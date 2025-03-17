@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-public class JapeRepository {
+public class JRepository {
     public static <T extends SankhyaEntity<T>> T findByPK(T template, Object... pkValues) throws Exception {
         String instanceName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(instanceName).findByPK(pkValues);
@@ -27,7 +27,7 @@ public class JapeRepository {
         return entities;
     }
 
-    public <T extends SankhyaEntity<T>> List<T> find(T template, String where, Object... params) throws Exception {
+    public static <T extends SankhyaEntity<T>> List<T> find(T template, String where, Object... params) throws Exception {
         String instanceName = template.getEntityName();
         Collection<DynamicVO> vos = JapeFactory.dao(instanceName).find(where, params);
 
@@ -37,6 +37,14 @@ public class JapeRepository {
             entities.add(createEntity(entity, vo));
         }
         return entities;
+    }
+
+    public static <T extends SankhyaEntity<T>> void update(T entity) {
+        throw new UnsupportedOperationException("Not implemented yet");
+    }
+
+    public static <T extends SankhyaEntity<T>> void create(T entity) {
+        throw new UnsupportedOperationException("Not implemented yet");
     }
 
     @SuppressWarnings("unchecked")

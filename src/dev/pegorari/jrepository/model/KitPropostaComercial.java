@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class KitPropostaComercial implements SankhyaEntity<KitPropostaComercial> {
-
+public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComercial> {
    private BigDecimal seqKit;
    private String tipKit;
    private String versaoProjeto;
@@ -59,6 +58,11 @@ public class KitPropostaComercial implements SankhyaEntity<KitPropostaComercial>
 
    public void setNuProjeto(BigDecimal nuProjeto) {
         this.nuProjeto = nuProjeto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGIKIT";
    }
 
    @Override

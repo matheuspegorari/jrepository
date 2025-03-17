@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EventoVeiculoCadastro implements SankhyaEntity<EventoVeiculoCadastro> {
-
+public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCadastro> {
    private BigDecimal codEvento;
    private BigDecimal codVeiculo;
    private Timestamp dtRef;
@@ -51,6 +50,11 @@ public class EventoVeiculoCadastro implements SankhyaEntity<EventoVeiculoCadastr
 
    public void setValor(BigDecimal valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEVEVEI";
    }
 
    @Override

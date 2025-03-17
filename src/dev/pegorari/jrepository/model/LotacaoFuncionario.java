@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LotacaoFuncionario implements SankhyaEntity<LotacaoFuncionario> {
-
+public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario> {
    private BigDecimal codEmp;
    private BigDecimal codFunc;
    private BigDecimal codUsu;
@@ -69,6 +68,11 @@ public class LotacaoFuncionario implements SankhyaEntity<LotacaoFuncionario> {
 
    public void setNuNo(BigDecimal nuNo) {
         this.nuNo = nuNo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPLFU";
    }
 
    @Override

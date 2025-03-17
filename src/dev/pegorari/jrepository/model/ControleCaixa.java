@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ControleCaixa implements SankhyaEntity<ControleCaixa> {
-
-   private BigDecimal codCtabCoint;
+public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
+   private BigDecimal codCtabcoint;
    private BigDecimal codUsu;
    private String conferido;
    private BigDecimal despesa;
@@ -18,12 +17,12 @@ public class ControleCaixa implements SankhyaEntity<ControleCaixa> {
    private BigDecimal saldoInicial;
    private BigDecimal codPdv;
 
-   public BigDecimal getCodCtabCoint() {
-        return codCtabCoint;
+   public BigDecimal getCodCtabcoint() {
+        return codCtabcoint;
    }
 
-   public void setCodCtabCoint(BigDecimal codCtabCoint) {
-        this.codCtabCoint = codCtabCoint;
+   public void setCodCtabcoint(BigDecimal codCtabcoint) {
+        this.codCtabcoint = codCtabcoint;
    }
 
    public BigDecimal getCodUsu() {
@@ -99,13 +98,18 @@ public class ControleCaixa implements SankhyaEntity<ControleCaixa> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAI";
+   }
+
+   @Override
    public String getEntityName() {
         return "ControleCaixa";
    }
 
    @Override
    public ControleCaixa fromVO(DynamicVO vo) {
-        this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
+        this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conferido = vo.asString("CONFERIDO");
         this.despesa = vo.asBigDecimal("DESPESA");

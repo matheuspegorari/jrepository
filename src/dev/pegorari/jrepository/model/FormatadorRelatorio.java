@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class FormatadorRelatorio implements SankhyaEntity<FormatadorRelatorio> {
-
+public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelatorio> {
    private String acessoCubo;
    private BigDecimal codEmp;
    private BigDecimal codGrupoRel;
@@ -303,6 +302,11 @@ public class FormatadorRelatorio implements SankhyaEntity<FormatadorRelatorio> {
 
    public void setTipoFonte(String tipoFonte) {
         this.tipoFonte = tipoFonte;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIIMP";
    }
 
    @Override

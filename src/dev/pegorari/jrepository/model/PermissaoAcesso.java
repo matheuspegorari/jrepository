@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PermissaoAcesso implements SankhyaEntity<PermissaoAcesso> {
-
+public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
    private BigDecimal codGrupo;
    private BigDecimal codUsu;
    private String permissao;
@@ -41,6 +40,11 @@ public class PermissaoAcesso implements SankhyaEntity<PermissaoAcesso> {
 
    public void setTipoAcesso(BigDecimal tipoAcesso) {
         this.tipoAcesso = tipoAcesso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPER";
    }
 
    @Override

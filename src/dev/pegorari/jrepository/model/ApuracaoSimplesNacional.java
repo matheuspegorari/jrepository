@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ApuracaoSimplesNacional implements SankhyaEntity<ApuracaoSimplesNacional> {
-
+public class ApuracaoSimplesNacional extends AbstractSankhyaEntity<ApuracaoSimplesNacional> {
    private BigDecimal aliqEfetivaMercExt;
    private BigDecimal aliqEfetivaMercInt;
    private BigDecimal faixaMercExt;
@@ -113,6 +112,11 @@ public class ApuracaoSimplesNacional implements SankhyaEntity<ApuracaoSimplesNac
 
    public void setVlrTotRecProjInt(BigDecimal vlrTotRecProjInt) {
         this.vlrTotRecProjInt = vlrTotRecProjInt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFAPSN";
    }
 
    @Override

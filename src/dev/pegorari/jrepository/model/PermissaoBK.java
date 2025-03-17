@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PermissaoBK implements SankhyaEntity<PermissaoBK> {
-
+public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    private String acesso;
    private BigDecimal codGrupo;
    private BigDecimal codUsu;
@@ -68,6 +67,11 @@ public class PermissaoBK implements SankhyaEntity<PermissaoBK> {
 
    public void setVersao(BigDecimal versao) {
         this.versao = versao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDPERBK";
    }
 
    @Override

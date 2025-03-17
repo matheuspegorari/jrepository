@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProgramacaoPlanoProducao implements SankhyaEntity<ProgramacaoPlanoProducao> {
-
+public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoPlanoProducao> {
    private Timestamp dhIniPrev;
    private BigDecimal idIproc;
    private BigDecimal idEfx;
@@ -78,6 +77,11 @@ public class ProgramacaoPlanoProducao implements SankhyaEntity<ProgramacaoPlanoP
 
    public void setJsonProg(char[] jsonProg) {
         this.jsonProg = jsonProg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRPIPROC";
    }
 
    @Override

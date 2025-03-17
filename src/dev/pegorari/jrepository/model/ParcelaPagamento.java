@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ParcelaPagamento implements SankhyaEntity<ParcelaPagamento> {
-
+public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    private String baixa;
    private BigDecimal codBcoPad;
    private BigDecimal codCenCusPad;
@@ -31,7 +30,7 @@ public class ParcelaPagamento implements SankhyaEntity<ParcelaPagamento> {
    private BigDecimal vencNaoUtil;
    private String somaPrazoCliente;
    private BigDecimal basePrazo;
-   private String parcExclusivaFcpSt;
+   private String parcExclusivaFcpst;
    private String tipoFin;
    private String usarDtEntSaignRe;
 
@@ -227,12 +226,12 @@ public class ParcelaPagamento implements SankhyaEntity<ParcelaPagamento> {
         this.basePrazo = basePrazo;
    }
 
-   public String getParcExclusivaFcpSt() {
-        return parcExclusivaFcpSt;
+   public String getParcExclusivaFcpst() {
+        return parcExclusivaFcpst;
    }
 
-   public void setParcExclusivaFcpSt(String parcExclusivaFcpSt) {
-        this.parcExclusivaFcpSt = parcExclusivaFcpSt;
+   public void setParcExclusivaFcpst(String parcExclusivaFcpst) {
+        this.parcExclusivaFcpst = parcExclusivaFcpst;
    }
 
    public String getTipoFin() {
@@ -249,6 +248,11 @@ public class ParcelaPagamento implements SankhyaEntity<ParcelaPagamento> {
 
    public void setUsarDtEntSaignRe(String usarDtEntSaignRe) {
         this.usarDtEntSaignRe = usarDtEntSaignRe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPPG";
    }
 
    @Override
@@ -282,7 +286,7 @@ public class ParcelaPagamento implements SankhyaEntity<ParcelaPagamento> {
         this.vencNaoUtil = vo.asBigDecimal("VENCNAOUTIL");
         this.somaPrazoCliente = vo.asString("SOMAPRAZOCLIENTE");
         this.basePrazo = vo.asBigDecimal("BASEPRAZO");
-        this.parcExclusivaFcpSt = vo.asString("PARCEXCLUSIVAFCPST");
+        this.parcExclusivaFcpst = vo.asString("PARCEXCLUSIVAFCPST");
         this.tipoFin = vo.asString("TIPOFIN");
         this.usarDtEntSaignRe = vo.asString("USARDTENTSAIGNRE");
         return this;

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItensApontamentoRecursosWC implements SankhyaEntity<ItensApontamentoRecursosWC> {
-
+public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApontamentoRecursosWC> {
    private BigDecimal codCre;
    private BigDecimal codMqp;
    private BigDecimal codRhp;
@@ -68,6 +67,11 @@ public class ItensApontamentoRecursosWC implements SankhyaEntity<ItensApontament
 
    public void setSeqApa(BigDecimal seqApa) {
         this.seqApa = seqApa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRIARW";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MensagensMDe implements SankhyaEntity<MensagensMDe> {
-
+public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    private BigDecimal sequencia;
    private String chaveAcesso;
    private BigDecimal codEmp;
@@ -60,6 +59,11 @@ public class MensagensMDe implements SankhyaEntity<MensagensMDe> {
 
    public void setMotivoResp(String motivoResp) {
         this.motivoResp = motivoResp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDEMSGS";
    }
 
    @Override

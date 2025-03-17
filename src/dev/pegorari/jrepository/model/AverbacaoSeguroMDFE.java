@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AverbacaoSeguroMDFE implements SankhyaEntity<AverbacaoSeguroMDFE> {
-
+public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMDFE> {
    private String nuAverb;
    private BigDecimal seqMdfe;
    private String numApOlice;
@@ -44,13 +43,18 @@ public class AverbacaoSeguroMDFE implements SankhyaEntity<AverbacaoSeguroMDFE> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFAVE";
+   }
+
+   @Override
    public String getEntityName() {
         return "AverbacaoSeguroMDFE";
    }
 
    @Override
    public AverbacaoSeguroMDFE fromVO(DynamicVO vo) {
-        this.nuAverb = vo.asString("NUAVERB");
+        this.nuAverb = vo.asString("NUMAVERB");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.numApOlice = vo.asString("NUMAPOLICE");
         this.nuViag = vo.asBigDecimal("NUVIAG");

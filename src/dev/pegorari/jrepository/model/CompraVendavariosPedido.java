@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CompraVendavariosPedido implements SankhyaEntity<CompraVendavariosPedido> {
-
+public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendavariosPedido> {
    private BigDecimal cusAtend;
    private BigDecimal nuNota;
    private BigDecimal nuNotaOrig;
@@ -15,7 +14,7 @@ public class CompraVendavariosPedido implements SankhyaEntity<CompraVendavariosP
    private BigDecimal sequenciaOrig;
    private String statusNota;
    private String nroRegExport;
-   private String nroAtoConcdraw;
+   private String nroAtoConcDraw;
    private BigDecimal nroMemorando;
    private String fixacao;
 
@@ -91,12 +90,12 @@ public class CompraVendavariosPedido implements SankhyaEntity<CompraVendavariosP
         this.nroRegExport = nroRegExport;
    }
 
-   public String getNroAtoConcdraw() {
-        return nroAtoConcdraw;
+   public String getNroAtoConcDraw() {
+        return nroAtoConcDraw;
    }
 
-   public void setNroAtoConcdraw(String nroAtoConcdraw) {
-        this.nroAtoConcdraw = nroAtoConcdraw;
+   public void setNroAtoConcDraw(String nroAtoConcDraw) {
+        this.nroAtoConcDraw = nroAtoConcDraw;
    }
 
    public BigDecimal getNroMemorando() {
@@ -116,6 +115,11 @@ public class CompraVendavariosPedido implements SankhyaEntity<CompraVendavariosP
    }
 
    @Override
+   public String getTableName() {
+        return "TGFVAR";
+   }
+
+   @Override
    public String getEntityName() {
         return "CompraVendavariosPedido";
    }
@@ -131,7 +135,7 @@ public class CompraVendavariosPedido implements SankhyaEntity<CompraVendavariosP
         this.sequenciaOrig = vo.asBigDecimal("SEQUENCIAORIG");
         this.statusNota = vo.asString("STATUSNOTA");
         this.nroRegExport = vo.asString("NROREGEXPORT");
-        this.nroAtoConcdraw = vo.asString("NROATOCONCDRAW");
+        this.nroAtoConcDraw = vo.asString("NROATOCONCDRAW");
         this.nroMemorando = vo.asBigDecimal("NROMEMORANDO");
         this.fixacao = vo.asString("FIXACAO");
         return this;

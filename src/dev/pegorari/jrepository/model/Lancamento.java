@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Lancamento implements SankhyaEntity<Lancamento> {
-
+public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    private BigDecimal codCencus;
    private BigDecimal codConPar;
    private BigDecimal codCtaCtb;
@@ -243,6 +242,11 @@ public class Lancamento implements SankhyaEntity<Lancamento> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCBLAN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Lancamento";
    }
@@ -272,7 +276,7 @@ public class Lancamento implements SankhyaEntity<Lancamento> {
         this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
         this.dtExtemporaneo = vo.asTimestamp("DTEXTEMPORANEO");
         this.extemporaneo = vo.asString("EXTEMPORANEO");
-        this.partLalurA = vo.asString("PARTLALURA");
+        this.partLalurA = vo.asString("PARTLALUR_A");
         this.chave = vo.asString("CHAVE");
         this.conciliado = vo.asString("CONCILIADO");
         return this;

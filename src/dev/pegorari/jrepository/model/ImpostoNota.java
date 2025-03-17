@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ImpostoNota implements SankhyaEntity<ImpostoNota> {
-
+public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    private BigDecimal aliquota;
    private BigDecimal base;
    private BigDecimal codCid;
@@ -140,6 +139,11 @@ public class ImpostoNota implements SankhyaEntity<ImpostoNota> {
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
         this.tpIrrfExt = tpIrrfExt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIMN";
    }
 
    @Override

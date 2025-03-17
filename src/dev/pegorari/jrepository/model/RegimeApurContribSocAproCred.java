@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegimeApurContribSocAproCred implements SankhyaEntity<RegimeApurContribSocAproCred> {
-
+public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeApurContribSocAproCred> {
    private BigDecimal codUsu;
    private BigDecimal indRegCum;
    private Timestamp dhAlter;
@@ -123,6 +122,11 @@ public class RegimeApurContribSocAproCred implements SankhyaEntity<RegimeApurCon
 
    public void setDescIteTercF525(String descIteTercF525) {
         this.descIteTercF525 = descIteTercF525;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRGM";
    }
 
    @Override

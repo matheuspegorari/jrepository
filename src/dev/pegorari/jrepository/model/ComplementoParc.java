@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ComplementoParc implements SankhyaEntity<ComplementoParc> {
-
+public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    private String nroCnh;
    private String numEntrega;
    private String numReceb;
@@ -735,6 +734,11 @@ public class ComplementoParc implements SankhyaEntity<ComplementoParc> {
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
         this.tpIrrfExt = tpIrrfExt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCPL";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EmpenhoProduto implements SankhyaEntity<EmpenhoProduto> {
-
+public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    private String chaveNfe;
    private BigDecimal codProd;
    private BigDecimal codUsu;
@@ -123,6 +122,11 @@ public class EmpenhoProduto implements SankhyaEntity<EmpenhoProduto> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEMPE";
    }
 
    @Override

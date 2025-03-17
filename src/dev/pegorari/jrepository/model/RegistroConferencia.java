@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegistroConferencia implements SankhyaEntity<RegistroConferencia> {
-
+public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferencia> {
    private String codBarra;
    private BigDecimal codProd;
    private BigDecimal codUsuConf;
@@ -150,6 +149,11 @@ public class RegistroConferencia implements SankhyaEntity<RegistroConferencia> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWRCON";
    }
 
    @Override

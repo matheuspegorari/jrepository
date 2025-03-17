@@ -1,24 +1,23 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OrdemServico implements SankhyaEntity<OrdemServico> {
-
+public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    private String contato;
    private String descricao;
    private Timestamp dhChamada;
    private Timestamp dhFechamentoSla;
    private Timestamp dtAlter;
-   private BigDecimal codParCatend;
+   private BigDecimal codParcAtend;
    private BigDecimal codPla;
    private String bairro;
    private String cidade;
    private BigDecimal codAtend;
    private String codBem;
-   private BigDecimal codCencus;
+   private BigDecimal codCenCus;
    private BigDecimal codContato;
    private BigDecimal codContatoPap;
    private BigDecimal codCos;
@@ -59,8 +58,8 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
    private BigDecimal tempPrevisto;
    private String tipo;
    private BigDecimal variacaoFluxo;
-   private String modeloVisivelAppos;
-   private BigDecimal codProcMaha;
+   private String modeloVisivelAppOs;
+   private BigDecimal codProcMaHa;
    private String impacto;
    private String urgencia;
 
@@ -104,12 +103,12 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
         this.dtAlter = dtAlter;
    }
 
-   public BigDecimal getCodParCatend() {
-        return codParCatend;
+   public BigDecimal getCodParcAtend() {
+        return codParcAtend;
    }
 
-   public void setCodParCatend(BigDecimal codParCatend) {
-        this.codParCatend = codParCatend;
+   public void setCodParcAtend(BigDecimal codParcAtend) {
+        this.codParcAtend = codParcAtend;
    }
 
    public BigDecimal getCodPla() {
@@ -152,12 +151,12 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
         this.codBem = codBem;
    }
 
-   public BigDecimal getCodCencus() {
-        return codCencus;
+   public BigDecimal getCodCenCus() {
+        return codCenCus;
    }
 
-   public void setCodCencus(BigDecimal codCencus) {
-        this.codCencus = codCencus;
+   public void setCodCenCus(BigDecimal codCenCus) {
+        this.codCenCus = codCenCus;
    }
 
    public BigDecimal getCodContato() {
@@ -480,20 +479,20 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
         this.variacaoFluxo = variacaoFluxo;
    }
 
-   public String getModeloVisivelAppos() {
-        return modeloVisivelAppos;
+   public String getModeloVisivelAppOs() {
+        return modeloVisivelAppOs;
    }
 
-   public void setModeloVisivelAppos(String modeloVisivelAppos) {
-        this.modeloVisivelAppos = modeloVisivelAppos;
+   public void setModeloVisivelAppOs(String modeloVisivelAppOs) {
+        this.modeloVisivelAppOs = modeloVisivelAppOs;
    }
 
-   public BigDecimal getCodProcMaha() {
-        return codProcMaha;
+   public BigDecimal getCodProcMaHa() {
+        return codProcMaHa;
    }
 
-   public void setCodProcMaha(BigDecimal codProcMaha) {
-        this.codProcMaha = codProcMaha;
+   public void setCodProcMaHa(BigDecimal codProcMaHa) {
+        this.codProcMaHa = codProcMaHa;
    }
 
    public String getImpacto() {
@@ -513,6 +512,11 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSOSE";
+   }
+
+   @Override
    public String getEntityName() {
         return "OrdemServico";
    }
@@ -524,13 +528,13 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
         this.dhChamada = vo.asTimestamp("DHCHAMADA");
         this.dhFechamentoSla = vo.asTimestamp("DHFECHAMENTOSLA");
         this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codParCatend = vo.asBigDecimal("CODPARCATEND");
+        this.codParcAtend = vo.asBigDecimal("CODPARCATEND");
         this.codPla = vo.asBigDecimal("CODPLA");
         this.bairro = vo.asString("BAIRRO");
         this.cidade = vo.asString("CIDADE");
         this.codAtend = vo.asBigDecimal("CODATEND");
         this.codBem = vo.asString("CODBEM");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
+        this.codCenCus = vo.asBigDecimal("CODCENCUS");
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codContatoPap = vo.asBigDecimal("CODCONTATOPAP");
         this.codCos = vo.asBigDecimal("CODCOS");
@@ -571,8 +575,8 @@ public class OrdemServico implements SankhyaEntity<OrdemServico> {
         this.tempPrevisto = vo.asBigDecimal("TEMPPREVISTO");
         this.tipo = vo.asString("TIPO");
         this.variacaoFluxo = vo.asBigDecimal("VARIACAOFLUXO");
-        this.modeloVisivelAppos = vo.asString("MODELOVISIVELAPPOS");
-        this.codProcMaha = vo.asBigDecimal("CODPROCMAHA");
+        this.modeloVisivelAppOs = vo.asString("MODELOVISIVELAPPOS");
+        this.codProcMaHa = vo.asBigDecimal("CODPROCMAHA");
         this.impacto = vo.asString("IMPACTO");
         this.urgencia = vo.asString("URGENCIA");
         return this;

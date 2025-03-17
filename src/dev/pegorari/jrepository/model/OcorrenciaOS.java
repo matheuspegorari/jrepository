@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class OcorrenciaOS implements SankhyaEntity<OcorrenciaOS> {
-
+public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    private String cobrar;
    private BigDecimal codOcorOs;
    private String descOcorOs;
@@ -44,6 +43,11 @@ public class OcorrenciaOS implements SankhyaEntity<OcorrenciaOS> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSOOS";
+   }
+
+   @Override
    public String getEntityName() {
         return "OcorrenciaOS";
    }
@@ -52,7 +56,7 @@ public class OcorrenciaOS implements SankhyaEntity<OcorrenciaOS> {
    public OcorrenciaOS fromVO(DynamicVO vo) {
         this.cobrar = vo.asString("COBRAR");
         this.codOcorOs = vo.asBigDecimal("CODOCOROS");
-        this.descOcorOs = vo.asString("DESCOCOROS");
+        this.descOcorOs = vo.asString("DESCROCOROS");
         this.previsto = vo.asString("PREVISTO");
         return this;
    }

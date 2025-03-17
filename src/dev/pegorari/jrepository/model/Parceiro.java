@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Parceiro implements SankhyaEntity<Parceiro> {
-
+public class Parceiro extends AbstractSankhyaEntity<Parceiro> {
    private String identInscEstad;
    private String implAudolote;
    private String indNatRet;
@@ -23,7 +22,7 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private String cei;
    private String cep;
    private String cgcCpf;
-   private String classifIcms;
+   private String classificMs;
    private String cliente;
    private String codAge;
    private BigDecimal codAnt;
@@ -32,12 +31,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private BigDecimal codBco;
    private BigDecimal codCid;
    private BigDecimal codCred;
-   private String codCtaBco;
-   private BigDecimal codCtaBcoInt;
-   private BigDecimal codCtaCtb;
-   private BigDecimal codCtaCtb2;
-   private BigDecimal codCtaCtb3;
-   private BigDecimal codCtaCtb4;
+   private String codCtabco;
+   private BigDecimal codCtabcoInt;
+   private BigDecimal codCtactb;
+   private BigDecimal codCtactb2;
+   private BigDecimal codCtactb3;
+   private BigDecimal codCtactb4;
    private BigDecimal codEmp;
    private BigDecimal codEmpPref;
    private BigDecimal codEnd;
@@ -49,14 +48,14 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private BigDecimal codTab;
    private BigDecimal codTabSt;
    private BigDecimal codTipParc;
-   private String codUniMed;
+   private String codUnimed;
    private BigDecimal codUsu;
    private BigDecimal codUsuCobr;
    private BigDecimal codVend;
    private String complemento;
    private String contAcesso;
-   private BigDecimal csTipIEnt;
-   private BigDecimal csTipISai;
+   private BigDecimal csTipIent;
+   private BigDecimal csTipIsai;
    private String ctaAdiant;
    private String descBonif;
    private BigDecimal descFin;
@@ -81,8 +80,8 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private String homePage;
    private String eCompra;
    private String email;
-   private BigDecimal codEnqIpISai;
-   private BigDecimal codEnqIpIEnt;
+   private BigDecimal codEnqIpIsai;
+   private BigDecimal codEnqIpIent;
    private String idEstrangeiro;
    private String tipGerBolCent;
    private String comoConheceu;
@@ -149,9 +148,9 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private String impAgrupFin;
    private String indAquisicao;
    private String indComercializacao;
-   private BigDecimal uniDImport;
+   private BigDecimal unidImport;
    private String inscMun;
-   private String ipiIncIcms;
+   private String ipiInCicms;
    private String latitude;
    private BigDecimal limCred;
    private BigDecimal limCredMensal;
@@ -205,7 +204,7 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private String tipoPessoa;
    private BigDecimal tolerInadImp;
    private String transportadora;
-   private String usaTabCrdForn;
+   private String usaTabCrForn;
    private String usuario;
    private String valDescGrdCar;
    private String vendedor;
@@ -228,14 +227,14 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    private String perfilEconect;
    private BigDecimal basePrazoEconect;
    private String tiposParc;
-   private String enviPedEmailTop;
+   private String enviaPedEmailTop;
    private String motNaoReterIssqn;
    private String sitEspecialResp;
    private BigDecimal provaCresc;
    private BigDecimal saldoDisp;
    private String tipLotacao;
    private String chavePix;
-   private String desconsiderDescBase;
+   private String desconsidEscBase;
    private BigDecimal codIdentCons;
    private BigDecimal tipClienteServCom;
    private String utilizaNucadParc;
@@ -379,12 +378,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.cgcCpf = cgcCpf;
    }
 
-   public String getClassifIcms() {
-        return classifIcms;
+   public String getClassificMs() {
+        return classificMs;
    }
 
-   public void setClassifIcms(String classifIcms) {
-        this.classifIcms = classifIcms;
+   public void setClassificMs(String classificMs) {
+        this.classificMs = classificMs;
    }
 
    public String getCliente() {
@@ -451,52 +450,52 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.codCred = codCred;
    }
 
-   public String getCodCtaBco() {
-        return codCtaBco;
+   public String getCodCtabco() {
+        return codCtabco;
    }
 
-   public void setCodCtaBco(String codCtaBco) {
-        this.codCtaBco = codCtaBco;
+   public void setCodCtabco(String codCtabco) {
+        this.codCtabco = codCtabco;
    }
 
-   public BigDecimal getCodCtaBcoInt() {
-        return codCtaBcoInt;
+   public BigDecimal getCodCtabcoInt() {
+        return codCtabcoInt;
    }
 
-   public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
-        this.codCtaBcoInt = codCtaBcoInt;
+   public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
+        this.codCtabcoInt = codCtabcoInt;
    }
 
-   public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+   public BigDecimal getCodCtactb() {
+        return codCtactb;
    }
 
-   public void setCodCtaCtb(BigDecimal codCtaCtb) {
-        this.codCtaCtb = codCtaCtb;
+   public void setCodCtactb(BigDecimal codCtactb) {
+        this.codCtactb = codCtactb;
    }
 
-   public BigDecimal getCodCtaCtb2() {
-        return codCtaCtb2;
+   public BigDecimal getCodCtactb2() {
+        return codCtactb2;
    }
 
-   public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
-        this.codCtaCtb2 = codCtaCtb2;
+   public void setCodCtactb2(BigDecimal codCtactb2) {
+        this.codCtactb2 = codCtactb2;
    }
 
-   public BigDecimal getCodCtaCtb3() {
-        return codCtaCtb3;
+   public BigDecimal getCodCtactb3() {
+        return codCtactb3;
    }
 
-   public void setCodCtaCtb3(BigDecimal codCtaCtb3) {
-        this.codCtaCtb3 = codCtaCtb3;
+   public void setCodCtactb3(BigDecimal codCtactb3) {
+        this.codCtactb3 = codCtactb3;
    }
 
-   public BigDecimal getCodCtaCtb4() {
-        return codCtaCtb4;
+   public BigDecimal getCodCtactb4() {
+        return codCtactb4;
    }
 
-   public void setCodCtaCtb4(BigDecimal codCtaCtb4) {
-        this.codCtaCtb4 = codCtaCtb4;
+   public void setCodCtactb4(BigDecimal codCtactb4) {
+        this.codCtactb4 = codCtactb4;
    }
 
    public BigDecimal getCodEmp() {
@@ -587,12 +586,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.codTipParc = codTipParc;
    }
 
-   public String getCodUniMed() {
-        return codUniMed;
+   public String getCodUnimed() {
+        return codUnimed;
    }
 
-   public void setCodUniMed(String codUniMed) {
-        this.codUniMed = codUniMed;
+   public void setCodUnimed(String codUnimed) {
+        this.codUnimed = codUnimed;
    }
 
    public BigDecimal getCodUsu() {
@@ -635,20 +634,20 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.contAcesso = contAcesso;
    }
 
-   public BigDecimal getCsTipIEnt() {
-        return csTipIEnt;
+   public BigDecimal getCsTipIent() {
+        return csTipIent;
    }
 
-   public void setCsTipIEnt(BigDecimal csTipIEnt) {
-        this.csTipIEnt = csTipIEnt;
+   public void setCsTipIent(BigDecimal csTipIent) {
+        this.csTipIent = csTipIent;
    }
 
-   public BigDecimal getCsTipISai() {
-        return csTipISai;
+   public BigDecimal getCsTipIsai() {
+        return csTipIsai;
    }
 
-   public void setCsTipISai(BigDecimal csTipISai) {
-        this.csTipISai = csTipISai;
+   public void setCsTipIsai(BigDecimal csTipIsai) {
+        this.csTipIsai = csTipIsai;
    }
 
    public String getCtaAdiant() {
@@ -843,20 +842,20 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.email = email;
    }
 
-   public BigDecimal getCodEnqIpISai() {
-        return codEnqIpISai;
+   public BigDecimal getCodEnqIpIsai() {
+        return codEnqIpIsai;
    }
 
-   public void setCodEnqIpISai(BigDecimal codEnqIpISai) {
-        this.codEnqIpISai = codEnqIpISai;
+   public void setCodEnqIpIsai(BigDecimal codEnqIpIsai) {
+        this.codEnqIpIsai = codEnqIpIsai;
    }
 
-   public BigDecimal getCodEnqIpIEnt() {
-        return codEnqIpIEnt;
+   public BigDecimal getCodEnqIpIent() {
+        return codEnqIpIent;
    }
 
-   public void setCodEnqIpIEnt(BigDecimal codEnqIpIEnt) {
-        this.codEnqIpIEnt = codEnqIpIEnt;
+   public void setCodEnqIpIent(BigDecimal codEnqIpIent) {
+        this.codEnqIpIent = codEnqIpIent;
    }
 
    public String getIdEstrangeiro() {
@@ -1387,12 +1386,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.indComercializacao = indComercializacao;
    }
 
-   public BigDecimal getUniDImport() {
-        return uniDImport;
+   public BigDecimal getUnidImport() {
+        return unidImport;
    }
 
-   public void setUniDImport(BigDecimal uniDImport) {
-        this.uniDImport = uniDImport;
+   public void setUnidImport(BigDecimal unidImport) {
+        this.unidImport = unidImport;
    }
 
    public String getInscMun() {
@@ -1403,12 +1402,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.inscMun = inscMun;
    }
 
-   public String getIpiIncIcms() {
-        return ipiIncIcms;
+   public String getIpiInCicms() {
+        return ipiInCicms;
    }
 
-   public void setIpiIncIcms(String ipiIncIcms) {
-        this.ipiIncIcms = ipiIncIcms;
+   public void setIpiInCicms(String ipiInCicms) {
+        this.ipiInCicms = ipiInCicms;
    }
 
    public String getLatitude() {
@@ -1835,12 +1834,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.transportadora = transportadora;
    }
 
-   public String getUsaTabCrdForn() {
-        return usaTabCrdForn;
+   public String getUsaTabCrForn() {
+        return usaTabCrForn;
    }
 
-   public void setUsaTabCrdForn(String usaTabCrdForn) {
-        this.usaTabCrdForn = usaTabCrdForn;
+   public void setUsaTabCrForn(String usaTabCrForn) {
+        this.usaTabCrForn = usaTabCrForn;
    }
 
    public String getUsuario() {
@@ -2019,12 +2018,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.tiposParc = tiposParc;
    }
 
-   public String getEnviPedEmailTop() {
-        return enviPedEmailTop;
+   public String getEnviaPedEmailTop() {
+        return enviaPedEmailTop;
    }
 
-   public void setEnviPedEmailTop(String enviPedEmailTop) {
-        this.enviPedEmailTop = enviPedEmailTop;
+   public void setEnviaPedEmailTop(String enviaPedEmailTop) {
+        this.enviaPedEmailTop = enviaPedEmailTop;
    }
 
    public String getMotNaoReterIssqn() {
@@ -2075,12 +2074,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.chavePix = chavePix;
    }
 
-   public String getDesconsiderDescBase() {
-        return desconsiderDescBase;
+   public String getDesconsidEscBase() {
+        return desconsidEscBase;
    }
 
-   public void setDesconsiderDescBase(String desconsiderDescBase) {
-        this.desconsiderDescBase = desconsiderDescBase;
+   public void setDesconsidEscBase(String desconsidEscBase) {
+        this.desconsidEscBase = desconsidEscBase;
    }
 
    public BigDecimal getCodIdentCons() {
@@ -2196,6 +2195,11 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPAR";
+   }
+
+   @Override
    public String getEntityName() {
         return "Parceiro";
    }
@@ -2217,8 +2221,8 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.calcInss = vo.asString("CALCINSS");
         this.cei = vo.asString("CEI");
         this.cep = vo.asString("CEP");
-        this.cgcCpf = vo.asString("CGCCPF");
-        this.classifIcms = vo.asString("CLASSIFICMS");
+        this.cgcCpf = vo.asString("CGC_CPF");
+        this.classificMs = vo.asString("CLASSIFICMS");
         this.cliente = vo.asString("CLIENTE");
         this.codAge = vo.asString("CODAGE");
         this.codAnt = vo.asBigDecimal("CODANT");
@@ -2227,12 +2231,12 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codCid = vo.asBigDecimal("CODCID");
         this.codCred = vo.asBigDecimal("CODCRED");
-        this.codCtaBco = vo.asString("CODCTABCO");
-        this.codCtaBcoInt = vo.asBigDecimal("CODCTABCOINT");
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.codCtaCtb2 = vo.asBigDecimal("CODCTACTB2");
-        this.codCtaCtb3 = vo.asBigDecimal("CODCTACTB3");
-        this.codCtaCtb4 = vo.asBigDecimal("CODCTACTB4");
+        this.codCtabco = vo.asString("CODCTABCO");
+        this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
+        this.codCtactb = vo.asBigDecimal("CODCTACTB");
+        this.codCtactb2 = vo.asBigDecimal("CODCTACTB2");
+        this.codCtactb3 = vo.asBigDecimal("CODCTACTB3");
+        this.codCtactb4 = vo.asBigDecimal("CODCTACTB4");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpPref = vo.asBigDecimal("CODEMPPREF");
         this.codEnd = vo.asBigDecimal("CODEND");
@@ -2244,18 +2248,18 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.codTab = vo.asBigDecimal("CODTAB");
         this.codTabSt = vo.asBigDecimal("CODTABST");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");
-        this.codUniMed = vo.asString("CODUNIMED");
+        this.codUnimed = vo.asString("CODUNIMED");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuCobr = vo.asBigDecimal("CODUSUCOBR");
         this.codVend = vo.asBigDecimal("CODVEND");
         this.complemento = vo.asString("COMPLEMENTO");
         this.contAcesso = vo.asString("CONTACESSO");
-        this.csTipIEnt = vo.asBigDecimal("CSTIPIENT");
-        this.csTipISai = vo.asBigDecimal("CSTIPISAI");
+        this.csTipIent = vo.asBigDecimal("CSTIPIENT");
+        this.csTipIsai = vo.asBigDecimal("CSTIPISAI");
         this.ctaAdiant = vo.asString("CTAADIANT");
         this.descBonif = vo.asString("DESCBONIF");
         this.descFin = vo.asBigDecimal("DESCFIN");
-        this.descRota = vo.asString("DESCROTA");
+        this.descRota = vo.asString("DESCRROTA");
         this.descStIva = vo.asString("DESCSTIVA");
         this.diaSem = vo.asBigDecimal("DIASEM");
         this.diasVarPagto = vo.asBigDecimal("DIASVARPAGTO");
@@ -2276,8 +2280,8 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.homePage = vo.asString("HOMEPAGE");
         this.eCompra = vo.asString("ECOMPRA");
         this.email = vo.asString("EMAIL");
-        this.codEnqIpISai = vo.asBigDecimal("CODENQIPISAI");
-        this.codEnqIpIEnt = vo.asBigDecimal("CODENQIPIENT");
+        this.codEnqIpIsai = vo.asBigDecimal("CODENQIPISAI");
+        this.codEnqIpIent = vo.asBigDecimal("CODENQIPIENT");
         this.idEstrangeiro = vo.asString("IDESTRANGEIRO");
         this.tipGerBolCent = vo.asString("TIPGERBOLCENT");
         this.comoConheceu = vo.asString("COMOCONHECEU");
@@ -2344,9 +2348,9 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.impAgrupFin = vo.asString("IMPAGRUPFIN");
         this.indAquisicao = vo.asString("INDAQUISICAO");
         this.indComercializacao = vo.asString("INDCOMERCIALIZACAO");
-        this.uniDImport = vo.asBigDecimal("UNIDIMPORT");
+        this.unidImport = vo.asBigDecimal("UNIDIMPORT");
         this.inscMun = vo.asString("INSCMUN");
-        this.ipiIncIcms = vo.asString("IPIINCICMS");
+        this.ipiInCicms = vo.asString("IPIINCICMS");
         this.latitude = vo.asString("LATITUDE");
         this.limCred = vo.asBigDecimal("LIMCRED");
         this.limCredMensal = vo.asBigDecimal("LIMCREDMENSAL");
@@ -2397,10 +2401,10 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.tipJuro = vo.asString("TIPJURO");
         this.tipoFatur = vo.asString("TIPOFATUR");
         this.tipoGerBoleto = vo.asString("TIPOGERBOLETO");
-        this.tipoPessoa = vo.asString("TIPOPESSOA");
+        this.tipoPessoa = vo.asString("TIPPESSOA");
         this.tolerInadImp = vo.asBigDecimal("TOLERINADIMP");
         this.transportadora = vo.asString("TRANSPORTADORA");
-        this.usaTabCrdForn = vo.asString("USATABCRDFORN");
+        this.usaTabCrForn = vo.asString("USATABCRFORN");
         this.usuario = vo.asString("USUARIO");
         this.valDescGrdCar = vo.asString("VALDESCGRDCAR");
         this.vendedor = vo.asString("VENDEDOR");
@@ -2423,20 +2427,20 @@ public class Parceiro implements SankhyaEntity<Parceiro> {
         this.perfilEconect = vo.asString("PERFILECONECT");
         this.basePrazoEconect = vo.asBigDecimal("BASEPRAZOECONECT");
         this.tiposParc = vo.asString("TIPOSPARC");
-        this.enviPedEmailTop = vo.asString("ENVIPEDEMAILTOP");
+        this.enviaPedEmailTop = vo.asString("ENVIPEDEMAILTOP");
         this.motNaoReterIssqn = vo.asString("MOTNAORETERISSQN");
         this.sitEspecialResp = vo.asString("SITESPECIALRESP");
         this.provaCresc = vo.asBigDecimal("PROVACRESC");
         this.saldoDisp = vo.asBigDecimal("SALDODISP");
         this.tipLotacao = vo.asString("TIPLOTACAO");
         this.chavePix = vo.asString("CHAVEPIX");
-        this.desconsiderDescBase = vo.asString("DESCONSIDERDESCBASE");
+        this.desconsidEscBase = vo.asString("DESCONSIDESCBASE");
         this.codIdentCons = vo.asBigDecimal("CODIDENTCONS");
         this.tipClienteServCom = vo.asBigDecimal("TIPCLIENTESERVCOM");
         this.utilizaNucadParc = vo.asString("UTILIZANUCADPARC");
         this.provaCrescCac = vo.asBigDecimal("PROVACRESCCAC");
         this.saldoDispCac = vo.asBigDecimal("SALDODISPCAC");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.considTotItensTrib = vo.asString("CONSIDTOTITENSTRIB");
         this.deduzIpiBcPisCf = vo.asString("DEDUZIPIBCPISCF");

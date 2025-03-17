@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RequisicaoPessoal implements SankhyaEntity<RequisicaoPessoal> {
-
+public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> {
    private String statusAval;
    private BigDecimal statusSelecao;
    private BigDecimal tipo;
@@ -321,6 +320,11 @@ public class RequisicaoPessoal implements SankhyaEntity<RequisicaoPessoal> {
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSREQ";
    }
 
    @Override

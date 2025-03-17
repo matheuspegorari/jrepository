@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItensCoProdutos implements SankhyaEntity<ItensCoProdutos> {
-
+public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    private BigDecimal codProdPa;
    private String codVol;
    private String controlePa;
@@ -68,6 +67,11 @@ public class ItensCoProdutos implements SankhyaEntity<ItensCoProdutos> {
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
         this.percDesvioSup = percDesvioSup;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRITECOP";
    }
 
    @Override

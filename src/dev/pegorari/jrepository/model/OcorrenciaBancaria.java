@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class OcorrenciaBancaria implements SankhyaEntity<OcorrenciaBancaria> {
-
+public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria> {
    private BigDecimal codBco;
    private BigDecimal codOcor;
    private String descricao;
@@ -32,6 +31,11 @@ public class OcorrenciaBancaria implements SankhyaEntity<OcorrenciaBancaria> {
 
    public void setDescricao(String descricao) {
         this.descricao = descricao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFOBC";
    }
 
    @Override

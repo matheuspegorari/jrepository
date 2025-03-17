@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Tabela implements SankhyaEntity<Tabela> {
-
+public class Tabela extends AbstractSankhyaEntity<Tabela> {
    private String descTab;
    private String nomeTab;
    private BigDecimal nuCampoNumeracao;
@@ -44,13 +43,18 @@ public class Tabela implements SankhyaEntity<Tabela> {
    }
 
    @Override
+   public String getTableName() {
+        return "TDDTAB";
+   }
+
+   @Override
    public String getEntityName() {
         return "Tabela";
    }
 
    @Override
    public Tabela fromVO(DynamicVO vo) {
-        this.descTab = vo.asString("DESCTAB");
+        this.descTab = vo.asString("DESCRTAB");
         this.nomeTab = vo.asString("NOMETAB");
         this.nuCampoNumeracao = vo.asBigDecimal("NUCAMPONUMERACAO");
         this.tipoNumeracao = vo.asString("TIPONUMERACAO");

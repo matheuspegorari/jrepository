@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormulaTamLote implements SankhyaEntity<FormulaTamLote> {
-
+public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
    private String descFormula;
    private String expressao;
    private BigDecimal idFormula;
@@ -32,6 +31,11 @@ public class FormulaTamLote implements SankhyaEntity<FormulaTamLote> {
 
    public void setIdFormula(BigDecimal idFormula) {
         this.idFormula = idFormula;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRFTL";
    }
 
    @Override

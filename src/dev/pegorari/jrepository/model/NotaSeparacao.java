@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NotaSeparacao implements SankhyaEntity<NotaSeparacao> {
-
+public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    private BigDecimal nuNota;
    private BigDecimal nuSeparacao;
-   private BigDecimal nuTarefaCan;
+   private BigDecimal nuTarefacan;
    private String statusNota;
 
    public BigDecimal getNuNota() {
@@ -27,12 +26,12 @@ public class NotaSeparacao implements SankhyaEntity<NotaSeparacao> {
         this.nuSeparacao = nuSeparacao;
    }
 
-   public BigDecimal getNuTarefaCan() {
-        return nuTarefaCan;
+   public BigDecimal getNuTarefacan() {
+        return nuTarefacan;
    }
 
-   public void setNuTarefaCan(BigDecimal nuTarefaCan) {
-        this.nuTarefaCan = nuTarefaCan;
+   public void setNuTarefacan(BigDecimal nuTarefacan) {
+        this.nuTarefacan = nuTarefacan;
    }
 
    public String getStatusNota() {
@@ -44,6 +43,11 @@ public class NotaSeparacao implements SankhyaEntity<NotaSeparacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGWSXN";
+   }
+
+   @Override
    public String getEntityName() {
         return "NotaSeparacao";
    }
@@ -52,7 +56,7 @@ public class NotaSeparacao implements SankhyaEntity<NotaSeparacao> {
    public NotaSeparacao fromVO(DynamicVO vo) {
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.nuTarefaCan = vo.asBigDecimal("NUTAREFACAN");
+        this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");
         this.statusNota = vo.asString("STATUSNOTA");
         return this;
    }

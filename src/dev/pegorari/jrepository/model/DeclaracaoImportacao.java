@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DeclaracaoImportacao implements SankhyaEntity<DeclaracaoImportacao> {
-
+public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImportacao> {
    private BigDecimal codUfDesemb;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
@@ -204,6 +203,11 @@ public class DeclaracaoImportacao implements SankhyaEntity<DeclaracaoImportacao>
 
    public void setVlrAfrmm(BigDecimal vlrAfrmm) {
         this.vlrAfrmm = vlrAfrmm;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIDI";
    }
 
    @Override

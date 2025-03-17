@@ -1,21 +1,20 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UsuarioBK implements SankhyaEntity<UsuarioBK> {
-
+public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    private String acessoVisualCab;
    private String altCtaFat;
    private String altCtaImpBol;
-   private String altOrdCFech;
+   private String altOrdCfech;
    private String aprovCot;
    private String baixaDesp;
    private String baixaRec;
    private BigDecimal codUsu;
-   private String contaAcesso;
-   private String contaGol;
+   private String contAcesso;
+   private String contGol;
    private String exibirValAnalRent;
    private String impNfCentral;
    private BigDecimal minutosFin;
@@ -48,12 +47,12 @@ public class UsuarioBK implements SankhyaEntity<UsuarioBK> {
         this.altCtaImpBol = altCtaImpBol;
    }
 
-   public String getAltOrdCFech() {
-        return altOrdCFech;
+   public String getAltOrdCfech() {
+        return altOrdCfech;
    }
 
-   public void setAltOrdCFech(String altOrdCFech) {
-        this.altOrdCFech = altOrdCFech;
+   public void setAltOrdCfech(String altOrdCfech) {
+        this.altOrdCfech = altOrdCfech;
    }
 
    public String getAprovCot() {
@@ -88,20 +87,20 @@ public class UsuarioBK implements SankhyaEntity<UsuarioBK> {
         this.codUsu = codUsu;
    }
 
-   public String getContaAcesso() {
-        return contaAcesso;
+   public String getContAcesso() {
+        return contAcesso;
    }
 
-   public void setContaAcesso(String contaAcesso) {
-        this.contaAcesso = contaAcesso;
+   public void setContAcesso(String contAcesso) {
+        this.contAcesso = contAcesso;
    }
 
-   public String getContaGol() {
-        return contaGol;
+   public String getContGol() {
+        return contGol;
    }
 
-   public void setContaGol(String contaGol) {
-        this.contaGol = contaGol;
+   public void setContGol(String contGol) {
+        this.contGol = contGol;
    }
 
    public String getExibirValAnalRent() {
@@ -161,6 +160,11 @@ public class UsuarioBK implements SankhyaEntity<UsuarioBK> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIUSUBK";
+   }
+
+   @Override
    public String getEntityName() {
         return "UsuarioBK";
    }
@@ -170,13 +174,13 @@ public class UsuarioBK implements SankhyaEntity<UsuarioBK> {
         this.acessoVisualCab = vo.asString("ACESSOVISUALCAB");
         this.altCtaFat = vo.asString("ALTCTAFAT");
         this.altCtaImpBol = vo.asString("ALTCTAIMPBOL");
-        this.altOrdCFech = vo.asString("ALTORDCFECH");
+        this.altOrdCfech = vo.asString("ALTORDCFECH");
         this.aprovCot = vo.asString("APROVCOT");
         this.baixaDesp = vo.asString("BAIXADESP");
         this.baixaRec = vo.asString("BAIXAREC");
         this.codUsu = vo.asBigDecimal("CODUSU");
-        this.contaAcesso = vo.asString("CONTAACESSO");
-        this.contaGol = vo.asString("CONTAGOL");
+        this.contAcesso = vo.asString("CONTACESSO");
+        this.contGol = vo.asString("CONTAGOL");
         this.exibirValAnalRent = vo.asString("EXIBIRVALANALRENT");
         this.impNfCentral = vo.asString("IMPNFCENTRAL");
         this.minutosFin = vo.asBigDecimal("MINUTOSFIN");

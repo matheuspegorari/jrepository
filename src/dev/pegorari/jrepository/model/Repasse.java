@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Repasse implements SankhyaEntity<Repasse> {
-
+public class Repasse extends AbstractSankhyaEntity<Repasse> {
    private BigDecimal nuCnd;
    private BigDecimal nuFinDesp;
    private BigDecimal nuFinOrig;
@@ -59,6 +58,11 @@ public class Repasse implements SankhyaEntity<Repasse> {
 
    public void setValorRateio(BigDecimal valorRateio) {
         this.valorRateio = valorRateio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFRP";
    }
 
    @Override

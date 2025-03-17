@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoCoProduto implements SankhyaEntity<GrupoCoProduto> {
-
+public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    private String ativo;
    private BigDecimal codProdMp;
    private String codVol;
@@ -68,6 +67,11 @@ public class GrupoCoProduto implements SankhyaEntity<GrupoCoProduto> {
 
    public void setQtdProcess(BigDecimal qtdProcess) {
         this.qtdProcess = qtdProcess;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCOP";
    }
 
    @Override

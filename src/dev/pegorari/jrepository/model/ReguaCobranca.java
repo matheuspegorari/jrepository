@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ReguaCobranca implements SankhyaEntity<ReguaCobranca> {
-
+public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    private String ativo;
    private BigDecimal codRegua;
    private char[] config;
@@ -60,6 +59,11 @@ public class ReguaCobranca implements SankhyaEntity<ReguaCobranca> {
 
    public void setUltExecucao(Timestamp ultExecucao) {
         this.ultExecucao = ultExecucao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRCB";
    }
 
    @Override

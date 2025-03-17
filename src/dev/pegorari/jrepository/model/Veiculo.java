@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Veiculo implements SankhyaEntity<Veiculo> {
-
+public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    private BigDecimal corDenatran;
    private String corFab;
    private String descrEmpParc;
@@ -584,6 +583,11 @@ public class Veiculo implements SankhyaEntity<Veiculo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFVEI";
+   }
+
+   @Override
    public String getEntityName() {
         return "Veiculo";
    }
@@ -592,7 +596,7 @@ public class Veiculo implements SankhyaEntity<Veiculo> {
    public Veiculo fromVO(DynamicVO vo) {
         this.corDenatran = vo.asBigDecimal("CORDENATRAN");
         this.corFab = vo.asString("CORFAB");
-        this.descrEmpParc = vo.asString("DESCREMPPARC");
+        this.descrEmpParc = vo.asString("DESCR_EMP_PARC");
         this.distEixos = vo.asString("DISTEIXOS");
         this.emiteExped = vo.asString("EMITEEXPED");
         this.empParc = vo.asString("EMPPARC");

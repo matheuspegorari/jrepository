@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoLancamentoExtrato implements SankhyaEntity<ConfiguracaoLancamentoExtrato> {
-
+public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<ConfiguracaoLancamentoExtrato> {
    private BigDecimal codProj;
    private BigDecimal catLanc;
    private BigDecimal codBco;
@@ -141,6 +140,11 @@ public class ConfiguracaoLancamentoExtrato implements SankhyaEntity<Configuracao
 
    public void setCodTipOperBaixa(BigDecimal codTipOperBaixa) {
         this.codTipOperBaixa = codTipOperBaixa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCLX";
    }
 
    @Override

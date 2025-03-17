@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TipoTarefa implements SankhyaEntity<TipoTarefa> {
-
+public class TipoTarefa extends AbstractSankhyaEntity<TipoTarefa> {
    private BigDecimal codTarefa;
-   private String descrTarefa;
+   private String descTarefa;
 
    public BigDecimal getCodTarefa() {
         return codTarefa;
@@ -17,12 +16,17 @@ public class TipoTarefa implements SankhyaEntity<TipoTarefa> {
         this.codTarefa = codTarefa;
    }
 
-   public String getDescrTarefa() {
-        return descrTarefa;
+   public String getDescTarefa() {
+        return descTarefa;
    }
 
-   public void setDescrTarefa(String descrTarefa) {
-        this.descrTarefa = descrTarefa;
+   public void setDescTarefa(String descTarefa) {
+        this.descTarefa = descTarefa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWTTR";
    }
 
    @Override
@@ -33,7 +37,7 @@ public class TipoTarefa implements SankhyaEntity<TipoTarefa> {
    @Override
    public TipoTarefa fromVO(DynamicVO vo) {
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
-        this.descrTarefa = vo.asString("DESCRTAREFA");
+        this.descTarefa = vo.asString("DESCRTAREFA");
         return this;
    }
 }

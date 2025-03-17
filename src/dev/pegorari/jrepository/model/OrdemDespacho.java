@@ -1,15 +1,14 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OrdemDespacho implements SankhyaEntity<OrdemDespacho> {
-
+public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    private String status;
    private BigDecimal codEmp;
-   private BigDecimal codParcTransp;
+   private BigDecimal codParctransp;
    private BigDecimal nuOdp;
    private Timestamp dtInclusao;
 
@@ -29,12 +28,12 @@ public class OrdemDespacho implements SankhyaEntity<OrdemDespacho> {
         this.codEmp = codEmp;
    }
 
-   public BigDecimal getCodParcTransp() {
-        return codParcTransp;
+   public BigDecimal getCodParctransp() {
+        return codParctransp;
    }
 
-   public void setCodParcTransp(BigDecimal codParcTransp) {
-        this.codParcTransp = codParcTransp;
+   public void setCodParctransp(BigDecimal codParctransp) {
+        this.codParctransp = codParctransp;
    }
 
    public BigDecimal getNuOdp() {
@@ -54,6 +53,11 @@ public class OrdemDespacho implements SankhyaEntity<OrdemDespacho> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFODP";
+   }
+
+   @Override
    public String getEntityName() {
         return "OrdemDespacho";
    }
@@ -62,7 +66,7 @@ public class OrdemDespacho implements SankhyaEntity<OrdemDespacho> {
    public OrdemDespacho fromVO(DynamicVO vo) {
         this.status = vo.asString("STATUS");
         this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParcTransp = vo.asBigDecimal("CODPARCTRANSP");
+        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.nuOdp = vo.asBigDecimal("NUODP");
         this.dtInclusao = vo.asTimestamp("DTINCLUSAO");
         return this;

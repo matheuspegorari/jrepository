@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MSDPerfil implements SankhyaEntity<MSDPerfil> {
-
+public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    private BigDecimal codPer;
    private String descPer;
    private String envUlt;
@@ -68,6 +67,11 @@ public class MSDPerfil implements SankhyaEntity<MSDPerfil> {
 
    public void setUsaQueryLista(String usaQueryLista) {
         this.usaQueryLista = usaQueryLista;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDPER";
    }
 
    @Override

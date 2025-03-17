@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotaConhecimentoTransporte implements SankhyaEntity<NotaConhecimentoTransporte> {
-
+public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhecimentoTransporte> {
    private BigDecimal codModDoc;
    private Timestamp dtEmissao;
    private String numero;
@@ -168,6 +167,11 @@ public class NotaConhecimentoTransporte implements SankhyaEntity<NotaConheciment
 
    public void setPesoL(BigDecimal pesoL) {
         this.pesoL = pesoL;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNCT";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EventoPeriodico implements SankhyaEntity<EventoPeriodico> {
-
+public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    private BigDecimal codEmp;
    private BigDecimal codUsu;
    private String descricao;
@@ -63,6 +62,11 @@ public class EventoPeriodico implements SankhyaEntity<EventoPeriodico> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFEPS";
+   }
+
+   @Override
    public String getEntityName() {
         return "EventoPeriodico";
    }
@@ -74,7 +78,7 @@ public class EventoPeriodico implements SankhyaEntity<EventoPeriodico> {
         this.descricao = vo.asString("DESCRICAO");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.evento = vo.asString("EVENTO");
-        this.geraEvento = vo.asString("GERAEVENTO");
+        this.geraEvento = vo.asString("GERAREVENTO");
         return this;
    }
 }

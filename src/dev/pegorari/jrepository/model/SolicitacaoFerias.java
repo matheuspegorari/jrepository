@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SolicitacaoFerias implements SankhyaEntity<SolicitacaoFerias> {
-
+public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> {
    private BigDecimal diasAbonoPec;
    private BigDecimal id;
    private Timestamp dtIniAqui;
@@ -123,6 +122,11 @@ public class SolicitacaoFerias implements SankhyaEntity<SolicitacaoFerias> {
 
    public void setDiasSolicitados(BigDecimal diasSolicitados) {
         this.diasSolicitados = diasSolicitados;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPSFE";
    }
 
    @Override

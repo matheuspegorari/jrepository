@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormularioProdutoAcabado implements SankhyaEntity<FormularioProdutoAcabado> {
-
+public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioProdutoAcabado> {
    private BigDecimal codProdPa;
    private String controlePa;
    private BigDecimal idForm;
@@ -41,6 +40,11 @@ public class FormularioProdutoAcabado implements SankhyaEntity<FormularioProduto
 
    public void setIdProc(BigDecimal idProc) {
         this.idProc = idProc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRFPA";
    }
 
    @Override

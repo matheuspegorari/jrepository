@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InformacaoNotaExportacao implements SankhyaEntity<InformacaoNotaExportacao> {
-
+public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNotaExportacao> {
    private Timestamp dtConhec;
    private String nroConhec;
    private String nroDeclaracao;
@@ -60,6 +59,11 @@ public class InformacaoNotaExportacao implements SankhyaEntity<InformacaoNotaExp
 
    public void setTipoConhec(BigDecimal tipoConhec) {
         this.tipoConhec = tipoConhec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEXPN";
    }
 
    @Override

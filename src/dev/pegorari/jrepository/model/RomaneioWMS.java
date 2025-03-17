@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RomaneioWMS implements SankhyaEntity<RomaneioWMS> {
-
+public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    private String recontado;
    private String codBarra;
    private String codBarraConcat;
@@ -77,6 +76,11 @@ public class RomaneioWMS implements SankhyaEntity<RomaneioWMS> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWROM";
    }
 
    @Override

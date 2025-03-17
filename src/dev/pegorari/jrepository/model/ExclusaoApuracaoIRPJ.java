@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExclusaoApuracaoIRPJ implements SankhyaEntity<ExclusaoApuracaoIRPJ> {
-
+public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracaoIRPJ> {
    private BigDecimal codCtaCtb;
    private BigDecimal codEmp;
    private String ctaCtb;
@@ -69,6 +68,11 @@ public class ExclusaoApuracaoIRPJ implements SankhyaEntity<ExclusaoApuracaoIRPJ>
 
    public void setVlrLanc(BigDecimal vlrLanc) {
         this.vlrLanc = vlrLanc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBIRPJEX";
    }
 
    @Override

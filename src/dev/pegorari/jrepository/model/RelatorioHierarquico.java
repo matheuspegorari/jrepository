@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RelatorioHierarquico implements SankhyaEntity<RelatorioHierarquico> {
-
+public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarquico> {
    private BigDecimal alinhamento;
    private BigDecimal codCampo;
    private BigDecimal codCampoPai;
@@ -149,6 +148,11 @@ public class RelatorioHierarquico implements SankhyaEntity<RelatorioHierarquico>
 
    public void setZerarNaQuebra(String zerarNaQuebra) {
         this.zerarNaQuebra = zerarNaQuebra;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIRHI";
    }
 
    @Override

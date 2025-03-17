@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfigContOrcamentarioContabil implements SankhyaEntity<ConfigContOrcamentarioContabil> {
-
+public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<ConfigContOrcamentarioContabil> {
    private String apresCod;
    private String ativo;
    private BigDecimal codCco;
@@ -20,7 +19,7 @@ public class ConfigContOrcamentarioContabil implements SankhyaEntity<ConfigContO
    private BigDecimal dtIniCorc;
    private String calDesInRecDesp;
    private String usaSalConReali;
-   private String zerarCtaCtaB;
+   private String zerarCtaCtab;
 
    public String getApresCod() {
         return apresCod;
@@ -134,12 +133,17 @@ public class ConfigContOrcamentarioContabil implements SankhyaEntity<ConfigContO
         this.usaSalConReali = usaSalConReali;
    }
 
-   public String getZerarCtaCtaB() {
-        return zerarCtaCtaB;
+   public String getZerarCtaCtab() {
+        return zerarCtaCtab;
    }
 
-   public void setZerarCtaCtaB(String zerarCtaCtaB) {
-        this.zerarCtaCtaB = zerarCtaCtaB;
+   public void setZerarCtaCtab(String zerarCtaCtab) {
+        this.zerarCtaCtab = zerarCtaCtab;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBCCO";
    }
 
    @Override
@@ -163,7 +167,7 @@ public class ConfigContOrcamentarioContabil implements SankhyaEntity<ConfigContO
         this.dtIniCorc = vo.asBigDecimal("DTINICORC");
         this.calDesInRecDesp = vo.asString("CALDESINRECDESP");
         this.usaSalConReali = vo.asString("USASALCONREALI");
-        this.zerarCtaCtaB = vo.asString("ZERARCTACTAB");
+        this.zerarCtaCtab = vo.asString("ZERARCTACTAB");
         return this;
    }
 }

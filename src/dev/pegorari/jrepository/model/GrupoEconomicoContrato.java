@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoEconomicoContrato implements SankhyaEntity<GrupoEconomicoContrato> {
-
+public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomicoContrato> {
    private BigDecimal codParc;
    private BigDecimal numContrato;
    private BigDecimal percCusto;
@@ -32,6 +31,11 @@ public class GrupoEconomicoContrato implements SankhyaEntity<GrupoEconomicoContr
 
    public void setPercCusto(BigDecimal percCusto) {
         this.percCusto = percCusto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSGEC";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SeguroTransporte implements SankhyaEntity<SeguroTransporte> {
-
+public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    private BigDecimal vlrCarga;
    private BigDecimal seqSeg;
    private String numApo;
@@ -68,6 +67,11 @@ public class SeguroTransporte implements SankhyaEntity<SeguroTransporte> {
 
    public void setNumAve(String numAve) {
         this.numAve = numAve;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSEG";
    }
 
    @Override

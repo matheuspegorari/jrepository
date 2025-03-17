@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoInstalacao implements SankhyaEntity<GrupoInstalacao> {
-
+public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
    private BigDecimal grupo;
    private BigDecimal numContrato;
    private BigDecimal qtdParc;
@@ -32,6 +31,11 @@ public class GrupoInstalacao implements SankhyaEntity<GrupoInstalacao> {
 
    public void setQtdParc(BigDecimal qtdParc) {
         this.qtdParc = qtdParc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSCGR";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SugestaoAcessoCartaoEvo implements SankhyaEntity<SugestaoAcessoCartaoEvo> {
-
+public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcessoCartaoEvo> {
    private String alteradoPeloUsuario;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -51,6 +50,11 @@ public class SugestaoAcessoCartaoEvo implements SankhyaEntity<SugestaoAcessoCart
 
    public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIACE";
    }
 
    @Override

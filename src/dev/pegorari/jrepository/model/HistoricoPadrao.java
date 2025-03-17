@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class HistoricoPadrao implements SankhyaEntity<HistoricoPadrao> {
-
+public class HistoricoPadrao extends AbstractSankhyaEntity<HistoricoPadrao> {
    private BigDecimal codHistCtb;
    private String historico;
 
@@ -23,6 +22,11 @@ public class HistoricoPadrao implements SankhyaEntity<HistoricoPadrao> {
 
    public void setHistorico(String historico) {
         this.historico = historico;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBHIS";
    }
 
    @Override

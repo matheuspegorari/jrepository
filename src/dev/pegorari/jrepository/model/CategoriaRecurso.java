@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CategoriaRecurso implements SankhyaEntity<CategoriaRecurso> {
-
+public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    private String analitico;
    private String ativo;
    private BigDecimal codCre;
@@ -113,6 +112,11 @@ public class CategoriaRecurso implements SankhyaEntity<CategoriaRecurso> {
 
    public void setDecQtd(BigDecimal decQtd) {
         this.decQtd = decQtd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCRE";
    }
 
    @Override

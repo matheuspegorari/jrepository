@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Cargo implements SankhyaEntity<Cargo> {
-
+public class Cargo extends AbstractSankhyaEntity<Cargo> {
    private BigDecimal codUsu;
    private String descrCargo;
    private Timestamp dtAlter;
@@ -240,6 +239,11 @@ public class Cargo implements SankhyaEntity<Cargo> {
 
    public void setUsadoEsocial(String usadoEsocial) {
         this.usadoEsocial = usadoEsocial;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPCAR";
    }
 
    @Override

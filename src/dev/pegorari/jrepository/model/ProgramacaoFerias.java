@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProgramacaoFerias implements SankhyaEntity<ProgramacaoFerias> {
-
+public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> {
    private String abonoInicio;
    private BigDecimal abonoPec;
    private String atualFergoz;
@@ -249,6 +248,11 @@ public class ProgramacaoFerias implements SankhyaEntity<ProgramacaoFerias> {
 
    public void setPerQuitado(String perQuitado) {
         this.perQuitado = perQuitado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPFER";
    }
 
    @Override

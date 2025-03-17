@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
-
+public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> {
    private String ativo;
    private BigDecimal camadas;
    private String codBarra;
@@ -24,8 +23,8 @@ public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
    private BigDecimal tipGtinNfe;
    private String unidSelo;
    private String unidTrib;
-   private String untribExportacao;
-   private String descrUntribExport;
+   private String unTribExportacao;
+   private String descrUnTribExport;
    private String opcoesGerar0220;
    private BigDecimal qtdDecimaisUpf;
    private String undTribRecob;
@@ -174,20 +173,20 @@ public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
         this.unidTrib = unidTrib;
    }
 
-   public String getUntribExportacao() {
-        return untribExportacao;
+   public String getUnTribExportacao() {
+        return unTribExportacao;
    }
 
-   public void setUntribExportacao(String untribExportacao) {
-        this.untribExportacao = untribExportacao;
+   public void setUnTribExportacao(String unTribExportacao) {
+        this.unTribExportacao = unTribExportacao;
    }
 
-   public String getDescrUntribExport() {
-        return descrUntribExport;
+   public String getDescrUnTribExport() {
+        return descrUnTribExport;
    }
 
-   public void setDescrUntribExport(String descrUntribExport) {
-        this.descrUntribExport = descrUntribExport;
+   public void setDescrUnTribExport(String descrUnTribExport) {
+        this.descrUnTribExport = descrUnTribExport;
    }
 
    public String getOpcoesGerar0220() {
@@ -215,6 +214,11 @@ public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFVOA";
+   }
+
+   @Override
    public String getEntityName() {
         return "VolumeAlternativo";
    }
@@ -231,7 +235,7 @@ public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
         this.divideMultiplica = vo.asString("DIVIDEMULTIPLICA");
         this.lastro = vo.asBigDecimal("LASTRO");
         this.m3 = vo.asBigDecimal("M3");
-        this.multiplVlr = vo.asBigDecimal("MULTIPLVLR");
+        this.multiplVlr = vo.asBigDecimal("MULTIPVLR");
         this.opcaoSep = vo.asString("OPCAOSEP");
         this.quantidade = vo.asBigDecimal("QUANTIDADE");
         this.selecionado = vo.asString("SELECIONADO");
@@ -239,8 +243,8 @@ public class VolumeAlternativo implements SankhyaEntity<VolumeAlternativo> {
         this.tipGtinNfe = vo.asBigDecimal("TIPGTINNFE");
         this.unidSelo = vo.asString("UNIDSELO");
         this.unidTrib = vo.asString("UNIDTRIB");
-        this.untribExportacao = vo.asString("UNTRIBEXPORTACAO");
-        this.descrUntribExport = vo.asString("DESCRUNTRIBEXPORT");
+        this.unTribExportacao = vo.asString("UNTRIBEXPORTACAO");
+        this.descrUnTribExport = vo.asString("DESCRUNTRIBEXPORT");
         this.opcoesGerar0220 = vo.asString("OPCOESGERAR0220");
         this.qtdDecimaisUpf = vo.asBigDecimal("QTDDECIMAISUPF");
         this.undTribRecob = vo.asString("UNDTRIBRECOB");

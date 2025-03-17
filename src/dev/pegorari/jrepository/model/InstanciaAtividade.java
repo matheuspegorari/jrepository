@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InstanciaAtividade implements SankhyaEntity<InstanciaAtividade> {
-
+public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade> {
    private BigDecimal codUsu;
    private String statusInstCicloContQual;
    private String nroLote;
@@ -31,8 +30,8 @@ public class InstanciaAtividade implements SankhyaEntity<InstanciaAtividade> {
    private Timestamp dhAceite;
    private Timestamp dhFinal;
    private Timestamp dhInicio;
-   private BigDecimal ideFx;
-   private String idexecWflow;
+   private BigDecimal idEfx;
+   private String idExecWflow;
    private BigDecimal idIatv;
    private BigDecimal idIproc;
    private BigDecimal tempoGastoMin;
@@ -232,20 +231,20 @@ public class InstanciaAtividade implements SankhyaEntity<InstanciaAtividade> {
         this.dhInicio = dhInicio;
    }
 
-   public BigDecimal getIdeFx() {
-        return ideFx;
+   public BigDecimal getIdEfx() {
+        return idEfx;
    }
 
-   public void setIdeFx(BigDecimal ideFx) {
-        this.ideFx = ideFx;
+   public void setIdEfx(BigDecimal idEfx) {
+        this.idEfx = idEfx;
    }
 
-   public String getIdexecWflow() {
-        return idexecWflow;
+   public String getIdExecWflow() {
+        return idExecWflow;
    }
 
-   public void setIdexecWflow(String idexecWflow) {
-        this.idexecWflow = idexecWflow;
+   public void setIdExecWflow(String idExecWflow) {
+        this.idExecWflow = idExecWflow;
    }
 
    public BigDecimal getIdIatv() {
@@ -297,6 +296,11 @@ public class InstanciaAtividade implements SankhyaEntity<InstanciaAtividade> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRIATV";
+   }
+
+   @Override
    public String getEntityName() {
         return "InstanciaAtividade";
    }
@@ -327,8 +331,8 @@ public class InstanciaAtividade implements SankhyaEntity<InstanciaAtividade> {
         this.dhAceite = vo.asTimestamp("DHACEITE");
         this.dhFinal = vo.asTimestamp("DHFINAL");
         this.dhInicio = vo.asTimestamp("DHINICIO");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.idexecWflow = vo.asString("IDEXECWFLOW");
+        this.idEfx = vo.asBigDecimal("IDEFX");
+        this.idExecWflow = vo.asString("IDEXECWFLOW");
         this.idIatv = vo.asBigDecimal("IDIATV");
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.tempoGastoMin = vo.asBigDecimal("TEMPOGASTOMIN");

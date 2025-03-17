@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CargaHorariaRecursoHumano implements SankhyaEntity<CargaHorariaRecursoHumano> {
-
+public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorariaRecursoHumano> {
    private BigDecimal codCargaHor;
    private BigDecimal codRhp;
    private Timestamp dtFinalVigor;
@@ -42,6 +41,11 @@ public class CargaHorariaRecursoHumano implements SankhyaEntity<CargaHorariaRecu
 
    public void setDtInicioVigor(Timestamp dtInicioVigor) {
         this.dtInicioVigor = dtInicioVigor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCHR";
    }
 
    @Override

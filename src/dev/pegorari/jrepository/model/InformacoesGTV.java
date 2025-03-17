@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class InformacoesGTV implements SankhyaEntity<InformacoesGTV> {
-
+public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    private BigDecimal cargaInfGtv;
    private BigDecimal codVeiculo;
    private BigDecimal digVerInfGtv;
@@ -77,6 +76,11 @@ public class InformacoesGTV implements SankhyaEntity<InformacoesGTV> {
 
    public void setSubSerInfGtv(String subSerInfGtv) {
         this.subSerInfGtv = subSerInfGtv;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIGTV";
    }
 
    @Override

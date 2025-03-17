@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExperienciaProfissional implements SankhyaEntity<ExperienciaProfissional> {
-
+public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaProfissional> {
    private String atual;
    private String bairro;
    private String cep;
    private String cidade;
    private String complEnd;
-   private Timestamp dataAdm;
+   private Timestamp dataDm;
    private Timestamp dataDem;
    private String descAtividades;
    private String email;
@@ -70,12 +69,12 @@ public class ExperienciaProfissional implements SankhyaEntity<ExperienciaProfiss
         this.complEnd = complEnd;
    }
 
-   public Timestamp getDataAdm() {
-        return dataAdm;
+   public Timestamp getDataDm() {
+        return dataDm;
    }
 
-   public void setDataAdm(Timestamp dataAdm) {
-        this.dataAdm = dataAdm;
+   public void setDataDm(Timestamp dataDm) {
+        this.dataDm = dataDm;
    }
 
    public Timestamp getDataDem() {
@@ -207,6 +206,11 @@ public class ExperienciaProfissional implements SankhyaEntity<ExperienciaProfiss
    }
 
    @Override
+   public String getTableName() {
+        return "TFCEXP";
+   }
+
+   @Override
    public String getEntityName() {
         return "ExperienciaProfissional";
    }
@@ -218,9 +222,9 @@ public class ExperienciaProfissional implements SankhyaEntity<ExperienciaProfiss
         this.cep = vo.asString("CEP");
         this.cidade = vo.asString("CIDADE");
         this.complEnd = vo.asString("COMPLEND");
-        this.dataAdm = vo.asTimestamp("DATAADM");
-        this.dataDem = vo.asTimestamp("DATADEM");
-        this.descAtividades = vo.asString("DESCATIVIDADES");
+        this.dataDm = vo.asTimestamp("DATADM");
+        this.dataDem = vo.asTimestamp("DATDEM");
+        this.descAtividades = vo.asString("DESCRATIVIDADES");
         this.email = vo.asString("EMAIL");
         this.faixaSalarialFinal = vo.asBigDecimal("FAIXASALARIALFINAL");
         this.faixaSalarialInicial = vo.asBigDecimal("FAIXASALARIALINICIAL");

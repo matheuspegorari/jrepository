@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ServicoProdutoExecutante implements SankhyaEntity<ServicoProdutoExecutante> {
-
+public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdutoExecutante> {
    private BigDecimal codProd;
    private BigDecimal codServ;
    private BigDecimal codUsu;
@@ -32,6 +31,11 @@ public class ServicoProdutoExecutante implements SankhyaEntity<ServicoProdutoExe
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSEU";
    }
 
    @Override

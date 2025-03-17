@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AtributoDeSetup implements SankhyaEntity<AtributoDeSetup> {
-
+public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    private String descratributo;
    private BigDecimal codWcp;
    private String estadoWc;
@@ -86,6 +85,11 @@ public class AtributoDeSetup implements SankhyaEntity<AtributoDeSetup> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRAST";
    }
 
    @Override

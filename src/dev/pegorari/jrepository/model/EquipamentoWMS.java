@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EquipamentoWMS implements SankhyaEntity<EquipamentoWMS> {
-
+public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
    private String ativo;
    private BigDecimal codEquip;
    private BigDecimal codTipEquip;
@@ -41,6 +40,11 @@ public class EquipamentoWMS implements SankhyaEntity<EquipamentoWMS> {
 
    public void setDescricao(String descricao) {
         this.descricao = descricao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEQP";
    }
 
    @Override

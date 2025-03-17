@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExecutanteTarefa implements SankhyaEntity<ExecutanteTarefa> {
-
+public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    private BigDecimal chave;
    private BigDecimal codUsu;
    private BigDecimal codUsuExec;
@@ -69,6 +68,11 @@ public class ExecutanteTarefa implements SankhyaEntity<ExecutanteTarefa> {
 
    public void setTipTarefa(String tipTarefa) {
         this.tipTarefa = tipTarefa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWUXT";
    }
 
    @Override

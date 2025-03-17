@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemMateriaPrimaAlternativa implements SankhyaEntity<ItemMateriaPrimaAlternativa> {
-
+public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMateriaPrimaAlternativa> {
    private BigDecimal qtdFatNota;
    private BigDecimal qtdMistura;
    private BigDecimal ordem;
@@ -95,6 +94,11 @@ public class ItemMateriaPrimaAlternativa implements SankhyaEntity<ItemMateriaPri
 
    public void setIdIproc(BigDecimal idIproc) {
         this.idIproc = idIproc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRIMPA";
    }
 
    @Override

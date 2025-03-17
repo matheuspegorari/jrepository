@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CadastroMaquina implements SankhyaEntity<CadastroMaquina> {
-
+public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    private BigDecimal codEmp;
    private BigDecimal codMaq;
    private String codNacionalIdent;
@@ -149,6 +148,11 @@ public class CadastroMaquina implements SankhyaEntity<CadastroMaquina> {
 
    public void setCodEquip(BigDecimal codEquip) {
         this.codEquip = codEquip;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMAQ";
    }
 
    @Override

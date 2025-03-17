@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LigacaoPedidoNotaTemp implements SankhyaEntity<LigacaoPedidoNotaTemp> {
-
+public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNotaTemp> {
    private BigDecimal cusAtend;
-   private String nroAtoConcDraw;
+   private String nroAtoConcdraw;
    private BigDecimal nroMemorando;
    private String nroRegExport;
    private BigDecimal nuNota;
@@ -26,12 +25,12 @@ public class LigacaoPedidoNotaTemp implements SankhyaEntity<LigacaoPedidoNotaTem
         this.cusAtend = cusAtend;
    }
 
-   public String getNroAtoConcDraw() {
-        return nroAtoConcDraw;
+   public String getNroAtoConcdraw() {
+        return nroAtoConcdraw;
    }
 
-   public void setNroAtoConcDraw(String nroAtoConcDraw) {
-        this.nroAtoConcDraw = nroAtoConcDraw;
+   public void setNroAtoConcdraw(String nroAtoConcdraw) {
+        this.nroAtoConcdraw = nroAtoConcdraw;
    }
 
    public BigDecimal getNroMemorando() {
@@ -107,6 +106,11 @@ public class LigacaoPedidoNotaTemp implements SankhyaEntity<LigacaoPedidoNotaTem
    }
 
    @Override
+   public String getTableName() {
+        return "TGFLIGT";
+   }
+
+   @Override
    public String getEntityName() {
         return "LigacaoPedidoNotaTemp";
    }
@@ -114,7 +118,7 @@ public class LigacaoPedidoNotaTemp implements SankhyaEntity<LigacaoPedidoNotaTem
    @Override
    public LigacaoPedidoNotaTemp fromVO(DynamicVO vo) {
         this.cusAtend = vo.asBigDecimal("CUSATEND");
-        this.nroAtoConcDraw = vo.asString("NROATOCONCDRAW");
+        this.nroAtoConcdraw = vo.asString("NROATOCONCDRAW");
         this.nroMemorando = vo.asBigDecimal("NROMEMORANDO");
         this.nroRegExport = vo.asString("NROREGEXPORT");
         this.nuNota = vo.asBigDecimal("NUNOTA");

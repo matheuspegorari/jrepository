@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DependenciaLancamentoOP implements SankhyaEntity<DependenciaLancamentoOP> {
-
+public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLancamentoOP> {
    private String controlePa;
    private String tipoNroLote;
    private BigDecimal codProdPa;
@@ -131,6 +130,11 @@ public class DependenciaLancamentoOP implements SankhyaEntity<DependenciaLancame
 
    public void setConsideraEstoque(String consideraEstoque) {
         this.consideraEstoque = consideraEstoque;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRDLOP";
    }
 
    @Override

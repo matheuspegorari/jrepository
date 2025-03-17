@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Financeiro implements SankhyaEntity<Financeiro> {
-
+public class Financeiro extends AbstractSankhyaEntity<Financeiro> {
    private String tipMulta;
    private BigDecimal vlrALiberar;
    private BigDecimal vlrAtual;
@@ -30,7 +29,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
    private BigDecimal codBco;
    private BigDecimal codBcoCmc7;
    private BigDecimal codCc;
-   private BigDecimal codCenCus;
+   private BigDecimal codCencus;
    private BigDecimal codCfo;
    private BigDecimal codContato;
    private BigDecimal codCtaBcoInt;
@@ -133,7 +132,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
    private String nossoNum;
    private String nroCessaoFdic;
    private BigDecimal nroLoteGnre;
-   private BigDecimal nuAponta;
+   private BigDecimal nuApon;
    private BigDecimal nuBco;
    private BigDecimal nuCcr;
    private BigDecimal nuCompens;
@@ -197,7 +196,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
    private String timOrigem;
    private String timOrigReneg;
    private BigDecimal timParcela;
-   private BigDecimal timRenegCancLote;
+   private BigDecimal timRenegCanclote;
    private BigDecimal timRenegImv;
    private BigDecimal timRenegLote;
    private BigDecimal timRepInteligente;
@@ -242,7 +241,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
    private BigDecimal atrasoInicial;
    private BigDecimal prazoInicial;
    private BigDecimal percDesc;
-   private String monioCorEm;
+   private String monioCorem;
    private BigDecimal nuCkc;
    private String chaveNfeGnre;
    private String indReceFdCont;
@@ -475,12 +474,12 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.codCc = codCc;
    }
 
-   public BigDecimal getCodCenCus() {
-        return codCenCus;
+   public BigDecimal getCodCencus() {
+        return codCencus;
    }
 
-   public void setCodCenCus(BigDecimal codCenCus) {
-        this.codCenCus = codCenCus;
+   public void setCodCencus(BigDecimal codCencus) {
+        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodCfo() {
@@ -1299,12 +1298,12 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.nroLoteGnre = nroLoteGnre;
    }
 
-   public BigDecimal getNuAponta() {
-        return nuAponta;
+   public BigDecimal getNuApon() {
+        return nuApon;
    }
 
-   public void setNuAponta(BigDecimal nuAponta) {
-        this.nuAponta = nuAponta;
+   public void setNuApon(BigDecimal nuApon) {
+        this.nuApon = nuApon;
    }
 
    public BigDecimal getNuBco() {
@@ -1811,12 +1810,12 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.timParcela = timParcela;
    }
 
-   public BigDecimal getTimRenegCancLote() {
-        return timRenegCancLote;
+   public BigDecimal getTimRenegCanclote() {
+        return timRenegCanclote;
    }
 
-   public void setTimRenegCancLote(BigDecimal timRenegCancLote) {
-        this.timRenegCancLote = timRenegCancLote;
+   public void setTimRenegCanclote(BigDecimal timRenegCanclote) {
+        this.timRenegCanclote = timRenegCanclote;
    }
 
    public BigDecimal getTimRenegImv() {
@@ -2171,12 +2170,12 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.percDesc = percDesc;
    }
 
-   public String getMonioCorEm() {
-        return monioCorEm;
+   public String getMonioCorem() {
+        return monioCorem;
    }
 
-   public void setMonioCorEm(String monioCorEm) {
-        this.monioCorEm = monioCorEm;
+   public void setMonioCorem(String monioCorem) {
+        this.monioCorem = monioCorem;
    }
 
    public BigDecimal getNuCkc() {
@@ -2556,6 +2555,11 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFFIN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Financeiro";
    }
@@ -2570,22 +2574,22 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuBaixa = vo.asBigDecimal("CODUSUBAIXA");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.agenciaCmc7 = vo.asString("AGENCIACMC7");
+        this.agenciaCmc7 = vo.asString("AGENCIA_CMC7");
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.atraso = vo.asBigDecimal("ATRASO");
         this.autorizado = vo.asString("AUTORIZADO");
         this.baseIcms = vo.asBigDecimal("BASEICMS");
         this.carta = vo.asBigDecimal("CARTA");
         this.cartaoDesc = vo.asBigDecimal("CARTAODESC");
-        this.cgcCpfCmc7 = vo.asString("CGCCPFCMC7");
-        this.cgcCpfParc = vo.asString("CGCCPFPARC");
+        this.cgcCpfCmc7 = vo.asString("CGC_CPF_CMC7");
+        this.cgcCpfParc = vo.asString("CGC_CPF_PARC");
         this.chaveCte = vo.asString("CHAVECTE");
         this.chaveCteRef = vo.asString("CHAVECTEREF");
         this.codBarra = vo.asString("CODBARRA");
         this.codBco = vo.asBigDecimal("CODBCO");
-        this.codBcoCmc7 = vo.asBigDecimal("CODBCOCMC7");
+        this.codBcoCmc7 = vo.asBigDecimal("CODBCO_CMC7");
         this.codCc = vo.asBigDecimal("CODCC");
-        this.codCenCus = vo.asBigDecimal("CODCENCUS");
+        this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codCtaBcoInt = vo.asBigDecimal("CODCTABCOINT");
@@ -2639,7 +2643,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.retornadoAc = vo.asString("RETORNADOAC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.contabilizadoPdd = vo.asString("CONTABILIZADOPDD");
-        this.contaCmc7 = vo.asString("CONTACMC7");
+        this.contaCmc7 = vo.asString("CONTA_CMC7");
         this.statusLib = vo.asBigDecimal("STATUSLIB");
         this.tipJuro = vo.asString("TIPJURO");
         this.tipMarcCheq = vo.asString("TIPMARCCHEQ");
@@ -2684,11 +2688,11 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.naturezaOperDes = vo.asString("NATUREZAOPERDES");
         this.nfComplFix = vo.asBigDecimal("NFCOMPLFIX");
         this.nfEntSeqFix = vo.asString("NFENTSEQFIX");
-        this.nomeEmitenteCmc7 = vo.asString("NOMEEMITENTECMC7");
+        this.nomeEmitenteCmc7 = vo.asString("NOMEEMITENTE_CMC7");
         this.nossoNum = vo.asString("NOSSONUM");
         this.nroCessaoFdic = vo.asString("NROCESSAOFDIC");
         this.nroLoteGnre = vo.asBigDecimal("NROLOTEGNRE");
-        this.nuAponta = vo.asBigDecimal("NUAPONTA");
+        this.nuApon = vo.asBigDecimal("NUAPONTA");
         this.nuBco = vo.asBigDecimal("NUBCO");
         this.nuCcr = vo.asBigDecimal("NUCCR");
         this.nuCompens = vo.asBigDecimal("NUCOMPENS");
@@ -2720,7 +2724,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.recDesp = vo.asBigDecimal("RECDESP");
         this.recDespFilter = vo.asString("RECDESPFILTER");
         this.rejeicaoGnre = vo.asString("REJEICAOGNRE");
-        this.chequeRastreadoCmc7 = vo.asString("CHEQUERASTREADOCMC7");
+        this.chequeRastreadoCmc7 = vo.asString("CHEQUERASTREADO_CMC7");
         this.codIptu = vo.asBigDecimal("CODIPTU");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.idUnico = vo.asBigDecimal("IDUNICO");
@@ -2752,7 +2756,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.timOrigem = vo.asString("TIMORIGEM");
         this.timOrigReneg = vo.asString("TIMORIGRENEG");
         this.timParcela = vo.asBigDecimal("TIMPARCELA");
-        this.timRenegCancLote = vo.asBigDecimal("TIMRENEGCANCLOTE");
+        this.timRenegCanclote = vo.asBigDecimal("TIMRENEGCANCLOTE");
         this.timRenegImv = vo.asBigDecimal("TIMRENEGIMV");
         this.timRenegLote = vo.asBigDecimal("TIMRENEGLOTE");
         this.timRepInteligente = vo.asBigDecimal("TIMREPINTELIGENTE");
@@ -2797,7 +2801,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.atrasoInicial = vo.asBigDecimal("ATRASOINICIAL");
         this.prazoInicial = vo.asBigDecimal("PRAZOINICIAL");
         this.percDesc = vo.asBigDecimal("PERCDESC");
-        this.monioCorEm = vo.asString("MONIOCOREM");
+        this.monioCorem = vo.asString("MONIOCOREM");
         this.nuCkc = vo.asBigDecimal("NUCKC");
         this.chaveNfeGnre = vo.asString("CHAVENFEGNRE");
         this.indReceFdCont = vo.asString("INDRECEFDCONT");
@@ -2829,7 +2833,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.vlrLancOrig = vo.asBigDecimal("VLRLANCORIG");
         this.nroImport = vo.asBigDecimal("NROIMPORT");
         this.nuCaixa = vo.asBigDecimal("NUCAIXA");
-        this.sangDespPdv = vo.asString("SANGDESPPDV");
+        this.sangDespPdv = vo.asString("SANGDESPDV");
         this.codPror = vo.asString("CODPROR");
         this.codUsuPror = vo.asBigDecimal("CODUSUPROR");
         this.dtPror = vo.asTimestamp("DTPROR");
@@ -2842,7 +2846,7 @@ public class Financeiro implements SankhyaEntity<Financeiro> {
         this.pixTef = vo.asBigDecimal("PIXTEF");
         this.codOperacaoVendaMais = vo.asString("CODOPERACAOVENDAMAIS");
         this.dhAprovacaoVendaMais = vo.asTimestamp("DHAPROVACAOVENDAMAIS");
-        this.dhImpressao = vo.asTimestamp("DHIMPRESSAO");
+        this.dhImpressao = vo.asTimestamp("DH_IMPRESSAO");
         this.taxaVendaMais = vo.asBigDecimal("TAXAVENDAMAIS");
         this.vendaMais = vo.asString("VENDAMAIS");
         return this;

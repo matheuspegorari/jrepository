@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PlanoAcao implements SankhyaEntity<PlanoAcao> {
-
+public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    private BigDecimal codExe;
    private BigDecimal completude;
    private String esforcoPrevisto;
@@ -240,6 +239,11 @@ public class PlanoAcao implements SankhyaEntity<PlanoAcao> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMIPLA";
    }
 
    @Override

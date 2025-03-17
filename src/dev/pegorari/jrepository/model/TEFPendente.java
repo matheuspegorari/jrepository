@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TEFPendente implements SankhyaEntity<TEFPendente> {
-
+public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    private String autorizacao;
    private String bandeira;
    private String cartao;
    private String chave;
    private String codControle;
-   private BigDecimal codTipTit;
+   private BigDecimal codTiptit;
    private BigDecimal codUsu;
    private Timestamp dhTransacao;
    private String gateway;
@@ -65,12 +64,12 @@ public class TEFPendente implements SankhyaEntity<TEFPendente> {
         this.codControle = codControle;
    }
 
-   public BigDecimal getCodTipTit() {
-        return codTipTit;
+   public BigDecimal getCodTiptit() {
+        return codTiptit;
    }
 
-   public void setCodTipTit(BigDecimal codTipTit) {
-        this.codTipTit = codTipTit;
+   public void setCodTiptit(BigDecimal codTiptit) {
+        this.codTiptit = codTiptit;
    }
 
    public BigDecimal getCodUsu() {
@@ -162,6 +161,11 @@ public class TEFPendente implements SankhyaEntity<TEFPendente> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTSP";
+   }
+
+   @Override
    public String getEntityName() {
         return "TEFPendente";
    }
@@ -173,7 +177,7 @@ public class TEFPendente implements SankhyaEntity<TEFPendente> {
         this.cartao = vo.asString("CARTAO");
         this.chave = vo.asString("CHAVE");
         this.codControle = vo.asString("CODCONTROLE");
-        this.codTipTit = vo.asBigDecimal("CODTIPTIT");
+        this.codTiptit = vo.asBigDecimal("CODTIPTIT");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhTransacao = vo.asTimestamp("DHTRANSACAO");
         this.gateway = vo.asString("GATEWAY");

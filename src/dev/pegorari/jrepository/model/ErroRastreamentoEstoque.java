@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ErroRastreamentoEstoque implements SankhyaEntity<ErroRastreamentoEstoque> {
-
+public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreamentoEstoque> {
    private BigDecimal chave;
    private BigDecimal codEmp;
    private BigDecimal codProd;
@@ -69,6 +68,11 @@ public class ErroRastreamentoEstoque implements SankhyaEntity<ErroRastreamentoEs
 
    public void setTipoErro(String tipoErro) {
         this.tipoErro = tipoErro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRER";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TaxasEspeciais implements SankhyaEntity<TaxasEspeciais> {
-
+public class TaxasEspeciais extends AbstractSankhyaEntity<TaxasEspeciais> {
    private BigDecimal codProd;
    private BigDecimal codTipVenda;
    private BigDecimal taxaJuro;
@@ -32,6 +31,11 @@ public class TaxasEspeciais implements SankhyaEntity<TaxasEspeciais> {
 
    public void setTaxaJuro(BigDecimal taxaJuro) {
         this.taxaJuro = taxaJuro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTAX";
    }
 
    @Override

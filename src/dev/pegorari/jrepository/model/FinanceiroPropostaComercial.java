@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FinanceiroPropostaComercial implements SankhyaEntity<FinanceiroPropostaComercial> {
-
+public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<FinanceiroPropostaComercial> {
    private BigDecimal codNat;
    private BigDecimal nuProjeto;
    private String rateado;
@@ -59,6 +58,11 @@ public class FinanceiroPropostaComercial implements SankhyaEntity<FinanceiroProp
 
    public void setVlrDesp(BigDecimal vlrDesp) {
         this.vlrDesp = vlrDesp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGIFIN";
    }
 
    @Override

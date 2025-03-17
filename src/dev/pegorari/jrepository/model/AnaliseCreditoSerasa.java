@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AnaliseCreditoSerasa implements SankhyaEntity<AnaliseCreditoSerasa> {
-
+public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSerasa> {
    private String urlEnvio;
    private BigDecimal codUsu;
    private Timestamp dhConsulta;
@@ -87,6 +86,11 @@ public class AnaliseCreditoSerasa implements SankhyaEntity<AnaliseCreditoSerasa>
 
    public void setDtLimite(Timestamp dtLimite) {
         this.dtLimite = dtLimite;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSERACS";
    }
 
    @Override

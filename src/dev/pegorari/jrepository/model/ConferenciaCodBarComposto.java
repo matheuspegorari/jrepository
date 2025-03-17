@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConferenciaCodBarComposto implements SankhyaEntity<ConferenciaCodBarComposto> {
-
+public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<ConferenciaCodBarComposto> {
    private String codBarComp;
    private BigDecimal nuConf;
    private BigDecimal nuNota;
@@ -68,6 +67,11 @@ public class ConferenciaCodBarComposto implements SankhyaEntity<ConferenciaCodBa
 
    public void setNuConf2(BigDecimal nuConf2) {
         this.nuConf2 = nuConf2;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCBC";
    }
 
    @Override

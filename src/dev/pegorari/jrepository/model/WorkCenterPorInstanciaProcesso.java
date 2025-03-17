@@ -1,15 +1,14 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class WorkCenterPorInstanciaProcesso implements SankhyaEntity<WorkCenterPorInstanciaProcesso> {
-
+public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCenterPorInstanciaProcesso> {
    private BigDecimal codWcp;
-   private BigDecimal idAwc;
+   private BigDecimal idaWc;
    private BigDecimal idIproc;
-   private BigDecimal idEfx;
+   private BigDecimal ideFx;
    private BigDecimal prioridade;
 
    public BigDecimal getCodWcp() {
@@ -20,12 +19,12 @@ public class WorkCenterPorInstanciaProcesso implements SankhyaEntity<WorkCenterP
         this.codWcp = codWcp;
    }
 
-   public BigDecimal getIdAwc() {
-        return idAwc;
+   public BigDecimal getIdaWc() {
+        return idaWc;
    }
 
-   public void setIdAwc(BigDecimal idAwc) {
-        this.idAwc = idAwc;
+   public void setIdaWc(BigDecimal idaWc) {
+        this.idaWc = idaWc;
    }
 
    public BigDecimal getIdIproc() {
@@ -36,12 +35,12 @@ public class WorkCenterPorInstanciaProcesso implements SankhyaEntity<WorkCenterP
         this.idIproc = idIproc;
    }
 
-   public BigDecimal getIdEfx() {
-        return idEfx;
+   public BigDecimal getIdeFx() {
+        return ideFx;
    }
 
-   public void setIdEfx(BigDecimal idEfx) {
-        this.idEfx = idEfx;
+   public void setIdeFx(BigDecimal ideFx) {
+        this.ideFx = ideFx;
    }
 
    public BigDecimal getPrioridade() {
@@ -53,6 +52,11 @@ public class WorkCenterPorInstanciaProcesso implements SankhyaEntity<WorkCenterP
    }
 
    @Override
+   public String getTableName() {
+        return "TPRWXIP";
+   }
+
+   @Override
    public String getEntityName() {
         return "WorkCenterPorInstanciaProcesso";
    }
@@ -60,9 +64,9 @@ public class WorkCenterPorInstanciaProcesso implements SankhyaEntity<WorkCenterP
    @Override
    public WorkCenterPorInstanciaProcesso fromVO(DynamicVO vo) {
         this.codWcp = vo.asBigDecimal("CODWCP");
-        this.idAwc = vo.asBigDecimal("IDAWC");
+        this.idaWc = vo.asBigDecimal("IDAWC");
         this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.idEfx = vo.asBigDecimal("IDEFX");
+        this.ideFx = vo.asBigDecimal("IDEFX");
         this.prioridade = vo.asBigDecimal("PRIORIDADE");
         return this;
    }

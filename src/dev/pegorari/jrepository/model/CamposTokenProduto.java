@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CamposTokenProduto implements SankhyaEntity<CamposTokenProduto> {
-
+public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto> {
    private String campo;
    private BigDecimal codCfg;
    private String entidade;
@@ -50,6 +49,11 @@ public class CamposTokenProduto implements SankhyaEntity<CamposTokenProduto> {
 
    public void setTabela(String tabela) {
         this.tabela = tabela;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTOKCAM";
    }
 
    @Override

@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
-
-   private String apRestransp;
+public class BaseVencimento extends AbstractSankhyaEntity<BaseVencimento> {
+   private String apresTransp;
    private String ativo;
    private String baixa;
    private BigDecimal basePrazo;
-   private BigDecimal codCtactb1;
-   private BigDecimal codCtactb2;
+   private BigDecimal codCtaCtb1;
+   private BigDecimal codCtaCtb2;
    private BigDecimal codFormDescMax;
    private BigDecimal codFormDescMaxItens;
    private BigDecimal codObsPadrao;
@@ -45,7 +44,7 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
    private BigDecimal prazoMedMax;
    private BigDecimal prazoMin;
    private String somaPrazoCliente;
-   private String subTipVenda;
+   private String subTipoVenda;
    private BigDecimal taxaJuro;
    private BigDecimal taxaJurSim;
    private String tipJuro;
@@ -64,12 +63,12 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
    private BigDecimal formaRecBtoSocin;
    private String exVendaMais;
 
-   public String getApRestransp() {
-        return apRestransp;
+   public String getApresTransp() {
+        return apresTransp;
    }
 
-   public void setApRestransp(String apRestransp) {
-        this.apRestransp = apRestransp;
+   public void setApresTransp(String apresTransp) {
+        this.apresTransp = apresTransp;
    }
 
    public String getAtivo() {
@@ -96,20 +95,20 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
         this.basePrazo = basePrazo;
    }
 
-   public BigDecimal getCodCtactb1() {
-        return codCtactb1;
+   public BigDecimal getCodCtaCtb1() {
+        return codCtaCtb1;
    }
 
-   public void setCodCtactb1(BigDecimal codCtactb1) {
-        this.codCtactb1 = codCtactb1;
+   public void setCodCtaCtb1(BigDecimal codCtaCtb1) {
+        this.codCtaCtb1 = codCtaCtb1;
    }
 
-   public BigDecimal getCodCtactb2() {
-        return codCtactb2;
+   public BigDecimal getCodCtaCtb2() {
+        return codCtaCtb2;
    }
 
-   public void setCodCtactb2(BigDecimal codCtactb2) {
-        this.codCtactb2 = codCtactb2;
+   public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        this.codCtaCtb2 = codCtaCtb2;
    }
 
    public BigDecimal getCodFormDescMax() {
@@ -368,12 +367,12 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
         this.somaPrazoCliente = somaPrazoCliente;
    }
 
-   public String getSubTipVenda() {
-        return subTipVenda;
+   public String getSubTipoVenda() {
+        return subTipoVenda;
    }
 
-   public void setSubTipVenda(String subTipVenda) {
-        this.subTipVenda = subTipVenda;
+   public void setSubTipoVenda(String subTipoVenda) {
+        this.subTipoVenda = subTipoVenda;
    }
 
    public BigDecimal getTaxaJuro() {
@@ -513,18 +512,23 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTPV";
+   }
+
+   @Override
    public String getEntityName() {
         return "BaseVencimento";
    }
 
    @Override
    public BaseVencimento fromVO(DynamicVO vo) {
-        this.apRestransp = vo.asString("APRESTRANSP");
+        this.apresTransp = vo.asString("APRESTRANSP");
         this.ativo = vo.asString("ATIVO");
         this.baixa = vo.asString("BAIXA");
         this.basePrazo = vo.asBigDecimal("BASEPRAZO");
-        this.codCtactb1 = vo.asBigDecimal("CODCTACTB1");
-        this.codCtactb2 = vo.asBigDecimal("CODCTACTB2");
+        this.codCtaCtb1 = vo.asBigDecimal("CODCTACTB_1");
+        this.codCtaCtb2 = vo.asBigDecimal("CODCTACTB_2");
         this.codFormDescMax = vo.asBigDecimal("CODFORMDESCMAX");
         this.codFormDescMaxItens = vo.asBigDecimal("CODFORMDESCMAXITENS");
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
@@ -536,7 +540,7 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
         this.compraMax = vo.asBigDecimal("COMPRAMAX");
         this.descMax = vo.asBigDecimal("DESCMAX");
         this.descProm = vo.asString("DESCPROM");
-        this.descTipVenda = vo.asString("DESCTIPVENDA");
+        this.descTipVenda = vo.asString("DESCRTIPVENDA");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.editaSimulacao = vo.asString("EDITASIMULACAO");
         this.emiteBoleta = vo.asString("EMITEBOLETA");
@@ -557,7 +561,7 @@ public class BaseVencimento implements SankhyaEntity<BaseVencimento> {
         this.prazoMedMax = vo.asBigDecimal("PRAZOMEDMAX");
         this.prazoMin = vo.asBigDecimal("PRAZOMIN");
         this.somaPrazoCliente = vo.asString("SOMAPRAZOCLIENTE");
-        this.subTipVenda = vo.asString("SUBTIPVENDA");
+        this.subTipoVenda = vo.asString("SUBTIPOVENDA");
         this.taxaJuro = vo.asBigDecimal("TAXAJURO");
         this.taxaJurSim = vo.asBigDecimal("TAXAJURSIM");
         this.tipJuro = vo.asString("TIPJURO");

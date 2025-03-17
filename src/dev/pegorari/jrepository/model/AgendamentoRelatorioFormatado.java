@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AgendamentoRelatorioFormatado implements SankhyaEntity<AgendamentoRelatorioFormatado> {
-
+public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<AgendamentoRelatorioFormatado> {
    private BigDecimal codUsuResp;
    private String agendamento;
    private String arqModEmail;
@@ -114,6 +113,11 @@ public class AgendamentoRelatorioFormatado implements SankhyaEntity<AgendamentoR
 
    public void setEmailManual(char[] emailManual) {
         this.emailManual = emailManual;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIARF";
    }
 
    @Override

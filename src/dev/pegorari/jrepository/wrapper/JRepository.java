@@ -10,14 +10,14 @@ import java.util.List;
 
 public class JRepository {
     public static <T extends SankhyaEntity<T>> T findByPK(T template, Object... pkValues) throws Exception {
-        String instanceName = template.getEntityName();
-        DynamicVO vo = JapeFactory.dao(instanceName).findByPK(pkValues);
+        String entityName = template.getEntityName();
+        DynamicVO vo = JapeFactory.dao(entityName).findByPK(pkValues);
         return createEntity(template, vo);
     }
 
     public static <T extends SankhyaEntity<T>> List<T> find(T template, String where) throws Exception {
-        String instanceName = template.getEntityName();
-        Collection<DynamicVO> vos = JapeFactory.dao(instanceName).find(where);
+        String entityName = template.getEntityName();
+        Collection<DynamicVO> vos = JapeFactory.dao(entityName).find(where);
 
         List<T> entities = new ArrayList<>(vos.size());
         for (DynamicVO vo : vos) {
@@ -28,8 +28,8 @@ public class JRepository {
     }
 
     public static <T extends SankhyaEntity<T>> List<T> find(T template, String where, Object... params) throws Exception {
-        String instanceName = template.getEntityName();
-        Collection<DynamicVO> vos = JapeFactory.dao(instanceName).find(where, params);
+        String entityName = template.getEntityName();
+        Collection<DynamicVO> vos = JapeFactory.dao(entityName).find(where, params);
 
         List<T> entities = new ArrayList<>(vos.size());
         for (DynamicVO vo : vos) {

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RateioRecDesp implements SankhyaEntity<RateioRecDesp> {
-
+public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    private BigDecimal percRateio;
    private String digitado;
    private Timestamp dtAlter;
@@ -123,6 +122,11 @@ public class RateioRecDesp implements SankhyaEntity<RateioRecDesp> {
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRAT";
    }
 
    @Override

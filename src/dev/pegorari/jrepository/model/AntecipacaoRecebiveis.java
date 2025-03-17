@@ -1,94 +1,93 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AntecipacaoRecebiveis implements SankhyaEntity<AntecipacaoRecebiveis> {
-
-   private BigDecimal nuFinTitIof;
-   private String docAntBanc;
-   private Timestamp dtAntBanc;
-   private BigDecimal nuAntBanc;
-   private BigDecimal nuFinDespAdic;
-   private BigDecimal nuFinTitBan;
-   private BigDecimal nuFinTitJur;
-   private BigDecimal nuFinTitObr;
-   private BigDecimal nuFinTitOri;
+public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRecebiveis> {
+   private BigDecimal nuFintitiof;
+   private String docAntbanc;
+   private Timestamp dtAntbanc;
+   private BigDecimal nuAntbanc;
+   private BigDecimal nuFindespadic;
+   private BigDecimal nuFintitban;
+   private BigDecimal nuFintitjur;
+   private BigDecimal nuFintitobr;
+   private BigDecimal nuFintitori;
    private String statusAnt;
-   private BigDecimal nuFinDespOp;
+   private BigDecimal nuFindespop;
 
-   public BigDecimal getNuFinTitIof() {
-        return nuFinTitIof;
+   public BigDecimal getNuFintitiof() {
+        return nuFintitiof;
    }
 
-   public void setNuFinTitIof(BigDecimal nuFinTitIof) {
-        this.nuFinTitIof = nuFinTitIof;
+   public void setNuFintitiof(BigDecimal nuFintitiof) {
+        this.nuFintitiof = nuFintitiof;
    }
 
-   public String getDocAntBanc() {
-        return docAntBanc;
+   public String getDocAntbanc() {
+        return docAntbanc;
    }
 
-   public void setDocAntBanc(String docAntBanc) {
-        this.docAntBanc = docAntBanc;
+   public void setDocAntbanc(String docAntbanc) {
+        this.docAntbanc = docAntbanc;
    }
 
-   public Timestamp getDtAntBanc() {
-        return dtAntBanc;
+   public Timestamp getDtAntbanc() {
+        return dtAntbanc;
    }
 
-   public void setDtAntBanc(Timestamp dtAntBanc) {
-        this.dtAntBanc = dtAntBanc;
+   public void setDtAntbanc(Timestamp dtAntbanc) {
+        this.dtAntbanc = dtAntbanc;
    }
 
-   public BigDecimal getNuAntBanc() {
-        return nuAntBanc;
+   public BigDecimal getNuAntbanc() {
+        return nuAntbanc;
    }
 
-   public void setNuAntBanc(BigDecimal nuAntBanc) {
-        this.nuAntBanc = nuAntBanc;
+   public void setNuAntbanc(BigDecimal nuAntbanc) {
+        this.nuAntbanc = nuAntbanc;
    }
 
-   public BigDecimal getNuFinDespAdic() {
-        return nuFinDespAdic;
+   public BigDecimal getNuFindespadic() {
+        return nuFindespadic;
    }
 
-   public void setNuFinDespAdic(BigDecimal nuFinDespAdic) {
-        this.nuFinDespAdic = nuFinDespAdic;
+   public void setNuFindespadic(BigDecimal nuFindespadic) {
+        this.nuFindespadic = nuFindespadic;
    }
 
-   public BigDecimal getNuFinTitBan() {
-        return nuFinTitBan;
+   public BigDecimal getNuFintitban() {
+        return nuFintitban;
    }
 
-   public void setNuFinTitBan(BigDecimal nuFinTitBan) {
-        this.nuFinTitBan = nuFinTitBan;
+   public void setNuFintitban(BigDecimal nuFintitban) {
+        this.nuFintitban = nuFintitban;
    }
 
-   public BigDecimal getNuFinTitJur() {
-        return nuFinTitJur;
+   public BigDecimal getNuFintitjur() {
+        return nuFintitjur;
    }
 
-   public void setNuFinTitJur(BigDecimal nuFinTitJur) {
-        this.nuFinTitJur = nuFinTitJur;
+   public void setNuFintitjur(BigDecimal nuFintitjur) {
+        this.nuFintitjur = nuFintitjur;
    }
 
-   public BigDecimal getNuFinTitObr() {
-        return nuFinTitObr;
+   public BigDecimal getNuFintitobr() {
+        return nuFintitobr;
    }
 
-   public void setNuFinTitObr(BigDecimal nuFinTitObr) {
-        this.nuFinTitObr = nuFinTitObr;
+   public void setNuFintitobr(BigDecimal nuFintitobr) {
+        this.nuFintitobr = nuFintitobr;
    }
 
-   public BigDecimal getNuFinTitOri() {
-        return nuFinTitOri;
+   public BigDecimal getNuFintitori() {
+        return nuFintitori;
    }
 
-   public void setNuFinTitOri(BigDecimal nuFinTitOri) {
-        this.nuFinTitOri = nuFinTitOri;
+   public void setNuFintitori(BigDecimal nuFintitori) {
+        this.nuFintitori = nuFintitori;
    }
 
    public String getStatusAnt() {
@@ -99,12 +98,17 @@ public class AntecipacaoRecebiveis implements SankhyaEntity<AntecipacaoRecebivei
         this.statusAnt = statusAnt;
    }
 
-   public BigDecimal getNuFinDespOp() {
-        return nuFinDespOp;
+   public BigDecimal getNuFindespop() {
+        return nuFindespop;
    }
 
-   public void setNuFinDespOp(BigDecimal nuFinDespOp) {
-        this.nuFinDespOp = nuFinDespOp;
+   public void setNuFindespop(BigDecimal nuFindespop) {
+        this.nuFindespop = nuFindespop;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFANB";
    }
 
    @Override
@@ -114,17 +118,17 @@ public class AntecipacaoRecebiveis implements SankhyaEntity<AntecipacaoRecebivei
 
    @Override
    public AntecipacaoRecebiveis fromVO(DynamicVO vo) {
-        this.nuFinTitIof = vo.asBigDecimal("NUFINTITIOF");
-        this.docAntBanc = vo.asString("DOCANTBANC");
-        this.dtAntBanc = vo.asTimestamp("DTANTBANC");
-        this.nuAntBanc = vo.asBigDecimal("NUANTBANC");
-        this.nuFinDespAdic = vo.asBigDecimal("NUFINDESPADIC");
-        this.nuFinTitBan = vo.asBigDecimal("NUFINTITBAN");
-        this.nuFinTitJur = vo.asBigDecimal("NUFINTITJUR");
-        this.nuFinTitObr = vo.asBigDecimal("NUFINTITOBR");
-        this.nuFinTitOri = vo.asBigDecimal("NUFINTITORI");
+        this.nuFintitiof = vo.asBigDecimal("NUFINTITIOF");
+        this.docAntbanc = vo.asString("DOCANTBANC");
+        this.dtAntbanc = vo.asTimestamp("DTANTBANC");
+        this.nuAntbanc = vo.asBigDecimal("NUANTBANC");
+        this.nuFindespadic = vo.asBigDecimal("NUFINDESPADIC");
+        this.nuFintitban = vo.asBigDecimal("NUFINTITBAN");
+        this.nuFintitjur = vo.asBigDecimal("NUFINTITJUR");
+        this.nuFintitobr = vo.asBigDecimal("NUFINTITOBR");
+        this.nuFintitori = vo.asBigDecimal("NUFINTITORI");
         this.statusAnt = vo.asString("STATUSANT");
-        this.nuFinDespOp = vo.asBigDecimal("NUFINDESPOP");
+        this.nuFindespop = vo.asBigDecimal("NUFINDESPOP");
         return this;
    }
 }

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LogRemessa implements SankhyaEntity<LogRemessa> {
-
+public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    private String arquivo;
    private BigDecimal codCtabCoint;
    private BigDecimal codLayout;
@@ -69,6 +68,11 @@ public class LogRemessa implements SankhyaEntity<LogRemessa> {
 
    public void setNuRemessa(BigDecimal nuRemessa) {
         this.nuRemessa = nuRemessa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRC";
    }
 
    @Override

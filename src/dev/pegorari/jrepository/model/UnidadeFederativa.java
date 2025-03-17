@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
-
+public class UnidadeFederativa extends AbstractSankhyaEntity<UnidadeFederativa> {
    private BigDecimal codDetGnre;
    private BigDecimal codIbge;
    private BigDecimal codPais;
@@ -19,16 +18,16 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
    private BigDecimal codCampoExtraGnre;
    private BigDecimal codFcpStGnre;
    private String gerInfCampAdicGnre;
-   private BigDecimal tipTitGnreFcpst;
+   private BigDecimal tipTitGnreFcpSt;
    private String valorCampoExtra;
    private String versaoGnre;
    private String estornoNfe;
    private BigDecimal codCampoExtraGnre2;
    private String vlrPersGnre;
    private BigDecimal codClsVencDime;
-   private BigDecimal codClsVencDimeFcpst;
+   private BigDecimal codClsVencDimeFcpSt;
    private BigDecimal codRecDime;
-   private BigDecimal codRecDimeFcpst;
+   private BigDecimal codRecDimeFcpSt;
    private BigDecimal tipoDoc;
    private String tipoInfo;
    private String usaWebServiceGnre;
@@ -139,12 +138,12 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
         this.gerInfCampAdicGnre = gerInfCampAdicGnre;
    }
 
-   public BigDecimal getTipTitGnreFcpst() {
-        return tipTitGnreFcpst;
+   public BigDecimal getTipTitGnreFcpSt() {
+        return tipTitGnreFcpSt;
    }
 
-   public void setTipTitGnreFcpst(BigDecimal tipTitGnreFcpst) {
-        this.tipTitGnreFcpst = tipTitGnreFcpst;
+   public void setTipTitGnreFcpSt(BigDecimal tipTitGnreFcpSt) {
+        this.tipTitGnreFcpSt = tipTitGnreFcpSt;
    }
 
    public String getValorCampoExtra() {
@@ -195,12 +194,12 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
         this.codClsVencDime = codClsVencDime;
    }
 
-   public BigDecimal getCodClsVencDimeFcpst() {
-        return codClsVencDimeFcpst;
+   public BigDecimal getCodClsVencDimeFcpSt() {
+        return codClsVencDimeFcpSt;
    }
 
-   public void setCodClsVencDimeFcpst(BigDecimal codClsVencDimeFcpst) {
-        this.codClsVencDimeFcpst = codClsVencDimeFcpst;
+   public void setCodClsVencDimeFcpSt(BigDecimal codClsVencDimeFcpSt) {
+        this.codClsVencDimeFcpSt = codClsVencDimeFcpSt;
    }
 
    public BigDecimal getCodRecDime() {
@@ -211,12 +210,12 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
         this.codRecDime = codRecDime;
    }
 
-   public BigDecimal getCodRecDimeFcpst() {
-        return codRecDimeFcpst;
+   public BigDecimal getCodRecDimeFcpSt() {
+        return codRecDimeFcpSt;
    }
 
-   public void setCodRecDimeFcpst(BigDecimal codRecDimeFcpst) {
-        this.codRecDimeFcpst = codRecDimeFcpst;
+   public void setCodRecDimeFcpSt(BigDecimal codRecDimeFcpSt) {
+        this.codRecDimeFcpSt = codRecDimeFcpSt;
    }
 
    public BigDecimal getTipoDoc() {
@@ -260,6 +259,11 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIUFS";
+   }
+
+   @Override
    public String getEntityName() {
         return "UnidadeFederativa";
    }
@@ -279,21 +283,21 @@ public class UnidadeFederativa implements SankhyaEntity<UnidadeFederativa> {
         this.codCampoExtraGnre = vo.asBigDecimal("CODCAMPOEXTRAGNRE");
         this.codFcpStGnre = vo.asBigDecimal("CODFCPSTGNRE");
         this.gerInfCampAdicGnre = vo.asString("GERINFCAMPADICGNRE");
-        this.tipTitGnreFcpst = vo.asBigDecimal("TIPTITGNREFCPST");
+        this.tipTitGnreFcpSt = vo.asBigDecimal("TIPTITGNREFCPST");
         this.valorCampoExtra = vo.asString("VALORCAMPOEXTRA");
         this.versaoGnre = vo.asString("VERSAOGNRE");
         this.estornoNfe = vo.asString("ESTORNONFE");
         this.codCampoExtraGnre2 = vo.asBigDecimal("CODCAMPOEXTRAGNRE2");
         this.vlrPersGnre = vo.asString("VLRPERSGNRE");
         this.codClsVencDime = vo.asBigDecimal("CODCLSVENCDIME");
-        this.codClsVencDimeFcpst = vo.asBigDecimal("CODCLSVENCDIMEFCPST");
+        this.codClsVencDimeFcpSt = vo.asBigDecimal("CODCLSVENCDIMEFCPST");
         this.codRecDime = vo.asBigDecimal("CODRECDIME");
-        this.codRecDimeFcpst = vo.asBigDecimal("CODRECDIMEFCPST");
+        this.codRecDimeFcpSt = vo.asBigDecimal("CODRECDIMEFCPST");
         this.tipoDoc = vo.asBigDecimal("TIPODOC");
         this.tipoInfo = vo.asString("TIPOINFO");
         this.usaWebServiceGnre = vo.asString("USAWEBSERVICEGNRE");
         this.tabPrecoPf = vo.asBigDecimal("TABPRECOPF");
-        this.tabPrecoPmc = vo.asBigDecimal("TABPRECOPMC");
+        this.tabPrecoPmc = vo.asBigDecimal("TABPRECPMC");
         return this;
    }
 }

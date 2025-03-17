@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CEP implements SankhyaEntity<CEP> {
-
+public class CEP extends AbstractSankhyaEntity<CEP> {
    private String cep;
    private BigDecimal codBai;
    private BigDecimal codCid;
@@ -50,6 +49,11 @@ public class CEP implements SankhyaEntity<CEP> {
 
    public void setIntervalo(String intervalo) {
         this.intervalo = intervalo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICEP";
    }
 
    @Override

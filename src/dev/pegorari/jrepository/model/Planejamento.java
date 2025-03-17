@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Planejamento implements SankhyaEntity<Planejamento> {
-
+public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    private BigDecimal codUsuAvaliador;
    private String assuntoEmail;
    private BigDecimal codParc;
@@ -150,6 +149,11 @@ public class Planejamento implements SankhyaEntity<Planejamento> {
 
    public void setCodSmtp(BigDecimal codSmtp) {
         this.codSmtp = codSmtp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQPLA";
    }
 
    @Override

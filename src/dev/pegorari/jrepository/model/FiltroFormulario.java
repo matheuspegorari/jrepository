@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class FiltroFormulario implements SankhyaEntity<FiltroFormulario> {
-
+public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private String expressao;
@@ -60,6 +59,11 @@ public class FiltroFormulario implements SankhyaEntity<FiltroFormulario> {
 
    public void setRelationName(String relationName) {
         this.relationName = relationName;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSILIG";
    }
 
    @Override

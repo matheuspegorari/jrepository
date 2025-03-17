@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class HistoricoCopiaConfiguracaoUsu implements SankhyaEntity<HistoricoCopiaConfiguracaoUsu> {
-
+public class HistoricoCopiaConfiguracaoUsu extends AbstractSankhyaEntity<HistoricoCopiaConfiguracaoUsu> {
    private BigDecimal codUsu;
    private BigDecimal nuNico;
 
@@ -23,6 +22,11 @@ public class HistoricoCopiaConfiguracaoUsu implements SankhyaEntity<HistoricoCop
 
    public void setNuNico(BigDecimal nuNico) {
         this.nuNico = nuNico;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIHCU";
    }
 
    @Override

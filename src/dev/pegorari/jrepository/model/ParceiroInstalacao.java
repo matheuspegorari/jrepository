@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ParceiroInstalacao implements SankhyaEntity<ParceiroInstalacao> {
-
+public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao> {
    private BigDecimal codParc;
    private BigDecimal codProj;
    private String contato;
@@ -180,6 +179,11 @@ public class ParceiroInstalacao implements SankhyaEntity<ParceiroInstalacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSCPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "ParceiroInstalacao";
    }
@@ -196,15 +200,15 @@ public class ParceiroInstalacao implements SankhyaEntity<ParceiroInstalacao> {
         this.obs1 = vo.asString("OBS1");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.telefone = vo.asString("TELEFONE");
-        this.cgcCpf = vo.asBigDecimal("CGCCPF");
-        this.cidadeParc = vo.asString("CIDADEPARC");
-        this.complementoParc = vo.asString("COMPLEMENTOPARC");
-        this.enderecoParc = vo.asString("ENDERECOPARC");
-        this.estadoParc = vo.asString("ESTADOPARC");
-        this.numeroParc = vo.asString("NUMEROPARC");
-        this.telefoneParc = vo.asString("TELEFONEPARC");
-        this.tipoParc = vo.asString("TIPOPARC");
-        this.cepParc = vo.asString("CEPPARC");
+        this.cgcCpf = vo.asBigDecimal("CGC_CPF");
+        this.cidadeParc = vo.asString("CIDADE_PARC");
+        this.complementoParc = vo.asString("COMPLEMENTO_PARC");
+        this.enderecoParc = vo.asString("ENDERECO_PARC");
+        this.estadoParc = vo.asString("ESTADO_PARC");
+        this.numeroParc = vo.asString("NUMERO_PARC");
+        this.telefoneParc = vo.asString("TELEFONE_PARC");
+        this.tipoParc = vo.asString("TIPO_PARC");
+        this.cepParc = vo.asString("CEP_PARC");
         return this;
    }
 }

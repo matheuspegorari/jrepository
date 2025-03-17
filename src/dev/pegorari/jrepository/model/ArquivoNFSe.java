@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ArquivoNFSe implements SankhyaEntity<ArquivoNFSe> {
-
+public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    private char[] xmlIntegracao;
    private String codVerifNfse;
    private Timestamp dhemissNfse;
@@ -96,6 +95,11 @@ public class ArquivoNFSe implements SankhyaEntity<ArquivoNFSe> {
 
    public void setXmlDps(char[] xmlDps) {
         this.xmlDps = xmlDps;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNFSE";
    }
 
    @Override

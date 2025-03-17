@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PropriedadeElemento implements SankhyaEntity<PropriedadeElemento> {
-
+public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemento> {
    private Timestamp datVal;
    private BigDecimal decVal;
    private BigDecimal ideFx;
@@ -69,6 +68,11 @@ public class PropriedadeElemento implements SankhyaEntity<PropriedadeElemento> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRPEFX";
    }
 
    @Override

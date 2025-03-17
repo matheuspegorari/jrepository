@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EstruturaOrganograma implements SankhyaEntity<EstruturaOrganograma> {
-
+public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganograma> {
    private String descricao;
    private String descrRoot;
    private BigDecimal nuEst;
@@ -41,6 +40,11 @@ public class EstruturaOrganograma implements SankhyaEntity<EstruturaOrganograma>
 
    public void setTipVisual(String tipVisual) {
         this.tipVisual = tipVisual;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCES";
    }
 
    @Override

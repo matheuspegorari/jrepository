@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastreamentoEstoque> {
-
-   private BigDecimal baseStFcpIntAnt;
+public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRastreamentoEstoque> {
+   private BigDecimal baseStfcpIntAnt;
    private BigDecimal baseSubst;
    private BigDecimal codEmp;
    private BigDecimal codProd;
@@ -16,24 +15,24 @@ public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastream
    private String digitado;
    private BigDecimal nuNota;
    private BigDecimal nuNotaCompra;
-   private BigDecimal percStFcpIntAnt;
+   private BigDecimal percStfcpIntAnt;
    private BigDecimal qtdNeg;
    private BigDecimal sequencia;
    private BigDecimal sequenciaCompra;
    private BigDecimal vlrIcms;
-   private BigDecimal vlrStFcpIntAnt;
+   private BigDecimal vlrStfcpIntAnt;
    private BigDecimal vlrSubst;
    private BigDecimal percSubst;
    private BigDecimal codCfo;
    private Timestamp dtNeg;
    private String tipMov;
 
-   public BigDecimal getBaseStFcpIntAnt() {
-        return baseStFcpIntAnt;
+   public BigDecimal getBaseStfcpIntAnt() {
+        return baseStfcpIntAnt;
    }
 
-   public void setBaseStFcpIntAnt(BigDecimal baseStFcpIntAnt) {
-        this.baseStFcpIntAnt = baseStFcpIntAnt;
+   public void setBaseStfcpIntAnt(BigDecimal baseStfcpIntAnt) {
+        this.baseStfcpIntAnt = baseStfcpIntAnt;
    }
 
    public BigDecimal getBaseSubst() {
@@ -100,12 +99,12 @@ public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastream
         this.nuNotaCompra = nuNotaCompra;
    }
 
-   public BigDecimal getPercStFcpIntAnt() {
-        return percStFcpIntAnt;
+   public BigDecimal getPercStfcpIntAnt() {
+        return percStfcpIntAnt;
    }
 
-   public void setPercStFcpIntAnt(BigDecimal percStFcpIntAnt) {
-        this.percStFcpIntAnt = percStFcpIntAnt;
+   public void setPercStfcpIntAnt(BigDecimal percStfcpIntAnt) {
+        this.percStfcpIntAnt = percStfcpIntAnt;
    }
 
    public BigDecimal getQtdNeg() {
@@ -140,12 +139,12 @@ public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastream
         this.vlrIcms = vlrIcms;
    }
 
-   public BigDecimal getVlrStFcpIntAnt() {
-        return vlrStFcpIntAnt;
+   public BigDecimal getVlrStfcpIntAnt() {
+        return vlrStfcpIntAnt;
    }
 
-   public void setVlrStFcpIntAnt(BigDecimal vlrStFcpIntAnt) {
-        this.vlrStFcpIntAnt = vlrStFcpIntAnt;
+   public void setVlrStfcpIntAnt(BigDecimal vlrStfcpIntAnt) {
+        this.vlrStfcpIntAnt = vlrStfcpIntAnt;
    }
 
    public BigDecimal getVlrSubst() {
@@ -189,13 +188,18 @@ public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastream
    }
 
    @Override
+   public String getTableName() {
+        return "TGFIPRE";
+   }
+
+   @Override
    public String getEntityName() {
         return "ImpostoRastreamentoEstoque";
    }
 
    @Override
    public ImpostoRastreamentoEstoque fromVO(DynamicVO vo) {
-        this.baseStFcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
+        this.baseStfcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
         this.baseSubst = vo.asBigDecimal("BASESUBST");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");
@@ -204,12 +208,12 @@ public class ImpostoRastreamentoEstoque implements SankhyaEntity<ImpostoRastream
         this.digitado = vo.asString("DIGITADO");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuNotaCompra = vo.asBigDecimal("NUNOTACOMPRA");
-        this.percStFcpIntAnt = vo.asBigDecimal("PERCSTFCPINTANT");
+        this.percStfcpIntAnt = vo.asBigDecimal("PERCSTFCPINTANT");
         this.qtdNeg = vo.asBigDecimal("QTDNEG");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.sequenciaCompra = vo.asBigDecimal("SEQUENCIACOMPRA");
         this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrStFcpIntAnt = vo.asBigDecimal("VLRSTFCPINTANT");
+        this.vlrStfcpIntAnt = vo.asBigDecimal("VLRSTFCPINTANT");
         this.vlrSubst = vo.asBigDecimal("VLRSUBST");
         this.percSubst = vo.asBigDecimal("PERCSUBST");
         this.codCfo = vo.asBigDecimal("CODCFO");

@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AgendaWMS implements SankhyaEntity<AgendaWMS> {
-
+public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    private BigDecimal codDoca;
-   private BigDecimal codParcTransp;
+   private BigDecimal codParctransp;
    private Timestamp dhEntrada;
    private Timestamp dhPrevista;
    private Timestamp dhSaida;
@@ -23,12 +22,12 @@ public class AgendaWMS implements SankhyaEntity<AgendaWMS> {
         this.codDoca = codDoca;
    }
 
-   public BigDecimal getCodParcTransp() {
-        return codParcTransp;
+   public BigDecimal getCodParctransp() {
+        return codParctransp;
    }
 
-   public void setCodParcTransp(BigDecimal codParcTransp) {
-        this.codParcTransp = codParcTransp;
+   public void setCodParctransp(BigDecimal codParctransp) {
+        this.codParctransp = codParctransp;
    }
 
    public Timestamp getDhEntrada() {
@@ -72,6 +71,11 @@ public class AgendaWMS implements SankhyaEntity<AgendaWMS> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGWAGE";
+   }
+
+   @Override
    public String getEntityName() {
         return "AgendaWMS";
    }
@@ -79,7 +83,7 @@ public class AgendaWMS implements SankhyaEntity<AgendaWMS> {
    @Override
    public AgendaWMS fromVO(DynamicVO vo) {
         this.codDoca = vo.asBigDecimal("CODDOCA");
-        this.codParcTransp = vo.asBigDecimal("CODPARCTRANSP");
+        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.dhEntrada = vo.asTimestamp("DHENTRADA");
         this.dhPrevista = vo.asTimestamp("DHPREVISTA");
         this.dhSaida = vo.asTimestamp("DHSAIDA");

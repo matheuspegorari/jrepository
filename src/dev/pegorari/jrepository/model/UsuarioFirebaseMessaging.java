@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class UsuarioFirebaseMessaging implements SankhyaEntity<UsuarioFirebaseMessaging> {
-
+public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFirebaseMessaging> {
    private String codFcm;
    private Timestamp dhRegistro;
    private BigDecimal codUsu;
@@ -51,6 +50,11 @@ public class UsuarioFirebaseMessaging implements SankhyaEntity<UsuarioFirebaseMe
 
    public void setPlataforma(String plataforma) {
         this.plataforma = plataforma;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIFCM";
    }
 
    @Override

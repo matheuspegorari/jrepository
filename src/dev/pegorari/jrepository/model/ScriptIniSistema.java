@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
-public class ScriptIniSistema implements SankhyaEntity<ScriptIniSistema> {
-
+public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
    private String nome;
    private String execucao;
    private Timestamp dtExecucao;
@@ -32,6 +31,11 @@ public class ScriptIniSistema implements SankhyaEntity<ScriptIniSistema> {
 
    public void setDtExecucao(Timestamp dtExecucao) {
         this.dtExecucao = dtExecucao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSISCI";
    }
 
    @Override

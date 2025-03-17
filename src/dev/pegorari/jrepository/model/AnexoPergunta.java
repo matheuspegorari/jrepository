@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AnexoPergunta implements SankhyaEntity<AnexoPergunta> {
-
+public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    private BigDecimal codPerg;
    private byte[] conteudo;
    private String descricao;
@@ -59,6 +58,11 @@ public class AnexoPergunta implements SankhyaEntity<AnexoPergunta> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQANE";
    }
 
    @Override

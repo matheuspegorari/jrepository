@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Pais implements SankhyaEntity<Pais> {
-
+public class Pais extends AbstractSankhyaEntity<Pais> {
    private String abreviatura;
    private BigDecimal codPais;
    private BigDecimal codPaisFis;
@@ -50,6 +49,11 @@ public class Pais implements SankhyaEntity<Pais> {
 
    public void setTimNacionalidad(String timNacionalidad) {
         this.timNacionalidad = timNacionalidad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPAI";
    }
 
    @Override

@@ -1,10 +1,9 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
-public class I18n implements SankhyaEntity<I18n> {
-
+public class I18n extends AbstractSankhyaEntity<I18n> {
    private String locale;
    private String texto;
    private String chave;
@@ -31,6 +30,11 @@ public class I18n implements SankhyaEntity<I18n> {
 
    public void setChave(String chave) {
         this.chave = chave;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDI18N";
    }
 
    @Override

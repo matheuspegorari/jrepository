@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemNota implements SankhyaEntity<ItemNota> {
-
+public class ItemNota extends AbstractSankhyaEntity<ItemNota> {
    private BigDecimal aliqIcms;
    private BigDecimal aliqIcmsRed;
    private BigDecimal aliqIpi;
@@ -66,7 +65,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    private BigDecimal codEnqIpi;
    private BigDecimal vlrUnitLiqMoe;
    private BigDecimal baseSubstitAnt;
-   private BigDecimal baseSubstSemRed;
+   private BigDecimal baseSubstitSemRed;
    private BigDecimal codCav;
    private BigDecimal codCfo;
    private BigDecimal codCfps;
@@ -74,9 +73,9 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    private BigDecimal codExec;
    private BigDecimal codLocalDest;
    private BigDecimal codLocalOrig;
-   private BigDecimal codMotDesonerIcms;
+   private BigDecimal codMotDesoneraIcms;
    private BigDecimal codObsPadrao;
-   private BigDecimal codParcExec;
+   private BigDecimal codParceExec;
    private BigDecimal codProc;
    private BigDecimal codProd;
    private BigDecimal codPromo;
@@ -140,7 +139,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    private BigDecimal qtdUnidPad;
    private BigDecimal qtdWms;
    private String referencia;
-   private String refFor;
+   private String refForn;
    private String reserva;
    private String seqPedido2;
    private BigDecimal sequencia;
@@ -181,7 +180,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    private String tipoSeparacao;
    private String nroProcesso;
    private BigDecimal baseSubstitUnitOrig;
-   private BigDecimal vlrSubstUnitOrig;
+   private BigDecimal vlrSubstitUnitOrig;
    private BigDecimal percDescFornecedor;
    private String statusProc;
    private String operAtual;
@@ -202,7 +201,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    private BigDecimal percUsaquDecpe;
    private BigDecimal vlrCusAquDecpe;
    private BigDecimal baseIcmsStFrete;
-   private BigDecimal codMotDesonerSt;
+   private BigDecimal codMotDesoneraSt;
    private BigDecimal vlrRepRedSt;
    private String unidade;
    private String tipEntrega;
@@ -692,12 +691,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.baseSubstitAnt = baseSubstitAnt;
    }
 
-   public BigDecimal getBaseSubstSemRed() {
-        return baseSubstSemRed;
+   public BigDecimal getBaseSubstitSemRed() {
+        return baseSubstitSemRed;
    }
 
-   public void setBaseSubstSemRed(BigDecimal baseSubstSemRed) {
-        this.baseSubstSemRed = baseSubstSemRed;
+   public void setBaseSubstitSemRed(BigDecimal baseSubstitSemRed) {
+        this.baseSubstitSemRed = baseSubstitSemRed;
    }
 
    public BigDecimal getCodCav() {
@@ -756,12 +755,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.codLocalOrig = codLocalOrig;
    }
 
-   public BigDecimal getCodMotDesonerIcms() {
-        return codMotDesonerIcms;
+   public BigDecimal getCodMotDesoneraIcms() {
+        return codMotDesoneraIcms;
    }
 
-   public void setCodMotDesonerIcms(BigDecimal codMotDesonerIcms) {
-        this.codMotDesonerIcms = codMotDesonerIcms;
+   public void setCodMotDesoneraIcms(BigDecimal codMotDesoneraIcms) {
+        this.codMotDesoneraIcms = codMotDesoneraIcms;
    }
 
    public BigDecimal getCodObsPadrao() {
@@ -772,12 +771,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.codObsPadrao = codObsPadrao;
    }
 
-   public BigDecimal getCodParcExec() {
-        return codParcExec;
+   public BigDecimal getCodParceExec() {
+        return codParceExec;
    }
 
-   public void setCodParcExec(BigDecimal codParcExec) {
-        this.codParcExec = codParcExec;
+   public void setCodParceExec(BigDecimal codParceExec) {
+        this.codParceExec = codParceExec;
    }
 
    public BigDecimal getCodProc() {
@@ -1284,12 +1283,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.referencia = referencia;
    }
 
-   public String getRefFor() {
-        return refFor;
+   public String getRefForn() {
+        return refForn;
    }
 
-   public void setRefFor(String refFor) {
-        this.refFor = refFor;
+   public void setRefForn(String refForn) {
+        this.refForn = refForn;
    }
 
    public String getReserva() {
@@ -1612,12 +1611,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.baseSubstitUnitOrig = baseSubstitUnitOrig;
    }
 
-   public BigDecimal getVlrSubstUnitOrig() {
-        return vlrSubstUnitOrig;
+   public BigDecimal getVlrSubstitUnitOrig() {
+        return vlrSubstitUnitOrig;
    }
 
-   public void setVlrSubstUnitOrig(BigDecimal vlrSubstUnitOrig) {
-        this.vlrSubstUnitOrig = vlrSubstUnitOrig;
+   public void setVlrSubstitUnitOrig(BigDecimal vlrSubstitUnitOrig) {
+        this.vlrSubstitUnitOrig = vlrSubstitUnitOrig;
    }
 
    public BigDecimal getPercDescFornecedor() {
@@ -1780,12 +1779,12 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.baseIcmsStFrete = baseIcmsStFrete;
    }
 
-   public BigDecimal getCodMotDesonerSt() {
-        return codMotDesonerSt;
+   public BigDecimal getCodMotDesoneraSt() {
+        return codMotDesoneraSt;
    }
 
-   public void setCodMotDesonerSt(BigDecimal codMotDesonerSt) {
-        this.codMotDesonerSt = codMotDesonerSt;
+   public void setCodMotDesoneraSt(BigDecimal codMotDesoneraSt) {
+        this.codMotDesoneraSt = codMotDesoneraSt;
    }
 
    public BigDecimal getVlrRepRedSt() {
@@ -1917,6 +1916,11 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFITE";
+   }
+
+   @Override
    public String getEntityName() {
         return "ItemNota";
    }
@@ -1982,7 +1986,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.codEnqIpi = vo.asBigDecimal("CODENQIPI");
         this.vlrUnitLiqMoe = vo.asBigDecimal("VLRUNITLIQMOE");
         this.baseSubstitAnt = vo.asBigDecimal("BASESUBSTITANT");
-        this.baseSubstSemRed = vo.asBigDecimal("BASESUBSTSEMRED");
+        this.baseSubstitSemRed = vo.asBigDecimal("BASESUBSTSEMRED");
         this.codCav = vo.asBigDecimal("CODCAV");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codCfps = vo.asBigDecimal("CODCFPS");
@@ -1990,9 +1994,9 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.codLocalDest = vo.asBigDecimal("CODLOCALDEST");
         this.codLocalOrig = vo.asBigDecimal("CODLOCALORIG");
-        this.codMotDesonerIcms = vo.asBigDecimal("CODMOTDESONERICMS");
+        this.codMotDesoneraIcms = vo.asBigDecimal("CODMOTDESONERAICMS");
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
-        this.codParcExec = vo.asBigDecimal("CODPARCEXEC");
+        this.codParceExec = vo.asBigDecimal("CODPARCEXEC");
         this.codProc = vo.asBigDecimal("CODPROC");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codPromo = vo.asBigDecimal("CODPROMO");
@@ -2056,7 +2060,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.qtdUnidPad = vo.asBigDecimal("QTDUNIDPAD");
         this.qtdWms = vo.asBigDecimal("QTDWMS");
         this.referencia = vo.asString("REFERENCIA");
-        this.refFor = vo.asString("REFFOR");
+        this.refForn = vo.asString("REFFORN");
         this.reserva = vo.asString("RESERVA");
         this.seqPedido2 = vo.asString("SEQPEDIDO2");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
@@ -2097,7 +2101,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.tipoSeparacao = vo.asString("TIPOSEPARACAO");
         this.nroProcesso = vo.asString("NROPROCESSO");
         this.baseSubstitUnitOrig = vo.asBigDecimal("BASESUBSTITUNITORIG");
-        this.vlrSubstUnitOrig = vo.asBigDecimal("VLRSUBSTUNITORIG");
+        this.vlrSubstitUnitOrig = vo.asBigDecimal("VLRSUBSTUNITORIG");
         this.percDescFornecedor = vo.asBigDecimal("PERCDESCFORNECEDOR");
         this.statusProc = vo.asString("STATUSPROC");
         this.operAtual = vo.asString("OPERATUAL");
@@ -2118,7 +2122,7 @@ public class ItemNota implements SankhyaEntity<ItemNota> {
         this.percUsaquDecpe = vo.asBigDecimal("PERCUSAQUDECPE");
         this.vlrCusAquDecpe = vo.asBigDecimal("VLRCUSAQUDECPE");
         this.baseIcmsStFrete = vo.asBigDecimal("BASEICMSSTFRETE");
-        this.codMotDesonerSt = vo.asBigDecimal("CODMOTDESONERST");
+        this.codMotDesoneraSt = vo.asBigDecimal("CODMOTDESONERAST");
         this.vlrRepRedSt = vo.asBigDecimal("VLRREPREDST");
         this.unidade = vo.asString("UNIDADE");
         this.tipEntrega = vo.asString("TIPENTREGA");

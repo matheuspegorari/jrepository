@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoEnvioNotaSefaz implements SankhyaEntity<HistoricoEnvioNotaSefaz> {
-
+public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvioNotaSefaz> {
    private BigDecimal sequencia;
    private Timestamp dhExec;
    private BigDecimal tipoServExec;
@@ -60,6 +59,11 @@ public class HistoricoEnvioNotaSefaz implements SankhyaEntity<HistoricoEnvioNota
 
    public void setNuAgendamento(BigDecimal nuAgendamento) {
         this.nuAgendamento = nuAgendamento;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFHEN";
    }
 
    @Override

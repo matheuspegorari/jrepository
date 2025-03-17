@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TipoNegociacao implements SankhyaEntity<TipoNegociacao> {
-
+public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    private String apresTransp;
    private String ativo;
    private String baixa;
@@ -513,6 +512,11 @@ public class TipoNegociacao implements SankhyaEntity<TipoNegociacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTPV";
+   }
+
+   @Override
    public String getEntityName() {
         return "TipoNegociacao";
    }
@@ -523,8 +527,8 @@ public class TipoNegociacao implements SankhyaEntity<TipoNegociacao> {
         this.ativo = vo.asString("ATIVO");
         this.baixa = vo.asString("BAIXA");
         this.basePrazo = vo.asBigDecimal("BASEPRAZO");
-        this.codCtaCtb1 = vo.asBigDecimal("CODCTACTB1");
-        this.codCtaCtb2 = vo.asBigDecimal("CODCTACTB2");
+        this.codCtaCtb1 = vo.asBigDecimal("CODCTACTB_1");
+        this.codCtaCtb2 = vo.asBigDecimal("CODCTACTB_2");
         this.codFormDescMax = vo.asBigDecimal("CODFORMDESCMAX");
         this.codFormDescMaxItens = vo.asBigDecimal("CODFORMDESCMAXITENS");
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
@@ -536,7 +540,7 @@ public class TipoNegociacao implements SankhyaEntity<TipoNegociacao> {
         this.compraMax = vo.asBigDecimal("COMPRAMAX");
         this.descMax = vo.asBigDecimal("DESCMAX");
         this.descProm = vo.asString("DESCPROM");
-        this.descTipVenda = vo.asString("DESCTIPVENDA");
+        this.descTipVenda = vo.asString("DESCRTIPVENDA");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.editaSimulacao = vo.asString("EDITASIMULACAO");
         this.emiteBoleta = vo.asString("EMITEBOLETA");

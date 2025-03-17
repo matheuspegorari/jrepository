@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class BotaoAcao implements SankhyaEntity<BotaoAcao> {
-
+public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    private BigDecimal codModulo;
    private char[] config;
    private String controlaAcesso;
@@ -95,6 +94,11 @@ public class BotaoAcao implements SankhyaEntity<BotaoAcao> {
 
    public void setTeclaAtalho(String teclaAtalho) {
         this.teclaAtalho = teclaAtalho;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIBTA";
    }
 
    @Override

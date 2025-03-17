@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GNREUnidadeFederativa implements SankhyaEntity<GNREUnidadeFederativa> {
-
+public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFederativa> {
    private BigDecimal codCampoExtraGnre;
    private BigDecimal codDetGnre;
    private BigDecimal codFcpstGnre;
@@ -194,6 +193,11 @@ public class GNREUnidadeFederativa implements SankhyaEntity<GNREUnidadeFederativ
 
    public void setTipoInfo(String tipoInfo) {
         this.tipoInfo = tipoInfo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIGUF";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NoEstrutura implements SankhyaEntity<NoEstrutura> {
-
+public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    private BigDecimal chaveRegistro;
    private BigDecimal codEmp;
    private BigDecimal nivel;
@@ -68,6 +67,11 @@ public class NoEstrutura implements SankhyaEntity<NoEstrutura> {
 
    public void setNuNoPai(BigDecimal nuNoPai) {
         this.nuNoPai = nuNoPai;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNES";
    }
 
    @Override

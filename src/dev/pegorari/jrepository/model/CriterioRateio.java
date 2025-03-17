@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CriterioRateio implements SankhyaEntity<CriterioRateio> {
-
+public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    private String automatico;
    private BigDecimal codCencus;
    private BigDecimal codCriterio;
@@ -86,6 +85,11 @@ public class CriterioRateio implements SankhyaEntity<CriterioRateio> {
 
    public void setNumContrato(BigDecimal numContrato) {
         this.numContrato = numContrato;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCRI";
    }
 
    @Override

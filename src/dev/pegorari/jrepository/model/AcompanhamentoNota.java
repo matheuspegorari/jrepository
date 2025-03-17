@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AcompanhamentoNota implements SankhyaEntity<AcompanhamentoNota> {
-
+public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota> {
    private BigDecimal codUsu;
    private Timestamp dhOcor;
    private String digitado;
@@ -105,6 +104,11 @@ public class AcompanhamentoNota implements SankhyaEntity<AcompanhamentoNota> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFACT";
    }
 
    @Override

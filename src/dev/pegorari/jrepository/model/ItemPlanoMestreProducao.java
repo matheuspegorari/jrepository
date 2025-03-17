@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemPlanoMestreProducao implements SankhyaEntity<ItemPlanoMestreProducao> {
-
+public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMestreProducao> {
    private BigDecimal qtdDemAjustada;
    private String fixado;
    private String prodInterm;
@@ -330,6 +329,11 @@ public class ItemPlanoMestreProducao implements SankhyaEntity<ItemPlanoMestrePro
 
    public void setSeqNota(BigDecimal seqNota) {
         this.seqNota = seqNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRIMPS";
    }
 
    @Override

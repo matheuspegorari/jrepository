@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoVeiculo implements SankhyaEntity<HistoricoVeiculo> {
-
+public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    private String ativo;
    private BigDecimal codParctransp;
    private BigDecimal codUsu;
@@ -78,6 +77,11 @@ public class HistoricoVeiculo implements SankhyaEntity<HistoricoVeiculo> {
 
    public void setPreco(BigDecimal preco) {
         this.preco = preco;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTFR";
    }
 
    @Override

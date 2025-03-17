@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EtapaPredecessora implements SankhyaEntity<EtapaPredecessora> {
-
+public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> {
    private BigDecimal nuFap;
    private BigDecimal nuMetapa;
    private BigDecimal nuMetapaPred;
@@ -41,6 +40,11 @@ public class EtapaPredecessora implements SankhyaEntity<EtapaPredecessora> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSEPD";
    }
 
    @Override

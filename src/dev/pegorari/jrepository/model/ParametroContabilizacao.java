@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ParametroContabilizacao implements SankhyaEntity<ParametroContabilizacao> {
-
+public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroContabilizacao> {
    private String ctaCtbConst;
    private String dc;
    private String formula;
@@ -194,6 +193,11 @@ public class ParametroContabilizacao implements SankhyaEntity<ParametroContabili
 
    public void setTipEmpCompany(String tipEmpCompany) {
         this.tipEmpCompany = tipEmpCompany;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCTB";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
-public class InformacaoRegistroExportacao implements SankhyaEntity<InformacaoRegistroExportacao> {
-
+public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<InformacaoRegistroExportacao> {
    private Timestamp dtRe;
    private String nroDeclaracao;
    private String nroRe;
@@ -32,6 +31,11 @@ public class InformacaoRegistroExportacao implements SankhyaEntity<InformacaoReg
 
    public void setNroRe(String nroRe) {
         this.nroRe = nroRe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEXPR";
    }
 
    @Override

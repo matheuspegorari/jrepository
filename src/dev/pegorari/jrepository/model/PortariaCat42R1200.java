@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PortariaCat42R1200 implements SankhyaEntity<PortariaCat42R1200> {
-
+public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200> {
    private String cgcCpf;
    private BigDecimal baseIcmstot;
    private BigDecimal codCfo;
@@ -261,13 +260,18 @@ public class PortariaCat42R1200 implements SankhyaEntity<PortariaCat42R1200> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAT42R1200";
+   }
+
+   @Override
    public String getEntityName() {
         return "PortariaCat42R1200";
    }
 
    @Override
    public PortariaCat42R1200 fromVO(DynamicVO vo) {
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.baseIcmstot = vo.asBigDecimal("BASEICMSTOT");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codEmp = vo.asBigDecimal("CODEMP");

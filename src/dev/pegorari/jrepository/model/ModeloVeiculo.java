@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ModeloVeiculo implements SankhyaEntity<ModeloVeiculo> {
-
+public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    private BigDecimal cilindrada;
    private BigDecimal codModVei;
    private String combustivel;
@@ -41,6 +40,11 @@ public class ModeloVeiculo implements SankhyaEntity<ModeloVeiculo> {
 
    public void setDescrModVei(String descrModVei) {
         this.descrModVei = descrModVei;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMVE";
    }
 
    @Override

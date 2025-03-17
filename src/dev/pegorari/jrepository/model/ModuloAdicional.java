@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ModuloAdicional implements SankhyaEntity<ModuloAdicional> {
-
+public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
    private BigDecimal codModulo;
    private String descrModulo;
    private String resourceId;
@@ -32,6 +31,11 @@ public class ModuloAdicional implements SankhyaEntity<ModuloAdicional> {
 
    public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIMOD";
    }
 
    @Override

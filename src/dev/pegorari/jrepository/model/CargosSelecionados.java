@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CargosSelecionados implements SankhyaEntity<CargosSelecionados> {
-
+public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados> {
    private BigDecimal codCargo;
    private BigDecimal nuCurriculo;
    private String triagem;
@@ -41,6 +40,11 @@ public class CargosSelecionados implements SankhyaEntity<CargosSelecionados> {
 
    public void setCandidato(String candidato) {
         this.candidato = candidato;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFCCAR";
    }
 
    @Override

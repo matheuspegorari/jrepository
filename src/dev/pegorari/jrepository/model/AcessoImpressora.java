@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AcessoImpressora implements SankhyaEntity<AcessoImpressora> {
-
+public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    private BigDecimal codigo;
    private String nome;
    private BigDecimal nuPrinter;
@@ -50,6 +49,11 @@ public class AcessoImpressora implements SankhyaEntity<AcessoImpressora> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIAPRN";
    }
 
    @Override

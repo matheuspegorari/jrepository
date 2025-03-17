@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
-
+public class CabecalhoNota extends AbstractSankhyaEntity<CabecalhoNota> {
    private BigDecimal codObsPadrao;
    private BigDecimal codParc;
    private BigDecimal codParcConsignatario;
@@ -48,7 +47,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
    private BigDecimal hrMov;
    private BigDecimal icmsFrete;
    private BigDecimal ipiEmb;
-   private String irfRetido;
+   private String irFretido;
    private String issRetido;
    private BigDecimal kmVeiculo;
    private String lacres;
@@ -57,7 +56,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
    private String localColeta;
    private String localEntrega;
    private BigDecimal m3;
-   private BigDecimal m3aEntregar;
+   private BigDecimal m3AEntregar;
    private String marca;
    private String modeloNfDes;
    private String naturezaOperDes;
@@ -65,8 +64,8 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
    private BigDecimal nroCaixa;
    private BigDecimal nroRedz;
    private BigDecimal nuConfAtual;
-   private BigDecimal nuLoteNfe;
-   private BigDecimal nuLoteNfse;
+   private BigDecimal nuLotEnfe;
+   private BigDecimal nuLotEnfse;
    private BigDecimal numAleatorio;
    private BigDecimal numCf;
    private BigDecimal numContrato;
@@ -268,7 +267,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
    private String agrupFinNota;
    private BigDecimal codCidOrigem;
    private BigDecimal codCidDestino;
-   private String classificMs;
+   private String classifIcms;
    private BigDecimal nuFop;
    private BigDecimal codUfEntrega;
    private BigDecimal codUfOrigem;
@@ -703,12 +702,12 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.ipiEmb = ipiEmb;
    }
 
-   public String getIrfRetido() {
-        return irfRetido;
+   public String getIrFretido() {
+        return irFretido;
    }
 
-   public void setIrfRetido(String irfRetido) {
-        this.irfRetido = irfRetido;
+   public void setIrFretido(String irFretido) {
+        this.irFretido = irFretido;
    }
 
    public String getIssRetido() {
@@ -775,12 +774,12 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.m3 = m3;
    }
 
-   public BigDecimal getM3aEntregar() {
-        return m3aEntregar;
+   public BigDecimal getM3AEntregar() {
+        return m3AEntregar;
    }
 
-   public void setM3aEntregar(BigDecimal m3aEntregar) {
-        this.m3aEntregar = m3aEntregar;
+   public void setM3AEntregar(BigDecimal m3AEntregar) {
+        this.m3AEntregar = m3AEntregar;
    }
 
    public String getMarca() {
@@ -839,20 +838,20 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.nuConfAtual = nuConfAtual;
    }
 
-   public BigDecimal getNuLoteNfe() {
-        return nuLoteNfe;
+   public BigDecimal getNuLotEnfe() {
+        return nuLotEnfe;
    }
 
-   public void setNuLoteNfe(BigDecimal nuLoteNfe) {
-        this.nuLoteNfe = nuLoteNfe;
+   public void setNuLotEnfe(BigDecimal nuLotEnfe) {
+        this.nuLotEnfe = nuLotEnfe;
    }
 
-   public BigDecimal getNuLoteNfse() {
-        return nuLoteNfse;
+   public BigDecimal getNuLotEnfse() {
+        return nuLotEnfse;
    }
 
-   public void setNuLoteNfse(BigDecimal nuLoteNfse) {
-        this.nuLoteNfse = nuLoteNfse;
+   public void setNuLotEnfse(BigDecimal nuLotEnfse) {
+        this.nuLotEnfse = nuLotEnfse;
    }
 
    public BigDecimal getNumAleatorio() {
@@ -2463,12 +2462,12 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.codCidDestino = codCidDestino;
    }
 
-   public String getClassificMs() {
-        return classificMs;
+   public String getClassifIcms() {
+        return classifIcms;
    }
 
-   public void setClassificMs(String classificMs) {
-        this.classificMs = classificMs;
+   public void setClassifIcms(String classifIcms) {
+        this.classifIcms = classifIcms;
    }
 
    public BigDecimal getNuFop() {
@@ -3312,6 +3311,11 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAB";
+   }
+
+   @Override
    public String getEntityName() {
         return "CabecalhoNota";
    }
@@ -3359,7 +3363,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.hrMov = vo.asBigDecimal("HRMOV");
         this.icmsFrete = vo.asBigDecimal("ICMSFRETE");
         this.ipiEmb = vo.asBigDecimal("IPIEMB");
-        this.irfRetido = vo.asString("IRFRETIDO");
+        this.irFretido = vo.asString("IRFRETIDO");
         this.issRetido = vo.asString("ISSRETIDO");
         this.kmVeiculo = vo.asBigDecimal("KMVEICULO");
         this.lacres = vo.asString("LACRES");
@@ -3368,7 +3372,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.localColeta = vo.asString("LOCALCOLETA");
         this.localEntrega = vo.asString("LOCALENTREGA");
         this.m3 = vo.asBigDecimal("M3");
-        this.m3aEntregar = vo.asBigDecimal("M3AENTREGAR");
+        this.m3AEntregar = vo.asBigDecimal("M3AENTREGAR");
         this.marca = vo.asString("MARCA");
         this.modeloNfDes = vo.asString("MODELONFDES");
         this.naturezaOperDes = vo.asString("NATUREZAOPERDES");
@@ -3376,8 +3380,8 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.nroCaixa = vo.asBigDecimal("NROCAIXA");
         this.nroRedz = vo.asBigDecimal("NROREDZ");
         this.nuConfAtual = vo.asBigDecimal("NUCONFATUAL");
-        this.nuLoteNfe = vo.asBigDecimal("NULOTENFE");
-        this.nuLoteNfse = vo.asBigDecimal("NULOTENFSE");
+        this.nuLotEnfe = vo.asBigDecimal("NULOTENFE");
+        this.nuLotEnfse = vo.asBigDecimal("NULOTENFSE");
         this.numAleatorio = vo.asBigDecimal("NUMALEATORIO");
         this.numCf = vo.asBigDecimal("NUMCF");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
@@ -3433,7 +3437,7 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
         this.baseSubstSemRed = vo.asBigDecimal("BASESUBSTSEMRED");
         this.chaveNfe = vo.asString("CHAVENFE");
-        this.cifFob = vo.asString("CIFFOB");
+        this.cifFob = vo.asString("CIF_FOB");
         this.codCc = vo.asBigDecimal("CODCC");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCid = vo.asBigDecimal("CODCID");
@@ -3574,12 +3578,12 @@ public class CabecalhoNota implements SankhyaEntity<CabecalhoNota> {
         this.vlrAfrmm = vo.asBigDecimal("VLRAFRMM");
         this.vlrFreteCalc = vo.asBigDecimal("VLRFRETECALC");
         this.vlrLiqItemNfe = vo.asString("VLRLIQITEMNFE");
-        this.vlrPrestaAfrmm = vo.asBigDecimal("VLRPRESTAAFRMM");
+        this.vlrPrestaAfrmm = vo.asBigDecimal("VLRPRESTAFRMM");
         this.vlrRepRedTotSemDesc = vo.asBigDecimal("VLRREPREDTOTSEMDESC");
         this.agrupFinNota = vo.asString("AGRUPFINNOTA");
         this.codCidOrigem = vo.asBigDecimal("CODCIDORIGEM");
         this.codCidDestino = vo.asBigDecimal("CODCIDDESTINO");
-        this.classificMs = vo.asString("CLASSIFICMS");
+        this.classifIcms = vo.asString("CLASSIFICMS");
         this.nuFop = vo.asBigDecimal("NUFOP");
         this.codUfEntrega = vo.asBigDecimal("CODUFENTREGA");
         this.codUfOrigem = vo.asBigDecimal("CODUFORIGEM");

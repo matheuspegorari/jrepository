@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabRelatoriosPersonalizados implements SankhyaEntity<CabRelatoriosPersonalizados> {
-
+public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelatoriosPersonalizados> {
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private BigDecimal nuPeriodoCtb;
@@ -42,6 +41,11 @@ public class CabRelatoriosPersonalizados implements SankhyaEntity<CabRelatoriosP
 
    public void setTabela(BigDecimal tabela) {
         this.tabela = tabela;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBCRP";
    }
 
    @Override

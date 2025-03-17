@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Transportadora implements SankhyaEntity<Transportadora> {
-
+public class Transportadora extends AbstractSankhyaEntity<Transportadora> {
    private String identInscEstad;
-   private String implAudolote;
+   private String implAudLote;
    private String indNatRet;
    private String inscEstadNauf;
    private String agencia;
@@ -54,8 +53,8 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    private BigDecimal codUsuCobr;
    private BigDecimal codVend;
    private String complemento;
-   private String contaCesso;
-   private BigDecimal csTipIent;
+   private String contAcesso;
+   private BigDecimal csTipEnt;
    private BigDecimal csTipIsai;
    private String ctaAdiant;
    private String descBonif;
@@ -149,7 +148,7 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    private String impAgrupFin;
    private String indAquisicao;
    private String indComercializacao;
-   private BigDecimal uniDImport;
+   private BigDecimal uniImport;
    private String inscMun;
    private String ipiIncIcms;
    private String latitude;
@@ -202,10 +201,10 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    private String tipJuro;
    private String tipoFatur;
    private String tipoGerBoleto;
-   private String tipoPessoa;
+   private String tipPessoa;
    private BigDecimal tolerInadImp;
    private String transportadora;
-   private String usaTabCrdForn;
+   private String usaTabCrForn;
    private String usuario;
    private String valDescGrdCar;
    private String vendedor;
@@ -229,13 +228,13 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    private BigDecimal basePrazoEconect;
    private String tiposParc;
    private String enviaPedEmailTop;
-   private String motNaoReterIssqn;
+   private String motNaoReterIssQn;
    private String sitEspecialResp;
    private BigDecimal provaCresc;
    private BigDecimal saldoDisp;
    private String tipLotacao;
    private String chavePix;
-   private String desconsideraEscBase;
+   private String desconsidEscBase;
    private BigDecimal codIdentCons;
    private BigDecimal tipClienteServCom;
    private String utilizaNucadParc;
@@ -244,7 +243,7 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    private String atNuVersao;
    private BigDecimal nuVersao;
    private String considTotItensTrib;
-   private String deduzIpiBcPisCof;
+   private String deduzIpiBcPisCf;
    private String consParcAdrCst;
    private String desconsDescInss;
    private String emailCte;
@@ -259,12 +258,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.identInscEstad = identInscEstad;
    }
 
-   public String getImplAudolote() {
-        return implAudolote;
+   public String getImplAudLote() {
+        return implAudLote;
    }
 
-   public void setImplAudolote(String implAudolote) {
-        this.implAudolote = implAudolote;
+   public void setImplAudLote(String implAudLote) {
+        this.implAudLote = implAudLote;
    }
 
    public String getIndNatRet() {
@@ -627,20 +626,20 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.complemento = complemento;
    }
 
-   public String getContaCesso() {
-        return contaCesso;
+   public String getContAcesso() {
+        return contAcesso;
    }
 
-   public void setContaCesso(String contaCesso) {
-        this.contaCesso = contaCesso;
+   public void setContAcesso(String contAcesso) {
+        this.contAcesso = contAcesso;
    }
 
-   public BigDecimal getCsTipIent() {
-        return csTipIent;
+   public BigDecimal getCsTipEnt() {
+        return csTipEnt;
    }
 
-   public void setCsTipIent(BigDecimal csTipIent) {
-        this.csTipIent = csTipIent;
+   public void setCsTipEnt(BigDecimal csTipEnt) {
+        this.csTipEnt = csTipEnt;
    }
 
    public BigDecimal getCsTipIsai() {
@@ -1387,12 +1386,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.indComercializacao = indComercializacao;
    }
 
-   public BigDecimal getUniDImport() {
-        return uniDImport;
+   public BigDecimal getUniImport() {
+        return uniImport;
    }
 
-   public void setUniDImport(BigDecimal uniDImport) {
-        this.uniDImport = uniDImport;
+   public void setUniImport(BigDecimal uniImport) {
+        this.uniImport = uniImport;
    }
 
    public String getInscMun() {
@@ -1811,12 +1810,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.tipoGerBoleto = tipoGerBoleto;
    }
 
-   public String getTipoPessoa() {
-        return tipoPessoa;
+   public String getTipPessoa() {
+        return tipPessoa;
    }
 
-   public void setTipoPessoa(String tipoPessoa) {
-        this.tipoPessoa = tipoPessoa;
+   public void setTipPessoa(String tipPessoa) {
+        this.tipPessoa = tipPessoa;
    }
 
    public BigDecimal getTolerInadImp() {
@@ -1835,12 +1834,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.transportadora = transportadora;
    }
 
-   public String getUsaTabCrdForn() {
-        return usaTabCrdForn;
+   public String getUsaTabCrForn() {
+        return usaTabCrForn;
    }
 
-   public void setUsaTabCrdForn(String usaTabCrdForn) {
-        this.usaTabCrdForn = usaTabCrdForn;
+   public void setUsaTabCrForn(String usaTabCrForn) {
+        this.usaTabCrForn = usaTabCrForn;
    }
 
    public String getUsuario() {
@@ -2027,12 +2026,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.enviaPedEmailTop = enviaPedEmailTop;
    }
 
-   public String getMotNaoReterIssqn() {
-        return motNaoReterIssqn;
+   public String getMotNaoReterIssQn() {
+        return motNaoReterIssQn;
    }
 
-   public void setMotNaoReterIssqn(String motNaoReterIssqn) {
-        this.motNaoReterIssqn = motNaoReterIssqn;
+   public void setMotNaoReterIssQn(String motNaoReterIssQn) {
+        this.motNaoReterIssQn = motNaoReterIssQn;
    }
 
    public String getSitEspecialResp() {
@@ -2075,12 +2074,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.chavePix = chavePix;
    }
 
-   public String getDesconsideraEscBase() {
-        return desconsideraEscBase;
+   public String getDesconsidEscBase() {
+        return desconsidEscBase;
    }
 
-   public void setDesconsideraEscBase(String desconsideraEscBase) {
-        this.desconsideraEscBase = desconsideraEscBase;
+   public void setDesconsidEscBase(String desconsidEscBase) {
+        this.desconsidEscBase = desconsidEscBase;
    }
 
    public BigDecimal getCodIdentCons() {
@@ -2147,12 +2146,12 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.considTotItensTrib = considTotItensTrib;
    }
 
-   public String getDeduzIpiBcPisCof() {
-        return deduzIpiBcPisCof;
+   public String getDeduzIpiBcPisCf() {
+        return deduzIpiBcPisCf;
    }
 
-   public void setDeduzIpiBcPisCof(String deduzIpiBcPisCof) {
-        this.deduzIpiBcPisCof = deduzIpiBcPisCof;
+   public void setDeduzIpiBcPisCf(String deduzIpiBcPisCf) {
+        this.deduzIpiBcPisCf = deduzIpiBcPisCf;
    }
 
    public String getConsParcAdrCst() {
@@ -2196,6 +2195,11 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPAR";
+   }
+
+   @Override
    public String getEntityName() {
         return "Transportadora";
    }
@@ -2203,7 +2207,7 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
    @Override
    public Transportadora fromVO(DynamicVO vo) {
         this.identInscEstad = vo.asString("IDENTINSCESTAD");
-        this.implAudolote = vo.asString("IMPLAUDOLOTE");
+        this.implAudLote = vo.asString("IMPLAUDOLOTE");
         this.indNatRet = vo.asString("INDNATRET");
         this.inscEstadNauf = vo.asString("INSCESTADNAUF");
         this.agencia = vo.asString("AGENCIA");
@@ -2217,7 +2221,7 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.calcInss = vo.asString("CALCINSS");
         this.cei = vo.asString("CEI");
         this.cep = vo.asString("CEP");
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.classificMs = vo.asString("CLASSIFICMS");
         this.cliente = vo.asString("CLIENTE");
         this.codAge = vo.asString("CODAGE");
@@ -2249,13 +2253,13 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.codUsuCobr = vo.asBigDecimal("CODUSUCOBR");
         this.codVend = vo.asBigDecimal("CODVEND");
         this.complemento = vo.asString("COMPLEMENTO");
-        this.contaCesso = vo.asString("CONTACESSO");
-        this.csTipIent = vo.asBigDecimal("CSTIPIENT");
+        this.contAcesso = vo.asString("CONTACESSO");
+        this.csTipEnt = vo.asBigDecimal("CSTIPIENT");
         this.csTipIsai = vo.asBigDecimal("CSTIPISAI");
         this.ctaAdiant = vo.asString("CTAADIANT");
         this.descBonif = vo.asString("DESCBONIF");
         this.descFin = vo.asBigDecimal("DESCFIN");
-        this.descRota = vo.asString("DESCROTA");
+        this.descRota = vo.asString("DESCRROTA");
         this.descStIva = vo.asString("DESCSTIVA");
         this.diaSem = vo.asBigDecimal("DIASEM");
         this.diasVarPagto = vo.asBigDecimal("DIASVARPAGTO");
@@ -2344,7 +2348,7 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.impAgrupFin = vo.asString("IMPAGRUPFIN");
         this.indAquisicao = vo.asString("INDAQUISICAO");
         this.indComercializacao = vo.asString("INDCOMERCIALIZACAO");
-        this.uniDImport = vo.asBigDecimal("UNIDIMPORT");
+        this.uniImport = vo.asBigDecimal("UNIDIMPORT");
         this.inscMun = vo.asString("INSCMUN");
         this.ipiIncIcms = vo.asString("IPIINCICMS");
         this.latitude = vo.asString("LATITUDE");
@@ -2397,10 +2401,10 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.tipJuro = vo.asString("TIPJURO");
         this.tipoFatur = vo.asString("TIPOFATUR");
         this.tipoGerBoleto = vo.asString("TIPOGERBOLETO");
-        this.tipoPessoa = vo.asString("TIPOPESSOA");
+        this.tipPessoa = vo.asString("TIPPESSOA");
         this.tolerInadImp = vo.asBigDecimal("TOLERINADIMP");
         this.transportadora = vo.asString("TRANSPORTADORA");
-        this.usaTabCrdForn = vo.asString("USATABCRDFORN");
+        this.usaTabCrForn = vo.asString("USATABCRFORN");
         this.usuario = vo.asString("USUARIO");
         this.valDescGrdCar = vo.asString("VALDESCGRDCAR");
         this.vendedor = vo.asString("VENDEDOR");
@@ -2423,23 +2427,23 @@ public class Transportadora implements SankhyaEntity<Transportadora> {
         this.perfilEconect = vo.asString("PERFILECONECT");
         this.basePrazoEconect = vo.asBigDecimal("BASEPRAZOECONECT");
         this.tiposParc = vo.asString("TIPOSPARC");
-        this.enviaPedEmailTop = vo.asString("ENVIAPEDEMAILTOP");
-        this.motNaoReterIssqn = vo.asString("MOTNAORETERISSQN");
+        this.enviaPedEmailTop = vo.asString("ENVIPEDEMAILTOP");
+        this.motNaoReterIssQn = vo.asString("MOTNAORETERISSQN");
         this.sitEspecialResp = vo.asString("SITESPECIALRESP");
         this.provaCresc = vo.asBigDecimal("PROVACRESC");
         this.saldoDisp = vo.asBigDecimal("SALDODISP");
         this.tipLotacao = vo.asString("TIPLOTACAO");
         this.chavePix = vo.asString("CHAVEPIX");
-        this.desconsideraEscBase = vo.asString("DESCONSIDERAESCBASE");
+        this.desconsidEscBase = vo.asString("DESCONSIDESCBASE");
         this.codIdentCons = vo.asBigDecimal("CODIDENTCONS");
         this.tipClienteServCom = vo.asBigDecimal("TIPCLIENTESERVCOM");
         this.utilizaNucadParc = vo.asString("UTILIZANUCADPARC");
         this.provaCrescCac = vo.asBigDecimal("PROVACRESCCAC");
         this.saldoDispCac = vo.asBigDecimal("SALDODISPCAC");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.considTotItensTrib = vo.asString("CONSIDTOTITENSTRIB");
-        this.deduzIpiBcPisCof = vo.asString("DEDUZIPIBCPISCOF");
+        this.deduzIpiBcPisCf = vo.asString("DEDUZIPIBCPISCF");
         this.consParcAdrCst = vo.asString("CONSPARCADRCST");
         this.desconsDescInss = vo.asString("DESCONSDESCINSS");
         this.emailCte = vo.asString("EMAILCTE");

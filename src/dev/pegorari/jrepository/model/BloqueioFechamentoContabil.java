@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class BloqueioFechamentoContabil implements SankhyaEntity<BloqueioFechamentoContabil> {
-
+public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFechamentoContabil> {
    private Timestamp dhInclusao;
    private Timestamp dtFechamentoBco;
    private Timestamp dtFechamentoCtb;
@@ -213,6 +212,11 @@ public class BloqueioFechamentoContabil implements SankhyaEntity<BloqueioFechame
 
    public void setRefFixa(String refFixa) {
         this.refFixa = refFixa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBBFC";
    }
 
    @Override

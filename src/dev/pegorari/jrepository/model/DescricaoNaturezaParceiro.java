@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DescricaoNaturezaParceiro implements SankhyaEntity<DescricaoNaturezaParceiro> {
-
+public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNaturezaParceiro> {
    private BigDecimal codNat;
    private BigDecimal codParc;
    private String descrNat;
@@ -32,6 +31,11 @@ public class DescricaoNaturezaParceiro implements SankhyaEntity<DescricaoNaturez
 
    public void setDescrNat(String descrNat) {
         this.descrNat = descrNat;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDNP";
    }
 
    @Override

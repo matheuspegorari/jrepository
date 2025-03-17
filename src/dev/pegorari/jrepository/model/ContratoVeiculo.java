@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ContratoVeiculo implements SankhyaEntity<ContratoVeiculo> {
-
+public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    private BigDecimal codServ;
    private BigDecimal codUsu;
    private BigDecimal codVeiculo;
@@ -105,6 +104,11 @@ public class ContratoVeiculo implements SankhyaEntity<ContratoVeiculo> {
 
    public void setTelefone(String telefone) {
         this.telefone = telefone;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSCVE";
    }
 
    @Override

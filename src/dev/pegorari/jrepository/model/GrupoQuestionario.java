@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class GrupoQuestionario implements SankhyaEntity<GrupoQuestionario> {
-
+public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> {
    private String analitico;
    private String ativo;
    private BigDecimal codGrupoQuest;
@@ -78,6 +77,11 @@ public class GrupoQuestionario implements SankhyaEntity<GrupoQuestionario> {
 
    public void setGrau(BigDecimal grau) {
         this.grau = grau;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQGRQ";
    }
 
    @Override

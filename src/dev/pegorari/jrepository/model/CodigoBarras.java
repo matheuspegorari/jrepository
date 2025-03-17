@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CodigoBarras implements SankhyaEntity<CodigoBarras> {
-
+public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    private String codBarra;
    private BigDecimal codProd;
    private BigDecimal codUsu;
@@ -51,6 +50,11 @@ public class CodigoBarras implements SankhyaEntity<CodigoBarras> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFBAR";
    }
 
    @Override

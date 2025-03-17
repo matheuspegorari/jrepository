@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RespostaAvisoSistema implements SankhyaEntity<RespostaAvisoSistema> {
-
+public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSistema> {
    private BigDecimal codUsu;
    private BigDecimal nuAviso;
    private BigDecimal nuRespAviso;
@@ -32,6 +31,11 @@ public class RespostaAvisoSistema implements SankhyaEntity<RespostaAvisoSistema>
 
    public void setNuRespAviso(BigDecimal nuRespAviso) {
         this.nuRespAviso = nuRespAviso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIRAV";
    }
 
    @Override

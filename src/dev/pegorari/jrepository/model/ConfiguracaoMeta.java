@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
-
+public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    private String investimento;
    private BigDecimal grupoNat;
    private BigDecimal local;
@@ -46,14 +45,14 @@ public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
    private BigDecimal codUsuAprov;
    private BigDecimal controle;
    private BigDecimal data;
-   private String descMeta;
+   private String descricaoMeta;
    private Timestamp dtAprov;
    private BigDecimal empresa;
    private BigDecimal executante;
    private BigDecimal grupo;
    private String apresCod;
    private String ignorCnaoPrev;
-   private String valPrevIgor;
+   private String valorPrevigor;
    private String campoSubstituto;
    private String metaPorQtd;
    private BigDecimal dtIniCorc;
@@ -370,12 +369,12 @@ public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
         this.data = data;
    }
 
-   public String getDescMeta() {
-        return descMeta;
+   public String getDescricaoMeta() {
+        return descricaoMeta;
    }
 
-   public void setDescMeta(String descMeta) {
-        this.descMeta = descMeta;
+   public void setDescricaoMeta(String descricaoMeta) {
+        this.descricaoMeta = descricaoMeta;
    }
 
    public Timestamp getDtAprov() {
@@ -426,12 +425,12 @@ public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
         this.ignorCnaoPrev = ignorCnaoPrev;
    }
 
-   public String getValPrevIgor() {
-        return valPrevIgor;
+   public String getValorPrevigor() {
+        return valorPrevigor;
    }
 
-   public void setValPrevIgor(String valPrevIgor) {
-        this.valPrevIgor = valPrevIgor;
+   public void setValorPrevigor(String valorPrevigor) {
+        this.valorPrevigor = valorPrevigor;
    }
 
    public String getCampoSubstituto() {
@@ -456,6 +455,11 @@ public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
 
    public void setDtIniCorc(BigDecimal dtIniCorc) {
         this.dtIniCorc = dtIniCorc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMCFG";
    }
 
    @Override
@@ -504,14 +508,14 @@ public class ConfiguracaoMeta implements SankhyaEntity<ConfiguracaoMeta> {
         this.codUsuAprov = vo.asBigDecimal("CODUSUAPROV");
         this.controle = vo.asBigDecimal("CONTROLE");
         this.data = vo.asBigDecimal("DATA");
-        this.descMeta = vo.asString("DESCMETA");
+        this.descricaoMeta = vo.asString("DESCRMETA");
         this.dtAprov = vo.asTimestamp("DTAPROV");
         this.empresa = vo.asBigDecimal("EMPRESA");
         this.executante = vo.asBigDecimal("EXECUTANTE");
         this.grupo = vo.asBigDecimal("GRUPO");
         this.apresCod = vo.asString("APRESCOD");
         this.ignorCnaoPrev = vo.asString("IGNORCNAOPREV");
-        this.valPrevIgor = vo.asString("VALPREVIGOR");
+        this.valorPrevigor = vo.asString("VALPREVIGOR");
         this.campoSubstituto = vo.asString("CAMPOSUBSTITUTO");
         this.metaPorQtd = vo.asString("METAPORQTD");
         this.dtIniCorc = vo.asBigDecimal("DTINICORC");

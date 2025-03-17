@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormularioProcesso implements SankhyaEntity<FormularioProcesso> {
-
+public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso> {
    private String descricao;
    private String escopo;
    private BigDecimal idForm;
@@ -86,6 +85,11 @@ public class FormularioProcesso implements SankhyaEntity<FormularioProcesso> {
 
    public void setCardinalidade(String cardinalidade) {
         this.cardinalidade = cardinalidade;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRFORM";
    }
 
    @Override

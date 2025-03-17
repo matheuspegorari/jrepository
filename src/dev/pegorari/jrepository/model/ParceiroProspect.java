@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ParceiroProspect implements SankhyaEntity<ParceiroProspect> {
-
+public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    private Timestamp dhCadSefaz;
    private String sitCadSefaz;
    private String cgcCpf;
@@ -540,6 +539,11 @@ public class ParceiroProspect implements SankhyaEntity<ParceiroProspect> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSPAP";
+   }
+
+   @Override
    public String getEntityName() {
         return "ParceiroProspect";
    }
@@ -548,7 +552,7 @@ public class ParceiroProspect implements SankhyaEntity<ParceiroProspect> {
    public ParceiroProspect fromVO(DynamicVO vo) {
         this.dhCadSefaz = vo.asTimestamp("DHCADSEFAZ");
         this.sitCadSefaz = vo.asString("SITCADSEFAZ");
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.codPap = vo.asBigDecimal("CODPAP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codParcB2b = vo.asBigDecimal("CODPARCB2B");

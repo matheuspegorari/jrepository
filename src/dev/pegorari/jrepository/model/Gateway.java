@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Gateway implements SankhyaEntity<Gateway> {
-
+public class Gateway extends AbstractSankhyaEntity<Gateway> {
    private BigDecimal ideFx;
 
    public BigDecimal getIdeFx() {
@@ -14,6 +13,11 @@ public class Gateway implements SankhyaEntity<Gateway> {
 
    public void setIdeFx(BigDecimal ideFx) {
         this.ideFx = ideFx;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRGTW";
    }
 
    @Override

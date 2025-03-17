@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemCotacao implements SankhyaEntity<ItemCotacao> {
-
+public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    private BigDecimal aliqIcms;
    private BigDecimal aliqIpi;
    private String cabecalho;
@@ -843,6 +842,11 @@ public class ItemCotacao implements SankhyaEntity<ItemCotacao> {
 
    public void setObsMotCanc(String obsMotCanc) {
         this.obsMotCanc = obsMotCanc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFITC";
    }
 
    @Override

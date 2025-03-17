@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotificacaoItem implements SankhyaEntity<NotificacaoItem> {
-
+public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    private Timestamp dhUltPostagem;
    private BigDecimal numItem;
    private BigDecimal numOs;
@@ -60,6 +59,11 @@ public class NotificacaoItem implements SankhyaEntity<NotificacaoItem> {
 
    public void setSeqNotifica(BigDecimal seqNotifica) {
         this.seqNotifica = seqNotifica;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSSNI";
    }
 
    @Override

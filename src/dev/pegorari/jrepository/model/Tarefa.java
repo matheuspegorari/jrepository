@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Tarefa implements SankhyaEntity<Tarefa> {
-
+public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    private BigDecimal codEmpoc;
    private BigDecimal codTarefa;
    private BigDecimal codUsu;
@@ -150,6 +149,11 @@ public class Tarefa implements SankhyaEntity<Tarefa> {
 
    public void setCodParc(BigDecimal codParc) {
         this.codParc = codParc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWTAR";
    }
 
    @Override

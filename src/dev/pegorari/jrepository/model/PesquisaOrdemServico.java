@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PesquisaOrdemServico implements SankhyaEntity<PesquisaOrdemServico> {
-
+public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemServico> {
    private String aplicavel;
    private BigDecimal codFld;
    private BigDecimal numItem;
@@ -50,6 +49,11 @@ public class PesquisaOrdemServico implements SankhyaEntity<PesquisaOrdemServico>
 
    public void setNuPesq(BigDecimal nuPesq) {
         this.nuPesq = nuPesq;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSPOS";
    }
 
    @Override

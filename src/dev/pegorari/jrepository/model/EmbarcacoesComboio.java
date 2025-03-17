@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EmbarcacoesComboio implements SankhyaEntity<EmbarcacoesComboio> {
-
+public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio> {
    private BigDecimal codVeiculo;
    private BigDecimal nuViag;
    private BigDecimal seqMdfe;
@@ -32,6 +31,11 @@ public class EmbarcacoesComboio implements SankhyaEntity<EmbarcacoesComboio> {
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         this.seqMdfe = seqMdfe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCOMB";
    }
 
    @Override

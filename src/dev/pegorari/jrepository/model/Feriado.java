@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Feriado implements SankhyaEntity<Feriado> {
-
+public class Feriado extends AbstractSankhyaEntity<Feriado> {
    private BigDecimal codCid;
    private BigDecimal codPais;
    private BigDecimal codUf;
-   private String descrFeriado;
+   private String descFeriado;
    private Timestamp dtFeriado;
    private String nacional;
    private String obrigatorio;
@@ -41,12 +40,12 @@ public class Feriado implements SankhyaEntity<Feriado> {
         this.codUf = codUf;
    }
 
-   public String getDescrFeriado() {
-        return descrFeriado;
+   public String getDescFeriado() {
+        return descFeriado;
    }
 
-   public void setDescrFeriado(String descrFeriado) {
-        this.descrFeriado = descrFeriado;
+   public void setDescFeriado(String descFeriado) {
+        this.descFeriado = descFeriado;
    }
 
    public Timestamp getDtFeriado() {
@@ -90,6 +89,11 @@ public class Feriado implements SankhyaEntity<Feriado> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIFER";
+   }
+
+   @Override
    public String getEntityName() {
         return "Feriado";
    }
@@ -99,7 +103,7 @@ public class Feriado implements SankhyaEntity<Feriado> {
         this.codCid = vo.asBigDecimal("CODCID");
         this.codPais = vo.asBigDecimal("CODPAIS");
         this.codUf = vo.asBigDecimal("CODUF");
-        this.descrFeriado = vo.asString("DESCRFERIADO");
+        this.descFeriado = vo.asString("DESCRFERIADO");
         this.dtFeriado = vo.asTimestamp("DTFERIADO");
         this.nacional = vo.asString("NACIONAL");
         this.obrigatorio = vo.asString("OBRIGATORIO");

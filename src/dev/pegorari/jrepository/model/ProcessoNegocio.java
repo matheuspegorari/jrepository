@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProcessoNegocio implements SankhyaEntity<ProcessoNegocio> {
-
+public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    private String ativo;
    private BigDecimal codPrn;
    private BigDecimal codUsuAlter;
@@ -141,6 +140,11 @@ public class ProcessoNegocio implements SankhyaEntity<ProcessoNegocio> {
 
    public void setXmlBpmn(char[] xmlBpmn) {
         this.xmlBpmn = xmlBpmn;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFPRN";
    }
 
    @Override

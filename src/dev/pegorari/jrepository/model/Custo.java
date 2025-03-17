@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Custo implements SankhyaEntity<Custo> {
-
-   private BigDecimal totalSemIcmSant;
+public class Custo extends AbstractSankhyaEntity<Custo> {
+   private BigDecimal totalSemIcmsAnt;
    private String altPreco;
    private String automatico;
    private BigDecimal codEmp;
@@ -33,12 +32,12 @@ public class Custo implements SankhyaEntity<Custo> {
    private BigDecimal vlrVendaFixo;
    private String processo;
 
-   public BigDecimal getTotalSemIcmSant() {
-        return totalSemIcmSant;
+   public BigDecimal getTotalSemIcmsAnt() {
+        return totalSemIcmsAnt;
    }
 
-   public void setTotalSemIcmSant(BigDecimal totalSemIcmSant) {
-        this.totalSemIcmSant = totalSemIcmSant;
+   public void setTotalSemIcmsAnt(BigDecimal totalSemIcmsAnt) {
+        this.totalSemIcmsAnt = totalSemIcmsAnt;
    }
 
    public String getAltPreco() {
@@ -234,13 +233,18 @@ public class Custo implements SankhyaEntity<Custo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCUS";
+   }
+
+   @Override
    public String getEntityName() {
         return "Custo";
    }
 
    @Override
    public Custo fromVO(DynamicVO vo) {
-        this.totalSemIcmSant = vo.asBigDecimal("TOTALSEMICMSANT");
+        this.totalSemIcmsAnt = vo.asBigDecimal("TOTALSEMICMSANT");
         this.altPreco = vo.asString("ALTPRECO");
         this.automatico = vo.asString("AUTOMATICO");
         this.codEmp = vo.asBigDecimal("CODEMP");

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ExpectativaEsforcoPreVenda implements SankhyaEntity<ExpectativaEsforcoPreVenda> {
-
+public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<ExpectativaEsforcoPreVenda> {
    private BigDecimal codEpv;
    private String descricao;
    private BigDecimal percPro;
@@ -32,6 +31,11 @@ public class ExpectativaEsforcoPreVenda implements SankhyaEntity<ExpectativaEsfo
 
    public void setPercPro(BigDecimal percPro) {
         this.percPro = percPro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSEPV";
    }
 
    @Override

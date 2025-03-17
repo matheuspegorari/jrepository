@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EtapaPlanejamentoProducao implements SankhyaEntity<EtapaPlanejamentoProducao> {
-
+public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanejamentoProducao> {
    private BigDecimal numPlan;
    private String abrvEtapa;
    private String cql;
@@ -123,6 +122,11 @@ public class EtapaPlanejamentoProducao implements SankhyaEntity<EtapaPlanejament
 
    public void setObservacao(String observacao) {
         this.observacao = observacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEPL";
    }
 
    @Override

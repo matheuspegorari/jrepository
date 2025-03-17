@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoJobEmpenho implements SankhyaEntity<ConfiguracaoJobEmpenho> {
-
+public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJobEmpenho> {
    private String ativo;
    private BigDecimal codEmp;
    private BigDecimal codParcCompra;
@@ -186,6 +185,11 @@ public class ConfiguracaoJobEmpenho implements SankhyaEntity<ConfiguracaoJobEmpe
 
    public void setFiltroVenda(char[] filtroVenda) {
         this.filtroVenda = filtroVenda;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWCONFEMPE";
    }
 
    @Override

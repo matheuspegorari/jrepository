@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfigsOAuth implements SankhyaEntity<ConfigsOAuth> {
-
+public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    private String clientId;
    private String clientSecret;
    private BigDecimal codAth;
@@ -113,6 +112,11 @@ public class ConfigsOAuth implements SankhyaEntity<ConfigsOAuth> {
 
    public void setTenant(String tenant) {
         this.tenant = tenant;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIATH";
    }
 
    @Override

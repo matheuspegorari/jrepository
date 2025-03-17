@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class IteracaoFilaMsgCotacao implements SankhyaEntity<IteracaoFilaMsgCotacao> {
-
+public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMsgCotacao> {
    private BigDecimal codFila;
    private BigDecimal codParc;
    private BigDecimal contador;
@@ -41,6 +40,11 @@ public class IteracaoFilaMsgCotacao implements SankhyaEntity<IteracaoFilaMsgCota
 
    public void setNumCotacao(BigDecimal numCotacao) {
         this.numCotacao = numCotacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNTC";
    }
 
    @Override

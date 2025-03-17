@@ -1,10 +1,9 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
-public class OpcaoCampoI18n implements SankhyaEntity<OpcaoCampoI18n> {
-
+public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    private String locale;
    private String nomeCampo;
    private String nomeTab;
@@ -49,6 +48,11 @@ public class OpcaoCampoI18n implements SankhyaEntity<OpcaoCampoI18n> {
 
    public void setValor(String valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDOPCI18N";
    }
 
    @Override

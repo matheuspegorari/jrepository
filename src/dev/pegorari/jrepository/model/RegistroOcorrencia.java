@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegistroOcorrencia implements SankhyaEntity<RegistroOcorrencia> {
-
+public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia> {
    private BigDecimal codFunc;
    private BigDecimal codHistOcor;
    private String descOcor;
@@ -270,6 +269,11 @@ public class RegistroOcorrencia implements SankhyaEntity<RegistroOcorrencia> {
    }
 
    @Override
+   public String getTableName() {
+        return "TFPOCO";
+   }
+
+   @Override
    public String getEntityName() {
         return "RegistroOcorrencia";
    }
@@ -278,7 +282,7 @@ public class RegistroOcorrencia implements SankhyaEntity<RegistroOcorrencia> {
    public RegistroOcorrencia fromVO(DynamicVO vo) {
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistOcor = vo.asBigDecimal("CODHISTOCOR");
-        this.descOcor = vo.asString("DESCOCOR");
+        this.descOcor = vo.asString("DESCROCOR");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.dtFinalOcor = vo.asTimestamp("DTFINALOCOR");
         this.dtInicOcor = vo.asTimestamp("DTINICOCOR");
@@ -300,8 +304,8 @@ public class RegistroOcorrencia implements SankhyaEntity<RegistroOcorrencia> {
         this.reajusteCct = vo.asString("REAJUSTECCT");
         this.cid = vo.asString("CID");
         this.codSind = vo.asBigDecimal("CODSIND");
-        this.dtInterrompFer = vo.asTimestamp("DTINTERROMPFER");
-        this.envSocial = vo.asString("ENVSOCIAL");
+        this.dtInterrompFer = vo.asTimestamp("DTINTERROMPEFER");
+        this.envSocial = vo.asString("ENVESOCIAL");
         this.especialidade = vo.asString("ESPECIALIDADE");
         this.processoCnv = vo.asString("PROCESSOCNV");
         this.sequenciaCnv = vo.asBigDecimal("SEQUENCIACNV");

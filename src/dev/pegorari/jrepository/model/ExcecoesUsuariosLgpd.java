@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ExcecoesUsuariosLgpd implements SankhyaEntity<ExcecoesUsuariosLgpd> {
-
+public class ExcecoesUsuariosLgpd extends AbstractSankhyaEntity<ExcecoesUsuariosLgpd> {
    private BigDecimal codCla;
    private BigDecimal codUsu;
    private String tipoVisu;
@@ -32,6 +31,11 @@ public class ExcecoesUsuariosLgpd implements SankhyaEntity<ExcecoesUsuariosLgpd>
 
    public void setTipoVisu(String tipoVisu) {
         this.tipoVisu = tipoVisu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIEXU";
    }
 
    @Override

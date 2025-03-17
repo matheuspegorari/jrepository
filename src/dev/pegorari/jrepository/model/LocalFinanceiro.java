@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LocalFinanceiro implements SankhyaEntity<LocalFinanceiro> {
-
-   private String aceitaNovaProd;
+public class LocalFinanceiro extends AbstractSankhyaEntity<LocalFinanceiro> {
+   private String aceitaNovaprod;
    private String analitico;
    private String ativo;
    private BigDecimal capacidadeProducao;
@@ -30,12 +29,12 @@ public class LocalFinanceiro implements SankhyaEntity<LocalFinanceiro> {
    private BigDecimal vlrCus;
    private BigDecimal vlrVenda;
 
-   public String getAceitaNovaProd() {
-        return aceitaNovaProd;
+   public String getAceitaNovaprod() {
+        return aceitaNovaprod;
    }
 
-   public void setAceitaNovaProd(String aceitaNovaProd) {
-        this.aceitaNovaProd = aceitaNovaProd;
+   public void setAceitaNovaprod(String aceitaNovaprod) {
+        this.aceitaNovaprod = aceitaNovaprod;
    }
 
    public String getAnalitico() {
@@ -215,13 +214,18 @@ public class LocalFinanceiro implements SankhyaEntity<LocalFinanceiro> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFLOC";
+   }
+
+   @Override
    public String getEntityName() {
         return "LocalFinanceiro";
    }
 
    @Override
    public LocalFinanceiro fromVO(DynamicVO vo) {
-        this.aceitaNovaProd = vo.asString("ACEITANOVAPROD");
+        this.aceitaNovaprod = vo.asString("ACEITANOVAPROD");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.capacidadeProducao = vo.asBigDecimal("CAPACIDADEPRODUCAO");

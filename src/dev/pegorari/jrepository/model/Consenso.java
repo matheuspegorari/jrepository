@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Consenso implements SankhyaEntity<Consenso> {
-
+public class Consenso extends AbstractSankhyaEntity<Consenso> {
    private BigDecimal nuAvaliacao;
    private BigDecimal nuPesq;
    private BigDecimal codUsu;
@@ -78,6 +77,11 @@ public class Consenso implements SankhyaEntity<Consenso> {
 
    public void setPlanoDeAcao(String planoDeAcao) {
         this.planoDeAcao = planoDeAcao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQCON";
    }
 
    @Override

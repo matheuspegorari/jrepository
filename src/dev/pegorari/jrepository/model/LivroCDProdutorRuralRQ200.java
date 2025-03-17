@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LivroCDProdutorRuralRQ200 implements SankhyaEntity<LivroCDProdutorRuralRQ200> {
-
+public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProdutorRuralRQ200> {
    private BigDecimal codEmp;
    private String digitado;
    private Timestamp dtFinal;
@@ -105,6 +104,11 @@ public class LivroCDProdutorRuralRQ200 implements SankhyaEntity<LivroCDProdutorR
 
    public void setCodParc(BigDecimal codParc) {
         this.codParc = codParc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFLCDPRRQ200";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PedEletronicoRestituicaoAIRPJ implements SankhyaEntity<PedEletronicoRestituicaoAIRPJ> {
-
+public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedEletronicoRestituicaoAIRPJ> {
    private BigDecimal codDarf;
    private BigDecimal codEmp;
    private String numPerd;
@@ -78,6 +77,11 @@ public class PedEletronicoRestituicaoAIRPJ implements SankhyaEntity<PedEletronic
 
    public void setVlrPerdComp(BigDecimal vlrPerdComp) {
         this.vlrPerdComp = vlrPerdComp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBIRPJPCOMP";
    }
 
    @Override

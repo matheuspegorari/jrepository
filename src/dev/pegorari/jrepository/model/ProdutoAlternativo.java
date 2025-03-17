@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProdutoAlternativo implements SankhyaEntity<ProdutoAlternativo> {
-
+public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo> {
    private BigDecimal codProd;
    private BigDecimal codProdAlt;
    private BigDecimal prioridade;
@@ -69,6 +68,11 @@ public class ProdutoAlternativo implements SankhyaEntity<ProdutoAlternativo> {
 
    public void setSubstituto(String substituto) {
         this.substituto = substituto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPAL";
    }
 
    @Override

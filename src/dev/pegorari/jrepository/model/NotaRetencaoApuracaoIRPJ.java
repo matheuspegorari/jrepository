@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotaRetencaoApuracaoIRPJ implements SankhyaEntity<NotaRetencaoApuracaoIRPJ> {
-
+public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencaoApuracaoIRPJ> {
    private BigDecimal codEmp;
    private BigDecimal codParc;
    private Timestamp dtEntSai;
@@ -114,6 +113,11 @@ public class NotaRetencaoApuracaoIRPJ implements SankhyaEntity<NotaRetencaoApura
 
    public void setRetemIrpjCsll(String retemIrpjCsll) {
         this.retemIrpjCsll = retemIrpjCsll;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBIRPJNFRET";
    }
 
    @Override

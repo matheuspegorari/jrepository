@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ViaTransporte implements SankhyaEntity<ViaTransporte> {
-
+public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    private BigDecimal codModPed;
    private BigDecimal codVtp;
    private String descricao;
@@ -95,6 +94,11 @@ public class ViaTransporte implements SankhyaEntity<ViaTransporte> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFVTP";
    }
 
    @Override

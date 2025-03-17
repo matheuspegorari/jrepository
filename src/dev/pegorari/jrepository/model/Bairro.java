@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Bairro implements SankhyaEntity<Bairro> {
-
+public class Bairro extends AbstractSankhyaEntity<Bairro> {
    private BigDecimal codBai;
    private BigDecimal codReg;
    private String descricaoCorreio;
@@ -63,6 +62,11 @@ public class Bairro implements SankhyaEntity<Bairro> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIBAI";
+   }
+
+   @Override
    public String getEntityName() {
         return "Bairro";
    }
@@ -74,7 +78,7 @@ public class Bairro implements SankhyaEntity<Bairro> {
         this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nomeBai = vo.asString("NOMEBAI");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         return this;
    }
 }

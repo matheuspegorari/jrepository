@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PlanoConta implements SankhyaEntity<PlanoConta> {
-
+public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    private String analitica;
    private String ativa;
    private String bemOriginal;
@@ -39,12 +38,12 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
    private BigDecimal naturezaEfd;
    private BigDecimal codRazAux;
    private String tabela;
-   private BigDecimal tipSalalur;
+   private BigDecimal tipSalAlur;
    private String lalurA;
    private BigDecimal codConta;
-   private String codLalurb;
+   private String codLalurB;
    private String descrConta;
-   private String indTribLalurb;
+   private String indTribLalurB;
    private String conResultCsll;
    private String conResultIrpj;
    private String exclusoesCsll;
@@ -54,7 +53,7 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
    private String zeraCrIrpj;
    private String classifCsll;
    private String classifIrpj;
-   private String tabelaLalurb;
+   private String tabelaLalurB;
 
    public String getAnalitica() {
         return analitica;
@@ -312,12 +311,12 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.tabela = tabela;
    }
 
-   public BigDecimal getTipSalalur() {
-        return tipSalalur;
+   public BigDecimal getTipSalAlur() {
+        return tipSalAlur;
    }
 
-   public void setTipSalalur(BigDecimal tipSalalur) {
-        this.tipSalalur = tipSalalur;
+   public void setTipSalAlur(BigDecimal tipSalAlur) {
+        this.tipSalAlur = tipSalAlur;
    }
 
    public String getLalurA() {
@@ -336,12 +335,12 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.codConta = codConta;
    }
 
-   public String getCodLalurb() {
-        return codLalurb;
+   public String getCodLalurB() {
+        return codLalurB;
    }
 
-   public void setCodLalurb(String codLalurb) {
-        this.codLalurb = codLalurb;
+   public void setCodLalurB(String codLalurB) {
+        this.codLalurB = codLalurB;
    }
 
    public String getDescrConta() {
@@ -352,12 +351,12 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.descrConta = descrConta;
    }
 
-   public String getIndTribLalurb() {
-        return indTribLalurb;
+   public String getIndTribLalurB() {
+        return indTribLalurB;
    }
 
-   public void setIndTribLalurb(String indTribLalurb) {
-        this.indTribLalurb = indTribLalurb;
+   public void setIndTribLalurB(String indTribLalurB) {
+        this.indTribLalurB = indTribLalurB;
    }
 
    public String getConResultCsll() {
@@ -432,12 +431,17 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.classifIrpj = classifIrpj;
    }
 
-   public String getTabelaLalurb() {
-        return tabelaLalurb;
+   public String getTabelaLalurB() {
+        return tabelaLalurB;
    }
 
-   public void setTabelaLalurb(String tabelaLalurb) {
-        this.tabelaLalurb = tabelaLalurb;
+   public void setTabelaLalurB(String tabelaLalurB) {
+        this.tabelaLalurB = tabelaLalurB;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBPLA";
    }
 
    @Override
@@ -473,18 +477,18 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtInativ = vo.asTimestamp("DTINATIV");
-        this.lalurACred = vo.asString("LALURACRED");
+        this.lalurACred = vo.asString("LALUR_A_CRED");
         this.recDesp = vo.asString("RECDESP");
         this.tabelaCred = vo.asString("TABELACRED");
         this.naturezaEfd = vo.asBigDecimal("NATUREZAEFD");
         this.codRazAux = vo.asBigDecimal("CODRAZAUX");
         this.tabela = vo.asString("TABELA");
-        this.tipSalalur = vo.asBigDecimal("TIPSALALUR");
-        this.lalurA = vo.asString("LALURA");
+        this.tipSalAlur = vo.asBigDecimal("TIPSALALUR");
+        this.lalurA = vo.asString("LALUR_A");
         this.codConta = vo.asBigDecimal("CODCONTA");
-        this.codLalurb = vo.asString("CODLALURB");
+        this.codLalurB = vo.asString("CODLALURB");
         this.descrConta = vo.asString("DESCRCONTA");
-        this.indTribLalurb = vo.asString("INDTRIBLALURB");
+        this.indTribLalurB = vo.asString("INDTRIBLALURB");
         this.conResultCsll = vo.asString("CONRESULTCSLL");
         this.conResultIrpj = vo.asString("CONRESULTIRPJ");
         this.exclusoesCsll = vo.asString("EXCLUSOESCSLL");
@@ -494,7 +498,7 @@ public class PlanoConta implements SankhyaEntity<PlanoConta> {
         this.zeraCrIrpj = vo.asString("ZERACRIRPJ");
         this.classifCsll = vo.asString("CLASSIFCSLL");
         this.classifIrpj = vo.asString("CLASSIFIRPJ");
-        this.tabelaLalurb = vo.asString("TABELALALURB");
+        this.tabelaLalurB = vo.asString("TABELALALURB");
         return this;
    }
 }

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PerfilParceiro implements SankhyaEntity<PerfilParceiro> {
-
+public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
    private BigDecimal codContato;
    private BigDecimal codParc;
    private BigDecimal codTipParc;
@@ -32,6 +31,11 @@ public class PerfilParceiro implements SankhyaEntity<PerfilParceiro> {
 
    public void setCodTipParc(BigDecimal codTipParc) {
         this.codTipParc = codTipParc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPPA";
    }
 
    @Override

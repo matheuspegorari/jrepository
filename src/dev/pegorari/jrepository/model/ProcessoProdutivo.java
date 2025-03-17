@@ -1,20 +1,19 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
-
+public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> {
    private String padrao;
    private BigDecimal codPrcProducao;
    private String procDesmonte;
    private String usaTerceiro;
    private String defTerceiro;
-   private String tipoNrLote;
-   private String mascNrLote;
-   private String tipoFragNrLote;
+   private String tipoNroLote;
+   private String mascNroLote;
+   private String tipoFragNroLote;
    private BigDecimal codLocalAlmoxarife;
    private BigDecimal codLocalManufatura;
    private BigDecimal codPlp;
@@ -26,7 +25,7 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
    private Timestamp dhAlter;
    private Timestamp dhCad;
    private BigDecimal idProc;
-   private BigDecimal idRpAInicial;
+   private BigDecimal idRpaInicial;
    private String idWflow;
    private String multiControle;
    private String multiPa;
@@ -46,10 +45,10 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
    private String usaLoteCuringa;
    private String ativo;
    private BigDecimal idFormula;
-   private String mascNrLoteSp;
-   private String tipoFragNrLoteSp;
-   private String tipoNrLoteSp;
-   private String usaConfNrLoteSp;
+   private String mascNroLoteSp;
+   private String tipoFragNroLoteSp;
+   private String tipoNroLoteSp;
+   private String usaConfNroLoteSp;
    private char[] xmlBpmnUi;
    private String perEdicao;
    private BigDecimal qtdDias;
@@ -97,28 +96,28 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.defTerceiro = defTerceiro;
    }
 
-   public String getTipoNrLote() {
-        return tipoNrLote;
+   public String getTipoNroLote() {
+        return tipoNroLote;
    }
 
-   public void setTipoNrLote(String tipoNrLote) {
-        this.tipoNrLote = tipoNrLote;
+   public void setTipoNroLote(String tipoNroLote) {
+        this.tipoNroLote = tipoNroLote;
    }
 
-   public String getMascNrLote() {
-        return mascNrLote;
+   public String getMascNroLote() {
+        return mascNroLote;
    }
 
-   public void setMascNrLote(String mascNrLote) {
-        this.mascNrLote = mascNrLote;
+   public void setMascNroLote(String mascNroLote) {
+        this.mascNroLote = mascNroLote;
    }
 
-   public String getTipoFragNrLote() {
-        return tipoFragNrLote;
+   public String getTipoFragNroLote() {
+        return tipoFragNroLote;
    }
 
-   public void setTipoFragNrLote(String tipoFragNrLote) {
-        this.tipoFragNrLote = tipoFragNrLote;
+   public void setTipoFragNroLote(String tipoFragNroLote) {
+        this.tipoFragNroLote = tipoFragNroLote;
    }
 
    public BigDecimal getCodLocalAlmoxarife() {
@@ -209,12 +208,12 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.idProc = idProc;
    }
 
-   public BigDecimal getIdRpAInicial() {
-        return idRpAInicial;
+   public BigDecimal getIdRpaInicial() {
+        return idRpaInicial;
    }
 
-   public void setIdRpAInicial(BigDecimal idRpAInicial) {
-        this.idRpAInicial = idRpAInicial;
+   public void setIdRpaInicial(BigDecimal idRpaInicial) {
+        this.idRpaInicial = idRpaInicial;
    }
 
    public String getIdWflow() {
@@ -369,36 +368,36 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.idFormula = idFormula;
    }
 
-   public String getMascNrLoteSp() {
-        return mascNrLoteSp;
+   public String getMascNroLoteSp() {
+        return mascNroLoteSp;
    }
 
-   public void setMascNrLoteSp(String mascNrLoteSp) {
-        this.mascNrLoteSp = mascNrLoteSp;
+   public void setMascNroLoteSp(String mascNroLoteSp) {
+        this.mascNroLoteSp = mascNroLoteSp;
    }
 
-   public String getTipoFragNrLoteSp() {
-        return tipoFragNrLoteSp;
+   public String getTipoFragNroLoteSp() {
+        return tipoFragNroLoteSp;
    }
 
-   public void setTipoFragNrLoteSp(String tipoFragNrLoteSp) {
-        this.tipoFragNrLoteSp = tipoFragNrLoteSp;
+   public void setTipoFragNroLoteSp(String tipoFragNroLoteSp) {
+        this.tipoFragNroLoteSp = tipoFragNroLoteSp;
    }
 
-   public String getTipoNrLoteSp() {
-        return tipoNrLoteSp;
+   public String getTipoNroLoteSp() {
+        return tipoNroLoteSp;
    }
 
-   public void setTipoNrLoteSp(String tipoNrLoteSp) {
-        this.tipoNrLoteSp = tipoNrLoteSp;
+   public void setTipoNroLoteSp(String tipoNroLoteSp) {
+        this.tipoNroLoteSp = tipoNroLoteSp;
    }
 
-   public String getUsaConfNrLoteSp() {
-        return usaConfNrLoteSp;
+   public String getUsaConfNroLoteSp() {
+        return usaConfNroLoteSp;
    }
 
-   public void setUsaConfNrLoteSp(String usaConfNrLoteSp) {
-        this.usaConfNrLoteSp = usaConfNrLoteSp;
+   public void setUsaConfNroLoteSp(String usaConfNroLoteSp) {
+        this.usaConfNroLoteSp = usaConfNroLoteSp;
    }
 
    public char[] getXmlBpmnUi() {
@@ -450,6 +449,11 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRPRC";
+   }
+
+   @Override
    public String getEntityName() {
         return "ProcessoProdutivo";
    }
@@ -461,9 +465,9 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.procDesmonte = vo.asString("PROCDESMONTE");
         this.usaTerceiro = vo.asString("USATERCEIRO");
         this.defTerceiro = vo.asString("DEFTERCEIRO");
-        this.tipoNrLote = vo.asString("TIPONRLOTE");
-        this.mascNrLote = vo.asString("MASCNRLOTE");
-        this.tipoFragNrLote = vo.asString("TIPOFRAGNRLOTE");
+        this.tipoNroLote = vo.asString("TIPONROLOTE");
+        this.mascNroLote = vo.asString("MASCNROLOTE");
+        this.tipoFragNroLote = vo.asString("TIPOFRAGNROLOTE");
         this.codLocalAlmoxarife = vo.asBigDecimal("CODLOCALALMOXARIFE");
         this.codLocalManufatura = vo.asBigDecimal("CODLOCALMANUFATURA");
         this.codPlp = vo.asBigDecimal("CODPLP");
@@ -475,7 +479,7 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhCad = vo.asTimestamp("DHCAD");
         this.idProc = vo.asBigDecimal("IDPROC");
-        this.idRpAInicial = vo.asBigDecimal("IDRPAINICIAL");
+        this.idRpaInicial = vo.asBigDecimal("IDRPAINICIAL");
         this.idWflow = vo.asString("IDWFLOW");
         this.multiControle = vo.asString("MULTICONTROLE");
         this.multiPa = vo.asString("MULTIPA");
@@ -495,10 +499,10 @@ public class ProcessoProdutivo implements SankhyaEntity<ProcessoProdutivo> {
         this.usaLoteCuringa = vo.asString("USALOTECURINGA");
         this.ativo = vo.asString("ATIVO");
         this.idFormula = vo.asBigDecimal("IDFORMULA");
-        this.mascNrLoteSp = vo.asString("MASCNRLOTESP");
-        this.tipoFragNrLoteSp = vo.asString("TIPOFRAGNRLOTESP");
-        this.tipoNrLoteSp = vo.asString("TIPONRLOTESP");
-        this.usaConfNrLoteSp = vo.asString("USACONFNRLOTESP");
+        this.mascNroLoteSp = vo.asString("MASCNROLOTESP");
+        this.tipoFragNroLoteSp = vo.asString("TIPOFRAGNROLOTESP");
+        this.tipoNroLoteSp = vo.asString("TIPONROLOTESP");
+        this.usaConfNroLoteSp = vo.asString("USACONFNROLOTESP");
         this.xmlBpmnUi = vo.asClob("XMLBPMNUI");
         this.perEdicao = vo.asString("PEREDICAO");
         this.qtdDias = vo.asBigDecimal("QTDDIAS");

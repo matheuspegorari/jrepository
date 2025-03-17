@@ -1,43 +1,42 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoWorkCenterAtividade implements SankhyaEntity<HistoricoWorkCenterAtividade> {
-
-   private BigDecimal idProc;
-   private Timestamp dhAloc;
-   private BigDecimal idAtv;
+public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<HistoricoWorkCenterAtividade> {
+   private BigDecimal idIproc;
+   private Timestamp dhaloc;
+   private BigDecimal idiAtv;
    private BigDecimal codUsuLibAloc;
    private BigDecimal codUsuAloc;
    private Timestamp dhLibAloc;
    private BigDecimal codWcp;
    private String descrAtv;
 
-   public BigDecimal getIdProc() {
-        return idProc;
+   public BigDecimal getIdIproc() {
+        return idIproc;
    }
 
-   public void setIdProc(BigDecimal idProc) {
-        this.idProc = idProc;
+   public void setIdIproc(BigDecimal idIproc) {
+        this.idIproc = idIproc;
    }
 
-   public Timestamp getDhAloc() {
-        return dhAloc;
+   public Timestamp getDhaloc() {
+        return dhaloc;
    }
 
-   public void setDhAloc(Timestamp dhAloc) {
-        this.dhAloc = dhAloc;
+   public void setDhaloc(Timestamp dhaloc) {
+        this.dhaloc = dhaloc;
    }
 
-   public BigDecimal getIdAtv() {
-        return idAtv;
+   public BigDecimal getIdiAtv() {
+        return idiAtv;
    }
 
-   public void setIdAtv(BigDecimal idAtv) {
-        this.idAtv = idAtv;
+   public void setIdiAtv(BigDecimal idiAtv) {
+        this.idiAtv = idiAtv;
    }
 
    public BigDecimal getCodUsuLibAloc() {
@@ -81,15 +80,20 @@ public class HistoricoWorkCenterAtividade implements SankhyaEntity<HistoricoWork
    }
 
    @Override
+   public String getTableName() {
+        return "TPRHWXA";
+   }
+
+   @Override
    public String getEntityName() {
         return "HistoricoWorkCenterAtividade";
    }
 
    @Override
    public HistoricoWorkCenterAtividade fromVO(DynamicVO vo) {
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.dhAloc = vo.asTimestamp("DHALOC");
-        this.idAtv = vo.asBigDecimal("IDATV");
+        this.idIproc = vo.asBigDecimal("IDIPROC");
+        this.dhaloc = vo.asTimestamp("DHALOC");
+        this.idiAtv = vo.asBigDecimal("IDIATV");
         this.codUsuLibAloc = vo.asBigDecimal("CODUSULIBALOC");
         this.codUsuAloc = vo.asBigDecimal("CODUSUALOC");
         this.dhLibAloc = vo.asTimestamp("DHLIBALOC");

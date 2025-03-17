@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Logradouro implements SankhyaEntity<Logradouro> {
-
+public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    private String codLogradouro;
    private BigDecimal codUsu;
    private String descrLogradouro;
@@ -42,6 +41,11 @@ public class Logradouro implements SankhyaEntity<Logradouro> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPLGR";
    }
 
    @Override

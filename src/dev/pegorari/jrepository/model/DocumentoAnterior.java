@@ -1,22 +1,21 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DocumentoAnterior implements SankhyaEntity<DocumentoAnterior> {
-
+public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> {
    private String chaveDant;
    private BigDecimal codParc;
    private BigDecimal nuNota;
    private BigDecimal seqDant;
    private String cteRef;
-   private Timestamp dEmi;
+   private Timestamp demi;
    private String nDoc;
    private String serie;
    private String subSer;
-   private String tpDocTa;
+   private String tpDocta;
 
    public String getChaveDant() {
         return chaveDant;
@@ -58,12 +57,12 @@ public class DocumentoAnterior implements SankhyaEntity<DocumentoAnterior> {
         this.cteRef = cteRef;
    }
 
-   public Timestamp getDEmi() {
-        return dEmi;
+   public Timestamp getDemi() {
+        return demi;
    }
 
-   public void setDEmi(Timestamp dEmi) {
-        this.dEmi = dEmi;
+   public void setDemi(Timestamp demi) {
+        this.demi = demi;
    }
 
    public String getNDoc() {
@@ -90,12 +89,17 @@ public class DocumentoAnterior implements SankhyaEntity<DocumentoAnterior> {
         this.subSer = subSer;
    }
 
-   public String getTpDocTa() {
-        return tpDocTa;
+   public String getTpDocta() {
+        return tpDocta;
    }
 
-   public void setTpDocTa(String tpDocTa) {
-        this.tpDocTa = tpDocTa;
+   public void setTpDocta(String tpDocta) {
+        this.tpDocta = tpDocta;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDANT";
    }
 
    @Override
@@ -110,11 +114,11 @@ public class DocumentoAnterior implements SankhyaEntity<DocumentoAnterior> {
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.seqDant = vo.asBigDecimal("SEQDANT");
         this.cteRef = vo.asString("CTEREF");
-        this.dEmi = vo.asTimestamp("DEMI");
+        this.demi = vo.asTimestamp("DEMI");
         this.nDoc = vo.asString("NDOC");
         this.serie = vo.asString("SERIE");
         this.subSer = vo.asString("SUBSER");
-        this.tpDocTa = vo.asString("TPDOCTA");
+        this.tpDocta = vo.asString("TPDOCTA");
         return this;
    }
 }

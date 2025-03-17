@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDFilaMensagem implements SankhyaEntity<MSDFilaMensagem> {
-
+public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    private Timestamp dhUltTenta;
    private String assunto;
    private BigDecimal codCon;
@@ -231,6 +230,11 @@ public class MSDFilaMensagem implements SankhyaEntity<MSDFilaMensagem> {
 
    public void setDbHashCode(String dbHashCode) {
         this.dbHashCode = dbHashCode;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDFMG";
    }
 
    @Override

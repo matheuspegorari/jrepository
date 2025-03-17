@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UFsPercurso implements SankhyaEntity<UFsPercurso> {
-
+public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    private BigDecimal seqMdfe;
    private BigDecimal codUf;
    private BigDecimal nuViag;
@@ -50,6 +49,11 @@ public class UFsPercurso implements SankhyaEntity<UFsPercurso> {
 
    public void setSeqViagem(BigDecimal seqViagem) {
         this.seqViagem = seqViagem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFUFP";
    }
 
    @Override

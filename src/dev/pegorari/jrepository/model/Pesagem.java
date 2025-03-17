@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Pesagem implements SankhyaEntity<Pesagem> {
-
+public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    private BigDecimal tara;
    private String variasNotas;
    private String nfTransp;
@@ -168,6 +167,11 @@ public class Pesagem implements SankhyaEntity<Pesagem> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGAPCA";
    }
 
    @Override

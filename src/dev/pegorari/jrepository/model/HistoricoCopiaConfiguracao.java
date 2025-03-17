@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoCopiaConfiguracao implements SankhyaEntity<HistoricoCopiaConfiguracao> {
-
+public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoCopiaConfiguracao> {
    private String confTop;
    private String abaSeg;
    private String chave;
@@ -87,6 +86,11 @@ public class HistoricoCopiaConfiguracao implements SankhyaEntity<HistoricoCopiaC
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIHCF";
    }
 
    @Override

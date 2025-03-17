@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DbExplorerQuery implements SankhyaEntity<DbExplorerQuery> {
-
+public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    private Timestamp dhAlter;
    private char[] textoQuery;
    private String tituloQuery;
@@ -51,6 +50,11 @@ public class DbExplorerQuery implements SankhyaEntity<DbExplorerQuery> {
 
    public void setNuQuery(BigDecimal nuQuery) {
         this.nuQuery = nuQuery;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIDBQUERY";
    }
 
    @Override

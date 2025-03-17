@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class HistoricoBancario implements SankhyaEntity<HistoricoBancario> {
-
+public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> {
    private String aceitaDev;
    private BigDecimal codLanc;
    private String descrLancBco;
@@ -41,6 +40,11 @@ public class HistoricoBancario implements SankhyaEntity<HistoricoBancario> {
 
    public void setTipLanc(BigDecimal tipLanc) {
         this.tipLanc = tipLanc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFHBC";
    }
 
    @Override

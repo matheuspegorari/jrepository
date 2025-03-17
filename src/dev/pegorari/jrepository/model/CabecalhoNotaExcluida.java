@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoNotaExcluida implements SankhyaEntity<CabecalhoNotaExcluida> {
-
+public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaExcluida> {
    private BigDecimal codParctranspFinal;
    private BigDecimal vlrFreteTotal;
    private String numNfse;
@@ -981,6 +980,11 @@ public class CabecalhoNotaExcluida implements SankhyaEntity<CabecalhoNotaExcluid
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAB_EXC";
+   }
+
+   @Override
    public String getEntityName() {
         return "CabecalhoNotaExcluida";
    }
@@ -1009,7 +1013,7 @@ public class CabecalhoNotaExcluida implements SankhyaEntity<CabecalhoNotaExcluid
         this.localEntrega = vo.asString("LOCALENTREGA");
         this.notaScf = vo.asString("NOTASCF");
         this.nroRedz = vo.asBigDecimal("NROREDZ");
-        this.ntUsername = vo.asString("NTUSERNAME");
+        this.ntUsername = vo.asString("NT_USERNAME");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.numCotacao = vo.asBigDecimal("NUMCOTACAO");
         this.numNota = vo.asBigDecimal("NUMNOTA");
@@ -1061,7 +1065,7 @@ public class CabecalhoNotaExcluida implements SankhyaEntity<CabecalhoNotaExcluid
         this.baseIpi = vo.asBigDecimal("BASEIPI");
         this.baseIss = vo.asBigDecimal("BASEISS");
         this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
-        this.cifFob = vo.asString("CIFFOB");
+        this.cifFob = vo.asString("CIF_FOB");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codEmp = vo.asBigDecimal("CODEMP");

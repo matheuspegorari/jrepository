@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InformacaoContribuinte implements SankhyaEntity<InformacaoContribuinte> {
-
+public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoContribuinte> {
    private String cnpjEfr;
    private BigDecimal codEmp;
    private String controle;
@@ -333,6 +332,11 @@ public class InformacaoContribuinte implements SankhyaEntity<InformacaoContribui
    }
 
    @Override
+   public String getTableName() {
+        return "TRIICR";
+   }
+
+   @Override
    public String getEntityName() {
         return "InformacaoContribuinte";
    }
@@ -357,8 +361,8 @@ public class InformacaoContribuinte implements SankhyaEntity<InformacaoContribui
         this.iniValid = vo.asTimestamp("INIVALID");
         this.nmCtt = vo.asString("NMCTT");
         this.nrInsc = vo.asString("NRINSC");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.statusReg = vo.asString("STATUSREG");
         this.tipo = vo.asString("TIPO");

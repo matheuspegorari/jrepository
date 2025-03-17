@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Imposto implements SankhyaEntity<Imposto> {
-
+public class Imposto extends AbstractSankhyaEntity<Imposto> {
    private String acumBaseIcms;
    private String acumBaseIpi;
    private String ativo;
@@ -224,6 +223,11 @@ public class Imposto implements SankhyaEntity<Imposto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFIMC";
+   }
+
+   @Override
    public String getEntityName() {
         return "Imposto";
    }
@@ -253,7 +257,7 @@ public class Imposto implements SankhyaEntity<Imposto> {
         this.f600Efd = vo.asString("F600EFD");
         this.vlrMaxInss = vo.asBigDecimal("VLRMAXINSS");
         this.regCalcImpRet = vo.asString("REGCALCIMPRET");
-        this.calcBaseDia = vo.asString("CALCBASEDIA");
+        this.calcBaseDia = vo.asString("CALCBASDIA");
         return this;
    }
 }

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SeguroMDFE implements SankhyaEntity<SeguroMDFE> {
-
+public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    private String nuMapolice;
    private BigDecimal codParcSeg;
    private BigDecimal nuViag;
@@ -50,6 +49,11 @@ public class SeguroMDFE implements SankhyaEntity<SeguroMDFE> {
 
    public void setCodParcRespSeg(BigDecimal codParcRespSeg) {
         this.codParcRespSeg = codParcRespSeg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFESEG";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemNotaOutbox implements SankhyaEntity<ItemNotaOutbox> {
-
+public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    private String idOutbox;
    private BigDecimal nuNota;
    private BigDecimal qtd;
@@ -41,6 +40,11 @@ public class ItemNotaOutbox implements SankhyaEntity<ItemNotaOutbox> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIBX";
    }
 
    @Override

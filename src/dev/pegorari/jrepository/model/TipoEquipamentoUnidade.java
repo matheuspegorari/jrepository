@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TipoEquipamentoUnidade implements SankhyaEntity<TipoEquipamentoUnidade> {
-
+public class TipoEquipamentoUnidade extends AbstractSankhyaEntity<TipoEquipamentoUnidade> {
    private BigDecimal codTipEquip;
    private String codVol;
 
@@ -23,6 +22,11 @@ public class TipoEquipamentoUnidade implements SankhyaEntity<TipoEquipamentoUnid
 
    public void setCodVol(String codVol) {
         this.codVol = codVol;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWUTE";
    }
 
    @Override

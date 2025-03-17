@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DetalhesAjustesCPRB implements SankhyaEntity<DetalhesAjustesCPRB> {
-
+public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCPRB> {
    private BigDecimal codAjuste;
    private String codCprb;
    private BigDecimal codEmp;
@@ -78,6 +77,11 @@ public class DetalhesAjustesCPRB implements SankhyaEntity<DetalhesAjustesCPRB> {
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
         this.vlrAjuste = vlrAjuste;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDACPRB";
    }
 
    @Override

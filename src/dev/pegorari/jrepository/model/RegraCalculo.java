@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
-
+public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    private String atuMovMen;
    private String calcFerPerAqui;
    private String calcParcFer;
@@ -27,7 +26,7 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
    private String descricao;
    private BigDecimal diaRetiradPd;
    private Timestamp dtAlter;
-   private String ferProPerAqui;
+   private String ferPerPerAqui;
    private String formaCalcMedias;
    private BigDecimal irfMin;
    private String lancFerAdiant;
@@ -52,7 +51,7 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
    private String tipArred;
    private String tipMes;
    private String tipMovMedias;
-   private BigDecimal arredsAllIq;
+   private BigDecimal arredSalLiq;
 
    public String getAtuMovMen() {
         return atuMovMen;
@@ -214,12 +213,12 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
         this.dtAlter = dtAlter;
    }
 
-   public String getFerProPerAqui() {
-        return ferProPerAqui;
+   public String getFerPerPerAqui() {
+        return ferPerPerAqui;
    }
 
-   public void setFerProPerAqui(String ferProPerAqui) {
-        this.ferProPerAqui = ferProPerAqui;
+   public void setFerPerPerAqui(String ferPerPerAqui) {
+        this.ferPerPerAqui = ferPerPerAqui;
    }
 
    public String getFormaCalcMedias() {
@@ -414,12 +413,17 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
         this.tipMovMedias = tipMovMedias;
    }
 
-   public BigDecimal getArredsAllIq() {
-        return arredsAllIq;
+   public BigDecimal getArredSalLiq() {
+        return arredSalLiq;
    }
 
-   public void setArredsAllIq(BigDecimal arredsAllIq) {
-        this.arredsAllIq = arredsAllIq;
+   public void setArredSalLiq(BigDecimal arredSalLiq) {
+        this.arredSalLiq = arredSalLiq;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPPRE";
    }
 
    @Override
@@ -449,7 +453,7 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
         this.descricao = vo.asString("DESCRICAO");
         this.diaRetiradPd = vo.asBigDecimal("DIARETIRADPD");
         this.dtAlter = vo.asTimestamp("DTALTER");
-        this.ferProPerAqui = vo.asString("FERPROPERAQUI");
+        this.ferPerPerAqui = vo.asString("FERPROPERAQUI");
         this.formaCalcMedias = vo.asString("FORMACALCMEDIAS");
         this.irfMin = vo.asBigDecimal("IRFMIN");
         this.lancFerAdiant = vo.asString("LANCFERADIANT");
@@ -474,7 +478,7 @@ public class RegraCalculo implements SankhyaEntity<RegraCalculo> {
         this.tipArred = vo.asString("TIPARRED");
         this.tipMes = vo.asString("TIPMES");
         this.tipMovMedias = vo.asString("TIPMOVMEDIAS");
-        this.arredsAllIq = vo.asBigDecimal("ARREDSALLIQ");
+        this.arredSalLiq = vo.asBigDecimal("ARREDSALLIQ");
         return this;
    }
 }

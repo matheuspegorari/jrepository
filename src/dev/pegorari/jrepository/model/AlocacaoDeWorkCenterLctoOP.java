@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AlocacaoDeWorkCenterLctoOP implements SankhyaEntity<AlocacaoDeWorkCenterLctoOP> {
-
+public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDeWorkCenterLctoOP> {
    private BigDecimal seqOp;
    private BigDecimal nuLop;
    private BigDecimal idAwc;
@@ -77,6 +76,11 @@ public class AlocacaoDeWorkCenterLctoOP implements SankhyaEntity<AlocacaoDeWorkC
 
    public void setDescrAtv(String descrAtv) {
         this.descrAtv = descrAtv;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRWLOP";
    }
 
    @Override

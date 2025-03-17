@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PlanoContaECD implements SankhyaEntity<PlanoContaECD> {
-
+public class PlanoContaECD extends AbstractSankhyaEntity<PlanoContaECD> {
    private Timestamp dtPrimImp;
    private String descrCta;
    private Timestamp dtInclusao;
@@ -123,6 +122,11 @@ public class PlanoContaECD implements SankhyaEntity<PlanoContaECD> {
 
    public void setCodCtaCtbIntPai(BigDecimal codCtaCtbIntPai) {
         this.codCtaCtbIntPai = codCtaCtbIntPai;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBPLA_IMP";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DetalhesGiro implements SankhyaEntity<DetalhesGiro> {
-
+public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    private BigDecimal seqImps;
    private BigDecimal numPs;
    private BigDecimal qtdGiro;
@@ -51,6 +50,11 @@ public class DetalhesGiro implements SankhyaEntity<DetalhesGiro> {
 
    public void setPerFin(Timestamp perFin) {
         this.perFin = perFin;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRDGIR";
    }
 
    @Override

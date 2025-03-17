@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoSerie implements SankhyaEntity<HistoricoSerie> {
-
+public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    private BigDecimal codProd;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
@@ -87,6 +86,11 @@ public class HistoricoSerie implements SankhyaEntity<HistoricoSerie> {
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFHSE";
    }
 
    @Override

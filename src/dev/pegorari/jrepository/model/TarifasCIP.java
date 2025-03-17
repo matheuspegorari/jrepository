@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
-
-   private BigDecimal codProdSubkit;
+public class TarifasCIP extends AbstractSankhyaEntity<TarifasCIP> {
+   private BigDecimal codProdSubKit;
    private String enqReintegra;
    private BigDecimal margLucro;
    private BigDecimal codGProd;
@@ -46,7 +45,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal arredPreco;
    private String ativo;
    private String balanca;
-   private String calculoGiro;
+   private String calcGiro;
    private BigDecimal camadas;
    private String caracteristicas;
    private BigDecimal carencia;
@@ -136,7 +135,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private String homePage;
    private String hrDobrada;
    private String icmsGerencia;
-   private BigDecimal identImob;
+   private BigDecimal idenImob;
    private byte[] imagem;
    private String impEtiqConf;
    private String impLaudoLote;
@@ -167,7 +166,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal pesoBruto;
    private BigDecimal pesoLiq;
    private BigDecimal prazoVal;
-   private BigDecimal prinCAtivo;
+   private BigDecimal princAtivo;
    private BigDecimal produtoNfe;
    private String promocao;
    private BigDecimal qtdEmb;
@@ -199,7 +198,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private String temIpiVenda;
    private String temIrf;
    private String temIss;
-   private Timestamp temPosServ;
+   private Timestamp tempoServ;
    private String tipContest;
    private String tipContestWms;
    private BigDecimal tipGtinNfe;
@@ -274,7 +273,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal tempMaxima;
    private String controlado;
    private BigDecimal tempMinima;
-   private String termoLabi;
+   private String termolabil;
    private String listaLpm;
    private String oneroso;
    private String refMercMed;
@@ -305,7 +304,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal codMarca;
    private String temRastroLote;
    private String armazeLote;
-   private BigDecimal mvaOriginalDrcst;
+   private BigDecimal mvaOriginalDrCst;
    private String codFciCalc;
    private BigDecimal vlrComercCalc;
    private BigDecimal vlrParcImpExtCalc;
@@ -315,11 +314,11 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal nuRfe;
    private BigDecimal modEtiqSepWms;
    private String impEtiqSepWms;
-   private String nroProcesso;
+   private String nrProcesso;
    private BigDecimal percCmtMun;
    private BigDecimal percCmtFed;
    private BigDecimal percCmtEst;
-   private BigDecimal corFonteConsPreco;
+   private BigDecimal corFontConsPreco;
    private BigDecimal corFundoConsPreco;
    private String calcDifAl;
    private BigDecimal classifCessaoObra;
@@ -341,7 +340,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private String tipoInssEspecial;
    private BigDecimal vlrPartidaGlp;
    private String integraEconect;
-   private BigDecimal maxMulEconect;
+   private BigDecimal maxMultEconect;
    private String utilSmartCard;
    private BigDecimal natEfdContM410M810;
    private BigDecimal codVtp;
@@ -351,11 +350,11 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private String statusNcm;
    private String wmsProdRastSerMed;
    private String servDespNTrib;
-   private String prodAliadRcst;
+   private String prodAliadrCst;
    private String gerImpNRetReinfaq;
    private BigDecimal aliqFetHab;
    private String codVolFetHab;
-   private String calcFuntTelPro;
+   private String calcFunTtelPro;
    private String calcFustPro;
    private BigDecimal tipUtilCom;
    private String codBarDifGtin;
@@ -363,19 +362,19 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private String prodInterno;
    private BigDecimal aliqImp;
    private BigDecimal aliqNac;
-   private String atNuVersao;
+   private String atuNuVersao;
    private BigDecimal integraFox;
    private BigDecimal nuVersao;
    private char[] gradePadrao;
    private BigDecimal idGrade;
    private BigDecimal percentSepPul;
    private String obtStAntMedEnt;
-   private String descProdDrcst;
+   private String descProdDrCst;
    private BigDecimal aliqInternaCat42;
    private String desDescCalcPis;
    private BigDecimal aliqFecop;
-   private BigDecimal mvaOriginalAdrcst;
-   private String participaAdrcst;
+   private BigDecimal mvaOriginalAdrCst;
+   private String participaAdrCst;
    private String prodSujFecop;
    private String calRupturaEstoque;
    private String codVolKanban;
@@ -383,16 +382,16 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    private BigDecimal codNatRend;
    private BigDecimal tpIrrfExt;
    private BigDecimal percIndMistura;
-   private String opeExpFetHab;
+   private String opExpFetHab;
    private String opeIntEstFetHab;
    private String opeIntFetHab;
 
-   public BigDecimal getCodProdSubkit() {
-        return codProdSubkit;
+   public BigDecimal getCodProdSubKit() {
+        return codProdSubKit;
    }
 
-   public void setCodProdSubkit(BigDecimal codProdSubkit) {
-        this.codProdSubkit = codProdSubkit;
+   public void setCodProdSubKit(BigDecimal codProdSubKit) {
+        this.codProdSubKit = codProdSubKit;
    }
 
    public String getEnqReintegra() {
@@ -699,12 +698,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.balanca = balanca;
    }
 
-   public String getCalculoGiro() {
-        return calculoGiro;
+   public String getCalcGiro() {
+        return calcGiro;
    }
 
-   public void setCalculoGiro(String calculoGiro) {
-        this.calculoGiro = calculoGiro;
+   public void setCalcGiro(String calcGiro) {
+        this.calcGiro = calcGiro;
    }
 
    public BigDecimal getCamadas() {
@@ -1419,12 +1418,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.icmsGerencia = icmsGerencia;
    }
 
-   public BigDecimal getIdentImob() {
-        return identImob;
+   public BigDecimal getIdenImob() {
+        return idenImob;
    }
 
-   public void setIdentImob(BigDecimal identImob) {
-        this.identImob = identImob;
+   public void setIdenImob(BigDecimal idenImob) {
+        this.idenImob = idenImob;
    }
 
    public byte[] getImagem() {
@@ -1667,12 +1666,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.prazoVal = prazoVal;
    }
 
-   public BigDecimal getPrinCAtivo() {
-        return prinCAtivo;
+   public BigDecimal getPrincAtivo() {
+        return princAtivo;
    }
 
-   public void setPrinCAtivo(BigDecimal prinCAtivo) {
-        this.prinCAtivo = prinCAtivo;
+   public void setPrincAtivo(BigDecimal princAtivo) {
+        this.princAtivo = princAtivo;
    }
 
    public BigDecimal getProdutoNfe() {
@@ -1923,12 +1922,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.temIss = temIss;
    }
 
-   public Timestamp getTemPosServ() {
-        return temPosServ;
+   public Timestamp getTempoServ() {
+        return tempoServ;
    }
 
-   public void setTemPosServ(Timestamp temPosServ) {
-        this.temPosServ = temPosServ;
+   public void setTempoServ(Timestamp tempoServ) {
+        this.tempoServ = tempoServ;
    }
 
    public String getTipContest() {
@@ -2523,12 +2522,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.tempMinima = tempMinima;
    }
 
-   public String getTermoLabi() {
-        return termoLabi;
+   public String getTermolabil() {
+        return termolabil;
    }
 
-   public void setTermoLabi(String termoLabi) {
-        this.termoLabi = termoLabi;
+   public void setTermolabil(String termolabil) {
+        this.termolabil = termolabil;
    }
 
    public String getListaLpm() {
@@ -2771,12 +2770,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.armazeLote = armazeLote;
    }
 
-   public BigDecimal getMvaOriginalDrcst() {
-        return mvaOriginalDrcst;
+   public BigDecimal getMvaOriginalDrCst() {
+        return mvaOriginalDrCst;
    }
 
-   public void setMvaOriginalDrcst(BigDecimal mvaOriginalDrcst) {
-        this.mvaOriginalDrcst = mvaOriginalDrcst;
+   public void setMvaOriginalDrCst(BigDecimal mvaOriginalDrCst) {
+        this.mvaOriginalDrCst = mvaOriginalDrCst;
    }
 
    public String getCodFciCalc() {
@@ -2851,12 +2850,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.impEtiqSepWms = impEtiqSepWms;
    }
 
-   public String getNroProcesso() {
-        return nroProcesso;
+   public String getNrProcesso() {
+        return nrProcesso;
    }
 
-   public void setNroProcesso(String nroProcesso) {
-        this.nroProcesso = nroProcesso;
+   public void setNrProcesso(String nrProcesso) {
+        this.nrProcesso = nrProcesso;
    }
 
    public BigDecimal getPercCmtMun() {
@@ -2883,12 +2882,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.percCmtEst = percCmtEst;
    }
 
-   public BigDecimal getCorFonteConsPreco() {
-        return corFonteConsPreco;
+   public BigDecimal getCorFontConsPreco() {
+        return corFontConsPreco;
    }
 
-   public void setCorFonteConsPreco(BigDecimal corFonteConsPreco) {
-        this.corFonteConsPreco = corFonteConsPreco;
+   public void setCorFontConsPreco(BigDecimal corFontConsPreco) {
+        this.corFontConsPreco = corFontConsPreco;
    }
 
    public BigDecimal getCorFundoConsPreco() {
@@ -3059,12 +3058,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.integraEconect = integraEconect;
    }
 
-   public BigDecimal getMaxMulEconect() {
-        return maxMulEconect;
+   public BigDecimal getMaxMultEconect() {
+        return maxMultEconect;
    }
 
-   public void setMaxMulEconect(BigDecimal maxMulEconect) {
-        this.maxMulEconect = maxMulEconect;
+   public void setMaxMultEconect(BigDecimal maxMultEconect) {
+        this.maxMultEconect = maxMultEconect;
    }
 
    public String getUtilSmartCard() {
@@ -3139,12 +3138,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.servDespNTrib = servDespNTrib;
    }
 
-   public String getProdAliadRcst() {
-        return prodAliadRcst;
+   public String getProdAliadrCst() {
+        return prodAliadrCst;
    }
 
-   public void setProdAliadRcst(String prodAliadRcst) {
-        this.prodAliadRcst = prodAliadRcst;
+   public void setProdAliadrCst(String prodAliadrCst) {
+        this.prodAliadrCst = prodAliadrCst;
    }
 
    public String getGerImpNRetReinfaq() {
@@ -3171,12 +3170,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.codVolFetHab = codVolFetHab;
    }
 
-   public String getCalcFuntTelPro() {
-        return calcFuntTelPro;
+   public String getCalcFunTtelPro() {
+        return calcFunTtelPro;
    }
 
-   public void setCalcFuntTelPro(String calcFuntTelPro) {
-        this.calcFuntTelPro = calcFuntTelPro;
+   public void setCalcFunTtelPro(String calcFunTtelPro) {
+        this.calcFunTtelPro = calcFunTtelPro;
    }
 
    public String getCalcFustPro() {
@@ -3235,12 +3234,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.aliqNac = aliqNac;
    }
 
-   public String getAtNuVersao() {
-        return atNuVersao;
+   public String getAtuNuVersao() {
+        return atuNuVersao;
    }
 
-   public void setAtNuVersao(String atNuVersao) {
-        this.atNuVersao = atNuVersao;
+   public void setAtuNuVersao(String atuNuVersao) {
+        this.atuNuVersao = atuNuVersao;
    }
 
    public BigDecimal getIntegraFox() {
@@ -3291,12 +3290,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
-   public String getDescProdDrcst() {
-        return descProdDrcst;
+   public String getDescProdDrCst() {
+        return descProdDrCst;
    }
 
-   public void setDescProdDrcst(String descProdDrcst) {
-        this.descProdDrcst = descProdDrcst;
+   public void setDescProdDrCst(String descProdDrCst) {
+        this.descProdDrCst = descProdDrCst;
    }
 
    public BigDecimal getAliqInternaCat42() {
@@ -3323,20 +3322,20 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.aliqFecop = aliqFecop;
    }
 
-   public BigDecimal getMvaOriginalAdrcst() {
-        return mvaOriginalAdrcst;
+   public BigDecimal getMvaOriginalAdrCst() {
+        return mvaOriginalAdrCst;
    }
 
-   public void setMvaOriginalAdrcst(BigDecimal mvaOriginalAdrcst) {
-        this.mvaOriginalAdrcst = mvaOriginalAdrcst;
+   public void setMvaOriginalAdrCst(BigDecimal mvaOriginalAdrCst) {
+        this.mvaOriginalAdrCst = mvaOriginalAdrCst;
    }
 
-   public String getParticipaAdrcst() {
-        return participaAdrcst;
+   public String getParticipaAdrCst() {
+        return participaAdrCst;
    }
 
-   public void setParticipaAdrcst(String participaAdrcst) {
-        this.participaAdrcst = participaAdrcst;
+   public void setParticipaAdrCst(String participaAdrCst) {
+        this.participaAdrCst = participaAdrCst;
    }
 
    public String getProdSujFecop() {
@@ -3395,12 +3394,12 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.percIndMistura = percIndMistura;
    }
 
-   public String getOpeExpFetHab() {
-        return opeExpFetHab;
+   public String getOpExpFetHab() {
+        return opExpFetHab;
    }
 
-   public void setOpeExpFetHab(String opeExpFetHab) {
-        this.opeExpFetHab = opeExpFetHab;
+   public void setOpExpFetHab(String opExpFetHab) {
+        this.opExpFetHab = opExpFetHab;
    }
 
    public String getOpeIntEstFetHab() {
@@ -3420,13 +3419,18 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPRO";
+   }
+
+   @Override
    public String getEntityName() {
         return "TarifasCIP";
    }
 
    @Override
    public TarifasCIP fromVO(DynamicVO vo) {
-        this.codProdSubkit = vo.asBigDecimal("CODPRODSUBKIT");
+        this.codProdSubKit = vo.asBigDecimal("CODPRODSUBKIT");
         this.enqReintegra = vo.asString("ENQREINTEGRA");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");
         this.codGProd = vo.asBigDecimal("CODGPROD");
@@ -3465,7 +3469,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.arredPreco = vo.asBigDecimal("ARREDPRECO");
         this.ativo = vo.asString("ATIVO");
         this.balanca = vo.asString("BALANCA");
-        this.calculoGiro = vo.asString("CALCULOGIRO");
+        this.calcGiro = vo.asString("CALCULOGIRO");
         this.camadas = vo.asBigDecimal("CAMADAS");
         this.caracteristicas = vo.asString("CARACTERISTICAS");
         this.carencia = vo.asBigDecimal("CARENCIA");
@@ -3555,7 +3559,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.homePage = vo.asString("HOMEPAGE");
         this.hrDobrada = vo.asString("HRDOBRADA");
         this.icmsGerencia = vo.asString("ICMSGERENCIA");
-        this.identImob = vo.asBigDecimal("IDENTIMOB");
+        this.idenImob = vo.asBigDecimal("IDENTIMOB");
         this.imagem = vo.asBlob("IMAGEM");
         this.impEtiqConf = vo.asString("IMPETIQCONF");
         this.impLaudoLote = vo.asString("IMPLAUDOLOTE");
@@ -3586,7 +3590,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
         this.pesoLiq = vo.asBigDecimal("PESOLIQ");
         this.prazoVal = vo.asBigDecimal("PRAZOVAL");
-        this.prinCAtivo = vo.asBigDecimal("PRINCATIVO");
+        this.princAtivo = vo.asBigDecimal("PRINCATIVO");
         this.produtoNfe = vo.asBigDecimal("PRODUTONFE");
         this.promocao = vo.asString("PROMOCAO");
         this.qtdEmb = vo.asBigDecimal("QTDEMB");
@@ -3618,7 +3622,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.temIpiVenda = vo.asString("TEMIPIVENDA");
         this.temIrf = vo.asString("TEMIRF");
         this.temIss = vo.asString("TEMISS");
-        this.temPosServ = vo.asTimestamp("TEMPOSSERV");
+        this.tempoServ = vo.asTimestamp("TEMPOSERV");
         this.tipContest = vo.asString("TIPCONTEST");
         this.tipContestWms = vo.asString("TIPCONTESTWMS");
         this.tipGtinNfe = vo.asBigDecimal("TIPGTINNFE");
@@ -3693,7 +3697,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.tempMaxima = vo.asBigDecimal("TEMPMAXIMA");
         this.controlado = vo.asString("CONTROLADO");
         this.tempMinima = vo.asBigDecimal("TEMPMINIMA");
-        this.termoLabi = vo.asString("TERMOLABI");
+        this.termolabil = vo.asString("TERMOLABIL");
         this.listaLpm = vo.asString("LISTALPM");
         this.oneroso = vo.asString("ONEROSO");
         this.refMercMed = vo.asString("REFMERCMED");
@@ -3724,7 +3728,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.codMarca = vo.asBigDecimal("CODMARCA");
         this.temRastroLote = vo.asString("TEMRASTROLOTE");
         this.armazeLote = vo.asString("ARMAZELOTE");
-        this.mvaOriginalDrcst = vo.asBigDecimal("MVAORIGINALDRCST");
+        this.mvaOriginalDrCst = vo.asBigDecimal("MVAORIGINALDRCST");
         this.codFciCalc = vo.asString("CODFCICALC");
         this.vlrComercCalc = vo.asBigDecimal("VLRCOMERCCALC");
         this.vlrParcImpExtCalc = vo.asBigDecimal("VLRPARCIMPEXTCALC");
@@ -3734,11 +3738,11 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.nuRfe = vo.asBigDecimal("NURFE");
         this.modEtiqSepWms = vo.asBigDecimal("MODETIQSEPWMS");
         this.impEtiqSepWms = vo.asString("IMPETIQSEPWMS");
-        this.nroProcesso = vo.asString("NROPROCESSO");
+        this.nrProcesso = vo.asString("NROPROCESSO");
         this.percCmtMun = vo.asBigDecimal("PERCCMTMUN");
         this.percCmtFed = vo.asBigDecimal("PERCCMTFED");
         this.percCmtEst = vo.asBigDecimal("PERCCMTEST");
-        this.corFonteConsPreco = vo.asBigDecimal("CORFONTECONSPRECO");
+        this.corFontConsPreco = vo.asBigDecimal("CORFONTCONSPRECO");
         this.corFundoConsPreco = vo.asBigDecimal("CORFUNDOCONSPRECO");
         this.calcDifAl = vo.asString("CALCDIFAL");
         this.classifCessaoObra = vo.asBigDecimal("CLASSIFCESSAOOBRA");
@@ -3760,7 +3764,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.tipoInssEspecial = vo.asString("TIPOINSSESPECIAL");
         this.vlrPartidaGlp = vo.asBigDecimal("VLRPARTIDAGLP");
         this.integraEconect = vo.asString("INTEGRAECONECT");
-        this.maxMulEconect = vo.asBigDecimal("MAXMULECONECT");
+        this.maxMultEconect = vo.asBigDecimal("MAXMULTECONECT");
         this.utilSmartCard = vo.asString("UTILSMARTCARD");
         this.natEfdContM410M810 = vo.asBigDecimal("NATEFDCONTM410M810");
         this.codVtp = vo.asBigDecimal("CODVTP");
@@ -3770,11 +3774,11 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.statusNcm = vo.asString("STATUSNCM");
         this.wmsProdRastSerMed = vo.asString("WMSPRODRASTSERMED");
         this.servDespNTrib = vo.asString("SERVDESPNTRIB");
-        this.prodAliadRcst = vo.asString("PRODALIADRCST");
+        this.prodAliadrCst = vo.asString("PRODALIADRCST");
         this.gerImpNRetReinfaq = vo.asString("GERIMPNRETREINFAQ");
         this.aliqFetHab = vo.asBigDecimal("ALIQFETHAB");
         this.codVolFetHab = vo.asString("CODVOLFETHAB");
-        this.calcFuntTelPro = vo.asString("CALCFUNTTELPRO");
+        this.calcFunTtelPro = vo.asString("CALCFUNTTELPRO");
         this.calcFustPro = vo.asString("CALCFUSTPRO");
         this.tipUtilCom = vo.asBigDecimal("TIPUTILCOM");
         this.codBarDifGtin = vo.asString("CODBARDIFGTIN");
@@ -3782,19 +3786,19 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.prodInterno = vo.asString("PRODINTERNO");
         this.aliqImp = vo.asBigDecimal("ALIQIMP");
         this.aliqNac = vo.asBigDecimal("ALIQNAC");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atuNuVersao = vo.asString("ATUNUVERSAO");
         this.integraFox = vo.asBigDecimal("INTEGRAFOX");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.gradePadrao = vo.asClob("GRADEPADRAO");
         this.idGrade = vo.asBigDecimal("IDGRADE");
         this.percentSepPul = vo.asBigDecimal("PERCENTSEPPUL");
         this.obtStAntMedEnt = vo.asString("OBTSTANTMEDENT");
-        this.descProdDrcst = vo.asString("DESCPRODDRCST");
+        this.descProdDrCst = vo.asString("DESCPRODDRCST");
         this.aliqInternaCat42 = vo.asBigDecimal("ALIQINTERNACAT42");
         this.desDescCalcPis = vo.asString("DESDESCCALCPIS");
         this.aliqFecop = vo.asBigDecimal("ALIQFECOP");
-        this.mvaOriginalAdrcst = vo.asBigDecimal("MVAORIGINALADRCST");
-        this.participaAdrcst = vo.asString("PARTICIPAADRCST");
+        this.mvaOriginalAdrCst = vo.asBigDecimal("MVAORIGINALADRCST");
+        this.participaAdrCst = vo.asString("PARTICIPAADRCST");
         this.prodSujFecop = vo.asString("PRODSUJFECOP");
         this.calRupturaEstoque = vo.asString("CALRUPTURAESTOQUE");
         this.codVolKanban = vo.asString("CODVOLKANBAN");
@@ -3802,7 +3806,7 @@ public class TarifasCIP implements SankhyaEntity<TarifasCIP> {
         this.codNatRend = vo.asBigDecimal("CODNATREND");
         this.tpIrrfExt = vo.asBigDecimal("TPIRRFEXT");
         this.percIndMistura = vo.asBigDecimal("PERCINDMISTURA");
-        this.opeExpFetHab = vo.asString("OPEEXPFETHAB");
+        this.opExpFetHab = vo.asString("OPEEXPFETHAB");
         this.opeIntEstFetHab = vo.asString("OPEINTESTFETHAB");
         this.opeIntFetHab = vo.asString("OPEINTFETHAB");
         return this;

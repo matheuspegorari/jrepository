@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TransicaoFluxo implements SankhyaEntity<TransicaoFluxo> {
-
+public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    private String defStatusExec;
    private String expCondicao;
    private BigDecimal ideFx;
@@ -77,6 +76,11 @@ public class TransicaoFluxo implements SankhyaEntity<TransicaoFluxo> {
 
    public void setPrioritario(String prioritario) {
         this.prioritario = prioritario;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRTFX";
    }
 
    @Override

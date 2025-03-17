@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CacheServicoBoaVista implements SankhyaEntity<CacheServicoBoaVista> {
-
+public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaVista> {
    private String cgcCpf;
    private String cmc7;
    private BigDecimal codUsu;
@@ -63,13 +62,18 @@ public class CacheServicoBoaVista implements SankhyaEntity<CacheServicoBoaVista>
    }
 
    @Override
+   public String getTableName() {
+        return "TGFBOA";
+   }
+
+   @Override
    public String getEntityName() {
         return "CacheServicoBoaVista";
    }
 
    @Override
    public CacheServicoBoaVista fromVO(DynamicVO vo) {
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhConsulta = vo.asTimestamp("DHCONSULTA");

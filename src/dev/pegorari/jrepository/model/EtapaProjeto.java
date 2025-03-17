@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EtapaProjeto implements SankhyaEntity<EtapaProjeto> {
-
+public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    private BigDecimal chaveImp;
    private BigDecimal codProd;
    private String concluida;
@@ -225,6 +224,11 @@ public class EtapaProjeto implements SankhyaEntity<EtapaProjeto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSFET";
+   }
+
+   @Override
    public String getEntityName() {
         return "EtapaProjeto";
    }
@@ -236,9 +240,9 @@ public class EtapaProjeto implements SankhyaEntity<EtapaProjeto> {
         this.concluida = vo.asString("CONCLUIDA");
         this.conclusaoAutomatica = vo.asString("CONCLUSAOAUTOMATICA");
         this.descricao = vo.asString("DESCRICAO");
-        this.dtCedOfImpPrev = vo.asTimestamp("DTCEDOFIMPPREV");
+        this.dtCedOfImpPrev = vo.asTimestamp("DTCEDOFIMPREV");
         this.dtCedOiNiPrev = vo.asTimestamp("DTCEDOINIPREV");
-        this.dtTarDefImpPrev = vo.asTimestamp("DTTARDEFIMPPREV");
+        this.dtTarDefImpPrev = vo.asTimestamp("DTTARDEFIMPREV");
         this.dtTarDeiNiPrev = vo.asTimestamp("DTTARDEINIPREV");
         this.exigeReq = vo.asString("EXIGEREQ");
         this.nuFap = vo.asBigDecimal("NUFAP");

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenagemGeral> {
-
+public class ContratoArmazenagemGeral extends AbstractSankhyaEntity<ContratoArmazenagemGeral> {
    private String temIrf;
    private String temIss;
    private String temMed;
@@ -100,7 +99,7 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
    private BigDecimal codUsuAlter;
    private String temCriRatesp;
    private BigDecimal codServEx;
-   private String numContin;
+   private String numContIn;
    private String cobProporCar;
    private BigDecimal codCencusAr;
    private BigDecimal codCencusEx;
@@ -140,12 +139,12 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
    private String tipIsencao;
    private BigDecimal codClc;
    private BigDecimal nuNotaRefArmaze;
-   private BigDecimal nuNotaRefExprec;
+   private BigDecimal nuNotaRefExpRec;
    private BigDecimal numCstc;
    private Timestamp dtRefArmaze;
-   private Timestamp dtRefExprec;
+   private Timestamp dtRefExpRec;
    private String formFatArmaze;
-   private String formFatExprec;
+   private String formFatExpRec;
    private BigDecimal valQuebTrans;
    private String cifFob;
    private String endereco;
@@ -910,12 +909,12 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.codServEx = codServEx;
    }
 
-   public String getNumContin() {
-        return numContin;
+   public String getNumContIn() {
+        return numContIn;
    }
 
-   public void setNumContin(String numContin) {
-        this.numContin = numContin;
+   public void setNumContIn(String numContIn) {
+        this.numContIn = numContIn;
    }
 
    public String getCobProporCar() {
@@ -1230,12 +1229,12 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.nuNotaRefArmaze = nuNotaRefArmaze;
    }
 
-   public BigDecimal getNuNotaRefExprec() {
-        return nuNotaRefExprec;
+   public BigDecimal getNuNotaRefExpRec() {
+        return nuNotaRefExpRec;
    }
 
-   public void setNuNotaRefExprec(BigDecimal nuNotaRefExprec) {
-        this.nuNotaRefExprec = nuNotaRefExprec;
+   public void setNuNotaRefExpRec(BigDecimal nuNotaRefExpRec) {
+        this.nuNotaRefExpRec = nuNotaRefExpRec;
    }
 
    public BigDecimal getNumCstc() {
@@ -1254,12 +1253,12 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.dtRefArmaze = dtRefArmaze;
    }
 
-   public Timestamp getDtRefExprec() {
-        return dtRefExprec;
+   public Timestamp getDtRefExpRec() {
+        return dtRefExpRec;
    }
 
-   public void setDtRefExprec(Timestamp dtRefExprec) {
-        this.dtRefExprec = dtRefExprec;
+   public void setDtRefExpRec(Timestamp dtRefExpRec) {
+        this.dtRefExpRec = dtRefExpRec;
    }
 
    public String getFormFatArmaze() {
@@ -1270,12 +1269,12 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.formFatArmaze = formFatArmaze;
    }
 
-   public String getFormFatExprec() {
-        return formFatExprec;
+   public String getFormFatExpRec() {
+        return formFatExpRec;
    }
 
-   public void setFormFatExprec(String formFatExprec) {
-        this.formFatExprec = formFatExprec;
+   public void setFormFatExpRec(String formFatExpRec) {
+        this.formFatExpRec = formFatExpRec;
    }
 
    public BigDecimal getValQuebTrans() {
@@ -1431,6 +1430,11 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
    }
 
    @Override
+   public String getTableName() {
+        return "TCSCON";
+   }
+
+   @Override
    public String getEntityName() {
         return "ContratoArmazenagemGeral";
    }
@@ -1530,7 +1534,7 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.temCriRatesp = vo.asString("TEMCRIRATESP");
         this.codServEx = vo.asBigDecimal("CODSERVEX");
-        this.numContin = vo.asString("NUMCONTIN");
+        this.numContIn = vo.asString("NUMCONTIN");
         this.cobProporCar = vo.asString("COBPROPORCAR");
         this.codCencusAr = vo.asBigDecimal("CODCENCUSAR");
         this.codCencusEx = vo.asBigDecimal("CODCENCUSEX");
@@ -1546,8 +1550,8 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.padClass = vo.asBigDecimal("PADCLASS");
         this.percObra = vo.asString("PERCOBRA");
         this.percObraAr = vo.asString("PERCOBRAAR");
-        this.percDesc = vo.asString("PERCDESC");
-        this.percDescon = vo.asString("PERCDESCON");
+        this.percDesc = vo.asString("PERDESC");
+        this.percDescon = vo.asString("PERDESCON");
         this.quebraTec = vo.asBigDecimal("QUEBRATEC");
         this.respPagar = vo.asBigDecimal("RESPPAGAR");
         this.sitCont = vo.asString("SITCONT");
@@ -1570,14 +1574,14 @@ public class ContratoArmazenagemGeral implements SankhyaEntity<ContratoArmazenag
         this.tipIsencao = vo.asString("TIPISENCAO");
         this.codClc = vo.asBigDecimal("CODCLC");
         this.nuNotaRefArmaze = vo.asBigDecimal("NUNOTAREFARMAZE");
-        this.nuNotaRefExprec = vo.asBigDecimal("NUNOTAREFEXPREC");
+        this.nuNotaRefExpRec = vo.asBigDecimal("NUNOTAREFEXPREC");
         this.numCstc = vo.asBigDecimal("NUMCSTC");
         this.dtRefArmaze = vo.asTimestamp("DTREFARMAZE");
-        this.dtRefExprec = vo.asTimestamp("DTREFEXPREC");
+        this.dtRefExpRec = vo.asTimestamp("DTREFEXPREC");
         this.formFatArmaze = vo.asString("FORMFATARMAZE");
-        this.formFatExprec = vo.asString("FORMFATEXPREC");
+        this.formFatExpRec = vo.asString("FORMFATEXPREC");
         this.valQuebTrans = vo.asBigDecimal("VALQUEBTRANS");
-        this.cifFob = vo.asString("CIFFOB");
+        this.cifFob = vo.asString("CIF_FOB");
         this.endereco = vo.asString("ENDERECO");
         this.inscEst = vo.asString("INSCEST");
         this.nomeParc = vo.asString("NOMEPARC");

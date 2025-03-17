@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CabecalhoSLA implements SankhyaEntity<CabecalhoSLA> {
-
+public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    private BigDecimal codCargaHor;
    private String descricao;
    private BigDecimal nuSla;
@@ -41,6 +40,11 @@ public class CabecalhoSLA implements SankhyaEntity<CabecalhoSLA> {
 
    public void setTipoFiltro(String tipoFiltro) {
         this.tipoFiltro = tipoFiltro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSSLA";
    }
 
    @Override

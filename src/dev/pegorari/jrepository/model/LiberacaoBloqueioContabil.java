@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LiberacaoBloqueioContabil implements SankhyaEntity<LiberacaoBloqueioContabil> {
-
+public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBloqueioContabil> {
    private BigDecimal codUsuLib;
    private BigDecimal codUsuSolicit;
    private Timestamp dhSolicit;
@@ -114,6 +113,11 @@ public class LiberacaoBloqueioContabil implements SankhyaEntity<LiberacaoBloquei
 
    public void setTipoMov(String tipoMov) {
         this.tipoMov = tipoMov;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBLBC";
    }
 
    @Override

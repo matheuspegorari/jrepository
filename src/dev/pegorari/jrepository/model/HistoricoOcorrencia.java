@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoOcorrencia implements SankhyaEntity<HistoricoOcorrencia> {
-
+public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrencia> {
    private String afastamento;
    private BigDecimal codAfaCausa;
    private BigDecimal codAfaRais;
@@ -306,6 +305,11 @@ public class HistoricoOcorrencia implements SankhyaEntity<HistoricoOcorrencia> {
    }
 
    @Override
+   public String getTableName() {
+        return "TFPHIS";
+   }
+
+   @Override
    public String getEntityName() {
         return "HistoricoOcorrencia";
    }
@@ -322,7 +326,7 @@ public class HistoricoOcorrencia implements SankhyaEntity<HistoricoOcorrencia> {
         this.falta = vo.asString("FALTA");
         this.tipTab = vo.asString("TIPTAB");
         this.abateAvisoPrevio = vo.asString("ABATEAVISOPREVIO");
-        this.absentismo = vo.asString("ABSENTISMO");
+        this.absentismo = vo.asString("ABSENTEISMO");
         this.anexoObrigatorio = vo.asString("ANEXOOBRIGATORIO");
         this.aparecePortal = vo.asString("APARECEPORTAL");
         this.apelido = vo.asString("APELIDO");

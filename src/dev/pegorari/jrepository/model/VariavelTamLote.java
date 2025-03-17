@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class VariavelTamLote implements SankhyaEntity<VariavelTamLote> {
-
+public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
    private String expressao;
    private BigDecimal idFormula;
    private String nomeVar;
@@ -41,6 +40,11 @@ public class VariavelTamLote implements SankhyaEntity<VariavelTamLote> {
 
    public void setOrdem(BigDecimal ordem) {
         this.ordem = ordem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRVFTL";
    }
 
    @Override

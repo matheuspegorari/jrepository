@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EstoqueEndereco implements SankhyaEntity<EstoqueEndereco> {
-
+public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    private BigDecimal codEmp;
    private BigDecimal codEnd;
    private BigDecimal codLocal;
@@ -150,6 +149,11 @@ public class EstoqueEndereco implements SankhyaEntity<EstoqueEndereco> {
 
    public void setSaidPendVolPad(BigDecimal saidPendVolPad) {
         this.saidPendVolPad = saidPendVolPad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEST";
    }
 
    @Override

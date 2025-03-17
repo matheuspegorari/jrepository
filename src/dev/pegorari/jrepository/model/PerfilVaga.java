@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PerfilVaga implements SankhyaEntity<PerfilVaga> {
-
+public class PerfilVaga extends AbstractSankhyaEntity<PerfilVaga> {
    private BigDecimal codPerfil;
    private BigDecimal codAnuncio;
 
@@ -23,6 +22,11 @@ public class PerfilVaga implements SankhyaEntity<PerfilVaga> {
 
    public void setCodAnuncio(BigDecimal codAnuncio) {
         this.codAnuncio = codAnuncio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSPFV";
    }
 
    @Override

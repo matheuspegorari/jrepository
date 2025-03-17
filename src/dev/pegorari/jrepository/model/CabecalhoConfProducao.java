@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoConfProducao implements SankhyaEntity<CabecalhoConfProducao> {
-
+public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfProducao> {
    private BigDecimal nuApo;
    private String status;
    private BigDecimal idAtv;
@@ -72,6 +71,11 @@ public class CabecalhoConfProducao implements SankhyaEntity<CabecalhoConfProduca
    }
 
    @Override
+   public String getTableName() {
+        return "TPRCONF";
+   }
+
+   @Override
    public String getEntityName() {
         return "CabecalhoConfProducao";
    }
@@ -80,7 +84,7 @@ public class CabecalhoConfProducao implements SankhyaEntity<CabecalhoConfProduca
    public CabecalhoConfProducao fromVO(DynamicVO vo) {
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.status = vo.asString("STATUS");
-        this.idAtv = vo.asBigDecimal("IDATV");
+        this.idAtv = vo.asBigDecimal("IDIATV");
         this.dhFinConf = vo.asTimestamp("DHFINCONF");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
         this.dhIniConf = vo.asTimestamp("DHINICONF");

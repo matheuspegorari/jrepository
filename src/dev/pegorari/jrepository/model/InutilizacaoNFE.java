@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InutilizacaoNFE implements SankhyaEntity<InutilizacaoNFE> {
-
+public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    private BigDecimal codEmp;
    private BigDecimal codModDoc;
    private BigDecimal codUsu;
@@ -105,6 +104,11 @@ public class InutilizacaoNFE implements SankhyaEntity<InutilizacaoNFE> {
 
    public void setTpAmbNfe(String tpAmbNfe) {
         this.tpAmbNfe = tpAmbNfe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFINU";
    }
 
    @Override

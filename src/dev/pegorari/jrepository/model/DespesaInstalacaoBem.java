@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DespesaInstalacaoBem implements SankhyaEntity<DespesaInstalacaoBem> {
-
+public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalacaoBem> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private BigDecimal nuNotaDesp;
@@ -69,6 +68,11 @@ public class DespesaInstalacaoBem implements SankhyaEntity<DespesaInstalacaoBem>
 
    public void setVlrTotRateio(BigDecimal vlrTotRateio) {
         this.vlrTotRateio = vlrTotRateio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCIDIB";
    }
 
    @Override

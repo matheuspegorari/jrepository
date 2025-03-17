@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemTarefa implements SankhyaEntity<ItemTarefa> {
-
+public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    private BigDecimal nuRecebimento;
    private BigDecimal codArmazenagem;
    private BigDecimal codAreaSep;
@@ -312,6 +311,11 @@ public class ItemTarefa implements SankhyaEntity<ItemTarefa> {
 
    public void setTriado(String triado) {
         this.triado = triado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWITT";
    }
 
    @Override

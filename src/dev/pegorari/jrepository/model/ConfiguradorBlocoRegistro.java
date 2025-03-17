@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguradorBlocoRegistro implements SankhyaEntity<ConfiguradorBlocoRegistro> {
-
+public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<ConfiguradorBlocoRegistro> {
    private String arquivosKw;
    private BigDecimal codEmp;
    private String bloco;
@@ -123,6 +122,11 @@ public class ConfiguradorBlocoRegistro implements SankhyaEntity<ConfiguradorBloc
 
    public void setDtAlter(Timestamp dtAlter) {
         this.dtAlter = dtAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBECF";
    }
 
    @Override

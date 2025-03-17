@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RestricaoTopBK implements SankhyaEntity<RestricaoTopBK> {
-
+public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    private String restricao;
    private BigDecimal sequencia;
    private BigDecimal codColRest;
@@ -68,6 +67,11 @@ public class RestricaoTopBK implements SankhyaEntity<RestricaoTopBK> {
 
    public void setTipRest(String tipRest) {
         this.tipRest = tipRest;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFREPBK";
    }
 
    @Override

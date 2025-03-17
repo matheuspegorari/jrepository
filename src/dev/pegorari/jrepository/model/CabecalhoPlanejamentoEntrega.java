@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoPlanejamentoEntrega implements SankhyaEntity<CabecalhoPlanejamentoEntrega> {
-
+public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<CabecalhoPlanejamentoEntrega> {
    private BigDecimal codCid;
    private BigDecimal codBai;
    private BigDecimal codEnd;
@@ -123,6 +122,11 @@ public class CabecalhoPlanejamentoEntrega implements SankhyaEntity<CabecalhoPlan
 
    public void setCodReg(BigDecimal codReg) {
         this.codReg = codReg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPLAC";
    }
 
    @Override

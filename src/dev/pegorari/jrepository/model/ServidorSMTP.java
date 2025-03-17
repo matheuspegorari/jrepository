@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ServidorSMTP implements SankhyaEntity<ServidorSMTP> {
-
+public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    private String senha;
    private String usuario;
    private String servidor;
@@ -158,6 +157,11 @@ public class ServidorSMTP implements SankhyaEntity<ServidorSMTP> {
 
    public void setUseOauth(String useOauth) {
         this.useOauth = useOauth;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSISMTP";
    }
 
    @Override

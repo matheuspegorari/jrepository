@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class FaturamentoAutomaticoWMS implements SankhyaEntity<FaturamentoAutomaticoWMS> {
-
+public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoAutomaticoWMS> {
    private String ativo;
    private BigDecimal codEmp;
    private Timestamp dtUltFatConfSep;
@@ -87,6 +86,11 @@ public class FaturamentoAutomaticoWMS implements SankhyaEntity<FaturamentoAutoma
 
    public void setFiltroFatAuto(char[] filtroFatAuto) {
         this.filtroFatAuto = filtroFatAuto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWFATAUTO";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SetupWorkCenterPorPA implements SankhyaEntity<SetupWorkCenterPorPA> {
-
+public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterPorPA> {
    private BigDecimal codProdPa;
    private String controlePa;
    private BigDecimal nuAst;
@@ -77,6 +76,11 @@ public class SetupWorkCenterPorPA implements SankhyaEntity<SetupWorkCenterPorPA>
 
    public void setValTexto(String valTexto) {
         this.valTexto = valTexto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRSWXP";
    }
 
    @Override

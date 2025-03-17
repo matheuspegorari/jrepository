@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ModeloEmail implements SankhyaEntity<ModeloEmail> {
-
+public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    private String assunto;
    private BigDecimal codModelo;
    private BigDecimal codSmtp;
@@ -77,6 +76,11 @@ public class ModeloEmail implements SankhyaEntity<ModeloEmail> {
 
    public void setCodUsuRemet(BigDecimal codUsuRemet) {
         this.codUsuRemet = codUsuRemet;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIMEM";
    }
 
    @Override

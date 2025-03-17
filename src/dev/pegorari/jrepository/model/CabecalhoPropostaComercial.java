@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoPropostaComercial implements SankhyaEntity<CabecalhoPropostaComercial> {
-
+public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoPropostaComercial> {
    private BigDecimal percDesconto;
    private BigDecimal percDescProd;
    private BigDecimal percDescServ;
@@ -528,6 +527,11 @@ public class CabecalhoPropostaComercial implements SankhyaEntity<CabecalhoPropos
 
    public void setPercComissao5(BigDecimal percComissao5) {
         this.percComissao5 = percComissao5;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGICAB";
    }
 
    @Override

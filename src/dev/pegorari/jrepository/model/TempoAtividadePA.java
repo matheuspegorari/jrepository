@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TempoAtividadePA implements SankhyaEntity<TempoAtividadePA> {
-
+public class TempoAtividadePA extends AbstractSankhyaEntity<TempoAtividadePA> {
    private BigDecimal ideFx;
    private String controlePa;
    private BigDecimal codProdPa;
@@ -123,6 +122,11 @@ public class TempoAtividadePA implements SankhyaEntity<TempoAtividadePA> {
 
    public void setUsarCtPadrao(String usarCtPadrao) {
         this.usarCtPadrao = usarCtPadrao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRTXP";
    }
 
    @Override

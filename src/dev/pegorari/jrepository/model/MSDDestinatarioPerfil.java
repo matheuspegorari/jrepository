@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MSDDestinatarioPerfil implements SankhyaEntity<MSDDestinatarioPerfil> {
-
+public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatarioPerfil> {
    private BigDecimal codCon;
    private BigDecimal codPer;
 
@@ -23,6 +22,11 @@ public class MSDDestinatarioPerfil implements SankhyaEntity<MSDDestinatarioPerfi
 
    public void setCodPer(BigDecimal codPer) {
         this.codPer = codPer;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDCPE";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Impressora implements SankhyaEntity<Impressora> {
-
+public class Impressora extends AbstractSankhyaEntity<Impressora> {
    private String aliasLocal;
    private String ativo;
    private Timestamp dhStatus;
@@ -78,6 +77,11 @@ public class Impressora implements SankhyaEntity<Impressora> {
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPRN";
    }
 
    @Override

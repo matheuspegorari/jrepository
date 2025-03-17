@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RelacaoItemCTe implements SankhyaEntity<RelacaoItemCTe> {
-
+public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    private BigDecimal seqNota;
    private BigDecimal sequencia;
    private BigDecimal valUnit;
@@ -77,6 +76,11 @@ public class RelacaoItemCTe implements SankhyaEntity<RelacaoItemCTe> {
 
    public void setQuantidade(BigDecimal quantidade) {
         this.quantidade = quantidade;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFINCT";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NumeroAtoConcDrawBack implements SankhyaEntity<NumeroAtoConcDrawBack> {
-
+public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDrawBack> {
    private BigDecimal sequenciaDraw;
    private BigDecimal sequencia;
    private BigDecimal nuNota;
@@ -41,6 +40,11 @@ public class NumeroAtoConcDrawBack implements SankhyaEntity<NumeroAtoConcDrawBac
 
    public void setNroAtoConcDraw(String nroAtoConcDraw) {
         this.nroAtoConcDraw = nroAtoConcDraw;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDRAW";
    }
 
    @Override

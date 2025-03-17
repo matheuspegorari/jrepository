@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoTomado> {
-
+public class RetContribServicoTomado extends AbstractSankhyaEntity<RetContribServicoTomado> {
    private String chave;
    private String cnpjPrestador;
    private BigDecimal codEmp;
@@ -26,8 +25,8 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
    private BigDecimal tpInscEstab;
    private BigDecimal vlrTotalBaseRet;
    private BigDecimal vlrTotalBruto;
-   private BigDecimal vlrTotalNRetAdic;
-   private BigDecimal vlrTotalNRetPrinc;
+   private BigDecimal vlrTotalNretAdic;
+   private BigDecimal vlrTotalNretPrinc;
    private BigDecimal vlrTotalRetAdic;
    private BigDecimal vlrTotalRetPrinc;
    private String cnpjPrestadorRet;
@@ -42,8 +41,8 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
    private BigDecimal vlrCrTomSuspRet;
    private BigDecimal vlrTotalBaseRetRet;
    private BigDecimal vlrTotalDifRet;
-   private BigDecimal vlrTotalNRetAdicRet;
-   private BigDecimal vlrTotalNRetPrincRet;
+   private BigDecimal vlrTotalNretAdicRet;
+   private BigDecimal vlrTotalNretPrincRet;
    private BigDecimal vlrTotalRetAdicCalc;
    private BigDecimal vlrTotalRetAdicDif;
    private BigDecimal vlrTotalRetAdicRet;
@@ -204,20 +203,20 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
         this.vlrTotalBruto = vlrTotalBruto;
    }
 
-   public BigDecimal getVlrTotalNRetAdic() {
-        return vlrTotalNRetAdic;
+   public BigDecimal getVlrTotalNretAdic() {
+        return vlrTotalNretAdic;
    }
 
-   public void setVlrTotalNRetAdic(BigDecimal vlrTotalNRetAdic) {
-        this.vlrTotalNRetAdic = vlrTotalNRetAdic;
+   public void setVlrTotalNretAdic(BigDecimal vlrTotalNretAdic) {
+        this.vlrTotalNretAdic = vlrTotalNretAdic;
    }
 
-   public BigDecimal getVlrTotalNRetPrinc() {
-        return vlrTotalNRetPrinc;
+   public BigDecimal getVlrTotalNretPrinc() {
+        return vlrTotalNretPrinc;
    }
 
-   public void setVlrTotalNRetPrinc(BigDecimal vlrTotalNRetPrinc) {
-        this.vlrTotalNRetPrinc = vlrTotalNRetPrinc;
+   public void setVlrTotalNretPrinc(BigDecimal vlrTotalNretPrinc) {
+        this.vlrTotalNretPrinc = vlrTotalNretPrinc;
    }
 
    public BigDecimal getVlrTotalRetAdic() {
@@ -332,20 +331,20 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
         this.vlrTotalDifRet = vlrTotalDifRet;
    }
 
-   public BigDecimal getVlrTotalNRetAdicRet() {
-        return vlrTotalNRetAdicRet;
+   public BigDecimal getVlrTotalNretAdicRet() {
+        return vlrTotalNretAdicRet;
    }
 
-   public void setVlrTotalNRetAdicRet(BigDecimal vlrTotalNRetAdicRet) {
-        this.vlrTotalNRetAdicRet = vlrTotalNRetAdicRet;
+   public void setVlrTotalNretAdicRet(BigDecimal vlrTotalNretAdicRet) {
+        this.vlrTotalNretAdicRet = vlrTotalNretAdicRet;
    }
 
-   public BigDecimal getVlrTotalNRetPrincRet() {
-        return vlrTotalNRetPrincRet;
+   public BigDecimal getVlrTotalNretPrincRet() {
+        return vlrTotalNretPrincRet;
    }
 
-   public void setVlrTotalNRetPrincRet(BigDecimal vlrTotalNRetPrincRet) {
-        this.vlrTotalNRetPrincRet = vlrTotalNRetPrincRet;
+   public void setVlrTotalNretPrincRet(BigDecimal vlrTotalNretPrincRet) {
+        this.vlrTotalNretPrincRet = vlrTotalNretPrincRet;
    }
 
    public BigDecimal getVlrTotalRetAdicCalc() {
@@ -405,6 +404,11 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
    }
 
    @Override
+   public String getTableName() {
+        return "TRIRCST";
+   }
+
+   @Override
    public String getEntityName() {
         return "RetContribServicoTomado";
    }
@@ -421,8 +425,8 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
         this.indObra = vo.asBigDecimal("INDOBRA");
         this.nrInsc = vo.asString("NRINSC");
         this.nrInscEstab = vo.asString("NRINSCESTAB");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.statusReg = vo.asString("STATUSREG");
         this.tpAmb = vo.asString("TPAMB");
@@ -430,8 +434,8 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
         this.tpInscEstab = vo.asBigDecimal("TPINSCESTAB");
         this.vlrTotalBaseRet = vo.asBigDecimal("VLRTOTALBASERET");
         this.vlrTotalBruto = vo.asBigDecimal("VLRTOTALBRUTO");
-        this.vlrTotalNRetAdic = vo.asBigDecimal("VLRTOTALNRETADIC");
-        this.vlrTotalNRetPrinc = vo.asBigDecimal("VLRTOTALNRETPRINC");
+        this.vlrTotalNretAdic = vo.asBigDecimal("VLRTOTALNRETADIC");
+        this.vlrTotalNretPrinc = vo.asBigDecimal("VLRTOTALNRETPRINC");
         this.vlrTotalRetAdic = vo.asBigDecimal("VLRTOTALRETADIC");
         this.vlrTotalRetPrinc = vo.asBigDecimal("VLRTOTALRETPRINC");
         this.cnpjPrestadorRet = vo.asString("CNPJPRESTADORRET");
@@ -446,8 +450,8 @@ public class RetContribServicoTomado implements SankhyaEntity<RetContribServicoT
         this.vlrCrTomSuspRet = vo.asBigDecimal("VLRCRTOMSUSPRET");
         this.vlrTotalBaseRetRet = vo.asBigDecimal("VLRTOTALBASERETRET");
         this.vlrTotalDifRet = vo.asBigDecimal("VLRTOTALDIFRET");
-        this.vlrTotalNRetAdicRet = vo.asBigDecimal("VLRTOTALNRETADICRET");
-        this.vlrTotalNRetPrincRet = vo.asBigDecimal("VLRTOTALNRETPRINCRET");
+        this.vlrTotalNretAdicRet = vo.asBigDecimal("VLRTOTALNRETADICRET");
+        this.vlrTotalNretPrincRet = vo.asBigDecimal("VLRTOTALNRETPRINCRET");
         this.vlrTotalRetAdicCalc = vo.asBigDecimal("VLRTOTALRETADICCALC");
         this.vlrTotalRetAdicDif = vo.asBigDecimal("VLRTOTALRETADICDIF");
         this.vlrTotalRetAdicRet = vo.asBigDecimal("VLRTOTALRETADICRET");

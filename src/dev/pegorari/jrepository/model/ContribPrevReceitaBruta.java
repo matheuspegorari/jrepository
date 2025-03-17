@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ContribPrevReceitaBruta implements SankhyaEntity<ContribPrevReceitaBruta> {
-
+public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevReceitaBruta> {
    private String nroRecibo;
    private String nroReciboAnt;
    private BigDecimal sequencia;
@@ -252,6 +251,11 @@ public class ContribPrevReceitaBruta implements SankhyaEntity<ContribPrevReceita
    }
 
    @Override
+   public String getTableName() {
+        return "TRICPRB";
+   }
+
+   @Override
    public String getEntityName() {
         return "ContribPrevReceitaBruta";
    }
@@ -265,7 +269,7 @@ public class ContribPrevReceitaBruta implements SankhyaEntity<ContribPrevReceita
         this.tpAmb = vo.asString("TPAMB");
         this.tpInsc = vo.asBigDecimal("TPINSC");
         this.tpInscEstab = vo.asBigDecimal("TPINSCESTAB");
-        this.vlrCpApuTotal = vo.asBigDecimal("VLRCPAPUTOTAL");
+        this.vlrCpApuTotal = vo.asBigDecimal("VLRCPAPURTOTAL");
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");
@@ -281,7 +285,7 @@ public class ContribPrevReceitaBruta implements SankhyaEntity<ContribPrevReceita
         this.msg = vo.asClob("MSG");
         this.tipo = vo.asString("TIPO");
         this.vlrBcCpRbTotal = vo.asBigDecimal("VLRBCCPRBTOTAL");
-        this.vlrCpApuTotalRet = vo.asBigDecimal("VLRCPAPUTOTALRET");
+        this.vlrCpApuTotalRet = vo.asBigDecimal("VLRCPAPURTOTALRET");
         this.vlrCpRbSuspTotalRet = vo.asBigDecimal("VLRCPRBSUSPTOTALRET");
         this.xmlEvento = vo.asClob("XMLEVENTO");
         this.xmlRetorno = vo.asClob("XMLRETORNO");

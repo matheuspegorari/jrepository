@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LigacaoNotasSaidasEntradas implements SankhyaEntity<LigacaoNotasSaidasEntradas> {
-
+public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNotasSaidasEntradas> {
    private BigDecimal baseSubst;
    private BigDecimal vlrSubst;
    private BigDecimal nuNota;
@@ -104,6 +103,11 @@ public class LigacaoNotasSaidasEntradas implements SankhyaEntity<LigacaoNotasSai
 
    public void setVlrStfcpInt(BigDecimal vlrStfcpInt) {
         this.vlrStfcpInt = vlrStfcpInt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFVAS";
    }
 
    @Override

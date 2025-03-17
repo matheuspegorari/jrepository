@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OcorrenciaContrato implements SankhyaEntity<OcorrenciaContrato> {
-
+public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato> {
    private BigDecimal codContato;
    private BigDecimal codOcor;
    private BigDecimal codParc;
@@ -78,6 +77,11 @@ public class OcorrenciaContrato implements SankhyaEntity<OcorrenciaContrato> {
 
    public void setNumContrato(BigDecimal numContrato) {
         this.numContrato = numContrato;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSOCC";
    }
 
    @Override

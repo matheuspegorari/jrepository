@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
-
+public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    private String ativo;
-   private String baixaCerro;
+   private String baixaCerto;
    private BigDecimal carencia;
    private BigDecimal cartaoDesc;
    private BigDecimal cartaoTaxa;
@@ -17,12 +16,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
    private BigDecimal codDetRecGnre;
    private BigDecimal codGrupoTipTit;
    private BigDecimal codMoeda;
-   private BigDecimal codParctef;
+   private BigDecimal codParcTef;
    private BigDecimal codProdGnre;
    private BigDecimal codRecGnre;
    private BigDecimal codTipTit;
    private String conferencia;
-   private String descripTipTit;
+   private String descTipTit;
    private String espDoc;
    private String exibBaix;
    private String exigBaixaAcerto;
@@ -48,7 +47,7 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
    private BigDecimal vlrCusVar;
    private String impComprovante;
    private String ajustavp;
-   private String tpAgnFce;
+   private String tpAgNfce;
    private String utilizaPos;
    private String arredPrimeiraParc;
    private BigDecimal qtdParcelCtf;
@@ -69,7 +68,7 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
    private String infCompleFdCont;
    private BigDecimal nroParcelasMax;
    private String alteraSimulTpv;
-   private String descrtPagNfce;
+   private String descTpagNfce;
    private String ultilizaPdvWeb;
    private String proibImpBol;
    private BigDecimal vlrParcMinCart;
@@ -85,12 +84,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.ativo = ativo;
    }
 
-   public String getBaixaCerro() {
-        return baixaCerro;
+   public String getBaixaCerto() {
+        return baixaCerto;
    }
 
-   public void setBaixaCerro(String baixaCerro) {
-        this.baixaCerro = baixaCerro;
+   public void setBaixaCerto(String baixaCerto) {
+        this.baixaCerto = baixaCerto;
    }
 
    public BigDecimal getCarencia() {
@@ -165,12 +164,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.codMoeda = codMoeda;
    }
 
-   public BigDecimal getCodParctef() {
-        return codParctef;
+   public BigDecimal getCodParcTef() {
+        return codParcTef;
    }
 
-   public void setCodParctef(BigDecimal codParctef) {
-        this.codParctef = codParctef;
+   public void setCodParcTef(BigDecimal codParcTef) {
+        this.codParcTef = codParcTef;
    }
 
    public BigDecimal getCodProdGnre() {
@@ -205,12 +204,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.conferencia = conferencia;
    }
 
-   public String getDescripTipTit() {
-        return descripTipTit;
+   public String getDescTipTit() {
+        return descTipTit;
    }
 
-   public void setDescripTipTit(String descripTipTit) {
-        this.descripTipTit = descripTipTit;
+   public void setDescTipTit(String descTipTit) {
+        this.descTipTit = descTipTit;
    }
 
    public String getEspDoc() {
@@ -413,12 +412,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.ajustavp = ajustavp;
    }
 
-   public String getTpAgnFce() {
-        return tpAgnFce;
+   public String getTpAgNfce() {
+        return tpAgNfce;
    }
 
-   public void setTpAgnFce(String tpAgnFce) {
-        this.tpAgnFce = tpAgnFce;
+   public void setTpAgNfce(String tpAgNfce) {
+        this.tpAgNfce = tpAgNfce;
    }
 
    public String getUtilizaPos() {
@@ -581,12 +580,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.alteraSimulTpv = alteraSimulTpv;
    }
 
-   public String getDescrtPagNfce() {
-        return descrtPagNfce;
+   public String getDescTpagNfce() {
+        return descTpagNfce;
    }
 
-   public void setDescrtPagNfce(String descrtPagNfce) {
-        this.descrtPagNfce = descrtPagNfce;
+   public void setDescTpagNfce(String descTpagNfce) {
+        this.descTpagNfce = descTpagNfce;
    }
 
    public String getUltilizaPdvWeb() {
@@ -638,6 +637,11 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTIT";
+   }
+
+   @Override
    public String getEntityName() {
         return "TipoTitulo";
    }
@@ -645,7 +649,7 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
    @Override
    public TipoTitulo fromVO(DynamicVO vo) {
         this.ativo = vo.asString("ATIVO");
-        this.baixaCerro = vo.asString("BAIXACERRO");
+        this.baixaCerto = vo.asString("BAIXACERTO");
         this.carencia = vo.asBigDecimal("CARENCIA");
         this.cartaoDesc = vo.asBigDecimal("CARTAODESC");
         this.cartaoTaxa = vo.asBigDecimal("CARTAOTAXA");
@@ -655,12 +659,12 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.codDetRecGnre = vo.asBigDecimal("CODDETRECGNRE");
         this.codGrupoTipTit = vo.asBigDecimal("CODGRUPOTIPTIT");
         this.codMoeda = vo.asBigDecimal("CODMOEDA");
-        this.codParctef = vo.asBigDecimal("CODPARCTEF");
+        this.codParcTef = vo.asBigDecimal("CODPARCTEF");
         this.codProdGnre = vo.asBigDecimal("CODPRODGNRE");
         this.codRecGnre = vo.asBigDecimal("CODRECGNRE");
         this.codTipTit = vo.asBigDecimal("CODTIPTIT");
         this.conferencia = vo.asString("CONFERENCIA");
-        this.descripTipTit = vo.asString("DESCRIPTIPTIT");
+        this.descTipTit = vo.asString("DESCRTIPTIT");
         this.espDoc = vo.asString("ESPDOC");
         this.exibBaix = vo.asString("EXIBBAIX");
         this.exigBaixaAcerto = vo.asString("EXIGBAIXAACERTO");
@@ -686,7 +690,7 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.vlrCusVar = vo.asBigDecimal("VLRCUSVAR");
         this.impComprovante = vo.asString("IMPCOMPROVANTE");
         this.ajustavp = vo.asString("AJUSTAVP");
-        this.tpAgnFce = vo.asString("TPAGNFCE");
+        this.tpAgNfce = vo.asString("TPAGNFCE");
         this.utilizaPos = vo.asString("UTILIZAPOS");
         this.arredPrimeiraParc = vo.asString("ARREDPRIMEIRAPARC");
         this.qtdParcelCtf = vo.asBigDecimal("QTDPARCELCTF");
@@ -707,7 +711,7 @@ public class TipoTitulo implements SankhyaEntity<TipoTitulo> {
         this.infCompleFdCont = vo.asString("INFCOMPLEFDCONT");
         this.nroParcelasMax = vo.asBigDecimal("NROPARCELASMAX");
         this.alteraSimulTpv = vo.asString("ALTERASIMULTPV");
-        this.descrtPagNfce = vo.asString("DESCRTPAGNFCE");
+        this.descTpagNfce = vo.asString("DESCRTPAGNFCE");
         this.ultilizaPdvWeb = vo.asString("ULTILIZAPDVWEB");
         this.proibImpBol = vo.asString("PROIBIMPBOL");
         this.vlrParcMinCart = vo.asBigDecimal("VLRPARCMINCART");

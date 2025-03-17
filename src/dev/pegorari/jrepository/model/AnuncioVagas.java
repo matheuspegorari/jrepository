@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AnuncioVagas implements SankhyaEntity<AnuncioVagas> {
-
+public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    private String tipo;
    private String resumo;
    private String descrVaga;
@@ -114,6 +113,11 @@ public class AnuncioVagas implements SankhyaEntity<AnuncioVagas> {
 
    public void setDtTermino(Timestamp dtTermino) {
         this.dtTermino = dtTermino;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSANU";
    }
 
    @Override

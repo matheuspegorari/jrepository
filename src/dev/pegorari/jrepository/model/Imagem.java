@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Imagem implements SankhyaEntity<Imagem> {
-
+public class Imagem extends AbstractSankhyaEntity<Imagem> {
    private BigDecimal codImg;
    private byte[] foto;
 
@@ -23,6 +22,11 @@ public class Imagem implements SankhyaEntity<Imagem> {
 
    public void setFoto(byte[] foto) {
         this.foto = foto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIIMG";
    }
 
    @Override

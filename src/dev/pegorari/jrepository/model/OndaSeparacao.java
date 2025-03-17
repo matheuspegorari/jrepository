@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OndaSeparacao implements SankhyaEntity<OndaSeparacao> {
-
+public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
    private BigDecimal codOnda;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
@@ -33,6 +32,11 @@ public class OndaSeparacao implements SankhyaEntity<OndaSeparacao> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWOND";
    }
 
    @Override

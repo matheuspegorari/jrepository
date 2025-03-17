@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DependenciaEntreOps implements SankhyaEntity<DependenciaEntreOps> {
-
+public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreOps> {
    private String referenciaPi;
    private String referenciaPa;
    private BigDecimal idIprocPi;
@@ -96,6 +95,11 @@ public class DependenciaEntreOps implements SankhyaEntity<DependenciaEntreOps> {
 
    public void setCodProdPi(BigDecimal codProdPi) {
         this.codProdPi = codProdPi;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRIDEP";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PartilhaSimplesNacional implements SankhyaEntity<PartilhaSimplesNacional> {
-
+public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimplesNacional> {
    private BigDecimal aliqCofins;
    private BigDecimal aliqCpp;
    private BigDecimal aliqCsll;
@@ -276,6 +275,11 @@ public class PartilhaSimplesNacional implements SankhyaEntity<PartilhaSimplesNac
 
    public void setVlrRecBrutaAliefe(BigDecimal vlrRecBrutaAliefe) {
         this.vlrRecBrutaAliefe = vlrRecBrutaAliefe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPSN";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TransferenciaVerbaOrcamento implements SankhyaEntity<TransferenciaVerbaOrcamento> {
-
+public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<TransferenciaVerbaOrcamento> {
    private BigDecimal codMeta;
    private Timestamp dhTransf;
    private BigDecimal nuTvo;
@@ -42,6 +41,11 @@ public class TransferenciaVerbaOrcamento implements SankhyaEntity<TransferenciaV
 
    public void setVlrTransf(BigDecimal vlrTransf) {
         this.vlrTransf = vlrTransf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMTVO";
    }
 
    @Override

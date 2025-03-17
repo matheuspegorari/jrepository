@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TopNaturezaOperacaoMunicipio implements SankhyaEntity<TopNaturezaOperacaoMunicipio> {
-
+public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNaturezaOperacaoMunicipio> {
    private BigDecimal codEmp;
    private BigDecimal codTipOper;
    private String codNatOper;
@@ -41,6 +40,11 @@ public class TopNaturezaOperacaoMunicipio implements SankhyaEntity<TopNaturezaOp
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTNA";
    }
 
    @Override

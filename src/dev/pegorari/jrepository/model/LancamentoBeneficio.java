@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LancamentoBeneficio implements SankhyaEntity<LancamentoBeneficio> {
-
+public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBeneficio> {
    private BigDecimal vlrTitular;
    private String nomeFunc;
    private BigDecimal sequencia;
@@ -150,6 +149,11 @@ public class LancamentoBeneficio implements SankhyaEntity<LancamentoBeneficio> {
 
    public void setVlrDepen(BigDecimal vlrDepen) {
         this.vlrDepen = vlrDepen;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPLBE";
    }
 
    @Override

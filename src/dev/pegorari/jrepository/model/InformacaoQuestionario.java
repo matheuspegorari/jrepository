@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InformacaoQuestionario implements SankhyaEntity<InformacaoQuestionario> {
-
+public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQuestionario> {
    private BigDecimal codQuest;
    private BigDecimal codUsu;
    private String descricao;
@@ -60,6 +59,11 @@ public class InformacaoQuestionario implements SankhyaEntity<InformacaoQuestiona
 
    public void setTexto(String texto) {
         this.texto = texto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQINF";
    }
 
    @Override

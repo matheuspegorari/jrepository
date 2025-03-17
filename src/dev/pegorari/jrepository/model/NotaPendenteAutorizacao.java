@@ -1,15 +1,14 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotaPendenteAutorizacao implements SankhyaEntity<NotaPendenteAutorizacao> {
-
+public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteAutorizacao> {
    private String tipo;
    private Timestamp dhUltTenta;
-   private BigDecimal qtdeEnvio;
+   private BigDecimal qtdenvio;
    private BigDecimal nuNota;
    private Timestamp dhInclusao;
    private BigDecimal codUsu;
@@ -32,12 +31,12 @@ public class NotaPendenteAutorizacao implements SankhyaEntity<NotaPendenteAutori
         this.dhUltTenta = dhUltTenta;
    }
 
-   public BigDecimal getQtdeEnvio() {
-        return qtdeEnvio;
+   public BigDecimal getQtdenvio() {
+        return qtdenvio;
    }
 
-   public void setQtdeEnvio(BigDecimal qtdeEnvio) {
-        this.qtdeEnvio = qtdeEnvio;
+   public void setQtdenvio(BigDecimal qtdenvio) {
+        this.qtdenvio = qtdenvio;
    }
 
    public BigDecimal getNuNota() {
@@ -81,6 +80,11 @@ public class NotaPendenteAutorizacao implements SankhyaEntity<NotaPendenteAutori
    }
 
    @Override
+   public String getTableName() {
+        return "TGFNPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "NotaPendenteAutorizacao";
    }
@@ -89,7 +93,7 @@ public class NotaPendenteAutorizacao implements SankhyaEntity<NotaPendenteAutori
    public NotaPendenteAutorizacao fromVO(DynamicVO vo) {
         this.tipo = vo.asString("TIPO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
-        this.qtdeEnvio = vo.asBigDecimal("QTDEENVIO");
+        this.qtdenvio = vo.asBigDecimal("QTDENVIO");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.codUsu = vo.asBigDecimal("CODUSU");

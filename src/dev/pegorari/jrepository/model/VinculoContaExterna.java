@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class VinculoContaExterna implements SankhyaEntity<VinculoContaExterna> {
-
+public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExterna> {
    private Timestamp dtAlter;
    private BigDecimal codUsu;
    private String mascCtaExt;
@@ -69,6 +68,11 @@ public class VinculoContaExterna implements SankhyaEntity<VinculoContaExterna> {
 
    public void setGeraRi157Ecd(String geraRi157Ecd) {
         this.geraRi157Ecd = geraRi157Ecd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBVCE";
    }
 
    @Override

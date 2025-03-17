@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DemonstrativosNotaExplicativa implements SankhyaEntity<DemonstrativosNotaExplicativa> {
-
+public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<DemonstrativosNotaExplicativa> {
    private String ativo;
    private String codDmt;
    private BigDecimal codTab;
@@ -207,6 +206,11 @@ public class DemonstrativosNotaExplicativa implements SankhyaEntity<Demonstrativ
    }
 
    @Override
+   public String getTableName() {
+        return "TCBDNE";
+   }
+
+   @Override
    public String getEntityName() {
         return "DemonstrativosNotaExplicativa";
    }
@@ -222,7 +226,7 @@ public class DemonstrativosNotaExplicativa implements SankhyaEntity<Demonstrativ
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.formatDtImpr = vo.asBigDecimal("FORMATDTIMPR");
         this.geraNeColunasValor = vo.asString("GERANECOLUNASVALOR");
-        this.geraAssinatura = vo.asString("GERAASSINATURA");
+        this.geraAssinatura = vo.asString("GERASSINATURA");
         this.imagem = vo.asString("IMAGEM");
         this.indEntTit = vo.asString("INDENTTIT");
         this.nivel = vo.asBigDecimal("NIVEL");

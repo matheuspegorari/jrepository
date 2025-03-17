@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegistroOperacaoEstoque implements SankhyaEntity<RegistroOperacaoEstoque> {
-
+public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOperacaoEstoque> {
    private String statusExec;
    private BigDecimal nuNota;
    private BigDecimal ideFx;
@@ -113,6 +112,11 @@ public class RegistroOperacaoEstoque implements SankhyaEntity<RegistroOperacaoEs
 
    public void setNuApo(BigDecimal nuApo) {
         this.nuApo = nuApo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRROPE";
    }
 
    @Override

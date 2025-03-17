@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EstoquePalete implements SankhyaEntity<EstoquePalete> {
-
+public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    private BigDecimal codEmp;
    private BigDecimal codEnd;
    private BigDecimal codLocal;
@@ -86,6 +85,11 @@ public class EstoquePalete implements SankhyaEntity<EstoquePalete> {
 
    public void setQtd(BigDecimal qtd) {
         this.qtd = qtd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEPL";
    }
 
    @Override

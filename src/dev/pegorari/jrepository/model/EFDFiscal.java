@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EFDFiscal implements SankhyaEntity<EFDFiscal> {
-
+public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    private String arqConfirmado;
    private BigDecimal codEmp;
    private Timestamp dtRef;
@@ -54,6 +53,11 @@ public class EFDFiscal implements SankhyaEntity<EFDFiscal> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFEFDF";
+   }
+
+   @Override
    public String getEntityName() {
         return "EFDFiscal";
    }
@@ -64,7 +68,7 @@ public class EFDFiscal implements SankhyaEntity<EFDFiscal> {
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");
         this.versaoLayout = vo.asBigDecimal("VERSAOLAYOUT");
-        this.codFinCsll = vo.asBigDecimal("CODFINCSLL");
+        this.codFinCsll = vo.asBigDecimal("COD_FIN_CSLL");
         return this;
    }
 }

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoNaturezas implements SankhyaEntity<GrupoNaturezas> {
-
+public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    private String analitico;
    private String ativo;
    private BigDecimal codGrupoNat;
@@ -68,6 +67,11 @@ public class GrupoNaturezas implements SankhyaEntity<GrupoNaturezas> {
 
    public void setTipNat(String tipNat) {
         this.tipNat = tipNat;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFGNT";
    }
 
    @Override

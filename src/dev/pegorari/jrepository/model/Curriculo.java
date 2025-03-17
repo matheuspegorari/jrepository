@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Curriculo implements SankhyaEntity<Curriculo> {
-
+public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    private BigDecimal nuCurriculoBt;
    private BigDecimal numCps;
    private String usoApAuditivo;
@@ -681,6 +680,11 @@ public class Curriculo implements SankhyaEntity<Curriculo> {
 
    public void setDeficienteF(String deficienteF) {
         this.deficienteF = deficienteF;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFCBCO";
    }
 
    @Override

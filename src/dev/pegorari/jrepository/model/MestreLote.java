@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MestreLote implements SankhyaEntity<MestreLote> {
-
+public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    private BigDecimal codUsu;
    private String comentarios;
    private BigDecimal codEmp;
@@ -132,6 +131,11 @@ public class MestreLote implements SankhyaEntity<MestreLote> {
 
    public void setCodEmpConsolid(BigDecimal codEmpConsolid) {
         this.codEmpConsolid = codEmpConsolid;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBLOT";
    }
 
    @Override

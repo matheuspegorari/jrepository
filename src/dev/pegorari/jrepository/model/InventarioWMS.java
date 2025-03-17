@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InventarioWMS implements SankhyaEntity<InventarioWMS> {
-
+public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    private String ativo;
    private BigDecimal atualEstoque;
    private String codBarra;
@@ -177,6 +176,11 @@ public class InventarioWMS implements SankhyaEntity<InventarioWMS> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWCTE";
    }
 
    @Override

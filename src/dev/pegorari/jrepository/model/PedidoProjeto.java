@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PedidoProjeto implements SankhyaEntity<PedidoProjeto> {
-
+public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    private String ativo;
    private BigDecimal nuFap;
    private BigDecimal nuNota;
@@ -41,6 +40,11 @@ public class PedidoProjeto implements SankhyaEntity<PedidoProjeto> {
 
    public void setQtdHoras(BigDecimal qtdHoras) {
         this.qtdHoras = qtdHoras;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSFPD";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class VagaPorNoEstrutura implements SankhyaEntity<VagaPorNoEstrutura> {
-
+public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura> {
    private Timestamp dhAlter;
    private BigDecimal codEmp;
    private BigDecimal codUsu;
@@ -51,6 +50,11 @@ public class VagaPorNoEstrutura implements SankhyaEntity<VagaPorNoEstrutura> {
 
    public void setQtdVagas(BigDecimal qtdVagas) {
         this.qtdVagas = qtdVagas;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSVNE";
    }
 
    @Override

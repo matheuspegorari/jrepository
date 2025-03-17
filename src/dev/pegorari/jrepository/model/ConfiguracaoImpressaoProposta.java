@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoImpressaoProposta implements SankhyaEntity<ConfiguracaoImpressaoProposta> {
-
+public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<ConfiguracaoImpressaoProposta> {
    private String caminhoArqImp;
    private String cargoContato;
    private String cargoVendedor;
@@ -284,6 +283,11 @@ public class ConfiguracaoImpressaoProposta implements SankhyaEntity<Configuracao
 
    public void setVersaoProjeto(String versaoProjeto) {
         this.versaoProjeto = versaoProjeto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGICIP";
    }
 
    @Override

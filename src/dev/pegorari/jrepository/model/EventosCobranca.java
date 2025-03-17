@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EventosCobranca implements SankhyaEntity<EventosCobranca> {
-
+public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    private BigDecimal codEvento;
    private BigDecimal codRegua;
    private char[] config;
@@ -87,6 +86,11 @@ public class EventosCobranca implements SankhyaEntity<EventosCobranca> {
 
    public void setTipo(BigDecimal tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFECB";
    }
 
    @Override

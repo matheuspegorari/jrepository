@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SerieMateriaPrima implements SankhyaEntity<SerieMateriaPrima> {
-
+public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> {
    private BigDecimal codProdMp;
    private BigDecimal codProdPa;
    private BigDecimal idIproc;
@@ -68,6 +67,11 @@ public class SerieMateriaPrima implements SankhyaEntity<SerieMateriaPrima> {
 
    public void setSeriePa(String seriePa) {
         this.seriePa = seriePa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRSERMP";
    }
 
    @Override

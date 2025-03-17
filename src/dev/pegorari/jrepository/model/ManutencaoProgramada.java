@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ManutencaoProgramada implements SankhyaEntity<ManutencaoProgramada> {
-
+public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgramada> {
    private BigDecimal codUsu;
    private Timestamp dhParada;
    private BigDecimal hrIndisp;
@@ -51,6 +50,11 @@ public class ManutencaoProgramada implements SankhyaEntity<ManutencaoProgramada>
 
    public void setNumPa(BigDecimal numPa) {
         this.numPa = numPa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIMPA";
    }
 
    @Override

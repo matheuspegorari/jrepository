@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemDivergenciaICMSST implements SankhyaEntity<ItemDivergenciaICMSST> {
-
+public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergenciaICMSST> {
    private BigDecimal baseSubstitCalc;
    private BigDecimal baseSubstitItem;
    private BigDecimal codProd;
@@ -143,6 +142,11 @@ public class ItemDivergenciaICMSST implements SankhyaEntity<ItemDivergenciaICMSS
    }
 
    @Override
+   public String getTableName() {
+        return "TGFIDST";
+   }
+
+   @Override
    public String getEntityName() {
         return "ItemDivergenciaICMSST";
    }
@@ -156,13 +160,13 @@ public class ItemDivergenciaICMSST implements SankhyaEntity<ItemDivergenciaICMSS
         this.digitado = vo.asString("DIGITADO");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrSubstitCalc = vo.asBigDecimal("VLRSUBSTITCALC");
-        this.vlrSubstitItem = vo.asBigDecimal("VLRSUBSTITITEM");
+        this.vlrSubstitCalc = vo.asBigDecimal("VLRSUBSTCALC");
+        this.vlrSubstitItem = vo.asBigDecimal("VLRSUBSTITEM");
         this.baseIcmsCalc = vo.asBigDecimal("BASEICMSCALC");
         this.baseIcmsIte = vo.asBigDecimal("BASEICMSITE");
         this.vlrIcmsCalc = vo.asBigDecimal("VLRICMSCALC");
         this.vlrIcmsIte = vo.asBigDecimal("VLRICMSITE");
-        this.difVlrSubstit = vo.asBigDecimal("DIFVLRSUBSTIT");
+        this.difVlrSubstit = vo.asBigDecimal("DIFVLRSUBST");
         this.idAliqIcms = vo.asBigDecimal("IDALIQICMS");
         return this;
    }

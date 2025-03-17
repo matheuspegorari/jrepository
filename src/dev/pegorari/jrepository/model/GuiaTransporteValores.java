@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GuiaTransporteValores implements SankhyaEntity<GuiaTransporteValores> {
-
+public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteValores> {
    private String descEvento;
    private BigDecimal nuNota;
 
@@ -23,6 +22,11 @@ public class GuiaTransporteValores implements SankhyaEntity<GuiaTransporteValore
 
    public void setNuNota(BigDecimal nuNota) {
         this.nuNota = nuNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFGTV";
    }
 
    @Override

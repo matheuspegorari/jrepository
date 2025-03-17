@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Separacao implements SankhyaEntity<Separacao> {
-
+public class Separacao extends AbstractSankhyaEntity<Separacao> {
    private BigDecimal statusConf;
    private BigDecimal tipoSplit;
    private BigDecimal codAreaConf;
    private BigDecimal codAreaSep;
    private BigDecimal codDoca;
-   private BigDecimal codEmpOc;
+   private BigDecimal codEmpoc;
    private BigDecimal codEndDoca;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -87,12 +86,12 @@ public class Separacao implements SankhyaEntity<Separacao> {
         this.codDoca = codDoca;
    }
 
-   public BigDecimal getCodEmpOc() {
-        return codEmpOc;
+   public BigDecimal getCodEmpoc() {
+        return codEmpoc;
    }
 
-   public void setCodEmpOc(BigDecimal codEmpOc) {
-        this.codEmpOc = codEmpOc;
+   public void setCodEmpoc(BigDecimal codEmpoc) {
+        this.codEmpoc = codEmpoc;
    }
 
    public BigDecimal getCodEndDoca() {
@@ -360,6 +359,11 @@ public class Separacao implements SankhyaEntity<Separacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGWSEP";
+   }
+
+   @Override
    public String getEntityName() {
         return "Separacao";
    }
@@ -371,7 +375,7 @@ public class Separacao implements SankhyaEntity<Separacao> {
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");
         this.codAreaSep = vo.asBigDecimal("CODAREASEP");
         this.codDoca = vo.asBigDecimal("CODDOCA");
-        this.codEmpOc = vo.asBigDecimal("CODEMPOC");
+        this.codEmpoc = vo.asBigDecimal("CODEMPOC");
         this.codEndDoca = vo.asBigDecimal("CODENDDOCA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

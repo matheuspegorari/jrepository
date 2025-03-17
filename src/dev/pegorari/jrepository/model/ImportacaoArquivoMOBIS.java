@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImportacaoArquivoMOBIS implements SankhyaEntity<ImportacaoArquivoMOBIS> {
-
+public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArquivoMOBIS> {
    private Timestamp dhImp;
    private char[] msg;
    private String nomeArq;
@@ -96,6 +95,11 @@ public class ImportacaoArquivoMOBIS implements SankhyaEntity<ImportacaoArquivoMO
 
    public void setArqHeader(String arqHeader) {
         this.arqHeader = arqHeader;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIMPMOBIS";
    }
 
    @Override

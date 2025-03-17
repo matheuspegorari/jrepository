@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemLigacaoConfirmedOrder implements SankhyaEntity<ItemLigacaoConfirmedOrder> {
-
+public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacaoConfirmedOrder> {
    private String amendCodeCo;
    private String amendCodeIv;
    private String amendCodeSr;
@@ -195,6 +194,11 @@ public class ItemLigacaoConfirmedOrder implements SankhyaEntity<ItemLigacaoConfi
 
    public void setLastShip(Timestamp lastShip) {
         this.lastShip = lastShip;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFICO";
    }
 
    @Override

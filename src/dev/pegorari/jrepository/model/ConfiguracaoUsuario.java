@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoUsuario implements SankhyaEntity<ConfiguracaoUsuario> {
-
+public class ConfiguracaoUsuario extends AbstractSankhyaEntity<ConfiguracaoUsuario> {
    private BigDecimal codUsu;
    private String conf;
    private String form;
@@ -32,6 +31,11 @@ public class ConfiguracaoUsuario implements SankhyaEntity<ConfiguracaoUsuario> {
 
    public void setForm(String form) {
         this.form = form;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICONF";
    }
 
    @Override

@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LogRegistrosMDe implements SankhyaEntity<LogRegistrosMDe> {
-
+public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    private BigDecimal codEmp;
    private String descRevento;
    private Timestamp dhEvento;
-   private String emissTerc;
+   private String emisSterc;
    private String infCompl;
    private String justificativa;
    private String nomeParcDest;
@@ -58,12 +57,12 @@ public class LogRegistrosMDe implements SankhyaEntity<LogRegistrosMDe> {
         this.dhEvento = dhEvento;
    }
 
-   public String getEmissTerc() {
-        return emissTerc;
+   public String getEmisSterc() {
+        return emisSterc;
    }
 
-   public void setEmissTerc(String emissTerc) {
-        this.emissTerc = emissTerc;
+   public void setEmisSterc(String emisSterc) {
+        this.emisSterc = emisSterc;
    }
 
    public String getInfCompl() {
@@ -243,6 +242,11 @@ public class LogRegistrosMDe implements SankhyaEntity<LogRegistrosMDe> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFMDELOG";
+   }
+
+   @Override
    public String getEntityName() {
         return "LogRegistrosMDe";
    }
@@ -252,7 +256,7 @@ public class LogRegistrosMDe implements SankhyaEntity<LogRegistrosMDe> {
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descRevento = vo.asString("DESCREVENTO");
         this.dhEvento = vo.asTimestamp("DHEVENTO");
-        this.emissTerc = vo.asString("EMISSTERC");
+        this.emisSterc = vo.asString("EMISSTERC");
         this.infCompl = vo.asString("INFCOMPL");
         this.justificativa = vo.asString("JUSTIFICATIVA");
         this.nomeParcDest = vo.asString("NOMEPARCDEST");

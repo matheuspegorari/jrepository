@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AlteracaoMetaOrcamento implements SankhyaEntity<AlteracaoMetaOrcamento> {
-
+public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaOrcamento> {
    private BigDecimal previsto4;
    private BigDecimal previsto5;
    private BigDecimal previsto6;
@@ -357,6 +356,11 @@ public class AlteracaoMetaOrcamento implements SankhyaEntity<AlteracaoMetaOrcame
 
    public void setPrevisto3(BigDecimal previsto3) {
         this.previsto3 = previsto3;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMAPO";
    }
 
    @Override

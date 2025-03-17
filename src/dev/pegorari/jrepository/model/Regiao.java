@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Regiao implements SankhyaEntity<Regiao> {
-
+public class Regiao extends AbstractSankhyaEntity<Regiao> {
    private String analitica;
    private String ativa;
    private BigDecimal codReg;
@@ -287,6 +286,11 @@ public class Regiao implements SankhyaEntity<Regiao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIREG";
+   }
+
+   @Override
    public String getEntityName() {
         return "Regiao";
    }
@@ -308,20 +312,20 @@ public class Regiao implements SankhyaEntity<Regiao> {
         this.percCusVar = vo.asBigDecimal("PERCCUSVAR");
         this.percDescFob = vo.asBigDecimal("PERCDESCFOB");
         this.percPremio = vo.asBigDecimal("PERCPREMIO");
-        this.semana1Dom = vo.asBigDecimal("SEMANA1DOM");
-        this.semana1Qua = vo.asBigDecimal("SEMANA1QUA");
-        this.semana1Qui = vo.asBigDecimal("SEMANA1QUI");
-        this.semana1Sab = vo.asBigDecimal("SEMANA1SAB");
-        this.semana1Seg = vo.asBigDecimal("SEMANA1SEG");
-        this.semana1Sex = vo.asBigDecimal("SEMANA1SEX");
-        this.semana1Ter = vo.asBigDecimal("SEMANA1TER");
-        this.semana2Dom = vo.asBigDecimal("SEMANA2DOM");
-        this.semana2Qua = vo.asBigDecimal("SEMANA2QUA");
-        this.semana2Qui = vo.asBigDecimal("SEMANA2QUI");
-        this.semana2Sab = vo.asBigDecimal("SEMANA2SAB");
-        this.semana2Seg = vo.asBigDecimal("SEMANA2SEG");
-        this.semana2Sex = vo.asBigDecimal("SEMANA2SEX");
-        this.semana2Ter = vo.asBigDecimal("SEMANA2TER");
+        this.semana1Dom = vo.asBigDecimal("SEMANA1_DOM");
+        this.semana1Qua = vo.asBigDecimal("SEMANA1_QUA");
+        this.semana1Qui = vo.asBigDecimal("SEMANA1_QUI");
+        this.semana1Sab = vo.asBigDecimal("SEMANA1_SAB");
+        this.semana1Seg = vo.asBigDecimal("SEMANA1_SEG");
+        this.semana1Sex = vo.asBigDecimal("SEMANA1_SEX");
+        this.semana1Ter = vo.asBigDecimal("SEMANA1_TER");
+        this.semana2Dom = vo.asBigDecimal("SEMANA2_DOM");
+        this.semana2Qua = vo.asBigDecimal("SEMANA2_QUA");
+        this.semana2Qui = vo.asBigDecimal("SEMANA2_QUI");
+        this.semana2Sab = vo.asBigDecimal("SEMANA2_SAB");
+        this.semana2Seg = vo.asBigDecimal("SEMANA2_SEG");
+        this.semana2Sex = vo.asBigDecimal("SEMANA2_SEX");
+        this.semana2Ter = vo.asBigDecimal("SEMANA2_TER");
         this.vlrAntecipacao = vo.asBigDecimal("VLRANTECIPACAO");
         this.vendaMin = vo.asBigDecimal("VENDAMIN");
         return this;

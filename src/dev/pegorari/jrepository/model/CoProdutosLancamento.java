@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CoProdutosLancamento implements SankhyaEntity<CoProdutosLancamento> {
-
+public class CoProdutosLancamento extends AbstractSankhyaEntity<CoProdutosLancamento> {
    private BigDecimal idCop;
    private BigDecimal nuLop;
    private BigDecimal qtdConsumida;
@@ -41,6 +40,11 @@ public class CoProdutosLancamento implements SankhyaEntity<CoProdutosLancamento>
 
    public void setSeqCop(BigDecimal seqCop) {
         this.seqCop = seqCop;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCOPLOP";
    }
 
    @Override

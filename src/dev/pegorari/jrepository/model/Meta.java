@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Meta implements SankhyaEntity<Meta> {
-
+public class Meta extends AbstractSankhyaEntity<Meta> {
    private String analitico;
    private BigDecimal antecipDesp;
    private BigDecimal codCencus;
@@ -357,6 +356,11 @@ public class Meta implements SankhyaEntity<Meta> {
 
    public void setTransfSaldoDesp(BigDecimal transfSaldoDesp) {
         this.transfSaldoDesp = transfSaldoDesp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMET";
    }
 
    @Override

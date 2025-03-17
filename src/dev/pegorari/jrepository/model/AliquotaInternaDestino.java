@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AliquotaInternaDestino implements SankhyaEntity<AliquotaInternaDestino> {
-
+public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaInternaDestino> {
    private BigDecimal percIcmFcp;
    private BigDecimal codUf;
    private BigDecimal codProd;
@@ -53,13 +52,18 @@ public class AliquotaInternaDestino implements SankhyaEntity<AliquotaInternaDest
    }
 
    @Override
+   public String getTableName() {
+        return "TGFAID";
+   }
+
+   @Override
    public String getEntityName() {
         return "AliquotaInternaDestino";
    }
 
    @Override
    public AliquotaInternaDestino fromVO(DynamicVO vo) {
-        this.percIcmFcp = vo.asBigDecimal("PERCICMFCP");
+        this.percIcmFcp = vo.asBigDecimal("PERCICMSFCP");
         this.codUf = vo.asBigDecimal("CODUF");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.aliqIntDest = vo.asBigDecimal("ALIQINTDEST");

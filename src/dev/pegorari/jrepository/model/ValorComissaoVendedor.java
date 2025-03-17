@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ValorComissaoVendedor implements SankhyaEntity<ValorComissaoVendedor> {
-
+public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVendedor> {
    private BigDecimal codEmp;
    private BigDecimal codEvento;
    private BigDecimal codForm;
@@ -213,6 +212,11 @@ public class ValorComissaoVendedor implements SankhyaEntity<ValorComissaoVendedo
 
    public void setVlrResiduoCom(BigDecimal vlrResiduoCom) {
         this.vlrResiduoCom = vlrResiduoCom;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCOM";
    }
 
    @Override

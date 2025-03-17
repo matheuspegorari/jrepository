@@ -1,31 +1,30 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstrativo> {
-
+public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDemonstrativo> {
    private String geradra;
-   private String grupDemonSdfc;
-   private String grupoDemonst;
-   private String indGrpdre;
-   private String invertVlrAlt;
-   private String sitDfc;
-   private String indDcctaFin;
-   private String indDcctaIni;
-   private BigDecimal nuOrdem;
+   private String grupdemonSdfc;
+   private String grupodemonst;
+   private String indgrpdre;
+   private String invertvlralt;
+   private String sitdfc;
+   private String inddcctafin;
+   private String inddcctaini;
+   private BigDecimal nuordem;
    private BigDecimal grau;
-   private String agrupDlpa;
-   private String indGrubal;
+   private String agrupdlpa;
+   private String indgrubal;
    private String analitico;
-   private String codDmtPai;
-   private BigDecimal codEmp;
-   private String codDmt;
-   private BigDecimal codTdm;
+   private String coddmtpai;
+   private BigDecimal codemp;
+   private String coddmt;
+   private BigDecimal codtdm;
    private String ativo;
    private String situacao;
-   private String descrDmt;
+   private String descrdmt;
 
    public String getGeradra() {
         return geradra;
@@ -35,68 +34,68 @@ public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstr
         this.geradra = geradra;
    }
 
-   public String getGrupDemonSdfc() {
-        return grupDemonSdfc;
+   public String getGrupdemonSdfc() {
+        return grupdemonSdfc;
    }
 
-   public void setGrupDemonSdfc(String grupDemonSdfc) {
-        this.grupDemonSdfc = grupDemonSdfc;
+   public void setGrupdemonSdfc(String grupdemonSdfc) {
+        this.grupdemonSdfc = grupdemonSdfc;
    }
 
-   public String getGrupoDemonst() {
-        return grupoDemonst;
+   public String getGrupodemonst() {
+        return grupodemonst;
    }
 
-   public void setGrupoDemonst(String grupoDemonst) {
-        this.grupoDemonst = grupoDemonst;
+   public void setGrupodemonst(String grupodemonst) {
+        this.grupodemonst = grupodemonst;
    }
 
-   public String getIndGrpdre() {
-        return indGrpdre;
+   public String getIndgrpdre() {
+        return indgrpdre;
    }
 
-   public void setIndGrpdre(String indGrpdre) {
-        this.indGrpdre = indGrpdre;
+   public void setIndgrpdre(String indgrpdre) {
+        this.indgrpdre = indgrpdre;
    }
 
-   public String getInvertVlrAlt() {
-        return invertVlrAlt;
+   public String getInvertvlralt() {
+        return invertvlralt;
    }
 
-   public void setInvertVlrAlt(String invertVlrAlt) {
-        this.invertVlrAlt = invertVlrAlt;
+   public void setInvertvlralt(String invertvlralt) {
+        this.invertvlralt = invertvlralt;
    }
 
-   public String getSitDfc() {
-        return sitDfc;
+   public String getSitdfc() {
+        return sitdfc;
    }
 
-   public void setSitDfc(String sitDfc) {
-        this.sitDfc = sitDfc;
+   public void setSitdfc(String sitdfc) {
+        this.sitdfc = sitdfc;
    }
 
-   public String getIndDcctaFin() {
-        return indDcctaFin;
+   public String getInddcctafin() {
+        return inddcctafin;
    }
 
-   public void setIndDcctaFin(String indDcctaFin) {
-        this.indDcctaFin = indDcctaFin;
+   public void setInddcctafin(String inddcctafin) {
+        this.inddcctafin = inddcctafin;
    }
 
-   public String getIndDcctaIni() {
-        return indDcctaIni;
+   public String getInddcctaini() {
+        return inddcctaini;
    }
 
-   public void setIndDcctaIni(String indDcctaIni) {
-        this.indDcctaIni = indDcctaIni;
+   public void setInddcctaini(String inddcctaini) {
+        this.inddcctaini = inddcctaini;
    }
 
-   public BigDecimal getNuOrdem() {
-        return nuOrdem;
+   public BigDecimal getNuordem() {
+        return nuordem;
    }
 
-   public void setNuOrdem(BigDecimal nuOrdem) {
-        this.nuOrdem = nuOrdem;
+   public void setNuordem(BigDecimal nuordem) {
+        this.nuordem = nuordem;
    }
 
    public BigDecimal getGrau() {
@@ -107,20 +106,20 @@ public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstr
         this.grau = grau;
    }
 
-   public String getAgrupDlpa() {
-        return agrupDlpa;
+   public String getAgrupdlpa() {
+        return agrupdlpa;
    }
 
-   public void setAgrupDlpa(String agrupDlpa) {
-        this.agrupDlpa = agrupDlpa;
+   public void setAgrupdlpa(String agrupdlpa) {
+        this.agrupdlpa = agrupdlpa;
    }
 
-   public String getIndGrubal() {
-        return indGrubal;
+   public String getIndgrubal() {
+        return indgrubal;
    }
 
-   public void setIndGrubal(String indGrubal) {
-        this.indGrubal = indGrubal;
+   public void setIndgrubal(String indgrubal) {
+        this.indgrubal = indgrubal;
    }
 
    public String getAnalitico() {
@@ -131,36 +130,36 @@ public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstr
         this.analitico = analitico;
    }
 
-   public String getCodDmtPai() {
-        return codDmtPai;
+   public String getCoddmtpai() {
+        return coddmtpai;
    }
 
-   public void setCodDmtPai(String codDmtPai) {
-        this.codDmtPai = codDmtPai;
+   public void setCoddmtpai(String coddmtpai) {
+        this.coddmtpai = coddmtpai;
    }
 
-   public BigDecimal getCodEmp() {
-        return codEmp;
+   public BigDecimal getCodemp() {
+        return codemp;
    }
 
-   public void setCodEmp(BigDecimal codEmp) {
-        this.codEmp = codEmp;
+   public void setCodemp(BigDecimal codemp) {
+        this.codemp = codemp;
    }
 
-   public String getCodDmt() {
-        return codDmt;
+   public String getCoddmt() {
+        return coddmt;
    }
 
-   public void setCodDmt(String codDmt) {
-        this.codDmt = codDmt;
+   public void setCoddmt(String coddmt) {
+        this.coddmt = coddmt;
    }
 
-   public BigDecimal getCodTdm() {
-        return codTdm;
+   public BigDecimal getCodtdm() {
+        return codtdm;
    }
 
-   public void setCodTdm(BigDecimal codTdm) {
-        this.codTdm = codTdm;
+   public void setCodtdm(BigDecimal codtdm) {
+        this.codtdm = codtdm;
    }
 
    public String getAtivo() {
@@ -179,12 +178,17 @@ public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstr
         this.situacao = situacao;
    }
 
-   public String getDescrDmt() {
-        return descrDmt;
+   public String getDescrdmt() {
+        return descrdmt;
    }
 
-   public void setDescrDmt(String descrDmt) {
-        this.descrDmt = descrDmt;
+   public void setDescrdmt(String descrdmt) {
+        this.descrdmt = descrdmt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBDMT";
    }
 
    @Override
@@ -195,25 +199,25 @@ public class HierarquiaDemonstrativo implements SankhyaEntity<HierarquiaDemonstr
    @Override
    public HierarquiaDemonstrativo fromVO(DynamicVO vo) {
         this.geradra = vo.asString("GERADRA");
-        this.grupDemonSdfc = vo.asString("GRUPDEMONSDFC");
-        this.grupoDemonst = vo.asString("GRUPODEMONST");
-        this.indGrpdre = vo.asString("INDGRPDRE");
-        this.invertVlrAlt = vo.asString("INVERTVLRALT");
-        this.sitDfc = vo.asString("SITDFC");
-        this.indDcctaFin = vo.asString("INDDCCTAFIN");
-        this.indDcctaIni = vo.asString("INDDCCTAINI");
-        this.nuOrdem = vo.asBigDecimal("NUORDEM");
+        this.grupdemonSdfc = vo.asString("GRUPDEMONSDFC");
+        this.grupodemonst = vo.asString("GRUPODEMONST");
+        this.indgrpdre = vo.asString("INDGRPDRE");
+        this.invertvlralt = vo.asString("INVERTVLRALT");
+        this.sitdfc = vo.asString("SITDFC");
+        this.inddcctafin = vo.asString("INDDCCTAFIN");
+        this.inddcctaini = vo.asString("INDDCCTAINI");
+        this.nuordem = vo.asBigDecimal("NUORDEM");
         this.grau = vo.asBigDecimal("GRAU");
-        this.agrupDlpa = vo.asString("AGRUPDLPA");
-        this.indGrubal = vo.asString("INDGRUBAL");
+        this.agrupdlpa = vo.asString("AGRUPDLPA");
+        this.indgrubal = vo.asString("INDGRUBAL");
         this.analitico = vo.asString("ANALITICO");
-        this.codDmtPai = vo.asString("CODDMTPAI");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codDmt = vo.asString("CODDMT");
-        this.codTdm = vo.asBigDecimal("CODTDM");
+        this.coddmtpai = vo.asString("CODDMTPAI");
+        this.codemp = vo.asBigDecimal("CODEMP");
+        this.coddmt = vo.asString("CODDMT");
+        this.codtdm = vo.asBigDecimal("CODTDM");
         this.ativo = vo.asString("ATIVO");
         this.situacao = vo.asString("SITUACAO");
-        this.descrDmt = vo.asString("DESCRDMT");
+        this.descrdmt = vo.asString("DESCRDMT");
         return this;
    }
 }

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CargaHoraria implements SankhyaEntity<CargaHoraria> {
-
+public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    private String descansoSem;
    private BigDecimal diaSem;
    private Timestamp dtAlter;
@@ -105,6 +104,11 @@ public class CargaHoraria implements SankhyaEntity<CargaHoraria> {
 
    public void setDurJornadaEsocial(BigDecimal durJornadaEsocial) {
         this.durJornadaEsocial = durJornadaEsocial;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPHOR";
    }
 
    @Override

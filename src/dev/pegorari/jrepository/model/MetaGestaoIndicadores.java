@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MetaGestaoIndicadores implements SankhyaEntity<MetaGestaoIndicadores> {
-
-   private String apresDecGraf;
+public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndicadores> {
+   private String apresdecGraf;
    private BigDecimal codInd;
    private BigDecimal codUng;
    private String descricao;
@@ -39,12 +38,12 @@ public class MetaGestaoIndicadores implements SankhyaEntity<MetaGestaoIndicadore
    private BigDecimal codInstQuebra;
    private String nomeInstaQuebra;
 
-   public String getApresDecGraf() {
-        return apresDecGraf;
+   public String getApresdecGraf() {
+        return apresdecGraf;
    }
 
-   public void setApresDecGraf(String apresDecGraf) {
-        this.apresDecGraf = apresDecGraf;
+   public void setApresdecGraf(String apresdecGraf) {
+        this.apresdecGraf = apresdecGraf;
    }
 
    public BigDecimal getCodInd() {
@@ -288,13 +287,18 @@ public class MetaGestaoIndicadores implements SankhyaEntity<MetaGestaoIndicadore
    }
 
    @Override
+   public String getTableName() {
+        return "TMIMET";
+   }
+
+   @Override
    public String getEntityName() {
         return "MetaGestaoIndicadores";
    }
 
    @Override
    public MetaGestaoIndicadores fromVO(DynamicVO vo) {
-        this.apresDecGraf = vo.asString("APRESDECGRAF");
+        this.apresdecGraf = vo.asString("APRESDECGRAF");
         this.codInd = vo.asBigDecimal("CODIND");
         this.codUng = vo.asBigDecimal("CODUNG");
         this.descricao = vo.asString("DESCRICAO");

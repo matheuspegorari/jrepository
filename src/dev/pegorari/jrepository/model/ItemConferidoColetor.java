@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemConferidoColetor implements SankhyaEntity<ItemConferidoColetor> {
-
+public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoColetor> {
    private Timestamp dtVal;
    private BigDecimal nuConferencia;
    private BigDecimal numVol;
@@ -126,6 +125,11 @@ public class ItemConferidoColetor implements SankhyaEntity<ItemConferidoColetor>
    }
 
    @Override
+   public String getTableName() {
+        return "TGWICC";
+   }
+
+   @Override
    public String getEntityName() {
         return "ItemConferidoColetor";
    }
@@ -144,7 +148,7 @@ public class ItemConferidoColetor implements SankhyaEntity<ItemConferidoColetor>
         this.confUsuFinal = vo.asString("CONFUSUFINAL");
         this.qtdPecas = vo.asBigDecimal("QTDPECAS");
         this.seriesNcm = vo.asString("SERIESNCM");
-        this.tipoLeitura = vo.asString("TIPOLEITURA");
+        this.tipoLeitura = vo.asString("TIPO_LEITURA");
         return this;
    }
 }

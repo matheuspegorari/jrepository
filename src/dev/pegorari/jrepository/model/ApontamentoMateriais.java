@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ApontamentoMateriais implements SankhyaEntity<ApontamentoMateriais> {
-
+public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMateriais> {
    private String referencia;
    private String codVol;
    private BigDecimal seqApa;
@@ -131,6 +130,11 @@ public class ApontamentoMateriais implements SankhyaEntity<ApontamentoMateriais>
 
    public void setQtdPerda(BigDecimal qtdPerda) {
         this.qtdPerda = qtdPerda;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRAMP";
    }
 
    @Override

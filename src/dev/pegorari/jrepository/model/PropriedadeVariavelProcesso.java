@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PropriedadeVariavelProcesso implements SankhyaEntity<PropriedadeVariavelProcesso> {
-
+public class PropriedadeVariavelProcesso extends AbstractSankhyaEntity<PropriedadeVariavelProcesso> {
    private String nome;
    private BigDecimal nuVar;
    private String valor;
@@ -32,6 +31,11 @@ public class PropriedadeVariavelProcesso implements SankhyaEntity<PropriedadeVar
 
    public void setValor(String valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFPRV";
    }
 
    @Override

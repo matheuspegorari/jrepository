@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AjusteApuracao implements SankhyaEntity<AjusteApuracao> {
-
+public class AjusteApuracao extends AbstractSankhyaEntity<AjusteApuracao> {
    private String codAjuste;
    private BigDecimal codEmp;
    private BigDecimal codObsPadrao;
@@ -222,6 +221,11 @@ public class AjusteApuracao implements SankhyaEntity<AjusteApuracao> {
 
    public void setRegAjdime(String regAjdime) {
         this.regAjdime = regAjdime;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFAJA";
    }
 
    @Override

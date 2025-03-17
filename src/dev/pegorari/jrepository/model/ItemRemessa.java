@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemRemessa implements SankhyaEntity<ItemRemessa> {
-
+public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    private String campo;
    private BigDecimal codigo;
    private String modulo;
@@ -86,6 +85,11 @@ public class ItemRemessa implements SankhyaEntity<ItemRemessa> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIIRE";
    }
 
    @Override

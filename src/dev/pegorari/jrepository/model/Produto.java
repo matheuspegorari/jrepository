@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Produto implements SankhyaEntity<Produto> {
-
+public class Produto extends AbstractSankhyaEntity<Produto> {
    private BigDecimal codProdSubkit;
    private String enqReintegra;
    private BigDecimal margLucro;
@@ -41,12 +40,12 @@ public class Produto implements SankhyaEntity<Produto> {
    private String aplicaSazo;
    private String apresDetalhe;
    private String apresForm;
-   private String apuraProdepe;
+   private String apuraProdEpe;
    private BigDecimal arredAgrup;
    private BigDecimal arredPreco;
    private String ativo;
    private String balanca;
-   private String calculoGiro;
+   private String calcGiro;
    private BigDecimal camadas;
    private String caracteristicas;
    private BigDecimal carencia;
@@ -55,7 +54,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private BigDecimal classeTox;
    private BigDecimal classUbTrib;
    private BigDecimal cnae;
-   private String lisContest;
+   private String lisContEst;
    private String local;
    private String localizacao;
    private BigDecimal loteCompMinimo;
@@ -85,7 +84,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private String codVolRes;
    private BigDecimal comGer;
    private String complDesc;
-   private String compoNoBrig;
+   private String componObrig;
    private BigDecimal comVend;
    private String concentracao;
    private String confCegaPeso;
@@ -126,7 +125,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private String fatTotal;
    private String flex;
    private String formulacao;
-   private String geraPlaProd;
+   private String geraPlProd;
    private String grupoCofins;
    private String grupoCssl;
    private String grupoDescProd;
@@ -136,12 +135,12 @@ public class Produto implements SankhyaEntity<Produto> {
    private String homePage;
    private String hrDobrada;
    private String icmsGerencia;
-   private BigDecimal identImob;
+   private BigDecimal idenImob;
    private byte[] imagem;
    private String impEtiqConf;
-   private String impLaudoLote;
+   private String implAudLote;
    private String impOrdemCorte;
-   private String indEspProdepe;
+   private String indEspProdEpe;
    private String infPureza;
    private BigDecimal intervalo;
    private BigDecimal largura;
@@ -167,7 +166,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private BigDecimal pesoBruto;
    private BigDecimal pesoLiq;
    private BigDecimal prazoVal;
-   private BigDecimal prinCAtivo;
+   private BigDecimal princAtivo;
    private BigDecimal produtoNfe;
    private String promocao;
    private BigDecimal qtdEmb;
@@ -199,15 +198,15 @@ public class Produto implements SankhyaEntity<Produto> {
    private String temIpiVenda;
    private String temIrf;
    private String temIss;
-   private Timestamp temPosServ;
-   private String tipContest;
-   private String tipContestWms;
+   private Timestamp tempoServ;
+   private String tipContEst;
+   private String tipContEstWms;
    private BigDecimal tipGtinNfe;
    private String tipLancNota;
    private String tipo;
    private String tipSerNfe;
    private String tipSubst;
-   private String titContest;
+   private String titContEst;
    private String unidade;
    private String unidMinArmaz;
    private String usaCodBarrasQtd;
@@ -274,7 +273,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private BigDecimal tempMaxima;
    private String controlado;
    private BigDecimal tempMinima;
-   private String termoLabil;
+   private String termolabil;
    private String listaLpm;
    private String oneroso;
    private String refMercMed;
@@ -283,7 +282,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private BigDecimal codTer;
    private String idenOtc;
    private String idenCosme;
-   private String idenCorrelato;
+   private String idenCorRelato;
    private BigDecimal codCpr;
    private BigDecimal seqSte;
    private BigDecimal codCat;
@@ -305,7 +304,7 @@ public class Produto implements SankhyaEntity<Produto> {
    private BigDecimal codMarca;
    private String temRastroLote;
    private String armazeLote;
-   private BigDecimal mvaOriginalDrcst;
+   private BigDecimal mvaOriginalDrCst;
    private String codFciCalc;
    private BigDecimal vlrComercCalc;
    private BigDecimal vlrParcImpExtCalc;
@@ -351,8 +350,8 @@ public class Produto implements SankhyaEntity<Produto> {
    private String statusNcm;
    private String wmsProdRastSerMed;
    private String servDespNTrib;
-   private String prodAliadRcst;
-   private String gerImpNRetReinfaq;
+   private String prodAliadrCst;
+   private String gerImpNRetReinfaQ;
    private BigDecimal aliqFetHab;
    private String codVolFetHab;
    private String calcFuntTelPro;
@@ -369,15 +368,15 @@ public class Produto implements SankhyaEntity<Produto> {
    private char[] gradePadrao;
    private BigDecimal idGrade;
    private BigDecimal percentSepPul;
-   private String obtStantMedEnt;
-   private String descProdDrcst;
+   private String obtStAntMedEnt;
+   private String descProdDrCst;
    private BigDecimal aliqInternaCat42;
    private String desDescCalcPis;
    private BigDecimal aliqFecop;
-   private BigDecimal mvaOriginalAdrcst;
-   private String participaAdrcst;
+   private BigDecimal mvaOriginalAdrCst;
+   private String participaAdrCst;
    private String prodSujFecop;
-   private String calcRupturaEstoque;
+   private String calRupturaEstoque;
    private String codVolKanban;
    private String bloqVendaFrac;
    private BigDecimal codNatRend;
@@ -659,12 +658,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.apresForm = apresForm;
    }
 
-   public String getApuraProdepe() {
-        return apuraProdepe;
+   public String getApuraProdEpe() {
+        return apuraProdEpe;
    }
 
-   public void setApuraProdepe(String apuraProdepe) {
-        this.apuraProdepe = apuraProdepe;
+   public void setApuraProdEpe(String apuraProdEpe) {
+        this.apuraProdEpe = apuraProdEpe;
    }
 
    public BigDecimal getArredAgrup() {
@@ -699,12 +698,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.balanca = balanca;
    }
 
-   public String getCalculoGiro() {
-        return calculoGiro;
+   public String getCalcGiro() {
+        return calcGiro;
    }
 
-   public void setCalculoGiro(String calculoGiro) {
-        this.calculoGiro = calculoGiro;
+   public void setCalcGiro(String calcGiro) {
+        this.calcGiro = calcGiro;
    }
 
    public BigDecimal getCamadas() {
@@ -771,12 +770,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.cnae = cnae;
    }
 
-   public String getLisContest() {
-        return lisContest;
+   public String getLisContEst() {
+        return lisContEst;
    }
 
-   public void setLisContest(String lisContest) {
-        this.lisContest = lisContest;
+   public void setLisContEst(String lisContEst) {
+        this.lisContEst = lisContEst;
    }
 
    public String getLocal() {
@@ -1011,12 +1010,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.complDesc = complDesc;
    }
 
-   public String getCompoNoBrig() {
-        return compoNoBrig;
+   public String getComponObrig() {
+        return componObrig;
    }
 
-   public void setCompoNoBrig(String compoNoBrig) {
-        this.compoNoBrig = compoNoBrig;
+   public void setComponObrig(String componObrig) {
+        this.componObrig = componObrig;
    }
 
    public BigDecimal getComVend() {
@@ -1339,12 +1338,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.formulacao = formulacao;
    }
 
-   public String getGeraPlaProd() {
-        return geraPlaProd;
+   public String getGeraPlProd() {
+        return geraPlProd;
    }
 
-   public void setGeraPlaProd(String geraPlaProd) {
-        this.geraPlaProd = geraPlaProd;
+   public void setGeraPlProd(String geraPlProd) {
+        this.geraPlProd = geraPlProd;
    }
 
    public String getGrupoCofins() {
@@ -1419,12 +1418,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.icmsGerencia = icmsGerencia;
    }
 
-   public BigDecimal getIdentImob() {
-        return identImob;
+   public BigDecimal getIdenImob() {
+        return idenImob;
    }
 
-   public void setIdentImob(BigDecimal identImob) {
-        this.identImob = identImob;
+   public void setIdenImob(BigDecimal idenImob) {
+        this.idenImob = idenImob;
    }
 
    public byte[] getImagem() {
@@ -1443,12 +1442,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.impEtiqConf = impEtiqConf;
    }
 
-   public String getImpLaudoLote() {
-        return impLaudoLote;
+   public String getImplAudLote() {
+        return implAudLote;
    }
 
-   public void setImpLaudoLote(String impLaudoLote) {
-        this.impLaudoLote = impLaudoLote;
+   public void setImplAudLote(String implAudLote) {
+        this.implAudLote = implAudLote;
    }
 
    public String getImpOrdemCorte() {
@@ -1459,12 +1458,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.impOrdemCorte = impOrdemCorte;
    }
 
-   public String getIndEspProdepe() {
-        return indEspProdepe;
+   public String getIndEspProdEpe() {
+        return indEspProdEpe;
    }
 
-   public void setIndEspProdepe(String indEspProdepe) {
-        this.indEspProdepe = indEspProdepe;
+   public void setIndEspProdEpe(String indEspProdEpe) {
+        this.indEspProdEpe = indEspProdEpe;
    }
 
    public String getInfPureza() {
@@ -1667,12 +1666,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.prazoVal = prazoVal;
    }
 
-   public BigDecimal getPrinCAtivo() {
-        return prinCAtivo;
+   public BigDecimal getPrincAtivo() {
+        return princAtivo;
    }
 
-   public void setPrinCAtivo(BigDecimal prinCAtivo) {
-        this.prinCAtivo = prinCAtivo;
+   public void setPrincAtivo(BigDecimal princAtivo) {
+        this.princAtivo = princAtivo;
    }
 
    public BigDecimal getProdutoNfe() {
@@ -1923,28 +1922,28 @@ public class Produto implements SankhyaEntity<Produto> {
         this.temIss = temIss;
    }
 
-   public Timestamp getTemPosServ() {
-        return temPosServ;
+   public Timestamp getTempoServ() {
+        return tempoServ;
    }
 
-   public void setTemPosServ(Timestamp temPosServ) {
-        this.temPosServ = temPosServ;
+   public void setTempoServ(Timestamp tempoServ) {
+        this.tempoServ = tempoServ;
    }
 
-   public String getTipContest() {
-        return tipContest;
+   public String getTipContEst() {
+        return tipContEst;
    }
 
-   public void setTipContest(String tipContest) {
-        this.tipContest = tipContest;
+   public void setTipContEst(String tipContEst) {
+        this.tipContEst = tipContEst;
    }
 
-   public String getTipContestWms() {
-        return tipContestWms;
+   public String getTipContEstWms() {
+        return tipContEstWms;
    }
 
-   public void setTipContestWms(String tipContestWms) {
-        this.tipContestWms = tipContestWms;
+   public void setTipContEstWms(String tipContEstWms) {
+        this.tipContEstWms = tipContEstWms;
    }
 
    public BigDecimal getTipGtinNfe() {
@@ -1987,12 +1986,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.tipSubst = tipSubst;
    }
 
-   public String getTitContest() {
-        return titContest;
+   public String getTitContEst() {
+        return titContEst;
    }
 
-   public void setTitContest(String titContest) {
-        this.titContest = titContest;
+   public void setTitContEst(String titContEst) {
+        this.titContEst = titContEst;
    }
 
    public String getUnidade() {
@@ -2523,12 +2522,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.tempMinima = tempMinima;
    }
 
-   public String getTermoLabil() {
-        return termoLabil;
+   public String getTermolabil() {
+        return termolabil;
    }
 
-   public void setTermoLabil(String termoLabil) {
-        this.termoLabil = termoLabil;
+   public void setTermolabil(String termolabil) {
+        this.termolabil = termolabil;
    }
 
    public String getListaLpm() {
@@ -2595,12 +2594,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.idenCosme = idenCosme;
    }
 
-   public String getIdenCorrelato() {
-        return idenCorrelato;
+   public String getIdenCorRelato() {
+        return idenCorRelato;
    }
 
-   public void setIdenCorrelato(String idenCorrelato) {
-        this.idenCorrelato = idenCorrelato;
+   public void setIdenCorRelato(String idenCorRelato) {
+        this.idenCorRelato = idenCorRelato;
    }
 
    public BigDecimal getCodCpr() {
@@ -2771,12 +2770,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.armazeLote = armazeLote;
    }
 
-   public BigDecimal getMvaOriginalDrcst() {
-        return mvaOriginalDrcst;
+   public BigDecimal getMvaOriginalDrCst() {
+        return mvaOriginalDrCst;
    }
 
-   public void setMvaOriginalDrcst(BigDecimal mvaOriginalDrcst) {
-        this.mvaOriginalDrcst = mvaOriginalDrcst;
+   public void setMvaOriginalDrCst(BigDecimal mvaOriginalDrCst) {
+        this.mvaOriginalDrCst = mvaOriginalDrCst;
    }
 
    public String getCodFciCalc() {
@@ -3139,20 +3138,20 @@ public class Produto implements SankhyaEntity<Produto> {
         this.servDespNTrib = servDespNTrib;
    }
 
-   public String getProdAliadRcst() {
-        return prodAliadRcst;
+   public String getProdAliadrCst() {
+        return prodAliadrCst;
    }
 
-   public void setProdAliadRcst(String prodAliadRcst) {
-        this.prodAliadRcst = prodAliadRcst;
+   public void setProdAliadrCst(String prodAliadrCst) {
+        this.prodAliadrCst = prodAliadrCst;
    }
 
-   public String getGerImpNRetReinfaq() {
-        return gerImpNRetReinfaq;
+   public String getGerImpNRetReinfaQ() {
+        return gerImpNRetReinfaQ;
    }
 
-   public void setGerImpNRetReinfaq(String gerImpNRetReinfaq) {
-        this.gerImpNRetReinfaq = gerImpNRetReinfaq;
+   public void setGerImpNRetReinfaQ(String gerImpNRetReinfaQ) {
+        this.gerImpNRetReinfaQ = gerImpNRetReinfaQ;
    }
 
    public BigDecimal getAliqFetHab() {
@@ -3283,20 +3282,20 @@ public class Produto implements SankhyaEntity<Produto> {
         this.percentSepPul = percentSepPul;
    }
 
-   public String getObtStantMedEnt() {
-        return obtStantMedEnt;
+   public String getObtStAntMedEnt() {
+        return obtStAntMedEnt;
    }
 
-   public void setObtStantMedEnt(String obtStantMedEnt) {
-        this.obtStantMedEnt = obtStantMedEnt;
+   public void setObtStAntMedEnt(String obtStAntMedEnt) {
+        this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
-   public String getDescProdDrcst() {
-        return descProdDrcst;
+   public String getDescProdDrCst() {
+        return descProdDrCst;
    }
 
-   public void setDescProdDrcst(String descProdDrcst) {
-        this.descProdDrcst = descProdDrcst;
+   public void setDescProdDrCst(String descProdDrCst) {
+        this.descProdDrCst = descProdDrCst;
    }
 
    public BigDecimal getAliqInternaCat42() {
@@ -3323,20 +3322,20 @@ public class Produto implements SankhyaEntity<Produto> {
         this.aliqFecop = aliqFecop;
    }
 
-   public BigDecimal getMvaOriginalAdrcst() {
-        return mvaOriginalAdrcst;
+   public BigDecimal getMvaOriginalAdrCst() {
+        return mvaOriginalAdrCst;
    }
 
-   public void setMvaOriginalAdrcst(BigDecimal mvaOriginalAdrcst) {
-        this.mvaOriginalAdrcst = mvaOriginalAdrcst;
+   public void setMvaOriginalAdrCst(BigDecimal mvaOriginalAdrCst) {
+        this.mvaOriginalAdrCst = mvaOriginalAdrCst;
    }
 
-   public String getParticipaAdrcst() {
-        return participaAdrcst;
+   public String getParticipaAdrCst() {
+        return participaAdrCst;
    }
 
-   public void setParticipaAdrcst(String participaAdrcst) {
-        this.participaAdrcst = participaAdrcst;
+   public void setParticipaAdrCst(String participaAdrCst) {
+        this.participaAdrCst = participaAdrCst;
    }
 
    public String getProdSujFecop() {
@@ -3347,12 +3346,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.prodSujFecop = prodSujFecop;
    }
 
-   public String getCalcRupturaEstoque() {
-        return calcRupturaEstoque;
+   public String getCalRupturaEstoque() {
+        return calRupturaEstoque;
    }
 
-   public void setCalcRupturaEstoque(String calcRupturaEstoque) {
-        this.calcRupturaEstoque = calcRupturaEstoque;
+   public void setCalRupturaEstoque(String calRupturaEstoque) {
+        this.calRupturaEstoque = calRupturaEstoque;
    }
 
    public String getCodVolKanban() {
@@ -3420,6 +3419,11 @@ public class Produto implements SankhyaEntity<Produto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPRO";
+   }
+
+   @Override
    public String getEntityName() {
         return "Produto";
    }
@@ -3460,12 +3464,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.aplicaSazo = vo.asString("APLICASAZO");
         this.apresDetalhe = vo.asString("APRESDETALHE");
         this.apresForm = vo.asString("APRESFORM");
-        this.apuraProdepe = vo.asString("APURAPRODEPE");
+        this.apuraProdEpe = vo.asString("APURAPRODEPE");
         this.arredAgrup = vo.asBigDecimal("ARREDAGRUP");
         this.arredPreco = vo.asBigDecimal("ARREDPRECO");
         this.ativo = vo.asString("ATIVO");
         this.balanca = vo.asString("BALANCA");
-        this.calculoGiro = vo.asString("CALCULOGIRO");
+        this.calcGiro = vo.asString("CALCULOGIRO");
         this.camadas = vo.asBigDecimal("CAMADAS");
         this.caracteristicas = vo.asString("CARACTERISTICAS");
         this.carencia = vo.asBigDecimal("CARENCIA");
@@ -3474,7 +3478,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.classeTox = vo.asBigDecimal("CLASSETOX");
         this.classUbTrib = vo.asBigDecimal("CLASSUBTRIB");
         this.cnae = vo.asBigDecimal("CNAE");
-        this.lisContest = vo.asString("LISCONTEST");
+        this.lisContEst = vo.asString("LISCONTEST");
         this.local = vo.asString("LOCAL");
         this.localizacao = vo.asString("LOCALIZACAO");
         this.loteCompMinimo = vo.asBigDecimal("LOTECOMPMINIMO");
@@ -3504,7 +3508,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.codVolRes = vo.asString("CODVOLRES");
         this.comGer = vo.asBigDecimal("COMGER");
         this.complDesc = vo.asString("COMPLDESC");
-        this.compoNoBrig = vo.asString("COMPONOBRIG");
+        this.componObrig = vo.asString("COMPONOBRIG");
         this.comVend = vo.asBigDecimal("COMVEND");
         this.concentracao = vo.asString("CONCENTRACAO");
         this.confCegaPeso = vo.asString("CONFCEGAPESO");
@@ -3545,7 +3549,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.fatTotal = vo.asString("FATTOTAL");
         this.flex = vo.asString("FLEX");
         this.formulacao = vo.asString("FORMULACAO");
-        this.geraPlaProd = vo.asString("GERAPLAPROD");
+        this.geraPlProd = vo.asString("GERAPLAPROD");
         this.grupoCofins = vo.asString("GRUPOCOFINS");
         this.grupoCssl = vo.asString("GRUPOCSSL");
         this.grupoDescProd = vo.asString("GRUPODESCPROD");
@@ -3555,12 +3559,12 @@ public class Produto implements SankhyaEntity<Produto> {
         this.homePage = vo.asString("HOMEPAGE");
         this.hrDobrada = vo.asString("HRDOBRADA");
         this.icmsGerencia = vo.asString("ICMSGERENCIA");
-        this.identImob = vo.asBigDecimal("IDENTIMOB");
+        this.idenImob = vo.asBigDecimal("IDENTIMOB");
         this.imagem = vo.asBlob("IMAGEM");
         this.impEtiqConf = vo.asString("IMPETIQCONF");
-        this.impLaudoLote = vo.asString("IMPLAUDOLOTE");
+        this.implAudLote = vo.asString("IMPLAUDOLOTE");
         this.impOrdemCorte = vo.asString("IMPORDEMCORTE");
-        this.indEspProdepe = vo.asString("INDESPPRODEPE");
+        this.indEspProdEpe = vo.asString("INDESPPRODEPE");
         this.infPureza = vo.asString("INFPUREZA");
         this.intervalo = vo.asBigDecimal("INTERVALO");
         this.largura = vo.asBigDecimal("LARGURA");
@@ -3586,7 +3590,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
         this.pesoLiq = vo.asBigDecimal("PESOLIQ");
         this.prazoVal = vo.asBigDecimal("PRAZOVAL");
-        this.prinCAtivo = vo.asBigDecimal("PRINCATIVO");
+        this.princAtivo = vo.asBigDecimal("PRINCATIVO");
         this.produtoNfe = vo.asBigDecimal("PRODUTONFE");
         this.promocao = vo.asString("PROMOCAO");
         this.qtdEmb = vo.asBigDecimal("QTDEMB");
@@ -3618,15 +3622,15 @@ public class Produto implements SankhyaEntity<Produto> {
         this.temIpiVenda = vo.asString("TEMIPIVENDA");
         this.temIrf = vo.asString("TEMIRF");
         this.temIss = vo.asString("TEMISS");
-        this.temPosServ = vo.asTimestamp("TEMPOSSERV");
-        this.tipContest = vo.asString("TIPCONTEST");
-        this.tipContestWms = vo.asString("TIPCONTESTWMS");
+        this.tempoServ = vo.asTimestamp("TEMPOSERV");
+        this.tipContEst = vo.asString("TIPCONTEST");
+        this.tipContEstWms = vo.asString("TIPCONTESTWMS");
         this.tipGtinNfe = vo.asBigDecimal("TIPGTINNFE");
         this.tipLancNota = vo.asString("TIPLANCNOTA");
         this.tipo = vo.asString("TIPO");
         this.tipSerNfe = vo.asString("TIPSERNFE");
         this.tipSubst = vo.asString("TIPSUBST");
-        this.titContest = vo.asString("TITCONTEST");
+        this.titContEst = vo.asString("TITCONTEST");
         this.unidade = vo.asString("UNIDADE");
         this.unidMinArmaz = vo.asString("UNIDMINARMAZ");
         this.usaCodBarrasQtd = vo.asString("USACODBARRASQTD");
@@ -3693,7 +3697,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.tempMaxima = vo.asBigDecimal("TEMPMAXIMA");
         this.controlado = vo.asString("CONTROLADO");
         this.tempMinima = vo.asBigDecimal("TEMPMINIMA");
-        this.termoLabil = vo.asString("TERMOLABIL");
+        this.termolabil = vo.asString("TERMOLABIL");
         this.listaLpm = vo.asString("LISTALPM");
         this.oneroso = vo.asString("ONEROSO");
         this.refMercMed = vo.asString("REFMERCMED");
@@ -3702,7 +3706,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.codTer = vo.asBigDecimal("CODTER");
         this.idenOtc = vo.asString("IDENOTC");
         this.idenCosme = vo.asString("IDENCOSME");
-        this.idenCorrelato = vo.asString("IDENCORRELATO");
+        this.idenCorRelato = vo.asString("IDENCORRELATO");
         this.codCpr = vo.asBigDecimal("CODCPR");
         this.seqSte = vo.asBigDecimal("SEQSTE");
         this.codCat = vo.asBigDecimal("CODCAT");
@@ -3724,7 +3728,7 @@ public class Produto implements SankhyaEntity<Produto> {
         this.codMarca = vo.asBigDecimal("CODMARCA");
         this.temRastroLote = vo.asString("TEMRASTROLOTE");
         this.armazeLote = vo.asString("ARMAZELOTE");
-        this.mvaOriginalDrcst = vo.asBigDecimal("MVAORIGINALDRCST");
+        this.mvaOriginalDrCst = vo.asBigDecimal("MVAORIGINALDRCST");
         this.codFciCalc = vo.asString("CODFCICALC");
         this.vlrComercCalc = vo.asBigDecimal("VLRCOMERCCALC");
         this.vlrParcImpExtCalc = vo.asBigDecimal("VLRPARCIMPEXTCALC");
@@ -3770,8 +3774,8 @@ public class Produto implements SankhyaEntity<Produto> {
         this.statusNcm = vo.asString("STATUSNCM");
         this.wmsProdRastSerMed = vo.asString("WMSPRODRASTSERMED");
         this.servDespNTrib = vo.asString("SERVDESPNTRIB");
-        this.prodAliadRcst = vo.asString("PRODALIADRCST");
-        this.gerImpNRetReinfaq = vo.asString("GERIMPNRETREINFAQ");
+        this.prodAliadrCst = vo.asString("PRODALIADRCST");
+        this.gerImpNRetReinfaQ = vo.asString("GERIMPNRETREINFAQ");
         this.aliqFetHab = vo.asBigDecimal("ALIQFETHAB");
         this.codVolFetHab = vo.asString("CODVOLFETHAB");
         this.calcFuntTelPro = vo.asString("CALCFUNTTELPRO");
@@ -3788,21 +3792,21 @@ public class Produto implements SankhyaEntity<Produto> {
         this.gradePadrao = vo.asClob("GRADEPADRAO");
         this.idGrade = vo.asBigDecimal("IDGRADE");
         this.percentSepPul = vo.asBigDecimal("PERCENTSEPPUL");
-        this.obtStantMedEnt = vo.asString("OBTSTANTMEDENT");
-        this.descProdDrcst = vo.asString("DESCPRODDRCST");
+        this.obtStAntMedEnt = vo.asString("OBTSTANTMEDENT");
+        this.descProdDrCst = vo.asString("DESCPRODDRCST");
         this.aliqInternaCat42 = vo.asBigDecimal("ALIQINTERNACAT42");
         this.desDescCalcPis = vo.asString("DESDESCCALCPIS");
         this.aliqFecop = vo.asBigDecimal("ALIQFECOP");
-        this.mvaOriginalAdrcst = vo.asBigDecimal("MVAORIGINALADRCST");
-        this.participaAdrcst = vo.asString("PARTICIPAADRCST");
+        this.mvaOriginalAdrCst = vo.asBigDecimal("MVAORIGINALADRCST");
+        this.participaAdrCst = vo.asString("PARTICIPAADRCST");
         this.prodSujFecop = vo.asString("PRODSUJFECOP");
-        this.calcRupturaEstoque = vo.asString("CALCRUPTURAESTOQUE");
+        this.calRupturaEstoque = vo.asString("CALRUPTURAESTOQUE");
         this.codVolKanban = vo.asString("CODVOLKANBAN");
         this.bloqVendaFrac = vo.asString("BLOQVENDAFRAC");
         this.codNatRend = vo.asBigDecimal("CODNATREND");
         this.tpIrrfExt = vo.asBigDecimal("TPIRRFEXT");
         this.percIndMistura = vo.asBigDecimal("PERCINDMISTURA");
-        this.opExpFetHab = vo.asString("OPEXPFETHAB");
+        this.opExpFetHab = vo.asString("OPEEXPFETHAB");
         this.opeIntEstFetHab = vo.asString("OPEINTESTFETHAB");
         this.opeIntFetHab = vo.asString("OPEINTFETHAB");
         return this;

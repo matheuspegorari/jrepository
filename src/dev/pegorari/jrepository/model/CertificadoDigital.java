@@ -1,10 +1,9 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
-public class CertificadoDigital implements SankhyaEntity<CertificadoDigital> {
-
+public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital> {
    private String nomeArquivo;
    private String interno;
    private String cgcCpf;
@@ -34,6 +33,11 @@ public class CertificadoDigital implements SankhyaEntity<CertificadoDigital> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSICDI";
+   }
+
+   @Override
    public String getEntityName() {
         return "CertificadoDigital";
    }
@@ -42,7 +46,7 @@ public class CertificadoDigital implements SankhyaEntity<CertificadoDigital> {
    public CertificadoDigital fromVO(DynamicVO vo) {
         this.nomeArquivo = vo.asString("NOMEARQUIVO");
         this.interno = vo.asString("INTERNO");
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         return this;
    }
 }

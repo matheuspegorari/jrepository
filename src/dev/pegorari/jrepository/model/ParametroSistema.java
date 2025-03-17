@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ParametroSistema implements SankhyaEntity<ParametroSistema> {
-
+public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    private String aba;
    private String chave;
    private String classe;
@@ -114,6 +113,11 @@ public class ParametroSistema implements SankhyaEntity<ParametroSistema> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPAR";
    }
 
    @Override

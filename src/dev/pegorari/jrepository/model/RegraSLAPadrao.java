@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegraSLAPadrao implements SankhyaEntity<RegraSLAPadrao> {
-
+public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    private BigDecimal codCargaHor;
    private String baseCalcTempo;
    private BigDecimal codGrupoProd;
@@ -140,6 +139,11 @@ public class RegraSLAPadrao implements SankhyaEntity<RegraSLAPadrao> {
 
    public void setValorTempo(BigDecimal valorTempo) {
         this.valorTempo = valorTempo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSRSL";
    }
 
    @Override

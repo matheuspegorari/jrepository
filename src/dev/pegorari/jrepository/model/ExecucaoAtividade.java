@@ -1,21 +1,20 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExecucaoAtividade implements SankhyaEntity<ExecucaoAtividade> {
-
+public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> {
    private BigDecimal codMtp;
    private String observacao;
    private String tipo;
    private Timestamp dhInicio;
    private BigDecimal codExec;
    private BigDecimal codUsu;
-   private BigDecimal ideIatv;
+   private BigDecimal ideiAtv;
    private Timestamp dhFinal;
-   private BigDecimal idIatv;
+   private BigDecimal idAtv;
 
    public BigDecimal getCodMtp() {
         return codMtp;
@@ -65,12 +64,12 @@ public class ExecucaoAtividade implements SankhyaEntity<ExecucaoAtividade> {
         this.codUsu = codUsu;
    }
 
-   public BigDecimal getIdeIatv() {
-        return ideIatv;
+   public BigDecimal getIdeiAtv() {
+        return ideiAtv;
    }
 
-   public void setIdeIatv(BigDecimal ideIatv) {
-        this.ideIatv = ideIatv;
+   public void setIdeiAtv(BigDecimal ideiAtv) {
+        this.ideiAtv = ideiAtv;
    }
 
    public Timestamp getDhFinal() {
@@ -81,12 +80,17 @@ public class ExecucaoAtividade implements SankhyaEntity<ExecucaoAtividade> {
         this.dhFinal = dhFinal;
    }
 
-   public BigDecimal getIdIatv() {
-        return idIatv;
+   public BigDecimal getIdAtv() {
+        return idAtv;
    }
 
-   public void setIdIatv(BigDecimal idIatv) {
-        this.idIatv = idIatv;
+   public void setIdAtv(BigDecimal idAtv) {
+        this.idAtv = idAtv;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPREIATV";
    }
 
    @Override
@@ -102,9 +106,9 @@ public class ExecucaoAtividade implements SankhyaEntity<ExecucaoAtividade> {
         this.dhInicio = vo.asTimestamp("DHINICIO");
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.codUsu = vo.asBigDecimal("CODUSU");
-        this.ideIatv = vo.asBigDecimal("IDEIATV");
+        this.ideiAtv = vo.asBigDecimal("IDEIATV");
         this.dhFinal = vo.asTimestamp("DHFINAL");
-        this.idIatv = vo.asBigDecimal("IDIATV");
+        this.idAtv = vo.asBigDecimal("IDIATV");
         return this;
    }
 }

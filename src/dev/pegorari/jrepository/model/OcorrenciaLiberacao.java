@@ -1,17 +1,16 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OcorrenciaLiberacao implements SankhyaEntity<OcorrenciaLiberacao> {
-
+public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberacao> {
    private BigDecimal grau;
    private String marca;
    private BigDecimal nuAutInv;
    private BigDecimal nuFin;
-   private BigDecimal numTransf;
+   private BigDecimal nuMtransf;
    private BigDecimal nuNota;
    private String observacao;
    private String obsLib;
@@ -87,12 +86,12 @@ public class OcorrenciaLiberacao implements SankhyaEntity<OcorrenciaLiberacao> {
         this.nuFin = nuFin;
    }
 
-   public BigDecimal getNumTransf() {
-        return numTransf;
+   public BigDecimal getNuMtransf() {
+        return nuMtransf;
    }
 
-   public void setNumTransf(BigDecimal numTransf) {
-        this.numTransf = numTransf;
+   public void setNuMtransf(BigDecimal nuMtransf) {
+        this.nuMtransf = nuMtransf;
    }
 
    public BigDecimal getNuNota() {
@@ -432,6 +431,11 @@ public class OcorrenciaLiberacao implements SankhyaEntity<OcorrenciaLiberacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGMTRA";
+   }
+
+   @Override
    public String getEntityName() {
         return "OcorrenciaLiberacao";
    }
@@ -442,7 +446,7 @@ public class OcorrenciaLiberacao implements SankhyaEntity<OcorrenciaLiberacao> {
         this.marca = vo.asString("MARCA");
         this.nuAutInv = vo.asBigDecimal("NUAUTINV");
         this.nuFin = vo.asBigDecimal("NUFIN");
-        this.numTransf = vo.asBigDecimal("NUMTRANSF");
+        this.nuMtransf = vo.asBigDecimal("NUMTRANSF");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.observacao = vo.asString("OBSERVACAO");
         this.obsLib = vo.asString("OBSLIB");
@@ -455,7 +459,7 @@ public class OcorrenciaLiberacao implements SankhyaEntity<OcorrenciaLiberacao> {
         this.status = vo.asString("STATUS");
         this.tipo = vo.asString("TIPO");
         this.valor = vo.asBigDecimal("VALOR");
-        this.valorOrig = vo.asBigDecimal("VALORORIG");
+        this.valorOrig = vo.asBigDecimal("VALOR_ORIG");
         this.vlrDesdob = vo.asBigDecimal("VLRDESDOB");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");

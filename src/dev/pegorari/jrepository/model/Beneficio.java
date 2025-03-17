@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Beneficio implements SankhyaEntity<Beneficio> {
-
+public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    private BigDecimal codBco;
    private BigDecimal codBen;
-   private BigDecimal codCenCus;
-   private BigDecimal codCenCusDif;
-   private BigDecimal codCtaBcoInt;
+   private BigDecimal codCencus;
+   private BigDecimal codCencusDif;
+   private BigDecimal codCtabcoInt;
    private BigDecimal codEmp;
    private BigDecimal codEvento;
    private BigDecimal codEventoEmp;
@@ -45,28 +44,28 @@ public class Beneficio implements SankhyaEntity<Beneficio> {
         this.codBen = codBen;
    }
 
-   public BigDecimal getCodCenCus() {
-        return codCenCus;
+   public BigDecimal getCodCencus() {
+        return codCencus;
    }
 
-   public void setCodCenCus(BigDecimal codCenCus) {
-        this.codCenCus = codCenCus;
+   public void setCodCencus(BigDecimal codCencus) {
+        this.codCencus = codCencus;
    }
 
-   public BigDecimal getCodCenCusDif() {
-        return codCenCusDif;
+   public BigDecimal getCodCencusDif() {
+        return codCencusDif;
    }
 
-   public void setCodCenCusDif(BigDecimal codCenCusDif) {
-        this.codCenCusDif = codCenCusDif;
+   public void setCodCencusDif(BigDecimal codCencusDif) {
+        this.codCencusDif = codCencusDif;
    }
 
-   public BigDecimal getCodCtaBcoInt() {
-        return codCtaBcoInt;
+   public BigDecimal getCodCtabcoInt() {
+        return codCtabcoInt;
    }
 
-   public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
-        this.codCtaBcoInt = codCtaBcoInt;
+   public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
+        this.codCtabcoInt = codCtabcoInt;
    }
 
    public BigDecimal getCodEmp() {
@@ -206,6 +205,11 @@ public class Beneficio implements SankhyaEntity<Beneficio> {
    }
 
    @Override
+   public String getTableName() {
+        return "TFPBEN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Beneficio";
    }
@@ -214,9 +218,9 @@ public class Beneficio implements SankhyaEntity<Beneficio> {
    public Beneficio fromVO(DynamicVO vo) {
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codBen = vo.asBigDecimal("CODBEN");
-        this.codCenCus = vo.asBigDecimal("CODCENCUS");
-        this.codCenCusDif = vo.asBigDecimal("CODCENCUSDIF");
-        this.codCtaBcoInt = vo.asBigDecimal("CODCTABCOINT");
+        this.codCencus = vo.asBigDecimal("CODCENCUS");
+        this.codCencusDif = vo.asBigDecimal("CODCENCUSDIF");
+        this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codEventoEmp = vo.asBigDecimal("CODEVENTOEMP");

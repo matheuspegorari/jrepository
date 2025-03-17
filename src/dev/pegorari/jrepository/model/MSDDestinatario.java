@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MSDDestinatario implements SankhyaEntity<MSDDestinatario> {
-
+public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    private String ativo;
    private String celular;
    private BigDecimal codCon;
@@ -86,6 +85,11 @@ public class MSDDestinatario implements SankhyaEntity<MSDDestinatario> {
 
    public void setNomeCon(String nomeCon) {
         this.nomeCon = nomeCon;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDCON";
    }
 
    @Override

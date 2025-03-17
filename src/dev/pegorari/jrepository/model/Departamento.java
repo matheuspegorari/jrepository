@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Departamento implements SankhyaEntity<Departamento> {
-
+public class Departamento extends AbstractSankhyaEntity<Departamento> {
    private String analitico;
    private String ativo;
    private BigDecimal codCencus;
@@ -167,6 +166,11 @@ public class Departamento implements SankhyaEntity<Departamento> {
 
    public void setCodProj(BigDecimal codProj) {
         this.codProj = codProj;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPDEP";
    }
 
    @Override

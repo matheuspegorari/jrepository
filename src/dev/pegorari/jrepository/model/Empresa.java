@@ -1,88 +1,87 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Empresa implements SankhyaEntity<Empresa> {
-
+public class Empresa extends AbstractSankhyaEntity<Empresa> {
    private BigDecimal ativecon;
    private String cargas;
    private String cep;
    private String cgc;
-   private BigDecimal codBai;
-   private BigDecimal codCid;
-   private String codCnl;
-   private BigDecimal codEmp;
-   private BigDecimal codEmpMatriz;
-   private BigDecimal codEnd;
-   private BigDecimal codMun;
-   private BigDecimal codParc;
-   private BigDecimal codRegTrib;
+   private BigDecimal codbai;
+   private BigDecimal codcid;
+   private String codcnl;
+   private BigDecimal codemp;
+   private BigDecimal codempmatriz;
+   private BigDecimal codend;
+   private BigDecimal codmun;
+   private BigDecimal codparc;
+   private BigDecimal codregtrib;
    private String comissoes;
    private String complemento;
    private Timestamp contabilidade;
    private String cooperativa;
-   private String cpfResp;
-   private Timestamp dtConvSoc;
-   private Timestamp dtRegJunta;
+   private String cpfresp;
+   private Timestamp dtconvsoc;
+   private Timestamp dtregjunta;
    private String dupliv;
    private String email;
-   private BigDecimal empAgruparGol;
+   private BigDecimal empagrupargol;
    private String estoque;
    private String fax;
    private String financeiro;
-   private String folhaPagto;
+   private String folhapagto;
    private String homepage;
-   private String inscEstad;
-   private String inscMun;
+   private String inscestad;
+   private String inscmun;
    private String latitude;
-   private BigDecimal limCurvaB;
-   private BigDecimal limCurvaC;
-   private String livrosFiscais;
-   private byte[] logoMarca;
+   private BigDecimal limcurvaB;
+   private BigDecimal limcurvaC;
+   private String livrosfiscais;
+   private byte[] logomarca;
    private String longitude;
-   private String modeloNfDes;
-   private BigDecimal natEstab;
-   private BigDecimal natJur;
-   private String nomeFantasia;
-   private String numEnd;
-   private BigDecimal numPropr;
-   private String prinCtitular;
+   private String modelonfdes;
+   private BigDecimal natestab;
+   private BigDecimal natjur;
+   private String nomefantasia;
+   private String numend;
+   private BigDecimal numpropr;
+   private String princtitular;
    private String producao;
-   private String ramoAtiv;
-   private String razaoAbrev;
-   private String razaoSocial;
-   private String regJuntaCom;
-   private String serieNfDes;
+   private String ramoativ;
+   private String razaoabrev;
+   private String razaosocial;
+   private String regjuntacom;
+   private String serienfdes;
    private String simples;
-   private String simplesNacNauf;
-   private String supDecisao;
+   private String simplesnacnauf;
+   private String supdecisao;
    private String telefone;
    private String telex;
-   private String tipoRegra;
-   private BigDecimal tipoSn;
-   private BigDecimal corEmpresa;
-   private String razaoSocialCompleta;
-   private BigDecimal qtdAcessos;
+   private String tiporegra;
+   private BigDecimal tiposn;
+   private BigDecimal corempresa;
+   private String razaosocialcompleta;
+   private BigDecimal qtdacessos;
    private String rntrc;
-   private String usaRazaoSocial;
-   private String produtorRural;
-   private String empIdEnotas;
-   private Timestamp dhConsiTimEnd;
-   private String numTaf;
-   private String nuRest;
-   private BigDecimal acdIntiSenMulta;
-   private BigDecimal classTrib;
-   private BigDecimal indConstr;
-   private BigDecimal indCoop;
-   private BigDecimal indOpCcp;
-   private BigDecimal indSitEsp;
-   private BigDecimal infoObra;
+   private String usarazaosocial;
+   private String produtorrural;
+   private String empidenotas;
+   private Timestamp dhconsitimend;
+   private String numtaf;
+   private String nurest;
+   private BigDecimal acdintisenmulta;
+   private BigDecimal classtrib;
+   private BigDecimal indconstr;
+   private BigDecimal indcoop;
+   private BigDecimal indopccp;
+   private BigDecimal indsitesp;
+   private BigDecimal infoobra;
    private String cotm;
-   private BigDecimal cnaePrepon;
-   private String cnpjPrefeitura;
+   private BigDecimal cnaeprepon;
+   private String cnpjprefeitura;
 
    public BigDecimal getAtivecon() {
         return ativecon;
@@ -116,76 +115,76 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.cgc = cgc;
    }
 
-   public BigDecimal getCodBai() {
-        return codBai;
+   public BigDecimal getCodbai() {
+        return codbai;
    }
 
-   public void setCodBai(BigDecimal codBai) {
-        this.codBai = codBai;
+   public void setCodbai(BigDecimal codbai) {
+        this.codbai = codbai;
    }
 
-   public BigDecimal getCodCid() {
-        return codCid;
+   public BigDecimal getCodcid() {
+        return codcid;
    }
 
-   public void setCodCid(BigDecimal codCid) {
-        this.codCid = codCid;
+   public void setCodcid(BigDecimal codcid) {
+        this.codcid = codcid;
    }
 
-   public String getCodCnl() {
-        return codCnl;
+   public String getCodcnl() {
+        return codcnl;
    }
 
-   public void setCodCnl(String codCnl) {
-        this.codCnl = codCnl;
+   public void setCodcnl(String codcnl) {
+        this.codcnl = codcnl;
    }
 
-   public BigDecimal getCodEmp() {
-        return codEmp;
+   public BigDecimal getCodemp() {
+        return codemp;
    }
 
-   public void setCodEmp(BigDecimal codEmp) {
-        this.codEmp = codEmp;
+   public void setCodemp(BigDecimal codemp) {
+        this.codemp = codemp;
    }
 
-   public BigDecimal getCodEmpMatriz() {
-        return codEmpMatriz;
+   public BigDecimal getCodempmatriz() {
+        return codempmatriz;
    }
 
-   public void setCodEmpMatriz(BigDecimal codEmpMatriz) {
-        this.codEmpMatriz = codEmpMatriz;
+   public void setCodempmatriz(BigDecimal codempmatriz) {
+        this.codempmatriz = codempmatriz;
    }
 
-   public BigDecimal getCodEnd() {
-        return codEnd;
+   public BigDecimal getCodend() {
+        return codend;
    }
 
-   public void setCodEnd(BigDecimal codEnd) {
-        this.codEnd = codEnd;
+   public void setCodend(BigDecimal codend) {
+        this.codend = codend;
    }
 
-   public BigDecimal getCodMun() {
-        return codMun;
+   public BigDecimal getCodmun() {
+        return codmun;
    }
 
-   public void setCodMun(BigDecimal codMun) {
-        this.codMun = codMun;
+   public void setCodmun(BigDecimal codmun) {
+        this.codmun = codmun;
    }
 
-   public BigDecimal getCodParc() {
-        return codParc;
+   public BigDecimal getCodparc() {
+        return codparc;
    }
 
-   public void setCodParc(BigDecimal codParc) {
-        this.codParc = codParc;
+   public void setCodparc(BigDecimal codparc) {
+        this.codparc = codparc;
    }
 
-   public BigDecimal getCodRegTrib() {
-        return codRegTrib;
+   public BigDecimal getCodregtrib() {
+        return codregtrib;
    }
 
-   public void setCodRegTrib(BigDecimal codRegTrib) {
-        this.codRegTrib = codRegTrib;
+   public void setCodregtrib(BigDecimal codregtrib) {
+        this.codregtrib = codregtrib;
    }
 
    public String getComissoes() {
@@ -220,28 +219,28 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.cooperativa = cooperativa;
    }
 
-   public String getCpfResp() {
-        return cpfResp;
+   public String getCpfresp() {
+        return cpfresp;
    }
 
-   public void setCpfResp(String cpfResp) {
-        this.cpfResp = cpfResp;
+   public void setCpfresp(String cpfresp) {
+        this.cpfresp = cpfresp;
    }
 
-   public Timestamp getDtConvSoc() {
-        return dtConvSoc;
+   public Timestamp getDtconvsoc() {
+        return dtconvsoc;
    }
 
-   public void setDtConvSoc(Timestamp dtConvSoc) {
-        this.dtConvSoc = dtConvSoc;
+   public void setDtconvsoc(Timestamp dtconvsoc) {
+        this.dtconvsoc = dtconvsoc;
    }
 
-   public Timestamp getDtRegJunta() {
-        return dtRegJunta;
+   public Timestamp getDtregjunta() {
+        return dtregjunta;
    }
 
-   public void setDtRegJunta(Timestamp dtRegJunta) {
-        this.dtRegJunta = dtRegJunta;
+   public void setDtregjunta(Timestamp dtregjunta) {
+        this.dtregjunta = dtregjunta;
    }
 
    public String getDupliv() {
@@ -260,12 +259,12 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.email = email;
    }
 
-   public BigDecimal getEmpAgruparGol() {
-        return empAgruparGol;
+   public BigDecimal getEmpagrupargol() {
+        return empagrupargol;
    }
 
-   public void setEmpAgruparGol(BigDecimal empAgruparGol) {
-        this.empAgruparGol = empAgruparGol;
+   public void setEmpagrupargol(BigDecimal empagrupargol) {
+        this.empagrupargol = empagrupargol;
    }
 
    public String getEstoque() {
@@ -292,12 +291,12 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.financeiro = financeiro;
    }
 
-   public String getFolhaPagto() {
-        return folhaPagto;
+   public String getFolhapagto() {
+        return folhapagto;
    }
 
-   public void setFolhaPagto(String folhaPagto) {
-        this.folhaPagto = folhaPagto;
+   public void setFolhapagto(String folhapagto) {
+        this.folhapagto = folhapagto;
    }
 
    public String getHomepage() {
@@ -308,20 +307,20 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.homepage = homepage;
    }
 
-   public String getInscEstad() {
-        return inscEstad;
+   public String getInscestad() {
+        return inscestad;
    }
 
-   public void setInscEstad(String inscEstad) {
-        this.inscEstad = inscEstad;
+   public void setInscestad(String inscestad) {
+        this.inscestad = inscestad;
    }
 
-   public String getInscMun() {
-        return inscMun;
+   public String getInscmun() {
+        return inscmun;
    }
 
-   public void setInscMun(String inscMun) {
-        this.inscMun = inscMun;
+   public void setInscmun(String inscmun) {
+        this.inscmun = inscmun;
    }
 
    public String getLatitude() {
@@ -332,36 +331,36 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.latitude = latitude;
    }
 
-   public BigDecimal getLimCurvaB() {
-        return limCurvaB;
+   public BigDecimal getLimcurvaB() {
+        return limcurvaB;
    }
 
-   public void setLimCurvaB(BigDecimal limCurvaB) {
-        this.limCurvaB = limCurvaB;
+   public void setLimcurvaB(BigDecimal limcurvaB) {
+        this.limcurvaB = limcurvaB;
    }
 
-   public BigDecimal getLimCurvaC() {
-        return limCurvaC;
+   public BigDecimal getLimcurvaC() {
+        return limcurvaC;
    }
 
-   public void setLimCurvaC(BigDecimal limCurvaC) {
-        this.limCurvaC = limCurvaC;
+   public void setLimcurvaC(BigDecimal limcurvaC) {
+        this.limcurvaC = limcurvaC;
    }
 
-   public String getLivrosFiscais() {
-        return livrosFiscais;
+   public String getLivrosfiscais() {
+        return livrosfiscais;
    }
 
-   public void setLivrosFiscais(String livrosFiscais) {
-        this.livrosFiscais = livrosFiscais;
+   public void setLivrosfiscais(String livrosfiscais) {
+        this.livrosfiscais = livrosfiscais;
    }
 
-   public byte[] getLogoMarca() {
-        return logoMarca;
+   public byte[] getLogomarca() {
+        return logomarca;
    }
 
-   public void setLogoMarca(byte[] logoMarca) {
-        this.logoMarca = logoMarca;
+   public void setLogomarca(byte[] logomarca) {
+        this.logomarca = logomarca;
    }
 
    public String getLongitude() {
@@ -372,60 +371,60 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.longitude = longitude;
    }
 
-   public String getModeloNfDes() {
-        return modeloNfDes;
+   public String getModelonfdes() {
+        return modelonfdes;
    }
 
-   public void setModeloNfDes(String modeloNfDes) {
-        this.modeloNfDes = modeloNfDes;
+   public void setModelonfdes(String modelonfdes) {
+        this.modelonfdes = modelonfdes;
    }
 
-   public BigDecimal getNatEstab() {
-        return natEstab;
+   public BigDecimal getNatestab() {
+        return natestab;
    }
 
-   public void setNatEstab(BigDecimal natEstab) {
-        this.natEstab = natEstab;
+   public void setNatestab(BigDecimal natestab) {
+        this.natestab = natestab;
    }
 
-   public BigDecimal getNatJur() {
-        return natJur;
+   public BigDecimal getNatjur() {
+        return natjur;
    }
 
-   public void setNatJur(BigDecimal natJur) {
-        this.natJur = natJur;
+   public void setNatjur(BigDecimal natjur) {
+        this.natjur = natjur;
    }
 
-   public String getNomeFantasia() {
-        return nomeFantasia;
+   public String getNomefantasia() {
+        return nomefantasia;
    }
 
-   public void setNomeFantasia(String nomeFantasia) {
-        this.nomeFantasia = nomeFantasia;
+   public void setNomefantasia(String nomefantasia) {
+        this.nomefantasia = nomefantasia;
    }
 
-   public String getNumEnd() {
-        return numEnd;
+   public String getNumend() {
+        return numend;
    }
 
-   public void setNumEnd(String numEnd) {
-        this.numEnd = numEnd;
+   public void setNumend(String numend) {
+        this.numend = numend;
    }
 
-   public BigDecimal getNumPropr() {
-        return numPropr;
+   public BigDecimal getNumpropr() {
+        return numpropr;
    }
 
-   public void setNumPropr(BigDecimal numPropr) {
-        this.numPropr = numPropr;
+   public void setNumpropr(BigDecimal numpropr) {
+        this.numpropr = numpropr;
    }
 
-   public String getPrinCtitular() {
-        return prinCtitular;
+   public String getPrinctitular() {
+        return princtitular;
    }
 
-   public void setPrinCtitular(String prinCtitular) {
-        this.prinCtitular = prinCtitular;
+   public void setPrinctitular(String princtitular) {
+        this.princtitular = princtitular;
    }
 
    public String getProducao() {
@@ -436,44 +435,44 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.producao = producao;
    }
 
-   public String getRamoAtiv() {
-        return ramoAtiv;
+   public String getRamoativ() {
+        return ramoativ;
    }
 
-   public void setRamoAtiv(String ramoAtiv) {
-        this.ramoAtiv = ramoAtiv;
+   public void setRamoativ(String ramoativ) {
+        this.ramoativ = ramoativ;
    }
 
-   public String getRazaoAbrev() {
-        return razaoAbrev;
+   public String getRazaoabrev() {
+        return razaoabrev;
    }
 
-   public void setRazaoAbrev(String razaoAbrev) {
-        this.razaoAbrev = razaoAbrev;
+   public void setRazaoabrev(String razaoabrev) {
+        this.razaoabrev = razaoabrev;
    }
 
-   public String getRazaoSocial() {
-        return razaoSocial;
+   public String getRazaosocial() {
+        return razaosocial;
    }
 
-   public void setRazaoSocial(String razaoSocial) {
-        this.razaoSocial = razaoSocial;
+   public void setRazaosocial(String razaosocial) {
+        this.razaosocial = razaosocial;
    }
 
-   public String getRegJuntaCom() {
-        return regJuntaCom;
+   public String getRegjuntacom() {
+        return regjuntacom;
    }
 
-   public void setRegJuntaCom(String regJuntaCom) {
-        this.regJuntaCom = regJuntaCom;
+   public void setRegjuntacom(String regjuntacom) {
+        this.regjuntacom = regjuntacom;
    }
 
-   public String getSerieNfDes() {
-        return serieNfDes;
+   public String getSerienfdes() {
+        return serienfdes;
    }
 
-   public void setSerieNfDes(String serieNfDes) {
-        this.serieNfDes = serieNfDes;
+   public void setSerienfdes(String serienfdes) {
+        this.serienfdes = serienfdes;
    }
 
    public String getSimples() {
@@ -484,20 +483,20 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.simples = simples;
    }
 
-   public String getSimplesNacNauf() {
-        return simplesNacNauf;
+   public String getSimplesnacnauf() {
+        return simplesnacnauf;
    }
 
-   public void setSimplesNacNauf(String simplesNacNauf) {
-        this.simplesNacNauf = simplesNacNauf;
+   public void setSimplesnacnauf(String simplesnacnauf) {
+        this.simplesnacnauf = simplesnacnauf;
    }
 
-   public String getSupDecisao() {
-        return supDecisao;
+   public String getSupdecisao() {
+        return supdecisao;
    }
 
-   public void setSupDecisao(String supDecisao) {
-        this.supDecisao = supDecisao;
+   public void setSupdecisao(String supdecisao) {
+        this.supdecisao = supdecisao;
    }
 
    public String getTelefone() {
@@ -516,44 +515,44 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.telex = telex;
    }
 
-   public String getTipoRegra() {
-        return tipoRegra;
+   public String getTiporegra() {
+        return tiporegra;
    }
 
-   public void setTipoRegra(String tipoRegra) {
-        this.tipoRegra = tipoRegra;
+   public void setTiporegra(String tiporegra) {
+        this.tiporegra = tiporegra;
    }
 
-   public BigDecimal getTipoSn() {
-        return tipoSn;
+   public BigDecimal getTiposn() {
+        return tiposn;
    }
 
-   public void setTipoSn(BigDecimal tipoSn) {
-        this.tipoSn = tipoSn;
+   public void setTiposn(BigDecimal tiposn) {
+        this.tiposn = tiposn;
    }
 
-   public BigDecimal getCorEmpresa() {
-        return corEmpresa;
+   public BigDecimal getCorempresa() {
+        return corempresa;
    }
 
-   public void setCorEmpresa(BigDecimal corEmpresa) {
-        this.corEmpresa = corEmpresa;
+   public void setCorempresa(BigDecimal corempresa) {
+        this.corempresa = corempresa;
    }
 
-   public String getRazaoSocialCompleta() {
-        return razaoSocialCompleta;
+   public String getRazaosocialcompleta() {
+        return razaosocialcompleta;
    }
 
-   public void setRazaoSocialCompleta(String razaoSocialCompleta) {
-        this.razaoSocialCompleta = razaoSocialCompleta;
+   public void setRazaosocialcompleta(String razaosocialcompleta) {
+        this.razaosocialcompleta = razaosocialcompleta;
    }
 
-   public BigDecimal getQtdAcessos() {
-        return qtdAcessos;
+   public BigDecimal getQtdacessos() {
+        return qtdacessos;
    }
 
-   public void setQtdAcessos(BigDecimal qtdAcessos) {
-        this.qtdAcessos = qtdAcessos;
+   public void setQtdacessos(BigDecimal qtdacessos) {
+        this.qtdacessos = qtdacessos;
    }
 
    public String getRntrc() {
@@ -564,108 +563,108 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.rntrc = rntrc;
    }
 
-   public String getUsaRazaoSocial() {
-        return usaRazaoSocial;
+   public String getUsarazaosocial() {
+        return usarazaosocial;
    }
 
-   public void setUsaRazaoSocial(String usaRazaoSocial) {
-        this.usaRazaoSocial = usaRazaoSocial;
+   public void setUsarazaosocial(String usarazaosocial) {
+        this.usarazaosocial = usarazaosocial;
    }
 
-   public String getProdutorRural() {
-        return produtorRural;
+   public String getProdutorrural() {
+        return produtorrural;
    }
 
-   public void setProdutorRural(String produtorRural) {
-        this.produtorRural = produtorRural;
+   public void setProdutorrural(String produtorrural) {
+        this.produtorrural = produtorrural;
    }
 
-   public String getEmpIdEnotas() {
-        return empIdEnotas;
+   public String getEmpidenotas() {
+        return empidenotas;
    }
 
-   public void setEmpIdEnotas(String empIdEnotas) {
-        this.empIdEnotas = empIdEnotas;
+   public void setEmpidenotas(String empidenotas) {
+        this.empidenotas = empidenotas;
    }
 
-   public Timestamp getDhConsiTimEnd() {
-        return dhConsiTimEnd;
+   public Timestamp getDhconsitimend() {
+        return dhconsitimend;
    }
 
-   public void setDhConsiTimEnd(Timestamp dhConsiTimEnd) {
-        this.dhConsiTimEnd = dhConsiTimEnd;
+   public void setDhconsitimend(Timestamp dhconsitimend) {
+        this.dhconsitimend = dhconsitimend;
    }
 
-   public String getNumTaf() {
-        return numTaf;
+   public String getNumtaf() {
+        return numtaf;
    }
 
-   public void setNumTaf(String numTaf) {
-        this.numTaf = numTaf;
+   public void setNumtaf(String numtaf) {
+        this.numtaf = numtaf;
    }
 
-   public String getNuRest() {
-        return nuRest;
+   public String getNurest() {
+        return nurest;
    }
 
-   public void setNuRest(String nuRest) {
-        this.nuRest = nuRest;
+   public void setNurest(String nurest) {
+        this.nurest = nurest;
    }
 
-   public BigDecimal getAcdIntiSenMulta() {
-        return acdIntiSenMulta;
+   public BigDecimal getAcdintisenmulta() {
+        return acdintisenmulta;
    }
 
-   public void setAcdIntiSenMulta(BigDecimal acdIntiSenMulta) {
-        this.acdIntiSenMulta = acdIntiSenMulta;
+   public void setAcdintisenmulta(BigDecimal acdintisenmulta) {
+        this.acdintisenmulta = acdintisenmulta;
    }
 
-   public BigDecimal getClassTrib() {
-        return classTrib;
+   public BigDecimal getClasstrib() {
+        return classtrib;
    }
 
-   public void setClassTrib(BigDecimal classTrib) {
-        this.classTrib = classTrib;
+   public void setClasstrib(BigDecimal classtrib) {
+        this.classtrib = classtrib;
    }
 
-   public BigDecimal getIndConstr() {
-        return indConstr;
+   public BigDecimal getIndconstr() {
+        return indconstr;
    }
 
-   public void setIndConstr(BigDecimal indConstr) {
-        this.indConstr = indConstr;
+   public void setIndconstr(BigDecimal indconstr) {
+        this.indconstr = indconstr;
    }
 
-   public BigDecimal getIndCoop() {
-        return indCoop;
+   public BigDecimal getIndcoop() {
+        return indcoop;
    }
 
-   public void setIndCoop(BigDecimal indCoop) {
-        this.indCoop = indCoop;
+   public void setIndcoop(BigDecimal indcoop) {
+        this.indcoop = indcoop;
    }
 
-   public BigDecimal getIndOpCcp() {
-        return indOpCcp;
+   public BigDecimal getIndopccp() {
+        return indopccp;
    }
 
-   public void setIndOpCcp(BigDecimal indOpCcp) {
-        this.indOpCcp = indOpCcp;
+   public void setIndopccp(BigDecimal indopccp) {
+        this.indopccp = indopccp;
    }
 
-   public BigDecimal getIndSitEsp() {
-        return indSitEsp;
+   public BigDecimal getIndsitesp() {
+        return indsitesp;
    }
 
-   public void setIndSitEsp(BigDecimal indSitEsp) {
-        this.indSitEsp = indSitEsp;
+   public void setIndsitesp(BigDecimal indsitesp) {
+        this.indsitesp = indsitesp;
    }
 
-   public BigDecimal getInfoObra() {
-        return infoObra;
+   public BigDecimal getInfoobra() {
+        return infoobra;
    }
 
-   public void setInfoObra(BigDecimal infoObra) {
-        this.infoObra = infoObra;
+   public void setInfoobra(BigDecimal infoobra) {
+        this.infoobra = infoobra;
    }
 
    public String getCotm() {
@@ -676,20 +675,25 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.cotm = cotm;
    }
 
-   public BigDecimal getCnaePrepon() {
-        return cnaePrepon;
+   public BigDecimal getCnaeprepon() {
+        return cnaeprepon;
    }
 
-   public void setCnaePrepon(BigDecimal cnaePrepon) {
-        this.cnaePrepon = cnaePrepon;
+   public void setCnaeprepon(BigDecimal cnaeprepon) {
+        this.cnaeprepon = cnaeprepon;
    }
 
-   public String getCnpjPrefeitura() {
-        return cnpjPrefeitura;
+   public String getCnpjprefeitura() {
+        return cnpjprefeitura;
    }
 
-   public void setCnpjPrefeitura(String cnpjPrefeitura) {
-        this.cnpjPrefeitura = cnpjPrefeitura;
+   public void setCnpjprefeitura(String cnpjprefeitura) {
+        this.cnpjprefeitura = cnpjprefeitura;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIEMP";
    }
 
    @Override
@@ -703,78 +707,78 @@ public class Empresa implements SankhyaEntity<Empresa> {
         this.cargas = vo.asString("CARGAS");
         this.cep = vo.asString("CEP");
         this.cgc = vo.asString("CGC");
-        this.codBai = vo.asBigDecimal("CODBAI");
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codCnl = vo.asString("CODCNL");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEmpMatriz = vo.asBigDecimal("CODEMPMATRIZ");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codMun = vo.asBigDecimal("CODMUN");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codRegTrib = vo.asBigDecimal("CODREGTRIB");
+        this.codbai = vo.asBigDecimal("CODBAI");
+        this.codcid = vo.asBigDecimal("CODCID");
+        this.codcnl = vo.asString("CODCNL");
+        this.codemp = vo.asBigDecimal("CODEMP");
+        this.codempmatriz = vo.asBigDecimal("CODEMPMATRIZ");
+        this.codend = vo.asBigDecimal("CODEND");
+        this.codmun = vo.asBigDecimal("CODMUN");
+        this.codparc = vo.asBigDecimal("CODPARC");
+        this.codregtrib = vo.asBigDecimal("CODREGTRIB");
         this.comissoes = vo.asString("COMISSOES");
         this.complemento = vo.asString("COMPLEMENTO");
         this.contabilidade = vo.asTimestamp("CONTABILIDADE");
         this.cooperativa = vo.asString("COOPERATIVA");
-        this.cpfResp = vo.asString("CPFRESP");
-        this.dtConvSoc = vo.asTimestamp("DTCONVSOC");
-        this.dtRegJunta = vo.asTimestamp("DTREGJUNTA");
+        this.cpfresp = vo.asString("CPFRESP");
+        this.dtconvsoc = vo.asTimestamp("DTCONVSOC");
+        this.dtregjunta = vo.asTimestamp("DTREGJUNTA");
         this.dupliv = vo.asString("DUPLIV");
         this.email = vo.asString("EMAIL");
-        this.empAgruparGol = vo.asBigDecimal("EMPAGRUPARGOL");
+        this.empagrupargol = vo.asBigDecimal("EMPAGRUPARGOL");
         this.estoque = vo.asString("ESTOQUE");
         this.fax = vo.asString("FAX");
         this.financeiro = vo.asString("FINANCEIRO");
-        this.folhaPagto = vo.asString("FOLHAPAGTO");
+        this.folhapagto = vo.asString("FOLHAPAGTO");
         this.homepage = vo.asString("HOMEPAGE");
-        this.inscEstad = vo.asString("INSCESTAD");
-        this.inscMun = vo.asString("INSCMUN");
+        this.inscestad = vo.asString("INSCESTAD");
+        this.inscmun = vo.asString("INSCMUN");
         this.latitude = vo.asString("LATITUDE");
-        this.limCurvaB = vo.asBigDecimal("LIMCURVAB");
-        this.limCurvaC = vo.asBigDecimal("LIMCURVAC");
-        this.livrosFiscais = vo.asString("LIVROSFISCAIS");
-        this.logoMarca = vo.asBlob("LOGOMARCA");
+        this.limcurvaB = vo.asBigDecimal("LIMCURVA_B");
+        this.limcurvaC = vo.asBigDecimal("LIMCURVA_C");
+        this.livrosfiscais = vo.asString("LIVROSFISCAIS");
+        this.logomarca = vo.asBlob("LOGOMARCA");
         this.longitude = vo.asString("LONGITUDE");
-        this.modeloNfDes = vo.asString("MODELONFDES");
-        this.natEstab = vo.asBigDecimal("NATESTAB");
-        this.natJur = vo.asBigDecimal("NATJUR");
-        this.nomeFantasia = vo.asString("NOMEFANTASIA");
-        this.numEnd = vo.asString("NUMEND");
-        this.numPropr = vo.asBigDecimal("NUMPROPR");
-        this.prinCtitular = vo.asString("PRINCTITULAR");
+        this.modelonfdes = vo.asString("MODELONFDES");
+        this.natestab = vo.asBigDecimal("NATESTAB");
+        this.natjur = vo.asBigDecimal("NATJUR");
+        this.nomefantasia = vo.asString("NOMEFANTASIA");
+        this.numend = vo.asString("NUMEND");
+        this.numpropr = vo.asBigDecimal("NUMPROPR");
+        this.princtitular = vo.asString("PRINCTITULAR");
         this.producao = vo.asString("PRODUCAO");
-        this.ramoAtiv = vo.asString("RAMOATIV");
-        this.razaoAbrev = vo.asString("RAZAOABREV");
-        this.razaoSocial = vo.asString("RAZAOSOCIAL");
-        this.regJuntaCom = vo.asString("REGJUNTACOM");
-        this.serieNfDes = vo.asString("SERIENFDES");
+        this.ramoativ = vo.asString("RAMOATIV");
+        this.razaoabrev = vo.asString("RAZAOABREV");
+        this.razaosocial = vo.asString("RAZAOSOCIAL");
+        this.regjuntacom = vo.asString("REGJUNTACOM");
+        this.serienfdes = vo.asString("SERIENFDES");
         this.simples = vo.asString("SIMPLES");
-        this.simplesNacNauf = vo.asString("SIMPLESNACNAUF");
-        this.supDecisao = vo.asString("SUPDECISAO");
+        this.simplesnacnauf = vo.asString("SIMPLESNACNAUF");
+        this.supdecisao = vo.asString("SUPDECISAO");
         this.telefone = vo.asString("TELEFONE");
         this.telex = vo.asString("TELEX");
-        this.tipoRegra = vo.asString("TIPOREGRA");
-        this.tipoSn = vo.asBigDecimal("TIPOSN");
-        this.corEmpresa = vo.asBigDecimal("COREMPRESA");
-        this.razaoSocialCompleta = vo.asString("RAZAOSOCIALCOMPLETA");
-        this.qtdAcessos = vo.asBigDecimal("QTDACESSOS");
+        this.tiporegra = vo.asString("TIPOREGRA");
+        this.tiposn = vo.asBigDecimal("TIPOSN");
+        this.corempresa = vo.asBigDecimal("COREMPRESA");
+        this.razaosocialcompleta = vo.asString("RAZAOSOCIALCOMPLETA");
+        this.qtdacessos = vo.asBigDecimal("QTDACESSOS");
         this.rntrc = vo.asString("RNTRC");
-        this.usaRazaoSocial = vo.asString("USARAZAOSOCIAL");
-        this.produtorRural = vo.asString("PRODUTORRURAL");
-        this.empIdEnotas = vo.asString("EMPIDENOTAS");
-        this.dhConsiTimEnd = vo.asTimestamp("DHCONSITIMEND");
-        this.numTaf = vo.asString("NUMTAF");
-        this.nuRest = vo.asString("NUREST");
-        this.acdIntiSenMulta = vo.asBigDecimal("ACDINTISENMULTA");
-        this.classTrib = vo.asBigDecimal("CLASSTRIB");
-        this.indConstr = vo.asBigDecimal("INDCONSTR");
-        this.indCoop = vo.asBigDecimal("INDCOOP");
-        this.indOpCcp = vo.asBigDecimal("INDOPCCP");
-        this.indSitEsp = vo.asBigDecimal("INDSITESP");
-        this.infoObra = vo.asBigDecimal("INFOOBRA");
+        this.usarazaosocial = vo.asString("USARAZAOSOCIAL");
+        this.produtorrural = vo.asString("PRODUTORRURAL");
+        this.empidenotas = vo.asString("EMPIDENOTAS");
+        this.dhconsitimend = vo.asTimestamp("DHCONSITIMEND");
+        this.numtaf = vo.asString("NUMTAF");
+        this.nurest = vo.asString("NUREST");
+        this.acdintisenmulta = vo.asBigDecimal("ACDINTISENMULTA");
+        this.classtrib = vo.asBigDecimal("CLASSTRIB");
+        this.indconstr = vo.asBigDecimal("INDCONSTR");
+        this.indcoop = vo.asBigDecimal("INDCOOP");
+        this.indopccp = vo.asBigDecimal("INDOPCCP");
+        this.indsitesp = vo.asBigDecimal("INDSITESP");
+        this.infoobra = vo.asBigDecimal("INFOOBRA");
         this.cotm = vo.asString("COTM");
-        this.cnaePrepon = vo.asBigDecimal("CNAEPREPON");
-        this.cnpjPrefeitura = vo.asString("CNPJPREFEITURA");
+        this.cnaeprepon = vo.asBigDecimal("CNAEPREPON");
+        this.cnpjprefeitura = vo.asString("CNPJPREFEITURA");
         return this;
    }
 }

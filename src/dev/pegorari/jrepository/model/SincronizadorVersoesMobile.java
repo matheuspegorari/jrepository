@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SincronizadorVersoesMobile implements SankhyaEntity<SincronizadorVersoesMobile> {
-
+public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<SincronizadorVersoesMobile> {
    private String id;
    private String nomeInstancia;
    private BigDecimal versao;
@@ -32,6 +31,11 @@ public class SincronizadorVersoesMobile implements SankhyaEntity<SincronizadorVe
 
    public void setVersao(BigDecimal versao) {
         this.versao = versao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSLSVM";
    }
 
    @Override

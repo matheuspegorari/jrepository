@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SolicitacaoLiberacaoOrcamento implements SankhyaEntity<SolicitacaoLiberacaoOrcamento> {
-
+public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<SolicitacaoLiberacaoOrcamento> {
    private BigDecimal codAprovador;
    private BigDecimal codMeta;
    private BigDecimal codSolicitante;
@@ -78,6 +77,11 @@ public class SolicitacaoLiberacaoOrcamento implements SankhyaEntity<SolicitacaoL
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMSLO";
    }
 
    @Override

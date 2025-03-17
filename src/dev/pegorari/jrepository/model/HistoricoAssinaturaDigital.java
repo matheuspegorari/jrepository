@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoAssinaturaDigital implements SankhyaEntity<HistoricoAssinaturaDigital> {
-
+public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoAssinaturaDigital> {
    private String chaveDoc;
    private BigDecimal codEvento;
    private BigDecimal codUsu;
@@ -135,6 +134,11 @@ public class HistoricoAssinaturaDigital implements SankhyaEntity<HistoricoAssina
    }
 
    @Override
+   public String getTableName() {
+        return "TSIDAS_HIS";
+   }
+
+   @Override
    public String getEntityName() {
         return "HistoricoAssinaturaDigital";
    }
@@ -144,15 +148,15 @@ public class HistoricoAssinaturaDigital implements SankhyaEntity<HistoricoAssina
         this.chaveDoc = vo.asString("CHAVEDOC");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codUsu = vo.asBigDecimal("CODUSU");
-        this.detalhesStatus = vo.asString("DETALHESSTATUS");
+        this.detalhesStatus = vo.asString("DETALHES_STATUS");
         this.dhEvento = vo.asTimestamp("DHEVENTO");
         this.erro = vo.asClob("ERRO");
         this.hashArquivo = vo.asString("HASHARQUIVO");
         this.id = vo.asBigDecimal("ID");
         this.msg = vo.asString("MSG");
         this.nuDoc = vo.asBigDecimal("NUDOC");
-        this.solicitacaoManual = vo.asBigDecimal("SOLICITACAOMANUAL");
-        this.statusAssinatura = vo.asString("STATUSASSINATURA");
+        this.solicitacaoManual = vo.asBigDecimal("SOLICITACAO_MANUAL");
+        this.statusAssinatura = vo.asString("STATUS_ASSINATURA");
         this.tipoDoc = vo.asString("TIPODOC");
         this.transactionId = vo.asString("TRANSACTIONID");
         return this;

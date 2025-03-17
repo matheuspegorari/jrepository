@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AreaSeparacao implements SankhyaEntity<AreaSeparacao> {
-
+public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    private BigDecimal codAreaConf;
    private Timestamp dhAlter;
    private BigDecimal m3Max;
@@ -225,6 +224,11 @@ public class AreaSeparacao implements SankhyaEntity<AreaSeparacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGWARS";
+   }
+
+   @Override
    public String getEntityName() {
         return "AreaSeparacao";
    }
@@ -245,7 +249,7 @@ public class AreaSeparacao implements SankhyaEntity<AreaSeparacao> {
         this.usaSepAgruProd = vo.asString("USASEPAGRUPROD");
         this.qtPedSepAgr = vo.asBigDecimal("QTPEDSEPAGR");
         this.pesMaxSepAgru = vo.asBigDecimal("PESMAXSEPAGRU");
-        this.volCheckSepProd = vo.asBigDecimal("VOLCHECKSEPPROD");
+        this.volCheckSepProd = vo.asBigDecimal("VOLCHECKSEPROD");
         this.qtCheckSep = vo.asBigDecimal("QTCHECKSEP");
         this.impressoraEtqSep = vo.asString("IMPRESSORAETQSEP");
         this.posEsteiraSep = vo.asString("POSESTEIRASEP");

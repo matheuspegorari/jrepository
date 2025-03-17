@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UsuarioTarefa implements SankhyaEntity<UsuarioTarefa> {
-
+public class UsuarioTarefa extends AbstractSankhyaEntity<UsuarioTarefa> {
    private BigDecimal codTarefa;
    private BigDecimal codUsu;
    private BigDecimal ordem;
@@ -32,6 +31,11 @@ public class UsuarioTarefa implements SankhyaEntity<UsuarioTarefa> {
 
    public void setOrdem(BigDecimal ordem) {
         this.ordem = ordem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWUSU";
    }
 
    @Override

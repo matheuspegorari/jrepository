@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoProdutoIcmsEmpresa implements SankhyaEntity<GrupoProdutoIcmsEmpresa> {
-
+public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoIcmsEmpresa> {
    private BigDecimal codEmp;
    private BigDecimal codGrupoProd;
    private BigDecimal grupoIcms;
@@ -86,6 +85,11 @@ public class GrupoProdutoIcmsEmpresa implements SankhyaEntity<GrupoProdutoIcmsEm
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
         this.codCtaCtbEfd = codCtaCtbEfd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFGEM";
    }
 
    @Override

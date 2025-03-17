@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConsolidacaoAcessos implements SankhyaEntity<ConsolidacaoAcessos> {
-
+public class ConsolidacaoAcessos extends AbstractSankhyaEntity<ConsolidacaoAcessos> {
    private BigDecimal codUsu;
    private BigDecimal codGrupo;
    private String consultar;
@@ -41,6 +40,11 @@ public class ConsolidacaoAcessos implements SankhyaEntity<ConsolidacaoAcessos> {
 
    public void setCodConfig(BigDecimal codConfig) {
         this.codConfig = codConfig;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFUCM";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Carrinho implements SankhyaEntity<Carrinho> {
-
+public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    private BigDecimal codLocal;
    private BigDecimal codProd;
    private String codVol;
@@ -149,6 +148,11 @@ public class Carrinho implements SankhyaEntity<Carrinho> {
 
    public void setVlrRetencao(BigDecimal vlrRetencao) {
         this.vlrRetencao = vlrRetencao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCAC";
    }
 
    @Override

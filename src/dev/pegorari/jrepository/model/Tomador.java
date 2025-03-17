@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Tomador implements SankhyaEntity<Tomador> {
-
+public class Tomador extends AbstractSankhyaEntity<Tomador> {
    private BigDecimal codEmp;
    private BigDecimal codFunc;
    private BigDecimal codParc;
@@ -78,6 +77,11 @@ public class Tomador implements SankhyaEntity<Tomador> {
 
    public void setObservacao(String observacao) {
         this.observacao = observacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPTOM";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoTabelaIrpfInss implements SankhyaEntity<CabecalhoTabelaIrpfInss> {
-
+public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabelaIrpfInss> {
    private Timestamp competencia;
    private String regime;
    private BigDecimal vlrDependente;
@@ -87,6 +86,11 @@ public class CabecalhoTabelaIrpfInss implements SankhyaEntity<CabecalhoTabelaIrp
 
    public void setConsDescSimpIrpf(String consDescSimpIrpf) {
         this.consDescSimpIrpf = consDescSimpIrpf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPFX";
    }
 
    @Override

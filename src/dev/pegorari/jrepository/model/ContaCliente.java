@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ContaCliente implements SankhyaEntity<ContaCliente> {
-
+public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    private String agencia;
    private String cgcCpf;
    private BigDecimal codBco;
@@ -53,6 +52,11 @@ public class ContaCliente implements SankhyaEntity<ContaCliente> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCTC";
+   }
+
+   @Override
    public String getEntityName() {
         return "ContaCliente";
    }
@@ -60,7 +64,7 @@ public class ContaCliente implements SankhyaEntity<ContaCliente> {
    @Override
    public ContaCliente fromVO(DynamicVO vo) {
         this.agencia = vo.asString("AGENCIA");
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.codBco = vo.asBigDecimal("CODBCO");
         this.conta = vo.asString("CONTA");
         this.nomeEmitente = vo.asString("NOMEEMITENTE");

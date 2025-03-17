@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MateriaPrimaAltLancamento implements SankhyaEntity<MateriaPrimaAltLancamento> {
-
+public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrimaAltLancamento> {
    private BigDecimal nuLop;
    private BigDecimal qtdMistura;
    private BigDecimal ordem;
@@ -104,6 +103,11 @@ public class MateriaPrimaAltLancamento implements SankhyaEntity<MateriaPrimaAltL
 
    public void setSeqMpa(BigDecimal seqMpa) {
         this.seqMpa = seqMpa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRMPALOP";
    }
 
    @Override

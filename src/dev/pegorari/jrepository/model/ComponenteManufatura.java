@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ComponenteManufatura implements SankhyaEntity<ComponenteManufatura> {
-
+public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufatura> {
    private String descricao;
    private BigDecimal grau;
    private BigDecimal qtdComp;
@@ -68,6 +67,11 @@ public class ComponenteManufatura implements SankhyaEntity<ComponenteManufatura>
 
    public void setCodCpmPai(BigDecimal codCpmPai) {
         this.codCpmPai = codCpmPai;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCPM";
    }
 
    @Override

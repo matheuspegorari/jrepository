@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
-
+public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    private BigDecimal codInc;
    private BigDecimal codLst;
    private String codTribMunIss;
@@ -32,7 +31,7 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
    private BigDecimal percFcp;
    private BigDecimal percPartDifal;
    private BigDecimal aliqIntDest;
-   private BigDecimal vlrDifAlRem;
+   private BigDecimal vlrDifalRem;
    private BigDecimal baseRed;
    private BigDecimal codImp;
    private BigDecimal aliquota;
@@ -40,7 +39,7 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
    private BigDecimal base;
    private BigDecimal aliqDiferencial;
    private BigDecimal aliquotaEfet;
-   private BigDecimal baseNormDifIcm;
+   private BigDecimal baseNormDifIcms;
    private BigDecimal baseRedEfet;
    private BigDecimal percRedBaseEfet;
    private BigDecimal valorDiferencial;
@@ -274,12 +273,12 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
         this.aliqIntDest = aliqIntDest;
    }
 
-   public BigDecimal getVlrDifAlRem() {
-        return vlrDifAlRem;
+   public BigDecimal getVlrDifalRem() {
+        return vlrDifalRem;
    }
 
-   public void setVlrDifAlRem(BigDecimal vlrDifAlRem) {
-        this.vlrDifAlRem = vlrDifAlRem;
+   public void setVlrDifalRem(BigDecimal vlrDifalRem) {
+        this.vlrDifalRem = vlrDifalRem;
    }
 
    public BigDecimal getBaseRed() {
@@ -338,12 +337,12 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
         this.aliquotaEfet = aliquotaEfet;
    }
 
-   public BigDecimal getBaseNormDifIcm() {
-        return baseNormDifIcm;
+   public BigDecimal getBaseNormDifIcms() {
+        return baseNormDifIcms;
    }
 
-   public void setBaseNormDifIcm(BigDecimal baseNormDifIcm) {
-        this.baseNormDifIcm = baseNormDifIcm;
+   public void setBaseNormDifIcms(BigDecimal baseNormDifIcms) {
+        this.baseNormDifIcms = baseNormDifIcms;
    }
 
    public BigDecimal getBaseRedEfet() {
@@ -603,6 +602,11 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFDIN";
+   }
+
+   @Override
    public String getEntityName() {
         return "ImpostoItemNota";
    }
@@ -634,7 +638,7 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
         this.percFcp = vo.asBigDecimal("PERCFCP");
         this.percPartDifal = vo.asBigDecimal("PERCPARTDIFAL");
         this.aliqIntDest = vo.asBigDecimal("ALIQINTDEST");
-        this.vlrDifAlRem = vo.asBigDecimal("VLRDIFALREM");
+        this.vlrDifalRem = vo.asBigDecimal("VLRDIFALREM");
         this.baseRed = vo.asBigDecimal("BASERED");
         this.codImp = vo.asBigDecimal("CODIMP");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
@@ -642,7 +646,7 @@ public class ImpostoItemNota implements SankhyaEntity<ImpostoItemNota> {
         this.base = vo.asBigDecimal("BASE");
         this.aliqDiferencial = vo.asBigDecimal("ALIQDIFERENCIAL");
         this.aliquotaEfet = vo.asBigDecimal("ALIQUOTAEFET");
-        this.baseNormDifIcm = vo.asBigDecimal("BASENORMDIFICM");
+        this.baseNormDifIcms = vo.asBigDecimal("BASENORMDIFICMS");
         this.baseRedEfet = vo.asBigDecimal("BASEREDEFET");
         this.percRedBaseEfet = vo.asBigDecimal("PERCREDBASEEFET");
         this.valorDiferencial = vo.asBigDecimal("VALORDIFERENCIAL");

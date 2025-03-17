@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentacaoCaixa implements SankhyaEntity<MovimentacaoCaixa> {
-
+public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private BigDecimal nroUnico;
@@ -87,6 +86,11 @@ public class MovimentacaoCaixa implements SankhyaEntity<MovimentacaoCaixa> {
 
    public void setNumNsu(String numNsu) {
         this.numNsu = numNsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMCX";
    }
 
    @Override

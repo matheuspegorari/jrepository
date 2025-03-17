@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class OpcaoCampo implements SankhyaEntity<OpcaoCampo> {
-
+public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    private BigDecimal nuCampo;
    private String opcao;
    private BigDecimal ordem;
@@ -50,6 +49,11 @@ public class OpcaoCampo implements SankhyaEntity<OpcaoCampo> {
 
    public void setValor(String valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDOPC";
    }
 
    @Override

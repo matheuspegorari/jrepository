@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UnidadesCargaVazia implements SankhyaEntity<UnidadesCargaVazia> {
-
+public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia> {
    private BigDecimal codUnicv;
    private String idUnidCargaVazia;
    private BigDecimal nuViag;
@@ -50,6 +49,11 @@ public class UnidadesCargaVazia implements SankhyaEntity<UnidadesCargaVazia> {
 
    public void setTipoUniCargaVazia(BigDecimal tipoUniCargaVazia) {
         this.tipoUniCargaVazia = tipoUniCargaVazia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFUCV";
    }
 
    @Override

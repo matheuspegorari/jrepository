@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoEmpresa implements SankhyaEntity<ConfiguracaoEmpresa> {
-
+public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpresa> {
    private BigDecimal cnae;
    private BigDecimal codEmp;
    private BigDecimal codLst;
@@ -14,7 +13,7 @@ public class ConfiguracaoEmpresa implements SankhyaEntity<ConfiguracaoEmpresa> {
    private BigDecimal codNbs;
    private BigDecimal codCtaCtbEfd;
    private BigDecimal tipoSn;
-   private BigDecimal enqReintegra;
+   private BigDecimal enqReIntegra;
 
    public BigDecimal getCnae() {
         return cnae;
@@ -80,12 +79,17 @@ public class ConfiguracaoEmpresa implements SankhyaEntity<ConfiguracaoEmpresa> {
         this.tipoSn = tipoSn;
    }
 
-   public BigDecimal getEnqReintegra() {
-        return enqReintegra;
+   public BigDecimal getEnqReIntegra() {
+        return enqReIntegra;
    }
 
-   public void setEnqReintegra(BigDecimal enqReintegra) {
-        this.enqReintegra = enqReintegra;
+   public void setEnqReIntegra(BigDecimal enqReIntegra) {
+        this.enqReIntegra = enqReIntegra;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSEM";
    }
 
    @Override
@@ -103,7 +107,7 @@ public class ConfiguracaoEmpresa implements SankhyaEntity<ConfiguracaoEmpresa> {
         this.codNbs = vo.asBigDecimal("CODNBS");
         this.codCtaCtbEfd = vo.asBigDecimal("CODCTACTBEFD");
         this.tipoSn = vo.asBigDecimal("TIPOSN");
-        this.enqReintegra = vo.asBigDecimal("ENQREINTEGRA");
+        this.enqReIntegra = vo.asBigDecimal("ENQREINTEGRA");
         return this;
    }
 }

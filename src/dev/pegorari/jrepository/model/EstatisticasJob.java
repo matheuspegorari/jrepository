@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EstatisticasJob implements SankhyaEntity<EstatisticasJob> {
-
+public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    private String ativo;
    private String descricao;
    private Timestamp dhexec;
@@ -150,6 +149,11 @@ public class EstatisticasJob implements SankhyaEntity<EstatisticasJob> {
 
    public void setTipjob(String tipjob) {
         this.tipjob = tipjob;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIEJO";
    }
 
    @Override

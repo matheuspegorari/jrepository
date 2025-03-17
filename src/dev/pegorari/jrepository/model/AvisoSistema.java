@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AvisoSistema implements SankhyaEntity<AvisoSistema> {
-
+public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    private BigDecimal codGrupo;
    private BigDecimal codUsu;
    private BigDecimal codUsuRemetente;
@@ -141,6 +140,11 @@ public class AvisoSistema implements SankhyaEntity<AvisoSistema> {
 
    public void setDtNotificacao(Timestamp dtNotificacao) {
         this.dtNotificacao = dtNotificacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIAVI";
    }
 
    @Override

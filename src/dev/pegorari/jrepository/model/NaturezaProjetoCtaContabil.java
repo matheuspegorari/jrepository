@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NaturezaProjetoCtaContabil implements SankhyaEntity<NaturezaProjetoCtaContabil> {
-
+public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaProjetoCtaContabil> {
    private String priorizarRateio;
    private BigDecimal codCtaCtb;
    private BigDecimal codProj;
@@ -41,6 +40,11 @@ public class NaturezaProjetoCtaContabil implements SankhyaEntity<NaturezaProjeto
 
    public void setCodNat(BigDecimal codNat) {
         this.codNat = codNat;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNPC";
    }
 
    @Override

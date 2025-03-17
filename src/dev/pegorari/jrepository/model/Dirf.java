@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Dirf implements SankhyaEntity<Dirf> {
-
+public class Dirf extends AbstractSankhyaEntity<Dirf> {
    private String arqConfirmado;
    private BigDecimal codEmp;
    private Timestamp dtFinal;
@@ -69,6 +68,11 @@ public class Dirf implements SankhyaEntity<Dirf> {
 
    public void setTipDeclaracao(String tipDeclaracao) {
         this.tipDeclaracao = tipDeclaracao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDIRF";
    }
 
    @Override

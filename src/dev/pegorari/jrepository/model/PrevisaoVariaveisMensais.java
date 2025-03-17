@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PrevisaoVariaveisMensais implements SankhyaEntity<PrevisaoVariaveisMensais> {
-
+public class PrevisaoVariaveisMensais extends AbstractSankhyaEntity<PrevisaoVariaveisMensais> {
    private String chave;
    private Timestamp mes;
    private BigDecimal valor;
@@ -33,6 +32,11 @@ public class PrevisaoVariaveisMensais implements SankhyaEntity<PrevisaoVariaveis
 
    public void setValor(BigDecimal valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSLIVM";
    }
 
    @Override

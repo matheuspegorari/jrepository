@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class GadgetBiaParametro implements SankhyaEntity<GadgetBiaParametro> {
-
+public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro> {
    private BigDecimal vlrDec;
    private String vlrTxt;
    private String chave;
@@ -60,6 +59,11 @@ public class GadgetBiaParametro implements SankhyaEntity<GadgetBiaParametro> {
 
    public void setVlrDat(Timestamp vlrDat) {
         this.vlrDat = vlrDat;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIGBP";
    }
 
    @Override

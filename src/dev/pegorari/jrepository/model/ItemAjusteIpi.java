@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemAjusteIpi implements SankhyaEntity<ItemAjusteIpi> {
-
+public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    private BigDecimal codProd;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -60,6 +59,11 @@ public class ItemAjusteIpi implements SankhyaEntity<ItemAjusteIpi> {
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
         this.vlrAjuste = vlrAjuste;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIJI";
    }
 
    @Override

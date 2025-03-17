@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Gadget implements SankhyaEntity<Gadget> {
-
+public class Gadget extends AbstractSankhyaEntity<Gadget> {
    private String ativo;
    private String categoria;
    private BigDecimal codUsu;
@@ -24,7 +23,7 @@ public class Gadget implements SankhyaEntity<Gadget> {
    private String evocard;
    private String layout;
    private BigDecimal qtdAnalisesUtilizadas;
-   private String apvnc;
+   private String apvNc;
 
    public String getAtivo() {
         return ativo;
@@ -162,12 +161,17 @@ public class Gadget implements SankhyaEntity<Gadget> {
         this.qtdAnalisesUtilizadas = qtdAnalisesUtilizadas;
    }
 
-   public String getApvnc() {
-        return apvnc;
+   public String getApvNc() {
+        return apvNc;
    }
 
-   public void setApvnc(String apvnc) {
-        this.apvnc = apvnc;
+   public void setApvNc(String apvNc) {
+        this.apvNc = apvNc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIGDG";
    }
 
    @Override
@@ -194,7 +198,7 @@ public class Gadget implements SankhyaEntity<Gadget> {
         this.evocard = vo.asString("EVOCARD");
         this.layout = vo.asString("LAYOUT");
         this.qtdAnalisesUtilizadas = vo.asBigDecimal("QTDANALISESUTILIZADAS");
-        this.apvnc = vo.asString("APVNC");
+        this.apvNc = vo.asString("APVNC");
         return this;
    }
 }

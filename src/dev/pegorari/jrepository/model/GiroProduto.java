@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class GiroProduto implements SankhyaEntity<GiroProduto> {
-
+public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    private BigDecimal codLocal;
    private BigDecimal codParcForn;
    private BigDecimal codProd;
@@ -107,9 +106,9 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
    private BigDecimal popularidade7;
    private BigDecimal popularidade8;
    private BigDecimal popularidade9;
-   private BigDecimal acumMarg9;
-   private BigDecimal acumPeso1;
-   private BigDecimal acumPeso10;
+   private BigDecimal accumMarg9;
+   private BigDecimal accumPeso1;
+   private BigDecimal accumPeso10;
    private BigDecimal estMax;
    private BigDecimal custoVenda12;
    private BigDecimal custoVenda2;
@@ -122,7 +121,7 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
    private BigDecimal vlrGastoVar2;
    private BigDecimal sugCompra;
    private BigDecimal sugCompraGir;
-   private String termolabil;
+   private String termoLabil;
    private BigDecimal custoVndTotal8;
    private BigDecimal custoVndTotal9;
    private BigDecimal descMax;
@@ -268,8 +267,8 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
    private BigDecimal partTotPer7;
    private BigDecimal partTotPer8;
    private BigDecimal partTotPer9;
-   private BigDecimal pedCpaPend;
-   private BigDecimal pedVdaPend;
+   private BigDecimal pedCpApend;
+   private BigDecimal pedVdApend;
    private BigDecimal perLucro1;
    private BigDecimal perLucro10;
    private BigDecimal perLucro11;
@@ -410,9 +409,9 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
    private BigDecimal percDescFornecedor;
    private BigDecimal numCotacao;
    private BigDecimal wmsBloqueado;
-   private BigDecimal acumMarg2;
-   private BigDecimal acumMarg3;
-   private BigDecimal durEstPosCpaGir;
+   private BigDecimal accumMarg_2;
+   private BigDecimal accumMarg_3;
+   private BigDecimal durEstPosCpAgir;
    private BigDecimal durEstSeg;
    private BigDecimal diasUteis;
    private Timestamp prevEntrega;
@@ -421,18 +420,18 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
    private BigDecimal vlrUltCompra;
    private String possuiFam;
    private BigDecimal diasRuptura;
-   private BigDecimal diasRupturaEst1;
-   private BigDecimal diasRupturaEst10;
-   private BigDecimal diasRupturaEst11;
-   private BigDecimal diasRupturaEst12;
-   private BigDecimal diasRupturaEst2;
-   private BigDecimal diasRupturaEst3;
-   private BigDecimal diasRupturaEst4;
-   private BigDecimal diasRupturaEst5;
-   private BigDecimal diasRupturaEst6;
-   private BigDecimal diasRupturaEst7;
-   private BigDecimal diasRupturaEst8;
-   private BigDecimal diasRupturaEst9;
+   private BigDecimal diasRupturaEst_1;
+   private BigDecimal diasRupturaEst_10;
+   private BigDecimal diasRupturaEst_11;
+   private BigDecimal diasRupturaEst_12;
+   private BigDecimal diasRupturaEst_2;
+   private BigDecimal diasRupturaEst_3;
+   private BigDecimal diasRupturaEst_4;
+   private BigDecimal diasRupturaEst_5;
+   private BigDecimal diasRupturaEst_6;
+   private BigDecimal diasRupturaEst_7;
+   private BigDecimal diasRupturaEst_8;
+   private BigDecimal diasRupturaEst_9;
    private BigDecimal numMps;
 
    public BigDecimal getCodLocal() {
@@ -1235,28 +1234,28 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.popularidade9 = popularidade9;
    }
 
-   public BigDecimal getAcumMarg9() {
-        return acumMarg9;
+   public BigDecimal getAccumMarg9() {
+        return accumMarg9;
    }
 
-   public void setAcumMarg9(BigDecimal acumMarg9) {
-        this.acumMarg9 = acumMarg9;
+   public void setAccumMarg9(BigDecimal accumMarg9) {
+        this.accumMarg9 = accumMarg9;
    }
 
-   public BigDecimal getAcumPeso1() {
-        return acumPeso1;
+   public BigDecimal getAccumPeso1() {
+        return accumPeso1;
    }
 
-   public void setAcumPeso1(BigDecimal acumPeso1) {
-        this.acumPeso1 = acumPeso1;
+   public void setAccumPeso1(BigDecimal accumPeso1) {
+        this.accumPeso1 = accumPeso1;
    }
 
-   public BigDecimal getAcumPeso10() {
-        return acumPeso10;
+   public BigDecimal getAccumPeso10() {
+        return accumPeso10;
    }
 
-   public void setAcumPeso10(BigDecimal acumPeso10) {
-        this.acumPeso10 = acumPeso10;
+   public void setAccumPeso10(BigDecimal accumPeso10) {
+        this.accumPeso10 = accumPeso10;
    }
 
    public BigDecimal getEstMax() {
@@ -1355,12 +1354,12 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.sugCompraGir = sugCompraGir;
    }
 
-   public String getTermolabil() {
-        return termolabil;
+   public String getTermoLabil() {
+        return termoLabil;
    }
 
-   public void setTermolabil(String termolabil) {
-        this.termolabil = termolabil;
+   public void setTermoLabil(String termoLabil) {
+        this.termoLabil = termoLabil;
    }
 
    public BigDecimal getCustoVndTotal8() {
@@ -2523,20 +2522,20 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.partTotPer9 = partTotPer9;
    }
 
-   public BigDecimal getPedCpaPend() {
-        return pedCpaPend;
+   public BigDecimal getPedCpApend() {
+        return pedCpApend;
    }
 
-   public void setPedCpaPend(BigDecimal pedCpaPend) {
-        this.pedCpaPend = pedCpaPend;
+   public void setPedCpApend(BigDecimal pedCpApend) {
+        this.pedCpApend = pedCpApend;
    }
 
-   public BigDecimal getPedVdaPend() {
-        return pedVdaPend;
+   public BigDecimal getPedVdApend() {
+        return pedVdApend;
    }
 
-   public void setPedVdaPend(BigDecimal pedVdaPend) {
-        this.pedVdaPend = pedVdaPend;
+   public void setPedVdApend(BigDecimal pedVdApend) {
+        this.pedVdApend = pedVdApend;
    }
 
    public BigDecimal getPerLucro1() {
@@ -3659,28 +3658,28 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.wmsBloqueado = wmsBloqueado;
    }
 
-   public BigDecimal getAcumMarg2() {
-        return acumMarg2;
+   public BigDecimal getAccumMarg_2() {
+        return accumMarg_2;
    }
 
-   public void setAcumMarg2(BigDecimal acumMarg2) {
-        this.acumMarg2 = acumMarg2;
+   public void setAccumMarg_2(BigDecimal accumMarg_2) {
+        this.accumMarg_2 = accumMarg_2;
    }
 
-   public BigDecimal getAcumMarg3() {
-        return acumMarg3;
+   public BigDecimal getAccumMarg_3() {
+        return accumMarg_3;
    }
 
-   public void setAcumMarg3(BigDecimal acumMarg3) {
-        this.acumMarg3 = acumMarg3;
+   public void setAccumMarg_3(BigDecimal accumMarg_3) {
+        this.accumMarg_3 = accumMarg_3;
    }
 
-   public BigDecimal getDurEstPosCpaGir() {
-        return durEstPosCpaGir;
+   public BigDecimal getDurEstPosCpAgir() {
+        return durEstPosCpAgir;
    }
 
-   public void setDurEstPosCpaGir(BigDecimal durEstPosCpaGir) {
-        this.durEstPosCpaGir = durEstPosCpaGir;
+   public void setDurEstPosCpAgir(BigDecimal durEstPosCpAgir) {
+        this.durEstPosCpAgir = durEstPosCpAgir;
    }
 
    public BigDecimal getDurEstSeg() {
@@ -3747,100 +3746,100 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.diasRuptura = diasRuptura;
    }
 
-   public BigDecimal getDiasRupturaEst1() {
-        return diasRupturaEst1;
+   public BigDecimal getDiasRupturaEst_1() {
+        return diasRupturaEst_1;
    }
 
-   public void setDiasRupturaEst1(BigDecimal diasRupturaEst1) {
-        this.diasRupturaEst1 = diasRupturaEst1;
+   public void setDiasRupturaEst_1(BigDecimal diasRupturaEst_1) {
+        this.diasRupturaEst_1 = diasRupturaEst_1;
    }
 
-   public BigDecimal getDiasRupturaEst10() {
-        return diasRupturaEst10;
+   public BigDecimal getDiasRupturaEst_10() {
+        return diasRupturaEst_10;
    }
 
-   public void setDiasRupturaEst10(BigDecimal diasRupturaEst10) {
-        this.diasRupturaEst10 = diasRupturaEst10;
+   public void setDiasRupturaEst_10(BigDecimal diasRupturaEst_10) {
+        this.diasRupturaEst_10 = diasRupturaEst_10;
    }
 
-   public BigDecimal getDiasRupturaEst11() {
-        return diasRupturaEst11;
+   public BigDecimal getDiasRupturaEst_11() {
+        return diasRupturaEst_11;
    }
 
-   public void setDiasRupturaEst11(BigDecimal diasRupturaEst11) {
-        this.diasRupturaEst11 = diasRupturaEst11;
+   public void setDiasRupturaEst_11(BigDecimal diasRupturaEst_11) {
+        this.diasRupturaEst_11 = diasRupturaEst_11;
    }
 
-   public BigDecimal getDiasRupturaEst12() {
-        return diasRupturaEst12;
+   public BigDecimal getDiasRupturaEst_12() {
+        return diasRupturaEst_12;
    }
 
-   public void setDiasRupturaEst12(BigDecimal diasRupturaEst12) {
-        this.diasRupturaEst12 = diasRupturaEst12;
+   public void setDiasRupturaEst_12(BigDecimal diasRupturaEst_12) {
+        this.diasRupturaEst_12 = diasRupturaEst_12;
    }
 
-   public BigDecimal getDiasRupturaEst2() {
-        return diasRupturaEst2;
+   public BigDecimal getDiasRupturaEst_2() {
+        return diasRupturaEst_2;
    }
 
-   public void setDiasRupturaEst2(BigDecimal diasRupturaEst2) {
-        this.diasRupturaEst2 = diasRupturaEst2;
+   public void setDiasRupturaEst_2(BigDecimal diasRupturaEst_2) {
+        this.diasRupturaEst_2 = diasRupturaEst_2;
    }
 
-   public BigDecimal getDiasRupturaEst3() {
-        return diasRupturaEst3;
+   public BigDecimal getDiasRupturaEst_3() {
+        return diasRupturaEst_3;
    }
 
-   public void setDiasRupturaEst3(BigDecimal diasRupturaEst3) {
-        this.diasRupturaEst3 = diasRupturaEst3;
+   public void setDiasRupturaEst_3(BigDecimal diasRupturaEst_3) {
+        this.diasRupturaEst_3 = diasRupturaEst_3;
    }
 
-   public BigDecimal getDiasRupturaEst4() {
-        return diasRupturaEst4;
+   public BigDecimal getDiasRupturaEst_4() {
+        return diasRupturaEst_4;
    }
 
-   public void setDiasRupturaEst4(BigDecimal diasRupturaEst4) {
-        this.diasRupturaEst4 = diasRupturaEst4;
+   public void setDiasRupturaEst_4(BigDecimal diasRupturaEst_4) {
+        this.diasRupturaEst_4 = diasRupturaEst_4;
    }
 
-   public BigDecimal getDiasRupturaEst5() {
-        return diasRupturaEst5;
+   public BigDecimal getDiasRupturaEst_5() {
+        return diasRupturaEst_5;
    }
 
-   public void setDiasRupturaEst5(BigDecimal diasRupturaEst5) {
-        this.diasRupturaEst5 = diasRupturaEst5;
+   public void setDiasRupturaEst_5(BigDecimal diasRupturaEst_5) {
+        this.diasRupturaEst_5 = diasRupturaEst_5;
    }
 
-   public BigDecimal getDiasRupturaEst6() {
-        return diasRupturaEst6;
+   public BigDecimal getDiasRupturaEst_6() {
+        return diasRupturaEst_6;
    }
 
-   public void setDiasRupturaEst6(BigDecimal diasRupturaEst6) {
-        this.diasRupturaEst6 = diasRupturaEst6;
+   public void setDiasRupturaEst_6(BigDecimal diasRupturaEst_6) {
+        this.diasRupturaEst_6 = diasRupturaEst_6;
    }
 
-   public BigDecimal getDiasRupturaEst7() {
-        return diasRupturaEst7;
+   public BigDecimal getDiasRupturaEst_7() {
+        return diasRupturaEst_7;
    }
 
-   public void setDiasRupturaEst7(BigDecimal diasRupturaEst7) {
-        this.diasRupturaEst7 = diasRupturaEst7;
+   public void setDiasRupturaEst_7(BigDecimal diasRupturaEst_7) {
+        this.diasRupturaEst_7 = diasRupturaEst_7;
    }
 
-   public BigDecimal getDiasRupturaEst8() {
-        return diasRupturaEst8;
+   public BigDecimal getDiasRupturaEst_8() {
+        return diasRupturaEst_8;
    }
 
-   public void setDiasRupturaEst8(BigDecimal diasRupturaEst8) {
-        this.diasRupturaEst8 = diasRupturaEst8;
+   public void setDiasRupturaEst_8(BigDecimal diasRupturaEst_8) {
+        this.diasRupturaEst_8 = diasRupturaEst_8;
    }
 
-   public BigDecimal getDiasRupturaEst9() {
-        return diasRupturaEst9;
+   public BigDecimal getDiasRupturaEst_9() {
+        return diasRupturaEst_9;
    }
 
-   public void setDiasRupturaEst9(BigDecimal diasRupturaEst9) {
-        this.diasRupturaEst9 = diasRupturaEst9;
+   public void setDiasRupturaEst_9(BigDecimal diasRupturaEst_9) {
+        this.diasRupturaEst_9 = diasRupturaEst_9;
    }
 
    public BigDecimal getNumMps() {
@@ -3849,6 +3848,11 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
 
    public void setNumMps(BigDecimal numMps) {
         this.numMps = numMps;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFGIR";
    }
 
    @Override
@@ -3867,115 +3871,115 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.complDesc = vo.asString("COMPLDESC");
         this.controlado = vo.asString("CONTROLADO");
         this.controle = vo.asString("CONTROLE");
-        this.curvaMarg1 = vo.asString("CURVAMARG1");
-        this.curvaMarg10 = vo.asString("CURVAMARG10");
-        this.curvaMarg11 = vo.asString("CURVAMARG11");
-        this.curvaMarg12 = vo.asString("CURVAMARG12");
-        this.curvaMarg2 = vo.asString("CURVAMARG2");
-        this.curvaMarg3 = vo.asString("CURVAMARG3");
-        this.curvaMarg4 = vo.asString("CURVAMARG4");
-        this.curvaMarg5 = vo.asString("CURVAMARG5");
-        this.curvaMarg6 = vo.asString("CURVAMARG6");
-        this.curvaMarg7 = vo.asString("CURVAMARG7");
-        this.curvaMarg8 = vo.asString("CURVAMARG8");
-        this.curvaMarg9 = vo.asString("CURVAMARG9");
-        this.curvaPeso1 = vo.asString("CURVAPESO1");
-        this.curvaPeso10 = vo.asString("CURVAPESO10");
-        this.curvaPeso11 = vo.asString("CURVAPESO11");
-        this.curvaPeso12 = vo.asString("CURVAPESO12");
-        this.curvaPeso2 = vo.asString("CURVAPESO2");
-        this.curvaPeso3 = vo.asString("CURVAPESO3");
-        this.curvaPeso4 = vo.asString("CURVAPESO4");
-        this.curvaPeso5 = vo.asString("CURVAPESO5");
-        this.curvaPeso6 = vo.asString("CURVAPESO6");
-        this.curvaPeso7 = vo.asString("CURVAPESO7");
-        this.curvaPeso8 = vo.asString("CURVAPESO8");
-        this.curvaPeso9 = vo.asString("CURVAPESO9");
-        this.curvaQtd1 = vo.asString("CURVAQTD1");
-        this.curvaQtd10 = vo.asString("CURVAQTD10");
-        this.curvaQtd11 = vo.asString("CURVAQTD11");
-        this.curvaQtd12 = vo.asString("CURVAQTD12");
-        this.curvaQtd2 = vo.asString("CURVAQTD2");
-        this.curvaQtd3 = vo.asString("CURVAQTD3");
-        this.curvaQtd4 = vo.asString("CURVAQTD4");
-        this.curvaQtd5 = vo.asString("CURVAQTD5");
-        this.curvaQtd6 = vo.asString("CURVAQTD6");
-        this.curvaQtd7 = vo.asString("CURVAQTD7");
-        this.curvaQtd8 = vo.asString("CURVAQTD8");
-        this.curvaQtd9 = vo.asString("CURVAQTD9");
-        this.curvaTot1 = vo.asString("CURVATOT1");
-        this.curvaTot10 = vo.asString("CURVATOT10");
-        this.curvaTot11 = vo.asString("CURVATOT11");
-        this.curvaTot12 = vo.asString("CURVATOT12");
-        this.curvaTot2 = vo.asString("CURVATOT2");
-        this.curvaTot3 = vo.asString("CURVATOT3");
-        this.curvaTot4 = vo.asString("CURVATOT4");
+        this.curvaMarg1 = vo.asString("CURVAMARG_1");
+        this.curvaMarg10 = vo.asString("CURVAMARG_10");
+        this.curvaMarg11 = vo.asString("CURVAMARG_11");
+        this.curvaMarg12 = vo.asString("CURVAMARG_12");
+        this.curvaMarg2 = vo.asString("CURVAMARG_2");
+        this.curvaMarg3 = vo.asString("CURVAMARG_3");
+        this.curvaMarg4 = vo.asString("CURVAMARG_4");
+        this.curvaMarg5 = vo.asString("CURVAMARG_5");
+        this.curvaMarg6 = vo.asString("CURVAMARG_6");
+        this.curvaMarg7 = vo.asString("CURVAMARG_7");
+        this.curvaMarg8 = vo.asString("CURVAMARG_8");
+        this.curvaMarg9 = vo.asString("CURVAMARG_9");
+        this.curvaPeso1 = vo.asString("CURVAPESO_1");
+        this.curvaPeso10 = vo.asString("CURVAPESO_10");
+        this.curvaPeso11 = vo.asString("CURVAPESO_11");
+        this.curvaPeso12 = vo.asString("CURVAPESO_12");
+        this.curvaPeso2 = vo.asString("CURVAPESO_2");
+        this.curvaPeso3 = vo.asString("CURVAPESO_3");
+        this.curvaPeso4 = vo.asString("CURVAPESO_4");
+        this.curvaPeso5 = vo.asString("CURVAPESO_5");
+        this.curvaPeso6 = vo.asString("CURVAPESO_6");
+        this.curvaPeso7 = vo.asString("CURVAPESO_7");
+        this.curvaPeso8 = vo.asString("CURVAPESO_8");
+        this.curvaPeso9 = vo.asString("CURVAPESO_9");
+        this.curvaQtd1 = vo.asString("CURVAQTD_1");
+        this.curvaQtd10 = vo.asString("CURVAQTD_10");
+        this.curvaQtd11 = vo.asString("CURVAQTD_11");
+        this.curvaQtd12 = vo.asString("CURVAQTD_12");
+        this.curvaQtd2 = vo.asString("CURVAQTD_2");
+        this.curvaQtd3 = vo.asString("CURVAQTD_3");
+        this.curvaQtd4 = vo.asString("CURVAQTD_4");
+        this.curvaQtd5 = vo.asString("CURVAQTD_5");
+        this.curvaQtd6 = vo.asString("CURVAQTD_6");
+        this.curvaQtd7 = vo.asString("CURVAQTD_7");
+        this.curvaQtd8 = vo.asString("CURVAQTD_8");
+        this.curvaQtd9 = vo.asString("CURVAQTD_9");
+        this.curvaTot1 = vo.asString("CURVATOT_1");
+        this.curvaTot10 = vo.asString("CURVATOT_10");
+        this.curvaTot11 = vo.asString("CURVATOT_11");
+        this.curvaTot12 = vo.asString("CURVATOT_12");
+        this.curvaTot2 = vo.asString("CURVATOT_2");
+        this.curvaTot3 = vo.asString("CURVATOT_3");
+        this.curvaTot4 = vo.asString("CURVATOT_4");
         this.ultCompra = vo.asTimestamp("ULTCOMPRA");
         this.ultVenda = vo.asTimestamp("ULTVENDA");
         this.vlrCredIcms = vo.asBigDecimal("VLRCREDICMS");
-        this.vlrGastoVar1 = vo.asBigDecimal("VLRGASTOVAR1");
-        this.vlrGastoVar6 = vo.asBigDecimal("VLRGASTOVAR6");
-        this.vlrGastoVar7 = vo.asBigDecimal("VLRGASTOVAR7");
-        this.vlrGastoVar8 = vo.asBigDecimal("VLRGASTOVAR8");
-        this.vlrGastoVar9 = vo.asBigDecimal("VLRGASTOVAR9");
-        this.vlrMargCont1 = vo.asBigDecimal("VLRMARGCONT1");
-        this.vlrMargCont10 = vo.asBigDecimal("VLRMARGCONT10");
-        this.vlrMargCont11 = vo.asBigDecimal("VLRMARGCONT11");
-        this.vlrMargCont12 = vo.asBigDecimal("VLRMARGCONT12");
-        this.vlrMargCont2 = vo.asBigDecimal("VLRMARGCONT2");
-        this.vlrMargCont3 = vo.asBigDecimal("VLRMARGCONT3");
-        this.vlrMargCont4 = vo.asBigDecimal("VLRMARGCONT4");
-        this.vlrMargCont5 = vo.asBigDecimal("VLRMARGCONT5");
-        this.vlrMargCont6 = vo.asBigDecimal("VLRMARGCONT6");
-        this.vlrMargCont7 = vo.asBigDecimal("VLRMARGCONT7");
-        this.vlrMargCont8 = vo.asBigDecimal("VLRMARGCONT8");
-        this.vlrMargCont9 = vo.asBigDecimal("VLRMARGCONT9");
+        this.vlrGastoVar1 = vo.asBigDecimal("VLRGASTOVAR_1");
+        this.vlrGastoVar6 = vo.asBigDecimal("VLRGASTOVAR_6");
+        this.vlrGastoVar7 = vo.asBigDecimal("VLRGASTOVAR_7");
+        this.vlrGastoVar8 = vo.asBigDecimal("VLRGASTOVAR_8");
+        this.vlrGastoVar9 = vo.asBigDecimal("VLRGASTOVAR_9");
+        this.vlrMargCont1 = vo.asBigDecimal("VLRMARGCONT_1");
+        this.vlrMargCont10 = vo.asBigDecimal("VLRMARGCONT_10");
+        this.vlrMargCont11 = vo.asBigDecimal("VLRMARGCONT_11");
+        this.vlrMargCont12 = vo.asBigDecimal("VLRMARGCONT_12");
+        this.vlrMargCont2 = vo.asBigDecimal("VLRMARGCONT_2");
+        this.vlrMargCont3 = vo.asBigDecimal("VLRMARGCONT_3");
+        this.vlrMargCont4 = vo.asBigDecimal("VLRMARGCONT_4");
+        this.vlrMargCont5 = vo.asBigDecimal("VLRMARGCONT_5");
+        this.vlrMargCont6 = vo.asBigDecimal("VLRMARGCONT_6");
+        this.vlrMargCont7 = vo.asBigDecimal("VLRMARGCONT_7");
+        this.vlrMargCont8 = vo.asBigDecimal("VLRMARGCONT_8");
+        this.vlrMargCont9 = vo.asBigDecimal("VLRMARGCONT_9");
         this.vlrTabPreco = vo.asBigDecimal("VLRTABPRECO");
-        this.vlrTot1 = vo.asBigDecimal("VLRTOT1");
-        this.vlrTot10 = vo.asBigDecimal("VLRTOT10");
-        this.vlrTot11 = vo.asBigDecimal("VLRTOT11");
-        this.vlrTot12 = vo.asBigDecimal("VLRTOT12");
-        this.vlrTot2 = vo.asBigDecimal("VLRTOT2");
-        this.vlrTot3 = vo.asBigDecimal("VLRTOT3");
-        this.vlrTot4 = vo.asBigDecimal("VLRTOT4");
-        this.vlrTot5 = vo.asBigDecimal("VLRTOT5");
-        this.vlrTot6 = vo.asBigDecimal("VLRTOT6");
-        this.vlrTot7 = vo.asBigDecimal("VLRTOT7");
-        this.vlrTot8 = vo.asBigDecimal("VLRTOT8");
-        this.vlrTot9 = vo.asBigDecimal("VLRTOT9");
-        this.vlrUnit1 = vo.asBigDecimal("VLRUNIT1");
-        this.vlrUnit10 = vo.asBigDecimal("VLRUNIT10");
-        this.vlrUnit11 = vo.asBigDecimal("VLRUNIT11");
-        this.vlrUnit12 = vo.asBigDecimal("VLRUNIT12");
-        this.vlrUnit2 = vo.asBigDecimal("VLRUNIT2");
-        this.vlrUnit3 = vo.asBigDecimal("VLRUNIT3");
-        this.vlrUnit4 = vo.asBigDecimal("VLRUNIT4");
-        this.vlrUnit5 = vo.asBigDecimal("VLRUNIT5");
-        this.vlrUnit6 = vo.asBigDecimal("VLRUNIT6");
-        this.acumPeso4 = vo.asBigDecimal("ACUMPESO4");
-        this.acumPeso5 = vo.asBigDecimal("ACUMPESO5");
-        this.acumPeso6 = vo.asBigDecimal("ACUMPESO6");
-        this.popularidade7 = vo.asBigDecimal("POPULARIDADE7");
-        this.popularidade8 = vo.asBigDecimal("POPULARIDADE8");
-        this.popularidade9 = vo.asBigDecimal("POPULARIDADE9");
-        this.acumMarg9 = vo.asBigDecimal("ACUMMARG9");
-        this.acumPeso1 = vo.asBigDecimal("ACUMPESO1");
-        this.acumPeso10 = vo.asBigDecimal("ACUMPESO10");
+        this.vlrTot1 = vo.asBigDecimal("VLRTOT_1");
+        this.vlrTot10 = vo.asBigDecimal("VLRTOT_10");
+        this.vlrTot11 = vo.asBigDecimal("VLRTOT_11");
+        this.vlrTot12 = vo.asBigDecimal("VLRTOT_12");
+        this.vlrTot2 = vo.asBigDecimal("VLRTOT_2");
+        this.vlrTot3 = vo.asBigDecimal("VLRTOT_3");
+        this.vlrTot4 = vo.asBigDecimal("VLRTOT_4");
+        this.vlrTot5 = vo.asBigDecimal("VLRTOT_5");
+        this.vlrTot6 = vo.asBigDecimal("VLRTOT_6");
+        this.vlrTot7 = vo.asBigDecimal("VLRTOT_7");
+        this.vlrTot8 = vo.asBigDecimal("VLRTOT_8");
+        this.vlrTot9 = vo.asBigDecimal("VLRTOT_9");
+        this.vlrUnit1 = vo.asBigDecimal("VLRUNIT_1");
+        this.vlrUnit10 = vo.asBigDecimal("VLRUNIT_10");
+        this.vlrUnit11 = vo.asBigDecimal("VLRUNIT_11");
+        this.vlrUnit12 = vo.asBigDecimal("VLRUNIT_12");
+        this.vlrUnit2 = vo.asBigDecimal("VLRUNIT_2");
+        this.vlrUnit3 = vo.asBigDecimal("VLRUNIT_3");
+        this.vlrUnit4 = vo.asBigDecimal("VLRUNIT_4");
+        this.vlrUnit5 = vo.asBigDecimal("VLRUNIT_5");
+        this.vlrUnit6 = vo.asBigDecimal("VLRUNIT_6");
+        this.acumPeso4 = vo.asBigDecimal("ACUMPESO_4");
+        this.acumPeso5 = vo.asBigDecimal("ACUMPESO_5");
+        this.acumPeso6 = vo.asBigDecimal("ACUMPESO_6");
+        this.popularidade7 = vo.asBigDecimal("POPULARIDADE_7");
+        this.popularidade8 = vo.asBigDecimal("POPULARIDADE_8");
+        this.popularidade9 = vo.asBigDecimal("POPULARIDADE_9");
+        this.accumMarg9 = vo.asBigDecimal("ACUMMARG_9");
+        this.accumPeso1 = vo.asBigDecimal("ACUMPESO_1");
+        this.accumPeso10 = vo.asBigDecimal("ACUMPESO_10");
         this.estMax = vo.asBigDecimal("ESTMAX");
-        this.custoVenda12 = vo.asBigDecimal("CUSTOVENDA12");
-        this.custoVenda2 = vo.asBigDecimal("CUSTOVENDA2");
-        this.custoVenda3 = vo.asBigDecimal("CUSTOVENDA3");
-        this.custoVenda4 = vo.asBigDecimal("CUSTOVENDA4");
-        this.custoVenda5 = vo.asBigDecimal("CUSTOVENDA5");
-        this.vlrGastoVar10 = vo.asBigDecimal("VLRGASTOVAR10");
-        this.vlrGastoVar11 = vo.asBigDecimal("VLRGASTOVAR11");
-        this.vlrGastoVar12 = vo.asBigDecimal("VLRGASTOVAR12");
-        this.vlrGastoVar2 = vo.asBigDecimal("VLRGASTOVAR2");
+        this.custoVenda12 = vo.asBigDecimal("CUSTOVENDA_12");
+        this.custoVenda2 = vo.asBigDecimal("CUSTOVENDA_2");
+        this.custoVenda3 = vo.asBigDecimal("CUSTOVENDA_3");
+        this.custoVenda4 = vo.asBigDecimal("CUSTOVENDA_4");
+        this.custoVenda5 = vo.asBigDecimal("CUSTOVENDA_5");
+        this.vlrGastoVar10 = vo.asBigDecimal("VLRGASTOVAR_10");
+        this.vlrGastoVar11 = vo.asBigDecimal("VLRGASTOVAR_11");
+        this.vlrGastoVar12 = vo.asBigDecimal("VLRGASTOVAR_12");
+        this.vlrGastoVar2 = vo.asBigDecimal("VLRGASTOVAR_2");
         this.sugCompra = vo.asBigDecimal("SUGCOMPRA");
         this.sugCompraGir = vo.asBigDecimal("SUGCOMPRAGIR");
-        this.termolabil = vo.asString("TERMOLABIL");
-        this.custoVndTotal8 = vo.asBigDecimal("CUSTOVNDTOTAL8");
-        this.custoVndTotal9 = vo.asBigDecimal("CUSTOVNDTOTAL9");
+        this.termoLabil = vo.asString("TERMOLABIL");
+        this.custoVndTotal8 = vo.asBigDecimal("CUSTOVNDTOTAL_8");
+        this.custoVndTotal9 = vo.asBigDecimal("CUSTOVNDTOTAL_9");
         this.descMax = vo.asBigDecimal("DESCMAX");
         this.diasSemVenda = vo.asBigDecimal("DIASSEMVENDA");
         this.durEst = vo.asBigDecimal("DUREST");
@@ -3992,250 +3996,250 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.idenPortaria = vo.asString("IDENPORTARIA");
         this.leadTime = vo.asBigDecimal("LEADTIME");
         this.listaLpm = vo.asString("LISTALPM");
-        this.lucro1 = vo.asBigDecimal("LUCRO1");
-        this.lucro10 = vo.asBigDecimal("LUCRO10");
-        this.lucro11 = vo.asBigDecimal("LUCRO11");
-        this.lucro12 = vo.asBigDecimal("LUCRO12");
-        this.lucro2 = vo.asBigDecimal("LUCRO2");
-        this.lucro3 = vo.asBigDecimal("LUCRO3");
-        this.lucro4 = vo.asBigDecimal("LUCRO4");
-        this.lucro5 = vo.asBigDecimal("LUCRO5");
-        this.lucro6 = vo.asBigDecimal("LUCRO6");
-        this.lucro7 = vo.asBigDecimal("LUCRO7");
-        this.lucro8 = vo.asBigDecimal("LUCRO8");
-        this.lucro9 = vo.asBigDecimal("LUCRO9");
+        this.lucro1 = vo.asBigDecimal("LUCRO_1");
+        this.lucro10 = vo.asBigDecimal("LUCRO_10");
+        this.lucro11 = vo.asBigDecimal("LUCRO_11");
+        this.lucro12 = vo.asBigDecimal("LUCRO_12");
+        this.lucro2 = vo.asBigDecimal("LUCRO_2");
+        this.lucro3 = vo.asBigDecimal("LUCRO_3");
+        this.lucro4 = vo.asBigDecimal("LUCRO_4");
+        this.lucro5 = vo.asBigDecimal("LUCRO_5");
+        this.lucro6 = vo.asBigDecimal("LUCRO_6");
+        this.lucro7 = vo.asBigDecimal("LUCRO_7");
+        this.lucro8 = vo.asBigDecimal("LUCRO_8");
+        this.lucro9 = vo.asBigDecimal("LUCRO_9");
         this.marca = vo.asString("MARCA");
         this.markup = vo.asBigDecimal("MARKUP");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.oneroso = vo.asString("ONEROSO");
         this.ordemMedida = vo.asBigDecimal("ORDEMMEDIDA");
         this.partEstoque = vo.asBigDecimal("PARTESTOQUE");
-        this.partGasVarFat1 = vo.asBigDecimal("PARTGASVARFAT1");
-        this.partGasVarFat10 = vo.asBigDecimal("PARTGASVARFAT10");
-        this.partGasVarFat11 = vo.asBigDecimal("PARTGASVARFAT11");
-        this.partGasVarFat12 = vo.asBigDecimal("PARTGASVARFAT12");
-        this.partGasVarFat2 = vo.asBigDecimal("PARTGASVARFAT2");
-        this.partGasVarFat3 = vo.asBigDecimal("PARTGASVARFAT3");
-        this.partGasVarFat4 = vo.asBigDecimal("PARTGASVARFAT4");
-        this.partGasVarFat5 = vo.asBigDecimal("PARTGASVARFAT5");
-        this.partGasVarFat6 = vo.asBigDecimal("PARTGASVARFAT6");
-        this.partGasVarFat7 = vo.asBigDecimal("PARTGASVARFAT7");
-        this.partGasVarFat8 = vo.asBigDecimal("PARTGASVARFAT8");
-        this.partGasVarFat9 = vo.asBigDecimal("PARTGASVARFAT9");
-        this.partGasVar1 = vo.asBigDecimal("PARTGASVAR1");
-        this.partGasVar10 = vo.asBigDecimal("PARTGASVAR10");
-        this.partGasVar11 = vo.asBigDecimal("PARTGASVAR11");
-        this.partGasVar12 = vo.asBigDecimal("PARTGASVAR12");
-        this.partGasVar2 = vo.asBigDecimal("PARTGASVAR2");
-        this.partGasVar3 = vo.asBigDecimal("PARTGASVAR3");
-        this.partGasVar4 = vo.asBigDecimal("PARTGASVAR4");
-        this.partGasVar5 = vo.asBigDecimal("PARTGASVAR5");
-        this.partGasVar6 = vo.asBigDecimal("PARTGASVAR6");
-        this.partGasVar7 = vo.asBigDecimal("PARTGASVAR7");
-        this.partGasVar8 = vo.asBigDecimal("PARTGASVAR8");
-        this.partGasVar9 = vo.asBigDecimal("PARTGASVAR9");
-        this.partLucro1 = vo.asBigDecimal("PARTLUCRO1");
-        this.partLucro10 = vo.asBigDecimal("PARTLUCRO10");
-        this.partLucro11 = vo.asBigDecimal("PARTLUCRO11");
-        this.partLucro12 = vo.asBigDecimal("PARTLUCRO12");
-        this.partLucro2 = vo.asBigDecimal("PARTLUCRO2");
-        this.partLucro3 = vo.asBigDecimal("PARTLUCRO3");
-        this.partLucro4 = vo.asBigDecimal("PARTLUCRO4");
-        this.partLucro5 = vo.asBigDecimal("PARTLUCRO5");
+        this.partGasVarFat1 = vo.asBigDecimal("PARTGASVARFAT_1");
+        this.partGasVarFat10 = vo.asBigDecimal("PARTGASVARFAT_10");
+        this.partGasVarFat11 = vo.asBigDecimal("PARTGASVARFAT_11");
+        this.partGasVarFat12 = vo.asBigDecimal("PARTGASVARFAT_12");
+        this.partGasVarFat2 = vo.asBigDecimal("PARTGASVARFAT_2");
+        this.partGasVarFat3 = vo.asBigDecimal("PARTGASVARFAT_3");
+        this.partGasVarFat4 = vo.asBigDecimal("PARTGASVARFAT_4");
+        this.partGasVarFat5 = vo.asBigDecimal("PARTGASVARFAT_5");
+        this.partGasVarFat6 = vo.asBigDecimal("PARTGASVARFAT_6");
+        this.partGasVarFat7 = vo.asBigDecimal("PARTGASVARFAT_7");
+        this.partGasVarFat8 = vo.asBigDecimal("PARTGASVARFAT_8");
+        this.partGasVarFat9 = vo.asBigDecimal("PARTGASVARFAT_9");
+        this.partGasVar1 = vo.asBigDecimal("PARTGASVAR_1");
+        this.partGasVar10 = vo.asBigDecimal("PARTGASVAR_10");
+        this.partGasVar11 = vo.asBigDecimal("PARTGASVAR_11");
+        this.partGasVar12 = vo.asBigDecimal("PARTGASVAR_12");
+        this.partGasVar2 = vo.asBigDecimal("PARTGASVAR_2");
+        this.partGasVar3 = vo.asBigDecimal("PARTGASVAR_3");
+        this.partGasVar4 = vo.asBigDecimal("PARTGASVAR_4");
+        this.partGasVar5 = vo.asBigDecimal("PARTGASVAR_5");
+        this.partGasVar6 = vo.asBigDecimal("PARTGASVAR_6");
+        this.partGasVar7 = vo.asBigDecimal("PARTGASVAR_7");
+        this.partGasVar8 = vo.asBigDecimal("PARTGASVAR_8");
+        this.partGasVar9 = vo.asBigDecimal("PARTGASVAR_9");
+        this.partLucro1 = vo.asBigDecimal("PARTLUCRO_1");
+        this.partLucro10 = vo.asBigDecimal("PARTLUCRO_10");
+        this.partLucro11 = vo.asBigDecimal("PARTLUCRO_11");
+        this.partLucro12 = vo.asBigDecimal("PARTLUCRO_12");
+        this.partLucro2 = vo.asBigDecimal("PARTLUCRO_2");
+        this.partLucro3 = vo.asBigDecimal("PARTLUCRO_3");
+        this.partLucro4 = vo.asBigDecimal("PARTLUCRO_4");
+        this.partLucro5 = vo.asBigDecimal("PARTLUCRO_5");
         this.prodFalta = vo.asString("PRODFALTA");
         this.qtdMaxima = vo.asBigDecimal("QTDMAXIMA");
         this.qtdMedia = vo.asBigDecimal("QTDMEDIA");
-        this.partLucro6 = vo.asBigDecimal("PARTLUCRO6");
-        this.partLucro7 = vo.asBigDecimal("PARTLUCRO7");
-        this.partLucro8 = vo.asBigDecimal("PARTLUCRO8");
-        this.partLucro9 = vo.asBigDecimal("PARTLUCRO9");
+        this.partLucro6 = vo.asBigDecimal("PARTLUCRO_6");
+        this.partLucro7 = vo.asBigDecimal("PARTLUCRO_7");
+        this.partLucro8 = vo.asBigDecimal("PARTLUCRO_8");
+        this.partLucro9 = vo.asBigDecimal("PARTLUCRO_9");
         this.referencia = vo.asString("REFERENCIA");
         this.refForn = vo.asString("REFFORN");
         this.refMercMed = vo.asString("REFMERCMED");
         this.statusMed = vo.asBigDecimal("STATUSMED");
         this.sugCompCustGer = vo.asBigDecimal("SUGCOMPCUSTGER");
-        this.curvaTot6 = vo.asString("CURVATOT6");
-        this.curvaTot7 = vo.asString("CURVATOT7");
-        this.curvaTot8 = vo.asString("CURVATOT8");
-        this.curvaTot9 = vo.asString("CURVATOT9");
+        this.curvaTot6 = vo.asString("CURVATOT_6");
+        this.curvaTot7 = vo.asString("CURVATOT_7");
+        this.curvaTot8 = vo.asString("CURVATOT_8");
+        this.curvaTot9 = vo.asString("CURVATOT_9");
         this.custoGer = vo.asBigDecimal("CUSTOGER");
         this.custoRep = vo.asBigDecimal("CUSTOREP");
-        this.custoVenda1 = vo.asBigDecimal("CUSTOVENDA1");
-        this.partMargContFat5 = vo.asBigDecimal("PARTMARGCONTFAT5");
-        this.partMargContFat6 = vo.asBigDecimal("PARTMARGCONTFAT6");
-        this.partMargContFat7 = vo.asBigDecimal("PARTMARGCONTFAT7");
-        this.partMargContFat8 = vo.asBigDecimal("PARTMARGCONTFAT8");
-        this.partMargContFat9 = vo.asBigDecimal("PARTMARGCONTFAT9");
-        this.partMargCont1 = vo.asBigDecimal("PARTMARGCONT1");
-        this.partMargCont10 = vo.asBigDecimal("PARTMARGCONT10");
-        this.partMargCont11 = vo.asBigDecimal("PARTMARGCONT11");
-        this.partMargCont12 = vo.asBigDecimal("PARTMARGCONT12");
-        this.partMargCont2 = vo.asBigDecimal("PARTMARGCONT2");
-        this.partMargCont3 = vo.asBigDecimal("PARTMARGCONT3");
-        this.partMargCont4 = vo.asBigDecimal("PARTMARGCONT4");
-        this.partMargCont5 = vo.asBigDecimal("PARTMARGCONT5");
-        this.partMargCont6 = vo.asBigDecimal("PARTMARGCONT6");
-        this.partMargCont7 = vo.asBigDecimal("PARTMARGCONT7");
-        this.partMargCont8 = vo.asBigDecimal("PARTMARGCONT8");
-        this.partMargCont9 = vo.asBigDecimal("PARTMARGCONT9");
-        this.partPeso1 = vo.asBigDecimal("PARTPESO1");
-        this.acumMarg1 = vo.asBigDecimal("ACUMMARG1");
-        this.acumMarg10 = vo.asBigDecimal("ACUMMARG10");
+        this.custoVenda1 = vo.asBigDecimal("CUSTOVENDA_1");
+        this.partMargContFat5 = vo.asBigDecimal("PARTMARGCONTFAT_5");
+        this.partMargContFat6 = vo.asBigDecimal("PARTMARGCONTFAT_6");
+        this.partMargContFat7 = vo.asBigDecimal("PARTMARGCONTFAT_7");
+        this.partMargContFat8 = vo.asBigDecimal("PARTMARGCONTFAT_8");
+        this.partMargContFat9 = vo.asBigDecimal("PARTMARGCONTFAT_9");
+        this.partMargCont1 = vo.asBigDecimal("PARTMARGCONT_1");
+        this.partMargCont10 = vo.asBigDecimal("PARTMARGCONT_10");
+        this.partMargCont11 = vo.asBigDecimal("PARTMARGCONT_11");
+        this.partMargCont12 = vo.asBigDecimal("PARTMARGCONT_12");
+        this.partMargCont2 = vo.asBigDecimal("PARTMARGCONT_2");
+        this.partMargCont3 = vo.asBigDecimal("PARTMARGCONT_3");
+        this.partMargCont4 = vo.asBigDecimal("PARTMARGCONT_4");
+        this.partMargCont5 = vo.asBigDecimal("PARTMARGCONT_5");
+        this.partMargCont6 = vo.asBigDecimal("PARTMARGCONT_6");
+        this.partMargCont7 = vo.asBigDecimal("PARTMARGCONT_7");
+        this.partMargCont8 = vo.asBigDecimal("PARTMARGCONT_8");
+        this.partMargCont9 = vo.asBigDecimal("PARTMARGCONT_9");
+        this.partPeso1 = vo.asBigDecimal("PARTPESO_1");
+        this.acumMarg1 = vo.asBigDecimal("ACUMMARG_1");
+        this.acumMarg10 = vo.asBigDecimal("ACUMMARG_10");
         this.qtdMinima = vo.asBigDecimal("QTDMINIMA");
         this.qtdTotal = vo.asBigDecimal("QTDTOTAL");
         this.qtdUltCompra = vo.asBigDecimal("QTDULTCOMPRA");
-        this.partPeso10 = vo.asBigDecimal("PARTPESO10");
-        this.partPeso11 = vo.asBigDecimal("PARTPESO11");
-        this.partPeso12 = vo.asBigDecimal("PARTPESO12");
-        this.partPeso2 = vo.asBigDecimal("PARTPESO2");
-        this.partPeso3 = vo.asBigDecimal("PARTPESO3");
-        this.partPeso4 = vo.asBigDecimal("PARTPESO4");
-        this.partPeso5 = vo.asBigDecimal("PARTPESO5");
-        this.partPeso6 = vo.asBigDecimal("PARTPESO6");
-        this.partPeso7 = vo.asBigDecimal("PARTPESO7");
-        this.partPeso8 = vo.asBigDecimal("PARTPESO8");
-        this.partPeso9 = vo.asBigDecimal("PARTPESO9");
-        this.partQtde1 = vo.asBigDecimal("PARTQTDE1");
-        this.partQtde10 = vo.asBigDecimal("PARTQTDE10");
-        this.partQtde11 = vo.asBigDecimal("PARTQTDE11");
-        this.partQtde12 = vo.asBigDecimal("PARTQTDE12");
-        this.partQtde2 = vo.asBigDecimal("PARTQTDE2");
-        this.partQtde3 = vo.asBigDecimal("PARTQTDE3");
-        this.partQtde4 = vo.asBigDecimal("PARTQTDE4");
-        this.partQtde5 = vo.asBigDecimal("PARTQTDE5");
-        this.partQtde6 = vo.asBigDecimal("PARTQTDE6");
-        this.partQtde7 = vo.asBigDecimal("PARTQTDE7");
-        this.partQtde8 = vo.asBigDecimal("PARTQTDE8");
-        this.partQtde9 = vo.asBigDecimal("PARTQTDE9");
-        this.partTotPer1 = vo.asBigDecimal("PARTTOTPER1");
-        this.partTotPer10 = vo.asBigDecimal("PARTTOTPER10");
-        this.partTotPer11 = vo.asBigDecimal("PARTTOTPER11");
-        this.partTotPer12 = vo.asBigDecimal("PARTTOTPER12");
-        this.partTotPer2 = vo.asBigDecimal("PARTTOTPER2");
-        this.partTotPer3 = vo.asBigDecimal("PARTTOTPER3");
-        this.partTotPer4 = vo.asBigDecimal("PARTTOTPER4");
-        this.partTotPer5 = vo.asBigDecimal("PARTTOTPER5");
-        this.partTotPer6 = vo.asBigDecimal("PARTTOTPER6");
-        this.partTotPer7 = vo.asBigDecimal("PARTTOTPER7");
-        this.partTotPer8 = vo.asBigDecimal("PARTTOTPER8");
-        this.partTotPer9 = vo.asBigDecimal("PARTTOTPER9");
-        this.pedCpaPend = vo.asBigDecimal("PEDCPAPEND");
-        this.pedVdaPend = vo.asBigDecimal("PEDVDAPEND");
-        this.perLucro1 = vo.asBigDecimal("PERLUCRO1");
-        this.perLucro10 = vo.asBigDecimal("PERLUCRO10");
-        this.perLucro11 = vo.asBigDecimal("PERLUCRO11");
-        this.perLucro12 = vo.asBigDecimal("PERLUCRO12");
-        this.perLucro2 = vo.asBigDecimal("PERLUCRO2");
-        this.perLucro3 = vo.asBigDecimal("PERLUCRO3");
-        this.perLucro4 = vo.asBigDecimal("PERLUCRO4");
-        this.perLucro5 = vo.asBigDecimal("PERLUCRO5");
-        this.perLucro6 = vo.asBigDecimal("PERLUCRO6");
-        this.perLucro7 = vo.asBigDecimal("PERLUCRO7");
-        this.perLucro8 = vo.asBigDecimal("PERLUCRO8");
-        this.perLucro9 = vo.asBigDecimal("PERLUCRO9");
-        this.peso1 = vo.asBigDecimal("PESO1");
-        this.peso10 = vo.asBigDecimal("PESO10");
-        this.peso11 = vo.asBigDecimal("PESO11");
-        this.peso12 = vo.asBigDecimal("PESO12");
-        this.peso2 = vo.asBigDecimal("PESO2");
-        this.peso3 = vo.asBigDecimal("PESO3");
-        this.peso4 = vo.asBigDecimal("PESO4");
-        this.peso5 = vo.asBigDecimal("PESO5");
-        this.peso6 = vo.asBigDecimal("PESO6");
-        this.peso7 = vo.asBigDecimal("PESO7");
-        this.peso8 = vo.asBigDecimal("PESO8");
-        this.peso9 = vo.asBigDecimal("PESO9");
+        this.partPeso10 = vo.asBigDecimal("PARTPESO_10");
+        this.partPeso11 = vo.asBigDecimal("PARTPESO_11");
+        this.partPeso12 = vo.asBigDecimal("PARTPESO_12");
+        this.partPeso2 = vo.asBigDecimal("PARTPESO_2");
+        this.partPeso3 = vo.asBigDecimal("PARTPESO_3");
+        this.partPeso4 = vo.asBigDecimal("PARTPESO_4");
+        this.partPeso5 = vo.asBigDecimal("PARTPESO_5");
+        this.partPeso6 = vo.asBigDecimal("PARTPESO_6");
+        this.partPeso7 = vo.asBigDecimal("PARTPESO_7");
+        this.partPeso8 = vo.asBigDecimal("PARTPESO_8");
+        this.partPeso9 = vo.asBigDecimal("PARTPESO_9");
+        this.partQtde1 = vo.asBigDecimal("PARTQTDE_1");
+        this.partQtde10 = vo.asBigDecimal("PARTQTDE_10");
+        this.partQtde11 = vo.asBigDecimal("PARTQTDE_11");
+        this.partQtde12 = vo.asBigDecimal("PARTQTDE_12");
+        this.partQtde2 = vo.asBigDecimal("PARTQTDE_2");
+        this.partQtde3 = vo.asBigDecimal("PARTQTDE_3");
+        this.partQtde4 = vo.asBigDecimal("PARTQTDE_4");
+        this.partQtde5 = vo.asBigDecimal("PARTQTDE_5");
+        this.partQtde6 = vo.asBigDecimal("PARTQTDE_6");
+        this.partQtde7 = vo.asBigDecimal("PARTQTDE_7");
+        this.partQtde8 = vo.asBigDecimal("PARTQTDE_8");
+        this.partQtde9 = vo.asBigDecimal("PARTQTDE_9");
+        this.partTotPer1 = vo.asBigDecimal("PARTTOTPER_1");
+        this.partTotPer10 = vo.asBigDecimal("PARTTOTPER_10");
+        this.partTotPer11 = vo.asBigDecimal("PARTTOTPER_11");
+        this.partTotPer12 = vo.asBigDecimal("PARTTOTPER_12");
+        this.partTotPer2 = vo.asBigDecimal("PARTTOTPER_2");
+        this.partTotPer3 = vo.asBigDecimal("PARTTOTPER_3");
+        this.partTotPer4 = vo.asBigDecimal("PARTTOTPER_4");
+        this.partTotPer5 = vo.asBigDecimal("PARTTOTPER_5");
+        this.partTotPer6 = vo.asBigDecimal("PARTTOTPER_6");
+        this.partTotPer7 = vo.asBigDecimal("PARTTOTPER_7");
+        this.partTotPer8 = vo.asBigDecimal("PARTTOTPER_8");
+        this.partTotPer9 = vo.asBigDecimal("PARTTOTPER_9");
+        this.pedCpApend = vo.asBigDecimal("PEDCPAPEND");
+        this.pedVdApend = vo.asBigDecimal("PEDVDAPEND");
+        this.perLucro1 = vo.asBigDecimal("PERLUCRO_1");
+        this.perLucro10 = vo.asBigDecimal("PERLUCRO_10");
+        this.perLucro11 = vo.asBigDecimal("PERLUCRO_11");
+        this.perLucro12 = vo.asBigDecimal("PERLUCRO_12");
+        this.perLucro2 = vo.asBigDecimal("PERLUCRO_2");
+        this.perLucro3 = vo.asBigDecimal("PERLUCRO_3");
+        this.perLucro4 = vo.asBigDecimal("PERLUCRO_4");
+        this.perLucro5 = vo.asBigDecimal("PERLUCRO_5");
+        this.perLucro6 = vo.asBigDecimal("PERLUCRO_6");
+        this.perLucro7 = vo.asBigDecimal("PERLUCRO_7");
+        this.perLucro8 = vo.asBigDecimal("PERLUCRO_8");
+        this.perLucro9 = vo.asBigDecimal("PERLUCRO_9");
+        this.peso1 = vo.asBigDecimal("PESO_1");
+        this.peso10 = vo.asBigDecimal("PESO_10");
+        this.peso11 = vo.asBigDecimal("PESO_11");
+        this.peso12 = vo.asBigDecimal("PESO_12");
+        this.peso2 = vo.asBigDecimal("PESO_2");
+        this.peso3 = vo.asBigDecimal("PESO_3");
+        this.peso4 = vo.asBigDecimal("PESO_4");
+        this.peso5 = vo.asBigDecimal("PESO_5");
+        this.peso6 = vo.asBigDecimal("PESO_6");
+        this.peso7 = vo.asBigDecimal("PESO_7");
+        this.peso8 = vo.asBigDecimal("PESO_8");
+        this.peso9 = vo.asBigDecimal("PESO_9");
         this.popTotal = vo.asBigDecimal("POPTOTAL");
-        this.popularidade1 = vo.asBigDecimal("POPULARIDADE1");
-        this.popularidade10 = vo.asBigDecimal("POPULARIDADE10");
-        this.popularidade11 = vo.asBigDecimal("POPULARIDADE11");
-        this.popularidade12 = vo.asBigDecimal("POPULARIDADE12");
-        this.popularidade2 = vo.asBigDecimal("POPULARIDADE2");
-        this.popularidade3 = vo.asBigDecimal("POPULARIDADE3");
-        this.popularidade4 = vo.asBigDecimal("POPULARIDADE4");
-        this.popularidade5 = vo.asBigDecimal("POPULARIDADE5");
-        this.partMargContFat3 = vo.asBigDecimal("PARTMARGCONTFAT3");
-        this.partMargContFat4 = vo.asBigDecimal("PARTMARGCONTFAT4");
-        this.custoVenda6 = vo.asBigDecimal("CUSTOVENDA6");
-        this.custoVenda7 = vo.asBigDecimal("CUSTOVENDA7");
-        this.custoVenda8 = vo.asBigDecimal("CUSTOVENDA8");
-        this.custoVenda9 = vo.asBigDecimal("CUSTOVENDA9");
-        this.custoVndTotal1 = vo.asBigDecimal("CUSTOVNDTOTAL1");
-        this.custoVndTotal10 = vo.asBigDecimal("CUSTOVNDTOTAL10");
-        this.custoVndTotal11 = vo.asBigDecimal("CUSTOVNDTOTAL11");
-        this.custoVndTotal12 = vo.asBigDecimal("CUSTOVNDTOTAL12");
-        this.custoVndTotal2 = vo.asBigDecimal("CUSTOVNDTOTAL2");
-        this.custoVndTotal3 = vo.asBigDecimal("CUSTOVNDTOTAL3");
-        this.custoVndTotal4 = vo.asBigDecimal("CUSTOVNDTOTAL4");
-        this.custoVndTotal5 = vo.asBigDecimal("CUSTOVNDTOTAL5");
-        this.custoVndTotal6 = vo.asBigDecimal("CUSTOVNDTOTAL6");
-        this.custoVndTotal7 = vo.asBigDecimal("CUSTOVNDTOTAL7");
-        this.custoVenda10 = vo.asBigDecimal("CUSTOVENDA10");
-        this.custoVenda11 = vo.asBigDecimal("CUSTOVENDA11");
-        this.popularidade6 = vo.asBigDecimal("POPULARIDADE6");
-        this.vlrUnit7 = vo.asBigDecimal("VLRUNIT7");
-        this.vlrUnit8 = vo.asBigDecimal("VLRUNIT8");
-        this.vlrUnit9 = vo.asBigDecimal("VLRUNIT9");
-        this.vlrVenda1 = vo.asBigDecimal("VLRVENDA1");
-        this.vlrVenda10 = vo.asBigDecimal("VLRVENDA10");
-        this.vlrVenda11 = vo.asBigDecimal("VLRVENDA11");
-        this.vlrVenda12 = vo.asBigDecimal("VLRVENDA12");
-        this.vlrVenda2 = vo.asBigDecimal("VLRVENDA2");
-        this.vlrVenda3 = vo.asBigDecimal("VLRVENDA3");
-        this.vlrVenda4 = vo.asBigDecimal("VLRVENDA4");
-        this.vlrVenda5 = vo.asBigDecimal("VLRVENDA5");
-        this.vlrVenda6 = vo.asBigDecimal("VLRVENDA6");
-        this.vlrVenda7 = vo.asBigDecimal("VLRVENDA7");
-        this.vlrVenda8 = vo.asBigDecimal("VLRVENDA8");
-        this.vlrVenda9 = vo.asBigDecimal("VLRVENDA9");
-        this.vlrVendiaUtil1 = vo.asBigDecimal("VLRVENDIAUTIL1");
-        this.vlrVendiaUtil10 = vo.asBigDecimal("VLRVENDIAUTIL10");
-        this.vlrVendiaUtil11 = vo.asBigDecimal("VLRVENDIAUTIL11");
-        this.vlrVendiaUtil12 = vo.asBigDecimal("VLRVENDIAUTIL12");
-        this.vlrVendiaUtil2 = vo.asBigDecimal("VLRVENDIAUTIL2");
-        this.vlrVendiaUtil3 = vo.asBigDecimal("VLRVENDIAUTIL3");
-        this.vlrVendiaUtil4 = vo.asBigDecimal("VLRVENDIAUTIL4");
-        this.vlrVendiaUtil5 = vo.asBigDecimal("VLRVENDIAUTIL5");
-        this.vlrVendiaUtil6 = vo.asBigDecimal("VLRVENDIAUTIL6");
-        this.vlrVendiaUtil7 = vo.asBigDecimal("VLRVENDIAUTIL7");
-        this.vlrVendiaUtil8 = vo.asBigDecimal("VLRVENDIAUTIL8");
-        this.vlrVendiaUtil9 = vo.asBigDecimal("VLRVENDIAUTIL9");
-        this.curvaTot5 = vo.asString("CURVATOT5");
-        this.partMargContFat1 = vo.asBigDecimal("PARTMARGCONTFAT1");
-        this.partMargContFat10 = vo.asBigDecimal("PARTMARGCONTFAT10");
-        this.partMargContFat11 = vo.asBigDecimal("PARTMARGCONTFAT11");
-        this.partMargContFat12 = vo.asBigDecimal("PARTMARGCONTFAT12");
-        this.partMargContFat2 = vo.asBigDecimal("PARTMARGCONTFAT2");
-        this.vlrGastoVar3 = vo.asBigDecimal("VLRGASTOVAR3");
-        this.vlrGastoVar4 = vo.asBigDecimal("VLRGASTOVAR4");
-        this.vlrGastoVar5 = vo.asBigDecimal("VLRGASTOVAR5");
-        this.acumPeso7 = vo.asBigDecimal("ACUMPESO7");
-        this.acumPeso8 = vo.asBigDecimal("ACUMPESO8");
-        this.acumPeso9 = vo.asBigDecimal("ACUMPESO9");
-        this.acumQtd1 = vo.asBigDecimal("ACUMQTD1");
-        this.acumQtd10 = vo.asBigDecimal("ACUMQTD10");
-        this.acumQtd11 = vo.asBigDecimal("ACUMQTD11");
-        this.acumQtd12 = vo.asBigDecimal("ACUMQTD12");
-        this.acumQtd2 = vo.asBigDecimal("ACUMQTD2");
-        this.acumQtd3 = vo.asBigDecimal("ACUMQTD3");
-        this.acumQtd4 = vo.asBigDecimal("ACUMQTD4");
-        this.acumQtd5 = vo.asBigDecimal("ACUMQTD5");
-        this.acumQtd6 = vo.asBigDecimal("ACUMQTD6");
-        this.acumQtd7 = vo.asBigDecimal("ACUMQTD7");
-        this.acumQtd8 = vo.asBigDecimal("ACUMQTD8");
-        this.acumQtd9 = vo.asBigDecimal("ACUMQTD9");
-        this.acumTot1 = vo.asBigDecimal("ACUMTOT1");
-        this.acumTot10 = vo.asBigDecimal("ACUMTOT10");
-        this.acumTot11 = vo.asBigDecimal("ACUMTOT11");
-        this.acumTot12 = vo.asBigDecimal("ACUMTOT12");
-        this.acumTot2 = vo.asBigDecimal("ACUMTOT2");
-        this.acumTot3 = vo.asBigDecimal("ACUMTOT3");
-        this.acumTot4 = vo.asBigDecimal("ACUMTOT4");
-        this.acumTot5 = vo.asBigDecimal("ACUMTOT5");
-        this.acumTot6 = vo.asBigDecimal("ACUMTOT6");
-        this.acumTot7 = vo.asBigDecimal("ACUMTOT7");
-        this.acumTot8 = vo.asBigDecimal("ACUMTOT8");
-        this.acumTot9 = vo.asBigDecimal("ACUMTOT9");
+        this.popularidade1 = vo.asBigDecimal("POPULARIDADE_1");
+        this.popularidade10 = vo.asBigDecimal("POPULARIDADE_10");
+        this.popularidade11 = vo.asBigDecimal("POPULARIDADE_11");
+        this.popularidade12 = vo.asBigDecimal("POPULARIDADE_12");
+        this.popularidade2 = vo.asBigDecimal("POPULARIDADE_2");
+        this.popularidade3 = vo.asBigDecimal("POPULARIDADE_3");
+        this.popularidade4 = vo.asBigDecimal("POPULARIDADE_4");
+        this.popularidade5 = vo.asBigDecimal("POPULARIDADE_5");
+        this.partMargContFat3 = vo.asBigDecimal("PARTMARGCONTFAT_3");
+        this.partMargContFat4 = vo.asBigDecimal("PARTMARGCONTFAT_4");
+        this.custoVenda6 = vo.asBigDecimal("CUSTOVENDA_6");
+        this.custoVenda7 = vo.asBigDecimal("CUSTOVENDA_7");
+        this.custoVenda8 = vo.asBigDecimal("CUSTOVENDA_8");
+        this.custoVenda9 = vo.asBigDecimal("CUSTOVENDA_9");
+        this.custoVndTotal1 = vo.asBigDecimal("CUSTOVNDTOTAL_1");
+        this.custoVndTotal10 = vo.asBigDecimal("CUSTOVNDTOTAL_10");
+        this.custoVndTotal11 = vo.asBigDecimal("CUSTOVNDTOTAL_11");
+        this.custoVndTotal12 = vo.asBigDecimal("CUSTOVNDTOTAL_12");
+        this.custoVndTotal2 = vo.asBigDecimal("CUSTOVNDTOTAL_2");
+        this.custoVndTotal3 = vo.asBigDecimal("CUSTOVNDTOTAL_3");
+        this.custoVndTotal4 = vo.asBigDecimal("CUSTOVNDTOTAL_4");
+        this.custoVndTotal5 = vo.asBigDecimal("CUSTOVNDTOTAL_5");
+        this.custoVndTotal6 = vo.asBigDecimal("CUSTOVNDTOTAL_6");
+        this.custoVndTotal7 = vo.asBigDecimal("CUSTOVNDTOTAL_7");
+        this.custoVenda10 = vo.asBigDecimal("CUSTOVENDA_10");
+        this.custoVenda11 = vo.asBigDecimal("CUSTOVENDA_11");
+        this.popularidade6 = vo.asBigDecimal("POPULARIDADE_6");
+        this.vlrUnit7 = vo.asBigDecimal("VLRUNIT_7");
+        this.vlrUnit8 = vo.asBigDecimal("VLRUNIT_8");
+        this.vlrUnit9 = vo.asBigDecimal("VLRUNIT_9");
+        this.vlrVenda1 = vo.asBigDecimal("VLRVENDA_1");
+        this.vlrVenda10 = vo.asBigDecimal("VLRVENDA_10");
+        this.vlrVenda11 = vo.asBigDecimal("VLRVENDA_11");
+        this.vlrVenda12 = vo.asBigDecimal("VLRVENDA_12");
+        this.vlrVenda2 = vo.asBigDecimal("VLRVENDA_2");
+        this.vlrVenda3 = vo.asBigDecimal("VLRVENDA_3");
+        this.vlrVenda4 = vo.asBigDecimal("VLRVENDA_4");
+        this.vlrVenda5 = vo.asBigDecimal("VLRVENDA_5");
+        this.vlrVenda6 = vo.asBigDecimal("VLRVENDA_6");
+        this.vlrVenda7 = vo.asBigDecimal("VLRVENDA_7");
+        this.vlrVenda8 = vo.asBigDecimal("VLRVENDA_8");
+        this.vlrVenda9 = vo.asBigDecimal("VLRVENDA_9");
+        this.vlrVendiaUtil1 = vo.asBigDecimal("VLRVENDIAUTIL_1");
+        this.vlrVendiaUtil10 = vo.asBigDecimal("VLRVENDIAUTIL_10");
+        this.vlrVendiaUtil11 = vo.asBigDecimal("VLRVENDIAUTIL_11");
+        this.vlrVendiaUtil12 = vo.asBigDecimal("VLRVENDIAUTIL_12");
+        this.vlrVendiaUtil2 = vo.asBigDecimal("VLRVENDIAUTIL_2");
+        this.vlrVendiaUtil3 = vo.asBigDecimal("VLRVENDIAUTIL_3");
+        this.vlrVendiaUtil4 = vo.asBigDecimal("VLRVENDIAUTIL_4");
+        this.vlrVendiaUtil5 = vo.asBigDecimal("VLRVENDIAUTIL_5");
+        this.vlrVendiaUtil6 = vo.asBigDecimal("VLRVENDIAUTIL_6");
+        this.vlrVendiaUtil7 = vo.asBigDecimal("VLRVENDIAUTIL_7");
+        this.vlrVendiaUtil8 = vo.asBigDecimal("VLRVENDIAUTIL_8");
+        this.vlrVendiaUtil9 = vo.asBigDecimal("VLRVENDIAUTIL_9");
+        this.curvaTot5 = vo.asString("CURVATOT_5");
+        this.partMargContFat1 = vo.asBigDecimal("PARTMARGCONTFAT_1");
+        this.partMargContFat10 = vo.asBigDecimal("PARTMARGCONTFAT_10");
+        this.partMargContFat11 = vo.asBigDecimal("PARTMARGCONTFAT_11");
+        this.partMargContFat12 = vo.asBigDecimal("PARTMARGCONTFAT_12");
+        this.partMargContFat2 = vo.asBigDecimal("PARTMARGCONTFAT_2");
+        this.vlrGastoVar3 = vo.asBigDecimal("VLRGASTOVAR_3");
+        this.vlrGastoVar4 = vo.asBigDecimal("VLRGASTOVAR_4");
+        this.vlrGastoVar5 = vo.asBigDecimal("VLRGASTOVAR_5");
+        this.acumPeso7 = vo.asBigDecimal("ACUMPESO_7");
+        this.acumPeso8 = vo.asBigDecimal("ACUMPESO_8");
+        this.acumPeso9 = vo.asBigDecimal("ACUMPESO_9");
+        this.acumQtd1 = vo.asBigDecimal("ACUMQTD_1");
+        this.acumQtd10 = vo.asBigDecimal("ACUMQTD_10");
+        this.acumQtd11 = vo.asBigDecimal("ACUMQTD_11");
+        this.acumQtd12 = vo.asBigDecimal("ACUMQTD_12");
+        this.acumQtd2 = vo.asBigDecimal("ACUMQTD_2");
+        this.acumQtd3 = vo.asBigDecimal("ACUMQTD_3");
+        this.acumQtd4 = vo.asBigDecimal("ACUMQTD_4");
+        this.acumQtd5 = vo.asBigDecimal("ACUMQTD_5");
+        this.acumQtd6 = vo.asBigDecimal("ACUMQTD_6");
+        this.acumQtd7 = vo.asBigDecimal("ACUMQTD_7");
+        this.acumQtd8 = vo.asBigDecimal("ACUMQTD_8");
+        this.acumQtd9 = vo.asBigDecimal("ACUMQTD_9");
+        this.acumTot1 = vo.asBigDecimal("ACUMTOT_1");
+        this.acumTot10 = vo.asBigDecimal("ACUMTOT_10");
+        this.acumTot11 = vo.asBigDecimal("ACUMTOT_11");
+        this.acumTot12 = vo.asBigDecimal("ACUMTOT_12");
+        this.acumTot2 = vo.asBigDecimal("ACUMTOT_2");
+        this.acumTot3 = vo.asBigDecimal("ACUMTOT_3");
+        this.acumTot4 = vo.asBigDecimal("ACUMTOT_4");
+        this.acumTot5 = vo.asBigDecimal("ACUMTOT_5");
+        this.acumTot6 = vo.asBigDecimal("ACUMTOT_6");
+        this.acumTot7 = vo.asBigDecimal("ACUMTOT_7");
+        this.acumTot8 = vo.asBigDecimal("ACUMTOT_8");
+        this.acumTot9 = vo.asBigDecimal("ACUMTOT_9");
         this.aliqCred = vo.asBigDecimal("ALIQCRED");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
@@ -4245,25 +4249,25 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.temSugGiroAjustado = vo.asString("TEMSUGGIROAJUSTADO");
         this.unPadrao = vo.asString("UNPADRAO");
         this.sugCompraGirMultCpa = vo.asBigDecimal("SUGCOMPRAGIRMULTCPA");
-        this.acumMarg4 = vo.asBigDecimal("ACUMMARG4");
-        this.acumMarg5 = vo.asBigDecimal("ACUMMARG5");
-        this.acumMarg6 = vo.asBigDecimal("ACUMMARG6");
-        this.acumMarg7 = vo.asBigDecimal("ACUMMARG7");
-        this.acumMarg8 = vo.asBigDecimal("ACUMMARG8");
-        this.acumMarg11 = vo.asBigDecimal("ACUMMARG11");
-        this.acumMarg12 = vo.asBigDecimal("ACUMMARG12");
-        this.acumPeso11 = vo.asBigDecimal("ACUMPESO11");
-        this.acumPeso12 = vo.asBigDecimal("ACUMPESO12");
-        this.acumPeso2 = vo.asBigDecimal("ACUMPESO2");
-        this.acumPeso3 = vo.asBigDecimal("ACUMPESO3");
+        this.acumMarg4 = vo.asBigDecimal("ACUMMARG_4");
+        this.acumMarg5 = vo.asBigDecimal("ACUMMARG_5");
+        this.acumMarg6 = vo.asBigDecimal("ACUMMARG_6");
+        this.acumMarg7 = vo.asBigDecimal("ACUMMARG_7");
+        this.acumMarg8 = vo.asBigDecimal("ACUMMARG_8");
+        this.acumMarg11 = vo.asBigDecimal("ACUMMARG_11");
+        this.acumMarg12 = vo.asBigDecimal("ACUMMARG_12");
+        this.acumPeso11 = vo.asBigDecimal("ACUMPESO_11");
+        this.acumPeso12 = vo.asBigDecimal("ACUMPESO_12");
+        this.acumPeso2 = vo.asBigDecimal("ACUMPESO_2");
+        this.acumPeso3 = vo.asBigDecimal("ACUMPESO_3");
         this.sugCompraMultCpa = vo.asBigDecimal("SUGCOMPRAMULTCPA");
         this.sugCpaGirAlterado = vo.asString("SUGCPAGIRALTERADO");
         this.percDescFornecedor = vo.asBigDecimal("PERCDESCFORNECEDOR");
         this.numCotacao = vo.asBigDecimal("NUMCOTACAO");
         this.wmsBloqueado = vo.asBigDecimal("WMSBLOQUEADO");
-        this.acumMarg2 = vo.asBigDecimal("ACUMMARG2");
-        this.acumMarg3 = vo.asBigDecimal("ACUMMARG3");
-        this.durEstPosCpaGir = vo.asBigDecimal("DURESTPOSCPAGIR");
+        this.accumMarg_2 = vo.asBigDecimal("ACUMMARG_2");
+        this.accumMarg_3 = vo.asBigDecimal("ACUMMARG_3");
+        this.durEstPosCpAgir = vo.asBigDecimal("DURESTPOSCPAGIR");
         this.durEstSeg = vo.asBigDecimal("DURESTSEG");
         this.diasUteis = vo.asBigDecimal("DIASUTEIS");
         this.prevEntrega = vo.asTimestamp("PREVENTREGA");
@@ -4272,18 +4276,18 @@ public class GiroProduto implements SankhyaEntity<GiroProduto> {
         this.vlrUltCompra = vo.asBigDecimal("VLRULTCOMPRA");
         this.possuiFam = vo.asString("POSSUIFAM");
         this.diasRuptura = vo.asBigDecimal("DIASRUPTURA");
-        this.diasRupturaEst1 = vo.asBigDecimal("DIASRUPTURAEST1");
-        this.diasRupturaEst10 = vo.asBigDecimal("DIASRUPTURAEST10");
-        this.diasRupturaEst11 = vo.asBigDecimal("DIASRUPTURAEST11");
-        this.diasRupturaEst12 = vo.asBigDecimal("DIASRUPTURAEST12");
-        this.diasRupturaEst2 = vo.asBigDecimal("DIASRUPTURAEST2");
-        this.diasRupturaEst3 = vo.asBigDecimal("DIASRUPTURAEST3");
-        this.diasRupturaEst4 = vo.asBigDecimal("DIASRUPTURAEST4");
-        this.diasRupturaEst5 = vo.asBigDecimal("DIASRUPTURAEST5");
-        this.diasRupturaEst6 = vo.asBigDecimal("DIASRUPTURAEST6");
-        this.diasRupturaEst7 = vo.asBigDecimal("DIASRUPTURAEST7");
-        this.diasRupturaEst8 = vo.asBigDecimal("DIASRUPTURAEST8");
-        this.diasRupturaEst9 = vo.asBigDecimal("DIASRUPTURAEST9");
+        this.diasRupturaEst_1 = vo.asBigDecimal("DIASRUPTURAEST_1");
+        this.diasRupturaEst_10 = vo.asBigDecimal("DIASRUPTURAEST_10");
+        this.diasRupturaEst_11 = vo.asBigDecimal("DIASRUPTURAEST_11");
+        this.diasRupturaEst_12 = vo.asBigDecimal("DIASRUPTURAEST_12");
+        this.diasRupturaEst_2 = vo.asBigDecimal("DIASRUPTURAEST_2");
+        this.diasRupturaEst_3 = vo.asBigDecimal("DIASRUPTURAEST_3");
+        this.diasRupturaEst_4 = vo.asBigDecimal("DIASRUPTURAEST_4");
+        this.diasRupturaEst_5 = vo.asBigDecimal("DIASRUPTURAEST_5");
+        this.diasRupturaEst_6 = vo.asBigDecimal("DIASRUPTURAEST_6");
+        this.diasRupturaEst_7 = vo.asBigDecimal("DIASRUPTURAEST_7");
+        this.diasRupturaEst_8 = vo.asBigDecimal("DIASRUPTURAEST_8");
+        this.diasRupturaEst_9 = vo.asBigDecimal("DIASRUPTURAEST_9");
         this.numMps = vo.asBigDecimal("NUMMPS");
         return this;
    }

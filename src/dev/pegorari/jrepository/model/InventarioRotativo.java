@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InventarioRotativo implements SankhyaEntity<InventarioRotativo> {
-
+public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo> {
    private String ativa;
    private BigDecimal codEmp;
    private BigDecimal codEnd;
@@ -231,6 +230,11 @@ public class InventarioRotativo implements SankhyaEntity<InventarioRotativo> {
 
    public void setQtdEstLogicaUmaPad(BigDecimal qtdEstLogicaUmaPad) {
         this.qtdEstLogicaUmaPad = qtdEstLogicaUmaPad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWIVR";
    }
 
    @Override

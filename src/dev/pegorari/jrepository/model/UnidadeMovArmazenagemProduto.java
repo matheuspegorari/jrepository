@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UnidadeMovArmazenagemProduto implements SankhyaEntity<UnidadeMovArmazenagemProduto> {
-
+public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeMovArmazenagemProduto> {
    private String codBarra;
    private BigDecimal codProd;
    private BigDecimal codUma;
@@ -50,6 +49,11 @@ public class UnidadeMovArmazenagemProduto implements SankhyaEntity<UnidadeMovArm
 
    public void setPadrao(String padrao) {
         this.padrao = padrao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPUMA";
    }
 
    @Override

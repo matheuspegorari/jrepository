@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Relacionamento implements SankhyaEntity<Relacionamento> {
-
+public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    private BigDecimal codAtendente;
    private BigDecimal codContato;
    private BigDecimal codHist;
@@ -186,6 +185,11 @@ public class Relacionamento implements SankhyaEntity<Relacionamento> {
 
    public void setNuAviso(BigDecimal nuAviso) {
         this.nuAviso = nuAviso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTEL";
    }
 
    @Override

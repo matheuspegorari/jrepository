@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TotalizadorAdicional implements SankhyaEntity<TotalizadorAdicional> {
-
+public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdicional> {
    private BigDecimal nuNota;
 
    public BigDecimal getNuNota() {
@@ -14,6 +13,11 @@ public class TotalizadorAdicional implements SankhyaEntity<TotalizadorAdicional>
 
    public void setNuNota(BigDecimal nuNota) {
         this.nuNota = nuNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTCA";
    }
 
    @Override

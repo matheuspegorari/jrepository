@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TarefaDependente implements SankhyaEntity<TarefaDependente> {
-
+public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    private BigDecimal nuTarefaDep;
    private BigDecimal nuTarefa;
    private BigDecimal qtdDep;
@@ -50,6 +49,11 @@ public class TarefaDependente implements SankhyaEntity<TarefaDependente> {
 
    public void setSequenciaDep(BigDecimal sequenciaDep) {
         this.sequenciaDep = sequenciaDep;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWTDP";
    }
 
    @Override

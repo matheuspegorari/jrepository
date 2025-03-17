@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SaldoBancario implements SankhyaEntity<SaldoBancario> {
-
+public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    private BigDecimal codCtabcoInt;
    private Timestamp referencia;
    private BigDecimal saldoBco;
@@ -42,6 +41,11 @@ public class SaldoBancario implements SankhyaEntity<SaldoBancario> {
 
    public void setSaldoReal(BigDecimal saldoReal) {
         this.saldoReal = saldoReal;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSBC";
    }
 
    @Override

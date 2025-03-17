@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RequisicaoSelecaoCurriculo implements SankhyaEntity<RequisicaoSelecaoCurriculo> {
-
+public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<RequisicaoSelecaoCurriculo> {
    private BigDecimal nuSelecao;
    private BigDecimal nuRequisicao;
 
@@ -23,6 +22,11 @@ public class RequisicaoSelecaoCurriculo implements SankhyaEntity<RequisicaoSelec
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         this.nuRequisicao = nuRequisicao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSRQS";
    }
 
    @Override

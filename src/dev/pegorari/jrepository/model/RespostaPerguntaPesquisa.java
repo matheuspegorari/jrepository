@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RespostaPerguntaPesquisa implements SankhyaEntity<RespostaPerguntaPesquisa> {
-
+public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerguntaPesquisa> {
    private byte[] anexo;
    private BigDecimal codPerg;
    private BigDecimal codResp;
@@ -19,7 +18,7 @@ public class RespostaPerguntaPesquisa implements SankhyaEntity<RespostaPerguntaP
    private String observacao;
    private String texto;
    private BigDecimal valor;
-   private String proibElimpeza;
+   private String proibElimepza;
 
    public byte[] getAnexo() {
         return anexo;
@@ -117,12 +116,17 @@ public class RespostaPerguntaPesquisa implements SankhyaEntity<RespostaPerguntaP
         this.valor = valor;
    }
 
-   public String getProibElimpeza() {
-        return proibElimpeza;
+   public String getProibElimepza() {
+        return proibElimepza;
    }
 
-   public void setProibElimpeza(String proibElimpeza) {
-        this.proibElimpeza = proibElimpeza;
+   public void setProibElimepza(String proibElimepza) {
+        this.proibElimepza = proibElimepza;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQRPE";
    }
 
    @Override
@@ -144,7 +148,7 @@ public class RespostaPerguntaPesquisa implements SankhyaEntity<RespostaPerguntaP
         this.observacao = vo.asString("OBSERVACAO");
         this.texto = vo.asString("TEXTO");
         this.valor = vo.asBigDecimal("VALOR");
-        this.proibElimpeza = vo.asString("PROIBELIMPEZA");
+        this.proibElimepza = vo.asString("PROIBELIMPEZA");
         return this;
    }
 }

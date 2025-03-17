@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RecursoModEtapa implements SankhyaEntity<RecursoModEtapa> {
-
+public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
    private BigDecimal codMetod;
    private BigDecimal codTipFuncao;
    private BigDecimal numModelo;
@@ -32,6 +31,11 @@ public class RecursoModEtapa implements SankhyaEntity<RecursoModEtapa> {
 
    public void setNumModelo(BigDecimal numModelo) {
         this.numModelo = numModelo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSMFU";
    }
 
    @Override

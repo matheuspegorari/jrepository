@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConsolidadorDados implements SankhyaEntity<ConsolidadorDados> {
-
+public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> {
    private String ativo;
    private BigDecimal codConsolidacao;
    private BigDecimal codUsu;
@@ -225,6 +224,11 @@ public class ConsolidadorDados implements SankhyaEntity<ConsolidadorDados> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSICND";
+   }
+
+   @Override
    public String getEntityName() {
         return "ConsolidadorDados";
    }
@@ -243,7 +247,7 @@ public class ConsolidadorDados implements SankhyaEntity<ConsolidadorDados> {
         this.expGatilho = vo.asString("EXPGATILHO");
         this.fonteDados = vo.asString("FONTEDADOS");
         this.invalido = vo.asString("INVALIDO");
-        this.logErro = vo.asString("LOGERRO");
+        this.logErro = vo.asString("LOG_ERRO");
         this.observacao = vo.asString("OBSERVACAO");
         this.qtdMesesConsolidar = vo.asBigDecimal("QTDMESESCONSOLIDAR");
         this.qtdMesesRetroagir = vo.asBigDecimal("QTDMESESRETROAGIR");

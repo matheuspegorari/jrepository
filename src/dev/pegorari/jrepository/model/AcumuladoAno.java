@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AcumuladoAno implements SankhyaEntity<AcumuladoAno> {
-
+public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    private BigDecimal ano;
    private BigDecimal codEmp;
    private BigDecimal codEvento;
@@ -294,6 +293,11 @@ public class AcumuladoAno implements SankhyaEntity<AcumuladoAno> {
 
    public void setVlrSetembro(BigDecimal vlrSetembro) {
         this.vlrSetembro = vlrSetembro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPACU";
    }
 
    @Override

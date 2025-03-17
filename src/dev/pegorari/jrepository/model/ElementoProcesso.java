@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ElementoProcesso implements SankhyaEntity<ElementoProcesso> {
-
+public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    private BigDecimal codPrn;
    private char[] documentacao;
-   private String expressCanditade;
+   private String expressCandidade;
    private String expressLanguage;
    private String idElemento;
    private String nome;
@@ -36,12 +35,12 @@ public class ElementoProcesso implements SankhyaEntity<ElementoProcesso> {
         this.documentacao = documentacao;
    }
 
-   public String getExpressCanditade() {
-        return expressCanditade;
+   public String getExpressCandidade() {
+        return expressCandidade;
    }
 
-   public void setExpressCanditade(String expressCanditade) {
-        this.expressCanditade = expressCanditade;
+   public void setExpressCandidade(String expressCandidade) {
+        this.expressCandidade = expressCandidade;
    }
 
    public String getExpressLanguage() {
@@ -125,6 +124,11 @@ public class ElementoProcesso implements SankhyaEntity<ElementoProcesso> {
    }
 
    @Override
+   public String getTableName() {
+        return "TWFELE";
+   }
+
+   @Override
    public String getEntityName() {
         return "ElementoProcesso";
    }
@@ -133,7 +137,7 @@ public class ElementoProcesso implements SankhyaEntity<ElementoProcesso> {
    public ElementoProcesso fromVO(DynamicVO vo) {
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.documentacao = vo.asClob("DOCUMENTACAO");
-        this.expressCanditade = vo.asString("EXPRESSCANDITADE");
+        this.expressCandidade = vo.asString("EXPRESSCANDITADE");
         this.expressLanguage = vo.asString("EXPRESSLANGUAGE");
         this.idElemento = vo.asString("IDELEMENTO");
         this.nome = vo.asString("NOME");

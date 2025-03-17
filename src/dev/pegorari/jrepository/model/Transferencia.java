@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Transferencia implements SankhyaEntity<Transferencia> {
-
+public class Transferencia extends AbstractSankhyaEntity<Transferencia> {
    private BigDecimal grau;
    private String marca;
    private BigDecimal nuAutInv;
@@ -432,6 +431,11 @@ public class Transferencia implements SankhyaEntity<Transferencia> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGMTRA";
+   }
+
+   @Override
    public String getEntityName() {
         return "Transferencia";
    }
@@ -455,7 +459,7 @@ public class Transferencia implements SankhyaEntity<Transferencia> {
         this.status = vo.asString("STATUS");
         this.tipo = vo.asString("TIPO");
         this.valor = vo.asBigDecimal("VALOR");
-        this.valorOrig = vo.asBigDecimal("VALORORIG");
+        this.valorOrig = vo.asBigDecimal("VALOR_ORIG");
         this.vlrDesdob = vo.asBigDecimal("VLRDESDOB");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");

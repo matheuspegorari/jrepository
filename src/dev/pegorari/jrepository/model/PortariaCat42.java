@@ -1,17 +1,16 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
-
+public class PortariaCat42 extends AbstractSankhyaEntity<PortariaCat42> {
    private BigDecimal vlrTotRessarcimento;
    private String arqConfirmado;
    private BigDecimal codEmp;
-   private String consFilTroNativo;
-   private String consMarcGrupRod;
+   private String consFilTronativo;
+   private String consMarcGruprod;
    private String consMarcProd;
    private Timestamp dtFinal;
    private Timestamp dtInicial;
@@ -19,7 +18,7 @@ public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
    private BigDecimal finApresentacao;
    private String temDivergencia;
    private BigDecimal tipApur;
-   private String usaVlrOrigSalDev;
+   private String usaVlrOrigSaldev;
    private BigDecimal versaoLayout;
    private BigDecimal totIcmsCredOperPropria;
    private BigDecimal vlrTotComplemento;
@@ -48,20 +47,20 @@ public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
         this.codEmp = codEmp;
    }
 
-   public String getConsFilTroNativo() {
-        return consFilTroNativo;
+   public String getConsFilTronativo() {
+        return consFilTronativo;
    }
 
-   public void setConsFilTroNativo(String consFilTroNativo) {
-        this.consFilTroNativo = consFilTroNativo;
+   public void setConsFilTronativo(String consFilTronativo) {
+        this.consFilTronativo = consFilTronativo;
    }
 
-   public String getConsMarcGrupRod() {
-        return consMarcGrupRod;
+   public String getConsMarcGruprod() {
+        return consMarcGruprod;
    }
 
-   public void setConsMarcGrupRod(String consMarcGrupRod) {
-        this.consMarcGrupRod = consMarcGrupRod;
+   public void setConsMarcGruprod(String consMarcGruprod) {
+        this.consMarcGruprod = consMarcGruprod;
    }
 
    public String getConsMarcProd() {
@@ -120,12 +119,12 @@ public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
         this.tipApur = tipApur;
    }
 
-   public String getUsaVlrOrigSalDev() {
-        return usaVlrOrigSalDev;
+   public String getUsaVlrOrigSaldev() {
+        return usaVlrOrigSaldev;
    }
 
-   public void setUsaVlrOrigSalDev(String usaVlrOrigSalDev) {
-        this.usaVlrOrigSalDev = usaVlrOrigSalDev;
+   public void setUsaVlrOrigSaldev(String usaVlrOrigSaldev) {
+        this.usaVlrOrigSaldev = usaVlrOrigSaldev;
    }
 
    public BigDecimal getVersaoLayout() {
@@ -153,17 +152,22 @@ public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAT42";
+   }
+
+   @Override
    public String getEntityName() {
         return "PortariaCat42";
    }
 
    @Override
    public PortariaCat42 fromVO(DynamicVO vo) {
-        this.vlrTotRessarcimento = vo.asBigDecimal("VLRTOTRESSARCIMENTO");
+        this.vlrTotRessarcimento = vo.asBigDecimal("VLR_TOT_RESSARCIMENTO");
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
-        this.consFilTroNativo = vo.asString("CONSFILTRONATIVO");
-        this.consMarcGrupRod = vo.asString("CONSMARCGRUPROD");
+        this.consFilTronativo = vo.asString("CONSFILTRONATIVO");
+        this.consMarcGruprod = vo.asString("CONSMARCGRUPROD");
         this.consMarcProd = vo.asString("CONSMARCPROD");
         this.dtFinal = vo.asTimestamp("DTFINAL");
         this.dtInicial = vo.asTimestamp("DTINICIAL");
@@ -171,10 +175,10 @@ public class PortariaCat42 implements SankhyaEntity<PortariaCat42> {
         this.finApresentacao = vo.asBigDecimal("FINAPRESENTACAO");
         this.temDivergencia = vo.asString("TEMDIVERGENCIA");
         this.tipApur = vo.asBigDecimal("TIPAPUR");
-        this.usaVlrOrigSalDev = vo.asString("USAVLRORIGSALDEV");
+        this.usaVlrOrigSaldev = vo.asString("USAVLRORIGSALDEV");
         this.versaoLayout = vo.asBigDecimal("VERSAOLAYOUT");
-        this.totIcmsCredOperPropria = vo.asBigDecimal("TOTICMSCREDOPERPROPRIA");
-        this.vlrTotComplemento = vo.asBigDecimal("VLRTOTCOMPLEMENTO");
+        this.totIcmsCredOperPropria = vo.asBigDecimal("TOT_ICMS_CRED_OPER_PROPRIA");
+        this.vlrTotComplemento = vo.asBigDecimal("VLR_TOT_COMPLEMENTO");
         return this;
    }
 }

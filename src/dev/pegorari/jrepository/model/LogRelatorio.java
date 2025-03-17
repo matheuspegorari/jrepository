@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LogRelatorio implements SankhyaEntity<LogRelatorio> {
-
+public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    private String className;
    private BigDecimal codUsu;
    private String consulta;
@@ -69,6 +68,11 @@ public class LogRelatorio implements SankhyaEntity<LogRelatorio> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSILRE";
    }
 
    @Override

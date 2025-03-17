@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MotoristaCTe implements SankhyaEntity<MotoristaCTe> {
-
+public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
    private BigDecimal nuNota;
    private BigDecimal codParc;
    private BigDecimal seqMot;
@@ -32,6 +31,11 @@ public class MotoristaCTe implements SankhyaEntity<MotoristaCTe> {
 
    public void setSeqMot(BigDecimal seqMot) {
         this.seqMot = seqMot;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMOT";
    }
 
    @Override

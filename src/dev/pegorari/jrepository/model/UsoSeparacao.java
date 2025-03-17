@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UsoSeparacao implements SankhyaEntity<UsoSeparacao> {
-
+public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    private String agrupFinNotas;
    private BigDecimal codTipOperPrinc;
    private String confirmNotasFat;
@@ -86,6 +85,11 @@ public class UsoSeparacao implements SankhyaEntity<UsoSeparacao> {
 
    public void setUsoSeparacao(String usoSeparacao) {
         this.usoSeparacao = usoSeparacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFUSE";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LancamentoDeOP implements SankhyaEntity<LancamentoDeOP> {
-
+public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    private BigDecimal nuLop;
    private Timestamp dhInc;
    private BigDecimal codUsu;
@@ -60,6 +59,11 @@ public class LancamentoDeOP implements SankhyaEntity<LancamentoDeOP> {
 
    public void setNumPs(BigDecimal numPs) {
         this.numPs = numPs;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRLOP";
    }
 
    @Override

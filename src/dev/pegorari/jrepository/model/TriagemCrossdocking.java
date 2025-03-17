@@ -1,17 +1,16 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TriagemCrossdocking implements SankhyaEntity<TriagemCrossdocking> {
-
+public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocking> {
    private String codBarra;
    private BigDecimal codProd;
    private BigDecimal codUsuConf;
    private String controle;
-   private String crossDocking;
+   private String crossdocking;
    private Timestamp dhAlter;
    private BigDecimal nuRecebimento;
    private BigDecimal qtdTriada;
@@ -50,12 +49,12 @@ public class TriagemCrossdocking implements SankhyaEntity<TriagemCrossdocking> {
         this.controle = controle;
    }
 
-   public String getCrossDocking() {
-        return crossDocking;
+   public String getCrossdocking() {
+        return crossdocking;
    }
 
-   public void setCrossDocking(String crossDocking) {
-        this.crossDocking = crossDocking;
+   public void setCrossdocking(String crossdocking) {
+        this.crossdocking = crossdocking;
    }
 
    public Timestamp getDhAlter() {
@@ -99,6 +98,11 @@ public class TriagemCrossdocking implements SankhyaEntity<TriagemCrossdocking> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGWTRCD";
+   }
+
+   @Override
    public String getEntityName() {
         return "TriagemCrossdocking";
    }
@@ -109,7 +113,7 @@ public class TriagemCrossdocking implements SankhyaEntity<TriagemCrossdocking> {
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
         this.controle = vo.asString("CONTROLE");
-        this.crossDocking = vo.asString("CROSSDOCKING");
+        this.crossdocking = vo.asString("CROSSDOCKING");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
         this.qtdTriada = vo.asBigDecimal("QTDTRIADA");

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItensPesagem implements SankhyaEntity<ItensPesagem> {
-
+public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    private BigDecimal codParc;
    private BigDecimal codProc;
    private BigDecimal codProd;
@@ -140,6 +139,11 @@ public class ItensPesagem implements SankhyaEntity<ItensPesagem> {
 
    public void setControle(String controle) {
         this.controle = controle;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGAPESI";
    }
 
    @Override

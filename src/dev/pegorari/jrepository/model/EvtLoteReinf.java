@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EvtLoteReinf implements SankhyaEntity<EvtLoteReinf> {
-
+public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    private Timestamp dhInc;
    private Timestamp dhPrevConsulta;
    private char[] msg;
@@ -87,6 +86,11 @@ public class EvtLoteReinf implements SankhyaEntity<EvtLoteReinf> {
 
    public void setTpAmb(BigDecimal tpAmb) {
         this.tpAmb = tpAmb;
+   }
+
+   @Override
+   public String getTableName() {
+        return "EVTLOTEREINF";
    }
 
    @Override

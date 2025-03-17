@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegistroParadaEquipamento implements SankhyaEntity<RegistroParadaEquipamento> {
-
+public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroParadaEquipamento> {
    private BigDecimal codEquip;
    private BigDecimal codMotPar;
    private Timestamp dhFim;
@@ -51,6 +50,11 @@ public class RegistroParadaEquipamento implements SankhyaEntity<RegistroParadaEq
 
    public void setObservacao(String observacao) {
         this.observacao = observacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWRPR";
    }
 
    @Override

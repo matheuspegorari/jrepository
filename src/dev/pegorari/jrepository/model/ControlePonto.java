@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ControlePonto implements SankhyaEntity<ControlePonto> {
-
+public class ControlePonto extends AbstractSankhyaEntity<ControlePonto> {
    private BigDecimal codEmp;
    private BigDecimal codFunc;
    private BigDecimal codHistocor;
@@ -114,6 +113,11 @@ public class ControlePonto implements SankhyaEntity<ControlePonto> {
 
    public void setTurno(BigDecimal turno) {
         this.turno = turno;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPPON";
    }
 
    @Override

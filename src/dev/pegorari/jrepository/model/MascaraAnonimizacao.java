@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MascaraAnonimizacao implements SankhyaEntity<MascaraAnonimizacao> {
-
+public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizacao> {
    private BigDecimal codMasAno;
    private BigDecimal codUsuAlter;
    private BigDecimal codUsuCriac;
@@ -69,6 +68,11 @@ public class MascaraAnonimizacao implements SankhyaEntity<MascaraAnonimizacao> {
 
    public void setTipoCampo(String tipoCampo) {
         this.tipoCampo = tipoCampo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIMASANO";
    }
 
    @Override

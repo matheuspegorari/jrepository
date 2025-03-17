@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MaterialMRP implements SankhyaEntity<MaterialMRP> {
-
+public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    private String tipoQtd;
    private BigDecimal qtdMistura;
    private BigDecimal qtdTotal;
@@ -95,6 +94,11 @@ public class MaterialMRP implements SankhyaEntity<MaterialMRP> {
 
    public void setTipoSubOp(String tipoSubOp) {
         this.tipoSubOp = tipoSubOp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRBOM";
    }
 
    @Override

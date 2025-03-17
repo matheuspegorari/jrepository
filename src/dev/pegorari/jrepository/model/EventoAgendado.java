@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EventoAgendado implements SankhyaEntity<EventoAgendado> {
-
+public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    private BigDecimal nuSelecao;
    private BigDecimal nuCurriculo;
    private BigDecimal codEtapa;
@@ -37,7 +36,7 @@ public class EventoAgendado implements SankhyaEntity<EventoAgendado> {
    private Timestamp dhCancelamento;
    private String changeKey;
    private String idOffice;
-   private BigDecimal numContrato;
+   private BigDecimal nuContrato;
    private BigDecimal falhaSinc;
    private BigDecimal codPap;
 
@@ -281,12 +280,12 @@ public class EventoAgendado implements SankhyaEntity<EventoAgendado> {
         this.idOffice = idOffice;
    }
 
-   public BigDecimal getNumContrato() {
-        return numContrato;
+   public BigDecimal getNuContrato() {
+        return nuContrato;
    }
 
-   public void setNumContrato(BigDecimal numContrato) {
-        this.numContrato = numContrato;
+   public void setNuContrato(BigDecimal nuContrato) {
+        this.nuContrato = nuContrato;
    }
 
    public BigDecimal getFalhaSinc() {
@@ -303,6 +302,11 @@ public class EventoAgendado implements SankhyaEntity<EventoAgendado> {
 
    public void setCodPap(BigDecimal codPap) {
         this.codPap = codPap;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSEAG";
    }
 
    @Override
@@ -342,7 +346,7 @@ public class EventoAgendado implements SankhyaEntity<EventoAgendado> {
         this.dhCancelamento = vo.asTimestamp("DHCANCELAMENTO");
         this.changeKey = vo.asString("CHANGEKEY");
         this.idOffice = vo.asString("IDOFFICE");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
+        this.nuContrato = vo.asBigDecimal("NUMCONTRATO");
         this.falhaSinc = vo.asBigDecimal("FALHASINC");
         this.codPap = vo.asBigDecimal("CODPAP");
         return this;

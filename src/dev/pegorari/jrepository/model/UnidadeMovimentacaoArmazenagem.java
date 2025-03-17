@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UnidadeMovimentacaoArmazenagem implements SankhyaEntity<UnidadeMovimentacaoArmazenagem> {
-
+public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<UnidadeMovimentacaoArmazenagem> {
    private BigDecimal codUma;
-   private String descUma;
+   private String descrUma;
    private BigDecimal peso;
 
    public BigDecimal getCodUma() {
@@ -18,12 +17,12 @@ public class UnidadeMovimentacaoArmazenagem implements SankhyaEntity<UnidadeMovi
         this.codUma = codUma;
    }
 
-   public String getDescUma() {
-        return descUma;
+   public String getDescrUma() {
+        return descrUma;
    }
 
-   public void setDescUma(String descUma) {
-        this.descUma = descUma;
+   public void setDescrUma(String descrUma) {
+        this.descrUma = descrUma;
    }
 
    public BigDecimal getPeso() {
@@ -35,6 +34,11 @@ public class UnidadeMovimentacaoArmazenagem implements SankhyaEntity<UnidadeMovi
    }
 
    @Override
+   public String getTableName() {
+        return "TGFUMA";
+   }
+
+   @Override
    public String getEntityName() {
         return "UnidadeMovimentacaoArmazenagem";
    }
@@ -42,7 +46,7 @@ public class UnidadeMovimentacaoArmazenagem implements SankhyaEntity<UnidadeMovi
    @Override
    public UnidadeMovimentacaoArmazenagem fromVO(DynamicVO vo) {
         this.codUma = vo.asBigDecimal("CODUMA");
-        this.descUma = vo.asString("DESCUMA");
+        this.descrUma = vo.asString("DESCRUMA");
         this.peso = vo.asBigDecimal("PESO");
         return this;
    }

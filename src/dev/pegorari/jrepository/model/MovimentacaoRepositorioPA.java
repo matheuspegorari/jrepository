@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentacaoRepositorioPA implements SankhyaEntity<MovimentacaoRepositorioPA> {
-
+public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<MovimentacaoRepositorioPA> {
    private BigDecimal codCpm;
    private BigDecimal codProdPa;
    private String controlePa;
    private Timestamp dhMov;
    private BigDecimal idIatv;
-   private BigDecimal idIproc;
+   private BigDecimal idProc;
    private BigDecimal idMer;
    private BigDecimal idRpa;
    private BigDecimal qtd;
@@ -61,12 +60,12 @@ public class MovimentacaoRepositorioPA implements SankhyaEntity<MovimentacaoRepo
         this.idIatv = idIatv;
    }
 
-   public BigDecimal getIdIproc() {
-        return idIproc;
+   public BigDecimal getIdProc() {
+        return idProc;
    }
 
-   public void setIdIproc(BigDecimal idIproc) {
-        this.idIproc = idIproc;
+   public void setIdProc(BigDecimal idProc) {
+        this.idProc = idProc;
    }
 
    public BigDecimal getIdMer() {
@@ -126,6 +125,11 @@ public class MovimentacaoRepositorioPA implements SankhyaEntity<MovimentacaoRepo
    }
 
    @Override
+   public String getTableName() {
+        return "TPRMER";
+   }
+
+   @Override
    public String getEntityName() {
         return "MovimentacaoRepositorioPA";
    }
@@ -137,7 +141,7 @@ public class MovimentacaoRepositorioPA implements SankhyaEntity<MovimentacaoRepo
         this.controlePa = vo.asString("CONTROLEPA");
         this.dhMov = vo.asTimestamp("DHMOV");
         this.idIatv = vo.asBigDecimal("IDIATV");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
+        this.idProc = vo.asBigDecimal("IDIPROC");
         this.idMer = vo.asBigDecimal("IDMER");
         this.idRpa = vo.asBigDecimal("IDRPA");
         this.qtd = vo.asBigDecimal("QTD");

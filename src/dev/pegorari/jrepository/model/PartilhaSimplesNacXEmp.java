@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PartilhaSimplesNacXEmp implements SankhyaEntity<PartilhaSimplesNacXEmp> {
-
+public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimplesNacXEmp> {
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private Timestamp dtRef;
@@ -60,6 +59,11 @@ public class PartilhaSimplesNacXEmp implements SankhyaEntity<PartilhaSimplesNacX
 
    public void setTipoSn(BigDecimal tipoSn) {
         this.tipoSn = tipoSn;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEMPSN";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotasMudancaTributacao implements SankhyaEntity<NotasMudancaTributacao> {
-
+public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTributacao> {
    private BigDecimal baseSubstit;
    private BigDecimal baseSubstitRec;
    private BigDecimal baseSubstitUn;
@@ -96,6 +95,11 @@ public class NotasMudancaTributacao implements SankhyaEntity<NotasMudancaTributa
 
    public void setDigitado(String digitado) {
         this.digitado = digitado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNPMT";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoKit implements SankhyaEntity<ConfiguracaoKit> {
-
+public class ConfiguracaoKit extends AbstractSankhyaEntity<ConfiguracaoKit> {
    private String distDescKitComp;
    private String calcImpKit;
    private String distribuiKitComp;
@@ -104,6 +103,11 @@ public class ConfiguracaoKit implements SankhyaEntity<ConfiguracaoKit> {
 
    public void setFaKitEstComp(String faKitEstComp) {
         this.faKitEstComp = faKitEstComp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIKIT";
    }
 
    @Override

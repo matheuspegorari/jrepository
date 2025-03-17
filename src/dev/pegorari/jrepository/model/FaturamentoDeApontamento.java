@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FaturamentoDeApontamento implements SankhyaEntity<FaturamentoDeApontamento> {
-
+public class FaturamentoDeApontamento extends AbstractSankhyaEntity<FaturamentoDeApontamento> {
    private BigDecimal nuNota;
    private BigDecimal nuApo;
    private BigDecimal seqApa;
@@ -50,6 +49,11 @@ public class FaturamentoDeApontamento implements SankhyaEntity<FaturamentoDeApon
 
    public void setQtd(BigDecimal qtd) {
         this.qtd = qtd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRAPF";
    }
 
    @Override

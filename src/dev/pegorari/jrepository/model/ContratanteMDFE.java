@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ContratanteMDFE implements SankhyaEntity<ContratanteMDFE> {
-
+public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
    private BigDecimal seqMdfe;
    private BigDecimal codParcContr;
    private BigDecimal nuViag;
@@ -32,6 +31,11 @@ public class ContratanteMDFE implements SankhyaEntity<ContratanteMDFE> {
 
    public void setNuViag(BigDecimal nuViag) {
         this.nuViag = nuViag;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCONTR";
    }
 
    @Override

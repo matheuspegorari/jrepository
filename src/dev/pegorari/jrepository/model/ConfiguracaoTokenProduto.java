@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoTokenProduto implements SankhyaEntity<ConfiguracaoTokenProduto> {
-
+public class ConfiguracaoTokenProduto extends AbstractSankhyaEntity<ConfiguracaoTokenProduto> {
    private String ativo;
    private BigDecimal codCfg;
    private Timestamp dhUltExec;
@@ -33,6 +32,11 @@ public class ConfiguracaoTokenProduto implements SankhyaEntity<ConfiguracaoToken
 
    public void setDhUltExec(Timestamp dhUltExec) {
         this.dhUltExec = dhUltExec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTOKCFG";
    }
 
    @Override

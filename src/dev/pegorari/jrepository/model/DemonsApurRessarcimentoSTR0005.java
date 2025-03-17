@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DemonsApurRessarcimentoSTR0005 implements SankhyaEntity<DemonsApurRessarcimentoSTR0005> {
-
+public class DemonsApurRessarcimentoSTR0005 extends AbstractSankhyaEntity<DemonsApurRessarcimentoSTR0005> {
    private String bairro;
    private String cep;
    private BigDecimal codEmp;
@@ -132,6 +131,11 @@ public class DemonsApurRessarcimentoSTR0005 implements SankhyaEntity<DemonsApurR
 
    public void setReg(String reg) {
         this.reg = reg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDRCSTR0005";
    }
 
    @Override

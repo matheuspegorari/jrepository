@@ -1,15 +1,14 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CodigoIdentOperacaoTransporte implements SankhyaEntity<CodigoIdentOperacaoTransporte> {
-
+public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoIdentOperacaoTransporte> {
    private BigDecimal seqMdfe;
    private String ciot;
    private BigDecimal nuViag;
-   private BigDecimal codParcciot;
+   private BigDecimal codParCciot;
 
    public BigDecimal getSeqMdfe() {
         return seqMdfe;
@@ -35,12 +34,17 @@ public class CodigoIdentOperacaoTransporte implements SankhyaEntity<CodigoIdentO
         this.nuViag = nuViag;
    }
 
-   public BigDecimal getCodParcciot() {
-        return codParcciot;
+   public BigDecimal getCodParCciot() {
+        return codParCciot;
    }
 
-   public void setCodParcciot(BigDecimal codParcciot) {
-        this.codParcciot = codParcciot;
+   public void setCodParCciot(BigDecimal codParCciot) {
+        this.codParCciot = codParCciot;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCIOT";
    }
 
    @Override
@@ -53,7 +57,7 @@ public class CodigoIdentOperacaoTransporte implements SankhyaEntity<CodigoIdentO
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.ciot = vo.asString("CIOT");
         this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.codParcciot = vo.asBigDecimal("CODPARCCIOT");
+        this.codParCciot = vo.asBigDecimal("CODPARCCIOT");
         return this;
    }
 }

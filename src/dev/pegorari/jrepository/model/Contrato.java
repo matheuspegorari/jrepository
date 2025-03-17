@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Contrato implements SankhyaEntity<Contrato> {
-
+public class Contrato extends AbstractSankhyaEntity<Contrato> {
    private String temIrf;
    private String temIss;
    private String temMed;
@@ -87,8 +86,8 @@ public class Contrato implements SankhyaEntity<Contrato> {
    private BigDecimal totalProvPendente;
    private BigDecimal valor;
    private String contrOrgPublico;
-   private String faturProRata;
-   private String grupoFaturProRata;
+   private String faturProrata;
+   private String grupoFaturProrata;
    private String serFaturCon;
    private BigDecimal topFaturCon;
    private String controlocBens;
@@ -98,10 +97,10 @@ public class Contrato implements SankhyaEntity<Contrato> {
    private String locacaoBem;
    private String gerarFinNota;
    private BigDecimal codUsuAlter;
-   private String temCriRatesp;
+   private String temCrIratEsp;
    private BigDecimal codServEx;
-   private String numContin;
-   private String cobProporCar;
+   private String numContIn;
+   private String cobPropOrCar;
    private BigDecimal codCencusAr;
    private BigDecimal codCencusEx;
    private BigDecimal codNatAr;
@@ -806,20 +805,20 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.contrOrgPublico = contrOrgPublico;
    }
 
-   public String getFaturProRata() {
-        return faturProRata;
+   public String getFaturProrata() {
+        return faturProrata;
    }
 
-   public void setFaturProRata(String faturProRata) {
-        this.faturProRata = faturProRata;
+   public void setFaturProrata(String faturProrata) {
+        this.faturProrata = faturProrata;
    }
 
-   public String getGrupoFaturProRata() {
-        return grupoFaturProRata;
+   public String getGrupoFaturProrata() {
+        return grupoFaturProrata;
    }
 
-   public void setGrupoFaturProRata(String grupoFaturProRata) {
-        this.grupoFaturProRata = grupoFaturProRata;
+   public void setGrupoFaturProrata(String grupoFaturProrata) {
+        this.grupoFaturProrata = grupoFaturProrata;
    }
 
    public String getSerFaturCon() {
@@ -894,12 +893,12 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.codUsuAlter = codUsuAlter;
    }
 
-   public String getTemCriRatesp() {
-        return temCriRatesp;
+   public String getTemCrIratEsp() {
+        return temCrIratEsp;
    }
 
-   public void setTemCriRatesp(String temCriRatesp) {
-        this.temCriRatesp = temCriRatesp;
+   public void setTemCrIratEsp(String temCrIratEsp) {
+        this.temCrIratEsp = temCrIratEsp;
    }
 
    public BigDecimal getCodServEx() {
@@ -910,20 +909,20 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.codServEx = codServEx;
    }
 
-   public String getNumContin() {
-        return numContin;
+   public String getNumContIn() {
+        return numContIn;
    }
 
-   public void setNumContin(String numContin) {
-        this.numContin = numContin;
+   public void setNumContIn(String numContIn) {
+        this.numContIn = numContIn;
    }
 
-   public String getCobProporCar() {
-        return cobProporCar;
+   public String getCobPropOrCar() {
+        return cobPropOrCar;
    }
 
-   public void setCobProporCar(String cobProporCar) {
-        this.cobProporCar = cobProporCar;
+   public void setCobPropOrCar(String cobPropOrCar) {
+        this.cobPropOrCar = cobPropOrCar;
    }
 
    public BigDecimal getCodCencusAr() {
@@ -1431,6 +1430,11 @@ public class Contrato implements SankhyaEntity<Contrato> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSCON";
+   }
+
+   @Override
    public String getEntityName() {
         return "Contrato";
    }
@@ -1517,8 +1521,8 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.totalProvPendente = vo.asBigDecimal("TOTALPROVPENDENTE");
         this.valor = vo.asBigDecimal("VALOR");
         this.contrOrgPublico = vo.asString("CONTRORGPUBLICO");
-        this.faturProRata = vo.asString("FATURPRORATA");
-        this.grupoFaturProRata = vo.asString("GRUPOFATURPRORATA");
+        this.faturProrata = vo.asString("FATURPRORATA");
+        this.grupoFaturProrata = vo.asString("GRUPOFATURPRORATA");
         this.serFaturCon = vo.asString("SERFATURCON");
         this.topFaturCon = vo.asBigDecimal("TOPFATURCON");
         this.controlocBens = vo.asString("CONTROLOCBENS");
@@ -1528,10 +1532,10 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.locacaoBem = vo.asString("LOCACAOBEM");
         this.gerarFinNota = vo.asString("GERARFINNOTA");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.temCriRatesp = vo.asString("TEMCRIRATESP");
+        this.temCrIratEsp = vo.asString("TEMCRIRATESP");
         this.codServEx = vo.asBigDecimal("CODSERVEX");
-        this.numContin = vo.asString("NUMCONTIN");
-        this.cobProporCar = vo.asString("COBPROPORCAR");
+        this.numContIn = vo.asString("NUMCONTIN");
+        this.cobPropOrCar = vo.asString("COBPROPORCAR");
         this.codCencusAr = vo.asBigDecimal("CODCENCUSAR");
         this.codCencusEx = vo.asBigDecimal("CODCENCUSEX");
         this.codNatAr = vo.asBigDecimal("CODNATAR");
@@ -1546,8 +1550,8 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.padClass = vo.asBigDecimal("PADCLASS");
         this.percObra = vo.asString("PERCOBRA");
         this.percObraAr = vo.asString("PERCOBRAAR");
-        this.percDesc = vo.asString("PERCDESC");
-        this.percDescon = vo.asString("PERCDESCON");
+        this.percDesc = vo.asString("PERDESC");
+        this.percDescon = vo.asString("PERDESCON");
         this.quebraTec = vo.asBigDecimal("QUEBRATEC");
         this.respPagar = vo.asBigDecimal("RESPPAGAR");
         this.sitCont = vo.asString("SITCONT");
@@ -1577,7 +1581,7 @@ public class Contrato implements SankhyaEntity<Contrato> {
         this.formFatArmaze = vo.asString("FORMFATARMAZE");
         this.formFatExpRec = vo.asString("FORMFATEXPREC");
         this.valQuebTrans = vo.asBigDecimal("VALQUEBTRANS");
-        this.cifFob = vo.asString("CIFFOB");
+        this.cifFob = vo.asString("CIF_FOB");
         this.endereco = vo.asString("ENDERECO");
         this.inscEst = vo.asString("INSCEST");
         this.nomeParc = vo.asString("NOMEPARC");

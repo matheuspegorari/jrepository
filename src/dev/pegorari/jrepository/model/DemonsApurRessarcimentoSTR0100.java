@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DemonsApurRessarcimentoSTR0100 implements SankhyaEntity<DemonsApurRessarcimentoSTR0100> {
-
+public class DemonsApurRessarcimentoSTR0100 extends AbstractSankhyaEntity<DemonsApurRessarcimentoSTR0100> {
    private String digitado;
    private Timestamp dtFinal;
    private Timestamp dtInicial;
@@ -168,6 +167,11 @@ public class DemonsApurRessarcimentoSTR0100 implements SankhyaEntity<DemonsApurR
 
    public void setCrc(String crc) {
         this.crc = crc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDRCSTR0100";
    }
 
    @Override

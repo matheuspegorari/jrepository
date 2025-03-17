@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ProdutoDivergente implements SankhyaEntity<ProdutoDivergente> {
-
+public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> {
    private BigDecimal codProd;
    private String codVol;
    private String controle;
@@ -50,6 +49,11 @@ public class ProdutoDivergente implements SankhyaEntity<ProdutoDivergente> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPDD";
    }
 
    @Override

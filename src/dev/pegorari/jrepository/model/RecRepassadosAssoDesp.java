@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RecRepassadosAssoDesp implements SankhyaEntity<RecRepassadosAssoDesp> {
-
+public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAssoDesp> {
    private String chave;
    private BigDecimal codEmp;
    private BigDecimal codEmpEstab;
@@ -252,6 +251,11 @@ public class RecRepassadosAssoDesp implements SankhyaEntity<RecRepassadosAssoDes
    }
 
    @Override
+   public String getTableName() {
+        return "TRIRRAD";
+   }
+
+   @Override
    public String getEntityName() {
         return "RecRepassadosAssoDesp";
    }
@@ -268,8 +272,8 @@ public class RecRepassadosAssoDesp implements SankhyaEntity<RecRepassadosAssoDes
         this.msg = vo.asString("MSG");
         this.nrInsc = vo.asString("NRINSC");
         this.nrInscEstab = vo.asString("NRINSCESTAB");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.statusReg = vo.asString("STATUSREG");
         this.tipo = vo.asString("TIPO");

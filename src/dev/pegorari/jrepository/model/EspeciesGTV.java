@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EspeciesGTV implements SankhyaEntity<EspeciesGTV> {
-
+public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    private String idInfGtv;
    private String numInfGtv;
    private BigDecimal nuNota;
@@ -50,6 +49,11 @@ public class EspeciesGTV implements SankhyaEntity<EspeciesGTV> {
 
    public void setVlrEspecie(BigDecimal vlrEspecie) {
         this.vlrEspecie = vlrEspecie;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEGTV";
    }
 
    @Override

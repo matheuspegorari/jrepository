@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Funcionario implements SankhyaEntity<Funcionario> {
-
+public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    private BigDecimal dependConvMed;
    private BigDecimal dependIrf;
    private BigDecimal dependSalFam;
@@ -54,7 +53,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private BigDecimal codCateg;
    private BigDecimal codCid;
    private BigDecimal codCidTrab;
-   private String codCtAbco;
+   private String codCtBco;
    private BigDecimal codDep;
    private BigDecimal codEmp;
    private BigDecimal codEmpOrig;
@@ -98,7 +97,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private BigDecimal percConv;
    private String pis;
    private Timestamp primeiraCnh;
-   private String primeEmprego;
+   private String primEmprego;
    private BigDecimal racaFuncionario;
    private BigDecimal regime;
    private BigDecimal remuMinima;
@@ -165,7 +164,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private String cpfSubstituido;
    private String crmMedicoAso;
    private BigDecimal diasAvisoPrevio;
-   private BigDecimal diasEmGrupoHr;
+   private BigDecimal diaSemGrupoHr;
    private String dispensaPonto;
    private String dispPerExp;
    private String dscAtivDes;
@@ -173,7 +172,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private Timestamp dtAltCpf;
    private Timestamp dtAso;
    private Timestamp dtEmiCertCivil;
-   private Timestamp dtEmiPporte;
+   private Timestamp dtEmiPorte;
    private Timestamp dtEsocial2205;
    private Timestamp dtEsocial2206;
    private Timestamp dtExpOc;
@@ -187,11 +186,11 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private Timestamp dtTransfDest;
    private Timestamp dtUltEnvEsocial;
    private Timestamp dtValOc;
-   private Timestamp dtValPporte;
+   private Timestamp dtValPorte;
    private Timestamp dtVencExp1Or;
    private Timestamp dtVencExp2Or;
    private Timestamp dtVincEmpAnt;
-   private String emissorPporte;
+   private String emissorPorte;
    private String envEsocial;
    private Timestamp fimValeSocial;
    private String idConsig;
@@ -212,7 +211,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private String matriculaOld;
    private String medicoAso;
    private String mei;
-   private String meTerg;
+   private String metErg;
    private BigDecimal mtvDesligTsv;
    private String nifBenef;
    private String nisEnviado;
@@ -272,10 +271,10 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    private BigDecimal tpRegTrabCed;
    private String trabAposent;
    private String ufCrmMedAso;
-   private BigDecimal ufPporte;
+   private BigDecimal ufPorte;
    private BigDecimal codCategEsocial;
    private BigDecimal codCidRic;
-   private String complementOrg;
+   private String complementoRg;
    private Timestamp dtEmiRic;
    private Timestamp dtExpCnh;
    private String nroRic;
@@ -722,12 +721,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.codCidTrab = codCidTrab;
    }
 
-   public String getCodCtAbco() {
-        return codCtAbco;
+   public String getCodCtBco() {
+        return codCtBco;
    }
 
-   public void setCodCtAbco(String codCtAbco) {
-        this.codCtAbco = codCtAbco;
+   public void setCodCtBco(String codCtBco) {
+        this.codCtBco = codCtBco;
    }
 
    public BigDecimal getCodDep() {
@@ -1074,12 +1073,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.primeiraCnh = primeiraCnh;
    }
 
-   public String getPrimeEmprego() {
-        return primeEmprego;
+   public String getPrimEmprego() {
+        return primEmprego;
    }
 
-   public void setPrimeEmprego(String primeEmprego) {
-        this.primeEmprego = primeEmprego;
+   public void setPrimEmprego(String primEmprego) {
+        this.primEmprego = primEmprego;
    }
 
    public BigDecimal getRacaFuncionario() {
@@ -1610,12 +1609,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.diasAvisoPrevio = diasAvisoPrevio;
    }
 
-   public BigDecimal getDiasEmGrupoHr() {
-        return diasEmGrupoHr;
+   public BigDecimal getDiaSemGrupoHr() {
+        return diaSemGrupoHr;
    }
 
-   public void setDiasEmGrupoHr(BigDecimal diasEmGrupoHr) {
-        this.diasEmGrupoHr = diasEmGrupoHr;
+   public void setDiaSemGrupoHr(BigDecimal diaSemGrupoHr) {
+        this.diaSemGrupoHr = diaSemGrupoHr;
    }
 
    public String getDispensaPonto() {
@@ -1674,12 +1673,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.dtEmiCertCivil = dtEmiCertCivil;
    }
 
-   public Timestamp getDtEmiPporte() {
-        return dtEmiPporte;
+   public Timestamp getDtEmiPorte() {
+        return dtEmiPorte;
    }
 
-   public void setDtEmiPporte(Timestamp dtEmiPporte) {
-        this.dtEmiPporte = dtEmiPporte;
+   public void setDtEmiPorte(Timestamp dtEmiPorte) {
+        this.dtEmiPorte = dtEmiPorte;
    }
 
    public Timestamp getDtEsocial2205() {
@@ -1786,12 +1785,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.dtValOc = dtValOc;
    }
 
-   public Timestamp getDtValPporte() {
-        return dtValPporte;
+   public Timestamp getDtValPorte() {
+        return dtValPorte;
    }
 
-   public void setDtValPporte(Timestamp dtValPporte) {
-        this.dtValPporte = dtValPporte;
+   public void setDtValPorte(Timestamp dtValPorte) {
+        this.dtValPorte = dtValPorte;
    }
 
    public Timestamp getDtVencExp1Or() {
@@ -1818,12 +1817,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.dtVincEmpAnt = dtVincEmpAnt;
    }
 
-   public String getEmissorPporte() {
-        return emissorPporte;
+   public String getEmissorPorte() {
+        return emissorPorte;
    }
 
-   public void setEmissorPporte(String emissorPporte) {
-        this.emissorPporte = emissorPporte;
+   public void setEmissorPorte(String emissorPorte) {
+        this.emissorPorte = emissorPorte;
    }
 
    public String getEnvEsocial() {
@@ -1986,12 +1985,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.mei = mei;
    }
 
-   public String getMeTerg() {
-        return meTerg;
+   public String getMetErg() {
+        return metErg;
    }
 
-   public void setMeTerg(String meTerg) {
-        this.meTerg = meTerg;
+   public void setMetErg(String metErg) {
+        this.metErg = metErg;
    }
 
    public BigDecimal getMtvDesligTsv() {
@@ -2466,12 +2465,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.ufCrmMedAso = ufCrmMedAso;
    }
 
-   public BigDecimal getUfPporte() {
-        return ufPporte;
+   public BigDecimal getUfPorte() {
+        return ufPorte;
    }
 
-   public void setUfPporte(BigDecimal ufPporte) {
-        this.ufPporte = ufPporte;
+   public void setUfPorte(BigDecimal ufPorte) {
+        this.ufPorte = ufPorte;
    }
 
    public BigDecimal getCodCategEsocial() {
@@ -2490,12 +2489,12 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.codCidRic = codCidRic;
    }
 
-   public String getComplementOrg() {
-        return complementOrg;
+   public String getComplementoRg() {
+        return complementoRg;
    }
 
-   public void setComplementOrg(String complementOrg) {
-        this.complementOrg = complementOrg;
+   public void setComplementoRg(String complementoRg) {
+        this.complementoRg = complementoRg;
    }
 
    public Timestamp getDtEmiRic() {
@@ -3051,6 +3050,11 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TFPFUN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Funcionario";
    }
@@ -3104,7 +3108,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.codCateg = vo.asBigDecimal("CODCATEG");
         this.codCid = vo.asBigDecimal("CODCID");
         this.codCidTrab = vo.asBigDecimal("CODCIDTRAB");
-        this.codCtAbco = vo.asString("CODCTABCO");
+        this.codCtBco = vo.asString("CODCTABCO");
         this.codDep = vo.asBigDecimal("CODDEP");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
@@ -3148,7 +3152,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.percConv = vo.asBigDecimal("PERCCONV");
         this.pis = vo.asString("PIS");
         this.primeiraCnh = vo.asTimestamp("PRIMEIRACNH");
-        this.primeEmprego = vo.asString("PRIMEEMPREGO");
+        this.primEmprego = vo.asString("PRIMEMPREGO");
         this.racaFuncionario = vo.asBigDecimal("RACAFUNCIONARIO");
         this.regime = vo.asBigDecimal("REGIME");
         this.remuMinima = vo.asBigDecimal("REMUMINIMA");
@@ -3179,7 +3183,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codSaq = vo.asBigDecimal("CODSAQ");
         this.casadoBr = vo.asString("CASADOBR");
-        this.clasTrabEstrang = vo.asBigDecimal("CLASTRABESTRANG");
+        this.clasTrabEstrang = vo.asBigDecimal("CLASSTRABESTRANG");
         this.dtChegPais = vo.asTimestamp("DTCHEGPAIS");
         this.dtExpRne = vo.asTimestamp("DTEXPRNE");
         this.dtNatural = vo.asTimestamp("DTNATURAL");
@@ -3215,7 +3219,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.cpfSubstituido = vo.asString("CPFSUBSTITUIDO");
         this.crmMedicoAso = vo.asString("CRMMEDICOASO");
         this.diasAvisoPrevio = vo.asBigDecimal("DIASAVISOPREVIO");
-        this.diasEmGrupoHr = vo.asBigDecimal("DIASEMGRUPOHR");
+        this.diaSemGrupoHr = vo.asBigDecimal("DIASEMGRUPOHR");
         this.dispensaPonto = vo.asString("DISPENSAPONTO");
         this.dispPerExp = vo.asString("DISPPEREXP");
         this.dscAtivDes = vo.asString("DSCATIVDES");
@@ -3223,25 +3227,25 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.dtAltCpf = vo.asTimestamp("DTALTCPF");
         this.dtAso = vo.asTimestamp("DTASO");
         this.dtEmiCertCivil = vo.asTimestamp("DTEMICERTCIVIL");
-        this.dtEmiPporte = vo.asTimestamp("DTEMIPPORTE");
+        this.dtEmiPorte = vo.asTimestamp("DTEMIPPORTE");
         this.dtEsocial2205 = vo.asTimestamp("DTESOCIAL2205");
         this.dtEsocial2206 = vo.asTimestamp("DTESOCIAL2206");
         this.dtExpOc = vo.asTimestamp("DTEXPOC");
         this.dtFimQuarentena = vo.asTimestamp("DTFIMQUARENTENA");
-        this.dtIncEsocial = vo.asTimestamp("DTINCESOCIAL");
+        this.dtIncEsocial = vo.asTimestamp("DTINC_ESOCIAL");
         this.dtIniGrupoHr = vo.asTimestamp("DTINIGRUPOHR");
         this.dtLaudoRra = vo.asTimestamp("DTLAUDORRA");
         this.dtLoteNis = vo.asTimestamp("DTLOTENIS");
         this.dtQuitacao = vo.asTimestamp("DTQUITACAO");
         this.dtTermino = vo.asTimestamp("DTTERMINO");
         this.dtTransfDest = vo.asTimestamp("DTTRANSFDEST");
-        this.dtUltEnvEsocial = vo.asTimestamp("DTULTENVESOCIAL");
+        this.dtUltEnvEsocial = vo.asTimestamp("DTULTENV_ESOCIAL");
         this.dtValOc = vo.asTimestamp("DTVALOC");
-        this.dtValPporte = vo.asTimestamp("DTVALPPORTE");
+        this.dtValPorte = vo.asTimestamp("DTVALPPORTE");
         this.dtVencExp1Or = vo.asTimestamp("DTVENCEXP1OR");
         this.dtVencExp2Or = vo.asTimestamp("DTVENCEXP2OR");
         this.dtVincEmpAnt = vo.asTimestamp("DTVINCEMPANT");
-        this.emissorPporte = vo.asString("EMISSORPPORTE");
+        this.emissorPorte = vo.asString("EMISSORPPORTE");
         this.envEsocial = vo.asString("ENVESOCIAL");
         this.fimValeSocial = vo.asTimestamp("FIMVALESOCIAL");
         this.idConsig = vo.asString("IDCONSIG");
@@ -3262,7 +3266,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.matriculaOld = vo.asString("MATRICULAOLD");
         this.medicoAso = vo.asString("MEDICOASO");
         this.mei = vo.asString("MEI");
-        this.meTerg = vo.asString("METERG");
+        this.metErg = vo.asString("METERG");
         this.mtvDesligTsv = vo.asBigDecimal("MTVDESLIGTSV");
         this.nifBenef = vo.asString("NIFBENEF");
         this.nisEnviado = vo.asString("NISENVIADO");
@@ -3300,7 +3304,7 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.quemPagaRra = vo.asBigDecimal("QUEMPAGARRA");
         this.reciboEsocial = vo.asString("RECIBOESOCIAL");
         this.remunBase = vo.asBigDecimal("REMUNBASE");
-        this.remuneracaoMesAnt = vo.asBigDecimal("REMUNERACAOMESANT");
+        this.remuneracaoMesAnt = vo.asBigDecimal("REMUNERAMESANT");
         this.salAjustadoSind = vo.asBigDecimal("SALAJUSTADOSIND");
         this.salBaseAnterior = vo.asBigDecimal("SALBASEANTERIOR");
         this.salProfessor = vo.asBigDecimal("SALPROFESSOR");
@@ -3322,10 +3326,10 @@ public class Funcionario implements SankhyaEntity<Funcionario> {
         this.tpRegTrabCed = vo.asBigDecimal("TPREGTRABCED");
         this.trabAposent = vo.asString("TRABAPOSENT");
         this.ufCrmMedAso = vo.asString("UFCRMMEDASO");
-        this.ufPporte = vo.asBigDecimal("UFPPORTE");
+        this.ufPorte = vo.asBigDecimal("UFPPORTE");
         this.codCategEsocial = vo.asBigDecimal("CODCATEGESOCIAL");
         this.codCidRic = vo.asBigDecimal("CODCIDRIC");
-        this.complementOrg = vo.asString("COMPLEMENTORG");
+        this.complementoRg = vo.asString("COMPLEMENTORG");
         this.dtEmiRic = vo.asTimestamp("DTEMIRIC");
         this.dtExpCnh = vo.asTimestamp("DTEXPCNH");
         this.nroRic = vo.asString("NRORIC");

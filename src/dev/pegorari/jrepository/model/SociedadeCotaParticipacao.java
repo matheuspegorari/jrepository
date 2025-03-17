@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SociedadeCotaParticipacao implements SankhyaEntity<SociedadeCotaParticipacao> {
-
+public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCotaParticipacao> {
    private BigDecimal codEmp;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -51,6 +50,11 @@ public class SociedadeCotaParticipacao implements SankhyaEntity<SociedadeCotaPar
 
    public void setNome(String nome) {
         this.nome = nome;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBSPC";
    }
 
    @Override

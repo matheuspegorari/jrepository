@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TabelaFaixas implements SankhyaEntity<TabelaFaixas> {
-
+public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    private BigDecimal codTab;
    private String descrTab;
    private Timestamp dtAlter;
@@ -159,6 +158,11 @@ public class TabelaFaixas implements SankhyaEntity<TabelaFaixas> {
 
    public void setValor9(BigDecimal valor9) {
         this.valor9 = valor9;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPFAI";
    }
 
    @Override

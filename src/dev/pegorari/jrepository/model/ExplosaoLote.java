@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExplosaoLote implements SankhyaEntity<ExplosaoLote> {
-
+public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    private BigDecimal codEndOrigem;
    private BigDecimal codProd;
    private String controle;
@@ -69,6 +68,11 @@ public class ExplosaoLote implements SankhyaEntity<ExplosaoLote> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEXPL";
    }
 
    @Override

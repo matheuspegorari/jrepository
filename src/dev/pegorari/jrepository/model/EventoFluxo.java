@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EventoFluxo implements SankhyaEntity<EventoFluxo> {
-
+public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    private BigDecimal ideFx;
    private BigDecimal ideFxAnexado;
    private String identificador;
@@ -50,6 +49,11 @@ public class EventoFluxo implements SankhyaEntity<EventoFluxo> {
 
    public void setInterrompe(String interrompe) {
         this.interrompe = interrompe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPREVT";
    }
 
    @Override

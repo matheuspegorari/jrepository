@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DefinicaoNoEstrutura implements SankhyaEntity<DefinicaoNoEstrutura> {
-
+public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstrutura> {
    private String multipocor;
    private BigDecimal nivelFinal;
    private BigDecimal nivelInicial;
@@ -59,6 +58,11 @@ public class DefinicaoNoEstrutura implements SankhyaEntity<DefinicaoNoEstrutura>
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDNE";
    }
 
    @Override

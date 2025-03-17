@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RecursosWorkCenterAtividade implements SankhyaEntity<RecursosWorkCenterAtividade> {
-
+public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosWorkCenterAtividade> {
    private BigDecimal codCre;
    private BigDecimal codProdPa;
    private String controlePa;
@@ -105,6 +104,11 @@ public class RecursosWorkCenterAtividade implements SankhyaEntity<RecursosWorkCe
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         this.codUsuCad = codUsuCad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRRWA";
    }
 
    @Override

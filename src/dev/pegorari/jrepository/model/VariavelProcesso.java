@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class VariavelProcesso implements SankhyaEntity<VariavelProcesso> {
-
+public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    private String descricao;
    private String escopo;
    private String leitura;
@@ -104,6 +103,11 @@ public class VariavelProcesso implements SankhyaEntity<VariavelProcesso> {
 
    public void setDefaultLong(String defaultLong) {
         this.defaultLong = defaultLong;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFVAR";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PrevisaoEntrega implements SankhyaEntity<PrevisaoEntrega> {
-
+public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private Timestamp dtPrev;
@@ -78,6 +77,11 @@ public class PrevisaoEntrega implements SankhyaEntity<PrevisaoEntrega> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFDTP";
    }
 
    @Override

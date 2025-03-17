@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProdutoEndereco implements SankhyaEntity<ProdutoEndereco> {
-
+public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    private String ativo;
    private BigDecimal codEnd;
    private BigDecimal codProd;
@@ -141,6 +140,11 @@ public class ProdutoEndereco implements SankhyaEntity<ProdutoEndereco> {
 
    public void setVinculoProd(String vinculoProd) {
         this.vinculoProd = vinculoProd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEXP";
    }
 
    @Override

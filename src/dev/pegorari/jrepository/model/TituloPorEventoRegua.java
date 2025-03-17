@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TituloPorEventoRegua implements SankhyaEntity<TituloPorEventoRegua> {
-
+public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoRegua> {
    private BigDecimal codRegua;
    private String mensagem;
    private BigDecimal nuFin;
@@ -50,6 +49,11 @@ public class TituloPorEventoRegua implements SankhyaEntity<TituloPorEventoRegua>
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTXE";
    }
 
    @Override

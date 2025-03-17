@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class OcorrenciaBancariaRetorno implements SankhyaEntity<OcorrenciaBancariaRetorno> {
-
+public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaBancariaRetorno> {
    private String baixaParcial;
    private BigDecimal codCencus;
    private BigDecimal codEmp;
@@ -275,6 +274,11 @@ public class OcorrenciaBancariaRetorno implements SankhyaEntity<OcorrenciaBancar
 
    public void setCamposAjustar(char[] camposAjustar) {
         this.camposAjustar = camposAjustar;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIOBC";
    }
 
    @Override

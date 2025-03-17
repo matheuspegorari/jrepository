@@ -1,26 +1,25 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DimensaoGrade implements SankhyaEntity<DimensaoGrade> {
-
-   private String abvAtb;
+public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
+   private String abVatb;
    private BigDecimal idAtb;
    private BigDecimal idGrade;
    private String nomeAtb;
    private BigDecimal ordCamp;
    private String tipo;
-   private String atuniversao;
+   private String atUnuVersao;
    private BigDecimal nuVersao;
 
-   public String getAbvAtb() {
-        return abvAtb;
+   public String getAbVatb() {
+        return abVatb;
    }
 
-   public void setAbvAtb(String abvAtb) {
-        this.abvAtb = abvAtb;
+   public void setAbVatb(String abVatb) {
+        this.abVatb = abVatb;
    }
 
    public BigDecimal getIdAtb() {
@@ -63,12 +62,12 @@ public class DimensaoGrade implements SankhyaEntity<DimensaoGrade> {
         this.tipo = tipo;
    }
 
-   public String getAtuniversao() {
-        return atuniversao;
+   public String getAtUnuVersao() {
+        return atUnuVersao;
    }
 
-   public void setAtuniversao(String atuniversao) {
-        this.atuniversao = atuniversao;
+   public void setAtUnuVersao(String atUnuVersao) {
+        this.atUnuVersao = atUnuVersao;
    }
 
    public BigDecimal getNuVersao() {
@@ -80,19 +79,24 @@ public class DimensaoGrade implements SankhyaEntity<DimensaoGrade> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFATB";
+   }
+
+   @Override
    public String getEntityName() {
         return "DimensaoGrade";
    }
 
    @Override
    public DimensaoGrade fromVO(DynamicVO vo) {
-        this.abvAtb = vo.asString("ABVATB");
+        this.abVatb = vo.asString("ABVATB");
         this.idAtb = vo.asBigDecimal("IDATB");
         this.idGrade = vo.asBigDecimal("IDGRADE");
         this.nomeAtb = vo.asString("NOMEATB");
         this.ordCamp = vo.asBigDecimal("ORDCAMP");
         this.tipo = vo.asString("TIPO");
-        this.atuniversao = vo.asString("ATUNIVERSAO");
+        this.atUnuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }

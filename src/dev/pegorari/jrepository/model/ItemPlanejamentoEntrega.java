@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemPlanejamentoEntrega implements SankhyaEntity<ItemPlanejamentoEntrega> {
-
+public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejamentoEntrega> {
    private BigDecimal nuPlan;
    private BigDecimal qtdNeg;
    private BigDecimal codContato;
@@ -68,6 +67,11 @@ public class ItemPlanejamentoEntrega implements SankhyaEntity<ItemPlanejamentoEn
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
         this.nuNotaOrig = nuNotaOrig;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPLAI";
    }
 
    @Override

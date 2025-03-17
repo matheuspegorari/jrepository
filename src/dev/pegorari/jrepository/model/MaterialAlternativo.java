@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MaterialAlternativo implements SankhyaEntity<MaterialAlternativo> {
-
+public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternativo> {
    private String referenciaMpAlt;
    private String referenciaMp;
    private BigDecimal codProdMp;
@@ -186,6 +185,11 @@ public class MaterialAlternativo implements SankhyaEntity<MaterialAlternativo> {
 
    public void setDhCad(Timestamp dhCad) {
         this.dhCad = dhCad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRMPA";
    }
 
    @Override

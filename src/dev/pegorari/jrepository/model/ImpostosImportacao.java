@@ -1,21 +1,20 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImpostosImportacao implements SankhyaEntity<ImpostosImportacao> {
-
+public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao> {
    private BigDecimal baseImposto;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private BigDecimal nuNota;
    private BigDecimal sequencia;
-   private BigDecimal vlrDespAdua;
+   private BigDecimal vlrDespadua;
    private BigDecimal vlrImposto;
    private BigDecimal vlrIof;
-   private String impTagExCNotNac;
+   private String impTagExcnNotNac;
 
    public BigDecimal getBaseImposto() {
         return baseImposto;
@@ -57,12 +56,12 @@ public class ImpostosImportacao implements SankhyaEntity<ImpostosImportacao> {
         this.sequencia = sequencia;
    }
 
-   public BigDecimal getVlrDespAdua() {
-        return vlrDespAdua;
+   public BigDecimal getVlrDespadua() {
+        return vlrDespadua;
    }
 
-   public void setVlrDespAdua(BigDecimal vlrDespAdua) {
-        this.vlrDespAdua = vlrDespAdua;
+   public void setVlrDespadua(BigDecimal vlrDespadua) {
+        this.vlrDespadua = vlrDespadua;
    }
 
    public BigDecimal getVlrImposto() {
@@ -81,12 +80,17 @@ public class ImpostosImportacao implements SankhyaEntity<ImpostosImportacao> {
         this.vlrIof = vlrIof;
    }
 
-   public String getImpTagExCNotNac() {
-        return impTagExCNotNac;
+   public String getImpTagExcnNotNac() {
+        return impTagExcnNotNac;
    }
 
-   public void setImpTagExCNotNac(String impTagExCNotNac) {
-        this.impTagExCNotNac = impTagExCNotNac;
+   public void setImpTagExcnNotNac(String impTagExcnNotNac) {
+        this.impTagExcnNotNac = impTagExcnNotNac;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIII";
    }
 
    @Override
@@ -101,10 +105,10 @@ public class ImpostosImportacao implements SankhyaEntity<ImpostosImportacao> {
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrDespAdua = vo.asBigDecimal("VLRDESPADUA");
+        this.vlrDespadua = vo.asBigDecimal("VLRDESPADUA");
         this.vlrImposto = vo.asBigDecimal("VLRIMPOSTO");
         this.vlrIof = vo.asBigDecimal("VLRIOF");
-        this.impTagExCNotNac = vo.asString("IMPTAGEXCNOTNAC");
+        this.impTagExcnNotNac = vo.asString("IMPTAGEXCNOTNAC");
         return this;
    }
 }

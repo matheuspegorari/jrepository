@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DocumentoAssinadoExcluido implements SankhyaEntity<DocumentoAssinadoExcluido> {
-
+public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAssinadoExcluido> {
    private String chaveArquivo;
    private BigDecimal nuDoc;
    private String motivoExc;
@@ -51,6 +50,11 @@ public class DocumentoAssinadoExcluido implements SankhyaEntity<DocumentoAssinad
 
    public void setDhExc(Timestamp dhExc) {
         this.dhExc = dhExc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIDAS_EXC";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class QuestionarioFluxo implements SankhyaEntity<QuestionarioFluxo> {
-
+public class QuestionarioFluxo extends AbstractSankhyaEntity<QuestionarioFluxo> {
    private BigDecimal codFld;
    private BigDecimal codPerg;
    private BigDecimal codQuest;
@@ -50,6 +49,11 @@ public class QuestionarioFluxo implements SankhyaEntity<QuestionarioFluxo> {
 
    public void setPercentualRespondido(BigDecimal percentualRespondido) {
         this.percentualRespondido = percentualRespondido;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSQXF";
    }
 
    @Override

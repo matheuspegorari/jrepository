@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CategoriaWorkCenter implements SankhyaEntity<CategoriaWorkCenter> {
-
+public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCenter> {
    private BigDecimal codCap;
    private BigDecimal codCwc;
-   private BigDecimal codWcpPadrao;
+   private BigDecimal codWcppadrao;
    private String descricao;
    private BigDecimal qtdCapacidadeMax;
    private BigDecimal qtdCapacidadeMin;
@@ -34,12 +33,12 @@ public class CategoriaWorkCenter implements SankhyaEntity<CategoriaWorkCenter> {
         this.codCwc = codCwc;
    }
 
-   public BigDecimal getCodWcpPadrao() {
-        return codWcpPadrao;
+   public BigDecimal getCodWcppadrao() {
+        return codWcppadrao;
    }
 
-   public void setCodWcpPadrao(BigDecimal codWcpPadrao) {
-        this.codWcpPadrao = codWcpPadrao;
+   public void setCodWcppadrao(BigDecimal codWcppadrao) {
+        this.codWcppadrao = codWcppadrao;
    }
 
    public String getDescricao() {
@@ -107,6 +106,11 @@ public class CategoriaWorkCenter implements SankhyaEntity<CategoriaWorkCenter> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRCWC";
+   }
+
+   @Override
    public String getEntityName() {
         return "CategoriaWorkCenter";
    }
@@ -115,7 +119,7 @@ public class CategoriaWorkCenter implements SankhyaEntity<CategoriaWorkCenter> {
    public CategoriaWorkCenter fromVO(DynamicVO vo) {
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCwc = vo.asBigDecimal("CODCWC");
-        this.codWcpPadrao = vo.asBigDecimal("CODWCPPADRAO");
+        this.codWcppadrao = vo.asBigDecimal("CODWCPPADRAO");
         this.descricao = vo.asString("DESCRICAO");
         this.qtdCapacidadeMax = vo.asBigDecimal("QTDCAPACIDADEMAX");
         this.qtdCapacidadeMin = vo.asBigDecimal("QTDCAPACIDADEMIN");

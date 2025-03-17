@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RecursosHumanosManufatura implements SankhyaEntity<RecursosHumanosManufatura> {
-
+public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHumanosManufatura> {
    private String ativo;
    private BigDecimal codCre;
    private BigDecimal codFunc;
@@ -77,6 +76,11 @@ public class RecursosHumanosManufatura implements SankhyaEntity<RecursosHumanosM
 
    public void setNome(String nome) {
         this.nome = nome;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRRHP";
    }
 
    @Override

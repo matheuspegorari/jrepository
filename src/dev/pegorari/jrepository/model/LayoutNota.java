@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LayoutNota implements SankhyaEntity<LayoutNota> {
-
+public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    private BigDecimal modulo;
    private String descricao;
    private char[] layout;
@@ -77,6 +76,11 @@ public class LayoutNota implements SankhyaEntity<LayoutNota> {
 
    public void setTipRec(String tipRec) {
         this.tipRec = tipRec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFLAY";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RejeicaoNfe implements SankhyaEntity<RejeicaoNfe> {
-
+public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    private BigDecimal codRejeicao;
    private String hashUtlRejeicao;
    private BigDecimal nuNota;
@@ -41,6 +40,11 @@ public class RejeicaoNfe implements SankhyaEntity<RejeicaoNfe> {
 
    public void setQtdRejeicoes(BigDecimal qtdRejeicoes) {
         this.qtdRejeicoes = qtdRejeicoes;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFREJNFE";
    }
 
    @Override

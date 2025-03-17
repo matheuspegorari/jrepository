@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RelacionamentoUsuario implements SankhyaEntity<RelacionamentoUsuario> {
-
+public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoUsuario> {
    private BigDecimal codUsu;
    private BigDecimal codUsuRel;
    private String tipo;
@@ -50,6 +49,11 @@ public class RelacionamentoUsuario implements SankhyaEntity<RelacionamentoUsuari
 
    public void setLiderImediato(String liderImediato) {
         this.liderImediato = liderImediato;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSRUS";
    }
 
    @Override

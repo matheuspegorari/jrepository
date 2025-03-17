@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class VariacaoDimensaoGrade implements SankhyaEntity<VariacaoDimensaoGrade> {
-
+public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensaoGrade> {
    private String abvVar;
    private BigDecimal idAtb;
    private BigDecimal idGrade;
@@ -15,7 +14,7 @@ public class VariacaoDimensaoGrade implements SankhyaEntity<VariacaoDimensaoGrad
    private String prmCpr;
    private String prmVnd;
    private String tipo;
-   private String atNuVersao;
+   private String atuniversao;
    private BigDecimal nuVersao;
 
    public String getAbvVar() {
@@ -90,12 +89,12 @@ public class VariacaoDimensaoGrade implements SankhyaEntity<VariacaoDimensaoGrad
         this.tipo = tipo;
    }
 
-   public String getAtNuVersao() {
-        return atNuVersao;
+   public String getAtuniversao() {
+        return atuniversao;
    }
 
-   public void setAtNuVersao(String atNuVersao) {
-        this.atNuVersao = atNuVersao;
+   public void setAtuniversao(String atuniversao) {
+        this.atuniversao = atuniversao;
    }
 
    public BigDecimal getNuVersao() {
@@ -104,6 +103,11 @@ public class VariacaoDimensaoGrade implements SankhyaEntity<VariacaoDimensaoGrad
 
    public void setNuVersao(BigDecimal nuVersao) {
         this.nuVersao = nuVersao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFGCL";
    }
 
    @Override
@@ -122,7 +126,7 @@ public class VariacaoDimensaoGrade implements SankhyaEntity<VariacaoDimensaoGrad
         this.prmCpr = vo.asString("PRMCPR");
         this.prmVnd = vo.asString("PRMVND");
         this.tipo = vo.asString("TIPO");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atuniversao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }

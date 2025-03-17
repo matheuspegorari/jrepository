@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentoBancario implements SankhyaEntity<MovimentoBancario> {
-
+public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> {
    private BigDecimal codCtabcoContra;
    private BigDecimal codCtabcoInt;
    private BigDecimal codCtabcoIntDest;
@@ -315,6 +314,11 @@ public class MovimentoBancario implements SankhyaEntity<MovimentoBancario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFMBC";
+   }
+
+   @Override
    public String getEntityName() {
         return "MovimentoBancario";
    }
@@ -348,7 +352,7 @@ public class MovimentoBancario implements SankhyaEntity<MovimentoBancario> {
         this.talao = vo.asBigDecimal("TALAO");
         this.vlrCheque = vo.asBigDecimal("VLRCHEQUE");
         this.vlrLanc = vo.asBigDecimal("VLRLANC");
-        this.vlrLancDestino = vo.asBigDecimal("VLRLANCDESTINO");
+        this.vlrLancDestino = vo.asBigDecimal("VLRLANC_DESTINO");
         this.vlrMoeda = vo.asBigDecimal("VLRMOEDA");
         this.vlrTroco = vo.asBigDecimal("VLRTROCO");
         this.codPdv = vo.asBigDecimal("CODPDV");

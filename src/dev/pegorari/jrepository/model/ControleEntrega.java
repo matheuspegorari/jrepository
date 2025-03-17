@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ControleEntrega implements SankhyaEntity<ControleEntrega> {
-
+public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    private BigDecimal codParc;
    private BigDecimal codReg;
    private BigDecimal codVend;
@@ -59,6 +58,11 @@ public class ControleEntrega implements SankhyaEntity<ControleEntrega> {
 
    public void setValor(BigDecimal valor) {
         this.valor = valor;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFVIS";
    }
 
    @Override

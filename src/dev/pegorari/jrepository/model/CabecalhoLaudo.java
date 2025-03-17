@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoLaudo implements SankhyaEntity<CabecalhoLaudo> {
-
+public class CabecalhoLaudo extends AbstractSankhyaEntity<CabecalhoLaudo> {
    private String referencia;
    private Timestamp dhAlter;
    private BigDecimal codUsu;
@@ -267,6 +266,11 @@ public class CabecalhoLaudo implements SankhyaEntity<CabecalhoLaudo> {
 
    public void setMotivoReprov(String motivoReprov) {
         this.motivoReprov = motivoReprov;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGACLL";
    }
 
    @Override

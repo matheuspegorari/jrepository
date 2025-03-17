@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ContaSMS implements SankhyaEntity<ContaSMS> {
-
+public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    private BigDecimal codContaSms;
    private String descricao;
    private String nomeRemetente;
@@ -59,6 +58,11 @@ public class ContaSMS implements SankhyaEntity<ContaSMS> {
 
    public void setUsuario(String usuario) {
         this.usuario = usuario;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSISMS";
    }
 
    @Override

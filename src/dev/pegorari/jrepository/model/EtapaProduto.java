@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
-
+public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    private BigDecimal cicloProducao;
    private BigDecimal codEtapa;
    private BigDecimal codLocal;
@@ -58,11 +57,11 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
         this.controle = controle;
    }
 
-   public String getFinal() {
+   public String getfinal() {
         return _final;
    }
 
-   public void setFinal(String _final) {
+   public void setfinal(String _final) {
         this._final = _final;
    }
 
@@ -107,6 +106,11 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFEPR";
+   }
+
+   @Override
    public String getEntityName() {
         return "EtapaProduto";
    }
@@ -118,7 +122,7 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");
-        this._final = vo.asString("FINAL");
+        this._final = vo.asString("_final");
         this.obrigatoria = vo.asString("OBRIGATORIA");
         this.ondeExec = vo.asString("ONDEEXEC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

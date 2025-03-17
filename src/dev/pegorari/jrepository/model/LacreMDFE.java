@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LacreMDFE implements SankhyaEntity<LacreMDFE> {
-
+public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
    private BigDecimal nuViag;
    private String numLacre;
    private BigDecimal seqMdfe;
@@ -32,6 +31,11 @@ public class LacreMDFE implements SankhyaEntity<LacreMDFE> {
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         this.seqMdfe = seqMdfe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFELAC";
    }
 
    @Override

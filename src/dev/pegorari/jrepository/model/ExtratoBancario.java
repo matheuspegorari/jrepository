@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ExtratoBancario implements SankhyaEntity<ExtratoBancario> {
-
+public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    private BigDecimal codCateg;
    private BigDecimal codUsu;
    private String conciliado;
@@ -171,6 +170,11 @@ public class ExtratoBancario implements SankhyaEntity<ExtratoBancario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFEXB";
+   }
+
+   @Override
    public String getEntityName() {
         return "ExtratoBancario";
    }
@@ -189,7 +193,7 @@ public class ExtratoBancario implements SankhyaEntity<ExtratoBancario> {
         this.nuExb = vo.asBigDecimal("NUEXB");
         this.nuImport = vo.asBigDecimal("NUIMPORT");
         this.valor = vo.asBigDecimal("VALOR");
-        this.cnpjCpf = vo.asString("CNPJCPF");
+        this.cnpjCpf = vo.asString("CNPJ_CPF");
         this.codBco = vo.asBigDecimal("CODBCO");
         this.fitId = vo.asString("FITID");
         this.recDesp = vo.asBigDecimal("RECDESP");

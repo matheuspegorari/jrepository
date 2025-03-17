@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImportacaoXMLNotas implements SankhyaEntity<ImportacaoXMLNotas> {
-
+public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas> {
    private Timestamp dhEmiss;
    private BigDecimal vlrNota;
    private String situacaoMde;
@@ -64,7 +63,7 @@ public class ImportacaoXMLNotas implements SankhyaEntity<ImportacaoXMLNotas> {
    private String tipoCte;
    private BigDecimal tipoManifDfe;
    private String tomadorCte;
-   private String ulteveDfe;
+   private String ulteVedFe;
    private String xNomeDest;
    private BigDecimal statusWms;
    private String tipImpCte;
@@ -533,12 +532,12 @@ public class ImportacaoXMLNotas implements SankhyaEntity<ImportacaoXMLNotas> {
         this.tomadorCte = tomadorCte;
    }
 
-   public String getUlteveDfe() {
-        return ulteveDfe;
+   public String getUlteVedFe() {
+        return ulteVedFe;
    }
 
-   public void setUlteveDfe(String ulteveDfe) {
-        this.ulteveDfe = ulteveDfe;
+   public void setUlteVedFe(String ulteVedFe) {
+        this.ulteVedFe = ulteVedFe;
    }
 
    public String getXNomeDest() {
@@ -630,6 +629,11 @@ public class ImportacaoXMLNotas implements SankhyaEntity<ImportacaoXMLNotas> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFIXN";
+   }
+
+   @Override
    public String getEntityName() {
         return "ImportacaoXMLNotas";
    }
@@ -693,7 +697,7 @@ public class ImportacaoXMLNotas implements SankhyaEntity<ImportacaoXMLNotas> {
         this.tipoCte = vo.asString("TIPOCTE");
         this.tipoManifDfe = vo.asBigDecimal("TIPOMANIFDFE");
         this.tomadorCte = vo.asString("TOMADORCTE");
-        this.ulteveDfe = vo.asString("ULTEVEDFE");
+        this.ulteVedFe = vo.asString("ULTEVEDFE");
         this.xNomeDest = vo.asString("XNOMEDEST");
         this.statusWms = vo.asBigDecimal("STATUSWMS");
         this.tipImpCte = vo.asString("TIPIMPCTE");

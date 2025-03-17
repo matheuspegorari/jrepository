@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Pesquisa implements SankhyaEntity<Pesquisa> {
-
+public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    private BigDecimal codQuest;
    private BigDecimal codUsu;
    private BigDecimal codUsuPesq;
@@ -177,6 +176,11 @@ public class Pesquisa implements SankhyaEntity<Pesquisa> {
 
    public void setCodParcPesq(BigDecimal codParcPesq) {
         this.codParcPesq = codParcPesq;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQPES";
    }
 
    @Override

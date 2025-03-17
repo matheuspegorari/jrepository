@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
-
+public class ContaBancaria extends AbstractSankhyaEntity<ContaBancaria> {
    private BigDecimal codAgeBenef;
    private BigDecimal codCtaBenef;
    private String idCliente;
@@ -21,7 +20,7 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
    private String bjBbaibolPag;
    private BigDecimal codCtaBaixa;
    private BigDecimal codLancBaixaBolRap;
-   private BigDecimal codTipoPerBaixaBolRap;
+   private BigDecimal codTipOperBaixaBolRap;
    private String pjBchave;
    private String pjBconBaixCred;
    private String pjBcred;
@@ -54,7 +53,7 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
    private String multipNossoNum;
    private String digitoSubst3;
    private String nossoNumero;
-   private String tipModNosNum;
+   private String tipModNossoNum;
    private String digitoSubst2;
    private String nossoNumAtivo;
    private String linhaDigAtivo;
@@ -234,12 +233,12 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
         this.codLancBaixaBolRap = codLancBaixaBolRap;
    }
 
-   public BigDecimal getCodTipoPerBaixaBolRap() {
-        return codTipoPerBaixaBolRap;
+   public BigDecimal getCodTipOperBaixaBolRap() {
+        return codTipOperBaixaBolRap;
    }
 
-   public void setCodTipoPerBaixaBolRap(BigDecimal codTipoPerBaixaBolRap) {
-        this.codTipoPerBaixaBolRap = codTipoPerBaixaBolRap;
+   public void setCodTipOperBaixaBolRap(BigDecimal codTipOperBaixaBolRap) {
+        this.codTipOperBaixaBolRap = codTipOperBaixaBolRap;
    }
 
    public String getPjBchave() {
@@ -498,12 +497,12 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
         this.nossoNumero = nossoNumero;
    }
 
-   public String getTipModNosNum() {
-        return tipModNosNum;
+   public String getTipModNossoNum() {
+        return tipModNossoNum;
    }
 
-   public void setTipModNosNum(String tipModNosNum) {
-        this.tipModNosNum = tipModNosNum;
+   public void setTipModNossoNum(String tipModNossoNum) {
+        this.tipModNossoNum = tipModNossoNum;
    }
 
    public String getDigitoSubst2() {
@@ -1035,6 +1034,11 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSICTA";
+   }
+
+   @Override
    public String getEntityName() {
         return "ContaBancaria";
    }
@@ -1055,7 +1059,7 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
         this.bjBbaibolPag = vo.asString("BJBBAIBOLPAG");
         this.codCtaBaixa = vo.asBigDecimal("CODCTABAIXA");
         this.codLancBaixaBolRap = vo.asBigDecimal("CODLANCBAIXABOLRAP");
-        this.codTipoPerBaixaBolRap = vo.asBigDecimal("CODTIPOPERBAIXABOLRAP");
+        this.codTipOperBaixaBolRap = vo.asBigDecimal("CODTIPOPERBAIXABOLRAP");
         this.pjBchave = vo.asString("PJBCHAVE");
         this.pjBconBaixCred = vo.asString("PJBCONBAIXCRED");
         this.pjBcred = vo.asString("PJBCRED");
@@ -1088,7 +1092,7 @@ public class ContaBancaria implements SankhyaEntity<ContaBancaria> {
         this.multipNossoNum = vo.asString("MULTIPNOSSONUM");
         this.digitoSubst3 = vo.asString("DIGITOSUBST3");
         this.nossoNumero = vo.asString("NOSSONUMERO");
-        this.tipModNosNum = vo.asString("TIPMODNOSNUM");
+        this.tipModNossoNum = vo.asString("TIPMODNOSSNUM");
         this.digitoSubst2 = vo.asString("DIGITOSUBST2");
         this.nossoNumAtivo = vo.asString("NOSSONUMATIVO");
         this.linhaDigAtivo = vo.asString("LINHADIGATIVO");

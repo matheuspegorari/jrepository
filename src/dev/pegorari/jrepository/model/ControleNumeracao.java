@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ControleNumeracao implements SankhyaEntity<ControleNumeracao> {
-
+public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> {
    private String arquivo;
    private String automatico;
    private BigDecimal codEmp;
@@ -159,6 +158,11 @@ public class ControleNumeracao implements SankhyaEntity<ControleNumeracao> {
 
    public void setUltNotaTalao(BigDecimal ultNotaTalao) {
         this.ultNotaTalao = ultNotaTalao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNUM";
    }
 
    @Override

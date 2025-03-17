@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegistroPalete implements SankhyaEntity<RegistroPalete> {
-
+public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    private BigDecimal codUsu;
    private String codVol;
    private String controle;
@@ -77,6 +76,11 @@ public class RegistroPalete implements SankhyaEntity<RegistroPalete> {
 
    public void setCodProd(BigDecimal codProd) {
         this.codProd = codProd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWRPL";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PortariaCat42R0150 implements SankhyaEntity<PortariaCat42R0150> {
-
+public class PortariaCat42R0150 extends AbstractSankhyaEntity<PortariaCat42R0150> {
    private String cnpj;
    private BigDecimal codEmp;
    private BigDecimal codMunFis;
@@ -114,6 +113,11 @@ public class PortariaCat42R0150 implements SankhyaEntity<PortariaCat42R0150> {
 
    public void setReg(String reg) {
         this.reg = reg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCAT42R0150";
    }
 
    @Override

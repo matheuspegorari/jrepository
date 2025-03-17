@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoUsuarioBK implements SankhyaEntity<ConfiguracaoUsuarioBK> {
-
+public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsuarioBK> {
    private BigDecimal codUsu;
    private String conf;
    private String form;
@@ -50,6 +49,11 @@ public class ConfiguracaoUsuarioBK implements SankhyaEntity<ConfiguracaoUsuarioB
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICONFBK";
    }
 
    @Override

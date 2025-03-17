@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProcessoSelecao implements SankhyaEntity<ProcessoSelecao> {
-
+public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    private BigDecimal nuRequisicao;
    private BigDecimal codAnuncio;
    private BigDecimal codUsu;
@@ -141,6 +140,11 @@ public class ProcessoSelecao implements SankhyaEntity<ProcessoSelecao> {
 
    public void setPersonalizar(String personalizar) {
         this.personalizar = personalizar;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSSEL";
    }
 
    @Override

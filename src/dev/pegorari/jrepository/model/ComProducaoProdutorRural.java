@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdutorRural> {
-
+public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoProdutorRural> {
    private String chave;
    private BigDecimal codEmp;
    private String controle;
@@ -21,25 +20,25 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
    private String tpAmb;
    private BigDecimal tpInsc;
    private BigDecimal tpInscEstab;
-   private BigDecimal vlrCpApurado;
+   private BigDecimal vlrCpApur;
    private BigDecimal vlrCpSuspTotal;
-   private BigDecimal vlrRatApurado;
+   private BigDecimal vlrRatApur;
    private BigDecimal vlrRatSuspTotal;
    private BigDecimal vlrRecBrutaTotal;
-   private BigDecimal vlrSenarApurado;
+   private BigDecimal vlrSenarApur;
    private BigDecimal vlrSenarSuspTotal;
    private BigDecimal codEmpEstab;
    private char[] dataChange;
    private char[] msg;
    private String tipo;
-   private BigDecimal vlrBaseCpApurado;
-   private BigDecimal vlrBaseRatApurado;
-   private BigDecimal vlrBaseSenarApurado;
-   private BigDecimal vlrCpApuradoRet;
+   private BigDecimal vlrBaseCpApur;
+   private BigDecimal vlrBaseRatApur;
+   private BigDecimal vlrBaseSenarApur;
+   private BigDecimal vlrCpApurRet;
    private BigDecimal vlrCpSuspTotalRet;
-   private BigDecimal vlrRatApuradoRet;
+   private BigDecimal vlrRatApurRet;
    private BigDecimal vlrRatSuspTotalRet;
-   private BigDecimal vlrSenarApuradoRet;
+   private BigDecimal vlrSenarApurRet;
    private BigDecimal vlrSenarSuspTotalRet;
    private char[] xmlEvento;
    private char[] xmlRetorno;
@@ -156,12 +155,12 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.tpInscEstab = tpInscEstab;
    }
 
-   public BigDecimal getVlrCpApurado() {
-        return vlrCpApurado;
+   public BigDecimal getVlrCpApur() {
+        return vlrCpApur;
    }
 
-   public void setVlrCpApurado(BigDecimal vlrCpApurado) {
-        this.vlrCpApurado = vlrCpApurado;
+   public void setVlrCpApur(BigDecimal vlrCpApur) {
+        this.vlrCpApur = vlrCpApur;
    }
 
    public BigDecimal getVlrCpSuspTotal() {
@@ -172,12 +171,12 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.vlrCpSuspTotal = vlrCpSuspTotal;
    }
 
-   public BigDecimal getVlrRatApurado() {
-        return vlrRatApurado;
+   public BigDecimal getVlrRatApur() {
+        return vlrRatApur;
    }
 
-   public void setVlrRatApurado(BigDecimal vlrRatApurado) {
-        this.vlrRatApurado = vlrRatApurado;
+   public void setVlrRatApur(BigDecimal vlrRatApur) {
+        this.vlrRatApur = vlrRatApur;
    }
 
    public BigDecimal getVlrRatSuspTotal() {
@@ -196,12 +195,12 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.vlrRecBrutaTotal = vlrRecBrutaTotal;
    }
 
-   public BigDecimal getVlrSenarApurado() {
-        return vlrSenarApurado;
+   public BigDecimal getVlrSenarApur() {
+        return vlrSenarApur;
    }
 
-   public void setVlrSenarApurado(BigDecimal vlrSenarApurado) {
-        this.vlrSenarApurado = vlrSenarApurado;
+   public void setVlrSenarApur(BigDecimal vlrSenarApur) {
+        this.vlrSenarApur = vlrSenarApur;
    }
 
    public BigDecimal getVlrSenarSuspTotal() {
@@ -244,36 +243,36 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.tipo = tipo;
    }
 
-   public BigDecimal getVlrBaseCpApurado() {
-        return vlrBaseCpApurado;
+   public BigDecimal getVlrBaseCpApur() {
+        return vlrBaseCpApur;
    }
 
-   public void setVlrBaseCpApurado(BigDecimal vlrBaseCpApurado) {
-        this.vlrBaseCpApurado = vlrBaseCpApurado;
+   public void setVlrBaseCpApur(BigDecimal vlrBaseCpApur) {
+        this.vlrBaseCpApur = vlrBaseCpApur;
    }
 
-   public BigDecimal getVlrBaseRatApurado() {
-        return vlrBaseRatApurado;
+   public BigDecimal getVlrBaseRatApur() {
+        return vlrBaseRatApur;
    }
 
-   public void setVlrBaseRatApurado(BigDecimal vlrBaseRatApurado) {
-        this.vlrBaseRatApurado = vlrBaseRatApurado;
+   public void setVlrBaseRatApur(BigDecimal vlrBaseRatApur) {
+        this.vlrBaseRatApur = vlrBaseRatApur;
    }
 
-   public BigDecimal getVlrBaseSenarApurado() {
-        return vlrBaseSenarApurado;
+   public BigDecimal getVlrBaseSenarApur() {
+        return vlrBaseSenarApur;
    }
 
-   public void setVlrBaseSenarApurado(BigDecimal vlrBaseSenarApurado) {
-        this.vlrBaseSenarApurado = vlrBaseSenarApurado;
+   public void setVlrBaseSenarApur(BigDecimal vlrBaseSenarApur) {
+        this.vlrBaseSenarApur = vlrBaseSenarApur;
    }
 
-   public BigDecimal getVlrCpApuradoRet() {
-        return vlrCpApuradoRet;
+   public BigDecimal getVlrCpApurRet() {
+        return vlrCpApurRet;
    }
 
-   public void setVlrCpApuradoRet(BigDecimal vlrCpApuradoRet) {
-        this.vlrCpApuradoRet = vlrCpApuradoRet;
+   public void setVlrCpApurRet(BigDecimal vlrCpApurRet) {
+        this.vlrCpApurRet = vlrCpApurRet;
    }
 
    public BigDecimal getVlrCpSuspTotalRet() {
@@ -284,12 +283,12 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.vlrCpSuspTotalRet = vlrCpSuspTotalRet;
    }
 
-   public BigDecimal getVlrRatApuradoRet() {
-        return vlrRatApuradoRet;
+   public BigDecimal getVlrRatApurRet() {
+        return vlrRatApurRet;
    }
 
-   public void setVlrRatApuradoRet(BigDecimal vlrRatApuradoRet) {
-        this.vlrRatApuradoRet = vlrRatApuradoRet;
+   public void setVlrRatApurRet(BigDecimal vlrRatApurRet) {
+        this.vlrRatApurRet = vlrRatApurRet;
    }
 
    public BigDecimal getVlrRatSuspTotalRet() {
@@ -300,12 +299,12 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.vlrRatSuspTotalRet = vlrRatSuspTotalRet;
    }
 
-   public BigDecimal getVlrSenarApuradoRet() {
-        return vlrSenarApuradoRet;
+   public BigDecimal getVlrSenarApurRet() {
+        return vlrSenarApurRet;
    }
 
-   public void setVlrSenarApuradoRet(BigDecimal vlrSenarApuradoRet) {
-        this.vlrSenarApuradoRet = vlrSenarApuradoRet;
+   public void setVlrSenarApurRet(BigDecimal vlrSenarApurRet) {
+        this.vlrSenarApurRet = vlrSenarApurRet;
    }
 
    public BigDecimal getVlrSenarSuspTotalRet() {
@@ -333,6 +332,11 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
    }
 
    @Override
+   public String getTableName() {
+        return "TRICPPR";
+   }
+
+   @Override
    public String getEntityName() {
         return "ComProducaoProdutorRural";
    }
@@ -346,32 +350,32 @@ public class ComProducaoProdutorRural implements SankhyaEntity<ComProducaoProdut
         this.idEvento = vo.asString("IDEVENTO");
         this.nrInsc = vo.asString("NRINSC");
         this.nrInscEstab = vo.asString("NRINSCESTAB");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.statusReg = vo.asString("STATUSREG");
         this.tpAmb = vo.asString("TPAMB");
         this.tpInsc = vo.asBigDecimal("TPINSC");
         this.tpInscEstab = vo.asBigDecimal("TPINSCESTAB");
-        this.vlrCpApurado = vo.asBigDecimal("VLRCPAPURADO");
+        this.vlrCpApur = vo.asBigDecimal("VLRCPAPUR");
         this.vlrCpSuspTotal = vo.asBigDecimal("VLRCPSUSPTOTAL");
-        this.vlrRatApurado = vo.asBigDecimal("VLRRATAPURADO");
+        this.vlrRatApur = vo.asBigDecimal("VLRRATAPUR");
         this.vlrRatSuspTotal = vo.asBigDecimal("VLRRATSUSPTOTAL");
         this.vlrRecBrutaTotal = vo.asBigDecimal("VLRRECBRUTATOTAL");
-        this.vlrSenarApurado = vo.asBigDecimal("VLRSENARAPURADO");
+        this.vlrSenarApur = vo.asBigDecimal("VLRSENARAPUR");
         this.vlrSenarSuspTotal = vo.asBigDecimal("VLRSENARSUSPTOTAL");
         this.codEmpEstab = vo.asBigDecimal("CODEMPESTAB");
         this.dataChange = vo.asClob("DATACHANGE");
         this.msg = vo.asClob("MSG");
         this.tipo = vo.asString("TIPO");
-        this.vlrBaseCpApurado = vo.asBigDecimal("VLRBASECPAPURADO");
-        this.vlrBaseRatApurado = vo.asBigDecimal("VLRBASERATAPURADO");
-        this.vlrBaseSenarApurado = vo.asBigDecimal("VLRBASESENARAPURADO");
-        this.vlrCpApuradoRet = vo.asBigDecimal("VLRCPAPURADORET");
+        this.vlrBaseCpApur = vo.asBigDecimal("VLRBASECPAPUR");
+        this.vlrBaseRatApur = vo.asBigDecimal("VLRBASERATAPUR");
+        this.vlrBaseSenarApur = vo.asBigDecimal("VLRBASESENARAPUR");
+        this.vlrCpApurRet = vo.asBigDecimal("VLRCPAPURRET");
         this.vlrCpSuspTotalRet = vo.asBigDecimal("VLRCPSUSPTOTALRET");
-        this.vlrRatApuradoRet = vo.asBigDecimal("VLRRATAPURADORET");
+        this.vlrRatApurRet = vo.asBigDecimal("VLRRATAPURRET");
         this.vlrRatSuspTotalRet = vo.asBigDecimal("VLRRATSUSPTOTALRET");
-        this.vlrSenarApuradoRet = vo.asBigDecimal("VLRSENARAPURADORET");
+        this.vlrSenarApurRet = vo.asBigDecimal("VLRSENARAPURRET");
         this.vlrSenarSuspTotalRet = vo.asBigDecimal("VLRSENARSUSPTOTALRET");
         this.xmlEvento = vo.asClob("XMLEVENTO");
         this.xmlRetorno = vo.asClob("XMLRETORNO");

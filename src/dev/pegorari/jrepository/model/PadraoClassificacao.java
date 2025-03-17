@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PadraoClassificacao implements SankhyaEntity<PadraoClassificacao> {
-
+public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificacao> {
    private String ativo;
    private BigDecimal classificacao;
    private BigDecimal codClt;
@@ -140,6 +139,11 @@ public class PadraoClassificacao implements SankhyaEntity<PadraoClassificacao> {
 
    public void setCodGpc(BigDecimal codGpc) {
         this.codGpc = codGpc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGACLT";
    }
 
    @Override

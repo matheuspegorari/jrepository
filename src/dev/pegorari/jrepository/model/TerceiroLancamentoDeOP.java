@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TerceiroLancamentoDeOP implements SankhyaEntity<TerceiroLancamentoDeOP> {
-
+public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancamentoDeOP> {
    private BigDecimal seqOp;
    private BigDecimal nuLop;
    private BigDecimal ideFx;
@@ -50,6 +49,11 @@ public class TerceiroLancamentoDeOP implements SankhyaEntity<TerceiroLancamentoD
 
    public void setDescAtv(String descAtv) {
         this.descAtv = descAtv;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRTLOP";
    }
 
    @Override

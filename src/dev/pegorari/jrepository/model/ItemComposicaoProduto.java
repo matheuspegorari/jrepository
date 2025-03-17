@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemComposicaoProduto implements SankhyaEntity<ItemComposicaoProduto> {
-
+public class ItemComposicaoProduto extends AbstractSankhyaEntity<ItemComposicaoProduto> {
    private BigDecimal preco;
    private String referenciaMp;
    private String atualEstoque;
@@ -437,6 +436,11 @@ public class ItemComposicaoProduto implements SankhyaEntity<ItemComposicaoProdut
 
    public void setMpDecQtd(BigDecimal mpDecQtd) {
         this.mpDecQtd = mpDecQtd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFICP";
    }
 
    @Override

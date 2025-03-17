@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemLaudo implements SankhyaEntity<ItemLaudo> {
-
+public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    private BigDecimal codClc;
    private BigDecimal codClt;
    private BigDecimal descontar;
@@ -89,6 +88,11 @@ public class ItemLaudo implements SankhyaEntity<ItemLaudo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGACLR";
+   }
+
+   @Override
    public String getEntityName() {
         return "ItemLaudo";
    }
@@ -101,7 +105,7 @@ public class ItemLaudo implements SankhyaEntity<ItemLaudo> {
         this.nuCll = vo.asBigDecimal("NUCLL");
         this.observacao = vo.asString("OBSERVACAO");
         this.resultado = vo.asBigDecimal("RESULTADO");
-        this.aprovadorResultado = vo.asString("APROVADORRESULTADO");
+        this.aprovadorResultado = vo.asString("APROVADORESULTADO");
         this.ordem = vo.asBigDecimal("ORDEM");
         this.resultadoConf = vo.asString("RESULTADOCONF");
         return this;

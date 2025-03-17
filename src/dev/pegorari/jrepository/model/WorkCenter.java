@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class WorkCenter implements SankhyaEntity<WorkCenter> {
-
+public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    private BigDecimal codCap;
    private BigDecimal codCargaHor;
    private BigDecimal codCencus;
@@ -257,6 +256,11 @@ public class WorkCenter implements SankhyaEntity<WorkCenter> {
 
    public void setDisponibilidade(String disponibilidade) {
         this.disponibilidade = disponibilidade;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRWCP";
    }
 
    @Override

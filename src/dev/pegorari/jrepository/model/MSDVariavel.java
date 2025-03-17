@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDVariavel implements SankhyaEntity<MSDVariavel> {
-
+public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    private String ativa;
    private String cfgDtResol;
    private BigDecimal codGrupo;
@@ -177,6 +176,11 @@ public class MSDVariavel implements SankhyaEntity<MSDVariavel> {
 
    public void setValorPadrao(String valorPadrao) {
         this.valorPadrao = valorPadrao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDVAR";
    }
 
    @Override

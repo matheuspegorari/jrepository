@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ParceiroTabelaProgressiva implements SankhyaEntity<ParceiroTabelaProgressiva> {
-
+public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTabelaProgressiva> {
    private BigDecimal codParc;
    private BigDecimal codProd;
    private Timestamp competencia;
@@ -60,6 +59,11 @@ public class ParceiroTabelaProgressiva implements SankhyaEntity<ParceiroTabelaPr
 
    public void setRetemInssOrigFin(String retemInssOrigFin) {
         this.retemInssOrigFin = retemInssOrigFin;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPTP";
    }
 
    @Override

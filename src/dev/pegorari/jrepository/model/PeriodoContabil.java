@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PeriodoContabil implements SankhyaEntity<PeriodoContabil> {
-
+public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    private BigDecimal codEmp;
    private BigDecimal codUsu;
    private String descricao;
@@ -69,6 +68,11 @@ public class PeriodoContabil implements SankhyaEntity<PeriodoContabil> {
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
         this.nuPeriodoCtb = nuPeriodoCtb;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBPCT";
    }
 
    @Override

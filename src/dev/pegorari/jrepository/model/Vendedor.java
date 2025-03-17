@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Vendedor implements SankhyaEntity<Vendedor> {
-
+public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    private BigDecimal acrescMax;
    private String apelido;
    private String ativo;
@@ -32,7 +31,7 @@ public class Vendedor implements SankhyaEntity<Vendedor> {
    private BigDecimal particMeta;
    private BigDecimal percCusVar;
    private BigDecimal provAcresc;
-   private String rechExtra;
+   private String rechRextra;
    private BigDecimal saldoDisp;
    private BigDecimal senha;
    private String tipCalc;
@@ -245,12 +244,12 @@ public class Vendedor implements SankhyaEntity<Vendedor> {
         this.provAcresc = provAcresc;
    }
 
-   public String getRechExtra() {
-        return rechExtra;
+   public String getRechRextra() {
+        return rechRextra;
    }
 
-   public void setRechExtra(String rechExtra) {
-        this.rechExtra = rechExtra;
+   public void setRechRextra(String rechRextra) {
+        this.rechRextra = rechRextra;
    }
 
    public BigDecimal getSaldoDisp() {
@@ -342,6 +341,11 @@ public class Vendedor implements SankhyaEntity<Vendedor> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFVEN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Vendedor";
    }
@@ -373,7 +377,7 @@ public class Vendedor implements SankhyaEntity<Vendedor> {
         this.particMeta = vo.asBigDecimal("PARTICMETA");
         this.percCusVar = vo.asBigDecimal("PERCCUSVAR");
         this.provAcresc = vo.asBigDecimal("PROVACRESC");
-        this.rechExtra = vo.asString("RECHEXTRA");
+        this.rechRextra = vo.asString("RECHREXTRA");
         this.saldoDisp = vo.asBigDecimal("SALDODISP");
         this.senha = vo.asBigDecimal("SENHA");
         this.tipCalc = vo.asString("TIPCALC");

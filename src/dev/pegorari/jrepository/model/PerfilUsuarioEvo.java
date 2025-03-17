@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PerfilUsuarioEvo implements SankhyaEntity<PerfilUsuarioEvo> {
-
+public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private String perfil;
@@ -33,6 +32,11 @@ public class PerfilUsuarioEvo implements SankhyaEntity<PerfilUsuarioEvo> {
 
    public void setPerfil(String perfil) {
         this.perfil = perfil;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPUE";
    }
 
    @Override

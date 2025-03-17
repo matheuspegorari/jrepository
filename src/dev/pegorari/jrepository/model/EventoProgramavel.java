@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EventoProgramavel implements SankhyaEntity<EventoProgramavel> {
-
+public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> {
    private String ativo;
    private char[] config;
    private String descricao;
@@ -77,6 +76,11 @@ public class EventoProgramavel implements SankhyaEntity<EventoProgramavel> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIEVP";
    }
 
    @Override

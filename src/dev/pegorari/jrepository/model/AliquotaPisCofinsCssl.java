@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AliquotaPisCofinsCssl implements SankhyaEntity<AliquotaPisCofinsCssl> {
-
+public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofinsCssl> {
    private BigDecimal aliq;
    private BigDecimal aliqCred;
    private BigDecimal codEmp;
@@ -185,6 +184,11 @@ public class AliquotaPisCofinsCssl implements SankhyaEntity<AliquotaPisCofinsCss
 
    public void setIdAliq(BigDecimal idAliq) {
         this.idAliq = idAliq;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIFE";
    }
 
    @Override

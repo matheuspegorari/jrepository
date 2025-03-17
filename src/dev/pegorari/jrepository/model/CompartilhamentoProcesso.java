@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CompartilhamentoProcesso implements SankhyaEntity<CompartilhamentoProcesso> {
-
+public class CompartilhamentoProcesso extends AbstractSankhyaEntity<CompartilhamentoProcesso> {
    private BigDecimal codPrn;
    private BigDecimal codUsu;
    private String permiteCompartilhar;
@@ -68,6 +67,11 @@ public class CompartilhamentoProcesso implements SankhyaEntity<CompartilhamentoP
 
    public void setTipUsuGru(String tipUsuGru) {
         this.tipUsuGru = tipUsuGru;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFCPN";
    }
 
    @Override

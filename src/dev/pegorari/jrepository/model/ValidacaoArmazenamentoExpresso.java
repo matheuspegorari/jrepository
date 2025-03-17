@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ValidacaoArmazenamentoExpresso implements SankhyaEntity<ValidacaoArmazenamentoExpresso> {
-
+public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<ValidacaoArmazenamentoExpresso> {
    private String codConcatenado;
    private BigDecimal nuTarefa;
    private BigDecimal sequencia;
@@ -32,6 +31,11 @@ public class ValidacaoArmazenamentoExpresso implements SankhyaEntity<ValidacaoAr
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWVAE";
    }
 
    @Override

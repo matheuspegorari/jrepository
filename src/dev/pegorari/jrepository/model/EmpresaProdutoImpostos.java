@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpostos> {
-
+public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProdutoImpostos> {
    private String usaLoteDtFab;
    private String usaLoteDtVal;
    private BigDecimal estMin;
@@ -34,9 +33,9 @@ public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpos
    private BigDecimal aliqGeral;
    private BigDecimal grupoIcms2;
    private BigDecimal codLocalPad;
-   private BigDecimal codEspeCst;
+   private BigDecimal codEspecSt;
    private BigDecimal mvaPadrao;
-   private String cat1799Spres;
+   private String cat1799SpRes;
    private String codFci;
    private BigDecimal percRedBaseIcmsEfet;
    private String rastStUltEntrada;
@@ -279,12 +278,12 @@ public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpos
         this.codLocalPad = codLocalPad;
    }
 
-   public BigDecimal getCodEspeCst() {
-        return codEspeCst;
+   public BigDecimal getCodEspecSt() {
+        return codEspecSt;
    }
 
-   public void setCodEspeCst(BigDecimal codEspeCst) {
-        this.codEspeCst = codEspeCst;
+   public void setCodEspecSt(BigDecimal codEspecSt) {
+        this.codEspecSt = codEspecSt;
    }
 
    public BigDecimal getMvaPadrao() {
@@ -295,12 +294,12 @@ public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpos
         this.mvaPadrao = mvaPadrao;
    }
 
-   public String getCat1799Spres() {
-        return cat1799Spres;
+   public String getCat1799SpRes() {
+        return cat1799SpRes;
    }
 
-   public void setCat1799Spres(String cat1799Spres) {
-        this.cat1799Spres = cat1799Spres;
+   public void setCat1799SpRes(String cat1799SpRes) {
+        this.cat1799SpRes = cat1799SpRes;
    }
 
    public String getCodFci() {
@@ -440,6 +439,11 @@ public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpos
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPEM";
+   }
+
+   @Override
    public String getEntityName() {
         return "EmpresaProdutoImpostos";
    }
@@ -474,9 +478,9 @@ public class EmpresaProdutoImpostos implements SankhyaEntity<EmpresaProdutoImpos
         this.aliqGeral = vo.asBigDecimal("ALIQGERAL");
         this.grupoIcms2 = vo.asBigDecimal("GRUPOICMS2");
         this.codLocalPad = vo.asBigDecimal("CODLOCALPAD");
-        this.codEspeCst = vo.asBigDecimal("CODESPECST");
+        this.codEspecSt = vo.asBigDecimal("CODESPECST");
         this.mvaPadrao = vo.asBigDecimal("MVAPADRAO");
-        this.cat1799Spres = vo.asString("CAT1799SPRES");
+        this.cat1799SpRes = vo.asString("CAT1799SPRES");
         this.codFci = vo.asString("CODFCI");
         this.percRedBaseIcmsEfet = vo.asBigDecimal("PERCREDBASEICMSEFET");
         this.rastStUltEntrada = vo.asString("RASTSTULTENTRADA");

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EmailBoletos implements SankhyaEntity<EmailBoletos> {
-
+public class EmailBoletos extends AbstractSankhyaEntity<EmailBoletos> {
    private BigDecimal nuFin;
    private BigDecimal codFila;
 
@@ -23,6 +22,11 @@ public class EmailBoletos implements SankhyaEntity<EmailBoletos> {
 
    public void setCodFila(BigDecimal codFila) {
         this.codFila = codFila;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEBOL";
    }
 
    @Override

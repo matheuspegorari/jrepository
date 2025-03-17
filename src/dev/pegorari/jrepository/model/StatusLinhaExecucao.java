@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class StatusLinhaExecucao implements SankhyaEntity<StatusLinhaExecucao> {
-
+public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecucao> {
    private BigDecimal idAtvStatusNormal;
    private String idExecWflow;
    private String statusExec;
@@ -32,6 +31,11 @@ public class StatusLinhaExecucao implements SankhyaEntity<StatusLinhaExecucao> {
 
    public void setStatusExec(String statusExec) {
         this.statusExec = statusExec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRSTE";
    }
 
    @Override

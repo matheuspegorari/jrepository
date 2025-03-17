@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EnderecoAreaConf implements SankhyaEntity<EnderecoAreaConf> {
-
+public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    private BigDecimal codEndFim;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
@@ -51,6 +50,11 @@ public class EnderecoAreaConf implements SankhyaEntity<EnderecoAreaConf> {
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
         this.codAreaConf = codAreaConf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWEAC";
    }
 
    @Override

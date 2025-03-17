@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FiltroPorTransicao implements SankhyaEntity<FiltroPorTransicao> {
-
+public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao> {
    private BigDecimal codEmp;
    private BigDecimal codLocal;
    private BigDecimal codProdMp;
@@ -104,6 +103,11 @@ public class FiltroPorTransicao implements SankhyaEntity<FiltroPorTransicao> {
 
    public void setTipoFiltro(String tipoFiltro) {
         this.tipoFiltro = tipoFiltro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRFXT";
    }
 
    @Override

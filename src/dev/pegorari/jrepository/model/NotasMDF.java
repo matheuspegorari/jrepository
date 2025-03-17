@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NotasMDF implements SankhyaEntity<NotasMDF> {
-
+public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    private BigDecimal codParc;
    private BigDecimal numNota;
    private BigDecimal nuNota;
@@ -122,6 +121,11 @@ public class NotasMDF implements SankhyaEntity<NotasMDF> {
 
    public void setStatusEnvio(String statusEnvio) {
         this.statusEnvio = statusEnvio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNMDFE";
    }
 
    @Override

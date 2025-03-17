@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConferenciaCega implements SankhyaEntity<ConferenciaCega> {
-
+public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    private BigDecimal codUsu;
    private String destFinal;
    private Timestamp dhFinalConf;
@@ -87,6 +86,11 @@ public class ConferenciaCega implements SankhyaEntity<ConferenciaCega> {
 
    public void setTipConf(String tipConf) {
         this.tipConf = tipConf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWCON";
    }
 
    @Override

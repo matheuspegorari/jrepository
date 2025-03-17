@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProdutoIntermediarioProcesso implements SankhyaEntity<ProdutoIntermediarioProcesso> {
-
+public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoIntermediarioProcesso> {
    private String referencia;
    private String tipoNroLote;
    private String controlePa;
@@ -177,6 +176,11 @@ public class ProdutoIntermediarioProcesso implements SankhyaEntity<ProdutoInterm
 
    public void setDhCad(Timestamp dhCad) {
         this.dhCad = dhCad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRLPI";
    }
 
    @Override

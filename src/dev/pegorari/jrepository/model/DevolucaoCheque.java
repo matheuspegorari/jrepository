@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DevolucaoCheque implements SankhyaEntity<DevolucaoCheque> {
-
+public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    private String aLineaCheqDev;
    private BigDecimal codTipTit;
    private BigDecimal nuDev;
@@ -59,6 +58,11 @@ public class DevolucaoCheque implements SankhyaEntity<DevolucaoCheque> {
 
    public void setNuFinRec(BigDecimal nuFinRec) {
         this.nuFinRec = nuFinRec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDC";
    }
 
    @Override

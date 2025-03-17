@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormularioElemento implements SankhyaEntity<FormularioElemento> {
-
+public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento> {
    private BigDecimal ideFx;
    private BigDecimal idForm;
    private String obrigatorio;
@@ -50,6 +49,11 @@ public class FormularioElemento implements SankhyaEntity<FormularioElemento> {
 
    public void setTipoAcesso(String tipoAcesso) {
         this.tipoAcesso = tipoAcesso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRFRME";
    }
 
    @Override

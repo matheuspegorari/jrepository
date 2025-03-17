@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
-public class MSDProximaResolucaoMensagens implements SankhyaEntity<MSDProximaResolucaoMensagens> {
-
+public class MSDProximaResolucaoMensagens extends AbstractSankhyaEntity<MSDProximaResolucaoMensagens> {
    private Timestamp proxResol;
 
    public Timestamp getProxResol() {
@@ -14,6 +13,11 @@ public class MSDProximaResolucaoMensagens implements SankhyaEntity<MSDProximaRes
 
    public void setProxResol(Timestamp proxResol) {
         this.proxResol = proxResol;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDPRM";
    }
 
    @Override

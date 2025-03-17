@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class QuantidadeCheckoutSeparacao implements SankhyaEntity<QuantidadeCheckoutSeparacao> {
-
+public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<QuantidadeCheckoutSeparacao> {
    private BigDecimal sequencia;
    private BigDecimal nuSeparacao;
    private BigDecimal qtdCheckouts;
@@ -50,6 +49,11 @@ public class QuantidadeCheckoutSeparacao implements SankhyaEntity<QuantidadeChec
 
    public void setNuNota(BigDecimal nuNota) {
         this.nuNota = nuNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWQCS";
    }
 
    @Override

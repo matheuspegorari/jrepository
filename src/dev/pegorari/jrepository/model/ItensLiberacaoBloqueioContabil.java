@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItensLiberacaoBloqueioContabil implements SankhyaEntity<ItensLiberacaoBloqueioContabil> {
-
+public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensLiberacaoBloqueioContabil> {
    private BigDecimal nuChave;
    private BigDecimal nuLiberacao;
    private String tabela;
@@ -41,6 +40,11 @@ public class ItensLiberacaoBloqueioContabil implements SankhyaEntity<ItensLibera
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBILB";
    }
 
    @Override

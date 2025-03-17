@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TransicaoPorFluxoProcesso implements SankhyaEntity<TransicaoPorFluxoProcesso> {
-
+public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPorFluxoProcesso> {
    private BigDecimal codProd;
    private BigDecimal codServDest;
    private BigDecimal codServOrig;
@@ -59,6 +58,11 @@ public class TransicaoPorFluxoProcesso implements SankhyaEntity<TransicaoPorFlux
 
    public void setVariacao(BigDecimal variacao) {
         this.variacao = variacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSTFL";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ComercialProduto implements SankhyaEntity<ComercialProduto> {
-
+public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    private BigDecimal qtdPedVda;
    private BigDecimal valor;
    private BigDecimal qtdPed;
@@ -132,6 +131,11 @@ public class ComercialProduto implements SankhyaEntity<ComercialProduto> {
 
    public void setQtdPedIr(BigDecimal qtdPedIr) {
         this.qtdPedIr = qtdPedIr;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSCPR";
    }
 
    @Override

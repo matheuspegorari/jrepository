@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SerieEmpresa implements SankhyaEntity<SerieEmpresa> {
-
+public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    private BigDecimal codEmp;
    private BigDecimal codTipOper;
    private BigDecimal sequencia;
@@ -41,6 +40,11 @@ public class SerieEmpresa implements SankhyaEntity<SerieEmpresa> {
 
    public void setSerie(String serie) {
         this.serie = serie;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSPE";
    }
 
    @Override

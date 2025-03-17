@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TerminaisCarregamento implements SankhyaEntity<TerminaisCarregamento> {
-
+public class TerminaisCarregamento extends AbstractSankhyaEntity<TerminaisCarregamento> {
    private BigDecimal codTercar;
    private String codTermCarreg;
    private String nomeTermCarreg;
@@ -50,6 +49,11 @@ public class TerminaisCarregamento implements SankhyaEntity<TerminaisCarregament
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         this.seqMdfe = seqMdfe;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTERCAR";
    }
 
    @Override

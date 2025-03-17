@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoCompraMRP implements SankhyaEntity<HistoricoCompraMRP> {
-
+public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP> {
    private BigDecimal seqImrp;
    private String cancelado;
    private BigDecimal codProd;
@@ -96,6 +95,11 @@ public class HistoricoCompraMRP implements SankhyaEntity<HistoricoCompraMRP> {
 
    public void setQtdMov(BigDecimal qtdMov) {
         this.qtdMov = qtdMov;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRHMRP";
    }
 
    @Override

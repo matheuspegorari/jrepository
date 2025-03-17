@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ContatoProspect implements SankhyaEntity<ContatoProspect> {
-
+public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    private String apelido;
    private String cargo;
    private String celular;
@@ -86,6 +85,11 @@ public class ContatoProspect implements SankhyaEntity<ContatoProspect> {
 
    public void setTelefone(String telefone) {
         this.telefone = telefone;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSCTT";
    }
 
    @Override

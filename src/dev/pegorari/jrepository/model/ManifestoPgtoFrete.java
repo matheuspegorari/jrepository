@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ManifestoPgtoFrete implements SankhyaEntity<ManifestoPgtoFrete> {
-
+public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete> {
    private String agencia;
    private String codBanco;
    private BigDecimal codParc;
@@ -104,6 +103,11 @@ public class ManifestoPgtoFrete implements SankhyaEntity<ManifestoPgtoFrete> {
 
    public void setChavePix(String chavePix) {
         this.chavePix = chavePix;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFPGFRE";
    }
 
    @Override

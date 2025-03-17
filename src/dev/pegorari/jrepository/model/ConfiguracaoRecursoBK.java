@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ConfiguracaoRecursoBK implements SankhyaEntity<ConfiguracaoRecursoBK> {
-
+public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRecursoBK> {
    private String chave;
    private String chavePai;
    private BigDecimal codUsu;
    private char[] config;
-   private BigDecimal nuUnico;
+   private BigDecimal nuNico;
    private BigDecimal sequencia;
    private String tipo;
 
@@ -46,12 +45,12 @@ public class ConfiguracaoRecursoBK implements SankhyaEntity<ConfiguracaoRecursoB
         this.config = config;
    }
 
-   public BigDecimal getNuUnico() {
-        return nuUnico;
+   public BigDecimal getNuNico() {
+        return nuNico;
    }
 
-   public void setNuUnico(BigDecimal nuUnico) {
-        this.nuUnico = nuUnico;
+   public void setNuNico(BigDecimal nuNico) {
+        this.nuNico = nuNico;
    }
 
    public BigDecimal getSequencia() {
@@ -71,6 +70,11 @@ public class ConfiguracaoRecursoBK implements SankhyaEntity<ConfiguracaoRecursoB
    }
 
    @Override
+   public String getTableName() {
+        return "TSICFGBK";
+   }
+
+   @Override
    public String getEntityName() {
         return "ConfiguracaoRecursoBK";
    }
@@ -81,7 +85,7 @@ public class ConfiguracaoRecursoBK implements SankhyaEntity<ConfiguracaoRecursoB
         this.chavePai = vo.asString("CHAVEPAI");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.config = vo.asClob("CONFIG");
-        this.nuUnico = vo.asBigDecimal("NUUNICO");
+        this.nuNico = vo.asBigDecimal("NUNICO");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.tipo = vo.asString("TIPO");
         return this;

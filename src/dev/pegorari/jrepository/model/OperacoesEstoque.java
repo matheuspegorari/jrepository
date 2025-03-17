@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class OperacoesEstoque implements SankhyaEntity<OperacoesEstoque> {
-
+public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    private String tipoMaterial;
    private BigDecimal seqOper;
    private String statusExec;
@@ -440,6 +439,11 @@ public class OperacoesEstoque implements SankhyaEntity<OperacoesEstoque> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPROEST";
+   }
+
+   @Override
    public String getEntityName() {
         return "OperacoesEstoque";
    }
@@ -450,7 +454,7 @@ public class OperacoesEstoque implements SankhyaEntity<OperacoesEstoque> {
         this.seqOper = vo.asBigDecimal("SEQOPER");
         this.statusExec = vo.asString("STATUSEXEC");
         this.tipoItens = vo.asString("TIPOITENS");
-        this.baixarReservaEst = vo.asString("BAIXARRESERVAEST");
+        this.baixarReservaEst = vo.asString("BAIXARESERVAEST");
         this.usarParcTerc = vo.asString("USARPARCTERC");
         this.tipoExec = vo.asString("TIPOEXEC");
         this.codLocalBaixaMp = vo.asBigDecimal("CODLOCALBAIXAMP");

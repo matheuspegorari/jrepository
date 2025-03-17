@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CreditoPisCofins implements SankhyaEntity<CreditoPisCofins> {
-
+public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    private String cnpj;
    private String cnpjSuc;
    private BigDecimal codemp;
@@ -99,6 +98,11 @@ public class CreditoPisCofins implements SankhyaEntity<CreditoPisCofins> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCRPC";
+   }
+
+   @Override
    public String getEntityName() {
         return "CreditoPisCofins";
    }
@@ -106,15 +110,15 @@ public class CreditoPisCofins implements SankhyaEntity<CreditoPisCofins> {
    @Override
    public CreditoPisCofins fromVO(DynamicVO vo) {
         this.cnpj = vo.asString("CNPJ");
-        this.cnpjSuc = vo.asString("CNPJSUC");
+        this.cnpjSuc = vo.asString("CNPJ_SUC");
         this.codemp = vo.asBigDecimal("CODEMP");
-        this.codCred = vo.asBigDecimal("CODCRED");
-        this.origCred = vo.asString("ORIGCRED");
-        this.perApuCred = vo.asTimestamp("PERAPUCRED");
+        this.codCred = vo.asBigDecimal("COD_CRED");
+        this.origCred = vo.asString("ORIG_CRED");
+        this.perApuCred = vo.asTimestamp("PER_APU_CRED");
         this.saldo = vo.asBigDecimal("SALDO");
         this.tipo = vo.asString("TIPO");
-        this.vlCredApu = vo.asBigDecimal("VLCREDAPU");
-        this.vlCredExtApu = vo.asBigDecimal("VLCREDEXTAPU");
+        this.vlCredApu = vo.asBigDecimal("VL_CRED_APU");
+        this.vlCredExtApu = vo.asBigDecimal("VL_CRED_EXT_APU");
         return this;
    }
 }

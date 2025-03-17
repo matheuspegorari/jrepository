@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemKitPropostaComercial implements SankhyaEntity<ItemKitPropostaComercial> {
-
+public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropostaComercial> {
    private BigDecimal vlrUnitPis;
    private BigDecimal codProd;
    private String descrItem;
@@ -545,6 +544,11 @@ public class ItemKitPropostaComercial implements SankhyaEntity<ItemKitPropostaCo
 
    public void setCodParcForn(BigDecimal codParcForn) {
         this.codParcForn = codParcForn;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGIITE";
    }
 
    @Override

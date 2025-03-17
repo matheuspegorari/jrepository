@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ServidorImpressao implements SankhyaEntity<ServidorImpressao> {
-
+public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> {
    private String ativo;
    private BigDecimal codUsuInc;
    private String descricao;
@@ -69,6 +68,11 @@ public class ServidorImpressao implements SankhyaEntity<ServidorImpressao> {
 
    public void setUrl(String url) {
         this.url = url;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSISVP";
    }
 
    @Override

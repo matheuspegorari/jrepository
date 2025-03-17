@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InventarioBem implements SankhyaEntity<InventarioBem> {
-
+public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    private String ajustado;
    private String codBem;
    private BigDecimal codDepCp;
@@ -114,6 +113,11 @@ public class InventarioBem implements SankhyaEntity<InventarioBem> {
 
    public void setNuNota(BigDecimal nuNota) {
         this.nuNota = nuNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCICTE";
    }
 
    @Override

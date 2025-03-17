@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NSUFaltante implements SankhyaEntity<NSUFaltante> {
-
+public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    private BigDecimal codEmp;
    private String tipo;
    private String nsu;
@@ -69,6 +68,11 @@ public class NSUFaltante implements SankhyaEntity<NSUFaltante> {
 
    public void setLocalizado(String localizado) {
         this.localizado = localizado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNSUF";
    }
 
    @Override

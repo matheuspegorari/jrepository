@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemImportacaoMOBIS implements SankhyaEntity<ItemImportacaoMOBIS> {
-
+public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOBIS> {
    private String invoiceNumber;
    private char[] msg;
    private BigDecimal nuImp;
@@ -77,6 +76,11 @@ public class ItemImportacaoMOBIS implements SankhyaEntity<ItemImportacaoMOBIS> {
 
    public void setImpStatus(String impStatus) {
         this.impStatus = impStatus;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIIMPMOBIS";
    }
 
    @Override

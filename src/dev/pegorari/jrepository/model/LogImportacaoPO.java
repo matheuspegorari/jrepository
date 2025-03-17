@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LogImportacaoPO implements SankhyaEntity<LogImportacaoPO> {
-
+public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
    private String erro;
    private BigDecimal nroLinha;
    private BigDecimal nuImport;
@@ -32,6 +31,11 @@ public class LogImportacaoPO implements SankhyaEntity<LogImportacaoPO> {
 
    public void setNuImport(BigDecimal nuImport) {
         this.nuImport = nuImport;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIPOLOG";
    }
 
    @Override

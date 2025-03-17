@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CabecalhoReinf implements SankhyaEntity<CabecalhoReinf> {
-
+public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    private BigDecimal codEmp;
    private String controle;
    private Timestamp dtRef;
@@ -144,6 +143,11 @@ public class CabecalhoReinf implements SankhyaEntity<CabecalhoReinf> {
    }
 
    @Override
+   public String getTableName() {
+        return "TRICAB";
+   }
+
+   @Override
    public String getEntityName() {
         return "CabecalhoReinf";
    }
@@ -164,7 +168,7 @@ public class CabecalhoReinf implements SankhyaEntity<CabecalhoReinf> {
         this.status = vo.asBigDecimal("STATUS");
         this.versaoLayout = vo.asBigDecimal("VERSAOLAYOUT");
         this.sequenciaAtual4000 = vo.asBigDecimal("SEQUENCIAATUAL4000");
-        this.statusGrupo4000 = vo.asBigDecimal("STATUSGRUPO4000");
+        this.statusGrupo4000 = vo.asBigDecimal("STATUS_GRUPO4000");
         return this;
    }
 }

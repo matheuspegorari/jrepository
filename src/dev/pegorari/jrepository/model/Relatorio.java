@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Relatorio implements SankhyaEntity<Relatorio> {
-
+public class Relatorio extends AbstractSankhyaEntity<Relatorio> {
    private String idTela;
    private BigDecimal nuInstancia;
    private BigDecimal nuRfe;
@@ -141,6 +140,11 @@ public class Relatorio implements SankhyaEntity<Relatorio> {
 
    public void setNomeImpressora(String nomeImpressora) {
         this.nomeImpressora = nomeImpressora;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIRFE";
    }
 
    @Override

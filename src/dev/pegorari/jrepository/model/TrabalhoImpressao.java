@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TrabalhoImpressao implements SankhyaEntity<TrabalhoImpressao> {
-
+public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> {
    private BigDecimal codUsu;
    private BigDecimal copies;
    private String description;
@@ -168,6 +167,11 @@ public class TrabalhoImpressao implements SankhyaEntity<TrabalhoImpressao> {
 
    public void setJobId(String jobId) {
         this.jobId = jobId;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIJPR";
    }
 
    @Override

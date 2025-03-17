@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Lane implements SankhyaEntity<Lane> {
-
+public class Lane extends AbstractSankhyaEntity<Lane> {
    private BigDecimal ideFx;
    private BigDecimal ideFxPool;
-   private BigDecimal idRpPadrao;
+   private BigDecimal idRpaPadrao;
 
    public BigDecimal getIdeFx() {
         return ideFx;
@@ -26,12 +25,17 @@ public class Lane implements SankhyaEntity<Lane> {
         this.ideFxPool = ideFxPool;
    }
 
-   public BigDecimal getIdRpPadrao() {
-        return idRpPadrao;
+   public BigDecimal getIdRpaPadrao() {
+        return idRpaPadrao;
    }
 
-   public void setIdRpPadrao(BigDecimal idRpPadrao) {
-        this.idRpPadrao = idRpPadrao;
+   public void setIdRpaPadrao(BigDecimal idRpaPadrao) {
+        this.idRpaPadrao = idRpaPadrao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRLND";
    }
 
    @Override
@@ -43,7 +47,7 @@ public class Lane implements SankhyaEntity<Lane> {
    public Lane fromVO(DynamicVO vo) {
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.ideFxPool = vo.asBigDecimal("IDEFXPOOL");
-        this.idRpPadrao = vo.asBigDecimal("IDRPPADRAO");
+        this.idRpaPadrao = vo.asBigDecimal("IDRPAPADRAO");
         return this;
    }
 }

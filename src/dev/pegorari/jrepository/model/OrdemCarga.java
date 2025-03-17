@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OrdemCarga implements SankhyaEntity<OrdemCarga> {
-
+public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    private BigDecimal codDoca;
    private BigDecimal codEmp;
    private BigDecimal codLocal;
@@ -483,6 +482,11 @@ public class OrdemCarga implements SankhyaEntity<OrdemCarga> {
 
    public void setCodEmpPai(BigDecimal codEmpPai) {
         this.codEmpPai = codEmpPai;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFORD";
    }
 
    @Override

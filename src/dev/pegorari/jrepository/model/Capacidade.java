@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Capacidade implements SankhyaEntity<Capacidade> {
-
+public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    private BigDecimal codCap;
    private String descricao;
    private String unidade;
@@ -41,6 +40,11 @@ public class Capacidade implements SankhyaEntity<Capacidade> {
 
    public void setUntmp(String untmp) {
         this.untmp = untmp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCAP";
    }
 
    @Override

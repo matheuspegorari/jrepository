@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoContabilizacao implements SankhyaEntity<HistoricoContabilizacao> {
-
-   private Timestamp dhCtz;
+public class HistoricoContabilizacao extends AbstractSankhyaEntity<HistoricoContabilizacao> {
+   private Timestamp dhctz;
    private char[] erroExec;
    private BigDecimal minutosCtz;
    private BigDecimal nuAgendCtz;
@@ -18,12 +17,12 @@ public class HistoricoContabilizacao implements SankhyaEntity<HistoricoContabili
    private String tipoExec;
    private String liberada;
 
-   public Timestamp getDhCtz() {
-        return dhCtz;
+   public Timestamp getDhctz() {
+        return dhctz;
    }
 
-   public void setDhCtz(Timestamp dhCtz) {
-        this.dhCtz = dhCtz;
+   public void setDhctz(Timestamp dhctz) {
+        this.dhctz = dhctz;
    }
 
    public char[] getErroExec() {
@@ -99,13 +98,18 @@ public class HistoricoContabilizacao implements SankhyaEntity<HistoricoContabili
    }
 
    @Override
+   public String getTableName() {
+        return "TCBHCT";
+   }
+
+   @Override
    public String getEntityName() {
         return "HistoricoContabilizacao";
    }
 
    @Override
    public HistoricoContabilizacao fromVO(DynamicVO vo) {
-        this.dhCtz = vo.asTimestamp("DHCTZ");
+        this.dhctz = vo.asTimestamp("DHCTZ");
         this.erroExec = vo.asClob("ERROEXEC");
         this.minutosCtz = vo.asBigDecimal("MINUTOSCTZ");
         this.nuAgendCtz = vo.asBigDecimal("NUAGENDCTZ");

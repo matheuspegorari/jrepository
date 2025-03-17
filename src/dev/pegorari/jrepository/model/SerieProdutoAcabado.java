@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SerieProdutoAcabado implements SankhyaEntity<SerieProdutoAcabado> {
-
+public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcabado> {
    private BigDecimal codProdPa;
-   private BigDecimal idIproc;
+   private BigDecimal idiProc;
    private String liberado;
    private BigDecimal nuApo;
    private String perda;
@@ -21,12 +20,12 @@ public class SerieProdutoAcabado implements SankhyaEntity<SerieProdutoAcabado> {
         this.codProdPa = codProdPa;
    }
 
-   public BigDecimal getIdIproc() {
-        return idIproc;
+   public BigDecimal getIdiProc() {
+        return idiProc;
    }
 
-   public void setIdIproc(BigDecimal idIproc) {
-        this.idIproc = idIproc;
+   public void setIdiProc(BigDecimal idiProc) {
+        this.idiProc = idiProc;
    }
 
    public String getLiberado() {
@@ -62,6 +61,11 @@ public class SerieProdutoAcabado implements SankhyaEntity<SerieProdutoAcabado> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRSERPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "SerieProdutoAcabado";
    }
@@ -69,7 +73,7 @@ public class SerieProdutoAcabado implements SankhyaEntity<SerieProdutoAcabado> {
    @Override
    public SerieProdutoAcabado fromVO(DynamicVO vo) {
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
+        this.idiProc = vo.asBigDecimal("IDIPROC");
         this.liberado = vo.asString("LIBERADO");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.perda = vo.asString("PERDA");

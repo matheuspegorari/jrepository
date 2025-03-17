@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ExecutanteCandidato implements SankhyaEntity<ExecutanteCandidato> {
-
+public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandidato> {
    private BigDecimal codigo;
    private String formula;
    private BigDecimal ideFx;
@@ -59,6 +58,11 @@ public class ExecutanteCandidato implements SankhyaEntity<ExecutanteCandidato> {
 
    public void setNome(String nome) {
         this.nome = nome;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRECD";
    }
 
    @Override

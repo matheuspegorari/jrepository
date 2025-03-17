@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class StatusEtapas implements SankhyaEntity<StatusEtapas> {
-
+public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    private BigDecimal codEtapa;
    private BigDecimal codStaEtapa;
    private String descRetapa;
-   private String descrNuCurriculo;
-   private String descrRequisicao;
+   private String descRnucurriculo;
+   private String descRrequisicao;
    private BigDecimal nuCurriculo;
    private BigDecimal nuRequisicao;
    private BigDecimal nuSelecao;
@@ -41,20 +40,20 @@ public class StatusEtapas implements SankhyaEntity<StatusEtapas> {
         this.descRetapa = descRetapa;
    }
 
-   public String getDescrNuCurriculo() {
-        return descrNuCurriculo;
+   public String getDescRnucurriculo() {
+        return descRnucurriculo;
    }
 
-   public void setDescrNuCurriculo(String descrNuCurriculo) {
-        this.descrNuCurriculo = descrNuCurriculo;
+   public void setDescRnucurriculo(String descRnucurriculo) {
+        this.descRnucurriculo = descRnucurriculo;
    }
 
-   public String getDescrRequisicao() {
-        return descrRequisicao;
+   public String getDescRrequisicao() {
+        return descRrequisicao;
    }
 
-   public void setDescrRequisicao(String descrRequisicao) {
-        this.descrRequisicao = descrRequisicao;
+   public void setDescRrequisicao(String descRrequisicao) {
+        this.descRrequisicao = descRrequisicao;
    }
 
    public BigDecimal getNuCurriculo() {
@@ -98,6 +97,11 @@ public class StatusEtapas implements SankhyaEntity<StatusEtapas> {
    }
 
    @Override
+   public String getTableName() {
+        return "TRSSTE";
+   }
+
+   @Override
    public String getEntityName() {
         return "StatusEtapas";
    }
@@ -107,8 +111,8 @@ public class StatusEtapas implements SankhyaEntity<StatusEtapas> {
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codStaEtapa = vo.asBigDecimal("CODSTAETAPA");
         this.descRetapa = vo.asString("DESCRETAPA");
-        this.descrNuCurriculo = vo.asString("DESCRNUCURRICULO");
-        this.descrRequisicao = vo.asString("DESCRREQUISICAO");
+        this.descRnucurriculo = vo.asString("DESCRNUCURRICULO");
+        this.descRrequisicao = vo.asString("DESCRREQUISICAO");
         this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
         this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         this.nuSelecao = vo.asBigDecimal("NUSELECAO");

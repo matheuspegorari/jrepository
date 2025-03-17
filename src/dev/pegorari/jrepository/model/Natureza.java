@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Natureza implements SankhyaEntity<Natureza> {
-
+public class Natureza extends AbstractSankhyaEntity<Natureza> {
    private BigDecimal aliqCofins;
    private BigDecimal aliqPis;
    private String analitica;
@@ -32,7 +31,7 @@ public class Natureza implements SankhyaEntity<Natureza> {
    private String subGrupoMkp;
    private String tipNat;
    private BigDecimal codCtaCtbEfd;
-   private String recAdiAntRural;
+   private String recAdiantRural;
    private String geralCdPr;
    private BigDecimal natEfdContM410M810;
 
@@ -244,12 +243,12 @@ public class Natureza implements SankhyaEntity<Natureza> {
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
-   public String getRecAdiAntRural() {
-        return recAdiAntRural;
+   public String getRecAdiantRural() {
+        return recAdiantRural;
    }
 
-   public void setRecAdiAntRural(String recAdiAntRural) {
-        this.recAdiAntRural = recAdiAntRural;
+   public void setRecAdiantRural(String recAdiantRural) {
+        this.recAdiantRural = recAdiantRural;
    }
 
    public String getGeralCdPr() {
@@ -266,6 +265,11 @@ public class Natureza implements SankhyaEntity<Natureza> {
 
    public void setNatEfdContM410M810(BigDecimal natEfdContM410M810) {
         this.natEfdContM410M810 = natEfdContM410M810;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNAT";
    }
 
    @Override
@@ -301,7 +305,7 @@ public class Natureza implements SankhyaEntity<Natureza> {
         this.subGrupoMkp = vo.asString("SUBGRUPOMKP");
         this.tipNat = vo.asString("TIPNAT");
         this.codCtaCtbEfd = vo.asBigDecimal("CODCTACTBEFD");
-        this.recAdiAntRural = vo.asString("RECADIANTRURAL");
+        this.recAdiantRural = vo.asString("RECADIANTRURAL");
         this.geralCdPr = vo.asString("GERALCDPR");
         this.natEfdContM410M810 = vo.asBigDecimal("NATEFDCONTM410M810");
         return this;

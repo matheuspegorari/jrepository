@@ -1,10 +1,9 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
-public class PlanejamentoMetaOrcamento implements SankhyaEntity<PlanejamentoMetaOrcamento> {
-
+public class PlanejamentoMetaOrcamento extends AbstractSankhyaEntity<PlanejamentoMetaOrcamento> {
    private String chave;
    private char[] config;
 
@@ -22,6 +21,11 @@ public class PlanejamentoMetaOrcamento implements SankhyaEntity<PlanejamentoMeta
 
    public void setConfig(char[] config) {
         this.config = config;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPMO";
    }
 
    @Override

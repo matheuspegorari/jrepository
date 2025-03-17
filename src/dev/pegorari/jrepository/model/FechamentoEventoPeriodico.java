@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class FechamentoEventoPeriodico implements SankhyaEntity<FechamentoEventoPeriodico> {
-
+public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoEventoPeriodico> {
    private BigDecimal codEmp;
    private Timestamp compSemMovto;
    private String cpfResp;
@@ -270,6 +269,11 @@ public class FechamentoEventoPeriodico implements SankhyaEntity<FechamentoEvento
    }
 
    @Override
+   public String getTableName() {
+        return "TRIFEP";
+   }
+
+   @Override
    public String getEntityName() {
         return "FechamentoEventoPeriodico";
    }
@@ -291,8 +295,8 @@ public class FechamentoEventoPeriodico implements SankhyaEntity<FechamentoEvento
         this.idEvento = vo.asString("IDEVENTO");
         this.nmResp = vo.asString("NMRESP");
         this.nrInsc = vo.asString("NRINSC");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.statusReg = vo.asString("STATUSREG");
         this.telefone = vo.asString("TELEFONE");

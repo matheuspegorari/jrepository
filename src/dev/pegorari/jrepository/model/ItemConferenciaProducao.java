@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ItemConferenciaProducao implements SankhyaEntity<ItemConferenciaProducao> {
-
+public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenciaProducao> {
    private String codBarra;
    private BigDecimal codProd;
    private BigDecimal nuConf;
@@ -50,6 +49,11 @@ public class ItemConferenciaProducao implements SankhyaEntity<ItemConferenciaPro
 
    public void setControle(String controle) {
         this.controle = controle;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCOI";
    }
 
    @Override

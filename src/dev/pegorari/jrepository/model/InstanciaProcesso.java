@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InstanciaProcesso implements SankhyaEntity<InstanciaProcesso> {
-
+public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> {
    private BigDecimal codPrn;
    private BigDecimal codUsuInc;
    private Timestamp dhConclusao;
@@ -150,6 +149,11 @@ public class InstanciaProcesso implements SankhyaEntity<InstanciaProcesso> {
 
    public void setObsCancel(String obsCancel) {
         this.obsCancel = obsCancel;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFIPRN";
    }
 
    @Override

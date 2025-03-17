@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConferenciaPedido implements SankhyaEntity<ConferenciaPedido> {
-
+public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> {
    private String codBarra;
    private BigDecimal codUsu;
    private BigDecimal nuConf;
@@ -69,6 +68,11 @@ public class ConferenciaPedido implements SankhyaEntity<ConferenciaPedido> {
 
    public void setDhConf(Timestamp dhConf) {
         this.dhConf = dhConf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCON";
    }
 
    @Override

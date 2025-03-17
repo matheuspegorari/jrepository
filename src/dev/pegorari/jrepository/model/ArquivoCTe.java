@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
-
+public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    private char[] xmlProtAutCte;
-   private char[] xmlEnvCartaEnvCli;
+   private char[] xmlEnvCartEnvCli;
    private char[] xmlEnvCli;
    private BigDecimal nuNota;
    private char[] xml;
@@ -16,7 +15,7 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
    private char[] xmlCanc;
    private char[] xmlCancProtAut;
    private char[] xmlCancEnvCli;
-   private char[] xmlEnvCartaRotAut;
+   private char[] xmlEnvCartRotAut;
    private char[] xmlProtAutEpec;
    private char[] xmlEnvEpec;
    private char[] xmlEnvCliCanc;
@@ -31,12 +30,12 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
         this.xmlProtAutCte = xmlProtAutCte;
    }
 
-   public char[] getXmlEnvCartaEnvCli() {
-        return xmlEnvCartaEnvCli;
+   public char[] getXmlEnvCartEnvCli() {
+        return xmlEnvCartEnvCli;
    }
 
-   public void setXmlEnvCartaEnvCli(char[] xmlEnvCartaEnvCli) {
-        this.xmlEnvCartaEnvCli = xmlEnvCartaEnvCli;
+   public void setXmlEnvCartEnvCli(char[] xmlEnvCartEnvCli) {
+        this.xmlEnvCartEnvCli = xmlEnvCartEnvCli;
    }
 
    public char[] getXmlEnvCli() {
@@ -103,12 +102,12 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
         this.xmlCancEnvCli = xmlCancEnvCli;
    }
 
-   public char[] getXmlEnvCartaRotAut() {
-        return xmlEnvCartaRotAut;
+   public char[] getXmlEnvCartRotAut() {
+        return xmlEnvCartRotAut;
    }
 
-   public void setXmlEnvCartaRotAut(char[] xmlEnvCartaRotAut) {
-        this.xmlEnvCartaRotAut = xmlEnvCartaRotAut;
+   public void setXmlEnvCartRotAut(char[] xmlEnvCartRotAut) {
+        this.xmlEnvCartRotAut = xmlEnvCartRotAut;
    }
 
    public char[] getXmlProtAutEpec() {
@@ -152,6 +151,11 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFNCTE";
+   }
+
+   @Override
    public String getEntityName() {
         return "ArquivoCTe";
    }
@@ -159,7 +163,7 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
    @Override
    public ArquivoCTe fromVO(DynamicVO vo) {
         this.xmlProtAutCte = vo.asClob("XMLPROTAUTCTE");
-        this.xmlEnvCartaEnvCli = vo.asClob("XMLENVCARTAENVCLI");
+        this.xmlEnvCartEnvCli = vo.asClob("XMLENVCARTENVCLI");
         this.xmlEnvCli = vo.asClob("XMLENVCLI");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.xml = vo.asClob("XML");
@@ -168,7 +172,7 @@ public class ArquivoCTe implements SankhyaEntity<ArquivoCTe> {
         this.xmlCanc = vo.asClob("XMLCANC");
         this.xmlCancProtAut = vo.asClob("XMLCANCPROTAUT");
         this.xmlCancEnvCli = vo.asClob("XMLCANCENVCLI");
-        this.xmlEnvCartaRotAut = vo.asClob("XMLENVCARTAROTAUT");
+        this.xmlEnvCartRotAut = vo.asClob("XMLENVCARTROTAUT");
         this.xmlProtAutEpec = vo.asClob("XMLPROTAUTEPEC");
         this.xmlEnvEpec = vo.asClob("XMLENVEPEC");
         this.xmlEnvCliCanc = vo.asClob("XMLENVCLICANC");

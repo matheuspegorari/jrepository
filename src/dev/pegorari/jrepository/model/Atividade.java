@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Atividade implements SankhyaEntity<Atividade> {
-
+public class Atividade extends AbstractSankhyaEntity<Atividade> {
    private String tipoConferencia;
-   private String concluiCq;
+   private String concluIcq;
    private String usaSeqCodBar;
    private String sepSeqCodBar;
    private BigDecimal idProc;
@@ -26,7 +25,7 @@ public class Atividade implements SankhyaEntity<Atividade> {
    private BigDecimal idAwc;
    private BigDecimal idCcq;
    private BigDecimal idEfx;
-   private BigDecimal idRpAdest;
+   private BigDecimal idRpadEst;
    private BigDecimal idRpaOper;
    private String inicializarPa;
    private String liberarWcFinal;
@@ -37,7 +36,7 @@ public class Atividade implements SankhyaEntity<Atividade> {
    private String apontaSp;
    private BigDecimal codPrcSub;
    private String apontaRecWc;
-   private BigDecimal codMtpfInTurno;
+   private BigDecimal codMtpFinTurno;
    private String multiTurno;
    private String contCumulativa;
    private String subApoPorConf;
@@ -62,12 +61,12 @@ public class Atividade implements SankhyaEntity<Atividade> {
         this.tipoConferencia = tipoConferencia;
    }
 
-   public String getConcluiCq() {
-        return concluiCq;
+   public String getConcluIcq() {
+        return concluIcq;
    }
 
-   public void setConcluiCq(String concluiCq) {
-        this.concluiCq = concluiCq;
+   public void setConcluIcq(String concluIcq) {
+        this.concluIcq = concluIcq;
    }
 
    public String getUsaSeqCodBar() {
@@ -214,12 +213,12 @@ public class Atividade implements SankhyaEntity<Atividade> {
         this.idEfx = idEfx;
    }
 
-   public BigDecimal getIdRpAdest() {
-        return idRpAdest;
+   public BigDecimal getIdRpadEst() {
+        return idRpadEst;
    }
 
-   public void setIdRpAdest(BigDecimal idRpAdest) {
-        this.idRpAdest = idRpAdest;
+   public void setIdRpadEst(BigDecimal idRpadEst) {
+        this.idRpadEst = idRpadEst;
    }
 
    public BigDecimal getIdRpaOper() {
@@ -302,12 +301,12 @@ public class Atividade implements SankhyaEntity<Atividade> {
         this.apontaRecWc = apontaRecWc;
    }
 
-   public BigDecimal getCodMtpfInTurno() {
-        return codMtpfInTurno;
+   public BigDecimal getCodMtpFinTurno() {
+        return codMtpFinTurno;
    }
 
-   public void setCodMtpfInTurno(BigDecimal codMtpfInTurno) {
-        this.codMtpfInTurno = codMtpfInTurno;
+   public void setCodMtpFinTurno(BigDecimal codMtpFinTurno) {
+        this.codMtpFinTurno = codMtpFinTurno;
    }
 
    public String getMultiTurno() {
@@ -431,6 +430,11 @@ public class Atividade implements SankhyaEntity<Atividade> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRATV";
+   }
+
+   @Override
    public String getEntityName() {
         return "Atividade";
    }
@@ -438,7 +442,7 @@ public class Atividade implements SankhyaEntity<Atividade> {
    @Override
    public Atividade fromVO(DynamicVO vo) {
         this.tipoConferencia = vo.asString("TIPOCONFERENCIA");
-        this.concluiCq = vo.asString("CONCLUICQ");
+        this.concluIcq = vo.asString("CONCLUICQ");
         this.usaSeqCodBar = vo.asString("USASEQCODBAR");
         this.sepSeqCodBar = vo.asString("SEPSEQCODBAR");
         this.idProc = vo.asBigDecimal("IDPROC");
@@ -457,7 +461,7 @@ public class Atividade implements SankhyaEntity<Atividade> {
         this.idAwc = vo.asBigDecimal("IDAWC");
         this.idCcq = vo.asBigDecimal("IDCCQ");
         this.idEfx = vo.asBigDecimal("IDEFX");
-        this.idRpAdest = vo.asBigDecimal("IDRPADEST");
+        this.idRpadEst = vo.asBigDecimal("IDRPADEST");
         this.idRpaOper = vo.asBigDecimal("IDRPAOPER");
         this.inicializarPa = vo.asString("INICIALIZARPA");
         this.liberarWcFinal = vo.asString("LIBERARWCFINAL");
@@ -468,7 +472,7 @@ public class Atividade implements SankhyaEntity<Atividade> {
         this.apontaSp = vo.asString("APONTASP");
         this.codPrcSub = vo.asBigDecimal("CODPRCSUB");
         this.apontaRecWc = vo.asString("APONTARECWC");
-        this.codMtpfInTurno = vo.asBigDecimal("CODMTPFINTURNO");
+        this.codMtpFinTurno = vo.asBigDecimal("CODMTPFINTURNO");
         this.multiTurno = vo.asString("MULTITURNO");
         this.contCumulativa = vo.asString("CONTCUMULATIVA");
         this.subApoPorConf = vo.asString("SUBAPOPORCONF");

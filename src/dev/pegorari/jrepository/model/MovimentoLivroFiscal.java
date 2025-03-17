@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal> {
-
+public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFiscal> {
    private BigDecimal codModDoc;
    private String empParc;
    private String entSai;
@@ -30,9 +29,9 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
    private String ufDestino;
    private String ufOrigem;
    private BigDecimal vlrCtb;
-   private BigDecimal vlrCtbtare;
+   private BigDecimal vlrCtbTare;
    private BigDecimal vlrIcms;
-   private BigDecimal vlrIcmstare;
+   private BigDecimal vlrIcmsTare;
    private BigDecimal vlrIpi;
    private BigDecimal vlrTare;
    private BigDecimal codParc;
@@ -42,34 +41,34 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
    private String digitado;
    private Timestamp dtDoc;
    private String chaveCte;
-   private String chaveCteref;
+   private String chaveCteRef;
    private String chaveNfe;
-   private String codAntecipst;
+   private String codAntecipSt;
    private BigDecimal codCfo;
-   private BigDecimal codCtactb;
+   private BigDecimal codCtaCtb;
    private BigDecimal codEmp;
    private BigDecimal aliqIcms;
    private BigDecimal aliqIpi;
    private BigDecimal baseIcms;
-   private BigDecimal baseIcmstare;
+   private BigDecimal baseIcmsTare;
    private BigDecimal baseIpi;
    private BigDecimal baseRetencao;
-   private BigDecimal codEmporig;
-   private BigDecimal baseRetencaosemred;
+   private BigDecimal codEmpOrig;
+   private BigDecimal baseRetencaoSemRed;
    private Timestamp dtFilt;
-   private Timestamp dtEntsaiinfo;
-   private BigDecimal vlrIcmscompl;
+   private Timestamp dtEntSaiInfo;
+   private BigDecimal vlrIcmsCompl;
    private String ufEntrega;
-   private BigDecimal codContatoentrega;
-   private BigDecimal codCidfimcte;
-   private BigDecimal codCidinictE;
-   private BigDecimal vlrIcmsdifalrem;
-   private BigDecimal vlrIcmsfcp;
-   private BigDecimal vlrStfcpint;
-   private BigDecimal vlrIcmsfcpint;
+   private BigDecimal codContatoEntrega;
+   private BigDecimal codCidFimCte;
+   private BigDecimal codCidIniCte;
+   private BigDecimal vlrIcmsDifalRem;
+   private BigDecimal vlrIcmsFcp;
+   private BigDecimal vlrStFcpInt;
+   private BigDecimal vlrIcmsFcpInt;
    private BigDecimal codProd;
-   private BigDecimal vlrIcmsdifaldest;
-   private BigDecimal codTipoper;
+   private BigDecimal vlrIcmsDifalDest;
+   private BigDecimal codTipOper;
    private String descrEmpParc;
    private Timestamp dtCanc;
    private BigDecimal codUsu;
@@ -260,12 +259,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.vlrCtb = vlrCtb;
    }
 
-   public BigDecimal getVlrCtbtare() {
-        return vlrCtbtare;
+   public BigDecimal getVlrCtbTare() {
+        return vlrCtbTare;
    }
 
-   public void setVlrCtbtare(BigDecimal vlrCtbtare) {
-        this.vlrCtbtare = vlrCtbtare;
+   public void setVlrCtbTare(BigDecimal vlrCtbTare) {
+        this.vlrCtbTare = vlrCtbTare;
    }
 
    public BigDecimal getVlrIcms() {
@@ -276,12 +275,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.vlrIcms = vlrIcms;
    }
 
-   public BigDecimal getVlrIcmstare() {
-        return vlrIcmstare;
+   public BigDecimal getVlrIcmsTare() {
+        return vlrIcmsTare;
    }
 
-   public void setVlrIcmstare(BigDecimal vlrIcmstare) {
-        this.vlrIcmstare = vlrIcmstare;
+   public void setVlrIcmsTare(BigDecimal vlrIcmsTare) {
+        this.vlrIcmsTare = vlrIcmsTare;
    }
 
    public BigDecimal getVlrIpi() {
@@ -356,12 +355,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.chaveCte = chaveCte;
    }
 
-   public String getChaveCteref() {
-        return chaveCteref;
+   public String getChaveCteRef() {
+        return chaveCteRef;
    }
 
-   public void setChaveCteref(String chaveCteref) {
-        this.chaveCteref = chaveCteref;
+   public void setChaveCteRef(String chaveCteRef) {
+        this.chaveCteRef = chaveCteRef;
    }
 
    public String getChaveNfe() {
@@ -372,12 +371,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.chaveNfe = chaveNfe;
    }
 
-   public String getCodAntecipst() {
-        return codAntecipst;
+   public String getCodAntecipSt() {
+        return codAntecipSt;
    }
 
-   public void setCodAntecipst(String codAntecipst) {
-        this.codAntecipst = codAntecipst;
+   public void setCodAntecipSt(String codAntecipSt) {
+        this.codAntecipSt = codAntecipSt;
    }
 
    public BigDecimal getCodCfo() {
@@ -388,12 +387,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.codCfo = codCfo;
    }
 
-   public BigDecimal getCodCtactb() {
-        return codCtactb;
+   public BigDecimal getCodCtaCtb() {
+        return codCtaCtb;
    }
 
-   public void setCodCtactb(BigDecimal codCtactb) {
-        this.codCtactb = codCtactb;
+   public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        this.codCtaCtb = codCtaCtb;
    }
 
    public BigDecimal getCodEmp() {
@@ -428,12 +427,12 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.baseIcms = baseIcms;
    }
 
-   public BigDecimal getBaseIcmstare() {
-        return baseIcmstare;
+   public BigDecimal getBaseIcmsTare() {
+        return baseIcmsTare;
    }
 
-   public void setBaseIcmstare(BigDecimal baseIcmstare) {
-        this.baseIcmstare = baseIcmstare;
+   public void setBaseIcmsTare(BigDecimal baseIcmsTare) {
+        this.baseIcmsTare = baseIcmsTare;
    }
 
    public BigDecimal getBaseIpi() {
@@ -452,20 +451,20 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.baseRetencao = baseRetencao;
    }
 
-   public BigDecimal getCodEmporig() {
-        return codEmporig;
+   public BigDecimal getCodEmpOrig() {
+        return codEmpOrig;
    }
 
-   public void setCodEmporig(BigDecimal codEmporig) {
-        this.codEmporig = codEmporig;
+   public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        this.codEmpOrig = codEmpOrig;
    }
 
-   public BigDecimal getBaseRetencaosemred() {
-        return baseRetencaosemred;
+   public BigDecimal getBaseRetencaoSemRed() {
+        return baseRetencaoSemRed;
    }
 
-   public void setBaseRetencaosemred(BigDecimal baseRetencaosemred) {
-        this.baseRetencaosemred = baseRetencaosemred;
+   public void setBaseRetencaoSemRed(BigDecimal baseRetencaoSemRed) {
+        this.baseRetencaoSemRed = baseRetencaoSemRed;
    }
 
    public Timestamp getDtFilt() {
@@ -476,20 +475,20 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.dtFilt = dtFilt;
    }
 
-   public Timestamp getDtEntsaiinfo() {
-        return dtEntsaiinfo;
+   public Timestamp getDtEntSaiInfo() {
+        return dtEntSaiInfo;
    }
 
-   public void setDtEntsaiinfo(Timestamp dtEntsaiinfo) {
-        this.dtEntsaiinfo = dtEntsaiinfo;
+   public void setDtEntSaiInfo(Timestamp dtEntSaiInfo) {
+        this.dtEntSaiInfo = dtEntSaiInfo;
    }
 
-   public BigDecimal getVlrIcmscompl() {
-        return vlrIcmscompl;
+   public BigDecimal getVlrIcmsCompl() {
+        return vlrIcmsCompl;
    }
 
-   public void setVlrIcmscompl(BigDecimal vlrIcmscompl) {
-        this.vlrIcmscompl = vlrIcmscompl;
+   public void setVlrIcmsCompl(BigDecimal vlrIcmsCompl) {
+        this.vlrIcmsCompl = vlrIcmsCompl;
    }
 
    public String getUfEntrega() {
@@ -500,60 +499,60 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.ufEntrega = ufEntrega;
    }
 
-   public BigDecimal getCodContatoentrega() {
-        return codContatoentrega;
+   public BigDecimal getCodContatoEntrega() {
+        return codContatoEntrega;
    }
 
-   public void setCodContatoentrega(BigDecimal codContatoentrega) {
-        this.codContatoentrega = codContatoentrega;
+   public void setCodContatoEntrega(BigDecimal codContatoEntrega) {
+        this.codContatoEntrega = codContatoEntrega;
    }
 
-   public BigDecimal getCodCidfimcte() {
-        return codCidfimcte;
+   public BigDecimal getCodCidFimCte() {
+        return codCidFimCte;
    }
 
-   public void setCodCidfimcte(BigDecimal codCidfimcte) {
-        this.codCidfimcte = codCidfimcte;
+   public void setCodCidFimCte(BigDecimal codCidFimCte) {
+        this.codCidFimCte = codCidFimCte;
    }
 
-   public BigDecimal getCodCidinictE() {
-        return codCidinictE;
+   public BigDecimal getCodCidIniCte() {
+        return codCidIniCte;
    }
 
-   public void setCodCidinictE(BigDecimal codCidinictE) {
-        this.codCidinictE = codCidinictE;
+   public void setCodCidIniCte(BigDecimal codCidIniCte) {
+        this.codCidIniCte = codCidIniCte;
    }
 
-   public BigDecimal getVlrIcmsdifalrem() {
-        return vlrIcmsdifalrem;
+   public BigDecimal getVlrIcmsDifalRem() {
+        return vlrIcmsDifalRem;
    }
 
-   public void setVlrIcmsdifalrem(BigDecimal vlrIcmsdifalrem) {
-        this.vlrIcmsdifalrem = vlrIcmsdifalrem;
+   public void setVlrIcmsDifalRem(BigDecimal vlrIcmsDifalRem) {
+        this.vlrIcmsDifalRem = vlrIcmsDifalRem;
    }
 
-   public BigDecimal getVlrIcmsfcp() {
-        return vlrIcmsfcp;
+   public BigDecimal getVlrIcmsFcp() {
+        return vlrIcmsFcp;
    }
 
-   public void setVlrIcmsfcp(BigDecimal vlrIcmsfcp) {
-        this.vlrIcmsfcp = vlrIcmsfcp;
+   public void setVlrIcmsFcp(BigDecimal vlrIcmsFcp) {
+        this.vlrIcmsFcp = vlrIcmsFcp;
    }
 
-   public BigDecimal getVlrStfcpint() {
-        return vlrStfcpint;
+   public BigDecimal getVlrStFcpInt() {
+        return vlrStFcpInt;
    }
 
-   public void setVlrStfcpint(BigDecimal vlrStfcpint) {
-        this.vlrStfcpint = vlrStfcpint;
+   public void setVlrStFcpInt(BigDecimal vlrStFcpInt) {
+        this.vlrStFcpInt = vlrStFcpInt;
    }
 
-   public BigDecimal getVlrIcmsfcpint() {
-        return vlrIcmsfcpint;
+   public BigDecimal getVlrIcmsFcpInt() {
+        return vlrIcmsFcpInt;
    }
 
-   public void setVlrIcmsfcpint(BigDecimal vlrIcmsfcpint) {
-        this.vlrIcmsfcpint = vlrIcmsfcpint;
+   public void setVlrIcmsFcpInt(BigDecimal vlrIcmsFcpInt) {
+        this.vlrIcmsFcpInt = vlrIcmsFcpInt;
    }
 
    public BigDecimal getCodProd() {
@@ -564,20 +563,20 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.codProd = codProd;
    }
 
-   public BigDecimal getVlrIcmsdifaldest() {
-        return vlrIcmsdifaldest;
+   public BigDecimal getVlrIcmsDifalDest() {
+        return vlrIcmsDifalDest;
    }
 
-   public void setVlrIcmsdifaldest(BigDecimal vlrIcmsdifaldest) {
-        this.vlrIcmsdifaldest = vlrIcmsdifaldest;
+   public void setVlrIcmsDifalDest(BigDecimal vlrIcmsDifalDest) {
+        this.vlrIcmsDifalDest = vlrIcmsDifalDest;
    }
 
-   public BigDecimal getCodTipoper() {
-        return codTipoper;
+   public BigDecimal getCodTipOper() {
+        return codTipOper;
    }
 
-   public void setCodTipoper(BigDecimal codTipoper) {
-        this.codTipoper = codTipoper;
+   public void setCodTipOper(BigDecimal codTipOper) {
+        this.codTipOper = codTipOper;
    }
 
    public String getDescrEmpParc() {
@@ -621,6 +620,11 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
    }
 
    @Override
+   public String getTableName() {
+        return "TGFLIV";
+   }
+
+   @Override
    public String getEntityName() {
         return "MovimentoLivroFiscal";
    }
@@ -650,9 +654,9 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.ufDestino = vo.asString("UFDESTINO");
         this.ufOrigem = vo.asString("UFORIGEM");
         this.vlrCtb = vo.asBigDecimal("VLRCTB");
-        this.vlrCtbtare = vo.asBigDecimal("VLRCTBTARE");
+        this.vlrCtbTare = vo.asBigDecimal("VLRCTBTARE");
         this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrIcmstare = vo.asBigDecimal("VLRICMSTARE");
+        this.vlrIcmsTare = vo.asBigDecimal("VLRICMSTARE");
         this.vlrIpi = vo.asBigDecimal("VLRIPI");
         this.vlrTare = vo.asBigDecimal("VLRTARE");
         this.codParc = vo.asBigDecimal("CODPARC");
@@ -662,35 +666,35 @@ public class MovimentoLivroFiscal implements SankhyaEntity<MovimentoLivroFiscal>
         this.digitado = vo.asString("DIGITADO");
         this.dtDoc = vo.asTimestamp("DTDOC");
         this.chaveCte = vo.asString("CHAVECTE");
-        this.chaveCteref = vo.asString("CHAVECTEREF");
+        this.chaveCteRef = vo.asString("CHAVECTEREF");
         this.chaveNfe = vo.asString("CHAVENFE");
-        this.codAntecipst = vo.asString("CODANTECIPST");
+        this.codAntecipSt = vo.asString("CODANTECIPST");
         this.codCfo = vo.asBigDecimal("CODCFO");
-        this.codCtactb = vo.asBigDecimal("CODCTACTB");
+        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqIpi = vo.asBigDecimal("ALIQIPI");
         this.baseIcms = vo.asBigDecimal("BASEICMS");
-        this.baseIcmstare = vo.asBigDecimal("BASEICMSTARE");
+        this.baseIcmsTare = vo.asBigDecimal("BASEICMSTARE");
         this.baseIpi = vo.asBigDecimal("BASEIPI");
         this.baseRetencao = vo.asBigDecimal("BASERETENCAO");
-        this.codEmporig = vo.asBigDecimal("CODEMPORIG");
-        this.baseRetencaosemred = vo.asBigDecimal("BASERETENCAOSEMRED");
+        this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
+        this.baseRetencaoSemRed = vo.asBigDecimal("BASERETENCAOSEMRED");
         this.dtFilt = vo.asTimestamp("DTFILT");
-        this.dtEntsaiinfo = vo.asTimestamp("DTENTSAIINFO");
-        this.vlrIcmscompl = vo.asBigDecimal("VLRICMSCOMPL");
+        this.dtEntSaiInfo = vo.asTimestamp("DTENTSAIINFO");
+        this.vlrIcmsCompl = vo.asBigDecimal("VLRICMSCOMPL");
         this.ufEntrega = vo.asString("UFENTREGA");
-        this.codContatoentrega = vo.asBigDecimal("CODCONTATOENTREGA");
-        this.codCidfimcte = vo.asBigDecimal("CODCIDFIMCTE");
-        this.codCidinictE = vo.asBigDecimal("CODCIDINICTE");
-        this.vlrIcmsdifalrem = vo.asBigDecimal("VLRICMSDIFALREM");
-        this.vlrIcmsfcp = vo.asBigDecimal("VLRICMSFCP");
-        this.vlrStfcpint = vo.asBigDecimal("VLRSTFCPINT");
-        this.vlrIcmsfcpint = vo.asBigDecimal("VLRICMSFCPINT");
+        this.codContatoEntrega = vo.asBigDecimal("CODCONTATOENTREGA");
+        this.codCidFimCte = vo.asBigDecimal("CODCIDFIMCTE");
+        this.codCidIniCte = vo.asBigDecimal("CODCIDINICTE");
+        this.vlrIcmsDifalRem = vo.asBigDecimal("VLRICMSDIFALREM");
+        this.vlrIcmsFcp = vo.asBigDecimal("VLRICMSFCP");
+        this.vlrStFcpInt = vo.asBigDecimal("VLRSTFCPINT");
+        this.vlrIcmsFcpInt = vo.asBigDecimal("VLRICMSFCPINT");
         this.codProd = vo.asBigDecimal("CODPROD");
-        this.vlrIcmsdifaldest = vo.asBigDecimal("VLRICMSDIFALDEST");
-        this.codTipoper = vo.asBigDecimal("CODTIPOPER");
-        this.descrEmpParc = vo.asString("DESCREMPPARC");
+        this.vlrIcmsDifalDest = vo.asBigDecimal("VLRICMSDIFALDEST");
+        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
+        this.descrEmpParc = vo.asString("DESCR_EMP_PARC");
         this.dtCanc = vo.asTimestamp("DTCANC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

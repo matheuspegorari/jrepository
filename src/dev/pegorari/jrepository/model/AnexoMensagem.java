@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AnexoMensagem implements SankhyaEntity<AnexoMensagem> {
-
+public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    private byte[] anexo;
    private String cid;
    private String nomeArquivo;
@@ -50,6 +49,11 @@ public class AnexoMensagem implements SankhyaEntity<AnexoMensagem> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDAMG";
    }
 
    @Override

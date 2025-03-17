@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Instancia implements SankhyaEntity<Instancia> {
-
+public class Instancia extends AbstractSankhyaEntity<Instancia> {
    private BigDecimal nuInstanciaExt;
    private BigDecimal nuInstanciaPai;
    private String raiz;
@@ -158,6 +157,11 @@ public class Instancia implements SankhyaEntity<Instancia> {
 
    public void setDescrTela(String descrTela) {
         this.descrTela = descrTela;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDINS";
    }
 
    @Override

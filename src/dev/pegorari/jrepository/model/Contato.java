@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Contato implements SankhyaEntity<Contato> {
-
+public class Contato extends AbstractSankhyaEntity<Contato> {
    private String email;
    private String fax;
    private String latitude;
@@ -474,6 +473,11 @@ public class Contato implements SankhyaEntity<Contato> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCTT";
    }
 
    @Override

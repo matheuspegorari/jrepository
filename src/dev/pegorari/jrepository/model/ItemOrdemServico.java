@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemOrdemServico implements SankhyaEntity<ItemOrdemServico> {
-
+public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    private String classificacao;
    private String cobrar;
    private BigDecimal codCencusPad;
@@ -636,6 +635,11 @@ public class ItemOrdemServico implements SankhyaEntity<ItemOrdemServico> {
 
    public void setDhPauseApp(Timestamp dhPauseApp) {
         this.dhPauseApp = dhPauseApp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSITE";
    }
 
    @Override

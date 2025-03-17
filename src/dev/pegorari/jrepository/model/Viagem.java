@@ -1,27 +1,26 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Viagem implements SankhyaEntity<Viagem> {
-
+public class Viagem extends AbstractSankhyaEntity<Viagem> {
    private BigDecimal codEmp;
    private BigDecimal codUsu;
-   private BigDecimal codVeiPrin;
-   private BigDecimal codVeiReb1;
-   private BigDecimal codVeiReb2;
-   private BigDecimal codVeiReb3;
+   private BigDecimal codVeiprin;
+   private BigDecimal codVeireb1;
+   private BigDecimal codVeireb2;
+   private BigDecimal codVeireb3;
    private Timestamp dhAlter;
    private BigDecimal nuViag;
    private String serie;
    private String statusDoc;
    private String tipAmb;
-   private String tipModalMdfe;
-   private String usaTomServContr;
-   private String usaCioTcTevInc;
-   private String contemDocTerc;
+   private String tipModalmdfe;
+   private String usaTomServcontr;
+   private String usaCiotctevinc;
+   private String contemDocterc;
 
    public BigDecimal getCodEmp() {
         return codEmp;
@@ -39,36 +38,36 @@ public class Viagem implements SankhyaEntity<Viagem> {
         this.codUsu = codUsu;
    }
 
-   public BigDecimal getCodVeiPrin() {
-        return codVeiPrin;
+   public BigDecimal getCodVeiprin() {
+        return codVeiprin;
    }
 
-   public void setCodVeiPrin(BigDecimal codVeiPrin) {
-        this.codVeiPrin = codVeiPrin;
+   public void setCodVeiprin(BigDecimal codVeiprin) {
+        this.codVeiprin = codVeiprin;
    }
 
-   public BigDecimal getCodVeiReb1() {
-        return codVeiReb1;
+   public BigDecimal getCodVeireb1() {
+        return codVeireb1;
    }
 
-   public void setCodVeiReb1(BigDecimal codVeiReb1) {
-        this.codVeiReb1 = codVeiReb1;
+   public void setCodVeireb1(BigDecimal codVeireb1) {
+        this.codVeireb1 = codVeireb1;
    }
 
-   public BigDecimal getCodVeiReb2() {
-        return codVeiReb2;
+   public BigDecimal getCodVeireb2() {
+        return codVeireb2;
    }
 
-   public void setCodVeiReb2(BigDecimal codVeiReb2) {
-        this.codVeiReb2 = codVeiReb2;
+   public void setCodVeireb2(BigDecimal codVeireb2) {
+        this.codVeireb2 = codVeireb2;
    }
 
-   public BigDecimal getCodVeiReb3() {
-        return codVeiReb3;
+   public BigDecimal getCodVeireb3() {
+        return codVeireb3;
    }
 
-   public void setCodVeiReb3(BigDecimal codVeiReb3) {
-        this.codVeiReb3 = codVeiReb3;
+   public void setCodVeireb3(BigDecimal codVeireb3) {
+        this.codVeireb3 = codVeireb3;
    }
 
    public Timestamp getDhAlter() {
@@ -111,36 +110,41 @@ public class Viagem implements SankhyaEntity<Viagem> {
         this.tipAmb = tipAmb;
    }
 
-   public String getTipModalMdfe() {
-        return tipModalMdfe;
+   public String getTipModalmdfe() {
+        return tipModalmdfe;
    }
 
-   public void setTipModalMdfe(String tipModalMdfe) {
-        this.tipModalMdfe = tipModalMdfe;
+   public void setTipModalmdfe(String tipModalmdfe) {
+        this.tipModalmdfe = tipModalmdfe;
    }
 
-   public String getUsaTomServContr() {
-        return usaTomServContr;
+   public String getUsaTomServcontr() {
+        return usaTomServcontr;
    }
 
-   public void setUsaTomServContr(String usaTomServContr) {
-        this.usaTomServContr = usaTomServContr;
+   public void setUsaTomServcontr(String usaTomServcontr) {
+        this.usaTomServcontr = usaTomServcontr;
    }
 
-   public String getUsaCioTcTevInc() {
-        return usaCioTcTevInc;
+   public String getUsaCiotctevinc() {
+        return usaCiotctevinc;
    }
 
-   public void setUsaCioTcTevInc(String usaCioTcTevInc) {
-        this.usaCioTcTevInc = usaCioTcTevInc;
+   public void setUsaCiotctevinc(String usaCiotctevinc) {
+        this.usaCiotctevinc = usaCiotctevinc;
    }
 
-   public String getContemDocTerc() {
-        return contemDocTerc;
+   public String getContemDocterc() {
+        return contemDocterc;
    }
 
-   public void setContemDocTerc(String contemDocTerc) {
-        this.contemDocTerc = contemDocTerc;
+   public void setContemDocterc(String contemDocterc) {
+        this.contemDocterc = contemDocterc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFVIAG";
    }
 
    @Override
@@ -152,19 +156,19 @@ public class Viagem implements SankhyaEntity<Viagem> {
    public Viagem fromVO(DynamicVO vo) {
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVeiPrin = vo.asBigDecimal("CODVEIPRIN");
-        this.codVeiReb1 = vo.asBigDecimal("CODVEIREB1");
-        this.codVeiReb2 = vo.asBigDecimal("CODVEIREB2");
-        this.codVeiReb3 = vo.asBigDecimal("CODVEIREB3");
+        this.codVeiprin = vo.asBigDecimal("CODVEIPRIN");
+        this.codVeireb1 = vo.asBigDecimal("CODVEIREB1");
+        this.codVeireb2 = vo.asBigDecimal("CODVEIREB2");
+        this.codVeireb3 = vo.asBigDecimal("CODVEIREB3");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.serie = vo.asString("SERIE");
         this.statusDoc = vo.asString("STATUSDOC");
         this.tipAmb = vo.asString("TIPAMB");
-        this.tipModalMdfe = vo.asString("TIPMODALMDFE");
-        this.usaTomServContr = vo.asString("USATOMSERVCONTR");
-        this.usaCioTcTevInc = vo.asString("USACIOTCTEVINC");
-        this.contemDocTerc = vo.asString("CONTEMDOCTERC");
+        this.tipModalmdfe = vo.asString("TIPMODALMDFE");
+        this.usaTomServcontr = vo.asString("USATOMSERVCONTR");
+        this.usaCiotctevinc = vo.asString("USACIOTCTEVINC");
+        this.contemDocterc = vo.asString("CONTEMDOCTERC");
         return this;
    }
 }

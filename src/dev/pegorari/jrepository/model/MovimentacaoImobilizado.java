@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentacaoImobilizado implements SankhyaEntity<MovimentacaoImobilizado> {
-
+public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoImobilizado> {
    private String codBem;
    private BigDecimal codCencus;
    private BigDecimal codDep;
@@ -132,6 +131,11 @@ public class MovimentacaoImobilizado implements SankhyaEntity<MovimentacaoImobil
 
    public void setVlrDep(BigDecimal vlrDep) {
         this.vlrDep = vlrDep;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCIMOV";
    }
 
    @Override

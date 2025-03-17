@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImportacaoExtratoBancario implements SankhyaEntity<ImportacaoExtratoBancario> {
-
+public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoExtratoBancario> {
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private Timestamp dhProcesso;
@@ -81,6 +80,11 @@ public class ImportacaoExtratoBancario implements SankhyaEntity<ImportacaoExtrat
    }
 
    @Override
+   public String getTableName() {
+        return "TGFIEB";
+   }
+
+   @Override
    public String getEntityName() {
         return "ImportacaoExtratoBancario";
    }
@@ -91,7 +95,7 @@ public class ImportacaoExtratoBancario implements SankhyaEntity<ImportacaoExtrat
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhProcesso = vo.asTimestamp("DHPROCESSO");
         this.dtImport = vo.asTimestamp("DTIMPORT");
-        this.hashArquivo = vo.asString("HASHARQUIVO");
+        this.hashArquivo = vo.asString("HASH_ARQUIVO");
         this.nomeArq = vo.asString("NOMEARQ");
         this.nuImport = vo.asBigDecimal("NUIMPORT");
         this.processado = vo.asString("PROCESSADO");

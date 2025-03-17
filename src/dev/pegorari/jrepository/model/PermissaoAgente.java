@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
-public class PermissaoAgente implements SankhyaEntity<PermissaoAgente> {
-
+public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    private Timestamp dhAutorizacao;
    private String id;
    private String permissao;
@@ -41,6 +40,11 @@ public class PermissaoAgente implements SankhyaEntity<PermissaoAgente> {
 
    public void setAutorizado(String autorizado) {
         this.autorizado = autorizado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TASPAG";
    }
 
    @Override

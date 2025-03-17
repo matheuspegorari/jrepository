@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CheckoutCabecalho implements SankhyaEntity<CheckoutCabecalho> {
-
+public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> {
    private BigDecimal codCencus;
    private BigDecimal codEmp;
    private BigDecimal codNat;
@@ -16,7 +15,7 @@ public class CheckoutCabecalho implements SankhyaEntity<CheckoutCabecalho> {
    private BigDecimal codVend;
    private BigDecimal nuKc;
    private BigDecimal nuLayout;
-   private String cpfCnpjAdquiriente;
+   private String cpfCnpjAdquirEnte;
 
    public BigDecimal getCodCencus() {
         return codCencus;
@@ -98,12 +97,17 @@ public class CheckoutCabecalho implements SankhyaEntity<CheckoutCabecalho> {
         this.nuLayout = nuLayout;
    }
 
-   public String getCpfCnpjAdquiriente() {
-        return cpfCnpjAdquiriente;
+   public String getCpfCnpjAdquirEnte() {
+        return cpfCnpjAdquirEnte;
    }
 
-   public void setCpfCnpjAdquiriente(String cpfCnpjAdquiriente) {
-        this.cpfCnpjAdquiriente = cpfCnpjAdquiriente;
+   public void setCpfCnpjAdquirEnte(String cpfCnpjAdquirEnte) {
+        this.cpfCnpjAdquirEnte = cpfCnpjAdquirEnte;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCKC";
    }
 
    @Override
@@ -121,9 +125,9 @@ public class CheckoutCabecalho implements SankhyaEntity<CheckoutCabecalho> {
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVend = vo.asBigDecimal("CODVEND");
-        this.nuKc = vo.asBigDecimal("NUKC");
+        this.nuKc = vo.asBigDecimal("NUCKC");
         this.nuLayout = vo.asBigDecimal("NULAYOUT");
-        this.cpfCnpjAdquiriente = vo.asString("CPFCNPJADQUIRIENTE");
+        this.cpfCnpjAdquirEnte = vo.asString("CPFCNPJADQUIRENTE");
         return this;
    }
 }

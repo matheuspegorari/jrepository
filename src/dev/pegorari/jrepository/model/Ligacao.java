@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Ligacao implements SankhyaEntity<Ligacao> {
-
+public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    private String alterar;
    private String condicao;
    private String excluir;
@@ -95,6 +94,11 @@ public class Ligacao implements SankhyaEntity<Ligacao> {
 
    public void setTipLigacao(String tipLigacao) {
         this.tipLigacao = tipLigacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TDDLIG";
    }
 
    @Override

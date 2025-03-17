@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TransferenciaWMS implements SankhyaEntity<TransferenciaWMS> {
-
+public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private BigDecimal nuRecebimento;
@@ -60,6 +59,11 @@ public class TransferenciaWMS implements SankhyaEntity<TransferenciaWMS> {
 
    public void setSituacao(String situacao) {
         this.situacao = situacao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWTRA";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormulaComposicaoProduto implements SankhyaEntity<FormulaComposicaoProduto> {
-
+public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaComposicaoProduto> {
    private String ativo;
    private BigDecimal cicloProducao;
    private BigDecimal codLocal;
@@ -185,6 +184,11 @@ public class FormulaComposicaoProduto implements SankhyaEntity<FormulaComposicao
 
    public void setIdProc(BigDecimal idProc) {
         this.idProc = idProc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFCP";
    }
 
    @Override

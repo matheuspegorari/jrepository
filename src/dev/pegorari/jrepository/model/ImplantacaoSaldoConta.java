@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoConta> {
-
+public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSaldoConta> {
    private BigDecimal codAgeBenef;
    private BigDecimal codCtaBenef;
    private String idCliente;
@@ -18,13 +17,13 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
    private BigDecimal vlrMinBoleta;
    private String zerarAut;
    private BigDecimal numCliente;
-   private String bjBbaibolPag;
+   private String bjbbaiBolPag;
    private BigDecimal codCtaBaixa;
    private BigDecimal codLancBaixaBolRap;
-   private BigDecimal codTipoPerBaixaBolRap;
-   private String pjBchave;
-   private String pjBconBaixCred;
-   private String pjBcred;
+   private BigDecimal codTipOperBaixaBolRap;
+   private String pjbChave;
+   private String pjbConBaixCred;
+   private String pjbCred;
    private String tipoBoleto;
    private BigDecimal nuContrato;
    private String campoLivre;
@@ -210,12 +209,12 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
         this.numCliente = numCliente;
    }
 
-   public String getBjBbaibolPag() {
-        return bjBbaibolPag;
+   public String getBjbbaiBolPag() {
+        return bjbbaiBolPag;
    }
 
-   public void setBjBbaibolPag(String bjBbaibolPag) {
-        this.bjBbaibolPag = bjBbaibolPag;
+   public void setBjbbaiBolPag(String bjbbaiBolPag) {
+        this.bjbbaiBolPag = bjbbaiBolPag;
    }
 
    public BigDecimal getCodCtaBaixa() {
@@ -234,36 +233,36 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
         this.codLancBaixaBolRap = codLancBaixaBolRap;
    }
 
-   public BigDecimal getCodTipoPerBaixaBolRap() {
-        return codTipoPerBaixaBolRap;
+   public BigDecimal getCodTipOperBaixaBolRap() {
+        return codTipOperBaixaBolRap;
    }
 
-   public void setCodTipoPerBaixaBolRap(BigDecimal codTipoPerBaixaBolRap) {
-        this.codTipoPerBaixaBolRap = codTipoPerBaixaBolRap;
+   public void setCodTipOperBaixaBolRap(BigDecimal codTipOperBaixaBolRap) {
+        this.codTipOperBaixaBolRap = codTipOperBaixaBolRap;
    }
 
-   public String getPjBchave() {
-        return pjBchave;
+   public String getPjbChave() {
+        return pjbChave;
    }
 
-   public void setPjBchave(String pjBchave) {
-        this.pjBchave = pjBchave;
+   public void setPjbChave(String pjbChave) {
+        this.pjbChave = pjbChave;
    }
 
-   public String getPjBconBaixCred() {
-        return pjBconBaixCred;
+   public String getPjbConBaixCred() {
+        return pjbConBaixCred;
    }
 
-   public void setPjBconBaixCred(String pjBconBaixCred) {
-        this.pjBconBaixCred = pjBconBaixCred;
+   public void setPjbConBaixCred(String pjbConBaixCred) {
+        this.pjbConBaixCred = pjbConBaixCred;
    }
 
-   public String getPjBcred() {
-        return pjBcred;
+   public String getPjbCred() {
+        return pjbCred;
    }
 
-   public void setPjBcred(String pjBcred) {
-        this.pjBcred = pjBcred;
+   public void setPjbCred(String pjbCred) {
+        this.pjbCred = pjbCred;
    }
 
    public String getTipoBoleto() {
@@ -1035,6 +1034,11 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
    }
 
    @Override
+   public String getTableName() {
+        return "TSICTA";
+   }
+
+   @Override
    public String getEntityName() {
         return "ImplantacaoSaldoConta";
    }
@@ -1052,13 +1056,13 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
         this.vlrMinBoleta = vo.asBigDecimal("VLRMINBOLETA");
         this.zerarAut = vo.asString("ZERARAUT");
         this.numCliente = vo.asBigDecimal("NUMCLIENTE");
-        this.bjBbaibolPag = vo.asString("BJBBAIBOLPAG");
+        this.bjbbaiBolPag = vo.asString("BJBBAIBOLPAG");
         this.codCtaBaixa = vo.asBigDecimal("CODCTABAIXA");
         this.codLancBaixaBolRap = vo.asBigDecimal("CODLANCBAIXABOLRAP");
-        this.codTipoPerBaixaBolRap = vo.asBigDecimal("CODTIPOPERBAIXABOLRAP");
-        this.pjBchave = vo.asString("PJBCHAVE");
-        this.pjBconBaixCred = vo.asString("PJBCONBAIXCRED");
-        this.pjBcred = vo.asString("PJBCRED");
+        this.codTipOperBaixaBolRap = vo.asBigDecimal("CODTIPOPERBAIXABOLRAP");
+        this.pjbChave = vo.asString("PJBCHAVE");
+        this.pjbConBaixCred = vo.asString("PJBCONBAIXCRED");
+        this.pjbCred = vo.asString("PJBCRED");
         this.tipoBoleto = vo.asString("TIPOBOLETO");
         this.nuContrato = vo.asBigDecimal("NUCONTRATO");
         this.campoLivre = vo.asString("CAMPOLIVRE");
@@ -1088,7 +1092,7 @@ public class ImplantacaoSaldoConta implements SankhyaEntity<ImplantacaoSaldoCont
         this.multipNossoNum = vo.asString("MULTIPNOSSONUM");
         this.digitoSubst3 = vo.asString("DIGITOSUBST3");
         this.nossoNumero = vo.asString("NOSSONUMERO");
-        this.tipModNossoNum = vo.asString("TIPMODNOSSONUM");
+        this.tipModNossoNum = vo.asString("TIPMODNOSSNUM");
         this.digitoSubst2 = vo.asString("DIGITOSUBST2");
         this.nossoNumAtivo = vo.asString("NOSSONUMATIVO");
         this.linhaDigAtivo = vo.asString("LINHADIGATIVO");

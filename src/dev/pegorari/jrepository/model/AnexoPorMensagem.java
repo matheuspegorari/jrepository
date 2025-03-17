@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AnexoPorMensagem implements SankhyaEntity<AnexoPorMensagem> {
-
+public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
    private BigDecimal codFila;
    private BigDecimal nuAnexo;
 
@@ -23,6 +22,11 @@ public class AnexoPorMensagem implements SankhyaEntity<AnexoPorMensagem> {
 
    public void setNuAnexo(BigDecimal nuAnexo) {
         this.nuAnexo = nuAnexo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDAXM";
    }
 
    @Override

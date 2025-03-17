@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Usuario implements SankhyaEntity<Usuario> {
-
+public class Usuario extends AbstractSankhyaEntity<Usuario> {
    private Timestamp dtLimAcesso;
    private String exibirValAnalRent;
    private byte[] foto;
@@ -78,7 +77,7 @@ public class Usuario implements SankhyaEntity<Usuario> {
    private BigDecimal codParcPerfil;
    private BigDecimal codUsu;
    private BigDecimal codVend;
-   private String contaAcesso;
+   private String contAcesso;
    private String contaGol;
    private String ignoraHorasCruz;
    private String excLibOrc;
@@ -94,23 +93,23 @@ public class Usuario implements SankhyaEntity<Usuario> {
    private String timPathScanner;
    private String timVerTodasFacs;
    private String usuRede;
-   private String timBaixTitRecAbe;
+   private String timBaixTitRecabe;
    private String selectWcapo;
    private String codIdeConect;
-   private String integraEConect;
-   private String idPerfilEConect;
-   private BigDecimal senhaEConect;
+   private String integraEconect;
+   private String idPerfilEconect;
+   private BigDecimal senhaEconect;
    private String permRepErro;
    private BigDecimal tipoUsu;
    private String tipEnvNotSol;
    private String abreGaveta;
    private String acessoPdvCancItens;
    private String acessoPdvSang;
-   private String acessoPdvSangPDesp;
+   private String acessoPdvSangPdesp;
    private String acessoPdvSupr;
    private String tokenCheckout;
    private String accountEmail;
-   private String atunVersao;
+   private String atNuVersao;
    private BigDecimal nuVersao;
    private Timestamp accountDhExpira;
    private String accountId;
@@ -687,12 +686,12 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.codVend = codVend;
    }
 
-   public String getContaAcesso() {
-        return contaAcesso;
+   public String getContAcesso() {
+        return contAcesso;
    }
 
-   public void setContaAcesso(String contaAcesso) {
-        this.contaAcesso = contaAcesso;
+   public void setContAcesso(String contAcesso) {
+        this.contAcesso = contAcesso;
    }
 
    public String getContaGol() {
@@ -815,12 +814,12 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.usuRede = usuRede;
    }
 
-   public String getTimBaixTitRecAbe() {
-        return timBaixTitRecAbe;
+   public String getTimBaixTitRecabe() {
+        return timBaixTitRecabe;
    }
 
-   public void setTimBaixTitRecAbe(String timBaixTitRecAbe) {
-        this.timBaixTitRecAbe = timBaixTitRecAbe;
+   public void setTimBaixTitRecabe(String timBaixTitRecabe) {
+        this.timBaixTitRecabe = timBaixTitRecabe;
    }
 
    public String getSelectWcapo() {
@@ -839,28 +838,28 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.codIdeConect = codIdeConect;
    }
 
-   public String getIntegraEConect() {
-        return integraEConect;
+   public String getIntegraEconect() {
+        return integraEconect;
    }
 
-   public void setIntegraEConect(String integraEConect) {
-        this.integraEConect = integraEConect;
+   public void setIntegraEconect(String integraEconect) {
+        this.integraEconect = integraEconect;
    }
 
-   public String getIdPerfilEConect() {
-        return idPerfilEConect;
+   public String getIdPerfilEconect() {
+        return idPerfilEconect;
    }
 
-   public void setIdPerfilEConect(String idPerfilEConect) {
-        this.idPerfilEConect = idPerfilEConect;
+   public void setIdPerfilEconect(String idPerfilEconect) {
+        this.idPerfilEconect = idPerfilEconect;
    }
 
-   public BigDecimal getSenhaEConect() {
-        return senhaEConect;
+   public BigDecimal getSenhaEconect() {
+        return senhaEconect;
    }
 
-   public void setSenhaEConect(BigDecimal senhaEConect) {
-        this.senhaEConect = senhaEConect;
+   public void setSenhaEconect(BigDecimal senhaEconect) {
+        this.senhaEconect = senhaEconect;
    }
 
    public String getPermRepErro() {
@@ -911,12 +910,12 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.acessoPdvSang = acessoPdvSang;
    }
 
-   public String getAcessoPdvSangPDesp() {
-        return acessoPdvSangPDesp;
+   public String getAcessoPdvSangPdesp() {
+        return acessoPdvSangPdesp;
    }
 
-   public void setAcessoPdvSangPDesp(String acessoPdvSangPDesp) {
-        this.acessoPdvSangPDesp = acessoPdvSangPDesp;
+   public void setAcessoPdvSangPdesp(String acessoPdvSangPdesp) {
+        this.acessoPdvSangPdesp = acessoPdvSangPdesp;
    }
 
    public String getAcessoPdvSupr() {
@@ -943,12 +942,12 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.accountEmail = accountEmail;
    }
 
-   public String getAtunVersao() {
-        return atunVersao;
+   public String getAtNuVersao() {
+        return atNuVersao;
    }
 
-   public void setAtunVersao(String atunVersao) {
-        this.atunVersao = atunVersao;
+   public void setAtNuVersao(String atNuVersao) {
+        this.atNuVersao = atNuVersao;
    }
 
    public BigDecimal getNuVersao() {
@@ -1008,6 +1007,11 @@ public class Usuario implements SankhyaEntity<Usuario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIUSU";
+   }
+
+   @Override
    public String getEntityName() {
         return "Usuario";
    }
@@ -1017,7 +1021,7 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.dtLimAcesso = vo.asTimestamp("DTLIMACESSO");
         this.exibirValAnalRent = vo.asString("EXIBIRVALANALRENT");
         this.foto = vo.asBlob("FOTO");
-        this.impNfcCentral = vo.asString("IMPNFCCENTRAL");
+        this.impNfcCentral = vo.asString("IMPNFCENTRAL");
         this.cpf = vo.asString("CPF");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.infRecSen = vo.asString("INFRECSEN");
@@ -1085,7 +1089,7 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.codParcPerfil = vo.asBigDecimal("CODPARCPERFIL");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVend = vo.asBigDecimal("CODVEND");
-        this.contaAcesso = vo.asString("CONTAACESSO");
+        this.contAcesso = vo.asString("CONTACESSO");
         this.contaGol = vo.asString("CONTAGOL");
         this.ignoraHorasCruz = vo.asString("IGNORAHORASCRUZ");
         this.excLibOrc = vo.asString("EXCLIBORC");
@@ -1101,23 +1105,23 @@ public class Usuario implements SankhyaEntity<Usuario> {
         this.timPathScanner = vo.asString("TIMPATHSCANNER");
         this.timVerTodasFacs = vo.asString("TIMVERTODASFACS");
         this.usuRede = vo.asString("USUREDE");
-        this.timBaixTitRecAbe = vo.asString("TIMBAIXTITRECABE");
+        this.timBaixTitRecabe = vo.asString("TIMBAIXTITRECABE");
         this.selectWcapo = vo.asString("SELECTWCAPO");
         this.codIdeConect = vo.asString("CODIDECONECT");
-        this.integraEConect = vo.asString("INTEGRAECONECT");
-        this.idPerfilEConect = vo.asString("IDPERFILECONECT");
-        this.senhaEConect = vo.asBigDecimal("SENHAECONECT");
+        this.integraEconect = vo.asString("INTEGRAECONECT");
+        this.idPerfilEconect = vo.asString("IDPERFILECONECT");
+        this.senhaEconect = vo.asBigDecimal("SENHAECONECT");
         this.permRepErro = vo.asString("PERMREPERRO");
         this.tipoUsu = vo.asBigDecimal("TIPOUSU");
         this.tipEnvNotSol = vo.asString("TIPENVNOTSOL");
         this.abreGaveta = vo.asString("ABREGAVETA");
         this.acessoPdvCancItens = vo.asString("ACESSOPDVCANCITENS");
         this.acessoPdvSang = vo.asString("ACESSOPDVSANG");
-        this.acessoPdvSangPDesp = vo.asString("ACESSOPDVSANGPDESP");
+        this.acessoPdvSangPdesp = vo.asString("ACESSOPDVSANGPDESP");
         this.acessoPdvSupr = vo.asString("ACESSOPDVSUPR");
         this.tokenCheckout = vo.asString("TOKENCHECKOUT");
         this.accountEmail = vo.asString("ACCOUNTEMAIL");
-        this.atunVersao = vo.asString("ATUNVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.accountDhExpira = vo.asTimestamp("ACCOUNTDHEXPIRA");
         this.accountId = vo.asString("ACCOUNTID");

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Cheque implements SankhyaEntity<Cheque> {
-
+public class Cheque extends AbstractSankhyaEntity<Cheque> {
    private String agencia;
    private String cgcCpf;
    private String cmc7;
@@ -117,6 +116,11 @@ public class Cheque implements SankhyaEntity<Cheque> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCHQ";
+   }
+
+   @Override
    public String getEntityName() {
         return "Cheque";
    }
@@ -124,7 +128,7 @@ public class Cheque implements SankhyaEntity<Cheque> {
    @Override
    public Cheque fromVO(DynamicVO vo) {
         this.agencia = vo.asString("AGENCIA");
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");
         this.codBco = vo.asBigDecimal("CODBCO");
         this.conta = vo.asString("CONTA");

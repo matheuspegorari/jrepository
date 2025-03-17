@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NotificacaoGapsGestao implements SankhyaEntity<NotificacaoGapsGestao> {
-
+public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGapsGestao> {
    private BigDecimal nuAviso;
    private String rotina;
    private BigDecimal codFila;
@@ -41,6 +40,11 @@ public class NotificacaoGapsGestao implements SankhyaEntity<NotificacaoGapsGesta
 
    public void setIgnorarProximas(String ignorarProximas) {
         this.ignorarProximas = ignorarProximas;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSINGG";
    }
 
    @Override

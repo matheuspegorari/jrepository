@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CodigoItemIPM implements SankhyaEntity<CodigoItemIPM> {
-
+public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    private String descricao;
    private BigDecimal codUf;
    private String codigoItem;
@@ -51,6 +50,11 @@ public class CodigoItemIPM implements SankhyaEntity<CodigoItemIPM> {
 
    public void setDtFinal(Timestamp dtFinal) {
         this.dtFinal = dtFinal;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCIPM";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RateiosParceiro implements SankhyaEntity<RateiosParceiro> {
-
+public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    private BigDecimal nuFin;
    private BigDecimal nuRateio;
    private BigDecimal recDesp;
@@ -41,6 +40,11 @@ public class RateiosParceiro implements SankhyaEntity<RateiosParceiro> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRAP";
    }
 
    @Override

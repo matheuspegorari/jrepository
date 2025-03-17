@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FaturamentoHorasCruzadas implements SankhyaEntity<FaturamentoHorasCruzadas> {
-
+public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoHorasCruzadas> {
    private BigDecimal sequencia;
    private BigDecimal nuNota;
    private BigDecimal numOs;
@@ -41,6 +40,11 @@ public class FaturamentoHorasCruzadas implements SankhyaEntity<FaturamentoHorasC
 
    public void setNumItem(BigDecimal numItem) {
         this.numItem = numItem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSFATHC";
    }
 
    @Override

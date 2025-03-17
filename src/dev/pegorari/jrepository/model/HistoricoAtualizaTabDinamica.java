@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class HistoricoAtualizaTabDinamica implements SankhyaEntity<HistoricoAtualizaTabDinamica> {
-
+public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<HistoricoAtualizaTabDinamica> {
    private BigDecimal codHis;
    private String msg;
    private Timestamp dtExec;
@@ -51,6 +50,11 @@ public class HistoricoAtualizaTabDinamica implements SankhyaEntity<HistoricoAtua
 
    public void setTempoGasto(BigDecimal tempoGasto) {
         this.tempoGasto = tempoGasto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBHID";
    }
 
    @Override

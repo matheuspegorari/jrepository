@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TabelaCPRB implements SankhyaEntity<TabelaCPRB> {
-
+public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    private BigDecimal codCtaCtb;
    private BigDecimal aliquota;
    private String codCprb;
@@ -69,6 +68,11 @@ public class TabelaCPRB implements SankhyaEntity<TabelaCPRB> {
 
    public void setDtInicial(Timestamp dtInicial) {
         this.dtInicial = dtInicial;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCPRB";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ViewEmpresaContabilidade implements SankhyaEntity<ViewEmpresaContabilidade> {
-
+public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaContabilidade> {
    private BigDecimal codCtaCtbEncRes;
    private String aceitarHistZero;
    private BigDecimal corEmpresa;
@@ -23,7 +22,7 @@ public class ViewEmpresaContabilidade implements SankhyaEntity<ViewEmpresaContab
    private String perAltQdCom;
    private BigDecimal codEmpPlaCta;
    private String utilProj;
-   private String utilCenCus;
+   private String utilCencus;
    private String codInstResp;
    private String mascCtaExt;
 
@@ -155,12 +154,12 @@ public class ViewEmpresaContabilidade implements SankhyaEntity<ViewEmpresaContab
         this.utilProj = utilProj;
    }
 
-   public String getUtilCenCus() {
-        return utilCenCus;
+   public String getUtilCencus() {
+        return utilCencus;
    }
 
-   public void setUtilCenCus(String utilCenCus) {
-        this.utilCenCus = utilCenCus;
+   public void setUtilCencus(String utilCencus) {
+        this.utilCencus = utilCencus;
    }
 
    public String getCodInstResp() {
@@ -177,6 +176,11 @@ public class ViewEmpresaContabilidade implements SankhyaEntity<ViewEmpresaContab
 
    public void setMascCtaExt(String mascCtaExt) {
         this.mascCtaExt = mascCtaExt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "VCBEMP";
    }
 
    @Override
@@ -202,7 +206,7 @@ public class ViewEmpresaContabilidade implements SankhyaEntity<ViewEmpresaContab
         this.perAltQdCom = vo.asString("PERALTQDCOM");
         this.codEmpPlaCta = vo.asBigDecimal("CODEMPPLACTA");
         this.utilProj = vo.asString("UTILPROJ");
-        this.utilCenCus = vo.asString("UTILCENCUS");
+        this.utilCencus = vo.asString("UTILCENCUS");
         this.codInstResp = vo.asString("CODINSTRESP");
         this.mascCtaExt = vo.asString("MASCCTAEXT");
         return this;

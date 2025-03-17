@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ResumoPorReferencia implements SankhyaEntity<ResumoPorReferencia> {
-
+public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferencia> {
    private BigDecimal codEmp;
    private Timestamp dhProcess;
    private Timestamp dtRef;
@@ -96,6 +95,11 @@ public class ResumoPorReferencia implements SankhyaEntity<ResumoPorReferencia> {
 
    public void setTpInsc(BigDecimal tpInsc) {
         this.tpInsc = tpInsc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRIRES";
    }
 
    @Override

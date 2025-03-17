@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AcertoFrete implements SankhyaEntity<AcertoFrete> {
-
+public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    private BigDecimal codUsu;
    private Timestamp dhAlter;
    private BigDecimal nuAcerto;
@@ -78,6 +77,11 @@ public class AcertoFrete implements SankhyaEntity<AcertoFrete> {
 
    public void setTipAcerto(String tipAcerto) {
         this.tipAcerto = tipAcerto;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFRE";
    }
 
    @Override

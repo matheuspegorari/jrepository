@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EstoqueRepositorioPA implements SankhyaEntity<EstoqueRepositorioPA> {
-
+public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositorioPA> {
    private BigDecimal codCpm;
    private BigDecimal codProdPa;
    private String controlePa;
    private BigDecimal estoque;
-   private BigDecimal idiProc;
+   private BigDecimal idIproc;
    private BigDecimal idRpa;
    private String statusExec;
    private String referencia;
@@ -48,12 +47,12 @@ public class EstoqueRepositorioPA implements SankhyaEntity<EstoqueRepositorioPA>
         this.estoque = estoque;
    }
 
-   public BigDecimal getIdiProc() {
-        return idiProc;
+   public BigDecimal getIdIproc() {
+        return idIproc;
    }
 
-   public void setIdiProc(BigDecimal idiProc) {
-        this.idiProc = idiProc;
+   public void setIdIproc(BigDecimal idIproc) {
+        this.idIproc = idIproc;
    }
 
    public BigDecimal getIdRpa() {
@@ -89,6 +88,11 @@ public class EstoqueRepositorioPA implements SankhyaEntity<EstoqueRepositorioPA>
    }
 
    @Override
+   public String getTableName() {
+        return "TPRESR";
+   }
+
+   @Override
    public String getEntityName() {
         return "EstoqueRepositorioPA";
    }
@@ -99,7 +103,7 @@ public class EstoqueRepositorioPA implements SankhyaEntity<EstoqueRepositorioPA>
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.estoque = vo.asBigDecimal("ESTOQUE");
-        this.idiProc = vo.asBigDecimal("IDIPROC");
+        this.idIproc = vo.asBigDecimal("IDIPROC");
         this.idRpa = vo.asBigDecimal("IDRPA");
         this.statusExec = vo.asString("STATUSEXEC");
         this.referencia = vo.asString("REFERENCIA");

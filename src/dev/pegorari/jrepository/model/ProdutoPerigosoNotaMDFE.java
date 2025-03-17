@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ProdutoPerigosoNotaMDFE implements SankhyaEntity<ProdutoPerigosoNotaMDFE> {
-
+public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigosoNotaMDFE> {
    private BigDecimal nuViag;
    private String qtdTotProd;
    private BigDecimal seqMdfe;
@@ -50,6 +49,11 @@ public class ProdutoPerigosoNotaMDFE implements SankhyaEntity<ProdutoPerigosoNot
 
    public void setNumOnu(String numOnu) {
         this.numOnu = numOnu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPERI";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RelacaoPergunta implements SankhyaEntity<RelacaoPergunta> {
-
+public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    private BigDecimal codPergDep;
    private BigDecimal codPergMestre;
    private BigDecimal codRespMestre;
@@ -51,6 +50,11 @@ public class RelacaoPergunta implements SankhyaEntity<RelacaoPergunta> {
 
    public void setOrdem(BigDecimal ordem) {
         this.ordem = ordem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQDPD";
    }
 
    @Override

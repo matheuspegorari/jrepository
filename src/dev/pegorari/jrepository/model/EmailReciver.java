@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EmailReciver implements SankhyaEntity<EmailReciver> {
-
+public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    private String situacaoNfe;
    private BigDecimal nuMail;
    private String chaveDoc;
@@ -78,6 +77,11 @@ public class EmailReciver implements SankhyaEntity<EmailReciver> {
 
    public void setMensagem(String mensagem) {
         this.mensagem = mensagem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDT";
    }
 
    @Override

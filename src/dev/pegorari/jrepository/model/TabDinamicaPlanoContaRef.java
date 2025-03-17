@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TabDinamicaPlanoContaRef implements SankhyaEntity<TabDinamicaPlanoContaRef> {
-
+public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaPlanoContaRef> {
    private BigDecimal tipo;
    private String tabela;
    private BigDecimal ano;
@@ -60,6 +59,11 @@ public class TabDinamicaPlanoContaRef implements SankhyaEntity<TabDinamicaPlanoC
 
    public void setDtAlter(Timestamp dtAlter) {
         this.dtAlter = dtAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBDPLR";
    }
 
    @Override

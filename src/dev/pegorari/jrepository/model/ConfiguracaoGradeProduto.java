@@ -1,17 +1,16 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoGradeProduto implements SankhyaEntity<ConfiguracaoGradeProduto> {
-
+public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<ConfiguracaoGradeProduto> {
    private BigDecimal codUsu;
    private Timestamp dhCad;
    private BigDecimal idGrade;
    private String nomGrd;
-   private String atuniversao;
+   private String atuNuVersao;
    private BigDecimal nuVersao;
    private String usaMascara;
 
@@ -47,12 +46,12 @@ public class ConfiguracaoGradeProduto implements SankhyaEntity<ConfiguracaoGrade
         this.nomGrd = nomGrd;
    }
 
-   public String getAtuniversao() {
-        return atuniversao;
+   public String getAtuNuVersao() {
+        return atuNuVersao;
    }
 
-   public void setAtuniversao(String atuniversao) {
-        this.atuniversao = atuniversao;
+   public void setAtuNuVersao(String atuNuVersao) {
+        this.atuNuVersao = atuNuVersao;
    }
 
    public BigDecimal getNuVersao() {
@@ -72,6 +71,11 @@ public class ConfiguracaoGradeProduto implements SankhyaEntity<ConfiguracaoGrade
    }
 
    @Override
+   public String getTableName() {
+        return "TGFGRD";
+   }
+
+   @Override
    public String getEntityName() {
         return "ConfiguracaoGradeProduto";
    }
@@ -82,7 +86,7 @@ public class ConfiguracaoGradeProduto implements SankhyaEntity<ConfiguracaoGrade
         this.dhCad = vo.asTimestamp("DHCAD");
         this.idGrade = vo.asBigDecimal("IDGRADE");
         this.nomGrd = vo.asString("NOMGRD");
-        this.atuniversao = vo.asString("ATUNIVERSAO");
+        this.atuNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.usaMascara = vo.asString("USAMASCARA");
         return this;

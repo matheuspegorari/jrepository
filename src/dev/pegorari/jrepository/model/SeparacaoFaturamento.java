@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SeparacaoFaturamento implements SankhyaEntity<SeparacaoFaturamento> {
-
+public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturamento> {
    private BigDecimal codEmp;
    private BigDecimal codTipOper;
    private BigDecimal codTipOperDest;
@@ -68,6 +67,11 @@ public class SeparacaoFaturamento implements SankhyaEntity<SeparacaoFaturamento>
 
    public void setSerieDest(String serieDest) {
         this.serieDest = serieDest;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFCI";
    }
 
    @Override

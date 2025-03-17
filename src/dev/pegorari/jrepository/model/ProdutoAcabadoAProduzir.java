@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProdutoAcabadoAProduzir implements SankhyaEntity<ProdutoAcabadoAProduzir> {
-
+public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabadoAProduzir> {
    private Timestamp dtVal;
    private Timestamp dtFab;
    private String referencia;
@@ -108,6 +107,11 @@ public class ProdutoAcabadoAProduzir implements SankhyaEntity<ProdutoAcabadoAPro
    }
 
    @Override
+   public String getTableName() {
+        return "TPRIPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "ProdutoAcabadoAProduzir";
    }
@@ -124,7 +128,7 @@ public class ProdutoAcabadoAProduzir implements SankhyaEntity<ProdutoAcabadoAPro
         this.nroLote = vo.asString("NROLOTE");
         this.qtdProduzir = vo.asBigDecimal("QTDPRODUZIR");
         this.saldoOp = vo.asBigDecimal("SALDOOP");
-        this.qtdProduzirOriginal = vo.asBigDecimal("QTDPRODUZIRORIGINAL");
+        this.qtdProduzirOriginal = vo.asBigDecimal("QTDPRODUZIR_ORIGINAL");
         return this;
    }
 }

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class IncidenciaPensao implements SankhyaEntity<IncidenciaPensao> {
-
+public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    private Timestamp dtAlter;
    private BigDecimal codEmp;
    private BigDecimal codEvento;
@@ -60,6 +59,11 @@ public class IncidenciaPensao implements SankhyaEntity<IncidenciaPensao> {
 
    public void setOrigPens(String origPens) {
         this.origPens = origPens;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPINC";
    }
 
    @Override

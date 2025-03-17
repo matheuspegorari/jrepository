@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SelecaoCurriculo implements SankhyaEntity<SelecaoCurriculo> {
-
+public class SelecaoCurriculo extends AbstractSankhyaEntity<SelecaoCurriculo> {
    private BigDecimal codEmp;
    private BigDecimal codFunc;
    private BigDecimal codUsu;
@@ -132,6 +131,11 @@ public class SelecaoCurriculo implements SankhyaEntity<SelecaoCurriculo> {
 
    public void setStatusAprov(String statusAprov) {
         this.statusAprov = statusAprov;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSCAN";
    }
 
    @Override

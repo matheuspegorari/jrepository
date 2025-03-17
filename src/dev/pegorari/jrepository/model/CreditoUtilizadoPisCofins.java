@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CreditoUtilizadoPisCofins implements SankhyaEntity<CreditoUtilizadoPisCofins> {
-
+public class CreditoUtilizadoPisCofins extends AbstractSankhyaEntity<CreditoUtilizadoPisCofins> {
    private String cnpj;
    private String cnpjSuc;
    private BigDecimal codemp;
@@ -108,6 +107,11 @@ public class CreditoUtilizadoPisCofins implements SankhyaEntity<CreditoUtilizado
    }
 
    @Override
+   public String getTableName() {
+        return "TGFDBPC";
+   }
+
+   @Override
    public String getEntityName() {
         return "CreditoUtilizadoPisCofins";
    }
@@ -115,16 +119,16 @@ public class CreditoUtilizadoPisCofins implements SankhyaEntity<CreditoUtilizado
    @Override
    public CreditoUtilizadoPisCofins fromVO(DynamicVO vo) {
         this.cnpj = vo.asString("CNPJ");
-        this.cnpjSuc = vo.asString("CNPJSUC");
+        this.cnpjSuc = vo.asString("CNPJ_SUC");
         this.codemp = vo.asBigDecimal("CODEMP");
-        this.codCred = vo.asBigDecimal("CODCRED");
-        this.origCred = vo.asString("ORIGCRED");
-        this.perApuCred = vo.asTimestamp("PERAPUCRED");
-        this.perUtiCred = vo.asTimestamp("PERUTICRED");
+        this.codCred = vo.asBigDecimal("COD_CRED");
+        this.origCred = vo.asString("ORIG_CRED");
+        this.perApuCred = vo.asTimestamp("PER_APU_CRED");
+        this.perUtiCred = vo.asTimestamp("PER_UTI_CRED");
         this.tipo = vo.asString("TIPO");
-        this.vlCredDcompPa = vo.asBigDecimal("VLCREDDCOMPPA");
-        this.vlCredDescPa = vo.asBigDecimal("VLCREDDESCPA");
-        this.vrCredPerPa = vo.asBigDecimal("VRCREDPERPA");
+        this.vlCredDcompPa = vo.asBigDecimal("VL_CRED_DCOMP_PA");
+        this.vlCredDescPa = vo.asBigDecimal("VL_CRED_DESC_PA");
+        this.vrCredPerPa = vo.asBigDecimal("VR_CRED_PER_PA");
         return this;
    }
 }

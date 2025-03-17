@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TerceiroProcessoProdutivo implements SankhyaEntity<TerceiroProcessoProdutivo> {
-
+public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroProcessoProdutivo> {
    private BigDecimal codProdPa;
    private BigDecimal codParcTerc;
    private BigDecimal ideFx;
@@ -87,6 +86,11 @@ public class TerceiroProcessoProdutivo implements SankhyaEntity<TerceiroProcesso
 
    public void setDhCad(Timestamp dhCad) {
         this.dhCad = dhCad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRTXPP";
    }
 
    @Override

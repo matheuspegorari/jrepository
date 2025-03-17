@@ -1,27 +1,26 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Campo implements SankhyaEntity<Campo> {
-
+public class Campo extends AbstractSankhyaEntity<Campo> {
    private String apresentacao;
    private String calculado;
-   private String descricaoCampo;
+   private String descrcampo;
    private String expressao;
    private String mascara;
-   private String nomeCampo;
-   private String nomeTab;
-   private BigDecimal nuCampo;
+   private String nomecampo;
+   private String nometab;
+   private BigDecimal nucampo;
    private BigDecimal ordem;
-   private String permitePadrao;
-   private String permitePesquisa;
+   private String permitepadrao;
+   private String permitepesquisa;
    private String sistema;
    private BigDecimal tamanho;
-   private String tipoCampo;
-   private String tipoApresentacao;
-   private String visivelGridPesquisa;
+   private String tipcampo;
+   private String tipoapresentacao;
+   private String visivelgridpesquisa;
    private String requerido;
 
    public String getApresentacao() {
@@ -40,12 +39,12 @@ public class Campo implements SankhyaEntity<Campo> {
         this.calculado = calculado;
    }
 
-   public String getDescricaoCampo() {
-        return descricaoCampo;
+   public String getDescrcampo() {
+        return descrcampo;
    }
 
-   public void setDescricaoCampo(String descricaoCampo) {
-        this.descricaoCampo = descricaoCampo;
+   public void setDescrcampo(String descrcampo) {
+        this.descrcampo = descrcampo;
    }
 
    public String getExpressao() {
@@ -64,28 +63,28 @@ public class Campo implements SankhyaEntity<Campo> {
         this.mascara = mascara;
    }
 
-   public String getNomeCampo() {
-        return nomeCampo;
+   public String getNomecampo() {
+        return nomecampo;
    }
 
-   public void setNomeCampo(String nomeCampo) {
-        this.nomeCampo = nomeCampo;
+   public void setNomecampo(String nomecampo) {
+        this.nomecampo = nomecampo;
    }
 
-   public String getNomeTab() {
-        return nomeTab;
+   public String getNometab() {
+        return nometab;
    }
 
-   public void setNomeTab(String nomeTab) {
-        this.nomeTab = nomeTab;
+   public void setNometab(String nometab) {
+        this.nometab = nometab;
    }
 
-   public BigDecimal getNuCampo() {
-        return nuCampo;
+   public BigDecimal getNucampo() {
+        return nucampo;
    }
 
-   public void setNuCampo(BigDecimal nuCampo) {
-        this.nuCampo = nuCampo;
+   public void setNucampo(BigDecimal nucampo) {
+        this.nucampo = nucampo;
    }
 
    public BigDecimal getOrdem() {
@@ -96,20 +95,20 @@ public class Campo implements SankhyaEntity<Campo> {
         this.ordem = ordem;
    }
 
-   public String getPermitePadrao() {
-        return permitePadrao;
+   public String getPermitepadrao() {
+        return permitepadrao;
    }
 
-   public void setPermitePadrao(String permitePadrao) {
-        this.permitePadrao = permitePadrao;
+   public void setPermitepadrao(String permitepadrao) {
+        this.permitepadrao = permitepadrao;
    }
 
-   public String getPermitePesquisa() {
-        return permitePesquisa;
+   public String getPermitepesquisa() {
+        return permitepesquisa;
    }
 
-   public void setPermitePesquisa(String permitePesquisa) {
-        this.permitePesquisa = permitePesquisa;
+   public void setPermitepesquisa(String permitepesquisa) {
+        this.permitepesquisa = permitepesquisa;
    }
 
    public String getSistema() {
@@ -128,28 +127,28 @@ public class Campo implements SankhyaEntity<Campo> {
         this.tamanho = tamanho;
    }
 
-   public String getTipoCampo() {
-        return tipoCampo;
+   public String getTipcampo() {
+        return tipcampo;
    }
 
-   public void setTipoCampo(String tipoCampo) {
-        this.tipoCampo = tipoCampo;
+   public void setTipcampo(String tipcampo) {
+        this.tipcampo = tipcampo;
    }
 
-   public String getTipoApresentacao() {
-        return tipoApresentacao;
+   public String getTipoapresentacao() {
+        return tipoapresentacao;
    }
 
-   public void setTipoApresentacao(String tipoApresentacao) {
-        this.tipoApresentacao = tipoApresentacao;
+   public void setTipoapresentacao(String tipoapresentacao) {
+        this.tipoapresentacao = tipoapresentacao;
    }
 
-   public String getVisivelGridPesquisa() {
-        return visivelGridPesquisa;
+   public String getVisivelgridpesquisa() {
+        return visivelgridpesquisa;
    }
 
-   public void setVisivelGridPesquisa(String visivelGridPesquisa) {
-        this.visivelGridPesquisa = visivelGridPesquisa;
+   public void setVisivelgridpesquisa(String visivelgridpesquisa) {
+        this.visivelgridpesquisa = visivelgridpesquisa;
    }
 
    public String getRequerido() {
@@ -161,6 +160,11 @@ public class Campo implements SankhyaEntity<Campo> {
    }
 
    @Override
+   public String getTableName() {
+        return "TDDCAM";
+   }
+
+   @Override
    public String getEntityName() {
         return "Campo";
    }
@@ -169,20 +173,20 @@ public class Campo implements SankhyaEntity<Campo> {
    public Campo fromVO(DynamicVO vo) {
         this.apresentacao = vo.asString("APRESENTACAO");
         this.calculado = vo.asString("CALCULADO");
-        this.descricaoCampo = vo.asString("DESCRICAOCAMPO");
+        this.descrcampo = vo.asString("DESCRCAMPO");
         this.expressao = vo.asString("EXPRESSAO");
         this.mascara = vo.asString("MASCARA");
-        this.nomeCampo = vo.asString("NOMECAMPO");
-        this.nomeTab = vo.asString("NOMETAB");
-        this.nuCampo = vo.asBigDecimal("NUCAMPO");
+        this.nomecampo = vo.asString("NOMECAMPO");
+        this.nometab = vo.asString("NOMETAB");
+        this.nucampo = vo.asBigDecimal("NUCAMPO");
         this.ordem = vo.asBigDecimal("ORDEM");
-        this.permitePadrao = vo.asString("PERMITEPADRAO");
-        this.permitePesquisa = vo.asString("PERMITEPESQUISA");
+        this.permitepadrao = vo.asString("PERMITEPADRAO");
+        this.permitepesquisa = vo.asString("PERMITEPESQUISA");
         this.sistema = vo.asString("SISTEMA");
         this.tamanho = vo.asBigDecimal("TAMANHO");
-        this.tipoCampo = vo.asString("TIPOCAMPO");
-        this.tipoApresentacao = vo.asString("TIPOAPRESENTACAO");
-        this.visivelGridPesquisa = vo.asString("VISIVELGRIDPESQUISA");
+        this.tipcampo = vo.asString("TIPCAMPO");
+        this.tipoapresentacao = vo.asString("TIPOAPRESENTACAO");
+        this.visivelgridpesquisa = vo.asString("VISIVELGRIDPESQUISA");
         this.requerido = vo.asString("REQUERIDO");
         return this;
    }

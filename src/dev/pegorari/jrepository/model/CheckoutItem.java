@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CheckoutItem implements SankhyaEntity<CheckoutItem> {
-
+public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    private BigDecimal nuKc;
    private BigDecimal nuPromocao;
    private BigDecimal nuTab;
@@ -270,13 +269,18 @@ public class CheckoutItem implements SankhyaEntity<CheckoutItem> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCKI";
+   }
+
+   @Override
    public String getEntityName() {
         return "CheckoutItem";
    }
 
    @Override
    public CheckoutItem fromVO(DynamicVO vo) {
-        this.nuKc = vo.asBigDecimal("NUKC");
+        this.nuKc = vo.asBigDecimal("NUCKC");
         this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");
         this.nuTab = vo.asBigDecimal("NUTAB");
         this.percDesc = vo.asBigDecimal("PERCDESC");

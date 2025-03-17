@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ModeloEtapa implements SankhyaEntity<ModeloEtapa> {
-
+public class ModeloEtapa extends AbstractSankhyaEntity<ModeloEtapa> {
    private BigDecimal codMetod;
    private BigDecimal codProd;
    private String descricao;
@@ -140,6 +139,11 @@ public class ModeloEtapa implements SankhyaEntity<ModeloEtapa> {
 
    public void setSuplementado(String suplementado) {
         this.suplementado = suplementado;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSMOD";
    }
 
    @Override

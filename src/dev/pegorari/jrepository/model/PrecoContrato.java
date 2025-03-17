@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PrecoContrato implements SankhyaEntity<PrecoContrato> {
-
+public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    private BigDecimal codProd;
    private BigDecimal codServ;
    private BigDecimal numContrato;
    private Timestamp referencia;
    private BigDecimal valor;
-   private BigDecimal codTerRespar;
+   private BigDecimal codTerResPar;
 
    public BigDecimal getCodProd() {
         return codProd;
@@ -54,12 +53,17 @@ public class PrecoContrato implements SankhyaEntity<PrecoContrato> {
         this.valor = valor;
    }
 
-   public BigDecimal getCodTerRespar() {
-        return codTerRespar;
+   public BigDecimal getCodTerResPar() {
+        return codTerResPar;
    }
 
-   public void setCodTerRespar(BigDecimal codTerRespar) {
-        this.codTerRespar = codTerRespar;
+   public void setCodTerResPar(BigDecimal codTerResPar) {
+        this.codTerResPar = codTerResPar;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSPRE";
    }
 
    @Override
@@ -74,7 +78,7 @@ public class PrecoContrato implements SankhyaEntity<PrecoContrato> {
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.valor = vo.asBigDecimal("VALOR");
-        this.codTerRespar = vo.asBigDecimal("CODTERRESPAR");
+        this.codTerResPar = vo.asBigDecimal("CODTERRESPAR");
         return this;
    }
 }

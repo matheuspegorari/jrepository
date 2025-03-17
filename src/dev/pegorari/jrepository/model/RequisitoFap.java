@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RequisitoFap implements SankhyaEntity<RequisitoFap> {
-
+public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    private String casoUso;
    private BigDecimal codReq;
    private String descricao;
@@ -68,6 +67,11 @@ public class RequisitoFap implements SankhyaEntity<RequisitoFap> {
 
    public void setTodaEtapa(String todaEtapa) {
         this.todaEtapa = todaEtapa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSREQ";
    }
 
    @Override

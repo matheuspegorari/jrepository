@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PoolImpressoras implements SankhyaEntity<PoolImpressoras> {
-
+public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
    private String caminhoSps;
    private String nomeImpLocal;
    private BigDecimal nuNip;
@@ -32,6 +31,11 @@ public class PoolImpressoras implements SankhyaEntity<PoolImpressoras> {
 
    public void setNuNip(BigDecimal nuNip) {
         this.nuNip = nuNip;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIPRP";
    }
 
    @Override

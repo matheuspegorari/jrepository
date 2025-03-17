@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FluxoDiagnosticoOS implements SankhyaEntity<FluxoDiagnosticoOS> {
-
+public class FluxoDiagnosticoOS extends AbstractSankhyaEntity<FluxoDiagnosticoOS> {
    private BigDecimal codFld;
    private BigDecimal numOs;
 
@@ -23,6 +22,11 @@ public class FluxoDiagnosticoOS implements SankhyaEntity<FluxoDiagnosticoOS> {
 
    public void setNumOs(BigDecimal numOs) {
         this.numOs = numOs;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSFXO";
    }
 
    @Override

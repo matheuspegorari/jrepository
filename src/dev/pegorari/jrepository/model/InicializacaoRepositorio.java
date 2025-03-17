@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class InicializacaoRepositorio implements SankhyaEntity<InicializacaoRepositorio> {
-
+public class InicializacaoRepositorio extends AbstractSankhyaEntity<InicializacaoRepositorio> {
    private BigDecimal codCpm;
-   private BigDecimal codProdPa;
+   private BigDecimal codProdpA;
    private String controlePa;
    private BigDecimal ideFx;
    private String tipo;
@@ -20,12 +19,12 @@ public class InicializacaoRepositorio implements SankhyaEntity<InicializacaoRepo
         this.codCpm = codCpm;
    }
 
-   public BigDecimal getCodProdPa() {
-        return codProdPa;
+   public BigDecimal getCodProdpA() {
+        return codProdpA;
    }
 
-   public void setCodProdPa(BigDecimal codProdPa) {
-        this.codProdPa = codProdPa;
+   public void setCodProdpA(BigDecimal codProdpA) {
+        this.codProdpA = codProdpA;
    }
 
    public String getControlePa() {
@@ -53,6 +52,11 @@ public class InicializacaoRepositorio implements SankhyaEntity<InicializacaoRepo
    }
 
    @Override
+   public String getTableName() {
+        return "TPRIRPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "InicializacaoRepositorio";
    }
@@ -60,7 +64,7 @@ public class InicializacaoRepositorio implements SankhyaEntity<InicializacaoRepo
    @Override
    public InicializacaoRepositorio fromVO(DynamicVO vo) {
         this.codCpm = vo.asBigDecimal("CODCPM");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
+        this.codProdpA = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.tipo = vo.asString("TIPO");

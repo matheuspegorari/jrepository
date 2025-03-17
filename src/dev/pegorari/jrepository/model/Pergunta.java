@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Pergunta implements SankhyaEntity<Pergunta> {
-
+public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    private String aceitaObservacao;
    private BigDecimal codGrupoPerg;
    private BigDecimal codPerg;
@@ -159,6 +158,11 @@ public class Pergunta implements SankhyaEntity<Pergunta> {
 
    public void setPermiteFiltrar(String permiteFiltrar) {
         this.permiteFiltrar = permiteFiltrar;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQPER";
    }
 
    @Override

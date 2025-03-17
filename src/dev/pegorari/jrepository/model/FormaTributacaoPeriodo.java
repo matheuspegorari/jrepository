@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class FormaTributacaoPeriodo implements SankhyaEntity<FormaTributacaoPeriodo> {
-
+public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributacaoPeriodo> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private String mes3BalRed;
@@ -87,6 +86,11 @@ public class FormaTributacaoPeriodo implements SankhyaEntity<FormaTributacaoPeri
 
    public void setMes1BalRed(String mes1BalRed) {
         this.mes1BalRed = mes1BalRed;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBFTR";
    }
 
    @Override

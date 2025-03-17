@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DetailMetaForecast implements SankhyaEntity<DetailMetaForecast> {
-
+public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast> {
    private BigDecimal codCenario;
    private BigDecimal codMeta;
    private BigDecimal codUsu;
@@ -69,6 +68,11 @@ public class DetailMetaForecast implements SankhyaEntity<DetailMetaForecast> {
 
    public void setValueDetail(String valueDetail) {
         this.valueDetail = valueDetail;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMDFM";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class OcorrenciasManifesto implements SankhyaEntity<OcorrenciasManifesto> {
-
+public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManifesto> {
    private BigDecimal nuViag;
    private BigDecimal seqMdfe;
    private char[] ocorrencias;
@@ -51,6 +50,11 @@ public class OcorrenciasManifesto implements SankhyaEntity<OcorrenciasManifesto>
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFOMDF";
    }
 
    @Override

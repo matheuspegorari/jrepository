@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class DestinatarioPlanejamento implements SankhyaEntity<DestinatarioPlanejamento> {
-
+public class DestinatarioPlanejamento extends AbstractSankhyaEntity<DestinatarioPlanejamento> {
    private BigDecimal nuPla;
    private String apresentacao;
    private BigDecimal chave;
@@ -59,6 +58,11 @@ public class DestinatarioPlanejamento implements SankhyaEntity<DestinatarioPlane
 
    public void setNuInstancia(BigDecimal nuInstancia) {
         this.nuInstancia = nuInstancia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQDPL";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TipoMeta implements SankhyaEntity<TipoMeta> {
-
+public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    private BigDecimal codMeta;
    private BigDecimal codUsu;
    private String compromisso;
@@ -60,6 +59,11 @@ public class TipoMeta implements SankhyaEntity<TipoMeta> {
 
    public void setCodTipOper(BigDecimal codTipOper) {
         this.codTipOper = codTipOper;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMTME";
    }
 
    @Override

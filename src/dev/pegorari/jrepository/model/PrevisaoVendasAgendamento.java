@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PrevisaoVendasAgendamento implements SankhyaEntity<PrevisaoVendasAgendamento> {
-
+public class PrevisaoVendasAgendamento extends AbstractSankhyaEntity<PrevisaoVendasAgendamento> {
    private BigDecimal codExec;
 
    public BigDecimal getCodExec() {
@@ -14,6 +13,11 @@ public class PrevisaoVendasAgendamento implements SankhyaEntity<PrevisaoVendasAg
 
    public void setCodExec(BigDecimal codExec) {
         this.codExec = codExec;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSLISC";
    }
 
    @Override

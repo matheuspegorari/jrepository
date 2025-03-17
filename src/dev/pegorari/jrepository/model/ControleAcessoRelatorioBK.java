@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ControleAcessoRelatorioBK implements SankhyaEntity<ControleAcessoRelatorioBK> {
-
+public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAcessoRelatorioBK> {
    private String altera;
    private BigDecimal codGrupo;
    private BigDecimal codRel;
@@ -95,6 +94,11 @@ public class ControleAcessoRelatorioBK implements SankhyaEntity<ControleAcessoRe
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIACIBK";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ValePedagioMDFE implements SankhyaEntity<ValePedagioMDFE> {
-
+public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    private BigDecimal codParcPag;
    private BigDecimal codParcForn;
    private String nuCompra;
@@ -86,6 +85,11 @@ public class ValePedagioMDFE implements SankhyaEntity<ValePedagioMDFE> {
 
    public void setTpValePed(String tpValePed) {
         this.tpValePed = tpValePed;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFEVALP";
    }
 
    @Override

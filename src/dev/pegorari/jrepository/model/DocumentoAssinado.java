@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DocumentoAssinado implements SankhyaEntity<DocumentoAssinado> {
-
+public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> {
    private Timestamp dhSolic;
    private String nomeArquivo;
    private BigDecimal nuDoc;
@@ -22,7 +21,7 @@ public class DocumentoAssinado implements SankhyaEntity<DocumentoAssinado> {
    private String tipoNotific;
    private String nomeSolicitante;
    private String nomeDestinatario;
-   private String detalheStatus;
+   private String detalhesStatus;
 
    public Timestamp getDhSolic() {
         return dhSolic;
@@ -144,12 +143,17 @@ public class DocumentoAssinado implements SankhyaEntity<DocumentoAssinado> {
         this.nomeDestinatario = nomeDestinatario;
    }
 
-   public String getDetalheStatus() {
-        return detalheStatus;
+   public String getDetalhesStatus() {
+        return detalhesStatus;
    }
 
-   public void setDetalheStatus(String detalheStatus) {
-        this.detalheStatus = detalheStatus;
+   public void setDetalhesStatus(String detalhesStatus) {
+        this.detalhesStatus = detalhesStatus;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIDAS";
    }
 
    @Override
@@ -174,7 +178,7 @@ public class DocumentoAssinado implements SankhyaEntity<DocumentoAssinado> {
         this.tipoNotific = vo.asString("TIPONOTIFIC");
         this.nomeSolicitante = vo.asString("NOMESOLICITANTE");
         this.nomeDestinatario = vo.asString("NOMEDESTINATARIO");
-        this.detalheStatus = vo.asString("DETALHESTATUS");
+        this.detalhesStatus = vo.asString("DETALHESTATUS");
         return this;
    }
 }

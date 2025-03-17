@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ContaSincAgenda implements SankhyaEntity<ContaSincAgenda> {
-
+public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    private String authCode;
    private String emailEnviado;
    private String refreshToken;
@@ -132,6 +131,11 @@ public class ContaSincAgenda implements SankhyaEntity<ContaSincAgenda> {
 
    public void setSincStatus(String sincStatus) {
         this.sincStatus = sincStatus;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSSAG";
    }
 
    @Override

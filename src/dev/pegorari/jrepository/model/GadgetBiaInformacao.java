@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GadgetBiaInformacao implements SankhyaEntity<GadgetBiaInformacao> {
-
+public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformacao> {
    private String campoAgrup;
    private String campoValor;
    private BigDecimal codGbi;
@@ -77,6 +76,11 @@ public class GadgetBiaInformacao implements SankhyaEntity<GadgetBiaInformacao> {
 
    public void setNuGdg(BigDecimal nuGdg) {
         this.nuGdg = nuGdg;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIGBI";
    }
 
    @Override

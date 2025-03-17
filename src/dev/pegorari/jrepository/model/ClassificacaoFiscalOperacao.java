@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ClassificacaoFiscalOperacao implements SankhyaEntity<ClassificacaoFiscalOperacao> {
-
+public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<ClassificacaoFiscalOperacao> {
    private String calcDifIcms;
    private BigDecimal codCfo;
    private BigDecimal codCtactb;
@@ -143,6 +142,11 @@ public class ClassificacaoFiscalOperacao implements SankhyaEntity<ClassificacaoF
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCFO";
+   }
+
+   @Override
    public String getEntityName() {
         return "ClassificacaoFiscalOperacao";
    }
@@ -153,7 +157,7 @@ public class ClassificacaoFiscalOperacao implements SankhyaEntity<ClassificacaoF
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");
         this.convProduz = vo.asString("CONVPRODUZ");
-        this.descCfo = vo.asString("DESCCFO");
+        this.descCfo = vo.asString("DESCRCFO");
         this.grupoCfo = vo.asBigDecimal("GRUPOCFO");
         this.tipIcms = vo.asString("TIPICMS");
         this.tipo = vo.asString("TIPO");

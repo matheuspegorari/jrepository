@@ -1,17 +1,16 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
-
+public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    private BigDecimal aliqFrete;
    private BigDecimal aliqSubtrib;
-   private BigDecimal aliqUfdest;
+   private BigDecimal aliqUfDest;
    private BigDecimal aliquota;
    private String baseStRed;
-   private String baseStUfdest;
+   private String baseStUfDest;
    private BigDecimal baseIcmMod;
    private BigDecimal baseIcmStMod;
    private String calcStExtraNota;
@@ -26,14 +25,14 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    private String convProduz;
    private BigDecimal csosn;
    private BigDecimal codTabStAnt;
-   private BigDecimal codTabStUfdest;
+   private BigDecimal codTabStUfDest;
    private String cusComIcmsBaseSt;
    private String descrRestricao;
    private String descrRestricao2;
    private String maiorBaseIcms;
    private String maiorBaseSt;
    private BigDecimal margLucro;
-   private BigDecimal mvaStUfdest;
+   private BigDecimal mvaStUfDest;
    private BigDecimal outOrga;
    private String proEmprego;
    private BigDecimal redBase;
@@ -56,7 +55,7 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    private String calcMvaAjustado;
    private BigDecimal aliqIntDest;
    private String calcRepRedDentro;
-   private BigDecimal codFormBasIcm;
+   private BigDecimal codFormBaseIcms;
    private String formaRepIcms;
    private String icmsDifPositiva;
    private BigDecimal margLucroEst;
@@ -88,7 +87,7 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    private BigDecimal percRedBaseDest;
    private String stCat137Sp;
    private String calcStConsuTri;
-   private String considIpivLroPprop;
+   private String considIpivLroProp;
    private BigDecimal percPmpf;
    private String calcRedPreIcmCon;
    private String naoConsidMva;
@@ -97,8 +96,8 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    private BigDecimal codTabStPmpf;
    private BigDecimal aliqIcmsCargTribRed;
    private BigDecimal aliqStCargTribRed;
-   private String calPerRedBaseIcms;
-   private String calPerRedBaseSt;
+   private String calcPerRedBaseIcms;
+   private String calcPerRedBaseSt;
    private BigDecimal aliqIcmsEspSt;
    private BigDecimal percUsaquDecpe;
    private String tipCusAquDecpe;
@@ -113,7 +112,7 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    private BigDecimal codFormBcIcmsAt;
    private String regraCalcBcIcmsAt;
    private String regraDeIcmsAt;
-   private BigDecimal codFormBasDifAl;
+   private BigDecimal codFormBaseDifAl;
    private String calcStDecpr;
    private BigDecimal codFormCalcDifAl;
    private BigDecimal credPresDecpr;
@@ -147,12 +146,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.aliqSubtrib = aliqSubtrib;
    }
 
-   public BigDecimal getAliqUfdest() {
-        return aliqUfdest;
+   public BigDecimal getAliqUfDest() {
+        return aliqUfDest;
    }
 
-   public void setAliqUfdest(BigDecimal aliqUfdest) {
-        this.aliqUfdest = aliqUfdest;
+   public void setAliqUfDest(BigDecimal aliqUfDest) {
+        this.aliqUfDest = aliqUfDest;
    }
 
    public BigDecimal getAliquota() {
@@ -171,12 +170,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.baseStRed = baseStRed;
    }
 
-   public String getBaseStUfdest() {
-        return baseStUfdest;
+   public String getBaseStUfDest() {
+        return baseStUfDest;
    }
 
-   public void setBaseStUfdest(String baseStUfdest) {
-        this.baseStUfdest = baseStUfdest;
+   public void setBaseStUfDest(String baseStUfDest) {
+        this.baseStUfDest = baseStUfDest;
    }
 
    public BigDecimal getBaseIcmMod() {
@@ -291,12 +290,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.codTabStAnt = codTabStAnt;
    }
 
-   public BigDecimal getCodTabStUfdest() {
-        return codTabStUfdest;
+   public BigDecimal getCodTabStUfDest() {
+        return codTabStUfDest;
    }
 
-   public void setCodTabStUfdest(BigDecimal codTabStUfdest) {
-        this.codTabStUfdest = codTabStUfdest;
+   public void setCodTabStUfDest(BigDecimal codTabStUfDest) {
+        this.codTabStUfDest = codTabStUfDest;
    }
 
    public String getCusComIcmsBaseSt() {
@@ -347,12 +346,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.margLucro = margLucro;
    }
 
-   public BigDecimal getMvaStUfdest() {
-        return mvaStUfdest;
+   public BigDecimal getMvaStUfDest() {
+        return mvaStUfDest;
    }
 
-   public void setMvaStUfdest(BigDecimal mvaStUfdest) {
-        this.mvaStUfdest = mvaStUfdest;
+   public void setMvaStUfDest(BigDecimal mvaStUfDest) {
+        this.mvaStUfDest = mvaStUfDest;
    }
 
    public BigDecimal getOutOrga() {
@@ -531,12 +530,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.calcRepRedDentro = calcRepRedDentro;
    }
 
-   public BigDecimal getCodFormBasIcm() {
-        return codFormBasIcm;
+   public BigDecimal getCodFormBaseIcms() {
+        return codFormBaseIcms;
    }
 
-   public void setCodFormBasIcm(BigDecimal codFormBasIcm) {
-        this.codFormBasIcm = codFormBasIcm;
+   public void setCodFormBaseIcms(BigDecimal codFormBaseIcms) {
+        this.codFormBaseIcms = codFormBaseIcms;
    }
 
    public String getFormaRepIcms() {
@@ -787,12 +786,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.calcStConsuTri = calcStConsuTri;
    }
 
-   public String getConsidIpivLroPprop() {
-        return considIpivLroPprop;
+   public String getConsidIpivLroProp() {
+        return considIpivLroProp;
    }
 
-   public void setConsidIpivLroPprop(String considIpivLroPprop) {
-        this.considIpivLroPprop = considIpivLroPprop;
+   public void setConsidIpivLroProp(String considIpivLroProp) {
+        this.considIpivLroProp = considIpivLroProp;
    }
 
    public BigDecimal getPercPmpf() {
@@ -859,20 +858,20 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.aliqStCargTribRed = aliqStCargTribRed;
    }
 
-   public String getCalPerRedBaseIcms() {
-        return calPerRedBaseIcms;
+   public String getCalcPerRedBaseIcms() {
+        return calcPerRedBaseIcms;
    }
 
-   public void setCalPerRedBaseIcms(String calPerRedBaseIcms) {
-        this.calPerRedBaseIcms = calPerRedBaseIcms;
+   public void setCalcPerRedBaseIcms(String calcPerRedBaseIcms) {
+        this.calcPerRedBaseIcms = calcPerRedBaseIcms;
    }
 
-   public String getCalPerRedBaseSt() {
-        return calPerRedBaseSt;
+   public String getCalcPerRedBaseSt() {
+        return calcPerRedBaseSt;
    }
 
-   public void setCalPerRedBaseSt(String calPerRedBaseSt) {
-        this.calPerRedBaseSt = calPerRedBaseSt;
+   public void setCalcPerRedBaseSt(String calcPerRedBaseSt) {
+        this.calcPerRedBaseSt = calcPerRedBaseSt;
    }
 
    public BigDecimal getAliqIcmsEspSt() {
@@ -987,12 +986,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.regraDeIcmsAt = regraDeIcmsAt;
    }
 
-   public BigDecimal getCodFormBasDifAl() {
-        return codFormBasDifAl;
+   public BigDecimal getCodFormBaseDifAl() {
+        return codFormBaseDifAl;
    }
 
-   public void setCodFormBasDifAl(BigDecimal codFormBasDifAl) {
-        this.codFormBasDifAl = codFormBasDifAl;
+   public void setCodFormBaseDifAl(BigDecimal codFormBaseDifAl) {
+        this.codFormBaseDifAl = codFormBaseDifAl;
    }
 
    public String getCalcStDecpr() {
@@ -1124,6 +1123,11 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFICM";
+   }
+
+   @Override
    public String getEntityName() {
         return "AliquotaICMS";
    }
@@ -1132,12 +1136,12 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
    public AliquotaICMS fromVO(DynamicVO vo) {
         this.aliqFrete = vo.asBigDecimal("ALIQFRETE");
         this.aliqSubtrib = vo.asBigDecimal("ALIQSUBTRIB");
-        this.aliqUfdest = vo.asBigDecimal("ALIQUFDEST");
+        this.aliqUfDest = vo.asBigDecimal("ALIQUFDEST");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.baseStRed = vo.asString("BASESTRED");
-        this.baseStUfdest = vo.asString("BASESTUFDEST");
-        this.baseIcmMod = vo.asBigDecimal("BASEICMMOD");
-        this.baseIcmStMod = vo.asBigDecimal("BASEICMSTMOD");
+        this.baseStUfDest = vo.asString("BASESTUFDEST");
+        this.baseIcmMod = vo.asBigDecimal("BASICMMOD");
+        this.baseIcmStMod = vo.asBigDecimal("BASICMSTMOD");
         this.calcStExtraNota = vo.asString("CALCSTEXTRANOTA");
         this.codAntecipSt = vo.asString("CODANTECIPST");
         this.codMotDesoneraIcms = vo.asBigDecimal("CODMOTDESONERAICMS");
@@ -1150,14 +1154,14 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.convProduz = vo.asString("CONVPRODUZ");
         this.csosn = vo.asBigDecimal("CSOSN");
         this.codTabStAnt = vo.asBigDecimal("CODTABSTANT");
-        this.codTabStUfdest = vo.asBigDecimal("CODTABSTUFDEST");
+        this.codTabStUfDest = vo.asBigDecimal("CODTABSTUFDEST");
         this.cusComIcmsBaseSt = vo.asString("CUSCOMICMSBASEST");
         this.descrRestricao = vo.asString("DESCRRESTRICAO");
         this.descrRestricao2 = vo.asString("DESCRRESTRICAO2");
         this.maiorBaseIcms = vo.asString("MAIORBASEICMS");
         this.maiorBaseSt = vo.asString("MAIORBASEST");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");
-        this.mvaStUfdest = vo.asBigDecimal("MVASTUFDEST");
+        this.mvaStUfDest = vo.asBigDecimal("MVASTUFDEST");
         this.outOrga = vo.asBigDecimal("OUTORGA");
         this.proEmprego = vo.asString("PROEMPREGO");
         this.redBase = vo.asBigDecimal("REDBASE");
@@ -1180,7 +1184,7 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.calcMvaAjustado = vo.asString("CALCMVAAJUSTADO");
         this.aliqIntDest = vo.asBigDecimal("ALIQINTDEST");
         this.calcRepRedDentro = vo.asString("CALCREPREDDENTRO");
-        this.codFormBasIcm = vo.asBigDecimal("CODFORMBASICM");
+        this.codFormBaseIcms = vo.asBigDecimal("CODFORMBASICM");
         this.formaRepIcms = vo.asString("FORMAREPICMS");
         this.icmsDifPositiva = vo.asString("ICMSDIFPOSITIVA");
         this.margLucroEst = vo.asBigDecimal("MARGLUCROEST");
@@ -1212,7 +1216,7 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.percRedBaseDest = vo.asBigDecimal("PERCREDBASEDEST");
         this.stCat137Sp = vo.asString("STCAT137SP");
         this.calcStConsuTri = vo.asString("CALCSTCONSUTRI");
-        this.considIpivLroPprop = vo.asString("CONSIDIPIVLROPPROP");
+        this.considIpivLroProp = vo.asString("CONSIDIPIVLROPPROP");
         this.percPmpf = vo.asBigDecimal("PERCPMPF");
         this.calcRedPreIcmCon = vo.asString("CALCREDPREICMCON");
         this.naoConsidMva = vo.asString("NAOCONSIDMVA");
@@ -1221,8 +1225,8 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.codTabStPmpf = vo.asBigDecimal("CODTABSTPMPF");
         this.aliqIcmsCargTribRed = vo.asBigDecimal("ALIQICMSCARGTRIBRED");
         this.aliqStCargTribRed = vo.asBigDecimal("ALIQSTCARGTRIBRED");
-        this.calPerRedBaseIcms = vo.asString("CALPERREDBASEICMS");
-        this.calPerRedBaseSt = vo.asString("CALPERREDBASEST");
+        this.calcPerRedBaseIcms = vo.asString("CALPERREDBASEICMS");
+        this.calcPerRedBaseSt = vo.asString("CALPERREDBASEST");
         this.aliqIcmsEspSt = vo.asBigDecimal("ALIQICMSESPST");
         this.percUsaquDecpe = vo.asBigDecimal("PERCUSAQUDECPE");
         this.tipCusAquDecpe = vo.asString("TIPCUSAQUDECPE");
@@ -1236,13 +1240,13 @@ public class AliquotaICMS implements SankhyaEntity<AliquotaICMS> {
         this.aliqIcmsAtInt = vo.asBigDecimal("ALIQICMSATINT");
         this.codFormBcIcmsAt = vo.asBigDecimal("CODFORMBCICMSAT");
         this.regraCalcBcIcmsAt = vo.asString("REGRACALCBCICMSAT");
-        this.regraDeIcmsAt = vo.asString("REGRADEICMSAT");
-        this.codFormBasDifAl = vo.asBigDecimal("CODFORMBASDIFAL");
+        this.regraDeIcmsAt = vo.asString("REGRADEDICMSAT");
+        this.codFormBaseDifAl = vo.asBigDecimal("CODFORMBASDIFAL");
         this.calcStDecpr = vo.asString("CALCSTDECPR");
         this.codFormCalcDifAl = vo.asBigDecimal("CODFORMCALCDIFAL");
         this.credPresDecpr = vo.asBigDecimal("CREDPRESDECPR");
         this.desIcmsSn = vo.asString("DESICMSSN");
-        this.formCalcFcpDifAl = vo.asBigDecimal("FORMCALCFCPDIFAL");
+        this.formCalcFcpDifAl = vo.asBigDecimal("FORMCALFCPDIFAL");
         this.percUsaquDecpeEst = vo.asBigDecimal("PERCUSAQUDECPEEST");
         this.aliqConsFin = vo.asBigDecimal("ALIQCONSFIN");
         this.codBen = vo.asString("CODBEN");

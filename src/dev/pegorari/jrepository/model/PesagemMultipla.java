@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PesagemMultipla implements SankhyaEntity<PesagemMultipla> {
-
+public class PesagemMultipla extends AbstractSankhyaEntity<PesagemMultipla> {
    private BigDecimal balancaPb;
    private BigDecimal balancaTara;
    private BigDecimal codPort;
@@ -330,6 +329,11 @@ public class PesagemMultipla implements SankhyaEntity<PesagemMultipla> {
 
    public void setMotivoCancel(String motivoCancel) {
         this.motivoCancel = motivoCancel;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGAPES";
    }
 
    @Override

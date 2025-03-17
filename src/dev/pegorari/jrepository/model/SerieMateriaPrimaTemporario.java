@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SerieMateriaPrimaTemporario implements SankhyaEntity<SerieMateriaPrimaTemporario> {
-
+public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMateriaPrimaTemporario> {
    private BigDecimal codProdMp;
    private BigDecimal codProdPa;
-   private BigDecimal idIproc;
+   private BigDecimal idIProc;
    private String liberado;
    private String serieMp;
    private String seriePa;
@@ -29,12 +28,12 @@ public class SerieMateriaPrimaTemporario implements SankhyaEntity<SerieMateriaPr
         this.codProdPa = codProdPa;
    }
 
-   public BigDecimal getIdIproc() {
-        return idIproc;
+   public BigDecimal getIdIProc() {
+        return idIProc;
    }
 
-   public void setIdIproc(BigDecimal idIproc) {
-        this.idIproc = idIproc;
+   public void setIdIProc(BigDecimal idIProc) {
+        this.idIProc = idIProc;
    }
 
    public String getLiberado() {
@@ -62,6 +61,11 @@ public class SerieMateriaPrimaTemporario implements SankhyaEntity<SerieMateriaPr
    }
 
    @Override
+   public String getTableName() {
+        return "TPRSERMP_TEMP";
+   }
+
+   @Override
    public String getEntityName() {
         return "SerieMateriaPrimaTemporario";
    }
@@ -70,7 +74,7 @@ public class SerieMateriaPrimaTemporario implements SankhyaEntity<SerieMateriaPr
    public SerieMateriaPrimaTemporario fromVO(DynamicVO vo) {
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
+        this.idIProc = vo.asBigDecimal("IDIPROC");
         this.liberado = vo.asString("LIBERADO");
         this.serieMp = vo.asString("SERIEMP");
         this.seriePa = vo.asString("SERIEPA");

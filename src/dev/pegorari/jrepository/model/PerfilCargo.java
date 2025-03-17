@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PerfilCargo implements SankhyaEntity<PerfilCargo> {
-
+public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    private BigDecimal codCargo;
    private BigDecimal codPerfil;
    private BigDecimal codUsu;
@@ -105,6 +104,11 @@ public class PerfilCargo implements SankhyaEntity<PerfilCargo> {
 
    public void setTipoPeriodo(String tipoPeriodo) {
         this.tipoPeriodo = tipoPeriodo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TFPPCG";
    }
 
    @Override

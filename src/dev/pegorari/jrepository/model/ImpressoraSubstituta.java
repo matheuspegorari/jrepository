@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ImpressoraSubstituta implements SankhyaEntity<ImpressoraSubstituta> {
-
+public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubstituta> {
    private BigDecimal codUsu;
    private String originalPrinterName;
    private String printerUri;
@@ -41,6 +40,11 @@ public class ImpressoraSubstituta implements SankhyaEntity<ImpressoraSubstituta>
 
    public void setTipoDoc(String tipoDoc) {
         this.tipoDoc = tipoDoc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSISBP";
    }
 
    @Override

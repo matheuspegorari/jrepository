@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDVarsResolvidas implements SankhyaEntity<MSDVarsResolvidas> {
-
+public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> {
    private BigDecimal codVar;
    private BigDecimal codVarRes;
    private Timestamp dtAlter;
@@ -60,6 +59,11 @@ public class MSDVarsResolvidas implements SankhyaEntity<MSDVarsResolvidas> {
 
    public void setValorNumerico(BigDecimal valorNumerico) {
         this.valorNumerico = valorNumerico;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDVRE";
    }
 
    @Override

@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ApuracaoDivergenciaICMSST implements SankhyaEntity<ApuracaoDivergenciaICMSST> {
-
-   private BigDecimal baseSubstCalc;
-   private BigDecimal baseSubstNota;
+public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDivergenciaICMSST> {
+   private BigDecimal baseSubstitCalc;
+   private BigDecimal baseSubstitNota;
    private String digitado;
    private Timestamp dtNeg;
    private BigDecimal nuFin;
@@ -19,20 +18,20 @@ public class ApuracaoDivergenciaICMSST implements SankhyaEntity<ApuracaoDivergen
    private BigDecimal vlrSubstNota;
    private BigDecimal vlrTotDivSubst;
 
-   public BigDecimal getBaseSubstCalc() {
-        return baseSubstCalc;
+   public BigDecimal getBaseSubstitCalc() {
+        return baseSubstitCalc;
    }
 
-   public void setBaseSubstCalc(BigDecimal baseSubstCalc) {
-        this.baseSubstCalc = baseSubstCalc;
+   public void setBaseSubstitCalc(BigDecimal baseSubstitCalc) {
+        this.baseSubstitCalc = baseSubstitCalc;
    }
 
-   public BigDecimal getBaseSubstNota() {
-        return baseSubstNota;
+   public BigDecimal getBaseSubstitNota() {
+        return baseSubstitNota;
    }
 
-   public void setBaseSubstNota(BigDecimal baseSubstNota) {
-        this.baseSubstNota = baseSubstNota;
+   public void setBaseSubstitNota(BigDecimal baseSubstitNota) {
+        this.baseSubstitNota = baseSubstitNota;
    }
 
    public String getDigitado() {
@@ -108,14 +107,19 @@ public class ApuracaoDivergenciaICMSST implements SankhyaEntity<ApuracaoDivergen
    }
 
    @Override
+   public String getTableName() {
+        return "TGFADST";
+   }
+
+   @Override
    public String getEntityName() {
         return "ApuracaoDivergenciaICMSST";
    }
 
    @Override
    public ApuracaoDivergenciaICMSST fromVO(DynamicVO vo) {
-        this.baseSubstCalc = vo.asBigDecimal("BASESUBSTCALC");
-        this.baseSubstNota = vo.asBigDecimal("BASESUBSTNOTA");
+        this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
+        this.baseSubstitNota = vo.asBigDecimal("BASESUBSTITNOTA");
         this.digitado = vo.asString("DIGITADO");
         this.dtNeg = vo.asTimestamp("DTNEG");
         this.nuFin = vo.asBigDecimal("NUFIN");

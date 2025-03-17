@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PortariaCat42R1050 implements SankhyaEntity<PortariaCat42R1050> {
-
+public class PortariaCat42R1050 extends AbstractSankhyaEntity<PortariaCat42R1050> {
    private BigDecimal qtdFim;
    private BigDecimal qtdIni;
    private String reg;
@@ -141,6 +140,11 @@ public class PortariaCat42R1050 implements SankhyaEntity<PortariaCat42R1050> {
 
    public void setTipoDivergencia(String tipoDivergencia) {
         this.tipoDivergencia = tipoDivergencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFCAT42R1050";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Formula implements SankhyaEntity<Formula> {
-
+public class Formula extends AbstractSankhyaEntity<Formula> {
    private String formulaWeb;
    private String tipDist;
    private String tipForm;
@@ -77,6 +76,11 @@ public class Formula implements SankhyaEntity<Formula> {
 
    public void setConsiderarRateio(String considerarRateio) {
         this.considerarRateio = considerarRateio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIFOR";
    }
 
    @Override

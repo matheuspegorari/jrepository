@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Doca implements SankhyaEntity<Doca> {
-
+public class Doca extends AbstractSankhyaEntity<Doca> {
    private String balcao;
    private String impressoraDoca;
    private BigDecimal altura;
@@ -95,6 +94,11 @@ public class Doca implements SankhyaEntity<Doca> {
 
    public void setCodEndCrossdock(BigDecimal codEndCrossdock) {
         this.codEndCrossdock = codEndCrossdock;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWDCA";
    }
 
    @Override

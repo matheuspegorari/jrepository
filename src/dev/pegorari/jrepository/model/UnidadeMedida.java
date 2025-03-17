@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class UnidadeMedida implements SankhyaEntity<UnidadeMedida> {
-
+public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    private String tipMed;
    private BigDecimal qtdMed;
    private BigDecimal seqMed;
@@ -50,6 +49,11 @@ public class UnidadeMedida implements SankhyaEntity<UnidadeMedida> {
 
    public void setUnMed(String unMed) {
         this.unMed = unMed;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFUNM";
    }
 
    @Override

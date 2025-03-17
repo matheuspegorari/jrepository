@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegistroAmostras implements SankhyaEntity<RegistroAmostras> {
-
+public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    private BigDecimal idIproc;
    private String referencia;
    private BigDecimal codUsu;
@@ -240,6 +239,11 @@ public class RegistroAmostras implements SankhyaEntity<RegistroAmostras> {
 
    public void setQtdAmostra(BigDecimal qtdAmostra) {
         this.qtdAmostra = qtdAmostra;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRAM";
    }
 
    @Override

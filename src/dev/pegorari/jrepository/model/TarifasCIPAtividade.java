@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TarifasCIPAtividade implements SankhyaEntity<TarifasCIPAtividade> {
-
+public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtividade> {
    private BigDecimal codProdPa;
    private BigDecimal codProdTar;
    private String codVol;
@@ -123,6 +122,11 @@ public class TarifasCIPAtividade implements SankhyaEntity<TarifasCIPAtividade> {
 
    public void setDhCad(Timestamp dhCad) {
         this.dhCad = dhCad;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRTCA";
    }
 
    @Override

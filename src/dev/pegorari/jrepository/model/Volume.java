@@ -1,18 +1,17 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class Volume implements SankhyaEntity<Volume> {
-
+public class Volume extends AbstractSankhyaEntity<Volume> {
    private String codVol;
    private String descrVol;
    private String utiliRegVolWms;
    private String utiliConfPeso;
    private String codVolFci;
    private BigDecimal decQtd;
-   private String atunVersao;
+   private String atuNuVersao;
    private BigDecimal nuVersao;
 
    public String getCodVol() {
@@ -63,12 +62,12 @@ public class Volume implements SankhyaEntity<Volume> {
         this.decQtd = decQtd;
    }
 
-   public String getAtunVersao() {
-        return atunVersao;
+   public String getAtuNuVersao() {
+        return atuNuVersao;
    }
 
-   public void setAtunVersao(String atunVersao) {
-        this.atunVersao = atunVersao;
+   public void setAtuNuVersao(String atuNuVersao) {
+        this.atuNuVersao = atuNuVersao;
    }
 
    public BigDecimal getNuVersao() {
@@ -77,6 +76,11 @@ public class Volume implements SankhyaEntity<Volume> {
 
    public void setNuVersao(BigDecimal nuVersao) {
         this.nuVersao = nuVersao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFVOL";
    }
 
    @Override
@@ -92,7 +96,7 @@ public class Volume implements SankhyaEntity<Volume> {
         this.utiliConfPeso = vo.asString("UTILICONFPESO");
         this.codVolFci = vo.asString("CODVOLFCI");
         this.decQtd = vo.asBigDecimal("DECQTD");
-        this.atunVersao = vo.asString("ATUNVERSAO");
+        this.atuNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }

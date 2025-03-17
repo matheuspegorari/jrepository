@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Processo implements SankhyaEntity<Processo> {
-
+public class Processo extends AbstractSankhyaEntity<Processo> {
    private BigDecimal codUsu;
    private Timestamp dhFim;
    private Timestamp dhIni;
@@ -96,6 +95,11 @@ public class Processo implements SankhyaEntity<Processo> {
 
    public void setXmlResult(char[] xmlResult) {
         this.xmlResult = xmlResult;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPRC";
    }
 
    @Override

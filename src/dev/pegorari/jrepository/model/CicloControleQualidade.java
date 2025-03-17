@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CicloControleQualidade implements SankhyaEntity<CicloControleQualidade> {
-
+public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQualidade> {
    private String aprovarComRessalvas;
    private String descrCiclo;
    private BigDecimal idCcq;
@@ -41,6 +40,11 @@ public class CicloControleQualidade implements SankhyaEntity<CicloControleQualid
 
    public void setIdProc(BigDecimal idProc) {
         this.idProc = idProc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCCQ";
    }
 
    @Override

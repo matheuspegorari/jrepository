@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class SLAProcessoNegocio implements SankhyaEntity<SLAProcessoNegocio> {
-
+public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio> {
    private String ativo;
    private BigDecimal cargaHoraria;
    private BigDecimal codPrn;
@@ -104,6 +103,11 @@ public class SLAProcessoNegocio implements SankhyaEntity<SLAProcessoNegocio> {
 
    public void setVersao(BigDecimal versao) {
         this.versao = versao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFRSLA";
    }
 
    @Override

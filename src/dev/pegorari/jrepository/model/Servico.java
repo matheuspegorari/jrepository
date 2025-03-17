@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Servico implements SankhyaEntity<Servico> {
-
-   private BigDecimal codProdSubkit;
+public class Servico extends AbstractSankhyaEntity<Servico> {
+   private BigDecimal codProdSubKit;
    private String enqReintegra;
    private BigDecimal margLucro;
    private BigDecimal codGProd;
@@ -25,8 +24,8 @@ public class Servico implements SankhyaEntity<Servico> {
    private BigDecimal codLst;
    private BigDecimal medAux;
    private String modoAplic;
-   private String motivoIncexc;
-   private BigDecimal multipVenda;
+   private String motivoIncExc;
+   private BigDecimal multiPvenda;
    private BigDecimal mvaAjustado;
    private String naturezaOperDes;
    private String ncm;
@@ -46,7 +45,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private BigDecimal arredPreco;
    private String ativo;
    private String balanca;
-   private String calculoGiro;
+   private String calcGiro;
    private BigDecimal camadas;
    private String caracteristicas;
    private BigDecimal carencia;
@@ -126,7 +125,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private String fatTotal;
    private String flex;
    private String formulacao;
-   private String geraPlaProd;
+   private String geraPlAProd;
    private String grupoCofins;
    private String grupoCssl;
    private String grupoDescProd;
@@ -134,9 +133,9 @@ public class Servico implements SankhyaEntity<Servico> {
    private String grupoPis;
    private BigDecimal grupoQuimico;
    private String homePage;
-   private String hrDobrada;
+   private String hrDoBrada;
    private String icmsGerencia;
-   private BigDecimal identImob;
+   private BigDecimal idenTimob;
    private byte[] imagem;
    private String impEtiqConf;
    private String impLaudoLote;
@@ -172,7 +171,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private String promocao;
    private BigDecimal qtdEmb;
    private BigDecimal qtdNfLaudosInt;
-   private String rastreEstoque;
+   private String rastrEstoque;
    private String receituario;
    private String recupAvaria;
    private BigDecimal redBaseInss;
@@ -187,7 +186,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private BigDecimal shelfLife;
    private BigDecimal shelfLifeMin;
    private String solCompra;
-   private String statusIncexc;
+   private String statusIncExc;
    private BigDecimal tamLote;
    private BigDecimal tamSerie;
    private String temCiap;
@@ -199,7 +198,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private String temIpiVenda;
    private String temIrf;
    private String temIss;
-   private Timestamp temPosServ;
+   private Timestamp tempoServ;
    private String tipContest;
    private String tipContestWms;
    private BigDecimal tipGtinNfe;
@@ -319,7 +318,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private BigDecimal percCmtMun;
    private BigDecimal percCmtFed;
    private BigDecimal percCmtEst;
-   private BigDecimal corFontConsPreco;
+   private BigDecimal corFonteConsPreco;
    private BigDecimal corFundoConsPreco;
    private String calcDifAl;
    private BigDecimal classifCessaoObra;
@@ -341,7 +340,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private String tipoInssEspecial;
    private BigDecimal vlrPartidaGlp;
    private String integraEconect;
-   private BigDecimal maxMultEconect;
+   private BigDecimal maxMulEconect;
    private String utilSmartCard;
    private BigDecimal natEfdContM410M810;
    private BigDecimal codVtp;
@@ -363,13 +362,13 @@ public class Servico implements SankhyaEntity<Servico> {
    private String prodInterno;
    private BigDecimal aliqImp;
    private BigDecimal aliqNac;
-   private String atuNuVersao;
+   private String atNuVersao;
    private BigDecimal integraFox;
    private BigDecimal nuVersao;
    private char[] gradePadrao;
    private BigDecimal idGrade;
    private BigDecimal percentSepPul;
-   private String obtStantMedEnt;
+   private String obtStAntMedEnt;
    private String descProdDrcst;
    private BigDecimal aliqInternaCat42;
    private String desDescCalcPis;
@@ -377,7 +376,7 @@ public class Servico implements SankhyaEntity<Servico> {
    private BigDecimal mvaOriginalAdrcst;
    private String participaAdrcst;
    private String prodSujFecop;
-   private String calcRupturaEstoque;
+   private String calRupturaEstoque;
    private String codVolKanban;
    private String bloqVendaFrac;
    private BigDecimal codNatRend;
@@ -387,12 +386,12 @@ public class Servico implements SankhyaEntity<Servico> {
    private String opeIntEstFetHab;
    private String opeIntFetHab;
 
-   public BigDecimal getCodProdSubkit() {
-        return codProdSubkit;
+   public BigDecimal getCodProdSubKit() {
+        return codProdSubKit;
    }
 
-   public void setCodProdSubkit(BigDecimal codProdSubkit) {
-        this.codProdSubkit = codProdSubkit;
+   public void setCodProdSubKit(BigDecimal codProdSubKit) {
+        this.codProdSubKit = codProdSubKit;
    }
 
    public String getEnqReintegra() {
@@ -531,20 +530,20 @@ public class Servico implements SankhyaEntity<Servico> {
         this.modoAplic = modoAplic;
    }
 
-   public String getMotivoIncexc() {
-        return motivoIncexc;
+   public String getMotivoIncExc() {
+        return motivoIncExc;
    }
 
-   public void setMotivoIncexc(String motivoIncexc) {
-        this.motivoIncexc = motivoIncexc;
+   public void setMotivoIncExc(String motivoIncExc) {
+        this.motivoIncExc = motivoIncExc;
    }
 
-   public BigDecimal getMultipVenda() {
-        return multipVenda;
+   public BigDecimal getMultiPvenda() {
+        return multiPvenda;
    }
 
-   public void setMultipVenda(BigDecimal multipVenda) {
-        this.multipVenda = multipVenda;
+   public void setMultiPvenda(BigDecimal multiPvenda) {
+        this.multiPvenda = multiPvenda;
    }
 
    public BigDecimal getMvaAjustado() {
@@ -699,12 +698,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.balanca = balanca;
    }
 
-   public String getCalculoGiro() {
-        return calculoGiro;
+   public String getCalcGiro() {
+        return calcGiro;
    }
 
-   public void setCalculoGiro(String calculoGiro) {
-        this.calculoGiro = calculoGiro;
+   public void setCalcGiro(String calcGiro) {
+        this.calcGiro = calcGiro;
    }
 
    public BigDecimal getCamadas() {
@@ -1339,12 +1338,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.formulacao = formulacao;
    }
 
-   public String getGeraPlaProd() {
-        return geraPlaProd;
+   public String getGeraPlAProd() {
+        return geraPlAProd;
    }
 
-   public void setGeraPlaProd(String geraPlaProd) {
-        this.geraPlaProd = geraPlaProd;
+   public void setGeraPlAProd(String geraPlAProd) {
+        this.geraPlAProd = geraPlAProd;
    }
 
    public String getGrupoCofins() {
@@ -1403,12 +1402,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.homePage = homePage;
    }
 
-   public String getHrDobrada() {
-        return hrDobrada;
+   public String getHrDoBrada() {
+        return hrDoBrada;
    }
 
-   public void setHrDobrada(String hrDobrada) {
-        this.hrDobrada = hrDobrada;
+   public void setHrDoBrada(String hrDoBrada) {
+        this.hrDoBrada = hrDoBrada;
    }
 
    public String getIcmsGerencia() {
@@ -1419,12 +1418,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.icmsGerencia = icmsGerencia;
    }
 
-   public BigDecimal getIdentImob() {
-        return identImob;
+   public BigDecimal getIdenTimob() {
+        return idenTimob;
    }
 
-   public void setIdentImob(BigDecimal identImob) {
-        this.identImob = identImob;
+   public void setIdenTimob(BigDecimal idenTimob) {
+        this.idenTimob = idenTimob;
    }
 
    public byte[] getImagem() {
@@ -1707,12 +1706,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.qtdNfLaudosInt = qtdNfLaudosInt;
    }
 
-   public String getRastreEstoque() {
-        return rastreEstoque;
+   public String getRastrEstoque() {
+        return rastrEstoque;
    }
 
-   public void setRastreEstoque(String rastreEstoque) {
-        this.rastreEstoque = rastreEstoque;
+   public void setRastrEstoque(String rastrEstoque) {
+        this.rastrEstoque = rastrEstoque;
    }
 
    public String getReceituario() {
@@ -1827,12 +1826,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.solCompra = solCompra;
    }
 
-   public String getStatusIncexc() {
-        return statusIncexc;
+   public String getStatusIncExc() {
+        return statusIncExc;
    }
 
-   public void setStatusIncexc(String statusIncexc) {
-        this.statusIncexc = statusIncexc;
+   public void setStatusIncExc(String statusIncExc) {
+        this.statusIncExc = statusIncExc;
    }
 
    public BigDecimal getTamLote() {
@@ -1923,12 +1922,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.temIss = temIss;
    }
 
-   public Timestamp getTemPosServ() {
-        return temPosServ;
+   public Timestamp getTempoServ() {
+        return tempoServ;
    }
 
-   public void setTemPosServ(Timestamp temPosServ) {
-        this.temPosServ = temPosServ;
+   public void setTempoServ(Timestamp tempoServ) {
+        this.tempoServ = tempoServ;
    }
 
    public String getTipContest() {
@@ -2883,12 +2882,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.percCmtEst = percCmtEst;
    }
 
-   public BigDecimal getCorFontConsPreco() {
-        return corFontConsPreco;
+   public BigDecimal getCorFonteConsPreco() {
+        return corFonteConsPreco;
    }
 
-   public void setCorFontConsPreco(BigDecimal corFontConsPreco) {
-        this.corFontConsPreco = corFontConsPreco;
+   public void setCorFonteConsPreco(BigDecimal corFonteConsPreco) {
+        this.corFonteConsPreco = corFonteConsPreco;
    }
 
    public BigDecimal getCorFundoConsPreco() {
@@ -3059,12 +3058,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.integraEconect = integraEconect;
    }
 
-   public BigDecimal getMaxMultEconect() {
-        return maxMultEconect;
+   public BigDecimal getMaxMulEconect() {
+        return maxMulEconect;
    }
 
-   public void setMaxMultEconect(BigDecimal maxMultEconect) {
-        this.maxMultEconect = maxMultEconect;
+   public void setMaxMulEconect(BigDecimal maxMulEconect) {
+        this.maxMulEconect = maxMulEconect;
    }
 
    public String getUtilSmartCard() {
@@ -3235,12 +3234,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.aliqNac = aliqNac;
    }
 
-   public String getAtuNuVersao() {
-        return atuNuVersao;
+   public String getAtNuVersao() {
+        return atNuVersao;
    }
 
-   public void setAtuNuVersao(String atuNuVersao) {
-        this.atuNuVersao = atuNuVersao;
+   public void setAtNuVersao(String atNuVersao) {
+        this.atNuVersao = atNuVersao;
    }
 
    public BigDecimal getIntegraFox() {
@@ -3283,12 +3282,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.percentSepPul = percentSepPul;
    }
 
-   public String getObtStantMedEnt() {
-        return obtStantMedEnt;
+   public String getObtStAntMedEnt() {
+        return obtStAntMedEnt;
    }
 
-   public void setObtStantMedEnt(String obtStantMedEnt) {
-        this.obtStantMedEnt = obtStantMedEnt;
+   public void setObtStAntMedEnt(String obtStAntMedEnt) {
+        this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
    public String getDescProdDrcst() {
@@ -3347,12 +3346,12 @@ public class Servico implements SankhyaEntity<Servico> {
         this.prodSujFecop = prodSujFecop;
    }
 
-   public String getCalcRupturaEstoque() {
-        return calcRupturaEstoque;
+   public String getCalRupturaEstoque() {
+        return calRupturaEstoque;
    }
 
-   public void setCalcRupturaEstoque(String calcRupturaEstoque) {
-        this.calcRupturaEstoque = calcRupturaEstoque;
+   public void setCalRupturaEstoque(String calRupturaEstoque) {
+        this.calRupturaEstoque = calRupturaEstoque;
    }
 
    public String getCodVolKanban() {
@@ -3420,13 +3419,18 @@ public class Servico implements SankhyaEntity<Servico> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFPRO";
+   }
+
+   @Override
    public String getEntityName() {
         return "Servico";
    }
 
    @Override
    public Servico fromVO(DynamicVO vo) {
-        this.codProdSubkit = vo.asBigDecimal("CODPRODSUBKIT");
+        this.codProdSubKit = vo.asBigDecimal("CODPRODSUBKIT");
         this.enqReintegra = vo.asString("ENQREINTEGRA");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");
         this.codGProd = vo.asBigDecimal("CODGPROD");
@@ -3444,8 +3448,8 @@ public class Servico implements SankhyaEntity<Servico> {
         this.codLst = vo.asBigDecimal("CODLST");
         this.medAux = vo.asBigDecimal("MEDAUX");
         this.modoAplic = vo.asString("MODOAPLIC");
-        this.motivoIncexc = vo.asString("MOTIVOINCEXC");
-        this.multipVenda = vo.asBigDecimal("MULTIPVENDA");
+        this.motivoIncExc = vo.asString("MOTIVOINCEXC");
+        this.multiPvenda = vo.asBigDecimal("MULTIPVENDA");
         this.mvaAjustado = vo.asBigDecimal("MVAAJUSTADO");
         this.naturezaOperDes = vo.asString("NATUREZAOPERDES");
         this.ncm = vo.asString("NCM");
@@ -3465,7 +3469,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.arredPreco = vo.asBigDecimal("ARREDPRECO");
         this.ativo = vo.asString("ATIVO");
         this.balanca = vo.asString("BALANCA");
-        this.calculoGiro = vo.asString("CALCULOGIRO");
+        this.calcGiro = vo.asString("CALCULOGIRO");
         this.camadas = vo.asBigDecimal("CAMADAS");
         this.caracteristicas = vo.asString("CARACTERISTICAS");
         this.carencia = vo.asBigDecimal("CARENCIA");
@@ -3545,7 +3549,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.fatTotal = vo.asString("FATTOTAL");
         this.flex = vo.asString("FLEX");
         this.formulacao = vo.asString("FORMULACAO");
-        this.geraPlaProd = vo.asString("GERAPLAPROD");
+        this.geraPlAProd = vo.asString("GERAPLAPROD");
         this.grupoCofins = vo.asString("GRUPOCOFINS");
         this.grupoCssl = vo.asString("GRUPOCSSL");
         this.grupoDescProd = vo.asString("GRUPODESCPROD");
@@ -3553,9 +3557,9 @@ public class Servico implements SankhyaEntity<Servico> {
         this.grupoPis = vo.asString("GRUPOPIS");
         this.grupoQuimico = vo.asBigDecimal("GRUPOQUIMICO");
         this.homePage = vo.asString("HOMEPAGE");
-        this.hrDobrada = vo.asString("HRDOBRADA");
+        this.hrDoBrada = vo.asString("HRDOBRADA");
         this.icmsGerencia = vo.asString("ICMSGERENCIA");
-        this.identImob = vo.asBigDecimal("IDENTIMOB");
+        this.idenTimob = vo.asBigDecimal("IDENTIMOB");
         this.imagem = vo.asBlob("IMAGEM");
         this.impEtiqConf = vo.asString("IMPETIQCONF");
         this.impLaudoLote = vo.asString("IMPLAUDOLOTE");
@@ -3591,7 +3595,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.promocao = vo.asString("PROMOCAO");
         this.qtdEmb = vo.asBigDecimal("QTDEMB");
         this.qtdNfLaudosInt = vo.asBigDecimal("QTDNFLAUDOSINT");
-        this.rastreEstoque = vo.asString("RASTREESTOQUE");
+        this.rastrEstoque = vo.asString("RASTRESTOQUE");
         this.receituario = vo.asString("RECEITUARIO");
         this.recupAvaria = vo.asString("RECUPAVARIA");
         this.redBaseInss = vo.asBigDecimal("REDBASEINSS");
@@ -3606,7 +3610,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.shelfLife = vo.asBigDecimal("SHELFLIFE");
         this.shelfLifeMin = vo.asBigDecimal("SHELFLIFEMIN");
         this.solCompra = vo.asString("SOLCOMPRA");
-        this.statusIncexc = vo.asString("STATUSINCEXC");
+        this.statusIncExc = vo.asString("STATUSINCEXC");
         this.tamLote = vo.asBigDecimal("TAMLOTE");
         this.tamSerie = vo.asBigDecimal("TAMSERIE");
         this.temCiap = vo.asString("TEMCIAP");
@@ -3618,7 +3622,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.temIpiVenda = vo.asString("TEMIPIVENDA");
         this.temIrf = vo.asString("TEMIRF");
         this.temIss = vo.asString("TEMISS");
-        this.temPosServ = vo.asTimestamp("TEMPOSSERV");
+        this.tempoServ = vo.asTimestamp("TEMPOSERV");
         this.tipContest = vo.asString("TIPCONTEST");
         this.tipContestWms = vo.asString("TIPCONTESTWMS");
         this.tipGtinNfe = vo.asBigDecimal("TIPGTINNFE");
@@ -3738,7 +3742,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.percCmtMun = vo.asBigDecimal("PERCCMTMUN");
         this.percCmtFed = vo.asBigDecimal("PERCCMTFED");
         this.percCmtEst = vo.asBigDecimal("PERCCMTEST");
-        this.corFontConsPreco = vo.asBigDecimal("CORFONTCONSPRECO");
+        this.corFonteConsPreco = vo.asBigDecimal("CORFONTCONSPRECO");
         this.corFundoConsPreco = vo.asBigDecimal("CORFUNDOCONSPRECO");
         this.calcDifAl = vo.asString("CALCDIFAL");
         this.classifCessaoObra = vo.asBigDecimal("CLASSIFCESSAOOBRA");
@@ -3760,7 +3764,7 @@ public class Servico implements SankhyaEntity<Servico> {
         this.tipoInssEspecial = vo.asString("TIPOINSSESPECIAL");
         this.vlrPartidaGlp = vo.asBigDecimal("VLRPARTIDAGLP");
         this.integraEconect = vo.asString("INTEGRAECONECT");
-        this.maxMultEconect = vo.asBigDecimal("MAXMULTECONECT");
+        this.maxMulEconect = vo.asBigDecimal("MAXMULTECONECT");
         this.utilSmartCard = vo.asString("UTILSMARTCARD");
         this.natEfdContM410M810 = vo.asBigDecimal("NATEFDCONTM410M810");
         this.codVtp = vo.asBigDecimal("CODVTP");
@@ -3782,13 +3786,13 @@ public class Servico implements SankhyaEntity<Servico> {
         this.prodInterno = vo.asString("PRODINTERNO");
         this.aliqImp = vo.asBigDecimal("ALIQIMP");
         this.aliqNac = vo.asBigDecimal("ALIQNAC");
-        this.atuNuVersao = vo.asString("ATUNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.integraFox = vo.asBigDecimal("INTEGRAFOX");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         this.gradePadrao = vo.asClob("GRADEPADRAO");
         this.idGrade = vo.asBigDecimal("IDGRADE");
         this.percentSepPul = vo.asBigDecimal("PERCENTSEPPUL");
-        this.obtStantMedEnt = vo.asString("OBTSTANTMEDENT");
+        this.obtStAntMedEnt = vo.asString("OBTSTANTMEDENT");
         this.descProdDrcst = vo.asString("DESCPRODDRCST");
         this.aliqInternaCat42 = vo.asBigDecimal("ALIQINTERNACAT42");
         this.desDescCalcPis = vo.asString("DESDESCCALCPIS");
@@ -3796,13 +3800,13 @@ public class Servico implements SankhyaEntity<Servico> {
         this.mvaOriginalAdrcst = vo.asBigDecimal("MVAORIGINALADRCST");
         this.participaAdrcst = vo.asString("PARTICIPAADRCST");
         this.prodSujFecop = vo.asString("PRODSUJFECOP");
-        this.calcRupturaEstoque = vo.asString("CALCRUPTURAESTOQUE");
+        this.calRupturaEstoque = vo.asString("CALRUPTURAESTOQUE");
         this.codVolKanban = vo.asString("CODVOLKANBAN");
         this.bloqVendaFrac = vo.asString("BLOQVENDAFRAC");
         this.codNatRend = vo.asBigDecimal("CODNATREND");
         this.tpIrrfExt = vo.asBigDecimal("TPIRRFEXT");
         this.percIndMistura = vo.asBigDecimal("PERCINDMISTURA");
-        this.opExpFetHab = vo.asString("OPEXPFETHAB");
+        this.opExpFetHab = vo.asString("OPEEXPFETHAB");
         this.opeIntEstFetHab = vo.asString("OPEINTESTFETHAB");
         this.opeIntFetHab = vo.asString("OPEINTFETHAB");
         return this;

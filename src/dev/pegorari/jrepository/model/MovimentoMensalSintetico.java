@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MovimentoMensalSintetico implements SankhyaEntity<MovimentoMensalSintetico> {
-
+public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMensalSintetico> {
    private BigDecimal ano;
    private BigDecimal codEmp;
    private BigDecimal codGrupoProd;
@@ -87,6 +86,11 @@ public class MovimentoMensalSintetico implements SankhyaEntity<MovimentoMensalSi
 
    public void setVlrMov(BigDecimal vlrMov) {
         this.vlrMov = vlrMov;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMMS";
    }
 
    @Override

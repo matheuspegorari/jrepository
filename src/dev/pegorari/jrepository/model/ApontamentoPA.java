@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ApontamentoPA implements SankhyaEntity<ApontamentoPA> {
-
+public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    private String referencia;
-   private BigDecimal qtdFatSp;
+   private BigDecimal qtdFatsp;
    private BigDecimal qtdApontada;
    private String controlePa;
-   private BigDecimal codProdPa;
+   private BigDecimal codProdpa;
    private BigDecimal seqApa;
    private BigDecimal qtdFat;
    private BigDecimal nuApo;
@@ -26,12 +25,12 @@ public class ApontamentoPA implements SankhyaEntity<ApontamentoPA> {
         this.referencia = referencia;
    }
 
-   public BigDecimal getQtdFatSp() {
-        return qtdFatSp;
+   public BigDecimal getQtdFatsp() {
+        return qtdFatsp;
    }
 
-   public void setQtdFatSp(BigDecimal qtdFatSp) {
-        this.qtdFatSp = qtdFatSp;
+   public void setQtdFatsp(BigDecimal qtdFatsp) {
+        this.qtdFatsp = qtdFatsp;
    }
 
    public BigDecimal getQtdApontada() {
@@ -50,12 +49,12 @@ public class ApontamentoPA implements SankhyaEntity<ApontamentoPA> {
         this.controlePa = controlePa;
    }
 
-   public BigDecimal getCodProdPa() {
-        return codProdPa;
+   public BigDecimal getCodProdpa() {
+        return codProdpa;
    }
 
-   public void setCodProdPa(BigDecimal codProdPa) {
-        this.codProdPa = codProdPa;
+   public void setCodProdpa(BigDecimal codProdpa) {
+        this.codProdpa = codProdpa;
    }
 
    public BigDecimal getSeqApa() {
@@ -107,6 +106,11 @@ public class ApontamentoPA implements SankhyaEntity<ApontamentoPA> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRAPA";
+   }
+
+   @Override
    public String getEntityName() {
         return "ApontamentoPA";
    }
@@ -114,10 +118,10 @@ public class ApontamentoPA implements SankhyaEntity<ApontamentoPA> {
    @Override
    public ApontamentoPA fromVO(DynamicVO vo) {
         this.referencia = vo.asString("REFERENCIA");
-        this.qtdFatSp = vo.asBigDecimal("QTDFATSP");
+        this.qtdFatsp = vo.asBigDecimal("QTDFATSP");
         this.qtdApontada = vo.asBigDecimal("QTDAPONTADA");
         this.controlePa = vo.asString("CONTROLEPA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
+        this.codProdpa = vo.asBigDecimal("CODPRODPA");
         this.seqApa = vo.asBigDecimal("SEQAPA");
         this.qtdFat = vo.asBigDecimal("QTDFAT");
         this.nuApo = vo.asBigDecimal("NUAPO");

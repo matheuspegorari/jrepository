@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
-public class AlteracaoCadastralEnotas implements SankhyaEntity<AlteracaoCadastralEnotas> {
-
+public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCadastralEnotas> {
    private Timestamp dhAlter;
    private Timestamp dhDone;
    private String id;
@@ -41,6 +40,11 @@ public class AlteracaoCadastralEnotas implements SankhyaEntity<AlteracaoCadastra
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFACE";
    }
 
    @Override

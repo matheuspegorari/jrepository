@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class IpiProdutoParceiro implements SankhyaEntity<IpiProdutoParceiro> {
-
+public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro> {
    private BigDecimal codIpi;
    private BigDecimal codParc;
    private BigDecimal codProd;
@@ -32,6 +31,11 @@ public class IpiProdutoParceiro implements SankhyaEntity<IpiProdutoParceiro> {
 
    public void setCodProd(BigDecimal codProd) {
         this.codProd = codProd;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIPP";
    }
 
    @Override

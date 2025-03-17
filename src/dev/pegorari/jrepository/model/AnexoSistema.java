@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AnexoSistema implements SankhyaEntity<AnexoSistema> {
-
+public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    private Timestamp dhCad;
    private BigDecimal codUsuAlt;
    private String pkRegistro;
@@ -132,6 +131,11 @@ public class AnexoSistema implements SankhyaEntity<AnexoSistema> {
 
    public void setLink(String link) {
         this.link = link;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIANX";
    }
 
    @Override

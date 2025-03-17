@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class StatusSerie implements SankhyaEntity<StatusSerie> {
-
+public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    private BigDecimal codProd;
    private BigDecimal nuNota;
    private BigDecimal seqNota;
@@ -50,6 +49,11 @@ public class StatusSerie implements SankhyaEntity<StatusSerie> {
 
    public void setStatus(String status) {
         this.status = status;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFSSE";
    }
 
    @Override

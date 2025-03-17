@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class BoletoRapidoHist implements SankhyaEntity<BoletoRapidoHist> {
-
+public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    private BigDecimal codUsu;
    private Timestamp dtAlt;
    private BigDecimal idUnico;
@@ -51,6 +50,11 @@ public class BoletoRapidoHist implements SankhyaEntity<BoletoRapidoHist> {
 
    public void setSitRegBol(String sitRegBol) {
         this.sitRegBol = sitRegBol;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPJBH";
    }
 
    @Override

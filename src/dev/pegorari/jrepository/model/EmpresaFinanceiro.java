@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
-
+public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal codLancBcoPag;
    private String corTeFaltaWms;
    private String cpfContador;
@@ -33,7 +32,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String gerarLivros;
    private String gerarProdLivEnt;
    private String gerarProdOrigKit;
-   private String geraNotaEnt;
+   private String gerNotaEnt;
    private String gravarObsNota;
    private String gravarObsPadrao;
    private String gravarSerieNota;
@@ -63,7 +62,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal codParcCtb;
    private BigDecimal codTab;
    private BigDecimal codTabCalc;
-   private BigDecimal codTipOperComp;
+   private BigDecimal codTipOperaComp;
    private String codTrib20Red;
    private String codTrib30;
    private String codTrib40Isent;
@@ -76,7 +75,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String compIpi;
    private String compIpiSepIcm;
    private String complItemNota;
-   private String consEntRpendWms;
+   private String consEntrPendWms;
    private String consOutrosImp;
    private String consVlrLiqNfse;
    private String contingenciaNfe;
@@ -94,7 +93,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal percMargem;
    private BigDecimal percPis;
    private String perfilEfd;
-   private String perProj;
+   private String percProj;
    private String prodEpe;
    private String projOnline;
    private String rastrEstoque;
@@ -134,7 +133,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String tratarTribut;
    private String tratarTributDefEmp;
    private String tratoCWms;
-   private String ufCrcContador;
+   private String ufCrContador;
    private BigDecimal ultAutorPag;
    private BigDecimal ultDupl;
    private BigDecimal ultPagCiapModc;
@@ -154,7 +153,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String wmsUsaRegVolFat;
    private Timestamp dtInicioKardex;
    private String gerLdPerTri;
-   private String icmsSctTd;
+   private String icmsScttd;
    private BigDecimal maxNotasLoteNfe;
    private BigDecimal modDupl;
    private BigDecimal modExped;
@@ -170,13 +169,13 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal nuRfe;
    private BigDecimal nuRfeCartaCorr;
    private String calcIss;
-   private BigDecimal calPercPis;
+   private BigDecimal calcPercPis;
    private BigDecimal codCenCus;
    private BigDecimal codCenCusDesp;
-   private BigDecimal codCtabCoipad;
-   private BigDecimal codCtactb1;
-   private BigDecimal codCtactb2;
-   private BigDecimal codCtactb3;
+   private BigDecimal codCtabCoIpad;
+   private BigDecimal codCtActb1;
+   private BigDecimal codCtActb2;
+   private BigDecimal codCtActb3;
    private BigDecimal codEmp;
    private BigDecimal codEmpMatrizEfd;
    private BigDecimal codEndSobra;
@@ -193,9 +192,9 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal notaEntSobraWms;
    private String codTrib53;
    private String envRespContNfe;
-   private BigDecimal tpObsFing4000;
-   private BigDecimal tpObsNotag4000;
-   private String gerObsFing4000;
+   private BigDecimal tpObsFinG4000;
+   private BigDecimal tpObsNotaG4000;
+   private String gerObsFinG4000;
    private BigDecimal codBcoIpi;
    private String tipTransmNfse;
    private BigDecimal codParcNfce;
@@ -207,106 +206,106 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal codMeta;
    private BigDecimal codModNfceCompl;
    private BigDecimal codModNfceSimpl;
-   private BigDecimal codEnqIpiSai;
-   private BigDecimal topSaidaDifPesoWms;
-   private BigDecimal codTabAlt;
-   private BigDecimal codSmtp;
-   private BigDecimal topEntDifPesoWms;
-   private BigDecimal codTipParc;
-   private BigDecimal corAgendado;
-   private BigDecimal corAtendido;
-   private BigDecimal corBloqueado;
-   private BigDecimal corEncaixado;
-   private BigDecimal corFaturado;
-   private BigDecimal corFixado;
-   private BigDecimal horaFinal;
-   private BigDecimal horaInicial;
+   private BigDecimal codenqipisai;
+   private BigDecimal topsaidadifpesowms;
+   private BigDecimal codtabalt;
+   private BigDecimal codsmtp;
+   private BigDecimal topentdifpesowms;
+   private BigDecimal codtipparc;
+   private BigDecimal coragendado;
+   private BigDecimal coratendido;
+   private BigDecimal corbloqueado;
+   private BigDecimal corencaixado;
+   private BigDecimal corfaturado;
+   private BigDecimal corfixado;
+   private BigDecimal horafinal;
+   private BigDecimal horainicial;
    private BigDecimal intervalo;
-   private BigDecimal notaModeloDAgenda;
-   private BigDecimal qtdLimiteMes;
-   private String validaCpfCnpj;
-   private String wmsUsaEtiqPal;
-   private String gerObsNotag4000;
-   private BigDecimal margSegPcp;
-   private BigDecimal seqTokenNfce;
-   private String tokenNfce;
-   private String tpAmbMdfe;
-   private String vlrLiqItemNfce;
-   private String chaveDigitalAgiliblue;
-   private String codUsuNfse;
-   private String codContrInfse;
-   private String temDenuesPont;
-   private BigDecimal przTolCancNota;
-   private BigDecimal przRegCancNota;
-   private String serNaoTribBaseIss;
-   private BigDecimal codEndArmIndef;
-   private BigDecimal copiasDacte;
-   private String tpAmbCte;
-   private BigDecimal codModDacte;
-   private String tipoEnvioCte;
-   private String contingenciaCte;
-   private String tipoDacte;
-   private String jobKeyNdd;
-   private String conectorNfse;
-   private BigDecimal codCtactbDesc;
-   private BigDecimal codCtactbJuros;
-   private BigDecimal codCtactbMult;
-   private BigDecimal codEndCrossdock;
-   private String codTrib90CredDeb;
-   private String conIcmsMajFcpInt;
-   private String consDevEvtr2050;
-   private String consIdBenef;
-   private String contingenciaNfce;
-   private BigDecimal copiasDanfce;
-   private String descRedDifCiap;
-   private String difAliqFcpInt;
-   private String emailNotfeCreinf;
-   private String envEmailConf;
-   private String envioSincronoCte;
-   private String envioSincronoNfce;
-   private String envioSincronoNfe;
-   private BigDecimal gerarRetencao;
-   private String gerarTaxFinEmbNfe;
-   private String igCertifSmtpXml;
-   private String insXmlPorImpSmtpXml;
-   private BigDecimal intConsSmtpXml;
-   private String nfseStAntConsFinal;
-   private BigDecimal notaEntAjustEstCons;
-   private BigDecimal notaEntAjustEstCter;
-   private BigDecimal notaEntAjustEstDter;
-   private BigDecimal notaSaiAjustBem;
-   private BigDecimal notaSaiAjustEstCons;
-   private BigDecimal notaSaiAjustEstCter;
-   private BigDecimal notaSaiAjustEstDter;
-   private String numDocR2020;
-   private BigDecimal nuNotaDemFx;
-   private BigDecimal nuNotaModFx;
-   private BigDecimal nuNotaTrcFx;
-   private String origProdComIpi;
-   private String permOutroUsuSepPed;
-   private BigDecimal portaSmtpXml;
-   private String progAquisAlim;
-   private Timestamp proxExecSmtpXml;
-   private String qrcodeNfceVersao2;
-   private String redIssBcPisConf;
-   private String redStCompBcPisCofins;
-   private String senhaSmtpXml;
-   private String servidorSmtpXml;
-   private String suprimirEmailDest;
-   private String tipConexSmtpXml;
-   private String tipDataEvtServ;
-   private String tipGerInfGveicGreb;
-   private String tipoEnvioNfce;
-   private String ultNsuCte;
-   private String usaCodBarrasConcatWms;
-   private String usaNomeComplItem;
-   private String usaRecParcial;
-   private String usaStExtNotaRestSt;
-   private String usuarioSmtpXml;
-   private String utilizaDfeTransp;
-   private String utilizaExploteSep;
-   private String utilizaSepPulmao;
-   private String utilizaTriCrossdocking;
+   private BigDecimal notamodelodagenda;
+   private BigDecimal qtdlimitemes;
+   private String validacpfcnpj;
+   private String wmsusaeqipal;
+   private String gerobsnotag4000;
+   private BigDecimal margsegpcp;
+   private BigDecimal seqtokennfce;
+   private String tokennfce;
+   private String tpambmdfe;
+   private String vlrliqitemnfce;
+   private String chavedigitalagiliblue;
+   private String codusunfse;
+   private String codcontrinfse;
+   private String temdenuespont;
+   private BigDecimal prztolcannota;
+   private BigDecimal przregcannota;
+   private String sernatribbaseiss;
+   private BigDecimal codendarmindef;
+   private BigDecimal copiasdacte;
+   private String tpambcte;
+   private BigDecimal codmoddacte;
+   private String tipoenviocte;
+   private String contingenciacte;
+   private String tipodacte;
+   private String jobkeyndd;
+   private String conectornfse;
+   private BigDecimal codctactbdesc;
+   private BigDecimal codctactbjuros;
+   private BigDecimal codctactbmult;
+   private BigDecimal codendcrossdock;
+   private String codtrib90creddeb;
+   private String conicmsmajfcpint;
+   private String consdevevtr2050;
+   private String considbenef;
+   private String contingencianfce;
+   private BigDecimal copiasdanfce;
+   private String descredifciap;
+   private String difaliqfcpint;
+   private String emailnotfecreinf;
+   private String envemailconf;
+   private String enviosincronocte;
+   private String enviosincrononfce;
+   private String enviosincrononfe;
+   private BigDecimal gerarretencao;
+   private String gerartaxfinembnfe;
+   private String igcertifsmtpxml;
+   private String insxmlporimpsmtpxml;
+   private BigDecimal intconssmtpxml;
+   private String nfestantconsfinal;
+   private BigDecimal notaentajustestcons;
+   private BigDecimal notaentajustestcter;
+   private BigDecimal notaentajustestdter;
+   private BigDecimal notasaiajustbem;
+   private BigDecimal notasaiajustestcons;
+   private BigDecimal notasaiajustestcter;
+   private BigDecimal notasaiajustestdter;
+   private String numdocr2020;
+   private BigDecimal nunotademfx;
+   private BigDecimal nunotamodfx;
+   private BigDecimal nunotatrcfx;
+   private String origprodcomipi;
+   private String permoutroususepped;
+   private BigDecimal portasmtpxml;
+   private String progaquisalim;
+   private Timestamp proxexecsmtpxml;
+   private String qrcodenfceversao2;
+   private String redissbcpisconf;
+   private String redstcompbcpiscofins;
+   private String senhasmtpxml;
+   private String servidorsmtpxml;
+   private String suprimiremaildest;
+   private String tipconexsmtpxml;
+   private String tipdataevtserv;
+   private String tipgerinfgveicgreb;
+   private String tipoenvionfce;
+   private String ultnsucte;
+   private String usacodbarrasconcatwms;
+   private String usanomecomplitem;
+   private String usarecparcial;
+   private String usasttextnotarestst;
+   private String usuariosmtpxml;
+   private String utilizadfetransp;
+   private String utilizaexplotesep;
+   private String utilizaseppulmao;
+   private String utilizatricrossdocking;
    private BigDecimal versaoNt;
    private BigDecimal versaoNtCte;
    private BigDecimal versaoNtMdfe;
@@ -315,16 +314,16 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String wmsMultiUsuConf;
    private String wmsUsaImpFechaVol;
    private String wmsUsaRegVolRec;
-   private String aedfe;
-   private String atualCbeneffat;
+   private String aedFe;
+   private String atualCbEnefFat;
    private String calcIcmsStNaoCont;
    private BigDecimal codTabCkc;
    private String reabCompleto;
    private BigDecimal aliqCfBonif;
    private BigDecimal aliqPisBonif;
-   private BigDecimal codCtactbBonif;
+   private BigDecimal codCtaCtbBonif;
    private String codStPisCfBonif;
-   private String mdfeDocSemisPropria;
+   private String mdfeDocSemIsProp;
    private BigDecimal nuRfeCartaCorrCte;
    private String tribPisCfBonif;
    private String gerLivIcmsEmpSn;
@@ -345,17 +344,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String defCstIpi99;
    private String ipiTributDefEmp;
    private String escritCompraEmissProp;
-   private String geraNotaEntCanc;
+   private String gerNotaEntCanc;
    private String metCalcDifIcms;
-   private BigDecimal pesMaxSepAgru;
-   private String usaSepAgrupProd;
-   private BigDecimal qtPedSepAgr;
+   private BigDecimal pesMaxSepaGru;
+   private String usaSepaGruProd;
+   private BigDecimal qtPedSepaGr;
    private BigDecimal qtCheckSep;
-   private BigDecimal volCheckSepProd;
+   private BigDecimal volCheckSepRod;
    private String consRepIcmsBasePisCof;
    private BigDecimal aliqPisDesc;
    private BigDecimal aliqCfJuros;
-   private BigDecimal localPadEconect;
+   private BigDecimal localPadEConect;
    private BigDecimal aliqCfDesc;
    private String jobMdEndDigital;
    private String codStPisCfDesc;
@@ -373,26 +372,26 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String redIcmsBcPisConfins;
    private String ultNsu;
    private String usaInfoAdConfPed;
-   private BigDecimal nfseObsIterps;
-   private BigDecimal qtdCarNfseObsIterps;
+   private BigDecimal nfSeObsIterPs;
+   private BigDecimal qtdCarNfSeObsIterPs;
    private String caepf;
    private String cafir;
-   private String gerAlcdpr;
+   private String gerAlcdPr;
    private String tipoExploracao;
    private String baixaFinPreEmissNfce;
    private String icmsNormalDifIcmsSn;
    private String dirFcpfResp;
    private String dirFDepDecJud;
    private String dirFDepFunInv;
-   private Timestamp dirFdhevento;
-   private String dirFentImune;
-   private String dirFnatDecl;
-   private String dirFpgExt;
-   private String dirFpgFundPub;
-   private String dirFplPriAss;
-   private String dirFsitEsp;
-   private String dirFsocost;
-   private String tempPremiacaoEstadual;
+   private Timestamp dirFdhEvento;
+   private String dirFEntImune;
+   private String dirFNatDecl;
+   private String dirFPgExt;
+   private String dirFPgFundPub;
+   private String dirFPlPriAss;
+   private String dirFSitEsp;
+   private String dirFSocost;
+   private String tempRemicaoEstadual;
    private BigDecimal codClassifEstab;
    private String redPisBcPisCofins;
    private BigDecimal nuRfeProducao;
@@ -402,9 +401,9 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String clasConsEnerg;
    private String clasConsGas;
    private String identEct;
-   private String wmsDocAsepBalcao;
+   private String wmsDocASepBalcao;
    private String efdh010;
-   private String efdh010Prter;
+   private String efdh010PrTer;
    private String efdh010Ter;
    private String utilizaExplote;
    private BigDecimal codRelMinutaOdp;
@@ -426,13 +425,13 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal respEntReinf;
    private String senhaEctRastreio;
    private BigDecimal sitEmpReinf;
-   private String tipCtactbEfd;
+   private String tipCtActbEfd;
    private BigDecimal topCorBanEconect;
    private BigDecimal tribReinf;
    private BigDecimal versaoCte;
    private String vinculoEfr;
    private BigDecimal nroMaxProd;
-   private BigDecimal tpOempresa;
+   private BigDecimal tpoEmpresa;
    private BigDecimal versaoMdfe;
    private String transpCarga;
    private String usaDtValLotNfe;
@@ -444,7 +443,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal codLojaEconect;
    private BigDecimal topRecargaCelEconect;
    private BigDecimal topNfceEconect;
-   private BigDecimal topSateConect;
+   private BigDecimal topSatEconect;
    private BigDecimal wmsCodEndFlut;
    private String usaTrocoCheckout;
    private BigDecimal codEmpOrigMovFin;
@@ -463,17 +462,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String tokenNfse;
    private BigDecimal efdCodBco;
    private BigDecimal efdCodCenCus;
-   private BigDecimal efdCodCtabCoInt;
+   private BigDecimal efdCodCtaBcoInt;
    private BigDecimal efdCodNatDespRecIcms;
-   private BigDecimal efdCodTipOper;
+   private BigDecimal efdCodTipoPer;
    private BigDecimal efdCodTipTit;
    private BigDecimal efdDiaVenc;
-   private String efdTipReenchNota;
-   private String intFinObriIcmsStRec;
+   private String efdTipoReenchNota;
+   private String intFinObricmsStRec;
    private String wmsRastSerMed;
-   private String codRespRetc180;
-   private String vlrBaseStc180;
-   private String vlrStc180;
+   private String codRespRetC180;
+   private String vlrBaseStC180;
+   private String vlrStC180;
    private BigDecimal topSangSupri;
    private String usaVlrMedTransfEmp;
    private BigDecimal topDespesa;
@@ -491,14 +490,14 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal codEmpGrupoFrete;
    private String calcFetHab;
    private String msgInfAdicFetHab;
-   private BigDecimal aliqFunttel;
+   private BigDecimal aliqFuntTel;
    private BigDecimal aliqFust;
-   private String fistel;
+   private String fisTel;
    private String vlrIcmsOpAnt;
    private String vlrStFcpOpAnt;
    private String vlrStOpAnt;
    private String vlrUnitIcmsOp;
-   private String inibeReabMaxPicking;
+   private String iniBereabMaxPicking;
    private String tratSobFinConf;
    private BigDecimal conEstOrigProd;
    private String vlrUnitMerc;
@@ -506,7 +505,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String entAutTarMapa;
    private BigDecimal priorCodNat;
    private String envRespContCte;
-   private String consDevTerevtr2050;
+   private String consDevTerevTr2050;
    private String envInutNotaExc;
    private String jusInutNotaExc;
    private String wmsDocArep;
@@ -517,29 +516,29 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private String proibEscCheckoutPed;
    private String nfeCanExtCanMes;
    private String envMdfSinc;
-   private String wmsPerSepProdAp;
-   private String consIdQtCarcDesc;
+   private String wmsPersEpProdAp;
+   private String considQtCarDesc;
    private String envLeiTranspDesc;
-   private String envLeiTranspTotoBs;
+   private String envLeiTranspTotObs;
    private String cgcProcurador;
-   private String inibLoqRegConf;
+   private String iniBloqRegConf;
    private String blqNfaCompNfcPend;
    private String difAliqDespAcess;
    private String complRestituicaoIcmsSt;
    private String calcPisCfsFin;
    private String isAliqIntSexC;
-   private BigDecimal tipIcmsFenvalBem;
+   private BigDecimal tipIcmsFenValBem;
    private String chavePixCheckout;
    private String urlPixCheckout;
    private BigDecimal calcVlrAquisBem;
-   private String inibeLote;
+   private String iniBelote;
    private String contBaiBemSubImprec;
    private BigDecimal codCtaPixTef;
    private String credIcmsCombus;
    private String credIcmsRemg;
    private String descricao;
    private String descrNat;
-   private String desTipIdevCom;
+   private String desTipIdEvCom;
    private BigDecimal natCanPix;
    private String rupturaEst;
    private String somarFcpBcCiap;
@@ -549,17 +548,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal topCanPixRec;
    private String usaMedDiaImp;
    private BigDecimal codCenCusIpi;
-   private BigDecimal codCtabCoIpi;
+   private BigDecimal codCtaBcoIpi;
    private BigDecimal codEmpImposto;
    private BigDecimal codModRetEstWms;
    private BigDecimal codNatIpi;
-   private BigDecimal codParcIpi;
+   private BigDecimal codParCipi;
    private String codReceitaIpi;
    private String codReceitaReinf;
-   private BigDecimal codTipOperIpi;
+   private BigDecimal codTipoPerIpi;
    private BigDecimal codTipTitIpi;
-   private String consDifParcOutIcms;
-   private String ctactbAnlRegApur;
+   private String consDifParCoutIcms;
+   private String ctaCtbAnlRegApur;
    private String desRestrFcpCst;
    private String desRestrFcpStCst;
    private BigDecimal diaVencIpi;
@@ -571,8 +570,8 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private Timestamp dtTransfFinsLucr;
    private String envInfIssSomDevido;
    private String estrNcredIcmsSt;
-   private String gerMultPlacres;
-   private BigDecimal indTipLayoutK010;
+   private String gerMultPlacRes;
+   private BigDecimal indTipoLayoutK010;
    private BigDecimal indUniao;
    private String integrarIpiFin;
    private BigDecimal modEstCpaWms;
@@ -580,22 +579,22 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
    private BigDecimal notaSaiAjusteReclas;
    private BigDecimal origDescontos;
    private String redStBcPisCofins;
-   private String stInclusa70;
-   private String tipCtactbEfdf;
+   private String stInclusA70;
+   private String tipCtaCtbEfdF;
    private String tipDataEvtPag;
    private String tipDataEvtPagXir;
    private String tokenIbpt;
-   private String usaCusMedIcMpro;
+   private String usaCusMedIcmsPro;
    private String usaCustoMedioMps;
-   private String desApCprodEpe;
+   private String desApCProDepE;
    private String regApurTribSn;
    private BigDecimal status;
    private String geraDeducaoPf;
    private String credIcmsCst60Am;
-   private String denunCesPcte;
-   private BigDecimal prazoRcancCte;
-   private BigDecimal prazoTcancCte;
-   private String teraCpCte;
+   private String denuncEspCte;
+   private BigDecimal prazoRCancCte;
+   private BigDecimal prazoTCancCte;
+   private String terAcpCte;
    private String aplCalcDifAliqFrt;
 
    public BigDecimal getCodLancBcoPag() {
@@ -806,12 +805,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.gerarProdOrigKit = gerarProdOrigKit;
    }
 
-   public String getGeraNotaEnt() {
-        return geraNotaEnt;
+   public String getGerNotaEnt() {
+        return gerNotaEnt;
    }
 
-   public void setGeraNotaEnt(String geraNotaEnt) {
-        this.geraNotaEnt = geraNotaEnt;
+   public void setGerNotaEnt(String gerNotaEnt) {
+        this.gerNotaEnt = gerNotaEnt;
    }
 
    public String getGravarObsNota() {
@@ -1046,12 +1045,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codTabCalc = codTabCalc;
    }
 
-   public BigDecimal getCodTipOperComp() {
-        return codTipOperComp;
+   public BigDecimal getCodTipOperaComp() {
+        return codTipOperaComp;
    }
 
-   public void setCodTipOperComp(BigDecimal codTipOperComp) {
-        this.codTipOperComp = codTipOperComp;
+   public void setCodTipOperaComp(BigDecimal codTipOperaComp) {
+        this.codTipOperaComp = codTipOperaComp;
    }
 
    public String getCodTrib20Red() {
@@ -1150,12 +1149,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.complItemNota = complItemNota;
    }
 
-   public String getConsEntRpendWms() {
-        return consEntRpendWms;
+   public String getConsEntrPendWms() {
+        return consEntrPendWms;
    }
 
-   public void setConsEntRpendWms(String consEntRpendWms) {
-        this.consEntRpendWms = consEntRpendWms;
+   public void setConsEntrPendWms(String consEntrPendWms) {
+        this.consEntrPendWms = consEntrPendWms;
    }
 
    public String getConsOutrosImp() {
@@ -1294,12 +1293,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.perfilEfd = perfilEfd;
    }
 
-   public String getPerProj() {
-        return perProj;
+   public String getPercProj() {
+        return percProj;
    }
 
-   public void setPerProj(String perProj) {
-        this.perProj = perProj;
+   public void setPercProj(String percProj) {
+        this.percProj = percProj;
    }
 
    public String getProdEpe() {
@@ -1614,12 +1613,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.tratoCWms = tratoCWms;
    }
 
-   public String getUfCrcContador() {
-        return ufCrcContador;
+   public String getUfCrContador() {
+        return ufCrContador;
    }
 
-   public void setUfCrcContador(String ufCrcContador) {
-        this.ufCrcContador = ufCrcContador;
+   public void setUfCrContador(String ufCrContador) {
+        this.ufCrContador = ufCrContador;
    }
 
    public BigDecimal getUltAutorPag() {
@@ -1774,12 +1773,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.gerLdPerTri = gerLdPerTri;
    }
 
-   public String getIcmsSctTd() {
-        return icmsSctTd;
+   public String getIcmsScttd() {
+        return icmsScttd;
    }
 
-   public void setIcmsSctTd(String icmsSctTd) {
-        this.icmsSctTd = icmsSctTd;
+   public void setIcmsScttd(String icmsScttd) {
+        this.icmsScttd = icmsScttd;
    }
 
    public BigDecimal getMaxNotasLoteNfe() {
@@ -1902,12 +1901,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.calcIss = calcIss;
    }
 
-   public BigDecimal getCalPercPis() {
-        return calPercPis;
+   public BigDecimal getCalcPercPis() {
+        return calcPercPis;
    }
 
-   public void setCalPercPis(BigDecimal calPercPis) {
-        this.calPercPis = calPercPis;
+   public void setCalcPercPis(BigDecimal calcPercPis) {
+        this.calcPercPis = calcPercPis;
    }
 
    public BigDecimal getCodCenCus() {
@@ -1926,36 +1925,36 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codCenCusDesp = codCenCusDesp;
    }
 
-   public BigDecimal getCodCtabCoipad() {
-        return codCtabCoipad;
+   public BigDecimal getCodCtabCoIpad() {
+        return codCtabCoIpad;
    }
 
-   public void setCodCtabCoipad(BigDecimal codCtabCoipad) {
-        this.codCtabCoipad = codCtabCoipad;
+   public void setCodCtabCoIpad(BigDecimal codCtabCoIpad) {
+        this.codCtabCoIpad = codCtabCoIpad;
    }
 
-   public BigDecimal getCodCtactb1() {
-        return codCtactb1;
+   public BigDecimal getCodCtActb1() {
+        return codCtActb1;
    }
 
-   public void setCodCtactb1(BigDecimal codCtactb1) {
-        this.codCtactb1 = codCtactb1;
+   public void setCodCtActb1(BigDecimal codCtActb1) {
+        this.codCtActb1 = codCtActb1;
    }
 
-   public BigDecimal getCodCtactb2() {
-        return codCtactb2;
+   public BigDecimal getCodCtActb2() {
+        return codCtActb2;
    }
 
-   public void setCodCtactb2(BigDecimal codCtactb2) {
-        this.codCtactb2 = codCtactb2;
+   public void setCodCtActb2(BigDecimal codCtActb2) {
+        this.codCtActb2 = codCtActb2;
    }
 
-   public BigDecimal getCodCtactb3() {
-        return codCtactb3;
+   public BigDecimal getCodCtActb3() {
+        return codCtActb3;
    }
 
-   public void setCodCtactb3(BigDecimal codCtactb3) {
-        this.codCtactb3 = codCtactb3;
+   public void setCodCtActb3(BigDecimal codCtActb3) {
+        this.codCtActb3 = codCtActb3;
    }
 
    public BigDecimal getCodEmp() {
@@ -2086,28 +2085,28 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.envRespContNfe = envRespContNfe;
    }
 
-   public BigDecimal getTpObsFing4000() {
-        return tpObsFing4000;
+   public BigDecimal getTpObsFinG4000() {
+        return tpObsFinG4000;
    }
 
-   public void setTpObsFing4000(BigDecimal tpObsFing4000) {
-        this.tpObsFing4000 = tpObsFing4000;
+   public void setTpObsFinG4000(BigDecimal tpObsFinG4000) {
+        this.tpObsFinG4000 = tpObsFinG4000;
    }
 
-   public BigDecimal getTpObsNotag4000() {
-        return tpObsNotag4000;
+   public BigDecimal getTpObsNotaG4000() {
+        return tpObsNotaG4000;
    }
 
-   public void setTpObsNotag4000(BigDecimal tpObsNotag4000) {
-        this.tpObsNotag4000 = tpObsNotag4000;
+   public void setTpObsNotaG4000(BigDecimal tpObsNotaG4000) {
+        this.tpObsNotaG4000 = tpObsNotaG4000;
    }
 
-   public String getGerObsFing4000() {
-        return gerObsFing4000;
+   public String getGerObsFinG4000() {
+        return gerObsFinG4000;
    }
 
-   public void setGerObsFing4000(String gerObsFing4000) {
-        this.gerObsFing4000 = gerObsFing4000;
+   public void setGerObsFinG4000(String gerObsFinG4000) {
+        this.gerObsFinG4000 = gerObsFinG4000;
    }
 
    public BigDecimal getCodBcoIpi() {
@@ -2198,116 +2197,116 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codModNfceSimpl = codModNfceSimpl;
    }
 
-   public BigDecimal getCodEnqIpiSai() {
-        return codEnqIpiSai;
+   public BigDecimal getCodenqipisai() {
+        return codenqipisai;
    }
 
-   public void setCodEnqIpiSai(BigDecimal codEnqIpiSai) {
-        this.codEnqIpiSai = codEnqIpiSai;
+   public void setCodenqipisai(BigDecimal codenqipisai) {
+        this.codenqipisai = codenqipisai;
    }
 
-   public BigDecimal getTopSaidaDifPesoWms() {
-        return topSaidaDifPesoWms;
+   public BigDecimal getTopsaidadifpesowms() {
+        return topsaidadifpesowms;
    }
 
-   public void setTopSaidaDifPesoWms(BigDecimal topSaidaDifPesoWms) {
-        this.topSaidaDifPesoWms = topSaidaDifPesoWms;
+   public void setTopsaidadifpesowms(BigDecimal topsaidadifpesowms) {
+        this.topsaidadifpesowms = topsaidadifpesowms;
    }
 
-   public BigDecimal getCodTabAlt() {
-        return codTabAlt;
+   public BigDecimal getCodtabalt() {
+        return codtabalt;
    }
 
-   public void setCodTabAlt(BigDecimal codTabAlt) {
-        this.codTabAlt = codTabAlt;
+   public void setCodtabalt(BigDecimal codtabalt) {
+        this.codtabalt = codtabalt;
    }
 
-   public BigDecimal getCodSmtp() {
-        return codSmtp;
+   public BigDecimal getCodsmtp() {
+        return codsmtp;
    }
 
-   public void setCodSmtp(BigDecimal codSmtp) {
-        this.codSmtp = codSmtp;
+   public void setCodsmtp(BigDecimal codsmtp) {
+        this.codsmtp = codsmtp;
    }
 
-   public BigDecimal getTopEntDifPesoWms() {
-        return topEntDifPesoWms;
+   public BigDecimal getTopentdifpesowms() {
+        return topentdifpesowms;
    }
 
-   public void setTopEntDifPesoWms(BigDecimal topEntDifPesoWms) {
-        this.topEntDifPesoWms = topEntDifPesoWms;
+   public void setTopentdifpesowms(BigDecimal topentdifpesowms) {
+        this.topentdifpesowms = topentdifpesowms;
    }
 
-   public BigDecimal getCodTipParc() {
-        return codTipParc;
+   public BigDecimal getCodtipparc() {
+        return codtipparc;
    }
 
-   public void setCodTipParc(BigDecimal codTipParc) {
-        this.codTipParc = codTipParc;
+   public void setCodtipparc(BigDecimal codtipparc) {
+        this.codtipparc = codtipparc;
    }
 
-   public BigDecimal getCorAgendado() {
-        return corAgendado;
+   public BigDecimal getCoragendado() {
+        return coragendado;
    }
 
-   public void setCorAgendado(BigDecimal corAgendado) {
-        this.corAgendado = corAgendado;
+   public void setCoragendado(BigDecimal coragendado) {
+        this.coragendado = coragendado;
    }
 
-   public BigDecimal getCorAtendido() {
-        return corAtendido;
+   public BigDecimal getCoratendido() {
+        return coratendido;
    }
 
-   public void setCorAtendido(BigDecimal corAtendido) {
-        this.corAtendido = corAtendido;
+   public void setCoratendido(BigDecimal coratendido) {
+        this.coratendido = coratendido;
    }
 
-   public BigDecimal getCorBloqueado() {
-        return corBloqueado;
+   public BigDecimal getCorbloqueado() {
+        return corbloqueado;
    }
 
-   public void setCorBloqueado(BigDecimal corBloqueado) {
-        this.corBloqueado = corBloqueado;
+   public void setCorbloqueado(BigDecimal corbloqueado) {
+        this.corbloqueado = corbloqueado;
    }
 
-   public BigDecimal getCorEncaixado() {
-        return corEncaixado;
+   public BigDecimal getCorencaixado() {
+        return corencaixado;
    }
 
-   public void setCorEncaixado(BigDecimal corEncaixado) {
-        this.corEncaixado = corEncaixado;
+   public void setCorencaixado(BigDecimal corencaixado) {
+        this.corencaixado = corencaixado;
    }
 
-   public BigDecimal getCorFaturado() {
-        return corFaturado;
+   public BigDecimal getCorfaturado() {
+        return corfaturado;
    }
 
-   public void setCorFaturado(BigDecimal corFaturado) {
-        this.corFaturado = corFaturado;
+   public void setCorfaturado(BigDecimal corfaturado) {
+        this.corfaturado = corfaturado;
    }
 
-   public BigDecimal getCorFixado() {
-        return corFixado;
+   public BigDecimal getCorfixado() {
+        return corfixado;
    }
 
-   public void setCorFixado(BigDecimal corFixado) {
-        this.corFixado = corFixado;
+   public void setCorfixado(BigDecimal corfixado) {
+        this.corfixado = corfixado;
    }
 
-   public BigDecimal getHoraFinal() {
-        return horaFinal;
+   public BigDecimal getHorafinal() {
+        return horafinal;
    }
 
-   public void setHoraFinal(BigDecimal horaFinal) {
-        this.horaFinal = horaFinal;
+   public void setHorafinal(BigDecimal horafinal) {
+        this.horafinal = horafinal;
    }
 
-   public BigDecimal getHoraInicial() {
-        return horaInicial;
+   public BigDecimal getHorainicial() {
+        return horainicial;
    }
 
-   public void setHoraInicial(BigDecimal horaInicial) {
-        this.horaInicial = horaInicial;
+   public void setHorainicial(BigDecimal horainicial) {
+        this.horainicial = horainicial;
    }
 
    public BigDecimal getIntervalo() {
@@ -2318,684 +2317,684 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.intervalo = intervalo;
    }
 
-   public BigDecimal getNotaModeloDAgenda() {
-        return notaModeloDAgenda;
+   public BigDecimal getNotamodelodagenda() {
+        return notamodelodagenda;
    }
 
-   public void setNotaModeloDAgenda(BigDecimal notaModeloDAgenda) {
-        this.notaModeloDAgenda = notaModeloDAgenda;
+   public void setNotamodelodagenda(BigDecimal notamodelodagenda) {
+        this.notamodelodagenda = notamodelodagenda;
    }
 
-   public BigDecimal getQtdLimiteMes() {
-        return qtdLimiteMes;
+   public BigDecimal getQtdlimitemes() {
+        return qtdlimitemes;
    }
 
-   public void setQtdLimiteMes(BigDecimal qtdLimiteMes) {
-        this.qtdLimiteMes = qtdLimiteMes;
+   public void setQtdlimitemes(BigDecimal qtdlimitemes) {
+        this.qtdlimitemes = qtdlimitemes;
    }
 
-   public String getValidaCpfCnpj() {
-        return validaCpfCnpj;
+   public String getValidacpfcnpj() {
+        return validacpfcnpj;
    }
 
-   public void setValidaCpfCnpj(String validaCpfCnpj) {
-        this.validaCpfCnpj = validaCpfCnpj;
+   public void setValidacpfcnpj(String validacpfcnpj) {
+        this.validacpfcnpj = validacpfcnpj;
    }
 
-   public String getWmsUsaEtiqPal() {
-        return wmsUsaEtiqPal;
+   public String getWmsusaeqipal() {
+        return wmsusaeqipal;
    }
 
-   public void setWmsUsaEtiqPal(String wmsUsaEtiqPal) {
-        this.wmsUsaEtiqPal = wmsUsaEtiqPal;
+   public void setWmsusaeqipal(String wmsusaeqipal) {
+        this.wmsusaeqipal = wmsusaeqipal;
    }
 
-   public String getGerObsNotag4000() {
-        return gerObsNotag4000;
+   public String getGerobsnotag4000() {
+        return gerobsnotag4000;
    }
 
-   public void setGerObsNotag4000(String gerObsNotag4000) {
-        this.gerObsNotag4000 = gerObsNotag4000;
+   public void setGerobsnotag4000(String gerobsnotag4000) {
+        this.gerobsnotag4000 = gerobsnotag4000;
    }
 
-   public BigDecimal getMargSegPcp() {
-        return margSegPcp;
+   public BigDecimal getMargsegpcp() {
+        return margsegpcp;
    }
 
-   public void setMargSegPcp(BigDecimal margSegPcp) {
-        this.margSegPcp = margSegPcp;
+   public void setMargsegpcp(BigDecimal margsegpcp) {
+        this.margsegpcp = margsegpcp;
    }
 
-   public BigDecimal getSeqTokenNfce() {
-        return seqTokenNfce;
+   public BigDecimal getSeqtokennfce() {
+        return seqtokennfce;
    }
 
-   public void setSeqTokenNfce(BigDecimal seqTokenNfce) {
-        this.seqTokenNfce = seqTokenNfce;
+   public void setSeqtokennfce(BigDecimal seqtokennfce) {
+        this.seqtokennfce = seqtokennfce;
    }
 
-   public String getTokenNfce() {
-        return tokenNfce;
+   public String getTokennfce() {
+        return tokennfce;
    }
 
-   public void setTokenNfce(String tokenNfce) {
-        this.tokenNfce = tokenNfce;
+   public void setTokennfce(String tokennfce) {
+        this.tokennfce = tokennfce;
    }
 
-   public String getTpAmbMdfe() {
-        return tpAmbMdfe;
+   public String getTpambmdfe() {
+        return tpambmdfe;
    }
 
-   public void setTpAmbMdfe(String tpAmbMdfe) {
-        this.tpAmbMdfe = tpAmbMdfe;
+   public void setTpambmdfe(String tpambmdfe) {
+        this.tpambmdfe = tpambmdfe;
    }
 
-   public String getVlrLiqItemNfce() {
-        return vlrLiqItemNfce;
+   public String getVlrliqitemnfce() {
+        return vlrliqitemnfce;
    }
 
-   public void setVlrLiqItemNfce(String vlrLiqItemNfce) {
-        this.vlrLiqItemNfce = vlrLiqItemNfce;
+   public void setVlrliqitemnfce(String vlrliqitemnfce) {
+        this.vlrliqitemnfce = vlrliqitemnfce;
    }
 
-   public String getChaveDigitalAgiliblue() {
-        return chaveDigitalAgiliblue;
+   public String getChavedigitalagiliblue() {
+        return chavedigitalagiliblue;
    }
 
-   public void setChaveDigitalAgiliblue(String chaveDigitalAgiliblue) {
-        this.chaveDigitalAgiliblue = chaveDigitalAgiliblue;
+   public void setChavedigitalagiliblue(String chavedigitalagiliblue) {
+        this.chavedigitalagiliblue = chavedigitalagiliblue;
    }
 
-   public String getCodUsuNfse() {
-        return codUsuNfse;
+   public String getCodusunfse() {
+        return codusunfse;
    }
 
-   public void setCodUsuNfse(String codUsuNfse) {
-        this.codUsuNfse = codUsuNfse;
+   public void setCodusunfse(String codusunfse) {
+        this.codusunfse = codusunfse;
    }
 
-   public String getCodContrInfse() {
-        return codContrInfse;
+   public String getCodcontrinfse() {
+        return codcontrinfse;
    }
 
-   public void setCodContrInfse(String codContrInfse) {
-        this.codContrInfse = codContrInfse;
+   public void setCodcontrinfse(String codcontrinfse) {
+        this.codcontrinfse = codcontrinfse;
    }
 
-   public String getTemDenuesPont() {
-        return temDenuesPont;
+   public String getTemdenuespont() {
+        return temdenuespont;
    }
 
-   public void setTemDenuesPont(String temDenuesPont) {
-        this.temDenuesPont = temDenuesPont;
+   public void setTemdenuespont(String temdenuespont) {
+        this.temdenuespont = temdenuespont;
    }
 
-   public BigDecimal getPrzTolCancNota() {
-        return przTolCancNota;
+   public BigDecimal getPrztolcannota() {
+        return prztolcannota;
    }
 
-   public void setPrzTolCancNota(BigDecimal przTolCancNota) {
-        this.przTolCancNota = przTolCancNota;
+   public void setPrztolcannota(BigDecimal prztolcannota) {
+        this.prztolcannota = prztolcannota;
    }
 
-   public BigDecimal getPrzRegCancNota() {
-        return przRegCancNota;
+   public BigDecimal getPrzregcannota() {
+        return przregcannota;
    }
 
-   public void setPrzRegCancNota(BigDecimal przRegCancNota) {
-        this.przRegCancNota = przRegCancNota;
+   public void setPrzregcannota(BigDecimal przregcannota) {
+        this.przregcannota = przregcannota;
    }
 
-   public String getSerNaoTribBaseIss() {
-        return serNaoTribBaseIss;
+   public String getSernatribbaseiss() {
+        return sernatribbaseiss;
    }
 
-   public void setSerNaoTribBaseIss(String serNaoTribBaseIss) {
-        this.serNaoTribBaseIss = serNaoTribBaseIss;
+   public void setSernatribbaseiss(String sernatribbaseiss) {
+        this.sernatribbaseiss = sernatribbaseiss;
    }
 
-   public BigDecimal getCodEndArmIndef() {
-        return codEndArmIndef;
+   public BigDecimal getCodendarmindef() {
+        return codendarmindef;
    }
 
-   public void setCodEndArmIndef(BigDecimal codEndArmIndef) {
-        this.codEndArmIndef = codEndArmIndef;
+   public void setCodendarmindef(BigDecimal codendarmindef) {
+        this.codendarmindef = codendarmindef;
    }
 
-   public BigDecimal getCopiasDacte() {
-        return copiasDacte;
+   public BigDecimal getCopiasdacte() {
+        return copiasdacte;
    }
 
-   public void setCopiasDacte(BigDecimal copiasDacte) {
-        this.copiasDacte = copiasDacte;
+   public void setCopiasdacte(BigDecimal copiasdacte) {
+        this.copiasdacte = copiasdacte;
    }
 
-   public String getTpAmbCte() {
-        return tpAmbCte;
+   public String getTpambcte() {
+        return tpambcte;
    }
 
-   public void setTpAmbCte(String tpAmbCte) {
-        this.tpAmbCte = tpAmbCte;
+   public void setTpambcte(String tpambcte) {
+        this.tpambcte = tpambcte;
    }
 
-   public BigDecimal getCodModDacte() {
-        return codModDacte;
+   public BigDecimal getCodmoddacte() {
+        return codmoddacte;
    }
 
-   public void setCodModDacte(BigDecimal codModDacte) {
-        this.codModDacte = codModDacte;
+   public void setCodmoddacte(BigDecimal codmoddacte) {
+        this.codmoddacte = codmoddacte;
    }
 
-   public String getTipoEnvioCte() {
-        return tipoEnvioCte;
+   public String getTipoenviocte() {
+        return tipoenviocte;
    }
 
-   public void setTipoEnvioCte(String tipoEnvioCte) {
-        this.tipoEnvioCte = tipoEnvioCte;
+   public void setTipoenviocte(String tipoenviocte) {
+        this.tipoenviocte = tipoenviocte;
    }
 
-   public String getContingenciaCte() {
-        return contingenciaCte;
+   public String getContingenciacte() {
+        return contingenciacte;
    }
 
-   public void setContingenciaCte(String contingenciaCte) {
-        this.contingenciaCte = contingenciaCte;
+   public void setContingenciacte(String contingenciacte) {
+        this.contingenciacte = contingenciacte;
    }
 
-   public String getTipoDacte() {
-        return tipoDacte;
+   public String getTipodacte() {
+        return tipodacte;
    }
 
-   public void setTipoDacte(String tipoDacte) {
-        this.tipoDacte = tipoDacte;
+   public void setTipodacte(String tipodacte) {
+        this.tipodacte = tipodacte;
    }
 
-   public String getJobKeyNdd() {
-        return jobKeyNdd;
+   public String getJobkeyndd() {
+        return jobkeyndd;
    }
 
-   public void setJobKeyNdd(String jobKeyNdd) {
-        this.jobKeyNdd = jobKeyNdd;
+   public void setJobkeyndd(String jobkeyndd) {
+        this.jobkeyndd = jobkeyndd;
    }
 
-   public String getConectorNfse() {
-        return conectorNfse;
+   public String getConectornfse() {
+        return conectornfse;
    }
 
-   public void setConectorNfse(String conectorNfse) {
-        this.conectorNfse = conectorNfse;
+   public void setConectornfse(String conectornfse) {
+        this.conectornfse = conectornfse;
    }
 
-   public BigDecimal getCodCtactbDesc() {
-        return codCtactbDesc;
+   public BigDecimal getCodctactbdesc() {
+        return codctactbdesc;
    }
 
-   public void setCodCtactbDesc(BigDecimal codCtactbDesc) {
-        this.codCtactbDesc = codCtactbDesc;
+   public void setCodctactbdesc(BigDecimal codctactbdesc) {
+        this.codctactbdesc = codctactbdesc;
    }
 
-   public BigDecimal getCodCtactbJuros() {
-        return codCtactbJuros;
+   public BigDecimal getCodctactbjuros() {
+        return codctactbjuros;
    }
 
-   public void setCodCtactbJuros(BigDecimal codCtactbJuros) {
-        this.codCtactbJuros = codCtactbJuros;
+   public void setCodctactbjuros(BigDecimal codctactbjuros) {
+        this.codctactbjuros = codctactbjuros;
    }
 
-   public BigDecimal getCodCtactbMult() {
-        return codCtactbMult;
+   public BigDecimal getCodctactbmult() {
+        return codctactbmult;
    }
 
-   public void setCodCtactbMult(BigDecimal codCtactbMult) {
-        this.codCtactbMult = codCtactbMult;
+   public void setCodctactbmult(BigDecimal codctactbmult) {
+        this.codctactbmult = codctactbmult;
    }
 
-   public BigDecimal getCodEndCrossdock() {
-        return codEndCrossdock;
+   public BigDecimal getCodendcrossdock() {
+        return codendcrossdock;
    }
 
-   public void setCodEndCrossdock(BigDecimal codEndCrossdock) {
-        this.codEndCrossdock = codEndCrossdock;
+   public void setCodendcrossdock(BigDecimal codendcrossdock) {
+        this.codendcrossdock = codendcrossdock;
    }
 
-   public String getCodTrib90CredDeb() {
-        return codTrib90CredDeb;
+   public String getCodtrib90creddeb() {
+        return codtrib90creddeb;
    }
 
-   public void setCodTrib90CredDeb(String codTrib90CredDeb) {
-        this.codTrib90CredDeb = codTrib90CredDeb;
+   public void setCodtrib90creddeb(String codtrib90creddeb) {
+        this.codtrib90creddeb = codtrib90creddeb;
    }
 
-   public String getConIcmsMajFcpInt() {
-        return conIcmsMajFcpInt;
+   public String getConicmsmajfcpint() {
+        return conicmsmajfcpint;
    }
 
-   public void setConIcmsMajFcpInt(String conIcmsMajFcpInt) {
-        this.conIcmsMajFcpInt = conIcmsMajFcpInt;
+   public void setConicmsmajfcpint(String conicmsmajfcpint) {
+        this.conicmsmajfcpint = conicmsmajfcpint;
    }
 
-   public String getConsDevEvtr2050() {
-        return consDevEvtr2050;
+   public String getConsdevevtr2050() {
+        return consdevevtr2050;
    }
 
-   public void setConsDevEvtr2050(String consDevEvtr2050) {
-        this.consDevEvtr2050 = consDevEvtr2050;
+   public void setConsdevevtr2050(String consdevevtr2050) {
+        this.consdevevtr2050 = consdevevtr2050;
    }
 
-   public String getConsIdBenef() {
-        return consIdBenef;
+   public String getConsidbenef() {
+        return considbenef;
    }
 
-   public void setConsIdBenef(String consIdBenef) {
-        this.consIdBenef = consIdBenef;
+   public void setConsidbenef(String considbenef) {
+        this.considbenef = considbenef;
    }
 
-   public String getContingenciaNfce() {
-        return contingenciaNfce;
+   public String getContingencianfce() {
+        return contingencianfce;
    }
 
-   public void setContingenciaNfce(String contingenciaNfce) {
-        this.contingenciaNfce = contingenciaNfce;
+   public void setContingencianfce(String contingencianfce) {
+        this.contingencianfce = contingencianfce;
    }
 
-   public BigDecimal getCopiasDanfce() {
-        return copiasDanfce;
+   public BigDecimal getCopiasdanfce() {
+        return copiasdanfce;
    }
 
-   public void setCopiasDanfce(BigDecimal copiasDanfce) {
-        this.copiasDanfce = copiasDanfce;
+   public void setCopiasdanfce(BigDecimal copiasdanfce) {
+        this.copiasdanfce = copiasdanfce;
    }
 
-   public String getDescRedDifCiap() {
-        return descRedDifCiap;
+   public String getDescredifciap() {
+        return descredifciap;
    }
 
-   public void setDescRedDifCiap(String descRedDifCiap) {
-        this.descRedDifCiap = descRedDifCiap;
+   public void setDescredifciap(String descredifciap) {
+        this.descredifciap = descredifciap;
    }
 
-   public String getDifAliqFcpInt() {
-        return difAliqFcpInt;
+   public String getDifaliqfcpint() {
+        return difaliqfcpint;
    }
 
-   public void setDifAliqFcpInt(String difAliqFcpInt) {
-        this.difAliqFcpInt = difAliqFcpInt;
+   public void setDifaliqfcpint(String difaliqfcpint) {
+        this.difaliqfcpint = difaliqfcpint;
    }
 
-   public String getEmailNotfeCreinf() {
-        return emailNotfeCreinf;
+   public String getEmailnotfecreinf() {
+        return emailnotfecreinf;
    }
 
-   public void setEmailNotfeCreinf(String emailNotfeCreinf) {
-        this.emailNotfeCreinf = emailNotfeCreinf;
+   public void setEmailnotfecreinf(String emailnotfecreinf) {
+        this.emailnotfecreinf = emailnotfecreinf;
    }
 
-   public String getEnvEmailConf() {
-        return envEmailConf;
+   public String getEnvemailconf() {
+        return envemailconf;
    }
 
-   public void setEnvEmailConf(String envEmailConf) {
-        this.envEmailConf = envEmailConf;
+   public void setEnvemailconf(String envemailconf) {
+        this.envemailconf = envemailconf;
    }
 
-   public String getEnvioSincronoCte() {
-        return envioSincronoCte;
+   public String getEnviosincronocte() {
+        return enviosincronocte;
    }
 
-   public void setEnvioSincronoCte(String envioSincronoCte) {
-        this.envioSincronoCte = envioSincronoCte;
+   public void setEnviosincronocte(String enviosincronocte) {
+        this.enviosincronocte = enviosincronocte;
    }
 
-   public String getEnvioSincronoNfce() {
-        return envioSincronoNfce;
+   public String getEnviosincrononfce() {
+        return enviosincrononfce;
    }
 
-   public void setEnvioSincronoNfce(String envioSincronoNfce) {
-        this.envioSincronoNfce = envioSincronoNfce;
+   public void setEnviosincrononfce(String enviosincrononfce) {
+        this.enviosincrononfce = enviosincrononfce;
    }
 
-   public String getEnvioSincronoNfe() {
-        return envioSincronoNfe;
+   public String getEnviosincrononfe() {
+        return enviosincrononfe;
    }
 
-   public void setEnvioSincronoNfe(String envioSincronoNfe) {
-        this.envioSincronoNfe = envioSincronoNfe;
+   public void setEnviosincrononfe(String enviosincrononfe) {
+        this.enviosincrononfe = enviosincrononfe;
    }
 
-   public BigDecimal getGerarRetencao() {
-        return gerarRetencao;
+   public BigDecimal getGerarretencao() {
+        return gerarretencao;
    }
 
-   public void setGerarRetencao(BigDecimal gerarRetencao) {
-        this.gerarRetencao = gerarRetencao;
+   public void setGerarretencao(BigDecimal gerarretencao) {
+        this.gerarretencao = gerarretencao;
    }
 
-   public String getGerarTaxFinEmbNfe() {
-        return gerarTaxFinEmbNfe;
+   public String getGerartaxfinembnfe() {
+        return gerartaxfinembnfe;
    }
 
-   public void setGerarTaxFinEmbNfe(String gerarTaxFinEmbNfe) {
-        this.gerarTaxFinEmbNfe = gerarTaxFinEmbNfe;
+   public void setGerartaxfinembnfe(String gerartaxfinembnfe) {
+        this.gerartaxfinembnfe = gerartaxfinembnfe;
    }
 
-   public String getIgCertifSmtpXml() {
-        return igCertifSmtpXml;
+   public String getIgcertifsmtpxml() {
+        return igcertifsmtpxml;
    }
 
-   public void setIgCertifSmtpXml(String igCertifSmtpXml) {
-        this.igCertifSmtpXml = igCertifSmtpXml;
+   public void setIgcertifsmtpxml(String igcertifsmtpxml) {
+        this.igcertifsmtpxml = igcertifsmtpxml;
    }
 
-   public String getInsXmlPorImpSmtpXml() {
-        return insXmlPorImpSmtpXml;
+   public String getInsxmlporimpsmtpxml() {
+        return insxmlporimpsmtpxml;
    }
 
-   public void setInsXmlPorImpSmtpXml(String insXmlPorImpSmtpXml) {
-        this.insXmlPorImpSmtpXml = insXmlPorImpSmtpXml;
+   public void setInsxmlporimpsmtpxml(String insxmlporimpsmtpxml) {
+        this.insxmlporimpsmtpxml = insxmlporimpsmtpxml;
    }
 
-   public BigDecimal getIntConsSmtpXml() {
-        return intConsSmtpXml;
+   public BigDecimal getIntconssmtpxml() {
+        return intconssmtpxml;
    }
 
-   public void setIntConsSmtpXml(BigDecimal intConsSmtpXml) {
-        this.intConsSmtpXml = intConsSmtpXml;
+   public void setIntconssmtpxml(BigDecimal intconssmtpxml) {
+        this.intconssmtpxml = intconssmtpxml;
    }
 
-   public String getNfseStAntConsFinal() {
-        return nfseStAntConsFinal;
+   public String getNfestantconsfinal() {
+        return nfestantconsfinal;
    }
 
-   public void setNfseStAntConsFinal(String nfseStAntConsFinal) {
-        this.nfseStAntConsFinal = nfseStAntConsFinal;
+   public void setNfestantconsfinal(String nfestantconsfinal) {
+        this.nfestantconsfinal = nfestantconsfinal;
    }
 
-   public BigDecimal getNotaEntAjustEstCons() {
-        return notaEntAjustEstCons;
+   public BigDecimal getNotaentajustestcons() {
+        return notaentajustestcons;
    }
 
-   public void setNotaEntAjustEstCons(BigDecimal notaEntAjustEstCons) {
-        this.notaEntAjustEstCons = notaEntAjustEstCons;
+   public void setNotaentajustestcons(BigDecimal notaentajustestcons) {
+        this.notaentajustestcons = notaentajustestcons;
    }
 
-   public BigDecimal getNotaEntAjustEstCter() {
-        return notaEntAjustEstCter;
+   public BigDecimal getNotaentajustestcter() {
+        return notaentajustestcter;
    }
 
-   public void setNotaEntAjustEstCter(BigDecimal notaEntAjustEstCter) {
-        this.notaEntAjustEstCter = notaEntAjustEstCter;
+   public void setNotaentajustestcter(BigDecimal notaentajustestcter) {
+        this.notaentajustestcter = notaentajustestcter;
    }
 
-   public BigDecimal getNotaEntAjustEstDter() {
-        return notaEntAjustEstDter;
+   public BigDecimal getNotaentajustestdter() {
+        return notaentajustestdter;
    }
 
-   public void setNotaEntAjustEstDter(BigDecimal notaEntAjustEstDter) {
-        this.notaEntAjustEstDter = notaEntAjustEstDter;
+   public void setNotaentajustestdter(BigDecimal notaentajustestdter) {
+        this.notaentajustestdter = notaentajustestdter;
    }
 
-   public BigDecimal getNotaSaiAjustBem() {
-        return notaSaiAjustBem;
+   public BigDecimal getNotasaiajustbem() {
+        return notasaiajustbem;
    }
 
-   public void setNotaSaiAjustBem(BigDecimal notaSaiAjustBem) {
-        this.notaSaiAjustBem = notaSaiAjustBem;
+   public void setNotasaiajustbem(BigDecimal notasaiajustbem) {
+        this.notasaiajustbem = notasaiajustbem;
    }
 
-   public BigDecimal getNotaSaiAjustEstCons() {
-        return notaSaiAjustEstCons;
+   public BigDecimal getNotasaiajustestcons() {
+        return notasaiajustestcons;
    }
 
-   public void setNotaSaiAjustEstCons(BigDecimal notaSaiAjustEstCons) {
-        this.notaSaiAjustEstCons = notaSaiAjustEstCons;
+   public void setNotasaiajustestcons(BigDecimal notasaiajustestcons) {
+        this.notasaiajustestcons = notasaiajustestcons;
    }
 
-   public BigDecimal getNotaSaiAjustEstCter() {
-        return notaSaiAjustEstCter;
+   public BigDecimal getNotasaiajustestcter() {
+        return notasaiajustestcter;
    }
 
-   public void setNotaSaiAjustEstCter(BigDecimal notaSaiAjustEstCter) {
-        this.notaSaiAjustEstCter = notaSaiAjustEstCter;
+   public void setNotasaiajustestcter(BigDecimal notasaiajustestcter) {
+        this.notasaiajustestcter = notasaiajustestcter;
    }
 
-   public BigDecimal getNotaSaiAjustEstDter() {
-        return notaSaiAjustEstDter;
+   public BigDecimal getNotasaiajustestdter() {
+        return notasaiajustestdter;
    }
 
-   public void setNotaSaiAjustEstDter(BigDecimal notaSaiAjustEstDter) {
-        this.notaSaiAjustEstDter = notaSaiAjustEstDter;
+   public void setNotasaiajustestdter(BigDecimal notasaiajustestdter) {
+        this.notasaiajustestdter = notasaiajustestdter;
    }
 
-   public String getNumDocR2020() {
-        return numDocR2020;
+   public String getNumdocr2020() {
+        return numdocr2020;
    }
 
-   public void setNumDocR2020(String numDocR2020) {
-        this.numDocR2020 = numDocR2020;
+   public void setNumdocr2020(String numdocr2020) {
+        this.numdocr2020 = numdocr2020;
    }
 
-   public BigDecimal getNuNotaDemFx() {
-        return nuNotaDemFx;
+   public BigDecimal getNunotademfx() {
+        return nunotademfx;
    }
 
-   public void setNuNotaDemFx(BigDecimal nuNotaDemFx) {
-        this.nuNotaDemFx = nuNotaDemFx;
+   public void setNunotademfx(BigDecimal nunotademfx) {
+        this.nunotademfx = nunotademfx;
    }
 
-   public BigDecimal getNuNotaModFx() {
-        return nuNotaModFx;
+   public BigDecimal getNunotamodfx() {
+        return nunotamodfx;
    }
 
-   public void setNuNotaModFx(BigDecimal nuNotaModFx) {
-        this.nuNotaModFx = nuNotaModFx;
+   public void setNunotamodfx(BigDecimal nunotamodfx) {
+        this.nunotamodfx = nunotamodfx;
    }
 
-   public BigDecimal getNuNotaTrcFx() {
-        return nuNotaTrcFx;
+   public BigDecimal getNunotatrcfx() {
+        return nunotatrcfx;
    }
 
-   public void setNuNotaTrcFx(BigDecimal nuNotaTrcFx) {
-        this.nuNotaTrcFx = nuNotaTrcFx;
+   public void setNunotatrcfx(BigDecimal nunotatrcfx) {
+        this.nunotatrcfx = nunotatrcfx;
    }
 
-   public String getOrigProdComIpi() {
-        return origProdComIpi;
+   public String getOrigprodcomipi() {
+        return origprodcomipi;
    }
 
-   public void setOrigProdComIpi(String origProdComIpi) {
-        this.origProdComIpi = origProdComIpi;
+   public void setOrigprodcomipi(String origprodcomipi) {
+        this.origprodcomipi = origprodcomipi;
    }
 
-   public String getPermOutroUsuSepPed() {
-        return permOutroUsuSepPed;
+   public String getPermoutroususepped() {
+        return permoutroususepped;
    }
 
-   public void setPermOutroUsuSepPed(String permOutroUsuSepPed) {
-        this.permOutroUsuSepPed = permOutroUsuSepPed;
+   public void setPermoutroususepped(String permoutroususepped) {
+        this.permoutroususepped = permoutroususepped;
    }
 
-   public BigDecimal getPortaSmtpXml() {
-        return portaSmtpXml;
+   public BigDecimal getPortasmtpxml() {
+        return portasmtpxml;
    }
 
-   public void setPortaSmtpXml(BigDecimal portaSmtpXml) {
-        this.portaSmtpXml = portaSmtpXml;
+   public void setPortasmtpxml(BigDecimal portasmtpxml) {
+        this.portasmtpxml = portasmtpxml;
    }
 
-   public String getProgAquisAlim() {
-        return progAquisAlim;
+   public String getProgaquisalim() {
+        return progaquisalim;
    }
 
-   public void setProgAquisAlim(String progAquisAlim) {
-        this.progAquisAlim = progAquisAlim;
+   public void setProgaquisalim(String progaquisalim) {
+        this.progaquisalim = progaquisalim;
    }
 
-   public Timestamp getProxExecSmtpXml() {
-        return proxExecSmtpXml;
+   public Timestamp getProxexecsmtpxml() {
+        return proxexecsmtpxml;
    }
 
-   public void setProxExecSmtpXml(Timestamp proxExecSmtpXml) {
-        this.proxExecSmtpXml = proxExecSmtpXml;
+   public void setProxexecsmtpxml(Timestamp proxexecsmtpxml) {
+        this.proxexecsmtpxml = proxexecsmtpxml;
    }
 
-   public String getQrcodeNfceVersao2() {
-        return qrcodeNfceVersao2;
+   public String getQrcodenfceversao2() {
+        return qrcodenfceversao2;
    }
 
-   public void setQrcodeNfceVersao2(String qrcodeNfceVersao2) {
-        this.qrcodeNfceVersao2 = qrcodeNfceVersao2;
+   public void setQrcodenfceversao2(String qrcodenfceversao2) {
+        this.qrcodenfceversao2 = qrcodenfceversao2;
    }
 
-   public String getRedIssBcPisConf() {
-        return redIssBcPisConf;
+   public String getRedissbcpisconf() {
+        return redissbcpisconf;
    }
 
-   public void setRedIssBcPisConf(String redIssBcPisConf) {
-        this.redIssBcPisConf = redIssBcPisConf;
+   public void setRedissbcpisconf(String redissbcpisconf) {
+        this.redissbcpisconf = redissbcpisconf;
    }
 
-   public String getRedStCompBcPisCofins() {
-        return redStCompBcPisCofins;
+   public String getRedstcompbcpiscofins() {
+        return redstcompbcpiscofins;
    }
 
-   public void setRedStCompBcPisCofins(String redStCompBcPisCofins) {
-        this.redStCompBcPisCofins = redStCompBcPisCofins;
+   public void setRedstcompbcpiscofins(String redstcompbcpiscofins) {
+        this.redstcompbcpiscofins = redstcompbcpiscofins;
    }
 
-   public String getSenhaSmtpXml() {
-        return senhaSmtpXml;
+   public String getSenhasmtpxml() {
+        return senhasmtpxml;
    }
 
-   public void setSenhaSmtpXml(String senhaSmtpXml) {
-        this.senhaSmtpXml = senhaSmtpXml;
+   public void setSenhasmtpxml(String senhasmtpxml) {
+        this.senhasmtpxml = senhasmtpxml;
    }
 
-   public String getServidorSmtpXml() {
-        return servidorSmtpXml;
+   public String getServidorsmtpxml() {
+        return servidorsmtpxml;
    }
 
-   public void setServidorSmtpXml(String servidorSmtpXml) {
-        this.servidorSmtpXml = servidorSmtpXml;
+   public void setServidorsmtpxml(String servidorsmtpxml) {
+        this.servidorsmtpxml = servidorsmtpxml;
    }
 
-   public String getSuprimirEmailDest() {
-        return suprimirEmailDest;
+   public String getSuprimiremaildest() {
+        return suprimiremaildest;
    }
 
-   public void setSuprimirEmailDest(String suprimirEmailDest) {
-        this.suprimirEmailDest = suprimirEmailDest;
+   public void setSuprimiremaildest(String suprimiremaildest) {
+        this.suprimiremaildest = suprimiremaildest;
    }
 
-   public String getTipConexSmtpXml() {
-        return tipConexSmtpXml;
+   public String getTipconexsmtpxml() {
+        return tipconexsmtpxml;
    }
 
-   public void setTipConexSmtpXml(String tipConexSmtpXml) {
-        this.tipConexSmtpXml = tipConexSmtpXml;
+   public void setTipconexsmtpxml(String tipconexsmtpxml) {
+        this.tipconexsmtpxml = tipconexsmtpxml;
    }
 
-   public String getTipDataEvtServ() {
-        return tipDataEvtServ;
+   public String getTipdataevtserv() {
+        return tipdataevtserv;
    }
 
-   public void setTipDataEvtServ(String tipDataEvtServ) {
-        this.tipDataEvtServ = tipDataEvtServ;
+   public void setTipdataevtserv(String tipdataevtserv) {
+        this.tipdataevtserv = tipdataevtserv;
    }
 
-   public String getTipGerInfGveicGreb() {
-        return tipGerInfGveicGreb;
+   public String getTipgerinfgveicgreb() {
+        return tipgerinfgveicgreb;
    }
 
-   public void setTipGerInfGveicGreb(String tipGerInfGveicGreb) {
-        this.tipGerInfGveicGreb = tipGerInfGveicGreb;
+   public void setTipgerinfgveicgreb(String tipgerinfgveicgreb) {
+        this.tipgerinfgveicgreb = tipgerinfgveicgreb;
    }
 
-   public String getTipoEnvioNfce() {
-        return tipoEnvioNfce;
+   public String getTipoenvionfce() {
+        return tipoenvionfce;
    }
 
-   public void setTipoEnvioNfce(String tipoEnvioNfce) {
-        this.tipoEnvioNfce = tipoEnvioNfce;
+   public void setTipoenvionfce(String tipoenvionfce) {
+        this.tipoenvionfce = tipoenvionfce;
    }
 
-   public String getUltNsuCte() {
-        return ultNsuCte;
+   public String getUltnsucte() {
+        return ultnsucte;
    }
 
-   public void setUltNsuCte(String ultNsuCte) {
-        this.ultNsuCte = ultNsuCte;
+   public void setUltnsucte(String ultnsucte) {
+        this.ultnsucte = ultnsucte;
    }
 
-   public String getUsaCodBarrasConcatWms() {
-        return usaCodBarrasConcatWms;
+   public String getUsacodbarrasconcatwms() {
+        return usacodbarrasconcatwms;
    }
 
-   public void setUsaCodBarrasConcatWms(String usaCodBarrasConcatWms) {
-        this.usaCodBarrasConcatWms = usaCodBarrasConcatWms;
+   public void setUsacodbarrasconcatwms(String usacodbarrasconcatwms) {
+        this.usacodbarrasconcatwms = usacodbarrasconcatwms;
    }
 
-   public String getUsaNomeComplItem() {
-        return usaNomeComplItem;
+   public String getUsanomecomplitem() {
+        return usanomecomplitem;
    }
 
-   public void setUsaNomeComplItem(String usaNomeComplItem) {
-        this.usaNomeComplItem = usaNomeComplItem;
+   public void setUsanomecomplitem(String usanomecomplitem) {
+        this.usanomecomplitem = usanomecomplitem;
    }
 
-   public String getUsaRecParcial() {
-        return usaRecParcial;
+   public String getUsarecparcial() {
+        return usarecparcial;
    }
 
-   public void setUsaRecParcial(String usaRecParcial) {
-        this.usaRecParcial = usaRecParcial;
+   public void setUsarecparcial(String usarecparcial) {
+        this.usarecparcial = usarecparcial;
    }
 
-   public String getUsaStExtNotaRestSt() {
-        return usaStExtNotaRestSt;
+   public String getUsasttextnotarestst() {
+        return usasttextnotarestst;
    }
 
-   public void setUsaStExtNotaRestSt(String usaStExtNotaRestSt) {
-        this.usaStExtNotaRestSt = usaStExtNotaRestSt;
+   public void setUsasttextnotarestst(String usasttextnotarestst) {
+        this.usasttextnotarestst = usasttextnotarestst;
    }
 
-   public String getUsuarioSmtpXml() {
-        return usuarioSmtpXml;
+   public String getUsuariosmtpxml() {
+        return usuariosmtpxml;
    }
 
-   public void setUsuarioSmtpXml(String usuarioSmtpXml) {
-        this.usuarioSmtpXml = usuarioSmtpXml;
+   public void setUsuariosmtpxml(String usuariosmtpxml) {
+        this.usuariosmtpxml = usuariosmtpxml;
    }
 
-   public String getUtilizaDfeTransp() {
-        return utilizaDfeTransp;
+   public String getUtilizadfetransp() {
+        return utilizadfetransp;
    }
 
-   public void setUtilizaDfeTransp(String utilizaDfeTransp) {
-        this.utilizaDfeTransp = utilizaDfeTransp;
+   public void setUtilizadfetransp(String utilizadfetransp) {
+        this.utilizadfetransp = utilizadfetransp;
    }
 
-   public String getUtilizaExploteSep() {
-        return utilizaExploteSep;
+   public String getUtilizaexplotesep() {
+        return utilizaexplotesep;
    }
 
-   public void setUtilizaExploteSep(String utilizaExploteSep) {
-        this.utilizaExploteSep = utilizaExploteSep;
+   public void setUtilizaexplotesep(String utilizaexplotesep) {
+        this.utilizaexplotesep = utilizaexplotesep;
    }
 
-   public String getUtilizaSepPulmao() {
-        return utilizaSepPulmao;
+   public String getUtilizaseppulmao() {
+        return utilizaseppulmao;
    }
 
-   public void setUtilizaSepPulmao(String utilizaSepPulmao) {
-        this.utilizaSepPulmao = utilizaSepPulmao;
+   public void setUtilizaseppulmao(String utilizaseppulmao) {
+        this.utilizaseppulmao = utilizaseppulmao;
    }
 
-   public String getUtilizaTriCrossdocking() {
-        return utilizaTriCrossdocking;
+   public String getUtilizatricrossdocking() {
+        return utilizatricrossdocking;
    }
 
-   public void setUtilizaTriCrossdocking(String utilizaTriCrossdocking) {
-        this.utilizaTriCrossdocking = utilizaTriCrossdocking;
+   public void setUtilizatricrossdocking(String utilizatricrossdocking) {
+        this.utilizatricrossdocking = utilizatricrossdocking;
    }
 
    public BigDecimal getVersaoNt() {
@@ -3062,20 +3061,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.wmsUsaRegVolRec = wmsUsaRegVolRec;
    }
 
-   public String getAedfe() {
-        return aedfe;
+   public String getAedFe() {
+        return aedFe;
    }
 
-   public void setAedfe(String aedfe) {
-        this.aedfe = aedfe;
+   public void setAedFe(String aedFe) {
+        this.aedFe = aedFe;
    }
 
-   public String getAtualCbeneffat() {
-        return atualCbeneffat;
+   public String getAtualCbEnefFat() {
+        return atualCbEnefFat;
    }
 
-   public void setAtualCbeneffat(String atualCbeneffat) {
-        this.atualCbeneffat = atualCbeneffat;
+   public void setAtualCbEnefFat(String atualCbEnefFat) {
+        this.atualCbEnefFat = atualCbEnefFat;
    }
 
    public String getCalcIcmsStNaoCont() {
@@ -3118,12 +3117,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.aliqPisBonif = aliqPisBonif;
    }
 
-   public BigDecimal getCodCtactbBonif() {
-        return codCtactbBonif;
+   public BigDecimal getCodCtaCtbBonif() {
+        return codCtaCtbBonif;
    }
 
-   public void setCodCtactbBonif(BigDecimal codCtactbBonif) {
-        this.codCtactbBonif = codCtactbBonif;
+   public void setCodCtaCtbBonif(BigDecimal codCtaCtbBonif) {
+        this.codCtaCtbBonif = codCtaCtbBonif;
    }
 
    public String getCodStPisCfBonif() {
@@ -3134,12 +3133,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codStPisCfBonif = codStPisCfBonif;
    }
 
-   public String getMdfeDocSemisPropria() {
-        return mdfeDocSemisPropria;
+   public String getMdfeDocSemIsProp() {
+        return mdfeDocSemIsProp;
    }
 
-   public void setMdfeDocSemisPropria(String mdfeDocSemisPropria) {
-        this.mdfeDocSemisPropria = mdfeDocSemisPropria;
+   public void setMdfeDocSemIsProp(String mdfeDocSemIsProp) {
+        this.mdfeDocSemIsProp = mdfeDocSemIsProp;
    }
 
    public BigDecimal getNuRfeCartaCorrCte() {
@@ -3302,12 +3301,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.escritCompraEmissProp = escritCompraEmissProp;
    }
 
-   public String getGeraNotaEntCanc() {
-        return geraNotaEntCanc;
+   public String getGerNotaEntCanc() {
+        return gerNotaEntCanc;
    }
 
-   public void setGeraNotaEntCanc(String geraNotaEntCanc) {
-        this.geraNotaEntCanc = geraNotaEntCanc;
+   public void setGerNotaEntCanc(String gerNotaEntCanc) {
+        this.gerNotaEntCanc = gerNotaEntCanc;
    }
 
    public String getMetCalcDifIcms() {
@@ -3318,28 +3317,28 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.metCalcDifIcms = metCalcDifIcms;
    }
 
-   public BigDecimal getPesMaxSepAgru() {
-        return pesMaxSepAgru;
+   public BigDecimal getPesMaxSepaGru() {
+        return pesMaxSepaGru;
    }
 
-   public void setPesMaxSepAgru(BigDecimal pesMaxSepAgru) {
-        this.pesMaxSepAgru = pesMaxSepAgru;
+   public void setPesMaxSepaGru(BigDecimal pesMaxSepaGru) {
+        this.pesMaxSepaGru = pesMaxSepaGru;
    }
 
-   public String getUsaSepAgrupProd() {
-        return usaSepAgrupProd;
+   public String getUsaSepaGruProd() {
+        return usaSepaGruProd;
    }
 
-   public void setUsaSepAgrupProd(String usaSepAgrupProd) {
-        this.usaSepAgrupProd = usaSepAgrupProd;
+   public void setUsaSepaGruProd(String usaSepaGruProd) {
+        this.usaSepaGruProd = usaSepaGruProd;
    }
 
-   public BigDecimal getQtPedSepAgr() {
-        return qtPedSepAgr;
+   public BigDecimal getQtPedSepaGr() {
+        return qtPedSepaGr;
    }
 
-   public void setQtPedSepAgr(BigDecimal qtPedSepAgr) {
-        this.qtPedSepAgr = qtPedSepAgr;
+   public void setQtPedSepaGr(BigDecimal qtPedSepaGr) {
+        this.qtPedSepaGr = qtPedSepaGr;
    }
 
    public BigDecimal getQtCheckSep() {
@@ -3350,12 +3349,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.qtCheckSep = qtCheckSep;
    }
 
-   public BigDecimal getVolCheckSepProd() {
-        return volCheckSepProd;
+   public BigDecimal getVolCheckSepRod() {
+        return volCheckSepRod;
    }
 
-   public void setVolCheckSepProd(BigDecimal volCheckSepProd) {
-        this.volCheckSepProd = volCheckSepProd;
+   public void setVolCheckSepRod(BigDecimal volCheckSepRod) {
+        this.volCheckSepRod = volCheckSepRod;
    }
 
    public String getConsRepIcmsBasePisCof() {
@@ -3382,12 +3381,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.aliqCfJuros = aliqCfJuros;
    }
 
-   public BigDecimal getLocalPadEconect() {
-        return localPadEconect;
+   public BigDecimal getLocalPadEConect() {
+        return localPadEConect;
    }
 
-   public void setLocalPadEconect(BigDecimal localPadEconect) {
-        this.localPadEconect = localPadEconect;
+   public void setLocalPadEConect(BigDecimal localPadEConect) {
+        this.localPadEConect = localPadEConect;
    }
 
    public BigDecimal getAliqCfDesc() {
@@ -3526,20 +3525,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.usaInfoAdConfPed = usaInfoAdConfPed;
    }
 
-   public BigDecimal getNfseObsIterps() {
-        return nfseObsIterps;
+   public BigDecimal getNfSeObsIterPs() {
+        return nfSeObsIterPs;
    }
 
-   public void setNfseObsIterps(BigDecimal nfseObsIterps) {
-        this.nfseObsIterps = nfseObsIterps;
+   public void setNfSeObsIterPs(BigDecimal nfSeObsIterPs) {
+        this.nfSeObsIterPs = nfSeObsIterPs;
    }
 
-   public BigDecimal getQtdCarNfseObsIterps() {
-        return qtdCarNfseObsIterps;
+   public BigDecimal getQtdCarNfSeObsIterPs() {
+        return qtdCarNfSeObsIterPs;
    }
 
-   public void setQtdCarNfseObsIterps(BigDecimal qtdCarNfseObsIterps) {
-        this.qtdCarNfseObsIterps = qtdCarNfseObsIterps;
+   public void setQtdCarNfSeObsIterPs(BigDecimal qtdCarNfSeObsIterPs) {
+        this.qtdCarNfSeObsIterPs = qtdCarNfSeObsIterPs;
    }
 
    public String getCaepf() {
@@ -3558,12 +3557,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.cafir = cafir;
    }
 
-   public String getGerAlcdpr() {
-        return gerAlcdpr;
+   public String getGerAlcdPr() {
+        return gerAlcdPr;
    }
 
-   public void setGerAlcdpr(String gerAlcdpr) {
-        this.gerAlcdpr = gerAlcdpr;
+   public void setGerAlcdPr(String gerAlcdPr) {
+        this.gerAlcdPr = gerAlcdPr;
    }
 
    public String getTipoExploracao() {
@@ -3614,76 +3613,76 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.dirFDepFunInv = dirFDepFunInv;
    }
 
-   public Timestamp getDirFdhevento() {
-        return dirFdhevento;
+   public Timestamp getDirFdhEvento() {
+        return dirFdhEvento;
    }
 
-   public void setDirFdhevento(Timestamp dirFdhevento) {
-        this.dirFdhevento = dirFdhevento;
+   public void setDirFdhEvento(Timestamp dirFdhEvento) {
+        this.dirFdhEvento = dirFdhEvento;
    }
 
-   public String getDirFentImune() {
-        return dirFentImune;
+   public String getDirFEntImune() {
+        return dirFEntImune;
    }
 
-   public void setDirFentImune(String dirFentImune) {
-        this.dirFentImune = dirFentImune;
+   public void setDirFEntImune(String dirFEntImune) {
+        this.dirFEntImune = dirFEntImune;
    }
 
-   public String getDirFnatDecl() {
-        return dirFnatDecl;
+   public String getDirFNatDecl() {
+        return dirFNatDecl;
    }
 
-   public void setDirFnatDecl(String dirFnatDecl) {
-        this.dirFnatDecl = dirFnatDecl;
+   public void setDirFNatDecl(String dirFNatDecl) {
+        this.dirFNatDecl = dirFNatDecl;
    }
 
-   public String getDirFpgExt() {
-        return dirFpgExt;
+   public String getDirFPgExt() {
+        return dirFPgExt;
    }
 
-   public void setDirFpgExt(String dirFpgExt) {
-        this.dirFpgExt = dirFpgExt;
+   public void setDirFPgExt(String dirFPgExt) {
+        this.dirFPgExt = dirFPgExt;
    }
 
-   public String getDirFpgFundPub() {
-        return dirFpgFundPub;
+   public String getDirFPgFundPub() {
+        return dirFPgFundPub;
    }
 
-   public void setDirFpgFundPub(String dirFpgFundPub) {
-        this.dirFpgFundPub = dirFpgFundPub;
+   public void setDirFPgFundPub(String dirFPgFundPub) {
+        this.dirFPgFundPub = dirFPgFundPub;
    }
 
-   public String getDirFplPriAss() {
-        return dirFplPriAss;
+   public String getDirFPlPriAss() {
+        return dirFPlPriAss;
    }
 
-   public void setDirFplPriAss(String dirFplPriAss) {
-        this.dirFplPriAss = dirFplPriAss;
+   public void setDirFPlPriAss(String dirFPlPriAss) {
+        this.dirFPlPriAss = dirFPlPriAss;
    }
 
-   public String getDirFsitEsp() {
-        return dirFsitEsp;
+   public String getDirFSitEsp() {
+        return dirFSitEsp;
    }
 
-   public void setDirFsitEsp(String dirFsitEsp) {
-        this.dirFsitEsp = dirFsitEsp;
+   public void setDirFSitEsp(String dirFSitEsp) {
+        this.dirFSitEsp = dirFSitEsp;
    }
 
-   public String getDirFsocost() {
-        return dirFsocost;
+   public String getDirFSocost() {
+        return dirFSocost;
    }
 
-   public void setDirFsocost(String dirFsocost) {
-        this.dirFsocost = dirFsocost;
+   public void setDirFSocost(String dirFSocost) {
+        this.dirFSocost = dirFSocost;
    }
 
-   public String getTempPremiacaoEstadual() {
-        return tempPremiacaoEstadual;
+   public String getTempRemicaoEstadual() {
+        return tempRemicaoEstadual;
    }
 
-   public void setTempPremiacaoEstadual(String tempPremiacaoEstadual) {
-        this.tempPremiacaoEstadual = tempPremiacaoEstadual;
+   public void setTempRemicaoEstadual(String tempRemicaoEstadual) {
+        this.tempRemicaoEstadual = tempRemicaoEstadual;
    }
 
    public BigDecimal getCodClassifEstab() {
@@ -3758,12 +3757,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.identEct = identEct;
    }
 
-   public String getWmsDocAsepBalcao() {
-        return wmsDocAsepBalcao;
+   public String getWmsDocASepBalcao() {
+        return wmsDocASepBalcao;
    }
 
-   public void setWmsDocAsepBalcao(String wmsDocAsepBalcao) {
-        this.wmsDocAsepBalcao = wmsDocAsepBalcao;
+   public void setWmsDocASepBalcao(String wmsDocASepBalcao) {
+        this.wmsDocASepBalcao = wmsDocASepBalcao;
    }
 
    public String getEfdh010() {
@@ -3774,12 +3773,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.efdh010 = efdh010;
    }
 
-   public String getEfdh010Prter() {
-        return efdh010Prter;
+   public String getEfdh010PrTer() {
+        return efdh010PrTer;
    }
 
-   public void setEfdh010Prter(String efdh010Prter) {
-        this.efdh010Prter = efdh010Prter;
+   public void setEfdh010PrTer(String efdh010PrTer) {
+        this.efdh010PrTer = efdh010PrTer;
    }
 
    public String getEfdh010Ter() {
@@ -3950,12 +3949,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.sitEmpReinf = sitEmpReinf;
    }
 
-   public String getTipCtactbEfd() {
-        return tipCtactbEfd;
+   public String getTipCtActbEfd() {
+        return tipCtActbEfd;
    }
 
-   public void setTipCtactbEfd(String tipCtactbEfd) {
-        this.tipCtactbEfd = tipCtactbEfd;
+   public void setTipCtActbEfd(String tipCtActbEfd) {
+        this.tipCtActbEfd = tipCtActbEfd;
    }
 
    public BigDecimal getTopCorBanEconect() {
@@ -3998,12 +3997,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.nroMaxProd = nroMaxProd;
    }
 
-   public BigDecimal getTpOempresa() {
-        return tpOempresa;
+   public BigDecimal getTpoEmpresa() {
+        return tpoEmpresa;
    }
 
-   public void setTpOempresa(BigDecimal tpOempresa) {
-        this.tpOempresa = tpOempresa;
+   public void setTpoEmpresa(BigDecimal tpoEmpresa) {
+        this.tpoEmpresa = tpoEmpresa;
    }
 
    public BigDecimal getVersaoMdfe() {
@@ -4094,12 +4093,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.topNfceEconect = topNfceEconect;
    }
 
-   public BigDecimal getTopSateConect() {
-        return topSateConect;
+   public BigDecimal getTopSatEconect() {
+        return topSatEconect;
    }
 
-   public void setTopSateConect(BigDecimal topSateConect) {
-        this.topSateConect = topSateConect;
+   public void setTopSatEconect(BigDecimal topSatEconect) {
+        this.topSatEconect = topSatEconect;
    }
 
    public BigDecimal getWmsCodEndFlut() {
@@ -4246,12 +4245,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.efdCodCenCus = efdCodCenCus;
    }
 
-   public BigDecimal getEfdCodCtabCoInt() {
-        return efdCodCtabCoInt;
+   public BigDecimal getEfdCodCtaBcoInt() {
+        return efdCodCtaBcoInt;
    }
 
-   public void setEfdCodCtabCoInt(BigDecimal efdCodCtabCoInt) {
-        this.efdCodCtabCoInt = efdCodCtabCoInt;
+   public void setEfdCodCtaBcoInt(BigDecimal efdCodCtaBcoInt) {
+        this.efdCodCtaBcoInt = efdCodCtaBcoInt;
    }
 
    public BigDecimal getEfdCodNatDespRecIcms() {
@@ -4262,12 +4261,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.efdCodNatDespRecIcms = efdCodNatDespRecIcms;
    }
 
-   public BigDecimal getEfdCodTipOper() {
-        return efdCodTipOper;
+   public BigDecimal getEfdCodTipoPer() {
+        return efdCodTipoPer;
    }
 
-   public void setEfdCodTipOper(BigDecimal efdCodTipOper) {
-        this.efdCodTipOper = efdCodTipOper;
+   public void setEfdCodTipoPer(BigDecimal efdCodTipoPer) {
+        this.efdCodTipoPer = efdCodTipoPer;
    }
 
    public BigDecimal getEfdCodTipTit() {
@@ -4286,20 +4285,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.efdDiaVenc = efdDiaVenc;
    }
 
-   public String getEfdTipReenchNota() {
-        return efdTipReenchNota;
+   public String getEfdTipoReenchNota() {
+        return efdTipoReenchNota;
    }
 
-   public void setEfdTipReenchNota(String efdTipReenchNota) {
-        this.efdTipReenchNota = efdTipReenchNota;
+   public void setEfdTipoReenchNota(String efdTipoReenchNota) {
+        this.efdTipoReenchNota = efdTipoReenchNota;
    }
 
-   public String getIntFinObriIcmsStRec() {
-        return intFinObriIcmsStRec;
+   public String getIntFinObricmsStRec() {
+        return intFinObricmsStRec;
    }
 
-   public void setIntFinObriIcmsStRec(String intFinObriIcmsStRec) {
-        this.intFinObriIcmsStRec = intFinObriIcmsStRec;
+   public void setIntFinObricmsStRec(String intFinObricmsStRec) {
+        this.intFinObricmsStRec = intFinObricmsStRec;
    }
 
    public String getWmsRastSerMed() {
@@ -4310,28 +4309,28 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.wmsRastSerMed = wmsRastSerMed;
    }
 
-   public String getCodRespRetc180() {
-        return codRespRetc180;
+   public String getCodRespRetC180() {
+        return codRespRetC180;
    }
 
-   public void setCodRespRetc180(String codRespRetc180) {
-        this.codRespRetc180 = codRespRetc180;
+   public void setCodRespRetC180(String codRespRetC180) {
+        this.codRespRetC180 = codRespRetC180;
    }
 
-   public String getVlrBaseStc180() {
-        return vlrBaseStc180;
+   public String getVlrBaseStC180() {
+        return vlrBaseStC180;
    }
 
-   public void setVlrBaseStc180(String vlrBaseStc180) {
-        this.vlrBaseStc180 = vlrBaseStc180;
+   public void setVlrBaseStC180(String vlrBaseStC180) {
+        this.vlrBaseStC180 = vlrBaseStC180;
    }
 
-   public String getVlrStc180() {
-        return vlrStc180;
+   public String getVlrStC180() {
+        return vlrStC180;
    }
 
-   public void setVlrStc180(String vlrStc180) {
-        this.vlrStc180 = vlrStc180;
+   public void setVlrStC180(String vlrStC180) {
+        this.vlrStC180 = vlrStC180;
    }
 
    public BigDecimal getTopSangSupri() {
@@ -4470,12 +4469,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.msgInfAdicFetHab = msgInfAdicFetHab;
    }
 
-   public BigDecimal getAliqFunttel() {
-        return aliqFunttel;
+   public BigDecimal getAliqFuntTel() {
+        return aliqFuntTel;
    }
 
-   public void setAliqFunttel(BigDecimal aliqFunttel) {
-        this.aliqFunttel = aliqFunttel;
+   public void setAliqFuntTel(BigDecimal aliqFuntTel) {
+        this.aliqFuntTel = aliqFuntTel;
    }
 
    public BigDecimal getAliqFust() {
@@ -4486,12 +4485,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.aliqFust = aliqFust;
    }
 
-   public String getFistel() {
-        return fistel;
+   public String getFisTel() {
+        return fisTel;
    }
 
-   public void setFistel(String fistel) {
-        this.fistel = fistel;
+   public void setFisTel(String fisTel) {
+        this.fisTel = fisTel;
    }
 
    public String getVlrIcmsOpAnt() {
@@ -4526,12 +4525,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.vlrUnitIcmsOp = vlrUnitIcmsOp;
    }
 
-   public String getInibeReabMaxPicking() {
-        return inibeReabMaxPicking;
+   public String getIniBereabMaxPicking() {
+        return iniBereabMaxPicking;
    }
 
-   public void setInibeReabMaxPicking(String inibeReabMaxPicking) {
-        this.inibeReabMaxPicking = inibeReabMaxPicking;
+   public void setIniBereabMaxPicking(String iniBereabMaxPicking) {
+        this.iniBereabMaxPicking = iniBereabMaxPicking;
    }
 
    public String getTratSobFinConf() {
@@ -4590,12 +4589,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.envRespContCte = envRespContCte;
    }
 
-   public String getConsDevTerevtr2050() {
-        return consDevTerevtr2050;
+   public String getConsDevTerevTr2050() {
+        return consDevTerevTr2050;
    }
 
-   public void setConsDevTerevtr2050(String consDevTerevtr2050) {
-        this.consDevTerevtr2050 = consDevTerevtr2050;
+   public void setConsDevTerevTr2050(String consDevTerevTr2050) {
+        this.consDevTerevTr2050 = consDevTerevTr2050;
    }
 
    public String getEnvInutNotaExc() {
@@ -4678,20 +4677,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.envMdfSinc = envMdfSinc;
    }
 
-   public String getWmsPerSepProdAp() {
-        return wmsPerSepProdAp;
+   public String getWmsPersEpProdAp() {
+        return wmsPersEpProdAp;
    }
 
-   public void setWmsPerSepProdAp(String wmsPerSepProdAp) {
-        this.wmsPerSepProdAp = wmsPerSepProdAp;
+   public void setWmsPersEpProdAp(String wmsPersEpProdAp) {
+        this.wmsPersEpProdAp = wmsPersEpProdAp;
    }
 
-   public String getConsIdQtCarcDesc() {
-        return consIdQtCarcDesc;
+   public String getConsidQtCarDesc() {
+        return considQtCarDesc;
    }
 
-   public void setConsIdQtCarcDesc(String consIdQtCarcDesc) {
-        this.consIdQtCarcDesc = consIdQtCarcDesc;
+   public void setConsidQtCarDesc(String considQtCarDesc) {
+        this.considQtCarDesc = considQtCarDesc;
    }
 
    public String getEnvLeiTranspDesc() {
@@ -4702,12 +4701,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.envLeiTranspDesc = envLeiTranspDesc;
    }
 
-   public String getEnvLeiTranspTotoBs() {
-        return envLeiTranspTotoBs;
+   public String getEnvLeiTranspTotObs() {
+        return envLeiTranspTotObs;
    }
 
-   public void setEnvLeiTranspTotoBs(String envLeiTranspTotoBs) {
-        this.envLeiTranspTotoBs = envLeiTranspTotoBs;
+   public void setEnvLeiTranspTotObs(String envLeiTranspTotObs) {
+        this.envLeiTranspTotObs = envLeiTranspTotObs;
    }
 
    public String getCgcProcurador() {
@@ -4718,12 +4717,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.cgcProcurador = cgcProcurador;
    }
 
-   public String getInibLoqRegConf() {
-        return inibLoqRegConf;
+   public String getIniBloqRegConf() {
+        return iniBloqRegConf;
    }
 
-   public void setInibLoqRegConf(String inibLoqRegConf) {
-        this.inibLoqRegConf = inibLoqRegConf;
+   public void setIniBloqRegConf(String iniBloqRegConf) {
+        this.iniBloqRegConf = iniBloqRegConf;
    }
 
    public String getBlqNfaCompNfcPend() {
@@ -4766,12 +4765,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.isAliqIntSexC = isAliqIntSexC;
    }
 
-   public BigDecimal getTipIcmsFenvalBem() {
-        return tipIcmsFenvalBem;
+   public BigDecimal getTipIcmsFenValBem() {
+        return tipIcmsFenValBem;
    }
 
-   public void setTipIcmsFenvalBem(BigDecimal tipIcmsFenvalBem) {
-        this.tipIcmsFenvalBem = tipIcmsFenvalBem;
+   public void setTipIcmsFenValBem(BigDecimal tipIcmsFenValBem) {
+        this.tipIcmsFenValBem = tipIcmsFenValBem;
    }
 
    public String getChavePixCheckout() {
@@ -4798,12 +4797,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.calcVlrAquisBem = calcVlrAquisBem;
    }
 
-   public String getInibeLote() {
-        return inibeLote;
+   public String getIniBelote() {
+        return iniBelote;
    }
 
-   public void setInibeLote(String inibeLote) {
-        this.inibeLote = inibeLote;
+   public void setIniBelote(String iniBelote) {
+        this.iniBelote = iniBelote;
    }
 
    public String getContBaiBemSubImprec() {
@@ -4854,12 +4853,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.descrNat = descrNat;
    }
 
-   public String getDesTipIdevCom() {
-        return desTipIdevCom;
+   public String getDesTipIdEvCom() {
+        return desTipIdEvCom;
    }
 
-   public void setDesTipIdevCom(String desTipIdevCom) {
-        this.desTipIdevCom = desTipIdevCom;
+   public void setDesTipIdEvCom(String desTipIdEvCom) {
+        this.desTipIdEvCom = desTipIdEvCom;
    }
 
    public BigDecimal getNatCanPix() {
@@ -4934,12 +4933,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codCenCusIpi = codCenCusIpi;
    }
 
-   public BigDecimal getCodCtabCoIpi() {
-        return codCtabCoIpi;
+   public BigDecimal getCodCtaBcoIpi() {
+        return codCtaBcoIpi;
    }
 
-   public void setCodCtabCoIpi(BigDecimal codCtabCoIpi) {
-        this.codCtabCoIpi = codCtabCoIpi;
+   public void setCodCtaBcoIpi(BigDecimal codCtaBcoIpi) {
+        this.codCtaBcoIpi = codCtaBcoIpi;
    }
 
    public BigDecimal getCodEmpImposto() {
@@ -4966,12 +4965,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codNatIpi = codNatIpi;
    }
 
-   public BigDecimal getCodParcIpi() {
-        return codParcIpi;
+   public BigDecimal getCodParCipi() {
+        return codParCipi;
    }
 
-   public void setCodParcIpi(BigDecimal codParcIpi) {
-        this.codParcIpi = codParcIpi;
+   public void setCodParCipi(BigDecimal codParCipi) {
+        this.codParCipi = codParCipi;
    }
 
    public String getCodReceitaIpi() {
@@ -4990,12 +4989,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codReceitaReinf = codReceitaReinf;
    }
 
-   public BigDecimal getCodTipOperIpi() {
-        return codTipOperIpi;
+   public BigDecimal getCodTipoPerIpi() {
+        return codTipoPerIpi;
    }
 
-   public void setCodTipOperIpi(BigDecimal codTipOperIpi) {
-        this.codTipOperIpi = codTipOperIpi;
+   public void setCodTipoPerIpi(BigDecimal codTipoPerIpi) {
+        this.codTipoPerIpi = codTipoPerIpi;
    }
 
    public BigDecimal getCodTipTitIpi() {
@@ -5006,20 +5005,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codTipTitIpi = codTipTitIpi;
    }
 
-   public String getConsDifParcOutIcms() {
-        return consDifParcOutIcms;
+   public String getConsDifParCoutIcms() {
+        return consDifParCoutIcms;
    }
 
-   public void setConsDifParcOutIcms(String consDifParcOutIcms) {
-        this.consDifParcOutIcms = consDifParcOutIcms;
+   public void setConsDifParCoutIcms(String consDifParCoutIcms) {
+        this.consDifParCoutIcms = consDifParCoutIcms;
    }
 
-   public String getCtactbAnlRegApur() {
-        return ctactbAnlRegApur;
+   public String getCtaCtbAnlRegApur() {
+        return ctaCtbAnlRegApur;
    }
 
-   public void setCtactbAnlRegApur(String ctactbAnlRegApur) {
-        this.ctactbAnlRegApur = ctactbAnlRegApur;
+   public void setCtaCtbAnlRegApur(String ctaCtbAnlRegApur) {
+        this.ctaCtbAnlRegApur = ctaCtbAnlRegApur;
    }
 
    public String getDesRestrFcpCst() {
@@ -5110,20 +5109,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.estrNcredIcmsSt = estrNcredIcmsSt;
    }
 
-   public String getGerMultPlacres() {
-        return gerMultPlacres;
+   public String getGerMultPlacRes() {
+        return gerMultPlacRes;
    }
 
-   public void setGerMultPlacres(String gerMultPlacres) {
-        this.gerMultPlacres = gerMultPlacres;
+   public void setGerMultPlacRes(String gerMultPlacRes) {
+        this.gerMultPlacRes = gerMultPlacRes;
    }
 
-   public BigDecimal getIndTipLayoutK010() {
-        return indTipLayoutK010;
+   public BigDecimal getIndTipoLayoutK010() {
+        return indTipoLayoutK010;
    }
 
-   public void setIndTipLayoutK010(BigDecimal indTipLayoutK010) {
-        this.indTipLayoutK010 = indTipLayoutK010;
+   public void setIndTipoLayoutK010(BigDecimal indTipoLayoutK010) {
+        this.indTipoLayoutK010 = indTipoLayoutK010;
    }
 
    public BigDecimal getIndUniao() {
@@ -5182,20 +5181,20 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.redStBcPisCofins = redStBcPisCofins;
    }
 
-   public String getStInclusa70() {
-        return stInclusa70;
+   public String getStInclusA70() {
+        return stInclusA70;
    }
 
-   public void setStInclusa70(String stInclusa70) {
-        this.stInclusa70 = stInclusa70;
+   public void setStInclusA70(String stInclusA70) {
+        this.stInclusA70 = stInclusA70;
    }
 
-   public String getTipCtactbEfdf() {
-        return tipCtactbEfdf;
+   public String getTipCtaCtbEfdF() {
+        return tipCtaCtbEfdF;
    }
 
-   public void setTipCtactbEfdf(String tipCtactbEfdf) {
-        this.tipCtactbEfdf = tipCtactbEfdf;
+   public void setTipCtaCtbEfdF(String tipCtaCtbEfdF) {
+        this.tipCtaCtbEfdF = tipCtaCtbEfdF;
    }
 
    public String getTipDataEvtPag() {
@@ -5222,12 +5221,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.tokenIbpt = tokenIbpt;
    }
 
-   public String getUsaCusMedIcMpro() {
-        return usaCusMedIcMpro;
+   public String getUsaCusMedIcmsPro() {
+        return usaCusMedIcmsPro;
    }
 
-   public void setUsaCusMedIcMpro(String usaCusMedIcMpro) {
-        this.usaCusMedIcMpro = usaCusMedIcMpro;
+   public void setUsaCusMedIcmsPro(String usaCusMedIcmsPro) {
+        this.usaCusMedIcmsPro = usaCusMedIcmsPro;
    }
 
    public String getUsaCustoMedioMps() {
@@ -5238,12 +5237,12 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.usaCustoMedioMps = usaCustoMedioMps;
    }
 
-   public String getDesApCprodEpe() {
-        return desApCprodEpe;
+   public String getDesApCProDepE() {
+        return desApCProDepE;
    }
 
-   public void setDesApCprodEpe(String desApCprodEpe) {
-        this.desApCprodEpe = desApCprodEpe;
+   public void setDesApCProDepE(String desApCProDepE) {
+        this.desApCProDepE = desApCProDepE;
    }
 
    public String getRegApurTribSn() {
@@ -5278,36 +5277,36 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.credIcmsCst60Am = credIcmsCst60Am;
    }
 
-   public String getDenunCesPcte() {
-        return denunCesPcte;
+   public String getDenuncEspCte() {
+        return denuncEspCte;
    }
 
-   public void setDenunCesPcte(String denunCesPcte) {
-        this.denunCesPcte = denunCesPcte;
+   public void setDenuncEspCte(String denuncEspCte) {
+        this.denuncEspCte = denuncEspCte;
    }
 
-   public BigDecimal getPrazoRcancCte() {
-        return prazoRcancCte;
+   public BigDecimal getPrazoRCancCte() {
+        return prazoRCancCte;
    }
 
-   public void setPrazoRcancCte(BigDecimal prazoRcancCte) {
-        this.prazoRcancCte = prazoRcancCte;
+   public void setPrazoRCancCte(BigDecimal prazoRCancCte) {
+        this.prazoRCancCte = prazoRCancCte;
    }
 
-   public BigDecimal getPrazoTcancCte() {
-        return prazoTcancCte;
+   public BigDecimal getPrazoTCancCte() {
+        return prazoTCancCte;
    }
 
-   public void setPrazoTcancCte(BigDecimal prazoTcancCte) {
-        this.prazoTcancCte = prazoTcancCte;
+   public void setPrazoTCancCte(BigDecimal prazoTCancCte) {
+        this.prazoTCancCte = prazoTCancCte;
    }
 
-   public String getTeraCpCte() {
-        return teraCpCte;
+   public String getTerAcpCte() {
+        return terAcpCte;
    }
 
-   public void setTeraCpCte(String teraCpCte) {
-        this.teraCpCte = teraCpCte;
+   public void setTerAcpCte(String terAcpCte) {
+        this.terAcpCte = terAcpCte;
    }
 
    public String getAplCalcDifAliqFrt() {
@@ -5316,6 +5315,11 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
 
    public void setAplCalcDifAliqFrt(String aplCalcDifAliqFrt) {
         this.aplCalcDifAliqFrt = aplCalcDifAliqFrt;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEMP";
    }
 
    @Override
@@ -5351,7 +5355,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.gerarLivros = vo.asString("GERARLIVROS");
         this.gerarProdLivEnt = vo.asString("GERARPRODLIVENT");
         this.gerarProdOrigKit = vo.asString("GERARPRODORIGKIT");
-        this.geraNotaEnt = vo.asString("GERANOTAENT");
+        this.gerNotaEnt = vo.asString("GERNOTAENT");
         this.gravarObsNota = vo.asString("GRAVAROBSNOTA");
         this.gravarObsPadrao = vo.asString("GRAVAROBSPADRAO");
         this.gravarSerieNota = vo.asString("GRAVARSERIENOTA");
@@ -5381,7 +5385,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codParcCtb = vo.asBigDecimal("CODPARCCTB");
         this.codTab = vo.asBigDecimal("CODTAB");
         this.codTabCalc = vo.asBigDecimal("CODTABCALC");
-        this.codTipOperComp = vo.asBigDecimal("CODTIPOPERCOMP");
+        this.codTipOperaComp = vo.asBigDecimal("CODTIPOPERACOMP");
         this.codTrib20Red = vo.asString("CODTRIB20RED");
         this.codTrib30 = vo.asString("CODTRIB30");
         this.codTrib40Isent = vo.asString("CODTRIB40ISENT");
@@ -5394,7 +5398,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.compIpi = vo.asString("COMPIPI");
         this.compIpiSepIcm = vo.asString("COMPIPISEPICM");
         this.complItemNota = vo.asString("COMPLITEMNOTA");
-        this.consEntRpendWms = vo.asString("CONSENTRPENDWMS");
+        this.consEntrPendWms = vo.asString("CONSENTRPENDWMS");
         this.consOutrosImp = vo.asString("CONSOUTROSIMP");
         this.consVlrLiqNfse = vo.asString("CONSVLRLIQNFSE");
         this.contingenciaNfe = vo.asString("CONTINGENCIANFE");
@@ -5412,7 +5416,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.percMargem = vo.asBigDecimal("PERCMARGEM");
         this.percPis = vo.asBigDecimal("PERCPIS");
         this.perfilEfd = vo.asString("PERFILEFD");
-        this.perProj = vo.asString("PERPROJ");
+        this.percProj = vo.asString("PERPROJ");
         this.prodEpe = vo.asString("PRODEPE");
         this.projOnline = vo.asString("PROJONLINE");
         this.rastrEstoque = vo.asString("RASTRESTOQUE");
@@ -5452,7 +5456,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.tratarTribut = vo.asString("TRATARTRIBUT");
         this.tratarTributDefEmp = vo.asString("TRATARTRIBUTDEFEMP");
         this.tratoCWms = vo.asString("TRATOCWMS");
-        this.ufCrcContador = vo.asString("UFCRCCONTADOR");
+        this.ufCrContador = vo.asString("UFCRCCONTADOR");
         this.ultAutorPag = vo.asBigDecimal("ULTAUTORPAG");
         this.ultDupl = vo.asBigDecimal("ULTDUPL");
         this.ultPagCiapModc = vo.asBigDecimal("ULTPAGCIAPMODC");
@@ -5472,7 +5476,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.wmsUsaRegVolFat = vo.asString("WMSUSAREGVOLFAT");
         this.dtInicioKardex = vo.asTimestamp("DTINICIOKARDEX");
         this.gerLdPerTri = vo.asString("GERLDPERTRI");
-        this.icmsSctTd = vo.asString("ICMSSCTTD");
+        this.icmsScttd = vo.asString("ICMSSCTTD");
         this.maxNotasLoteNfe = vo.asBigDecimal("MAXNOTASLOTENFE");
         this.modDupl = vo.asBigDecimal("MODDUPL");
         this.modExped = vo.asBigDecimal("MODEXPED");
@@ -5488,13 +5492,13 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.nuRfe = vo.asBigDecimal("NURFE");
         this.nuRfeCartaCorr = vo.asBigDecimal("NURFECARTACORR");
         this.calcIss = vo.asString("CALCISS");
-        this.calPercPis = vo.asBigDecimal("CALPERCPIS");
+        this.calcPercPis = vo.asBigDecimal("CALPERCPIS");
         this.codCenCus = vo.asBigDecimal("CODCENCUS");
         this.codCenCusDesp = vo.asBigDecimal("CODCENCUSDESP");
-        this.codCtabCoipad = vo.asBigDecimal("CODCTABCOIPAD");
-        this.codCtactb1 = vo.asBigDecimal("CODCTACTB1");
-        this.codCtactb2 = vo.asBigDecimal("CODCTACTB2");
-        this.codCtactb3 = vo.asBigDecimal("CODCTACTB3");
+        this.codCtabCoIpad = vo.asBigDecimal("CODCTABCOIPAD");
+        this.codCtActb1 = vo.asBigDecimal("CODCTACTB_1");
+        this.codCtActb2 = vo.asBigDecimal("CODCTACTB_2");
+        this.codCtActb3 = vo.asBigDecimal("CODCTACTB_3");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpMatrizEfd = vo.asBigDecimal("CODEMPMATRIZEFD");
         this.codEndSobra = vo.asBigDecimal("CODENDSOBRA");
@@ -5511,9 +5515,9 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.notaEntSobraWms = vo.asBigDecimal("NOTAENTSOBRAWMS");
         this.codTrib53 = vo.asString("CODTRIB53");
         this.envRespContNfe = vo.asString("ENVRESPCONTNFE");
-        this.tpObsFing4000 = vo.asBigDecimal("TPOBSFING4000");
-        this.tpObsNotag4000 = vo.asBigDecimal("TPOBSNOTAG4000");
-        this.gerObsFing4000 = vo.asString("GEROBSFING4000");
+        this.tpObsFinG4000 = vo.asBigDecimal("TPOBSFING4000");
+        this.tpObsNotaG4000 = vo.asBigDecimal("TPOBSNOTAG4000");
+        this.gerObsFinG4000 = vo.asString("GEROBSFING4000");
         this.codBcoIpi = vo.asBigDecimal("CODBCOIPI");
         this.tipTransmNfse = vo.asString("TIPTRANSMNFSE");
         this.codParcNfce = vo.asBigDecimal("CODPARCNFCE");
@@ -5525,106 +5529,106 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codModNfceCompl = vo.asBigDecimal("CODMODNFCECOMPL");
         this.codModNfceSimpl = vo.asBigDecimal("CODMODNFCESIMPL");
-        this.codEnqIpiSai = vo.asBigDecimal("CODENQIPISAI");
-        this.topSaidaDifPesoWms = vo.asBigDecimal("TOPSAIDADIFPESOWMS");
-        this.codTabAlt = vo.asBigDecimal("CODTABALT");
-        this.codSmtp = vo.asBigDecimal("CODSMTP");
-        this.topEntDifPesoWms = vo.asBigDecimal("TOPENTDIFPESOWMS");
-        this.codTipParc = vo.asBigDecimal("CODTIPPARC");
-        this.corAgendado = vo.asBigDecimal("CORAGENDADO");
-        this.corAtendido = vo.asBigDecimal("CORATENDIDO");
-        this.corBloqueado = vo.asBigDecimal("CORBLOQUEADO");
-        this.corEncaixado = vo.asBigDecimal("CORENCAIXADO");
-        this.corFaturado = vo.asBigDecimal("CORFATURADO");
-        this.corFixado = vo.asBigDecimal("CORFIXADO");
-        this.horaFinal = vo.asBigDecimal("HORAFINAL");
-        this.horaInicial = vo.asBigDecimal("HORAINICIAL");
+        this.codenqipisai = vo.asBigDecimal("CODENQIPISAI");
+        this.topsaidadifpesowms = vo.asBigDecimal("TOPSAIDADIFPESOWMS");
+        this.codtabalt = vo.asBigDecimal("CODTABALT");
+        this.codsmtp = vo.asBigDecimal("CODSMTP");
+        this.topentdifpesowms = vo.asBigDecimal("TOPENTDIFPESOWMS");
+        this.codtipparc = vo.asBigDecimal("CODTIPPARC");
+        this.coragendado = vo.asBigDecimal("CORAGENDADO");
+        this.coratendido = vo.asBigDecimal("CORATENDIDO");
+        this.corbloqueado = vo.asBigDecimal("CORBLOQUEADO");
+        this.corencaixado = vo.asBigDecimal("CORENCAIXADO");
+        this.corfaturado = vo.asBigDecimal("CORFATURADO");
+        this.corfixado = vo.asBigDecimal("CORFIXADO");
+        this.horafinal = vo.asBigDecimal("HORAFINAL");
+        this.horainicial = vo.asBigDecimal("HORAINICIAL");
         this.intervalo = vo.asBigDecimal("INTERVALO");
-        this.notaModeloDAgenda = vo.asBigDecimal("NOTAMODELODAGENDA");
-        this.qtdLimiteMes = vo.asBigDecimal("QTDLIMITEMES");
-        this.validaCpfCnpj = vo.asString("VALIDACPFCNPJ");
-        this.wmsUsaEtiqPal = vo.asString("WMSUSAETIQPAL");
-        this.gerObsNotag4000 = vo.asString("GEROBSNOTAG4000");
-        this.margSegPcp = vo.asBigDecimal("MARGSEGPCP");
-        this.seqTokenNfce = vo.asBigDecimal("SEQTOKENNFCE");
-        this.tokenNfce = vo.asString("TOKENNFCE");
-        this.tpAmbMdfe = vo.asString("TPAMBMDFE");
-        this.vlrLiqItemNfce = vo.asString("VLRLIQITEMNFCE");
-        this.chaveDigitalAgiliblue = vo.asString("CHAVEDIGITALAGILIBLUE");
-        this.codUsuNfse = vo.asString("CODUSUNFSE");
-        this.codContrInfse = vo.asString("CODCONTRINFSE");
-        this.temDenuesPont = vo.asString("TEMDENUESPONT");
-        this.przTolCancNota = vo.asBigDecimal("PRZTOLCANCNOTA");
-        this.przRegCancNota = vo.asBigDecimal("PRZREGCANCNOTA");
-        this.serNaoTribBaseIss = vo.asString("SERNAOTRIBBASEISS");
-        this.codEndArmIndef = vo.asBigDecimal("CODENDARMINDEF");
-        this.copiasDacte = vo.asBigDecimal("COPIASDACTE");
-        this.tpAmbCte = vo.asString("TPAMBCTE");
-        this.codModDacte = vo.asBigDecimal("CODMODDACTE");
-        this.tipoEnvioCte = vo.asString("TIPOENVIOCTE");
-        this.contingenciaCte = vo.asString("CONTINGENCIACTE");
-        this.tipoDacte = vo.asString("TIPODACTE");
-        this.jobKeyNdd = vo.asString("JOBKEYNDD");
-        this.conectorNfse = vo.asString("CONECTORNFSE");
-        this.codCtactbDesc = vo.asBigDecimal("CODCTACTBDESC");
-        this.codCtactbJuros = vo.asBigDecimal("CODCTACTBJUROS");
-        this.codCtactbMult = vo.asBigDecimal("CODCTACTBMULT");
-        this.codEndCrossdock = vo.asBigDecimal("CODENDCROSSDOCK");
-        this.codTrib90CredDeb = vo.asString("CODTRIB90CREDDEB");
-        this.conIcmsMajFcpInt = vo.asString("CONICMSMAJFCPINT");
-        this.consDevEvtr2050 = vo.asString("CONSDEVEVTR2050");
-        this.consIdBenef = vo.asString("CONSIDBENEF");
-        this.contingenciaNfce = vo.asString("CONTINGENCIANFCE");
-        this.copiasDanfce = vo.asBigDecimal("COPIASDANFCE");
-        this.descRedDifCiap = vo.asString("DESCREDDIFCIAP");
-        this.difAliqFcpInt = vo.asString("DIFALIQFCPINT");
-        this.emailNotfeCreinf = vo.asString("EMAILNOTFECREINF");
-        this.envEmailConf = vo.asString("ENVEMAILCONF");
-        this.envioSincronoCte = vo.asString("ENVIOSINCRONOCTE");
-        this.envioSincronoNfce = vo.asString("ENVIOSINCRONONFCE");
-        this.envioSincronoNfe = vo.asString("ENVIOSINCRONONFE");
-        this.gerarRetencao = vo.asBigDecimal("GERARRETENCAO");
-        this.gerarTaxFinEmbNfe = vo.asString("GERARTAXFINEMBNFE");
-        this.igCertifSmtpXml = vo.asString("IGCERTIFSMTPXML");
-        this.insXmlPorImpSmtpXml = vo.asString("INSXMLPORIMPSMTPXML");
-        this.intConsSmtpXml = vo.asBigDecimal("INTCONSSMTPXML");
-        this.nfseStAntConsFinal = vo.asString("NFSESTANTCONSFINAL");
-        this.notaEntAjustEstCons = vo.asBigDecimal("NOTAENTAJUSTESTCONS");
-        this.notaEntAjustEstCter = vo.asBigDecimal("NOTAENTAJUSTESTCTER");
-        this.notaEntAjustEstDter = vo.asBigDecimal("NOTAENTAJUSTESTDTER");
-        this.notaSaiAjustBem = vo.asBigDecimal("NOTASAIAJUSTBEM");
-        this.notaSaiAjustEstCons = vo.asBigDecimal("NOTASAIAJUSTESTCONS");
-        this.notaSaiAjustEstCter = vo.asBigDecimal("NOTASAIAJUSTESTCTER");
-        this.notaSaiAjustEstDter = vo.asBigDecimal("NOTASAIAJUSTESTDTER");
-        this.numDocR2020 = vo.asString("NUMDOCR2020");
-        this.nuNotaDemFx = vo.asBigDecimal("NUNOTADEMFX");
-        this.nuNotaModFx = vo.asBigDecimal("NUNOTAMODFX");
-        this.nuNotaTrcFx = vo.asBigDecimal("NUNOTATRCFX");
-        this.origProdComIpi = vo.asString("ORIGPRODCOMIPI");
-        this.permOutroUsuSepPed = vo.asString("PERMOUTROUSUSEPPED");
-        this.portaSmtpXml = vo.asBigDecimal("PORTASMTPXML");
-        this.progAquisAlim = vo.asString("PROGAQUISALIM");
-        this.proxExecSmtpXml = vo.asTimestamp("PROXEXECSMTPXML");
-        this.qrcodeNfceVersao2 = vo.asString("QRCODENFCEVERSAO2");
-        this.redIssBcPisConf = vo.asString("REDISSBCPISCONF");
-        this.redStCompBcPisCofins = vo.asString("REDSTCOMPBCPISCOFINS");
-        this.senhaSmtpXml = vo.asString("SENHASMTPXML");
-        this.servidorSmtpXml = vo.asString("SERVIDORSMTPXML");
-        this.suprimirEmailDest = vo.asString("SUPRIMIREMAILDEST");
-        this.tipConexSmtpXml = vo.asString("TIPCONEXSMTPXML");
-        this.tipDataEvtServ = vo.asString("TIPDATAEVTSERV");
-        this.tipGerInfGveicGreb = vo.asString("TIPGERINFGVEICGREB");
-        this.tipoEnvioNfce = vo.asString("TIPOENVIONFCE");
-        this.ultNsuCte = vo.asString("ULTNSUCTE");
-        this.usaCodBarrasConcatWms = vo.asString("USACODBARRASCONCATWMS");
-        this.usaNomeComplItem = vo.asString("USANOMECOMPLITEM");
-        this.usaRecParcial = vo.asString("USARECPARCIAL");
-        this.usaStExtNotaRestSt = vo.asString("USASTEXTNOTARESTST");
-        this.usuarioSmtpXml = vo.asString("USUARIOSMTPXML");
-        this.utilizaDfeTransp = vo.asString("UTILIZADFETRANSP");
-        this.utilizaExploteSep = vo.asString("UTILIZAEXPLOTESEP");
-        this.utilizaSepPulmao = vo.asString("UTILIZASEPPULMAO");
-        this.utilizaTriCrossdocking = vo.asString("UTILIZATRICROSSDOCKING");
+        this.notamodelodagenda = vo.asBigDecimal("NOTAMODELODAGENDA");
+        this.qtdlimitemes = vo.asBigDecimal("QTDLIMITEMES");
+        this.validacpfcnpj = vo.asString("VALIDACPFCNPJ");
+        this.wmsusaeqipal = vo.asString("WMSUSAETIQPAL");
+        this.gerobsnotag4000 = vo.asString("GEROBSNOTAG4000");
+        this.margsegpcp = vo.asBigDecimal("MARGSEGPCP");
+        this.seqtokennfce = vo.asBigDecimal("SEQTOKENNFCE");
+        this.tokennfce = vo.asString("TOKENNFCE");
+        this.tpambmdfe = vo.asString("TPAMBMDFE");
+        this.vlrliqitemnfce = vo.asString("VLRLIQITEMNFCE");
+        this.chavedigitalagiliblue = vo.asString("CHAVEDIGITALAGILIBLUE");
+        this.codusunfse = vo.asString("CODUSUNFSE");
+        this.codcontrinfse = vo.asString("CODCONTRINFSE");
+        this.temdenuespont = vo.asString("TEMDENUESPONT");
+        this.prztolcannota = vo.asBigDecimal("PRZTOLCANNOTA");
+        this.przregcannota = vo.asBigDecimal("PRZREGCANNOTA");
+        this.sernatribbaseiss = vo.asString("SERNAOTRIBBASEISS");
+        this.codendarmindef = vo.asBigDecimal("CODENDARMINDEF");
+        this.copiasdacte = vo.asBigDecimal("COPIASDACTE");
+        this.tpambcte = vo.asString("TPAMBCTE");
+        this.codmoddacte = vo.asBigDecimal("CODMODDACTE");
+        this.tipoenviocte = vo.asString("TIPOENVIOCTE");
+        this.contingenciacte = vo.asString("CONTINGENCIACTE");
+        this.tipodacte = vo.asString("TIPODACTE");
+        this.jobkeyndd = vo.asString("JOBKEYNDD");
+        this.conectornfse = vo.asString("CONECTORNFSE");
+        this.codctactbdesc = vo.asBigDecimal("CODCTACTBDESC");
+        this.codctactbjuros = vo.asBigDecimal("CODCTACTBJUROS");
+        this.codctactbmult = vo.asBigDecimal("CODCTACTBMULT");
+        this.codendcrossdock = vo.asBigDecimal("CODENDCROSSDOCK");
+        this.codtrib90creddeb = vo.asString("CODTRIB90CREDDEB");
+        this.conicmsmajfcpint = vo.asString("CONICMSMAJFCPINT");
+        this.consdevevtr2050 = vo.asString("CONSDEVEVTR2050");
+        this.considbenef = vo.asString("CONSIDBENEF");
+        this.contingencianfce = vo.asString("CONTINGENCIANFCE");
+        this.copiasdanfce = vo.asBigDecimal("COPIASDANFCE");
+        this.descredifciap = vo.asString("DESCREDDIFCIAP");
+        this.difaliqfcpint = vo.asString("DIFALIQFCPINT");
+        this.emailnotfecreinf = vo.asString("EMAILNOTFECREINF");
+        this.envemailconf = vo.asString("ENVEMAILCONF");
+        this.enviosincronocte = vo.asString("ENVIOSINCRONOCTE");
+        this.enviosincrononfce = vo.asString("ENVIOSINCRONONFCE");
+        this.enviosincrononfe = vo.asString("ENVIOSINCRONONFE");
+        this.gerarretencao = vo.asBigDecimal("GERARRETENCAO");
+        this.gerartaxfinembnfe = vo.asString("GERARTAXFINEMBNFE");
+        this.igcertifsmtpxml = vo.asString("IGCERTIFSMTPXML");
+        this.insxmlporimpsmtpxml = vo.asString("INSXMLPORIMPSMTPXML");
+        this.intconssmtpxml = vo.asBigDecimal("INTCONSSMTPXML");
+        this.nfestantconsfinal = vo.asString("NFESTANTCONSFINAL");
+        this.notaentajustestcons = vo.asBigDecimal("NOTAENTAJUSTESTCONS");
+        this.notaentajustestcter = vo.asBigDecimal("NOTAENTAJUSTESTCTER");
+        this.notaentajustestdter = vo.asBigDecimal("NOTAENTAJUSTESTDTER");
+        this.notasaiajustbem = vo.asBigDecimal("NOTASAIAJUSTBEM");
+        this.notasaiajustestcons = vo.asBigDecimal("NOTASAIAJUSTESTCONS");
+        this.notasaiajustestcter = vo.asBigDecimal("NOTASAIAJUSTESTCTER");
+        this.notasaiajustestdter = vo.asBigDecimal("NOTASAIAJUSTESTDTER");
+        this.numdocr2020 = vo.asString("NUMDOCR2020");
+        this.nunotademfx = vo.asBigDecimal("NUNOTADEMFX");
+        this.nunotamodfx = vo.asBigDecimal("NUNOTAMODFX");
+        this.nunotatrcfx = vo.asBigDecimal("NUNOTATRCFX");
+        this.origprodcomipi = vo.asString("ORIGPRODCOMIPI");
+        this.permoutroususepped = vo.asString("PERMOUTROUSUSEPPED");
+        this.portasmtpxml = vo.asBigDecimal("PORTASMTPXML");
+        this.progaquisalim = vo.asString("PROGAQUISALIM");
+        this.proxexecsmtpxml = vo.asTimestamp("PROXEXECSMTPXML");
+        this.qrcodenfceversao2 = vo.asString("QRCODENFCEVERSAO2");
+        this.redissbcpisconf = vo.asString("REDISSBCPISCONF");
+        this.redstcompbcpiscofins = vo.asString("REDSTCOMPBCPISCOFINS");
+        this.senhasmtpxml = vo.asString("SENHASMTPXML");
+        this.servidorsmtpxml = vo.asString("SERVIDORSMTPXML");
+        this.suprimiremaildest = vo.asString("SUPRIMIREMAILDEST");
+        this.tipconexsmtpxml = vo.asString("TIPCONEXSMTPXML");
+        this.tipdataevtserv = vo.asString("TIPDATAEVTSERV");
+        this.tipgerinfgveicgreb = vo.asString("TIPGERINFGVEICGREB");
+        this.tipoenvionfce = vo.asString("TIPOENVIONFCE");
+        this.ultnsucte = vo.asString("ULTNSUCTE");
+        this.usacodbarrasconcatwms = vo.asString("USACODBARRASCONCATWMS");
+        this.usanomecomplitem = vo.asString("USANOMECOMPLITEM");
+        this.usarecparcial = vo.asString("USARECPARCIAL");
+        this.usasttextnotarestst = vo.asString("USASTEXTNOTARESTST");
+        this.usuariosmtpxml = vo.asString("USUARIOSMTPXML");
+        this.utilizadfetransp = vo.asString("UTILIZADFETRANSP");
+        this.utilizaexplotesep = vo.asString("UTILIZAEXPLOTESEP");
+        this.utilizaseppulmao = vo.asString("UTILIZASEPPULMAO");
+        this.utilizatricrossdocking = vo.asString("UTILIZATRICROSSDOCKING");
         this.versaoNt = vo.asBigDecimal("VERSAONT");
         this.versaoNtCte = vo.asBigDecimal("VERSAONTCTE");
         this.versaoNtMdfe = vo.asBigDecimal("VERSAONTMDFE");
@@ -5633,16 +5637,16 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.wmsMultiUsuConf = vo.asString("WMSMULTIUSUCONF");
         this.wmsUsaImpFechaVol = vo.asString("WMSUSAIMPFECHAVOL");
         this.wmsUsaRegVolRec = vo.asString("WMSUSAREGVOLREC");
-        this.aedfe = vo.asString("AEDFE");
-        this.atualCbeneffat = vo.asString("ATUALCBENEFFAT");
+        this.aedFe = vo.asString("AEDFE");
+        this.atualCbEnefFat = vo.asString("ATUALCBENEFFAT");
         this.calcIcmsStNaoCont = vo.asString("CALCICMSSTNAOCONT");
         this.codTabCkc = vo.asBigDecimal("CODTABCKC");
         this.reabCompleto = vo.asString("REABCOMPLETO");
         this.aliqCfBonif = vo.asBigDecimal("ALIQCFBONIF");
         this.aliqPisBonif = vo.asBigDecimal("ALIQPISBONIF");
-        this.codCtactbBonif = vo.asBigDecimal("CODCTACTBBONIF");
+        this.codCtaCtbBonif = vo.asBigDecimal("CODCTACTBBONIF");
         this.codStPisCfBonif = vo.asString("CODSTPISCFBONIF");
-        this.mdfeDocSemisPropria = vo.asString("MDFEDOCSEMISPROPRIA");
+        this.mdfeDocSemIsProp = vo.asString("MDFEDOCSEMISPROPRIA");
         this.nuRfeCartaCorrCte = vo.asBigDecimal("NURFECARTACORRCTE");
         this.tribPisCfBonif = vo.asString("TRIBPISCFBONIF");
         this.gerLivIcmsEmpSn = vo.asString("GERLIVICMSEMPSN");
@@ -5663,17 +5667,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.defCstIpi99 = vo.asString("DEFCSTIPI99");
         this.ipiTributDefEmp = vo.asString("IPITRIBUTDEFEMP");
         this.escritCompraEmissProp = vo.asString("ESCRITCOMPRAEMISSPROP");
-        this.geraNotaEntCanc = vo.asString("GERANOTAENTCANC");
+        this.gerNotaEntCanc = vo.asString("GERNOTAENTCANC");
         this.metCalcDifIcms = vo.asString("METCALCDIFICMS");
-        this.pesMaxSepAgru = vo.asBigDecimal("PESMAXSEPAGRU");
-        this.usaSepAgrupProd = vo.asString("USASEPAGRUPPROD");
-        this.qtPedSepAgr = vo.asBigDecimal("QTPEDSEPAGR");
+        this.pesMaxSepaGru = vo.asBigDecimal("PESMAXSEPAGRU");
+        this.usaSepaGruProd = vo.asString("USASEPAGRUPROD");
+        this.qtPedSepaGr = vo.asBigDecimal("QTPEDSEPAGR");
         this.qtCheckSep = vo.asBigDecimal("QTCHECKSEP");
-        this.volCheckSepProd = vo.asBigDecimal("VOLCHECKSEPPROD");
+        this.volCheckSepRod = vo.asBigDecimal("VOLCHECKSEPROD");
         this.consRepIcmsBasePisCof = vo.asString("CONSREPICMSBASEPISCOF");
         this.aliqPisDesc = vo.asBigDecimal("ALIQPISDESC");
         this.aliqCfJuros = vo.asBigDecimal("ALIQCFJUROS");
-        this.localPadEconect = vo.asBigDecimal("LOCALPADECONECT");
+        this.localPadEConect = vo.asBigDecimal("LOCALPADECONECT");
         this.aliqCfDesc = vo.asBigDecimal("ALIQCFDESC");
         this.jobMdEndDigital = vo.asString("JOBMDENDDIGITAL");
         this.codStPisCfDesc = vo.asString("CODSTPISCFDESC");
@@ -5691,39 +5695,39 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.redIcmsBcPisConfins = vo.asString("REDICMSBCPISCONFINS");
         this.ultNsu = vo.asString("ULTNSU");
         this.usaInfoAdConfPed = vo.asString("USAINFOADCONFPED");
-        this.nfseObsIterps = vo.asBigDecimal("NFSEOBSITERPS");
-        this.qtdCarNfseObsIterps = vo.asBigDecimal("QTDCARNFSEOBSITERPS");
+        this.nfSeObsIterPs = vo.asBigDecimal("NFSEOBSITERPS");
+        this.qtdCarNfSeObsIterPs = vo.asBigDecimal("QTDCARNFSEOBSITERPS");
         this.caepf = vo.asString("CAEPF");
         this.cafir = vo.asString("CAFIR");
-        this.gerAlcdpr = vo.asString("GERALCDPR");
+        this.gerAlcdPr = vo.asString("GERALCDPR");
         this.tipoExploracao = vo.asString("TIPOEXPLORACAO");
         this.baixaFinPreEmissNfce = vo.asString("BAIXAFINPREEMISSNFCE");
         this.icmsNormalDifIcmsSn = vo.asString("ICMSNORMALDIFICMSSN");
         this.dirFcpfResp = vo.asString("DIRFCPFRESP");
         this.dirFDepDecJud = vo.asString("DIRFDEPDECJUD");
         this.dirFDepFunInv = vo.asString("DIRFDEPFUNINV");
-        this.dirFdhevento = vo.asTimestamp("DIRFDHEVENTO");
-        this.dirFentImune = vo.asString("DIRFENTIMUNE");
-        this.dirFnatDecl = vo.asString("DIRFNATDECL");
-        this.dirFpgExt = vo.asString("DIRFPGEXT");
-        this.dirFpgFundPub = vo.asString("DIRFPGFUNDPUB");
-        this.dirFplPriAss = vo.asString("DIRFPLPRIASS");
-        this.dirFsitEsp = vo.asString("DIRFSITESP");
-        this.dirFsocost = vo.asString("DIRFSOCOST");
-        this.tempPremiacaoEstadual = vo.asString("TEMPPREMIACAOESTADUAL");
+        this.dirFdhEvento = vo.asTimestamp("DIRFDHEVENTO");
+        this.dirFEntImune = vo.asString("DIRFENTIMUNE");
+        this.dirFNatDecl = vo.asString("DIRFNATDECL");
+        this.dirFPgExt = vo.asString("DIRFPGEXT");
+        this.dirFPgFundPub = vo.asString("DIRFPGFUNDPUB");
+        this.dirFPlPriAss = vo.asString("DIRFPLPRIASS");
+        this.dirFSitEsp = vo.asString("DIRFSITESP");
+        this.dirFSocost = vo.asString("DIRFSOCOST");
+        this.tempRemicaoEstadual = vo.asString("TEMPREMIACAOESTADUAL");
         this.codClassifEstab = vo.asBigDecimal("CODCLASSIFESTAB");
         this.redPisBcPisCofins = vo.asString("REDPISBCPISCOFINS");
         this.nuRfeProducao = vo.asBigDecimal("NURFEPRODUCAO");
         this.impressoraEtqSep = vo.asString("IMPRESSORAETQSEP");
         this.filtroAliqIcmsSql = vo.asString("FILTROALIQICMSSQL");
-        this.clasConsAgua = vo.asString("CLASCONSAGUA");
-        this.clasConsEnerg = vo.asString("CLASCONSENERG");
-        this.clasConsGas = vo.asString("CLASCONSGAS");
+        this.clasConsAgua = vo.asString("CLASCONS_AGUA");
+        this.clasConsEnerg = vo.asString("CLASCONS_ENERG");
+        this.clasConsGas = vo.asString("CLASCONS_GAS");
         this.identEct = vo.asString("IDENTECT");
-        this.wmsDocAsepBalcao = vo.asString("WMSDOCASEPBALCAO");
+        this.wmsDocASepBalcao = vo.asString("WMSDOCASEPBALCAO");
         this.efdh010 = vo.asString("EFDH010");
-        this.efdh010Prter = vo.asString("EFDH010PRTER");
-        this.efdh010Ter = vo.asString("EFDH010TER");
+        this.efdh010PrTer = vo.asString("EFDH010_PRTER");
+        this.efdh010Ter = vo.asString("EFDH010_TER");
         this.utilizaExplote = vo.asString("UTILIZAEXPLOTE");
         this.codRelMinutaOdp = vo.asBigDecimal("CODRELMINUTAODP");
         this.senhaEct = vo.asString("SENHAECT");
@@ -5744,13 +5748,13 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.respEntReinf = vo.asBigDecimal("RESPENTREINF");
         this.senhaEctRastreio = vo.asString("SENHAECTRASTREIO");
         this.sitEmpReinf = vo.asBigDecimal("SITEMPREINF");
-        this.tipCtactbEfd = vo.asString("TIPCTACTBEFD");
+        this.tipCtActbEfd = vo.asString("TIPCTACTBEFD");
         this.topCorBanEconect = vo.asBigDecimal("TOPCORBANECONECT");
         this.tribReinf = vo.asBigDecimal("TRIBREINF");
         this.versaoCte = vo.asBigDecimal("VERSAOCTE");
         this.vinculoEfr = vo.asString("VINCULOEFR");
         this.nroMaxProd = vo.asBigDecimal("NROMAXPROD");
-        this.tpOempresa = vo.asBigDecimal("TPOEMPRESA");
+        this.tpoEmpresa = vo.asBigDecimal("TPOEMPRESA");
         this.versaoMdfe = vo.asBigDecimal("VERSAOMDFE");
         this.transpCarga = vo.asString("TRANSPCARGA");
         this.usaDtValLotNfe = vo.asString("USADTVALLOTNFE");
@@ -5762,7 +5766,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.codLojaEconect = vo.asBigDecimal("CODLOJAECONECT");
         this.topRecargaCelEconect = vo.asBigDecimal("TOPRECARGACELECONECT");
         this.topNfceEconect = vo.asBigDecimal("TOPNFCEECONECT");
-        this.topSateConect = vo.asBigDecimal("TOPSATECONECT");
+        this.topSatEconect = vo.asBigDecimal("TOPSATECONECT");
         this.wmsCodEndFlut = vo.asBigDecimal("WMSCODENDFLUT");
         this.usaTrocoCheckout = vo.asString("USATROCOCHECKOUT");
         this.codEmpOrigMovFin = vo.asBigDecimal("CODEMPORIGMOVFIN");
@@ -5781,17 +5785,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.tokenNfse = vo.asString("TOKENNFSE");
         this.efdCodBco = vo.asBigDecimal("EFDCODBCO");
         this.efdCodCenCus = vo.asBigDecimal("EFDCODCENCUS");
-        this.efdCodCtabCoInt = vo.asBigDecimal("EFDCODCTABCOINT");
+        this.efdCodCtaBcoInt = vo.asBigDecimal("EFDCODCTABCOINT");
         this.efdCodNatDespRecIcms = vo.asBigDecimal("EFDCODNATDESPRECICMS");
-        this.efdCodTipOper = vo.asBigDecimal("EFDCODTIPOPER");
+        this.efdCodTipoPer = vo.asBigDecimal("EFDCODTIPOPER");
         this.efdCodTipTit = vo.asBigDecimal("EFDCODTIPTIT");
         this.efdDiaVenc = vo.asBigDecimal("EFDDIAVENC");
-        this.efdTipReenchNota = vo.asString("EFDTIPREENCHNOTA");
-        this.intFinObriIcmsStRec = vo.asString("INTFINOBRIICMSSTREC");
+        this.efdTipoReenchNota = vo.asString("EFDTIPREENCHNOTA");
+        this.intFinObricmsStRec = vo.asString("INTFINOBRICMSSTREC");
         this.wmsRastSerMed = vo.asString("WMSRASTSERMED");
-        this.codRespRetc180 = vo.asString("CODRESPRETC180");
-        this.vlrBaseStc180 = vo.asString("VLRBASESTC180");
-        this.vlrStc180 = vo.asString("VLRSTC180");
+        this.codRespRetC180 = vo.asString("CODRESPRETC180");
+        this.vlrBaseStC180 = vo.asString("VLRBASESTC180");
+        this.vlrStC180 = vo.asString("VLRSTC180");
         this.topSangSupri = vo.asBigDecimal("TOPSANGSUPRI");
         this.usaVlrMedTransfEmp = vo.asString("USAVLRMEDTRANSFEMP");
         this.topDespesa = vo.asBigDecimal("TOPDESPESA");
@@ -5806,17 +5810,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.ambienteGnre = vo.asString("AMBIENTEGNRE");
         this.codEmpMatrizGnre = vo.asBigDecimal("CODEMPMATRIZGNRE");
         this.versaoGnre = vo.asString("VERSAOGNRE");
-        this.codEmpGrupoFrete = vo.asBigDecimal("CODEMPGRUPOFRETE");
+        this.codEmpGrupoFrete = vo.asBigDecimal("CODEMPGRUPFRETE");
         this.calcFetHab = vo.asString("CALCFETHAB");
         this.msgInfAdicFetHab = vo.asString("MSGINFADICFETHAB");
-        this.aliqFunttel = vo.asBigDecimal("ALIQFUNTTEL");
+        this.aliqFuntTel = vo.asBigDecimal("ALIQFUNTTEL");
         this.aliqFust = vo.asBigDecimal("ALIQFUST");
-        this.fistel = vo.asString("FISTEL");
+        this.fisTel = vo.asString("FISTEL");
         this.vlrIcmsOpAnt = vo.asString("VLRICMSOPANT");
         this.vlrStFcpOpAnt = vo.asString("VLRSTFCPOPANT");
         this.vlrStOpAnt = vo.asString("VLRSTOPANT");
         this.vlrUnitIcmsOp = vo.asString("VLRUNITICMSOP");
-        this.inibeReabMaxPicking = vo.asString("INIBEREABMAXPICKING");
+        this.iniBereabMaxPicking = vo.asString("INIBEREABMAXPICKING");
         this.tratSobFinConf = vo.asString("TRATSOBFINCONF");
         this.conEstOrigProd = vo.asBigDecimal("CONESTORIGPROD");
         this.vlrUnitMerc = vo.asString("VLRUNITMERC");
@@ -5824,7 +5828,7 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.entAutTarMapa = vo.asString("ENTAUTTARMAPA");
         this.priorCodNat = vo.asBigDecimal("PRIORCODNAT");
         this.envRespContCte = vo.asString("ENVRESPCONTCTE");
-        this.consDevTerevtr2050 = vo.asString("CONSDEVTEREVTR2050");
+        this.consDevTerevTr2050 = vo.asString("CONSDEVTEREVTR2050");
         this.envInutNotaExc = vo.asString("ENVINUTNOTAEXC");
         this.jusInutNotaExc = vo.asString("JUSINUTNOTAEXC");
         this.wmsDocArep = vo.asString("WMSDOCAREP");
@@ -5835,29 +5839,29 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.proibEscCheckoutPed = vo.asString("PROIBESCCHECKOUTPED");
         this.nfeCanExtCanMes = vo.asString("NFECANEXTCANMES");
         this.envMdfSinc = vo.asString("ENVMDFSINC");
-        this.wmsPerSepProdAp = vo.asString("WMSPERSEPPRODAP");
-        this.consIdQtCarcDesc = vo.asString("CONSIDQTCARCDESC");
+        this.wmsPersEpProdAp = vo.asString("WMSPERSEPPRODAP");
+        this.considQtCarDesc = vo.asString("CONSIDQTCARCDESC");
         this.envLeiTranspDesc = vo.asString("ENVLEITRANSPDESC");
-        this.envLeiTranspTotoBs = vo.asString("ENVLEITRANSPTOTOBS");
+        this.envLeiTranspTotObs = vo.asString("ENVLEITRANSPTOTOBS");
         this.cgcProcurador = vo.asString("CGCPROCURADOR");
-        this.inibLoqRegConf = vo.asString("INIBLOQREGCONF");
+        this.iniBloqRegConf = vo.asString("INIBLOQREGCONF");
         this.blqNfaCompNfcPend = vo.asString("BLQNFACOMPNFCPEND");
         this.difAliqDespAcess = vo.asString("DIFALIQDESPACESS");
         this.complRestituicaoIcmsSt = vo.asString("COMPLRESTITUICAOICMSST");
         this.calcPisCfsFin = vo.asString("CALCPISCFSFIN");
         this.isAliqIntSexC = vo.asString("ISALIQINTSEXC");
-        this.tipIcmsFenvalBem = vo.asBigDecimal("TIPICMSFENVALBEM");
+        this.tipIcmsFenValBem = vo.asBigDecimal("TIPICMSFENVALBEM");
         this.chavePixCheckout = vo.asString("CHAVEPIXCHECKOUT");
         this.urlPixCheckout = vo.asString("URLPIXCHECKOUT");
         this.calcVlrAquisBem = vo.asBigDecimal("CALCVLRAQUISBEM");
-        this.inibeLote = vo.asString("INIBELOTE");
+        this.iniBelote = vo.asString("INIBELOTE");
         this.contBaiBemSubImprec = vo.asString("CONTBAIBEMSUBIMPREC");
         this.codCtaPixTef = vo.asBigDecimal("CODCTAPIXTEF");
         this.credIcmsCombus = vo.asString("CREDICMSCOMBUS");
         this.credIcmsRemg = vo.asString("CREDICMSREMG");
         this.descricao = vo.asString("DESCRICAO");
         this.descrNat = vo.asString("DESCRNAT");
-        this.desTipIdevCom = vo.asString("DESTIPIDEVCOM");
+        this.desTipIdEvCom = vo.asString("DESTIPIDEVCOM");
         this.natCanPix = vo.asBigDecimal("NATCANPIX");
         this.rupturaEst = vo.asString("RUPTURAEST");
         this.somarFcpBcCiap = vo.asString("SOMARFCPBCCIAP");
@@ -5867,17 +5871,17 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.topCanPixRec = vo.asBigDecimal("TOPCANPIXREC");
         this.usaMedDiaImp = vo.asString("USAMEDDIAIMP");
         this.codCenCusIpi = vo.asBigDecimal("CODCENCUSIPI");
-        this.codCtabCoIpi = vo.asBigDecimal("CODCTABCOIPI");
+        this.codCtaBcoIpi = vo.asBigDecimal("CODCTABCOIPI");
         this.codEmpImposto = vo.asBigDecimal("CODEMPIMPOSTO");
         this.codModRetEstWms = vo.asBigDecimal("CODMODRETESTWMS");
         this.codNatIpi = vo.asBigDecimal("CODNATIPI");
-        this.codParcIpi = vo.asBigDecimal("CODPARCIPI");
+        this.codParCipi = vo.asBigDecimal("CODPARCIPI");
         this.codReceitaIpi = vo.asString("CODRECEITAIPI");
         this.codReceitaReinf = vo.asString("CODRECEITAREINF");
-        this.codTipOperIpi = vo.asBigDecimal("CODTIPOPERIPI");
+        this.codTipoPerIpi = vo.asBigDecimal("CODTIPOPERIPI");
         this.codTipTitIpi = vo.asBigDecimal("CODTIPTITIPI");
-        this.consDifParcOutIcms = vo.asString("CONSDIFPARCOUTICMS");
-        this.ctactbAnlRegApur = vo.asString("CTACTBANLREGAPUR");
+        this.consDifParCoutIcms = vo.asString("CONSDIFPARCOUTICMS");
+        this.ctaCtbAnlRegApur = vo.asString("CTACTBANLREGAPUR");
         this.desRestrFcpCst = vo.asString("DESRESTRFCPCST");
         this.desRestrFcpStCst = vo.asString("DESRESTRFCPSTCST");
         this.diaVencIpi = vo.asBigDecimal("DIAVENCIPI");
@@ -5889,8 +5893,8 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.dtTransfFinsLucr = vo.asTimestamp("DTTRANSFFINSLUCR");
         this.envInfIssSomDevido = vo.asString("ENVINFISSSOMDEVIDO");
         this.estrNcredIcmsSt = vo.asString("ESTRNCREDICMSST");
-        this.gerMultPlacres = vo.asString("GERMULTPLACRES");
-        this.indTipLayoutK010 = vo.asBigDecimal("INDTIPLAYOUTK010");
+        this.gerMultPlacRes = vo.asString("GERMULTPLACRES");
+        this.indTipoLayoutK010 = vo.asBigDecimal("INDTIPLAYOUTK010");
         this.indUniao = vo.asBigDecimal("INDUNIAO");
         this.integrarIpiFin = vo.asString("INTEGRARIPIFIN");
         this.modEstCpaWms = vo.asBigDecimal("MODESTCPAWMS");
@@ -5898,22 +5902,22 @@ public class EmpresaFinanceiro implements SankhyaEntity<EmpresaFinanceiro> {
         this.notaSaiAjusteReclas = vo.asBigDecimal("NOTASAIAJUSTERECLAS");
         this.origDescontos = vo.asBigDecimal("ORIGDESCONTOS");
         this.redStBcPisCofins = vo.asString("REDSTBCPISCOFINS");
-        this.stInclusa70 = vo.asString("STINCLUSA70");
-        this.tipCtactbEfdf = vo.asString("TIPCTACTBEFDF");
+        this.stInclusA70 = vo.asString("STINCLUSA70");
+        this.tipCtaCtbEfdF = vo.asString("TIPCTACTBEFDF");
         this.tipDataEvtPag = vo.asString("TIPDATAEVTPAG");
         this.tipDataEvtPagXir = vo.asString("TIPDATAEVTPAGXIR");
         this.tokenIbpt = vo.asString("TOKENIBPT");
-        this.usaCusMedIcMpro = vo.asString("USACUSMEDICMPRO");
+        this.usaCusMedIcmsPro = vo.asString("USACUSMEDICMPRO");
         this.usaCustoMedioMps = vo.asString("USACUSTOMEDIOMPS");
-        this.desApCprodEpe = vo.asString("DESAPCPRODEPE");
+        this.desApCProDepE = vo.asString("DESAPCPRODEPE");
         this.regApurTribSn = vo.asString("REGAPURTRIBSN");
         this.status = vo.asBigDecimal("STATUS");
         this.geraDeducaoPf = vo.asString("GERADEDUCAOPF");
         this.credIcmsCst60Am = vo.asString("CREDICMSCST60AM");
-        this.denunCesPcte = vo.asString("DENUNCESPCTE");
-        this.prazoRcancCte = vo.asBigDecimal("PRAZORCANCCTE");
-        this.prazoTcancCte = vo.asBigDecimal("PRAZOTCANCCTE");
-        this.teraCpCte = vo.asString("TERACPCTE");
+        this.denuncEspCte = vo.asString("DENUNCESPCTE");
+        this.prazoRCancCte = vo.asBigDecimal("PRAZORCANCCTE");
+        this.prazoTCancCte = vo.asBigDecimal("PRAZOTCANCCTE");
+        this.terAcpCte = vo.asString("TERACPCTE");
         this.aplCalcDifAliqFrt = vo.asString("APLCALCDIFALIQFRT");
         return this;
    }

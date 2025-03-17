@@ -1,13 +1,12 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AcaoAgendada implements SankhyaEntity<AcaoAgendada> {
-
+public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    private BigDecimal nuAag;
-   private String autotran;
+   private String autoTran;
    private BigDecimal codModulo;
    private String ativo;
    private String acao;
@@ -27,12 +26,12 @@ public class AcaoAgendada implements SankhyaEntity<AcaoAgendada> {
         this.nuAag = nuAag;
    }
 
-   public String getAutotran() {
-        return autotran;
+   public String getAutoTran() {
+        return autoTran;
    }
 
-   public void setAutotran(String autotran) {
-        this.autotran = autotran;
+   public void setAutoTran(String autoTran) {
+        this.autoTran = autoTran;
    }
 
    public BigDecimal getCodModulo() {
@@ -116,6 +115,11 @@ public class AcaoAgendada implements SankhyaEntity<AcaoAgendada> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIAAG";
+   }
+
+   @Override
    public String getEntityName() {
         return "AcaoAgendada";
    }
@@ -123,7 +127,7 @@ public class AcaoAgendada implements SankhyaEntity<AcaoAgendada> {
    @Override
    public AcaoAgendada fromVO(DynamicVO vo) {
         this.nuAag = vo.asBigDecimal("NUAAG");
-        this.autotran = vo.asString("AUTOTRAN");
+        this.autoTran = vo.asString("AUTOTRAN");
         this.codModulo = vo.asBigDecimal("CODMODULO");
         this.ativo = vo.asString("ATIVO");
         this.acao = vo.asString("ACAO");

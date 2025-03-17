@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProcessoAdmJudicial implements SankhyaEntity<ProcessoAdmJudicial> {
-
+public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudicial> {
    private String ativo;
    private String autoria;
    private BigDecimal codCid;
@@ -150,6 +149,11 @@ public class ProcessoAdmJudicial implements SankhyaEntity<ProcessoAdmJudicial> {
 
    public void setOrigemProcesso(BigDecimal origemProcesso) {
         this.origemProcesso = origemProcesso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRIPAJ";
    }
 
    @Override

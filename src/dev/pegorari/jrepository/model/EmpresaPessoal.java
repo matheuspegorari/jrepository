@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
-
+public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    private String socioOstensivo;
    private String sugereDatPag;
    private String tipDiaPag;
@@ -18,9 +17,9 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private String cgcAnt;
    private String cgcSindPatronal;
    private String clubeInvest;
-   private BigDecimal codCencus;
+   private BigDecimal codCenCus;
    private BigDecimal codCtabCoint;
-   private BigDecimal codCtaCtbRever13;
+   private BigDecimal codCtactbRever13;
    private BigDecimal codEmp;
    private BigDecimal codEmpModHol;
    private BigDecimal codEmpOrg;
@@ -28,7 +27,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private BigDecimal codPref;
    private BigDecimal codRegFis;
    private String cpfRespCnpj;
-   private BigDecimal ctaCtbReversao;
+   private BigDecimal ctaCtbReverSao;
    private BigDecimal ctaFgts;
    private String depositoJud;
    private BigDecimal diaPagFerias;
@@ -49,7 +48,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private BigDecimal empDestinoCtb;
    private BigDecimal empDestinoGrelha;
    private String geraMatricula;
-   private BigDecimal histCtbReversao;
+   private BigDecimal histCtbReverSao;
    private BigDecimal mesDissidio;
    private BigDecimal modHollerit;
    private BigDecimal numConvInt;
@@ -85,7 +84,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private String indRpps;
    private BigDecimal indSimples;
    private BigDecimal indSitPj;
-   private Timestamp iniValeSocial;
+   private Timestamp iniValSocial;
    private String logoFolha;
    private String nmEnte;
    private String nroCertif;
@@ -99,7 +98,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private BigDecimal nuProcessoRat;
    private BigDecimal pagDou;
    private String pastaDoPonto;
-   private BigDecimal percente;
+   private BigDecimal percEnte;
    private BigDecimal percSeg;
    private BigDecimal percSupl;
    private BigDecimal periodoImpPonto;
@@ -117,7 +116,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private String cnpjEfr;
    private String cnpjProcurador;
    private BigDecimal codBcoFin;
-   private BigDecimal codCencusAtoCoop;
+   private BigDecimal codCenCusAtoCoop;
    private BigDecimal codCtabCofin;
    private BigDecimal codEmpLotacao;
    private BigDecimal codGrelha;
@@ -126,7 +125,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private BigDecimal codNatSaldoRet;
    private BigDecimal codProjAtoCoop;
    private String contaPr;
-   private String contentEd;
+   private String conteNted;
    private String contPcd;
    private BigDecimal controlePonto;
    private String cpfProdrural;
@@ -163,10 +162,10 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    private String fapNaoPublicada;
    private String debSusEsocial;
    private String permFeriasAntecip;
-   private Timestamp apuracCompetencia;
-   private String permApuracCompet;
+   private Timestamp apuracaoCompetencia;
+   private String permApuracaoCompet;
    private Timestamp dtVirada;
-   private String inAptApInExist;
+   private String inAptApInexist;
    private String isMatriz;
    private String possuiS1000;
    private String tpAmbEsocial;
@@ -262,12 +261,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.clubeInvest = clubeInvest;
    }
 
-   public BigDecimal getCodCencus() {
-        return codCencus;
+   public BigDecimal getCodCenCus() {
+        return codCenCus;
    }
 
-   public void setCodCencus(BigDecimal codCencus) {
-        this.codCencus = codCencus;
+   public void setCodCenCus(BigDecimal codCenCus) {
+        this.codCenCus = codCenCus;
    }
 
    public BigDecimal getCodCtabCoint() {
@@ -278,12 +277,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.codCtabCoint = codCtabCoint;
    }
 
-   public BigDecimal getCodCtaCtbRever13() {
-        return codCtaCtbRever13;
+   public BigDecimal getCodCtactbRever13() {
+        return codCtactbRever13;
    }
 
-   public void setCodCtaCtbRever13(BigDecimal codCtaCtbRever13) {
-        this.codCtaCtbRever13 = codCtaCtbRever13;
+   public void setCodCtactbRever13(BigDecimal codCtactbRever13) {
+        this.codCtactbRever13 = codCtactbRever13;
    }
 
    public BigDecimal getCodEmp() {
@@ -342,12 +341,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.cpfRespCnpj = cpfRespCnpj;
    }
 
-   public BigDecimal getCtaCtbReversao() {
-        return ctaCtbReversao;
+   public BigDecimal getCtaCtbReverSao() {
+        return ctaCtbReverSao;
    }
 
-   public void setCtaCtbReversao(BigDecimal ctaCtbReversao) {
-        this.ctaCtbReversao = ctaCtbReversao;
+   public void setCtaCtbReverSao(BigDecimal ctaCtbReverSao) {
+        this.ctaCtbReverSao = ctaCtbReverSao;
    }
 
    public BigDecimal getCtaFgts() {
@@ -510,12 +509,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.geraMatricula = geraMatricula;
    }
 
-   public BigDecimal getHistCtbReversao() {
-        return histCtbReversao;
+   public BigDecimal getHistCtbReverSao() {
+        return histCtbReverSao;
    }
 
-   public void setHistCtbReversao(BigDecimal histCtbReversao) {
-        this.histCtbReversao = histCtbReversao;
+   public void setHistCtbReverSao(BigDecimal histCtbReverSao) {
+        this.histCtbReverSao = histCtbReverSao;
    }
 
    public BigDecimal getMesDissidio() {
@@ -798,12 +797,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.indSitPj = indSitPj;
    }
 
-   public Timestamp getIniValeSocial() {
-        return iniValeSocial;
+   public Timestamp getIniValSocial() {
+        return iniValSocial;
    }
 
-   public void setIniValeSocial(Timestamp iniValeSocial) {
-        this.iniValeSocial = iniValeSocial;
+   public void setIniValSocial(Timestamp iniValSocial) {
+        this.iniValSocial = iniValSocial;
    }
 
    public String getLogoFolha() {
@@ -910,12 +909,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.pastaDoPonto = pastaDoPonto;
    }
 
-   public BigDecimal getPercente() {
-        return percente;
+   public BigDecimal getPercEnte() {
+        return percEnte;
    }
 
-   public void setPercente(BigDecimal percente) {
-        this.percente = percente;
+   public void setPercEnte(BigDecimal percEnte) {
+        this.percEnte = percEnte;
    }
 
    public BigDecimal getPercSeg() {
@@ -1054,12 +1053,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.codBcoFin = codBcoFin;
    }
 
-   public BigDecimal getCodCencusAtoCoop() {
-        return codCencusAtoCoop;
+   public BigDecimal getCodCenCusAtoCoop() {
+        return codCenCusAtoCoop;
    }
 
-   public void setCodCencusAtoCoop(BigDecimal codCencusAtoCoop) {
-        this.codCencusAtoCoop = codCencusAtoCoop;
+   public void setCodCenCusAtoCoop(BigDecimal codCenCusAtoCoop) {
+        this.codCenCusAtoCoop = codCenCusAtoCoop;
    }
 
    public BigDecimal getCodCtabCofin() {
@@ -1126,12 +1125,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.contaPr = contaPr;
    }
 
-   public String getContentEd() {
-        return contentEd;
+   public String getConteNted() {
+        return conteNted;
    }
 
-   public void setContentEd(String contentEd) {
-        this.contentEd = contentEd;
+   public void setConteNted(String conteNted) {
+        this.conteNted = conteNted;
    }
 
    public String getContPcd() {
@@ -1422,20 +1421,20 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.permFeriasAntecip = permFeriasAntecip;
    }
 
-   public Timestamp getApuracCompetencia() {
-        return apuracCompetencia;
+   public Timestamp getApuracaoCompetencia() {
+        return apuracaoCompetencia;
    }
 
-   public void setApuracCompetencia(Timestamp apuracCompetencia) {
-        this.apuracCompetencia = apuracCompetencia;
+   public void setApuracaoCompetencia(Timestamp apuracaoCompetencia) {
+        this.apuracaoCompetencia = apuracaoCompetencia;
    }
 
-   public String getPermApuracCompet() {
-        return permApuracCompet;
+   public String getPermApuracaoCompet() {
+        return permApuracaoCompet;
    }
 
-   public void setPermApuracCompet(String permApuracCompet) {
-        this.permApuracCompet = permApuracCompet;
+   public void setPermApuracaoCompet(String permApuracaoCompet) {
+        this.permApuracaoCompet = permApuracaoCompet;
    }
 
    public Timestamp getDtVirada() {
@@ -1446,12 +1445,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.dtVirada = dtVirada;
    }
 
-   public String getInAptApInExist() {
-        return inAptApInExist;
+   public String getInAptApInexist() {
+        return inAptApInexist;
    }
 
-   public void setInAptApInExist(String inAptApInExist) {
-        this.inAptApInExist = inAptApInExist;
+   public void setInAptApInexist(String inAptApInexist) {
+        this.inAptApInexist = inAptApInexist;
    }
 
    public String getIsMatriz() {
@@ -1503,6 +1502,11 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
    }
 
    @Override
+   public String getTableName() {
+        return "TFPEMP";
+   }
+
+   @Override
    public String getEntityName() {
         return "EmpresaPessoal";
    }
@@ -1520,9 +1524,9 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.cgcAnt = vo.asString("CGCANT");
         this.cgcSindPatronal = vo.asString("CGCSINDPATRONAL");
         this.clubeInvest = vo.asString("CLUBEINVEST");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
+        this.codCenCus = vo.asBigDecimal("CODCENCUS");
         this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
-        this.codCtaCtbRever13 = vo.asBigDecimal("CODCTACTBREVER13");
+        this.codCtactbRever13 = vo.asBigDecimal("CODCTACTBREVER13");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpModHol = vo.asBigDecimal("CODEMPMODHOL");
         this.codEmpOrg = vo.asBigDecimal("CODEMPORG");
@@ -1530,13 +1534,13 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.codPref = vo.asBigDecimal("CODPREF");
         this.codRegFis = vo.asBigDecimal("CODREGFIS");
         this.cpfRespCnpj = vo.asString("CPFRESPCNPJ");
-        this.ctaCtbReversao = vo.asBigDecimal("CTACTBREVERSAO");
+        this.ctaCtbReverSao = vo.asBigDecimal("CTACTBREVERSAO");
         this.ctaFgts = vo.asBigDecimal("CTAFGTS");
         this.depositoJud = vo.asString("DEPOSITOJUD");
         this.diaPagFerias = vo.asBigDecimal("DIAPAGFERIAS");
         this.diaPagMensal = vo.asBigDecimal("DIAPAGMENSAL");
         this.diaPagQuinz = vo.asBigDecimal("DIAPAGQUINZ");
-        this.diaPagQuinz2 = vo.asBigDecimal("DIAPAGQUINZ2");
+        this.diaPagQuinz2 = vo.asBigDecimal("DIAPAGQUINZ_2");
         this.diaPagSem = vo.asBigDecimal("DIAPAGSEM");
         this.dirfCpf = vo.asString("DIRFCPF");
         this.dirfDdd = vo.asString("DIRFDDD");
@@ -1551,7 +1555,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.empDestinoCtb = vo.asBigDecimal("EMPDESTINOCTB");
         this.empDestinoGrelha = vo.asBigDecimal("EMPDESTINOGRELHA");
         this.geraMatricula = vo.asString("GERAMATRICULA");
-        this.histCtbReversao = vo.asBigDecimal("HISTCTBREVERSAO");
+        this.histCtbReverSao = vo.asBigDecimal("HISTCTBREVERSAO");
         this.mesDissidio = vo.asBigDecimal("MESDISSIDIO");
         this.modHollerit = vo.asBigDecimal("MODHOLLERIT");
         this.numConvInt = vo.asBigDecimal("NUMCONVINT");
@@ -1576,7 +1580,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.arqModEmail = vo.asString("ARQMODEMAIL");
         this.impPortalRh = vo.asString("IMPPORTALRH");
         this.inibeHollerit = vo.asString("INIBEHOLLERIT");
-        this.portalApto = vo.asString("PORTALAPTO");
+        this.portalApto = vo.asString("PORTALAPONTO");
         this.portalEvolucao = vo.asString("PORTALEVOLUCAO");
         this.portalProgFerias = vo.asString("PORTALPROGFERIAS");
         this.importaPonto = vo.asString("IMPORTAPONTO");
@@ -1587,7 +1591,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.indRpps = vo.asString("INDRPPS");
         this.indSimples = vo.asBigDecimal("INDSIMPLES");
         this.indSitPj = vo.asBigDecimal("INDSITPJ");
-        this.iniValeSocial = vo.asTimestamp("INIVALESOCIAL");
+        this.iniValSocial = vo.asTimestamp("INIVALESOCIAL");
         this.logoFolha = vo.asString("LOGOFOLHA");
         this.nmEnte = vo.asString("NMENTE");
         this.nroCertif = vo.asString("NROCERTIF");
@@ -1601,7 +1605,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.nuProcessoRat = vo.asBigDecimal("NUPROCESSORAT");
         this.pagDou = vo.asBigDecimal("PAGDOU");
         this.pastaDoPonto = vo.asString("PASTADOPONTO");
-        this.percente = vo.asBigDecimal("PERCENTE");
+        this.percEnte = vo.asBigDecimal("PERCENTE");
         this.percSeg = vo.asBigDecimal("PERCSEG");
         this.percSupl = vo.asBigDecimal("PERCSUPL");
         this.periodoImpPonto = vo.asBigDecimal("PERIODOIMPPONTO");
@@ -1619,7 +1623,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.cnpjEfr = vo.asString("CNPJEFR");
         this.cnpjProcurador = vo.asString("CNPJPROCURADOR");
         this.codBcoFin = vo.asBigDecimal("CODBCOFIN");
-        this.codCencusAtoCoop = vo.asBigDecimal("CODCENCUSATOCOOP");
+        this.codCenCusAtoCoop = vo.asBigDecimal("CODCENCUSATOCOOP");
         this.codCtabCofin = vo.asBigDecimal("CODCTABCOFIN");
         this.codEmpLotacao = vo.asBigDecimal("CODEMPLOTACAO");
         this.codGrelha = vo.asBigDecimal("CODGRELHA");
@@ -1628,7 +1632,7 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.codNatSaldoRet = vo.asBigDecimal("CODNATSALDORET");
         this.codProjAtoCoop = vo.asBigDecimal("CODPROJATOCOOP");
         this.contaPr = vo.asString("CONTAPR");
-        this.contentEd = vo.asString("CONTENTED");
+        this.conteNted = vo.asString("CONTENTED");
         this.contPcd = vo.asString("CONTPCD");
         this.controlePonto = vo.asBigDecimal("CONTROLEPONTO");
         this.cpfProdrural = vo.asString("CPFPRODRURAL");
@@ -1639,12 +1643,12 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.dtCargaInicial = vo.asTimestamp("DTCARGAINICIAL");
         this.dtDou = vo.asTimestamp("DTDOU");
         this.dtEmiCertif = vo.asTimestamp("DTEMICERTIF");
-        this.dtIncEsocial = vo.asTimestamp("DTINCESOCIAL");
+        this.dtIncEsocial = vo.asTimestamp("DTINC_ESOCIAL");
         this.dtInicioEsocial = vo.asTimestamp("DTINICIOESOCIAL");
         this.dtProtRenov = vo.asTimestamp("DTPROTRENOV");
         this.dtSesmt = vo.asTimestamp("DTSESMT");
         this.dtTerceiraFase = vo.asTimestamp("DTTERCEIRAFASE");
-        this.dtUltEnvEsocial = vo.asTimestamp("DTULTENVESOCIAL");
+        this.dtUltEnvEsocial = vo.asTimestamp("DTULTENV_ESOCIAL");
         this.dtVencCertif = vo.asTimestamp("DTVENCCERTIF");
         this.envEsocial = vo.asString("ENVESOCIAL");
         this.enviaEmp = vo.asString("ENVIAEMP");
@@ -1665,10 +1669,10 @@ public class EmpresaPessoal implements SankhyaEntity<EmpresaPessoal> {
         this.fapNaoPublicada = vo.asString("FAPNAOPUBLICADA");
         this.debSusEsocial = vo.asString("DEBSUSESOCIAL");
         this.permFeriasAntecip = vo.asString("PERMFERIASANTECIP");
-        this.apuracCompetencia = vo.asTimestamp("APURACCOMPETENCIA");
-        this.permApuracCompet = vo.asString("PERMAPURACCOMPET");
+        this.apuracaoCompetencia = vo.asTimestamp("APURACOMPETENCIA");
+        this.permApuracaoCompet = vo.asString("PERMAPURACOMPET");
         this.dtVirada = vo.asTimestamp("DTVIRADA");
-        this.inAptApInExist = vo.asString("INAPTAPINEXIST");
+        this.inAptApInexist = vo.asString("INAPTAPINEXIST");
         this.isMatriz = vo.asString("ISMATRIZ");
         this.possuiS1000 = vo.asString("POSSUIS1000");
         this.tpAmbEsocial = vo.asString("TPAMBESOCIAL");

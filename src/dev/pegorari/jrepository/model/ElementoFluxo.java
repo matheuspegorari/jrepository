@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ElementoFluxo implements SankhyaEntity<ElementoFluxo> {
-
+public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    private String corFonte;
    private String corPreenchimento;
    private String descricao;
@@ -122,6 +121,11 @@ public class ElementoFluxo implements SankhyaEntity<ElementoFluxo> {
 
    public void setWaypoints(char[] waypoints) {
         this.waypoints = waypoints;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPREFX";
    }
 
    @Override

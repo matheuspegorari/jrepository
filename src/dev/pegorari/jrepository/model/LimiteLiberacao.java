@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LimiteLiberacao implements SankhyaEntity<LimiteLiberacao> {
-
+public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    private BigDecimal codGru;
    private BigDecimal codUsu;
    private String enviarEmail;
@@ -77,6 +76,11 @@ public class LimiteLiberacao implements SankhyaEntity<LimiteLiberacao> {
 
    public void setTipoLimite(String tipoLimite) {
         this.tipoLimite = tipoLimite;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSILIM";
    }
 
    @Override

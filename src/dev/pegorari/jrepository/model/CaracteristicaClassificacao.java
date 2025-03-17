@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CaracteristicaClassificacao implements SankhyaEntity<CaracteristicaClassificacao> {
-
+public class CaracteristicaClassificacao extends AbstractSankhyaEntity<CaracteristicaClassificacao> {
    private BigDecimal codClc;
    private BigDecimal codClt;
    private BigDecimal descontar;
@@ -104,6 +103,11 @@ public class CaracteristicaClassificacao implements SankhyaEntity<Caracteristica
 
    public void setVlrCalcIndice(BigDecimal vlrCalcIndice) {
         this.vlrCalcIndice = vlrCalcIndice;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGACLI";
    }
 
    @Override

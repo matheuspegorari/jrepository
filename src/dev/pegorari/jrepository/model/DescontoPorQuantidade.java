@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DescontoPorQuantidade implements SankhyaEntity<DescontoPorQuantidade> {
-
+public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuantidade> {
    private BigDecimal codUsu;
    private Timestamp dtAlter;
    private BigDecimal nuPromocao;
@@ -81,6 +80,11 @@ public class DescontoPorQuantidade implements SankhyaEntity<DescontoPorQuantidad
    }
 
    @Override
+   public String getTableName() {
+        return "TGFDPQ";
+   }
+
+   @Override
    public String getEntityName() {
         return "DescontoPorQuantidade";
    }
@@ -93,7 +97,7 @@ public class DescontoPorQuantidade implements SankhyaEntity<DescontoPorQuantidad
         this.percDesc = vo.asBigDecimal("PERCDESC");
         this.qtde = vo.asBigDecimal("QTDE");
         this.tipDesc = vo.asString("TIPDESC");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }

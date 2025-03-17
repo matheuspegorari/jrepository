@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class BannerLoginJiva implements SankhyaEntity<BannerLoginJiva> {
-
+public class BannerLoginJiva extends AbstractSankhyaEntity<BannerLoginJiva> {
    private String nomeArq;
    private BigDecimal nuArquivo;
    private BigDecimal ordem;
@@ -68,6 +67,11 @@ public class BannerLoginJiva implements SankhyaEntity<BannerLoginJiva> {
 
    public void setEvo(String evo) {
         this.evo = evo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIBLG";
    }
 
    @Override

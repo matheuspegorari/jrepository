@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DevolucaoWMS implements SankhyaEntity<DevolucaoWMS> {
-
+public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    private BigDecimal sequencia;
    private BigDecimal qtdDevolver;
    private BigDecimal nuNota;
@@ -69,6 +68,11 @@ public class DevolucaoWMS implements SankhyaEntity<DevolucaoWMS> {
 
    public void setDhDev(Timestamp dhDev) {
         this.dhDev = dhDev;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWDEV";
    }
 
    @Override

@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InformacaoDeclaracaoExportacao implements SankhyaEntity<InformacaoDeclaracaoExportacao> {
-
+public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<InformacaoDeclaracaoExportacao> {
    private BigDecimal codPaisDestino;
-   private Timestamp dtaVerbacacao;
+   private Timestamp dtaVerbacao;
    private Timestamp dtDeclaracao;
    private String natureza;
    private String nroDeclaracao;
@@ -22,12 +21,12 @@ public class InformacaoDeclaracaoExportacao implements SankhyaEntity<InformacaoD
         this.codPaisDestino = codPaisDestino;
    }
 
-   public Timestamp getDtaVerbacacao() {
-        return dtaVerbacacao;
+   public Timestamp getDtaVerbacao() {
+        return dtaVerbacao;
    }
 
-   public void setDtaVerbacacao(Timestamp dtaVerbacacao) {
-        this.dtaVerbacacao = dtaVerbacacao;
+   public void setDtaVerbacao(Timestamp dtaVerbacao) {
+        this.dtaVerbacao = dtaVerbacao;
    }
 
    public Timestamp getDtDeclaracao() {
@@ -63,6 +62,11 @@ public class InformacaoDeclaracaoExportacao implements SankhyaEntity<InformacaoD
    }
 
    @Override
+   public String getTableName() {
+        return "TGFEXPD";
+   }
+
+   @Override
    public String getEntityName() {
         return "InformacaoDeclaracaoExportacao";
    }
@@ -70,7 +74,7 @@ public class InformacaoDeclaracaoExportacao implements SankhyaEntity<InformacaoD
    @Override
    public InformacaoDeclaracaoExportacao fromVO(DynamicVO vo) {
         this.codPaisDestino = vo.asBigDecimal("CODPAISDESTINO");
-        this.dtaVerbacacao = vo.asTimestamp("DTAVERBACACAO");
+        this.dtaVerbacao = vo.asTimestamp("DTAVERBACAO");
         this.dtDeclaracao = vo.asTimestamp("DTDECLARACAO");
         this.natureza = vo.asString("NATUREZA");
         this.nroDeclaracao = vo.asString("NRODECLARACAO");

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CaixaFlowrack implements SankhyaEntity<CaixaFlowrack> {
-
+public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    private BigDecimal codVolume;
    private String conferido;
    private BigDecimal nuSeparacao;
@@ -77,6 +76,11 @@ public class CaixaFlowrack implements SankhyaEntity<CaixaFlowrack> {
 
    public void setTipoVolume(String tipoVolume) {
         this.tipoVolume = tipoVolume;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWCCX";
    }
 
    @Override

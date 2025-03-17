@@ -1,20 +1,19 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Projeto implements SankhyaEntity<Projeto> {
-
+public class Projeto extends AbstractSankhyaEntity<Projeto> {
    private String abreviatura;
    private BigDecimal amostraCusMax;
    private String analitico;
    private String ativo;
    private BigDecimal cargaHorMax;
    private BigDecimal codClt;
-   private BigDecimal codCtaCtb;
-   private BigDecimal codCtaCtb2;
+   private BigDecimal codCtActb;
+   private BigDecimal codCtActb2;
    private BigDecimal codEmp;
    private BigDecimal codProd;
    private BigDecimal codProj;
@@ -86,20 +85,20 @@ public class Projeto implements SankhyaEntity<Projeto> {
         this.codClt = codClt;
    }
 
-   public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+   public BigDecimal getCodCtActb() {
+        return codCtActb;
    }
 
-   public void setCodCtaCtb(BigDecimal codCtaCtb) {
-        this.codCtaCtb = codCtaCtb;
+   public void setCodCtActb(BigDecimal codCtActb) {
+        this.codCtActb = codCtActb;
    }
 
-   public BigDecimal getCodCtaCtb2() {
-        return codCtaCtb2;
+   public BigDecimal getCodCtActb2() {
+        return codCtActb2;
    }
 
-   public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
-        this.codCtaCtb2 = codCtaCtb2;
+   public void setCodCtActb2(BigDecimal codCtActb2) {
+        this.codCtActb2 = codCtActb2;
    }
 
    public BigDecimal getCodEmp() {
@@ -279,6 +278,11 @@ public class Projeto implements SankhyaEntity<Projeto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCSPRJ";
+   }
+
+   @Override
    public String getEntityName() {
         return "Projeto";
    }
@@ -291,8 +295,8 @@ public class Projeto implements SankhyaEntity<Projeto> {
         this.ativo = vo.asString("ATIVO");
         this.cargaHorMax = vo.asBigDecimal("CARGAHORMAX");
         this.codClt = vo.asBigDecimal("CODCLT");
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.codCtaCtb2 = vo.asBigDecimal("CODCTACTB2");
+        this.codCtActb = vo.asBigDecimal("CODCTACTB");
+        this.codCtActb2 = vo.asBigDecimal("CODCTACTB2");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codProj = vo.asBigDecimal("CODPROJ");

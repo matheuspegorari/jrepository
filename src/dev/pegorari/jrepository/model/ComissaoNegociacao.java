@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ComissaoNegociacao implements SankhyaEntity<ComissaoNegociacao> {
-
+public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao> {
    private BigDecimal codVend;
    private BigDecimal nuComissao;
    private BigDecimal codNat;
@@ -96,6 +95,11 @@ public class ComissaoNegociacao implements SankhyaEntity<ComissaoNegociacao> {
 
    public void setGridMult(BigDecimal gridMult) {
         this.gridMult = gridMult;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSCNV";
    }
 
    @Override

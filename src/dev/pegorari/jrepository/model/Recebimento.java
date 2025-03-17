@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Recebimento implements SankhyaEntity<Recebimento> {
-
+public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    private String descrsituacao;
    private String numPedido2;
    private BigDecimal codDoca;
@@ -195,6 +194,11 @@ public class Recebimento implements SankhyaEntity<Recebimento> {
 
    public void setTipoNota(BigDecimal tipoNota) {
         this.tipoNota = tipoNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWREC";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ManifestoPrazoPgtoFrete implements SankhyaEntity<ManifestoPrazoPgtoFrete> {
-
+public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPrazoPgtoFrete> {
    private BigDecimal nuViag;
    private BigDecimal parcela;
    private BigDecimal seqMdfe;
@@ -69,6 +68,11 @@ public class ManifestoPrazoPgtoFrete implements SankhyaEntity<ManifestoPrazoPgto
 
    public void setVencimento(Timestamp vencimento) {
         this.vencimento = vencimento;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFPRAPGFRE";
    }
 
    @Override

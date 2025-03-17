@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class NotificacaoSonora implements SankhyaEntity<NotificacaoSonora> {
-
+public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> {
    private String arqSom;
    private BigDecimal numItem;
    private BigDecimal numOs;
@@ -32,6 +31,11 @@ public class NotificacaoSonora implements SankhyaEntity<NotificacaoSonora> {
 
    public void setNumOs(BigDecimal numOs) {
         this.numOs = numOs;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSSNS";
    }
 
    @Override

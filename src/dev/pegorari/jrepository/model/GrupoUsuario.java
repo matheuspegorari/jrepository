@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GrupoUsuario implements SankhyaEntity<GrupoUsuario> {
-
+public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    private String ativo;
    private BigDecimal codGrupo;
    private BigDecimal codUnn;
@@ -62,6 +61,11 @@ public class GrupoUsuario implements SankhyaEntity<GrupoUsuario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIGRU";
+   }
+
+   @Override
    public String getEntityName() {
         return "GrupoUsuario";
    }
@@ -73,7 +77,7 @@ public class GrupoUsuario implements SankhyaEntity<GrupoUsuario> {
         this.codUnn = vo.asBigDecimal("CODUNN");
         this.email = vo.asString("EMAIL");
         this.nomeGrupo = vo.asString("NOMEGRUPO");
-        this.userName = vo.asString("USERNAME");
+        this.userName = vo.asString("USER_NAME");
         return this;
    }
 }

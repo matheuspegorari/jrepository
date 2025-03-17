@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProdutoMudancaTributacao implements SankhyaEntity<ProdutoMudancaTributacao> {
-
+public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudancaTributacao> {
    private BigDecimal aliqIcms;
    private BigDecimal aliqSt;
    private BigDecimal baseIcms;
@@ -35,7 +34,7 @@ public class ProdutoMudancaTributacao implements SankhyaEntity<ProdutoMudancaTri
    private BigDecimal cstAnterior;
    private BigDecimal idAliqAnterior;
    private BigDecimal vlrIcmsSt;
-   private BigDecimal baseTestoque;
+   private BigDecimal baseStEstoque;
    private String vlrCusUtil;
    private BigDecimal vlrIcmsUnit;
 
@@ -263,12 +262,12 @@ public class ProdutoMudancaTributacao implements SankhyaEntity<ProdutoMudancaTri
         this.vlrIcmsSt = vlrIcmsSt;
    }
 
-   public BigDecimal getBaseTestoque() {
-        return baseTestoque;
+   public BigDecimal getBaseStEstoque() {
+        return baseStEstoque;
    }
 
-   public void setBaseTestoque(BigDecimal baseTestoque) {
-        this.baseTestoque = baseTestoque;
+   public void setBaseStEstoque(BigDecimal baseStEstoque) {
+        this.baseStEstoque = baseStEstoque;
    }
 
    public String getVlrCusUtil() {
@@ -285,6 +284,11 @@ public class ProdutoMudancaTributacao implements SankhyaEntity<ProdutoMudancaTri
 
    public void setVlrIcmsUnit(BigDecimal vlrIcmsUnit) {
         this.vlrIcmsUnit = vlrIcmsUnit;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPMT";
    }
 
    @Override
@@ -322,7 +326,7 @@ public class ProdutoMudancaTributacao implements SankhyaEntity<ProdutoMudancaTri
         this.cstAnterior = vo.asBigDecimal("CSTANTERIOR");
         this.idAliqAnterior = vo.asBigDecimal("IDALIQANTERIOR");
         this.vlrIcmsSt = vo.asBigDecimal("VLRICMSST");
-        this.baseTestoque = vo.asBigDecimal("BASETESTOQUE");
+        this.baseStEstoque = vo.asBigDecimal("BASESTESTOQUE");
         this.vlrCusUtil = vo.asString("VLRCUSUTIL");
         this.vlrIcmsUnit = vo.asBigDecimal("VLRICMSUNIT");
         return this;

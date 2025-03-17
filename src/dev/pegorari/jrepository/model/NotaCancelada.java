@@ -1,21 +1,20 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
-
+public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    private BigDecimal codModDoc;
    private BigDecimal codParc;
    private String atualliviss;
    private String chaveNfe;
    private BigDecimal codEmp;
    private BigDecimal codMaq;
-   private String numProtocCancCte;
+   private String numProtocCancTec;
    private BigDecimal tpEmisCte;
-   private Timestamp dhProtocCancCte;
+   private Timestamp dhProtocCancTec;
    private String tpAmbNfe;
    private BigDecimal nuNotaSub;
    private String numProtocCte;
@@ -25,7 +24,7 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
    private Timestamp dhProtocCan;
    private Timestamp dhProtocEspont;
    private Timestamp dhProtocNfe;
-   private Timestamp dhRegdPec;
+   private Timestamp dhRegDpec;
    private Timestamp dtCanc;
    private Timestamp dtFatur;
    private Timestamp dtMov;
@@ -40,7 +39,7 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
    private String numProtocCan;
    private String numProtocEspont;
    private String numProtocNfe;
-   private String numRegdPec;
+   private String numRegDpec;
    private BigDecimal nuNota;
    private BigDecimal nuRem;
    private String serieNfdEs;
@@ -104,12 +103,12 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.codMaq = codMaq;
    }
 
-   public String getNumProtocCancCte() {
-        return numProtocCancCte;
+   public String getNumProtocCancTec() {
+        return numProtocCancTec;
    }
 
-   public void setNumProtocCancCte(String numProtocCancCte) {
-        this.numProtocCancCte = numProtocCancCte;
+   public void setNumProtocCancTec(String numProtocCancTec) {
+        this.numProtocCancTec = numProtocCancTec;
    }
 
    public BigDecimal getTpEmisCte() {
@@ -120,12 +119,12 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.tpEmisCte = tpEmisCte;
    }
 
-   public Timestamp getDhProtocCancCte() {
-        return dhProtocCancCte;
+   public Timestamp getDhProtocCancTec() {
+        return dhProtocCancTec;
    }
 
-   public void setDhProtocCancCte(Timestamp dhProtocCancCte) {
-        this.dhProtocCancCte = dhProtocCancCte;
+   public void setDhProtocCancTec(Timestamp dhProtocCancTec) {
+        this.dhProtocCancTec = dhProtocCancTec;
    }
 
    public String getTpAmbNfe() {
@@ -200,12 +199,12 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.dhProtocNfe = dhProtocNfe;
    }
 
-   public Timestamp getDhRegdPec() {
-        return dhRegdPec;
+   public Timestamp getDhRegDpec() {
+        return dhRegDpec;
    }
 
-   public void setDhRegdPec(Timestamp dhRegdPec) {
-        this.dhRegdPec = dhRegdPec;
+   public void setDhRegDpec(Timestamp dhRegDpec) {
+        this.dhRegDpec = dhRegDpec;
    }
 
    public Timestamp getDtCanc() {
@@ -320,12 +319,12 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.numProtocNfe = numProtocNfe;
    }
 
-   public String getNumRegdPec() {
-        return numRegdPec;
+   public String getNumRegDpec() {
+        return numRegDpec;
    }
 
-   public void setNumRegdPec(String numRegdPec) {
-        this.numRegdPec = numRegdPec;
+   public void setNumRegDpec(String numRegDpec) {
+        this.numRegDpec = numRegDpec;
    }
 
    public BigDecimal getNuNota() {
@@ -441,6 +440,11 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFCAN";
+   }
+
+   @Override
    public String getEntityName() {
         return "NotaCancelada";
    }
@@ -453,9 +457,9 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.chaveNfe = vo.asString("CHAVENFE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codMaq = vo.asBigDecimal("CODMAQ");
-        this.numProtocCancCte = vo.asString("NUMPROTOCCANCCTE");
+        this.numProtocCancTec = vo.asString("NUMPROTOCCANCTE");
         this.tpEmisCte = vo.asBigDecimal("TPEMISCTE");
-        this.dhProtocCancCte = vo.asTimestamp("DHPROTOCCANCCTE");
+        this.dhProtocCancTec = vo.asTimestamp("DHPROTOCCANCTE");
         this.tpAmbNfe = vo.asString("TPAMBNFE");
         this.nuNotaSub = vo.asBigDecimal("NUNOTASUB");
         this.numProtocCte = vo.asString("NUMPROTOCCTE");
@@ -465,7 +469,7 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.dhProtocCan = vo.asTimestamp("DHPROTOCCAN");
         this.dhProtocEspont = vo.asTimestamp("DHPROTOCESPONT");
         this.dhProtocNfe = vo.asTimestamp("DHPROTOCNFE");
-        this.dhRegdPec = vo.asTimestamp("DHREGDPEC");
+        this.dhRegDpec = vo.asTimestamp("DHREGDPEC");
         this.dtCanc = vo.asTimestamp("DTCANC");
         this.dtFatur = vo.asTimestamp("DTFATUR");
         this.dtMov = vo.asTimestamp("DTMOV");
@@ -480,7 +484,7 @@ public class NotaCancelada implements SankhyaEntity<NotaCancelada> {
         this.numProtocCan = vo.asString("NUMPROTOCCAN");
         this.numProtocEspont = vo.asString("NUMPROTOCESPONT");
         this.numProtocNfe = vo.asString("NUMPROTOCNFE");
-        this.numRegdPec = vo.asString("NUMREGDPEC");
+        this.numRegDpec = vo.asString("NUMREGDPEC");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuRem = vo.asBigDecimal("NUREM");
         this.serieNfdEs = vo.asString("SERIENFDES");

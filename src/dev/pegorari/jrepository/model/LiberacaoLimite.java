@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LiberacaoLimite implements SankhyaEntity<LiberacaoLimite> {
-
+public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    private String antecipacao;
    private BigDecimal codCencus;
    private BigDecimal codMeta;
@@ -285,6 +284,11 @@ public class LiberacaoLimite implements SankhyaEntity<LiberacaoLimite> {
 
    public void setObsCompl(String obsCompl) {
         this.obsCompl = obsCompl;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSILIB";
    }
 
    @Override

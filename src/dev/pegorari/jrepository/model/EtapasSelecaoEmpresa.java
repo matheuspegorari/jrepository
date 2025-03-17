@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EtapasSelecaoEmpresa implements SankhyaEntity<EtapasSelecaoEmpresa> {
-
+public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmpresa> {
    private BigDecimal codEtapa;
    private BigDecimal seqEtapa;
    private BigDecimal codCargo;
@@ -87,6 +86,11 @@ public class EtapasSelecaoEmpresa implements SankhyaEntity<EtapasSelecaoEmpresa>
 
    public void setVlrEtapa(BigDecimal vlrEtapa) {
         this.vlrEtapa = vlrEtapa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSECG";
    }
 
    @Override

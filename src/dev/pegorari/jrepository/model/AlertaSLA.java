@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class AlertaSLA implements SankhyaEntity<AlertaSLA> {
-
+public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    private BigDecimal codPrn;
    private BigDecimal codSmtp;
    private char[] exprDestinatarios;
@@ -104,6 +103,11 @@ public class AlertaSLA implements SankhyaEntity<AlertaSLA> {
 
    public void setAtivo(String ativo) {
         this.ativo = ativo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFASLA";
    }
 
    @Override

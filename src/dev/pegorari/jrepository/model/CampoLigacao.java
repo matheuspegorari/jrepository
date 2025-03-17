@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CampoLigacao implements SankhyaEntity<CampoLigacao> {
-
+public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    private BigDecimal nuCampoDest;
    private BigDecimal nuCampoOrig;
    private BigDecimal nuInstDest;
@@ -62,6 +61,11 @@ public class CampoLigacao implements SankhyaEntity<CampoLigacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TDDLGC";
+   }
+
+   @Override
    public String getEntityName() {
         return "CampoLigacao";
    }
@@ -73,7 +77,7 @@ public class CampoLigacao implements SankhyaEntity<CampoLigacao> {
         this.nuInstDest = vo.asBigDecimal("NUINSTDEST");
         this.nuInstOrig = vo.asBigDecimal("NUINSTORIG");
         this.ordem = vo.asBigDecimal("ORDEM");
-        this.origObrigatoria = vo.asString("ORIGOBRIGATORIA");
+        this.origObrigatoria = vo.asString("ORIG_OBRIGATORIA");
         return this;
    }
 }

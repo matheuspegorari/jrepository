@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class MotivosParada implements SankhyaEntity<MotivosParada> {
-
+public class MotivosParada extends AbstractSankhyaEntity<MotivosParada> {
    private String ativo;
    private BigDecimal codMtp;
    private String descricao;
@@ -50,6 +49,11 @@ public class MotivosParada implements SankhyaEntity<MotivosParada> {
 
    public void setPlanejada(String planejada) {
         this.planejada = planejada;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRMTP";
    }
 
    @Override

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
-
+public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    private String usarPrecoCusto;
    private String usoProdSeparacao;
    private String valTbCompCr;
@@ -141,7 +140,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String temIss;
    private String temPis;
    private String temReaIcms;
-   private String temVavtCon;
+   private String temVavtcOn;
    private String tipAltDtVenc;
    private String tipAtualFin;
    private String tipAtualWms;
@@ -150,7 +149,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String tipIpi;
    private String tipIvaSubst;
    private String tipMov;
-   private String tipMovBemsPed;
+   private String tipMovBemSped;
    private String tipoImpKit;
    private String tipoNumeracao;
    private BigDecimal vlrBasePgto;
@@ -168,7 +167,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String valNum;
    private String impNaoConf;
    private String impNotaAdicional;
-   private BigDecimal codRemedi;
+   private BigDecimal codRemEdi;
    private BigDecimal codTipOper;
    private BigDecimal codTipOperDeneg;
    private BigDecimal codTipOperDestino;
@@ -215,7 +214,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String enviarWmsConf;
    private String envWmsConfirmada;
    private String execIte;
-   private String exigAnalItens;
+   private String exigeAnalItens;
    private String exigeAgendaWms;
    private String exigeConf;
    private String exigeCotacao;
@@ -236,9 +235,9 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String geraBonPre;
    private String geraGnre;
    private String geraPlanProd;
-   private String geraRparcDest;
-   private String geraRtagJnfe;
-   private BigDecimal goldEv;
+   private String geraRParcDest;
+   private String geraRTagJNfe;
+   private BigDecimal golDev;
    private BigDecimal golMpSinal;
    private BigDecimal golSinal;
    private String graHisAltPed;
@@ -249,7 +248,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String fatForaPlanEnt;
    private String geraEndEntrNfe;
    private String exigeConfirmacaoMde;
-   private BigDecimal codModCfeCanc;
+   private BigDecimal codModCfecanc;
    private String constOpApurSimp;
    private String gerInfoEfdPag;
    private String ignExpAutLot;
@@ -260,9 +259,9 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private BigDecimal codEnqIpiSai;
    private BigDecimal codEnqIpiEnt;
    private String permFinMenorVlrNota;
-   private String produEtLoc;
+   private String prodUetLoc;
    private BigDecimal percMinBaseInss;
-   private String ajustavp;
+   private String ajustaVp;
    private BigDecimal codMoedaVp;
    private String indPresNfce;
    private BigDecimal topAtendimento;
@@ -278,7 +277,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private BigDecimal tipServCte;
    private BigDecimal codTopDenegCte;
    private String tipoCte;
-   private String valVariaCvlrUnit;
+   private String valVarIaCvlrUnit;
    private BigDecimal confValEvent68;
    private String dataRetroFat;
    private BigDecimal consVlrRemRetInd;
@@ -286,7 +285,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String devSemDestaqueSt;
    private String geraDemandaMps;
    private String gerCorApon;
-   private String ignorarAgrupMinDev;
+   private String ignoraAgrupMinDev;
    private String redIcmsBcPisConfins;
    private String salvarConfSemPerg;
    private String semCredIpiSt;
@@ -313,18 +312,18 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String distStVlrUnitFat;
    private String simulacAutoFrete;
    private String icmsOrigEstPed;
-   private BigDecimal codCtacTbEfd;
+   private BigDecimal codCtaCtbEfd;
    private String ligOrigOrig;
    private String indTerc;
    private String movEndFlutuante;
    private String usaServTabIrFinsS;
-   private String descOnfse;
+   private String descOnNfse;
    private String aplicTabIrFinsS;
    private String formRecIss;
    private BigDecimal natEfdContM410M810;
-   private BigDecimal nufOp;
+   private BigDecimal nuFop;
    private String orcamento;
-   private String descOnslCdPr;
+   private String descOnSlcdPr;
    private BigDecimal codModRo;
    private BigDecimal codLocalImpXml;
    private String impXmlMantDespAces;
@@ -335,7 +334,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String topPisCofRedAquis;
    private BigDecimal tipComplCust;
    private BigDecimal nuLayoutCvr;
-   private String descTopadrCst1400;
+   private String descTopAdrCst1400;
    private String calcFunTtelTop;
    private String calcFustTop;
    private String calcStFrtXtNotProp;
@@ -343,10 +342,10 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    private String intermed;
    private String valEstMaximo;
    private String ignObsOrigRem;
-   private String descConsidPedXml;
+   private String descOnSidPedXml;
    private String operacaoAmostra;
    private String atualEstWmsTerc;
-   private String descConsidNfeOrigem;
+   private String descOnSidNfeOrigem;
    private String dedFcpBcPisCofins;
    private String armTipApu;
    private String calcPisCfsFin;
@@ -1430,12 +1429,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.temReaIcms = temReaIcms;
    }
 
-   public String getTemVavtCon() {
-        return temVavtCon;
+   public String getTemVavtcOn() {
+        return temVavtcOn;
    }
 
-   public void setTemVavtCon(String temVavtCon) {
-        this.temVavtCon = temVavtCon;
+   public void setTemVavtcOn(String temVavtcOn) {
+        this.temVavtcOn = temVavtcOn;
    }
 
    public String getTipAltDtVenc() {
@@ -1502,12 +1501,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.tipMov = tipMov;
    }
 
-   public String getTipMovBemsPed() {
-        return tipMovBemsPed;
+   public String getTipMovBemSped() {
+        return tipMovBemSped;
    }
 
-   public void setTipMovBemsPed(String tipMovBemsPed) {
-        this.tipMovBemsPed = tipMovBemsPed;
+   public void setTipMovBemSped(String tipMovBemSped) {
+        this.tipMovBemSped = tipMovBemSped;
    }
 
    public String getTipoImpKit() {
@@ -1646,12 +1645,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.impNotaAdicional = impNotaAdicional;
    }
 
-   public BigDecimal getCodRemedi() {
-        return codRemedi;
+   public BigDecimal getCodRemEdi() {
+        return codRemEdi;
    }
 
-   public void setCodRemedi(BigDecimal codRemedi) {
-        this.codRemedi = codRemedi;
+   public void setCodRemEdi(BigDecimal codRemEdi) {
+        this.codRemEdi = codRemEdi;
    }
 
    public BigDecimal getCodTipOper() {
@@ -2022,12 +2021,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.execIte = execIte;
    }
 
-   public String getExigAnalItens() {
-        return exigAnalItens;
+   public String getExigeAnalItens() {
+        return exigeAnalItens;
    }
 
-   public void setExigAnalItens(String exigAnalItens) {
-        this.exigAnalItens = exigAnalItens;
+   public void setExigeAnalItens(String exigeAnalItens) {
+        this.exigeAnalItens = exigeAnalItens;
    }
 
    public String getExigeAgendaWms() {
@@ -2190,28 +2189,28 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.geraPlanProd = geraPlanProd;
    }
 
-   public String getGeraRparcDest() {
-        return geraRparcDest;
+   public String getGeraRParcDest() {
+        return geraRParcDest;
    }
 
-   public void setGeraRparcDest(String geraRparcDest) {
-        this.geraRparcDest = geraRparcDest;
+   public void setGeraRParcDest(String geraRParcDest) {
+        this.geraRParcDest = geraRParcDest;
    }
 
-   public String getGeraRtagJnfe() {
-        return geraRtagJnfe;
+   public String getGeraRTagJNfe() {
+        return geraRTagJNfe;
    }
 
-   public void setGeraRtagJnfe(String geraRtagJnfe) {
-        this.geraRtagJnfe = geraRtagJnfe;
+   public void setGeraRTagJNfe(String geraRTagJNfe) {
+        this.geraRTagJNfe = geraRTagJNfe;
    }
 
-   public BigDecimal getGoldEv() {
-        return goldEv;
+   public BigDecimal getGolDev() {
+        return golDev;
    }
 
-   public void setGoldEv(BigDecimal goldEv) {
-        this.goldEv = goldEv;
+   public void setGolDev(BigDecimal golDev) {
+        this.golDev = golDev;
    }
 
    public BigDecimal getGolMpSinal() {
@@ -2294,12 +2293,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.exigeConfirmacaoMde = exigeConfirmacaoMde;
    }
 
-   public BigDecimal getCodModCfeCanc() {
-        return codModCfeCanc;
+   public BigDecimal getCodModCfecanc() {
+        return codModCfecanc;
    }
 
-   public void setCodModCfeCanc(BigDecimal codModCfeCanc) {
-        this.codModCfeCanc = codModCfeCanc;
+   public void setCodModCfecanc(BigDecimal codModCfecanc) {
+        this.codModCfecanc = codModCfecanc;
    }
 
    public String getConstOpApurSimp() {
@@ -2382,12 +2381,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.permFinMenorVlrNota = permFinMenorVlrNota;
    }
 
-   public String getProduEtLoc() {
-        return produEtLoc;
+   public String getProdUetLoc() {
+        return prodUetLoc;
    }
 
-   public void setProduEtLoc(String produEtLoc) {
-        this.produEtLoc = produEtLoc;
+   public void setProdUetLoc(String prodUetLoc) {
+        this.prodUetLoc = prodUetLoc;
    }
 
    public BigDecimal getPercMinBaseInss() {
@@ -2398,12 +2397,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.percMinBaseInss = percMinBaseInss;
    }
 
-   public String getAjustavp() {
-        return ajustavp;
+   public String getAjustaVp() {
+        return ajustaVp;
    }
 
-   public void setAjustavp(String ajustavp) {
-        this.ajustavp = ajustavp;
+   public void setAjustaVp(String ajustaVp) {
+        this.ajustaVp = ajustaVp;
    }
 
    public BigDecimal getCodMoedaVp() {
@@ -2526,12 +2525,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.tipoCte = tipoCte;
    }
 
-   public String getValVariaCvlrUnit() {
-        return valVariaCvlrUnit;
+   public String getValVarIaCvlrUnit() {
+        return valVarIaCvlrUnit;
    }
 
-   public void setValVariaCvlrUnit(String valVariaCvlrUnit) {
-        this.valVariaCvlrUnit = valVariaCvlrUnit;
+   public void setValVarIaCvlrUnit(String valVarIaCvlrUnit) {
+        this.valVarIaCvlrUnit = valVarIaCvlrUnit;
    }
 
    public BigDecimal getConfValEvent68() {
@@ -2590,12 +2589,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.gerCorApon = gerCorApon;
    }
 
-   public String getIgnorarAgrupMinDev() {
-        return ignorarAgrupMinDev;
+   public String getIgnoraAgrupMinDev() {
+        return ignoraAgrupMinDev;
    }
 
-   public void setIgnorarAgrupMinDev(String ignorarAgrupMinDev) {
-        this.ignorarAgrupMinDev = ignorarAgrupMinDev;
+   public void setIgnoraAgrupMinDev(String ignoraAgrupMinDev) {
+        this.ignoraAgrupMinDev = ignoraAgrupMinDev;
    }
 
    public String getRedIcmsBcPisConfins() {
@@ -2806,12 +2805,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.icmsOrigEstPed = icmsOrigEstPed;
    }
 
-   public BigDecimal getCodCtacTbEfd() {
-        return codCtacTbEfd;
+   public BigDecimal getCodCtaCtbEfd() {
+        return codCtaCtbEfd;
    }
 
-   public void setCodCtacTbEfd(BigDecimal codCtacTbEfd) {
-        this.codCtacTbEfd = codCtacTbEfd;
+   public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
    public String getLigOrigOrig() {
@@ -2846,12 +2845,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.usaServTabIrFinsS = usaServTabIrFinsS;
    }
 
-   public String getDescOnfse() {
-        return descOnfse;
+   public String getDescOnNfse() {
+        return descOnNfse;
    }
 
-   public void setDescOnfse(String descOnfse) {
-        this.descOnfse = descOnfse;
+   public void setDescOnNfse(String descOnNfse) {
+        this.descOnNfse = descOnNfse;
    }
 
    public String getAplicTabIrFinsS() {
@@ -2878,12 +2877,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.natEfdContM410M810 = natEfdContM410M810;
    }
 
-   public BigDecimal getNufOp() {
-        return nufOp;
+   public BigDecimal getNuFop() {
+        return nuFop;
    }
 
-   public void setNufOp(BigDecimal nufOp) {
-        this.nufOp = nufOp;
+   public void setNuFop(BigDecimal nuFop) {
+        this.nuFop = nuFop;
    }
 
    public String getOrcamento() {
@@ -2894,12 +2893,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.orcamento = orcamento;
    }
 
-   public String getDescOnslCdPr() {
-        return descOnslCdPr;
+   public String getDescOnSlcdPr() {
+        return descOnSlcdPr;
    }
 
-   public void setDescOnslCdPr(String descOnslCdPr) {
-        this.descOnslCdPr = descOnslCdPr;
+   public void setDescOnSlcdPr(String descOnSlcdPr) {
+        this.descOnSlcdPr = descOnSlcdPr;
    }
 
    public BigDecimal getCodModRo() {
@@ -2982,12 +2981,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.nuLayoutCvr = nuLayoutCvr;
    }
 
-   public String getDescTopadrCst1400() {
-        return descTopadrCst1400;
+   public String getDescTopAdrCst1400() {
+        return descTopAdrCst1400;
    }
 
-   public void setDescTopadrCst1400(String descTopadrCst1400) {
-        this.descTopadrCst1400 = descTopadrCst1400;
+   public void setDescTopAdrCst1400(String descTopAdrCst1400) {
+        this.descTopAdrCst1400 = descTopAdrCst1400;
    }
 
    public String getCalcFunTtelTop() {
@@ -3046,12 +3045,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.ignObsOrigRem = ignObsOrigRem;
    }
 
-   public String getDescConsidPedXml() {
-        return descConsidPedXml;
+   public String getDescOnSidPedXml() {
+        return descOnSidPedXml;
    }
 
-   public void setDescConsidPedXml(String descConsidPedXml) {
-        this.descConsidPedXml = descConsidPedXml;
+   public void setDescOnSidPedXml(String descOnSidPedXml) {
+        this.descOnSidPedXml = descOnSidPedXml;
    }
 
    public String getOperacaoAmostra() {
@@ -3070,12 +3069,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.atualEstWmsTerc = atualEstWmsTerc;
    }
 
-   public String getDescConsidNfeOrigem() {
-        return descConsidNfeOrigem;
+   public String getDescOnSidNfeOrigem() {
+        return descOnSidNfeOrigem;
    }
 
-   public void setDescConsidNfeOrigem(String descConsidNfeOrigem) {
-        this.descConsidNfeOrigem = descConsidNfeOrigem;
+   public void setDescOnSidNfeOrigem(String descOnSidNfeOrigem) {
+        this.descOnSidNfeOrigem = descOnSidNfeOrigem;
    }
 
    public String getDedFcpBcPisCofins() {
@@ -3159,6 +3158,11 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTOP";
+   }
+
+   @Override
    public String getEntityName() {
         return "TipoOperacao";
    }
@@ -3218,12 +3222,12 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.calcIcms = vo.asString("CALCICMS");
         this.camGerEdiConf = vo.asString("CAMGEREDICONF");
         this.classifIcms = vo.asString("CLASSIFICMS");
-        this.codCfoCombustLubrif = vo.asBigDecimal("CODCFOCOMBUSTLUBRIF");
-        this.codCfoEntrada = vo.asBigDecimal("CODCFOENTRADA");
-        this.codCfoEntradaFora = vo.asBigDecimal("CODCFOENTRADAFORA");
-        this.codCfoSaida = vo.asBigDecimal("CODCFOSAIDA");
-        this.codCfoSaidaFora = vo.asBigDecimal("CODCFOSAIDAFORA");
-        this.codCfoTerc = vo.asBigDecimal("CODCFOTERC");
+        this.codCfoCombustLubrif = vo.asBigDecimal("CODCFO_COMBUST_LUBRIF");
+        this.codCfoEntrada = vo.asBigDecimal("CODCFO_ENTRADA");
+        this.codCfoEntradaFora = vo.asBigDecimal("CODCFO_ENTRADA_FORA");
+        this.codCfoSaida = vo.asBigDecimal("CODCFO_SAIDA");
+        this.codCfoSaidaFora = vo.asBigDecimal("CODCFO_SAIDA_FORA");
+        this.codCfoTerc = vo.asBigDecimal("CODCFO_TERC");
         this.codCfps = vo.asBigDecimal("CODCFPS");
         this.descRemail = vo.asString("DESCREMAIL");
         this.utilizaWms = vo.asString("UTILIZAWMS");
@@ -3277,7 +3281,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.somarCofinsSt = vo.asString("SOMARCOFINSST");
         this.somarIpi = vo.asString("SOMARIPI");
         this.somarPisSt = vo.asString("SOMARPISST");
-        this.somarSubst = vo.asString("SOMARSUBST");
+        this.somarSubst = vo.asString("SOMASUBST");
         this.statusBaixaEst = vo.asString("STATUSBAIXAEST");
         this.statusLote = vo.asString("STATUSLOTE");
         this.stPropDestaque = vo.asString("STPROPDESTAQUE");
@@ -3299,7 +3303,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.temIss = vo.asString("TEMISS");
         this.temPis = vo.asString("TEMPIS");
         this.temReaIcms = vo.asString("TEMREAICMS");
-        this.temVavtCon = vo.asString("TEMVAVTCON");
+        this.temVavtcOn = vo.asString("TEMVAVTCON");
         this.tipAltDtVenc = vo.asString("TIPALTDTVENC");
         this.tipAtualFin = vo.asString("TIPATUALFIN");
         this.tipAtualWms = vo.asString("TIPATUALWMS");
@@ -3308,7 +3312,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.tipIpi = vo.asString("TIPIPI");
         this.tipIvaSubst = vo.asString("TIPIVASUBST");
         this.tipMov = vo.asString("TIPMOV");
-        this.tipMovBemsPed = vo.asString("TIPMOVBEMSPED");
+        this.tipMovBemSped = vo.asString("TIPMOVBEMSPED");
         this.tipoImpKit = vo.asString("TIPOIMPKIT");
         this.tipoNumeracao = vo.asString("TIPONUMERACAO");
         this.vlrBasePgto = vo.asBigDecimal("VLRBASEPGTO");
@@ -3326,7 +3330,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.valNum = vo.asString("VALNUM");
         this.impNaoConf = vo.asString("IMPNAOCONF");
         this.impNotaAdicional = vo.asString("IMPNOTAADICIONAL");
-        this.codRemedi = vo.asBigDecimal("CODREMEDI");
+        this.codRemEdi = vo.asBigDecimal("CODREMEDI");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codTipOperDeneg = vo.asBigDecimal("CODTIPOPERDENEG");
         this.codTipOperDestino = vo.asBigDecimal("CODTIPOPERDESTINO");
@@ -3366,14 +3370,14 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.digInfImporta = vo.asString("DIGINFIMPORTA");
         this.digPureza = vo.asString("DIGPUREZA");
-        this.editaAnaliseRentab = vo.asString("EDITAANALISERENTAB");
+        this.editaAnaliseRentab = vo.asString("EDITANALISERENTAB");
         this.emiteBoleta = vo.asString("EMITEBOLETA");
         this.emiteNota = vo.asString("EMITENOTA");
         this.empFuncDif = vo.asString("EMPFUNCDIF");
         this.enviarWmsConf = vo.asString("ENVIARWMSCONF");
         this.envWmsConfirmada = vo.asString("ENVWMSCONFIRMADA");
         this.execIte = vo.asString("EXECITE");
-        this.exigAnalItens = vo.asString("EXIGANALITENS");
+        this.exigeAnalItens = vo.asString("EXIGANALITENS");
         this.exigeAgendaWms = vo.asString("EXIGEAGENDAWMS");
         this.exigeConf = vo.asString("EXIGECONF");
         this.exigeCotacao = vo.asString("EXIGECOTACAO");
@@ -3394,9 +3398,9 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.geraBonPre = vo.asString("GERABONPRE");
         this.geraGnre = vo.asString("GERAGNRE");
         this.geraPlanProd = vo.asString("GERAPLANPROD");
-        this.geraRparcDest = vo.asString("GERARPARCDEST");
-        this.geraRtagJnfe = vo.asString("GERARTAGJNFE");
-        this.goldEv = vo.asBigDecimal("GOLDEV");
+        this.geraRParcDest = vo.asString("GERARPARCDEST");
+        this.geraRTagJNfe = vo.asString("GERARTAGJNFE");
+        this.golDev = vo.asBigDecimal("GOLDEV");
         this.golMpSinal = vo.asBigDecimal("GOLMPSINAL");
         this.golSinal = vo.asBigDecimal("GOLSINAL");
         this.graHisAltPed = vo.asString("GRAHISALTPED");
@@ -3407,7 +3411,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.fatForaPlanEnt = vo.asString("FATFORAPLANENT");
         this.geraEndEntrNfe = vo.asString("GERAENDENTRNFE");
         this.exigeConfirmacaoMde = vo.asString("EXIGECONFIRMACAOMDE");
-        this.codModCfeCanc = vo.asBigDecimal("CODMODCFECANC");
+        this.codModCfecanc = vo.asBigDecimal("CODMODCFECANC");
         this.constOpApurSimp = vo.asString("CONSTOPAPURSIMP");
         this.gerInfoEfdPag = vo.asString("GERINFOEFDPAG");
         this.ignExpAutLot = vo.asString("IGNEXPAUTLOT");
@@ -3418,9 +3422,9 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.codEnqIpiSai = vo.asBigDecimal("CODENQIPISAI");
         this.codEnqIpiEnt = vo.asBigDecimal("CODENQIPIENT");
         this.permFinMenorVlrNota = vo.asString("PERMFINMENORVLRNOTA");
-        this.produEtLoc = vo.asString("PRODUETLOC");
+        this.prodUetLoc = vo.asString("PRODUETLOC");
         this.percMinBaseInss = vo.asBigDecimal("PERCMINBASEINSS");
-        this.ajustavp = vo.asString("AJUSTAVP");
+        this.ajustaVp = vo.asString("AJUSTAVP");
         this.codMoedaVp = vo.asBigDecimal("CODMOEDAVP");
         this.indPresNfce = vo.asString("INDPRESNFCE");
         this.topAtendimento = vo.asBigDecimal("TOPATENDIMENTO");
@@ -3436,7 +3440,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.tipServCte = vo.asBigDecimal("TIPSERVCTE");
         this.codTopDenegCte = vo.asBigDecimal("CODTOPDENEGCTE");
         this.tipoCte = vo.asString("TIPOCTE");
-        this.valVariaCvlrUnit = vo.asString("VALVARIACVLRUNIT");
+        this.valVarIaCvlrUnit = vo.asString("VALVARIACVLRUNIT");
         this.confValEvent68 = vo.asBigDecimal("CONFVALEVENT68");
         this.dataRetroFat = vo.asString("DATARETROFAT");
         this.consVlrRemRetInd = vo.asBigDecimal("CONSVLRREMRETIND");
@@ -3444,7 +3448,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.devSemDestaqueSt = vo.asString("DEVSEMDESTAQUEST");
         this.geraDemandaMps = vo.asString("GERADEMANDAMPS");
         this.gerCorApon = vo.asString("GERCORAPON");
-        this.ignorarAgrupMinDev = vo.asString("IGNORARAGRUPMINDEV");
+        this.ignoraAgrupMinDev = vo.asString("IGNORARAGRUPMINDEV");
         this.redIcmsBcPisConfins = vo.asString("REDICMSBCPISCONFINS");
         this.salvarConfSemPerg = vo.asString("SALVARCONFSEMPERG");
         this.semCredIpiSt = vo.asString("SEMCREDIPIST");
@@ -3471,18 +3475,18 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.distStVlrUnitFat = vo.asString("DISTSTVLRUNITFAT");
         this.simulacAutoFrete = vo.asString("SIMULACAUTOFRETE");
         this.icmsOrigEstPed = vo.asString("ICMSORIGESTPED");
-        this.codCtacTbEfd = vo.asBigDecimal("CODCTACTBEFD");
+        this.codCtaCtbEfd = vo.asBigDecimal("CODCTACTBEFD");
         this.ligOrigOrig = vo.asString("LIGORIGORIG");
         this.indTerc = vo.asString("INDTERC");
         this.movEndFlutuante = vo.asString("MOVENDFLUTUANTE");
         this.usaServTabIrFinsS = vo.asString("USASERVTABIRFINSS");
-        this.descOnfse = vo.asString("DESCONFSE");
+        this.descOnNfse = vo.asString("DESCONNFSE");
         this.aplicTabIrFinsS = vo.asString("APLICTABIRFINSS");
         this.formRecIss = vo.asString("FORMRECISS");
         this.natEfdContM410M810 = vo.asBigDecimal("NATEFDCONTM410M810");
-        this.nufOp = vo.asBigDecimal("NUFOP");
+        this.nuFop = vo.asBigDecimal("NUFOP");
         this.orcamento = vo.asString("ORCAMENTO");
-        this.descOnslCdPr = vo.asString("DESCONSLCDPR");
+        this.descOnSlcdPr = vo.asString("DESCONSLCDPR");
         this.codModRo = vo.asBigDecimal("CODMODRO");
         this.codLocalImpXml = vo.asBigDecimal("CODLOCALIMPXML");
         this.impXmlMantDespAces = vo.asString("IMPXMLMANTDESPACES");
@@ -3493,7 +3497,7 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.topPisCofRedAquis = vo.asString("TOPPISCOFREDAQUIS");
         this.tipComplCust = vo.asBigDecimal("TIPCOMPLCUST");
         this.nuLayoutCvr = vo.asBigDecimal("NULAYOUTCVR");
-        this.descTopadrCst1400 = vo.asString("DESCTOPADRCST1400");
+        this.descTopAdrCst1400 = vo.asString("DESTOPADRCST1400");
         this.calcFunTtelTop = vo.asString("CALCFUNTTELTOP");
         this.calcFustTop = vo.asString("CALCFUSTTOP");
         this.calcStFrtXtNotProp = vo.asString("CALCSTFRTXTNOTPROP");
@@ -3501,10 +3505,10 @@ public class TipoOperacao implements SankhyaEntity<TipoOperacao> {
         this.intermed = vo.asString("INTERMED");
         this.valEstMaximo = vo.asString("VALESTMAXIMO");
         this.ignObsOrigRem = vo.asString("IGNOBSORIGREM");
-        this.descConsidPedXml = vo.asString("DESCCONSIDPEDXML");
+        this.descOnSidPedXml = vo.asString("DESCONSIDPEDXML");
         this.operacaoAmostra = vo.asString("OPERACAOAMOSTRA");
         this.atualEstWmsTerc = vo.asString("ATUALESTWMSTERC");
-        this.descConsidNfeOrigem = vo.asString("DESCCONSIDNFEORIGEM");
+        this.descOnSidNfeOrigem = vo.asString("DESCONSIDNFEORIGEM");
         this.dedFcpBcPisCofins = vo.asString("DEDFCPBCPISCOFINS");
         this.armTipApu = vo.asString("ARMTIPAPU");
         this.calcPisCfsFin = vo.asString("CALCPISCFSFIN");

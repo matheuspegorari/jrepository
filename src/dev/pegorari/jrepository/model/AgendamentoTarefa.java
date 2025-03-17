@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AgendamentoTarefa implements SankhyaEntity<AgendamentoTarefa> {
-
+public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> {
    private String ativo;
    private BigDecimal codEmp;
    private char[] config;
@@ -168,6 +167,11 @@ public class AgendamentoTarefa implements SankhyaEntity<AgendamentoTarefa> {
 
    public void setGeraLotePara(String geraLotePara) {
         this.geraLotePara = geraLotePara;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFTAG";
    }
 
    @Override

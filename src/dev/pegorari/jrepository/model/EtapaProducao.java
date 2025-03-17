@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EtapaProducao implements SankhyaEntity<EtapaProducao> {
-
+public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    private String ajustarMps;
    private String gerarAmostra;
    private String localOrigEnt;
@@ -257,6 +256,11 @@ public class EtapaProducao implements SankhyaEntity<EtapaProducao> {
 
    public void setCodLocalSaiOrig(BigDecimal codLocalSaiOrig) {
         this.codLocalSaiOrig = codLocalSaiOrig;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFETA";
    }
 
    @Override

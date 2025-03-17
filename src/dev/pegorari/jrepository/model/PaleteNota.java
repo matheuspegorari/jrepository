@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PaleteNota implements SankhyaEntity<PaleteNota> {
-
+public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
    private BigDecimal idPalete;
    private BigDecimal nuNota;
    private BigDecimal sequencia;
@@ -32,6 +31,11 @@ public class PaleteNota implements SankhyaEntity<PaleteNota> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWPXN";
    }
 
    @Override

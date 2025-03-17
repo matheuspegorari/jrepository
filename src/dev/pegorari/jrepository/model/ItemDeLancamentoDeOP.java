@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItemDeLancamentoDeOP implements SankhyaEntity<ItemDeLancamentoDeOP> {
-
+public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamentoDeOP> {
    private BigDecimal ordem;
    private BigDecimal seqOp;
    private BigDecimal idProc;
@@ -186,6 +185,11 @@ public class ItemDeLancamentoDeOP implements SankhyaEntity<ItemDeLancamentoDeOP>
 
    public void setControle(String controle) {
         this.controle = controle;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRILOP";
    }
 
    @Override

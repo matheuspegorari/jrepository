@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegistrosEscrituracaoFiscal implements SankhyaEntity<RegistrosEscrituracaoFiscal> {
-
+public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<RegistrosEscrituracaoFiscal> {
    private String bloco;
    private BigDecimal codEmp;
    private String descricao;
@@ -77,6 +76,11 @@ public class RegistrosEscrituracaoFiscal implements SankhyaEntity<RegistrosEscri
 
    public void setTipo(BigDecimal tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEFR";
    }
 
    @Override

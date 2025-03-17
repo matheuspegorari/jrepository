@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RequisitoEtapa implements SankhyaEntity<RequisitoEtapa> {
-
+public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
    private BigDecimal codReq;
    private BigDecimal nuFap;
    private BigDecimal nuMetapa;
@@ -32,6 +31,11 @@ public class RequisitoEtapa implements SankhyaEntity<RequisitoEtapa> {
 
    public void setNuMetapa(BigDecimal nuMetapa) {
         this.nuMetapa = nuMetapa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSREE";
    }
 
    @Override

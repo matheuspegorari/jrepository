@@ -1,19 +1,18 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade> {
-
+public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabilidade> {
    private String aceitarHistZero;
    private String aceitarVlrLanc;
    private BigDecimal codEmp;
    private BigDecimal codEmpPlacta;
    private String contador;
    private String crc;
-   private String ctaRedAut;
+   private String ctarEdaut;
    private String digCta;
    private Timestamp dtAbertura;
    private Timestamp dtFimPerCtb;
@@ -23,7 +22,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
    private BigDecimal nroLoteMnualFim;
    private BigDecimal nroLoteMnualIni;
    private BigDecimal numDiario;
-   private String numLoteSaut;
+   private String numLotesAut;
    private Timestamp referencia;
    private String simbVlrNeg;
    private String tipAtualSaldos;
@@ -47,17 +46,17 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
    private String derEx;
    private BigDecimal indRecReceita;
    private String indPaisaPais;
-   private String indRetId;
+   private String indRetid;
    private String indResiduosSolid;
    private String indRecOpa;
    private String indCopadomundo;
-   private String indOlimpIadas;
+   private String indOlimpiadas;
    private String indRepNblRedes;
    private String indReif;
    private String indRetAero;
-   private String indRecIne;
+   private String indRecine;
    private String indRepEnec;
-   private String indReIcomp;
+   private String indReicomP;
    private String indPadis;
    private String indRecap;
    private String indPatvd;
@@ -66,7 +65,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
    private BigDecimal indMudancPc;
    private String pjSujeitaCsll;
    private String diffCont;
-   private BigDecimal formaTrib;
+   private BigDecimal formatRib;
    private String optExtRtt;
    private String optPaes;
    private String indAreaCom;
@@ -98,14 +97,14 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
    private String indEcomTi;
    private String indComExp;
    private String indDoaEleit;
-   private String indPgtorem;
+   private String indPgtoRem;
    private String tipEscPre;
    private String apurCsll;
    private String formaApuri;
    private String tipEnt;
    private String optRefis;
    private String formaApur;
-   private String gerRegjPerAnual;
+   private String gerRegJperAnual;
    private String indEbas;
    private String indOleoBunker;
    private String indRepEper;
@@ -166,12 +165,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.crc = crc;
    }
 
-   public String getCtaRedAut() {
-        return ctaRedAut;
+   public String getCtarEdaut() {
+        return ctarEdaut;
    }
 
-   public void setCtaRedAut(String ctaRedAut) {
-        this.ctaRedAut = ctaRedAut;
+   public void setCtarEdaut(String ctarEdaut) {
+        this.ctarEdaut = ctarEdaut;
    }
 
    public String getDigCta() {
@@ -246,12 +245,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.numDiario = numDiario;
    }
 
-   public String getNumLoteSaut() {
-        return numLoteSaut;
+   public String getNumLotesAut() {
+        return numLotesAut;
    }
 
-   public void setNumLoteSaut(String numLoteSaut) {
-        this.numLoteSaut = numLoteSaut;
+   public void setNumLotesAut(String numLotesAut) {
+        this.numLotesAut = numLotesAut;
    }
 
    public Timestamp getReferencia() {
@@ -438,12 +437,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indPaisaPais = indPaisaPais;
    }
 
-   public String getIndRetId() {
-        return indRetId;
+   public String getIndRetid() {
+        return indRetid;
    }
 
-   public void setIndRetId(String indRetId) {
-        this.indRetId = indRetId;
+   public void setIndRetid(String indRetid) {
+        this.indRetid = indRetid;
    }
 
    public String getIndResiduosSolid() {
@@ -470,12 +469,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indCopadomundo = indCopadomundo;
    }
 
-   public String getIndOlimpIadas() {
-        return indOlimpIadas;
+   public String getIndOlimpiadas() {
+        return indOlimpiadas;
    }
 
-   public void setIndOlimpIadas(String indOlimpIadas) {
-        this.indOlimpIadas = indOlimpIadas;
+   public void setIndOlimpiadas(String indOlimpiadas) {
+        this.indOlimpiadas = indOlimpiadas;
    }
 
    public String getIndRepNblRedes() {
@@ -502,12 +501,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indRetAero = indRetAero;
    }
 
-   public String getIndRecIne() {
-        return indRecIne;
+   public String getIndRecine() {
+        return indRecine;
    }
 
-   public void setIndRecIne(String indRecIne) {
-        this.indRecIne = indRecIne;
+   public void setIndRecine(String indRecine) {
+        this.indRecine = indRecine;
    }
 
    public String getIndRepEnec() {
@@ -518,12 +517,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indRepEnec = indRepEnec;
    }
 
-   public String getIndReIcomp() {
-        return indReIcomp;
+   public String getIndReicomP() {
+        return indReicomP;
    }
 
-   public void setIndReIcomp(String indReIcomp) {
-        this.indReIcomp = indReIcomp;
+   public void setIndReicomP(String indReicomP) {
+        this.indReicomP = indReicomP;
    }
 
    public String getIndPadis() {
@@ -590,12 +589,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.diffCont = diffCont;
    }
 
-   public BigDecimal getFormaTrib() {
-        return formaTrib;
+   public BigDecimal getFormatRib() {
+        return formatRib;
    }
 
-   public void setFormaTrib(BigDecimal formaTrib) {
-        this.formaTrib = formaTrib;
+   public void setFormatRib(BigDecimal formatRib) {
+        this.formatRib = formatRib;
    }
 
    public String getOptExtRtt() {
@@ -846,12 +845,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indDoaEleit = indDoaEleit;
    }
 
-   public String getIndPgtorem() {
-        return indPgtorem;
+   public String getIndPgtoRem() {
+        return indPgtoRem;
    }
 
-   public void setIndPgtorem(String indPgtorem) {
-        this.indPgtorem = indPgtorem;
+   public void setIndPgtoRem(String indPgtoRem) {
+        this.indPgtoRem = indPgtoRem;
    }
 
    public String getTipEscPre() {
@@ -902,12 +901,12 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.formaApur = formaApur;
    }
 
-   public String getGerRegjPerAnual() {
-        return gerRegjPerAnual;
+   public String getGerRegJperAnual() {
+        return gerRegJperAnual;
    }
 
-   public void setGerRegjPerAnual(String gerRegjPerAnual) {
-        this.gerRegjPerAnual = gerRegjPerAnual;
+   public void setGerRegJperAnual(String gerRegJperAnual) {
+        this.gerRegJperAnual = gerRegJperAnual;
    }
 
    public String getIndEbas() {
@@ -999,6 +998,11 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
    }
 
    @Override
+   public String getTableName() {
+        return "TCBEMP";
+   }
+
+   @Override
    public String getEntityName() {
         return "EmpresaContabilidade";
    }
@@ -1011,7 +1015,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.codEmpPlacta = vo.asBigDecimal("CODEMPPLACTA");
         this.contador = vo.asString("CONTADOR");
         this.crc = vo.asString("CRC");
-        this.ctaRedAut = vo.asString("CTAREDAUT");
+        this.ctarEdaut = vo.asString("CTAREDAUT");
         this.digCta = vo.asString("DIGCTA");
         this.dtAbertura = vo.asTimestamp("DTABERTURA");
         this.dtFimPerCtb = vo.asTimestamp("DTFIMPERCTB");
@@ -1021,7 +1025,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.nroLoteMnualFim = vo.asBigDecimal("NROLOTEMNUALFIM");
         this.nroLoteMnualIni = vo.asBigDecimal("NROLOTEMNUALINI");
         this.numDiario = vo.asBigDecimal("NUMDIARIO");
-        this.numLoteSaut = vo.asString("NUMLOTESAUT");
+        this.numLotesAut = vo.asString("NUMLOTESAUT");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.simbVlrNeg = vo.asString("SIMBVLRNEG");
         this.tipAtualSaldos = vo.asString("TIPATUALSALDOS");
@@ -1034,7 +1038,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.codInstResp = vo.asString("CODINSTRESP");
         this.ultimoNumeroUsado = vo.asBigDecimal("ULTIMONUMEROUSADO");
         this.nroOrdem = vo.asBigDecimal("NROORDEM");
-        this.nroOrdemR = vo.asBigDecimal("NROORDEMR");
+        this.nroOrdemR = vo.asBigDecimal("NROORDEM_R");
         this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
         this.percRateio = vo.asBigDecimal("PERCRATEIO");
         this.empCopPla = vo.asBigDecimal("EMPCOPPLA");
@@ -1045,17 +1049,17 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.derEx = vo.asString("DEREX");
         this.indRecReceita = vo.asBigDecimal("INDRECRECEITA");
         this.indPaisaPais = vo.asString("INDPAISAPAIS");
-        this.indRetId = vo.asString("INDRETID");
+        this.indRetid = vo.asString("INDRETID");
         this.indResiduosSolid = vo.asString("INDRESIDUOSSOLID");
         this.indRecOpa = vo.asString("INDRECOPA");
         this.indCopadomundo = vo.asString("INDCOPADOMUNDO");
-        this.indOlimpIadas = vo.asString("INDOLIMPIADAS");
+        this.indOlimpiadas = vo.asString("INDOLIMPIADAS");
         this.indRepNblRedes = vo.asString("INDREPNBLREDES");
         this.indReif = vo.asString("INDREIF");
         this.indRetAero = vo.asString("INDRETAERO");
-        this.indRecIne = vo.asString("INDRECINE");
+        this.indRecine = vo.asString("INDRECINE");
         this.indRepEnec = vo.asString("INDREPENEC");
-        this.indReIcomp = vo.asString("INDREICOMP");
+        this.indReicomP = vo.asString("INDREICOMP");
         this.indPadis = vo.asString("INDPADIS");
         this.indRecap = vo.asString("INDRECAP");
         this.indPatvd = vo.asString("INDPATVD");
@@ -1064,7 +1068,7 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indMudancPc = vo.asBigDecimal("INDMUDANCPC");
         this.pjSujeitaCsll = vo.asString("PJSUJEITACSLL");
         this.diffCont = vo.asString("DIFFCONT");
-        this.formaTrib = vo.asBigDecimal("FORMATRIB");
+        this.formatRib = vo.asBigDecimal("FORMATRIB");
         this.optExtRtt = vo.asString("OPTEXTRTT");
         this.optPaes = vo.asString("OPTPAES");
         this.indAreaCom = vo.asString("INDAREACOM");
@@ -1096,20 +1100,20 @@ public class EmpresaContabilidade implements SankhyaEntity<EmpresaContabilidade>
         this.indEcomTi = vo.asString("INDECOMTI");
         this.indComExp = vo.asString("INDCOMEXP");
         this.indDoaEleit = vo.asString("INDDOAELEIT");
-        this.indPgtorem = vo.asString("INDPGTOREM");
+        this.indPgtoRem = vo.asString("INDPGTOREM");
         this.tipEscPre = vo.asString("TIPESCPRE");
         this.apurCsll = vo.asString("APURCSLL");
         this.formaApuri = vo.asString("FORMAAPURI");
         this.tipEnt = vo.asString("TIPENT");
         this.optRefis = vo.asString("OPTREFIS");
         this.formaApur = vo.asString("FORMAAPUR");
-        this.gerRegjPerAnual = vo.asString("GERREGJPERANUAL");
+        this.gerRegJperAnual = vo.asString("GERREGJPERANUAL");
         this.indEbas = vo.asString("INDEBAS");
         this.indOleoBunker = vo.asString("INDOLEOBUNKER");
         this.indRepEper = vo.asString("INDREPEPER");
-        this.indRepEpetroInd = vo.asString("INDREPEPETROIND");
-        this.indRepEpetroNac = vo.asString("INDREPEPETRONAC");
-        this.indRepEpetroTemp = vo.asString("INDREPEPETROTEMP");
+        this.indRepEpetroInd = vo.asString("INDREPETROIND");
+        this.indRepEpetroNac = vo.asString("INDREPETRONAC");
+        this.indRepEpetroTemp = vo.asString("INDREPETROTEMP");
         this.indRepOrto = vo.asString("INDREPORTO");
         this.indRetEei = vo.asString("INDRETEEI");
         this.indRetIi = vo.asString("INDRETII");

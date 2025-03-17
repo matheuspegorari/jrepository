@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Financiamento implements SankhyaEntity<Financiamento> {
-
+public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    private String tipMulta;
    private BigDecimal vlrALiberar;
    private BigDecimal vlrAtual;
@@ -33,7 +32,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private BigDecimal codCencus;
    private BigDecimal codCfo;
    private BigDecimal codContato;
-   private BigDecimal codCtabcoInt;
+   private BigDecimal codCtaBcoInt;
    private BigDecimal codEmp;
    private BigDecimal codEmpBaixa;
    private BigDecimal codFunc;
@@ -77,7 +76,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private BigDecimal vlrVendor;
    private BigDecimal codVend;
    private String serieEntSafFix;
-   private String serieNfDes;
+   private String serieNfdEs;
    private String serieNota;
    private String serieNotaCompl;
    private String statusGnre;
@@ -95,7 +94,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private String rateadoCab;
    private String tpAgNfce;
    private BigDecimal valorPresente;
-   private String ctabcoBaixa;
+   private String ctaBcoBaixa;
    private String descAlineaCheqDev;
    private String descrHistAc;
    private String descrLancBco;
@@ -124,7 +123,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private String issRetido;
    private String linhaDigitavel;
    private BigDecimal m2;
-   private String modeloNfDes;
+   private String modeloNfdEs;
    private String mostrarEneg;
    private String naturezaOperDes;
    private BigDecimal nfComplFix;
@@ -133,7 +132,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private String nossoNum;
    private String nroCessaoFdic;
    private BigDecimal nroLoteGnre;
-   private BigDecimal nuAponta;
+   private BigDecimal nuApon;
    private BigDecimal nuBco;
    private BigDecimal nuCcr;
    private BigDecimal nuCompens;
@@ -205,7 +204,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private BigDecimal timRescisaoLoc;
    private BigDecimal timRescisaoLtv;
    private BigDecimal timTipoIntermed;
-   private String timTxAdmGerAlu;
+   private String timTxAdmGeralU;
    private BigDecimal timVendaImv;
    private BigDecimal timVendaLote;
    private BigDecimal timVlrAluguel;
@@ -275,9 +274,9 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    private BigDecimal nroImport;
    private BigDecimal nuCaixa;
    private String sangDespPdv;
-   private String codPror;
-   private BigDecimal codUsuPror;
-   private Timestamp dtPror;
+   private String codPrOr;
+   private BigDecimal codUsuPrOr;
+   private Timestamp dtPrOr;
    private Timestamp nvDtVenc;
    private String pendenteCriarDesp;
    private String prorrogado;
@@ -499,12 +498,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.codContato = codContato;
    }
 
-   public BigDecimal getCodCtabcoInt() {
-        return codCtabcoInt;
+   public BigDecimal getCodCtaBcoInt() {
+        return codCtaBcoInt;
    }
 
-   public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
-        this.codCtabcoInt = codCtabcoInt;
+   public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        this.codCtaBcoInt = codCtaBcoInt;
    }
 
    public BigDecimal getCodEmp() {
@@ -851,12 +850,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.serieEntSafFix = serieEntSafFix;
    }
 
-   public String getSerieNfDes() {
-        return serieNfDes;
+   public String getSerieNfdEs() {
+        return serieNfdEs;
    }
 
-   public void setSerieNfDes(String serieNfDes) {
-        this.serieNfDes = serieNfDes;
+   public void setSerieNfdEs(String serieNfdEs) {
+        this.serieNfdEs = serieNfdEs;
    }
 
    public String getSerieNota() {
@@ -995,12 +994,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.valorPresente = valorPresente;
    }
 
-   public String getCtabcoBaixa() {
-        return ctabcoBaixa;
+   public String getCtaBcoBaixa() {
+        return ctaBcoBaixa;
    }
 
-   public void setCtabcoBaixa(String ctabcoBaixa) {
-        this.ctabcoBaixa = ctabcoBaixa;
+   public void setCtaBcoBaixa(String ctaBcoBaixa) {
+        this.ctaBcoBaixa = ctaBcoBaixa;
    }
 
    public String getDescAlineaCheqDev() {
@@ -1227,12 +1226,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.m2 = m2;
    }
 
-   public String getModeloNfDes() {
-        return modeloNfDes;
+   public String getModeloNfdEs() {
+        return modeloNfdEs;
    }
 
-   public void setModeloNfDes(String modeloNfDes) {
-        this.modeloNfDes = modeloNfDes;
+   public void setModeloNfdEs(String modeloNfdEs) {
+        this.modeloNfdEs = modeloNfdEs;
    }
 
    public String getMostrarEneg() {
@@ -1299,12 +1298,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.nroLoteGnre = nroLoteGnre;
    }
 
-   public BigDecimal getNuAponta() {
-        return nuAponta;
+   public BigDecimal getNuApon() {
+        return nuApon;
    }
 
-   public void setNuAponta(BigDecimal nuAponta) {
-        this.nuAponta = nuAponta;
+   public void setNuApon(BigDecimal nuApon) {
+        this.nuApon = nuApon;
    }
 
    public BigDecimal getNuBco() {
@@ -1875,12 +1874,12 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.timTipoIntermed = timTipoIntermed;
    }
 
-   public String getTimTxAdmGerAlu() {
-        return timTxAdmGerAlu;
+   public String getTimTxAdmGeralU() {
+        return timTxAdmGeralU;
    }
 
-   public void setTimTxAdmGerAlu(String timTxAdmGerAlu) {
-        this.timTxAdmGerAlu = timTxAdmGerAlu;
+   public void setTimTxAdmGeralU(String timTxAdmGeralU) {
+        this.timTxAdmGeralU = timTxAdmGeralU;
    }
 
    public BigDecimal getTimVendaImv() {
@@ -2435,28 +2434,28 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.sangDespPdv = sangDespPdv;
    }
 
-   public String getCodPror() {
-        return codPror;
+   public String getCodPrOr() {
+        return codPrOr;
    }
 
-   public void setCodPror(String codPror) {
-        this.codPror = codPror;
+   public void setCodPrOr(String codPrOr) {
+        this.codPrOr = codPrOr;
    }
 
-   public BigDecimal getCodUsuPror() {
-        return codUsuPror;
+   public BigDecimal getCodUsuPrOr() {
+        return codUsuPrOr;
    }
 
-   public void setCodUsuPror(BigDecimal codUsuPror) {
-        this.codUsuPror = codUsuPror;
+   public void setCodUsuPrOr(BigDecimal codUsuPrOr) {
+        this.codUsuPrOr = codUsuPrOr;
    }
 
-   public Timestamp getDtPror() {
-        return dtPror;
+   public Timestamp getDtPrOr() {
+        return dtPrOr;
    }
 
-   public void setDtPror(Timestamp dtPror) {
-        this.dtPror = dtPror;
+   public void setDtPrOr(Timestamp dtPrOr) {
+        this.dtPrOr = dtPrOr;
    }
 
    public Timestamp getNvDtVenc() {
@@ -2556,6 +2555,11 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFFIN";
+   }
+
+   @Override
    public String getEntityName() {
         return "Financiamento";
    }
@@ -2570,25 +2574,25 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuBaixa = vo.asBigDecimal("CODUSUBAIXA");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.agenciaCmc7 = vo.asString("AGENCIACMC7");
+        this.agenciaCmc7 = vo.asString("AGENCIA_CMC7");
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.atraso = vo.asBigDecimal("ATRASO");
         this.autorizado = vo.asString("AUTORIZADO");
         this.baseIcms = vo.asBigDecimal("BASEICMS");
         this.carta = vo.asBigDecimal("CARTA");
         this.cartaoDesc = vo.asBigDecimal("CARTAODESC");
-        this.cgcCpfCmc7 = vo.asString("CGCCPFCMC7");
-        this.cgcCpfParc = vo.asString("CGCCPFPARC");
+        this.cgcCpfCmc7 = vo.asString("CGC_CPF_CMC7");
+        this.cgcCpfParc = vo.asString("CGC_CPF_PARC");
         this.chaveCte = vo.asString("CHAVECTE");
         this.chaveCteRef = vo.asString("CHAVECTEREF");
         this.codBarra = vo.asString("CODBARRA");
         this.codBco = vo.asBigDecimal("CODBCO");
-        this.codBcoCmc7 = vo.asBigDecimal("CODBCOCMC7");
+        this.codBcoCmc7 = vo.asBigDecimal("CODBCO_CMC7");
         this.codCc = vo.asBigDecimal("CODCC");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
+        this.codCtaBcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpBaixa = vo.asBigDecimal("CODEMPBAIXA");
         this.codFunc = vo.asBigDecimal("CODFUNC");
@@ -2632,14 +2636,14 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.vlrVendor = vo.asBigDecimal("VLRVENDOR");
         this.codVend = vo.asBigDecimal("CODVEND");
         this.serieEntSafFix = vo.asString("SERIEENTSAFFIX");
-        this.serieNfDes = vo.asString("SERIENFDES");
+        this.serieNfdEs = vo.asString("SERIENFDES");
         this.serieNota = vo.asString("SERIENOTA");
         this.serieNotaCompl = vo.asString("SERIENOTACOMPL");
         this.statusGnre = vo.asString("STATUSGNRE");
         this.retornadoAc = vo.asString("RETORNADOAC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.contabilizadoPdd = vo.asString("CONTABILIZADOPDD");
-        this.contaCmc7 = vo.asString("CONTACMC7");
+        this.contaCmc7 = vo.asString("CONTA_CMC7");
         this.statusLib = vo.asBigDecimal("STATUSLIB");
         this.tipJuro = vo.asString("TIPJURO");
         this.tipMarcCheq = vo.asString("TIPMARCCHEQ");
@@ -2650,7 +2654,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.rateadoCab = vo.asString("RATEADOCAB");
         this.tpAgNfce = vo.asString("TPAGNFCE");
         this.valorPresente = vo.asBigDecimal("VALORPRESENTE");
-        this.ctabcoBaixa = vo.asString("CTABCOBAIXA");
+        this.ctaBcoBaixa = vo.asString("CTABCOBAIXA");
         this.descAlineaCheqDev = vo.asString("DESCALINEACHEQDEV");
         this.descrHistAc = vo.asString("DESCRHISTAC");
         this.descrLancBco = vo.asString("DESCRLANCBCO");
@@ -2679,16 +2683,16 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.issRetido = vo.asString("ISSRETIDO");
         this.linhaDigitavel = vo.asString("LINHADIGITAVEL");
         this.m2 = vo.asBigDecimal("M2");
-        this.modeloNfDes = vo.asString("MODELONFDES");
+        this.modeloNfdEs = vo.asString("MODELONFDES");
         this.mostrarEneg = vo.asString("MOSTRARENEG");
         this.naturezaOperDes = vo.asString("NATUREZAOPERDES");
         this.nfComplFix = vo.asBigDecimal("NFCOMPLFIX");
         this.nfEntSeqFix = vo.asString("NFENTSEQFIX");
-        this.nomeEmitenteCmc7 = vo.asString("NOMEEMITENTECMC7");
+        this.nomeEmitenteCmc7 = vo.asString("NOMEEMITENTE_CMC7");
         this.nossoNum = vo.asString("NOSSONUM");
         this.nroCessaoFdic = vo.asString("NROCESSAOFDIC");
         this.nroLoteGnre = vo.asBigDecimal("NROLOTEGNRE");
-        this.nuAponta = vo.asBigDecimal("NUAPONTA");
+        this.nuApon = vo.asBigDecimal("NUAPONTA");
         this.nuBco = vo.asBigDecimal("NUBCO");
         this.nuCcr = vo.asBigDecimal("NUCCR");
         this.nuCompens = vo.asBigDecimal("NUCOMPENS");
@@ -2720,7 +2724,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.recDesp = vo.asBigDecimal("RECDESP");
         this.recDespFilter = vo.asString("RECDESPFILTER");
         this.rejeicaoGnre = vo.asString("REJEICAOGNRE");
-        this.chequeRastreadoCmc7 = vo.asString("CHEQUERASTREADOCMC7");
+        this.chequeRastreadoCmc7 = vo.asString("CHEQUERASTREADO_CMC7");
         this.codIptu = vo.asBigDecimal("CODIPTU");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.idUnico = vo.asBigDecimal("IDUNICO");
@@ -2760,7 +2764,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.timRescisaoLoc = vo.asBigDecimal("TIMRESCISAOLOC");
         this.timRescisaoLtv = vo.asBigDecimal("TIMRESCISAOLTV");
         this.timTipoIntermed = vo.asBigDecimal("TIMTIPOINTERMED");
-        this.timTxAdmGerAlu = vo.asString("TIMTXADMGERALU");
+        this.timTxAdmGeralU = vo.asString("TIMTXADMGERALU");
         this.timVendaImv = vo.asBigDecimal("TIMVENDAIMV");
         this.timVendaLote = vo.asBigDecimal("TIMVENDALOTE");
         this.timVlrAluguel = vo.asBigDecimal("TIMVLRALUGUEL");
@@ -2829,10 +2833,10 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.vlrLancOrig = vo.asBigDecimal("VLRLANCORIG");
         this.nroImport = vo.asBigDecimal("NROIMPORT");
         this.nuCaixa = vo.asBigDecimal("NUCAIXA");
-        this.sangDespPdv = vo.asString("SANGDESPPDV");
-        this.codPror = vo.asString("CODPROR");
-        this.codUsuPror = vo.asBigDecimal("CODUSUPROR");
-        this.dtPror = vo.asTimestamp("DTPROR");
+        this.sangDespPdv = vo.asString("SANGDESPDV");
+        this.codPrOr = vo.asString("CODPROR");
+        this.codUsuPrOr = vo.asBigDecimal("CODUSUPROR");
+        this.dtPrOr = vo.asTimestamp("DTPROR");
         this.nvDtVenc = vo.asTimestamp("NVDTVENC");
         this.pendenteCriarDesp = vo.asString("PENDENTECRIARDESP");
         this.prorrogado = vo.asString("PRORROGADO");
@@ -2842,7 +2846,7 @@ public class Financiamento implements SankhyaEntity<Financiamento> {
         this.pixTef = vo.asBigDecimal("PIXTEF");
         this.codOperacaoVendaMais = vo.asString("CODOPERACAOVENDAMAIS");
         this.dhAprovacaoVendaMais = vo.asTimestamp("DHAPROVACAOVENDAMAIS");
-        this.dhImpressao = vo.asTimestamp("DHIMPRESSAO");
+        this.dhImpressao = vo.asTimestamp("DH_IMPRESSAO");
         this.taxaVendaMais = vo.asBigDecimal("TAXAVENDAMAIS");
         this.vendaMais = vo.asString("VENDAMAIS");
         return this;

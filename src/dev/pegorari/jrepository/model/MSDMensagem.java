@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDMensagem implements SankhyaEntity<MSDMensagem> {
-
+public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    private BigDecimal intMin;
    private char[] mensagem;
    private Timestamp proxResol;
@@ -141,6 +140,11 @@ public class MSDMensagem implements SankhyaEntity<MSDMensagem> {
 
    public void setCodSmtp(BigDecimal codSmtp) {
         this.codSmtp = codSmtp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDMSG";
    }
 
    @Override

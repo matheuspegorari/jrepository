@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class SaldoECD implements SankhyaEntity<SaldoECD> {
-
+public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    private BigDecimal saldoFinMes;
    private Timestamp referencia;
    private String indStIni;
@@ -96,6 +95,11 @@ public class SaldoECD implements SankhyaEntity<SaldoECD> {
 
    public void setCodEmp(BigDecimal codEmp) {
         this.codEmp = codEmp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCBSAL_IMP";
    }
 
    @Override

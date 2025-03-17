@@ -1,16 +1,15 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotasPendentesLote implements SankhyaEntity<NotasPendentesLote> {
-
+public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote> {
    private Timestamp dhInclusao;
    private Timestamp dhUltTenta;
    private BigDecimal nuNota;
-   private BigDecimal qtEnvio;
+   private BigDecimal qtdeEnvio;
 
    public Timestamp getDhInclusao() {
         return dhInclusao;
@@ -36,12 +35,17 @@ public class NotasPendentesLote implements SankhyaEntity<NotasPendentesLote> {
         this.nuNota = nuNota;
    }
 
-   public BigDecimal getQtEnvio() {
-        return qtEnvio;
+   public BigDecimal getQtdeEnvio() {
+        return qtdeEnvio;
    }
 
-   public void setQtEnvio(BigDecimal qtEnvio) {
-        this.qtEnvio = qtEnvio;
+   public void setQtdeEnvio(BigDecimal qtdeEnvio) {
+        this.qtdeEnvio = qtdeEnvio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFNPG";
    }
 
    @Override
@@ -54,7 +58,7 @@ public class NotasPendentesLote implements SankhyaEntity<NotasPendentesLote> {
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtEnvio = vo.asBigDecimal("QTENVIO");
+        this.qtdeEnvio = vo.asBigDecimal("QTDENVIO");
         return this;
    }
 }

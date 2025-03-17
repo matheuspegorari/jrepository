@@ -1,39 +1,38 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class TerminaisDescarregamento implements SankhyaEntity<TerminaisDescarregamento> {
-
-   private BigDecimal codTerDes;
-   private String codTermDesc;
-   private String nomeTermDesc;
+public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDescarregamento> {
+   private BigDecimal codTerdes;
+   private String codTermdesc;
+   private String nomeTermdesc;
    private BigDecimal nuViag;
    private BigDecimal seqMdfe;
 
-   public BigDecimal getCodTerDes() {
-        return codTerDes;
+   public BigDecimal getCodTerdes() {
+        return codTerdes;
    }
 
-   public void setCodTerDes(BigDecimal codTerDes) {
-        this.codTerDes = codTerDes;
+   public void setCodTerdes(BigDecimal codTerdes) {
+        this.codTerdes = codTerdes;
    }
 
-   public String getCodTermDesc() {
-        return codTermDesc;
+   public String getCodTermdesc() {
+        return codTermdesc;
    }
 
-   public void setCodTermDesc(String codTermDesc) {
-        this.codTermDesc = codTermDesc;
+   public void setCodTermdesc(String codTermdesc) {
+        this.codTermdesc = codTermdesc;
    }
 
-   public String getNomeTermDesc() {
-        return nomeTermDesc;
+   public String getNomeTermdesc() {
+        return nomeTermdesc;
    }
 
-   public void setNomeTermDesc(String nomeTermDesc) {
-        this.nomeTermDesc = nomeTermDesc;
+   public void setNomeTermdesc(String nomeTermdesc) {
+        this.nomeTermdesc = nomeTermdesc;
    }
 
    public BigDecimal getNuViag() {
@@ -53,15 +52,20 @@ public class TerminaisDescarregamento implements SankhyaEntity<TerminaisDescarre
    }
 
    @Override
+   public String getTableName() {
+        return "TGFTERDESC";
+   }
+
+   @Override
    public String getEntityName() {
         return "TerminaisDescarregamento";
    }
 
    @Override
    public TerminaisDescarregamento fromVO(DynamicVO vo) {
-        this.codTerDes = vo.asBigDecimal("CODTERDES");
-        this.codTermDesc = vo.asString("CODTERMDESC");
-        this.nomeTermDesc = vo.asString("NOMETERMDESC");
+        this.codTerdes = vo.asBigDecimal("CODTERDES");
+        this.codTermdesc = vo.asString("CODTERMDESC");
+        this.nomeTermdesc = vo.asString("NOMETERMDESC");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         return this;

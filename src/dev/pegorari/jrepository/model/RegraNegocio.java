@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegraNegocio implements SankhyaEntity<RegraNegocio> {
-
+public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    private String ativo;
    private BigDecimal codUsuLib;
    private String descricao;
@@ -104,6 +103,11 @@ public class RegraNegocio implements SankhyaEntity<RegraNegocio> {
 
    public void setConfig(char[] config) {
         this.config = config;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFRNG";
    }
 
    @Override

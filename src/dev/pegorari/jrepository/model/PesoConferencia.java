@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PesoConferencia implements SankhyaEntity<PesoConferencia> {
-
+public class PesoConferencia extends AbstractSankhyaEntity<PesoConferencia> {
    private BigDecimal codPcon;
    private BigDecimal nuConf;
    private BigDecimal pesoBruto;
@@ -50,6 +49,11 @@ public class PesoConferencia implements SankhyaEntity<PesoConferencia> {
 
    public void setSeqConf(BigDecimal seqConf) {
         this.seqConf = seqConf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFPCON";
    }
 
    @Override

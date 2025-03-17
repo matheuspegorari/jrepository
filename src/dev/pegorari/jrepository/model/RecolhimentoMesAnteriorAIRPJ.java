@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RecolhimentoMesAnteriorAIRPJ implements SankhyaEntity<RecolhimentoMesAnteriorAIRPJ> {
-
+public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<RecolhimentoMesAnteriorAIRPJ> {
    private BigDecimal codEmp;
    private String digitado;
    private Timestamp mesPagamento;
@@ -63,6 +62,11 @@ public class RecolhimentoMesAnteriorAIRPJ implements SankhyaEntity<RecolhimentoM
    }
 
    @Override
+   public String getTableName() {
+        return "TCBIRPJREC";
+   }
+
+   @Override
    public String getEntityName() {
         return "RecolhimentoMesAnteriorAIRPJ";
    }
@@ -74,7 +78,7 @@ public class RecolhimentoMesAnteriorAIRPJ implements SankhyaEntity<RecolhimentoM
         this.mesPagamento = vo.asTimestamp("MESPAGAMENTO");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.vlrImposto = vo.asBigDecimal("VLRIMPOSTO");
-        this.vlrImpostoCsll = vo.asBigDecimal("VLRIMPOSTOCSLL");
+        this.vlrImpostoCsll = vo.asBigDecimal("VLRIMPOSTO_CSLL");
         return this;
    }
 }

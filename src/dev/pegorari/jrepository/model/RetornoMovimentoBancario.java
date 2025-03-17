@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RetornoMovimentoBancario implements SankhyaEntity<RetornoMovimentoBancario> {
-
+public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovimentoBancario> {
    private String usaSqlNuFin;
    private String analitico;
    private String ativo;
@@ -98,6 +97,11 @@ public class RetornoMovimentoBancario implements SankhyaEntity<RetornoMovimentoB
    }
 
    @Override
+   public String getTableName() {
+        return "TSIRET";
+   }
+
+   @Override
    public String getEntityName() {
         return "RetornoMovimentoBancario";
    }
@@ -111,7 +115,7 @@ public class RetornoMovimentoBancario implements SankhyaEntity<RetornoMovimentoB
         this.codPai = vo.asBigDecimal("CODPAI");
         this.concExtBanc = vo.asString("CONCEXTBANC");
         this.grau = vo.asBigDecimal("GRAU");
-        this.spChamada = vo.asString("SPCHAMADA");
+        this.spChamada = vo.asString("SP_CHAMADA");
         this.titulo = vo.asString("TITULO");
         this.configTaxaAdmin = vo.asString("CONFIGTAXAADMIN");
         return this;

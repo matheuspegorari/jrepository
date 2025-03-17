@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDDestinatarioMensagem implements SankhyaEntity<MSDDestinatarioMensagem> {
-
+public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatarioMensagem> {
    private BigDecimal codCon;
    private BigDecimal codMsg;
    private BigDecimal intMin;
@@ -42,6 +41,11 @@ public class MSDDestinatarioMensagem implements SankhyaEntity<MSDDestinatarioMen
 
    public void setUltEnvio(Timestamp ultEnvio) {
         this.ultEnvio = ultEnvio;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDDMG";
    }
 
    @Override

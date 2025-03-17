@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PerguntaQuestionario implements SankhyaEntity<PerguntaQuestionario> {
-
+public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestionario> {
    private String apelido;
    private BigDecimal codPerg;
    private BigDecimal codQuest;
@@ -50,6 +49,11 @@ public class PerguntaQuestionario implements SankhyaEntity<PerguntaQuestionario>
 
    public void setPeso(BigDecimal peso) {
         this.peso = peso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQPEQ";
    }
 
    @Override

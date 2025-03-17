@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Manifesto implements SankhyaEntity<Manifesto> {
-
+public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    private String chaveMdfe;
    private BigDecimal codUsu;
    private Timestamp dhAlter;
@@ -378,6 +377,11 @@ public class Manifesto implements SankhyaEntity<Manifesto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFMDFE";
+   }
+
+   @Override
    public String getEntityName() {
         return "Manifesto";
    }
@@ -392,7 +396,7 @@ public class Manifesto implements SankhyaEntity<Manifesto> {
         this.nroRecibo = vo.asString("NRORECIBO");
         this.numAleatorio = vo.asBigDecimal("NUMALEATORIO");
         this.numMdfe = vo.asBigDecimal("NUMMDFE");
-        this.numViag = vo.asBigDecimal("NUMVIAG");
+        this.numViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.statusMdfe = vo.asString("STATUSMDFE");
         this.tipEmiss = vo.asString("TIPEMISS");

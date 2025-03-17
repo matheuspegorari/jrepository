@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormatadorRemessa implements SankhyaEntity<FormatadorRemessa> {
-
+public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> {
    private String ativo;
    private BigDecimal codigo;
    private BigDecimal codPai;
@@ -17,7 +16,7 @@ public class FormatadorRemessa implements SankhyaEntity<FormatadorRemessa> {
    private String ficha;
    private String filtro;
    private BigDecimal grau;
-   private String iniArqRem;
+   private String iniCarqRem;
    private String modulo;
    private String nomeArq;
    private String ordenar;
@@ -119,12 +118,12 @@ public class FormatadorRemessa implements SankhyaEntity<FormatadorRemessa> {
         this.grau = grau;
    }
 
-   public String getIniArqRem() {
-        return iniArqRem;
+   public String getIniCarqRem() {
+        return iniCarqRem;
    }
 
-   public void setIniArqRem(String iniArqRem) {
-        this.iniArqRem = iniArqRem;
+   public void setIniCarqRem(String iniCarqRem) {
+        this.iniCarqRem = iniCarqRem;
    }
 
    public String getModulo() {
@@ -224,6 +223,11 @@ public class FormatadorRemessa implements SankhyaEntity<FormatadorRemessa> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIREM";
+   }
+
+   @Override
    public String getEntityName() {
         return "FormatadorRemessa";
    }
@@ -241,7 +245,7 @@ public class FormatadorRemessa implements SankhyaEntity<FormatadorRemessa> {
         this.ficha = vo.asString("FICHA");
         this.filtro = vo.asString("FILTRO");
         this.grau = vo.asBigDecimal("GRAU");
-        this.iniArqRem = vo.asString("INIARQREM");
+        this.iniCarqRem = vo.asString("INICARQREM");
         this.modulo = vo.asString("MODULO");
         this.nomeArq = vo.asString("NOMEARQ");
         this.ordenar = vo.asString("ORDENAR");

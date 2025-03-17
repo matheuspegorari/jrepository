@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class LogAcesso implements SankhyaEntity<LogAcesso> {
-
+public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    private BigDecimal codProd;
    private Timestamp dhAcesso;
    private String hostname;
@@ -87,6 +86,11 @@ public class LogAcesso implements SankhyaEntity<LogAcesso> {
 
    public void setUsuario(String usuario) {
         this.usuario = usuario;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSILAC";
    }
 
    @Override

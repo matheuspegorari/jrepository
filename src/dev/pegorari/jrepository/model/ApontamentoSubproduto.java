@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ApontamentoSubproduto implements SankhyaEntity<ApontamentoSubproduto> {
-
+public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubproduto> {
    private String referencia;
    private BigDecimal qtd;
    private BigDecimal seqApa;
@@ -68,6 +67,11 @@ public class ApontamentoSubproduto implements SankhyaEntity<ApontamentoSubprodut
 
    public void setCodProdSp(BigDecimal codProdSp) {
         this.codProdSp = codProdSp;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRASP";
    }
 
    @Override

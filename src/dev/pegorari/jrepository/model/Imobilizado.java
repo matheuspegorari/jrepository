@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Imobilizado implements SankhyaEntity<Imobilizado> {
-
+public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    private String descrLocal;
    private Timestamp dtBaixa;
    private Timestamp dtCompra;
@@ -663,6 +662,11 @@ public class Imobilizado implements SankhyaEntity<Imobilizado> {
 
    public void setVlrPisCompra(BigDecimal vlrPisCompra) {
         this.vlrPisCompra = vlrPisCompra;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCIBEM";
    }
 
    @Override

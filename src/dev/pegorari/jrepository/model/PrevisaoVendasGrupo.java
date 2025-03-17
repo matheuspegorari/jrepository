@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PrevisaoVendasGrupo implements SankhyaEntity<PrevisaoVendasGrupo> {
-
+public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGrupo> {
    private BigDecimal codGrupo;
    private String descrGrupo;
    private String nomeGrupo;
@@ -32,6 +31,11 @@ public class PrevisaoVendasGrupo implements SankhyaEntity<PrevisaoVendasGrupo> {
 
    public void setNomeGrupo(String nomeGrupo) {
         this.nomeGrupo = nomeGrupo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSLIPG";
    }
 
    @Override

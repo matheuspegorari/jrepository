@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FormulaIcms implements SankhyaEntity<FormulaIcms> {
-
+public class FormulaIcms extends AbstractSankhyaEntity<FormulaIcms> {
    private BigDecimal codForm;
    private String descrForm;
    private String formula;
@@ -32,6 +31,11 @@ public class FormulaIcms implements SankhyaEntity<FormulaIcms> {
 
    public void setFormula(String formula) {
         this.formula = formula;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFIC";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class RegraSLASubOs implements SankhyaEntity<RegraSLASubOs> {
-
+public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    private BigDecimal numItem;
    private BigDecimal numOs;
    private BigDecimal numReg;
@@ -41,6 +40,11 @@ public class RegraSLASubOs implements SankhyaEntity<RegraSLASubOs> {
 
    public void setNuSla(BigDecimal nuSla) {
         this.nuSla = nuSla;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSRSI";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class EtapaEstruturaProducao implements SankhyaEntity<EtapaEstruturaProducao> {
-
+public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstruturaProducao> {
    private BigDecimal leadTimeCql;
    private String abreviacao;
    private BigDecimal codEst;
@@ -95,6 +94,11 @@ public class EtapaEstruturaProducao implements SankhyaEntity<EtapaEstruturaProdu
 
    public void setCompart(String compart) {
         this.compart = compart;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFEEP";
    }
 
    @Override

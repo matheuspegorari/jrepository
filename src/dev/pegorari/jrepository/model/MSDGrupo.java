@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class MSDGrupo implements SankhyaEntity<MSDGrupo> {
-
+public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
    private BigDecimal codGrupo;
    private String descrGrupo;
    private Timestamp dtAlter;
@@ -42,6 +41,11 @@ public class MSDGrupo implements SankhyaEntity<MSDGrupo> {
 
    public void setOrdem(BigDecimal ordem) {
         this.ordem = ordem;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TMDGRU";
    }
 
    @Override

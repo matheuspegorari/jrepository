@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Cidade implements SankhyaEntity<Cidade> {
-
+public class Cidade extends AbstractSankhyaEntity<Cidade> {
    private String mascaraLc116;
    private BigDecimal codCid;
    private BigDecimal codMunDms;
@@ -46,23 +45,23 @@ public class Cidade implements SankhyaEntity<Cidade> {
    private String noFormatLc116;
    private String cnaeFullNfse;
    private String noInscMunPar;
-   private String jsonSemAlidenMun;
+   private String jsonSemAliDenMun;
    private BigDecimal codParNfse;
    private String ufNomeCid;
-   private String permCancNfseSubstit;
+   private String perCancNfseSubstit;
    private BigDecimal vMinRetencaoIss;
    private String gerCodNatIssJson;
    private String envItensSepJson;
    private BigDecimal qtdMaxEnvItensJson;
    private String obsJsonEnotas;
-   private String actCanExnt;
-   private String atNuVersao;
+   private String actCanExNt;
+   private String atUnuVersao;
    private String envFpJson;
    private String envMulEmailJson;
    private String envTagDesconJson;
    private String gerNuNfseInfCpm;
    private String infQtdVlrUniJson;
-   private String remZeroEsquerdLc116;
+   private String remZeroEsquerdaLc116;
    private String regEspTrib;
    private String gerCnaeMultJson;
 
@@ -378,12 +377,12 @@ public class Cidade implements SankhyaEntity<Cidade> {
         this.noInscMunPar = noInscMunPar;
    }
 
-   public String getJsonSemAlidenMun() {
-        return jsonSemAlidenMun;
+   public String getJsonSemAliDenMun() {
+        return jsonSemAliDenMun;
    }
 
-   public void setJsonSemAlidenMun(String jsonSemAlidenMun) {
-        this.jsonSemAlidenMun = jsonSemAlidenMun;
+   public void setJsonSemAliDenMun(String jsonSemAliDenMun) {
+        this.jsonSemAliDenMun = jsonSemAliDenMun;
    }
 
    public BigDecimal getCodParNfse() {
@@ -402,12 +401,12 @@ public class Cidade implements SankhyaEntity<Cidade> {
         this.ufNomeCid = ufNomeCid;
    }
 
-   public String getPermCancNfseSubstit() {
-        return permCancNfseSubstit;
+   public String getPerCancNfseSubstit() {
+        return perCancNfseSubstit;
    }
 
-   public void setPermCancNfseSubstit(String permCancNfseSubstit) {
-        this.permCancNfseSubstit = permCancNfseSubstit;
+   public void setPerCancNfseSubstit(String perCancNfseSubstit) {
+        this.perCancNfseSubstit = perCancNfseSubstit;
    }
 
    public BigDecimal getVMinRetencaoIss() {
@@ -450,20 +449,20 @@ public class Cidade implements SankhyaEntity<Cidade> {
         this.obsJsonEnotas = obsJsonEnotas;
    }
 
-   public String getActCanExnt() {
-        return actCanExnt;
+   public String getActCanExNt() {
+        return actCanExNt;
    }
 
-   public void setActCanExnt(String actCanExnt) {
-        this.actCanExnt = actCanExnt;
+   public void setActCanExNt(String actCanExNt) {
+        this.actCanExNt = actCanExNt;
    }
 
-   public String getAtNuVersao() {
-        return atNuVersao;
+   public String getAtUnuVersao() {
+        return atUnuVersao;
    }
 
-   public void setAtNuVersao(String atNuVersao) {
-        this.atNuVersao = atNuVersao;
+   public void setAtUnuVersao(String atUnuVersao) {
+        this.atUnuVersao = atUnuVersao;
    }
 
    public String getEnvFpJson() {
@@ -506,12 +505,12 @@ public class Cidade implements SankhyaEntity<Cidade> {
         this.infQtdVlrUniJson = infQtdVlrUniJson;
    }
 
-   public String getRemZeroEsquerdLc116() {
-        return remZeroEsquerdLc116;
+   public String getRemZeroEsquerdaLc116() {
+        return remZeroEsquerdaLc116;
    }
 
-   public void setRemZeroEsquerdLc116(String remZeroEsquerdLc116) {
-        this.remZeroEsquerdLc116 = remZeroEsquerdLc116;
+   public void setRemZeroEsquerdaLc116(String remZeroEsquerdaLc116) {
+        this.remZeroEsquerdaLc116 = remZeroEsquerdaLc116;
    }
 
    public String getRegEspTrib() {
@@ -528,6 +527,11 @@ public class Cidade implements SankhyaEntity<Cidade> {
 
    public void setGerCnaeMultJson(String gerCnaeMultJson) {
         this.gerCnaeMultJson = gerCnaeMultJson;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICID";
    }
 
    @Override
@@ -576,23 +580,23 @@ public class Cidade implements SankhyaEntity<Cidade> {
         this.noFormatLc116 = vo.asString("NOFORMATLC116");
         this.cnaeFullNfse = vo.asString("CNAEFULLNFSE");
         this.noInscMunPar = vo.asString("NOINSCMUNPAR");
-        this.jsonSemAlidenMun = vo.asString("JSONSEMALIDENMUN");
-        this.codParNfse = vo.asBigDecimal("CODPARNFSE");
+        this.jsonSemAliDenMun = vo.asString("JSONSEMALIDENMUN");
+        this.codParNfse = vo.asBigDecimal("CODPARCNFSE");
         this.ufNomeCid = vo.asString("UFNOMECID");
-        this.permCancNfseSubstit = vo.asString("PERMCANCNFSESUBSTIT");
+        this.perCancNfseSubstit = vo.asString("PERMCANCNFSESUBSTIT");
         this.vMinRetencaoIss = vo.asBigDecimal("VMINRETENCAOISS");
         this.gerCodNatIssJson = vo.asString("GERCODNATISSJSON");
         this.envItensSepJson = vo.asString("ENVITENSSEPJSON");
         this.qtdMaxEnvItensJson = vo.asBigDecimal("QTDMAXENVITENSJSON");
         this.obsJsonEnotas = vo.asString("OBSJSONENOTAS");
-        this.actCanExnt = vo.asString("ACTCANEXNT");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.actCanExNt = vo.asString("ACTCANEXNT");
+        this.atUnuVersao = vo.asString("ATUNUVERSAO");
         this.envFpJson = vo.asString("ENVFPJSON");
         this.envMulEmailJson = vo.asString("ENVMULEMAILJSON");
         this.envTagDesconJson = vo.asString("ENVTAGDESCONJSON");
         this.gerNuNfseInfCpm = vo.asString("GERNUNFSEINFCPM");
         this.infQtdVlrUniJson = vo.asString("INFQTDVLRUNIJSON");
-        this.remZeroEsquerdLc116 = vo.asString("REMZEROESQUERDLC116");
+        this.remZeroEsquerdaLc116 = vo.asString("REMZEROESQUERDLC116");
         this.regEspTrib = vo.asString("REGESPTRIB");
         this.gerCnaeMultJson = vo.asString("GERCNAEMULTJSON");
         return this;

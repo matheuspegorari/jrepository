@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class GadgetBiaConhecimento implements SankhyaEntity<GadgetBiaConhecimento> {
-
+public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhecimento> {
    private BigDecimal codGbc;
    private BigDecimal codUsu;
    private BigDecimal nuDsb;
@@ -59,6 +58,11 @@ public class GadgetBiaConhecimento implements SankhyaEntity<GadgetBiaConheciment
 
    public void setResourceId(String resourceId) {
         this.resourceId = resourceId;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIGBC";
    }
 
    @Override

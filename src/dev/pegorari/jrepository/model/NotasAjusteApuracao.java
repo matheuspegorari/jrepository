@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NotasAjusteApuracao implements SankhyaEntity<NotasAjusteApuracao> {
-
+public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApuracao> {
    private BigDecimal codParc;
    private BigDecimal codProd;
    private BigDecimal codUsu;
@@ -141,6 +140,11 @@ public class NotasAjusteApuracao implements SankhyaEntity<NotasAjusteApuracao> {
 
    public void setCodModDoc(BigDecimal codModDoc) {
         this.codModDoc = codModDoc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFAJN";
    }
 
    @Override

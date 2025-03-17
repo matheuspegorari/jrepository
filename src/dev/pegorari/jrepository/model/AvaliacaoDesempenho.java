@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AvaliacaoDesempenho implements SankhyaEntity<AvaliacaoDesempenho> {
-
+public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempenho> {
    private BigDecimal nuPla;
    private BigDecimal nuAvaliacao;
    private BigDecimal nuPlaAvaliado;
@@ -51,6 +50,11 @@ public class AvaliacaoDesempenho implements SankhyaEntity<AvaliacaoDesempenho> {
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQAVD";
    }
 
    @Override

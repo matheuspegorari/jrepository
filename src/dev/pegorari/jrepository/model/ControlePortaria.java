@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ControlePortaria implements SankhyaEntity<ControlePortaria> {
-
+public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    private BigDecimal codMoto;
    private BigDecimal codPort;
    private BigDecimal codUsu;
@@ -195,6 +194,11 @@ public class ControlePortaria implements SankhyaEntity<ControlePortaria> {
 
    public void setModalidade(String modalidade) {
         this.modalidade = modalidade;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGARPO";
    }
 
    @Override

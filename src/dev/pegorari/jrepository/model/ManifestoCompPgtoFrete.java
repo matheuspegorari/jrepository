@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ManifestoCompPgtoFrete implements SankhyaEntity<ManifestoCompPgtoFrete> {
-
+public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompPgtoFrete> {
    private String descricao;
    private BigDecimal nuViag;
    private BigDecimal seqCompgFre;
@@ -86,6 +85,11 @@ public class ManifestoCompPgtoFrete implements SankhyaEntity<ManifestoCompPgtoFr
 
    public void setVlrAdiant(BigDecimal vlrAdiant) {
         this.vlrAdiant = vlrAdiant;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMDFCOMPGFRE";
    }
 
    @Override

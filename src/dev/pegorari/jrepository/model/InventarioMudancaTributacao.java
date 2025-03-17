@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMudancaTributacao> {
-
+public class InventarioMudancaTributacao extends AbstractSankhyaEntity<InventarioMudancaTributacao> {
    private BigDecimal codEmp;
    private BigDecimal codParc;
    private BigDecimal codTipOper;
@@ -17,8 +16,8 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
    private Timestamp dtMtp;
    private String motInv;
    private String statusEfd;
-   private String gravarIcmsNormStTh020;
-   private String usaStAnt;
+   private String gravarIcmsNormSth020;
+   private String usaStant;
    private String usaVlrUnit;
    private String procPorMed;
    private String geraSpedBaseSt;
@@ -27,7 +26,7 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
    private BigDecimal aliqInterna;
    private String consEmpUltCompra;
    private String geraSpedVlrSt;
-   private String usaIcmsCalc;
+   private String usaRicmsCalc;
    private String consAntExNota;
 
    public BigDecimal getCodEmp() {
@@ -110,20 +109,20 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
         this.statusEfd = statusEfd;
    }
 
-   public String getGravarIcmsNormStTh020() {
-        return gravarIcmsNormStTh020;
+   public String getGravarIcmsNormSth020() {
+        return gravarIcmsNormSth020;
    }
 
-   public void setGravarIcmsNormStTh020(String gravarIcmsNormStTh020) {
-        this.gravarIcmsNormStTh020 = gravarIcmsNormStTh020;
+   public void setGravarIcmsNormSth020(String gravarIcmsNormSth020) {
+        this.gravarIcmsNormSth020 = gravarIcmsNormSth020;
    }
 
-   public String getUsaStAnt() {
-        return usaStAnt;
+   public String getUsaStant() {
+        return usaStant;
    }
 
-   public void setUsaStAnt(String usaStAnt) {
-        this.usaStAnt = usaStAnt;
+   public void setUsaStant(String usaStant) {
+        this.usaStant = usaStant;
    }
 
    public String getUsaVlrUnit() {
@@ -190,12 +189,12 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
         this.geraSpedVlrSt = geraSpedVlrSt;
    }
 
-   public String getUsaIcmsCalc() {
-        return usaIcmsCalc;
+   public String getUsaRicmsCalc() {
+        return usaRicmsCalc;
    }
 
-   public void setUsaIcmsCalc(String usaIcmsCalc) {
-        this.usaIcmsCalc = usaIcmsCalc;
+   public void setUsaRicmsCalc(String usaRicmsCalc) {
+        this.usaRicmsCalc = usaRicmsCalc;
    }
 
    public String getConsAntExNota() {
@@ -204,6 +203,11 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
 
    public void setConsAntExNota(String consAntExNota) {
         this.consAntExNota = consAntExNota;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFMTP";
    }
 
    @Override
@@ -223,8 +227,8 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
         this.dtMtp = vo.asTimestamp("DTMTP");
         this.motInv = vo.asString("MOTINV");
         this.statusEfd = vo.asString("STATUSEFD");
-        this.gravarIcmsNormStTh020 = vo.asString("GRAVARICMSNORMSTTH020");
-        this.usaStAnt = vo.asString("USASTANT");
+        this.gravarIcmsNormSth020 = vo.asString("GRAVARICMSNORMSTH020");
+        this.usaStant = vo.asString("USASTANT");
         this.usaVlrUnit = vo.asString("USAVLRUNIT");
         this.procPorMed = vo.asString("PROCPORMED");
         this.geraSpedBaseSt = vo.asString("GERASPEDBASEST");
@@ -233,7 +237,7 @@ public class InventarioMudancaTributacao implements SankhyaEntity<InventarioMuda
         this.aliqInterna = vo.asBigDecimal("ALIQINTERNA");
         this.consEmpUltCompra = vo.asString("CONSEMPULTCOMPRA");
         this.geraSpedVlrSt = vo.asString("GERASPEDVLRST");
-        this.usaIcmsCalc = vo.asString("USAICMSCALC");
+        this.usaRicmsCalc = vo.asString("USARICMSCALC");
         this.consAntExNota = vo.asString("CONSANTEXNOTA");
         return this;
    }

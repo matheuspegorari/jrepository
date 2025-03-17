@@ -1,15 +1,14 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Questionario implements SankhyaEntity<Questionario> {
-
+public class Questionario extends AbstractSankhyaEntity<Questionario> {
    private String perguntasPorGrupo;
    private Timestamp dhAlter;
-   private String exiberRespCorreta;
+   private String exiberespCorreta;
    private BigDecimal nroPergPorPag;
    private String ordemAleatoria;
    private String ativo;
@@ -34,12 +33,12 @@ public class Questionario implements SankhyaEntity<Questionario> {
         this.dhAlter = dhAlter;
    }
 
-   public String getExiberRespCorreta() {
-        return exiberRespCorreta;
+   public String getExiberespCorreta() {
+        return exiberespCorreta;
    }
 
-   public void setExiberRespCorreta(String exiberRespCorreta) {
-        this.exiberRespCorreta = exiberRespCorreta;
+   public void setExiberespCorreta(String exiberespCorreta) {
+        this.exiberespCorreta = exiberespCorreta;
    }
 
    public BigDecimal getNroPergPorPag() {
@@ -99,6 +98,11 @@ public class Questionario implements SankhyaEntity<Questionario> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPQQUE";
+   }
+
+   @Override
    public String getEntityName() {
         return "Questionario";
    }
@@ -107,7 +111,7 @@ public class Questionario implements SankhyaEntity<Questionario> {
    public Questionario fromVO(DynamicVO vo) {
         this.perguntasPorGrupo = vo.asString("PERGUNTASPORGRUPO");
         this.dhAlter = vo.asTimestamp("DHALTER");
-        this.exiberRespCorreta = vo.asString("EXIBERRESPCORRETA");
+        this.exiberespCorreta = vo.asString("EXIBERESPCORRETA");
         this.nroPergPorPag = vo.asBigDecimal("NROPERGPORPAG");
         this.ordemAleatoria = vo.asString("ORDEMALEATORIA");
         this.ativo = vo.asString("ATIVO");

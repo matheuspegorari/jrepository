@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoMPS implements SankhyaEntity<ConfiguracaoMPS> {
-
+public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    private String descricao;
    private BigDecimal codCmps;
    private Timestamp dhInc;
@@ -51,6 +50,11 @@ public class ConfiguracaoMPS implements SankhyaEntity<ConfiguracaoMPS> {
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRCMPS";
    }
 
    @Override

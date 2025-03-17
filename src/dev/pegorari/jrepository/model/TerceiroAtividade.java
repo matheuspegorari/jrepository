@@ -1,14 +1,13 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class TerceiroAtividade implements SankhyaEntity<TerceiroAtividade> {
-
+public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> {
    private BigDecimal idIproc;
-   private BigDecimal idEfx;
+   private BigDecimal ideFx;
    private BigDecimal codParcterc;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -21,12 +20,12 @@ public class TerceiroAtividade implements SankhyaEntity<TerceiroAtividade> {
         this.idIproc = idIproc;
    }
 
-   public BigDecimal getIdEfx() {
-        return idEfx;
+   public BigDecimal getIdeFx() {
+        return ideFx;
    }
 
-   public void setIdEfx(BigDecimal idEfx) {
-        this.idEfx = idEfx;
+   public void setIdeFx(BigDecimal ideFx) {
+        this.ideFx = ideFx;
    }
 
    public BigDecimal getCodParcterc() {
@@ -54,6 +53,11 @@ public class TerceiroAtividade implements SankhyaEntity<TerceiroAtividade> {
    }
 
    @Override
+   public String getTableName() {
+        return "TPRTXAT";
+   }
+
+   @Override
    public String getEntityName() {
         return "TerceiroAtividade";
    }
@@ -61,7 +65,7 @@ public class TerceiroAtividade implements SankhyaEntity<TerceiroAtividade> {
    @Override
    public TerceiroAtividade fromVO(DynamicVO vo) {
         this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.idEfx = vo.asBigDecimal("IDEFX");
+        this.ideFx = vo.asBigDecimal("IDEFX");
         this.codParcterc = vo.asBigDecimal("CODPARCTERC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Lote implements SankhyaEntity<Lote> {
-
+public class Lote extends AbstractSankhyaEntity<Lote> {
    private BigDecimal codEmp;
    private BigDecimal codLocal;
    private BigDecimal codProd;
@@ -96,6 +95,11 @@ public class Lote implements SankhyaEntity<Lote> {
 
    public void setTitulo(String titulo) {
         this.titulo = titulo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFLOT";
    }
 
    @Override

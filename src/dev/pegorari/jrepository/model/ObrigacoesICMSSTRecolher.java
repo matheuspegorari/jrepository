@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ObrigacoesICMSSTRecolher implements SankhyaEntity<ObrigacoesICMSSTRecolher> {
-
+public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesICMSSTRecolher> {
    private BigDecimal codEmp;
    private BigDecimal codObr;
    private String codRec;
@@ -168,6 +167,11 @@ public class ObrigacoesICMSSTRecolher implements SankhyaEntity<ObrigacoesICMSSTR
 
    public void setCodRecDime(String codRecDime) {
         this.codRecDime = codRecDime;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFOIR";
    }
 
    @Override

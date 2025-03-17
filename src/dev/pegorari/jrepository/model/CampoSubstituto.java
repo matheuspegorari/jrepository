@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class CampoSubstituto implements SankhyaEntity<CampoSubstituto> {
-
+public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    private String campoSubstituto;
    private String codCampo;
    private BigDecimal codMeta;
@@ -41,6 +40,11 @@ public class CampoSubstituto implements SankhyaEntity<CampoSubstituto> {
 
    public void setGrau(BigDecimal grau) {
         this.grau = grau;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGMSUB";
    }
 
    @Override

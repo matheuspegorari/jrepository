@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class GrupoProduto implements SankhyaEntity<GrupoProduto> {
-
+public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    private String agrupaLocValEst;
    private String analitico;
    private String aprProdVda;
@@ -369,6 +368,11 @@ public class GrupoProduto implements SankhyaEntity<GrupoProduto> {
    }
 
    @Override
+   public String getTableName() {
+        return "TGFGRU";
+   }
+
+   @Override
    public String getEntityName() {
         return "GrupoProduto";
    }
@@ -386,15 +390,15 @@ public class GrupoProduto implements SankhyaEntity<GrupoProduto> {
         this.codNat = vo.asBigDecimal("CODNAT");
         this.codProj = vo.asBigDecimal("CODPROJ");
         this.codRfa = vo.asBigDecimal("CODRFA");
-        this.comCurvaA = vo.asBigDecimal("COMCURVAA");
-        this.comCurvaB = vo.asBigDecimal("COMCURVAB");
-        this.comCurvaC = vo.asBigDecimal("COMCURVAC");
+        this.comCurvaA = vo.asBigDecimal("COMCURVA_A");
+        this.comCurvaB = vo.asBigDecimal("COMCURVA_B");
+        this.comCurvaC = vo.asBigDecimal("COMCURVA_C");
         this.descrGrupoProd = vo.asString("DESCRGRUPOPROD");
         this.grau = vo.asBigDecimal("GRAU");
         this.grupoIcms = vo.asBigDecimal("GRUPOICMS");
         this.imagem = vo.asBlob("IMAGEM");
-        this.limCurvaB = vo.asBigDecimal("LIMCURVAB");
-        this.limCurvaC = vo.asBigDecimal("LIMCURVAC");
+        this.limCurvaB = vo.asBigDecimal("LIMCURVA_B");
+        this.limCurvaC = vo.asBigDecimal("LIMCURVA_C");
         this.metaQtd = vo.asBigDecimal("METAQTD");
         this.particMeta = vo.asBigDecimal("PARTICMETA");
         this.pedirLib = vo.asString("PEDIRLIB");

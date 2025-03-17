@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ClassificacaoLgpd implements SankhyaEntity<ClassificacaoLgpd> {
-
+public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> {
    private BigDecimal codCla;
    private BigDecimal codUsuAlter;
    private BigDecimal codUsuCriac;
@@ -60,6 +59,11 @@ public class ClassificacaoLgpd implements SankhyaEntity<ClassificacaoLgpd> {
 
    public void setDtCriac(Timestamp dtCriac) {
         this.dtCriac = dtCriac;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICLA";
    }
 
    @Override

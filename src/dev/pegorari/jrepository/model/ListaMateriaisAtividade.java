@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ListaMateriaisAtividade implements SankhyaEntity<ListaMateriaisAtividade> {
-
+public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriaisAtividade> {
    private BigDecimal codLocalBaixa;
    private BigDecimal percDesvioInf;
    private BigDecimal percDesvioSup;
@@ -26,7 +25,7 @@ public class ListaMateriaisAtividade implements SankhyaEntity<ListaMateriaisAtiv
    private String tipoQtd;
    private String referencia;
    private String fixaQtdApo;
-   private String consuRefugo;
+   private String consuRefUgo;
    private String vinculoSeriePa;
    private String estoqueTerceiro;
    private String liberaDesvio;
@@ -188,12 +187,12 @@ public class ListaMateriaisAtividade implements SankhyaEntity<ListaMateriaisAtiv
         this.fixaQtdApo = fixaQtdApo;
    }
 
-   public String getConsuRefugo() {
-        return consuRefugo;
+   public String getConsuRefUgo() {
+        return consuRefUgo;
    }
 
-   public void setConsuRefugo(String consuRefugo) {
-        this.consuRefugo = consuRefugo;
+   public void setConsuRefUgo(String consuRefUgo) {
+        this.consuRefUgo = consuRefUgo;
    }
 
    public String getVinculoSeriePa() {
@@ -261,6 +260,11 @@ public class ListaMateriaisAtividade implements SankhyaEntity<ListaMateriaisAtiv
    }
 
    @Override
+   public String getTableName() {
+        return "TPRLMP";
+   }
+
+   @Override
    public String getEntityName() {
         return "ListaMateriaisAtividade";
    }
@@ -286,7 +290,7 @@ public class ListaMateriaisAtividade implements SankhyaEntity<ListaMateriaisAtiv
         this.tipoQtd = vo.asString("TIPOQTD");
         this.referencia = vo.asString("REFERENCIA");
         this.fixaQtdApo = vo.asString("FIXAQTDAPO");
-        this.consuRefugo = vo.asString("CONSUREFUGO");
+        this.consuRefUgo = vo.asString("CONSUREFUGO");
         this.vinculoSeriePa = vo.asString("VINCULOSERIEPA");
         this.estoqueTerceiro = vo.asString("ESTOQUETERCEIRO");
         this.liberaDesvio = vo.asString("LIBERADESVIO");

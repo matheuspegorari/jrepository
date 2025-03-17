@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class CentroResultado implements SankhyaEntity<CentroResultado> {
-
+public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    private String analitico;
    private BigDecimal area;
    private BigDecimal areaCont;
@@ -195,6 +194,11 @@ public class CentroResultado implements SankhyaEntity<CentroResultado> {
 
    public void setCalcElalurPartea(String calcElalurPartea) {
         this.calcElalurPartea = calcElalurPartea;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICUS";
    }
 
    @Override

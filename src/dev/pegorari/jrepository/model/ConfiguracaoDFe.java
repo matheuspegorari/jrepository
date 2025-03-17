@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ConfiguracaoDFe implements SankhyaEntity<ConfiguracaoDFe> {
-
+public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    private BigDecimal codEmp;
    private Timestamp mdeProxConsCte;
    private Timestamp mdeProxConsulta;
@@ -60,6 +59,11 @@ public class ConfiguracaoDFe implements SankhyaEntity<ConfiguracaoDFe> {
 
    public void setUltNsuCte(String ultNsuCte) {
         this.ultNsuCte = ultNsuCte;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSICDFE";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FiltroCalculoCusto implements SankhyaEntity<FiltroCalculoCusto> {
-
+public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto> {
    private BigDecimal codChave;
    private BigDecimal codForm;
    private String tabela;
@@ -59,6 +58,11 @@ public class FiltroCalculoCusto implements SankhyaEntity<FiltroCalculoCusto> {
 
    public void setTipLancPla(String tipLancPla) {
         this.tipLancPla = tipLancPla;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIFOP";
    }
 
    @Override

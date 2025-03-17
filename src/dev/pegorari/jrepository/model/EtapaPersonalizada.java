@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EtapaPersonalizada implements SankhyaEntity<EtapaPersonalizada> {
-
+public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada> {
    private String arqModEmail;
    private BigDecimal codEpe;
    private BigDecimal codEtapa;
@@ -78,6 +77,11 @@ public class EtapaPersonalizada implements SankhyaEntity<EtapaPersonalizada> {
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         this.nuSelecao = nuSelecao;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSEPE";
    }
 
    @Override

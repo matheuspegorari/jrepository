@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ColetaEntregaPorNota implements SankhyaEntity<ColetaEntregaPorNota> {
-
+public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPorNota> {
    private String cgcCpf;
    private BigDecimal codMunFis;
    private BigDecimal codParc;
@@ -80,13 +79,18 @@ public class ColetaEntregaPorNota implements SankhyaEntity<ColetaEntregaPorNota>
    }
 
    @Override
+   public String getTableName() {
+        return "TGFNCE";
+   }
+
+   @Override
    public String getEntityName() {
         return "ColetaEntregaPorNota";
    }
 
    @Override
    public ColetaEntregaPorNota fromVO(DynamicVO vo) {
-        this.cgcCpf = vo.asString("CGCCPF");
+        this.cgcCpf = vo.asString("CGC_CPF");
         this.codMunFis = vo.asBigDecimal("CODMUNFIS");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.inscEstad = vo.asString("INSCESTAD");

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class Endereco implements SankhyaEntity<Endereco> {
-
+public class Endereco extends AbstractSankhyaEntity<Endereco> {
    private BigDecimal codEnd;
    private String descricaoCorreio;
    private Timestamp dtAlter;
@@ -81,6 +80,11 @@ public class Endereco implements SankhyaEntity<Endereco> {
    }
 
    @Override
+   public String getTableName() {
+        return "TSIEND";
+   }
+
+   @Override
    public String getEntityName() {
         return "Endereco";
    }
@@ -92,7 +96,7 @@ public class Endereco implements SankhyaEntity<Endereco> {
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nomeEnd = vo.asString("NOMEEND");
         this.tipo = vo.asString("TIPO");
-        this.atNuVersao = vo.asString("ATNUVERSAO");
+        this.atNuVersao = vo.asString("ATUNUVERSAO");
         this.codLogradouro = vo.asString("CODLOGRADOURO");
         this.tipoEndereco = vo.asString("TIPOENDERECO");
         return this;

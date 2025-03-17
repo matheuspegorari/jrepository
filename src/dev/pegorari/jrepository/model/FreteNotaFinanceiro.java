@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class FreteNotaFinanceiro implements SankhyaEntity<FreteNotaFinanceiro> {
-
+public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinanceiro> {
    private BigDecimal nuFin;
    private BigDecimal nuNota;
    private BigDecimal vlrFrete;
@@ -41,6 +40,11 @@ public class FreteNotaFinanceiro implements SankhyaEntity<FreteNotaFinanceiro> {
 
    public void setTipFrete(String tipFrete) {
         this.tipFrete = tipFrete;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFFNF";
    }
 
    @Override

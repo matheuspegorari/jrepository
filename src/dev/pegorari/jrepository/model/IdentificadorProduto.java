@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class IdentificadorProduto implements SankhyaEntity<IdentificadorProduto> {
-
+public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorProduto> {
    private String identificador;
    private BigDecimal nuConf;
    private String nome;
@@ -59,6 +58,11 @@ public class IdentificadorProduto implements SankhyaEntity<IdentificadorProduto>
 
    public void setSeqConf(BigDecimal seqConf) {
         this.seqConf = seqConf;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFIDPC";
    }
 
    @Override

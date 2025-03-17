@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ItensResultadoMRP implements SankhyaEntity<ItensResultadoMRP> {
-
+public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> {
    private BigDecimal qtdPedCompra;
    private String controleMp;
    private BigDecimal codProdMp;
@@ -123,6 +122,11 @@ public class ItensResultadoMRP implements SankhyaEntity<ItensResultadoMRP> {
 
    public void setDataPdc(Timestamp dataPdc) {
         this.dataPdc = dataPdc;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRIMRP";
    }
 
    @Override

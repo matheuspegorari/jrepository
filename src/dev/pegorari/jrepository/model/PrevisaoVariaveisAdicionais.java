@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class PrevisaoVariaveisAdicionais implements SankhyaEntity<PrevisaoVariaveisAdicionais> {
-
+public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoVariaveisAdicionais> {
    private String chave;
    private BigDecimal codExec;
    private String tipo;
@@ -32,6 +31,11 @@ public class PrevisaoVariaveisAdicionais implements SankhyaEntity<PrevisaoVariav
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSLIVA";
    }
 
    @Override

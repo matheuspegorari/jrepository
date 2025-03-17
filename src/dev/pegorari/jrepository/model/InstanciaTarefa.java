@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class InstanciaTarefa implements SankhyaEntity<InstanciaTarefa> {
-
+public class InstanciaTarefa extends AbstractSankhyaEntity<InstanciaTarefa> {
    private BigDecimal codUsuDono;
    private Timestamp dhAceite;
    private Timestamp dhConclusao;
@@ -159,6 +158,11 @@ public class InstanciaTarefa implements SankhyaEntity<InstanciaTarefa> {
 
    public void setDhAlter(Timestamp dhAlter) {
         this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TWFITAR";
    }
 
    @Override

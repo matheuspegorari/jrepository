@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class DemonsApurRessarcimentoST implements SankhyaEntity<DemonsApurRessarcimentoST> {
-
+public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurRessarcimentoST> {
    private String arqConfirmado;
    private BigDecimal codEmp;
    private Timestamp dtFinal;
@@ -153,6 +152,11 @@ public class DemonsApurRessarcimentoST implements SankhyaEntity<DemonsApurRessar
    }
 
    @Override
+   public String getTableName() {
+        return "TGFDRCST";
+   }
+
+   @Override
    public String getEntityName() {
         return "DemonsApurRessarcimentoST";
    }
@@ -174,7 +178,7 @@ public class DemonsApurRessarcimentoST implements SankhyaEntity<DemonsApurRessar
         this.listNotasReg2113Tip30 = vo.asString("LISTNOTASREG2113TIP30");
         this.listNotasReg2130 = vo.asString("LISTNOTASREG2130");
         this.percSt60SemVlrAnt = vo.asString("PERCST60SEMVLRANT");
-        this.percMvndCst60 = vo.asString("PERCMVNDCST60");
+        this.percMvndCst60 = vo.asString("PERMVNDCST60");
         return this;
    }
 }

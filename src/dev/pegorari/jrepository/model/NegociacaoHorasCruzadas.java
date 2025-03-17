@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class NegociacaoHorasCruzadas implements SankhyaEntity<NegociacaoHorasCruzadas> {
-
+public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHorasCruzadas> {
    private BigDecimal codParc;
    private Timestamp dtAlter;
    private BigDecimal nuNegociacao;
@@ -114,6 +113,11 @@ public class NegociacaoHorasCruzadas implements SankhyaEntity<NegociacaoHorasCru
 
    public void setCodUsu(BigDecimal codUsu) {
         this.codUsu = codUsu;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TCSNHC";
    }
 
    @Override

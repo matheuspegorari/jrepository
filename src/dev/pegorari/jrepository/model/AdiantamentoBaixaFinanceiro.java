@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class AdiantamentoBaixaFinanceiro implements SankhyaEntity<AdiantamentoBaixaFinanceiro> {
-
+public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<AdiantamentoBaixaFinanceiro> {
    private BigDecimal codUsu;
    private Timestamp dhMov;
    private BigDecimal nuAntecipa;
@@ -51,6 +50,11 @@ public class AdiantamentoBaixaFinanceiro implements SankhyaEntity<AdiantamentoBa
 
    public void setVlrTaxa(BigDecimal vlrTaxa) {
         this.vlrTaxa = vlrTaxa;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFABF";
    }
 
    @Override

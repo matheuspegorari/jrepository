@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ApuracaoIRPJ implements SankhyaEntity<ApuracaoIRPJ> {
-
+public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    private BigDecimal baseAjustada;
    private BigDecimal baseAjustadaCsll;
    private BigDecimal codEmp;
@@ -37,11 +36,11 @@ public class ApuracaoIRPJ implements SankhyaEntity<ApuracaoIRPJ> {
    private BigDecimal totalRecolhidoCsll;
    private BigDecimal valorPat;
    private String formaApur;
-   private BigDecimal vlrIrpjCompprej;
-   private BigDecimal vlrIrpjCompprejCsll;
-   private BigDecimal compBcnegCsll;
-   private BigDecimal compprejUfis;
-   private BigDecimal deduOutinc;
+   private BigDecimal vlrIrpjCompPrej;
+   private BigDecimal vlrIrpjCompPrejCsll;
+   private BigDecimal compBcNegCsll;
+   private BigDecimal compPrejUfis;
+   private BigDecimal deduOutInc;
    private BigDecimal resLiqAjus;
    private BigDecimal resLiqAjusCsll;
    private BigDecimal vlrCsllRetComp;
@@ -289,44 +288,44 @@ public class ApuracaoIRPJ implements SankhyaEntity<ApuracaoIRPJ> {
         this.formaApur = formaApur;
    }
 
-   public BigDecimal getVlrIrpjCompprej() {
-        return vlrIrpjCompprej;
+   public BigDecimal getVlrIrpjCompPrej() {
+        return vlrIrpjCompPrej;
    }
 
-   public void setVlrIrpjCompprej(BigDecimal vlrIrpjCompprej) {
-        this.vlrIrpjCompprej = vlrIrpjCompprej;
+   public void setVlrIrpjCompPrej(BigDecimal vlrIrpjCompPrej) {
+        this.vlrIrpjCompPrej = vlrIrpjCompPrej;
    }
 
-   public BigDecimal getVlrIrpjCompprejCsll() {
-        return vlrIrpjCompprejCsll;
+   public BigDecimal getVlrIrpjCompPrejCsll() {
+        return vlrIrpjCompPrejCsll;
    }
 
-   public void setVlrIrpjCompprejCsll(BigDecimal vlrIrpjCompprejCsll) {
-        this.vlrIrpjCompprejCsll = vlrIrpjCompprejCsll;
+   public void setVlrIrpjCompPrejCsll(BigDecimal vlrIrpjCompPrejCsll) {
+        this.vlrIrpjCompPrejCsll = vlrIrpjCompPrejCsll;
    }
 
-   public BigDecimal getCompBcnegCsll() {
-        return compBcnegCsll;
+   public BigDecimal getCompBcNegCsll() {
+        return compBcNegCsll;
    }
 
-   public void setCompBcnegCsll(BigDecimal compBcnegCsll) {
-        this.compBcnegCsll = compBcnegCsll;
+   public void setCompBcNegCsll(BigDecimal compBcNegCsll) {
+        this.compBcNegCsll = compBcNegCsll;
    }
 
-   public BigDecimal getCompprejUfis() {
-        return compprejUfis;
+   public BigDecimal getCompPrejUfis() {
+        return compPrejUfis;
    }
 
-   public void setCompprejUfis(BigDecimal compprejUfis) {
-        this.compprejUfis = compprejUfis;
+   public void setCompPrejUfis(BigDecimal compPrejUfis) {
+        this.compPrejUfis = compPrejUfis;
    }
 
-   public BigDecimal getDeduOutinc() {
-        return deduOutinc;
+   public BigDecimal getDeduOutInc() {
+        return deduOutInc;
    }
 
-   public void setDeduOutinc(BigDecimal deduOutinc) {
-        this.deduOutinc = deduOutinc;
+   public void setDeduOutInc(BigDecimal deduOutInc) {
+        this.deduOutInc = deduOutInc;
    }
 
    public BigDecimal getResLiqAjus() {
@@ -378,6 +377,11 @@ public class ApuracaoIRPJ implements SankhyaEntity<ApuracaoIRPJ> {
    }
 
    @Override
+   public String getTableName() {
+        return "TCBIRPJ";
+   }
+
+   @Override
    public String getEntityName() {
         return "ApuracaoIRPJ";
    }
@@ -385,42 +389,42 @@ public class ApuracaoIRPJ implements SankhyaEntity<ApuracaoIRPJ> {
    @Override
    public ApuracaoIRPJ fromVO(DynamicVO vo) {
         this.baseAjustada = vo.asBigDecimal("BASEAJUSTADA");
-        this.baseAjustadaCsll = vo.asBigDecimal("BASEAJUSTADACSLL");
+        this.baseAjustadaCsll = vo.asBigDecimal("BASEAJUSTADA_CSLL");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.compensacoes = vo.asBigDecimal("COMPENSACOES");
-        this.compensacoesCsll = vo.asBigDecimal("COMPENSACOESCSLL");
+        this.compensacoesCsll = vo.asBigDecimal("COMPENSACOES_CSLL");
         this.csll9 = vo.asBigDecimal("CSLL9");
         this.csllRetido = vo.asBigDecimal("CSLLRETIDO");
         this.deducaoPat = vo.asBigDecimal("DEDUCAOPAT");
         this.impostoARecolherFinal = vo.asBigDecimal("IMPOSTOARECOLHERFINAL");
-        this.impostoARecolherFinalCsll = vo.asBigDecimal("IMPOSTOARECOLHERFINALCSLL");
+        this.impostoARecolherFinalCsll = vo.asBigDecimal("IMPOSTOARECOLHERFINAL_CSLL");
         this.impostoDevido = vo.asBigDecimal("IMPOSTODEVIDO");
         this.impostoDevidoLiq = vo.asBigDecimal("IMPOSTODEVIDOLIQ");
         this.irpj10 = vo.asBigDecimal("IRPJ10");
         this.irpj15 = vo.asBigDecimal("IRPJ15");
         this.irpjRetido = vo.asBigDecimal("IRPJRETIDO");
         this.lucroAntesIr = vo.asBigDecimal("LUCROANTESIR");
-        this.lucroAntesIrCsll = vo.asBigDecimal("LUCROANTESIRCSLL");
+        this.lucroAntesIrCsll = vo.asBigDecimal("LUCROANTESIR_CSLL");
         this.recolhimentoAvulso = vo.asBigDecimal("RECOLHIMENTOAVULSO");
-        this.recolhimentoAvulsoCsll = vo.asBigDecimal("RECOLHIMENTOAVULSOCSLL");
+        this.recolhimentoAvulsoCsll = vo.asBigDecimal("RECOLHIMENTOAVULSO_CSLL");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.saldoARecolher = vo.asBigDecimal("SALDOARECOLHER");
-        this.saldoARecolherCsll = vo.asBigDecimal("SALDOARECOLHERCSLL");
+        this.saldoARecolherCsll = vo.asBigDecimal("SALDOARECOLHER_CSLL");
         this.totalAdicoes = vo.asBigDecimal("TOTALADICOES");
-        this.totalAdicoesCsll = vo.asBigDecimal("TOTALADICOESCSLL");
+        this.totalAdicoesCsll = vo.asBigDecimal("TOTALADICOES_CSLL");
         this.totalExclusoes = vo.asBigDecimal("TOTALEXCLUSOES");
-        this.totalExclusoesCsll = vo.asBigDecimal("TOTALEXCLUSOESCSLL");
+        this.totalExclusoesCsll = vo.asBigDecimal("TOTALEXCLUSOES_CSLL");
         this.totalRecolhido = vo.asBigDecimal("TOTALRECOLHIDO");
-        this.totalRecolhidoCsll = vo.asBigDecimal("TOTALRECOLHIDOCSLL");
+        this.totalRecolhidoCsll = vo.asBigDecimal("TOTALRECOLHIDO_CSLL");
         this.valorPat = vo.asBigDecimal("VALORPAT");
         this.formaApur = vo.asString("FORMAAPUR");
-        this.vlrIrpjCompprej = vo.asBigDecimal("VLRIRPJCOMPPREJ");
-        this.vlrIrpjCompprejCsll = vo.asBigDecimal("VLRIRPJCOMPPREJCSLL");
-        this.compBcnegCsll = vo.asBigDecimal("COMPBCNEGCSLL");
-        this.compprejUfis = vo.asBigDecimal("COMPPREJUFIS");
-        this.deduOutinc = vo.asBigDecimal("DEDUOUTINC");
+        this.vlrIrpjCompPrej = vo.asBigDecimal("VLRIRPJCOMPPREJ");
+        this.vlrIrpjCompPrejCsll = vo.asBigDecimal("VLRIRPJCOMPPREJ_CSLL");
+        this.compBcNegCsll = vo.asBigDecimal("COMPBCNEG_CSLL");
+        this.compPrejUfis = vo.asBigDecimal("COMPPREJUFIS");
+        this.deduOutInc = vo.asBigDecimal("DEDUOUTINC");
         this.resLiqAjus = vo.asBigDecimal("RESLIQAJUS");
-        this.resLiqAjusCsll = vo.asBigDecimal("RESLIQAJUSCSLL");
+        this.resLiqAjusCsll = vo.asBigDecimal("RESLIQAJUS_CSLL");
         this.vlrCsllRetComp = vo.asBigDecimal("VLRCSLLRETCOMP");
         this.vlrIrpjRetComp = vo.asBigDecimal("VLRIRPJRETCOMP");
         this.consCrespecPartea = vo.asString("CONSCRESPECPARTEA");

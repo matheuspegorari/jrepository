@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class ProcessoAdmJudicialReinf implements SankhyaEntity<ProcessoAdmJudicialReinf> {
-
+public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJudicialReinf> {
    private String chave;
    private BigDecimal codEmp;
    private BigDecimal codMunic;
@@ -261,6 +260,11 @@ public class ProcessoAdmJudicialReinf implements SankhyaEntity<ProcessoAdmJudici
    }
 
    @Override
+   public String getTableName() {
+        return "TRIPAJR";
+   }
+
+   @Override
    public String getEntityName() {
         return "ProcessoAdmJudicialReinf";
    }
@@ -278,8 +282,8 @@ public class ProcessoAdmJudicialReinf implements SankhyaEntity<ProcessoAdmJudici
         this.indAutoria = vo.asBigDecimal("INDAUTORIA");
         this.iniValid = vo.asTimestamp("INIVALID");
         this.nrInsc = vo.asString("NRINSC");
-        this.nrRecibo = vo.asString("NRRECIBO");
-        this.nrReciboAnt = vo.asString("NRRECIBOANT");
+        this.nrRecibo = vo.asString("NRORECIBO");
+        this.nrReciboAnt = vo.asString("NRORECIBOANT");
         this.nrProc = vo.asString("NRPROC");
         this.nuProcesso = vo.asBigDecimal("NUPROCESSO");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

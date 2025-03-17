@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class PerfilRequisicao implements SankhyaEntity<PerfilRequisicao> {
-
+public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    private BigDecimal codPerfil;
    private BigDecimal codUsu;
    private Timestamp dtAlter;
@@ -60,6 +59,11 @@ public class PerfilRequisicao implements SankhyaEntity<PerfilRequisicao> {
 
    public void setPeso(BigDecimal peso) {
         this.peso = peso;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TRSPER";
    }
 
    @Override

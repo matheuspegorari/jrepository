@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EntidadesRecentesFavoritas implements SankhyaEntity<EntidadesRecentesFavoritas> {
-
+public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesRecentesFavoritas> {
    private String nomeInstancia;
    private Timestamp dhUltimoAcesso;
    private BigDecimal codUsu;
@@ -51,6 +50,11 @@ public class EntidadesRecentesFavoritas implements SankhyaEntity<EntidadesRecent
 
    public void setPkRegistro(String pkRegistro) {
         this.pkRegistro = pkRegistro;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TSIERF";
    }
 
    @Override

@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class LigacaoSeparacaoAgrupada implements SankhyaEntity<LigacaoSeparacaoAgrupada> {
-
+public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSeparacaoAgrupada> {
    private BigDecimal nuSepFilha;
    private BigDecimal seqIttFilha;
    private BigDecimal seqIttMae;
@@ -50,6 +49,11 @@ public class LigacaoSeparacaoAgrupada implements SankhyaEntity<LigacaoSeparacaoA
 
    public void setQtdFilha(BigDecimal qtdFilha) {
         this.qtdFilha = qtdFilha;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGWSVAR";
    }
 
    @Override

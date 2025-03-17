@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class RegistroIss implements SankhyaEntity<RegistroIss> {
-
+public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    private BigDecimal vlrRedBaseIss;
    private BigDecimal vlrSub;
    private BigDecimal sequencia;
@@ -321,6 +320,11 @@ public class RegistroIss implements SankhyaEntity<RegistroIss> {
 
    public void setCodLst(BigDecimal codLst) {
         this.codLst = codLst;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TGFLIS";
    }
 
    @Override

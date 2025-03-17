@@ -1,11 +1,10 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
-public class ApontamentoVolumes implements SankhyaEntity<ApontamentoVolumes> {
-
+public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes> {
    private BigDecimal codProd;
    private String controle;
    private BigDecimal id;
@@ -95,6 +94,11 @@ public class ApontamentoVolumes implements SankhyaEntity<ApontamentoVolumes> {
 
    public void setTipo(String tipo) {
         this.tipo = tipo;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPRAVO";
    }
 
    @Override

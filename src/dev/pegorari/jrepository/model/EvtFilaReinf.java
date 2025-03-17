@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EvtFilaReinf implements SankhyaEntity<EvtFilaReinf> {
-
+public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    private String acao;
    private String chave;
    private String chaveEvento;
@@ -261,6 +260,11 @@ public class EvtFilaReinf implements SankhyaEntity<EvtFilaReinf> {
    }
 
    @Override
+   public String getTableName() {
+        return "EVTFILAREINF";
+   }
+
+   @Override
    public String getEntityName() {
         return "EvtFilaReinf";
    }
@@ -273,7 +277,7 @@ public class EvtFilaReinf implements SankhyaEntity<EvtFilaReinf> {
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codRetorno = vo.asBigDecimal("CODRETORNO");
         this.codUsuInc = vo.asBigDecimal("CODUSUINC");
-        this.descEvt = vo.asString("DESCEVT");
+        this.descEvt = vo.asString("DESCREVT");
         this.dhInc = vo.asTimestamp("DHINC");
         this.dhProc = vo.asTimestamp("DHPROC");
         this.fimValid = vo.asTimestamp("FIMVALID");

@@ -1,12 +1,11 @@
 package dev.pegorari.jrepository.model;
 
 import br.com.sankhya.jape.vo.DynamicVO;
-import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 import java.math.BigDecimal;
 
-public class EnvioQuestionario implements SankhyaEntity<EnvioQuestionario> {
-
+public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> {
    private BigDecimal chave;
    private BigDecimal chave2;
    private BigDecimal codFila;
@@ -96,6 +95,11 @@ public class EnvioQuestionario implements SankhyaEntity<EnvioQuestionario> {
 
    public void setSequencia(BigDecimal sequencia) {
         this.sequencia = sequencia;
+   }
+
+   @Override
+   public String getTableName() {
+        return "TPQENV";
    }
 
    @Override

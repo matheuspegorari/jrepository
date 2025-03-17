@@ -1,0 +1,89 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class BannerLogin implements SankhyaEntity<BannerLogin> {
+
+   private String nomeArq;
+   private BigDecimal nuArquivo;
+   private BigDecimal ordem;
+   private BigDecimal tempo;
+   private String url;
+   private String profile;
+   private String evo;
+
+   public String getNomeArq() {
+        return nomeArq;
+   }
+
+   public void setNomeArq(String nomeArq) {
+        this.nomeArq = nomeArq;
+   }
+
+   public BigDecimal getNuArquivo() {
+        return nuArquivo;
+   }
+
+   public void setNuArquivo(BigDecimal nuArquivo) {
+        this.nuArquivo = nuArquivo;
+   }
+
+   public BigDecimal getOrdem() {
+        return ordem;
+   }
+
+   public void setOrdem(BigDecimal ordem) {
+        this.ordem = ordem;
+   }
+
+   public BigDecimal getTempo() {
+        return tempo;
+   }
+
+   public void setTempo(BigDecimal tempo) {
+        this.tempo = tempo;
+   }
+
+   public String getUrl() {
+        return url;
+   }
+
+   public void setUrl(String url) {
+        this.url = url;
+   }
+
+   public String getProfile() {
+        return profile;
+   }
+
+   public void setProfile(String profile) {
+        this.profile = profile;
+   }
+
+   public String getEvo() {
+        return evo;
+   }
+
+   public void setEvo(String evo) {
+        this.evo = evo;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "BannerLogin";
+   }
+
+   @Override
+   public BannerLogin fromVO(DynamicVO vo) {
+        this.nomeArq = vo.asString("NOMEARQ");
+        this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
+        this.ordem = vo.asBigDecimal("ORDEM");
+        this.tempo = vo.asBigDecimal("TEMPO");
+        this.url = vo.asString("URL");
+        this.profile = vo.asString("PROFILE");
+        this.evo = vo.asString("EVO");
+        return this;
+   }
+}

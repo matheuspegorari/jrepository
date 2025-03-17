@@ -1,0 +1,59 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class AverbacaoSeguroMDFE implements SankhyaEntity<AverbacaoSeguroMDFE> {
+
+   private String nuAverb;
+   private BigDecimal seqMdfe;
+   private String numApOlice;
+   private BigDecimal nuViag;
+
+   public String getNuAverb() {
+        return nuAverb;
+   }
+
+   public void setNuAverb(String nuAverb) {
+        this.nuAverb = nuAverb;
+   }
+
+   public BigDecimal getSeqMdfe() {
+        return seqMdfe;
+   }
+
+   public void setSeqMdfe(BigDecimal seqMdfe) {
+        this.seqMdfe = seqMdfe;
+   }
+
+   public String getNumApOlice() {
+        return numApOlice;
+   }
+
+   public void setNumApOlice(String numApOlice) {
+        this.numApOlice = numApOlice;
+   }
+
+   public BigDecimal getNuViag() {
+        return nuViag;
+   }
+
+   public void setNuViag(BigDecimal nuViag) {
+        this.nuViag = nuViag;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "AverbacaoSeguroMDFE";
+   }
+
+   @Override
+   public AverbacaoSeguroMDFE fromVO(DynamicVO vo) {
+        this.nuAverb = vo.asString("NUAVERB");
+        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
+        this.numApOlice = vo.asString("NUMAPOLICE");
+        this.nuViag = vo.asBigDecimal("NUVIAG");
+        return this;
+   }
+}

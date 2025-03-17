@@ -1,0 +1,79 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class FiltroCalculoCusto implements SankhyaEntity<FiltroCalculoCusto> {
+
+   private BigDecimal codChave;
+   private BigDecimal codForm;
+   private String tabela;
+   private String tipForm;
+   private BigDecimal codEmpPla;
+   private String tipLancPla;
+
+   public BigDecimal getCodChave() {
+        return codChave;
+   }
+
+   public void setCodChave(BigDecimal codChave) {
+        this.codChave = codChave;
+   }
+
+   public BigDecimal getCodForm() {
+        return codForm;
+   }
+
+   public void setCodForm(BigDecimal codForm) {
+        this.codForm = codForm;
+   }
+
+   public String getTabela() {
+        return tabela;
+   }
+
+   public void setTabela(String tabela) {
+        this.tabela = tabela;
+   }
+
+   public String getTipForm() {
+        return tipForm;
+   }
+
+   public void setTipForm(String tipForm) {
+        this.tipForm = tipForm;
+   }
+
+   public BigDecimal getCodEmpPla() {
+        return codEmpPla;
+   }
+
+   public void setCodEmpPla(BigDecimal codEmpPla) {
+        this.codEmpPla = codEmpPla;
+   }
+
+   public String getTipLancPla() {
+        return tipLancPla;
+   }
+
+   public void setTipLancPla(String tipLancPla) {
+        this.tipLancPla = tipLancPla;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "FiltroCalculoCusto";
+   }
+
+   @Override
+   public FiltroCalculoCusto fromVO(DynamicVO vo) {
+        this.codChave = vo.asBigDecimal("CODCHAVE");
+        this.codForm = vo.asBigDecimal("CODFORM");
+        this.tabela = vo.asString("TABELA");
+        this.tipForm = vo.asString("TIPFORM");
+        this.codEmpPla = vo.asBigDecimal("CODEMPPLA");
+        this.tipLancPla = vo.asString("TIPLANCPLA");
+        return this;
+   }
+}

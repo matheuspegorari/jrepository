@@ -1,0 +1,49 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class RelacaoTipoNo implements SankhyaEntity<RelacaoTipoNo> {
+
+   private BigDecimal nuEst;
+   private BigDecimal nuInstanciaFilha;
+   private BigDecimal nuInstanciaPai;
+
+   public BigDecimal getNuEst() {
+        return nuEst;
+   }
+
+   public void setNuEst(BigDecimal nuEst) {
+        this.nuEst = nuEst;
+   }
+
+   public BigDecimal getNuInstanciaFilha() {
+        return nuInstanciaFilha;
+   }
+
+   public void setNuInstanciaFilha(BigDecimal nuInstanciaFilha) {
+        this.nuInstanciaFilha = nuInstanciaFilha;
+   }
+
+   public BigDecimal getNuInstanciaPai() {
+        return nuInstanciaPai;
+   }
+
+   public void setNuInstanciaPai(BigDecimal nuInstanciaPai) {
+        this.nuInstanciaPai = nuInstanciaPai;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "RelacaoTipoNo";
+   }
+
+   @Override
+   public RelacaoTipoNo fromVO(DynamicVO vo) {
+        this.nuEst = vo.asBigDecimal("NUEST");
+        this.nuInstanciaFilha = vo.asBigDecimal("NUINSTANCIAFILHA");
+        this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");
+        return this;
+   }
+}

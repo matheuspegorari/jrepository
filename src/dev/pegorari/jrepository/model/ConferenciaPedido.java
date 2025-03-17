@@ -1,0 +1,90 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class ConferenciaPedido implements SankhyaEntity<ConferenciaPedido> {
+
+   private String codBarra;
+   private BigDecimal codUsu;
+   private BigDecimal nuConf;
+   private BigDecimal qtd;
+   private BigDecimal sequencia;
+   private String tipoConf;
+   private Timestamp dhConf;
+
+   public String getCodBarra() {
+        return codBarra;
+   }
+
+   public void setCodBarra(String codBarra) {
+        this.codBarra = codBarra;
+   }
+
+   public BigDecimal getCodUsu() {
+        return codUsu;
+   }
+
+   public void setCodUsu(BigDecimal codUsu) {
+        this.codUsu = codUsu;
+   }
+
+   public BigDecimal getNuConf() {
+        return nuConf;
+   }
+
+   public void setNuConf(BigDecimal nuConf) {
+        this.nuConf = nuConf;
+   }
+
+   public BigDecimal getQtd() {
+        return qtd;
+   }
+
+   public void setQtd(BigDecimal qtd) {
+        this.qtd = qtd;
+   }
+
+   public BigDecimal getSequencia() {
+        return sequencia;
+   }
+
+   public void setSequencia(BigDecimal sequencia) {
+        this.sequencia = sequencia;
+   }
+
+   public String getTipoConf() {
+        return tipoConf;
+   }
+
+   public void setTipoConf(String tipoConf) {
+        this.tipoConf = tipoConf;
+   }
+
+   public Timestamp getDhConf() {
+        return dhConf;
+   }
+
+   public void setDhConf(Timestamp dhConf) {
+        this.dhConf = dhConf;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "ConferenciaPedido";
+   }
+
+   @Override
+   public ConferenciaPedido fromVO(DynamicVO vo) {
+        this.codBarra = vo.asString("CODBARRA");
+        this.codUsu = vo.asBigDecimal("CODUSU");
+        this.nuConf = vo.asBigDecimal("NUCONF");
+        this.qtd = vo.asBigDecimal("QTD");
+        this.sequencia = vo.asBigDecimal("SEQUENCIA");
+        this.tipoConf = vo.asString("TIPOCONF");
+        this.dhConf = vo.asTimestamp("DHCONF");
+        return this;
+   }
+}

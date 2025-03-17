@@ -1,0 +1,260 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class Site implements SankhyaEntity<Site> {
+
+   private String abreviatura;
+   private String analitico;
+   private String ativo;
+   private String celular;
+   private String cep;
+   private String cnpj;
+   private BigDecimal codBai;
+   private BigDecimal codCid;
+   private BigDecimal codEnd;
+   private BigDecimal codSite;
+   private BigDecimal codSitePai;
+   private BigDecimal codUsu;
+   private String complemento;
+   private Timestamp dtAlter;
+   private Timestamp dtCad;
+   private String email;
+   private String fax;
+   private BigDecimal grau;
+   private String inscEstad;
+   private String nomeSite;
+   private String numEnd;
+   private String observacoes;
+   private BigDecimal ramal;
+   private String telefone;
+
+   public String getAbreviatura() {
+        return abreviatura;
+   }
+
+   public void setAbreviatura(String abreviatura) {
+        this.abreviatura = abreviatura;
+   }
+
+   public String getAnalitico() {
+        return analitico;
+   }
+
+   public void setAnalitico(String analitico) {
+        this.analitico = analitico;
+   }
+
+   public String getAtivo() {
+        return ativo;
+   }
+
+   public void setAtivo(String ativo) {
+        this.ativo = ativo;
+   }
+
+   public String getCelular() {
+        return celular;
+   }
+
+   public void setCelular(String celular) {
+        this.celular = celular;
+   }
+
+   public String getCep() {
+        return cep;
+   }
+
+   public void setCep(String cep) {
+        this.cep = cep;
+   }
+
+   public String getCnpj() {
+        return cnpj;
+   }
+
+   public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+   }
+
+   public BigDecimal getCodBai() {
+        return codBai;
+   }
+
+   public void setCodBai(BigDecimal codBai) {
+        this.codBai = codBai;
+   }
+
+   public BigDecimal getCodCid() {
+        return codCid;
+   }
+
+   public void setCodCid(BigDecimal codCid) {
+        this.codCid = codCid;
+   }
+
+   public BigDecimal getCodEnd() {
+        return codEnd;
+   }
+
+   public void setCodEnd(BigDecimal codEnd) {
+        this.codEnd = codEnd;
+   }
+
+   public BigDecimal getCodSite() {
+        return codSite;
+   }
+
+   public void setCodSite(BigDecimal codSite) {
+        this.codSite = codSite;
+   }
+
+   public BigDecimal getCodSitePai() {
+        return codSitePai;
+   }
+
+   public void setCodSitePai(BigDecimal codSitePai) {
+        this.codSitePai = codSitePai;
+   }
+
+   public BigDecimal getCodUsu() {
+        return codUsu;
+   }
+
+   public void setCodUsu(BigDecimal codUsu) {
+        this.codUsu = codUsu;
+   }
+
+   public String getComplemento() {
+        return complemento;
+   }
+
+   public void setComplemento(String complemento) {
+        this.complemento = complemento;
+   }
+
+   public Timestamp getDtAlter() {
+        return dtAlter;
+   }
+
+   public void setDtAlter(Timestamp dtAlter) {
+        this.dtAlter = dtAlter;
+   }
+
+   public Timestamp getDtCad() {
+        return dtCad;
+   }
+
+   public void setDtCad(Timestamp dtCad) {
+        this.dtCad = dtCad;
+   }
+
+   public String getEmail() {
+        return email;
+   }
+
+   public void setEmail(String email) {
+        this.email = email;
+   }
+
+   public String getFax() {
+        return fax;
+   }
+
+   public void setFax(String fax) {
+        this.fax = fax;
+   }
+
+   public BigDecimal getGrau() {
+        return grau;
+   }
+
+   public void setGrau(BigDecimal grau) {
+        this.grau = grau;
+   }
+
+   public String getInscEstad() {
+        return inscEstad;
+   }
+
+   public void setInscEstad(String inscEstad) {
+        this.inscEstad = inscEstad;
+   }
+
+   public String getNomeSite() {
+        return nomeSite;
+   }
+
+   public void setNomeSite(String nomeSite) {
+        this.nomeSite = nomeSite;
+   }
+
+   public String getNumEnd() {
+        return numEnd;
+   }
+
+   public void setNumEnd(String numEnd) {
+        this.numEnd = numEnd;
+   }
+
+   public String getObservacoes() {
+        return observacoes;
+   }
+
+   public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
+   }
+
+   public BigDecimal getRamal() {
+        return ramal;
+   }
+
+   public void setRamal(BigDecimal ramal) {
+        this.ramal = ramal;
+   }
+
+   public String getTelefone() {
+        return telefone;
+   }
+
+   public void setTelefone(String telefone) {
+        this.telefone = telefone;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "Site";
+   }
+
+   @Override
+   public Site fromVO(DynamicVO vo) {
+        this.abreviatura = vo.asString("ABREVIATURA");
+        this.analitico = vo.asString("ANALITICO");
+        this.ativo = vo.asString("ATIVO");
+        this.celular = vo.asString("CELULAR");
+        this.cep = vo.asString("CEP");
+        this.cnpj = vo.asString("CNPJ");
+        this.codBai = vo.asBigDecimal("CODBAI");
+        this.codCid = vo.asBigDecimal("CODCID");
+        this.codEnd = vo.asBigDecimal("CODEND");
+        this.codSite = vo.asBigDecimal("CODSITE");
+        this.codSitePai = vo.asBigDecimal("CODSITEPAI");
+        this.codUsu = vo.asBigDecimal("CODUSU");
+        this.complemento = vo.asString("COMPLEMENTO");
+        this.dtAlter = vo.asTimestamp("DTALTER");
+        this.dtCad = vo.asTimestamp("DTCAD");
+        this.email = vo.asString("EMAIL");
+        this.fax = vo.asString("FAX");
+        this.grau = vo.asBigDecimal("GRAU");
+        this.inscEstad = vo.asString("INSCESTAD");
+        this.nomeSite = vo.asString("NOMESITE");
+        this.numEnd = vo.asString("NUMEND");
+        this.observacoes = vo.asString("OBSERVACOES");
+        this.ramal = vo.asBigDecimal("RAMAL");
+        this.telefone = vo.asString("TELEFONE");
+        return this;
+   }
+}

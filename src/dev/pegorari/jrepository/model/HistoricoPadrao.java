@@ -1,0 +1,39 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class HistoricoPadrao implements SankhyaEntity<HistoricoPadrao> {
+
+   private BigDecimal codHistCtb;
+   private String historico;
+
+   public BigDecimal getCodHistCtb() {
+        return codHistCtb;
+   }
+
+   public void setCodHistCtb(BigDecimal codHistCtb) {
+        this.codHistCtb = codHistCtb;
+   }
+
+   public String getHistorico() {
+        return historico;
+   }
+
+   public void setHistorico(String historico) {
+        this.historico = historico;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "HistoricoPadrao";
+   }
+
+   @Override
+   public HistoricoPadrao fromVO(DynamicVO vo) {
+        this.codHistCtb = vo.asBigDecimal("CODHISTCTB");
+        this.historico = vo.asString("HISTORICO");
+        return this;
+   }
+}

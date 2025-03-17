@@ -1,0 +1,120 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class SerieProduto implements SankhyaEntity<SerieProduto> {
+
+   private BigDecimal atualEstoque;
+   private String avariado;
+   private BigDecimal codProd;
+   private BigDecimal codUsu;
+   private Timestamp dtAlter;
+   private BigDecimal nuNota;
+   private BigDecimal sequencia;
+   private String serie;
+   private String serieFab;
+   private String smartCard;
+
+   public BigDecimal getAtualEstoque() {
+        return atualEstoque;
+   }
+
+   public void setAtualEstoque(BigDecimal atualEstoque) {
+        this.atualEstoque = atualEstoque;
+   }
+
+   public String getAvariado() {
+        return avariado;
+   }
+
+   public void setAvariado(String avariado) {
+        this.avariado = avariado;
+   }
+
+   public BigDecimal getCodProd() {
+        return codProd;
+   }
+
+   public void setCodProd(BigDecimal codProd) {
+        this.codProd = codProd;
+   }
+
+   public BigDecimal getCodUsu() {
+        return codUsu;
+   }
+
+   public void setCodUsu(BigDecimal codUsu) {
+        this.codUsu = codUsu;
+   }
+
+   public Timestamp getDtAlter() {
+        return dtAlter;
+   }
+
+   public void setDtAlter(Timestamp dtAlter) {
+        this.dtAlter = dtAlter;
+   }
+
+   public BigDecimal getNuNota() {
+        return nuNota;
+   }
+
+   public void setNuNota(BigDecimal nuNota) {
+        this.nuNota = nuNota;
+   }
+
+   public BigDecimal getSequencia() {
+        return sequencia;
+   }
+
+   public void setSequencia(BigDecimal sequencia) {
+        this.sequencia = sequencia;
+   }
+
+   public String getSerie() {
+        return serie;
+   }
+
+   public void setSerie(String serie) {
+        this.serie = serie;
+   }
+
+   public String getSerieFab() {
+        return serieFab;
+   }
+
+   public void setSerieFab(String serieFab) {
+        this.serieFab = serieFab;
+   }
+
+   public String getSmartCard() {
+        return smartCard;
+   }
+
+   public void setSmartCard(String smartCard) {
+        this.smartCard = smartCard;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "SerieProduto";
+   }
+
+   @Override
+   public SerieProduto fromVO(DynamicVO vo) {
+        this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
+        this.avariado = vo.asString("AVARIADO");
+        this.codProd = vo.asBigDecimal("CODPROD");
+        this.codUsu = vo.asBigDecimal("CODUSU");
+        this.dtAlter = vo.asTimestamp("DTALTER");
+        this.nuNota = vo.asBigDecimal("NUNOTA");
+        this.sequencia = vo.asBigDecimal("SEQUENCIA");
+        this.serie = vo.asString("SERIE");
+        this.serieFab = vo.asString("SERIEFAB");
+        this.smartCard = vo.asString("SMARTCARD");
+        return this;
+   }
+}

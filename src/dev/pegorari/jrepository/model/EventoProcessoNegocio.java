@@ -1,0 +1,139 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class EventoProcessoNegocio implements SankhyaEntity<EventoProcessoNegocio> {
+
+   private String acao;
+   private BigDecimal codPrn;
+   private String descRevento;
+   private String formato;
+   private String formulario;
+   private String idElemento;
+   private BigDecimal nuEvent;
+   private String onde;
+   private String quando;
+   private String referencia;
+   private BigDecimal tipoAcao;
+   private BigDecimal versao;
+
+   public String getAcao() {
+        return acao;
+   }
+
+   public void setAcao(String acao) {
+        this.acao = acao;
+   }
+
+   public BigDecimal getCodPrn() {
+        return codPrn;
+   }
+
+   public void setCodPrn(BigDecimal codPrn) {
+        this.codPrn = codPrn;
+   }
+
+   public String getDescRevento() {
+        return descRevento;
+   }
+
+   public void setDescRevento(String descRevento) {
+        this.descRevento = descRevento;
+   }
+
+   public String getFormato() {
+        return formato;
+   }
+
+   public void setFormato(String formato) {
+        this.formato = formato;
+   }
+
+   public String getFormulario() {
+        return formulario;
+   }
+
+   public void setFormulario(String formulario) {
+        this.formulario = formulario;
+   }
+
+   public String getIdElemento() {
+        return idElemento;
+   }
+
+   public void setIdElemento(String idElemento) {
+        this.idElemento = idElemento;
+   }
+
+   public BigDecimal getNuEvent() {
+        return nuEvent;
+   }
+
+   public void setNuEvent(BigDecimal nuEvent) {
+        this.nuEvent = nuEvent;
+   }
+
+   public String getOnde() {
+        return onde;
+   }
+
+   public void setOnde(String onde) {
+        this.onde = onde;
+   }
+
+   public String getQuando() {
+        return quando;
+   }
+
+   public void setQuando(String quando) {
+        this.quando = quando;
+   }
+
+   public String getReferencia() {
+        return referencia;
+   }
+
+   public void setReferencia(String referencia) {
+        this.referencia = referencia;
+   }
+
+   public BigDecimal getTipoAcao() {
+        return tipoAcao;
+   }
+
+   public void setTipoAcao(BigDecimal tipoAcao) {
+        this.tipoAcao = tipoAcao;
+   }
+
+   public BigDecimal getVersao() {
+        return versao;
+   }
+
+   public void setVersao(BigDecimal versao) {
+        this.versao = versao;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "EventoProcessoNegocio";
+   }
+
+   @Override
+   public EventoProcessoNegocio fromVO(DynamicVO vo) {
+        this.acao = vo.asString("ACAO");
+        this.codPrn = vo.asBigDecimal("CODPRN");
+        this.descRevento = vo.asString("DESCREVENTO");
+        this.formato = vo.asString("FORMATO");
+        this.formulario = vo.asString("FORMULARIO");
+        this.idElemento = vo.asString("IDELEMENTO");
+        this.nuEvent = vo.asBigDecimal("NUEVENT");
+        this.onde = vo.asString("ONDE");
+        this.quando = vo.asString("QUANDO");
+        this.referencia = vo.asString("REFERENCIA");
+        this.tipoAcao = vo.asBigDecimal("TIPOACAO");
+        this.versao = vo.asBigDecimal("VERSAO");
+        return this;
+   }
+}

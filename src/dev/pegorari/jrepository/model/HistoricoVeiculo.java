@@ -1,0 +1,100 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class HistoricoVeiculo implements SankhyaEntity<HistoricoVeiculo> {
+
+   private String ativo;
+   private BigDecimal codParctransp;
+   private BigDecimal codUsu;
+   private BigDecimal codVeiculo;
+   private Timestamp dtAlter;
+   private Timestamp dtVigor;
+   private BigDecimal nuTabFret;
+   private BigDecimal preco;
+
+   public String getAtivo() {
+        return ativo;
+   }
+
+   public void setAtivo(String ativo) {
+        this.ativo = ativo;
+   }
+
+   public BigDecimal getCodParctransp() {
+        return codParctransp;
+   }
+
+   public void setCodParctransp(BigDecimal codParctransp) {
+        this.codParctransp = codParctransp;
+   }
+
+   public BigDecimal getCodUsu() {
+        return codUsu;
+   }
+
+   public void setCodUsu(BigDecimal codUsu) {
+        this.codUsu = codUsu;
+   }
+
+   public BigDecimal getCodVeiculo() {
+        return codVeiculo;
+   }
+
+   public void setCodVeiculo(BigDecimal codVeiculo) {
+        this.codVeiculo = codVeiculo;
+   }
+
+   public Timestamp getDtAlter() {
+        return dtAlter;
+   }
+
+   public void setDtAlter(Timestamp dtAlter) {
+        this.dtAlter = dtAlter;
+   }
+
+   public Timestamp getDtVigor() {
+        return dtVigor;
+   }
+
+   public void setDtVigor(Timestamp dtVigor) {
+        this.dtVigor = dtVigor;
+   }
+
+   public BigDecimal getNuTabFret() {
+        return nuTabFret;
+   }
+
+   public void setNuTabFret(BigDecimal nuTabFret) {
+        this.nuTabFret = nuTabFret;
+   }
+
+   public BigDecimal getPreco() {
+        return preco;
+   }
+
+   public void setPreco(BigDecimal preco) {
+        this.preco = preco;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "HistoricoVeiculo";
+   }
+
+   @Override
+   public HistoricoVeiculo fromVO(DynamicVO vo) {
+        this.ativo = vo.asString("ATIVO");
+        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
+        this.codUsu = vo.asBigDecimal("CODUSU");
+        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
+        this.dtAlter = vo.asTimestamp("DTALTER");
+        this.dtVigor = vo.asTimestamp("DTVIGOR");
+        this.nuTabFret = vo.asBigDecimal("NUTABFRET");
+        this.preco = vo.asBigDecimal("PRECO");
+        return this;
+   }
+}

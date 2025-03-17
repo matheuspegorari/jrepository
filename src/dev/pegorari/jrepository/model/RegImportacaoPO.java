@@ -1,0 +1,70 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class RegImportacaoPO implements SankhyaEntity<RegImportacaoPO> {
+
+   private String cabArq;
+   private BigDecimal codMeta;
+   private BigDecimal codUsu;
+   private Timestamp dtProc;
+   private BigDecimal nuImport;
+
+   public String getCabArq() {
+        return cabArq;
+   }
+
+   public void setCabArq(String cabArq) {
+        this.cabArq = cabArq;
+   }
+
+   public BigDecimal getCodMeta() {
+        return codMeta;
+   }
+
+   public void setCodMeta(BigDecimal codMeta) {
+        this.codMeta = codMeta;
+   }
+
+   public BigDecimal getCodUsu() {
+        return codUsu;
+   }
+
+   public void setCodUsu(BigDecimal codUsu) {
+        this.codUsu = codUsu;
+   }
+
+   public Timestamp getDtProc() {
+        return dtProc;
+   }
+
+   public void setDtProc(Timestamp dtProc) {
+        this.dtProc = dtProc;
+   }
+
+   public BigDecimal getNuImport() {
+        return nuImport;
+   }
+
+   public void setNuImport(BigDecimal nuImport) {
+        this.nuImport = nuImport;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "RegImportacaoPO";
+   }
+
+   @Override
+   public RegImportacaoPO fromVO(DynamicVO vo) {
+        this.cabArq = vo.asString("CABARQ");
+        this.codMeta = vo.asBigDecimal("CODMETA");
+        this.codUsu = vo.asBigDecimal("CODUSU");
+        this.dtProc = vo.asTimestamp("DTPROC");
+        this.nuImport = vo.asBigDecimal("NUIMPORT");
+        return this;
+   }
+}

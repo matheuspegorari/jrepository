@@ -1,0 +1,49 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class OcorrenciaBancaria implements SankhyaEntity<OcorrenciaBancaria> {
+
+   private BigDecimal codBco;
+   private BigDecimal codOcor;
+   private String descricao;
+
+   public BigDecimal getCodBco() {
+        return codBco;
+   }
+
+   public void setCodBco(BigDecimal codBco) {
+        this.codBco = codBco;
+   }
+
+   public BigDecimal getCodOcor() {
+        return codOcor;
+   }
+
+   public void setCodOcor(BigDecimal codOcor) {
+        this.codOcor = codOcor;
+   }
+
+   public String getDescricao() {
+        return descricao;
+   }
+
+   public void setDescricao(String descricao) {
+        this.descricao = descricao;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "OcorrenciaBancaria";
+   }
+
+   @Override
+   public OcorrenciaBancaria fromVO(DynamicVO vo) {
+        this.codBco = vo.asBigDecimal("CODBCO");
+        this.codOcor = vo.asBigDecimal("CODOCOR");
+        this.descricao = vo.asString("DESCRICAO");
+        return this;
+   }
+}

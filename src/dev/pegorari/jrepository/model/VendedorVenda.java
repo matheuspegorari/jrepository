@@ -1,0 +1,49 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class VendedorVenda implements SankhyaEntity<VendedorVenda> {
+
+   private BigDecimal codTab;
+   private BigDecimal codTipVenda;
+   private BigDecimal codVend;
+
+   public BigDecimal getCodTab() {
+        return codTab;
+   }
+
+   public void setCodTab(BigDecimal codTab) {
+        this.codTab = codTab;
+   }
+
+   public BigDecimal getCodTipVenda() {
+        return codTipVenda;
+   }
+
+   public void setCodTipVenda(BigDecimal codTipVenda) {
+        this.codTipVenda = codTipVenda;
+   }
+
+   public BigDecimal getCodVend() {
+        return codVend;
+   }
+
+   public void setCodVend(BigDecimal codVend) {
+        this.codVend = codVend;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "VendedorVenda";
+   }
+
+   @Override
+   public VendedorVenda fromVO(DynamicVO vo) {
+        this.codTab = vo.asBigDecimal("CODTAB");
+        this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
+        this.codVend = vo.asBigDecimal("CODVEND");
+        return this;
+   }
+}

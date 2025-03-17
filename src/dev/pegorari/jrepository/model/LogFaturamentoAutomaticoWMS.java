@@ -1,0 +1,60 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.sql.Timestamp;
+import java.math.BigDecimal;
+
+public class LogFaturamentoAutomaticoWMS implements SankhyaEntity<LogFaturamentoAutomaticoWMS> {
+
+   private char[] log;
+   private BigDecimal numNota;
+   private BigDecimal nuNota;
+   private Timestamp dhAlter;
+
+   public char[] getLog() {
+        return log;
+   }
+
+   public void setLog(char[] log) {
+        this.log = log;
+   }
+
+   public BigDecimal getNumNota() {
+        return numNota;
+   }
+
+   public void setNumNota(BigDecimal numNota) {
+        this.numNota = numNota;
+   }
+
+   public BigDecimal getNuNota() {
+        return nuNota;
+   }
+
+   public void setNuNota(BigDecimal nuNota) {
+        this.nuNota = nuNota;
+   }
+
+   public Timestamp getDhAlter() {
+        return dhAlter;
+   }
+
+   public void setDhAlter(Timestamp dhAlter) {
+        this.dhAlter = dhAlter;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "LogFaturamentoAutomaticoWMS";
+   }
+
+   @Override
+   public LogFaturamentoAutomaticoWMS fromVO(DynamicVO vo) {
+        this.log = vo.asClob("LOG");
+        this.numNota = vo.asBigDecimal("NUMNOTA");
+        this.nuNota = vo.asBigDecimal("NUNOTA");
+        this.dhAlter = vo.asTimestamp("DHALTER");
+        return this;
+   }
+}

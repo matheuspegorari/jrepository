@@ -1,0 +1,189 @@
+package dev.pegorari.jrepository.model;
+
+import br.com.sankhya.jape.vo.DynamicVO;
+import dev.pegorari.jrepository.interfaces.SankhyaEntity;
+import java.math.BigDecimal;
+
+public class ServidorSMTP implements SankhyaEntity<ServidorSMTP> {
+
+   private String senha;
+   private String usuario;
+   private String servidor;
+   private BigDecimal porta;
+   private BigDecimal codSmtp;
+   private String remetente;
+   private String ignoraCertificado;
+   private String padrao;
+   private String tipo;
+   private BigDecimal portaPop;
+   private String servidorPop;
+   private String utilDownXml;
+   private String accessToken;
+   private BigDecimal codAth;
+   private String expiresIn;
+   private String refreshToken;
+   private String useOauth;
+
+   public String getSenha() {
+        return senha;
+   }
+
+   public void setSenha(String senha) {
+        this.senha = senha;
+   }
+
+   public String getUsuario() {
+        return usuario;
+   }
+
+   public void setUsuario(String usuario) {
+        this.usuario = usuario;
+   }
+
+   public String getServidor() {
+        return servidor;
+   }
+
+   public void setServidor(String servidor) {
+        this.servidor = servidor;
+   }
+
+   public BigDecimal getPorta() {
+        return porta;
+   }
+
+   public void setPorta(BigDecimal porta) {
+        this.porta = porta;
+   }
+
+   public BigDecimal getCodSmtp() {
+        return codSmtp;
+   }
+
+   public void setCodSmtp(BigDecimal codSmtp) {
+        this.codSmtp = codSmtp;
+   }
+
+   public String getRemetente() {
+        return remetente;
+   }
+
+   public void setRemetente(String remetente) {
+        this.remetente = remetente;
+   }
+
+   public String getIgnoraCertificado() {
+        return ignoraCertificado;
+   }
+
+   public void setIgnoraCertificado(String ignoraCertificado) {
+        this.ignoraCertificado = ignoraCertificado;
+   }
+
+   public String getPadrao() {
+        return padrao;
+   }
+
+   public void setPadrao(String padrao) {
+        this.padrao = padrao;
+   }
+
+   public String getTipo() {
+        return tipo;
+   }
+
+   public void setTipo(String tipo) {
+        this.tipo = tipo;
+   }
+
+   public BigDecimal getPortaPop() {
+        return portaPop;
+   }
+
+   public void setPortaPop(BigDecimal portaPop) {
+        this.portaPop = portaPop;
+   }
+
+   public String getServidorPop() {
+        return servidorPop;
+   }
+
+   public void setServidorPop(String servidorPop) {
+        this.servidorPop = servidorPop;
+   }
+
+   public String getUtilDownXml() {
+        return utilDownXml;
+   }
+
+   public void setUtilDownXml(String utilDownXml) {
+        this.utilDownXml = utilDownXml;
+   }
+
+   public String getAccessToken() {
+        return accessToken;
+   }
+
+   public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+   }
+
+   public BigDecimal getCodAth() {
+        return codAth;
+   }
+
+   public void setCodAth(BigDecimal codAth) {
+        this.codAth = codAth;
+   }
+
+   public String getExpiresIn() {
+        return expiresIn;
+   }
+
+   public void setExpiresIn(String expiresIn) {
+        this.expiresIn = expiresIn;
+   }
+
+   public String getRefreshToken() {
+        return refreshToken;
+   }
+
+   public void setRefreshToken(String refreshToken) {
+        this.refreshToken = refreshToken;
+   }
+
+   public String getUseOauth() {
+        return useOauth;
+   }
+
+   public void setUseOauth(String useOauth) {
+        this.useOauth = useOauth;
+   }
+
+   @Override
+   public String getEntityName() {
+        return "ServidorSMTP";
+   }
+
+   @Override
+   public ServidorSMTP fromVO(DynamicVO vo) {
+        this.senha = vo.asString("SENHA");
+        this.usuario = vo.asString("USUARIO");
+        this.servidor = vo.asString("SERVIDOR");
+        this.porta = vo.asBigDecimal("PORTA");
+        this.codSmtp = vo.asBigDecimal("CODSMTP");
+        this.remetente = vo.asString("REMETENTE");
+        this.ignoraCertificado = vo.asString("IGNORACERTIFICADO");
+        this.padrao = vo.asString("PADRAO");
+        this.tipo = vo.asString("TIPO");
+        this.portaPop = vo.asBigDecimal("PORTAPOP");
+        this.servidorPop = vo.asString("SERVIDORPOP");
+        this.utilDownXml = vo.asString("UTILDOWNXML");
+        this.accessToken = vo.asString("ACCESSTOKEN");
+        this.codAth = vo.asBigDecimal("CODATH");
+        this.expiresIn = vo.asString("EXPIRESIN");
+        this.refreshToken = vo.asString("REFRESHTOKEN");
+        this.useOauth = vo.asString("USEOAUTH");
+        return this;
+   }
+}

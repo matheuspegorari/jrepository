@@ -11,7 +11,7 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
    private BigDecimal codLocal;
    private BigDecimal codProd;
    private String controle;
-   private String final;
+   private String _final;
    private String obrigatoria;
    private String ondeExec;
    private BigDecimal sequencia;
@@ -59,11 +59,11 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
    }
 
    public String getFinal() {
-        return final;
+        return _final;
    }
 
-   public void setFinal(String final) {
-        this.final = final;
+   public void setFinal(String _final) {
+        this._final = _final;
    }
 
    public String getObrigatoria() {
@@ -118,7 +118,7 @@ public class EtapaProduto implements SankhyaEntity<EtapaProduto> {
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");
-        this.final = vo.asString("FINAL");
+        this._final = vo.asString("FINAL");
         this.obrigatoria = vo.asString("OBRIGATORIA");
         this.ondeExec = vo.asString("ONDEEXEC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

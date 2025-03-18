@@ -20,8 +20,7 @@ public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implemen
         this.dirtyFields.clear();
     }
 
-    @Override
-    public void markDirty(String fieldName, Object value) {
+    protected void markDirty(String fieldName, Object value) {
         dirtyFields.put(fieldName, value);
     }
 

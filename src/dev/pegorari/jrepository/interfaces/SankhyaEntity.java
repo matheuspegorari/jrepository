@@ -9,6 +9,5 @@ public interface SankhyaEntity<T extends SankhyaEntity<T>> {
     String getEntityName();
     T fromVO(DynamicVO vo);
     DynamicVO getOriginalVO();
-    void markDirty(String fieldName, Object value);
     Map<String,Object> getDirtyFields();
 }

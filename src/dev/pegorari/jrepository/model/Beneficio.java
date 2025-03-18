@@ -33,6 +33,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -41,6 +42,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodBen(BigDecimal codBen) {
+        markAsChanged("CODBEN", codBen);
         this.codBen = codBen;
    }
 
@@ -49,6 +51,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -57,6 +60,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodCencusDif(BigDecimal codCencusDif) {
+        markAsChanged("CODCENCUSDIF", codCencusDif);
         this.codCencusDif = codCencusDif;
    }
 
@@ -65,6 +69,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
+        markAsChanged("CODCTABCOINT", codCtabcoInt);
         this.codCtabcoInt = codCtabcoInt;
    }
 
@@ -73,6 +78,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -81,6 +87,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -89,6 +96,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodEventoEmp(BigDecimal codEventoEmp) {
+        markAsChanged("CODEVENTOEMP", codEventoEmp);
         this.codEventoEmp = codEventoEmp;
    }
 
@@ -97,6 +105,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -105,6 +114,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -113,6 +123,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodParcEmp(BigDecimal codParcEmp) {
+        markAsChanged("CODPARCEMP", codParcEmp);
         this.codParcEmp = codParcEmp;
    }
 
@@ -121,6 +132,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -129,6 +141,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodTbe(BigDecimal codTbe) {
+        markAsChanged("CODTBE", codTbe);
         this.codTbe = codTbe;
    }
 
@@ -137,6 +150,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -145,6 +159,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -153,6 +168,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -161,6 +177,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -169,6 +186,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setFormulaInd(String formulaInd) {
+        markAsChanged("FORMULAIND", formulaInd);
         this.formulaInd = formulaInd;
    }
 
@@ -177,6 +195,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setValidaAfastamento(String validaAfastamento) {
+        markAsChanged("VALIDAAFASTAMENTO", validaAfastamento);
         this.validaAfastamento = validaAfastamento;
    }
 
@@ -185,6 +204,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setVlrParteEmpresa(BigDecimal vlrParteEmpresa) {
+        markAsChanged("VLRPARTEEMPRESA", vlrParteEmpresa);
         this.vlrParteEmpresa = vlrParteEmpresa;
    }
 
@@ -193,6 +213,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setDescHrCarga(String descHrCarga) {
+        markAsChanged("DESCHRCARGA", descHrCarga);
         this.descHrCarga = descHrCarga;
    }
 
@@ -201,6 +222,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
    }
 
    public void setTipoBeneficio(BigDecimal tipoBeneficio) {
+        markAsChanged("TIPOBENEFICIO", tipoBeneficio);
         this.tipoBeneficio = tipoBeneficio;
    }
 
@@ -216,6 +238,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
 
    @Override
    public Beneficio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codBen = vo.asBigDecimal("CODBEN");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

@@ -20,6 +20,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setApelido(String apelido) {
+        markAsChanged("APELIDO", apelido);
         this.apelido = apelido;
    }
 
@@ -28,6 +29,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setCargo(String cargo) {
+        markAsChanged("CARGO", cargo);
         this.cargo = cargo;
    }
 
@@ -36,6 +38,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -44,6 +47,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -52,6 +56,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -60,6 +65,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -68,6 +74,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setNomeContato(String nomeContato) {
+        markAsChanged("NOMECONTATO", nomeContato);
         this.nomeContato = nomeContato;
    }
 
@@ -76,6 +83,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setRamal(String ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -84,6 +92,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -99,6 +108,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
 
    @Override
    public ContatoProspect fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apelido = vo.asString("APELIDO");
         this.cargo = vo.asString("CARGO");
         this.celular = vo.asString("CELULAR");

@@ -17,6 +17,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -25,6 +26,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -33,6 +35,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
+        markAsChanged("CODPARCTERC", codParcterc);
         this.codParcterc = codParcterc;
    }
 
@@ -41,6 +44,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -49,6 +53,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -64,6 +69,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
 
    @Override
    public TerceiroAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.codParcterc = vo.asBigDecimal("CODPARCTERC");

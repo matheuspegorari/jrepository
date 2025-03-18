@@ -17,6 +17,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -25,6 +26,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    }
 
    public void setDhParada(Timestamp dhParada) {
+        markAsChanged("DHPARADA", dhParada);
         this.dhParada = dhParada;
    }
 
@@ -33,6 +35,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    }
 
    public void setHrIndisp(BigDecimal hrIndisp) {
+        markAsChanged("HRINDISP", hrIndisp);
         this.hrIndisp = hrIndisp;
    }
 
@@ -41,6 +44,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    }
 
    public void setMsgMp(String msgMp) {
+        markAsChanged("MSGMP", msgMp);
         this.msgMp = msgMp;
    }
 
@@ -49,6 +53,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    }
 
    public void setNumPa(BigDecimal numPa) {
+        markAsChanged("NUMPA", numPa);
         this.numPa = numPa;
    }
 
@@ -64,6 +69,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
 
    @Override
    public ManutencaoProgramada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhParada = vo.asTimestamp("DHPARADA");
         this.hrIndisp = vo.asBigDecimal("HRINDISP");

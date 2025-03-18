@@ -26,6 +26,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setCalcDifIcms(String calcDifIcms) {
+        markAsChanged("CALCDIFICMS", calcDifIcms);
         this.calcDifIcms = calcDifIcms;
    }
 
@@ -34,6 +35,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setCodCfo(BigDecimal codCfo) {
+        markAsChanged("CODCFO", codCfo);
         this.codCfo = codCfo;
    }
 
@@ -42,6 +44,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setCodCtactb(BigDecimal codCtactb) {
+        markAsChanged("CODCTACTB", codCtactb);
         this.codCtactb = codCtactb;
    }
 
@@ -50,6 +53,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setConvProduz(String convProduz) {
+        markAsChanged("CONVPRODUZ", convProduz);
         this.convProduz = convProduz;
    }
 
@@ -58,6 +62,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setDescCfo(String descCfo) {
+        markAsChanged("DESCRCFO", descCfo);
         this.descCfo = descCfo;
    }
 
@@ -66,6 +71,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setGrupoCfo(BigDecimal grupoCfo) {
+        markAsChanged("GRUPOCFO", grupoCfo);
         this.grupoCfo = grupoCfo;
    }
 
@@ -74,6 +80,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setTipIcms(String tipIcms) {
+        markAsChanged("TIPICMS", tipIcms);
         this.tipIcms = tipIcms;
    }
 
@@ -82,6 +89,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -90,6 +98,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setTributadasCiap(String tributadasCiap) {
+        markAsChanged("TRIBUTADASCIAP", tributadasCiap);
         this.tributadasCiap = tributadasCiap;
    }
 
@@ -98,6 +107,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setTipoPerProdEpe(String tipoPerProdEpe) {
+        markAsChanged("TIPOPERPRODEPE", tipoPerProdEpe);
         this.tipoPerProdEpe = tipoPerProdEpe;
    }
 
@@ -106,6 +116,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setRecBrutaEfdBlocOp(String recBrutaEfdBlocOp) {
+        markAsChanged("RECBRUTAEFDBLOCOP", recBrutaEfdBlocOp);
         this.recBrutaEfdBlocOp = recBrutaEfdBlocOp;
    }
 
@@ -114,6 +125,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setMovimFisica(String movimFisica) {
+        markAsChanged("MOVIMFISICA", movimFisica);
         this.movimFisica = movimFisica;
    }
 
@@ -122,6 +134,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setEmpCodSit08Efd(String empCodSit08Efd) {
+        markAsChanged("EMPCODSIT08EFD", empCodSit08Efd);
         this.empCodSit08Efd = empCodSit08Efd;
    }
 
@@ -130,6 +143,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setRecBrutaCiap(String recBrutaCiap) {
+        markAsChanged("RECBRUTACIAP", recBrutaCiap);
         this.recBrutaCiap = recBrutaCiap;
    }
 
@@ -138,6 +152,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
    }
 
    public void setDesconsiderarCfoReg47(String desconsiderarCfoReg47) {
+        markAsChanged("DESCONSIDERARCFOREG47", desconsiderarCfoReg47);
         this.desconsiderarCfoReg47 = desconsiderarCfoReg47;
    }
 
@@ -153,6 +168,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
 
    @Override
    public ClassificacaoFiscalOperacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.calcDifIcms = vo.asString("CALCDIFICMS");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

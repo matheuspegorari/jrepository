@@ -12,6 +12,7 @@ public class Gateway extends AbstractSankhyaEntity<Gateway> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -27,6 +28,7 @@ public class Gateway extends AbstractSankhyaEntity<Gateway> {
 
    @Override
    public Gateway fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         return this;
    }

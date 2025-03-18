@@ -34,6 +34,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setCodUfDesemb(BigDecimal codUfDesemb) {
+        markAsChanged("CODUFDESEMB", codUfDesemb);
         this.codUfDesemb = codUfDesemb;
    }
 
@@ -42,6 +43,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -50,6 +52,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -58,6 +61,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDocImp(BigDecimal docImp) {
+        markAsChanged("DOCIMP", docImp);
         this.docImp = docImp;
    }
 
@@ -66,6 +70,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDtDesembaraco(Timestamp dtDesembaraco) {
+        markAsChanged("DTDESEMBARACO", dtDesembaraco);
         this.dtDesembaraco = dtDesembaraco;
    }
 
@@ -74,6 +79,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDtPagCofins(Timestamp dtPagCofins) {
+        markAsChanged("DTPAGCOFINS", dtPagCofins);
         this.dtPagCofins = dtPagCofins;
    }
 
@@ -82,6 +88,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDtPagPis(Timestamp dtPagPis) {
+        markAsChanged("DTPAGPIS", dtPagPis);
         this.dtPagPis = dtPagPis;
    }
 
@@ -90,6 +97,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setDtRegistro(Timestamp dtRegistro) {
+        markAsChanged("DTREGISTRO", dtRegistro);
         this.dtRegistro = dtRegistro;
    }
 
@@ -98,6 +106,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setLocDesembaraco(String locDesembaraco) {
+        markAsChanged("LOCDESEMBARACO", locDesembaraco);
         this.locDesembaraco = locDesembaraco;
    }
 
@@ -106,6 +115,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setNroDocumento(String nroDocumento) {
+        markAsChanged("NRODOCUMENTO", nroDocumento);
         this.nroDocumento = nroDocumento;
    }
 
@@ -114,6 +124,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setNumAcDraw(String numAcDraw) {
+        markAsChanged("NUMACDRAW", numAcDraw);
         this.numAcDraw = numAcDraw;
    }
 
@@ -122,6 +133,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -130,6 +142,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setSeqDi(BigDecimal seqDi) {
+        markAsChanged("SEQDI", seqDi);
         this.seqDi = seqDi;
    }
 
@@ -138,6 +151,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -146,6 +160,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setVlrCofinsImp(BigDecimal vlrCofinsImp) {
+        markAsChanged("VLRCOFINSIMP", vlrCofinsImp);
         this.vlrCofinsImp = vlrCofinsImp;
    }
 
@@ -154,6 +169,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setVlrPisImp(BigDecimal vlrPisImp) {
+        markAsChanged("VLRPISIMP", vlrPisImp);
         this.vlrPisImp = vlrPisImp;
    }
 
@@ -162,6 +178,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setCodExportador(String codExportador) {
+        markAsChanged("CODEXPORTADOR", codExportador);
         this.codExportador = codExportador;
    }
 
@@ -170,6 +187,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setUfAdquirente(String ufAdquirente) {
+        markAsChanged("UFADQUIRENTE", ufAdquirente);
         this.ufAdquirente = ufAdquirente;
    }
 
@@ -178,6 +196,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setCnpjAdquirente(String cnpjAdquirente) {
+        markAsChanged("CNPJADQUIRENTE", cnpjAdquirente);
         this.cnpjAdquirente = cnpjAdquirente;
    }
 
@@ -186,6 +205,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setViaTransp(String viaTransp) {
+        markAsChanged("VIATRANSP", viaTransp);
         this.viaTransp = viaTransp;
    }
 
@@ -194,6 +214,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setTipProcImp(String tipProcImp) {
+        markAsChanged("TIPPROCIMP", tipProcImp);
         this.tipProcImp = tipProcImp;
    }
 
@@ -202,6 +223,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    }
 
    public void setVlrAfrmm(BigDecimal vlrAfrmm) {
+        markAsChanged("VLRAFRMM", vlrAfrmm);
         this.vlrAfrmm = vlrAfrmm;
    }
 
@@ -217,6 +239,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
 
    @Override
    public DeclaracaoImportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUfDesemb = vo.asBigDecimal("CODUFDESEMB");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

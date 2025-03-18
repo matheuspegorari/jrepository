@@ -49,6 +49,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setAcrescMax(BigDecimal acrescMax) {
+        markAsChanged("ACRESCMAX", acrescMax);
         this.acrescMax = acrescMax;
    }
 
@@ -57,6 +58,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setApelido(String apelido) {
+        markAsChanged("APELIDO", apelido);
         this.apelido = apelido;
    }
 
@@ -65,6 +67,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -73,6 +76,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -81,6 +85,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodCencusPad(BigDecimal codCencusPad) {
+        markAsChanged("CODCENCUSPAD", codCencusPad);
         this.codCencusPad = codCencusPad;
    }
 
@@ -89,6 +94,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -97,6 +103,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodForm(BigDecimal codForm) {
+        markAsChanged("CODFORM", codForm);
         this.codForm = codForm;
    }
 
@@ -105,6 +112,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -113,6 +121,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -121,6 +130,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -129,6 +139,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -137,6 +148,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -145,6 +157,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -153,6 +166,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setComCm(String comCm) {
+        markAsChanged("COMCM", comCm);
         this.comCm = comCm;
    }
 
@@ -161,6 +175,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setComGer(BigDecimal comGer) {
+        markAsChanged("COMGER", comGer);
         this.comGer = comGer;
    }
 
@@ -169,6 +184,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setComVenda(BigDecimal comVenda) {
+        markAsChanged("COMVENDA", comVenda);
         this.comVenda = comVenda;
    }
 
@@ -177,6 +193,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setDescMax(BigDecimal descMax) {
+        markAsChanged("DESCMAX", descMax);
         this.descMax = descMax;
    }
 
@@ -185,6 +202,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setDiaCom(BigDecimal diaCom) {
+        markAsChanged("DIACOM", diaCom);
         this.diaCom = diaCom;
    }
 
@@ -193,6 +211,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -201,6 +220,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -209,6 +229,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setGrupoDescVend(String grupoDescVend) {
+        markAsChanged("GRUPODESCVEND", grupoDescVend);
         this.grupoDescVend = grupoDescVend;
    }
 
@@ -217,6 +238,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setGrupoRetencao(String grupoRetencao) {
+        markAsChanged("GRUPORETENCAO", grupoRetencao);
         this.grupoRetencao = grupoRetencao;
    }
 
@@ -225,6 +247,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setParticMeta(BigDecimal particMeta) {
+        markAsChanged("PARTICMETA", particMeta);
         this.particMeta = particMeta;
    }
 
@@ -233,6 +256,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setPercCusVar(BigDecimal percCusVar) {
+        markAsChanged("PERCCUSVAR", percCusVar);
         this.percCusVar = percCusVar;
    }
 
@@ -241,6 +265,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setProvAcresc(BigDecimal provAcresc) {
+        markAsChanged("PROVACRESC", provAcresc);
         this.provAcresc = provAcresc;
    }
 
@@ -249,6 +274,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setRechRextra(String rechRextra) {
+        markAsChanged("RECHREXTRA", rechRextra);
         this.rechRextra = rechRextra;
    }
 
@@ -257,6 +283,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setSaldoDisp(BigDecimal saldoDisp) {
+        markAsChanged("SALDODISP", saldoDisp);
         this.saldoDisp = saldoDisp;
    }
 
@@ -265,6 +292,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setSenha(BigDecimal senha) {
+        markAsChanged("SENHA", senha);
         this.senha = senha;
    }
 
@@ -273,6 +301,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setTipCalc(String tipCalc) {
+        markAsChanged("TIPCALC", tipCalc);
         this.tipCalc = tipCalc;
    }
 
@@ -281,6 +310,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setTipFechCom(String tipFechCom) {
+        markAsChanged("TIPFECHCOM", tipFechCom);
         this.tipFechCom = tipFechCom;
    }
 
@@ -289,6 +319,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setTipoCertif(String tipoCertif) {
+        markAsChanged("TIPOCERTIF", tipoCertif);
         this.tipoCertif = tipoCertif;
    }
 
@@ -297,6 +328,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setTipValor(String tipValor) {
+        markAsChanged("TIPVALOR", tipValor);
         this.tipValor = tipValor;
    }
 
@@ -305,6 +337,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setTipVend(String tipVend) {
+        markAsChanged("TIPVEND", tipVend);
         this.tipVend = tipVend;
    }
 
@@ -313,6 +346,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setVlrHora(BigDecimal vlrHora) {
+        markAsChanged("VLRHORA", vlrHora);
         this.vlrHora = vlrHora;
    }
 
@@ -321,6 +355,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setAtuacomprador(String atuacomprador) {
+        markAsChanged("ATUACOMPRADOR", atuacomprador);
         this.atuacomprador = atuacomprador;
    }
 
@@ -329,6 +364,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setProvAcrescCac(BigDecimal provAcrescCac) {
+        markAsChanged("PROVACRESCCAC", provAcrescCac);
         this.provAcrescCac = provAcrescCac;
    }
 
@@ -337,6 +373,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
    }
 
    public void setSaldoDispCac(BigDecimal saldoDispCac) {
+        markAsChanged("SALDODISPCAC", saldoDispCac);
         this.saldoDispCac = saldoDispCac;
    }
 
@@ -352,6 +389,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
 
    @Override
    public Vendedor fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acrescMax = vo.asBigDecimal("ACRESCMAX");
         this.apelido = vo.asString("APELIDO");
         this.ativo = vo.asString("ATIVO");

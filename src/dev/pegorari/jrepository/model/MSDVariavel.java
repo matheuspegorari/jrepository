@@ -31,6 +31,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -39,6 +40,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setCfgDtResol(String cfgDtResol) {
+        markAsChanged("CFGDTRESOL", cfgDtResol);
         this.cfgDtResol = cfgDtResol;
    }
 
@@ -47,6 +49,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -55,6 +58,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -63,6 +67,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setCodVar(BigDecimal codVar) {
+        markAsChanged("CODVAR", codVar);
         this.codVar = codVar;
    }
 
@@ -71,6 +76,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setDescrVar(String descrVar) {
+        markAsChanged("DESCRVAR", descrVar);
         this.descrVar = descrVar;
    }
 
@@ -79,6 +85,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -87,6 +94,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setExpDtRef(String expDtRef) {
+        markAsChanged("EXPDTREF", expDtRef);
         this.expDtRef = expDtRef;
    }
 
@@ -95,6 +103,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setFormula(char[] formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -103,6 +112,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setNomeExib(String nomeExib) {
+        markAsChanged("NOMEEXIB", nomeExib);
         this.nomeExib = nomeExib;
    }
 
@@ -111,6 +121,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setNomeVar(String nomeVar) {
+        markAsChanged("NOMEVAR", nomeVar);
         this.nomeVar = nomeVar;
    }
 
@@ -119,6 +130,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -127,6 +139,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -135,6 +148,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setPeriodicidade(BigDecimal periodicidade) {
+        markAsChanged("PERIODICIDADE", periodicidade);
         this.periodicidade = periodicidade;
    }
 
@@ -143,6 +157,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setProxResol(Timestamp proxResol) {
+        markAsChanged("PROXRESOL", proxResol);
         this.proxResol = proxResol;
    }
 
@@ -151,6 +166,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -159,6 +175,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setTipoSaida(String tipoSaida) {
+        markAsChanged("TIPOSAIDA", tipoSaida);
         this.tipoSaida = tipoSaida;
    }
 
@@ -167,6 +184,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setUltResol(Timestamp ultResol) {
+        markAsChanged("ULTRESOL", ultResol);
         this.ultResol = ultResol;
    }
 
@@ -175,6 +193,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
    }
 
    public void setValorPadrao(String valorPadrao) {
+        markAsChanged("VALORPADRAO", valorPadrao);
         this.valorPadrao = valorPadrao;
    }
 
@@ -190,6 +209,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
 
    @Override
    public MSDVariavel fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativa = vo.asString("ATIVA");
         this.cfgDtResol = vo.asString("CFGDTRESOL");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");

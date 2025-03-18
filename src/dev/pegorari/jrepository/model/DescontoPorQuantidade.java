@@ -20,6 +20,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -28,6 +29,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -36,6 +38,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setNuPromocao(BigDecimal nuPromocao) {
+        markAsChanged("NUPROMOCAO", nuPromocao);
         this.nuPromocao = nuPromocao;
    }
 
@@ -44,6 +47,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -52,6 +56,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setQtde(BigDecimal qtde) {
+        markAsChanged("QTDE", qtde);
         this.qtde = qtde;
    }
 
@@ -60,6 +65,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setTipDesc(String tipDesc) {
+        markAsChanged("TIPDESC", tipDesc);
         this.tipDesc = tipDesc;
    }
 
@@ -68,6 +74,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -76,6 +83,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -91,6 +99,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
 
    @Override
    public DescontoPorQuantidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");

@@ -22,6 +22,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setSeqImrp(BigDecimal seqImrp) {
+        markAsChanged("SEQIMRP", seqImrp);
         this.seqImrp = seqImrp;
    }
 
@@ -30,6 +31,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setCancelado(String cancelado) {
+        markAsChanged("CANCELADO", cancelado);
         this.cancelado = cancelado;
    }
 
@@ -38,6 +40,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -46,6 +49,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -54,6 +58,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setCodUsuCanc(BigDecimal codUsuCanc) {
+        markAsChanged("CODUSUCANC", codUsuCanc);
         this.codUsuCanc = codUsuCanc;
    }
 
@@ -62,6 +67,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -70,6 +76,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setDtCanc(Timestamp dtCanc) {
+        markAsChanged("DTCANC", dtCanc);
         this.dtCanc = dtCanc;
    }
 
@@ -78,6 +85,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -86,6 +94,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -94,6 +103,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    }
 
    public void setQtdMov(BigDecimal qtdMov) {
+        markAsChanged("QTDMOV", qtdMov);
         this.qtdMov = qtdMov;
    }
 
@@ -109,6 +119,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
 
    @Override
    public HistoricoCompraMRP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqImrp = vo.asBigDecimal("SEQIMRP");
         this.cancelado = vo.asString("CANCELADO");
         this.codProd = vo.asBigDecimal("CODPROD");

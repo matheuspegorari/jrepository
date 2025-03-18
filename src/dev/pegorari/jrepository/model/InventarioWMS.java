@@ -31,6 +31,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -39,6 +40,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setAtualEstoque(BigDecimal atualEstoque) {
+        markAsChanged("ATUALESTOQUE", atualEstoque);
         this.atualEstoque = atualEstoque;
    }
 
@@ -47,6 +49,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -55,6 +58,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -63,6 +67,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -71,6 +76,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -79,6 +85,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -87,6 +94,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -95,6 +103,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -103,6 +112,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -111,6 +121,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -119,6 +130,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setDtAtualEst(Timestamp dtAtualEst) {
+        markAsChanged("DTATUALEST", dtAtualEst);
         this.dtAtualEst = dtAtualEst;
    }
 
@@ -127,6 +139,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setDtContagem(Timestamp dtContagem) {
+        markAsChanged("DTCONTAGEM", dtContagem);
         this.dtContagem = dtContagem;
    }
 
@@ -135,6 +148,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -143,6 +157,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -151,6 +166,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -159,6 +175,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -167,6 +184,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setReservado(BigDecimal reservado) {
+        markAsChanged("RESERVADO", reservado);
         this.reservado = reservado;
    }
 
@@ -175,6 +193,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -190,6 +209,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
 
    @Override
    public InventarioWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
         this.codBarra = vo.asString("CODBARRA");

@@ -17,6 +17,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setCodContaSms(BigDecimal codContaSms) {
+        markAsChanged("CODCONTASMS", codContaSms);
         this.codContaSms = codContaSms;
    }
 
@@ -25,6 +26,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -33,6 +35,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setNomeRemetente(String nomeRemetente) {
+        markAsChanged("NOMEREMETENTE", nomeRemetente);
         this.nomeRemetente = nomeRemetente;
    }
 
@@ -41,6 +44,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setPlataforma(String plataforma) {
+        markAsChanged("PLATAFORMA", plataforma);
         this.plataforma = plataforma;
    }
 
@@ -49,6 +53,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setSenha(String senha) {
+        markAsChanged("SENHA", senha);
         this.senha = senha;
    }
 
@@ -57,6 +62,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
    }
 
    public void setUsuario(String usuario) {
+        markAsChanged("USUARIO", usuario);
         this.usuario = usuario;
    }
 
@@ -72,6 +78,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
 
    @Override
    public ContaSMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codContaSms = vo.asBigDecimal("CODCONTASMS");
         this.descricao = vo.asString("DESCRICAO");
         this.nomeRemetente = vo.asString("NOMEREMETENTE");

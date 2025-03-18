@@ -16,6 +16,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    }
 
    public void setTipMed(String tipMed) {
+        markAsChanged("TIPMED", tipMed);
         this.tipMed = tipMed;
    }
 
@@ -24,6 +25,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    }
 
    public void setQtdMed(BigDecimal qtdMed) {
+        markAsChanged("QTDMED", qtdMed);
         this.qtdMed = qtdMed;
    }
 
@@ -32,6 +34,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    }
 
    public void setSeqMed(BigDecimal seqMed) {
+        markAsChanged("SEQMED", seqMed);
         this.seqMed = seqMed;
    }
 
@@ -40,6 +43,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -48,6 +52,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    }
 
    public void setUnMed(String unMed) {
+        markAsChanged("UNMED", unMed);
         this.unMed = unMed;
    }
 
@@ -63,6 +68,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
 
    @Override
    public UnidadeMedida fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipMed = vo.asString("TIPMED");
         this.qtdMed = vo.asBigDecimal("QTDMED");
         this.seqMed = vo.asBigDecimal("SEQMED");

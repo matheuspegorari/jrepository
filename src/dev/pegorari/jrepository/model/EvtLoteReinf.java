@@ -21,6 +21,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -29,6 +30,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setDhPrevConsulta(Timestamp dhPrevConsulta) {
+        markAsChanged("DHPREVCONSULTA", dhPrevConsulta);
         this.dhPrevConsulta = dhPrevConsulta;
    }
 
@@ -37,6 +39,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -45,6 +48,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setNroProtLote(String nroProtLote) {
+        markAsChanged("NROPROTLOTE", nroProtLote);
         this.nroProtLote = nroProtLote;
    }
 
@@ -53,6 +57,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setNuLote(BigDecimal nuLote) {
+        markAsChanged("NULOTE", nuLote);
         this.nuLote = nuLote;
    }
 
@@ -61,6 +66,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -69,6 +75,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setXmlEnvLote(char[] xmlEnvLote) {
+        markAsChanged("XMLENVLOTE", xmlEnvLote);
         this.xmlEnvLote = xmlEnvLote;
    }
 
@@ -77,6 +84,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setXmlRetLote(char[] xmlRetLote) {
+        markAsChanged("XMLRETLOTE", xmlRetLote);
         this.xmlRetLote = xmlRetLote;
    }
 
@@ -85,6 +93,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    }
 
    public void setTpAmb(BigDecimal tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -100,6 +109,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
 
    @Override
    public EvtLoteReinf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhInc = vo.asTimestamp("DHINC");
         this.dhPrevConsulta = vo.asTimestamp("DHPREVCONSULTA");
         this.msg = vo.asClob("MSG");

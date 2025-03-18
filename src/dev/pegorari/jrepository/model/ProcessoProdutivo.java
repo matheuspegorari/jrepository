@@ -61,6 +61,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -69,6 +70,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodPrcProducao(BigDecimal codPrcProducao) {
+        markAsChanged("CODPRCPRODUCAO", codPrcProducao);
         this.codPrcProducao = codPrcProducao;
    }
 
@@ -77,6 +79,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setProcDesmonte(String procDesmonte) {
+        markAsChanged("PROCDESMONTE", procDesmonte);
         this.procDesmonte = procDesmonte;
    }
 
@@ -85,6 +88,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setUsaTerceiro(String usaTerceiro) {
+        markAsChanged("USATERCEIRO", usaTerceiro);
         this.usaTerceiro = usaTerceiro;
    }
 
@@ -93,6 +97,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setDefTerceiro(String defTerceiro) {
+        markAsChanged("DEFTERCEIRO", defTerceiro);
         this.defTerceiro = defTerceiro;
    }
 
@@ -101,6 +106,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoNroLote(String tipoNroLote) {
+        markAsChanged("TIPONROLOTE", tipoNroLote);
         this.tipoNroLote = tipoNroLote;
    }
 
@@ -109,6 +115,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setMascNroLote(String mascNroLote) {
+        markAsChanged("MASCNROLOTE", mascNroLote);
         this.mascNroLote = mascNroLote;
    }
 
@@ -117,6 +124,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoFragNroLote(String tipoFragNroLote) {
+        markAsChanged("TIPOFRAGNROLOTE", tipoFragNroLote);
         this.tipoFragNroLote = tipoFragNroLote;
    }
 
@@ -125,6 +133,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodLocalAlmoxarife(BigDecimal codLocalAlmoxarife) {
+        markAsChanged("CODLOCALALMOXARIFE", codLocalAlmoxarife);
         this.codLocalAlmoxarife = codLocalAlmoxarife;
    }
 
@@ -133,6 +142,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodLocalManufatura(BigDecimal codLocalManufatura) {
+        markAsChanged("CODLOCALMANUFATURA", codLocalManufatura);
         this.codLocalManufatura = codLocalManufatura;
    }
 
@@ -141,6 +151,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -149,6 +160,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodPrc(BigDecimal codPrc) {
+        markAsChanged("CODPRC", codPrc);
         this.codPrc = codPrc;
    }
 
@@ -157,6 +169,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -165,6 +178,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -173,6 +187,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setDescrAbrev(String descrAbrev) {
+        markAsChanged("DESCRABREV", descrAbrev);
         this.descrAbrev = descrAbrev;
    }
 
@@ -181,6 +196,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setDescrLonga(String descrLonga) {
+        markAsChanged("DESCRLONGA", descrLonga);
         this.descrLonga = descrLonga;
    }
 
@@ -189,6 +205,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -197,6 +214,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -205,6 +223,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -213,6 +232,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setIdRpaInicial(BigDecimal idRpaInicial) {
+        markAsChanged("IDRPAINICIAL", idRpaInicial);
         this.idRpaInicial = idRpaInicial;
    }
 
@@ -221,6 +241,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setIdWflow(String idWflow) {
+        markAsChanged("IDWFLOW", idWflow);
         this.idWflow = idWflow;
    }
 
@@ -229,6 +250,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setMultiControle(String multiControle) {
+        markAsChanged("MULTICONTROLE", multiControle);
         this.multiControle = multiControle;
    }
 
@@ -237,6 +259,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setMultiPa(String multiPa) {
+        markAsChanged("MULTIPA", multiPa);
         this.multiPa = multiPa;
    }
 
@@ -245,6 +268,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoInicia(String tipoInicia) {
+        markAsChanged("TIPOINICIA", tipoInicia);
         this.tipoInicia = tipoInicia;
    }
 
@@ -253,6 +277,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoProc(String tipoProc) {
+        markAsChanged("TIPOPROC", tipoProc);
         this.tipoProc = tipoProc;
    }
 
@@ -261,6 +286,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -269,6 +295,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setXmlBpmn(char[] xmlBpmn) {
+        markAsChanged("XMLBPMN", xmlBpmn);
         this.xmlBpmn = xmlBpmn;
    }
 
@@ -277,6 +304,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setPercDesvioInf(BigDecimal percDesvioInf) {
+        markAsChanged("PERCDESVIOINF", percDesvioInf);
         this.percDesvioInf = percDesvioInf;
    }
 
@@ -285,6 +313,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
+        markAsChanged("PERCDESVIOSUP", percDesvioSup);
         this.percDesvioSup = percDesvioSup;
    }
 
@@ -293,6 +322,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setProcReparo(String procReparo) {
+        markAsChanged("PROCREPARO", procReparo);
         this.procReparo = procReparo;
    }
 
@@ -301,6 +331,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setExigePedido(String exigePedido) {
+        markAsChanged("EXIGEPEDIDO", exigePedido);
         this.exigePedido = exigePedido;
    }
 
@@ -309,6 +340,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setValidaVersao(String validaVersao) {
+        markAsChanged("VALIDAVERSAO", validaVersao);
         this.validaVersao = validaVersao;
    }
 
@@ -317,6 +349,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setProdParaTerceiro(String prodParaTerceiro) {
+        markAsChanged("PRODPARATERCEIRO", prodParaTerceiro);
         this.prodParaTerceiro = prodParaTerceiro;
    }
 
@@ -325,6 +358,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setLiberaDesvio(String liberaDesvio) {
+        markAsChanged("LIBERADESVIO", liberaDesvio);
         this.liberaDesvio = liberaDesvio;
    }
 
@@ -333,6 +367,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setLoteCuringa(String loteCuringa) {
+        markAsChanged("LOTECURINGA", loteCuringa);
         this.loteCuringa = loteCuringa;
    }
 
@@ -341,6 +376,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setPadraoProduto(String padraoProduto) {
+        markAsChanged("PADRAOPRODUTO", padraoProduto);
         this.padraoProduto = padraoProduto;
    }
 
@@ -349,6 +385,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setUsaLoteCuringa(String usaLoteCuringa) {
+        markAsChanged("USALOTECURINGA", usaLoteCuringa);
         this.usaLoteCuringa = usaLoteCuringa;
    }
 
@@ -357,6 +394,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -365,6 +403,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setIdFormula(BigDecimal idFormula) {
+        markAsChanged("IDFORMULA", idFormula);
         this.idFormula = idFormula;
    }
 
@@ -373,6 +412,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setMascNroLoteSp(String mascNroLoteSp) {
+        markAsChanged("MASCNROLOTESP", mascNroLoteSp);
         this.mascNroLoteSp = mascNroLoteSp;
    }
 
@@ -381,6 +421,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoFragNroLoteSp(String tipoFragNroLoteSp) {
+        markAsChanged("TIPOFRAGNROLOTESP", tipoFragNroLoteSp);
         this.tipoFragNroLoteSp = tipoFragNroLoteSp;
    }
 
@@ -389,6 +430,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipoNroLoteSp(String tipoNroLoteSp) {
+        markAsChanged("TIPONROLOTESP", tipoNroLoteSp);
         this.tipoNroLoteSp = tipoNroLoteSp;
    }
 
@@ -397,6 +439,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setUsaConfNroLoteSp(String usaConfNroLoteSp) {
+        markAsChanged("USACONFNROLOTESP", usaConfNroLoteSp);
         this.usaConfNroLoteSp = usaConfNroLoteSp;
    }
 
@@ -405,6 +448,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setXmlBpmnUi(char[] xmlBpmnUi) {
+        markAsChanged("XMLBPMNUI", xmlBpmnUi);
         this.xmlBpmnUi = xmlBpmnUi;
    }
 
@@ -413,6 +457,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setPerEdicao(String perEdicao) {
+        markAsChanged("PEREDICAO", perEdicao);
         this.perEdicao = perEdicao;
    }
 
@@ -421,6 +466,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setQtdDias(BigDecimal qtdDias) {
+        markAsChanged("QTDDIAS", qtdDias);
         this.qtdDias = qtdDias;
    }
 
@@ -429,6 +475,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setRoteiroHtml5(String roteiroHtml5) {
+        markAsChanged("ROTEIROHTML5", roteiroHtml5);
         this.roteiroHtml5 = roteiroHtml5;
    }
 
@@ -437,6 +484,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setTipExecAtv(String tipExecAtv) {
+        markAsChanged("TIPEXECATV", tipExecAtv);
         this.tipExecAtv = tipExecAtv;
    }
 
@@ -445,6 +493,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
    }
 
    public void setVersaoAnt(BigDecimal versaoAnt) {
+        markAsChanged("VERSAOANT", versaoAnt);
         this.versaoAnt = versaoAnt;
    }
 
@@ -460,6 +509,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
 
    @Override
    public ProcessoProdutivo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.padrao = vo.asString("PADRAO");
         this.codPrcProducao = vo.asBigDecimal("CODPRCPRODUCAO");
         this.procDesmonte = vo.asString("PROCDESMONTE");

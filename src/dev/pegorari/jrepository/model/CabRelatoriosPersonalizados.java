@@ -16,6 +16,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -24,6 +25,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -32,6 +34,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
+        markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
         this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
@@ -40,6 +43,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
    }
 
    public void setTabela(BigDecimal tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -55,6 +59,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
 
    @Override
    public CabRelatoriosPersonalizados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuPeriodoCtb = vo.asBigDecimal("NUPERIODOCTB");

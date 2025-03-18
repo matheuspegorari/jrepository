@@ -17,6 +17,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -25,6 +26,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    }
 
    public void setDtAlt(Timestamp dtAlt) {
+        markAsChanged("DTALT", dtAlt);
         this.dtAlt = dtAlt;
    }
 
@@ -33,6 +35,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    }
 
    public void setIdUnico(BigDecimal idUnico) {
+        markAsChanged("IDUNICO", idUnico);
         this.idUnico = idUnico;
    }
 
@@ -41,6 +44,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -49,6 +53,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    }
 
    public void setSitRegBol(String sitRegBol) {
+        markAsChanged("SITREGBOL", sitRegBol);
         this.sitRegBol = sitRegBol;
    }
 
@@ -64,6 +69,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
 
    @Override
    public BoletoRapidoHist fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlt = vo.asTimestamp("DTALT");
         this.idUnico = vo.asBigDecimal("IDUNICO");

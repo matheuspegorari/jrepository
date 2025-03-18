@@ -53,6 +53,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setBaseAjustada(BigDecimal baseAjustada) {
+        markAsChanged("BASEAJUSTADA", baseAjustada);
         this.baseAjustada = baseAjustada;
    }
 
@@ -61,6 +62,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setBaseAjustadaCsll(BigDecimal baseAjustadaCsll) {
+        markAsChanged("BASEAJUSTADA_CSLL", baseAjustadaCsll);
         this.baseAjustadaCsll = baseAjustadaCsll;
    }
 
@@ -69,6 +71,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -77,6 +80,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCompensacoes(BigDecimal compensacoes) {
+        markAsChanged("COMPENSACOES", compensacoes);
         this.compensacoes = compensacoes;
    }
 
@@ -85,6 +89,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCompensacoesCsll(BigDecimal compensacoesCsll) {
+        markAsChanged("COMPENSACOES_CSLL", compensacoesCsll);
         this.compensacoesCsll = compensacoesCsll;
    }
 
@@ -93,6 +98,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCsll9(BigDecimal csll9) {
+        markAsChanged("CSLL9", csll9);
         this.csll9 = csll9;
    }
 
@@ -101,6 +107,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCsllRetido(BigDecimal csllRetido) {
+        markAsChanged("CSLLRETIDO", csllRetido);
         this.csllRetido = csllRetido;
    }
 
@@ -109,6 +116,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setDeducaoPat(BigDecimal deducaoPat) {
+        markAsChanged("DEDUCAOPAT", deducaoPat);
         this.deducaoPat = deducaoPat;
    }
 
@@ -117,6 +125,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setImpostoARecolherFinal(BigDecimal impostoARecolherFinal) {
+        markAsChanged("IMPOSTOARECOLHERFINAL", impostoARecolherFinal);
         this.impostoARecolherFinal = impostoARecolherFinal;
    }
 
@@ -125,6 +134,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setImpostoARecolherFinalCsll(BigDecimal impostoARecolherFinalCsll) {
+        markAsChanged("IMPOSTOARECOLHERFINAL_CSLL", impostoARecolherFinalCsll);
         this.impostoARecolherFinalCsll = impostoARecolherFinalCsll;
    }
 
@@ -133,6 +143,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setImpostoDevido(BigDecimal impostoDevido) {
+        markAsChanged("IMPOSTODEVIDO", impostoDevido);
         this.impostoDevido = impostoDevido;
    }
 
@@ -141,6 +152,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setImpostoDevidoLiq(BigDecimal impostoDevidoLiq) {
+        markAsChanged("IMPOSTODEVIDOLIQ", impostoDevidoLiq);
         this.impostoDevidoLiq = impostoDevidoLiq;
    }
 
@@ -149,6 +161,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setIrpj10(BigDecimal irpj10) {
+        markAsChanged("IRPJ10", irpj10);
         this.irpj10 = irpj10;
    }
 
@@ -157,6 +170,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setIrpj15(BigDecimal irpj15) {
+        markAsChanged("IRPJ15", irpj15);
         this.irpj15 = irpj15;
    }
 
@@ -165,6 +179,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setIrpjRetido(BigDecimal irpjRetido) {
+        markAsChanged("IRPJRETIDO", irpjRetido);
         this.irpjRetido = irpjRetido;
    }
 
@@ -173,6 +188,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setLucroAntesIr(BigDecimal lucroAntesIr) {
+        markAsChanged("LUCROANTESIR", lucroAntesIr);
         this.lucroAntesIr = lucroAntesIr;
    }
 
@@ -181,6 +197,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setLucroAntesIrCsll(BigDecimal lucroAntesIrCsll) {
+        markAsChanged("LUCROANTESIR_CSLL", lucroAntesIrCsll);
         this.lucroAntesIrCsll = lucroAntesIrCsll;
    }
 
@@ -189,6 +206,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setRecolhimentoAvulso(BigDecimal recolhimentoAvulso) {
+        markAsChanged("RECOLHIMENTOAVULSO", recolhimentoAvulso);
         this.recolhimentoAvulso = recolhimentoAvulso;
    }
 
@@ -197,6 +215,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setRecolhimentoAvulsoCsll(BigDecimal recolhimentoAvulsoCsll) {
+        markAsChanged("RECOLHIMENTOAVULSO_CSLL", recolhimentoAvulsoCsll);
         this.recolhimentoAvulsoCsll = recolhimentoAvulsoCsll;
    }
 
@@ -205,6 +224,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -213,6 +233,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setSaldoARecolher(BigDecimal saldoARecolher) {
+        markAsChanged("SALDOARECOLHER", saldoARecolher);
         this.saldoARecolher = saldoARecolher;
    }
 
@@ -221,6 +242,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setSaldoARecolherCsll(BigDecimal saldoARecolherCsll) {
+        markAsChanged("SALDOARECOLHER_CSLL", saldoARecolherCsll);
         this.saldoARecolherCsll = saldoARecolherCsll;
    }
 
@@ -229,6 +251,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalAdicoes(BigDecimal totalAdicoes) {
+        markAsChanged("TOTALADICOES", totalAdicoes);
         this.totalAdicoes = totalAdicoes;
    }
 
@@ -237,6 +260,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalAdicoesCsll(BigDecimal totalAdicoesCsll) {
+        markAsChanged("TOTALADICOES_CSLL", totalAdicoesCsll);
         this.totalAdicoesCsll = totalAdicoesCsll;
    }
 
@@ -245,6 +269,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalExclusoes(BigDecimal totalExclusoes) {
+        markAsChanged("TOTALEXCLUSOES", totalExclusoes);
         this.totalExclusoes = totalExclusoes;
    }
 
@@ -253,6 +278,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalExclusoesCsll(BigDecimal totalExclusoesCsll) {
+        markAsChanged("TOTALEXCLUSOES_CSLL", totalExclusoesCsll);
         this.totalExclusoesCsll = totalExclusoesCsll;
    }
 
@@ -261,6 +287,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalRecolhido(BigDecimal totalRecolhido) {
+        markAsChanged("TOTALRECOLHIDO", totalRecolhido);
         this.totalRecolhido = totalRecolhido;
    }
 
@@ -269,6 +296,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setTotalRecolhidoCsll(BigDecimal totalRecolhidoCsll) {
+        markAsChanged("TOTALRECOLHIDO_CSLL", totalRecolhidoCsll);
         this.totalRecolhidoCsll = totalRecolhidoCsll;
    }
 
@@ -277,6 +305,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setValorPat(BigDecimal valorPat) {
+        markAsChanged("VALORPAT", valorPat);
         this.valorPat = valorPat;
    }
 
@@ -285,6 +314,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setFormaApur(String formaApur) {
+        markAsChanged("FORMAAPUR", formaApur);
         this.formaApur = formaApur;
    }
 
@@ -293,6 +323,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setVlrIrpjCompPrej(BigDecimal vlrIrpjCompPrej) {
+        markAsChanged("VLRIRPJCOMPPREJ", vlrIrpjCompPrej);
         this.vlrIrpjCompPrej = vlrIrpjCompPrej;
    }
 
@@ -301,6 +332,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setVlrIrpjCompPrejCsll(BigDecimal vlrIrpjCompPrejCsll) {
+        markAsChanged("VLRIRPJCOMPPREJ_CSLL", vlrIrpjCompPrejCsll);
         this.vlrIrpjCompPrejCsll = vlrIrpjCompPrejCsll;
    }
 
@@ -309,6 +341,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCompBcNegCsll(BigDecimal compBcNegCsll) {
+        markAsChanged("COMPBCNEG_CSLL", compBcNegCsll);
         this.compBcNegCsll = compBcNegCsll;
    }
 
@@ -317,6 +350,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setCompPrejUfis(BigDecimal compPrejUfis) {
+        markAsChanged("COMPPREJUFIS", compPrejUfis);
         this.compPrejUfis = compPrejUfis;
    }
 
@@ -325,6 +359,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setDeduOutInc(BigDecimal deduOutInc) {
+        markAsChanged("DEDUOUTINC", deduOutInc);
         this.deduOutInc = deduOutInc;
    }
 
@@ -333,6 +368,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setResLiqAjus(BigDecimal resLiqAjus) {
+        markAsChanged("RESLIQAJUS", resLiqAjus);
         this.resLiqAjus = resLiqAjus;
    }
 
@@ -341,6 +377,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setResLiqAjusCsll(BigDecimal resLiqAjusCsll) {
+        markAsChanged("RESLIQAJUS_CSLL", resLiqAjusCsll);
         this.resLiqAjusCsll = resLiqAjusCsll;
    }
 
@@ -349,6 +386,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setVlrCsllRetComp(BigDecimal vlrCsllRetComp) {
+        markAsChanged("VLRCSLLRETCOMP", vlrCsllRetComp);
         this.vlrCsllRetComp = vlrCsllRetComp;
    }
 
@@ -357,6 +395,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setVlrIrpjRetComp(BigDecimal vlrIrpjRetComp) {
+        markAsChanged("VLRIRPJRETCOMP", vlrIrpjRetComp);
         this.vlrIrpjRetComp = vlrIrpjRetComp;
    }
 
@@ -365,6 +404,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setConsCrespecPartea(String consCrespecPartea) {
+        markAsChanged("CONSCRESPECPARTEA", consCrespecPartea);
         this.consCrespecPartea = consCrespecPartea;
    }
 
@@ -373,6 +413,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
    }
 
    public void setDeduzPat10(String deduzPat10) {
+        markAsChanged("DEDUZPAT10", deduzPat10);
         this.deduzPat10 = deduzPat10;
    }
 
@@ -388,6 +429,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
 
    @Override
    public ApuracaoIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseAjustada = vo.asBigDecimal("BASEAJUSTADA");
         this.baseAjustadaCsll = vo.asBigDecimal("BASEAJUSTADA_CSLL");
         this.codEmp = vo.asBigDecimal("CODEMP");

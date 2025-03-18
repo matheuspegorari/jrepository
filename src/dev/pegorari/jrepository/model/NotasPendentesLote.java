@@ -16,6 +16,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -24,6 +25,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
+        markAsChanged("DHULTTENTA", dhUltTenta);
         this.dhUltTenta = dhUltTenta;
    }
 
@@ -32,6 +34,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -40,6 +43,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
    }
 
    public void setQtdeEnvio(BigDecimal qtdeEnvio) {
+        markAsChanged("QTDENVIO", qtdeEnvio);
         this.qtdeEnvio = qtdeEnvio;
    }
 
@@ -55,6 +59,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
 
    @Override
    public NotasPendentesLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

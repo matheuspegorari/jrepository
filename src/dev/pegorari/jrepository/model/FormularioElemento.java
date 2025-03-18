@@ -16,6 +16,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -24,6 +25,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    }
 
    public void setIdForm(BigDecimal idForm) {
+        markAsChanged("IDFORM", idForm);
         this.idForm = idForm;
    }
 
@@ -32,6 +34,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    }
 
    public void setObrigatorio(String obrigatorio) {
+        markAsChanged("OBRIGATORIO", obrigatorio);
         this.obrigatorio = obrigatorio;
    }
 
@@ -40,6 +43,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -48,6 +52,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    }
 
    public void setTipoAcesso(String tipoAcesso) {
+        markAsChanged("TIPOACESSO", tipoAcesso);
         this.tipoAcesso = tipoAcesso;
    }
 
@@ -63,6 +68,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
 
    @Override
    public FormularioElemento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.idForm = vo.asBigDecimal("IDFORM");
         this.obrigatorio = vo.asString("OBRIGATORIO");

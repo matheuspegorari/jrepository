@@ -13,6 +13,7 @@ public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
    }
 
    public void setCodTipSaz(BigDecimal codTipSaz) {
+        markAsChanged("CODTIPSAZ", codTipSaz);
         this.codTipSaz = codTipSaz;
    }
 
@@ -21,6 +22,7 @@ public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -36,6 +38,7 @@ public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
 
    @Override
    public TipoSazonalidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTipSaz = vo.asBigDecimal("CODTIPSAZ");
         this.descricao = vo.asString("DESCRICAO");
         return this;

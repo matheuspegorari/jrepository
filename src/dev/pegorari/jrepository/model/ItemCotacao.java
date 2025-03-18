@@ -105,6 +105,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -113,6 +114,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
+        markAsChanged("ALIQIPI", aliqIpi);
         this.aliqIpi = aliqIpi;
    }
 
@@ -121,6 +123,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCabecalho(String cabecalho) {
+        markAsChanged("CABECALHO", cabecalho);
         this.cabecalho = cabecalho;
    }
 
@@ -129,6 +132,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -137,6 +141,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -145,6 +150,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -153,6 +159,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -161,6 +168,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -169,6 +177,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -177,6 +186,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -185,6 +195,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setConfiabForn(BigDecimal confiabForn) {
+        markAsChanged("CONFIABFORN", confiabForn);
         this.confiabForn = confiabForn;
    }
 
@@ -193,6 +204,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -201,6 +213,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCusGer(BigDecimal cusGer) {
+        markAsChanged("CUSGER", cusGer);
         this.cusGer = cusGer;
    }
 
@@ -209,6 +222,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCusMedIcm(BigDecimal cusMedIcm) {
+        markAsChanged("CUSMEDICM", cusMedIcm);
         this.cusMedIcm = cusMedIcm;
    }
 
@@ -217,6 +231,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCusRep(BigDecimal cusRep) {
+        markAsChanged("CUSREP", cusRep);
         this.cusRep = cusRep;
    }
 
@@ -225,6 +240,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCusSemIcm(BigDecimal cusSemIcm) {
+        markAsChanged("CUSSEMICM", cusSemIcm);
         this.cusSemIcm = cusSemIcm;
    }
 
@@ -233,6 +249,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCusVariavel(BigDecimal cusVariavel) {
+        markAsChanged("CUSVARIAVEL", cusVariavel);
         this.cusVariavel = cusVariavel;
    }
 
@@ -241,6 +258,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDifAliqIcms(BigDecimal difAliqIcms) {
+        markAsChanged("DIFALIQICMS", difAliqIcms);
         this.difAliqIcms = difAliqIcms;
    }
 
@@ -249,6 +267,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDiferenciador(BigDecimal diferenciador) {
+        markAsChanged("DIFERENCIADOR", diferenciador);
         this.diferenciador = diferenciador;
    }
 
@@ -257,6 +276,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDtColetaPreco(Timestamp dtColetaPreco) {
+        markAsChanged("DTCOLETAPRECO", dtColetaPreco);
         this.dtColetaPreco = dtColetaPreco;
    }
 
@@ -265,6 +285,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDtMoeda(Timestamp dtMoeda) {
+        markAsChanged("DTMOEDA", dtMoeda);
         this.dtMoeda = dtMoeda;
    }
 
@@ -273,6 +294,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setFatMinimo(BigDecimal fatMinimo) {
+        markAsChanged("FATMINIMO", fatMinimo);
         this.fatMinimo = fatMinimo;
    }
 
@@ -281,6 +303,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setFrete(BigDecimal frete) {
+        markAsChanged("FRETE", frete);
         this.frete = frete;
    }
 
@@ -289,6 +312,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setGarantia(BigDecimal garantia) {
+        markAsChanged("GARANTIA", garantia);
         this.garantia = garantia;
    }
 
@@ -297,6 +321,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setIcms(BigDecimal icms) {
+        markAsChanged("ICMS", icms);
         this.icms = icms;
    }
 
@@ -305,6 +330,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setIpi(BigDecimal ipi) {
+        markAsChanged("IPI", ipi);
         this.ipi = ipi;
    }
 
@@ -313,6 +339,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setMelhor(String melhor) {
+        markAsChanged("MELHOR", melhor);
         this.melhor = melhor;
    }
 
@@ -321,6 +348,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -329,6 +357,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -337,6 +366,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setOutros(BigDecimal outros) {
+        markAsChanged("OUTROS", outros);
         this.outros = outros;
    }
 
@@ -345,6 +375,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPercAcresc(BigDecimal percAcresc) {
+        markAsChanged("PERCACRESC", percAcresc);
         this.percAcresc = percAcresc;
    }
 
@@ -353,6 +384,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -361,6 +393,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrazoEntrega(BigDecimal prazoEntrega) {
+        markAsChanged("PRAZOENTREGA", prazoEntrega);
         this.prazoEntrega = prazoEntrega;
    }
 
@@ -369,6 +402,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrazoMedio(BigDecimal prazoMedio) {
+        markAsChanged("PRAZOMEDIO", prazoMedio);
         this.prazoMedio = prazoMedio;
    }
 
@@ -377,6 +411,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrazoValProp(BigDecimal prazoValProp) {
+        markAsChanged("PRAZOVALPROP", prazoValProp);
         this.prazoValProp = prazoValProp;
    }
 
@@ -385,6 +420,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPreco(BigDecimal preco) {
+        markAsChanged("PRECO", preco);
         this.preco = preco;
    }
 
@@ -393,6 +429,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrecoCalc(BigDecimal precoCalc) {
+        markAsChanged("PRECOCALC", precoCalc);
         this.precoCalc = precoCalc;
    }
 
@@ -401,6 +438,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setQtdCotada(BigDecimal qtdCotada) {
+        markAsChanged("QTDCOTADA", qtdCotada);
         this.qtdCotada = qtdCotada;
    }
 
@@ -409,6 +447,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setQualAtend(BigDecimal qualAtend) {
+        markAsChanged("QUALATEND", qualAtend);
         this.qualAtend = qualAtend;
    }
 
@@ -417,6 +456,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setQualProd(BigDecimal qualProd) {
+        markAsChanged("QUALPROD", qualProd);
         this.qualProd = qualProd;
    }
 
@@ -425,6 +465,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setResultCot(BigDecimal resultCot) {
+        markAsChanged("RESULTCOT", resultCot);
         this.resultCot = resultCot;
    }
 
@@ -433,6 +474,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -441,6 +483,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setTaxaJuro(BigDecimal taxaJuro) {
+        markAsChanged("TAXAJURO", taxaJuro);
         this.taxaJuro = taxaJuro;
    }
 
@@ -449,6 +492,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setVlrAcresc(BigDecimal vlrAcresc) {
+        markAsChanged("VLRACRESC", vlrAcresc);
         this.vlrAcresc = vlrAcresc;
    }
 
@@ -457,6 +501,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -465,6 +510,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setVlrMoeda(BigDecimal vlrMoeda) {
+        markAsChanged("VLRMOEDA", vlrMoeda);
         this.vlrMoeda = vlrMoeda;
    }
 
@@ -473,6 +519,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
+        markAsChanged("VLRSUBST", vlrSubst);
         this.vlrSubst = vlrSubst;
    }
 
@@ -481,6 +528,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDhEntrega(Timestamp dhEntrega) {
+        markAsChanged("DHENTREGA", dhEntrega);
         this.dhEntrega = dhEntrega;
    }
 
@@ -489,6 +537,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCustoFinal(BigDecimal custoFinal) {
+        markAsChanged("CUSTOFINAL", custoFinal);
         this.custoFinal = custoFinal;
    }
 
@@ -497,6 +546,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setModFrete(String modFrete) {
+        markAsChanged("MODFRETE", modFrete);
         this.modFrete = modFrete;
    }
 
@@ -505,6 +555,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrecoMoe(BigDecimal precoMoe) {
+        markAsChanged("PRECOMOE", precoMoe);
         this.precoMoe = precoMoe;
    }
 
@@ -513,6 +564,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setValProposta(BigDecimal valProposta) {
+        markAsChanged("VALPROPOSTA", valProposta);
         this.valProposta = valProposta;
    }
 
@@ -521,6 +573,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setVlrDescMoe(BigDecimal vlrDescMoe) {
+        markAsChanged("VLRDESCMOE", vlrDescMoe);
         this.vlrDescMoe = vlrDescMoe;
    }
 
@@ -529,6 +582,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setEmpresa(BigDecimal empresa) {
+        markAsChanged("EMPRESA", empresa);
         this.empresa = empresa;
    }
 
@@ -537,6 +591,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setNumeroOs(BigDecimal numeroOs) {
+        markAsChanged("NUMEROOS", numeroOs);
         this.numeroOs = numeroOs;
    }
 
@@ -545,6 +600,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodProdEsp(BigDecimal codProdEsp) {
+        markAsChanged("CODPRODESP", codProdEsp);
         this.codProdEsp = codProdEsp;
    }
 
@@ -553,6 +609,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setFornecAprovado(BigDecimal fornecAprovado) {
+        markAsChanged("FORNECAPROVADO", fornecAprovado);
         this.fornecAprovado = fornecAprovado;
    }
 
@@ -561,6 +618,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setSeqNotaCpa(BigDecimal seqNotaCpa) {
+        markAsChanged("SEQNOTACPA", seqNotaCpa);
         this.seqNotaCpa = seqNotaCpa;
    }
 
@@ -569,6 +627,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setStatusPrecificacao(String statusPrecificacao) {
+        markAsChanged("STATUSPRECIFICACAO", statusPrecificacao);
         this.statusPrecificacao = statusPrecificacao;
    }
 
@@ -577,6 +636,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -585,6 +645,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUsuResp(BigDecimal usuResp) {
+        markAsChanged("USURESP", usuResp);
         this.usuResp = usuResp;
    }
 
@@ -593,6 +654,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setStatusEnvio(String statusEnvio) {
+        markAsChanged("STATUSENVIO", statusEnvio);
         this.statusEnvio = statusEnvio;
    }
 
@@ -601,6 +663,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -609,6 +672,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setProdAgrupMin(BigDecimal prodAgrupMin) {
+        markAsChanged("PRODAGRUPMIN", prodAgrupMin);
         this.prodAgrupMin = prodAgrupMin;
    }
 
@@ -617,6 +681,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setProdDecQtd(BigDecimal prodDecQtd) {
+        markAsChanged("PRODDECQTD", prodDecQtd);
         this.prodDecQtd = prodDecQtd;
    }
 
@@ -625,6 +690,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUltCusGer(BigDecimal ultCusGer) {
+        markAsChanged("ULTCUSGER", ultCusGer);
         this.ultCusGer = ultCusGer;
    }
 
@@ -633,6 +699,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setMelhorPreco(BigDecimal melhorPreco) {
+        markAsChanged("MELHORPRECO", melhorPreco);
         this.melhorPreco = melhorPreco;
    }
 
@@ -641,6 +708,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDhInicial(Timestamp dhInicial) {
+        markAsChanged("DHINICIAL", dhInicial);
         this.dhInicial = dhInicial;
    }
 
@@ -649,6 +717,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -657,6 +726,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -665,6 +735,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUltCusVar(BigDecimal ultCusVar) {
+        markAsChanged("ULTCUSVAR", ultCusVar);
         this.ultCusVar = ultCusVar;
    }
 
@@ -673,6 +744,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setTotalParceiros(BigDecimal totalParceiros) {
+        markAsChanged("TOTALPARCEIROS", totalParceiros);
         this.totalParceiros = totalParceiros;
    }
 
@@ -681,6 +753,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCentResult(BigDecimal centResult) {
+        markAsChanged("CENTRESULT", centResult);
         this.centResult = centResult;
    }
 
@@ -689,6 +762,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUltCusRep(BigDecimal ultCusRep) {
+        markAsChanged("ULTCUSREP", ultCusRep);
         this.ultCusRep = ultCusRep;
    }
 
@@ -697,6 +771,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setPrazoParc(BigDecimal prazoParc) {
+        markAsChanged("PRAZOPARC", prazoParc);
         this.prazoParc = prazoParc;
    }
 
@@ -705,6 +780,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDtLimPreco(Timestamp dtLimPreco) {
+        markAsChanged("DTLIMPRECO", dtLimPreco);
         this.dtLimPreco = dtLimPreco;
    }
 
@@ -713,6 +789,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setRespMinCot(BigDecimal respMinCot) {
+        markAsChanged("RESPMINCOT", respMinCot);
         this.respMinCot = respMinCot;
    }
 
@@ -721,6 +798,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDtLimite(Timestamp dtLimite) {
+        markAsChanged("DTLIMITE", dtLimite);
         this.dtLimite = dtLimite;
    }
 
@@ -729,6 +807,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setDtEnvioCot(Timestamp dtEnvioCot) {
+        markAsChanged("DTENVIOCOT", dtEnvioCot);
         this.dtEnvioCot = dtEnvioCot;
    }
 
@@ -737,6 +816,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setSeqItemCot(BigDecimal seqItemCot) {
+        markAsChanged("SEQITEMCOT", seqItemCot);
         this.seqItemCot = seqItemCot;
    }
 
@@ -745,6 +825,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setStatusProdCot(String statusProdCot) {
+        markAsChanged("STATUSPRODCOT", statusProdCot);
         this.statusProdCot = statusProdCot;
    }
 
@@ -753,6 +834,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUsuSol(BigDecimal usuSol) {
+        markAsChanged("USUSOL", usuSol);
         this.usuSol = usuSol;
    }
 
@@ -761,6 +843,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setMelhorFornEc(BigDecimal melhorFornEc) {
+        markAsChanged("MELHORFORNEC", melhorFornEc);
         this.melhorFornEc = melhorFornEc;
    }
 
@@ -769,6 +852,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setNuNotaCpa(BigDecimal nuNotaCpa) {
+        markAsChanged("NUNOTACPA", nuNotaCpa);
         this.nuNotaCpa = nuNotaCpa;
    }
 
@@ -777,6 +861,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setTotalProduto(BigDecimal totalProduto) {
+        markAsChanged("TOTALPRODUTO", totalProduto);
         this.totalProduto = totalProduto;
    }
 
@@ -785,6 +870,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setQtdParcPagt(BigDecimal qtdParcPagt) {
+        markAsChanged("QTDPARCPAGT", qtdParcPagt);
         this.qtdParcPagt = qtdParcPagt;
    }
 
@@ -793,6 +879,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCondPagt(String condPagt) {
+        markAsChanged("CONDPAGT", condPagt);
         this.condPagt = condPagt;
    }
 
@@ -801,6 +888,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setUltVlrUnitComp(BigDecimal ultVlrUnitComp) {
+        markAsChanged("ULTVLRUNITCOMP", ultVlrUnitComp);
         this.ultVlrUnitComp = ultVlrUnitComp;
    }
 
@@ -809,6 +897,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setProdDecVlr(BigDecimal prodDecVlr) {
+        markAsChanged("PRODDECVLR", prodDecVlr);
         this.prodDecVlr = prodDecVlr;
    }
 
@@ -817,6 +906,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setTipoColPreco(String tipoColPreco) {
+        markAsChanged("TIPOCOLPRECO", tipoColPreco);
         this.tipoColPreco = tipoColPreco;
    }
 
@@ -825,6 +915,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setCodMotCan(BigDecimal codMotCan) {
+        markAsChanged("CODMOTCAN", codMotCan);
         this.codMotCan = codMotCan;
    }
 
@@ -833,6 +924,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setComplDesc(String complDesc) {
+        markAsChanged("COMPLDESC", complDesc);
         this.complDesc = complDesc;
    }
 
@@ -841,6 +933,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
    }
 
    public void setObsMotCanc(String obsMotCanc) {
+        markAsChanged("OBSMOTCANC", obsMotCanc);
         this.obsMotCanc = obsMotCanc;
    }
 
@@ -856,6 +949,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
 
    @Override
    public ItemCotacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqIpi = vo.asBigDecimal("ALIQIPI");
         this.cabecalho = vo.asString("CABECALHO");

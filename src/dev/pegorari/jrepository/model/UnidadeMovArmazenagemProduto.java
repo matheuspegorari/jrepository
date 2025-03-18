@@ -16,6 +16,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -24,6 +25,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -32,6 +34,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    }
 
    public void setCodUma(BigDecimal codUma) {
+        markAsChanged("CODUMA", codUma);
         this.codUma = codUma;
    }
 
@@ -40,6 +43,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -48,6 +52,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -63,6 +68,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
 
    @Override
    public UnidadeMovArmazenagemProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUma = vo.asBigDecimal("CODUMA");

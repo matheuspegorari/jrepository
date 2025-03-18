@@ -16,6 +16,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    }
 
    public void setPercIcmFcp(BigDecimal percIcmFcp) {
+        markAsChanged("PERCICMSFCP", percIcmFcp);
         this.percIcmFcp = percIcmFcp;
    }
 
@@ -24,6 +25,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -32,6 +34,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -40,6 +43,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    }
 
    public void setAliqIntDest(BigDecimal aliqIntDest) {
+        markAsChanged("ALIQINTDEST", aliqIntDest);
         this.aliqIntDest = aliqIntDest;
    }
 
@@ -48,6 +52,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    }
 
    public void setPercRedBaseDest(BigDecimal percRedBaseDest) {
+        markAsChanged("PERCREDBASEDEST", percRedBaseDest);
         this.percRedBaseDest = percRedBaseDest;
    }
 
@@ -63,6 +68,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
 
    @Override
    public AliquotaInternaDestino fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.percIcmFcp = vo.asBigDecimal("PERCICMSFCP");
         this.codUf = vo.asBigDecimal("CODUF");
         this.codProd = vo.asBigDecimal("CODPROD");

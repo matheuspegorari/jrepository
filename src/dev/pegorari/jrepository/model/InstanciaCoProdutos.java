@@ -15,6 +15,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
    }
 
    public void setIdCop(BigDecimal idCop) {
+        markAsChanged("IDCOP", idCop);
         this.idCop = idCop;
    }
 
@@ -23,6 +24,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
    }
 
    public void setIdICop(BigDecimal idICop) {
+        markAsChanged("IDICOP", idICop);
         this.idICop = idICop;
    }
 
@@ -31,6 +33,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
    }
 
    public void setIdIProc(BigDecimal idIProc) {
+        markAsChanged("IDIPROC", idIProc);
         this.idIProc = idIProc;
    }
 
@@ -39,6 +42,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
    }
 
    public void setQtdConsumida(BigDecimal qtdConsumida) {
+        markAsChanged("QTDCONSUMIDA", qtdConsumida);
         this.qtdConsumida = qtdConsumida;
    }
 
@@ -54,6 +58,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
 
    @Override
    public InstanciaCoProdutos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idCop = vo.asBigDecimal("IDCOP");
         this.idICop = vo.asBigDecimal("IDICOP");
         this.idIProc = vo.asBigDecimal("IDIPROC");

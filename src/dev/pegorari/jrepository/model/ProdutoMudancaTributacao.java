@@ -43,6 +43,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -51,6 +52,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setAliqSt(BigDecimal aliqSt) {
+        markAsChanged("ALIQST", aliqSt);
         this.aliqSt = aliqSt;
    }
 
@@ -59,6 +61,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -67,6 +70,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
+        markAsChanged("BASESUBSTIT", baseSubstit);
         this.baseSubstit = baseSubstit;
    }
 
@@ -75,6 +79,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setBaseSubstitCompra(BigDecimal baseSubstitCompra) {
+        markAsChanged("BASESUBSTITCOMPRA", baseSubstitCompra);
         this.baseSubstitCompra = baseSubstitCompra;
    }
 
@@ -83,6 +88,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -91,6 +97,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -99,6 +106,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodParcCompra(BigDecimal codParcCompra) {
+        markAsChanged("CODPARCCOMPRA", codParcCompra);
         this.codParcCompra = codParcCompra;
    }
 
@@ -107,6 +115,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -115,6 +124,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -123,6 +133,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -131,6 +142,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCst(BigDecimal cst) {
+        markAsChanged("CST", cst);
         this.cst = cst;
    }
 
@@ -139,6 +151,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -147,6 +160,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -155,6 +169,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setDtMtp(Timestamp dtMtp) {
+        markAsChanged("DTMTP", dtMtp);
         this.dtMtp = dtMtp;
    }
 
@@ -163,6 +178,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setIdAliq(BigDecimal idAliq) {
+        markAsChanged("IDALIQ", idAliq);
         this.idAliq = idAliq;
    }
 
@@ -171,6 +187,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setMva(BigDecimal mva) {
+        markAsChanged("MVA", mva);
         this.mva = mva;
    }
 
@@ -179,6 +196,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setNcm(String ncm) {
+        markAsChanged("NCM", ncm);
         this.ncm = ncm;
    }
 
@@ -187,6 +205,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setNuNotaCompra(BigDecimal nuNotaCompra) {
+        markAsChanged("NUNOTACOMPRA", nuNotaCompra);
         this.nuNotaCompra = nuNotaCompra;
    }
 
@@ -195,6 +214,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setQtdEst(BigDecimal qtdEst) {
+        markAsChanged("QTDEST", qtdEst);
         this.qtdEst = qtdEst;
    }
 
@@ -203,6 +223,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setUsoProd(String usoProd) {
+        markAsChanged("USOPROD", usoProd);
         this.usoProd = usoProd;
    }
 
@@ -211,6 +232,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -219,6 +241,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrIcmsCompra(BigDecimal vlrIcmsCompra) {
+        markAsChanged("VLRICMSCOMPRA", vlrIcmsCompra);
         this.vlrIcmsCompra = vlrIcmsCompra;
    }
 
@@ -227,6 +250,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrUnitCusto(BigDecimal vlrUnitCusto) {
+        markAsChanged("VLRUNITCUSTO", vlrUnitCusto);
         this.vlrUnitCusto = vlrUnitCusto;
    }
 
@@ -235,6 +259,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setBaseIcmsSt(BigDecimal baseIcmsSt) {
+        markAsChanged("BASEICMSST", baseIcmsSt);
         this.baseIcmsSt = baseIcmsSt;
    }
 
@@ -243,6 +268,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setCstAnterior(BigDecimal cstAnterior) {
+        markAsChanged("CSTANTERIOR", cstAnterior);
         this.cstAnterior = cstAnterior;
    }
 
@@ -251,6 +277,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setIdAliqAnterior(BigDecimal idAliqAnterior) {
+        markAsChanged("IDALIQANTERIOR", idAliqAnterior);
         this.idAliqAnterior = idAliqAnterior;
    }
 
@@ -259,6 +286,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrIcmsSt(BigDecimal vlrIcmsSt) {
+        markAsChanged("VLRICMSST", vlrIcmsSt);
         this.vlrIcmsSt = vlrIcmsSt;
    }
 
@@ -267,6 +295,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setBaseStEstoque(BigDecimal baseStEstoque) {
+        markAsChanged("BASESTESTOQUE", baseStEstoque);
         this.baseStEstoque = baseStEstoque;
    }
 
@@ -275,6 +304,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrCusUtil(String vlrCusUtil) {
+        markAsChanged("VLRCUSUTIL", vlrCusUtil);
         this.vlrCusUtil = vlrCusUtil;
    }
 
@@ -283,6 +313,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    }
 
    public void setVlrIcmsUnit(BigDecimal vlrIcmsUnit) {
+        markAsChanged("VLRICMSUNIT", vlrIcmsUnit);
         this.vlrIcmsUnit = vlrIcmsUnit;
    }
 
@@ -298,6 +329,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
 
    @Override
    public ProdutoMudancaTributacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqSt = vo.asBigDecimal("ALIQST");
         this.baseIcms = vo.asBigDecimal("BASEICMS");

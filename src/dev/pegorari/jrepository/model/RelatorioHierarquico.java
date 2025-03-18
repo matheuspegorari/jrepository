@@ -27,6 +27,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setAlinhamento(BigDecimal alinhamento) {
+        markAsChanged("ALINHAMENTO", alinhamento);
         this.alinhamento = alinhamento;
    }
 
@@ -35,6 +36,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setCodCampo(BigDecimal codCampo) {
+        markAsChanged("CODCAMPO", codCampo);
         this.codCampo = codCampo;
    }
 
@@ -43,6 +45,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setCodCampoPai(BigDecimal codCampoPai) {
+        markAsChanged("CODCAMPOPAI", codCampoPai);
         this.codCampoPai = codCampoPai;
    }
 
@@ -51,6 +54,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setCodUni(BigDecimal codUni) {
+        markAsChanged("CODUNI", codUni);
         this.codUni = codUni;
    }
 
@@ -59,6 +63,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -67,6 +72,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -75,6 +81,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setLigacao(String ligacao) {
+        markAsChanged("LIGACAO", ligacao);
         this.ligacao = ligacao;
    }
 
@@ -83,6 +90,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setMascara(String mascara) {
+        markAsChanged("MASCARA", mascara);
         this.mascara = mascara;
    }
 
@@ -91,6 +99,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setPrograma(String programa) {
+        markAsChanged("PROGRAMA", programa);
         this.programa = programa;
    }
 
@@ -99,6 +108,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setSankhya(String sankhya) {
+        markAsChanged("SANKHYA", sankhya);
         this.sankhya = sankhya;
    }
 
@@ -107,6 +117,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setSoHierarquia(String soHierarquia) {
+        markAsChanged("SOHIERARQUIA", soHierarquia);
         this.soHierarquia = soHierarquia;
    }
 
@@ -115,6 +126,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setTabelas(String tabelas) {
+        markAsChanged("TABELAS", tabelas);
         this.tabelas = tabelas;
    }
 
@@ -123,6 +135,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setTamanho(BigDecimal tamanho) {
+        markAsChanged("TAMANHO", tamanho);
         this.tamanho = tamanho;
    }
 
@@ -131,6 +144,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -139,6 +153,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setTotaliza(String totaliza) {
+        markAsChanged("TOTALIZA", totaliza);
         this.totaliza = totaliza;
    }
 
@@ -147,6 +162,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    }
 
    public void setZerarNaQuebra(String zerarNaQuebra) {
+        markAsChanged("ZERARNAQUEBRA", zerarNaQuebra);
         this.zerarNaQuebra = zerarNaQuebra;
    }
 
@@ -162,6 +178,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
 
    @Override
    public RelatorioHierarquico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.alinhamento = vo.asBigDecimal("ALINHAMENTO");
         this.codCampo = vo.asBigDecimal("CODCAMPO");
         this.codCampoPai = vo.asBigDecimal("CODCAMPOPAI");

@@ -16,6 +16,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
+        markAsChanged("QTDALOCADA", qtdAlocada);
         this.qtdAlocada = qtdAlocada;
    }
 
@@ -24,6 +25,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -32,6 +34,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -40,6 +43,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    }
 
    public void setFatorCapacidade(BigDecimal fatorCapacidade) {
+        markAsChanged("FATORCAPACIDADE", fatorCapacidade);
         this.fatorCapacidade = fatorCapacidade;
    }
 
@@ -48,6 +52,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    }
 
    public void setModCapacidade(String modCapacidade) {
+        markAsChanged("MODCAPACIDADE", modCapacidade);
         this.modCapacidade = modCapacidade;
    }
 
@@ -63,6 +68,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
 
    @Override
    public RecursoPorWorkCenter fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.qtdAlocada = vo.asBigDecimal("QTDALOCADA");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codWcp = vo.asBigDecimal("CODWCP");

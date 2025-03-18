@@ -15,6 +15,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
+        markAsChanged("NUAVISO", nuAviso);
         this.nuAviso = nuAviso;
    }
 
@@ -23,6 +24,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
    }
 
    public void setRotina(String rotina) {
+        markAsChanged("ROTINA", rotina);
         this.rotina = rotina;
    }
 
@@ -31,6 +33,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -39,6 +42,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
    }
 
    public void setIgnorarProximas(String ignorarProximas) {
+        markAsChanged("IGNORARPROXIMAS", ignorarProximas);
         this.ignorarProximas = ignorarProximas;
    }
 
@@ -54,6 +58,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
 
    @Override
    public NotificacaoGapsGestao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuAviso = vo.asBigDecimal("NUAVISO");
         this.rotina = vo.asString("ROTINA");
         this.codFila = vo.asBigDecimal("CODFILA");

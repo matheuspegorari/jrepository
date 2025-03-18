@@ -19,6 +19,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -27,6 +28,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -43,6 +46,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -51,6 +55,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setFimPeriodo(Timestamp fimPeriodo) {
+        markAsChanged("FIMPERIODO", fimPeriodo);
         this.fimPeriodo = fimPeriodo;
    }
 
@@ -59,6 +64,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setInicioPeriodo(Timestamp inicioPeriodo) {
+        markAsChanged("INICIOPERIODO", inicioPeriodo);
         this.inicioPeriodo = inicioPeriodo;
    }
 
@@ -67,6 +73,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
+        markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
         this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
@@ -82,6 +89,7 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
 
    @Override
    public PeriodoContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");

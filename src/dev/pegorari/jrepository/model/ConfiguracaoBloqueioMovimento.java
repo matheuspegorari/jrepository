@@ -34,6 +34,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -42,6 +43,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -50,6 +52,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -58,6 +61,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDescrBloqueio(String descrBloqueio) {
+        markAsChanged("DESCRBLOQUEIO", descrBloqueio);
         this.descrBloqueio = descrBloqueio;
    }
 
@@ -66,6 +70,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -74,6 +79,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovBco(BigDecimal diaFechaMovBco) {
+        markAsChanged("DIAFECHAMOVBCO", diaFechaMovBco);
         this.diaFechaMovBco = diaFechaMovBco;
    }
 
@@ -82,6 +88,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovCalcCus(BigDecimal diaFechaMovCalcCus) {
+        markAsChanged("DIAFECHAMOVCALCCUS", diaFechaMovCalcCus);
         this.diaFechaMovCalcCus = diaFechaMovCalcCus;
    }
 
@@ -90,6 +97,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovCtb(BigDecimal diaFechaMovCtb) {
+        markAsChanged("DIAFECHAMOVCTB", diaFechaMovCtb);
         this.diaFechaMovCtb = diaFechaMovCtb;
    }
 
@@ -98,6 +106,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovDesp(BigDecimal diaFechaMovDesp) {
+        markAsChanged("DIAFECHAMOVDESP", diaFechaMovDesp);
         this.diaFechaMovDesp = diaFechaMovDesp;
    }
 
@@ -106,6 +115,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovEnt(BigDecimal diaFechaMovEnt) {
+        markAsChanged("DIAFECHAMOVENT", diaFechaMovEnt);
         this.diaFechaMovEnt = diaFechaMovEnt;
    }
 
@@ -114,6 +124,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovFis(BigDecimal diaFechaMovFis) {
+        markAsChanged("DIAFECHAMOVFIS", diaFechaMovFis);
         this.diaFechaMovFis = diaFechaMovFis;
    }
 
@@ -122,6 +133,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovRec(BigDecimal diaFechaMovRec) {
+        markAsChanged("DIAFECHAMOVREC", diaFechaMovRec);
         this.diaFechaMovRec = diaFechaMovRec;
    }
 
@@ -130,6 +142,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setDiaFechaMovSai(BigDecimal diaFechaMovSai) {
+        markAsChanged("DIAFECHAMOVSAI", diaFechaMovSai);
         this.diaFechaMovSai = diaFechaMovSai;
    }
 
@@ -138,6 +151,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovBco(String fechaMovBco) {
+        markAsChanged("FECHAMOVBCO", fechaMovBco);
         this.fechaMovBco = fechaMovBco;
    }
 
@@ -146,6 +160,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovCalcCus(String fechaMovCalcCus) {
+        markAsChanged("FECHAMOVCALCCUS", fechaMovCalcCus);
         this.fechaMovCalcCus = fechaMovCalcCus;
    }
 
@@ -154,6 +169,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovCtb(String fechaMovCtb) {
+        markAsChanged("FECHAMOVCTB", fechaMovCtb);
         this.fechaMovCtb = fechaMovCtb;
    }
 
@@ -162,6 +178,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovDesp(String fechaMovDesp) {
+        markAsChanged("FECHAMOVDESP", fechaMovDesp);
         this.fechaMovDesp = fechaMovDesp;
    }
 
@@ -170,6 +187,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovEnt(String fechaMovEnt) {
+        markAsChanged("FECHAMOVENT", fechaMovEnt);
         this.fechaMovEnt = fechaMovEnt;
    }
 
@@ -178,6 +196,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovFis(String fechaMovFis) {
+        markAsChanged("FECHAMOVFIS", fechaMovFis);
         this.fechaMovFis = fechaMovFis;
    }
 
@@ -186,6 +205,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovRec(String fechaMovRec) {
+        markAsChanged("FECHAMOVREC", fechaMovRec);
         this.fechaMovRec = fechaMovRec;
    }
 
@@ -194,6 +214,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setFechaMovSai(String fechaMovSai) {
+        markAsChanged("FECHAMOVSAI", fechaMovSai);
         this.fechaMovSai = fechaMovSai;
    }
 
@@ -202,6 +223,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    }
 
    public void setNuConfBloqueio(BigDecimal nuConfBloqueio) {
+        markAsChanged("NUCONFBLOQUEIO", nuConfBloqueio);
         this.nuConfBloqueio = nuConfBloqueio;
    }
 
@@ -217,6 +239,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoBloqueioMovimento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");

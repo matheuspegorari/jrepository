@@ -15,6 +15,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    }
 
    public void setDhAutorizacao(Timestamp dhAutorizacao) {
+        markAsChanged("DHAUTORIZACAO", dhAutorizacao);
         this.dhAutorizacao = dhAutorizacao;
    }
 
@@ -23,6 +24,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    }
 
    public void setId(String id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -31,6 +33,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    }
 
    public void setPermissao(String permissao) {
+        markAsChanged("PERMISSAO", permissao);
         this.permissao = permissao;
    }
 
@@ -39,6 +42,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    }
 
    public void setAutorizado(String autorizado) {
+        markAsChanged("AUTORIZADO", autorizado);
         this.autorizado = autorizado;
    }
 
@@ -54,6 +58,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
 
    @Override
    public PermissaoAgente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhAutorizacao = vo.asTimestamp("DHAUTORIZACAO");
         this.id = vo.asString("ID");
         this.permissao = vo.asString("PERMISSAO");

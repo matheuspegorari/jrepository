@@ -17,6 +17,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -25,6 +26,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -33,6 +35,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    }
 
    public void setNuAjuste(BigDecimal nuAjuste) {
+        markAsChanged("NUAJUSTE", nuAjuste);
         this.nuAjuste = nuAjuste;
    }
 
@@ -41,6 +44,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    }
 
    public void setNuIvt(BigDecimal nuIvt) {
+        markAsChanged("NUIVT", nuIvt);
         this.nuIvt = nuIvt;
    }
 
@@ -49,6 +53,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -64,6 +69,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
 
    @Override
    public AjusteEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuAjuste = vo.asBigDecimal("NUAJUSTE");

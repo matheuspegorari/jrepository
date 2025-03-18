@@ -18,6 +18,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -26,6 +27,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -42,6 +45,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -50,6 +54,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setEvento(String evento) {
+        markAsChanged("EVENTO", evento);
         this.evento = evento;
    }
 
@@ -58,6 +63,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    }
 
    public void setGeraEvento(String geraEvento) {
+        markAsChanged("GERAREVENTO", geraEvento);
         this.geraEvento = geraEvento;
    }
 
@@ -73,6 +79,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
 
    @Override
    public EventoPeriodico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");

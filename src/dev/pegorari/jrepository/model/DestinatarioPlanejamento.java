@@ -17,6 +17,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setNuPla(BigDecimal nuPla) {
+        markAsChanged("NUPLA", nuPla);
         this.nuPla = nuPla;
    }
 
@@ -25,6 +26,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setApresentacao(String apresentacao) {
+        markAsChanged("APRESENTACAO", apresentacao);
         this.apresentacao = apresentacao;
    }
 
@@ -33,6 +35,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setChave(BigDecimal chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -41,6 +44,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setChave2(BigDecimal chave2) {
+        markAsChanged("CHAVE2", chave2);
         this.chave2 = chave2;
    }
 
@@ -49,6 +53,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setEvento(String evento) {
+        markAsChanged("EVENTO", evento);
         this.evento = evento;
    }
 
@@ -57,6 +62,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -72,6 +78,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
 
    @Override
    public DestinatarioPlanejamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuPla = vo.asBigDecimal("NUPLA");
         this.apresentacao = vo.asString("APRESENTACAO");
         this.chave = vo.asBigDecimal("CHAVE");

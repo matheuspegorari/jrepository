@@ -17,6 +17,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -25,6 +26,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -33,6 +35,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -49,6 +53,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -64,6 +69,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
 
    @Override
    public CodigoBarras fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");

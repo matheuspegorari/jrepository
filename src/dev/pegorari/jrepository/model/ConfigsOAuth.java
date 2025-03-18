@@ -23,6 +23,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setClientId(String clientId) {
+        markAsChanged("CLIENTID", clientId);
         this.clientId = clientId;
    }
 
@@ -31,6 +32,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setClientSecret(String clientSecret) {
+        markAsChanged("CLIENTSECRET", clientSecret);
         this.clientSecret = clientSecret;
    }
 
@@ -39,6 +41,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setCodAth(BigDecimal codAth) {
+        markAsChanged("CODATH", codAth);
         this.codAth = codAth;
    }
 
@@ -47,6 +50,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -55,6 +59,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setNomeDaApi(String nomeDaApi) {
+        markAsChanged("NOMEDAAPI", nomeDaApi);
         this.nomeDaApi = nomeDaApi;
    }
 
@@ -63,6 +68,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setRedirectUri(String redirectUri) {
+        markAsChanged("REDIRECTURI", redirectUri);
         this.redirectUri = redirectUri;
    }
 
@@ -71,6 +77,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setScopes(String scopes) {
+        markAsChanged("SCOPES", scopes);
         this.scopes = scopes;
    }
 
@@ -79,6 +86,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setUrlApiGoogle(String urlApiGoogle) {
+        markAsChanged("URLAPIGOOGLE", urlApiGoogle);
         this.urlApiGoogle = urlApiGoogle;
    }
 
@@ -87,6 +95,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setUrlGetAccessToken(String urlGetAccessToken) {
+        markAsChanged("URLGETACCESSTOKEN", urlGetAccessToken);
         this.urlGetAccessToken = urlGetAccessToken;
    }
 
@@ -95,6 +104,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setUrlGooglePeople(String urlGooglePeople) {
+        markAsChanged("URLGOOGLEPEOPLE", urlGooglePeople);
         this.urlGooglePeople = urlGooglePeople;
    }
 
@@ -103,6 +113,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setProvedor(String provedor) {
+        markAsChanged("PROVEDOR", provedor);
         this.provedor = provedor;
    }
 
@@ -111,6 +122,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
    }
 
    public void setTenant(String tenant) {
+        markAsChanged("TENANT", tenant);
         this.tenant = tenant;
    }
 
@@ -126,6 +138,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
 
    @Override
    public ConfigsOAuth fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.clientId = vo.asString("CLIENTID");
         this.clientSecret = vo.asString("CLIENTSECRET");
         this.codAth = vo.asBigDecimal("CODATH");

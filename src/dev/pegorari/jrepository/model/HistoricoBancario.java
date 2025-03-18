@@ -15,6 +15,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
    }
 
    public void setAceitaDev(String aceitaDev) {
+        markAsChanged("ACEITADEV", aceitaDev);
         this.aceitaDev = aceitaDev;
    }
 
@@ -23,6 +24,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
    }
 
    public void setCodLanc(BigDecimal codLanc) {
+        markAsChanged("CODLANC", codLanc);
         this.codLanc = codLanc;
    }
 
@@ -31,6 +33,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
    }
 
    public void setDescrLancBco(String descrLancBco) {
+        markAsChanged("DESCRLANCBCO", descrLancBco);
         this.descrLancBco = descrLancBco;
    }
 
@@ -39,6 +42,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
    }
 
    public void setTipLanc(BigDecimal tipLanc) {
+        markAsChanged("TIPLANC", tipLanc);
         this.tipLanc = tipLanc;
    }
 
@@ -54,6 +58,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
 
    @Override
    public HistoricoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aceitaDev = vo.asString("ACEITADEV");
         this.codLanc = vo.asBigDecimal("CODLANC");
         this.descrLancBco = vo.asString("DESCRLANCBCO");

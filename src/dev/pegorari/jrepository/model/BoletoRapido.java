@@ -32,6 +32,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setCodCtabCoint(BigDecimal codCtabCoint) {
+        markAsChanged("CODCTABCOINT", codCtabCoint);
         this.codCtabCoint = codCtabCoint;
    }
 
@@ -40,6 +41,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -48,6 +50,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setDtCred(Timestamp dtCred) {
+        markAsChanged("DTCRED", dtCred);
         this.dtCred = dtCred;
    }
 
@@ -56,6 +59,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setDtPag(Timestamp dtPag) {
+        markAsChanged("DTPAG", dtPag);
         this.dtPag = dtPag;
    }
 
@@ -64,6 +68,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setDtVenc(Timestamp dtVenc) {
+        markAsChanged("DTVENC", dtVenc);
         this.dtVenc = dtVenc;
    }
 
@@ -72,6 +77,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setIdUnico(BigDecimal idUnico) {
+        markAsChanged("IDUNICO", idUnico);
         this.idUnico = idUnico;
    }
 
@@ -80,6 +86,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setIdUniorig(BigDecimal idUniorig) {
+        markAsChanged("IDUNIORIG", idUniorig);
         this.idUniorig = idUniorig;
    }
 
@@ -88,6 +95,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setLinkBoleto(String linkBoleto) {
+        markAsChanged("LINKBOLETO", linkBoleto);
         this.linkBoleto = linkBoleto;
    }
 
@@ -96,6 +104,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setLinkGrupo(String linkGrupo) {
+        markAsChanged("LINKGRUPO", linkGrupo);
         this.linkGrupo = linkGrupo;
    }
 
@@ -104,6 +113,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setLinkInfo(String linkInfo) {
+        markAsChanged("LINKINFO", linkInfo);
         this.linkInfo = linkInfo;
    }
 
@@ -112,6 +122,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setNmPedido(BigDecimal nmPedido) {
+        markAsChanged("NMPEDIDO", nmPedido);
         this.nmPedido = nmPedido;
    }
 
@@ -120,6 +131,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setNmToken(String nmToken) {
+        markAsChanged("NMTOKEN", nmToken);
         this.nmToken = nmToken;
    }
 
@@ -128,6 +140,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setNossoNumor(BigDecimal nossoNumor) {
+        markAsChanged("NOSSONUMOR", nossoNumor);
         this.nossoNumor = nossoNumor;
    }
 
@@ -136,6 +149,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setNumBanco(String numBanco) {
+        markAsChanged("NUMBANCO", numBanco);
         this.numBanco = numBanco;
    }
 
@@ -144,6 +158,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setSitRegBol(String sitRegBol) {
+        markAsChanged("SITREGBOL", sitRegBol);
         this.sitRegBol = sitRegBol;
    }
 
@@ -152,6 +167,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -160,6 +176,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setVrBoleto(BigDecimal vrBoleto) {
+        markAsChanged("VRBOLETO", vrBoleto);
         this.vrBoleto = vrBoleto;
    }
 
@@ -168,6 +185,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setVrLiquido(BigDecimal vrLiquido) {
+        markAsChanged("VRLIQUIDO", vrLiquido);
         this.vrLiquido = vrLiquido;
    }
 
@@ -176,6 +194,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setVrPago(BigDecimal vrPago) {
+        markAsChanged("VRPAGO", vrPago);
         this.vrPago = vrPago;
    }
 
@@ -184,6 +203,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
    }
 
    public void setVrTarifa(BigDecimal vrTarifa) {
+        markAsChanged("VRTARIFA", vrTarifa);
         this.vrTarifa = vrTarifa;
    }
 
@@ -199,6 +219,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
 
    @Override
    public BoletoRapido fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtCred = vo.asTimestamp("DTCRED");

@@ -26,6 +26,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -34,6 +35,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -42,6 +44,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setPkRegistro(String pkRegistro) {
+        markAsChanged("PKREGISTRO", pkRegistro);
         this.pkRegistro = pkRegistro;
    }
 
@@ -50,6 +53,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -58,6 +62,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setChaveArquivo(String chaveArquivo) {
+        markAsChanged("CHAVEARQUIVO", chaveArquivo);
         this.chaveArquivo = chaveArquivo;
    }
 
@@ -66,6 +71,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -74,6 +80,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -82,6 +89,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -90,6 +98,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setTipoAcesso(String tipoAcesso) {
+        markAsChanged("TIPOACESSO", tipoAcesso);
         this.tipoAcesso = tipoAcesso;
    }
 
@@ -98,6 +107,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setTipoApres(String tipoApres) {
+        markAsChanged("TIPOAPRES", tipoApres);
         this.tipoApres = tipoApres;
    }
 
@@ -106,6 +116,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -114,6 +125,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -122,6 +134,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setNuAttach(BigDecimal nuAttach) {
+        markAsChanged("NUATTACH", nuAttach);
         this.nuAttach = nuAttach;
    }
 
@@ -130,6 +143,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
    }
 
    public void setLink(String link) {
+        markAsChanged("LINK", link);
         this.link = link;
    }
 
@@ -145,6 +159,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
 
    @Override
    public AnexoSistema fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhCad = vo.asTimestamp("DHCAD");
         this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
         this.pkRegistro = vo.asString("PKREGISTRO");

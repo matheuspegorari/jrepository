@@ -85,6 +85,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDescrLocal(String descrLocal) {
+        markAsChanged("DESCRLOCAL", descrLocal);
         this.descrLocal = descrLocal;
    }
 
@@ -93,6 +94,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtBaixa(Timestamp dtBaixa) {
+        markAsChanged("DTBAIXA", dtBaixa);
         this.dtBaixa = dtBaixa;
    }
 
@@ -101,6 +103,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtCompra(Timestamp dtCompra) {
+        markAsChanged("DTCOMPRA", dtCompra);
         this.dtCompra = dtCompra;
    }
 
@@ -109,6 +112,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtFimDep(Timestamp dtFimDep) {
+        markAsChanged("DTFIMDEP", dtFimDep);
         this.dtFimDep = dtFimDep;
    }
 
@@ -117,6 +121,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtFimRefCiap(Timestamp dtFimRefCiap) {
+        markAsChanged("DTFIMREFCIAP", dtFimRefCiap);
         this.dtFimRefCiap = dtFimRefCiap;
    }
 
@@ -125,6 +130,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtInicioDep(Timestamp dtInicioDep) {
+        markAsChanged("DTINICIODEP", dtInicioDep);
         this.dtInicioDep = dtInicioDep;
    }
 
@@ -133,6 +139,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -141,6 +148,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNotaBaixa(BigDecimal nuNotaBaixa) {
+        markAsChanged("NUNOTABAIXA", nuNotaBaixa);
         this.nuNotaBaixa = nuNotaBaixa;
    }
 
@@ -149,6 +157,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setValorPresente(BigDecimal valorPresente) {
+        markAsChanged("VALORPRESENTE", valorPresente);
         this.valorPresente = valorPresente;
    }
 
@@ -157,6 +166,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrDepOrig(BigDecimal vlrDepOrig) {
+        markAsChanged("VLRDEPORIG", vlrDepOrig);
         this.vlrDepOrig = vlrDepOrig;
    }
 
@@ -165,6 +175,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtRetorno(Timestamp dtRetorno) {
+        markAsChanged("DTRETORNO", dtRetorno);
         this.dtRetorno = dtRetorno;
    }
 
@@ -173,6 +184,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNfDevVenda(BigDecimal nfDevVenda) {
+        markAsChanged("NFDEVVENDA", nfDevVenda);
         this.nfDevVenda = nfDevVenda;
    }
 
@@ -181,6 +193,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNfRetorno(BigDecimal nfRetorno) {
+        markAsChanged("NFRETORNO", nfRetorno);
         this.nfRetorno = nfRetorno;
    }
 
@@ -189,6 +202,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNfSaida(BigDecimal nfSaida) {
+        markAsChanged("NFSAIDA", nfSaida);
         this.nfSaida = nfSaida;
    }
 
@@ -197,6 +211,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNomePossuidor(String nomePossuidor) {
+        markAsChanged("NOMEPOSSUIDOR", nomePossuidor);
         this.nomePossuidor = nomePossuidor;
    }
 
@@ -205,6 +220,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -213,6 +229,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -221,6 +238,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNumNotaBaixa(BigDecimal numNotaBaixa) {
+        markAsChanged("NUMNOTABAIXA", numNotaBaixa);
         this.numNotaBaixa = numNotaBaixa;
    }
 
@@ -229,6 +247,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNotaDev(BigDecimal nuNotaDev) {
+        markAsChanged("NUNOTADEV", nuNotaDev);
         this.nuNotaDev = nuNotaDev;
    }
 
@@ -237,6 +256,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNotaDevVenda(BigDecimal nuNotaDevVenda) {
+        markAsChanged("NUNOTADEVVENDA", nuNotaDevVenda);
         this.nuNotaDevVenda = nuNotaDevVenda;
    }
 
@@ -245,6 +265,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNotaSaida(BigDecimal nuNotaSaida) {
+        markAsChanged("NUNOTASAIDA", nuNotaSaida);
         this.nuNotaSaida = nuNotaSaida;
    }
 
@@ -253,6 +274,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setQtdMesesCiap(BigDecimal qtdMesesCiap) {
+        markAsChanged("QTDMESESCIAP", qtdMesesCiap);
         this.qtdMesesCiap = qtdMesesCiap;
    }
 
@@ -261,6 +283,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setTemDepreciacao(String temDepreciacao) {
+        markAsChanged("TEMDEPRECIACAO", temDepreciacao);
         this.temDepreciacao = temDepreciacao;
    }
 
@@ -269,6 +292,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrAquisicao(BigDecimal vlrAquisicao) {
+        markAsChanged("VLRAQUISICAO", vlrAquisicao);
         this.vlrAquisicao = vlrAquisicao;
    }
 
@@ -277,6 +301,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrDep(BigDecimal vlrDep) {
+        markAsChanged("VLRDEP", vlrDep);
         this.vlrDep = vlrDep;
    }
 
@@ -285,6 +310,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsCiap(BigDecimal vlrIcmsCiap) {
+        markAsChanged("VLRICMSCIAP", vlrIcmsCiap);
         this.vlrIcmsCiap = vlrIcmsCiap;
    }
 
@@ -293,6 +319,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsDifCiap(BigDecimal vlrIcmsDifCiap) {
+        markAsChanged("VLRICMSDIFCIAP", vlrIcmsDifCiap);
         this.vlrIcmsDifCiap = vlrIcmsDifCiap;
    }
 
@@ -301,6 +328,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsFrtCiap(BigDecimal vlrIcmsFrtCiap) {
+        markAsChanged("VLRICMSFRTCIAP", vlrIcmsFrtCiap);
         this.vlrIcmsFrtCiap = vlrIcmsFrtCiap;
    }
 
@@ -309,6 +337,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsStCiap(BigDecimal vlrIcmsStCiap) {
+        markAsChanged("VLRICMSSTCIAP", vlrIcmsStCiap);
         this.vlrIcmsStCiap = vlrIcmsStCiap;
    }
 
@@ -317,6 +346,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrSaldo(BigDecimal vlrSaldo) {
+        markAsChanged("VLRSALDO", vlrSaldo);
         this.vlrSaldo = vlrSaldo;
    }
 
@@ -325,6 +355,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -333,6 +364,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodBemAtual(String codBemAtual) {
+        markAsChanged("CODBEMATUAL", codBemAtual);
         this.codBemAtual = codBemAtual;
    }
 
@@ -341,6 +373,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodBemOrig(String codBemOrig) {
+        markAsChanged("CODBEMORIG", codBemOrig);
         this.codBemOrig = codBemOrig;
    }
 
@@ -349,6 +382,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -357,6 +391,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -365,6 +400,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtIniRefCiap(Timestamp dtIniRefCiap) {
+        markAsChanged("DTINIREFCIAP", dtIniRefCiap);
         this.dtIniRefCiap = dtIniRefCiap;
    }
 
@@ -373,6 +409,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -381,6 +418,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodPossuidor(BigDecimal codPossuidor) {
+        markAsChanged("CODPOSSUIDOR", codPossuidor);
         this.codPossuidor = codPossuidor;
    }
 
@@ -389,6 +427,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -397,6 +436,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDescrAbrev(String descrAbrev) {
+        markAsChanged("DESCRABREV", descrAbrev);
         this.descrAbrev = descrAbrev;
    }
 
@@ -405,6 +445,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDescrBem(String descrBem) {
+        markAsChanged("DESCRBEM", descrBem);
         this.descrBem = descrBem;
    }
 
@@ -413,6 +454,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setAliqCofins(BigDecimal aliqCofins) {
+        markAsChanged("ALIQCOFINS", aliqCofins);
         this.aliqCofins = aliqCofins;
    }
 
@@ -421,6 +463,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setAliqPis(BigDecimal aliqPis) {
+        markAsChanged("ALIQPIS", aliqPis);
         this.aliqPis = aliqPis;
    }
 
@@ -429,6 +472,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCstCofins(BigDecimal cstCofins) {
+        markAsChanged("CSTCOFINS", cstCofins);
         this.cstCofins = cstCofins;
    }
 
@@ -437,6 +481,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCstPis(BigDecimal cstPis) {
+        markAsChanged("CSTPIS", cstPis);
         this.cstPis = cstPis;
    }
 
@@ -445,6 +490,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDescrUtilBem(String descrUtilBem) {
+        markAsChanged("DESCRUTILBEM", descrUtilBem);
         this.descrUtilBem = descrUtilBem;
    }
 
@@ -453,6 +499,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtFimAj(Timestamp dtFimAj) {
+        markAsChanged("DTFIMAJ", dtFimAj);
         this.dtFimAj = dtFimAj;
    }
 
@@ -461,6 +508,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDtInicioAj(Timestamp dtInicioAj) {
+        markAsChanged("DTINICIOAJ", dtInicioAj);
         this.dtInicioAj = dtInicioAj;
    }
 
@@ -469,6 +517,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNParcPisCof(BigDecimal nParcPisCof) {
+        markAsChanged("NPARCPISCOF", nParcPisCof);
         this.nParcPisCof = nParcPisCof;
    }
 
@@ -477,6 +526,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setPisCofMp540(String pisCofMp540) {
+        markAsChanged("PISCOFMP540", pisCofMp540);
         this.pisCofMp540 = pisCofMp540;
    }
 
@@ -485,6 +535,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setSaldo(BigDecimal saldo) {
+        markAsChanged("SALDO", saldo);
         this.saldo = saldo;
    }
 
@@ -493,6 +544,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setTemAj(String temAj) {
+        markAsChanged("TEMAJ", temAj);
         this.temAj = temAj;
    }
 
@@ -501,6 +553,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setTemCredPisCofinsDepr(String temCredPisCofinsDepr) {
+        markAsChanged("TEMCREDPISCOFINSDEPR", temCredPisCofinsDepr);
         this.temCredPisCofinsDepr = temCredPisCofinsDepr;
    }
 
@@ -509,6 +562,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setTipoEntCiap(String tipoEntCiap) {
+        markAsChanged("TIPOENTCIAP", tipoEntCiap);
         this.tipoEntCiap = tipoEntCiap;
    }
 
@@ -517,6 +571,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setUtilImob(BigDecimal utilImob) {
+        markAsChanged("UTILIMOB", utilImob);
         this.utilImob = utilImob;
    }
 
@@ -525,6 +580,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrCompraAquisicao(BigDecimal vlrCompraAquisicao) {
+        markAsChanged("VLRCOMPRAAQUISICAO", vlrCompraAquisicao);
         this.vlrCompraAquisicao = vlrCompraAquisicao;
    }
 
@@ -533,6 +589,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrDepAj(BigDecimal vlrDepAj) {
+        markAsChanged("VLRDEPAJ", vlrDepAj);
         this.vlrDepAj = vlrDepAj;
    }
 
@@ -541,6 +598,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrSaldoAj(BigDecimal vlrSaldoAj) {
+        markAsChanged("VLRSALDOAJ", vlrSaldoAj);
         this.vlrSaldoAj = vlrSaldoAj;
    }
 
@@ -549,6 +607,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrTotDespesaBem(BigDecimal vlrTotDespesaBem) {
+        markAsChanged("VLRTOTDESPESABEM", vlrTotDespesaBem);
         this.vlrTotDespesaBem = vlrTotDespesaBem;
    }
 
@@ -557,6 +616,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVidaUtil(BigDecimal vidaUtil) {
+        markAsChanged("VIDAUTIL", vidaUtil);
         this.vidaUtil = vidaUtil;
    }
 
@@ -565,6 +625,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodProdOrig(BigDecimal codProdOrig) {
+        markAsChanged("CODPRODORIG", codProdOrig);
         this.codProdOrig = codProdOrig;
    }
 
@@ -573,6 +634,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodUsuDesmembramento(BigDecimal codUsuDesmembramento) {
+        markAsChanged("CODUSUDESMEMBRAMENTO", codUsuDesmembramento);
         this.codUsuDesmembramento = codUsuDesmembramento;
    }
 
@@ -581,6 +643,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDhDesmembramento(Timestamp dhDesmembramento) {
+        markAsChanged("DHDESMEMBRAMENTO", dhDesmembramento);
         this.dhDesmembramento = dhDesmembramento;
    }
 
@@ -589,6 +652,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setNuNotaOrigDesmemb(BigDecimal nuNotaOrigDesmemb) {
+        markAsChanged("NUNOTAORIGDESMEMB", nuNotaOrigDesmemb);
         this.nuNotaOrigDesmemb = nuNotaOrigDesmemb;
    }
 
@@ -597,6 +661,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrExcBaseCred(BigDecimal vlrExcBaseCred) {
+        markAsChanged("VLREXCBASECRED", vlrExcBaseCred);
         this.vlrExcBaseCred = vlrExcBaseCred;
    }
 
@@ -605,6 +670,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setCodUsuCompra(BigDecimal codUsuCompra) {
+        markAsChanged("CODUSUCOMPRA", codUsuCompra);
         this.codUsuCompra = codUsuCompra;
    }
 
@@ -613,6 +679,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDhAlterCompra(Timestamp dhAlterCompra) {
+        markAsChanged("DHALTERCOMPRA", dhAlterCompra);
         this.dhAlterCompra = dhAlterCompra;
    }
 
@@ -621,6 +688,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setDigitadoCompra(String digitadoCompra) {
+        markAsChanged("DIGITADOCOMPRA", digitadoCompra);
         this.digitadoCompra = digitadoCompra;
    }
 
@@ -629,6 +697,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrCofinsCompra(BigDecimal vlrCofinsCompra) {
+        markAsChanged("VLRCOFINSCOMPRA", vlrCofinsCompra);
         this.vlrCofinsCompra = vlrCofinsCompra;
    }
 
@@ -637,6 +706,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrCompraAquisicaoCalc(BigDecimal vlrCompraAquisicaoCalc) {
+        markAsChanged("VLRCOMPRAAQUISICAOCALC", vlrCompraAquisicaoCalc);
         this.vlrCompraAquisicaoCalc = vlrCompraAquisicaoCalc;
    }
 
@@ -645,6 +715,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsCiapCalc(BigDecimal vlrIcmsCiapCalc) {
+        markAsChanged("VLRICMSCIAPCALC", vlrIcmsCiapCalc);
         this.vlrIcmsCiapCalc = vlrIcmsCiapCalc;
    }
 
@@ -653,6 +724,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrIcmsStCiapCalc(BigDecimal vlrIcmsStCiapCalc) {
+        markAsChanged("VLRICMSSTCIAPCALC", vlrIcmsStCiapCalc);
         this.vlrIcmsStCiapCalc = vlrIcmsStCiapCalc;
    }
 
@@ -661,6 +733,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
    }
 
    public void setVlrPisCompra(BigDecimal vlrPisCompra) {
+        markAsChanged("VLRPISCOMPRA", vlrPisCompra);
         this.vlrPisCompra = vlrPisCompra;
    }
 
@@ -676,6 +749,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
 
    @Override
    public Imobilizado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descrLocal = vo.asString("DESCRLOCAL");
         this.dtBaixa = vo.asTimestamp("DTBAIXA");
         this.dtCompra = vo.asTimestamp("DTCOMPRA");

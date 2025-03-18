@@ -21,6 +21,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setBaseImposto(BigDecimal baseImposto) {
+        markAsChanged("BASEIMPOSTO", baseImposto);
         this.baseImposto = baseImposto;
    }
 
@@ -29,6 +30,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -37,6 +39,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -45,6 +48,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -53,6 +57,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -61,6 +66,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setVlrDespadua(BigDecimal vlrDespadua) {
+        markAsChanged("VLRDESPADUA", vlrDespadua);
         this.vlrDespadua = vlrDespadua;
    }
 
@@ -69,6 +75,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setVlrImposto(BigDecimal vlrImposto) {
+        markAsChanged("VLRIMPOSTO", vlrImposto);
         this.vlrImposto = vlrImposto;
    }
 
@@ -77,6 +84,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setVlrIof(BigDecimal vlrIof) {
+        markAsChanged("VLRIOF", vlrIof);
         this.vlrIof = vlrIof;
    }
 
@@ -85,6 +93,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    }
 
    public void setImpTagExcnNotNac(String impTagExcnNotNac) {
+        markAsChanged("IMPTAGEXCNOTNAC", impTagExcnNotNac);
         this.impTagExcnNotNac = impTagExcnNotNac;
    }
 
@@ -100,6 +109,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
 
    @Override
    public ImpostosImportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseImposto = vo.asBigDecimal("BASEIMPOSTO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

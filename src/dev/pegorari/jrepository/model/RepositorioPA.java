@@ -13,6 +13,7 @@ public class RepositorioPA extends AbstractSankhyaEntity<RepositorioPA> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -21,6 +22,7 @@ public class RepositorioPA extends AbstractSankhyaEntity<RepositorioPA> {
    }
 
    public void setIdRpa(BigDecimal idRpa) {
+        markAsChanged("IDRPA", idRpa);
         this.idRpa = idRpa;
    }
 
@@ -36,6 +38,7 @@ public class RepositorioPA extends AbstractSankhyaEntity<RepositorioPA> {
 
    @Override
    public RepositorioPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.idRpa = vo.asBigDecimal("IDRPA");
         return this;

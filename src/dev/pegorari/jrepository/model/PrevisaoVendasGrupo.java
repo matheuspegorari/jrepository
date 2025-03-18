@@ -14,6 +14,7 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -22,6 +23,7 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
    }
 
    public void setDescrGrupo(String descrGrupo) {
+        markAsChanged("DESCRGRUPO", descrGrupo);
         this.descrGrupo = descrGrupo;
    }
 
@@ -30,6 +32,7 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
    }
 
    public void setNomeGrupo(String nomeGrupo) {
+        markAsChanged("NOMEGRUPO", nomeGrupo);
         this.nomeGrupo = nomeGrupo;
    }
 
@@ -45,6 +48,7 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
 
    @Override
    public PrevisaoVendasGrupo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.descrGrupo = vo.asString("DESCRGRUPO");
         this.nomeGrupo = vo.asString("NOMEGRUPO");

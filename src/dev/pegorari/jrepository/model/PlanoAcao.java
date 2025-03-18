@@ -38,6 +38,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodExe(BigDecimal codExe) {
+        markAsChanged("CODEXE", codExe);
         this.codExe = codExe;
    }
 
@@ -46,6 +47,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCompletude(BigDecimal completude) {
+        markAsChanged("COMPLETUDE", completude);
         this.completude = completude;
    }
 
@@ -54,6 +56,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setEsforcoPrevisto(String esforcoPrevisto) {
+        markAsChanged("ESFORCOPREVISTO", esforcoPrevisto);
         this.esforcoPrevisto = esforcoPrevisto;
    }
 
@@ -62,6 +65,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setEsforcoRealizado(String esforcoRealizado) {
+        markAsChanged("ESFORCOREALIZADO", esforcoRealizado);
         this.esforcoRealizado = esforcoRealizado;
    }
 
@@ -70,6 +74,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodPla(BigDecimal codPla) {
+        markAsChanged("CODPLA", codPla);
         this.codPla = codPla;
    }
 
@@ -78,6 +83,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodUng(BigDecimal codUng) {
+        markAsChanged("CODUNG", codUng);
         this.codUng = codUng;
    }
 
@@ -86,6 +92,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -94,6 +101,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodUsuExec(BigDecimal codUsuExec) {
+        markAsChanged("CODUSUEXEC", codUsuExec);
         this.codUsuExec = codUsuExec;
    }
 
@@ -102,6 +110,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setComo(String como) {
+        markAsChanged("COMO", como);
         this.como = como;
    }
 
@@ -110,6 +119,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -118,6 +128,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDtFimPrevisto(Timestamp dtFimPrevisto) {
+        markAsChanged("DTFIMPREVISTO", dtFimPrevisto);
         this.dtFimPrevisto = dtFimPrevisto;
    }
 
@@ -126,6 +137,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDtFimRealizado(Timestamp dtFimRealizado) {
+        markAsChanged("DTFIMREALIZADO", dtFimRealizado);
         this.dtFimRealizado = dtFimRealizado;
    }
 
@@ -134,6 +146,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDtIniPrevisto(Timestamp dtIniPrevisto) {
+        markAsChanged("DTINIPREVISTO", dtIniPrevisto);
         this.dtIniPrevisto = dtIniPrevisto;
    }
 
@@ -142,6 +155,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDtIniRealizado(Timestamp dtIniRealizado) {
+        markAsChanged("DTINIREALIZADO", dtIniRealizado);
         this.dtIniRealizado = dtIniRealizado;
    }
 
@@ -150,6 +164,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDtPla(Timestamp dtPla) {
+        markAsChanged("DTPLA", dtPla);
         this.dtPla = dtPla;
    }
 
@@ -158,6 +173,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setNumEt(BigDecimal numEt) {
+        markAsChanged("NUMET", numEt);
         this.numEt = numEt;
    }
 
@@ -166,6 +182,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -174,6 +191,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -182,6 +200,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setOnde(String onde) {
+        markAsChanged("ONDE", onde);
         this.onde = onde;
    }
 
@@ -190,6 +209,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setOque(String oque) {
+        markAsChanged("OQUE", oque);
         this.oque = oque;
    }
 
@@ -198,6 +218,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setPorque(String porque) {
+        markAsChanged("PORQUE", porque);
         this.porque = porque;
    }
 
@@ -206,6 +227,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setQuanto(String quanto) {
+        markAsChanged("QUANTO", quanto);
         this.quanto = quanto;
    }
 
@@ -214,6 +236,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setRetorno(String retorno) {
+        markAsChanged("RETORNO", retorno);
         this.retorno = retorno;
    }
 
@@ -222,6 +245,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -230,6 +254,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -238,6 +263,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -253,6 +279,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
 
    @Override
    public PlanoAcao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codExe = vo.asBigDecimal("CODEXE");
         this.completude = vo.asBigDecimal("COMPLETUDE");
         this.esforcoPrevisto = vo.asString("ESFORCOPREVISTO");

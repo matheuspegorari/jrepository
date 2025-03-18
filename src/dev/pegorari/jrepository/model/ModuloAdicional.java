@@ -14,6 +14,7 @@ public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
    }
 
    public void setCodModulo(BigDecimal codModulo) {
+        markAsChanged("CODMODULO", codModulo);
         this.codModulo = codModulo;
    }
 
@@ -22,6 +23,7 @@ public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
    }
 
    public void setDescrModulo(String descrModulo) {
+        markAsChanged("DESCRMODULO", descrModulo);
         this.descrModulo = descrModulo;
    }
 
@@ -30,6 +32,7 @@ public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -45,6 +48,7 @@ public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
 
    @Override
    public ModuloAdicional fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModulo = vo.asBigDecimal("CODMODULO");
         this.descrModulo = vo.asString("DESCRMODULO");
         this.resourceId = vo.asString("RESOURCEID");

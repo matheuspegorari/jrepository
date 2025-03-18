@@ -18,6 +18,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setCodPer(BigDecimal codPer) {
+        markAsChanged("CODPER", codPer);
         this.codPer = codPer;
    }
 
@@ -26,6 +27,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setDescPer(String descPer) {
+        markAsChanged("DESCPER", descPer);
         this.descPer = descPer;
    }
 
@@ -34,6 +36,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setEnvUlt(String envUlt) {
+        markAsChanged("ENVULT", envUlt);
         this.envUlt = envUlt;
    }
 
@@ -42,6 +45,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setIntMin(BigDecimal intMin) {
+        markAsChanged("INTMIN", intMin);
         this.intMin = intMin;
    }
 
@@ -50,6 +54,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setNomePer(String nomePer) {
+        markAsChanged("NOMEPER", nomePer);
         this.nomePer = nomePer;
    }
 
@@ -58,6 +63,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setQueryListaDest(char[] queryListaDest) {
+        markAsChanged("QUERYLISTADEST", queryListaDest);
         this.queryListaDest = queryListaDest;
    }
 
@@ -66,6 +72,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    }
 
    public void setUsaQueryLista(String usaQueryLista) {
+        markAsChanged("USAQUERYLISTA", usaQueryLista);
         this.usaQueryLista = usaQueryLista;
    }
 
@@ -81,6 +88,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
 
    @Override
    public MSDPerfil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPer = vo.asBigDecimal("CODPER");
         this.descPer = vo.asString("DESCPER");
         this.envUlt = vo.asString("ENVULT");

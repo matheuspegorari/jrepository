@@ -21,6 +21,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setCodCap(BigDecimal codCap) {
+        markAsChanged("CODCAP", codCap);
         this.codCap = codCap;
    }
 
@@ -29,6 +30,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -37,6 +39,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -45,6 +48,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -53,6 +57,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -61,6 +66,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setNuCpr(BigDecimal nuCpr) {
+        markAsChanged("NUCPR", nuCpr);
         this.nuCpr = nuCpr;
    }
 
@@ -69,6 +75,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setQtdCapacidadeMax(BigDecimal qtdCapacidadeMax) {
+        markAsChanged("QTDCAPACIDADEMAX", qtdCapacidadeMax);
         this.qtdCapacidadeMax = qtdCapacidadeMax;
    }
 
@@ -77,6 +84,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setQtdCapacidadeMin(BigDecimal qtdCapacidadeMin) {
+        markAsChanged("QTDCAPACIDADEMIN", qtdCapacidadeMin);
         this.qtdCapacidadeMin = qtdCapacidadeMin;
    }
 
@@ -85,6 +93,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setQtdCapacidadePad(BigDecimal qtdCapacidadePad) {
+        markAsChanged("QTDCAPACIDADEPAD", qtdCapacidadePad);
         this.qtdCapacidadePad = qtdCapacidadePad;
    }
 
@@ -93,6 +102,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
    }
 
    public void setTipoCapacidade(String tipoCapacidade) {
+        markAsChanged("TIPOCAPACIDADE", tipoCapacidade);
         this.tipoCapacidade = tipoCapacidade;
    }
 
@@ -108,6 +118,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
 
    @Override
    public CapacidadeRecurso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

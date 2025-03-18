@@ -13,6 +13,7 @@ public class PerfilVaga extends AbstractSankhyaEntity<PerfilVaga> {
    }
 
    public void setCodPerfil(BigDecimal codPerfil) {
+        markAsChanged("CODPERFIL", codPerfil);
         this.codPerfil = codPerfil;
    }
 
@@ -21,6 +22,7 @@ public class PerfilVaga extends AbstractSankhyaEntity<PerfilVaga> {
    }
 
    public void setCodAnuncio(BigDecimal codAnuncio) {
+        markAsChanged("CODANUNCIO", codAnuncio);
         this.codAnuncio = codAnuncio;
    }
 
@@ -36,6 +38,7 @@ public class PerfilVaga extends AbstractSankhyaEntity<PerfilVaga> {
 
    @Override
    public PerfilVaga fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codAnuncio = vo.asBigDecimal("CODANUNCIO");
         return this;

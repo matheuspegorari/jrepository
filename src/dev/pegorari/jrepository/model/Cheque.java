@@ -24,6 +24,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setAgencia(String agencia) {
+        markAsChanged("AGENCIA", agencia);
         this.agencia = agencia;
    }
 
@@ -32,6 +33,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -40,6 +42,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setCmc7(String cmc7) {
+        markAsChanged("CMC7", cmc7);
         this.cmc7 = cmc7;
    }
 
@@ -48,6 +51,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -56,6 +60,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setConta(String conta) {
+        markAsChanged("CONTA", conta);
         this.conta = conta;
    }
 
@@ -64,6 +69,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setDataCheque(Timestamp dataCheque) {
+        markAsChanged("DATACHEQUE", dataCheque);
         this.dataCheque = dataCheque;
    }
 
@@ -72,6 +78,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setNomeEmitente(String nomeEmitente) {
+        markAsChanged("NOMEEMITENTE", nomeEmitente);
         this.nomeEmitente = nomeEmitente;
    }
 
@@ -80,6 +87,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setNuChq(BigDecimal nuChq) {
+        markAsChanged("NUCHQ", nuChq);
         this.nuChq = nuChq;
    }
 
@@ -88,6 +96,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -96,6 +105,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setNumCheque(String numCheque) {
+        markAsChanged("NUMCHEQUE", numCheque);
         this.numCheque = numCheque;
    }
 
@@ -104,6 +114,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -112,6 +123,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
    }
 
    public void setVlrCheque(BigDecimal vlrCheque) {
+        markAsChanged("VLRCHEQUE", vlrCheque);
         this.vlrCheque = vlrCheque;
    }
 
@@ -127,6 +139,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
 
    @Override
    public Cheque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.agencia = vo.asString("AGENCIA");
         this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");

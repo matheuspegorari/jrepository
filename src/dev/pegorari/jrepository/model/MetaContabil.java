@@ -23,6 +23,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setCodCco(BigDecimal codCco) {
+        markAsChanged("CODCCO", codCco);
         this.codCco = codCco;
    }
 
@@ -31,6 +32,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -39,6 +41,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setCodCtactb(BigDecimal codCtactb) {
+        markAsChanged("CODCTACTB", codCtactb);
         this.codCtactb = codCtactb;
    }
 
@@ -47,6 +50,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -55,6 +59,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -63,6 +68,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -71,6 +77,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -79,6 +86,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setNuPeriodoctb(BigDecimal nuPeriodoctb) {
+        markAsChanged("NUPERIODOCTB", nuPeriodoctb);
         this.nuPeriodoctb = nuPeriodoctb;
    }
 
@@ -87,6 +95,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setPrevisto(BigDecimal previsto) {
+        markAsChanged("PREVISTO", previsto);
         this.previsto = previsto;
    }
 
@@ -95,6 +104,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setRealizado(BigDecimal realizado) {
+        markAsChanged("REALIZADO", realizado);
         this.realizado = realizado;
    }
 
@@ -103,6 +113,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
    }
 
    public void setRecDesp(String recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -118,6 +129,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
 
    @Override
    public MetaContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCco = vo.asBigDecimal("CODCCO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

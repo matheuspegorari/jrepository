@@ -27,6 +27,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -35,6 +36,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -43,6 +45,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -51,6 +54,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -59,6 +63,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -67,6 +72,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setOutrasColunas(char[] outrasColunas) {
+        markAsChanged("OUTRASCOLUNAS", outrasColunas);
         this.outrasColunas = outrasColunas;
    }
 
@@ -75,6 +81,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setPrecoTotal(BigDecimal precoTotal) {
+        markAsChanged("PRECOTOTAL", precoTotal);
         this.precoTotal = precoTotal;
    }
 
@@ -83,6 +90,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setPrecoUsado(BigDecimal precoUsado) {
+        markAsChanged("PRECOUSADO", precoUsado);
         this.precoUsado = precoUsado;
    }
 
@@ -91,6 +99,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setQtdProduto(BigDecimal qtdProduto) {
+        markAsChanged("QTDPRODUTO", qtdProduto);
         this.qtdProduto = qtdProduto;
    }
 
@@ -99,6 +108,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setSeqCac(BigDecimal seqCac) {
+        markAsChanged("SEQCAC", seqCac);
         this.seqCac = seqCac;
    }
 
@@ -107,6 +117,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setDescTotal(BigDecimal descTotal) {
+        markAsChanged("DESCTOTAL", descTotal);
         this.descTotal = descTotal;
    }
 
@@ -115,6 +126,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setPrecoBase(BigDecimal precoBase) {
+        markAsChanged("PRECOBASE", precoBase);
         this.precoBase = precoBase;
    }
 
@@ -123,6 +135,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setPrecoBaseQtd(BigDecimal precoBaseQtd) {
+        markAsChanged("PRECOBASEQTD", precoBaseQtd);
         this.precoBaseQtd = precoBaseQtd;
    }
 
@@ -131,6 +144,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setVlrAcrescDesc(BigDecimal vlrAcrescDesc) {
+        markAsChanged("VLRACRESCDESC", vlrAcrescDesc);
         this.vlrAcrescDesc = vlrAcrescDesc;
    }
 
@@ -139,6 +153,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setVlrCus(BigDecimal vlrCus) {
+        markAsChanged("VLRCUS", vlrCus);
         this.vlrCus = vlrCus;
    }
 
@@ -147,6 +162,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    }
 
    public void setVlrRetencao(BigDecimal vlrRetencao) {
+        markAsChanged("VLRRETENCAO", vlrRetencao);
         this.vlrRetencao = vlrRetencao;
    }
 
@@ -162,6 +178,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
 
    @Override
    public Carrinho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codVol = vo.asString("CODVOL");

@@ -23,6 +23,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -31,6 +32,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setDhOcor(Timestamp dhOcor) {
+        markAsChanged("DHOCOR", dhOcor);
         this.dhOcor = dhOcor;
    }
 
@@ -39,6 +41,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -47,6 +50,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setHrAct(BigDecimal hrAct) {
+        markAsChanged("HRACT", hrAct);
         this.hrAct = hrAct;
    }
 
@@ -55,6 +59,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setNotaPontual(BigDecimal notaPontual) {
+        markAsChanged("NOTAPONTUAL", notaPontual);
         this.notaPontual = notaPontual;
    }
 
@@ -63,6 +68,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setNotaQualidade(BigDecimal notaQualidade) {
+        markAsChanged("NOTAQUALIDADE", notaQualidade);
         this.notaQualidade = notaQualidade;
    }
 
@@ -71,6 +77,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -79,6 +86,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -87,6 +95,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setOcorrencias(String ocorrencias) {
+        markAsChanged("OCORRENCIAS", ocorrencias);
         this.ocorrencias = ocorrencias;
    }
 
@@ -95,6 +104,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -103,6 +113,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -118,6 +129,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
 
    @Override
    public AcompanhamentoNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhOcor = vo.asTimestamp("DHOCOR");
         this.digitado = vo.asString("DIGITADO");

@@ -14,6 +14,7 @@ public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
    }
 
    public void setErro(String erro) {
+        markAsChanged("ERRO", erro);
         this.erro = erro;
    }
 
@@ -22,6 +23,7 @@ public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
    }
 
    public void setNroLinha(BigDecimal nroLinha) {
+        markAsChanged("NROLINHA", nroLinha);
         this.nroLinha = nroLinha;
    }
 
@@ -30,6 +32,7 @@ public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
    }
 
    public void setNuImport(BigDecimal nuImport) {
+        markAsChanged("NUIMPORT", nuImport);
         this.nuImport = nuImport;
    }
 
@@ -45,6 +48,7 @@ public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
 
    @Override
    public LogImportacaoPO fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.erro = vo.asString("ERRO");
         this.nroLinha = vo.asBigDecimal("NROLINHA");
         this.nuImport = vo.asBigDecimal("NUIMPORT");

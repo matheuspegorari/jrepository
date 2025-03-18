@@ -20,6 +20,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -28,6 +29,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -36,6 +38,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setDhProcesso(Timestamp dhProcesso) {
+        markAsChanged("DHPROCESSO", dhProcesso);
         this.dhProcesso = dhProcesso;
    }
 
@@ -44,6 +47,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setDtImport(Timestamp dtImport) {
+        markAsChanged("DTIMPORT", dtImport);
         this.dtImport = dtImport;
    }
 
@@ -52,6 +56,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setHashArquivo(String hashArquivo) {
+        markAsChanged("HASH_ARQUIVO", hashArquivo);
         this.hashArquivo = hashArquivo;
    }
 
@@ -60,6 +65,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setNomeArq(String nomeArq) {
+        markAsChanged("NOMEARQ", nomeArq);
         this.nomeArq = nomeArq;
    }
 
@@ -68,6 +74,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setNuImport(BigDecimal nuImport) {
+        markAsChanged("NUIMPORT", nuImport);
         this.nuImport = nuImport;
    }
 
@@ -76,6 +83,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    }
 
    public void setProcessado(String processado) {
+        markAsChanged("PROCESSADO", processado);
         this.processado = processado;
    }
 
@@ -91,6 +99,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
 
    @Override
    public ImportacaoExtratoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhProcesso = vo.asTimestamp("DHPROCESSO");

@@ -14,6 +14,7 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
    }
 
    public void setIdAtvStatusNormal(BigDecimal idAtvStatusNormal) {
+        markAsChanged("IDATVSTATUSNORMAL", idAtvStatusNormal);
         this.idAtvStatusNormal = idAtvStatusNormal;
    }
 
@@ -22,6 +23,7 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
    }
 
    public void setIdExecWflow(String idExecWflow) {
+        markAsChanged("IDEXECWFLOW", idExecWflow);
         this.idExecWflow = idExecWflow;
    }
 
@@ -30,6 +32,7 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
    }
 
    public void setStatusExec(String statusExec) {
+        markAsChanged("STATUSEXEC", statusExec);
         this.statusExec = statusExec;
    }
 
@@ -45,6 +48,7 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
 
    @Override
    public StatusLinhaExecucao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idAtvStatusNormal = vo.asBigDecimal("IDATVSTATUSNORMAL");
         this.idExecWflow = vo.asString("IDEXECWFLOW");
         this.statusExec = vo.asString("STATUSEXEC");

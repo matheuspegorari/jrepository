@@ -20,6 +20,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setAliasLocal(String aliasLocal) {
+        markAsChanged("ALIASLOCAL", aliasLocal);
         this.aliasLocal = aliasLocal;
    }
 
@@ -28,6 +29,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +38,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setDhStatus(Timestamp dhStatus) {
+        markAsChanged("DHSTATUS", dhStatus);
         this.dhStatus = dhStatus;
    }
 
@@ -44,6 +47,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -52,6 +56,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setNuPrinter(BigDecimal nuPrinter) {
+        markAsChanged("NUPRINTER", nuPrinter);
         this.nuPrinter = nuPrinter;
    }
 
@@ -60,6 +65,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setNuSvp(BigDecimal nuSvp) {
+        markAsChanged("NUSVP", nuSvp);
         this.nuSvp = nuSvp;
    }
 
@@ -68,6 +74,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setPrinterUri(String printerUri) {
+        markAsChanged("PRINTERURI", printerUri);
         this.printerUri = printerUri;
    }
 
@@ -76,6 +83,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -91,6 +99,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
 
    @Override
    public Impressora fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliasLocal = vo.asString("ALIASLOCAL");
         this.ativo = vo.asString("ATIVO");
         this.dhStatus = vo.asTimestamp("DHSTATUS");

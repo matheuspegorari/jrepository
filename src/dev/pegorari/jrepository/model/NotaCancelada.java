@@ -60,6 +60,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -68,6 +69,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -76,6 +78,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setAtualliviss(String atualliviss) {
+        markAsChanged("ATUALLIVISS", atualliviss);
         this.atualliviss = atualliviss;
    }
 
@@ -84,6 +87,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -92,6 +96,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -100,6 +105,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setCodMaq(BigDecimal codMaq) {
+        markAsChanged("CODMAQ", codMaq);
         this.codMaq = codMaq;
    }
 
@@ -108,6 +114,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumProtocCancTec(String numProtocCancTec) {
+        markAsChanged("NUMPROTOCCANCTE", numProtocCancTec);
         this.numProtocCancTec = numProtocCancTec;
    }
 
@@ -116,6 +123,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTpEmisCte(BigDecimal tpEmisCte) {
+        markAsChanged("TPEMISCTE", tpEmisCte);
         this.tpEmisCte = tpEmisCte;
    }
 
@@ -124,6 +132,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhProtocCancTec(Timestamp dhProtocCancTec) {
+        markAsChanged("DHPROTOCCANCTE", dhProtocCancTec);
         this.dhProtocCancTec = dhProtocCancTec;
    }
 
@@ -132,6 +141,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTpAmbNfe(String tpAmbNfe) {
+        markAsChanged("TPAMBNFE", tpAmbNfe);
         this.tpAmbNfe = tpAmbNfe;
    }
 
@@ -140,6 +150,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNuNotaSub(BigDecimal nuNotaSub) {
+        markAsChanged("NUNOTASUB", nuNotaSub);
         this.nuNotaSub = nuNotaSub;
    }
 
@@ -148,6 +159,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumProtocCte(String numProtocCte) {
+        markAsChanged("NUMPROTOCCTE", numProtocCte);
         this.numProtocCte = numProtocCte;
    }
 
@@ -156,6 +168,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhProtocCte(Timestamp dhProtocCte) {
+        markAsChanged("DHPROTOCCTE", dhProtocCte);
         this.dhProtocCte = dhProtocCte;
    }
 
@@ -164,6 +177,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setChaveCte(String chaveCte) {
+        markAsChanged("CHAVECTE", chaveCte);
         this.chaveCte = chaveCte;
    }
 
@@ -172,6 +186,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTpAmbCte(String tpAmbCte) {
+        markAsChanged("TPAMBCTE", tpAmbCte);
         this.tpAmbCte = tpAmbCte;
    }
 
@@ -180,6 +195,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhProtocCan(Timestamp dhProtocCan) {
+        markAsChanged("DHPROTOCCAN", dhProtocCan);
         this.dhProtocCan = dhProtocCan;
    }
 
@@ -188,6 +204,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhProtocEspont(Timestamp dhProtocEspont) {
+        markAsChanged("DHPROTOCESPONT", dhProtocEspont);
         this.dhProtocEspont = dhProtocEspont;
    }
 
@@ -196,6 +213,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhProtocNfe(Timestamp dhProtocNfe) {
+        markAsChanged("DHPROTOCNFE", dhProtocNfe);
         this.dhProtocNfe = dhProtocNfe;
    }
 
@@ -204,6 +222,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhRegDpec(Timestamp dhRegDpec) {
+        markAsChanged("DHREGDPEC", dhRegDpec);
         this.dhRegDpec = dhRegDpec;
    }
 
@@ -212,6 +231,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDtCanc(Timestamp dtCanc) {
+        markAsChanged("DTCANC", dtCanc);
         this.dtCanc = dtCanc;
    }
 
@@ -220,6 +240,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDtFatur(Timestamp dtFatur) {
+        markAsChanged("DTFATUR", dtFatur);
         this.dtFatur = dtFatur;
    }
 
@@ -228,6 +249,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -236,6 +258,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -244,6 +267,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setModeloNfdEs(String modeloNfdEs) {
+        markAsChanged("MODELONFDES", modeloNfdEs);
         this.modeloNfdEs = modeloNfdEs;
    }
 
@@ -252,6 +276,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setMotCancel(String motCancel) {
+        markAsChanged("MOTCANCEL", motCancel);
         this.motCancel = motCancel;
    }
 
@@ -260,6 +285,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNaturezaOperDes(String naturezaOperDes) {
+        markAsChanged("NATUREZAOPERDES", naturezaOperDes);
         this.naturezaOperDes = naturezaOperDes;
    }
 
@@ -268,6 +294,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNroRedz(BigDecimal nroRedz) {
+        markAsChanged("NROREDZ", nroRedz);
         this.nroRedz = nroRedz;
    }
 
@@ -276,6 +303,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumCf(BigDecimal numCf) {
+        markAsChanged("NUMCF", numCf);
         this.numCf = numCf;
    }
 
@@ -284,6 +312,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumNfse(String numNfse) {
+        markAsChanged("NUMNFSE", numNfse);
         this.numNfse = numNfse;
    }
 
@@ -292,6 +321,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -300,6 +330,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumProtocCan(String numProtocCan) {
+        markAsChanged("NUMPROTOCCAN", numProtocCan);
         this.numProtocCan = numProtocCan;
    }
 
@@ -308,6 +339,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumProtocEspont(String numProtocEspont) {
+        markAsChanged("NUMPROTOCESPONT", numProtocEspont);
         this.numProtocEspont = numProtocEspont;
    }
 
@@ -316,6 +348,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumProtocNfe(String numProtocNfe) {
+        markAsChanged("NUMPROTOCNFE", numProtocNfe);
         this.numProtocNfe = numProtocNfe;
    }
 
@@ -324,6 +357,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNumRegDpec(String numRegDpec) {
+        markAsChanged("NUMREGDPEC", numRegDpec);
         this.numRegDpec = numRegDpec;
    }
 
@@ -332,6 +366,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -340,6 +375,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNuRem(BigDecimal nuRem) {
+        markAsChanged("NUREM", nuRem);
         this.nuRem = nuRem;
    }
 
@@ -348,6 +384,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setSerieNfdEs(String serieNfdEs) {
+        markAsChanged("SERIENFDES", serieNfdEs);
         this.serieNfdEs = serieNfdEs;
    }
 
@@ -356,6 +393,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -364,6 +402,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTpEmisNfe(BigDecimal tpEmisNfe) {
+        markAsChanged("TPEMISNFE", tpEmisNfe);
         this.tpEmisNfe = tpEmisNfe;
    }
 
@@ -372,6 +411,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -380,6 +420,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setAtuallivFis(String atuallivFis) {
+        markAsChanged("ATUALLIVFIS", atuallivFis);
         this.atuallivFis = atuallivFis;
    }
 
@@ -388,6 +429,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setDhCancPrefNfse(Timestamp dhCancPrefNfse) {
+        markAsChanged("DHCANCPREFNFSE", dhCancPrefNfse);
         this.dhCancPrefNfse = dhCancPrefNfse;
    }
 
@@ -396,6 +438,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setProtCancNfse(String protCancNfse) {
+        markAsChanged("PROTCANCNFSE", protCancNfse);
         this.protCancNfse = protCancNfse;
    }
 
@@ -404,6 +447,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTipCancNfse(String tipCancNfse) {
+        markAsChanged("TIPCANCNFSE", tipCancNfse);
         this.tipCancNfse = tipCancNfse;
    }
 
@@ -412,6 +456,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setTpAmbNfse(String tpAmbNfse) {
+        markAsChanged("TPAMBNFSE", tpAmbNfse);
         this.tpAmbNfse = tpAmbNfse;
    }
 
@@ -420,6 +465,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setIdPontuacaoParceria(BigDecimal idPontuacaoParceria) {
+        markAsChanged("IDPONTUACAOPARCERIA", idPontuacaoParceria);
         this.idPontuacaoParceria = idPontuacaoParceria;
    }
 
@@ -428,6 +474,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setNfseCabCext(String nfseCabCext) {
+        markAsChanged("NFSECABCEXT", nfseCabCext);
         this.nfseCabCext = nfseCabCext;
    }
 
@@ -436,6 +483,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
    }
 
    public void setStatusVm(String statusVm) {
+        markAsChanged("STATUSVM", statusVm);
         this.statusVm = statusVm;
    }
 
@@ -451,6 +499,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
 
    @Override
    public NotaCancelada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.atualliviss = vo.asString("ATUALLIVISS");

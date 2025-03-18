@@ -51,6 +51,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -59,6 +60,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setAntecipDesp(BigDecimal antecipDesp) {
+        markAsChanged("ANTECIPDESP", antecipDesp);
         this.antecipDesp = antecipDesp;
    }
 
@@ -67,6 +69,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -75,6 +78,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -83,6 +87,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -91,6 +96,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -99,6 +105,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -107,6 +114,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -115,6 +123,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -123,6 +132,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -131,6 +141,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -139,6 +150,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -147,6 +159,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -155,6 +168,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -163,6 +177,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -171,6 +186,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -179,6 +195,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -187,6 +204,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -195,6 +213,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -203,6 +222,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setCompromissoDesp(BigDecimal compromissoDesp) {
+        markAsChanged("COMPROMISSODESP", compromissoDesp);
         this.compromissoDesp = compromissoDesp;
    }
 
@@ -211,6 +231,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -219,6 +240,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setDia(BigDecimal dia) {
+        markAsChanged("DIA", dia);
         this.dia = dia;
    }
 
@@ -227,6 +249,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -235,6 +258,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -243,6 +267,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setPercAviso(BigDecimal percAviso) {
+        markAsChanged("PERCAVISO", percAviso);
         this.percAviso = percAviso;
    }
 
@@ -251,6 +276,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setPercentual(BigDecimal percentual) {
+        markAsChanged("PERCENTUAL", percentual);
         this.percentual = percentual;
    }
 
@@ -259,6 +285,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setPrevDesp(BigDecimal prevDesp) {
+        markAsChanged("PREVDESP", prevDesp);
         this.prevDesp = prevDesp;
    }
 
@@ -267,6 +294,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setPrevRec(BigDecimal prevRec) {
+        markAsChanged("PREVREC", prevRec);
         this.prevRec = prevRec;
    }
 
@@ -275,6 +303,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setQtdPrev(BigDecimal qtdPrev) {
+        markAsChanged("QTDPREV", qtdPrev);
         this.qtdPrev = qtdPrev;
    }
 
@@ -283,6 +312,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setQtdReal(BigDecimal qtdReal) {
+        markAsChanged("QTDREAL", qtdReal);
         this.qtdReal = qtdReal;
    }
 
@@ -291,6 +321,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setRealDesp(BigDecimal realDesp) {
+        markAsChanged("REALDESP", realDesp);
         this.realDesp = realDesp;
    }
 
@@ -299,6 +330,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setRealRec(BigDecimal realRec) {
+        markAsChanged("REALREC", realRec);
         this.realRec = realRec;
    }
 
@@ -307,6 +339,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setReducaoDesp(BigDecimal reducaoDesp) {
+        markAsChanged("REDUCAODESP", reducaoDesp);
         this.reducaoDesp = reducaoDesp;
    }
 
@@ -315,6 +348,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setSemanaMes(BigDecimal semanaMes) {
+        markAsChanged("SEMANAMES", semanaMes);
         this.semanaMes = semanaMes;
    }
 
@@ -323,6 +357,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setSuplementoDesp(BigDecimal suplementoDesp) {
+        markAsChanged("SUPLEMENTODESP", suplementoDesp);
         this.suplementoDesp = suplementoDesp;
    }
 
@@ -331,6 +366,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setTipoMsg(String tipoMsg) {
+        markAsChanged("TIPOMSG", tipoMsg);
         this.tipoMsg = tipoMsg;
    }
 
@@ -339,6 +375,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setTotalAutInv(BigDecimal totalAutInv) {
+        markAsChanged("TOTALAUTINV", totalAutInv);
         this.totalAutInv = totalAutInv;
    }
 
@@ -347,6 +384,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setTransfDesp(BigDecimal transfDesp) {
+        markAsChanged("TRANSFDESP", transfDesp);
         this.transfDesp = transfDesp;
    }
 
@@ -355,6 +393,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
    }
 
    public void setTransfSaldoDesp(BigDecimal transfSaldoDesp) {
+        markAsChanged("TRANSFSALDODESP", transfSaldoDesp);
         this.transfSaldoDesp = transfSaldoDesp;
    }
 
@@ -370,6 +409,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
 
    @Override
    public Meta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.antecipDesp = vo.asBigDecimal("ANTECIPDESP");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

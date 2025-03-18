@@ -19,6 +19,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -27,6 +28,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setIdLinha(String idLinha) {
+        markAsChanged("IDLINHA", idLinha);
         this.idLinha = idLinha;
    }
 
@@ -35,6 +37,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setIdValor(String idValor) {
+        markAsChanged("IDVALOR", idValor);
         this.idValor = idValor;
    }
 
@@ -43,6 +46,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -51,6 +55,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setPosFim(BigDecimal posFim) {
+        markAsChanged("POSFIM", posFim);
         this.posFim = posFim;
    }
 
@@ -59,6 +64,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setPosIni(BigDecimal posIni) {
+        markAsChanged("POSINI", posIni);
         this.posIni = posIni;
    }
 
@@ -67,6 +73,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setQtdDec(BigDecimal qtdDec) {
+        markAsChanged("QTDDEC", qtdDec);
         this.qtdDec = qtdDec;
    }
 
@@ -75,6 +82,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -90,6 +98,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
 
    @Override
    public DetalheRetornoMovimentoBco fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.idLinha = vo.asString("IDLINHA");
         this.idValor = vo.asString("IDVALOR");

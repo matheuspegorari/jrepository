@@ -123,6 +123,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDtLimAcesso(Timestamp dtLimAcesso) {
+        markAsChanged("DTLIMACESSO", dtLimAcesso);
         this.dtLimAcesso = dtLimAcesso;
    }
 
@@ -131,6 +132,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setExibirValAnalRent(String exibirValAnalRent) {
+        markAsChanged("EXIBIRVALANALRENT", exibirValAnalRent);
         this.exibirValAnalRent = exibirValAnalRent;
    }
 
@@ -139,6 +141,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setFoto(byte[] foto) {
+        markAsChanged("FOTO", foto);
         this.foto = foto;
    }
 
@@ -147,6 +150,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setImpNfcCentral(String impNfcCentral) {
+        markAsChanged("IMPNFCENTRAL", impNfcCentral);
         this.impNfcCentral = impNfcCentral;
    }
 
@@ -155,6 +159,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCpf(String cpf) {
+        markAsChanged("CPF", cpf);
         this.cpf = cpf;
    }
 
@@ -163,6 +168,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -171,6 +177,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setInfRecSen(String infRecSen) {
+        markAsChanged("INFRECSEN", infRecSen);
         this.infRecSen = infRecSen;
    }
 
@@ -179,6 +186,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setInstalaPacotesS(String instalaPacotesS) {
+        markAsChanged("INSTALAPACOTESS", instalaPacotesS);
         this.instalaPacotesS = instalaPacotesS;
    }
 
@@ -187,6 +195,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setInterno(String interno) {
+        markAsChanged("INTERNO", interno);
         this.interno = interno;
    }
 
@@ -195,6 +204,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -203,6 +213,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setMinutosFin(BigDecimal minutosFin) {
+        markAsChanged("MINUTOSFIN", minutosFin);
         this.minutosFin = minutosFin;
    }
 
@@ -211,6 +222,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -219,6 +231,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNivelAcesso(String nivelAcesso) {
+        markAsChanged("NIVELACESSO", nivelAcesso);
         this.nivelAcesso = nivelAcesso;
    }
 
@@ -227,6 +240,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNomeFila(String nomeFila) {
+        markAsChanged("NOMEFILA", nomeFila);
         this.nomeFila = nomeFila;
    }
 
@@ -235,6 +249,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNomeUsu(String nomeUsu) {
+        markAsChanged("NOMEUSU", nomeUsu);
         this.nomeUsu = nomeUsu;
    }
 
@@ -243,6 +258,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNomeUsuCplt(String nomeUsuCplt) {
+        markAsChanged("NOMEUSUCPLT", nomeUsuCplt);
         this.nomeUsuCplt = nomeUsuCplt;
    }
 
@@ -251,6 +267,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNotSlaFila(String notSlaFila) {
+        markAsChanged("NOTSLAFILA", notSlaFila);
         this.notSlaFila = notSlaFila;
    }
 
@@ -259,6 +276,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setPermAltMoeda(String permAltMoeda) {
+        markAsChanged("PERMALTMOEDA", permAltMoeda);
         this.permAltMoeda = permAltMoeda;
    }
 
@@ -267,6 +285,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setPermExpRel(String permExpRel) {
+        markAsChanged("PERMEXPREL", permExpRel);
         this.permExpRel = permExpRel;
    }
 
@@ -275,6 +294,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setPermImprimeRel(String permImprimeRel) {
+        markAsChanged("PERMIMPRIMEREL", permImprimeRel);
         this.permImprimeRel = permImprimeRel;
    }
 
@@ -283,6 +303,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setPortaSmtp(BigDecimal portaSmtp) {
+        markAsChanged("PORTASMTP", portaSmtp);
         this.portaSmtp = portaSmtp;
    }
 
@@ -291,6 +312,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setRenDiasValJur(BigDecimal renDiasValJur) {
+        markAsChanged("RENDIASVALJUR", renDiasValJur);
         this.renDiasValJur = renDiasValJur;
    }
 
@@ -299,6 +321,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setRestringeCart(String restringeCart) {
+        markAsChanged("RESTRINGECART", restringeCart);
         this.restringeCart = restringeCart;
    }
 
@@ -307,6 +330,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setRg(String rg) {
+        markAsChanged("RG", rg);
         this.rg = rg;
    }
 
@@ -315,6 +339,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSegurancaSmtp(String segurancaSmtp) {
+        markAsChanged("SEGURANCASMTP", segurancaSmtp);
         this.segurancaSmtp = segurancaSmtp;
    }
 
@@ -323,6 +348,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaAntiga(String senhaAntiga) {
+        markAsChanged("SENHAANTIGA", senhaAntiga);
         this.senhaAntiga = senhaAntiga;
    }
 
@@ -331,6 +357,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaNova(String senhaNova) {
+        markAsChanged("SENHANOVA", senhaNova);
         this.senhaNova = senhaNova;
    }
 
@@ -339,6 +366,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaNuncaExpira(String senhaNuncaExpira) {
+        markAsChanged("SENHANUNCAEXPIRA", senhaNuncaExpira);
         this.senhaNuncaExpira = senhaNuncaExpira;
    }
 
@@ -347,6 +375,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaRepete(String senhaRepete) {
+        markAsChanged("SENHAREPETE", senhaRepete);
         this.senhaRepete = senhaRepete;
    }
 
@@ -355,6 +384,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaSmtp(String senhaSmtp) {
+        markAsChanged("SENHASMTP", senhaSmtp);
         this.senhaSmtp = senhaSmtp;
    }
 
@@ -363,6 +393,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setServidorSmtp(String servidorSmtp) {
+        markAsChanged("SERVIDORSMTP", servidorSmtp);
         this.servidorSmtp = servidorSmtp;
    }
 
@@ -371,6 +402,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTemEcf(String temEcf) {
+        markAsChanged("TEMECF", temEcf);
         this.temEcf = temEcf;
    }
 
@@ -379,6 +411,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTipoSmtp(String tipoSmtp) {
+        markAsChanged("TIPOSMTP", tipoSmtp);
         this.tipoSmtp = tipoSmtp;
    }
 
@@ -387,6 +420,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setToleranciaAcesso(BigDecimal toleranciaAcesso) {
+        markAsChanged("TOLERANCIAACESSO", toleranciaAcesso);
         this.toleranciaAcesso = toleranciaAcesso;
    }
 
@@ -395,6 +429,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTopBaixaDespesa(BigDecimal topBaixaDespesa) {
+        markAsChanged("TOPBAIXADESPESA", topBaixaDespesa);
         this.topBaixaDespesa = topBaixaDespesa;
    }
 
@@ -403,6 +438,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTopBaixaReceita(BigDecimal topBaixaReceita) {
+        markAsChanged("TOPBAIXARECEITA", topBaixaReceita);
         this.topBaixaReceita = topBaixaReceita;
    }
 
@@ -411,6 +447,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setUsuarioSmtp(String usuarioSmtp) {
+        markAsChanged("USUARIOSMTP", usuarioSmtp);
         this.usuarioSmtp = usuarioSmtp;
    }
 
@@ -419,6 +456,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setVerCabPropria(String verCabPropria) {
+        markAsChanged("VERCABPROPRIA", verCabPropria);
         this.verCabPropria = verCabPropria;
    }
 
@@ -427,6 +465,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setVisAcesOutUsu(String visAcesOutUsu) {
+        markAsChanged("VISACESOUTUSU", visAcesOutUsu);
         this.visAcesOutUsu = visAcesOutUsu;
    }
 
@@ -435,6 +474,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setVlrMaxAut(BigDecimal vlrMaxAut) {
+        markAsChanged("VLRMAXAUT", vlrMaxAut);
         this.vlrMaxAut = vlrMaxAut;
    }
 
@@ -443,6 +483,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -451,6 +492,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDtUltAcesso(Timestamp dtUltAcesso) {
+        markAsChanged("DTULTACESSO", dtUltAcesso);
         this.dtUltAcesso = dtUltAcesso;
    }
 
@@ -459,6 +501,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDtUltimaSenha(Timestamp dtUltimaSenha) {
+        markAsChanged("DTULTIMASENHA", dtUltimaSenha);
         this.dtUltimaSenha = dtUltimaSenha;
    }
 
@@ -467,6 +510,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -475,6 +519,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setEmailSolLib(String emailSolLib) {
+        markAsChanged("EMAILSOLLIB", emailSolLib);
         this.emailSolLib = emailSolLib;
    }
 
@@ -483,6 +528,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountPartner(BigDecimal accountPartner) {
+        markAsChanged("ACCOUNTPARTNER", accountPartner);
         this.accountPartner = accountPartner;
    }
 
@@ -491,6 +537,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodEquip(BigDecimal codEquip) {
+        markAsChanged("CODEQUIP", codEquip);
         this.codEquip = codEquip;
    }
 
@@ -499,6 +546,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessaFormulaRel(String acessaFormulaRel) {
+        markAsChanged("ACESSAFORMULAREL", acessaFormulaRel);
         this.acessaFormulaRel = acessaFormulaRel;
    }
 
@@ -507,6 +555,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessoVisualCab(String acessoVisualCab) {
+        markAsChanged("ACESSOVISUALCAB", acessoVisualCab);
         this.acessoVisualCab = acessoVisualCab;
    }
 
@@ -515,6 +564,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAltCtaFat(String altCtaFat) {
+        markAsChanged("ALTCTAFAT", altCtaFat);
         this.altCtaFat = altCtaFat;
    }
 
@@ -523,6 +573,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAltCtaImpBol(String altCtaImpBol) {
+        markAsChanged("ALTCTAIMPBOL", altCtaImpBol);
         this.altCtaImpBol = altCtaImpBol;
    }
 
@@ -531,6 +582,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAltOrdCFech(String altOrdCFech) {
+        markAsChanged("ALTORDCFECH", altOrdCFech);
         this.altOrdCFech = altOrdCFech;
    }
 
@@ -539,6 +591,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setApenasCompLib(String apenasCompLib) {
+        markAsChanged("APENASCOMPLIB", apenasCompLib);
         this.apenasCompLib = apenasCompLib;
    }
 
@@ -547,6 +600,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAprovCot(String aprovCot) {
+        markAsChanged("APROVCOT", aprovCot);
         this.aprovCot = aprovCot;
    }
 
@@ -555,6 +609,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAvisaVarPreco(String avisaVarPreco) {
+        markAsChanged("AVISAVARPRECO", avisaVarPreco);
         this.avisaVarPreco = avisaVarPreco;
    }
 
@@ -563,6 +618,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setBaixaDesp(String baixaDesp) {
+        markAsChanged("BAIXADESP", baixaDesp);
         this.baixaDesp = baixaDesp;
    }
 
@@ -571,6 +627,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setBaixaRec(String baixaRec) {
+        markAsChanged("BAIXAREC", baixaRec);
         this.baixaRec = baixaRec;
    }
 
@@ -579,6 +636,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCaixa(String caixa) {
+        markAsChanged("CAIXA", caixa);
         this.caixa = caixa;
    }
 
@@ -587,6 +645,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodCargaAcesso(BigDecimal codCargaAcesso) {
+        markAsChanged("CODCARGAACESSO", codCargaAcesso);
         this.codCargaAcesso = codCargaAcesso;
    }
 
@@ -595,6 +654,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodCenCusPad(BigDecimal codCenCusPad) {
+        markAsChanged("CODCENCUSPAD", codCenCusPad);
         this.codCenCusPad = codCenCusPad;
    }
 
@@ -603,6 +663,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodContatoPerfil(BigDecimal codContatoPerfil) {
+        markAsChanged("CODCONTATOPERFIL", codContatoPerfil);
         this.codContatoPerfil = codContatoPerfil;
    }
 
@@ -611,6 +672,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -619,6 +681,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodCtaBcoInt2(BigDecimal codCtaBcoInt2) {
+        markAsChanged("CODCTABCOINT2", codCtaBcoInt2);
         this.codCtaBcoInt2 = codCtaBcoInt2;
    }
 
@@ -627,6 +690,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -635,6 +699,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -643,6 +708,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -651,6 +717,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -659,6 +726,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -667,6 +735,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodParcPerfil(BigDecimal codParcPerfil) {
+        markAsChanged("CODPARCPERFIL", codParcPerfil);
         this.codParcPerfil = codParcPerfil;
    }
 
@@ -675,6 +744,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -683,6 +753,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -691,6 +762,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setContAcesso(String contAcesso) {
+        markAsChanged("CONTACESSO", contAcesso);
         this.contAcesso = contAcesso;
    }
 
@@ -699,6 +771,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setContaGol(String contaGol) {
+        markAsChanged("CONTAGOL", contaGol);
         this.contaGol = contaGol;
    }
 
@@ -707,6 +780,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setIgnoraHorasCruz(String ignoraHorasCruz) {
+        markAsChanged("IGNORAHORASCRUZ", ignoraHorasCruz);
         this.ignoraHorasCruz = ignoraHorasCruz;
    }
 
@@ -715,6 +789,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setExcLibOrc(String excLibOrc) {
+        markAsChanged("EXCLIBORC", excLibOrc);
         this.excLibOrc = excLibOrc;
    }
 
@@ -723,6 +798,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodPerfil(BigDecimal codPerfil) {
+        markAsChanged("CODPERFIL", codPerfil);
         this.codPerfil = codPerfil;
    }
 
@@ -731,6 +807,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCorCodigo(BigDecimal corCodigo) {
+        markAsChanged("CORCODIGO", corCodigo);
         this.corCodigo = corCodigo;
    }
 
@@ -739,6 +816,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setGestor(String gestor) {
+        markAsChanged("GESTOR", gestor);
         this.gestor = gestor;
    }
 
@@ -747,6 +825,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setGrupoRede(String grupoRede) {
+        markAsChanged("GRUPOREDE", grupoRede);
         this.grupoRede = grupoRede;
    }
 
@@ -755,6 +834,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setIgnoraLdap(String ignoraLdap) {
+        markAsChanged("IGNORALDAP", ignoraLdap);
         this.ignoraLdap = ignoraLdap;
    }
 
@@ -763,6 +843,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setImplantador(String implantador) {
+        markAsChanged("IMPLANTADOR", implantador);
         this.implantador = implantador;
    }
 
@@ -771,6 +852,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setOperacional(String operacional) {
+        markAsChanged("OPERACIONAL", operacional);
         this.operacional = operacional;
    }
 
@@ -779,6 +861,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setProprietario(String proprietario) {
+        markAsChanged("PROPRIETARIO", proprietario);
         this.proprietario = proprietario;
    }
 
@@ -787,6 +870,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTimBaixaWord(String timBaixaWord) {
+        markAsChanged("TIMBAIXAWORD", timBaixaWord);
         this.timBaixaWord = timBaixaWord;
    }
 
@@ -795,6 +879,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTimPathScanner(String timPathScanner) {
+        markAsChanged("TIMPATHSCANNER", timPathScanner);
         this.timPathScanner = timPathScanner;
    }
 
@@ -803,6 +888,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTimVerTodasFacs(String timVerTodasFacs) {
+        markAsChanged("TIMVERTODASFACS", timVerTodasFacs);
         this.timVerTodasFacs = timVerTodasFacs;
    }
 
@@ -811,6 +897,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setUsuRede(String usuRede) {
+        markAsChanged("USUREDE", usuRede);
         this.usuRede = usuRede;
    }
 
@@ -819,6 +906,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTimBaixTitRecabe(String timBaixTitRecabe) {
+        markAsChanged("TIMBAIXTITRECABE", timBaixTitRecabe);
         this.timBaixTitRecabe = timBaixTitRecabe;
    }
 
@@ -827,6 +915,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSelectWcapo(String selectWcapo) {
+        markAsChanged("SELECTWCAPO", selectWcapo);
         this.selectWcapo = selectWcapo;
    }
 
@@ -835,6 +924,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setCodIdeConect(String codIdeConect) {
+        markAsChanged("CODIDECONECT", codIdeConect);
         this.codIdeConect = codIdeConect;
    }
 
@@ -843,6 +933,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setIntegraEconect(String integraEconect) {
+        markAsChanged("INTEGRAECONECT", integraEconect);
         this.integraEconect = integraEconect;
    }
 
@@ -851,6 +942,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setIdPerfilEconect(String idPerfilEconect) {
+        markAsChanged("IDPERFILECONECT", idPerfilEconect);
         this.idPerfilEconect = idPerfilEconect;
    }
 
@@ -859,6 +951,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setSenhaEconect(BigDecimal senhaEconect) {
+        markAsChanged("SENHAECONECT", senhaEconect);
         this.senhaEconect = senhaEconect;
    }
 
@@ -867,6 +960,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setPermRepErro(String permRepErro) {
+        markAsChanged("PERMREPERRO", permRepErro);
         this.permRepErro = permRepErro;
    }
 
@@ -875,6 +969,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTipoUsu(BigDecimal tipoUsu) {
+        markAsChanged("TIPOUSU", tipoUsu);
         this.tipoUsu = tipoUsu;
    }
 
@@ -883,6 +978,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTipEnvNotSol(String tipEnvNotSol) {
+        markAsChanged("TIPENVNOTSOL", tipEnvNotSol);
         this.tipEnvNotSol = tipEnvNotSol;
    }
 
@@ -891,6 +987,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAbreGaveta(String abreGaveta) {
+        markAsChanged("ABREGAVETA", abreGaveta);
         this.abreGaveta = abreGaveta;
    }
 
@@ -899,6 +996,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessoPdvCancItens(String acessoPdvCancItens) {
+        markAsChanged("ACESSOPDVCANCITENS", acessoPdvCancItens);
         this.acessoPdvCancItens = acessoPdvCancItens;
    }
 
@@ -907,6 +1005,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessoPdvSang(String acessoPdvSang) {
+        markAsChanged("ACESSOPDVSANG", acessoPdvSang);
         this.acessoPdvSang = acessoPdvSang;
    }
 
@@ -915,6 +1014,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessoPdvSangPdesp(String acessoPdvSangPdesp) {
+        markAsChanged("ACESSOPDVSANGPDESP", acessoPdvSangPdesp);
         this.acessoPdvSangPdesp = acessoPdvSangPdesp;
    }
 
@@ -923,6 +1023,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAcessoPdvSupr(String acessoPdvSupr) {
+        markAsChanged("ACESSOPDVSUPR", acessoPdvSupr);
         this.acessoPdvSupr = acessoPdvSupr;
    }
 
@@ -931,6 +1032,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setTokenCheckout(String tokenCheckout) {
+        markAsChanged("TOKENCHECKOUT", tokenCheckout);
         this.tokenCheckout = tokenCheckout;
    }
 
@@ -939,6 +1041,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountEmail(String accountEmail) {
+        markAsChanged("ACCOUNTEMAIL", accountEmail);
         this.accountEmail = accountEmail;
    }
 
@@ -947,6 +1050,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -955,6 +1059,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -963,6 +1068,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountDhExpira(Timestamp accountDhExpira) {
+        markAsChanged("ACCOUNTDHEXPIRA", accountDhExpira);
         this.accountDhExpira = accountDhExpira;
    }
 
@@ -971,6 +1077,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountId(String accountId) {
+        markAsChanged("ACCOUNTID", accountId);
         this.accountId = accountId;
    }
 
@@ -979,6 +1086,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountNomeFoto(String accountNomeFoto) {
+        markAsChanged("ACCOUNTNOMEFOTO", accountNomeFoto);
         this.accountNomeFoto = accountNomeFoto;
    }
 
@@ -987,6 +1095,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setAccountToken(char[] accountToken) {
+        markAsChanged("ACCOUNTTOKEN", accountToken);
         this.accountToken = accountToken;
    }
 
@@ -995,6 +1104,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setImp2SansUpcai(String imp2SansUpcai) {
+        markAsChanged("IMP2SANSUPCAI", imp2SansUpcai);
         this.imp2SansUpcai = imp2SansUpcai;
    }
 
@@ -1003,6 +1113,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
    }
 
    public void setDescTotalNotaPdv(String descTotalNotaPdv) {
+        markAsChanged("DESCTOTALNOTAPDV", descTotalNotaPdv);
         this.descTotalNotaPdv = descTotalNotaPdv;
    }
 
@@ -1018,6 +1129,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
 
    @Override
    public Usuario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtLimAcesso = vo.asTimestamp("DTLIMACESSO");
         this.exibirValAnalRent = vo.asString("EXIBIRVALANALRENT");
         this.foto = vo.asBlob("FOTO");

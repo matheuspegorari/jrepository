@@ -22,6 +22,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -30,6 +31,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setCodEquipe(BigDecimal codEquipe) {
+        markAsChanged("CODEQUIPE", codEquipe);
         this.codEquipe = codEquipe;
    }
 
@@ -38,6 +40,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setCodGrupoUsu(BigDecimal codGrupoUsu) {
+        markAsChanged("CODGRUPOUSU", codGrupoUsu);
         this.codGrupoUsu = codGrupoUsu;
    }
 
@@ -46,6 +49,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -54,6 +58,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -62,6 +67,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setIdElemento(String idElemento) {
+        markAsChanged("IDELEMENTO", idElemento);
         this.idElemento = idElemento;
    }
 
@@ -70,6 +76,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -78,6 +85,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setDinamico(String dinamico) {
+        markAsChanged("DINAMICO", dinamico);
         this.dinamico = dinamico;
    }
 
@@ -86,6 +94,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
+        markAsChanged("IDINSTPRN", idInstPrn);
         this.idInstPrn = idInstPrn;
    }
 
@@ -94,6 +103,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setIdInstTar(BigDecimal idInstTar) {
+        markAsChanged("IDINSTTAR", idInstTar);
         this.idInstTar = idInstTar;
    }
 
@@ -102,6 +112,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -117,6 +128,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
 
    @Override
    public UsuarioCandidatoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEquipe = vo.asBigDecimal("CODEQUIPE");
         this.codGrupoUsu = vo.asBigDecimal("CODGRUPOUSU");

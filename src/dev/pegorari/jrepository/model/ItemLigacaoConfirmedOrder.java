@@ -33,6 +33,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setAmendCodeCo(String amendCodeCo) {
+        markAsChanged("AMENDCODECO", amendCodeCo);
         this.amendCodeCo = amendCodeCo;
    }
 
@@ -41,6 +42,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setAmendCodeIv(String amendCodeIv) {
+        markAsChanged("AMENDCODEIV", amendCodeIv);
         this.amendCodeIv = amendCodeIv;
    }
 
@@ -49,6 +51,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setAmendCodeSr(String amendCodeSr) {
+        markAsChanged("AMENDCODESR", amendCodeSr);
         this.amendCodeSr = amendCodeSr;
    }
 
@@ -57,6 +60,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setAmendCode(String amendCode) {
+        markAsChanged("AMENDCODE", amendCode);
         this.amendCode = amendCode;
    }
 
@@ -65,6 +69,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setBkOrderQty(BigDecimal bkOrderQty) {
+        markAsChanged("BKORDERQTY", bkOrderQty);
         this.bkOrderQty = bkOrderQty;
    }
 
@@ -73,6 +78,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setDtEstDesp(Timestamp dtEstDesp) {
+        markAsChanged("DTESTDESP", dtEstDesp);
         this.dtEstDesp = dtEstDesp;
    }
 
@@ -81,6 +87,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setDtStatus(Timestamp dtStatus) {
+        markAsChanged("DTSTATUS", dtStatus);
         this.dtStatus = dtStatus;
    }
 
@@ -89,6 +96,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setFlagCode(String flagCode) {
+        markAsChanged("FLAGCODE", flagCode);
         this.flagCode = flagCode;
    }
 
@@ -97,6 +105,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setShipMode(String shipMode) {
+        markAsChanged("SHIPMODE", shipMode);
         this.shipMode = shipMode;
    }
 
@@ -105,6 +114,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setShipQty(BigDecimal shipQty) {
+        markAsChanged("SHIPQTY", shipQty);
         this.shipQty = shipQty;
    }
 
@@ -113,6 +123,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setSufixoPo(String sufixoPo) {
+        markAsChanged("SUFIXOPO", sufixoPo);
         this.sufixoPo = sufixoPo;
    }
 
@@ -121,6 +132,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setSupplanQty(BigDecimal supplanQty) {
+        markAsChanged("SUPPLANQTY", supplanQty);
         this.supplanQty = supplanQty;
    }
 
@@ -129,6 +141,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setNuNotaCo(BigDecimal nuNotaCo) {
+        markAsChanged("NUNOTACO", nuNotaCo);
         this.nuNotaCo = nuNotaCo;
    }
 
@@ -137,6 +150,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setNuNotaPo(BigDecimal nuNotaPo) {
+        markAsChanged("NUNOTAPO", nuNotaPo);
         this.nuNotaPo = nuNotaPo;
    }
 
@@ -145,6 +159,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setPackQty(BigDecimal packQty) {
+        markAsChanged("PACKQTY", packQty);
         this.packQty = packQty;
    }
 
@@ -153,6 +168,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setProcQty(BigDecimal procQty) {
+        markAsChanged("PROCQTY", procQty);
         this.procQty = procQty;
    }
 
@@ -161,6 +177,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setQtdNegOriginal(BigDecimal qtdNegOriginal) {
+        markAsChanged("QTDNEGORIGINAL", qtdNegOriginal);
         this.qtdNegOriginal = qtdNegOriginal;
    }
 
@@ -169,6 +186,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setSequenciaCo(BigDecimal sequenciaCo) {
+        markAsChanged("SEQUENCIACO", sequenciaCo);
         this.sequenciaCo = sequenciaCo;
    }
 
@@ -177,6 +195,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setSequenciaPo(BigDecimal sequenciaPo) {
+        markAsChanged("SEQUENCIAPO", sequenciaPo);
         this.sequenciaPo = sequenciaPo;
    }
 
@@ -185,6 +204,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setLastInvoice(String lastInvoice) {
+        markAsChanged("LASTINVOICE", lastInvoice);
         this.lastInvoice = lastInvoice;
    }
 
@@ -193,6 +213,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    }
 
    public void setLastShip(Timestamp lastShip) {
+        markAsChanged("LASTSHIP", lastShip);
         this.lastShip = lastShip;
    }
 
@@ -208,6 +229,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
 
    @Override
    public ItemLigacaoConfirmedOrder fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.amendCodeCo = vo.asString("AMENDCODECO");
         this.amendCodeIv = vo.asString("AMENDCODEIV");
         this.amendCodeSr = vo.asString("AMENDCODESR");

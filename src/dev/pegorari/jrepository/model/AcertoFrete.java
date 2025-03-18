@@ -20,6 +20,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -28,6 +29,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -36,6 +38,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setNuAcerto(BigDecimal nuAcerto) {
+        markAsChanged("NUACERTO", nuAcerto);
         this.nuAcerto = nuAcerto;
    }
 
@@ -44,6 +47,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -52,6 +56,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
+        markAsChanged("NUFINORIG", nuFinOrig);
         this.nuFinOrig = nuFinOrig;
    }
 
@@ -60,6 +65,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -68,6 +74,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -76,6 +83,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    }
 
    public void setTipAcerto(String tipAcerto) {
+        markAsChanged("TIPACERTO", tipAcerto);
         this.tipAcerto = tipAcerto;
    }
 
@@ -91,6 +99,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
 
    @Override
    public AcertoFrete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuAcerto = vo.asBigDecimal("NUACERTO");

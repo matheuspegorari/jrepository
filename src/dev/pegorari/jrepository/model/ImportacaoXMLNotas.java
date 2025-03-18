@@ -81,6 +81,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDhEmiss(Timestamp dhEmiss) {
+        markAsChanged("DHEMISS", dhEmiss);
         this.dhEmiss = dhEmiss;
    }
 
@@ -89,6 +90,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -97,6 +99,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setSituacaoMde(String situacaoMde) {
+        markAsChanged("SITUACAOMDE", situacaoMde);
         this.situacaoMde = situacaoMde;
    }
 
@@ -105,6 +108,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setImportadoMde(String importadoMde) {
+        markAsChanged("IMPORTADOMDE", importadoMde);
         this.importadoMde = importadoMde;
    }
 
@@ -113,6 +117,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setSituacaoNfe(String situacaoNfe) {
+        markAsChanged("SITUACAONFE", situacaoNfe);
         this.situacaoNfe = situacaoNfe;
    }
 
@@ -121,6 +126,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTemXml(String temXml) {
+        markAsChanged("TEMXML", temXml);
         this.temXml = temXml;
    }
 
@@ -129,6 +135,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -137,6 +144,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -145,6 +153,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -153,6 +162,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -161,6 +171,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setChaveAcesso(String chaveAcesso) {
+        markAsChanged("CHAVEACESSO", chaveAcesso);
         this.chaveAcesso = chaveAcesso;
    }
 
@@ -169,6 +180,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodUsuImp(BigDecimal codUsuImp) {
+        markAsChanged("CODUSUIMP", codUsuImp);
         this.codUsuImp = codUsuImp;
    }
 
@@ -177,6 +189,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodUsuProc(BigDecimal codUsuProc) {
+        markAsChanged("CODUSUPROC", codUsuProc);
         this.codUsuProc = codUsuProc;
    }
 
@@ -185,6 +198,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -193,6 +207,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDetalhesImportacao(String detalhesImportacao) {
+        markAsChanged("DETALHESIMPORTACAO", detalhesImportacao);
         this.detalhesImportacao = detalhesImportacao;
    }
 
@@ -201,6 +216,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDhImport(Timestamp dhImport) {
+        markAsChanged("DHIMPORT", dhImport);
         this.dhImport = dhImport;
    }
 
@@ -209,6 +225,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDhProcess(Timestamp dhProcess) {
+        markAsChanged("DHPROCESS", dhProcess);
         this.dhProcess = dhProcess;
    }
 
@@ -217,6 +234,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -225,6 +243,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
+        markAsChanged("NUARQUIVO", nuArquivo);
         this.nuArquivo = nuArquivo;
    }
 
@@ -233,6 +252,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -241,6 +261,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -249,6 +270,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setStatus(BigDecimal status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -257,6 +279,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -265,6 +288,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setXml(char[] xml) {
+        markAsChanged("XML", xml);
         this.xml = xml;
    }
 
@@ -273,6 +297,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setXNomeEmit(String xNomeEmit) {
+        markAsChanged("XNOMEEMIT", xNomeEmit);
         this.xNomeEmit = xNomeEmit;
    }
 
@@ -281,6 +306,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setXNomeToma(String xNomeToma) {
+        markAsChanged("XNOMETOMA", xNomeToma);
         this.xNomeToma = xNomeToma;
    }
 
@@ -289,6 +315,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setXNomeTransp(String xNomeTransp) {
+        markAsChanged("XNOMETRANSP", xNomeTransp);
         this.xNomeTransp = xNomeTransp;
    }
 
@@ -297,6 +324,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCfopXml(String cfopXml) {
+        markAsChanged("CFOPXML", cfopXml);
         this.cfopXml = cfopXml;
    }
 
@@ -305,6 +333,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjDest(String cnpjDest) {
+        markAsChanged("CNPJDEST", cnpjDest);
         this.cnpjDest = cnpjDest;
    }
 
@@ -313,6 +342,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjExped(String cnpjExped) {
+        markAsChanged("CNPJEXPED", cnpjExped);
         this.cnpjExped = cnpjExped;
    }
 
@@ -321,6 +351,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjParc(String cnpjParc) {
+        markAsChanged("CNPJPARC", cnpjParc);
         this.cnpjParc = cnpjParc;
    }
 
@@ -329,6 +360,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjReceb(String cnpjReceb) {
+        markAsChanged("CNPJRECEB", cnpjReceb);
         this.cnpjReceb = cnpjReceb;
    }
 
@@ -337,6 +369,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjRemet(String cnpjRemet) {
+        markAsChanged("CNPJREMET", cnpjRemet);
         this.cnpjRemet = cnpjRemet;
    }
 
@@ -345,6 +378,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCnpjTransp(String cnpjTransp) {
+        markAsChanged("CNPJTRANSP", cnpjTransp);
         this.cnpjTransp = cnpjTransp;
    }
 
@@ -353,6 +387,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -361,6 +396,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -369,6 +405,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcDest(BigDecimal codParcDest) {
+        markAsChanged("CODPARCDEST", codParcDest);
         this.codParcDest = codParcDest;
    }
 
@@ -377,6 +414,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcExped(BigDecimal codParcExped) {
+        markAsChanged("CODPARCEXPED", codParcExped);
         this.codParcExped = codParcExped;
    }
 
@@ -385,6 +423,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcReceb(BigDecimal codParcReceb) {
+        markAsChanged("CODPARCRECEB", codParcReceb);
         this.codParcReceb = codParcReceb;
    }
 
@@ -393,6 +432,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcRemet(BigDecimal codParcRemet) {
+        markAsChanged("CODPARCREMET", codParcRemet);
         this.codParcRemet = codParcRemet;
    }
 
@@ -401,6 +441,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcTransp(BigDecimal codParcTransp) {
+        markAsChanged("CODPARCTRANSP", codParcTransp);
         this.codParcTransp = codParcTransp;
    }
 
@@ -409,6 +450,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -417,6 +459,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -425,6 +468,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDiasEmissaoCalc(String diasEmissaoCalc) {
+        markAsChanged("DIASEMISSAOCALC", diasEmissaoCalc);
         this.diasEmissaoCalc = diasEmissaoCalc;
    }
 
@@ -433,6 +477,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDocsRef(char[] docsRef) {
+        markAsChanged("DOCSREF", docsRef);
         this.docsRef = docsRef;
    }
 
@@ -441,6 +486,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDtAutorizacao(Timestamp dtAutorizacao) {
+        markAsChanged("DTAUTORIZACAO", dtAutorizacao);
         this.dtAutorizacao = dtAutorizacao;
    }
 
@@ -449,6 +495,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDtConfirmacao(Timestamp dtConfirmacao) {
+        markAsChanged("DTCONFIRMACAO", dtConfirmacao);
         this.dtConfirmacao = dtConfirmacao;
    }
 
@@ -457,6 +504,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setEntSaiNfe(String entSaiNfe) {
+        markAsChanged("ENTSAINFE", entSaiNfe);
         this.entSaiNfe = entSaiNfe;
    }
 
@@ -465,6 +513,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNaturezaOper(String naturezaOper) {
+        markAsChanged("NATUREZAOPER", naturezaOper);
         this.naturezaOper = naturezaOper;
    }
 
@@ -473,6 +522,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setObservacaoDfe(String observacaoDfe) {
+        markAsChanged("OBSERVACAODFE", observacaoDfe);
         this.observacaoDfe = observacaoDfe;
    }
 
@@ -481,6 +531,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setPapelCte(String papelCte) {
+        markAsChanged("PAPELCTE", papelCte);
         this.papelCte = papelCte;
    }
 
@@ -489,6 +540,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setPlacaVeic(String placaVeic) {
+        markAsChanged("PLACAVEIC", placaVeic);
         this.placaVeic = placaVeic;
    }
 
@@ -497,6 +549,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setSerieDoc(BigDecimal serieDoc) {
+        markAsChanged("SERIEDOC", serieDoc);
         this.serieDoc = serieDoc;
    }
 
@@ -505,6 +558,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setSituacaoCte(String situacaoCte) {
+        markAsChanged("SITUACAOCTE", situacaoCte);
         this.situacaoCte = situacaoCte;
    }
 
@@ -513,6 +567,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTipoCte(String tipoCte) {
+        markAsChanged("TIPOCTE", tipoCte);
         this.tipoCte = tipoCte;
    }
 
@@ -521,6 +576,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTipoManifDfe(BigDecimal tipoManifDfe) {
+        markAsChanged("TIPOMANIFDFE", tipoManifDfe);
         this.tipoManifDfe = tipoManifDfe;
    }
 
@@ -529,6 +585,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTomadorCte(String tomadorCte) {
+        markAsChanged("TOMADORCTE", tomadorCte);
         this.tomadorCte = tomadorCte;
    }
 
@@ -537,6 +594,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setUlteVedFe(String ulteVedFe) {
+        markAsChanged("ULTEVEDFE", ulteVedFe);
         this.ulteVedFe = ulteVedFe;
    }
 
@@ -545,6 +603,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setXNomeDest(String xNomeDest) {
+        markAsChanged("XNOMEDEST", xNomeDest);
         this.xNomeDest = xNomeDest;
    }
 
@@ -553,6 +612,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setStatusWms(BigDecimal statusWms) {
+        markAsChanged("STATUSWMS", statusWms);
         this.statusWms = statusWms;
    }
 
@@ -561,6 +621,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTipImpCte(String tipImpCte) {
+        markAsChanged("TIPIMPCTE", tipImpCte);
         this.tipImpCte = tipImpCte;
    }
 
@@ -569,6 +630,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setTipoNfe(String tipoNfe) {
+        markAsChanged("TIPONFE", tipoNfe);
         this.tipoNfe = tipoNfe;
    }
 
@@ -577,6 +639,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -585,6 +648,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDtVenc(Timestamp dtVenc) {
+        markAsChanged("DTVENC", dtVenc);
         this.dtVenc = dtVenc;
    }
 
@@ -593,6 +657,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -601,6 +666,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcColetaCte(BigDecimal codParcColetaCte) {
+        markAsChanged("CODPARCCOLETACTE", codParcColetaCte);
         this.codParcColetaCte = codParcColetaCte;
    }
 
@@ -609,6 +675,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setCodParcEntregaCte(BigDecimal codParcEntregaCte) {
+        markAsChanged("CODPARCENTREGACTE", codParcEntregaCte);
         this.codParcEntregaCte = codParcEntregaCte;
    }
 
@@ -617,6 +684,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setDhProcAg(Timestamp dhProcAg) {
+        markAsChanged("DHPROCAG", dhProcAg);
         this.dhProcAg = dhProcAg;
    }
 
@@ -625,6 +693,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
    }
 
    public void setQtdProcAg(BigDecimal qtdProcAg) {
+        markAsChanged("QTDPROCAG", qtdProcAg);
         this.qtdProcAg = qtdProcAg;
    }
 
@@ -640,6 +709,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
 
    @Override
    public ImportacaoXMLNotas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhEmiss = vo.asTimestamp("DHEMISS");
         this.vlrNota = vo.asBigDecimal("VLRNOTA");
         this.situacaoMde = vo.asString("SITUACAOMDE");

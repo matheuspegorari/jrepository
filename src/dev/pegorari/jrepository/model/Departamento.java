@@ -29,6 +29,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -37,6 +38,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -45,6 +47,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -53,6 +56,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -61,6 +65,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodDepPai(BigDecimal codDepPai) {
+        markAsChanged("CODDEPPAI", codDepPai);
         this.codDepPai = codDepPai;
    }
 
@@ -69,6 +74,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -77,6 +83,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -85,6 +92,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodRegFis(BigDecimal codRegFis) {
+        markAsChanged("CODREGFIS", codRegFis);
         this.codRegFis = codRegFis;
    }
 
@@ -93,6 +101,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -101,6 +110,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setDescrDep(String descrDep) {
+        markAsChanged("DESCRDEP", descrDep);
         this.descrDep = descrDep;
    }
 
@@ -109,6 +119,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -117,6 +128,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -125,6 +137,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setNrInscContrat(String nrInscContrat) {
+        markAsChanged("NRINSCCONTRAT", nrInscContrat);
         this.nrInscContrat = nrInscContrat;
    }
 
@@ -133,6 +146,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setNrInscProp(String nrInscProp) {
+        markAsChanged("NRINSCPROP", nrInscProp);
         this.nrInscProp = nrInscProp;
    }
 
@@ -141,6 +155,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setTipLotacao(BigDecimal tipLotacao) {
+        markAsChanged("TIPLOTACAO", tipLotacao);
         this.tipLotacao = tipLotacao;
    }
 
@@ -149,6 +164,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setTpInscContrat(BigDecimal tpInscContrat) {
+        markAsChanged("TPINSCCONTRAT", tpInscContrat);
         this.tpInscContrat = tpInscContrat;
    }
 
@@ -157,6 +173,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setTpInscProp(BigDecimal tpInscProp) {
+        markAsChanged("TPINSCPROP", tpInscProp);
         this.tpInscProp = tpInscProp;
    }
 
@@ -165,6 +182,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -180,6 +198,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
 
    @Override
    public Departamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

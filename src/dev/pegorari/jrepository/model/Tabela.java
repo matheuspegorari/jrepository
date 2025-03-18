@@ -15,6 +15,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
    }
 
    public void setDescTab(String descTab) {
+        markAsChanged("DESCRTAB", descTab);
         this.descTab = descTab;
    }
 
@@ -23,6 +24,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -31,6 +33,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
    }
 
    public void setNuCampoNumeracao(BigDecimal nuCampoNumeracao) {
+        markAsChanged("NUCAMPONUMERACAO", nuCampoNumeracao);
         this.nuCampoNumeracao = nuCampoNumeracao;
    }
 
@@ -39,6 +42,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
    }
 
    public void setTipoNumeracao(String tipoNumeracao) {
+        markAsChanged("TIPONUMERACAO", tipoNumeracao);
         this.tipoNumeracao = tipoNumeracao;
    }
 
@@ -54,6 +58,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
 
    @Override
    public Tabela fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descTab = vo.asString("DESCRTAB");
         this.nomeTab = vo.asString("NOMETAB");
         this.nuCampoNumeracao = vo.asBigDecimal("NUCAMPONUMERACAO");

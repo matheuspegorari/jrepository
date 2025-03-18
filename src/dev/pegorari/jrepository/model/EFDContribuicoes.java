@@ -18,6 +18,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setArqConfirmado(String arqConfirmado) {
+        markAsChanged("ARQCONFIRMADO", arqConfirmado);
         this.arqConfirmado = arqConfirmado;
    }
 
@@ -26,6 +27,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -34,6 +36,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -42,6 +45,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
+        markAsChanged("VERSAOLAYOUT", versaoLayout);
         this.versaoLayout = versaoLayout;
    }
 
@@ -50,6 +54,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -58,6 +63,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
    }
 
    public void setTipoEscritCsll(BigDecimal tipoEscritCsll) {
+        markAsChanged("TIPO_ESCRIT_CSLL", tipoEscritCsll);
         this.tipoEscritCsll = tipoEscritCsll;
    }
 
@@ -73,6 +79,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
 
    @Override
    public EFDContribuicoes fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");

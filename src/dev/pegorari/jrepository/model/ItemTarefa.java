@@ -46,6 +46,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -54,6 +55,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodArmazenagem(BigDecimal codArmazenagem) {
+        markAsChanged("CODARMAZENAGEM", codArmazenagem);
         this.codArmazenagem = codArmazenagem;
    }
 
@@ -62,6 +64,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
+        markAsChanged("CODAREASEP", codAreaSep);
         this.codAreaSep = codAreaSep;
    }
 
@@ -70,6 +73,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodBarraVolCompra(String codBarraVolCompra) {
+        markAsChanged("CODBARRAVOLCOMPRA", codBarraVolCompra);
         this.codBarraVolCompra = codBarraVolCompra;
    }
 
@@ -78,6 +82,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -86,6 +91,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodEndDestino(BigDecimal codEndDestino) {
+        markAsChanged("CODENDDESTINO", codEndDestino);
         this.codEndDestino = codEndDestino;
    }
 
@@ -94,6 +100,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodEndOrigem(BigDecimal codEndOrigem) {
+        markAsChanged("CODENDORIGEM", codEndOrigem);
         this.codEndOrigem = codEndOrigem;
    }
 
@@ -102,6 +109,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodEquip(BigDecimal codEquip) {
+        markAsChanged("CODEQUIP", codEquip);
         this.codEquip = codEquip;
    }
 
@@ -110,6 +118,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -118,6 +127,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -126,6 +136,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodUsuExec(BigDecimal codUsuExec) {
+        markAsChanged("CODUSUEXEC", codUsuExec);
         this.codUsuExec = codUsuExec;
    }
 
@@ -134,6 +145,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodVolCompra(String codVolCompra) {
+        markAsChanged("CODVOLCOMPRA", codVolCompra);
         this.codVolCompra = codVolCompra;
    }
 
@@ -142,6 +154,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodVolDest(String codVolDest) {
+        markAsChanged("CODVOLDEST", codVolDest);
         this.codVolDest = codVolDest;
    }
 
@@ -150,6 +163,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setCodVolOrig(String codVolOrig) {
+        markAsChanged("CODVOLORIG", codVolOrig);
         this.codVolOrig = codVolOrig;
    }
 
@@ -158,6 +172,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -166,6 +181,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setDhFinalExec(Timestamp dhFinalExec) {
+        markAsChanged("DHFINALEXEC", dhFinalExec);
         this.dhFinalExec = dhFinalExec;
    }
 
@@ -174,6 +190,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setDhInicialExec(Timestamp dhInicialExec) {
+        markAsChanged("DHINICIALEXEC", dhInicialExec);
         this.dhInicialExec = dhInicialExec;
    }
 
@@ -182,6 +199,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setFaseTarefa(BigDecimal faseTarefa) {
+        markAsChanged("FASETAREFA", faseTarefa);
         this.faseTarefa = faseTarefa;
    }
 
@@ -190,6 +208,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -198,6 +217,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -206,6 +226,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setOcorrencia(String ocorrencia) {
+        markAsChanged("OCORRENCIA", ocorrencia);
         this.ocorrencia = ocorrencia;
    }
 
@@ -214,6 +235,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -222,6 +244,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setQtdDest(BigDecimal qtdDest) {
+        markAsChanged("QTDDEST", qtdDest);
         this.qtdDest = qtdDest;
    }
 
@@ -230,6 +253,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setQtdOrig(BigDecimal qtdOrig) {
+        markAsChanged("QTDORIG", qtdOrig);
         this.qtdOrig = qtdOrig;
    }
 
@@ -238,6 +262,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setQtdVolCompra(BigDecimal qtdVolCompra) {
+        markAsChanged("QTDVOLCOMPRA", qtdVolCompra);
         this.qtdVolCompra = qtdVolCompra;
    }
 
@@ -246,6 +271,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setQtdVolPad(BigDecimal qtdVolPad) {
+        markAsChanged("QTDVOLPAD", qtdVolPad);
         this.qtdVolPad = qtdVolPad;
    }
 
@@ -254,6 +280,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -262,6 +289,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -270,6 +298,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setTipTarefa(String tipTarefa) {
+        markAsChanged("TIPTAREFA", tipTarefa);
         this.tipTarefa = tipTarefa;
    }
 
@@ -278,6 +307,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setDhFimMapa(Timestamp dhFimMapa) {
+        markAsChanged("DHFIMMAPA", dhFimMapa);
         this.dhFimMapa = dhFimMapa;
    }
 
@@ -286,6 +316,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setDhImpMapa(Timestamp dhImpMapa) {
+        markAsChanged("DHIMPMAPA", dhImpMapa);
         this.dhImpMapa = dhImpMapa;
    }
 
@@ -294,6 +325,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setDhInicioMapa(Timestamp dhInicioMapa) {
+        markAsChanged("DHINICIOMAPA", dhInicioMapa);
         this.dhInicioMapa = dhInicioMapa;
    }
 
@@ -302,6 +334,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setIdMapa(BigDecimal idMapa) {
+        markAsChanged("IDMAPA", idMapa);
         this.idMapa = idMapa;
    }
 
@@ -310,6 +343,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
    }
 
    public void setTriado(String triado) {
+        markAsChanged("TRIADO", triado);
         this.triado = triado;
    }
 
@@ -325,6 +359,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
 
    @Override
    public ItemTarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
         this.codArmazenagem = vo.asBigDecimal("CODARMAZENAGEM");
         this.codAreaSep = vo.asBigDecimal("CODAREASEP");

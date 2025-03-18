@@ -20,6 +20,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setAutomatico(String automatico) {
+        markAsChanged("AUTOMATICO", automatico);
         this.automatico = automatico;
    }
 
@@ -28,6 +29,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -36,6 +38,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setCodCriterio(BigDecimal codCriterio) {
+        markAsChanged("CODCRITERIO", codCriterio);
         this.codCriterio = codCriterio;
    }
 
@@ -44,6 +47,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -52,6 +56,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -60,6 +65,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -68,6 +74,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -76,6 +83,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setOrigemCriterio(String origemCriterio) {
+        markAsChanged("ORIGEMCRITERIO", origemCriterio);
         this.origemCriterio = origemCriterio;
    }
 
@@ -84,6 +92,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -99,6 +108,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
 
    @Override
    public CriterioRateio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.automatico = vo.asString("AUTOMATICO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCriterio = vo.asBigDecimal("CODCRITERIO");

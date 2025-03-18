@@ -20,6 +20,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -28,6 +29,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setEscopo(String escopo) {
+        markAsChanged("ESCOPO", escopo);
         this.escopo = escopo;
    }
 
@@ -36,6 +38,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setIdForm(BigDecimal idForm) {
+        markAsChanged("IDFORM", idForm);
         this.idForm = idForm;
    }
 
@@ -44,6 +47,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -52,6 +56,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setNomeInstanciaRef(String nomeInstanciaRef) {
+        markAsChanged("NOMEINSTANCIAREF", nomeInstanciaRef);
         this.nomeInstanciaRef = nomeInstanciaRef;
    }
 
@@ -60,6 +65,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setObrigatorioInicia(String obrigatorioInicia) {
+        markAsChanged("OBRIGATORIOINICIA", obrigatorioInicia);
         this.obrigatorioInicia = obrigatorioInicia;
    }
 
@@ -68,6 +74,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setOrdemInicia(BigDecimal ordemInicia) {
+        markAsChanged("ORDEMINICIA", ordemInicia);
         this.ordemInicia = ordemInicia;
    }
 
@@ -76,6 +83,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setTipoForm(String tipoForm) {
+        markAsChanged("TIPOFORM", tipoForm);
         this.tipoForm = tipoForm;
    }
 
@@ -84,6 +92,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    }
 
    public void setCardinalidade(String cardinalidade) {
+        markAsChanged("CARDINALIDADE", cardinalidade);
         this.cardinalidade = cardinalidade;
    }
 
@@ -99,6 +108,7 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
 
    @Override
    public FormularioProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.escopo = vo.asString("ESCOPO");
         this.idForm = vo.asBigDecimal("IDFORM");

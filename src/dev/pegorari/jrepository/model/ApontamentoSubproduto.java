@@ -18,6 +18,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -26,6 +27,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -34,6 +36,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -42,6 +45,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -50,6 +54,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -58,6 +63,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setControleSp(String controleSp) {
+        markAsChanged("CONTROLESP", controleSp);
         this.controleSp = controleSp;
    }
 
@@ -66,6 +72,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    }
 
    public void setCodProdSp(BigDecimal codProdSp) {
+        markAsChanged("CODPRODSP", codProdSp);
         this.codProdSp = codProdSp;
    }
 
@@ -81,6 +88,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
 
    @Override
    public ApontamentoSubproduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.qtd = vo.asBigDecimal("QTD");
         this.seqApa = vo.asBigDecimal("SEQAPA");

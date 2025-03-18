@@ -16,6 +16,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -24,6 +25,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    }
 
    public void setControlePi(String controlePi) {
+        markAsChanged("CONTROLEPI", controlePi);
         this.controlePi = controlePi;
    }
 
@@ -32,6 +34,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    }
 
    public void setCodProdPi(BigDecimal codProdPi) {
+        markAsChanged("CODPRODPI", codProdPi);
         this.codProdPi = codProdPi;
    }
 
@@ -40,6 +43,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -48,6 +52,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -63,6 +68,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
 
    @Override
    public EventoProdutoIntermediario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.controlePi = vo.asString("CONTROLEPI");
         this.codProdPi = vo.asBigDecimal("CODPRODPI");

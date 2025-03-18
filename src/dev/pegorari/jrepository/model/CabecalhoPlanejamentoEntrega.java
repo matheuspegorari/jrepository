@@ -25,6 +25,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -33,6 +34,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -41,6 +43,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -49,6 +52,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -57,6 +61,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -65,6 +70,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -73,6 +79,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodParcFat(BigDecimal codParcFat) {
+        markAsChanged("CODPARCFAT", codParcFat);
         this.codParcFat = codParcFat;
    }
 
@@ -81,6 +88,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setDistribuicaoContato(BigDecimal distribuicaoContato) {
+        markAsChanged("DISTRIBUICAOCONTATO", distribuicaoContato);
         this.distribuicaoContato = distribuicaoContato;
    }
 
@@ -89,6 +97,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setNumEnd(BigDecimal numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -97,6 +106,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -105,6 +115,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setNuPlan(BigDecimal nuPlan) {
+        markAsChanged("NUPLAN", nuPlan);
         this.nuPlan = nuPlan;
    }
 
@@ -113,6 +124,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -121,6 +133,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -136,6 +149,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
 
    @Override
    public CabecalhoPlanejamentoEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codEnd = vo.asBigDecimal("CODEND");

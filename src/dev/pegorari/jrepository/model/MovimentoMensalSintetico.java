@@ -21,6 +21,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setAno(BigDecimal ano) {
+        markAsChanged("ANO", ano);
         this.ano = ano;
    }
 
@@ -29,6 +30,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -37,6 +39,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -45,6 +48,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -53,6 +57,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setDtam(Timestamp dtam) {
+        markAsChanged("DTAM", dtam);
         this.dtam = dtam;
    }
 
@@ -61,6 +66,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setGrupo(String grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -69,6 +75,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setMes(BigDecimal mes) {
+        markAsChanged("MES", mes);
         this.mes = mes;
    }
 
@@ -77,6 +84,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -85,6 +93,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    }
 
    public void setVlrMov(BigDecimal vlrMov) {
+        markAsChanged("VLRMOV", vlrMov);
         this.vlrMov = vlrMov;
    }
 
@@ -100,6 +109,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
 
    @Override
    public MovimentoMensalSintetico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ano = vo.asBigDecimal("ANO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");

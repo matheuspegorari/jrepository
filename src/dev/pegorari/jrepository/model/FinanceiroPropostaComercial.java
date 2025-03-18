@@ -17,6 +17,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -25,6 +26,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -33,6 +35,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setRateado(String rateado) {
+        markAsChanged("RATEADO", rateado);
         this.rateado = rateado;
    }
 
@@ -41,6 +44,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setTipFin(String tipFin) {
+        markAsChanged("TIPFIN", tipFin);
         this.tipFin = tipFin;
    }
 
@@ -49,6 +53,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -57,6 +62,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    }
 
    public void setVlrDesp(BigDecimal vlrDesp) {
+        markAsChanged("VLRDESP", vlrDesp);
         this.vlrDesp = vlrDesp;
    }
 
@@ -72,6 +78,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
 
    @Override
    public FinanceiroPropostaComercial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codNat = vo.asBigDecimal("CODNAT");
         this.nuProjeto = vo.asBigDecimal("NUPROJETO");
         this.rateado = vo.asString("RATEADO");

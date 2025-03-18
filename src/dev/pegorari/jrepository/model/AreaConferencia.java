@@ -17,6 +17,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    }
 
    public void setImpSep(String impSep) {
+        markAsChanged("IMPSEP", impSep);
         this.impSep = impSep;
    }
 
@@ -25,6 +26,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
+        markAsChanged("CODAREACONF", codAreaConf);
         this.codAreaConf = codAreaConf;
    }
 
@@ -33,6 +35,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -49,6 +53,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    }
 
    public void setNomeAreaConf(String nomeAreaConf) {
+        markAsChanged("NOMEAREACONF", nomeAreaConf);
         this.nomeAreaConf = nomeAreaConf;
    }
 
@@ -64,6 +69,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
 
    @Override
    public AreaConferencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.impSep = vo.asString("IMPSEP");
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");
         this.codUsu = vo.asBigDecimal("CODUSU");

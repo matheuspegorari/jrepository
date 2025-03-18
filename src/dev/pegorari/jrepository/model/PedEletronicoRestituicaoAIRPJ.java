@@ -20,6 +20,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setCodDarf(BigDecimal codDarf) {
+        markAsChanged("CODDARF", codDarf);
         this.codDarf = codDarf;
    }
 
@@ -28,6 +29,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -36,6 +38,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setNumPerd(String numPerd) {
+        markAsChanged("NUMPERD", numPerd);
         this.numPerd = numPerd;
    }
 
@@ -44,6 +47,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -52,6 +56,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setRefOrigem(Timestamp refOrigem) {
+        markAsChanged("REFORIGEM", refOrigem);
         this.refOrigem = refOrigem;
    }
 
@@ -60,6 +65,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setTipoImposto(String tipoImposto) {
+        markAsChanged("TIPOIMPOSTO", tipoImposto);
         this.tipoImposto = tipoImposto;
    }
 
@@ -68,6 +74,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setTipPerdComp(String tipPerdComp) {
+        markAsChanged("TIPPERDCOMP", tipPerdComp);
         this.tipPerdComp = tipPerdComp;
    }
 
@@ -76,6 +83,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
    }
 
    public void setVlrPerdComp(BigDecimal vlrPerdComp) {
+        markAsChanged("VLRPERDCOMP", vlrPerdComp);
         this.vlrPerdComp = vlrPerdComp;
    }
 
@@ -91,6 +99,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
 
    @Override
    public PedEletronicoRestituicaoAIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codDarf = vo.asBigDecimal("CODDARF");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.numPerd = vo.asString("NUMPERD");

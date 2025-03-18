@@ -39,6 +39,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodCap(BigDecimal codCap) {
+        markAsChanged("CODCAP", codCap);
         this.codCap = codCap;
    }
 
@@ -47,6 +48,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -55,6 +57,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -63,6 +66,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodCwc(BigDecimal codCwc) {
+        markAsChanged("CODCWC", codCwc);
         this.codCwc = codCwc;
    }
 
@@ -71,6 +75,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodLocalWc(BigDecimal codLocalWc) {
+        markAsChanged("CODLOCALWC", codLocalWc);
         this.codLocalWc = codLocalWc;
    }
 
@@ -79,6 +84,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -87,6 +93,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
+        markAsChanged("CODUSURESP", codUsuResp);
         this.codUsuResp = codUsuResp;
    }
 
@@ -95,6 +102,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -103,6 +111,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setExigeCleanup(String exigeCleanup) {
+        markAsChanged("EXIGECLEANUP", exigeCleanup);
         this.exigeCleanup = exigeCleanup;
    }
 
@@ -111,6 +120,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setIndiceOee(BigDecimal indiceOee) {
+        markAsChanged("INDICEOEE", indiceOee);
         this.indiceOee = indiceOee;
    }
 
@@ -119,6 +129,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -127,6 +138,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setNomeImpressora(String nomeImpressora) {
+        markAsChanged("NOMEIMPRESSORA", nomeImpressora);
         this.nomeImpressora = nomeImpressora;
    }
 
@@ -135,6 +147,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setNumQp(BigDecimal numQp) {
+        markAsChanged("NUMQP", numQp);
         this.numQp = numQp;
    }
 
@@ -143,6 +156,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setOperacao(String operacao) {
+        markAsChanged("OPERACAO", operacao);
         this.operacao = operacao;
    }
 
@@ -151,6 +165,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdCapacidadeMax(BigDecimal qtdCapacidadeMax) {
+        markAsChanged("QTDCAPACIDADEMAX", qtdCapacidadeMax);
         this.qtdCapacidadeMax = qtdCapacidadeMax;
    }
 
@@ -159,6 +174,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdCapacidadeMin(BigDecimal qtdCapacidadeMin) {
+        markAsChanged("QTDCAPACIDADEMIN", qtdCapacidadeMin);
         this.qtdCapacidadeMin = qtdCapacidadeMin;
    }
 
@@ -167,6 +183,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdCapacidadePad(BigDecimal qtdCapacidadePad) {
+        markAsChanged("QTDCAPACIDADEPAD", qtdCapacidadePad);
         this.qtdCapacidadePad = qtdCapacidadePad;
    }
 
@@ -175,6 +192,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setSetupPronto(String setupPronto) {
+        markAsChanged("SETUPPRONTO", setupPronto);
         this.setupPronto = setupPronto;
    }
 
@@ -183,6 +201,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setTempoCleanup(BigDecimal tempoCleanup) {
+        markAsChanged("TEMPOCLEANUP", tempoCleanup);
         this.tempoCleanup = tempoCleanup;
    }
 
@@ -191,6 +210,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setTempoSetup(BigDecimal tempoSetup) {
+        markAsChanged("TEMPOSETUP", tempoSetup);
         this.tempoSetup = tempoSetup;
    }
 
@@ -199,6 +219,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setTipoSetup(String tipoSetup) {
+        markAsChanged("TIPOSETUP", tipoSetup);
         this.tipoSetup = tipoSetup;
    }
 
@@ -207,6 +228,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
+        markAsChanged("QTDALOCADA", qtdAlocada);
         this.qtdAlocada = qtdAlocada;
    }
 
@@ -215,6 +237,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -223,6 +246,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdCargaMax(BigDecimal qtdCargaMax) {
+        markAsChanged("QTDCARGAMAX", qtdCargaMax);
         this.qtdCargaMax = qtdCargaMax;
    }
 
@@ -231,6 +255,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setQtdCargaMin(BigDecimal qtdCargaMin) {
+        markAsChanged("QTDCARGAMIN", qtdCargaMin);
         this.qtdCargaMin = qtdCargaMin;
    }
 
@@ -239,6 +264,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setRestringeCarga(String restringeCarga) {
+        markAsChanged("RESTRINGECARGA", restringeCarga);
         this.restringeCarga = restringeCarga;
    }
 
@@ -247,6 +273,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setCapacidadeHora(BigDecimal capacidadeHora) {
+        markAsChanged("CAPACIDADEHORA", capacidadeHora);
         this.capacidadeHora = capacidadeHora;
    }
 
@@ -255,6 +282,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    }
 
    public void setDisponibilidade(String disponibilidade) {
+        markAsChanged("DISPONIBILIDADE", disponibilidade);
         this.disponibilidade = disponibilidade;
    }
 
@@ -270,6 +298,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
 
    @Override
    public WorkCenter fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

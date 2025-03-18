@@ -18,6 +18,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setRestricao(String restricao) {
+        markAsChanged("RESTRICAO", restricao);
         this.restricao = restricao;
    }
 
@@ -26,6 +27,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -34,6 +36,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setCodColRest(BigDecimal codColRest) {
+        markAsChanged("CODCOLREST", codColRest);
         this.codColRest = codColRest;
    }
 
@@ -42,6 +45,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -50,6 +54,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -58,6 +63,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -66,6 +72,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    }
 
    public void setTipRest(String tipRest) {
+        markAsChanged("TIPREST", tipRest);
         this.tipRest = tipRest;
    }
 
@@ -81,6 +88,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
 
    @Override
    public RestricaoTopBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.restricao = vo.asString("RESTRICAO");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.codColRest = vo.asBigDecimal("CODCOLREST");

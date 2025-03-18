@@ -22,6 +22,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setCodCap(BigDecimal codCap) {
+        markAsChanged("CODCAP", codCap);
         this.codCap = codCap;
    }
 
@@ -30,6 +31,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setCodCwc(BigDecimal codCwc) {
+        markAsChanged("CODCWC", codCwc);
         this.codCwc = codCwc;
    }
 
@@ -38,6 +40,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setCodWcppadrao(BigDecimal codWcppadrao) {
+        markAsChanged("CODWCPPADRAO", codWcppadrao);
         this.codWcppadrao = codWcppadrao;
    }
 
@@ -46,6 +49,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -54,6 +58,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setQtdCapacidadeMax(BigDecimal qtdCapacidadeMax) {
+        markAsChanged("QTDCAPACIDADEMAX", qtdCapacidadeMax);
         this.qtdCapacidadeMax = qtdCapacidadeMax;
    }
 
@@ -62,6 +67,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setQtdCapacidadeMin(BigDecimal qtdCapacidadeMin) {
+        markAsChanged("QTDCAPACIDADEMIN", qtdCapacidadeMin);
         this.qtdCapacidadeMin = qtdCapacidadeMin;
    }
 
@@ -70,6 +76,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setQtdCapacidadePad(BigDecimal qtdCapacidadePad) {
+        markAsChanged("QTDCAPACIDADEPAD", qtdCapacidadePad);
         this.qtdCapacidadePad = qtdCapacidadePad;
    }
 
@@ -78,6 +85,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setTempoCleanup(BigDecimal tempoCleanup) {
+        markAsChanged("TEMPOCLEANUP", tempoCleanup);
         this.tempoCleanup = tempoCleanup;
    }
 
@@ -86,6 +94,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setTempoSetup(BigDecimal tempoSetup) {
+        markAsChanged("TEMPOSETUP", tempoSetup);
         this.tempoSetup = tempoSetup;
    }
 
@@ -94,6 +103,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -102,6 +112,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    }
 
    public void setCapacidadeHora(BigDecimal capacidadeHora) {
+        markAsChanged("CAPACIDADEHORA", capacidadeHora);
         this.capacidadeHora = capacidadeHora;
    }
 
@@ -117,6 +128,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
 
    @Override
    public CategoriaWorkCenter fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCwc = vo.asBigDecimal("CODCWC");
         this.codWcppadrao = vo.asBigDecimal("CODWCPPADRAO");

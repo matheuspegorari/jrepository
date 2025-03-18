@@ -15,6 +15,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -23,6 +24,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -31,6 +33,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    }
 
    public void setNumReg(BigDecimal numReg) {
+        markAsChanged("NUMREG", numReg);
         this.numReg = numReg;
    }
 
@@ -39,6 +42,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    }
 
    public void setNuSla(BigDecimal nuSla) {
+        markAsChanged("NUSLA", nuSla);
         this.nuSla = nuSla;
    }
 
@@ -54,6 +58,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
 
    @Override
    public RegraSLASubOs fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");
         this.numReg = vo.asBigDecimal("NUMREG");

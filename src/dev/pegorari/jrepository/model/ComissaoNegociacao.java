@@ -22,6 +22,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -30,6 +31,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setNuComissao(BigDecimal nuComissao) {
+        markAsChanged("NUCOMISSAO", nuComissao);
         this.nuComissao = nuComissao;
    }
 
@@ -38,6 +40,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -46,6 +49,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setComissao(BigDecimal comissao) {
+        markAsChanged("COMISSAO", comissao);
         this.comissao = comissao;
    }
 
@@ -54,6 +58,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -62,6 +67,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -70,6 +76,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -78,6 +85,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setVlrBase(BigDecimal vlrBase) {
+        markAsChanged("VLRBASE", vlrBase);
         this.vlrBase = vlrBase;
    }
 
@@ -86,6 +94,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setVlrTotComissao(BigDecimal vlrTotComissao) {
+        markAsChanged("VLRTOTCOMISSAO", vlrTotComissao);
         this.vlrTotComissao = vlrTotComissao;
    }
 
@@ -94,6 +103,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    }
 
    public void setGridMult(BigDecimal gridMult) {
+        markAsChanged("GRIDMULT", gridMult);
         this.gridMult = gridMult;
    }
 
@@ -109,6 +119,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
 
    @Override
    public ComissaoNegociacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVend = vo.asBigDecimal("CODVEND");
         this.nuComissao = vo.asBigDecimal("NUCOMISSAO");
         this.codNat = vo.asBigDecimal("CODNAT");

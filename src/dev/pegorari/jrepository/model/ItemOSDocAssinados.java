@@ -14,6 +14,7 @@ public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -22,6 +23,7 @@ public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -30,6 +32,7 @@ public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
+        markAsChanged("NUDOC", nuDoc);
         this.nuDoc = nuDoc;
    }
 
@@ -45,6 +48,7 @@ public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados
 
    @Override
    public ItemOSDocAssinados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.numOs = vo.asBigDecimal("NUMOS");
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.nuDoc = vo.asBigDecimal("NUDOC");

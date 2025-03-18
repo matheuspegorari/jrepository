@@ -27,6 +27,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +36,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -43,6 +45,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -51,6 +54,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtAguarCorrecao(BigDecimal evtAguarCorrecao) {
+        markAsChanged("EVTAGUARCORRECAO", evtAguarCorrecao);
         this.evtAguarCorrecao = evtAguarCorrecao;
    }
 
@@ -59,6 +63,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtEnviado(BigDecimal evtEnviado) {
+        markAsChanged("EVTENVIADO", evtEnviado);
         this.evtEnviado = evtEnviado;
    }
 
@@ -67,6 +72,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtErroEvtPrior(BigDecimal evtErroEvtPrior) {
+        markAsChanged("EVTERROEVTPRIOR", evtErroEvtPrior);
         this.evtErroEvtPrior = evtErroEvtPrior;
    }
 
@@ -75,6 +81,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtFinalizado(BigDecimal evtFinalizado) {
+        markAsChanged("EVTFINALIZADO", evtFinalizado);
         this.evtFinalizado = evtFinalizado;
    }
 
@@ -83,6 +90,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtPendente(BigDecimal evtPendente) {
+        markAsChanged("EVTPENDENTE", evtPendente);
         this.evtPendente = evtPendente;
    }
 
@@ -91,6 +99,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setEvtTotais(BigDecimal evtTotais) {
+        markAsChanged("EVTTOTAIS", evtTotais);
         this.evtTotais = evtTotais;
    }
 
@@ -99,6 +108,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setSequenciaAtual(BigDecimal sequenciaAtual) {
+        markAsChanged("SEQUENCIAATUAL", sequenciaAtual);
         this.sequenciaAtual = sequenciaAtual;
    }
 
@@ -107,6 +117,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -115,6 +126,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setStatus(BigDecimal status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -123,6 +135,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
+        markAsChanged("VERSAOLAYOUT", versaoLayout);
         this.versaoLayout = versaoLayout;
    }
 
@@ -131,6 +144,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setSequenciaAtual4000(BigDecimal sequenciaAtual4000) {
+        markAsChanged("SEQUENCIAATUAL4000", sequenciaAtual4000);
         this.sequenciaAtual4000 = sequenciaAtual4000;
    }
 
@@ -139,6 +153,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    }
 
    public void setStatusGrupo4000(BigDecimal statusGrupo4000) {
+        markAsChanged("STATUS_GRUPO4000", statusGrupo4000);
         this.statusGrupo4000 = statusGrupo4000;
    }
 
@@ -154,6 +169,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
 
    @Override
    public CabecalhoReinf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");
         this.dtRef = vo.asTimestamp("DTREF");

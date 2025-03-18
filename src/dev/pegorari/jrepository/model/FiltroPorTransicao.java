@@ -22,6 +22,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -30,6 +31,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -38,6 +40,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -46,6 +49,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -54,6 +58,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -62,6 +67,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -70,6 +76,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setExpSql(String expSql) {
+        markAsChanged("EXPSQL", expSql);
         this.expSql = expSql;
    }
 
@@ -78,6 +85,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -86,6 +94,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setIdeFxBase(BigDecimal ideFxBase) {
+        markAsChanged("IDEFXBASE", ideFxBase);
         this.ideFxBase = ideFxBase;
    }
 
@@ -94,6 +103,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -102,6 +112,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
    }
 
    public void setTipoFiltro(String tipoFiltro) {
+        markAsChanged("TIPOFILTRO", tipoFiltro);
         this.tipoFiltro = tipoFiltro;
    }
 
@@ -117,6 +128,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
 
    @Override
    public FiltroPorTransicao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

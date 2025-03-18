@@ -37,6 +37,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
+        markAsChanged("DHULTTENTA", dhUltTenta);
         this.dhUltTenta = dhUltTenta;
    }
 
@@ -45,6 +46,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setAssunto(String assunto) {
+        markAsChanged("ASSUNTO", assunto);
         this.assunto = assunto;
    }
 
@@ -53,6 +55,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodCon(BigDecimal codCon) {
+        markAsChanged("CODCON", codCon);
         this.codCon = codCon;
    }
 
@@ -61,6 +64,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -69,6 +73,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -77,6 +82,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -85,6 +91,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodUsuRemet(BigDecimal codUsuRemet) {
+        markAsChanged("CODUSUREMET", codUsuRemet);
         this.codUsuRemet = codUsuRemet;
    }
 
@@ -93,6 +100,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setDtEntrada(Timestamp dtEntrada) {
+        markAsChanged("DTENTRADA", dtEntrada);
         this.dtEntrada = dtEntrada;
    }
 
@@ -101,6 +109,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -109,6 +118,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setEmailSemCopia(String emailSemCopia) {
+        markAsChanged("EMAILSEMCOPIA", emailSemCopia);
         this.emailSemCopia = emailSemCopia;
    }
 
@@ -117,6 +127,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setMaxTentEnvio(BigDecimal maxTentEnvio) {
+        markAsChanged("MAXTENTENVIO", maxTentEnvio);
         this.maxTentEnvio = maxTentEnvio;
    }
 
@@ -125,6 +136,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setMensagem(char[] mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -133,6 +145,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setMimeType(String mimeType) {
+        markAsChanged("MIMETYPE", mimeType);
         this.mimeType = mimeType;
    }
 
@@ -141,6 +154,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setNuAnexo(BigDecimal nuAnexo) {
+        markAsChanged("NUANEXO", nuAnexo);
         this.nuAnexo = nuAnexo;
    }
 
@@ -149,6 +163,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setNuChave(BigDecimal nuChave) {
+        markAsChanged("NUCHAVE", nuChave);
         this.nuChave = nuChave;
    }
 
@@ -157,6 +172,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setReenviar(String reenviar) {
+        markAsChanged("REENVIAR", reenviar);
         this.reenviar = reenviar;
    }
 
@@ -165,6 +181,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -173,6 +190,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setTentEnvio(BigDecimal tentEnvio) {
+        markAsChanged("TENTENVIO", tentEnvio);
         this.tentEnvio = tentEnvio;
    }
 
@@ -181,6 +199,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setTipoDoc(String tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -189,6 +208,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setTipoEnvio(String tipoEnvio) {
+        markAsChanged("TIPOENVIO", tipoEnvio);
         this.tipoEnvio = tipoEnvio;
    }
 
@@ -197,6 +217,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setMsgErro(String msgErro) {
+        markAsChanged("MSGERRO", msgErro);
         this.msgErro = msgErro;
    }
 
@@ -205,6 +226,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -213,6 +235,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -221,6 +244,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setCodContaSms(BigDecimal codContaSms) {
+        markAsChanged("CODCONTASMS", codContaSms);
         this.codContaSms = codContaSms;
    }
 
@@ -229,6 +253,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    }
 
    public void setDbHashCode(String dbHashCode) {
+        markAsChanged("DBHASHCODE", dbHashCode);
         this.dbHashCode = dbHashCode;
    }
 
@@ -244,6 +269,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
 
    @Override
    public MSDFilaMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.assunto = vo.asString("ASSUNTO");
         this.codCon = vo.asBigDecimal("CODCON");

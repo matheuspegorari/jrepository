@@ -25,6 +25,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +34,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -41,6 +43,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -49,6 +52,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -57,6 +61,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -65,6 +70,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
+        markAsChanged("NUAPURACAO", nuApuracao);
         this.nuApuracao = nuApuracao;
    }
 
@@ -73,6 +79,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -81,6 +88,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -89,6 +97,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -97,6 +106,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setStatus(BigDecimal status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -105,6 +115,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -113,6 +124,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setVlrTotRecExt(BigDecimal vlrTotRecExt) {
+        markAsChanged("VLRTOTRECEXT", vlrTotRecExt);
         this.vlrTotRecExt = vlrTotRecExt;
    }
 
@@ -121,6 +133,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    }
 
    public void setVlrTotRecInt(BigDecimal vlrTotRecInt) {
+        markAsChanged("VLRTOTRECINT", vlrTotRecInt);
         this.vlrTotRecInt = vlrTotRecInt;
    }
 
@@ -136,6 +149,7 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
 
    @Override
    public NotasApuracaoReceitaMensal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");

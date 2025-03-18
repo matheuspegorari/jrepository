@@ -34,6 +34,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -42,6 +43,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setCamadas(BigDecimal camadas) {
+        markAsChanged("CAMADAS", camadas);
         this.camadas = camadas;
    }
 
@@ -50,6 +52,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -58,6 +61,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -66,6 +70,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -74,6 +79,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -82,6 +88,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setDescrDanfe(String descrDanfe) {
+        markAsChanged("DESCRDANFE", descrDanfe);
         this.descrDanfe = descrDanfe;
    }
 
@@ -90,6 +97,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setDivideMultiplica(String divideMultiplica) {
+        markAsChanged("DIVIDEMULTIPLICA", divideMultiplica);
         this.divideMultiplica = divideMultiplica;
    }
 
@@ -98,6 +106,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setLastro(BigDecimal lastro) {
+        markAsChanged("LASTRO", lastro);
         this.lastro = lastro;
    }
 
@@ -106,6 +115,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setM3(BigDecimal m3) {
+        markAsChanged("M3", m3);
         this.m3 = m3;
    }
 
@@ -114,6 +124,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setMultiplVlr(BigDecimal multiplVlr) {
+        markAsChanged("MULTIPVLR", multiplVlr);
         this.multiplVlr = multiplVlr;
    }
 
@@ -122,6 +133,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setOpcaoSep(String opcaoSep) {
+        markAsChanged("OPCAOSEP", opcaoSep);
         this.opcaoSep = opcaoSep;
    }
 
@@ -130,6 +142,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setQuantidade(BigDecimal quantidade) {
+        markAsChanged("QUANTIDADE", quantidade);
         this.quantidade = quantidade;
    }
 
@@ -138,6 +151,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setSelecionado(String selecionado) {
+        markAsChanged("SELECIONADO", selecionado);
         this.selecionado = selecionado;
    }
 
@@ -146,6 +160,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setTipCodBarra(String tipCodBarra) {
+        markAsChanged("TIPCODBARRA", tipCodBarra);
         this.tipCodBarra = tipCodBarra;
    }
 
@@ -154,6 +169,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setTipGtinNfe(BigDecimal tipGtinNfe) {
+        markAsChanged("TIPGTINNFE", tipGtinNfe);
         this.tipGtinNfe = tipGtinNfe;
    }
 
@@ -162,6 +178,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setUnidSelo(String unidSelo) {
+        markAsChanged("UNIDSELO", unidSelo);
         this.unidSelo = unidSelo;
    }
 
@@ -170,6 +187,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setUnidTrib(String unidTrib) {
+        markAsChanged("UNIDTRIB", unidTrib);
         this.unidTrib = unidTrib;
    }
 
@@ -178,6 +196,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setUnTribExportacao(String unTribExportacao) {
+        markAsChanged("UNTRIBEXPORTACAO", unTribExportacao);
         this.unTribExportacao = unTribExportacao;
    }
 
@@ -186,6 +205,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setDescrUnTribExport(String descrUnTribExport) {
+        markAsChanged("DESCRUNTRIBEXPORT", descrUnTribExport);
         this.descrUnTribExport = descrUnTribExport;
    }
 
@@ -194,6 +214,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setOpcoesGerar0220(String opcoesGerar0220) {
+        markAsChanged("OPCOESGERAR0220", opcoesGerar0220);
         this.opcoesGerar0220 = opcoesGerar0220;
    }
 
@@ -202,6 +223,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setQtdDecimaisUpf(BigDecimal qtdDecimaisUpf) {
+        markAsChanged("QTDDECIMAISUPF", qtdDecimaisUpf);
         this.qtdDecimaisUpf = qtdDecimaisUpf;
    }
 
@@ -210,6 +232,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
    }
 
    public void setUndTribRecob(String undTribRecob) {
+        markAsChanged("UNDTRIBRECOB", undTribRecob);
         this.undTribRecob = undTribRecob;
    }
 
@@ -225,6 +248,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
 
    @Override
    public VolumeAlternativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.camadas = vo.asBigDecimal("CAMADAS");
         this.codBarra = vo.asString("CODBARRA");

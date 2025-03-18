@@ -17,6 +17,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setBloco(String bloco) {
+        markAsChanged("BLOCO", bloco);
         this.bloco = bloco;
    }
 
@@ -25,6 +26,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +35,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -41,6 +44,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setGerarBloco(String gerarBloco) {
+        markAsChanged("GERARBLOCO", gerarBloco);
         this.gerarBloco = gerarBloco;
    }
 
@@ -49,6 +53,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -57,6 +62,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -72,6 +78,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
 
    @Override
    public BlocosEscrituracaoFiscal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.bloco = vo.asString("BLOCO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descricao = vo.asString("DESCRICAO");

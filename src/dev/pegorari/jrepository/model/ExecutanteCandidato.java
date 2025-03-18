@@ -17,6 +17,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -25,6 +26,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -33,6 +35,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -41,6 +44,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setSeqEcd(BigDecimal seqEcd) {
+        markAsChanged("SEQECD", seqEcd);
         this.seqEcd = seqEcd;
    }
 
@@ -49,6 +53,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -57,6 +62,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -72,6 +78,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
 
    @Override
    public ExecutanteCandidato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.formula = vo.asString("FORMULA");
         this.ideFx = vo.asBigDecimal("IDEFX");

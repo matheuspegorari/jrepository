@@ -53,6 +53,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -61,6 +62,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setAntecipDesp(BigDecimal antecipDesp) {
+        markAsChanged("ANTECIPDESP", antecipDesp);
         this.antecipDesp = antecipDesp;
    }
 
@@ -69,6 +71,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -77,6 +80,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -85,6 +89,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -93,6 +98,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -101,6 +107,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -109,6 +116,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -117,6 +125,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -125,6 +134,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -133,6 +143,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -141,6 +152,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -149,6 +161,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -157,6 +170,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -165,6 +179,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -173,6 +188,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -181,6 +197,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -189,6 +206,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -197,6 +215,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -205,6 +224,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -213,6 +233,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setCompromissoDesp(BigDecimal compromissoDesp) {
+        markAsChanged("COMPROMISSODESP", compromissoDesp);
         this.compromissoDesp = compromissoDesp;
    }
 
@@ -221,6 +242,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -229,6 +251,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setDia(BigDecimal dia) {
+        markAsChanged("DIA", dia);
         this.dia = dia;
    }
 
@@ -237,6 +260,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -245,6 +269,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -253,6 +278,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setPercAviso(BigDecimal percAviso) {
+        markAsChanged("PERCAVISO", percAviso);
         this.percAviso = percAviso;
    }
 
@@ -261,6 +287,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setPercentual(BigDecimal percentual) {
+        markAsChanged("PERCENTUAL", percentual);
         this.percentual = percentual;
    }
 
@@ -269,6 +296,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setPrevDesp(BigDecimal prevDesp) {
+        markAsChanged("PREVDESP", prevDesp);
         this.prevDesp = prevDesp;
    }
 
@@ -277,6 +305,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setPrevRec(BigDecimal prevRec) {
+        markAsChanged("PREVREC", prevRec);
         this.prevRec = prevRec;
    }
 
@@ -285,6 +314,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setQtdPrev(BigDecimal qtdPrev) {
+        markAsChanged("QTDPREV", qtdPrev);
         this.qtdPrev = qtdPrev;
    }
 
@@ -293,6 +323,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setQtdReal(BigDecimal qtdReal) {
+        markAsChanged("QTDREAL", qtdReal);
         this.qtdReal = qtdReal;
    }
 
@@ -301,6 +332,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setRealDesp(BigDecimal realDesp) {
+        markAsChanged("REALDESP", realDesp);
         this.realDesp = realDesp;
    }
 
@@ -309,6 +341,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setRealRec(BigDecimal realRec) {
+        markAsChanged("REALREC", realRec);
         this.realRec = realRec;
    }
 
@@ -317,6 +350,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setReducaoDesp(BigDecimal reducaoDesp) {
+        markAsChanged("REDUCAODESP", reducaoDesp);
         this.reducaoDesp = reducaoDesp;
    }
 
@@ -325,6 +359,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setSemanaMes(BigDecimal semanaMes) {
+        markAsChanged("SEMANAMES", semanaMes);
         this.semanaMes = semanaMes;
    }
 
@@ -333,6 +368,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setSuplementoDesp(BigDecimal suplementoDesp) {
+        markAsChanged("SUPLEMENTODESP", suplementoDesp);
         this.suplementoDesp = suplementoDesp;
    }
 
@@ -341,6 +377,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setTipoMsg(String tipoMsg) {
+        markAsChanged("TIPOMSG", tipoMsg);
         this.tipoMsg = tipoMsg;
    }
 
@@ -349,6 +386,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setTotalAutInv(BigDecimal totalAutInv) {
+        markAsChanged("TOTALAUTINV", totalAutInv);
         this.totalAutInv = totalAutInv;
    }
 
@@ -357,6 +395,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setTransfDesp(BigDecimal transfDesp) {
+        markAsChanged("TRANSFDESP", transfDesp);
         this.transfDesp = transfDesp;
    }
 
@@ -365,6 +404,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setTransfSaldoDesp(BigDecimal transfSaldoDesp) {
+        markAsChanged("TRANSFSALDODESP", transfSaldoDesp);
         this.transfSaldoDesp = transfSaldoDesp;
    }
 
@@ -373,6 +413,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -388,6 +429,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
 
    @Override
    public MetaAtual fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.antecipDesp = vo.asBigDecimal("ANTECIPDESP");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

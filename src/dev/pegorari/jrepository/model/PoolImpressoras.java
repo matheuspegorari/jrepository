@@ -14,6 +14,7 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
    }
 
    public void setCaminhoSps(String caminhoSps) {
+        markAsChanged("CAMINHOSPS", caminhoSps);
         this.caminhoSps = caminhoSps;
    }
 
@@ -22,6 +23,7 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
    }
 
    public void setNomeImpLocal(String nomeImpLocal) {
+        markAsChanged("NOMEIMPLOCAL", nomeImpLocal);
         this.nomeImpLocal = nomeImpLocal;
    }
 
@@ -30,6 +32,7 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
    }
 
    public void setNuNip(BigDecimal nuNip) {
+        markAsChanged("NUNIP", nuNip);
         this.nuNip = nuNip;
    }
 
@@ -45,6 +48,7 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
 
    @Override
    public PoolImpressoras fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.caminhoSps = vo.asString("CAMINHOSPS");
         this.nomeImpLocal = vo.asString("NOMEIMPLOCAL");
         this.nuNip = vo.asBigDecimal("NUNIP");

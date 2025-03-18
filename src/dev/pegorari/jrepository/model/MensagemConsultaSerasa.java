@@ -15,6 +15,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
    }
 
    public void setNuConsulta(BigDecimal nuConsulta) {
+        markAsChanged("NUCONSULTA", nuConsulta);
         this.nuConsulta = nuConsulta;
    }
 
@@ -23,6 +24,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -31,6 +33,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -39,6 +42,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
    }
 
    public void setCodOpcao(String codOpcao) {
+        markAsChanged("CODOPCAO", codOpcao);
         this.codOpcao = codOpcao;
    }
 
@@ -54,6 +58,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
 
    @Override
    public MensagemConsultaSerasa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuConsulta = vo.asBigDecimal("NUCONSULTA");
         this.msg = vo.asString("MSG");
         this.codMsg = vo.asBigDecimal("CODMSG");

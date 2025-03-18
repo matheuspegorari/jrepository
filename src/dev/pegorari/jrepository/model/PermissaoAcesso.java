@@ -15,6 +15,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -23,6 +24,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -31,6 +33,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
    }
 
    public void setPermissao(String permissao) {
+        markAsChanged("PERMISSAO", permissao);
         this.permissao = permissao;
    }
 
@@ -39,6 +42,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
    }
 
    public void setTipoAcesso(BigDecimal tipoAcesso) {
+        markAsChanged("TIPOACESSO", tipoAcesso);
         this.tipoAcesso = tipoAcesso;
    }
 
@@ -54,6 +58,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
 
    @Override
    public PermissaoAcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.permissao = vo.asString("PERMISSAO");

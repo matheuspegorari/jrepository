@@ -30,6 +30,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setCodCateg(BigDecimal codCateg) {
+        markAsChanged("CODCATEG", codCateg);
         this.codCateg = codCateg;
    }
 
@@ -38,6 +39,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -46,6 +48,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setConciliado(String conciliado) {
+        markAsChanged("CONCILIADO", conciliado);
         this.conciliado = conciliado;
    }
 
@@ -54,6 +57,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setConvenio(BigDecimal convenio) {
+        markAsChanged("CONVENIO", convenio);
         this.convenio = convenio;
    }
 
@@ -62,6 +66,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -70,6 +75,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setDtLanc(Timestamp dtLanc) {
+        markAsChanged("DTLANC", dtLanc);
         this.dtLanc = dtLanc;
    }
 
@@ -78,6 +84,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setHist(String hist) {
+        markAsChanged("HIST", hist);
         this.hist = hist;
    }
 
@@ -86,6 +93,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setNroCta(String nroCta) {
+        markAsChanged("NROCTA", nroCta);
         this.nroCta = nroCta;
    }
 
@@ -94,6 +102,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setNroDoc(BigDecimal nroDoc) {
+        markAsChanged("NRODOC", nroDoc);
         this.nroDoc = nroDoc;
    }
 
@@ -102,6 +111,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setNuExb(BigDecimal nuExb) {
+        markAsChanged("NUEXB", nuExb);
         this.nuExb = nuExb;
    }
 
@@ -110,6 +120,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setNuImport(BigDecimal nuImport) {
+        markAsChanged("NUIMPORT", nuImport);
         this.nuImport = nuImport;
    }
 
@@ -118,6 +129,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -126,6 +138,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setCnpjCpf(String cnpjCpf) {
+        markAsChanged("CNPJ_CPF", cnpjCpf);
         this.cnpjCpf = cnpjCpf;
    }
 
@@ -134,6 +147,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -142,6 +156,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setFitId(String fitId) {
+        markAsChanged("FITID", fitId);
         this.fitId = fitId;
    }
 
@@ -150,6 +165,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -158,6 +174,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setTipoTransacao(String tipoTransacao) {
+        markAsChanged("TIPOTRANSACAO", tipoTransacao);
         this.tipoTransacao = tipoTransacao;
    }
 
@@ -166,6 +183,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
    }
 
    public void setNuBco(BigDecimal nuBco) {
+        markAsChanged("NUBCO", nuBco);
         this.nuBco = nuBco;
    }
 
@@ -181,6 +199,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
 
    @Override
    public ExtratoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCateg = vo.asBigDecimal("CODCATEG");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conciliado = vo.asString("CONCILIADO");

@@ -22,6 +22,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -30,6 +31,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setCargaHoraria(BigDecimal cargaHoraria) {
+        markAsChanged("CARGAHORARIA", cargaHoraria);
         this.cargaHoraria = cargaHoraria;
    }
 
@@ -38,6 +40,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -46,6 +49,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setCondicoesEscolha(char[] condicoesEscolha) {
+        markAsChanged("CONDICOESESCOLHA", condicoesEscolha);
         this.condicoesEscolha = condicoesEscolha;
    }
 
@@ -54,6 +58,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setCondicoesSuspensao(char[] condicoesSuspensao) {
+        markAsChanged("CONDICOESSUSPENSAO", condicoesSuspensao);
         this.condicoesSuspensao = condicoesSuspensao;
    }
 
@@ -62,6 +67,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setNomeRegra(String nomeRegra) {
+        markAsChanged("NOMEREGRA", nomeRegra);
         this.nomeRegra = nomeRegra;
    }
 
@@ -70,6 +76,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setRegra(BigDecimal regra) {
+        markAsChanged("REGRA", regra);
         this.regra = regra;
    }
 
@@ -78,6 +85,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setTempoLimite(BigDecimal tempoLimite) {
+        markAsChanged("TEMPOLIMITE", tempoLimite);
         this.tempoLimite = tempoLimite;
    }
 
@@ -86,6 +94,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setTipoTempo(String tipoTempo) {
+        markAsChanged("TIPOTEMPO", tipoTempo);
         this.tipoTempo = tipoTempo;
    }
 
@@ -94,6 +103,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setTipoTempoAviso(String tipoTempoAviso) {
+        markAsChanged("TIPOTEMPOAVISO", tipoTempoAviso);
         this.tipoTempoAviso = tipoTempoAviso;
    }
 
@@ -102,6 +112,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -117,6 +128,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
 
    @Override
    public SLAProcessoNegocio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.cargaHoraria = vo.asBigDecimal("CARGAHORARIA");
         this.codPrn = vo.asBigDecimal("CODPRN");

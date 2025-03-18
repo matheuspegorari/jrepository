@@ -19,6 +19,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setArqConfirmado(String arqConfirmado) {
+        markAsChanged("ARQCONFIRMADO", arqConfirmado);
         this.arqConfirmado = arqConfirmado;
    }
 
@@ -27,6 +28,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +37,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -43,6 +46,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -51,6 +55,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setIdEstLeiaute(String idEstLeiaute) {
+        markAsChanged("IDESTLEIAUTE", idEstLeiaute);
         this.idEstLeiaute = idEstLeiaute;
    }
 
@@ -59,6 +64,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setNumRecibo(String numRecibo) {
+        markAsChanged("NUMRECIBO", numRecibo);
         this.numRecibo = numRecibo;
    }
 
@@ -67,6 +73,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    }
 
    public void setTipDeclaracao(String tipDeclaracao) {
+        markAsChanged("TIPDECLARACAO", tipDeclaracao);
         this.tipDeclaracao = tipDeclaracao;
    }
 
@@ -82,6 +89,7 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
 
    @Override
    public Dirf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtFinal = vo.asTimestamp("DTFINAL");

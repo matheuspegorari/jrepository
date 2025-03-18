@@ -62,6 +62,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setInvestimento(String investimento) {
+        markAsChanged("INVESTIMENTO", investimento);
         this.investimento = investimento;
    }
 
@@ -70,6 +71,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setGrupoNat(BigDecimal grupoNat) {
+        markAsChanged("GRUPONAT", grupoNat);
         this.grupoNat = grupoNat;
    }
 
@@ -78,6 +80,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setLocal(BigDecimal local) {
+        markAsChanged("LOCAL", local);
         this.local = local;
    }
 
@@ -86,6 +89,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setMarca(BigDecimal marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -94,6 +98,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setNatureza(BigDecimal natureza) {
+        markAsChanged("NATUREZA", natureza);
         this.natureza = natureza;
    }
 
@@ -102,6 +107,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setPais(BigDecimal pais) {
+        markAsChanged("PAIS", pais);
         this.pais = pais;
    }
 
@@ -110,6 +116,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setPercAviso(BigDecimal percAviso) {
+        markAsChanged("PERCAVISO", percAviso);
         this.percAviso = percAviso;
    }
 
@@ -118,6 +125,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setPerfil(BigDecimal perfil) {
+        markAsChanged("PERFIL", perfil);
         this.perfil = perfil;
    }
 
@@ -126,6 +134,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setPeriodo(BigDecimal periodo) {
+        markAsChanged("PERIODO", periodo);
         this.periodo = periodo;
    }
 
@@ -134,6 +143,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setProduto(BigDecimal produto) {
+        markAsChanged("PRODUTO", produto);
         this.produto = produto;
    }
 
@@ -142,6 +152,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setProjeto(BigDecimal projeto) {
+        markAsChanged("PROJETO", projeto);
         this.projeto = projeto;
    }
 
@@ -150,6 +161,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setRegiao(BigDecimal regiao) {
+        markAsChanged("REGIAO", regiao);
         this.regiao = regiao;
    }
 
@@ -158,6 +170,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setSimplificada(String simplificada) {
+        markAsChanged("SIMPLIFICADA", simplificada);
         this.simplificada = simplificada;
    }
 
@@ -166,6 +179,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setSomarImp(String somarImp) {
+        markAsChanged("SOMARIMP", somarImp);
         this.somarImp = somarImp;
    }
 
@@ -174,6 +188,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setSomarInss(String somarInss) {
+        markAsChanged("SOMARINSS", somarInss);
         this.somarInss = somarInss;
    }
 
@@ -182,6 +197,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setSomarIrrf(String somarIrrf) {
+        markAsChanged("SOMARIRRF", somarIrrf);
         this.somarIrrf = somarIrrf;
    }
 
@@ -190,6 +206,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setSomarIssRet(String somarIssRet) {
+        markAsChanged("SOMARISSRET", somarIssRet);
         this.somarIssRet = somarIssRet;
    }
 
@@ -198,6 +215,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setTipMeta(String tipMeta) {
+        markAsChanged("TIPMETA", tipMeta);
         this.tipMeta = tipMeta;
    }
 
@@ -206,6 +224,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setTipoData(String tipoData) {
+        markAsChanged("TIPODATA", tipoData);
         this.tipoData = tipoData;
    }
 
@@ -214,6 +233,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setTipoMsg(String tipoMsg) {
+        markAsChanged("TIPOMSG", tipoMsg);
         this.tipoMsg = tipoMsg;
    }
 
@@ -222,6 +242,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setTipQtd(String tipQtd) {
+        markAsChanged("TIPQTD", tipQtd);
         this.tipQtd = tipQtd;
    }
 
@@ -230,6 +251,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setTipVlr(String tipVlr) {
+        markAsChanged("TIPVLR", tipVlr);
         this.tipVlr = tipVlr;
    }
 
@@ -238,6 +260,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setUf(BigDecimal uf) {
+        markAsChanged("UF", uf);
         this.uf = uf;
    }
 
@@ -246,6 +269,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setValorBruto(String valorBruto) {
+        markAsChanged("VALORBRUTO", valorBruto);
         this.valorBruto = valorBruto;
    }
 
@@ -254,6 +278,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setVendedor(BigDecimal vendedor) {
+        markAsChanged("VENDEDOR", vendedor);
         this.vendedor = vendedor;
    }
 
@@ -262,6 +287,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setVendItem(BigDecimal vendItem) {
+        markAsChanged("VENDITEM", vendItem);
         this.vendItem = vendItem;
    }
 
@@ -270,6 +296,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -278,6 +305,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setIncComp(String incComp) {
+        markAsChanged("INCCOMP", incComp);
         this.incComp = incComp;
    }
 
@@ -286,6 +314,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setArqImportPo(String arqImportPo) {
+        markAsChanged("ARQIMPORTPO", arqImportPo);
         this.arqImportPo = arqImportPo;
    }
 
@@ -294,6 +323,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -302,6 +332,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCentroResultado(BigDecimal centroResultado) {
+        markAsChanged("CENTRORESULTADO", centroResultado);
         this.centroResultado = centroResultado;
    }
 
@@ -310,6 +341,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCidade(BigDecimal cidade) {
+        markAsChanged("CIDADE", cidade);
         this.cidade = cidade;
    }
 
@@ -318,6 +350,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -326,6 +359,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -334,6 +368,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCodMetaAnt(BigDecimal codMetaAnt) {
+        markAsChanged("CODMETAANT", codMetaAnt);
         this.codMetaAnt = codMetaAnt;
    }
 
@@ -342,6 +377,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -350,6 +386,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCodUsuAprov(BigDecimal codUsuAprov) {
+        markAsChanged("CODUSUAPROV", codUsuAprov);
         this.codUsuAprov = codUsuAprov;
    }
 
@@ -358,6 +395,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setControle(BigDecimal controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -366,6 +404,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setData(BigDecimal data) {
+        markAsChanged("DATA", data);
         this.data = data;
    }
 
@@ -374,6 +413,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setDescricaoMeta(String descricaoMeta) {
+        markAsChanged("DESCRMETA", descricaoMeta);
         this.descricaoMeta = descricaoMeta;
    }
 
@@ -382,6 +422,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setDtAprov(Timestamp dtAprov) {
+        markAsChanged("DTAPROV", dtAprov);
         this.dtAprov = dtAprov;
    }
 
@@ -390,6 +431,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setEmpresa(BigDecimal empresa) {
+        markAsChanged("EMPRESA", empresa);
         this.empresa = empresa;
    }
 
@@ -398,6 +440,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setExecutante(BigDecimal executante) {
+        markAsChanged("EXECUTANTE", executante);
         this.executante = executante;
    }
 
@@ -406,6 +449,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -414,6 +458,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setApresCod(String apresCod) {
+        markAsChanged("APRESCOD", apresCod);
         this.apresCod = apresCod;
    }
 
@@ -422,6 +467,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setIgnorCnaoPrev(String ignorCnaoPrev) {
+        markAsChanged("IGNORCNAOPREV", ignorCnaoPrev);
         this.ignorCnaoPrev = ignorCnaoPrev;
    }
 
@@ -430,6 +476,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setValorPrevigor(String valorPrevigor) {
+        markAsChanged("VALPREVIGOR", valorPrevigor);
         this.valorPrevigor = valorPrevigor;
    }
 
@@ -438,6 +485,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setCampoSubstituto(String campoSubstituto) {
+        markAsChanged("CAMPOSUBSTITUTO", campoSubstituto);
         this.campoSubstituto = campoSubstituto;
    }
 
@@ -446,6 +494,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setMetaPorQtd(String metaPorQtd) {
+        markAsChanged("METAPORQTD", metaPorQtd);
         this.metaPorQtd = metaPorQtd;
    }
 
@@ -454,6 +503,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
    }
 
    public void setDtIniCorc(BigDecimal dtIniCorc) {
+        markAsChanged("DTINICORC", dtIniCorc);
         this.dtIniCorc = dtIniCorc;
    }
 
@@ -469,6 +519,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
 
    @Override
    public ConfiguracaoMeta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.investimento = vo.asString("INVESTIMENTO");
         this.grupoNat = vo.asBigDecimal("GRUPONAT");
         this.local = vo.asBigDecimal("LOCAL");

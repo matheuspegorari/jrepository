@@ -35,6 +35,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -43,6 +44,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoBco(Timestamp dtFechamentoBco) {
+        markAsChanged("DTFECHAMENTOBCO", dtFechamentoBco);
         this.dtFechamentoBco = dtFechamentoBco;
    }
 
@@ -51,6 +53,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoCtb(Timestamp dtFechamentoCtb) {
+        markAsChanged("DTFECHAMENTOCTB", dtFechamentoCtb);
         this.dtFechamentoCtb = dtFechamentoCtb;
    }
 
@@ -59,6 +62,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoCus(Timestamp dtFechamentoCus) {
+        markAsChanged("DTFECHAMENTOCUS", dtFechamentoCus);
         this.dtFechamentoCus = dtFechamentoCus;
    }
 
@@ -67,6 +71,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoDesp(Timestamp dtFechamentoDesp) {
+        markAsChanged("DTFECHAMENTODESP", dtFechamentoDesp);
         this.dtFechamentoDesp = dtFechamentoDesp;
    }
 
@@ -75,6 +80,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoFis(Timestamp dtFechamentoFis) {
+        markAsChanged("DTFECHAMENTOFIS", dtFechamentoFis);
         this.dtFechamentoFis = dtFechamentoFis;
    }
 
@@ -83,6 +89,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoRec(Timestamp dtFechamentoRec) {
+        markAsChanged("DTFECHAMENTOREC", dtFechamentoRec);
         this.dtFechamentoRec = dtFechamentoRec;
    }
 
@@ -91,6 +98,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoSai(Timestamp dtFechamentoSai) {
+        markAsChanged("DTFECHAMENTOSAI", dtFechamentoSai);
         this.dtFechamentoSai = dtFechamentoSai;
    }
 
@@ -99,6 +107,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setNuBloqueio(BigDecimal nuBloqueio) {
+        markAsChanged("NUBLOQUEIO", nuBloqueio);
         this.nuBloqueio = nuBloqueio;
    }
 
@@ -107,6 +116,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -115,6 +125,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -123,6 +134,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaCalcust(String tipoFechaCalcust) {
+        markAsChanged("TIPOFECHACALCUST", tipoFechaCalcust);
         this.tipoFechaCalcust = tipoFechaCalcust;
    }
 
@@ -131,6 +143,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaEstEnt(String tipoFechaEstEnt) {
+        markAsChanged("TIPOFECHAESTENT", tipoFechaEstEnt);
         this.tipoFechaEstEnt = tipoFechaEstEnt;
    }
 
@@ -139,6 +152,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaEstSai(String tipoFechaEstSai) {
+        markAsChanged("TIPOFECHAESTSAI", tipoFechaEstSai);
         this.tipoFechaEstSai = tipoFechaEstSai;
    }
 
@@ -147,6 +161,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaFinDesp(String tipoFechaFinDesp) {
+        markAsChanged("TIPOFECHAFINDESP", tipoFechaFinDesp);
         this.tipoFechaFinDesp = tipoFechaFinDesp;
    }
 
@@ -155,6 +170,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaFinRec(String tipoFechaFinRec) {
+        markAsChanged("TIPOFECHAFINREC", tipoFechaFinRec);
         this.tipoFechaFinRec = tipoFechaFinRec;
    }
 
@@ -163,6 +179,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaMovBco(String tipoFechaMovBco) {
+        markAsChanged("TIPOFECHAMOVBCO", tipoFechaMovBco);
         this.tipoFechaMovBco = tipoFechaMovBco;
    }
 
@@ -171,6 +188,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaMovCtb(String tipoFechaMovCtb) {
+        markAsChanged("TIPOFECHAMOVCTB", tipoFechaMovCtb);
         this.tipoFechaMovCtb = tipoFechaMovCtb;
    }
 
@@ -179,6 +197,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setTipoFechaMovFis(String tipoFechaMovFis) {
+        markAsChanged("TIPOFECHAMOVFIS", tipoFechaMovFis);
         this.tipoFechaMovFis = tipoFechaMovFis;
    }
 
@@ -187,6 +206,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setDtFechamentoEnt(Timestamp dtFechamentoEnt) {
+        markAsChanged("DTFECHAMENTOENT", dtFechamentoEnt);
         this.dtFechamentoEnt = dtFechamentoEnt;
    }
 
@@ -195,6 +215,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -203,6 +224,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -211,6 +233,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    }
 
    public void setRefFixa(String refFixa) {
+        markAsChanged("REFFIXA", refFixa);
         this.refFixa = refFixa;
    }
 
@@ -226,6 +249,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
 
    @Override
    public BloqueioFechamentoContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dtFechamentoBco = vo.asTimestamp("DTFECHAMENTOBCO");
         this.dtFechamentoCtb = vo.asTimestamp("DTFECHAMENTOCTB");

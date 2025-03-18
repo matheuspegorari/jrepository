@@ -439,6 +439,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -447,6 +448,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
+        markAsChanged("CODPARCFORN", codParcForn);
         this.codParcForn = codParcForn;
    }
 
@@ -455,6 +457,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -463,6 +466,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodRel(BigDecimal codRel) {
+        markAsChanged("CODREL", codRel);
         this.codRel = codRel;
    }
 
@@ -471,6 +475,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -479,6 +484,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodVolCompra(String codVolCompra) {
+        markAsChanged("CODVOLCOMPRA", codVolCompra);
         this.codVolCompra = codVolCompra;
    }
 
@@ -487,6 +493,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setComplDesc(String complDesc) {
+        markAsChanged("COMPLDESC", complDesc);
         this.complDesc = complDesc;
    }
 
@@ -495,6 +502,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setControlado(String controlado) {
+        markAsChanged("CONTROLADO", controlado);
         this.controlado = controlado;
    }
 
@@ -503,6 +511,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -511,6 +520,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg1(String curvaMarg1) {
+        markAsChanged("CURVAMARG_1", curvaMarg1);
         this.curvaMarg1 = curvaMarg1;
    }
 
@@ -519,6 +529,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg10(String curvaMarg10) {
+        markAsChanged("CURVAMARG_10", curvaMarg10);
         this.curvaMarg10 = curvaMarg10;
    }
 
@@ -527,6 +538,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg11(String curvaMarg11) {
+        markAsChanged("CURVAMARG_11", curvaMarg11);
         this.curvaMarg11 = curvaMarg11;
    }
 
@@ -535,6 +547,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg12(String curvaMarg12) {
+        markAsChanged("CURVAMARG_12", curvaMarg12);
         this.curvaMarg12 = curvaMarg12;
    }
 
@@ -543,6 +556,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg2(String curvaMarg2) {
+        markAsChanged("CURVAMARG_2", curvaMarg2);
         this.curvaMarg2 = curvaMarg2;
    }
 
@@ -551,6 +565,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg3(String curvaMarg3) {
+        markAsChanged("CURVAMARG_3", curvaMarg3);
         this.curvaMarg3 = curvaMarg3;
    }
 
@@ -559,6 +574,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg4(String curvaMarg4) {
+        markAsChanged("CURVAMARG_4", curvaMarg4);
         this.curvaMarg4 = curvaMarg4;
    }
 
@@ -567,6 +583,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg5(String curvaMarg5) {
+        markAsChanged("CURVAMARG_5", curvaMarg5);
         this.curvaMarg5 = curvaMarg5;
    }
 
@@ -575,6 +592,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg6(String curvaMarg6) {
+        markAsChanged("CURVAMARG_6", curvaMarg6);
         this.curvaMarg6 = curvaMarg6;
    }
 
@@ -583,6 +601,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg7(String curvaMarg7) {
+        markAsChanged("CURVAMARG_7", curvaMarg7);
         this.curvaMarg7 = curvaMarg7;
    }
 
@@ -591,6 +610,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg8(String curvaMarg8) {
+        markAsChanged("CURVAMARG_8", curvaMarg8);
         this.curvaMarg8 = curvaMarg8;
    }
 
@@ -599,6 +619,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaMarg9(String curvaMarg9) {
+        markAsChanged("CURVAMARG_9", curvaMarg9);
         this.curvaMarg9 = curvaMarg9;
    }
 
@@ -607,6 +628,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso1(String curvaPeso1) {
+        markAsChanged("CURVAPESO_1", curvaPeso1);
         this.curvaPeso1 = curvaPeso1;
    }
 
@@ -615,6 +637,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso10(String curvaPeso10) {
+        markAsChanged("CURVAPESO_10", curvaPeso10);
         this.curvaPeso10 = curvaPeso10;
    }
 
@@ -623,6 +646,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso11(String curvaPeso11) {
+        markAsChanged("CURVAPESO_11", curvaPeso11);
         this.curvaPeso11 = curvaPeso11;
    }
 
@@ -631,6 +655,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso12(String curvaPeso12) {
+        markAsChanged("CURVAPESO_12", curvaPeso12);
         this.curvaPeso12 = curvaPeso12;
    }
 
@@ -639,6 +664,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso2(String curvaPeso2) {
+        markAsChanged("CURVAPESO_2", curvaPeso2);
         this.curvaPeso2 = curvaPeso2;
    }
 
@@ -647,6 +673,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso3(String curvaPeso3) {
+        markAsChanged("CURVAPESO_3", curvaPeso3);
         this.curvaPeso3 = curvaPeso3;
    }
 
@@ -655,6 +682,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso4(String curvaPeso4) {
+        markAsChanged("CURVAPESO_4", curvaPeso4);
         this.curvaPeso4 = curvaPeso4;
    }
 
@@ -663,6 +691,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso5(String curvaPeso5) {
+        markAsChanged("CURVAPESO_5", curvaPeso5);
         this.curvaPeso5 = curvaPeso5;
    }
 
@@ -671,6 +700,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso6(String curvaPeso6) {
+        markAsChanged("CURVAPESO_6", curvaPeso6);
         this.curvaPeso6 = curvaPeso6;
    }
 
@@ -679,6 +709,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso7(String curvaPeso7) {
+        markAsChanged("CURVAPESO_7", curvaPeso7);
         this.curvaPeso7 = curvaPeso7;
    }
 
@@ -687,6 +718,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso8(String curvaPeso8) {
+        markAsChanged("CURVAPESO_8", curvaPeso8);
         this.curvaPeso8 = curvaPeso8;
    }
 
@@ -695,6 +727,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaPeso9(String curvaPeso9) {
+        markAsChanged("CURVAPESO_9", curvaPeso9);
         this.curvaPeso9 = curvaPeso9;
    }
 
@@ -703,6 +736,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd1(String curvaQtd1) {
+        markAsChanged("CURVAQTD_1", curvaQtd1);
         this.curvaQtd1 = curvaQtd1;
    }
 
@@ -711,6 +745,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd10(String curvaQtd10) {
+        markAsChanged("CURVAQTD_10", curvaQtd10);
         this.curvaQtd10 = curvaQtd10;
    }
 
@@ -719,6 +754,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd11(String curvaQtd11) {
+        markAsChanged("CURVAQTD_11", curvaQtd11);
         this.curvaQtd11 = curvaQtd11;
    }
 
@@ -727,6 +763,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd12(String curvaQtd12) {
+        markAsChanged("CURVAQTD_12", curvaQtd12);
         this.curvaQtd12 = curvaQtd12;
    }
 
@@ -735,6 +772,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd2(String curvaQtd2) {
+        markAsChanged("CURVAQTD_2", curvaQtd2);
         this.curvaQtd2 = curvaQtd2;
    }
 
@@ -743,6 +781,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd3(String curvaQtd3) {
+        markAsChanged("CURVAQTD_3", curvaQtd3);
         this.curvaQtd3 = curvaQtd3;
    }
 
@@ -751,6 +790,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd4(String curvaQtd4) {
+        markAsChanged("CURVAQTD_4", curvaQtd4);
         this.curvaQtd4 = curvaQtd4;
    }
 
@@ -759,6 +799,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd5(String curvaQtd5) {
+        markAsChanged("CURVAQTD_5", curvaQtd5);
         this.curvaQtd5 = curvaQtd5;
    }
 
@@ -767,6 +808,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd6(String curvaQtd6) {
+        markAsChanged("CURVAQTD_6", curvaQtd6);
         this.curvaQtd6 = curvaQtd6;
    }
 
@@ -775,6 +817,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd7(String curvaQtd7) {
+        markAsChanged("CURVAQTD_7", curvaQtd7);
         this.curvaQtd7 = curvaQtd7;
    }
 
@@ -783,6 +826,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd8(String curvaQtd8) {
+        markAsChanged("CURVAQTD_8", curvaQtd8);
         this.curvaQtd8 = curvaQtd8;
    }
 
@@ -791,6 +835,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaQtd9(String curvaQtd9) {
+        markAsChanged("CURVAQTD_9", curvaQtd9);
         this.curvaQtd9 = curvaQtd9;
    }
 
@@ -799,6 +844,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot1(String curvaTot1) {
+        markAsChanged("CURVATOT_1", curvaTot1);
         this.curvaTot1 = curvaTot1;
    }
 
@@ -807,6 +853,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot10(String curvaTot10) {
+        markAsChanged("CURVATOT_10", curvaTot10);
         this.curvaTot10 = curvaTot10;
    }
 
@@ -815,6 +862,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot11(String curvaTot11) {
+        markAsChanged("CURVATOT_11", curvaTot11);
         this.curvaTot11 = curvaTot11;
    }
 
@@ -823,6 +871,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot12(String curvaTot12) {
+        markAsChanged("CURVATOT_12", curvaTot12);
         this.curvaTot12 = curvaTot12;
    }
 
@@ -831,6 +880,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot2(String curvaTot2) {
+        markAsChanged("CURVATOT_2", curvaTot2);
         this.curvaTot2 = curvaTot2;
    }
 
@@ -839,6 +889,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot3(String curvaTot3) {
+        markAsChanged("CURVATOT_3", curvaTot3);
         this.curvaTot3 = curvaTot3;
    }
 
@@ -847,6 +898,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot4(String curvaTot4) {
+        markAsChanged("CURVATOT_4", curvaTot4);
         this.curvaTot4 = curvaTot4;
    }
 
@@ -855,6 +907,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setUltCompra(Timestamp ultCompra) {
+        markAsChanged("ULTCOMPRA", ultCompra);
         this.ultCompra = ultCompra;
    }
 
@@ -863,6 +916,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setUltVenda(Timestamp ultVenda) {
+        markAsChanged("ULTVENDA", ultVenda);
         this.ultVenda = ultVenda;
    }
 
@@ -871,6 +925,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrCredIcms(BigDecimal vlrCredIcms) {
+        markAsChanged("VLRCREDICMS", vlrCredIcms);
         this.vlrCredIcms = vlrCredIcms;
    }
 
@@ -879,6 +934,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar1(BigDecimal vlrGastoVar1) {
+        markAsChanged("VLRGASTOVAR_1", vlrGastoVar1);
         this.vlrGastoVar1 = vlrGastoVar1;
    }
 
@@ -887,6 +943,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar6(BigDecimal vlrGastoVar6) {
+        markAsChanged("VLRGASTOVAR_6", vlrGastoVar6);
         this.vlrGastoVar6 = vlrGastoVar6;
    }
 
@@ -895,6 +952,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar7(BigDecimal vlrGastoVar7) {
+        markAsChanged("VLRGASTOVAR_7", vlrGastoVar7);
         this.vlrGastoVar7 = vlrGastoVar7;
    }
 
@@ -903,6 +961,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar8(BigDecimal vlrGastoVar8) {
+        markAsChanged("VLRGASTOVAR_8", vlrGastoVar8);
         this.vlrGastoVar8 = vlrGastoVar8;
    }
 
@@ -911,6 +970,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar9(BigDecimal vlrGastoVar9) {
+        markAsChanged("VLRGASTOVAR_9", vlrGastoVar9);
         this.vlrGastoVar9 = vlrGastoVar9;
    }
 
@@ -919,6 +979,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont1(BigDecimal vlrMargCont1) {
+        markAsChanged("VLRMARGCONT_1", vlrMargCont1);
         this.vlrMargCont1 = vlrMargCont1;
    }
 
@@ -927,6 +988,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont10(BigDecimal vlrMargCont10) {
+        markAsChanged("VLRMARGCONT_10", vlrMargCont10);
         this.vlrMargCont10 = vlrMargCont10;
    }
 
@@ -935,6 +997,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont11(BigDecimal vlrMargCont11) {
+        markAsChanged("VLRMARGCONT_11", vlrMargCont11);
         this.vlrMargCont11 = vlrMargCont11;
    }
 
@@ -943,6 +1006,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont12(BigDecimal vlrMargCont12) {
+        markAsChanged("VLRMARGCONT_12", vlrMargCont12);
         this.vlrMargCont12 = vlrMargCont12;
    }
 
@@ -951,6 +1015,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont2(BigDecimal vlrMargCont2) {
+        markAsChanged("VLRMARGCONT_2", vlrMargCont2);
         this.vlrMargCont2 = vlrMargCont2;
    }
 
@@ -959,6 +1024,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont3(BigDecimal vlrMargCont3) {
+        markAsChanged("VLRMARGCONT_3", vlrMargCont3);
         this.vlrMargCont3 = vlrMargCont3;
    }
 
@@ -967,6 +1033,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont4(BigDecimal vlrMargCont4) {
+        markAsChanged("VLRMARGCONT_4", vlrMargCont4);
         this.vlrMargCont4 = vlrMargCont4;
    }
 
@@ -975,6 +1042,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont5(BigDecimal vlrMargCont5) {
+        markAsChanged("VLRMARGCONT_5", vlrMargCont5);
         this.vlrMargCont5 = vlrMargCont5;
    }
 
@@ -983,6 +1051,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont6(BigDecimal vlrMargCont6) {
+        markAsChanged("VLRMARGCONT_6", vlrMargCont6);
         this.vlrMargCont6 = vlrMargCont6;
    }
 
@@ -991,6 +1060,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont7(BigDecimal vlrMargCont7) {
+        markAsChanged("VLRMARGCONT_7", vlrMargCont7);
         this.vlrMargCont7 = vlrMargCont7;
    }
 
@@ -999,6 +1069,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont8(BigDecimal vlrMargCont8) {
+        markAsChanged("VLRMARGCONT_8", vlrMargCont8);
         this.vlrMargCont8 = vlrMargCont8;
    }
 
@@ -1007,6 +1078,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrMargCont9(BigDecimal vlrMargCont9) {
+        markAsChanged("VLRMARGCONT_9", vlrMargCont9);
         this.vlrMargCont9 = vlrMargCont9;
    }
 
@@ -1015,6 +1087,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTabPreco(BigDecimal vlrTabPreco) {
+        markAsChanged("VLRTABPRECO", vlrTabPreco);
         this.vlrTabPreco = vlrTabPreco;
    }
 
@@ -1023,6 +1096,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot1(BigDecimal vlrTot1) {
+        markAsChanged("VLRTOT_1", vlrTot1);
         this.vlrTot1 = vlrTot1;
    }
 
@@ -1031,6 +1105,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot10(BigDecimal vlrTot10) {
+        markAsChanged("VLRTOT_10", vlrTot10);
         this.vlrTot10 = vlrTot10;
    }
 
@@ -1039,6 +1114,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot11(BigDecimal vlrTot11) {
+        markAsChanged("VLRTOT_11", vlrTot11);
         this.vlrTot11 = vlrTot11;
    }
 
@@ -1047,6 +1123,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot12(BigDecimal vlrTot12) {
+        markAsChanged("VLRTOT_12", vlrTot12);
         this.vlrTot12 = vlrTot12;
    }
 
@@ -1055,6 +1132,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot2(BigDecimal vlrTot2) {
+        markAsChanged("VLRTOT_2", vlrTot2);
         this.vlrTot2 = vlrTot2;
    }
 
@@ -1063,6 +1141,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot3(BigDecimal vlrTot3) {
+        markAsChanged("VLRTOT_3", vlrTot3);
         this.vlrTot3 = vlrTot3;
    }
 
@@ -1071,6 +1150,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot4(BigDecimal vlrTot4) {
+        markAsChanged("VLRTOT_4", vlrTot4);
         this.vlrTot4 = vlrTot4;
    }
 
@@ -1079,6 +1159,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot5(BigDecimal vlrTot5) {
+        markAsChanged("VLRTOT_5", vlrTot5);
         this.vlrTot5 = vlrTot5;
    }
 
@@ -1087,6 +1168,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot6(BigDecimal vlrTot6) {
+        markAsChanged("VLRTOT_6", vlrTot6);
         this.vlrTot6 = vlrTot6;
    }
 
@@ -1095,6 +1177,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot7(BigDecimal vlrTot7) {
+        markAsChanged("VLRTOT_7", vlrTot7);
         this.vlrTot7 = vlrTot7;
    }
 
@@ -1103,6 +1186,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot8(BigDecimal vlrTot8) {
+        markAsChanged("VLRTOT_8", vlrTot8);
         this.vlrTot8 = vlrTot8;
    }
 
@@ -1111,6 +1195,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrTot9(BigDecimal vlrTot9) {
+        markAsChanged("VLRTOT_9", vlrTot9);
         this.vlrTot9 = vlrTot9;
    }
 
@@ -1119,6 +1204,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit1(BigDecimal vlrUnit1) {
+        markAsChanged("VLRUNIT_1", vlrUnit1);
         this.vlrUnit1 = vlrUnit1;
    }
 
@@ -1127,6 +1213,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit10(BigDecimal vlrUnit10) {
+        markAsChanged("VLRUNIT_10", vlrUnit10);
         this.vlrUnit10 = vlrUnit10;
    }
 
@@ -1135,6 +1222,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit11(BigDecimal vlrUnit11) {
+        markAsChanged("VLRUNIT_11", vlrUnit11);
         this.vlrUnit11 = vlrUnit11;
    }
 
@@ -1143,6 +1231,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit12(BigDecimal vlrUnit12) {
+        markAsChanged("VLRUNIT_12", vlrUnit12);
         this.vlrUnit12 = vlrUnit12;
    }
 
@@ -1151,6 +1240,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit2(BigDecimal vlrUnit2) {
+        markAsChanged("VLRUNIT_2", vlrUnit2);
         this.vlrUnit2 = vlrUnit2;
    }
 
@@ -1159,6 +1249,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit3(BigDecimal vlrUnit3) {
+        markAsChanged("VLRUNIT_3", vlrUnit3);
         this.vlrUnit3 = vlrUnit3;
    }
 
@@ -1167,6 +1258,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit4(BigDecimal vlrUnit4) {
+        markAsChanged("VLRUNIT_4", vlrUnit4);
         this.vlrUnit4 = vlrUnit4;
    }
 
@@ -1175,6 +1267,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit5(BigDecimal vlrUnit5) {
+        markAsChanged("VLRUNIT_5", vlrUnit5);
         this.vlrUnit5 = vlrUnit5;
    }
 
@@ -1183,6 +1276,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit6(BigDecimal vlrUnit6) {
+        markAsChanged("VLRUNIT_6", vlrUnit6);
         this.vlrUnit6 = vlrUnit6;
    }
 
@@ -1191,6 +1285,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso4(BigDecimal acumPeso4) {
+        markAsChanged("ACUMPESO_4", acumPeso4);
         this.acumPeso4 = acumPeso4;
    }
 
@@ -1199,6 +1294,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso5(BigDecimal acumPeso5) {
+        markAsChanged("ACUMPESO_5", acumPeso5);
         this.acumPeso5 = acumPeso5;
    }
 
@@ -1207,6 +1303,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso6(BigDecimal acumPeso6) {
+        markAsChanged("ACUMPESO_6", acumPeso6);
         this.acumPeso6 = acumPeso6;
    }
 
@@ -1215,6 +1312,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade7(BigDecimal popularidade7) {
+        markAsChanged("POPULARIDADE_7", popularidade7);
         this.popularidade7 = popularidade7;
    }
 
@@ -1223,6 +1321,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade8(BigDecimal popularidade8) {
+        markAsChanged("POPULARIDADE_8", popularidade8);
         this.popularidade8 = popularidade8;
    }
 
@@ -1231,6 +1330,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade9(BigDecimal popularidade9) {
+        markAsChanged("POPULARIDADE_9", popularidade9);
         this.popularidade9 = popularidade9;
    }
 
@@ -1239,6 +1339,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAccumMarg9(BigDecimal accumMarg9) {
+        markAsChanged("ACUMMARG_9", accumMarg9);
         this.accumMarg9 = accumMarg9;
    }
 
@@ -1247,6 +1348,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAccumPeso1(BigDecimal accumPeso1) {
+        markAsChanged("ACUMPESO_1", accumPeso1);
         this.accumPeso1 = accumPeso1;
    }
 
@@ -1255,6 +1357,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAccumPeso10(BigDecimal accumPeso10) {
+        markAsChanged("ACUMPESO_10", accumPeso10);
         this.accumPeso10 = accumPeso10;
    }
 
@@ -1263,6 +1366,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -1271,6 +1375,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda12(BigDecimal custoVenda12) {
+        markAsChanged("CUSTOVENDA_12", custoVenda12);
         this.custoVenda12 = custoVenda12;
    }
 
@@ -1279,6 +1384,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda2(BigDecimal custoVenda2) {
+        markAsChanged("CUSTOVENDA_2", custoVenda2);
         this.custoVenda2 = custoVenda2;
    }
 
@@ -1287,6 +1393,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda3(BigDecimal custoVenda3) {
+        markAsChanged("CUSTOVENDA_3", custoVenda3);
         this.custoVenda3 = custoVenda3;
    }
 
@@ -1295,6 +1402,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda4(BigDecimal custoVenda4) {
+        markAsChanged("CUSTOVENDA_4", custoVenda4);
         this.custoVenda4 = custoVenda4;
    }
 
@@ -1303,6 +1411,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda5(BigDecimal custoVenda5) {
+        markAsChanged("CUSTOVENDA_5", custoVenda5);
         this.custoVenda5 = custoVenda5;
    }
 
@@ -1311,6 +1420,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar10(BigDecimal vlrGastoVar10) {
+        markAsChanged("VLRGASTOVAR_10", vlrGastoVar10);
         this.vlrGastoVar10 = vlrGastoVar10;
    }
 
@@ -1319,6 +1429,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar11(BigDecimal vlrGastoVar11) {
+        markAsChanged("VLRGASTOVAR_11", vlrGastoVar11);
         this.vlrGastoVar11 = vlrGastoVar11;
    }
 
@@ -1327,6 +1438,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar12(BigDecimal vlrGastoVar12) {
+        markAsChanged("VLRGASTOVAR_12", vlrGastoVar12);
         this.vlrGastoVar12 = vlrGastoVar12;
    }
 
@@ -1335,6 +1447,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar2(BigDecimal vlrGastoVar2) {
+        markAsChanged("VLRGASTOVAR_2", vlrGastoVar2);
         this.vlrGastoVar2 = vlrGastoVar2;
    }
 
@@ -1343,6 +1456,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompra(BigDecimal sugCompra) {
+        markAsChanged("SUGCOMPRA", sugCompra);
         this.sugCompra = sugCompra;
    }
 
@@ -1351,6 +1465,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompraGir(BigDecimal sugCompraGir) {
+        markAsChanged("SUGCOMPRAGIR", sugCompraGir);
         this.sugCompraGir = sugCompraGir;
    }
 
@@ -1359,6 +1474,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setTermoLabil(String termoLabil) {
+        markAsChanged("TERMOLABIL", termoLabil);
         this.termoLabil = termoLabil;
    }
 
@@ -1367,6 +1483,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal8(BigDecimal custoVndTotal8) {
+        markAsChanged("CUSTOVNDTOTAL_8", custoVndTotal8);
         this.custoVndTotal8 = custoVndTotal8;
    }
 
@@ -1375,6 +1492,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal9(BigDecimal custoVndTotal9) {
+        markAsChanged("CUSTOVNDTOTAL_9", custoVndTotal9);
         this.custoVndTotal9 = custoVndTotal9;
    }
 
@@ -1383,6 +1501,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDescMax(BigDecimal descMax) {
+        markAsChanged("DESCMAX", descMax);
         this.descMax = descMax;
    }
 
@@ -1391,6 +1510,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasSemVenda(BigDecimal diasSemVenda) {
+        markAsChanged("DIASSEMVENDA", diasSemVenda);
         this.diasSemVenda = diasSemVenda;
    }
 
@@ -1399,6 +1519,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDurEst(BigDecimal durEst) {
+        markAsChanged("DUREST", durEst);
         this.durEst = durEst;
    }
 
@@ -1407,6 +1528,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDurEstPosCpa(BigDecimal durEstPosCpa) {
+        markAsChanged("DURESTPOSCPA", durEstPosCpa);
         this.durEstPosCpa = durEstPosCpa;
    }
 
@@ -1415,6 +1537,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstCustGer(BigDecimal estCustGer) {
+        markAsChanged("ESTCUSTGER", estCustGer);
         this.estCustGer = estCustGer;
    }
 
@@ -1423,6 +1546,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstMenMedVend(String estMenMedVend) {
+        markAsChanged("ESTMENMEDVEND", estMenMedVend);
         this.estMenMedVend = estMenMedVend;
    }
 
@@ -1431,6 +1555,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -1439,6 +1564,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstMinGir(BigDecimal estMinGir) {
+        markAsChanged("ESTMINGIR", estMinGir);
         this.estMinGir = estMinGir;
    }
 
@@ -1447,6 +1573,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -1455,6 +1582,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setFrequencia(BigDecimal frequencia) {
+        markAsChanged("FREQUENCIA", frequencia);
         this.frequencia = frequencia;
    }
 
@@ -1463,6 +1591,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setIdenCorrelato(String idenCorrelato) {
+        markAsChanged("IDENCORRELATO", idenCorrelato);
         this.idenCorrelato = idenCorrelato;
    }
 
@@ -1471,6 +1600,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setIdenCosme(String idenCosme) {
+        markAsChanged("IDENCOSME", idenCosme);
         this.idenCosme = idenCosme;
    }
 
@@ -1479,6 +1609,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setIdenOtc(String idenOtc) {
+        markAsChanged("IDENOTC", idenOtc);
         this.idenOtc = idenOtc;
    }
 
@@ -1487,6 +1618,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setIdenPortaria(String idenPortaria) {
+        markAsChanged("IDENPORTARIA", idenPortaria);
         this.idenPortaria = idenPortaria;
    }
 
@@ -1495,6 +1627,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -1503,6 +1636,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setListaLpm(String listaLpm) {
+        markAsChanged("LISTALPM", listaLpm);
         this.listaLpm = listaLpm;
    }
 
@@ -1511,6 +1645,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro1(BigDecimal lucro1) {
+        markAsChanged("LUCRO_1", lucro1);
         this.lucro1 = lucro1;
    }
 
@@ -1519,6 +1654,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro10(BigDecimal lucro10) {
+        markAsChanged("LUCRO_10", lucro10);
         this.lucro10 = lucro10;
    }
 
@@ -1527,6 +1663,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro11(BigDecimal lucro11) {
+        markAsChanged("LUCRO_11", lucro11);
         this.lucro11 = lucro11;
    }
 
@@ -1535,6 +1672,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro12(BigDecimal lucro12) {
+        markAsChanged("LUCRO_12", lucro12);
         this.lucro12 = lucro12;
    }
 
@@ -1543,6 +1681,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro2(BigDecimal lucro2) {
+        markAsChanged("LUCRO_2", lucro2);
         this.lucro2 = lucro2;
    }
 
@@ -1551,6 +1690,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro3(BigDecimal lucro3) {
+        markAsChanged("LUCRO_3", lucro3);
         this.lucro3 = lucro3;
    }
 
@@ -1559,6 +1699,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro4(BigDecimal lucro4) {
+        markAsChanged("LUCRO_4", lucro4);
         this.lucro4 = lucro4;
    }
 
@@ -1567,6 +1708,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro5(BigDecimal lucro5) {
+        markAsChanged("LUCRO_5", lucro5);
         this.lucro5 = lucro5;
    }
 
@@ -1575,6 +1717,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro6(BigDecimal lucro6) {
+        markAsChanged("LUCRO_6", lucro6);
         this.lucro6 = lucro6;
    }
 
@@ -1583,6 +1726,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro7(BigDecimal lucro7) {
+        markAsChanged("LUCRO_7", lucro7);
         this.lucro7 = lucro7;
    }
 
@@ -1591,6 +1735,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro8(BigDecimal lucro8) {
+        markAsChanged("LUCRO_8", lucro8);
         this.lucro8 = lucro8;
    }
 
@@ -1599,6 +1744,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setLucro9(BigDecimal lucro9) {
+        markAsChanged("LUCRO_9", lucro9);
         this.lucro9 = lucro9;
    }
 
@@ -1607,6 +1753,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -1615,6 +1762,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setMarkup(BigDecimal markup) {
+        markAsChanged("MARKUP", markup);
         this.markup = markup;
    }
 
@@ -1623,6 +1771,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -1631,6 +1780,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setOneroso(String oneroso) {
+        markAsChanged("ONEROSO", oneroso);
         this.oneroso = oneroso;
    }
 
@@ -1639,6 +1789,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setOrdemMedida(BigDecimal ordemMedida) {
+        markAsChanged("ORDEMMEDIDA", ordemMedida);
         this.ordemMedida = ordemMedida;
    }
 
@@ -1647,6 +1798,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartEstoque(BigDecimal partEstoque) {
+        markAsChanged("PARTESTOQUE", partEstoque);
         this.partEstoque = partEstoque;
    }
 
@@ -1655,6 +1807,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat1(BigDecimal partGasVarFat1) {
+        markAsChanged("PARTGASVARFAT_1", partGasVarFat1);
         this.partGasVarFat1 = partGasVarFat1;
    }
 
@@ -1663,6 +1816,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat10(BigDecimal partGasVarFat10) {
+        markAsChanged("PARTGASVARFAT_10", partGasVarFat10);
         this.partGasVarFat10 = partGasVarFat10;
    }
 
@@ -1671,6 +1825,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat11(BigDecimal partGasVarFat11) {
+        markAsChanged("PARTGASVARFAT_11", partGasVarFat11);
         this.partGasVarFat11 = partGasVarFat11;
    }
 
@@ -1679,6 +1834,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat12(BigDecimal partGasVarFat12) {
+        markAsChanged("PARTGASVARFAT_12", partGasVarFat12);
         this.partGasVarFat12 = partGasVarFat12;
    }
 
@@ -1687,6 +1843,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat2(BigDecimal partGasVarFat2) {
+        markAsChanged("PARTGASVARFAT_2", partGasVarFat2);
         this.partGasVarFat2 = partGasVarFat2;
    }
 
@@ -1695,6 +1852,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat3(BigDecimal partGasVarFat3) {
+        markAsChanged("PARTGASVARFAT_3", partGasVarFat3);
         this.partGasVarFat3 = partGasVarFat3;
    }
 
@@ -1703,6 +1861,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat4(BigDecimal partGasVarFat4) {
+        markAsChanged("PARTGASVARFAT_4", partGasVarFat4);
         this.partGasVarFat4 = partGasVarFat4;
    }
 
@@ -1711,6 +1870,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat5(BigDecimal partGasVarFat5) {
+        markAsChanged("PARTGASVARFAT_5", partGasVarFat5);
         this.partGasVarFat5 = partGasVarFat5;
    }
 
@@ -1719,6 +1879,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat6(BigDecimal partGasVarFat6) {
+        markAsChanged("PARTGASVARFAT_6", partGasVarFat6);
         this.partGasVarFat6 = partGasVarFat6;
    }
 
@@ -1727,6 +1888,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat7(BigDecimal partGasVarFat7) {
+        markAsChanged("PARTGASVARFAT_7", partGasVarFat7);
         this.partGasVarFat7 = partGasVarFat7;
    }
 
@@ -1735,6 +1897,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat8(BigDecimal partGasVarFat8) {
+        markAsChanged("PARTGASVARFAT_8", partGasVarFat8);
         this.partGasVarFat8 = partGasVarFat8;
    }
 
@@ -1743,6 +1906,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVarFat9(BigDecimal partGasVarFat9) {
+        markAsChanged("PARTGASVARFAT_9", partGasVarFat9);
         this.partGasVarFat9 = partGasVarFat9;
    }
 
@@ -1751,6 +1915,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar1(BigDecimal partGasVar1) {
+        markAsChanged("PARTGASVAR_1", partGasVar1);
         this.partGasVar1 = partGasVar1;
    }
 
@@ -1759,6 +1924,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar10(BigDecimal partGasVar10) {
+        markAsChanged("PARTGASVAR_10", partGasVar10);
         this.partGasVar10 = partGasVar10;
    }
 
@@ -1767,6 +1933,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar11(BigDecimal partGasVar11) {
+        markAsChanged("PARTGASVAR_11", partGasVar11);
         this.partGasVar11 = partGasVar11;
    }
 
@@ -1775,6 +1942,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar12(BigDecimal partGasVar12) {
+        markAsChanged("PARTGASVAR_12", partGasVar12);
         this.partGasVar12 = partGasVar12;
    }
 
@@ -1783,6 +1951,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar2(BigDecimal partGasVar2) {
+        markAsChanged("PARTGASVAR_2", partGasVar2);
         this.partGasVar2 = partGasVar2;
    }
 
@@ -1791,6 +1960,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar3(BigDecimal partGasVar3) {
+        markAsChanged("PARTGASVAR_3", partGasVar3);
         this.partGasVar3 = partGasVar3;
    }
 
@@ -1799,6 +1969,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar4(BigDecimal partGasVar4) {
+        markAsChanged("PARTGASVAR_4", partGasVar4);
         this.partGasVar4 = partGasVar4;
    }
 
@@ -1807,6 +1978,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar5(BigDecimal partGasVar5) {
+        markAsChanged("PARTGASVAR_5", partGasVar5);
         this.partGasVar5 = partGasVar5;
    }
 
@@ -1815,6 +1987,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar6(BigDecimal partGasVar6) {
+        markAsChanged("PARTGASVAR_6", partGasVar6);
         this.partGasVar6 = partGasVar6;
    }
 
@@ -1823,6 +1996,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar7(BigDecimal partGasVar7) {
+        markAsChanged("PARTGASVAR_7", partGasVar7);
         this.partGasVar7 = partGasVar7;
    }
 
@@ -1831,6 +2005,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar8(BigDecimal partGasVar8) {
+        markAsChanged("PARTGASVAR_8", partGasVar8);
         this.partGasVar8 = partGasVar8;
    }
 
@@ -1839,6 +2014,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartGasVar9(BigDecimal partGasVar9) {
+        markAsChanged("PARTGASVAR_9", partGasVar9);
         this.partGasVar9 = partGasVar9;
    }
 
@@ -1847,6 +2023,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro1(BigDecimal partLucro1) {
+        markAsChanged("PARTLUCRO_1", partLucro1);
         this.partLucro1 = partLucro1;
    }
 
@@ -1855,6 +2032,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro10(BigDecimal partLucro10) {
+        markAsChanged("PARTLUCRO_10", partLucro10);
         this.partLucro10 = partLucro10;
    }
 
@@ -1863,6 +2041,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro11(BigDecimal partLucro11) {
+        markAsChanged("PARTLUCRO_11", partLucro11);
         this.partLucro11 = partLucro11;
    }
 
@@ -1871,6 +2050,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro12(BigDecimal partLucro12) {
+        markAsChanged("PARTLUCRO_12", partLucro12);
         this.partLucro12 = partLucro12;
    }
 
@@ -1879,6 +2059,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro2(BigDecimal partLucro2) {
+        markAsChanged("PARTLUCRO_2", partLucro2);
         this.partLucro2 = partLucro2;
    }
 
@@ -1887,6 +2068,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro3(BigDecimal partLucro3) {
+        markAsChanged("PARTLUCRO_3", partLucro3);
         this.partLucro3 = partLucro3;
    }
 
@@ -1895,6 +2077,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro4(BigDecimal partLucro4) {
+        markAsChanged("PARTLUCRO_4", partLucro4);
         this.partLucro4 = partLucro4;
    }
 
@@ -1903,6 +2086,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro5(BigDecimal partLucro5) {
+        markAsChanged("PARTLUCRO_5", partLucro5);
         this.partLucro5 = partLucro5;
    }
 
@@ -1911,6 +2095,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setProdFalta(String prodFalta) {
+        markAsChanged("PRODFALTA", prodFalta);
         this.prodFalta = prodFalta;
    }
 
@@ -1919,6 +2104,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setQtdMaxima(BigDecimal qtdMaxima) {
+        markAsChanged("QTDMAXIMA", qtdMaxima);
         this.qtdMaxima = qtdMaxima;
    }
 
@@ -1927,6 +2113,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setQtdMedia(BigDecimal qtdMedia) {
+        markAsChanged("QTDMEDIA", qtdMedia);
         this.qtdMedia = qtdMedia;
    }
 
@@ -1935,6 +2122,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro6(BigDecimal partLucro6) {
+        markAsChanged("PARTLUCRO_6", partLucro6);
         this.partLucro6 = partLucro6;
    }
 
@@ -1943,6 +2131,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro7(BigDecimal partLucro7) {
+        markAsChanged("PARTLUCRO_7", partLucro7);
         this.partLucro7 = partLucro7;
    }
 
@@ -1951,6 +2140,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro8(BigDecimal partLucro8) {
+        markAsChanged("PARTLUCRO_8", partLucro8);
         this.partLucro8 = partLucro8;
    }
 
@@ -1959,6 +2149,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartLucro9(BigDecimal partLucro9) {
+        markAsChanged("PARTLUCRO_9", partLucro9);
         this.partLucro9 = partLucro9;
    }
 
@@ -1967,6 +2158,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -1975,6 +2167,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setRefForn(String refForn) {
+        markAsChanged("REFFORN", refForn);
         this.refForn = refForn;
    }
 
@@ -1983,6 +2176,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setRefMercMed(String refMercMed) {
+        markAsChanged("REFMERCMED", refMercMed);
         this.refMercMed = refMercMed;
    }
 
@@ -1991,6 +2185,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setStatusMed(BigDecimal statusMed) {
+        markAsChanged("STATUSMED", statusMed);
         this.statusMed = statusMed;
    }
 
@@ -1999,6 +2194,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompCustGer(BigDecimal sugCompCustGer) {
+        markAsChanged("SUGCOMPCUSTGER", sugCompCustGer);
         this.sugCompCustGer = sugCompCustGer;
    }
 
@@ -2007,6 +2203,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot6(String curvaTot6) {
+        markAsChanged("CURVATOT_6", curvaTot6);
         this.curvaTot6 = curvaTot6;
    }
 
@@ -2015,6 +2212,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot7(String curvaTot7) {
+        markAsChanged("CURVATOT_7", curvaTot7);
         this.curvaTot7 = curvaTot7;
    }
 
@@ -2023,6 +2221,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot8(String curvaTot8) {
+        markAsChanged("CURVATOT_8", curvaTot8);
         this.curvaTot8 = curvaTot8;
    }
 
@@ -2031,6 +2230,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot9(String curvaTot9) {
+        markAsChanged("CURVATOT_9", curvaTot9);
         this.curvaTot9 = curvaTot9;
    }
 
@@ -2039,6 +2239,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoGer(BigDecimal custoGer) {
+        markAsChanged("CUSTOGER", custoGer);
         this.custoGer = custoGer;
    }
 
@@ -2047,6 +2248,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoRep(BigDecimal custoRep) {
+        markAsChanged("CUSTOREP", custoRep);
         this.custoRep = custoRep;
    }
 
@@ -2055,6 +2257,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda1(BigDecimal custoVenda1) {
+        markAsChanged("CUSTOVENDA_1", custoVenda1);
         this.custoVenda1 = custoVenda1;
    }
 
@@ -2063,6 +2266,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat5(BigDecimal partMargContFat5) {
+        markAsChanged("PARTMARGCONTFAT_5", partMargContFat5);
         this.partMargContFat5 = partMargContFat5;
    }
 
@@ -2071,6 +2275,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat6(BigDecimal partMargContFat6) {
+        markAsChanged("PARTMARGCONTFAT_6", partMargContFat6);
         this.partMargContFat6 = partMargContFat6;
    }
 
@@ -2079,6 +2284,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat7(BigDecimal partMargContFat7) {
+        markAsChanged("PARTMARGCONTFAT_7", partMargContFat7);
         this.partMargContFat7 = partMargContFat7;
    }
 
@@ -2087,6 +2293,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat8(BigDecimal partMargContFat8) {
+        markAsChanged("PARTMARGCONTFAT_8", partMargContFat8);
         this.partMargContFat8 = partMargContFat8;
    }
 
@@ -2095,6 +2302,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat9(BigDecimal partMargContFat9) {
+        markAsChanged("PARTMARGCONTFAT_9", partMargContFat9);
         this.partMargContFat9 = partMargContFat9;
    }
 
@@ -2103,6 +2311,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont1(BigDecimal partMargCont1) {
+        markAsChanged("PARTMARGCONT_1", partMargCont1);
         this.partMargCont1 = partMargCont1;
    }
 
@@ -2111,6 +2320,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont10(BigDecimal partMargCont10) {
+        markAsChanged("PARTMARGCONT_10", partMargCont10);
         this.partMargCont10 = partMargCont10;
    }
 
@@ -2119,6 +2329,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont11(BigDecimal partMargCont11) {
+        markAsChanged("PARTMARGCONT_11", partMargCont11);
         this.partMargCont11 = partMargCont11;
    }
 
@@ -2127,6 +2338,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont12(BigDecimal partMargCont12) {
+        markAsChanged("PARTMARGCONT_12", partMargCont12);
         this.partMargCont12 = partMargCont12;
    }
 
@@ -2135,6 +2347,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont2(BigDecimal partMargCont2) {
+        markAsChanged("PARTMARGCONT_2", partMargCont2);
         this.partMargCont2 = partMargCont2;
    }
 
@@ -2143,6 +2356,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont3(BigDecimal partMargCont3) {
+        markAsChanged("PARTMARGCONT_3", partMargCont3);
         this.partMargCont3 = partMargCont3;
    }
 
@@ -2151,6 +2365,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont4(BigDecimal partMargCont4) {
+        markAsChanged("PARTMARGCONT_4", partMargCont4);
         this.partMargCont4 = partMargCont4;
    }
 
@@ -2159,6 +2374,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont5(BigDecimal partMargCont5) {
+        markAsChanged("PARTMARGCONT_5", partMargCont5);
         this.partMargCont5 = partMargCont5;
    }
 
@@ -2167,6 +2383,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont6(BigDecimal partMargCont6) {
+        markAsChanged("PARTMARGCONT_6", partMargCont6);
         this.partMargCont6 = partMargCont6;
    }
 
@@ -2175,6 +2392,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont7(BigDecimal partMargCont7) {
+        markAsChanged("PARTMARGCONT_7", partMargCont7);
         this.partMargCont7 = partMargCont7;
    }
 
@@ -2183,6 +2401,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont8(BigDecimal partMargCont8) {
+        markAsChanged("PARTMARGCONT_8", partMargCont8);
         this.partMargCont8 = partMargCont8;
    }
 
@@ -2191,6 +2410,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargCont9(BigDecimal partMargCont9) {
+        markAsChanged("PARTMARGCONT_9", partMargCont9);
         this.partMargCont9 = partMargCont9;
    }
 
@@ -2199,6 +2419,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso1(BigDecimal partPeso1) {
+        markAsChanged("PARTPESO_1", partPeso1);
         this.partPeso1 = partPeso1;
    }
 
@@ -2207,6 +2428,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg1(BigDecimal acumMarg1) {
+        markAsChanged("ACUMMARG_1", acumMarg1);
         this.acumMarg1 = acumMarg1;
    }
 
@@ -2215,6 +2437,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg10(BigDecimal acumMarg10) {
+        markAsChanged("ACUMMARG_10", acumMarg10);
         this.acumMarg10 = acumMarg10;
    }
 
@@ -2223,6 +2446,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setQtdMinima(BigDecimal qtdMinima) {
+        markAsChanged("QTDMINIMA", qtdMinima);
         this.qtdMinima = qtdMinima;
    }
 
@@ -2231,6 +2455,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setQtdTotal(BigDecimal qtdTotal) {
+        markAsChanged("QTDTOTAL", qtdTotal);
         this.qtdTotal = qtdTotal;
    }
 
@@ -2239,6 +2464,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setQtdUltCompra(BigDecimal qtdUltCompra) {
+        markAsChanged("QTDULTCOMPRA", qtdUltCompra);
         this.qtdUltCompra = qtdUltCompra;
    }
 
@@ -2247,6 +2473,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso10(BigDecimal partPeso10) {
+        markAsChanged("PARTPESO_10", partPeso10);
         this.partPeso10 = partPeso10;
    }
 
@@ -2255,6 +2482,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso11(BigDecimal partPeso11) {
+        markAsChanged("PARTPESO_11", partPeso11);
         this.partPeso11 = partPeso11;
    }
 
@@ -2263,6 +2491,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso12(BigDecimal partPeso12) {
+        markAsChanged("PARTPESO_12", partPeso12);
         this.partPeso12 = partPeso12;
    }
 
@@ -2271,6 +2500,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso2(BigDecimal partPeso2) {
+        markAsChanged("PARTPESO_2", partPeso2);
         this.partPeso2 = partPeso2;
    }
 
@@ -2279,6 +2509,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso3(BigDecimal partPeso3) {
+        markAsChanged("PARTPESO_3", partPeso3);
         this.partPeso3 = partPeso3;
    }
 
@@ -2287,6 +2518,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso4(BigDecimal partPeso4) {
+        markAsChanged("PARTPESO_4", partPeso4);
         this.partPeso4 = partPeso4;
    }
 
@@ -2295,6 +2527,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso5(BigDecimal partPeso5) {
+        markAsChanged("PARTPESO_5", partPeso5);
         this.partPeso5 = partPeso5;
    }
 
@@ -2303,6 +2536,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso6(BigDecimal partPeso6) {
+        markAsChanged("PARTPESO_6", partPeso6);
         this.partPeso6 = partPeso6;
    }
 
@@ -2311,6 +2545,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso7(BigDecimal partPeso7) {
+        markAsChanged("PARTPESO_7", partPeso7);
         this.partPeso7 = partPeso7;
    }
 
@@ -2319,6 +2554,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso8(BigDecimal partPeso8) {
+        markAsChanged("PARTPESO_8", partPeso8);
         this.partPeso8 = partPeso8;
    }
 
@@ -2327,6 +2563,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartPeso9(BigDecimal partPeso9) {
+        markAsChanged("PARTPESO_9", partPeso9);
         this.partPeso9 = partPeso9;
    }
 
@@ -2335,6 +2572,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde1(BigDecimal partQtde1) {
+        markAsChanged("PARTQTDE_1", partQtde1);
         this.partQtde1 = partQtde1;
    }
 
@@ -2343,6 +2581,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde10(BigDecimal partQtde10) {
+        markAsChanged("PARTQTDE_10", partQtde10);
         this.partQtde10 = partQtde10;
    }
 
@@ -2351,6 +2590,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde11(BigDecimal partQtde11) {
+        markAsChanged("PARTQTDE_11", partQtde11);
         this.partQtde11 = partQtde11;
    }
 
@@ -2359,6 +2599,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde12(BigDecimal partQtde12) {
+        markAsChanged("PARTQTDE_12", partQtde12);
         this.partQtde12 = partQtde12;
    }
 
@@ -2367,6 +2608,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde2(BigDecimal partQtde2) {
+        markAsChanged("PARTQTDE_2", partQtde2);
         this.partQtde2 = partQtde2;
    }
 
@@ -2375,6 +2617,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde3(BigDecimal partQtde3) {
+        markAsChanged("PARTQTDE_3", partQtde3);
         this.partQtde3 = partQtde3;
    }
 
@@ -2383,6 +2626,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde4(BigDecimal partQtde4) {
+        markAsChanged("PARTQTDE_4", partQtde4);
         this.partQtde4 = partQtde4;
    }
 
@@ -2391,6 +2635,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde5(BigDecimal partQtde5) {
+        markAsChanged("PARTQTDE_5", partQtde5);
         this.partQtde5 = partQtde5;
    }
 
@@ -2399,6 +2644,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde6(BigDecimal partQtde6) {
+        markAsChanged("PARTQTDE_6", partQtde6);
         this.partQtde6 = partQtde6;
    }
 
@@ -2407,6 +2653,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde7(BigDecimal partQtde7) {
+        markAsChanged("PARTQTDE_7", partQtde7);
         this.partQtde7 = partQtde7;
    }
 
@@ -2415,6 +2662,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde8(BigDecimal partQtde8) {
+        markAsChanged("PARTQTDE_8", partQtde8);
         this.partQtde8 = partQtde8;
    }
 
@@ -2423,6 +2671,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartQtde9(BigDecimal partQtde9) {
+        markAsChanged("PARTQTDE_9", partQtde9);
         this.partQtde9 = partQtde9;
    }
 
@@ -2431,6 +2680,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer1(BigDecimal partTotPer1) {
+        markAsChanged("PARTTOTPER_1", partTotPer1);
         this.partTotPer1 = partTotPer1;
    }
 
@@ -2439,6 +2689,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer10(BigDecimal partTotPer10) {
+        markAsChanged("PARTTOTPER_10", partTotPer10);
         this.partTotPer10 = partTotPer10;
    }
 
@@ -2447,6 +2698,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer11(BigDecimal partTotPer11) {
+        markAsChanged("PARTTOTPER_11", partTotPer11);
         this.partTotPer11 = partTotPer11;
    }
 
@@ -2455,6 +2707,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer12(BigDecimal partTotPer12) {
+        markAsChanged("PARTTOTPER_12", partTotPer12);
         this.partTotPer12 = partTotPer12;
    }
 
@@ -2463,6 +2716,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer2(BigDecimal partTotPer2) {
+        markAsChanged("PARTTOTPER_2", partTotPer2);
         this.partTotPer2 = partTotPer2;
    }
 
@@ -2471,6 +2725,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer3(BigDecimal partTotPer3) {
+        markAsChanged("PARTTOTPER_3", partTotPer3);
         this.partTotPer3 = partTotPer3;
    }
 
@@ -2479,6 +2734,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer4(BigDecimal partTotPer4) {
+        markAsChanged("PARTTOTPER_4", partTotPer4);
         this.partTotPer4 = partTotPer4;
    }
 
@@ -2487,6 +2743,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer5(BigDecimal partTotPer5) {
+        markAsChanged("PARTTOTPER_5", partTotPer5);
         this.partTotPer5 = partTotPer5;
    }
 
@@ -2495,6 +2752,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer6(BigDecimal partTotPer6) {
+        markAsChanged("PARTTOTPER_6", partTotPer6);
         this.partTotPer6 = partTotPer6;
    }
 
@@ -2503,6 +2761,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer7(BigDecimal partTotPer7) {
+        markAsChanged("PARTTOTPER_7", partTotPer7);
         this.partTotPer7 = partTotPer7;
    }
 
@@ -2511,6 +2770,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer8(BigDecimal partTotPer8) {
+        markAsChanged("PARTTOTPER_8", partTotPer8);
         this.partTotPer8 = partTotPer8;
    }
 
@@ -2519,6 +2779,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartTotPer9(BigDecimal partTotPer9) {
+        markAsChanged("PARTTOTPER_9", partTotPer9);
         this.partTotPer9 = partTotPer9;
    }
 
@@ -2527,6 +2788,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPedCpApend(BigDecimal pedCpApend) {
+        markAsChanged("PEDCPAPEND", pedCpApend);
         this.pedCpApend = pedCpApend;
    }
 
@@ -2535,6 +2797,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPedVdApend(BigDecimal pedVdApend) {
+        markAsChanged("PEDVDAPEND", pedVdApend);
         this.pedVdApend = pedVdApend;
    }
 
@@ -2543,6 +2806,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro1(BigDecimal perLucro1) {
+        markAsChanged("PERLUCRO_1", perLucro1);
         this.perLucro1 = perLucro1;
    }
 
@@ -2551,6 +2815,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro10(BigDecimal perLucro10) {
+        markAsChanged("PERLUCRO_10", perLucro10);
         this.perLucro10 = perLucro10;
    }
 
@@ -2559,6 +2824,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro11(BigDecimal perLucro11) {
+        markAsChanged("PERLUCRO_11", perLucro11);
         this.perLucro11 = perLucro11;
    }
 
@@ -2567,6 +2833,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro12(BigDecimal perLucro12) {
+        markAsChanged("PERLUCRO_12", perLucro12);
         this.perLucro12 = perLucro12;
    }
 
@@ -2575,6 +2842,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro2(BigDecimal perLucro2) {
+        markAsChanged("PERLUCRO_2", perLucro2);
         this.perLucro2 = perLucro2;
    }
 
@@ -2583,6 +2851,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro3(BigDecimal perLucro3) {
+        markAsChanged("PERLUCRO_3", perLucro3);
         this.perLucro3 = perLucro3;
    }
 
@@ -2591,6 +2860,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro4(BigDecimal perLucro4) {
+        markAsChanged("PERLUCRO_4", perLucro4);
         this.perLucro4 = perLucro4;
    }
 
@@ -2599,6 +2869,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro5(BigDecimal perLucro5) {
+        markAsChanged("PERLUCRO_5", perLucro5);
         this.perLucro5 = perLucro5;
    }
 
@@ -2607,6 +2878,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro6(BigDecimal perLucro6) {
+        markAsChanged("PERLUCRO_6", perLucro6);
         this.perLucro6 = perLucro6;
    }
 
@@ -2615,6 +2887,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro7(BigDecimal perLucro7) {
+        markAsChanged("PERLUCRO_7", perLucro7);
         this.perLucro7 = perLucro7;
    }
 
@@ -2623,6 +2896,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro8(BigDecimal perLucro8) {
+        markAsChanged("PERLUCRO_8", perLucro8);
         this.perLucro8 = perLucro8;
    }
 
@@ -2631,6 +2905,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPerLucro9(BigDecimal perLucro9) {
+        markAsChanged("PERLUCRO_9", perLucro9);
         this.perLucro9 = perLucro9;
    }
 
@@ -2639,6 +2914,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso1(BigDecimal peso1) {
+        markAsChanged("PESO_1", peso1);
         this.peso1 = peso1;
    }
 
@@ -2647,6 +2923,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso10(BigDecimal peso10) {
+        markAsChanged("PESO_10", peso10);
         this.peso10 = peso10;
    }
 
@@ -2655,6 +2932,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso11(BigDecimal peso11) {
+        markAsChanged("PESO_11", peso11);
         this.peso11 = peso11;
    }
 
@@ -2663,6 +2941,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso12(BigDecimal peso12) {
+        markAsChanged("PESO_12", peso12);
         this.peso12 = peso12;
    }
 
@@ -2671,6 +2950,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso2(BigDecimal peso2) {
+        markAsChanged("PESO_2", peso2);
         this.peso2 = peso2;
    }
 
@@ -2679,6 +2959,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso3(BigDecimal peso3) {
+        markAsChanged("PESO_3", peso3);
         this.peso3 = peso3;
    }
 
@@ -2687,6 +2968,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso4(BigDecimal peso4) {
+        markAsChanged("PESO_4", peso4);
         this.peso4 = peso4;
    }
 
@@ -2695,6 +2977,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso5(BigDecimal peso5) {
+        markAsChanged("PESO_5", peso5);
         this.peso5 = peso5;
    }
 
@@ -2703,6 +2986,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso6(BigDecimal peso6) {
+        markAsChanged("PESO_6", peso6);
         this.peso6 = peso6;
    }
 
@@ -2711,6 +2995,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso7(BigDecimal peso7) {
+        markAsChanged("PESO_7", peso7);
         this.peso7 = peso7;
    }
 
@@ -2719,6 +3004,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso8(BigDecimal peso8) {
+        markAsChanged("PESO_8", peso8);
         this.peso8 = peso8;
    }
 
@@ -2727,6 +3013,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPeso9(BigDecimal peso9) {
+        markAsChanged("PESO_9", peso9);
         this.peso9 = peso9;
    }
 
@@ -2735,6 +3022,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopTotal(BigDecimal popTotal) {
+        markAsChanged("POPTOTAL", popTotal);
         this.popTotal = popTotal;
    }
 
@@ -2743,6 +3031,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade1(BigDecimal popularidade1) {
+        markAsChanged("POPULARIDADE_1", popularidade1);
         this.popularidade1 = popularidade1;
    }
 
@@ -2751,6 +3040,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade10(BigDecimal popularidade10) {
+        markAsChanged("POPULARIDADE_10", popularidade10);
         this.popularidade10 = popularidade10;
    }
 
@@ -2759,6 +3049,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade11(BigDecimal popularidade11) {
+        markAsChanged("POPULARIDADE_11", popularidade11);
         this.popularidade11 = popularidade11;
    }
 
@@ -2767,6 +3058,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade12(BigDecimal popularidade12) {
+        markAsChanged("POPULARIDADE_12", popularidade12);
         this.popularidade12 = popularidade12;
    }
 
@@ -2775,6 +3067,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade2(BigDecimal popularidade2) {
+        markAsChanged("POPULARIDADE_2", popularidade2);
         this.popularidade2 = popularidade2;
    }
 
@@ -2783,6 +3076,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade3(BigDecimal popularidade3) {
+        markAsChanged("POPULARIDADE_3", popularidade3);
         this.popularidade3 = popularidade3;
    }
 
@@ -2791,6 +3085,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade4(BigDecimal popularidade4) {
+        markAsChanged("POPULARIDADE_4", popularidade4);
         this.popularidade4 = popularidade4;
    }
 
@@ -2799,6 +3094,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade5(BigDecimal popularidade5) {
+        markAsChanged("POPULARIDADE_5", popularidade5);
         this.popularidade5 = popularidade5;
    }
 
@@ -2807,6 +3103,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat3(BigDecimal partMargContFat3) {
+        markAsChanged("PARTMARGCONTFAT_3", partMargContFat3);
         this.partMargContFat3 = partMargContFat3;
    }
 
@@ -2815,6 +3112,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat4(BigDecimal partMargContFat4) {
+        markAsChanged("PARTMARGCONTFAT_4", partMargContFat4);
         this.partMargContFat4 = partMargContFat4;
    }
 
@@ -2823,6 +3121,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda6(BigDecimal custoVenda6) {
+        markAsChanged("CUSTOVENDA_6", custoVenda6);
         this.custoVenda6 = custoVenda6;
    }
 
@@ -2831,6 +3130,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda7(BigDecimal custoVenda7) {
+        markAsChanged("CUSTOVENDA_7", custoVenda7);
         this.custoVenda7 = custoVenda7;
    }
 
@@ -2839,6 +3139,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda8(BigDecimal custoVenda8) {
+        markAsChanged("CUSTOVENDA_8", custoVenda8);
         this.custoVenda8 = custoVenda8;
    }
 
@@ -2847,6 +3148,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda9(BigDecimal custoVenda9) {
+        markAsChanged("CUSTOVENDA_9", custoVenda9);
         this.custoVenda9 = custoVenda9;
    }
 
@@ -2855,6 +3157,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal1(BigDecimal custoVndTotal1) {
+        markAsChanged("CUSTOVNDTOTAL_1", custoVndTotal1);
         this.custoVndTotal1 = custoVndTotal1;
    }
 
@@ -2863,6 +3166,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal10(BigDecimal custoVndTotal10) {
+        markAsChanged("CUSTOVNDTOTAL_10", custoVndTotal10);
         this.custoVndTotal10 = custoVndTotal10;
    }
 
@@ -2871,6 +3175,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal11(BigDecimal custoVndTotal11) {
+        markAsChanged("CUSTOVNDTOTAL_11", custoVndTotal11);
         this.custoVndTotal11 = custoVndTotal11;
    }
 
@@ -2879,6 +3184,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal12(BigDecimal custoVndTotal12) {
+        markAsChanged("CUSTOVNDTOTAL_12", custoVndTotal12);
         this.custoVndTotal12 = custoVndTotal12;
    }
 
@@ -2887,6 +3193,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal2(BigDecimal custoVndTotal2) {
+        markAsChanged("CUSTOVNDTOTAL_2", custoVndTotal2);
         this.custoVndTotal2 = custoVndTotal2;
    }
 
@@ -2895,6 +3202,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal3(BigDecimal custoVndTotal3) {
+        markAsChanged("CUSTOVNDTOTAL_3", custoVndTotal3);
         this.custoVndTotal3 = custoVndTotal3;
    }
 
@@ -2903,6 +3211,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal4(BigDecimal custoVndTotal4) {
+        markAsChanged("CUSTOVNDTOTAL_4", custoVndTotal4);
         this.custoVndTotal4 = custoVndTotal4;
    }
 
@@ -2911,6 +3220,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal5(BigDecimal custoVndTotal5) {
+        markAsChanged("CUSTOVNDTOTAL_5", custoVndTotal5);
         this.custoVndTotal5 = custoVndTotal5;
    }
 
@@ -2919,6 +3229,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal6(BigDecimal custoVndTotal6) {
+        markAsChanged("CUSTOVNDTOTAL_6", custoVndTotal6);
         this.custoVndTotal6 = custoVndTotal6;
    }
 
@@ -2927,6 +3238,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVndTotal7(BigDecimal custoVndTotal7) {
+        markAsChanged("CUSTOVNDTOTAL_7", custoVndTotal7);
         this.custoVndTotal7 = custoVndTotal7;
    }
 
@@ -2935,6 +3247,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda10(BigDecimal custoVenda10) {
+        markAsChanged("CUSTOVENDA_10", custoVenda10);
         this.custoVenda10 = custoVenda10;
    }
 
@@ -2943,6 +3256,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCustoVenda11(BigDecimal custoVenda11) {
+        markAsChanged("CUSTOVENDA_11", custoVenda11);
         this.custoVenda11 = custoVenda11;
    }
 
@@ -2951,6 +3265,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPopularidade6(BigDecimal popularidade6) {
+        markAsChanged("POPULARIDADE_6", popularidade6);
         this.popularidade6 = popularidade6;
    }
 
@@ -2959,6 +3274,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit7(BigDecimal vlrUnit7) {
+        markAsChanged("VLRUNIT_7", vlrUnit7);
         this.vlrUnit7 = vlrUnit7;
    }
 
@@ -2967,6 +3283,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit8(BigDecimal vlrUnit8) {
+        markAsChanged("VLRUNIT_8", vlrUnit8);
         this.vlrUnit8 = vlrUnit8;
    }
 
@@ -2975,6 +3292,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUnit9(BigDecimal vlrUnit9) {
+        markAsChanged("VLRUNIT_9", vlrUnit9);
         this.vlrUnit9 = vlrUnit9;
    }
 
@@ -2983,6 +3301,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda1(BigDecimal vlrVenda1) {
+        markAsChanged("VLRVENDA_1", vlrVenda1);
         this.vlrVenda1 = vlrVenda1;
    }
 
@@ -2991,6 +3310,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda10(BigDecimal vlrVenda10) {
+        markAsChanged("VLRVENDA_10", vlrVenda10);
         this.vlrVenda10 = vlrVenda10;
    }
 
@@ -2999,6 +3319,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda11(BigDecimal vlrVenda11) {
+        markAsChanged("VLRVENDA_11", vlrVenda11);
         this.vlrVenda11 = vlrVenda11;
    }
 
@@ -3007,6 +3328,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda12(BigDecimal vlrVenda12) {
+        markAsChanged("VLRVENDA_12", vlrVenda12);
         this.vlrVenda12 = vlrVenda12;
    }
 
@@ -3015,6 +3337,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda2(BigDecimal vlrVenda2) {
+        markAsChanged("VLRVENDA_2", vlrVenda2);
         this.vlrVenda2 = vlrVenda2;
    }
 
@@ -3023,6 +3346,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda3(BigDecimal vlrVenda3) {
+        markAsChanged("VLRVENDA_3", vlrVenda3);
         this.vlrVenda3 = vlrVenda3;
    }
 
@@ -3031,6 +3355,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda4(BigDecimal vlrVenda4) {
+        markAsChanged("VLRVENDA_4", vlrVenda4);
         this.vlrVenda4 = vlrVenda4;
    }
 
@@ -3039,6 +3364,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda5(BigDecimal vlrVenda5) {
+        markAsChanged("VLRVENDA_5", vlrVenda5);
         this.vlrVenda5 = vlrVenda5;
    }
 
@@ -3047,6 +3373,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda6(BigDecimal vlrVenda6) {
+        markAsChanged("VLRVENDA_6", vlrVenda6);
         this.vlrVenda6 = vlrVenda6;
    }
 
@@ -3055,6 +3382,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda7(BigDecimal vlrVenda7) {
+        markAsChanged("VLRVENDA_7", vlrVenda7);
         this.vlrVenda7 = vlrVenda7;
    }
 
@@ -3063,6 +3391,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda8(BigDecimal vlrVenda8) {
+        markAsChanged("VLRVENDA_8", vlrVenda8);
         this.vlrVenda8 = vlrVenda8;
    }
 
@@ -3071,6 +3400,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVenda9(BigDecimal vlrVenda9) {
+        markAsChanged("VLRVENDA_9", vlrVenda9);
         this.vlrVenda9 = vlrVenda9;
    }
 
@@ -3079,6 +3409,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil1(BigDecimal vlrVendiaUtil1) {
+        markAsChanged("VLRVENDIAUTIL_1", vlrVendiaUtil1);
         this.vlrVendiaUtil1 = vlrVendiaUtil1;
    }
 
@@ -3087,6 +3418,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil10(BigDecimal vlrVendiaUtil10) {
+        markAsChanged("VLRVENDIAUTIL_10", vlrVendiaUtil10);
         this.vlrVendiaUtil10 = vlrVendiaUtil10;
    }
 
@@ -3095,6 +3427,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil11(BigDecimal vlrVendiaUtil11) {
+        markAsChanged("VLRVENDIAUTIL_11", vlrVendiaUtil11);
         this.vlrVendiaUtil11 = vlrVendiaUtil11;
    }
 
@@ -3103,6 +3436,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil12(BigDecimal vlrVendiaUtil12) {
+        markAsChanged("VLRVENDIAUTIL_12", vlrVendiaUtil12);
         this.vlrVendiaUtil12 = vlrVendiaUtil12;
    }
 
@@ -3111,6 +3445,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil2(BigDecimal vlrVendiaUtil2) {
+        markAsChanged("VLRVENDIAUTIL_2", vlrVendiaUtil2);
         this.vlrVendiaUtil2 = vlrVendiaUtil2;
    }
 
@@ -3119,6 +3454,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil3(BigDecimal vlrVendiaUtil3) {
+        markAsChanged("VLRVENDIAUTIL_3", vlrVendiaUtil3);
         this.vlrVendiaUtil3 = vlrVendiaUtil3;
    }
 
@@ -3127,6 +3463,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil4(BigDecimal vlrVendiaUtil4) {
+        markAsChanged("VLRVENDIAUTIL_4", vlrVendiaUtil4);
         this.vlrVendiaUtil4 = vlrVendiaUtil4;
    }
 
@@ -3135,6 +3472,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil5(BigDecimal vlrVendiaUtil5) {
+        markAsChanged("VLRVENDIAUTIL_5", vlrVendiaUtil5);
         this.vlrVendiaUtil5 = vlrVendiaUtil5;
    }
 
@@ -3143,6 +3481,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil6(BigDecimal vlrVendiaUtil6) {
+        markAsChanged("VLRVENDIAUTIL_6", vlrVendiaUtil6);
         this.vlrVendiaUtil6 = vlrVendiaUtil6;
    }
 
@@ -3151,6 +3490,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil7(BigDecimal vlrVendiaUtil7) {
+        markAsChanged("VLRVENDIAUTIL_7", vlrVendiaUtil7);
         this.vlrVendiaUtil7 = vlrVendiaUtil7;
    }
 
@@ -3159,6 +3499,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil8(BigDecimal vlrVendiaUtil8) {
+        markAsChanged("VLRVENDIAUTIL_8", vlrVendiaUtil8);
         this.vlrVendiaUtil8 = vlrVendiaUtil8;
    }
 
@@ -3167,6 +3508,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrVendiaUtil9(BigDecimal vlrVendiaUtil9) {
+        markAsChanged("VLRVENDIAUTIL_9", vlrVendiaUtil9);
         this.vlrVendiaUtil9 = vlrVendiaUtil9;
    }
 
@@ -3175,6 +3517,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCurvaTot5(String curvaTot5) {
+        markAsChanged("CURVATOT_5", curvaTot5);
         this.curvaTot5 = curvaTot5;
    }
 
@@ -3183,6 +3526,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat1(BigDecimal partMargContFat1) {
+        markAsChanged("PARTMARGCONTFAT_1", partMargContFat1);
         this.partMargContFat1 = partMargContFat1;
    }
 
@@ -3191,6 +3535,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat10(BigDecimal partMargContFat10) {
+        markAsChanged("PARTMARGCONTFAT_10", partMargContFat10);
         this.partMargContFat10 = partMargContFat10;
    }
 
@@ -3199,6 +3544,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat11(BigDecimal partMargContFat11) {
+        markAsChanged("PARTMARGCONTFAT_11", partMargContFat11);
         this.partMargContFat11 = partMargContFat11;
    }
 
@@ -3207,6 +3553,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat12(BigDecimal partMargContFat12) {
+        markAsChanged("PARTMARGCONTFAT_12", partMargContFat12);
         this.partMargContFat12 = partMargContFat12;
    }
 
@@ -3215,6 +3562,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPartMargContFat2(BigDecimal partMargContFat2) {
+        markAsChanged("PARTMARGCONTFAT_2", partMargContFat2);
         this.partMargContFat2 = partMargContFat2;
    }
 
@@ -3223,6 +3571,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar3(BigDecimal vlrGastoVar3) {
+        markAsChanged("VLRGASTOVAR_3", vlrGastoVar3);
         this.vlrGastoVar3 = vlrGastoVar3;
    }
 
@@ -3231,6 +3580,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar4(BigDecimal vlrGastoVar4) {
+        markAsChanged("VLRGASTOVAR_4", vlrGastoVar4);
         this.vlrGastoVar4 = vlrGastoVar4;
    }
 
@@ -3239,6 +3589,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrGastoVar5(BigDecimal vlrGastoVar5) {
+        markAsChanged("VLRGASTOVAR_5", vlrGastoVar5);
         this.vlrGastoVar5 = vlrGastoVar5;
    }
 
@@ -3247,6 +3598,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso7(BigDecimal acumPeso7) {
+        markAsChanged("ACUMPESO_7", acumPeso7);
         this.acumPeso7 = acumPeso7;
    }
 
@@ -3255,6 +3607,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso8(BigDecimal acumPeso8) {
+        markAsChanged("ACUMPESO_8", acumPeso8);
         this.acumPeso8 = acumPeso8;
    }
 
@@ -3263,6 +3616,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso9(BigDecimal acumPeso9) {
+        markAsChanged("ACUMPESO_9", acumPeso9);
         this.acumPeso9 = acumPeso9;
    }
 
@@ -3271,6 +3625,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd1(BigDecimal acumQtd1) {
+        markAsChanged("ACUMQTD_1", acumQtd1);
         this.acumQtd1 = acumQtd1;
    }
 
@@ -3279,6 +3634,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd10(BigDecimal acumQtd10) {
+        markAsChanged("ACUMQTD_10", acumQtd10);
         this.acumQtd10 = acumQtd10;
    }
 
@@ -3287,6 +3643,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd11(BigDecimal acumQtd11) {
+        markAsChanged("ACUMQTD_11", acumQtd11);
         this.acumQtd11 = acumQtd11;
    }
 
@@ -3295,6 +3652,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd12(BigDecimal acumQtd12) {
+        markAsChanged("ACUMQTD_12", acumQtd12);
         this.acumQtd12 = acumQtd12;
    }
 
@@ -3303,6 +3661,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd2(BigDecimal acumQtd2) {
+        markAsChanged("ACUMQTD_2", acumQtd2);
         this.acumQtd2 = acumQtd2;
    }
 
@@ -3311,6 +3670,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd3(BigDecimal acumQtd3) {
+        markAsChanged("ACUMQTD_3", acumQtd3);
         this.acumQtd3 = acumQtd3;
    }
 
@@ -3319,6 +3679,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd4(BigDecimal acumQtd4) {
+        markAsChanged("ACUMQTD_4", acumQtd4);
         this.acumQtd4 = acumQtd4;
    }
 
@@ -3327,6 +3688,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd5(BigDecimal acumQtd5) {
+        markAsChanged("ACUMQTD_5", acumQtd5);
         this.acumQtd5 = acumQtd5;
    }
 
@@ -3335,6 +3697,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd6(BigDecimal acumQtd6) {
+        markAsChanged("ACUMQTD_6", acumQtd6);
         this.acumQtd6 = acumQtd6;
    }
 
@@ -3343,6 +3706,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd7(BigDecimal acumQtd7) {
+        markAsChanged("ACUMQTD_7", acumQtd7);
         this.acumQtd7 = acumQtd7;
    }
 
@@ -3351,6 +3715,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd8(BigDecimal acumQtd8) {
+        markAsChanged("ACUMQTD_8", acumQtd8);
         this.acumQtd8 = acumQtd8;
    }
 
@@ -3359,6 +3724,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumQtd9(BigDecimal acumQtd9) {
+        markAsChanged("ACUMQTD_9", acumQtd9);
         this.acumQtd9 = acumQtd9;
    }
 
@@ -3367,6 +3733,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot1(BigDecimal acumTot1) {
+        markAsChanged("ACUMTOT_1", acumTot1);
         this.acumTot1 = acumTot1;
    }
 
@@ -3375,6 +3742,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot10(BigDecimal acumTot10) {
+        markAsChanged("ACUMTOT_10", acumTot10);
         this.acumTot10 = acumTot10;
    }
 
@@ -3383,6 +3751,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot11(BigDecimal acumTot11) {
+        markAsChanged("ACUMTOT_11", acumTot11);
         this.acumTot11 = acumTot11;
    }
 
@@ -3391,6 +3760,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot12(BigDecimal acumTot12) {
+        markAsChanged("ACUMTOT_12", acumTot12);
         this.acumTot12 = acumTot12;
    }
 
@@ -3399,6 +3769,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot2(BigDecimal acumTot2) {
+        markAsChanged("ACUMTOT_2", acumTot2);
         this.acumTot2 = acumTot2;
    }
 
@@ -3407,6 +3778,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot3(BigDecimal acumTot3) {
+        markAsChanged("ACUMTOT_3", acumTot3);
         this.acumTot3 = acumTot3;
    }
 
@@ -3415,6 +3787,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot4(BigDecimal acumTot4) {
+        markAsChanged("ACUMTOT_4", acumTot4);
         this.acumTot4 = acumTot4;
    }
 
@@ -3423,6 +3796,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot5(BigDecimal acumTot5) {
+        markAsChanged("ACUMTOT_5", acumTot5);
         this.acumTot5 = acumTot5;
    }
 
@@ -3431,6 +3805,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot6(BigDecimal acumTot6) {
+        markAsChanged("ACUMTOT_6", acumTot6);
         this.acumTot6 = acumTot6;
    }
 
@@ -3439,6 +3814,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot7(BigDecimal acumTot7) {
+        markAsChanged("ACUMTOT_7", acumTot7);
         this.acumTot7 = acumTot7;
    }
 
@@ -3447,6 +3823,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot8(BigDecimal acumTot8) {
+        markAsChanged("ACUMTOT_8", acumTot8);
         this.acumTot8 = acumTot8;
    }
 
@@ -3455,6 +3832,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumTot9(BigDecimal acumTot9) {
+        markAsChanged("ACUMTOT_9", acumTot9);
         this.acumTot9 = acumTot9;
    }
 
@@ -3463,6 +3841,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAliqCred(BigDecimal aliqCred) {
+        markAsChanged("ALIQCRED", aliqCred);
         this.aliqCred = aliqCred;
    }
 
@@ -3471,6 +3850,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -3479,6 +3859,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -3487,6 +3868,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setMultipCpa(BigDecimal multipCpa) {
+        markAsChanged("MULTIPCPA", multipCpa);
         this.multipCpa = multipCpa;
    }
 
@@ -3495,6 +3877,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompraGirAjustado(BigDecimal sugCompraGirAjustado) {
+        markAsChanged("SUGCOMPRAGIRAJUSTADO", sugCompraGirAjustado);
         this.sugCompraGirAjustado = sugCompraGirAjustado;
    }
 
@@ -3503,6 +3886,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompraGirAjustadoMultCpa(BigDecimal sugCompraGirAjustadoMultCpa) {
+        markAsChanged("SUGCOMPRAGIRAJUSTADOMULTCPA", sugCompraGirAjustadoMultCpa);
         this.sugCompraGirAjustadoMultCpa = sugCompraGirAjustadoMultCpa;
    }
 
@@ -3511,6 +3895,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setTemSugGiroAjustado(String temSugGiroAjustado) {
+        markAsChanged("TEMSUGGIROAJUSTADO", temSugGiroAjustado);
         this.temSugGiroAjustado = temSugGiroAjustado;
    }
 
@@ -3519,6 +3904,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setUnPadrao(String unPadrao) {
+        markAsChanged("UNPADRAO", unPadrao);
         this.unPadrao = unPadrao;
    }
 
@@ -3527,6 +3913,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompraGirMultCpa(BigDecimal sugCompraGirMultCpa) {
+        markAsChanged("SUGCOMPRAGIRMULTCPA", sugCompraGirMultCpa);
         this.sugCompraGirMultCpa = sugCompraGirMultCpa;
    }
 
@@ -3535,6 +3922,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg4(BigDecimal acumMarg4) {
+        markAsChanged("ACUMMARG_4", acumMarg4);
         this.acumMarg4 = acumMarg4;
    }
 
@@ -3543,6 +3931,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg5(BigDecimal acumMarg5) {
+        markAsChanged("ACUMMARG_5", acumMarg5);
         this.acumMarg5 = acumMarg5;
    }
 
@@ -3551,6 +3940,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg6(BigDecimal acumMarg6) {
+        markAsChanged("ACUMMARG_6", acumMarg6);
         this.acumMarg6 = acumMarg6;
    }
 
@@ -3559,6 +3949,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg7(BigDecimal acumMarg7) {
+        markAsChanged("ACUMMARG_7", acumMarg7);
         this.acumMarg7 = acumMarg7;
    }
 
@@ -3567,6 +3958,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg8(BigDecimal acumMarg8) {
+        markAsChanged("ACUMMARG_8", acumMarg8);
         this.acumMarg8 = acumMarg8;
    }
 
@@ -3575,6 +3967,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg11(BigDecimal acumMarg11) {
+        markAsChanged("ACUMMARG_11", acumMarg11);
         this.acumMarg11 = acumMarg11;
    }
 
@@ -3583,6 +3976,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumMarg12(BigDecimal acumMarg12) {
+        markAsChanged("ACUMMARG_12", acumMarg12);
         this.acumMarg12 = acumMarg12;
    }
 
@@ -3591,6 +3985,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso11(BigDecimal acumPeso11) {
+        markAsChanged("ACUMPESO_11", acumPeso11);
         this.acumPeso11 = acumPeso11;
    }
 
@@ -3599,6 +3994,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso12(BigDecimal acumPeso12) {
+        markAsChanged("ACUMPESO_12", acumPeso12);
         this.acumPeso12 = acumPeso12;
    }
 
@@ -3607,6 +4003,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso2(BigDecimal acumPeso2) {
+        markAsChanged("ACUMPESO_2", acumPeso2);
         this.acumPeso2 = acumPeso2;
    }
 
@@ -3615,6 +4012,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAcumPeso3(BigDecimal acumPeso3) {
+        markAsChanged("ACUMPESO_3", acumPeso3);
         this.acumPeso3 = acumPeso3;
    }
 
@@ -3623,6 +4021,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCompraMultCpa(BigDecimal sugCompraMultCpa) {
+        markAsChanged("SUGCOMPRAMULTCPA", sugCompraMultCpa);
         this.sugCompraMultCpa = sugCompraMultCpa;
    }
 
@@ -3631,6 +4030,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setSugCpaGirAlterado(String sugCpaGirAlterado) {
+        markAsChanged("SUGCPAGIRALTERADO", sugCpaGirAlterado);
         this.sugCpaGirAlterado = sugCpaGirAlterado;
    }
 
@@ -3639,6 +4039,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPercDescFornecedor(BigDecimal percDescFornecedor) {
+        markAsChanged("PERCDESCFORNECEDOR", percDescFornecedor);
         this.percDescFornecedor = percDescFornecedor;
    }
 
@@ -3647,6 +4048,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -3655,6 +4057,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setWmsBloqueado(BigDecimal wmsBloqueado) {
+        markAsChanged("WMSBLOQUEADO", wmsBloqueado);
         this.wmsBloqueado = wmsBloqueado;
    }
 
@@ -3663,6 +4066,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAccumMarg_2(BigDecimal accumMarg_2) {
+        markAsChanged("ACUMMARG_2", accumMarg_2);
         this.accumMarg_2 = accumMarg_2;
    }
 
@@ -3671,6 +4075,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setAccumMarg_3(BigDecimal accumMarg_3) {
+        markAsChanged("ACUMMARG_3", accumMarg_3);
         this.accumMarg_3 = accumMarg_3;
    }
 
@@ -3679,6 +4084,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDurEstPosCpAgir(BigDecimal durEstPosCpAgir) {
+        markAsChanged("DURESTPOSCPAGIR", durEstPosCpAgir);
         this.durEstPosCpAgir = durEstPosCpAgir;
    }
 
@@ -3687,6 +4093,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDurEstSeg(BigDecimal durEstSeg) {
+        markAsChanged("DURESTSEG", durEstSeg);
         this.durEstSeg = durEstSeg;
    }
 
@@ -3695,6 +4102,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasUteis(BigDecimal diasUteis) {
+        markAsChanged("DIASUTEIS", diasUteis);
         this.diasUteis = diasUteis;
    }
 
@@ -3703,6 +4111,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPrevEntrega(Timestamp prevEntrega) {
+        markAsChanged("PREVENTREGA", prevEntrega);
         this.prevEntrega = prevEntrega;
    }
 
@@ -3711,6 +4120,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setGiroDiario(BigDecimal giroDiario) {
+        markAsChanged("GIRODIARIO", giroDiario);
         this.giroDiario = giroDiario;
    }
 
@@ -3719,6 +4129,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPontoPed(Timestamp pontoPed) {
+        markAsChanged("PONTOPED", pontoPed);
         this.pontoPed = pontoPed;
    }
 
@@ -3727,6 +4138,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setVlrUltCompra(BigDecimal vlrUltCompra) {
+        markAsChanged("VLRULTCOMPRA", vlrUltCompra);
         this.vlrUltCompra = vlrUltCompra;
    }
 
@@ -3735,6 +4147,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setPossuiFam(String possuiFam) {
+        markAsChanged("POSSUIFAM", possuiFam);
         this.possuiFam = possuiFam;
    }
 
@@ -3743,6 +4156,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRuptura(BigDecimal diasRuptura) {
+        markAsChanged("DIASRUPTURA", diasRuptura);
         this.diasRuptura = diasRuptura;
    }
 
@@ -3751,6 +4165,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_1(BigDecimal diasRupturaEst_1) {
+        markAsChanged("DIASRUPTURAEST_1", diasRupturaEst_1);
         this.diasRupturaEst_1 = diasRupturaEst_1;
    }
 
@@ -3759,6 +4174,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_10(BigDecimal diasRupturaEst_10) {
+        markAsChanged("DIASRUPTURAEST_10", diasRupturaEst_10);
         this.diasRupturaEst_10 = diasRupturaEst_10;
    }
 
@@ -3767,6 +4183,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_11(BigDecimal diasRupturaEst_11) {
+        markAsChanged("DIASRUPTURAEST_11", diasRupturaEst_11);
         this.diasRupturaEst_11 = diasRupturaEst_11;
    }
 
@@ -3775,6 +4192,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_12(BigDecimal diasRupturaEst_12) {
+        markAsChanged("DIASRUPTURAEST_12", diasRupturaEst_12);
         this.diasRupturaEst_12 = diasRupturaEst_12;
    }
 
@@ -3783,6 +4201,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_2(BigDecimal diasRupturaEst_2) {
+        markAsChanged("DIASRUPTURAEST_2", diasRupturaEst_2);
         this.diasRupturaEst_2 = diasRupturaEst_2;
    }
 
@@ -3791,6 +4210,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_3(BigDecimal diasRupturaEst_3) {
+        markAsChanged("DIASRUPTURAEST_3", diasRupturaEst_3);
         this.diasRupturaEst_3 = diasRupturaEst_3;
    }
 
@@ -3799,6 +4219,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_4(BigDecimal diasRupturaEst_4) {
+        markAsChanged("DIASRUPTURAEST_4", diasRupturaEst_4);
         this.diasRupturaEst_4 = diasRupturaEst_4;
    }
 
@@ -3807,6 +4228,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_5(BigDecimal diasRupturaEst_5) {
+        markAsChanged("DIASRUPTURAEST_5", diasRupturaEst_5);
         this.diasRupturaEst_5 = diasRupturaEst_5;
    }
 
@@ -3815,6 +4237,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_6(BigDecimal diasRupturaEst_6) {
+        markAsChanged("DIASRUPTURAEST_6", diasRupturaEst_6);
         this.diasRupturaEst_6 = diasRupturaEst_6;
    }
 
@@ -3823,6 +4246,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_7(BigDecimal diasRupturaEst_7) {
+        markAsChanged("DIASRUPTURAEST_7", diasRupturaEst_7);
         this.diasRupturaEst_7 = diasRupturaEst_7;
    }
 
@@ -3831,6 +4255,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_8(BigDecimal diasRupturaEst_8) {
+        markAsChanged("DIASRUPTURAEST_8", diasRupturaEst_8);
         this.diasRupturaEst_8 = diasRupturaEst_8;
    }
 
@@ -3839,6 +4264,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setDiasRupturaEst_9(BigDecimal diasRupturaEst_9) {
+        markAsChanged("DIASRUPTURAEST_9", diasRupturaEst_9);
         this.diasRupturaEst_9 = diasRupturaEst_9;
    }
 
@@ -3847,6 +4273,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
    }
 
    public void setNumMps(BigDecimal numMps) {
+        markAsChanged("NUMMPS", numMps);
         this.numMps = numMps;
    }
 
@@ -3862,6 +4289,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
 
    @Override
    public GiroProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codParcForn = vo.asBigDecimal("CODPARCFORN");
         this.codProd = vo.asBigDecimal("CODPROD");

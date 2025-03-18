@@ -391,6 +391,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProdSubkit(BigDecimal codProdSubkit) {
+        markAsChanged("CODPRODSUBKIT", codProdSubkit);
         this.codProdSubkit = codProdSubkit;
    }
 
@@ -399,6 +400,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEnqReintegra(String enqReintegra) {
+        markAsChanged("ENQREINTEGRA", enqReintegra);
         this.enqReintegra = enqReintegra;
    }
 
@@ -407,6 +409,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMargLucro(BigDecimal margLucro) {
+        markAsChanged("MARGLUCRO", margLucro);
         this.margLucro = margLucro;
    }
 
@@ -415,6 +418,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodGProd(BigDecimal codGProd) {
+        markAsChanged("CODGPROD", codGProd);
         this.codGProd = codGProd;
    }
 
@@ -423,6 +427,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodEspecSt(BigDecimal codEspecSt) {
+        markAsChanged("CODESPECST", codEspecSt);
         this.codEspecSt = codEspecSt;
    }
 
@@ -431,6 +436,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAnp(BigDecimal codAnp) {
+        markAsChanged("CODANP", codAnp);
         this.codAnp = codAnp;
    }
 
@@ -439,6 +445,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
+        markAsChanged("CODAREASEP", codAreaSep);
         this.codAreaSep = codAreaSep;
    }
 
@@ -447,6 +454,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFormaPonta(BigDecimal codFormaPonta) {
+        markAsChanged("CODFORMAPONTA", codFormaPonta);
         this.codFormaPonta = codFormaPonta;
    }
 
@@ -455,6 +463,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFormPrec(BigDecimal codFormPrec) {
+        markAsChanged("CODFORMPREC", codFormPrec);
         this.codFormPrec = codFormPrec;
    }
 
@@ -463,6 +472,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodGar(BigDecimal codGar) {
+        markAsChanged("CODGAR", codGar);
         this.codGar = codGar;
    }
 
@@ -471,6 +481,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodGenero(BigDecimal codGenero) {
+        markAsChanged("CODGENERO", codGenero);
         this.codGenero = codGenero;
    }
 
@@ -479,6 +490,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -487,6 +499,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodIcmsFast(BigDecimal codIcmsFast) {
+        markAsChanged("CODICMSFAST", codIcmsFast);
         this.codIcmsFast = codIcmsFast;
    }
 
@@ -495,6 +508,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodIpi(BigDecimal codIpi) {
+        markAsChanged("CODIPI", codIpi);
         this.codIpi = codIpi;
    }
 
@@ -503,6 +517,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodLocalPadrao(BigDecimal codLocalPadrao) {
+        markAsChanged("CODLOCALPADRAO", codLocalPadrao);
         this.codLocalPadrao = codLocalPadrao;
    }
 
@@ -511,6 +526,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -519,6 +535,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMedAux(BigDecimal medAux) {
+        markAsChanged("MEDAUX", medAux);
         this.medAux = medAux;
    }
 
@@ -527,6 +544,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setModoAplic(String modoAplic) {
+        markAsChanged("MODOAPLIC", modoAplic);
         this.modoAplic = modoAplic;
    }
 
@@ -535,6 +553,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMotivoIncexc(String motivoIncexc) {
+        markAsChanged("MOTIVOINCEXC", motivoIncexc);
         this.motivoIncexc = motivoIncexc;
    }
 
@@ -543,6 +562,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMultipVenda(BigDecimal multipVenda) {
+        markAsChanged("MULTIPVENDA", multipVenda);
         this.multipVenda = multipVenda;
    }
 
@@ -551,6 +571,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMvaAjustado(BigDecimal mvaAjustado) {
+        markAsChanged("MVAAJUSTADO", mvaAjustado);
         this.mvaAjustado = mvaAjustado;
    }
 
@@ -559,6 +580,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNaturezaOperDes(String naturezaOperDes) {
+        markAsChanged("NATUREZAOPERDES", naturezaOperDes);
         this.naturezaOperDes = naturezaOperDes;
    }
 
@@ -567,6 +589,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNcm(String ncm) {
+        markAsChanged("NCM", ncm);
         this.ncm = ncm;
    }
 
@@ -575,6 +598,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAcrescMax(BigDecimal acrescMax) {
+        markAsChanged("ACRESCMAX", acrescMax);
         this.acrescMax = acrescMax;
    }
 
@@ -583,6 +607,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAgrupCompMinimo(BigDecimal agrupCompMinimo) {
+        markAsChanged("AGRUPCOMPMINIMO", agrupCompMinimo);
         this.agrupCompMinimo = agrupCompMinimo;
    }
 
@@ -591,6 +616,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAgrupMin(BigDecimal agrupMin) {
+        markAsChanged("AGRUPMIN", agrupMin);
         this.agrupMin = agrupMin;
    }
 
@@ -599,6 +625,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAlertaEstMin(String alertaEstMin) {
+        markAsChanged("ALERTAESTMIN", alertaEstMin);
         this.alertaEstMin = alertaEstMin;
    }
 
@@ -607,6 +634,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqIcmsIntEfd(BigDecimal aliqIcmsIntEfd) {
+        markAsChanged("ALIQICMSINTEFD", aliqIcmsIntEfd);
         this.aliqIcmsIntEfd = aliqIcmsIntEfd;
    }
 
@@ -615,6 +643,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAltura(BigDecimal altura) {
+        markAsChanged("ALTURA", altura);
         this.altura = altura;
    }
 
@@ -623,6 +652,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAp1RctEgo(String ap1RctEgo) {
+        markAsChanged("AP1RCTEGO", ap1RctEgo);
         this.ap1RctEgo = ap1RctEgo;
    }
 
@@ -631,6 +661,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAplicacao(BigDecimal aplicacao) {
+        markAsChanged("APLICACAO", aplicacao);
         this.aplicacao = aplicacao;
    }
 
@@ -639,6 +670,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAplicaSazo(String aplicaSazo) {
+        markAsChanged("APLICASAZO", aplicaSazo);
         this.aplicaSazo = aplicaSazo;
    }
 
@@ -647,6 +679,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setApresDetalhe(String apresDetalhe) {
+        markAsChanged("APRESDETALHE", apresDetalhe);
         this.apresDetalhe = apresDetalhe;
    }
 
@@ -655,6 +688,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setApresForm(String apresForm) {
+        markAsChanged("APRESFORM", apresForm);
         this.apresForm = apresForm;
    }
 
@@ -663,6 +697,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setApuraProdEpe(String apuraProdEpe) {
+        markAsChanged("APURAPRODEPE", apuraProdEpe);
         this.apuraProdEpe = apuraProdEpe;
    }
 
@@ -671,6 +706,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setArredAgrup(BigDecimal arredAgrup) {
+        markAsChanged("ARREDAGRUP", arredAgrup);
         this.arredAgrup = arredAgrup;
    }
 
@@ -679,6 +715,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setArredPreco(BigDecimal arredPreco) {
+        markAsChanged("ARREDPRECO", arredPreco);
         this.arredPreco = arredPreco;
    }
 
@@ -687,6 +724,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -695,6 +733,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setBalanca(String balanca) {
+        markAsChanged("BALANCA", balanca);
         this.balanca = balanca;
    }
 
@@ -703,6 +742,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCalcGiro(String calcGiro) {
+        markAsChanged("CALCULOGIRO", calcGiro);
         this.calcGiro = calcGiro;
    }
 
@@ -711,6 +751,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCamadas(BigDecimal camadas) {
+        markAsChanged("CAMADAS", camadas);
         this.camadas = camadas;
    }
 
@@ -719,6 +760,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCaracteristicas(String caracteristicas) {
+        markAsChanged("CARACTERISTICAS", caracteristicas);
         this.caracteristicas = caracteristicas;
    }
 
@@ -727,6 +769,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCarencia(BigDecimal carencia) {
+        markAsChanged("CARENCIA", carencia);
         this.carencia = carencia;
    }
 
@@ -735,6 +778,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCientifico(String cientifico) {
+        markAsChanged("CIENTIFICO", cientifico);
         this.cientifico = cientifico;
    }
 
@@ -743,6 +787,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setClasseAgt(BigDecimal classeAgt) {
+        markAsChanged("CLASSEAGT", classeAgt);
         this.classeAgt = classeAgt;
    }
 
@@ -751,6 +796,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setClasseTox(BigDecimal classeTox) {
+        markAsChanged("CLASSETOX", classeTox);
         this.classeTox = classeTox;
    }
 
@@ -759,6 +805,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setClassUbTrib(BigDecimal classUbTrib) {
+        markAsChanged("CLASSUBTRIB", classUbTrib);
         this.classUbTrib = classUbTrib;
    }
 
@@ -767,6 +814,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCnae(BigDecimal cnae) {
+        markAsChanged("CNAE", cnae);
         this.cnae = cnae;
    }
 
@@ -775,6 +823,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLisContEst(String lisContEst) {
+        markAsChanged("LISCONTEST", lisContEst);
         this.lisContEst = lisContEst;
    }
 
@@ -783,6 +832,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLocal(String local) {
+        markAsChanged("LOCAL", local);
         this.local = local;
    }
 
@@ -791,6 +841,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLocalizacao(String localizacao) {
+        markAsChanged("LOCALIZACAO", localizacao);
         this.localizacao = localizacao;
    }
 
@@ -799,6 +850,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLoteCompMinimo(BigDecimal loteCompMinimo) {
+        markAsChanged("LOTECOMPMINIMO", loteCompMinimo);
         this.loteCompMinimo = loteCompMinimo;
    }
 
@@ -807,6 +859,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLoteCompras(BigDecimal loteCompras) {
+        markAsChanged("LOTECOMPRAS", loteCompras);
         this.loteCompras = loteCompras;
    }
 
@@ -815,6 +868,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setM3(BigDecimal m3) {
+        markAsChanged("M3", m3);
         this.m3 = m3;
    }
 
@@ -823,6 +877,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setManejoInt(String manejoInt) {
+        markAsChanged("MANEJOINT", manejoInt);
         this.manejoInt = manejoInt;
    }
 
@@ -831,6 +886,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -839,6 +895,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -847,6 +904,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNotifConf(String notifConf) {
+        markAsChanged("NOTIFCONF", notifConf);
         this.notifConf = notifConf;
    }
 
@@ -855,6 +913,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -863,6 +922,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -871,6 +931,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -879,6 +940,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
+        markAsChanged("CODPARCFORN", codParcForn);
         this.codParcForn = codParcForn;
    }
 
@@ -887,6 +949,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -895,6 +958,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProdAgrupApt(BigDecimal codProdAgrupApt) {
+        markAsChanged("CODPRODAGRUPAPT", codProdAgrupApt);
         this.codProdAgrupApt = codProdAgrupApt;
    }
 
@@ -903,6 +967,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProdAgrupAptEnc(BigDecimal codProdAgrupAptEnc) {
+        markAsChanged("CODPRODAGRUPAPTENC", codProdAgrupAptEnc);
         this.codProdAgrupAptEnc = codProdAgrupAptEnc;
    }
 
@@ -911,6 +976,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProdRoi(String codProdRoi) {
+        markAsChanged("CODPRODROI", codProdRoi);
         this.codProdRoi = codProdRoi;
    }
 
@@ -919,6 +985,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -927,6 +994,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodRegMapa(String codRegMapa) {
+        markAsChanged("CODREGMAPA", codRegMapa);
         this.codRegMapa = codRegMapa;
    }
 
@@ -935,6 +1003,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodRfa(BigDecimal codRfa) {
+        markAsChanged("CODRFA", codRfa);
         this.codRfa = codRfa;
    }
 
@@ -943,6 +1012,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -951,6 +1021,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodTribMunIss(String codTribMunIss) {
+        markAsChanged("CODTRIBMUNISS", codTribMunIss);
         this.codTribMunIss = codTribMunIss;
    }
 
@@ -959,6 +1030,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -967,6 +1039,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -975,6 +1048,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolCompra(String codVolCompra) {
+        markAsChanged("CODVOLCOMPRA", codVolCompra);
         this.codVolCompra = codVolCompra;
    }
 
@@ -983,6 +1057,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolPlan(String codVolPlan) {
+        markAsChanged("CODVOLPLAN", codVolPlan);
         this.codVolPlan = codVolPlan;
    }
 
@@ -991,6 +1066,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolRes(String codVolRes) {
+        markAsChanged("CODVOLRES", codVolRes);
         this.codVolRes = codVolRes;
    }
 
@@ -999,6 +1075,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setComGer(BigDecimal comGer) {
+        markAsChanged("COMGER", comGer);
         this.comGer = comGer;
    }
 
@@ -1007,6 +1084,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setComplDesc(String complDesc) {
+        markAsChanged("COMPLDESC", complDesc);
         this.complDesc = complDesc;
    }
 
@@ -1015,6 +1093,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setComponObrig(String componObrig) {
+        markAsChanged("COMPONOBRIG", componObrig);
         this.componObrig = componObrig;
    }
 
@@ -1023,6 +1102,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setComVend(BigDecimal comVend) {
+        markAsChanged("COMVEND", comVend);
         this.comVend = comVend;
    }
 
@@ -1031,6 +1111,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConcentracao(String concentracao) {
+        markAsChanged("CONCENTRACAO", concentracao);
         this.concentracao = concentracao;
    }
 
@@ -1039,6 +1120,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConfCegaPeso(String confCegaPeso) {
+        markAsChanged("CONFCEGAPESO", confCegaPeso);
         this.confCegaPeso = confCegaPeso;
    }
 
@@ -1047,6 +1129,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConfere(String confere) {
+        markAsChanged("CONFERE", confere);
         this.confere = confere;
    }
 
@@ -1055,6 +1138,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConverVol(BigDecimal converVol) {
+        markAsChanged("CONVERVOL", converVol);
         this.converVol = converVol;
    }
 
@@ -1063,6 +1147,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCstIpiEnt(BigDecimal cstIpiEnt) {
+        markAsChanged("CSTIPIENT", cstIpiEnt);
         this.cstIpiEnt = cstIpiEnt;
    }
 
@@ -1071,6 +1156,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCstIpiSai(BigDecimal cstIpiSai) {
+        markAsChanged("CSTIPISAI", cstIpiSai);
         this.cstIpiSai = cstIpiSai;
    }
 
@@ -1079,6 +1165,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCultura(String cultura) {
+        markAsChanged("CULTURA", cultura);
         this.cultura = cultura;
    }
 
@@ -1087,6 +1174,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDecCusto(BigDecimal decCusto) {
+        markAsChanged("DECCUSTO", decCusto);
         this.decCusto = decCusto;
    }
 
@@ -1095,6 +1183,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDecQtd(BigDecimal decQtd) {
+        markAsChanged("DECQTD", decQtd);
         this.decQtd = decQtd;
    }
 
@@ -1103,6 +1192,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDecVlr(BigDecimal decVlr) {
+        markAsChanged("DECVLR", decVlr);
         this.decVlr = decVlr;
    }
 
@@ -1111,6 +1201,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescMax(BigDecimal descMax) {
+        markAsChanged("DESCMAX", descMax);
         this.descMax = descMax;
    }
 
@@ -1119,6 +1210,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescMaxFlex(BigDecimal descMaxFlex) {
+        markAsChanged("DESCMAXFLEX", descMaxFlex);
         this.descMaxFlex = descMaxFlex;
    }
 
@@ -1127,6 +1219,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescrProd(String descrProd) {
+        markAsChanged("DESCRPROD", descrProd);
         this.descrProd = descrProd;
    }
 
@@ -1135,6 +1228,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescrProdNfe(String descrProdNfe) {
+        markAsChanged("DESCRPRODNFE", descrProdNfe);
         this.descrProdNfe = descrProdNfe;
    }
 
@@ -1143,6 +1237,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDesvioMax(BigDecimal desvioMax) {
+        markAsChanged("DESVIOMAX", desvioMax);
         this.desvioMax = desvioMax;
    }
 
@@ -1151,6 +1246,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDiasExpedicao(BigDecimal diasExpedicao) {
+        markAsChanged("DIASEXPEDICAO", diasExpedicao);
         this.diasExpedicao = diasExpedicao;
    }
 
@@ -1159,6 +1255,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDimensoes(String dimensoes) {
+        markAsChanged("DIMENSOES", dimensoes);
         this.dimensoes = dimensoes;
    }
 
@@ -1167,6 +1264,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDosagem(BigDecimal dosagem) {
+        markAsChanged("DOSAGEM", dosagem);
         this.dosagem = dosagem;
    }
 
@@ -1175,6 +1273,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDosagemPor(BigDecimal dosagemPor) {
+        markAsChanged("DOSAGEMPOR", dosagemPor);
         this.dosagemPor = dosagemPor;
    }
 
@@ -1183,6 +1282,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -1191,6 +1291,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDtAlterEmq(Timestamp dtAlterEmq) {
+        markAsChanged("DTALTEREMQ", dtAlterEmq);
         this.dtAlterEmq = dtAlterEmq;
    }
 
@@ -1199,6 +1300,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDtAlterEsq(Timestamp dtAlterEsq) {
+        markAsChanged("DTALTERESQ", dtAlterEsq);
         this.dtAlterEsq = dtAlterEsq;
    }
 
@@ -1207,6 +1309,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDtValDif(String dtValDif) {
+        markAsChanged("DTVALDIF", dtValDif);
         this.dtValDif = dtValDif;
    }
 
@@ -1215,6 +1318,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEndImagem(String endImagem) {
+        markAsChanged("ENDIMAGEM", endImagem);
         this.endImagem = endImagem;
    }
 
@@ -1223,6 +1327,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEndModRotulo(String endModRotulo) {
+        markAsChanged("ENDMODROTULO", endModRotulo);
         this.endModRotulo = endModRotulo;
    }
 
@@ -1231,6 +1336,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEpocaAplic(String epocaAplic) {
+        markAsChanged("EPOCAAPLIC", epocaAplic);
         this.epocaAplic = epocaAplic;
    }
 
@@ -1239,6 +1345,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEspessura(BigDecimal espessura) {
+        markAsChanged("ESPESSURA", espessura);
         this.espessura = espessura;
    }
 
@@ -1247,6 +1354,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -1255,6 +1363,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstMaxDias(BigDecimal estMaxDias) {
+        markAsChanged("ESTMAXDIAS", estMaxDias);
         this.estMaxDias = estMaxDias;
    }
 
@@ -1263,6 +1372,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstMaxQtd(BigDecimal estMaxQtd) {
+        markAsChanged("ESTMAXQTD", estMaxQtd);
         this.estMaxQtd = estMaxQtd;
    }
 
@@ -1271,6 +1381,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -1279,6 +1390,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstSegDias(BigDecimal estSegDias) {
+        markAsChanged("ESTSEGDIAS", estSegDias);
         this.estSegDias = estSegDias;
    }
 
@@ -1287,6 +1399,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setEstSegQtd(BigDecimal estSegQtd) {
+        markAsChanged("ESTSEGQTD", estSegQtd);
         this.estSegQtd = estSegQtd;
    }
 
@@ -1295,6 +1408,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setExcluirConf(String excluirConf) {
+        markAsChanged("EXCLUIRCONF", excluirConf);
         this.excluirConf = excluirConf;
    }
 
@@ -1303,6 +1417,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setExigeBenefic(String exigeBenefic) {
+        markAsChanged("EXIGEBENEFIC", exigeBenefic);
         this.exigeBenefic = exigeBenefic;
    }
 
@@ -1311,6 +1426,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFabricante(String fabricante) {
+        markAsChanged("FABRICANTE", fabricante);
         this.fabricante = fabricante;
    }
 
@@ -1319,6 +1435,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFatTotal(String fatTotal) {
+        markAsChanged("FATTOTAL", fatTotal);
         this.fatTotal = fatTotal;
    }
 
@@ -1327,6 +1444,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFlex(String flex) {
+        markAsChanged("FLEX", flex);
         this.flex = flex;
    }
 
@@ -1335,6 +1453,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFormulacao(String formulacao) {
+        markAsChanged("FORMULACAO", formulacao);
         this.formulacao = formulacao;
    }
 
@@ -1343,6 +1462,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGeraPlProd(String geraPlProd) {
+        markAsChanged("GERAPLAPROD", geraPlProd);
         this.geraPlProd = geraPlProd;
    }
 
@@ -1351,6 +1471,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoCofins(String grupoCofins) {
+        markAsChanged("GRUPOCOFINS", grupoCofins);
         this.grupoCofins = grupoCofins;
    }
 
@@ -1359,6 +1480,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoCssl(String grupoCssl) {
+        markAsChanged("GRUPOCSSL", grupoCssl);
         this.grupoCssl = grupoCssl;
    }
 
@@ -1367,6 +1489,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoDescProd(String grupoDescProd) {
+        markAsChanged("GRUPODESCPROD", grupoDescProd);
         this.grupoDescProd = grupoDescProd;
    }
 
@@ -1375,6 +1498,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoIcms(BigDecimal grupoIcms) {
+        markAsChanged("GRUPOICMS", grupoIcms);
         this.grupoIcms = grupoIcms;
    }
 
@@ -1383,6 +1507,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoPis(String grupoPis) {
+        markAsChanged("GRUPOPIS", grupoPis);
         this.grupoPis = grupoPis;
    }
 
@@ -1391,6 +1516,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoQuimico(BigDecimal grupoQuimico) {
+        markAsChanged("GRUPOQUIMICO", grupoQuimico);
         this.grupoQuimico = grupoQuimico;
    }
 
@@ -1399,6 +1525,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setHomePage(String homePage) {
+        markAsChanged("HOMEPAGE", homePage);
         this.homePage = homePage;
    }
 
@@ -1407,6 +1534,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setHrDobrada(String hrDobrada) {
+        markAsChanged("HRDOBRADA", hrDobrada);
         this.hrDobrada = hrDobrada;
    }
 
@@ -1415,6 +1543,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIcmsGerencia(String icmsGerencia) {
+        markAsChanged("ICMSGERENCIA", icmsGerencia);
         this.icmsGerencia = icmsGerencia;
    }
 
@@ -1423,6 +1552,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdenImob(BigDecimal idenImob) {
+        markAsChanged("IDENTIMOB", idenImob);
         this.idenImob = idenImob;
    }
 
@@ -1431,6 +1561,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setImagem(byte[] imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -1439,6 +1570,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setImpEtiqConf(String impEtiqConf) {
+        markAsChanged("IMPETIQCONF", impEtiqConf);
         this.impEtiqConf = impEtiqConf;
    }
 
@@ -1447,6 +1579,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setImplAudLote(String implAudLote) {
+        markAsChanged("IMPLAUDOLOTE", implAudLote);
         this.implAudLote = implAudLote;
    }
 
@@ -1455,6 +1588,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setImpOrdemCorte(String impOrdemCorte) {
+        markAsChanged("IMPORDEMCORTE", impOrdemCorte);
         this.impOrdemCorte = impOrdemCorte;
    }
 
@@ -1463,6 +1597,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIndEspProdEpe(String indEspProdEpe) {
+        markAsChanged("INDESPPRODEPE", indEspProdEpe);
         this.indEspProdEpe = indEspProdEpe;
    }
 
@@ -1471,6 +1606,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setInfPureza(String infPureza) {
+        markAsChanged("INFPUREZA", infPureza);
         this.infPureza = infPureza;
    }
 
@@ -1479,6 +1615,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIntervalo(BigDecimal intervalo) {
+        markAsChanged("INTERVALO", intervalo);
         this.intervalo = intervalo;
    }
 
@@ -1487,6 +1624,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLargura(BigDecimal largura) {
+        markAsChanged("LARGURA", largura);
         this.largura = largura;
    }
 
@@ -1495,6 +1633,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLastro(BigDecimal lastro) {
+        markAsChanged("LASTRO", lastro);
         this.lastro = lastro;
    }
 
@@ -1503,6 +1642,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -1511,6 +1651,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAutCodif(String codAutCodif) {
+        markAsChanged("CODAUTCODIF", codAutCodif);
         this.codAutCodif = codAutCodif;
    }
 
@@ -1519,6 +1660,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodBarBalanca(String codBarBalanca) {
+        markAsChanged("CODBARBALANCA", codBarBalanca);
         this.codBarBalanca = codBarBalanca;
    }
 
@@ -1527,6 +1669,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -1535,6 +1678,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCos(BigDecimal codCos) {
+        markAsChanged("CODCOS", codCos);
         this.codCos = codCos;
    }
 
@@ -1543,6 +1687,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -1551,6 +1696,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -1559,6 +1705,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCtaCtb3(BigDecimal codCtaCtb3) {
+        markAsChanged("CODCTACTB3", codCtaCtb3);
         this.codCtaCtb3 = codCtaCtb3;
    }
 
@@ -1567,6 +1714,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCtaCtb4(BigDecimal codCtaCtb4) {
+        markAsChanged("CODCTACTB4", codCtaCtb4);
         this.codCtaCtb4 = codCtaCtb4;
    }
 
@@ -1575,6 +1723,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFci(String codFci) {
+        markAsChanged("CODFCI", codFci);
         this.codFci = codFci;
    }
 
@@ -1583,6 +1732,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFiltro(BigDecimal codFiltro) {
+        markAsChanged("CODFILTRO", codFiltro);
         this.codFiltro = codFiltro;
    }
 
@@ -1591,6 +1741,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoKit(String tipoKit) {
+        markAsChanged("TIPOKIT", tipoKit);
         this.tipoKit = tipoKit;
    }
 
@@ -1599,6 +1750,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodConfKit(BigDecimal codConfKit) {
+        markAsChanged("CODCONFKIT", codConfKit);
         this.codConfKit = codConfKit;
    }
 
@@ -1607,6 +1759,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodExNcm(BigDecimal codExNcm) {
+        markAsChanged("CODEXNCM", codExNcm);
         this.codExNcm = codExNcm;
    }
 
@@ -1615,6 +1768,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercInss(BigDecimal percInss) {
+        markAsChanged("PERCINSS", percInss);
         this.percInss = percInss;
    }
 
@@ -1623,6 +1777,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercIrf(BigDecimal percIrf) {
+        markAsChanged("PERCIRF", percIrf);
         this.percIrf = percIrf;
    }
 
@@ -1631,6 +1786,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercQuebraTec(BigDecimal percQuebraTec) {
+        markAsChanged("PERCQUEBRATEC", percQuebraTec);
         this.percQuebraTec = percQuebraTec;
    }
 
@@ -1639,6 +1795,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPermCompProd(String permCompProd) {
+        markAsChanged("PERMCOMPPROD", permCompProd);
         this.permCompProd = permCompProd;
    }
 
@@ -1647,6 +1804,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -1655,6 +1813,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
+        markAsChanged("PESOLIQ", pesoLiq);
         this.pesoLiq = pesoLiq;
    }
 
@@ -1663,6 +1822,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPrazoVal(BigDecimal prazoVal) {
+        markAsChanged("PRAZOVAL", prazoVal);
         this.prazoVal = prazoVal;
    }
 
@@ -1671,6 +1831,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPrincAtivo(BigDecimal princAtivo) {
+        markAsChanged("PRINCATIVO", princAtivo);
         this.princAtivo = princAtivo;
    }
 
@@ -1679,6 +1840,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setProdutoNfe(BigDecimal produtoNfe) {
+        markAsChanged("PRODUTONFE", produtoNfe);
         this.produtoNfe = produtoNfe;
    }
 
@@ -1687,6 +1849,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPromocao(String promocao) {
+        markAsChanged("PROMOCAO", promocao);
         this.promocao = promocao;
    }
 
@@ -1695,6 +1858,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setQtdEmb(BigDecimal qtdEmb) {
+        markAsChanged("QTDEMB", qtdEmb);
         this.qtdEmb = qtdEmb;
    }
 
@@ -1703,6 +1867,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setQtdNfLaudosInt(BigDecimal qtdNfLaudosInt) {
+        markAsChanged("QTDNFLAUDOSINT", qtdNfLaudosInt);
         this.qtdNfLaudosInt = qtdNfLaudosInt;
    }
 
@@ -1711,6 +1876,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRastrEstoque(String rastrEstoque) {
+        markAsChanged("RASTRESTOQUE", rastrEstoque);
         this.rastrEstoque = rastrEstoque;
    }
 
@@ -1719,6 +1885,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setReceituario(String receituario) {
+        markAsChanged("RECEITUARIO", receituario);
         this.receituario = receituario;
    }
 
@@ -1727,6 +1894,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRecupAvaria(String recupAvaria) {
+        markAsChanged("RECUPAVARIA", recupAvaria);
         this.recupAvaria = recupAvaria;
    }
 
@@ -1735,6 +1903,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRedBaseInss(BigDecimal redBaseInss) {
+        markAsChanged("REDBASEINSS", redBaseInss);
         this.redBaseInss = redBaseInss;
    }
 
@@ -1743,6 +1912,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRedBaseIrf(BigDecimal redBaseIrf) {
+        markAsChanged("REDBASEIRF", redBaseIrf);
         this.redBaseIrf = redBaseIrf;
    }
 
@@ -1751,6 +1921,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -1759,6 +1930,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRefForn(String refForn) {
+        markAsChanged("REFFORN", refForn);
         this.refForn = refForn;
    }
 
@@ -1767,6 +1939,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRegraWms(String regraWms) {
+        markAsChanged("REGRAWMS", regraWms);
         this.regraWms = regraWms;
    }
 
@@ -1775,6 +1948,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRemeter(String remeter) {
+        markAsChanged("REMETER", remeter);
         this.remeter = remeter;
    }
 
@@ -1783,6 +1957,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRendimento(String rendimento) {
+        markAsChanged("RENDIMENTO", rendimento);
         this.rendimento = rendimento;
    }
 
@@ -1791,6 +1966,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRendimentoHa(BigDecimal rendimentoHa) {
+        markAsChanged("RENDIMENTOHA", rendimentoHa);
         this.rendimentoHa = rendimentoHa;
    }
 
@@ -1799,6 +1975,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSelecionado(String selecionado) {
+        markAsChanged("SELECIONADO", selecionado);
         this.selecionado = selecionado;
    }
 
@@ -1807,6 +1984,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setShelfLife(BigDecimal shelfLife) {
+        markAsChanged("SHELFLIFE", shelfLife);
         this.shelfLife = shelfLife;
    }
 
@@ -1815,6 +1993,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setShelfLifeMin(BigDecimal shelfLifeMin) {
+        markAsChanged("SHELFLIFEMIN", shelfLifeMin);
         this.shelfLifeMin = shelfLifeMin;
    }
 
@@ -1823,6 +2002,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSolCompra(String solCompra) {
+        markAsChanged("SOLCOMPRA", solCompra);
         this.solCompra = solCompra;
    }
 
@@ -1831,6 +2011,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setStatusIncexc(String statusIncexc) {
+        markAsChanged("STATUSINCEXC", statusIncexc);
         this.statusIncexc = statusIncexc;
    }
 
@@ -1839,6 +2020,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTamLote(BigDecimal tamLote) {
+        markAsChanged("TAMLOTE", tamLote);
         this.tamLote = tamLote;
    }
 
@@ -1847,6 +2029,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTamSerie(BigDecimal tamSerie) {
+        markAsChanged("TAMSERIE", tamSerie);
         this.tamSerie = tamSerie;
    }
 
@@ -1855,6 +2038,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemCiap(String temCiap) {
+        markAsChanged("TEMCIAP", temCiap);
         this.temCiap = temCiap;
    }
 
@@ -1863,6 +2047,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemComissao(String temComissao) {
+        markAsChanged("TEMCOMISSAO", temComissao);
         this.temComissao = temComissao;
    }
 
@@ -1871,6 +2056,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemCredPisCofinsDepr(String temCredPisCofinsDepr) {
+        markAsChanged("TEMCREDPISCOFINSDEPR", temCredPisCofinsDepr);
         this.temCredPisCofinsDepr = temCredPisCofinsDepr;
    }
 
@@ -1879,6 +2065,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemIcms(String temIcms) {
+        markAsChanged("TEMICMS", temIcms);
         this.temIcms = temIcms;
    }
 
@@ -1887,6 +2074,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemInss(String temInss) {
+        markAsChanged("TEMINSS", temInss);
         this.temInss = temInss;
    }
 
@@ -1895,6 +2083,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemIpiCompra(String temIpiCompra) {
+        markAsChanged("TEMIPICOMPRA", temIpiCompra);
         this.temIpiCompra = temIpiCompra;
    }
 
@@ -1903,6 +2092,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemIpiVenda(String temIpiVenda) {
+        markAsChanged("TEMIPIVENDA", temIpiVenda);
         this.temIpiVenda = temIpiVenda;
    }
 
@@ -1911,6 +2101,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemIrf(String temIrf) {
+        markAsChanged("TEMIRF", temIrf);
         this.temIrf = temIrf;
    }
 
@@ -1919,6 +2110,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemIss(String temIss) {
+        markAsChanged("TEMISS", temIss);
         this.temIss = temIss;
    }
 
@@ -1927,6 +2119,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTempoServ(Timestamp tempoServ) {
+        markAsChanged("TEMPOSERV", tempoServ);
         this.tempoServ = tempoServ;
    }
 
@@ -1935,6 +2128,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipContEst(String tipContEst) {
+        markAsChanged("TIPCONTEST", tipContEst);
         this.tipContEst = tipContEst;
    }
 
@@ -1943,6 +2137,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipContEstWms(String tipContEstWms) {
+        markAsChanged("TIPCONTESTWMS", tipContEstWms);
         this.tipContEstWms = tipContEstWms;
    }
 
@@ -1951,6 +2146,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipGtinNfe(BigDecimal tipGtinNfe) {
+        markAsChanged("TIPGTINNFE", tipGtinNfe);
         this.tipGtinNfe = tipGtinNfe;
    }
 
@@ -1959,6 +2155,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipLancNota(String tipLancNota) {
+        markAsChanged("TIPLANCNOTA", tipLancNota);
         this.tipLancNota = tipLancNota;
    }
 
@@ -1967,6 +2164,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -1975,6 +2173,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipSerNfe(String tipSerNfe) {
+        markAsChanged("TIPSERNFE", tipSerNfe);
         this.tipSerNfe = tipSerNfe;
    }
 
@@ -1983,6 +2182,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipSubst(String tipSubst) {
+        markAsChanged("TIPSUBST", tipSubst);
         this.tipSubst = tipSubst;
    }
 
@@ -1991,6 +2191,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTitContEst(String titContEst) {
+        markAsChanged("TITCONTEST", titContEst);
         this.titContEst = titContEst;
    }
 
@@ -1999,6 +2200,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUnidade(String unidade) {
+        markAsChanged("UNIDADE", unidade);
         this.unidade = unidade;
    }
 
@@ -2007,6 +2209,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUnidMinArmaz(String unidMinArmaz) {
+        markAsChanged("UNIDMINARMAZ", unidMinArmaz);
         this.unidMinArmaz = unidMinArmaz;
    }
 
@@ -2015,6 +2218,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaCodBarrasQtd(String usaCodBarrasQtd) {
+        markAsChanged("USACODBARRASQTD", usaCodBarrasQtd);
         this.usaCodBarrasQtd = usaCodBarrasQtd;
    }
 
@@ -2023,6 +2227,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaImpAgrupMin(String usaImpAgrupMin) {
+        markAsChanged("USAIMPAGRUPMIN", usaImpAgrupMin);
         this.usaImpAgrupMin = usaImpAgrupMin;
    }
 
@@ -2031,6 +2236,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaLocal(String usaLocal) {
+        markAsChanged("USALOCAL", usaLocal);
         this.usaLocal = usaLocal;
    }
 
@@ -2039,6 +2245,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaSerieFab(String usaSerieFab) {
+        markAsChanged("USASERIEFAB", usaSerieFab);
         this.usaSerieFab = usaSerieFab;
    }
 
@@ -2047,6 +2254,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaSerieSepWms(String usaSerieSepWms) {
+        markAsChanged("USASERIESEPWMS", usaSerieSepWms);
         this.usaSerieSepWms = usaSerieSepWms;
    }
 
@@ -2055,6 +2263,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaStatusLote(String usaStatusLote) {
+        markAsChanged("USASTATUSLOTE", usaStatusLote);
         this.usaStatusLote = usaStatusLote;
    }
 
@@ -2063,6 +2272,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsoProd(String usoProd) {
+        markAsChanged("USOPROD", usoProd);
         this.usoProd = usoProd;
    }
 
@@ -2071,6 +2281,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUtilImob(BigDecimal utilImob) {
+        markAsChanged("UTILIMOB", utilImob);
         this.utilImob = utilImob;
    }
 
@@ -2079,6 +2290,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUtilizaWms(String utilizaWms) {
+        markAsChanged("UTILIZAWMS", utilizaWms);
         this.utilizaWms = utilizaWms;
    }
 
@@ -2087,6 +2299,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setValCapM3(String valCapM3) {
+        markAsChanged("VALCAPM3", valCapM3);
         this.valCapM3 = valCapM3;
    }
 
@@ -2095,6 +2308,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setValCbGlobal(String valCbGlobal) {
+        markAsChanged("VALCBGLOBAL", valCbGlobal);
         this.valCbGlobal = valCbGlobal;
    }
 
@@ -2103,6 +2317,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVenCompIndiv(String venCompIndiv) {
+        markAsChanged("VENCOMPINDIV", venCompIndiv);
         this.venCompIndiv = venCompIndiv;
    }
 
@@ -2111,6 +2326,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVlrComerc(BigDecimal vlrComerc) {
+        markAsChanged("VLRCOMERC", vlrComerc);
         this.vlrComerc = vlrComerc;
    }
 
@@ -2119,6 +2335,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVlrParcImpExt(BigDecimal vlrParcImpExt) {
+        markAsChanged("VLRPARCIMPEXT", vlrParcImpExt);
         this.vlrParcImpExt = vlrParcImpExt;
    }
 
@@ -2127,6 +2344,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVolDosagem(String volDosagem) {
+        markAsChanged("VOLDOSAGEM", volDosagem);
         this.volDosagem = volDosagem;
    }
 
@@ -2135,6 +2353,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVolDosagemPor(String volDosagemPor) {
+        markAsChanged("VOLDOSAGEMPOR", volDosagemPor);
         this.volDosagemPor = volDosagemPor;
    }
 
@@ -2143,6 +2362,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercTolPesoMenorSep(BigDecimal percTolPesoMenorSep) {
+        markAsChanged("PERCTOLPESOMENORSEP", percTolPesoMenorSep);
         this.percTolPesoMenorSep = percTolPesoMenorSep;
    }
 
@@ -2151,6 +2371,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaLoteDtFab(String usaLoteDtFab) {
+        markAsChanged("USALOTEDTFAB", usaLoteDtFab);
         this.usaLoteDtFab = usaLoteDtFab;
    }
 
@@ -2159,6 +2380,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaLoteDtVal(String usaLoteDtVal) {
+        markAsChanged("USALOTEDTVAL", usaLoteDtVal);
         this.usaLoteDtVal = usaLoteDtVal;
    }
 
@@ -2167,6 +2389,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescVenConsul(String descVenConsul) {
+        markAsChanged("DESCVENCONSUL", descVenConsul);
         this.descVenConsul = descVenConsul;
    }
 
@@ -2175,6 +2398,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFiltroReq(BigDecimal codFiltroReq) {
+        markAsChanged("CODFILTROREQ", codFiltroReq);
         this.codFiltroReq = codFiltroReq;
    }
 
@@ -2183,6 +2407,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setControlMedic(String controlMedic) {
+        markAsChanged("CONTROLMEDIC", controlMedic);
         this.controlMedic = controlMedic;
    }
 
@@ -2191,6 +2416,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodEnqIpiEnt(BigDecimal codEnqIpiEnt) {
+        markAsChanged("CODENQIPIENT", codEnqIpiEnt);
         this.codEnqIpiEnt = codEnqIpiEnt;
    }
 
@@ -2199,6 +2425,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodEnqIpiSai(BigDecimal codEnqIpiSai) {
+        markAsChanged("CODENQIPISAI", codEnqIpiSai);
         this.codEnqIpiSai = codEnqIpiSai;
    }
 
@@ -2207,6 +2434,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqGeral(BigDecimal aliqGeral) {
+        markAsChanged("ALIQGERAL", aliqGeral);
         this.aliqGeral = aliqGeral;
    }
 
@@ -2215,6 +2443,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMvaPadrao(BigDecimal mvaPadrao) {
+        markAsChanged("MVAPADRAO", mvaPadrao);
         this.mvaPadrao = mvaPadrao;
    }
 
@@ -2223,6 +2452,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoIcms2(BigDecimal grupoIcms2) {
+        markAsChanged("GRUPOICMS2", grupoIcms2);
         this.grupoIcms2 = grupoIcms2;
    }
 
@@ -2231,6 +2461,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUsaContPesoVar(String usaContPesoVar) {
+        markAsChanged("USACONTPESOVAR", usaContPesoVar);
         this.usaContPesoVar = usaContPesoVar;
    }
 
@@ -2239,6 +2470,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercTolPesoMaior(BigDecimal percTolPesoMaior) {
+        markAsChanged("PERCTOLPESOMAIOR", percTolPesoMaior);
         this.percTolPesoMaior = percTolPesoMaior;
    }
 
@@ -2247,6 +2479,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercTolPesoMaiorSep(BigDecimal percTolPesoMaiorSep) {
+        markAsChanged("PERCTOLPESOMAIORSEP", percTolPesoMaiorSep);
         this.percTolPesoMaiorSep = percTolPesoMaiorSep;
    }
 
@@ -2255,6 +2488,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercTolPesoMenor(BigDecimal percTolPesoMenor) {
+        markAsChanged("PERCTOLPESOMENOR", percTolPesoMenor);
         this.percTolPesoMenor = percTolPesoMenor;
    }
 
@@ -2263,6 +2497,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolPesoVar(String codVolPesoVar) {
+        markAsChanged("CODVOLPESOVAR", codVolPesoVar);
         this.codVolPesoVar = codVolPesoVar;
    }
 
@@ -2271,6 +2506,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercCmtImp(BigDecimal percCmtImp) {
+        markAsChanged("PERCCMTIMP", percCmtImp);
         this.percCmtImp = percCmtImp;
    }
 
@@ -2279,6 +2515,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercCmtNac(BigDecimal percCmtNac) {
+        markAsChanged("PERCCMTNAC", percCmtNac);
         this.percCmtNac = percCmtNac;
    }
 
@@ -2287,6 +2524,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSerFaturCon(String serFaturCon) {
+        markAsChanged("SERFATURCON", serFaturCon);
         this.serFaturCon = serFaturCon;
    }
 
@@ -2295,6 +2533,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTopFaturCon(BigDecimal topFaturCon) {
+        markAsChanged("TOPFATURCON", topFaturCon);
         this.topFaturCon = topFaturCon;
    }
 
@@ -2303,6 +2542,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNumItemRea(BigDecimal numItemRea) {
+        markAsChanged("NUMITEMREA", numItemRea);
         this.numItemRea = numItemRea;
    }
 
@@ -2311,6 +2551,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setObsEtiqueta(String obsEtiqueta) {
+        markAsChanged("OBSETIQUETA", obsEtiqueta);
         this.obsEtiqueta = obsEtiqueta;
    }
 
@@ -2319,6 +2560,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOrigProd(String origProd) {
+        markAsChanged("ORIGPROD", origProd);
         this.origProd = origProd;
    }
 
@@ -2327,6 +2569,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -2335,6 +2578,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercAumentCusto(BigDecimal percAumentCusto) {
+        markAsChanged("PERCAUMENTCUSTO", percAumentCusto);
         this.percAumentCusto = percAumentCusto;
    }
 
@@ -2343,6 +2587,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setExigeLastroCamadas(String exigeLastroCamadas) {
+        markAsChanged("EXIGELASTROCAMADAS", exigeLastroCamadas);
         this.exigeLastroCamadas = exigeLastroCamadas;
    }
 
@@ -2351,6 +2596,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFixoAgenda(String fixoAgenda) {
+        markAsChanged("FIXOAGENDA", fixoAgenda);
         this.fixoAgenda = fixoAgenda;
    }
 
@@ -2359,6 +2605,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDtSubst(Timestamp dtSubst) {
+        markAsChanged("DTSUBST", dtSubst);
         this.dtSubst = dtSubst;
    }
 
@@ -2367,6 +2614,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodProdSubst(BigDecimal codProdSubst) {
+        markAsChanged("CODPRODSUBST", codProdSubst);
         this.codProdSubst = codProdSubst;
    }
 
@@ -2375,6 +2623,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCat1799Spres(String cat1799Spres) {
+        markAsChanged("CAT1799SPRES", cat1799Spres);
         this.cat1799Spres = cat1799Spres;
    }
 
@@ -2383,6 +2632,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodComp(BigDecimal codComp) {
+        markAsChanged("CODCOMP", codComp);
         this.codComp = codComp;
    }
 
@@ -2391,6 +2641,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVisivelAppOs(String visivelAppOs) {
+        markAsChanged("VISIVELAPPOS", visivelAppOs);
         this.visivelAppOs = visivelAppOs;
    }
 
@@ -2399,6 +2650,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodParcConsig(BigDecimal codParcConsig) {
+        markAsChanged("CODPARCCONSIG", codParcConsig);
         this.codParcConsig = codParcConsig;
    }
 
@@ -2407,6 +2659,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoItemSped(String tipoItemSped) {
+        markAsChanged("TIPOITEMSPED", tipoItemSped);
         this.tipoItemSped = tipoItemSped;
    }
 
@@ -2415,6 +2668,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodIdCnae(BigDecimal codIdCnae) {
+        markAsChanged("CODIDCNAE", codIdCnae);
         this.codIdCnae = codIdCnae;
    }
 
@@ -2423,6 +2677,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodNbs(BigDecimal codNbs) {
+        markAsChanged("CODNBS", codNbs);
         this.codNbs = codNbs;
    }
 
@@ -2431,6 +2686,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConsProdCat42(String consProdCat42) {
+        markAsChanged("CONSPRODCAT42", consProdCat42);
         this.consProdCat42 = consProdCat42;
    }
 
@@ -2439,6 +2695,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDesvioMaxTolConfSep(BigDecimal desvioMaxTolConfSep) {
+        markAsChanged("DESVIOMAXTOLCONFSEP", desvioMaxTolConfSep);
         this.desvioMaxTolConfSep = desvioMaxTolConfSep;
    }
 
@@ -2447,6 +2704,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDesvioMinTolConfSep(BigDecimal desvioMinTolConfSep) {
+        markAsChanged("DESVIOMINTOLCONFSEP", desvioMinTolConfSep);
         this.desvioMinTolConfSep = desvioMinTolConfSep;
    }
 
@@ -2455,6 +2713,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setFragmentaLote(String fragmentaLote) {
+        markAsChanged("FRAGMENTALOTE", fragmentaLote);
         this.fragmentaLote = fragmentaLote;
    }
 
@@ -2463,6 +2722,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGrupoTransg(BigDecimal grupoTransg) {
+        markAsChanged("GRUPOTRANSG", grupoTransg);
         this.grupoTransg = grupoTransg;
    }
 
@@ -2471,6 +2731,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMotIsencaoAnvisa(String motIsencaoAnvisa) {
+        markAsChanged("MOTISENCAOANVISA", motIsencaoAnvisa);
         this.motIsencaoAnvisa = motIsencaoAnvisa;
    }
 
@@ -2479,6 +2740,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercRedBaseIcmsEfet(BigDecimal percRedBaseIcmsEfet) {
+        markAsChanged("PERCREDBASEICMSEFET", percRedBaseIcmsEfet);
         this.percRedBaseIcmsEfet = percRedBaseIcmsEfet;
    }
 
@@ -2487,6 +2749,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRegistrarPeso(String registrarPeso) {
+        markAsChanged("REGISTRARPESO", registrarPeso);
         this.registrarPeso = registrarPeso;
    }
 
@@ -2495,6 +2758,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setServPrestTer(String servPrestTer) {
+        markAsChanged("SERVPRESTTER", servPrestTer);
         this.servPrestTer = servPrestTer;
    }
 
@@ -2503,6 +2767,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTempMaxima(BigDecimal tempMaxima) {
+        markAsChanged("TEMPMAXIMA", tempMaxima);
         this.tempMaxima = tempMaxima;
    }
 
@@ -2511,6 +2776,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setControlado(String controlado) {
+        markAsChanged("CONTROLADO", controlado);
         this.controlado = controlado;
    }
 
@@ -2519,6 +2785,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTempMinima(BigDecimal tempMinima) {
+        markAsChanged("TEMPMINIMA", tempMinima);
         this.tempMinima = tempMinima;
    }
 
@@ -2527,6 +2794,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTermolabil(String termolabil) {
+        markAsChanged("TERMOLABIL", termolabil);
         this.termolabil = termolabil;
    }
 
@@ -2535,6 +2803,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setListaLpm(String listaLpm) {
+        markAsChanged("LISTALPM", listaLpm);
         this.listaLpm = listaLpm;
    }
 
@@ -2543,6 +2812,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOneroso(String oneroso) {
+        markAsChanged("ONEROSO", oneroso);
         this.oneroso = oneroso;
    }
 
@@ -2551,6 +2821,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setRefMercMed(String refMercMed) {
+        markAsChanged("REFMERCMED", refMercMed);
         this.refMercMed = refMercMed;
    }
 
@@ -2559,6 +2830,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdenPortaria(String idenPortaria) {
+        markAsChanged("IDENPORTARIA", idenPortaria);
         this.idenPortaria = idenPortaria;
    }
 
@@ -2567,6 +2839,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodPat(BigDecimal codPat) {
+        markAsChanged("CODPAT", codPat);
         this.codPat = codPat;
    }
 
@@ -2575,6 +2848,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodTer(BigDecimal codTer) {
+        markAsChanged("CODTER", codTer);
         this.codTer = codTer;
    }
 
@@ -2583,6 +2857,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdenOtc(String idenOtc) {
+        markAsChanged("IDENOTC", idenOtc);
         this.idenOtc = idenOtc;
    }
 
@@ -2591,6 +2866,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdenCosme(String idenCosme) {
+        markAsChanged("IDENCOSME", idenCosme);
         this.idenCosme = idenCosme;
    }
 
@@ -2599,6 +2875,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdenCorRelato(String idenCorRelato) {
+        markAsChanged("IDENCORRELATO", idenCorRelato);
         this.idenCorRelato = idenCorRelato;
    }
 
@@ -2607,6 +2884,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCpr(BigDecimal codCpr) {
+        markAsChanged("CODCPR", codCpr);
         this.codCpr = codCpr;
    }
 
@@ -2615,6 +2893,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSeqSte(BigDecimal seqSte) {
+        markAsChanged("SEQSTE", seqSte);
         this.seqSte = seqSte;
    }
 
@@ -2623,6 +2902,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCat(BigDecimal codCat) {
+        markAsChanged("CODCAT", codCat);
         this.codCat = codCat;
    }
 
@@ -2631,6 +2911,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setStatusMed(BigDecimal statusMed) {
+        markAsChanged("STATUSMED", statusMed);
         this.statusMed = statusMed;
    }
 
@@ -2639,6 +2920,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSeqSca(BigDecimal seqSca) {
+        markAsChanged("SEQSCA", seqSca);
         this.seqSca = seqSca;
    }
 
@@ -2647,6 +2929,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setProdFalta(String prodFalta) {
+        markAsChanged("PRODFALTA", prodFalta);
         this.prodFalta = prodFalta;
    }
 
@@ -2655,6 +2938,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFab(BigDecimal codFab) {
+        markAsChanged("CODFAB", codFab);
         this.codFab = codFab;
    }
 
@@ -2663,6 +2947,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setSeqSpr(BigDecimal seqSpr) {
+        markAsChanged("SEQSPR", seqSpr);
         this.seqSpr = seqSpr;
    }
 
@@ -2671,6 +2956,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setQtdIdentif(BigDecimal qtdIdentif) {
+        markAsChanged("QTDIDENTIF", qtdIdentif);
         this.qtdIdentif = qtdIdentif;
    }
 
@@ -2679,6 +2965,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoIdentif(String tipoIdentif) {
+        markAsChanged("TIPOIDENTIF", tipoIdentif);
         this.tipoIdentif = tipoIdentif;
    }
 
@@ -2687,6 +2974,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemMedicao(String temMedicao) {
+        markAsChanged("TEMMEDICAO", temMedicao);
         this.temMedicao = temMedicao;
    }
 
@@ -2695,6 +2983,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
+        markAsChanged("TIPOSN", tipoSn);
         this.tipoSn = tipoSn;
    }
 
@@ -2703,6 +2992,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodServTelecom(BigDecimal codServTelecom) {
+        markAsChanged("CODSERVTELECOM", codServTelecom);
         this.codServTelecom = codServTelecom;
    }
 
@@ -2711,6 +3001,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoContagem(String tipoContagem) {
+        markAsChanged("TIPOCONTAGEM", tipoContagem);
         this.tipoContagem = tipoContagem;
    }
 
@@ -2719,6 +3010,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAnvisa(String codAnvisa) {
+        markAsChanged("CODANVISA", codAnvisa);
         this.codAnvisa = codAnvisa;
    }
 
@@ -2727,6 +3019,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescrAnp(String descrAnp) {
+        markAsChanged("DESCRANP", descrAnp);
         this.descrAnp = descrAnp;
    }
 
@@ -2735,6 +3028,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercMistGlp(BigDecimal percMistGlp) {
+        markAsChanged("PERCMISTGLP", percMistGlp);
         this.percMistGlp = percMistGlp;
    }
 
@@ -2743,6 +3037,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOrdemMedida(BigDecimal ordemMedida) {
+        markAsChanged("ORDEMMEDIDA", ordemMedida);
         this.ordemMedida = ordemMedida;
    }
 
@@ -2751,6 +3046,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodMarca(BigDecimal codMarca) {
+        markAsChanged("CODMARCA", codMarca);
         this.codMarca = codMarca;
    }
 
@@ -2759,6 +3055,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTemRastroLote(String temRastroLote) {
+        markAsChanged("TEMRASTROLOTE", temRastroLote);
         this.temRastroLote = temRastroLote;
    }
 
@@ -2767,6 +3064,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setArmazeLote(String armazeLote) {
+        markAsChanged("ARMAZELOTE", armazeLote);
         this.armazeLote = armazeLote;
    }
 
@@ -2775,6 +3073,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMvaOriginalDrCst(BigDecimal mvaOriginalDrCst) {
+        markAsChanged("MVAORIGINALDRCST", mvaOriginalDrCst);
         this.mvaOriginalDrCst = mvaOriginalDrCst;
    }
 
@@ -2783,6 +3082,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFciCalc(String codFciCalc) {
+        markAsChanged("CODFCICALC", codFciCalc);
         this.codFciCalc = codFciCalc;
    }
 
@@ -2791,6 +3091,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVlrComercCalc(BigDecimal vlrComercCalc) {
+        markAsChanged("VLRCOMERCCALC", vlrComercCalc);
         this.vlrComercCalc = vlrComercCalc;
    }
 
@@ -2799,6 +3100,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVlrParcImpExtCalc(BigDecimal vlrParcImpExtCalc) {
+        markAsChanged("VLRPARCIMPEXTCALC", vlrParcImpExtCalc);
         this.vlrParcImpExtCalc = vlrParcImpExtCalc;
    }
 
@@ -2807,6 +3109,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodBarComp(String codBarComp) {
+        markAsChanged("CODBARCOMP", codBarComp);
         this.codBarComp = codBarComp;
    }
 
@@ -2815,6 +3118,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIncPesoBruto(BigDecimal incPesoBruto) {
+        markAsChanged("INCPESOBRUTO", incPesoBruto);
         this.incPesoBruto = incPesoBruto;
    }
 
@@ -2823,6 +3127,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIncPesoLiquido(BigDecimal incPesoLiquido) {
+        markAsChanged("INCPESOLIQUIDO", incPesoLiquido);
         this.incPesoLiquido = incPesoLiquido;
    }
 
@@ -2831,6 +3136,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -2839,6 +3145,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setModEtiqSepWms(BigDecimal modEtiqSepWms) {
+        markAsChanged("MODETIQSEPWMS", modEtiqSepWms);
         this.modEtiqSepWms = modEtiqSepWms;
    }
 
@@ -2847,6 +3154,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setImpEtiqSepWms(String impEtiqSepWms) {
+        markAsChanged("IMPETIQSEPWMS", impEtiqSepWms);
         this.impEtiqSepWms = impEtiqSepWms;
    }
 
@@ -2855,6 +3163,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNroProcesso(String nroProcesso) {
+        markAsChanged("NROPROCESSO", nroProcesso);
         this.nroProcesso = nroProcesso;
    }
 
@@ -2863,6 +3172,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercCmtMun(BigDecimal percCmtMun) {
+        markAsChanged("PERCCMTMUN", percCmtMun);
         this.percCmtMun = percCmtMun;
    }
 
@@ -2871,6 +3181,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercCmtFed(BigDecimal percCmtFed) {
+        markAsChanged("PERCCMTFED", percCmtFed);
         this.percCmtFed = percCmtFed;
    }
 
@@ -2879,6 +3190,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercCmtEst(BigDecimal percCmtEst) {
+        markAsChanged("PERCCMTEST", percCmtEst);
         this.percCmtEst = percCmtEst;
    }
 
@@ -2887,6 +3199,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCorFontConsPreco(BigDecimal corFontConsPreco) {
+        markAsChanged("CORFONTCONSPRECO", corFontConsPreco);
         this.corFontConsPreco = corFontConsPreco;
    }
 
@@ -2895,6 +3208,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCorFundoConsPreco(BigDecimal corFundoConsPreco) {
+        markAsChanged("CORFUNDOCONSPRECO", corFundoConsPreco);
         this.corFundoConsPreco = corFundoConsPreco;
    }
 
@@ -2903,6 +3217,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCalcDifAl(String calcDifAl) {
+        markAsChanged("CALCDIFAL", calcDifAl);
         this.calcDifAl = calcDifAl;
    }
 
@@ -2911,6 +3226,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setClassifCessaoObra(BigDecimal classifCessaoObra) {
+        markAsChanged("CLASSIFCESSAOOBRA", classifCessaoObra);
         this.classifCessaoObra = classifCessaoObra;
    }
 
@@ -2919,6 +3235,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCnpjFabricante(String cnpjFabricante) {
+        markAsChanged("CNPJFABRICANTE", cnpjFabricante);
         this.cnpjFabricante = cnpjFabricante;
    }
 
@@ -2927,6 +3244,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAgregacao(String codAgregacao) {
+        markAsChanged("CODAGREGACAO", codAgregacao);
         this.codAgregacao = codAgregacao;
    }
 
@@ -2935,6 +3253,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodAtivReintegra(String codAtivReintegra) {
+        markAsChanged("CODATIVREINTEGRA", codAtivReintegra);
         this.codAtivReintegra = codAtivReintegra;
    }
 
@@ -2943,6 +3262,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodBenefNauf(String codBenefNauf) {
+        markAsChanged("CODBENEFNAUF", codBenefNauf);
         this.codBenefNauf = codBenefNauf;
    }
 
@@ -2951,6 +3271,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCprb(String codCprb) {
+        markAsChanged("CODCPRB", codCprb);
         this.codCprb = codCprb;
    }
 
@@ -2959,6 +3280,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -2967,6 +3289,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodFiltroCta(BigDecimal codFiltroCta) {
+        markAsChanged("CODFILTROCTA", codFiltroCta);
         this.codFiltroCta = codFiltroCta;
    }
 
@@ -2975,6 +3298,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setComercializacaoAgri(String comercializacaoAgri) {
+        markAsChanged("COMERCIALIZACAOAGRI", comercializacaoAgri);
         this.comercializacaoAgri = comercializacaoAgri;
    }
 
@@ -2983,6 +3307,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIndEscala(String indEscala) {
+        markAsChanged("INDESCALA", indEscala);
         this.indEscala = indEscala;
    }
 
@@ -2991,6 +3316,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setObraConstCivil(BigDecimal obraConstCivil) {
+        markAsChanged("OBRACONSTCIVIL", obraConstCivil);
         this.obraConstCivil = obraConstCivil;
    }
 
@@ -2999,6 +3325,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercInssEspecial(BigDecimal percInssEspecial) {
+        markAsChanged("PERCINSSESPECIAL", percInssEspecial);
         this.percInssEspecial = percInssEspecial;
    }
 
@@ -3007,6 +3334,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercMistGni(BigDecimal percMistGni) {
+        markAsChanged("PERCMISTGNI", percMistGni);
         this.percMistGni = percMistGni;
    }
 
@@ -3015,6 +3343,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUtilizaEndFlut(String utilizaEndFlut) {
+        markAsChanged("UTILIZAENDFLUT", utilizaEndFlut);
         this.utilizaEndFlut = utilizaEndFlut;
    }
 
@@ -3023,6 +3352,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercMistGnn(BigDecimal percMistGnn) {
+        markAsChanged("PERCMISTGNN", percMistGnn);
         this.percMistGnn = percMistGnn;
    }
 
@@ -3031,6 +3361,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setQtdAgrupamentoMtz(BigDecimal qtdAgrupamentoMtz) {
+        markAsChanged("QTDAGRUPAMENTOMTZ", qtdAgrupamentoMtz);
         this.qtdAgrupamentoMtz = qtdAgrupamentoMtz;
    }
 
@@ -3039,6 +3370,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipoInssEspecial(String tipoInssEspecial) {
+        markAsChanged("TIPOINSSESPECIAL", tipoInssEspecial);
         this.tipoInssEspecial = tipoInssEspecial;
    }
 
@@ -3047,6 +3379,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setVlrPartidaGlp(BigDecimal vlrPartidaGlp) {
+        markAsChanged("VLRPARTIDAGLP", vlrPartidaGlp);
         this.vlrPartidaGlp = vlrPartidaGlp;
    }
 
@@ -3055,6 +3388,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIntegraEconect(String integraEconect) {
+        markAsChanged("INTEGRAECONECT", integraEconect);
         this.integraEconect = integraEconect;
    }
 
@@ -3063,6 +3397,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMaxMultEconect(BigDecimal maxMultEconect) {
+        markAsChanged("MAXMULTECONECT", maxMultEconect);
         this.maxMultEconect = maxMultEconect;
    }
 
@@ -3071,6 +3406,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setUtilSmartCard(String utilSmartCard) {
+        markAsChanged("UTILSMARTCARD", utilSmartCard);
         this.utilSmartCard = utilSmartCard;
    }
 
@@ -3079,6 +3415,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNatEfdContM410M810(BigDecimal natEfdContM410M810) {
+        markAsChanged("NATEFDCONTM410M810", natEfdContM410M810);
         this.natEfdContM410M810 = natEfdContM410M810;
    }
 
@@ -3087,6 +3424,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVtp(BigDecimal codVtp) {
+        markAsChanged("CODVTP", codVtp);
         this.codVtp = codVtp;
    }
 
@@ -3095,6 +3433,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIndTipRefBcIcmsSt(String indTipRefBcIcmsSt) {
+        markAsChanged("INDTIPREFBCICMSST", indTipRefBcIcmsSt);
         this.indTipRefBcIcmsSt = indTipRefBcIcmsSt;
    }
 
@@ -3103,6 +3442,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setConEstOrigProd(String conEstOrigProd) {
+        markAsChanged("CONESTORIGPROD", conEstOrigProd);
         this.conEstOrigProd = conEstOrigProd;
    }
 
@@ -3111,6 +3451,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTamanhoMedioPeca(BigDecimal tamanhoMedioPeca) {
+        markAsChanged("TAMANHOMEDIOPECA", tamanhoMedioPeca);
         this.tamanhoMedioPeca = tamanhoMedioPeca;
    }
 
@@ -3119,6 +3460,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setStatusNcm(String statusNcm) {
+        markAsChanged("STATUSNCM", statusNcm);
         this.statusNcm = statusNcm;
    }
 
@@ -3127,6 +3469,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setWmsProdRastSerMed(String wmsProdRastSerMed) {
+        markAsChanged("WMSPRODRASTSERMED", wmsProdRastSerMed);
         this.wmsProdRastSerMed = wmsProdRastSerMed;
    }
 
@@ -3135,6 +3478,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setServDespNTrib(String servDespNTrib) {
+        markAsChanged("SERVDESPNTRIB", servDespNTrib);
         this.servDespNTrib = servDespNTrib;
    }
 
@@ -3143,6 +3487,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setProdAliadrCst(String prodAliadrCst) {
+        markAsChanged("PRODALIADRCST", prodAliadrCst);
         this.prodAliadrCst = prodAliadrCst;
    }
 
@@ -3151,6 +3496,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGerImpNRetReinfaQ(String gerImpNRetReinfaQ) {
+        markAsChanged("GERIMPNRETREINFAQ", gerImpNRetReinfaQ);
         this.gerImpNRetReinfaQ = gerImpNRetReinfaQ;
    }
 
@@ -3159,6 +3505,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqFetHab(BigDecimal aliqFetHab) {
+        markAsChanged("ALIQFETHAB", aliqFetHab);
         this.aliqFetHab = aliqFetHab;
    }
 
@@ -3167,6 +3514,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolFetHab(String codVolFetHab) {
+        markAsChanged("CODVOLFETHAB", codVolFetHab);
         this.codVolFetHab = codVolFetHab;
    }
 
@@ -3175,6 +3523,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCalcFuntTelPro(String calcFuntTelPro) {
+        markAsChanged("CALCFUNTTELPRO", calcFuntTelPro);
         this.calcFuntTelPro = calcFuntTelPro;
    }
 
@@ -3183,6 +3532,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCalcFustPro(String calcFustPro) {
+        markAsChanged("CALCFUSTPRO", calcFustPro);
         this.calcFustPro = calcFustPro;
    }
 
@@ -3191,6 +3541,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTipUtilCom(BigDecimal tipUtilCom) {
+        markAsChanged("TIPUTILCOM", tipUtilCom);
         this.tipUtilCom = tipUtilCom;
    }
 
@@ -3199,6 +3550,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodBarDifGtin(String codBarDifGtin) {
+        markAsChanged("CODBARDIFGTIN", codBarDifGtin);
         this.codBarDifGtin = codBarDifGtin;
    }
 
@@ -3207,6 +3559,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodBarTribDifGtin(String codBarTribDifGtin) {
+        markAsChanged("CODBARTRIBDIFGTIN", codBarTribDifGtin);
         this.codBarTribDifGtin = codBarTribDifGtin;
    }
 
@@ -3215,6 +3568,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setProdInterno(String prodInterno) {
+        markAsChanged("PRODINTERNO", prodInterno);
         this.prodInterno = prodInterno;
    }
 
@@ -3223,6 +3577,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqImp(BigDecimal aliqImp) {
+        markAsChanged("ALIQIMP", aliqImp);
         this.aliqImp = aliqImp;
    }
 
@@ -3231,6 +3586,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqNac(BigDecimal aliqNac) {
+        markAsChanged("ALIQNAC", aliqNac);
         this.aliqNac = aliqNac;
    }
 
@@ -3239,6 +3595,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAtuNuVersao(String atuNuVersao) {
+        markAsChanged("ATUNUVERSAO", atuNuVersao);
         this.atuNuVersao = atuNuVersao;
    }
 
@@ -3247,6 +3604,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIntegraFox(BigDecimal integraFox) {
+        markAsChanged("INTEGRAFOX", integraFox);
         this.integraFox = integraFox;
    }
 
@@ -3255,6 +3613,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -3263,6 +3622,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setGradePadrao(char[] gradePadrao) {
+        markAsChanged("GRADEPADRAO", gradePadrao);
         this.gradePadrao = gradePadrao;
    }
 
@@ -3271,6 +3631,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setIdGrade(BigDecimal idGrade) {
+        markAsChanged("IDGRADE", idGrade);
         this.idGrade = idGrade;
    }
 
@@ -3279,6 +3640,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercentSepPul(BigDecimal percentSepPul) {
+        markAsChanged("PERCENTSEPPUL", percentSepPul);
         this.percentSepPul = percentSepPul;
    }
 
@@ -3287,6 +3649,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setObtStAntMedEnt(String obtStAntMedEnt) {
+        markAsChanged("OBTSTANTMEDENT", obtStAntMedEnt);
         this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
@@ -3295,6 +3658,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDescProdDrCst(String descProdDrCst) {
+        markAsChanged("DESCPRODDRCST", descProdDrCst);
         this.descProdDrCst = descProdDrCst;
    }
 
@@ -3303,6 +3667,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqInternaCat42(BigDecimal aliqInternaCat42) {
+        markAsChanged("ALIQINTERNACAT42", aliqInternaCat42);
         this.aliqInternaCat42 = aliqInternaCat42;
    }
 
@@ -3311,6 +3676,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setDesDescCalcPis(String desDescCalcPis) {
+        markAsChanged("DESDESCCALCPIS", desDescCalcPis);
         this.desDescCalcPis = desDescCalcPis;
    }
 
@@ -3319,6 +3685,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setAliqFecop(BigDecimal aliqFecop) {
+        markAsChanged("ALIQFECOP", aliqFecop);
         this.aliqFecop = aliqFecop;
    }
 
@@ -3327,6 +3694,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setMvaOriginalAdrCst(BigDecimal mvaOriginalAdrCst) {
+        markAsChanged("MVAORIGINALADRCST", mvaOriginalAdrCst);
         this.mvaOriginalAdrCst = mvaOriginalAdrCst;
    }
 
@@ -3335,6 +3703,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setParticipaAdrCst(String participaAdrCst) {
+        markAsChanged("PARTICIPAADRCST", participaAdrCst);
         this.participaAdrCst = participaAdrCst;
    }
 
@@ -3343,6 +3712,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setProdSujFecop(String prodSujFecop) {
+        markAsChanged("PRODSUJFECOP", prodSujFecop);
         this.prodSujFecop = prodSujFecop;
    }
 
@@ -3351,6 +3721,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCalRupturaEstoque(String calRupturaEstoque) {
+        markAsChanged("CALRUPTURAESTOQUE", calRupturaEstoque);
         this.calRupturaEstoque = calRupturaEstoque;
    }
 
@@ -3359,6 +3730,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodVolKanban(String codVolKanban) {
+        markAsChanged("CODVOLKANBAN", codVolKanban);
         this.codVolKanban = codVolKanban;
    }
 
@@ -3367,6 +3739,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setBloqVendaFrac(String bloqVendaFrac) {
+        markAsChanged("BLOQVENDAFRAC", bloqVendaFrac);
         this.bloqVendaFrac = bloqVendaFrac;
    }
 
@@ -3375,6 +3748,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setCodNatRend(BigDecimal codNatRend) {
+        markAsChanged("CODNATREND", codNatRend);
         this.codNatRend = codNatRend;
    }
 
@@ -3383,6 +3757,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
+        markAsChanged("TPIRRFEXT", tpIrrfExt);
         this.tpIrrfExt = tpIrrfExt;
    }
 
@@ -3391,6 +3766,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setPercIndMistura(BigDecimal percIndMistura) {
+        markAsChanged("PERCINDMISTURA", percIndMistura);
         this.percIndMistura = percIndMistura;
    }
 
@@ -3399,6 +3775,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOpExpFetHab(String opExpFetHab) {
+        markAsChanged("OPEEXPFETHAB", opExpFetHab);
         this.opExpFetHab = opExpFetHab;
    }
 
@@ -3407,6 +3784,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOpeIntEstFetHab(String opeIntEstFetHab) {
+        markAsChanged("OPEINTESTFETHAB", opeIntEstFetHab);
         this.opeIntEstFetHab = opeIntEstFetHab;
    }
 
@@ -3415,6 +3793,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
    }
 
    public void setOpeIntFetHab(String opeIntFetHab) {
+        markAsChanged("OPEINTFETHAB", opeIntFetHab);
         this.opeIntFetHab = opeIntFetHab;
    }
 
@@ -3430,6 +3809,7 @@ public class Produto extends AbstractSankhyaEntity<Produto> {
 
    @Override
    public Produto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdSubkit = vo.asBigDecimal("CODPRODSUBKIT");
         this.enqReintegra = vo.asString("ENQREINTEGRA");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");

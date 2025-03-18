@@ -20,6 +20,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setSituacaoNfe(String situacaoNfe) {
+        markAsChanged("SITUACAONFE", situacaoNfe);
         this.situacaoNfe = situacaoNfe;
    }
 
@@ -28,6 +29,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setNuMail(BigDecimal nuMail) {
+        markAsChanged("NUMAIL", nuMail);
         this.nuMail = nuMail;
    }
 
@@ -36,6 +38,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setChaveDoc(String chaveDoc) {
+        markAsChanged("CHAVEDOC", chaveDoc);
         this.chaveDoc = chaveDoc;
    }
 
@@ -44,6 +47,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setDtDownload(Timestamp dtDownload) {
+        markAsChanged("DTDOWNLOAD", dtDownload);
         this.dtDownload = dtDownload;
    }
 
@@ -52,6 +56,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setXml(char[] xml) {
+        markAsChanged("XML", xml);
         this.xml = xml;
    }
 
@@ -60,6 +65,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setTipoNota(String tipoNota) {
+        markAsChanged("TIPONOTA", tipoNota);
         this.tipoNota = tipoNota;
    }
 
@@ -68,6 +74,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
+        markAsChanged("NUARQUIVO", nuArquivo);
         this.nuArquivo = nuArquivo;
    }
 
@@ -76,6 +83,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
    }
 
    public void setMensagem(String mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -91,6 +99,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
 
    @Override
    public EmailReciver fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.situacaoNfe = vo.asString("SITUACAONFE");
         this.nuMail = vo.asBigDecimal("NUMAIL");
         this.chaveDoc = vo.asString("CHAVEDOC");

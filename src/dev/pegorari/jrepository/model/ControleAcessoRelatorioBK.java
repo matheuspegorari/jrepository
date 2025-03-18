@@ -21,6 +21,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setAltera(String altera) {
+        markAsChanged("ALTERA", altera);
         this.altera = altera;
    }
 
@@ -29,6 +30,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -37,6 +39,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setCodRel(BigDecimal codRel) {
+        markAsChanged("CODREL", codRel);
         this.codRel = codRel;
    }
 
@@ -45,6 +48,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -53,6 +57,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setCons(String cons) {
+        markAsChanged("CONS", cons);
         this.cons = cons;
    }
 
@@ -61,6 +66,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setFiltro(String filtro) {
+        markAsChanged("FILTRO", filtro);
         this.filtro = filtro;
    }
 
@@ -69,6 +75,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -77,6 +84,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setResumo(String resumo) {
+        markAsChanged("RESUMO", resumo);
         this.resumo = resumo;
    }
 
@@ -85,6 +93,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setSeguranca(String seguranca) {
+        markAsChanged("SEGURANCA", seguranca);
         this.seguranca = seguranca;
    }
 
@@ -93,6 +102,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -108,6 +118,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
 
    @Override
    public ControleAcessoRelatorioBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.altera = vo.asString("ALTERA");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codRel = vo.asBigDecimal("CODREL");

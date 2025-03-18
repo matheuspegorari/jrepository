@@ -20,6 +20,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setCodDesc(BigDecimal codDesc) {
+        markAsChanged("CODDESC", codDesc);
         this.codDesc = codDesc;
    }
 
@@ -28,6 +29,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -36,6 +38,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setDifContratAplicad(BigDecimal difContratAplicad) {
+        markAsChanged("DIFCONTRATPLICAD", difContratAplicad);
         this.difContratAplicad = difContratAplicad;
    }
 
@@ -44,6 +47,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -52,6 +56,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -60,6 +65,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -68,6 +74,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -76,6 +83,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    }
 
    public void setVlrDescContratado(BigDecimal vlrDescContratado) {
+        markAsChanged("VLRDESCCONTRATADO", vlrDescContratado);
         this.vlrDescContratado = vlrDescContratado;
    }
 
@@ -91,6 +99,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
 
    @Override
    public DescontoFinanceiroAplicado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codDesc = vo.asBigDecimal("CODDESC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.difContratAplicad = vo.asBigDecimal("DIFCONTRATPLICAD");

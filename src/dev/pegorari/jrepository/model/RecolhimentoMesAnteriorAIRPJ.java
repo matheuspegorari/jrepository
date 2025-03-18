@@ -18,6 +18,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -26,6 +27,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -34,6 +36,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setMesPagamento(Timestamp mesPagamento) {
+        markAsChanged("MESPAGAMENTO", mesPagamento);
         this.mesPagamento = mesPagamento;
    }
 
@@ -42,6 +45,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -50,6 +54,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setVlrImposto(BigDecimal vlrImposto) {
+        markAsChanged("VLRIMPOSTO", vlrImposto);
         this.vlrImposto = vlrImposto;
    }
 
@@ -58,6 +63,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    }
 
    public void setVlrImpostoCsll(BigDecimal vlrImpostoCsll) {
+        markAsChanged("VLRIMPOSTO_CSLL", vlrImpostoCsll);
         this.vlrImpostoCsll = vlrImpostoCsll;
    }
 
@@ -73,6 +79,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
 
    @Override
    public RecolhimentoMesAnteriorAIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.digitado = vo.asString("DIGITADO");
         this.mesPagamento = vo.asTimestamp("MESPAGAMENTO");

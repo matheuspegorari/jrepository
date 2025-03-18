@@ -21,6 +21,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setAlterar(String alterar) {
+        markAsChanged("ALTERAR", alterar);
         this.alterar = alterar;
    }
 
@@ -29,6 +30,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setCondicao(String condicao) {
+        markAsChanged("CONDICAO", condicao);
         this.condicao = condicao;
    }
 
@@ -37,6 +39,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setExcluir(String excluir) {
+        markAsChanged("EXCLUIR", excluir);
         this.excluir = excluir;
    }
 
@@ -45,6 +48,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -53,6 +57,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setInserir(String inserir) {
+        markAsChanged("INSERIR", inserir);
         this.inserir = inserir;
    }
 
@@ -61,6 +66,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setNomeLigacao(String nomeLigacao) {
+        markAsChanged("NOMELIGACAO", nomeLigacao);
         this.nomeLigacao = nomeLigacao;
    }
 
@@ -69,6 +75,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setNuInstDest(BigDecimal nuInstDest) {
+        markAsChanged("NUINSTDEST", nuInstDest);
         this.nuInstDest = nuInstDest;
    }
 
@@ -77,6 +84,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setNuInstOrig(BigDecimal nuInstOrig) {
+        markAsChanged("NUINSTORIG", nuInstOrig);
         this.nuInstOrig = nuInstOrig;
    }
 
@@ -85,6 +93,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setObrigatoria(String obrigatoria) {
+        markAsChanged("OBRIGATORIA", obrigatoria);
         this.obrigatoria = obrigatoria;
    }
 
@@ -93,6 +102,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    }
 
    public void setTipLigacao(String tipLigacao) {
+        markAsChanged("TIPLIGACAO", tipLigacao);
         this.tipLigacao = tipLigacao;
    }
 
@@ -108,6 +118,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
 
    @Override
    public Ligacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.alterar = vo.asString("ALTERAR");
         this.condicao = vo.asString("CONDICAO");
         this.excluir = vo.asString("EXCLUIR");

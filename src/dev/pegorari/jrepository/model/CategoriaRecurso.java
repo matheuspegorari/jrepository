@@ -23,6 +23,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -31,6 +32,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -39,6 +41,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -47,6 +50,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setCodCrePai(BigDecimal codCrePai) {
+        markAsChanged("CODCREPAI", codCrePai);
         this.codCrePai = codCrePai;
    }
 
@@ -55,6 +59,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setCodServAponta(BigDecimal codServAponta) {
+        markAsChanged("CODSERVAPONTA", codServAponta);
         this.codServAponta = codServAponta;
    }
 
@@ -63,6 +68,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -71,6 +77,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -79,6 +86,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setParamSetup(String paramSetup) {
+        markAsChanged("PARAMSETUP", paramSetup);
         this.paramSetup = paramSetup;
    }
 
@@ -87,6 +95,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -95,6 +104,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setTipoApontaUso(String tipoApontaUso) {
+        markAsChanged("TIPOAPONTAUSO", tipoApontaUso);
         this.tipoApontaUso = tipoApontaUso;
    }
 
@@ -103,6 +113,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -111,6 +122,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
    }
 
    public void setDecQtd(BigDecimal decQtd) {
+        markAsChanged("DECQTD", decQtd);
         this.decQtd = decQtd;
    }
 
@@ -126,6 +138,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
 
    @Override
    public CategoriaRecurso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codCre = vo.asBigDecimal("CODCRE");

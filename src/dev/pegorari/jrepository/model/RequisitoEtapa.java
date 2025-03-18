@@ -14,6 +14,7 @@ public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
    }
 
    public void setCodReq(BigDecimal codReq) {
+        markAsChanged("CODREQ", codReq);
         this.codReq = codReq;
    }
 
@@ -22,6 +23,7 @@ public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -30,6 +32,7 @@ public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
    }
 
    public void setNuMetapa(BigDecimal nuMetapa) {
+        markAsChanged("NUMETAPA", nuMetapa);
         this.nuMetapa = nuMetapa;
    }
 
@@ -45,6 +48,7 @@ public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
 
    @Override
    public RequisitoEtapa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codReq = vo.asBigDecimal("CODREQ");
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuMetapa = vo.asBigDecimal("NUMETAPA");

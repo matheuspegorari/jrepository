@@ -18,6 +18,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -26,6 +27,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -34,6 +36,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -42,6 +45,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -50,6 +54,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -58,6 +63,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
    }
 
    public void setCodTerResPar(BigDecimal codTerResPar) {
+        markAsChanged("CODTERRESPAR", codTerResPar);
         this.codTerResPar = codTerResPar;
    }
 
@@ -73,6 +79,7 @@ public class PrecoContrato extends AbstractSankhyaEntity<PrecoContrato> {
 
    @Override
    public PrecoContrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServ = vo.asBigDecimal("CODSERV");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");

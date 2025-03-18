@@ -68,6 +68,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setContato(String contato) {
+        markAsChanged("CONTATO", contato);
         this.contato = contato;
    }
 
@@ -76,6 +77,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -84,6 +86,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDhChamada(Timestamp dhChamada) {
+        markAsChanged("DHCHAMADA", dhChamada);
         this.dhChamada = dhChamada;
    }
 
@@ -92,6 +95,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDhFechamentoSla(Timestamp dhFechamentoSla) {
+        markAsChanged("DHFECHAMENTOSLA", dhFechamentoSla);
         this.dhFechamentoSla = dhFechamentoSla;
    }
 
@@ -100,6 +104,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -108,6 +113,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodParcAtend(BigDecimal codParcAtend) {
+        markAsChanged("CODPARCATEND", codParcAtend);
         this.codParcAtend = codParcAtend;
    }
 
@@ -116,6 +122,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodPla(BigDecimal codPla) {
+        markAsChanged("CODPLA", codPla);
         this.codPla = codPla;
    }
 
@@ -124,6 +131,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setBairro(String bairro) {
+        markAsChanged("BAIRRO", bairro);
         this.bairro = bairro;
    }
 
@@ -132,6 +140,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCidade(String cidade) {
+        markAsChanged("CIDADE", cidade);
         this.cidade = cidade;
    }
 
@@ -140,6 +149,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodAtend(BigDecimal codAtend) {
+        markAsChanged("CODATEND", codAtend);
         this.codAtend = codAtend;
    }
 
@@ -148,6 +158,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -156,6 +167,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -164,6 +176,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -172,6 +185,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodContatoPap(BigDecimal codContatoPap) {
+        markAsChanged("CODCONTATOPAP", codContatoPap);
         this.codContatoPap = codContatoPap;
    }
 
@@ -180,6 +194,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodCos(BigDecimal codCos) {
+        markAsChanged("CODCOS", codCos);
         this.codCos = codCos;
    }
 
@@ -188,6 +203,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodCosAnt(BigDecimal codCosAnt) {
+        markAsChanged("CODCOSANT", codCosAnt);
         this.codCosAnt = codCosAnt;
    }
 
@@ -196,6 +212,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodOat(BigDecimal codOat) {
+        markAsChanged("CODOAT", codOat);
         this.codOat = codOat;
    }
 
@@ -204,6 +221,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -212,6 +230,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -220,6 +239,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -228,6 +248,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setEndereco(String endereco) {
+        markAsChanged("ENDERECO", endereco);
         this.endereco = endereco;
    }
 
@@ -236,6 +257,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setEtapaNeg(String etapaNeg) {
+        markAsChanged("ETAPANEG", etapaNeg);
         this.etapaNeg = etapaNeg;
    }
 
@@ -244,6 +266,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setIdentificador(String identificador) {
+        markAsChanged("IDENTIFICADOR", identificador);
         this.identificador = identificador;
    }
 
@@ -252,6 +275,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNomeContato(String nomeContato) {
+        markAsChanged("NOMECONTATO", nomeContato);
         this.nomeContato = nomeContato;
    }
 
@@ -260,6 +284,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNomeModelo(String nomeModelo) {
+        markAsChanged("NOMEMODELO", nomeModelo);
         this.nomeModelo = nomeModelo;
    }
 
@@ -268,6 +293,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -276,6 +302,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -284,6 +311,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNumEtapa(BigDecimal numEtapa) {
+        markAsChanged("NUMETAPA", numEtapa);
         this.numEtapa = numEtapa;
    }
 
@@ -292,6 +320,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDtFechamento(Timestamp dtFechamento) {
+        markAsChanged("DTFECHAMENTO", dtFechamento);
         this.dtFechamento = dtFechamento;
    }
 
@@ -300,6 +329,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setDtPrevista(Timestamp dtPrevista) {
+        markAsChanged("DTPREVISTA", dtPrevista);
         this.dtPrevista = dtPrevista;
    }
 
@@ -308,6 +338,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodServFluxo(BigDecimal codServFluxo) {
+        markAsChanged("CODSERVFLUXO", codServFluxo);
         this.codServFluxo = codServFluxo;
    }
 
@@ -316,6 +347,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodTpn(BigDecimal codTpn) {
+        markAsChanged("CODTPN", codTpn);
         this.codTpn = codTpn;
    }
 
@@ -324,6 +356,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -332,6 +365,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodUsuFech(BigDecimal codUsuFech) {
+        markAsChanged("CODUSUFECH", codUsuFech);
         this.codUsuFech = codUsuFech;
    }
 
@@ -340,6 +374,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
+        markAsChanged("CODUSURESP", codUsuResp);
         this.codUsuResp = codUsuResp;
    }
 
@@ -348,6 +383,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodUsuSolicitante(BigDecimal codUsuSolicitante) {
+        markAsChanged("CODUSUSOLICITANTE", codUsuSolicitante);
         this.codUsuSolicitante = codUsuSolicitante;
    }
 
@@ -356,6 +392,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -364,6 +401,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -372,6 +410,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNumOsCliente(String numOsCliente) {
+        markAsChanged("NUMOSCLIENTE", numOsCliente);
         this.numOsCliente = numOsCliente;
    }
 
@@ -380,6 +419,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNumOsRelacionada(BigDecimal numOsRelacionada) {
+        markAsChanged("NUMOSRELACIONADA", numOsRelacionada);
         this.numOsRelacionada = numOsRelacionada;
    }
 
@@ -388,6 +428,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -396,6 +437,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setPossuiSla(String possuiSla) {
+        markAsChanged("POSSUISLA", possuiSla);
         this.possuiSla = possuiSla;
    }
 
@@ -404,6 +446,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -412,6 +455,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -420,6 +464,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setStatusNeg(String statusNeg) {
+        markAsChanged("STATUSNEG", statusNeg);
         this.statusNeg = statusNeg;
    }
 
@@ -428,6 +473,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTelContato(String telContato) {
+        markAsChanged("TELCONTATO", telContato);
         this.telContato = telContato;
    }
 
@@ -436,6 +482,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTempGasto(BigDecimal tempGasto) {
+        markAsChanged("TEMPGASTO", tempGasto);
         this.tempGasto = tempGasto;
    }
 
@@ -444,6 +491,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTempoGastoSla(BigDecimal tempoGastoSla) {
+        markAsChanged("TEMPOGASTOSLA", tempoGastoSla);
         this.tempoGastoSla = tempoGastoSla;
    }
 
@@ -452,6 +500,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTempoSla(BigDecimal tempoSla) {
+        markAsChanged("TEMPOSLA", tempoSla);
         this.tempoSla = tempoSla;
    }
 
@@ -460,6 +509,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTempPrevisto(BigDecimal tempPrevisto) {
+        markAsChanged("TEMPPREVISTO", tempPrevisto);
         this.tempPrevisto = tempPrevisto;
    }
 
@@ -468,6 +518,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -476,6 +527,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setVariacaoFluxo(BigDecimal variacaoFluxo) {
+        markAsChanged("VARIACAOFLUXO", variacaoFluxo);
         this.variacaoFluxo = variacaoFluxo;
    }
 
@@ -484,6 +536,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setModeloVisivelAppOs(String modeloVisivelAppOs) {
+        markAsChanged("MODELOVISIVELAPPOS", modeloVisivelAppOs);
         this.modeloVisivelAppOs = modeloVisivelAppOs;
    }
 
@@ -492,6 +545,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setCodProcMaHa(BigDecimal codProcMaHa) {
+        markAsChanged("CODPROCMAHA", codProcMaHa);
         this.codProcMaHa = codProcMaHa;
    }
 
@@ -500,6 +554,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setImpacto(String impacto) {
+        markAsChanged("IMPACTO", impacto);
         this.impacto = impacto;
    }
 
@@ -508,6 +563,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    }
 
    public void setUrgencia(String urgencia) {
+        markAsChanged("URGENCIA", urgencia);
         this.urgencia = urgencia;
    }
 
@@ -523,6 +579,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
 
    @Override
    public OrdemServico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.contato = vo.asString("CONTATO");
         this.descricao = vo.asString("DESCRICAO");
         this.dhChamada = vo.asTimestamp("DHCHAMADA");

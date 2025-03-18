@@ -16,6 +16,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -24,6 +25,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    }
 
    public void setCodOcorrencia(String codOcorrencia) {
+        markAsChanged("CODOCORRENCIA", codOcorrencia);
         this.codOcorrencia = codOcorrencia;
    }
 
@@ -32,6 +34,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    }
 
    public void setCodRej(String codRej) {
+        markAsChanged("CODREJ", codRej);
         this.codRej = codRej;
    }
 
@@ -40,6 +43,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    }
 
    public void setDescrRej(String descrRej) {
+        markAsChanged("DESCRREJ", descrRej);
         this.descrRej = descrRej;
    }
 
@@ -48,6 +52,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
 
    @Override
    public Rejeicao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.codOcorrencia = vo.asString("CODOCORRENCIA");
         this.codRej = vo.asString("CODREJ");

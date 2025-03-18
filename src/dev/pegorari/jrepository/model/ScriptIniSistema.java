@@ -14,6 +14,7 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -22,6 +23,7 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
    }
 
    public void setExecucao(String execucao) {
+        markAsChanged("EXECUCAO", execucao);
         this.execucao = execucao;
    }
 
@@ -30,6 +32,7 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
    }
 
    public void setDtExecucao(Timestamp dtExecucao) {
+        markAsChanged("DTEXECUCAO", dtExecucao);
         this.dtExecucao = dtExecucao;
    }
 
@@ -45,6 +48,7 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
 
    @Override
    public ScriptIniSistema fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nome = vo.asString("NOME");
         this.execucao = vo.asString("EXECUCAO");
         this.dtExecucao = vo.asTimestamp("DTEXECUCAO");

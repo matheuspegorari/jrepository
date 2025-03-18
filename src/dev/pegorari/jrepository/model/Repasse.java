@@ -17,6 +17,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setNuCnd(BigDecimal nuCnd) {
+        markAsChanged("NUCND", nuCnd);
         this.nuCnd = nuCnd;
    }
 
@@ -25,6 +26,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setNuFinDesp(BigDecimal nuFinDesp) {
+        markAsChanged("NUFINDESP", nuFinDesp);
         this.nuFinDesp = nuFinDesp;
    }
 
@@ -33,6 +35,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
+        markAsChanged("NUFINORIG", nuFinOrig);
         this.nuFinOrig = nuFinOrig;
    }
 
@@ -41,6 +44,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setNuFinRec(BigDecimal nuFinRec) {
+        markAsChanged("NUFINREC", nuFinRec);
         this.nuFinRec = nuFinRec;
    }
 
@@ -49,6 +53,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setPercRateio(BigDecimal percRateio) {
+        markAsChanged("PERCRATEIO", percRateio);
         this.percRateio = percRateio;
    }
 
@@ -57,6 +62,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    }
 
    public void setValorRateio(BigDecimal valorRateio) {
+        markAsChanged("VALORRATEIO", valorRateio);
         this.valorRateio = valorRateio;
    }
 
@@ -72,6 +78,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
 
    @Override
    public Repasse fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuCnd = vo.asBigDecimal("NUCND");
         this.nuFinDesp = vo.asBigDecimal("NUFINDESP");
         this.nuFinOrig = vo.asBigDecimal("NUFINORIG");

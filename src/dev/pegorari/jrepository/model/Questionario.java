@@ -22,6 +22,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setPerguntasPorGrupo(String perguntasPorGrupo) {
+        markAsChanged("PERGUNTASPORGRUPO", perguntasPorGrupo);
         this.perguntasPorGrupo = perguntasPorGrupo;
    }
 
@@ -30,6 +31,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -38,6 +40,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setExiberespCorreta(String exiberespCorreta) {
+        markAsChanged("EXIBERESPCORRETA", exiberespCorreta);
         this.exiberespCorreta = exiberespCorreta;
    }
 
@@ -46,6 +49,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setNroPergPorPag(BigDecimal nroPergPorPag) {
+        markAsChanged("NROPERGPORPAG", nroPergPorPag);
         this.nroPergPorPag = nroPergPorPag;
    }
 
@@ -54,6 +58,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setOrdemAleatoria(String ordemAleatoria) {
+        markAsChanged("ORDEMALEATORIA", ordemAleatoria);
         this.ordemAleatoria = ordemAleatoria;
    }
 
@@ -62,6 +67,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -70,6 +76,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setCodGrupoQuest(BigDecimal codGrupoQuest) {
+        markAsChanged("CODGRUPOQUEST", codGrupoQuest);
         this.codGrupoQuest = codGrupoQuest;
    }
 
@@ -78,6 +85,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -86,6 +94,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -94,6 +103,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    }
 
    public void setDescrQuest(String descrQuest) {
+        markAsChanged("DESCRQUEST", descrQuest);
         this.descrQuest = descrQuest;
    }
 
@@ -109,6 +119,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
 
    @Override
    public Questionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.perguntasPorGrupo = vo.asString("PERGUNTASPORGRUPO");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.exiberespCorreta = vo.asString("EXIBERESPCORRETA");

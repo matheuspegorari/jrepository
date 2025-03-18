@@ -22,6 +22,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -30,6 +31,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
+        markAsChanged("CODUSULIB", codUsuLib);
         this.codUsuLib = codUsuLib;
    }
 
@@ -38,6 +40,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -46,6 +49,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setEvento(BigDecimal evento) {
+        markAsChanged("EVENTO", evento);
         this.evento = evento;
    }
 
@@ -54,6 +58,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -62,6 +67,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setNuRng(BigDecimal nuRng) {
+        markAsChanged("NURNG", nuRng);
         this.nuRng = nuRng;
    }
 
@@ -70,6 +76,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setOnde(String onde) {
+        markAsChanged("ONDE", onde);
         this.onde = onde;
    }
 
@@ -78,6 +85,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setQuando(String quando) {
+        markAsChanged("QUANDO", quando);
         this.quando = quando;
    }
 
@@ -86,6 +94,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setTipoExpressao(String tipoExpressao) {
+        markAsChanged("TIPOEXPRESSAO", tipoExpressao);
         this.tipoExpressao = tipoExpressao;
    }
 
@@ -94,6 +103,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setInibeLib(String inibeLib) {
+        markAsChanged("INIBELIB", inibeLib);
         this.inibeLib = inibeLib;
    }
 
@@ -102,6 +112,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -117,6 +128,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
 
    @Override
    public RegraNegocio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.descricao = vo.asString("DESCRICAO");

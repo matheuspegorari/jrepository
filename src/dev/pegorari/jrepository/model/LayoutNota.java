@@ -19,6 +19,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setModulo(BigDecimal modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -27,6 +28,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -35,6 +37,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setLayout(char[] layout) {
+        markAsChanged("LAYOUT", layout);
         this.layout = layout;
    }
 
@@ -43,6 +46,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setNuLayout(BigDecimal nuLayout) {
+        markAsChanged("NULAYOUT", nuLayout);
         this.nuLayout = nuLayout;
    }
 
@@ -51,6 +55,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -59,6 +64,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -67,6 +73,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setUsarCheckoutProd(String usarCheckoutProd) {
+        markAsChanged("USARCHECKOUTPROD", usarCheckoutProd);
         this.usarCheckoutProd = usarCheckoutProd;
    }
 
@@ -75,6 +82,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
    }
 
    public void setTipRec(String tipRec) {
+        markAsChanged("TIPREC", tipRec);
         this.tipRec = tipRec;
    }
 
@@ -90,6 +98,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
 
    @Override
    public LayoutNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.modulo = vo.asBigDecimal("MODULO");
         this.descricao = vo.asString("DESCRICAO");
         this.layout = vo.asClob("LAYOUT");

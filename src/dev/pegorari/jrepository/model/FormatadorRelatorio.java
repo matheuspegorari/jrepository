@@ -45,6 +45,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setAcessoCubo(String acessoCubo) {
+        markAsChanged("ACESSOCUBO", acessoCubo);
         this.acessoCubo = acessoCubo;
    }
 
@@ -53,6 +54,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -61,6 +63,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setCodGrupoRel(BigDecimal codGrupoRel) {
+        markAsChanged("CODGRUPOREL", codGrupoRel);
         this.codGrupoRel = codGrupoRel;
    }
 
@@ -69,6 +72,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setCodRel(BigDecimal codRel) {
+        markAsChanged("CODREL", codRel);
         this.codRel = codRel;
    }
 
@@ -77,6 +81,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setContasBco(String contasBco) {
+        markAsChanged("CONTASBCO", contasBco);
         this.contasBco = contasBco;
    }
 
@@ -85,6 +90,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -93,6 +99,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -101,6 +108,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setEscolhidos(String escolhidos) {
+        markAsChanged("ESCOLHIDOS", escolhidos);
         this.escolhidos = escolhidos;
    }
 
@@ -109,6 +117,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setFastService(String fastService) {
+        markAsChanged("FASTSERVICE", fastService);
         this.fastService = fastService;
    }
 
@@ -117,6 +126,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setFiltros(String filtros) {
+        markAsChanged("FILTROS", filtros);
         this.filtros = filtros;
    }
 
@@ -125,6 +135,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setFiltros2(String filtros2) {
+        markAsChanged("FILTROS2", filtros2);
         this.filtros2 = filtros2;
    }
 
@@ -133,6 +144,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setGrafic(byte[] grafic) {
+        markAsChanged("GRAFIC", grafic);
         this.grafic = grafic;
    }
 
@@ -141,6 +153,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLayout(byte[] layout) {
+        markAsChanged("LAYOUT", layout);
         this.layout = layout;
    }
 
@@ -149,6 +162,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLayoutSw(byte[] layoutSw) {
+        markAsChanged("LAYOUTSW", layoutSw);
         this.layoutSw = layoutSw;
    }
 
@@ -157,6 +171,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLista1(String lista1) {
+        markAsChanged("LISTA1", lista1);
         this.lista1 = lista1;
    }
 
@@ -165,6 +180,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLista2(String lista2) {
+        markAsChanged("LISTA2", lista2);
         this.lista2 = lista2;
    }
 
@@ -173,6 +189,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLista3(String lista3) {
+        markAsChanged("LISTA3", lista3);
         this.lista3 = lista3;
    }
 
@@ -181,6 +198,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setLista4(String lista4) {
+        markAsChanged("LISTA4", lista4);
         this.lista4 = lista4;
    }
 
@@ -189,6 +207,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -197,6 +216,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -205,6 +225,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -213,6 +234,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setOrdem(String ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -221,6 +243,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setOrientacao(String orientacao) {
+        markAsChanged("ORIENTACAO", orientacao);
         this.orientacao = orientacao;
    }
 
@@ -229,6 +252,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setOrigem(BigDecimal origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -237,6 +261,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setParamsGen(String paramsGen) {
+        markAsChanged("PARAMSGEN", paramsGen);
         this.paramsGen = paramsGen;
    }
 
@@ -245,6 +270,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setPersonalizado(String personalizado) {
+        markAsChanged("PERSONALIZADO", personalizado);
         this.personalizado = personalizado;
    }
 
@@ -253,6 +279,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setQtdVisualizacoes(BigDecimal qtdVisualizacoes) {
+        markAsChanged("QTDVISUALIZACOES", qtdVisualizacoes);
         this.qtdVisualizacoes = qtdVisualizacoes;
    }
 
@@ -261,6 +288,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setResumo(String resumo) {
+        markAsChanged("RESUMO", resumo);
         this.resumo = resumo;
    }
 
@@ -269,6 +297,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setSankhya(String sankhya) {
+        markAsChanged("SANKHYA", sankhya);
         this.sankhya = sankhya;
    }
 
@@ -277,6 +306,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setTamFonte(BigDecimal tamFonte) {
+        markAsChanged("TAMFONTE", tamFonte);
         this.tamFonte = tamFonte;
    }
 
@@ -285,6 +315,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setTemLayoutSw(String temLayoutSw) {
+        markAsChanged("TEMLAYOUTSW", temLayoutSw);
         this.temLayoutSw = temLayoutSw;
    }
 
@@ -293,6 +324,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -301,6 +333,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    }
 
    public void setTipoFonte(String tipoFonte) {
+        markAsChanged("TIPOFONTE", tipoFonte);
         this.tipoFonte = tipoFonte;
    }
 
@@ -316,6 +349,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
 
    @Override
    public FormatadorRelatorio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acessoCubo = vo.asString("ACESSOCUBO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoRel = vo.asBigDecimal("CODGRUPOREL");

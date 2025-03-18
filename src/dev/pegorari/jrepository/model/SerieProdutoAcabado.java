@@ -17,6 +17,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -25,6 +26,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setIdiProc(BigDecimal idiProc) {
+        markAsChanged("IDIPROC", idiProc);
         this.idiProc = idiProc;
    }
 
@@ -33,6 +35,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -41,6 +44,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -49,6 +53,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setPerda(String perda) {
+        markAsChanged("PERDA", perda);
         this.perda = perda;
    }
 
@@ -57,6 +62,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    }
 
    public void setSeriePa(String seriePa) {
+        markAsChanged("SERIEPA", seriePa);
         this.seriePa = seriePa;
    }
 
@@ -72,6 +78,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
 
    @Override
    public SerieProdutoAcabado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.idiProc = vo.asBigDecimal("IDIPROC");
         this.liberado = vo.asString("LIBERADO");

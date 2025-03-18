@@ -33,6 +33,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setCodParcPref(BigDecimal codParcPref) {
+        markAsChanged("CODPARCPREF", codParcPref);
         this.codParcPref = codParcPref;
    }
 
@@ -41,6 +42,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -49,6 +51,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setDtVersao(Timestamp dtVersao) {
+        markAsChanged("DTVERSAO", dtVersao);
         this.dtVersao = dtVersao;
    }
 
@@ -57,6 +60,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setFrequencia(BigDecimal frequencia) {
+        markAsChanged("FREQUENCIA", frequencia);
         this.frequencia = frequencia;
    }
 
@@ -65,6 +69,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setGrupImpressao(BigDecimal grupImpressao) {
+        markAsChanged("GRUPIMPRESSAO", grupImpressao);
         this.grupImpressao = grupImpressao;
    }
 
@@ -73,6 +78,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setImprNota(String imprNota) {
+        markAsChanged("IMPRNOTA", imprNota);
         this.imprNota = imprNota;
    }
 
@@ -81,6 +87,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setImprOs(String imprOs) {
+        markAsChanged("IMPROS", imprOs);
         this.imprOs = imprOs;
    }
 
@@ -89,6 +96,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setLimitante(String limitante) {
+        markAsChanged("LIMITANTE", limitante);
         this.limitante = limitante;
    }
 
@@ -97,6 +105,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -105,6 +114,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setNumSerie(String numSerie) {
+        markAsChanged("NUMSERIE", numSerie);
         this.numSerie = numSerie;
    }
 
@@ -113,6 +123,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setNumUsuarios(BigDecimal numUsuarios) {
+        markAsChanged("NUMUSUARIOS", numUsuarios);
         this.numUsuarios = numUsuarios;
    }
 
@@ -121,6 +132,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -129,6 +141,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setProdPrinc(String prodPrinc) {
+        markAsChanged("PRODPRINC", prodPrinc);
         this.prodPrinc = prodPrinc;
    }
 
@@ -137,6 +150,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setQtdePrevista(BigDecimal qtdePrevista) {
+        markAsChanged("QTDEPREVISTA", qtdePrevista);
         this.qtdePrevista = qtdePrevista;
    }
 
@@ -145,6 +159,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setQtdMeses(BigDecimal qtdMeses) {
+        markAsChanged("QTDMESES", qtdMeses);
         this.qtdMeses = qtdMeses;
    }
 
@@ -153,6 +168,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setSitProd(String sitProd) {
+        markAsChanged("SITPROD", sitProd);
         this.sitProd = sitProd;
    }
 
@@ -161,6 +177,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setVersao(String versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -169,6 +186,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setVlrUnit(BigDecimal vlrUnit) {
+        markAsChanged("VLRUNIT", vlrUnit);
         this.vlrUnit = vlrUnit;
    }
 
@@ -177,6 +195,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setSerFaturCon(String serFaturCon) {
+        markAsChanged("SERFATURCON", serFaturCon);
         this.serFaturCon = serFaturCon;
    }
 
@@ -185,6 +204,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setTopFaturCon(BigDecimal topFaturCon) {
+        markAsChanged("TOPFATURCON", topFaturCon);
         this.topFaturCon = topFaturCon;
    }
 
@@ -193,6 +213,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    }
 
    public void setQtdUsu(BigDecimal qtdUsu) {
+        markAsChanged("QTDUSU", qtdUsu);
         this.qtdUsu = qtdUsu;
    }
 
@@ -208,6 +229,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
 
    @Override
    public ProdutoServicoContrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParcPref = vo.asBigDecimal("CODPARCPREF");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.dtVersao = vo.asTimestamp("DTVERSAO");

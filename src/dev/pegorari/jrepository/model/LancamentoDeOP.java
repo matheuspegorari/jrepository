@@ -18,6 +18,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -26,6 +27,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -34,6 +36,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -42,6 +45,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -50,6 +54,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setReutilizar(String reutilizar) {
+        markAsChanged("REUTILIZAR", reutilizar);
         this.reutilizar = reutilizar;
    }
 
@@ -58,6 +63,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -73,6 +79,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
 
    @Override
    public LancamentoDeOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuLop = vo.asBigDecimal("NULOP");
         this.dhInc = vo.asTimestamp("DHINC");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -38,6 +38,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -46,6 +47,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodConPar(BigDecimal codConPar) {
+        markAsChanged("CODCONPAR", codConPar);
         this.codConPar = codConPar;
    }
 
@@ -54,6 +56,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -62,6 +65,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -70,6 +74,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodHistCtb(BigDecimal codHistCtb) {
+        markAsChanged("CODHISTCTB", codHistCtb);
         this.codHistCtb = codHistCtb;
    }
 
@@ -78,6 +83,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -86,6 +92,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -94,6 +101,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setComplHist(String complHist) {
+        markAsChanged("COMPLHIST", complHist);
         this.complHist = complHist;
    }
 
@@ -102,6 +110,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -110,6 +119,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -118,6 +128,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setNumDoc(BigDecimal numDoc) {
+        markAsChanged("NUMDOC", numDoc);
         this.numDoc = numDoc;
    }
 
@@ -126,6 +137,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setNumLanc(BigDecimal numLanc) {
+        markAsChanged("NUMLANC", numLanc);
         this.numLanc = numLanc;
    }
 
@@ -134,6 +146,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setNumLote(BigDecimal numLote) {
+        markAsChanged("NUMLOTE", numLote);
         this.numLote = numLote;
    }
 
@@ -142,6 +155,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -150,6 +164,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setTipLanc(String tipLanc) {
+        markAsChanged("TIPLANC", tipLanc);
         this.tipLanc = tipLanc;
    }
 
@@ -158,6 +173,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setVencimento(Timestamp vencimento) {
+        markAsChanged("VENCIMENTO", vencimento);
         this.vencimento = vencimento;
    }
 
@@ -166,6 +182,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setVlrCred(BigDecimal vlrCred) {
+        markAsChanged("VLRCRED", vlrCred);
         this.vlrCred = vlrCred;
    }
 
@@ -174,6 +191,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setVlrDeb(BigDecimal vlrDeb) {
+        markAsChanged("VLRDEB", vlrDeb);
         this.vlrDeb = vlrDeb;
    }
 
@@ -182,6 +200,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setVlrLanc(BigDecimal vlrLanc) {
+        markAsChanged("VLRLANC", vlrLanc);
         this.vlrLanc = vlrLanc;
    }
 
@@ -190,6 +209,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -198,6 +218,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -206,6 +227,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setDtExtemporaneo(Timestamp dtExtemporaneo) {
+        markAsChanged("DTEXTEMPORANEO", dtExtemporaneo);
         this.dtExtemporaneo = dtExtemporaneo;
    }
 
@@ -214,6 +236,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setExtemporaneo(String extemporaneo) {
+        markAsChanged("EXTEMPORANEO", extemporaneo);
         this.extemporaneo = extemporaneo;
    }
 
@@ -222,6 +245,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setPartLalurA(String partLalurA) {
+        markAsChanged("PARTLALUR_A", partLalurA);
         this.partLalurA = partLalurA;
    }
 
@@ -230,6 +254,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -238,6 +263,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
    }
 
    public void setConciliado(String conciliado) {
+        markAsChanged("CONCILIADO", conciliado);
         this.conciliado = conciliado;
    }
 
@@ -253,6 +279,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
 
    @Override
    public Lancamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codConPar = vo.asBigDecimal("CODCONPAR");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");

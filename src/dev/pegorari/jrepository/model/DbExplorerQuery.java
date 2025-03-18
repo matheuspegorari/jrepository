@@ -17,6 +17,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -25,6 +26,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    }
 
    public void setTextoQuery(char[] textoQuery) {
+        markAsChanged("TEXTOQUERY", textoQuery);
         this.textoQuery = textoQuery;
    }
 
@@ -33,6 +35,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    }
 
    public void setTituloQuery(String tituloQuery) {
+        markAsChanged("TITULOQUERY", tituloQuery);
         this.tituloQuery = tituloQuery;
    }
 
@@ -41,6 +44,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -49,6 +53,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    }
 
    public void setNuQuery(BigDecimal nuQuery) {
+        markAsChanged("NUQUERY", nuQuery);
         this.nuQuery = nuQuery;
    }
 
@@ -64,6 +69,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
 
    @Override
    public DbExplorerQuery fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.textoQuery = vo.asClob("TEXTOQUERY");
         this.tituloQuery = vo.asString("TITULOQUERY");

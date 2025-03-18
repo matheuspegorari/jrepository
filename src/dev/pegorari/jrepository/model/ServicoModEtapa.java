@@ -15,6 +15,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
    }
 
    public void setCodMetod(BigDecimal codMetod) {
+        markAsChanged("CODMETOD", codMetod);
         this.codMetod = codMetod;
    }
 
@@ -23,6 +24,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -31,6 +33,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
    }
 
    public void setComplementar(String complementar) {
+        markAsChanged("COMPLEMENTAR", complementar);
         this.complementar = complementar;
    }
 
@@ -39,6 +42,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
    }
 
    public void setNumModelo(BigDecimal numModelo) {
+        markAsChanged("NUMMODELO", numModelo);
         this.numModelo = numModelo;
    }
 
@@ -54,6 +58,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
 
    @Override
    public ServicoModEtapa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMetod = vo.asBigDecimal("CODMETOD");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.complementar = vo.asString("COMPLEMENTAR");

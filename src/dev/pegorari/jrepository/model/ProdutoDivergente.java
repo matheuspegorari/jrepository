@@ -16,6 +16,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -24,6 +25,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -32,6 +34,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -40,6 +43,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -48,6 +52,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
 
    @Override
    public ProdutoDivergente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codVol = vo.asString("CODVOL");
         this.controle = vo.asString("CONTROLE");

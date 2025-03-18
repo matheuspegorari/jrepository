@@ -18,6 +18,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -26,6 +27,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setChavePai(String chavePai) {
+        markAsChanged("CHAVEPAI", chavePai);
         this.chavePai = chavePai;
    }
 
@@ -34,6 +36,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -42,6 +45,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -50,6 +54,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -58,6 +63,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -66,6 +72,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -81,6 +88,7 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
 
    @Override
    public ConfiguracaoRecursoBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.chavePai = vo.asString("CHAVEPAI");
         this.codUsu = vo.asBigDecimal("CODUSU");

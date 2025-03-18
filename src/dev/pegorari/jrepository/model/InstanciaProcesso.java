@@ -28,6 +28,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -36,6 +37,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setCodUsuInc(BigDecimal codUsuInc) {
+        markAsChanged("CODUSUINC", codUsuInc);
         this.codUsuInc = codUsuInc;
    }
 
@@ -44,6 +46,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setDhConclusao(Timestamp dhConclusao) {
+        markAsChanged("DHCONCLUSAO", dhConclusao);
         this.dhConclusao = dhConclusao;
    }
 
@@ -52,6 +55,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -60,6 +64,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
+        markAsChanged("IDINSTPRN", idInstPrn);
         this.idInstPrn = idInstPrn;
    }
 
@@ -68,6 +73,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -76,6 +82,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setSituacaoExec(String situacaoExec) {
+        markAsChanged("SITUACAOEXEC", situacaoExec);
         this.situacaoExec = situacaoExec;
    }
 
@@ -84,6 +91,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setDhVencimento(Timestamp dhVencimento) {
+        markAsChanged("DHVENCIMENTO", dhVencimento);
         this.dhVencimento = dhVencimento;
    }
 
@@ -92,6 +100,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setPercDecorrido(BigDecimal percDecorrido) {
+        markAsChanged("PERCDECORRIDO", percDecorrido);
         this.percDecorrido = percDecorrido;
    }
 
@@ -100,6 +109,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -108,6 +118,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setSlaAtual(BigDecimal slaAtual) {
+        markAsChanged("SLAATUAL", slaAtual);
         this.slaAtual = slaAtual;
    }
 
@@ -116,6 +127,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setTempoDecorrido(BigDecimal tempoDecorrido) {
+        markAsChanged("TEMPODECORRIDO", tempoDecorrido);
         this.tempoDecorrido = tempoDecorrido;
    }
 
@@ -124,6 +136,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setTempoLimite(BigDecimal tempoLimite) {
+        markAsChanged("TEMPOLIMITE", tempoLimite);
         this.tempoLimite = tempoLimite;
    }
 
@@ -132,6 +145,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setIdPrnMestre(BigDecimal idPrnMestre) {
+        markAsChanged("IDPRNMESTRE", idPrnMestre);
         this.idPrnMestre = idPrnMestre;
    }
 
@@ -140,6 +154,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setCodUsuCancel(BigDecimal codUsuCancel) {
+        markAsChanged("CODUSUCANCEL", codUsuCancel);
         this.codUsuCancel = codUsuCancel;
    }
 
@@ -148,6 +163,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
    }
 
    public void setObsCancel(String obsCancel) {
+        markAsChanged("OBSCANCEL", obsCancel);
         this.obsCancel = obsCancel;
    }
 
@@ -163,6 +179,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
 
    @Override
    public InstanciaProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsuInc = vo.asBigDecimal("CODUSUINC");
         this.dhConclusao = vo.asTimestamp("DHCONCLUSAO");

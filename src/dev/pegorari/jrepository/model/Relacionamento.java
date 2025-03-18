@@ -32,6 +32,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodAtendente(BigDecimal codAtendente) {
+        markAsChanged("CODATENDENTE", codAtendente);
         this.codAtendente = codAtendente;
    }
 
@@ -40,6 +41,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -48,6 +50,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodHist(BigDecimal codHist) {
+        markAsChanged("CODHIST", codHist);
         this.codHist = codHist;
    }
 
@@ -56,6 +59,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -64,6 +68,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -72,6 +77,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -80,6 +86,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -88,6 +95,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setComentarios(String comentarios) {
+        markAsChanged("COMENTARIOS", comentarios);
         this.comentarios = comentarios;
    }
 
@@ -96,6 +104,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setComentarios2(String comentarios2) {
+        markAsChanged("COMENTARIOS2", comentarios2);
         this.comentarios2 = comentarios2;
    }
 
@@ -104,6 +113,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setDhChamada(Timestamp dhChamada) {
+        markAsChanged("DHCHAMADA", dhChamada);
         this.dhChamada = dhChamada;
    }
 
@@ -112,6 +122,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setDhProxCham(Timestamp dhProxCham) {
+        markAsChanged("DHPROXCHAM", dhProxCham);
         this.dhProxCham = dhProxCham;
    }
 
@@ -120,6 +131,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -128,6 +140,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -136,6 +149,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setNuRel(BigDecimal nuRel) {
+        markAsChanged("NUREL", nuRel);
         this.nuRel = nuRel;
    }
 
@@ -144,6 +158,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setPendente(String pendente) {
+        markAsChanged("PENDENTE", pendente);
         this.pendente = pendente;
    }
 
@@ -152,6 +167,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -160,6 +176,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setTelefoneParc(String telefoneParc) {
+        markAsChanged("TELEFONEPARC", telefoneParc);
         this.telefoneParc = telefoneParc;
    }
 
@@ -168,6 +185,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setTempPrevisto(Timestamp tempPrevisto) {
+        markAsChanged("TEMPPREVISTO", tempPrevisto);
         this.tempPrevisto = tempPrevisto;
    }
 
@@ -176,6 +194,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setTipCham(String tipCham) {
+        markAsChanged("TIPCHAM", tipCham);
         this.tipCham = tipCham;
    }
 
@@ -184,6 +203,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
+        markAsChanged("NUAVISO", nuAviso);
         this.nuAviso = nuAviso;
    }
 
@@ -199,6 +219,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
 
    @Override
    public Relacionamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAtendente = vo.asBigDecimal("CODATENDENTE");
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codHist = vo.asBigDecimal("CODHIST");

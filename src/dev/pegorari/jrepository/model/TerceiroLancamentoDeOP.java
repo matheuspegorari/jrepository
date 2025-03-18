@@ -16,6 +16,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -24,6 +25,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -32,6 +34,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -40,6 +43,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
+        markAsChanged("CODPARCTERC", codParcterc);
         this.codParcterc = codParcterc;
    }
 
@@ -48,6 +52,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    }
 
    public void setDescAtv(String descAtv) {
+        markAsChanged("DESCATV", descAtv);
         this.descAtv = descAtv;
    }
 
@@ -63,6 +68,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
 
    @Override
    public TerceiroLancamentoDeOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.ideFx = vo.asBigDecimal("IDEFX");

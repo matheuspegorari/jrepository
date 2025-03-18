@@ -18,6 +18,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -26,6 +27,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -42,6 +45,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -50,6 +54,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -58,6 +63,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -73,6 +79,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
 
    @Override
    public InformacaoQuestionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codQuest = vo.asBigDecimal("CODQUEST");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");

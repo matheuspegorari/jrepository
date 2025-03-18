@@ -31,6 +31,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setArquivo(String arquivo) {
+        markAsChanged("ARQUIVO", arquivo);
         this.arquivo = arquivo;
    }
 
@@ -39,6 +40,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setCoData(BigDecimal coData) {
+        markAsChanged("CODATA", coData);
         this.coData = coData;
    }
 
@@ -47,6 +49,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -55,6 +58,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -63,6 +67,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setConteudo(byte[] conteudo) {
+        markAsChanged("CONTEUDO", conteudo);
         this.conteudo = conteudo;
    }
 
@@ -71,6 +76,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -79,6 +85,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -87,6 +94,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setDtExpira(Timestamp dtExpira) {
+        markAsChanged("DTEXPIRA", dtExpira);
         this.dtExpira = dtExpira;
    }
 
@@ -95,6 +103,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setEdita(String edita) {
+        markAsChanged("EDITA", edita);
         this.edita = edita;
    }
 
@@ -103,6 +112,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setEndArqui(String endArqui) {
+        markAsChanged("ENDARQUI", endArqui);
         this.endArqui = endArqui;
    }
 
@@ -111,6 +121,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setIdentificacaoArquivo(String identificacaoArquivo) {
+        markAsChanged("IDENTIFICACAOARQUIVO", identificacaoArquivo);
         this.identificacaoArquivo = identificacaoArquivo;
    }
 
@@ -119,6 +130,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setPublico(String publico) {
+        markAsChanged("PUBLICO", publico);
         this.publico = publico;
    }
 
@@ -127,6 +139,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -135,6 +148,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setSequenciaPr(BigDecimal sequenciaPr) {
+        markAsChanged("SEQUENCIAPR", sequenciaPr);
         this.sequenciaPr = sequenciaPr;
    }
 
@@ -143,6 +157,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -151,6 +166,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setTipoConteudo(String tipoConteudo) {
+        markAsChanged("TIPOCONTEUDO", tipoConteudo);
         this.tipoConteudo = tipoConteudo;
    }
 
@@ -159,6 +175,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -167,6 +184,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setDtVigor(Timestamp dtVigor) {
+        markAsChanged("DTVIGOR", dtVigor);
         this.dtVigor = dtVigor;
    }
 
@@ -175,6 +193,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
    }
 
    public void setLink(String link) {
+        markAsChanged("LINK", link);
         this.link = link;
    }
 
@@ -190,6 +209,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
 
    @Override
    public Anexo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.coData = vo.asBigDecimal("CODATA");
         this.codEmp = vo.asBigDecimal("CODEMP");

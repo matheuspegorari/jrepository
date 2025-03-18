@@ -71,6 +71,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitPis(BigDecimal vlrUnitPis) {
+        markAsChanged("VLRUNITPIS", vlrUnitPis);
         this.vlrUnitPis = vlrUnitPis;
    }
 
@@ -79,6 +80,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -87,6 +89,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setDescrItem(String descrItem) {
+        markAsChanged("DESCRITEM", descrItem);
         this.descrItem = descrItem;
    }
 
@@ -95,6 +98,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setFatorImpostos(BigDecimal fatorImpostos) {
+        markAsChanged("FATORIMPOSTOS", fatorImpostos);
         this.fatorImpostos = fatorImpostos;
    }
 
@@ -103,6 +107,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setFatorVernet(BigDecimal fatorVernet) {
+        markAsChanged("FATORVERNET", fatorVernet);
         this.fatorVernet = fatorVernet;
    }
 
@@ -111,6 +116,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -119,6 +125,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -127,6 +134,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPartNumber(String partNumber) {
+        markAsChanged("PARTNUMBER", partNumber);
         this.partNumber = partNumber;
    }
 
@@ -135,6 +143,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercCofins(BigDecimal percCofins) {
+        markAsChanged("PERCCOFINS", percCofins);
         this.percCofins = percCofins;
    }
 
@@ -143,6 +152,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercCssl(BigDecimal percCssl) {
+        markAsChanged("PERCCSSL", percCssl);
         this.percCssl = percCssl;
    }
 
@@ -151,6 +161,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -159,6 +170,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercFrete(BigDecimal percFrete) {
+        markAsChanged("PERCFRETE", percFrete);
         this.percFrete = percFrete;
    }
 
@@ -167,6 +179,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercImpostosCom(BigDecimal percImpostosCom) {
+        markAsChanged("PERCIMPOSTOSCOM", percImpostosCom);
         this.percImpostosCom = percImpostosCom;
    }
 
@@ -175,6 +188,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercImpostosVen(BigDecimal percImpostosVen) {
+        markAsChanged("PERCIMPOSTOSVEN", percImpostosVen);
         this.percImpostosVen = percImpostosVen;
    }
 
@@ -183,6 +197,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercInternacao(BigDecimal percInternacao) {
+        markAsChanged("PERCINTERNACAO", percInternacao);
         this.percInternacao = percInternacao;
    }
 
@@ -191,6 +206,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercMargemProp(BigDecimal percMargemProp) {
+        markAsChanged("PERCMARGEMPROP", percMargemProp);
         this.percMargemProp = percMargemProp;
    }
 
@@ -199,6 +215,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setPercPis(BigDecimal percPis) {
+        markAsChanged("PERCPIS", percPis);
         this.percPis = percPis;
    }
 
@@ -207,6 +224,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -215,6 +233,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setQtdSpare(BigDecimal qtdSpare) {
+        markAsChanged("QTDSPARE", qtdSpare);
         this.qtdSpare = qtdSpare;
    }
 
@@ -223,6 +242,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setRateado(String rateado) {
+        markAsChanged("RATEADO", rateado);
         this.rateado = rateado;
    }
 
@@ -231,6 +251,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setSeqItem(BigDecimal seqItem) {
+        markAsChanged("SEQITEM", seqItem);
         this.seqItem = seqItem;
    }
 
@@ -239,6 +260,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setSeqKit(BigDecimal seqKit) {
+        markAsChanged("SEQKIT", seqKit);
         this.seqKit = seqKit;
    }
 
@@ -247,6 +269,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -255,6 +278,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setServico(String servico) {
+        markAsChanged("SERVICO", servico);
         this.servico = servico;
    }
 
@@ -263,6 +287,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setTipKit(String tipKit) {
+        markAsChanged("TIPKIT", tipKit);
         this.tipKit = tipKit;
    }
 
@@ -271,6 +296,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -279,6 +305,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrDesconto(BigDecimal vlrDesconto) {
+        markAsChanged("VLRDESCONTO", vlrDesconto);
         this.vlrDesconto = vlrDesconto;
    }
 
@@ -287,6 +314,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrImpostosCom(BigDecimal vlrImpostosCom) {
+        markAsChanged("VLRIMPOSTOSCOM", vlrImpostosCom);
         this.vlrImpostosCom = vlrImpostosCom;
    }
 
@@ -295,6 +323,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrImpostosVen(BigDecimal vlrImpostosVen) {
+        markAsChanged("VLRIMPOSTOSVEN", vlrImpostosVen);
         this.vlrImpostosVen = vlrImpostosVen;
    }
 
@@ -303,6 +332,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrInternacao(BigDecimal vlrInternacao) {
+        markAsChanged("VLRINTERNACAO", vlrInternacao);
         this.vlrInternacao = vlrInternacao;
    }
 
@@ -311,6 +341,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrMargem(BigDecimal vlrMargem) {
+        markAsChanged("VLRMARGEM", vlrMargem);
         this.vlrMargem = vlrMargem;
    }
 
@@ -319,6 +350,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotCif(BigDecimal vlrTotCif) {
+        markAsChanged("VLRTOTCIF", vlrTotCif);
         this.vlrTotCif = vlrTotCif;
    }
 
@@ -327,6 +359,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotComMargem(BigDecimal vlrTotComMargem) {
+        markAsChanged("VLRTOTCOMMARGEM", vlrTotComMargem);
         this.vlrTotComMargem = vlrTotComMargem;
    }
 
@@ -335,6 +368,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotComSpare(BigDecimal vlrTotComSpare) {
+        markAsChanged("VLRTOTCOMSPARE", vlrTotComSpare);
         this.vlrTotComSpare = vlrTotComSpare;
    }
 
@@ -343,6 +377,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotDesc(BigDecimal vlrTotDesc) {
+        markAsChanged("VLRTOTDESC", vlrTotDesc);
         this.vlrTotDesc = vlrTotDesc;
    }
 
@@ -351,6 +386,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotFinal(BigDecimal vlrTotFinal) {
+        markAsChanged("VLRTOTFINAL", vlrTotFinal);
         this.vlrTotFinal = vlrTotFinal;
    }
 
@@ -359,6 +395,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotFinalArred(BigDecimal vlrTotFinalArred) {
+        markAsChanged("VLRTOTFINALARRED", vlrTotFinalArred);
         this.vlrTotFinalArred = vlrTotFinalArred;
    }
 
@@ -367,6 +404,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotFob(BigDecimal vlrTotFob) {
+        markAsChanged("VLRTOTFOB", vlrTotFob);
         this.vlrTotFob = vlrTotFob;
    }
 
@@ -375,6 +413,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotImpostosCom(BigDecimal vlrTotImpostosCom) {
+        markAsChanged("VLRTOTIMPOSTOSCOM", vlrTotImpostosCom);
         this.vlrTotImpostosCom = vlrTotImpostosCom;
    }
 
@@ -383,6 +422,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotImpostosVen(BigDecimal vlrTotImpostosVen) {
+        markAsChanged("VLRTOTIMPOSTOSVEN", vlrTotImpostosVen);
         this.vlrTotImpostosVen = vlrTotImpostosVen;
    }
 
@@ -391,6 +431,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotInternacao(BigDecimal vlrTotInternacao) {
+        markAsChanged("VLRTOTINTERNACAO", vlrTotInternacao);
         this.vlrTotInternacao = vlrTotInternacao;
    }
 
@@ -399,6 +440,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrTotMargem(BigDecimal vlrTotMargem) {
+        markAsChanged("VLRTOTMARGEM", vlrTotMargem);
         this.vlrTotMargem = vlrTotMargem;
    }
 
@@ -407,6 +449,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitCif(BigDecimal vlrUnitCif) {
+        markAsChanged("VLRUNITCIF", vlrUnitCif);
         this.vlrUnitCif = vlrUnitCif;
    }
 
@@ -415,6 +458,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitCofins(BigDecimal vlrUnitCofins) {
+        markAsChanged("VLRUNITCOFINS", vlrUnitCofins);
         this.vlrUnitCofins = vlrUnitCofins;
    }
 
@@ -423,6 +467,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitComMargem(BigDecimal vlrUnitComMargem) {
+        markAsChanged("VLRUNITCOMMARGEM", vlrUnitComMargem);
         this.vlrUnitComMargem = vlrUnitComMargem;
    }
 
@@ -431,6 +476,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitComSpare(BigDecimal vlrUnitComSpare) {
+        markAsChanged("VLRUNITCOMSPARE", vlrUnitComSpare);
         this.vlrUnitComSpare = vlrUnitComSpare;
    }
 
@@ -439,6 +485,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitCssl(BigDecimal vlrUnitCssl) {
+        markAsChanged("VLRUNITCSSL", vlrUnitCssl);
         this.vlrUnitCssl = vlrUnitCssl;
    }
 
@@ -447,6 +494,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitFinal(BigDecimal vlrUnitFinal) {
+        markAsChanged("VLRUNITFINAL", vlrUnitFinal);
         this.vlrUnitFinal = vlrUnitFinal;
    }
 
@@ -455,6 +503,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitFinalArred(BigDecimal vlrUnitFinalArred) {
+        markAsChanged("VLRUNITFINALARRED", vlrUnitFinalArred);
         this.vlrUnitFinalArred = vlrUnitFinalArred;
    }
 
@@ -463,6 +512,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitFob(BigDecimal vlrUnitFob) {
+        markAsChanged("VLRUNITFOB", vlrUnitFob);
         this.vlrUnitFob = vlrUnitFob;
    }
 
@@ -471,6 +521,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitFobDesc(BigDecimal vlrUnitFobDesc) {
+        markAsChanged("VLRUNITFOBDESC", vlrUnitFobDesc);
         this.vlrUnitFobDesc = vlrUnitFobDesc;
    }
 
@@ -479,6 +530,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitFrete(BigDecimal vlrUnitFrete) {
+        markAsChanged("VLRUNITFRETE", vlrUnitFrete);
         this.vlrUnitFrete = vlrUnitFrete;
    }
 
@@ -487,6 +539,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitIcms(BigDecimal vlrUnitIcms) {
+        markAsChanged("VLRUNITICMS", vlrUnitIcms);
         this.vlrUnitIcms = vlrUnitIcms;
    }
 
@@ -495,6 +548,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitIi(BigDecimal vlrUnitIi) {
+        markAsChanged("VLRUNITII", vlrUnitIi);
         this.vlrUnitIi = vlrUnitIi;
    }
 
@@ -503,6 +557,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setVlrUnitIpi(BigDecimal vlrUnitIpi) {
+        markAsChanged("VLRUNITIPI", vlrUnitIpi);
         this.vlrUnitIpi = vlrUnitIpi;
    }
 
@@ -511,6 +566,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -519,6 +575,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setAliqIi(BigDecimal aliqIi) {
+        markAsChanged("ALIQII", aliqIi);
         this.aliqIi = aliqIi;
    }
 
@@ -527,6 +584,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
+        markAsChanged("ALIQIPI", aliqIpi);
         this.aliqIpi = aliqIpi;
    }
 
@@ -535,6 +593,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setCodNbm(String codNbm) {
+        markAsChanged("CODNBM", codNbm);
         this.codNbm = codNbm;
    }
 
@@ -543,6 +602,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
+        markAsChanged("CODPARCFORN", codParcForn);
         this.codParcForn = codParcForn;
    }
 
@@ -558,6 +618,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
 
    @Override
    public ItemKitPropostaComercial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.vlrUnitPis = vo.asBigDecimal("VLRUNITPIS");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.descrItem = vo.asString("DESCRITEM");

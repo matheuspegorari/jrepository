@@ -24,6 +24,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -32,6 +33,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setResumo(String resumo) {
+        markAsChanged("RESUMO", resumo);
         this.resumo = resumo;
    }
 
@@ -40,6 +42,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setDescrVaga(String descrVaga) {
+        markAsChanged("DESCRVAGA", descrVaga);
         this.descrVaga = descrVaga;
    }
 
@@ -48,6 +51,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setCodAnuncio(BigDecimal codAnuncio) {
+        markAsChanged("CODANUNCIO", codAnuncio);
         this.codAnuncio = codAnuncio;
    }
 
@@ -56,6 +60,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -64,6 +69,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -72,6 +78,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setFaixaSalarialFinal(BigDecimal faixaSalarialFinal) {
+        markAsChanged("FAIXASALARIALFINAL", faixaSalarialFinal);
         this.faixaSalarialFinal = faixaSalarialFinal;
    }
 
@@ -80,6 +87,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setDtEntrada(Timestamp dtEntrada) {
+        markAsChanged("DTENTRADA", dtEntrada);
         this.dtEntrada = dtEntrada;
    }
 
@@ -88,6 +96,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setFaixaSalarialInicial(BigDecimal faixaSalarialInicial) {
+        markAsChanged("FAIXASALARIALINICIAL", faixaSalarialInicial);
         this.faixaSalarialInicial = faixaSalarialInicial;
    }
 
@@ -96,6 +105,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setGrauInstr(BigDecimal grauInstr) {
+        markAsChanged("GRAUINSTR", grauInstr);
         this.grauInstr = grauInstr;
    }
 
@@ -104,6 +114,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setNuVagas(BigDecimal nuVagas) {
+        markAsChanged("NUVAGAS", nuVagas);
         this.nuVagas = nuVagas;
    }
 
@@ -112,6 +123,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    }
 
    public void setDtTermino(Timestamp dtTermino) {
+        markAsChanged("DTTERMINO", dtTermino);
         this.dtTermino = dtTermino;
    }
 
@@ -127,6 +139,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
 
    @Override
    public AnuncioVagas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipo = vo.asString("TIPO");
         this.resumo = vo.asString("RESUMO");
         this.descrVaga = vo.asString("DESCRVAGA");

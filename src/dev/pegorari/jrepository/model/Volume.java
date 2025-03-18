@@ -19,6 +19,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -27,6 +28,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setDescrVol(String descrVol) {
+        markAsChanged("DESCRVOL", descrVol);
         this.descrVol = descrVol;
    }
 
@@ -35,6 +37,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setUtiliRegVolWms(String utiliRegVolWms) {
+        markAsChanged("UTILIREGVOLWMS", utiliRegVolWms);
         this.utiliRegVolWms = utiliRegVolWms;
    }
 
@@ -43,6 +46,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setUtiliConfPeso(String utiliConfPeso) {
+        markAsChanged("UTILICONFPESO", utiliConfPeso);
         this.utiliConfPeso = utiliConfPeso;
    }
 
@@ -51,6 +55,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setCodVolFci(String codVolFci) {
+        markAsChanged("CODVOLFCI", codVolFci);
         this.codVolFci = codVolFci;
    }
 
@@ -59,6 +64,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setDecQtd(BigDecimal decQtd) {
+        markAsChanged("DECQTD", decQtd);
         this.decQtd = decQtd;
    }
 
@@ -67,6 +73,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setAtuNuVersao(String atuNuVersao) {
+        markAsChanged("ATUNUVERSAO", atuNuVersao);
         this.atuNuVersao = atuNuVersao;
    }
 
@@ -75,6 +82,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -90,6 +98,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
 
    @Override
    public Volume fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVol = vo.asString("CODVOL");
         this.descrVol = vo.asString("DESCRVOL");
         this.utiliRegVolWms = vo.asString("UTILIREGVOLWMS");

@@ -24,6 +24,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setAba(String aba) {
+        markAsChanged("ABA", aba);
         this.aba = aba;
    }
 
@@ -32,6 +33,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -40,6 +42,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setClasse(String classe) {
+        markAsChanged("CLASSE", classe);
         this.classe = classe;
    }
 
@@ -48,6 +51,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -56,6 +60,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setData(Timestamp data) {
+        markAsChanged("DATA", data);
         this.data = data;
    }
 
@@ -64,6 +69,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -72,6 +78,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setInteiro(BigDecimal inteiro) {
+        markAsChanged("INTEIRO", inteiro);
         this.inteiro = inteiro;
    }
 
@@ -80,6 +87,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setLogico(String logico) {
+        markAsChanged("LOGICO", logico);
         this.logico = logico;
    }
 
@@ -88,6 +96,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setModulo(String modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -96,6 +105,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setNumDec(BigDecimal numDec) {
+        markAsChanged("NUMDEC", numDec);
         this.numDec = numDec;
    }
 
@@ -104,6 +114,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -112,6 +123,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -127,6 +139,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
 
    @Override
    public ParametroSistema fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aba = vo.asString("ABA");
         this.chave = vo.asString("CHAVE");
         this.classe = vo.asString("CLASSE");

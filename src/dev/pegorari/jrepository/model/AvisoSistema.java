@@ -27,6 +27,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -35,6 +36,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -43,6 +45,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setCodUsuRemetente(BigDecimal codUsuRemetente) {
+        markAsChanged("CODUSUREMETENTE", codUsuRemetente);
         this.codUsuRemetente = codUsuRemetente;
    }
 
@@ -51,6 +54,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -59,6 +63,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setDhCriacao(Timestamp dhCriacao) {
+        markAsChanged("DHCRIACAO", dhCriacao);
         this.dhCriacao = dhCriacao;
    }
 
@@ -67,6 +72,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setIdentificador(String identificador) {
+        markAsChanged("IDENTIFICADOR", identificador);
         this.identificador = identificador;
    }
 
@@ -75,6 +81,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setImportancia(BigDecimal importancia) {
+        markAsChanged("IMPORTANCIA", importancia);
         this.importancia = importancia;
    }
 
@@ -83,6 +90,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
+        markAsChanged("NUAVISO", nuAviso);
         this.nuAviso = nuAviso;
    }
 
@@ -91,6 +99,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setNuAvisoPai(BigDecimal nuAvisoPai) {
+        markAsChanged("NUAVISOPAI", nuAvisoPai);
         this.nuAvisoPai = nuAvisoPai;
    }
 
@@ -99,6 +108,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setSolucao(String solucao) {
+        markAsChanged("SOLUCAO", solucao);
         this.solucao = solucao;
    }
 
@@ -107,6 +117,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -115,6 +126,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -123,6 +135,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -131,6 +144,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setDtExpiracao(Timestamp dtExpiracao) {
+        markAsChanged("DTEXPIRACAO", dtExpiracao);
         this.dtExpiracao = dtExpiracao;
    }
 
@@ -139,6 +153,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    }
 
    public void setDtNotificacao(Timestamp dtNotificacao) {
+        markAsChanged("DTNOTIFICACAO", dtNotificacao);
         this.dtNotificacao = dtNotificacao;
    }
 
@@ -154,6 +169,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
 
    @Override
    public AvisoSistema fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuRemetente = vo.asBigDecimal("CODUSUREMETENTE");

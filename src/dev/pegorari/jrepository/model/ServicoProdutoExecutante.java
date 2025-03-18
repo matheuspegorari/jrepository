@@ -14,6 +14,7 @@ public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdu
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -22,6 +23,7 @@ public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdu
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -30,6 +32,7 @@ public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdu
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -45,6 +48,7 @@ public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdu
 
    @Override
    public ServicoProdutoExecutante fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServ = vo.asBigDecimal("CODSERV");
         this.codUsu = vo.asBigDecimal("CODUSU");

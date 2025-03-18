@@ -21,6 +21,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setDta(Timestamp dta) {
+        markAsChanged("DTA", dta);
         this.dta = dta;
    }
 
@@ -29,6 +30,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
+        markAsChanged("IDINSTPRN", idInstPrn);
         this.idInstPrn = idInstPrn;
    }
 
@@ -37,6 +39,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setIdInstTar(BigDecimal idInstTar) {
+        markAsChanged("IDINSTTAR", idInstTar);
         this.idInstTar = idInstTar;
    }
 
@@ -45,6 +48,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -53,6 +57,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setNumDec(BigDecimal numDec) {
+        markAsChanged("NUMDEC", numDec);
         this.numDec = numDec;
    }
 
@@ -61,6 +66,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setNumInt(BigDecimal numInt) {
+        markAsChanged("NUMINT", numInt);
         this.numInt = numInt;
    }
 
@@ -69,6 +75,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -77,6 +84,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setTextoLongo(String textoLongo) {
+        markAsChanged("TEXTOLONGO", textoLongo);
         this.textoLongo = textoLongo;
    }
 
@@ -85,6 +93,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
 
    @Override
    public InstanciaVariavel fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dta = vo.asTimestamp("DTA");
         this.idInstPrn = vo.asBigDecimal("IDINSTPRN");
         this.idInstTar = vo.asBigDecimal("IDINSTTAR");

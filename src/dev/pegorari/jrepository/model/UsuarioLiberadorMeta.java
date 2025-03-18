@@ -13,6 +13,7 @@ public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberador
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -21,6 +22,7 @@ public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberador
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -36,6 +38,7 @@ public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberador
 
    @Override
    public UsuarioLiberadorMeta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         return this;

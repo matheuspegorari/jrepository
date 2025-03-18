@@ -17,6 +17,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -25,6 +26,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +35,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    }
 
    public void setNuNo(BigDecimal nuNo) {
+        markAsChanged("NUNO", nuNo);
         this.nuNo = nuNo;
    }
 
@@ -49,6 +53,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    }
 
    public void setQtdVagas(BigDecimal qtdVagas) {
+        markAsChanged("QTDVAGAS", qtdVagas);
         this.qtdVagas = qtdVagas;
    }
 
@@ -64,6 +69,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
 
    @Override
    public VagaPorNoEstrutura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");

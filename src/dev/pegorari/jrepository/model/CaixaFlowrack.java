@@ -19,6 +19,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setCodVolume(BigDecimal codVolume) {
+        markAsChanged("CODVOLUME", codVolume);
         this.codVolume = codVolume;
    }
 
@@ -27,6 +28,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setConferido(String conferido) {
+        markAsChanged("CONFERIDO", conferido);
         this.conferido = conferido;
    }
 
@@ -35,6 +37,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -43,6 +46,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -51,6 +55,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setQtde(BigDecimal qtde) {
+        markAsChanged("QTDE", qtde);
         this.qtde = qtde;
    }
 
@@ -59,6 +64,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setSeqTarefa(BigDecimal seqTarefa) {
+        markAsChanged("SEQTAREFA", seqTarefa);
         this.seqTarefa = seqTarefa;
    }
 
@@ -67,6 +73,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -75,6 +82,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
    }
 
    public void setTipoVolume(String tipoVolume) {
+        markAsChanged("TIPOVOLUME", tipoVolume);
         this.tipoVolume = tipoVolume;
    }
 
@@ -90,6 +98,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
 
    @Override
    public CaixaFlowrack fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVolume = vo.asBigDecimal("CODVOLUME");
         this.conferido = vo.asString("CONFERIDO");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");

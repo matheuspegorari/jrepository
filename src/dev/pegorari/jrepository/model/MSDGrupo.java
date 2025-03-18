@@ -16,6 +16,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -24,6 +25,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
    }
 
    public void setDescrGrupo(String descrGrupo) {
+        markAsChanged("DESCRGRUPO", descrGrupo);
         this.descrGrupo = descrGrupo;
    }
 
@@ -32,6 +34,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -40,6 +43,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -55,6 +59,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
 
    @Override
    public MSDGrupo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.descrGrupo = vo.asString("DESCRGRUPO");
         this.dtAlter = vo.asTimestamp("DTALTER");

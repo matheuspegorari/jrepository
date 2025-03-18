@@ -24,6 +24,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setCorFonte(String corFonte) {
+        markAsChanged("CORFONTE", corFonte);
         this.corFonte = corFonte;
    }
 
@@ -32,6 +33,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setCorPreenchimento(String corPreenchimento) {
+        markAsChanged("CORPREENCHIMENTO", corPreenchimento);
         this.corPreenchimento = corPreenchimento;
    }
 
@@ -40,6 +42,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -48,6 +51,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -56,6 +60,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setIdeFxLane(BigDecimal ideFxLane) {
+        markAsChanged("IDEFXLANE", ideFxLane);
         this.ideFxLane = ideFxLane;
    }
 
@@ -64,6 +69,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -72,6 +78,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setTamFonte(BigDecimal tamFonte) {
+        markAsChanged("TAMFONTE", tamFonte);
         this.tamFonte = tamFonte;
    }
 
@@ -80,6 +87,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -88,6 +96,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setX1Pos(BigDecimal x1Pos) {
+        markAsChanged("X1POS", x1Pos);
         this.x1Pos = x1Pos;
    }
 
@@ -96,6 +105,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setX2Pos(BigDecimal x2Pos) {
+        markAsChanged("X2POS", x2Pos);
         this.x2Pos = x2Pos;
    }
 
@@ -104,6 +114,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setY1Pos(BigDecimal y1Pos) {
+        markAsChanged("Y1POS", y1Pos);
         this.y1Pos = y1Pos;
    }
 
@@ -112,6 +123,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setY2Pos(BigDecimal y2Pos) {
+        markAsChanged("Y2POS", y2Pos);
         this.y2Pos = y2Pos;
    }
 
@@ -120,6 +132,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    }
 
    public void setWaypoints(char[] waypoints) {
+        markAsChanged("WAYPOINTS", waypoints);
         this.waypoints = waypoints;
    }
 
@@ -135,6 +148,7 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
 
    @Override
    public ElementoFluxo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.corFonte = vo.asString("CORFONTE");
         this.corPreenchimento = vo.asString("CORPREENCHIMENTO");
         this.descricao = vo.asString("DESCRICAO");

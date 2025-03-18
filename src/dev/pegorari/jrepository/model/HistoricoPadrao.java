@@ -13,6 +13,7 @@ public class HistoricoPadrao extends AbstractSankhyaEntity<HistoricoPadrao> {
    }
 
    public void setCodHistCtb(BigDecimal codHistCtb) {
+        markAsChanged("CODHISTCTB", codHistCtb);
         this.codHistCtb = codHistCtb;
    }
 
@@ -21,6 +22,7 @@ public class HistoricoPadrao extends AbstractSankhyaEntity<HistoricoPadrao> {
    }
 
    public void setHistorico(String historico) {
+        markAsChanged("HISTORICO", historico);
         this.historico = historico;
    }
 
@@ -36,6 +38,7 @@ public class HistoricoPadrao extends AbstractSankhyaEntity<HistoricoPadrao> {
 
    @Override
    public HistoricoPadrao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codHistCtb = vo.asBigDecimal("CODHISTCTB");
         this.historico = vo.asString("HISTORICO");
         return this;

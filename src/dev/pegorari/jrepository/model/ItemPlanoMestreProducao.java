@@ -48,6 +48,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdDemAjustada(BigDecimal qtdDemAjustada) {
+        markAsChanged("QTDDEMAJUSTADA", qtdDemAjustada);
         this.qtdDemAjustada = qtdDemAjustada;
    }
 
@@ -56,6 +57,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setFixado(String fixado) {
+        markAsChanged("FIXADO", fixado);
         this.fixado = fixado;
    }
 
@@ -64,6 +66,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setProdInterm(String prodInterm) {
+        markAsChanged("PRODINTERM", prodInterm);
         this.prodInterm = prodInterm;
    }
 
@@ -72,6 +75,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdDemIndireta(BigDecimal qtdDemIndireta) {
+        markAsChanged("QTDDEMINDIRETA", qtdDemIndireta);
         this.qtdDemIndireta = qtdDemIndireta;
    }
 
@@ -80,6 +84,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setDtInicioMax(Timestamp dtInicioMax) {
+        markAsChanged("DTINICIOMAX", dtInicioMax);
         this.dtInicioMax = dtInicioMax;
    }
 
@@ -88,6 +93,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setDtPrevent(Timestamp dtPrevent) {
+        markAsChanged("DTPREVENT", dtPrevent);
         this.dtPrevent = dtPrevent;
    }
 
@@ -96,6 +102,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setDtPreventPai(Timestamp dtPreventPai) {
+        markAsChanged("DTPREVENTPAI", dtPreventPai);
         this.dtPreventPai = dtPreventPai;
    }
 
@@ -104,6 +111,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdOppendente(BigDecimal qtdOppendente) {
+        markAsChanged("QTDOPPENDENTE", qtdOppendente);
         this.qtdOppendente = qtdOppendente;
    }
 
@@ -112,6 +120,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setTempoAtravess(BigDecimal tempoAtravess) {
+        markAsChanged("TEMPOATRAVESS", tempoAtravess);
         this.tempoAtravess = tempoAtravess;
    }
 
@@ -120,6 +129,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdProduzirCalc(BigDecimal qtdProduzirCalc) {
+        markAsChanged("QTDPRODUZIRCALC", qtdProduzirCalc);
         this.qtdProduzirCalc = qtdProduzirCalc;
    }
 
@@ -128,6 +138,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdSaldoProduzir(BigDecimal qtdSaldoProduzir) {
+        markAsChanged("QTDSALDOPRODUZIR", qtdSaldoProduzir);
         this.qtdSaldoProduzir = qtdSaldoProduzir;
    }
 
@@ -136,6 +147,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdPedCompra(BigDecimal qtdPedCompra) {
+        markAsChanged("QTDPEDCOMPRA", qtdPedCompra);
         this.qtdPedCompra = qtdPedCompra;
    }
 
@@ -144,6 +156,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdProduzirAd(BigDecimal qtdProduzirAd) {
+        markAsChanged("QTDPRODUZIRAD", qtdProduzirAd);
         this.qtdProduzirAd = qtdProduzirAd;
    }
 
@@ -152,6 +165,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setPercEstSobDemanda(BigDecimal percEstSobDemanda) {
+        markAsChanged("PERCESTSOBDEMANDA", percEstSobDemanda);
         this.percEstSobDemanda = percEstSobDemanda;
    }
 
@@ -160,6 +174,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdDemandaLiq(BigDecimal qtdDemandaLiq) {
+        markAsChanged("QTDDEMANDALIQ", qtdDemandaLiq);
         this.qtdDemandaLiq = qtdDemandaLiq;
    }
 
@@ -168,6 +183,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -176,6 +192,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -184,6 +201,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -192,6 +210,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -200,6 +219,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -208,6 +228,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -216,6 +237,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -224,6 +246,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdEmProgramacao(BigDecimal qtdEmProgramacao) {
+        markAsChanged("QTDEMPROGRAMACAO", qtdEmProgramacao);
         this.qtdEmProgramacao = qtdEmProgramacao;
    }
 
@@ -232,6 +255,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setCodPrc(BigDecimal codPrc) {
+        markAsChanged("CODPRC", codPrc);
         this.codPrc = codPrc;
    }
 
@@ -240,6 +264,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdGiroMedioCalc(BigDecimal qtdGiroMedioCalc) {
+        markAsChanged("QTDGIROMEDIOCALC", qtdGiroMedioCalc);
         this.qtdGiroMedioCalc = qtdGiroMedioCalc;
    }
 
@@ -248,6 +273,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setSeqImpsPai(BigDecimal seqImpsPai) {
+        markAsChanged("SEQIMPSPAI", seqImpsPai);
         this.seqImpsPai = seqImpsPai;
    }
 
@@ -256,6 +282,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setSeqImps(BigDecimal seqImps) {
+        markAsChanged("SEQIMPS", seqImps);
         this.seqImps = seqImps;
    }
 
@@ -264,6 +291,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdOutrosPlan(BigDecimal qtdOutrosPlan) {
+        markAsChanged("QTDOUTROSPLAN", qtdOutrosPlan);
         this.qtdOutrosPlan = qtdOutrosPlan;
    }
 
@@ -272,6 +300,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdGirMedio(BigDecimal qtdGirMedio) {
+        markAsChanged("QTDGIRMEDIO", qtdGirMedio);
         this.qtdGirMedio = qtdGirMedio;
    }
 
@@ -280,6 +309,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdDemBruta(BigDecimal qtdDemBruta) {
+        markAsChanged("QTDDEMBRUTA", qtdDemBruta);
         this.qtdDemBruta = qtdDemBruta;
    }
 
@@ -288,6 +318,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdBaseMrp(BigDecimal qtdBaseMrp) {
+        markAsChanged("QTDBASEMRP", qtdBaseMrp);
         this.qtdBaseMrp = qtdBaseMrp;
    }
 
@@ -296,6 +327,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdEstoque(BigDecimal qtdEstoque) {
+        markAsChanged("QTDESTOQUE", qtdEstoque);
         this.qtdEstoque = qtdEstoque;
    }
 
@@ -304,6 +336,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdEmOp(BigDecimal qtdEmOp) {
+        markAsChanged("QTDEMOP", qtdEmOp);
         this.qtdEmOp = qtdEmOp;
    }
 
@@ -312,6 +345,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setQtdProduzirLiq(BigDecimal qtdProduzirLiq) {
+        markAsChanged("QTDPRODUZIRLIQ", qtdProduzirLiq);
         this.qtdProduzirLiq = qtdProduzirLiq;
    }
 
@@ -320,6 +354,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -328,6 +363,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -343,6 +379,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
 
    @Override
    public ItemPlanoMestreProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.qtdDemAjustada = vo.asBigDecimal("QTDDEMAJUSTADA");
         this.fixado = vo.asString("FIXADO");
         this.prodInterm = vo.asString("PRODINTERM");

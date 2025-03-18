@@ -17,6 +17,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setCodGbc(BigDecimal codGbc) {
+        markAsChanged("CODGBC", codGbc);
         this.codGbc = codGbc;
    }
 
@@ -25,6 +26,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -33,6 +35,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
+        markAsChanged("NUDSB", nuDsb);
         this.nuDsb = nuDsb;
    }
 
@@ -41,6 +44,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setPergunta(String pergunta) {
+        markAsChanged("PERGUNTA", pergunta);
         this.pergunta = pergunta;
    }
 
@@ -49,6 +53,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setQtdUso(BigDecimal qtdUso) {
+        markAsChanged("QTDUSO", qtdUso);
         this.qtdUso = qtdUso;
    }
 
@@ -57,6 +62,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -72,6 +78,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
 
    @Override
    public GadgetBiaConhecimento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGbc = vo.asBigDecimal("CODGBC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuDsb = vo.asBigDecimal("NUDSB");

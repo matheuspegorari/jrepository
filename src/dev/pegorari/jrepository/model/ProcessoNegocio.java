@@ -27,6 +27,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -35,6 +36,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -43,6 +45,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -51,6 +54,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setCodUsuDono(BigDecimal codUsuDono) {
+        markAsChanged("CODUSUDONO", codUsuDono);
         this.codUsuDono = codUsuDono;
    }
 
@@ -59,6 +63,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -67,6 +72,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setDhCriacao(Timestamp dhCriacao) {
+        markAsChanged("DHCRIACAO", dhCriacao);
         this.dhCriacao = dhCriacao;
    }
 
@@ -75,6 +81,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setDhPublicacao(Timestamp dhPublicacao) {
+        markAsChanged("DHPUBLICACAO", dhPublicacao);
         this.dhPublicacao = dhPublicacao;
    }
 
@@ -83,6 +90,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setDocumentacao(char[] documentacao) {
+        markAsChanged("DOCUMENTACAO", documentacao);
         this.documentacao = documentacao;
    }
 
@@ -91,6 +99,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setImgBpmn(char[] imgBpmn) {
+        markAsChanged("IMGBPMN", imgBpmn);
         this.imgBpmn = imgBpmn;
    }
 
@@ -99,6 +108,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -107,6 +117,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setNuGrupo(BigDecimal nuGrupo) {
+        markAsChanged("NUGRUPO", nuGrupo);
         this.nuGrupo = nuGrupo;
    }
 
@@ -115,6 +126,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setUltimaVersao(String ultimaVersao) {
+        markAsChanged("ULTIMAVERSAO", ultimaVersao);
         this.ultimaVersao = ultimaVersao;
    }
 
@@ -123,6 +135,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setVerAntDhPublicacao(Timestamp verAntDhPublicacao) {
+        markAsChanged("VERANTDHPUBLICACAO", verAntDhPublicacao);
         this.verAntDhPublicacao = verAntDhPublicacao;
    }
 
@@ -131,6 +144,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -139,6 +153,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    }
 
    public void setXmlBpmn(char[] xmlBpmn) {
+        markAsChanged("XMLBPMN", xmlBpmn);
         this.xmlBpmn = xmlBpmn;
    }
 
@@ -154,6 +169,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
 
    @Override
    public ProcessoNegocio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");

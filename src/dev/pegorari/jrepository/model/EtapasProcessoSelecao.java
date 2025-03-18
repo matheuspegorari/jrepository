@@ -21,6 +21,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setArqModEmail(String arqModEmail) {
+        markAsChanged("ARQMODEMAIL", arqModEmail);
         this.arqModEmail = arqModEmail;
    }
 
@@ -29,6 +30,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -37,6 +39,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setCodQuestionario(BigDecimal codQuestionario) {
+        markAsChanged("CODQUESTIONARIO", codQuestionario);
         this.codQuestionario = codQuestionario;
    }
 
@@ -45,6 +48,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -53,6 +57,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setDescRetapa(String descRetapa) {
+        markAsChanged("DESCRETAPA", descRetapa);
         this.descRetapa = descRetapa;
    }
 
@@ -61,6 +66,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -69,6 +75,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -77,6 +84,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -85,6 +93,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -100,6 +109,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
 
    @Override
    public EtapasProcessoSelecao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqModEmail = vo.asString("ARQMODEMAIL");
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codQuestionario = vo.asBigDecimal("CODQUESTIONARIO");

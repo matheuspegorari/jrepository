@@ -38,6 +38,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -46,6 +47,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -54,6 +56,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -62,6 +65,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDhConferencia(Timestamp dhConferencia) {
+        markAsChanged("DHCONFERENCIA", dhConferencia);
         this.dhConferencia = dhConferencia;
    }
 
@@ -70,6 +74,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -78,6 +83,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDhProtocol(Timestamp dhProtocol) {
+        markAsChanged("DHPROTOCOL", dhProtocol);
         this.dhProtocol = dhProtocol;
    }
 
@@ -86,6 +92,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodUsuProtocol(BigDecimal codUsuProtocol) {
+        markAsChanged("CODUSUPROTOCOL", codUsuProtocol);
         this.codUsuProtocol = codUsuProtocol;
    }
 
@@ -94,6 +101,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -102,6 +110,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodUsuConferencia(BigDecimal codUsuConferencia) {
+        markAsChanged("CODUSUCONFERENCIA", codUsuConferencia);
         this.codUsuConferencia = codUsuConferencia;
    }
 
@@ -110,6 +119,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -118,6 +128,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDhColeta(Timestamp dhColeta) {
+        markAsChanged("DHCOLETA", dhColeta);
         this.dhColeta = dhColeta;
    }
 
@@ -126,6 +137,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setFabricante(String fabricante) {
+        markAsChanged("FABRICANTE", fabricante);
         this.fabricante = fabricante;
    }
 
@@ -134,6 +146,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -142,6 +155,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDtFabricacao(Timestamp dtFabricacao) {
+        markAsChanged("DTFABRICACAO", dtFabricacao);
         this.dtFabricacao = dtFabricacao;
    }
 
@@ -150,6 +164,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDtValidade(Timestamp dtValidade) {
+        markAsChanged("DTVALIDADE", dtValidade);
         this.dtValidade = dtValidade;
    }
 
@@ -158,6 +173,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -166,6 +182,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -174,6 +191,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodTipAmostra(BigDecimal codTipAmostra) {
+        markAsChanged("CODTIPAMOSTRA", codTipAmostra);
         this.codTipAmostra = codTipAmostra;
    }
 
@@ -182,6 +200,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -190,6 +209,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setNuRam(BigDecimal nuRam) {
+        markAsChanged("NURAM", nuRam);
         this.nuRam = nuRam;
    }
 
@@ -198,6 +218,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -206,6 +227,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setDesmembramento(String desmembramento) {
+        markAsChanged("DESMEMBRAMENTO", desmembramento);
         this.desmembramento = desmembramento;
    }
 
@@ -214,6 +236,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setQtdTotVol(BigDecimal qtdTotVol) {
+        markAsChanged("QTDTOTVOL", qtdTotVol);
         this.qtdTotVol = qtdTotVol;
    }
 
@@ -222,6 +245,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setQtdVolAmostra(BigDecimal qtdVolAmostra) {
+        markAsChanged("QTDVOLAMOSTRA", qtdVolAmostra);
         this.qtdVolAmostra = qtdVolAmostra;
    }
 
@@ -230,6 +254,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setCodUsuColeta(BigDecimal codUsuColeta) {
+        markAsChanged("CODUSUCOLETA", codUsuColeta);
         this.codUsuColeta = codUsuColeta;
    }
 
@@ -238,6 +263,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
    }
 
    public void setQtdAmostra(BigDecimal qtdAmostra) {
+        markAsChanged("QTDAMOSTRA", qtdAmostra);
         this.qtdAmostra = qtdAmostra;
    }
 
@@ -253,6 +279,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
 
    @Override
    public RegistroAmostras fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.referencia = vo.asString("REFERENCIA");
         this.codUsu = vo.asBigDecimal("CODUSU");

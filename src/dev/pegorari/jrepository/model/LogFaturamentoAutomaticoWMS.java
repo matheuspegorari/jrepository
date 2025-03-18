@@ -16,6 +16,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
    }
 
    public void setLog(char[] log) {
+        markAsChanged("LOG", log);
         this.log = log;
    }
 
@@ -24,6 +25,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -32,6 +34,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -40,6 +43,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -55,6 +59,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
 
    @Override
    public LogFaturamentoAutomaticoWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.log = vo.asClob("LOG");
         this.numNota = vo.asBigDecimal("NUMNOTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

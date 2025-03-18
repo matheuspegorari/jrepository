@@ -13,6 +13,7 @@ public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -21,6 +22,7 @@ public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
    }
 
    public void setNuAnexo(BigDecimal nuAnexo) {
+        markAsChanged("NUANEXO", nuAnexo);
         this.nuAnexo = nuAnexo;
    }
 
@@ -36,6 +38,7 @@ public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
 
    @Override
    public AnexoPorMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.nuAnexo = vo.asBigDecimal("NUANEXO");
         return this;

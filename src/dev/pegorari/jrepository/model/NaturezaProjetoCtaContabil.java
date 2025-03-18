@@ -15,6 +15,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
    }
 
    public void setPriorizarRateio(String priorizarRateio) {
+        markAsChanged("PRIORIZARRATEIO", priorizarRateio);
         this.priorizarRateio = priorizarRateio;
    }
 
@@ -23,6 +24,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -31,6 +33,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -39,6 +42,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -54,6 +58,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
 
    @Override
    public NaturezaProjetoCtaContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.priorizarRateio = vo.asString("PRIORIZARRATEIO");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.codProj = vo.asBigDecimal("CODPROJ");

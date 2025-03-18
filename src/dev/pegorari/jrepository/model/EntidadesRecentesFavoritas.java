@@ -17,6 +17,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -25,6 +26,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    }
 
    public void setDhUltimoAcesso(Timestamp dhUltimoAcesso) {
+        markAsChanged("DHULTIMOACESSO", dhUltimoAcesso);
         this.dhUltimoAcesso = dhUltimoAcesso;
    }
 
@@ -33,6 +35,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    }
 
    public void setFavorito(String favorito) {
+        markAsChanged("FAVORITO", favorito);
         this.favorito = favorito;
    }
 
@@ -49,6 +53,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    }
 
    public void setPkRegistro(String pkRegistro) {
+        markAsChanged("PKREGISTRO", pkRegistro);
         this.pkRegistro = pkRegistro;
    }
 
@@ -64,6 +69,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
 
    @Override
    public EntidadesRecentesFavoritas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.dhUltimoAcesso = vo.asTimestamp("DHULTIMOACESSO");
         this.codUsu = vo.asBigDecimal("CODUSU");

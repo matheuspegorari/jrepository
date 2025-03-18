@@ -16,6 +16,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -24,6 +25,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -32,6 +34,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -40,6 +43,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -48,6 +52,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    }
 
    public void setSeqViagem(BigDecimal seqViagem) {
+        markAsChanged("SEQVIAGEM", seqViagem);
         this.seqViagem = seqViagem;
    }
 
@@ -63,6 +68,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
 
    @Override
    public UFsPercurso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.codUf = vo.asBigDecimal("CODUF");
         this.nuViag = vo.asBigDecimal("NUVIAG");

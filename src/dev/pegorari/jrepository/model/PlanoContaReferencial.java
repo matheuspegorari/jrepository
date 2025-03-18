@@ -22,6 +22,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setDescrCtaRef(String descrCtaRef) {
+        markAsChanged("DESCRCTAREF", descrCtaRef);
         this.descrCtaRef = descrCtaRef;
    }
 
@@ -30,6 +31,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -38,6 +40,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -46,6 +49,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setCodCtaRef(String codCtaRef) {
+        markAsChanged("CODCTAREF", codCtaRef);
         this.codCtaRef = codCtaRef;
    }
 
@@ -54,6 +58,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -62,6 +67,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -70,6 +76,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setAnalitica(String analitica) {
+        markAsChanged("ANALITICA", analitica);
         this.analitica = analitica;
    }
 
@@ -78,6 +85,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setCtcCtbPai(String ctcCtbPai) {
+        markAsChanged("CTCCTBPAI", ctcCtbPai);
         this.ctcCtbPai = ctcCtbPai;
    }
 
@@ -86,6 +94,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setNatureza(String natureza) {
+        markAsChanged("NATUREZA", natureza);
         this.natureza = natureza;
    }
 
@@ -94,6 +103,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -109,6 +119,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
 
    @Override
    public PlanoContaReferencial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descrCtaRef = vo.asString("DESCRCTAREF");
         this.grau = vo.asBigDecimal("GRAU");
         this.tipo = vo.asBigDecimal("TIPO");

@@ -16,6 +16,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    }
 
    public void setCodRegua(BigDecimal codRegua) {
+        markAsChanged("CODREGUA", codRegua);
         this.codRegua = codRegua;
    }
 
@@ -24,6 +25,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    }
 
    public void setMensagem(String mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -32,6 +34,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -40,6 +43,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    }
 
    public void setSeqExec(BigDecimal seqExec) {
+        markAsChanged("SEQEXEC", seqExec);
         this.seqExec = seqExec;
    }
 
@@ -48,6 +52,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -63,6 +68,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
 
    @Override
    public TituloPorEventoRegua fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.mensagem = vo.asString("MENSAGEM");
         this.nuFin = vo.asBigDecimal("NUFIN");

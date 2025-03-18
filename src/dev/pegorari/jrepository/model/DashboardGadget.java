@@ -13,6 +13,7 @@ public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
+        markAsChanged("NUDSB", nuDsb);
         this.nuDsb = nuDsb;
    }
 
@@ -21,6 +22,7 @@ public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
    }
 
    public void setNuGdg(BigDecimal nuGdg) {
+        markAsChanged("NUGDG", nuGdg);
         this.nuGdg = nuGdg;
    }
 
@@ -36,6 +38,7 @@ public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
 
    @Override
    public DashboardGadget fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuDsb = vo.asBigDecimal("NUDSB");
         this.nuGdg = vo.asBigDecimal("NUGDG");
         return this;

@@ -70,6 +70,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercDesconto(BigDecimal percDesconto) {
+        markAsChanged("PERCDESCONTO", percDesconto);
         this.percDesconto = percDesconto;
    }
 
@@ -78,6 +79,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercDescProd(BigDecimal percDescProd) {
+        markAsChanged("PERCDESCPROD", percDescProd);
         this.percDescProd = percDescProd;
    }
 
@@ -86,6 +88,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercDescServ(BigDecimal percDescServ) {
+        markAsChanged("PERCDESCSERV", percDescServ);
         this.percDescServ = percDescServ;
    }
 
@@ -94,6 +97,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercFrete(BigDecimal percFrete) {
+        markAsChanged("PERCFRETE", percFrete);
         this.percFrete = percFrete;
    }
 
@@ -102,6 +106,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercImpostoProd(BigDecimal percImpostoProd) {
+        markAsChanged("PERCIMPOSTOPROD", percImpostoProd);
         this.percImpostoProd = percImpostoProd;
    }
 
@@ -110,6 +115,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercImpostoServ(BigDecimal percImpostoServ) {
+        markAsChanged("PERCIMPOSTOSERV", percImpostoServ);
         this.percImpostoServ = percImpostoServ;
    }
 
@@ -118,6 +124,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercImpostoSven(BigDecimal percImpostoSven) {
+        markAsChanged("PERCIMPOSTOSVEN", percImpostoSven);
         this.percImpostoSven = percImpostoSven;
    }
 
@@ -126,6 +133,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -134,6 +142,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -142,6 +151,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -150,6 +160,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setDtProjeto(Timestamp dtProjeto) {
+        markAsChanged("DTPROJETO", dtProjeto);
         this.dtProjeto = dtProjeto;
    }
 
@@ -158,6 +169,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setDupNovaVersao(String dupNovaVersao) {
+        markAsChanged("DUPNOVAVERSAO", dupNovaVersao);
         this.dupNovaVersao = dupNovaVersao;
    }
 
@@ -166,6 +178,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercInternacao(BigDecimal percInternacao) {
+        markAsChanged("PERCINTERNACAO", percInternacao);
         this.percInternacao = percInternacao;
    }
 
@@ -174,6 +187,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercInternacaoProd(BigDecimal percInternacaoProd) {
+        markAsChanged("PERCINTERNACAOPROD", percInternacaoProd);
         this.percInternacaoProd = percInternacaoProd;
    }
 
@@ -182,6 +196,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercInternacaoServ(BigDecimal percInternacaoServ) {
+        markAsChanged("PERCINTERNACAOSERV", percInternacaoServ);
         this.percInternacaoServ = percInternacaoServ;
    }
 
@@ -190,6 +205,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercLucroLiquido(BigDecimal percLucroLiquido) {
+        markAsChanged("PERCLUCROLIQUIDO", percLucroLiquido);
         this.percLucroLiquido = percLucroLiquido;
    }
 
@@ -198,6 +214,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercMargemProd(BigDecimal percMargemProd) {
+        markAsChanged("PERCMARGEMPROD", percMargemProd);
         this.percMargemProd = percMargemProd;
    }
 
@@ -206,6 +223,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercMargemProp(BigDecimal percMargemProp) {
+        markAsChanged("PERCMARGEMPROP", percMargemProp);
         this.percMargemProp = percMargemProp;
    }
 
@@ -214,6 +232,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercMargemServ(BigDecimal percMargemServ) {
+        markAsChanged("PERCMARGEMSERV", percMargemServ);
         this.percMargemServ = percMargemServ;
    }
 
@@ -222,6 +241,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -230,6 +250,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrCusEquipCif(BigDecimal vlrCusEquipCif) {
+        markAsChanged("VLRCUSEQUIPCIF", vlrCusEquipCif);
         this.vlrCusEquipCif = vlrCusEquipCif;
    }
 
@@ -238,6 +259,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrCusEquipFob(BigDecimal vlrCusEquipFob) {
+        markAsChanged("VLRCUSEQUIPFOB", vlrCusEquipFob);
         this.vlrCusEquipFob = vlrCusEquipFob;
    }
 
@@ -246,6 +268,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrCusEquipMargem(BigDecimal vlrCusEquipMargem) {
+        markAsChanged("VLRCUSEQUIPMARGEM", vlrCusEquipMargem);
         this.vlrCusEquipMargem = vlrCusEquipMargem;
    }
 
@@ -254,6 +277,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrDesconto(BigDecimal vlrDesconto) {
+        markAsChanged("VLRDESCONTO", vlrDesconto);
         this.vlrDesconto = vlrDesconto;
    }
 
@@ -262,6 +286,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarantiaTecnico(BigDecimal vlrGarantiaTecnico) {
+        markAsChanged("VLRGARANTIATECNICO", vlrGarantiaTecnico);
         this.vlrGarantiaTecnico = vlrGarantiaTecnico;
    }
 
@@ -270,6 +295,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarHardCif(BigDecimal vlrGarHardCif) {
+        markAsChanged("VLRGARHARDCIF", vlrGarHardCif);
         this.vlrGarHardCif = vlrGarHardCif;
    }
 
@@ -278,6 +304,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarHardFob(BigDecimal vlrGarHardFob) {
+        markAsChanged("VLRGARHARDFOB", vlrGarHardFob);
         this.vlrGarHardFob = vlrGarHardFob;
    }
 
@@ -286,6 +313,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarHardMargem(BigDecimal vlrGarHardMargem) {
+        markAsChanged("VLRGARHARDMARGEM", vlrGarHardMargem);
         this.vlrGarHardMargem = vlrGarHardMargem;
    }
 
@@ -294,6 +322,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarSoftCif(BigDecimal vlrGarSoftCif) {
+        markAsChanged("VLRGARSOFTCIF", vlrGarSoftCif);
         this.vlrGarSoftCif = vlrGarSoftCif;
    }
 
@@ -302,6 +331,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarSoftFob(BigDecimal vlrGarSoftFob) {
+        markAsChanged("VLRGARSOFTFOB", vlrGarSoftFob);
         this.vlrGarSoftFob = vlrGarSoftFob;
    }
 
@@ -310,6 +340,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrGarSoftMargem(BigDecimal vlrGarSoftMargem) {
+        markAsChanged("VLRGARSOFTMARGEM", vlrGarSoftMargem);
         this.vlrGarSoftMargem = vlrGarSoftMargem;
    }
 
@@ -318,6 +349,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrImpostoSven(BigDecimal vlrImpostoSven) {
+        markAsChanged("VLRIMPOSTOSVEN", vlrImpostoSven);
         this.vlrImpostoSven = vlrImpostoSven;
    }
 
@@ -326,6 +358,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrInstalacao(BigDecimal vlrInstalacao) {
+        markAsChanged("VLRINSTALACAO", vlrInstalacao);
         this.vlrInstalacao = vlrInstalacao;
    }
 
@@ -334,6 +367,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrInternacao(BigDecimal vlrInternacao) {
+        markAsChanged("VLRINTERNACAO", vlrInternacao);
         this.vlrInternacao = vlrInternacao;
    }
 
@@ -342,6 +376,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrLucroLiquidoReal(BigDecimal vlrLucroLiquidoReal) {
+        markAsChanged("VLRLUCROLIQUIDOREAL", vlrLucroLiquidoReal);
         this.vlrLucroLiquidoReal = vlrLucroLiquidoReal;
    }
 
@@ -350,6 +385,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrMargemProp(BigDecimal vlrMargemProp) {
+        markAsChanged("VLRMARGEMPROP", vlrMargemProp);
         this.vlrMargemProp = vlrMargemProp;
    }
 
@@ -358,6 +394,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrMoeda(BigDecimal vlrMoeda) {
+        markAsChanged("VLRMOEDA", vlrMoeda);
         this.vlrMoeda = vlrMoeda;
    }
 
@@ -366,6 +403,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrOutrosCusCif(BigDecimal vlrOutrosCusCif) {
+        markAsChanged("VLROUTROSCUSCIF", vlrOutrosCusCif);
         this.vlrOutrosCusCif = vlrOutrosCusCif;
    }
 
@@ -374,6 +412,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrOutrosCusMargem(BigDecimal vlrOutrosCusMargem) {
+        markAsChanged("VLROUTROSCUSMARGEM", vlrOutrosCusMargem);
         this.vlrOutrosCusMargem = vlrOutrosCusMargem;
    }
 
@@ -382,6 +421,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotal(BigDecimal vlrTotal) {
+        markAsChanged("VLRTOTAL", vlrTotal);
         this.vlrTotal = vlrTotal;
    }
 
@@ -390,6 +430,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalArredondado(BigDecimal vlrTotalArredondado) {
+        markAsChanged("VLRTOTALARREDONDADO", vlrTotalArredondado);
         this.vlrTotalArredondado = vlrTotalArredondado;
    }
 
@@ -398,6 +439,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalCif(BigDecimal vlrTotalCif) {
+        markAsChanged("VLRTOTALCIF", vlrTotalCif);
         this.vlrTotalCif = vlrTotalCif;
    }
 
@@ -406,6 +448,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalComissao(BigDecimal vlrTotalComissao) {
+        markAsChanged("VLRTOTALCOMISSAO", vlrTotalComissao);
         this.vlrTotalComissao = vlrTotalComissao;
    }
 
@@ -414,6 +457,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalComSpare(BigDecimal vlrTotalComSpare) {
+        markAsChanged("VLRTOTALCOMSPARE", vlrTotalComSpare);
         this.vlrTotalComSpare = vlrTotalComSpare;
    }
 
@@ -422,6 +466,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalCus(BigDecimal vlrTotalCus) {
+        markAsChanged("VLRTOTALCUS", vlrTotalCus);
         this.vlrTotalCus = vlrTotalCus;
    }
 
@@ -430,6 +475,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalFob(BigDecimal vlrTotalFob) {
+        markAsChanged("VLRTOTALFOB", vlrTotalFob);
         this.vlrTotalFob = vlrTotalFob;
    }
 
@@ -438,6 +484,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTotalReal(BigDecimal vlrTotalReal) {
+        markAsChanged("VLRTOTALREAL", vlrTotalReal);
         this.vlrTotalReal = vlrTotalReal;
    }
 
@@ -446,6 +493,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrTreinamento(BigDecimal vlrTreinamento) {
+        markAsChanged("VLRTREINAMENTO", vlrTreinamento);
         this.vlrTreinamento = vlrTreinamento;
    }
 
@@ -454,6 +502,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrViagemInt(BigDecimal vlrViagemInt) {
+        markAsChanged("VLRVIAGEMINT", vlrViagemInt);
         this.vlrViagemInt = vlrViagemInt;
    }
 
@@ -462,6 +511,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setVlrViagemNac(BigDecimal vlrViagemNac) {
+        markAsChanged("VLRVIAGEMNAC", vlrViagemNac);
         this.vlrViagemNac = vlrViagemNac;
    }
 
@@ -470,6 +520,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setNomeProj(String nomeProj) {
+        markAsChanged("NOMEPROJ", nomeProj);
         this.nomeProj = nomeProj;
    }
 
@@ -478,6 +529,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -486,6 +538,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setObs(char[] obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -494,6 +547,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercComissao1(BigDecimal percComissao1) {
+        markAsChanged("PERCCOMISSAO1", percComissao1);
         this.percComissao1 = percComissao1;
    }
 
@@ -502,6 +556,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercComissao2(BigDecimal percComissao2) {
+        markAsChanged("PERCCOMISSAO2", percComissao2);
         this.percComissao2 = percComissao2;
    }
 
@@ -510,6 +565,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercComissao3(BigDecimal percComissao3) {
+        markAsChanged("PERCCOMISSAO3", percComissao3);
         this.percComissao3 = percComissao3;
    }
 
@@ -518,6 +574,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercComissao4(BigDecimal percComissao4) {
+        markAsChanged("PERCCOMISSAO4", percComissao4);
         this.percComissao4 = percComissao4;
    }
 
@@ -526,6 +583,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
    }
 
    public void setPercComissao5(BigDecimal percComissao5) {
+        markAsChanged("PERCCOMISSAO5", percComissao5);
         this.percComissao5 = percComissao5;
    }
 
@@ -541,6 +599,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
 
    @Override
    public CabecalhoPropostaComercial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.percDesconto = vo.asBigDecimal("PERCDESCONTO");
         this.percDescProd = vo.asBigDecimal("PERCDESCPROD");
         this.percDescServ = vo.asBigDecimal("PERCDESCSERV");

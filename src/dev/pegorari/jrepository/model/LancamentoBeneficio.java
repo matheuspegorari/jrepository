@@ -28,6 +28,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setVlrTitular(BigDecimal vlrTitular) {
+        markAsChanged("VLRTITULAR", vlrTitular);
         this.vlrTitular = vlrTitular;
    }
 
@@ -36,6 +37,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setNomeFunc(String nomeFunc) {
+        markAsChanged("NOMEFUNC", nomeFunc);
         this.nomeFunc = nomeFunc;
    }
 
@@ -44,6 +46,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -52,6 +55,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setSituacaoFunc(BigDecimal situacaoFunc) {
+        markAsChanged("SITUACAOFUNC", situacaoFunc);
         this.situacaoFunc = situacaoFunc;
    }
 
@@ -60,6 +64,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodBen(BigDecimal codBen) {
+        markAsChanged("CODBEN", codBen);
         this.codBen = codBen;
    }
 
@@ -68,6 +73,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -76,6 +82,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodCbe(BigDecimal codCbe) {
+        markAsChanged("CODCBE", codCbe);
         this.codCbe = codCbe;
    }
 
@@ -84,6 +91,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -92,6 +100,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -100,6 +109,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -108,6 +118,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -116,6 +127,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodFuncao(BigDecimal codFuncao) {
+        markAsChanged("CODFUNCAO", codFuncao);
         this.codFuncao = codFuncao;
    }
 
@@ -124,6 +136,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setCodLbe(BigDecimal codLbe) {
+        markAsChanged("CODLBE", codLbe);
         this.codLbe = codLbe;
    }
 
@@ -132,6 +145,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setDtRefEmp(Timestamp dtRefEmp) {
+        markAsChanged("DTREFEMP", dtRefEmp);
         this.dtRefEmp = dtRefEmp;
    }
 
@@ -140,6 +154,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setNomeDepend(String nomeDepend) {
+        markAsChanged("NOMEDEPEND", nomeDepend);
         this.nomeDepend = nomeDepend;
    }
 
@@ -148,6 +163,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
    }
 
    public void setVlrDepen(BigDecimal vlrDepen) {
+        markAsChanged("VLRDEPEN", vlrDepen);
         this.vlrDepen = vlrDepen;
    }
 
@@ -163,6 +179,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
 
    @Override
    public LancamentoBeneficio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.vlrTitular = vo.asBigDecimal("VLRTITULAR");
         this.nomeFunc = vo.asString("NOMEFUNC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

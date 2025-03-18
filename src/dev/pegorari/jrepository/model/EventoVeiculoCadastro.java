@@ -17,6 +17,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -25,6 +26,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -33,6 +35,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -41,6 +44,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -49,6 +53,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -64,6 +69,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
 
    @Override
    public EventoVeiculoCadastro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.dtRef = vo.asTimestamp("DTREF");

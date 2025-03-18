@@ -28,6 +28,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +37,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -44,6 +46,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setDhexec(Timestamp dhexec) {
+        markAsChanged("DHEXEC", dhexec);
         this.dhexec = dhexec;
    }
 
@@ -52,6 +55,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setDhproxexec(Timestamp dhproxexec) {
+        markAsChanged("DHPROXEXEC", dhproxexec);
         this.dhproxexec = dhproxexec;
    }
 
@@ -60,6 +64,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setErrotrace(String errotrace) {
+        markAsChanged("ERROTRACE", errotrace);
         this.errotrace = errotrace;
    }
 
@@ -68,6 +73,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setId(String id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -76,6 +82,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setMediaexec(BigDecimal mediaexec) {
+        markAsChanged("MEDIAEXEC", mediaexec);
         this.mediaexec = mediaexec;
    }
 
@@ -84,6 +91,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setMsgerro(String msgerro) {
+        markAsChanged("MSGERRO", msgerro);
         this.msgerro = msgerro;
    }
 
@@ -92,6 +100,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setQtdexecs(BigDecimal qtdexecs) {
+        markAsChanged("QTDEXECS", qtdexecs);
         this.qtdexecs = qtdexecs;
    }
 
@@ -100,6 +109,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setQtdfalhas(BigDecimal qtdfalhas) {
+        markAsChanged("QTDFALHAS", qtdfalhas);
         this.qtdfalhas = qtdfalhas;
    }
 
@@ -108,6 +118,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setStatusexec(String statusexec) {
+        markAsChanged("STATUSEXEC", statusexec);
         this.statusexec = statusexec;
    }
 
@@ -116,6 +127,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setTempoexec(BigDecimal tempoexec) {
+        markAsChanged("TEMPOEXEC", tempoexec);
         this.tempoexec = tempoexec;
    }
 
@@ -124,6 +136,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setTempomaxexec(BigDecimal tempomaxexec) {
+        markAsChanged("TEMPOMAXEXEC", tempomaxexec);
         this.tempomaxexec = tempomaxexec;
    }
 
@@ -132,6 +145,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setTempominexec(BigDecimal tempominexec) {
+        markAsChanged("TEMPOMINEXEC", tempominexec);
         this.tempominexec = tempominexec;
    }
 
@@ -140,6 +154,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setTempoulimaexec(BigDecimal tempoulimaexec) {
+        markAsChanged("TEMPOULIMAEXEC", tempoulimaexec);
         this.tempoulimaexec = tempoulimaexec;
    }
 
@@ -148,6 +163,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
    }
 
    public void setTipjob(String tipjob) {
+        markAsChanged("TIPJOB", tipjob);
         this.tipjob = tipjob;
    }
 
@@ -163,6 +179,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
 
    @Override
    public EstatisticasJob fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.descricao = vo.asString("DESCRICAO");
         this.dhexec = vo.asTimestamp("DHEXEC");

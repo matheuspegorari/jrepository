@@ -27,6 +27,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -35,6 +36,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -43,6 +45,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -51,6 +54,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setConvProduzir(String convProduzir) {
+        markAsChanged("CONVPRODUZIR", convProduzir);
         this.convProduzir = convProduzir;
    }
 
@@ -59,6 +63,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setDtAjuste(Timestamp dtAjuste) {
+        markAsChanged("DTAJUSTE", dtAjuste);
         this.dtAjuste = dtAjuste;
    }
 
@@ -67,6 +72,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -75,6 +81,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setDtDoc(Timestamp dtDoc) {
+        markAsChanged("DTDOC", dtDoc);
         this.dtDoc = dtDoc;
    }
 
@@ -83,6 +90,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setNuAja(BigDecimal nuAja) {
+        markAsChanged("NUAJA", nuAja);
         this.nuAja = nuAja;
    }
 
@@ -91,6 +99,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setNumDoc(BigDecimal numDoc) {
+        markAsChanged("NUMDOC", numDoc);
         this.numDoc = numDoc;
    }
 
@@ -99,6 +108,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -107,6 +117,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setSeqAja(BigDecimal seqAja) {
+        markAsChanged("SEQAJA", seqAja);
         this.seqAja = seqAja;
    }
 
@@ -115,6 +126,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -123,6 +135,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -131,6 +144,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
+        markAsChanged("VLRAJUSTE", vlrAjuste);
         this.vlrAjuste = vlrAjuste;
    }
 
@@ -139,6 +153,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -154,6 +169,7 @@ public class NotasAjusteApuracao extends AbstractSankhyaEntity<NotasAjusteApurac
 
    @Override
    public NotasAjusteApuracao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");

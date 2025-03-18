@@ -39,6 +39,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setBaixa(String baixa) {
+        markAsChanged("BAIXA", baixa);
         this.baixa = baixa;
    }
 
@@ -47,6 +48,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodBcoPad(BigDecimal codBcoPad) {
+        markAsChanged("CODBCOPAD", codBcoPad);
         this.codBcoPad = codBcoPad;
    }
 
@@ -55,6 +57,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodCenCusPad(BigDecimal codCenCusPad) {
+        markAsChanged("CODCENCUSPAD", codCenCusPad);
         this.codCenCusPad = codCenCusPad;
    }
 
@@ -63,6 +66,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -71,6 +75,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -79,6 +84,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodNatPad(BigDecimal codNatPad) {
+        markAsChanged("CODNATPAD", codNatPad);
         this.codNatPad = codNatPad;
    }
 
@@ -87,6 +93,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -95,6 +102,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodProjPad(BigDecimal codProjPad) {
+        markAsChanged("CODPROJPAD", codProjPad);
         this.codProjPad = codProjPad;
    }
 
@@ -103,6 +111,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodTipTitPad(BigDecimal codTipTitPad) {
+        markAsChanged("CODTIPTITPAD", codTipTitPad);
         this.codTipTitPad = codTipTitPad;
    }
 
@@ -111,6 +120,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -119,6 +129,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setCor(String cor) {
+        markAsChanged("COR", cor);
         this.cor = cor;
    }
 
@@ -127,6 +138,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setDigVenda(String digVenda) {
+        markAsChanged("DIGVENDA", digVenda);
         this.digVenda = digVenda;
    }
 
@@ -135,6 +147,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setDtFix(Timestamp dtFix) {
+        markAsChanged("DTFIX", dtFix);
         this.dtFix = dtFix;
    }
 
@@ -143,6 +156,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -151,6 +165,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setPercentual(BigDecimal percentual) {
+        markAsChanged("PERCENTUAL", percentual);
         this.percentual = percentual;
    }
 
@@ -159,6 +174,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setPrazo(BigDecimal prazo) {
+        markAsChanged("PRAZO", prazo);
         this.prazo = prazo;
    }
 
@@ -167,6 +183,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -175,6 +192,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setTextoCentral(String textoCentral) {
+        markAsChanged("TEXTOCENTRAL", textoCentral);
         this.textoCentral = textoCentral;
    }
 
@@ -183,6 +201,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setTipoEmp(String tipoEmp) {
+        markAsChanged("TIPOEMP", tipoEmp);
         this.tipoEmp = tipoEmp;
    }
 
@@ -191,6 +210,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setTipoPar(String tipoPar) {
+        markAsChanged("TIPOPAR", tipoPar);
         this.tipoPar = tipoPar;
    }
 
@@ -199,6 +219,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setTipRecDesp(String tipRecDesp) {
+        markAsChanged("TIPRECDESP", tipRecDesp);
         this.tipRecDesp = tipRecDesp;
    }
 
@@ -207,6 +228,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setVencNaoUtil(BigDecimal vencNaoUtil) {
+        markAsChanged("VENCNAOUTIL", vencNaoUtil);
         this.vencNaoUtil = vencNaoUtil;
    }
 
@@ -215,6 +237,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setSomaPrazoCliente(String somaPrazoCliente) {
+        markAsChanged("SOMAPRAZOCLIENTE", somaPrazoCliente);
         this.somaPrazoCliente = somaPrazoCliente;
    }
 
@@ -223,6 +246,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setBasePrazo(BigDecimal basePrazo) {
+        markAsChanged("BASEPRAZO", basePrazo);
         this.basePrazo = basePrazo;
    }
 
@@ -231,6 +255,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setParcExclusivaFcpst(String parcExclusivaFcpst) {
+        markAsChanged("PARCEXCLUSIVAFCPST", parcExclusivaFcpst);
         this.parcExclusivaFcpst = parcExclusivaFcpst;
    }
 
@@ -239,6 +264,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setTipoFin(String tipoFin) {
+        markAsChanged("TIPOFIN", tipoFin);
         this.tipoFin = tipoFin;
    }
 
@@ -247,6 +273,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
    }
 
    public void setUsarDtEntSaignRe(String usarDtEntSaignRe) {
+        markAsChanged("USARDTENTSAIGNRE", usarDtEntSaignRe);
         this.usarDtEntSaignRe = usarDtEntSaignRe;
    }
 
@@ -262,6 +289,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
 
    @Override
    public ParcelaPagamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baixa = vo.asString("BAIXA");
         this.codBcoPad = vo.asBigDecimal("CODBCOPAD");
         this.codCenCusPad = vo.asBigDecimal("CODCENCUSPAD");

@@ -22,6 +22,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setReferenciaPi(String referenciaPi) {
+        markAsChanged("REFERENCIAPI", referenciaPi);
         this.referenciaPi = referenciaPi;
    }
 
@@ -30,6 +31,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setReferenciaPa(String referenciaPa) {
+        markAsChanged("REFERENCIAPA", referenciaPa);
         this.referenciaPa = referenciaPa;
    }
 
@@ -38,6 +40,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setIdIprocPi(BigDecimal idIprocPi) {
+        markAsChanged("IDIPROCPI", idIprocPi);
         this.idIprocPi = idIprocPi;
    }
 
@@ -46,6 +49,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -54,6 +58,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -62,6 +67,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setQtdDep(BigDecimal qtdDep) {
+        markAsChanged("QTDDEP", qtdDep);
         this.qtdDep = qtdDep;
    }
 
@@ -70,6 +76,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setIdIprocPa(BigDecimal idIprocPa) {
+        markAsChanged("IDIPROCPA", idIprocPa);
         this.idIprocPa = idIprocPa;
    }
 
@@ -78,6 +85,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -86,6 +94,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setControlePi(String controlePi) {
+        markAsChanged("CONTROLEPI", controlePi);
         this.controlePi = controlePi;
    }
 
@@ -94,6 +103,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
    }
 
    public void setCodProdPi(BigDecimal codProdPi) {
+        markAsChanged("CODPRODPI", codProdPi);
         this.codProdPi = codProdPi;
    }
 
@@ -109,6 +119,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
 
    @Override
    public DependenciaEntreOps fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referenciaPi = vo.asString("REFERENCIAPI");
         this.referenciaPa = vo.asString("REFERENCIAPA");
         this.idIprocPi = vo.asBigDecimal("IDIPROCPI");

@@ -14,6 +14,7 @@ public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSis
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -22,6 +23,7 @@ public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSis
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
+        markAsChanged("NUAVISO", nuAviso);
         this.nuAviso = nuAviso;
    }
 
@@ -30,6 +32,7 @@ public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSis
    }
 
    public void setNuRespAviso(BigDecimal nuRespAviso) {
+        markAsChanged("NURESPAVISO", nuRespAviso);
         this.nuRespAviso = nuRespAviso;
    }
 
@@ -45,6 +48,7 @@ public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSis
 
    @Override
    public RespostaAvisoSistema fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuAviso = vo.asBigDecimal("NUAVISO");
         this.nuRespAviso = vo.asBigDecimal("NURESPAVISO");

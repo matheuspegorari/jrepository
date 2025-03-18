@@ -27,6 +27,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +36,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setCodMaq(BigDecimal codMaq) {
+        markAsChanged("CODMAQ", codMaq);
         this.codMaq = codMaq;
    }
 
@@ -43,6 +45,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setCodNacionalIdent(String codNacionalIdent) {
+        markAsChanged("CODNACIONALIDENT", codNacionalIdent);
         this.codNacionalIdent = codNacionalIdent;
    }
 
@@ -51,6 +54,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setFusoHorario(BigDecimal fusoHorario) {
+        markAsChanged("FUSOHORARIO", fusoHorario);
         this.fusoHorario = fusoHorario;
    }
 
@@ -59,6 +63,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setIndLivro(String indLivro) {
+        markAsChanged("INDLIVRO", indLivro);
         this.indLivro = indLivro;
    }
 
@@ -67,6 +72,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -75,6 +81,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setMd5Paf(String md5Paf) {
+        markAsChanged("MD5PAF", md5Paf);
         this.md5Paf = md5Paf;
    }
 
@@ -83,6 +90,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setModDoc(String modDoc) {
+        markAsChanged("MODDOC", modDoc);
         this.modDoc = modDoc;
    }
 
@@ -91,6 +99,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setTipoEcf(String tipoEcf) {
+        markAsChanged("TIPOECF", tipoEcf);
         this.tipoEcf = tipoEcf;
    }
 
@@ -99,6 +108,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setModelo(String modelo) {
+        markAsChanged("MODELO", modelo);
         this.modelo = modelo;
    }
 
@@ -107,6 +117,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setNroCaixa(BigDecimal nroCaixa) {
+        markAsChanged("NROCAIXA", nroCaixa);
         this.nroCaixa = nroCaixa;
    }
 
@@ -115,6 +126,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setNroSerie(String nroSerie) {
+        markAsChanged("NROSERIE", nroSerie);
         this.nroSerie = nroSerie;
    }
 
@@ -123,6 +135,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setNumUsuEcf(BigDecimal numUsuEcf) {
+        markAsChanged("NUMUSUECF", numUsuEcf);
         this.numUsuEcf = numUsuEcf;
    }
 
@@ -131,6 +144,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setTipDoc(String tipDoc) {
+        markAsChanged("TIPDOC", tipDoc);
         this.tipDoc = tipDoc;
    }
 
@@ -139,6 +153,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -147,6 +162,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    }
 
    public void setCodEquip(BigDecimal codEquip) {
+        markAsChanged("CODEQUIP", codEquip);
         this.codEquip = codEquip;
    }
 
@@ -162,6 +178,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
 
    @Override
    public CadastroMaquina fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codMaq = vo.asBigDecimal("CODMAQ");
         this.codNacionalIdent = vo.asString("CODNACIONALIDENT");

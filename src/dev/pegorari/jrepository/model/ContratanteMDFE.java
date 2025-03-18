@@ -14,6 +14,7 @@ public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -22,6 +23,7 @@ public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
    }
 
    public void setCodParcContr(BigDecimal codParcContr) {
+        markAsChanged("CODPARCCONTR", codParcContr);
         this.codParcContr = codParcContr;
    }
 
@@ -30,6 +32,7 @@ public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -45,6 +48,7 @@ public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
 
    @Override
    public ContratanteMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.codParcContr = vo.asBigDecimal("CODPARCCONTR");
         this.nuViag = vo.asBigDecimal("NUVIAG");

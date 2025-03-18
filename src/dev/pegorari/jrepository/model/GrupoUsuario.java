@@ -17,6 +17,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -25,6 +26,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -33,6 +35,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setCodUnn(BigDecimal codUnn) {
+        markAsChanged("CODUNN", codUnn);
         this.codUnn = codUnn;
    }
 
@@ -41,6 +44,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -49,6 +53,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setNomeGrupo(String nomeGrupo) {
+        markAsChanged("NOMEGRUPO", nomeGrupo);
         this.nomeGrupo = nomeGrupo;
    }
 
@@ -57,6 +62,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
    }
 
    public void setUserName(String userName) {
+        markAsChanged("USER_NAME", userName);
         this.userName = userName;
    }
 
@@ -72,6 +78,7 @@ public class GrupoUsuario extends AbstractSankhyaEntity<GrupoUsuario> {
 
    @Override
    public GrupoUsuario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUnn = vo.asBigDecimal("CODUNN");

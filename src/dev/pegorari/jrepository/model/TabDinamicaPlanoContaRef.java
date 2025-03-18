@@ -18,6 +18,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -26,6 +27,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -34,6 +36,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setAno(BigDecimal ano) {
+        markAsChanged("ANO", ano);
         this.ano = ano;
    }
 
@@ -42,6 +45,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -50,6 +54,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setVersao(String versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -58,6 +63,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -73,6 +79,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
 
    @Override
    public TabDinamicaPlanoContaRef fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipo = vo.asBigDecimal("TIPO");
         this.tabela = vo.asString("TABELA");
         this.ano = vo.asBigDecimal("ANO");

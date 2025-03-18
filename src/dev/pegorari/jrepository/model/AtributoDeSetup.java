@@ -20,6 +20,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setDescratributo(String descratributo) {
+        markAsChanged("DESCRATRIBUTO", descratributo);
         this.descratributo = descratributo;
    }
 
@@ -28,6 +29,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -36,6 +38,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setEstadoWc(String estadoWc) {
+        markAsChanged("ESTADOWC", estadoWc);
         this.estadoWc = estadoWc;
    }
 
@@ -44,6 +47,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setExpValidacao(String expValidacao) {
+        markAsChanged("EXPVALIDACAO", expValidacao);
         this.expValidacao = expValidacao;
    }
 
@@ -52,6 +56,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setItensLista(String itensLista) {
+        markAsChanged("ITENSLISTA", itensLista);
         this.itensLista = itensLista;
    }
 
@@ -60,6 +65,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setNomeInstanciaRef(String nomeInstanciaRef) {
+        markAsChanged("NOMEINSTANCIAREF", nomeInstanciaRef);
         this.nomeInstanciaRef = nomeInstanciaRef;
    }
 
@@ -68,6 +74,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setNuAst(BigDecimal nuAst) {
+        markAsChanged("NUAST", nuAst);
         this.nuAst = nuAst;
    }
 
@@ -76,6 +83,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setPesoRelativo(BigDecimal pesoRelativo) {
+        markAsChanged("PESORELATIVO", pesoRelativo);
         this.pesoRelativo = pesoRelativo;
    }
 
@@ -84,6 +92,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -99,6 +108,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
 
    @Override
    public AtributoDeSetup fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descratributo = vo.asString("DESCRATRIBUTO");
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.estadoWc = vo.asString("ESTADOWC");

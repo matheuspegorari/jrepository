@@ -63,6 +63,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setExclConf(String exclConf) {
+        markAsChanged("EXCLCONF", exclConf);
         this.exclConf = exclConf;
    }
 
@@ -71,6 +72,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setLocalizacao(String localizacao) {
+        markAsChanged("LOCALIZACAO", localizacao);
         this.localizacao = localizacao;
    }
 
@@ -79,6 +81,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEntradasPend(BigDecimal entradasPend) {
+        markAsChanged("ENTRADASPEND", entradasPend);
         this.entradasPend = entradasPend;
    }
 
@@ -87,6 +90,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEstDispVolPad(BigDecimal estDispVolPad) {
+        markAsChanged("ESTDISPVOLPAD", estDispVolPad);
         this.estDispVolPad = estDispVolPad;
    }
 
@@ -95,6 +99,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setBloqueado(String bloqueado) {
+        markAsChanged("BLOQUEADO", bloqueado);
         this.bloqueado = bloqueado;
    }
 
@@ -103,6 +108,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
+        markAsChanged("CODAREASEP", codAreaSep);
         this.codAreaSep = codAreaSep;
    }
 
@@ -111,6 +117,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setNomeAreaSep(String nomeAreaSep) {
+        markAsChanged("NOMEAREASEP", nomeAreaSep);
         this.nomeAreaSep = nomeAreaSep;
    }
 
@@ -119,6 +126,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEstoqueVolPad(BigDecimal estoqueVolPad) {
+        markAsChanged("ESTOQUEVOLPAD", estoqueVolPad);
         this.estoqueVolPad = estoqueVolPad;
    }
 
@@ -127,6 +135,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setSaidasPend(BigDecimal saidasPend) {
+        markAsChanged("SAIDASPEND", saidasPend);
         this.saidasPend = saidasPend;
    }
 
@@ -135,6 +144,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDescrLocal(String descrLocal) {
+        markAsChanged("DESCRLOCAL", descrLocal);
         this.descrLocal = descrLocal;
    }
 
@@ -143,6 +153,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -151,6 +162,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setRefForn(String refForn) {
+        markAsChanged("REFFORN", refForn);
         this.refForn = refForn;
    }
 
@@ -159,6 +171,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -167,6 +180,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -175,6 +189,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDescrGrupoProd(String descrGrupoProd) {
+        markAsChanged("DESCRGRUPOPROD", descrGrupoProd);
         this.descrGrupoProd = descrGrupoProd;
    }
 
@@ -183,6 +198,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -191,6 +207,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setPicking(String picking) {
+        markAsChanged("PICKING", picking);
         this.picking = picking;
    }
 
@@ -199,6 +216,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setMultiProd(String multiProd) {
+        markAsChanged("MULTIPROD", multiProd);
         this.multiProd = multiProd;
    }
 
@@ -207,6 +225,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setExpedicao(String expedicao) {
+        markAsChanged("EXPEDICAO", expedicao);
         this.expedicao = expedicao;
    }
 
@@ -215,6 +234,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -223,6 +243,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -231,6 +252,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -239,6 +261,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEhDoca(String ehDoca) {
+        markAsChanged("EHDOCA", ehDoca);
         this.ehDoca = ehDoca;
    }
 
@@ -247,6 +270,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setComplDesc(String complDesc) {
+        markAsChanged("COMPLDESC", complDesc);
         this.complDesc = complDesc;
    }
 
@@ -255,6 +279,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -263,6 +288,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setNomeFantasia(String nomeFantasia) {
+        markAsChanged("NOMEFANTASIA", nomeFantasia);
         this.nomeFantasia = nomeFantasia;
    }
 
@@ -271,6 +297,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -279,6 +306,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setProfundidade(BigDecimal profundidade) {
+        markAsChanged("PROFUNDIDADE", profundidade);
         this.profundidade = profundidade;
    }
 
@@ -287,6 +315,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -295,6 +324,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setLargura(BigDecimal largura) {
+        markAsChanged("LARGURA", largura);
         this.largura = largura;
    }
 
@@ -303,6 +333,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setAltura(BigDecimal altura) {
+        markAsChanged("ALTURA", altura);
         this.altura = altura;
    }
 
@@ -311,6 +342,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEstDisp(BigDecimal estDisp) {
+        markAsChanged("ESTDISP", estDisp);
         this.estDisp = estDisp;
    }
 
@@ -319,6 +351,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDescrProd(String descrProd) {
+        markAsChanged("DESCRPROD", descrProd);
         this.descrProd = descrProd;
    }
 
@@ -327,6 +360,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEntrPendVolPad(BigDecimal entrPendVolPad) {
+        markAsChanged("ENTRPENDVOLPAD", entrPendVolPad);
         this.entrPendVolPad = entrPendVolPad;
    }
 
@@ -335,6 +369,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setSaidPendVolPad(BigDecimal saidPendVolPad) {
+        markAsChanged("SAIDPENDVOLPAD", saidPendVolPad);
         this.saidPendVolPad = saidPendVolPad;
    }
 
@@ -343,6 +378,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -351,6 +387,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEndMovVertical(String endMovVertical) {
+        markAsChanged("ENDMOVVERTICAL", endMovVertical);
         this.endMovVertical = endMovVertical;
    }
 
@@ -359,6 +396,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDtRec(Timestamp dtRec) {
+        markAsChanged("DTREC", dtRec);
         this.dtRec = dtRec;
    }
 
@@ -367,6 +405,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -375,6 +414,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -383,6 +423,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDtValMinExp(Timestamp dtValMinExp) {
+        markAsChanged("DTVALMINEXP", dtValMinExp);
         this.dtValMinExp = dtValMinExp;
    }
 
@@ -391,6 +432,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -399,6 +441,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -407,6 +450,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setDescrEnd(String descrEnd) {
+        markAsChanged("DESCREND", descrEnd);
         this.descrEnd = descrEnd;
    }
 
@@ -415,6 +459,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEndereco(String endereco) {
+        markAsChanged("ENDERECO", endereco);
         this.endereco = endereco;
    }
 
@@ -423,6 +468,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodEndPai(BigDecimal codEndPai) {
+        markAsChanged("CODENDPAI", codEndPai);
         this.codEndPai = codEndPai;
    }
 
@@ -431,6 +477,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -439,6 +486,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setNomeParc(String nomeParc) {
+        markAsChanged("NOMEPARC", nomeParc);
         this.nomeParc = nomeParc;
    }
 
@@ -447,6 +495,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -455,6 +504,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -463,6 +513,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
    }
 
    public void setCodVolPad(String codVolPad) {
+        markAsChanged("CODVOLPAD", codVolPad);
         this.codVolPad = codVolPad;
    }
 
@@ -478,6 +529,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
 
    @Override
    public ViewEstoqueEnderecoWms fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.exclConf = vo.asString("EXCLCONF");
         this.localizacao = vo.asString("LOCALIZACAO");
         this.entradasPend = vo.asBigDecimal("ENTRADASPEND");

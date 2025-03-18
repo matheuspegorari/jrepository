@@ -21,6 +21,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setUrlEnvio(String urlEnvio) {
+        markAsChanged("URLENVIO", urlEnvio);
         this.urlEnvio = urlEnvio;
    }
 
@@ -29,6 +30,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -37,6 +39,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setDhConsulta(Timestamp dhConsulta) {
+        markAsChanged("DHCONSULTA", dhConsulta);
         this.dhConsulta = dhConsulta;
    }
 
@@ -45,6 +48,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setNuConsulta(BigDecimal nuConsulta) {
+        markAsChanged("NUCONSULTA", nuConsulta);
         this.nuConsulta = nuConsulta;
    }
 
@@ -53,6 +57,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -61,6 +66,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setResposta(char[] resposta) {
+        markAsChanged("RESPOSTA", resposta);
         this.resposta = resposta;
    }
 
@@ -69,6 +75,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setDocumento(String documento) {
+        markAsChanged("DOCUMENTO", documento);
         this.documento = documento;
    }
 
@@ -77,6 +84,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -85,6 +93,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
    }
 
    public void setDtLimite(Timestamp dtLimite) {
+        markAsChanged("DTLIMITE", dtLimite);
         this.dtLimite = dtLimite;
    }
 
@@ -100,6 +109,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
 
    @Override
    public AnaliseCreditoSerasa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.urlEnvio = vo.asString("URLENVIO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhConsulta = vo.asTimestamp("DHCONSULTA");

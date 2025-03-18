@@ -39,6 +39,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -47,6 +48,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -55,6 +57,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setCodEmpEstab(BigDecimal codEmpEstab) {
+        markAsChanged("CODEMPESTAB", codEmpEstab);
         this.codEmpEstab = codEmpEstab;
    }
 
@@ -63,6 +66,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -71,6 +75,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -79,6 +84,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -87,6 +93,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -95,6 +102,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -103,6 +111,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -111,6 +120,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setNrInscEstab(String nrInscEstab) {
+        markAsChanged("NRINSCESTAB", nrInscEstab);
         this.nrInscEstab = nrInscEstab;
    }
 
@@ -119,6 +129,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -127,6 +138,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -135,6 +147,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -143,6 +156,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -151,6 +165,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -159,6 +174,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -167,6 +183,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -175,6 +192,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setTpInscEstab(BigDecimal tpInscEstab) {
+        markAsChanged("TPINSCESTAB", tpInscEstab);
         this.tpInscEstab = tpInscEstab;
    }
 
@@ -183,6 +201,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalBaseRet(BigDecimal vlrTotalBaseRet) {
+        markAsChanged("VLRTOTALBASERET", vlrTotalBaseRet);
         this.vlrTotalBaseRet = vlrTotalBaseRet;
    }
 
@@ -191,6 +210,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalNRet(BigDecimal vlrTotalNRet) {
+        markAsChanged("VLRTOTALNRET", vlrTotalNRet);
         this.vlrTotalNRet = vlrTotalNRet;
    }
 
@@ -199,6 +219,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalNRetRet(BigDecimal vlrTotalNRetRet) {
+        markAsChanged("VLRTOTALNRETRET", vlrTotalNRetRet);
         this.vlrTotalNRetRet = vlrTotalNRetRet;
    }
 
@@ -207,6 +228,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalRep(BigDecimal vlrTotalRep) {
+        markAsChanged("VLRTOTALREP", vlrTotalRep);
         this.vlrTotalRep = vlrTotalRep;
    }
 
@@ -215,6 +237,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalRepRet(BigDecimal vlrTotalRepRet) {
+        markAsChanged("VLRTOTALREPRET", vlrTotalRepRet);
         this.vlrTotalRepRet = vlrTotalRepRet;
    }
 
@@ -223,6 +246,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalRet(BigDecimal vlrTotalRet) {
+        markAsChanged("VLRTOTALRET", vlrTotalRet);
         this.vlrTotalRet = vlrTotalRet;
    }
 
@@ -231,6 +255,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setVlrTotalRetRet(BigDecimal vlrTotalRetRet) {
+        markAsChanged("VLRTOTALRETRET", vlrTotalRetRet);
         this.vlrTotalRetRet = vlrTotalRetRet;
    }
 
@@ -239,6 +264,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setXmlEvento(String xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -247,6 +273,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
    }
 
    public void setXmlRetorno(String xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -262,6 +289,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
 
    @Override
    public RecRepassadosAssoDesp fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpEstab = vo.asBigDecimal("CODEMPESTAB");

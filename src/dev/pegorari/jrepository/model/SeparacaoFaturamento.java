@@ -18,6 +18,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -26,6 +27,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -34,6 +36,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setCodTipOperDest(BigDecimal codTipOperDest) {
+        markAsChanged("CODTIPOPERDEST", codTipOperDest);
         this.codTipOperDest = codTipOperDest;
    }
 
@@ -42,6 +45,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setConfirmDocFat(String confirmDocFat) {
+        markAsChanged("CONFIRMDOCFAT", confirmDocFat);
         this.confirmDocFat = confirmDocFat;
    }
 
@@ -50,6 +54,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setCriterioSep(char[] criterioSep) {
+        markAsChanged("CRITERIOSEP", criterioSep);
         this.criterioSep = criterioSep;
    }
 
@@ -58,6 +63,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -66,6 +72,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    }
 
    public void setSerieDest(String serieDest) {
+        markAsChanged("SERIEDEST", serieDest);
         this.serieDest = serieDest;
    }
 
@@ -81,6 +88,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
 
    @Override
    public SeparacaoFaturamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codTipOperDest = vo.asBigDecimal("CODTIPOPERDEST");

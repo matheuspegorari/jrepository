@@ -21,6 +21,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -29,6 +30,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -37,6 +39,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -45,6 +48,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -53,6 +57,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setDhIncial(Timestamp dhIncial) {
+        markAsChanged("DHINCIAL", dhIncial);
         this.dhIncial = dhIncial;
    }
 
@@ -61,6 +66,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -69,6 +75,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setNuIwc(BigDecimal nuIwc) {
+        markAsChanged("NUIWC", nuIwc);
         this.nuIwc = nuIwc;
    }
 
@@ -77,6 +84,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -85,6 +93,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -100,6 +109,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
 
    @Override
    public IndisponibilidadeWorkCenter fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.dhAlter = vo.asTimestamp("DHALTER");

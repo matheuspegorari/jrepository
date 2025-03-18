@@ -14,6 +14,7 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -22,6 +23,7 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -30,6 +32,7 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -45,6 +48,7 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
 
    @Override
    public EmbarcacoesComboio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

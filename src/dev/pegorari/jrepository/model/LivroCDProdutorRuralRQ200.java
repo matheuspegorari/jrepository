@@ -23,6 +23,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -31,6 +32,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -39,6 +41,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -47,6 +50,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -55,6 +59,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setMes(Timestamp mes) {
+        markAsChanged("MES", mes);
         this.mes = mes;
    }
 
@@ -63,6 +68,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setNatSldFin(String natSldFin) {
+        markAsChanged("NATSLDFIN", natSldFin);
         this.natSldFin = natSldFin;
    }
 
@@ -71,6 +77,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setReg(String reg) {
+        markAsChanged("REG", reg);
         this.reg = reg;
    }
 
@@ -79,6 +86,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setSldFin(BigDecimal sldFin) {
+        markAsChanged("SLDFIN", sldFin);
         this.sldFin = sldFin;
    }
 
@@ -87,6 +95,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setVlEntrada(BigDecimal vlEntrada) {
+        markAsChanged("VLENTRADA", vlEntrada);
         this.vlEntrada = vlEntrada;
    }
 
@@ -95,6 +104,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setVlSaida(BigDecimal vlSaida) {
+        markAsChanged("VLSAIDA", vlSaida);
         this.vlSaida = vlSaida;
    }
 
@@ -103,6 +113,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -118,6 +129,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
 
    @Override
    public LivroCDProdutorRuralRQ200 fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.digitado = vo.asString("DIGITADO");
         this.dtFinal = vo.asTimestamp("DTFINAL");

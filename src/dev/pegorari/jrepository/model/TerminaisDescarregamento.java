@@ -16,6 +16,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    }
 
    public void setCodTerdes(BigDecimal codTerdes) {
+        markAsChanged("CODTERDES", codTerdes);
         this.codTerdes = codTerdes;
    }
 
@@ -24,6 +25,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    }
 
    public void setCodTermdesc(String codTermdesc) {
+        markAsChanged("CODTERMDESC", codTermdesc);
         this.codTermdesc = codTermdesc;
    }
 
@@ -32,6 +34,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    }
 
    public void setNomeTermdesc(String nomeTermdesc) {
+        markAsChanged("NOMETERMDESC", nomeTermdesc);
         this.nomeTermdesc = nomeTermdesc;
    }
 
@@ -40,6 +43,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -48,6 +52,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -63,6 +68,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
 
    @Override
    public TerminaisDescarregamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTerdes = vo.asBigDecimal("CODTERDES");
         this.codTermdesc = vo.asString("CODTERMDESC");
         this.nomeTermdesc = vo.asString("NOMETERMDESC");

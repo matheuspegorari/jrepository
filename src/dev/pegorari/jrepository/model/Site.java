@@ -36,6 +36,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setAbreviatura(String abreviatura) {
+        markAsChanged("ABREVIATURA", abreviatura);
         this.abreviatura = abreviatura;
    }
 
@@ -44,6 +45,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -52,6 +54,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -60,6 +63,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -68,6 +72,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -76,6 +81,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCnpj(String cnpj) {
+        markAsChanged("CNPJ", cnpj);
         this.cnpj = cnpj;
    }
 
@@ -84,6 +90,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -92,6 +99,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -100,6 +108,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -108,6 +117,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodSite(BigDecimal codSite) {
+        markAsChanged("CODSITE", codSite);
         this.codSite = codSite;
    }
 
@@ -116,6 +126,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodSitePai(BigDecimal codSitePai) {
+        markAsChanged("CODSITEPAI", codSitePai);
         this.codSitePai = codSitePai;
    }
 
@@ -124,6 +135,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -132,6 +144,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -140,6 +153,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -148,6 +162,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setDtCad(Timestamp dtCad) {
+        markAsChanged("DTCAD", dtCad);
         this.dtCad = dtCad;
    }
 
@@ -156,6 +171,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -164,6 +180,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setFax(String fax) {
+        markAsChanged("FAX", fax);
         this.fax = fax;
    }
 
@@ -172,6 +189,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -180,6 +198,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setInscEstad(String inscEstad) {
+        markAsChanged("INSCESTAD", inscEstad);
         this.inscEstad = inscEstad;
    }
 
@@ -188,6 +207,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setNomeSite(String nomeSite) {
+        markAsChanged("NOMESITE", nomeSite);
         this.nomeSite = nomeSite;
    }
 
@@ -196,6 +216,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -204,6 +225,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setObservacoes(String observacoes) {
+        markAsChanged("OBSERVACOES", observacoes);
         this.observacoes = observacoes;
    }
 
@@ -212,6 +234,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setRamal(BigDecimal ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -220,6 +243,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -235,6 +259,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
 
    @Override
    public Site fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

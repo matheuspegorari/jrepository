@@ -15,6 +15,7 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -23,6 +24,7 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -31,6 +33,7 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
    }
 
    public void setPerfil(String perfil) {
+        markAsChanged("PERFIL", perfil);
         this.perfil = perfil;
    }
 
@@ -46,6 +49,7 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
 
    @Override
    public PerfilUsuarioEvo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.perfil = vo.asString("PERFIL");

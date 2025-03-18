@@ -14,6 +14,7 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -22,6 +23,7 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -30,6 +32,7 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -45,6 +48,7 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
 
    @Override
    public PerfilParceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");

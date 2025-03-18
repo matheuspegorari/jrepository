@@ -27,6 +27,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -35,6 +36,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setCodAnuncio(BigDecimal codAnuncio) {
+        markAsChanged("CODANUNCIO", codAnuncio);
         this.codAnuncio = codAnuncio;
    }
 
@@ -43,6 +45,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -51,6 +54,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setCodUsuResponsavel(BigDecimal codUsuResponsavel) {
+        markAsChanged("CODUSURESPONSAVEL", codUsuResponsavel);
         this.codUsuResponsavel = codUsuResponsavel;
    }
 
@@ -59,6 +63,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setDescrSelecao(String descrSelecao) {
+        markAsChanged("DESCRSELECAO", descrSelecao);
         this.descrSelecao = descrSelecao;
    }
 
@@ -67,6 +72,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -75,6 +81,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -83,6 +90,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setDtPrevTermino(Timestamp dtPrevTermino) {
+        markAsChanged("DTPREVTERMINO", dtPrevTermino);
         this.dtPrevTermino = dtPrevTermino;
    }
 
@@ -91,6 +99,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -99,6 +108,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -107,6 +117,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setSitSelecao(BigDecimal sitSelecao) {
+        markAsChanged("SITSELECAO", sitSelecao);
         this.sitSelecao = sitSelecao;
    }
 
@@ -115,6 +126,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setQtdVagasPre(BigDecimal qtdVagasPre) {
+        markAsChanged("QTDVAGASPRE", qtdVagasPre);
         this.qtdVagasPre = qtdVagasPre;
    }
 
@@ -123,6 +135,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setQtdVagasReq(BigDecimal qtdVagasReq) {
+        markAsChanged("QTDVAGASREQ", qtdVagasReq);
         this.qtdVagasReq = qtdVagasReq;
    }
 
@@ -131,6 +144,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setDtFechamento(Timestamp dtFechamento) {
+        markAsChanged("DTFECHAMENTO", dtFechamento);
         this.dtFechamento = dtFechamento;
    }
 
@@ -139,6 +153,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
    }
 
    public void setPersonalizar(String personalizar) {
+        markAsChanged("PERSONALIZAR", personalizar);
         this.personalizar = personalizar;
    }
 
@@ -154,6 +169,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
 
    @Override
    public ProcessoSelecao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         this.codAnuncio = vo.asBigDecimal("CODANUNCIO");
         this.codUsu = vo.asBigDecimal("CODUSU");

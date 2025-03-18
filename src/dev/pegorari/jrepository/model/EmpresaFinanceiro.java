@@ -602,6 +602,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodLancBcoPag(BigDecimal codLancBcoPag) {
+        markAsChanged("CODLANCBCOPAG", codLancBcoPag);
         this.codLancBcoPag = codLancBcoPag;
    }
 
@@ -610,6 +611,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCorTeFaltaWms(String corTeFaltaWms) {
+        markAsChanged("CORTEFALTAWMS", corTeFaltaWms);
         this.corTeFaltaWms = corTeFaltaWms;
    }
 
@@ -618,6 +620,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCpfContador(String cpfContador) {
+        markAsChanged("CPFCONTADOR", cpfContador);
         this.cpfContador = cpfContador;
    }
 
@@ -626,6 +629,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCrcContador(String crcContador) {
+        markAsChanged("CRCCONTADOR", crcContador);
         this.crcContador = crcContador;
    }
 
@@ -634,6 +638,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCredCofins(String credCofins) {
+        markAsChanged("CREDCOFINS", credCofins);
         this.credCofins = credCofins;
    }
 
@@ -642,6 +647,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCredPis(String credPis) {
+        markAsChanged("CREDPIS", credPis);
         this.credPis = credPis;
    }
 
@@ -650,6 +656,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCstIpiEnt(BigDecimal cstIpiEnt) {
+        markAsChanged("CSTIPIENT", cstIpiEnt);
         this.cstIpiEnt = cstIpiEnt;
    }
 
@@ -658,6 +665,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCstIpiSai(BigDecimal cstIpiSai) {
+        markAsChanged("CSTIPISAI", cstIpiSai);
         this.cstIpiSai = cstIpiSai;
    }
 
@@ -666,6 +674,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtCertifNfeFim(Timestamp dtCertifNfeFim) {
+        markAsChanged("DTCERTIFNFEFIM", dtCertifNfeFim);
         this.dtCertifNfeFim = dtCertifNfeFim;
    }
 
@@ -674,6 +683,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtCertifNfeIni(Timestamp dtCertifNfeIni) {
+        markAsChanged("DTCERTIFNFEINI", dtCertifNfeIni);
         this.dtCertifNfeIni = dtCertifNfeIni;
    }
 
@@ -682,6 +692,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmailContador(String emailContador) {
+        markAsChanged("EMAILCONTADOR", emailContador);
         this.emailContador = emailContador;
    }
 
@@ -690,6 +701,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmiteExped(String emiteExped) {
+        markAsChanged("EMITEEXPED", emiteExped);
         this.emiteExped = emiteExped;
    }
 
@@ -698,6 +710,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmpDestinoWms(BigDecimal empDestinoWms) {
+        markAsChanged("EMPDESTINOWMS", empDestinoWms);
         this.empDestinoWms = empDestinoWms;
    }
 
@@ -706,6 +719,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmpSoma(BigDecimal empSoma) {
+        markAsChanged("EMPSOMA", empSoma);
         this.empSoma = empSoma;
    }
 
@@ -714,6 +728,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEndeCktIndef(BigDecimal endeCktIndef) {
+        markAsChanged("ENDECKTINDEF", endeCktIndef);
         this.endeCktIndef = endeCktIndef;
    }
 
@@ -722,6 +737,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEndeMovIndef(BigDecimal endeMovIndef) {
+        markAsChanged("ENDEMOVINDEF", endeMovIndef);
         this.endeMovIndef = endeMovIndef;
    }
 
@@ -730,6 +746,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEntPenBalcaoWms(String entPenBalcaoWms) {
+        markAsChanged("ENTPENBALCAOWMS", entPenBalcaoWms);
         this.entPenBalcaoWms = entPenBalcaoWms;
    }
 
@@ -738,6 +755,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFlex(String flex) {
+        markAsChanged("FLEX", flex);
         this.flex = flex;
    }
 
@@ -746,6 +764,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFragmentaEstWms(String fragmentaEstWms) {
+        markAsChanged("FRAGMENTAESTWMS", fragmentaEstWms);
         this.fragmentaEstWms = fragmentaEstWms;
    }
 
@@ -754,6 +773,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFrasEnfse(String frasEnfse) {
+        markAsChanged("FRASENFSE", frasEnfse);
         this.frasEnfse = frasEnfse;
    }
 
@@ -762,6 +782,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFreteSepConstransp(String freteSepConstransp) {
+        markAsChanged("FRETESEPCONSTRANSP", freteSepConstransp);
         this.freteSepConstransp = freteSepConstransp;
    }
 
@@ -770,6 +791,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFreteSepSemPre(String freteSepSemPre) {
+        markAsChanged("FRETESEPSEMPRE", freteSepSemPre);
         this.freteSepSemPre = freteSepSemPre;
    }
 
@@ -778,6 +800,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGeraGnre(String geraGnre) {
+        markAsChanged("GERAGNRE", geraGnre);
         this.geraGnre = geraGnre;
    }
 
@@ -786,6 +809,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerarLivros(String gerarLivros) {
+        markAsChanged("GERARLIVROS", gerarLivros);
         this.gerarLivros = gerarLivros;
    }
 
@@ -794,6 +818,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerarProdLivEnt(String gerarProdLivEnt) {
+        markAsChanged("GERARPRODLIVENT", gerarProdLivEnt);
         this.gerarProdLivEnt = gerarProdLivEnt;
    }
 
@@ -802,6 +827,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerarProdOrigKit(String gerarProdOrigKit) {
+        markAsChanged("GERARPRODORIGKIT", gerarProdOrigKit);
         this.gerarProdOrigKit = gerarProdOrigKit;
    }
 
@@ -810,6 +836,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerNotaEnt(String gerNotaEnt) {
+        markAsChanged("GERNOTAENT", gerNotaEnt);
         this.gerNotaEnt = gerNotaEnt;
    }
 
@@ -818,6 +845,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGravarObsNota(String gravarObsNota) {
+        markAsChanged("GRAVAROBSNOTA", gravarObsNota);
         this.gravarObsNota = gravarObsNota;
    }
 
@@ -826,6 +854,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGravarObsPadrao(String gravarObsPadrao) {
+        markAsChanged("GRAVAROBSPADRAO", gravarObsPadrao);
         this.gravarObsPadrao = gravarObsPadrao;
    }
 
@@ -834,6 +863,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGravarSerieNota(String gravarSerieNota) {
+        markAsChanged("GRAVARSERIENOTA", gravarSerieNota);
         this.gravarSerieNota = gravarSerieNota;
    }
 
@@ -842,6 +872,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpEtiqSepOc(String impEtiqSepOc) {
+        markAsChanged("IMPETIQSEPOC", impEtiqSepOc);
         this.impEtiqSepOc = impEtiqSepOc;
    }
 
@@ -850,6 +881,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpEtiqVolConf(String impEtiqVolConf) {
+        markAsChanged("IMPETIQVOLCONF", impEtiqVolConf);
         this.impEtiqVolConf = impEtiqVolConf;
    }
 
@@ -858,6 +890,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpEtqVol(BigDecimal impEtqVol) {
+        markAsChanged("IMPETQVOL", impEtqVol);
         this.impEtqVol = impEtqVol;
    }
 
@@ -866,6 +899,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpExped(String impExped) {
+        markAsChanged("IMPEXPED", impExped);
         this.impExped = impExped;
    }
 
@@ -874,6 +908,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIncentCult(String incentCult) {
+        markAsChanged("INCENTCULT", incentCult);
         this.incentCult = incentCult;
    }
 
@@ -882,6 +917,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIndEscrit(BigDecimal indEscrit) {
+        markAsChanged("INDESCRIT", indEscrit);
         this.indEscrit = indEscrit;
    }
 
@@ -890,6 +926,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIntegraWmsProd(String integraWmsProd) {
+        markAsChanged("INTEGRAWMSPROD", integraWmsProd);
         this.integraWmsProd = integraWmsProd;
    }
 
@@ -898,6 +935,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIpiIncIcms(String ipiIncIcms) {
+        markAsChanged("IPIINCICMS", ipiIncIcms);
         this.ipiIncIcms = ipiIncIcms;
    }
 
@@ -906,6 +944,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIpiNaoIncid(String ipiNaoIncid) {
+        markAsChanged("IPINAOINCID", ipiNaoIncid);
         this.ipiNaoIncid = ipiNaoIncid;
    }
 
@@ -914,6 +953,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setLayoutDanfe(String layoutDanfe) {
+        markAsChanged("LAYOUTDANFE", layoutDanfe);
         this.layoutDanfe = layoutDanfe;
    }
 
@@ -922,6 +962,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setLivro1Para1Tgfite(String livro1Para1Tgfite) {
+        markAsChanged("LIVRO1PARA1TGFITE", livro1Para1Tgfite);
         this.livro1Para1Tgfite = livro1Para1Tgfite;
    }
 
@@ -930,6 +971,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setLocalPad(BigDecimal localPad) {
+        markAsChanged("LOCALPAD", localPad);
         this.localPad = localPad;
    }
 
@@ -938,6 +980,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setLogoDanfe(String logoDanfe) {
+        markAsChanged("LOGODANFE", logoDanfe);
         this.logoDanfe = logoDanfe;
    }
 
@@ -946,6 +989,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMarcaNotRps(String marcaNotRps) {
+        markAsChanged("MARCANOTRPS", marcaNotRps);
         this.marcaNotRps = marcaNotRps;
    }
 
@@ -954,6 +998,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMaxCredIndeniz(BigDecimal maxCredIndeniz) {
+        markAsChanged("MAXCREDINDENIZ", maxCredIndeniz);
         this.maxCredIndeniz = maxCredIndeniz;
    }
 
@@ -962,6 +1007,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMaxDebIndeniz(BigDecimal maxDebIndeniz) {
+        markAsChanged("MAXDEBINDENIZ", maxDebIndeniz);
         this.maxDebIndeniz = maxDebIndeniz;
    }
 
@@ -970,6 +1016,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpMatrizNfse(BigDecimal codEmpMatrizNfse) {
+        markAsChanged("CODEMPMATRIZNFSE", codEmpMatrizNfse);
         this.codEmpMatrizNfse = codEmpMatrizNfse;
    }
 
@@ -978,6 +1025,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpOc(BigDecimal codEmpOc) {
+        markAsChanged("CODEMPOC", codEmpOc);
         this.codEmpOc = codEmpOc;
    }
 
@@ -986,6 +1034,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndAvaria(BigDecimal codEndAvaria) {
+        markAsChanged("CODENDAVARIA", codEndAvaria);
         this.codEndAvaria = codEndAvaria;
    }
 
@@ -994,6 +1043,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodLancBcoRec(BigDecimal codLancBcoRec) {
+        markAsChanged("CODLANCBCOREC", codLancBcoRec);
         this.codLancBcoRec = codLancBcoRec;
    }
 
@@ -1002,6 +1052,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodLocAlterc(BigDecimal codLocAlterc) {
+        markAsChanged("CODLOCALTERC", codLocAlterc);
         this.codLocAlterc = codLocAlterc;
    }
 
@@ -1010,6 +1061,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModDanfe(BigDecimal codModDanfe) {
+        markAsChanged("CODMODDANFE", codModDanfe);
         this.codModDanfe = codModDanfe;
    }
 
@@ -1018,6 +1070,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModDanfeContingencia(BigDecimal codModDanfeContingencia) {
+        markAsChanged("CODMODDANFECONTINGENCIA", codModDanfeContingencia);
         this.codModDanfeContingencia = codModDanfeContingencia;
    }
 
@@ -1026,6 +1079,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodParcCtb(BigDecimal codParcCtb) {
+        markAsChanged("CODPARCCTB", codParcCtb);
         this.codParcCtb = codParcCtb;
    }
 
@@ -1034,6 +1088,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -1042,6 +1097,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTabCalc(BigDecimal codTabCalc) {
+        markAsChanged("CODTABCALC", codTabCalc);
         this.codTabCalc = codTabCalc;
    }
 
@@ -1050,6 +1106,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTipOperaComp(BigDecimal codTipOperaComp) {
+        markAsChanged("CODTIPOPERACOMP", codTipOperaComp);
         this.codTipOperaComp = codTipOperaComp;
    }
 
@@ -1058,6 +1115,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib20Red(String codTrib20Red) {
+        markAsChanged("CODTRIB20RED", codTrib20Red);
         this.codTrib20Red = codTrib20Red;
    }
 
@@ -1066,6 +1124,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib30(String codTrib30) {
+        markAsChanged("CODTRIB30", codTrib30);
         this.codTrib30 = codTrib30;
    }
 
@@ -1074,6 +1133,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib40Isent(String codTrib40Isent) {
+        markAsChanged("CODTRIB40ISENT", codTrib40Isent);
         this.codTrib40Isent = codTrib40Isent;
    }
 
@@ -1082,6 +1142,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib41NaoTrib(String codTrib41NaoTrib) {
+        markAsChanged("CODTRIB41NAOTRIB", codTrib41NaoTrib);
         this.codTrib41NaoTrib = codTrib41NaoTrib;
    }
 
@@ -1090,6 +1151,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib50Susp(String codTrib50Susp) {
+        markAsChanged("CODTRIB50SUSP", codTrib50Susp);
         this.codTrib50Susp = codTrib50Susp;
    }
 
@@ -1098,6 +1160,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib51Dif(String codTrib51Dif) {
+        markAsChanged("CODTRIB51DIF", codTrib51Dif);
         this.codTrib51Dif = codTrib51Dif;
    }
 
@@ -1106,6 +1169,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib60StAnt(String codTrib60StAnt) {
+        markAsChanged("CODTRIB60STANT", codTrib60StAnt);
         this.codTrib60StAnt = codTrib60StAnt;
    }
 
@@ -1114,6 +1178,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib70RedSt(String codTrib70RedSt) {
+        markAsChanged("CODTRIB70REDST", codTrib70RedSt);
         this.codTrib70RedSt = codTrib70RedSt;
    }
 
@@ -1122,6 +1187,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib90Out(String codTrib90Out) {
+        markAsChanged("CODTRIB90OUT", codTrib90Out);
         this.codTrib90Out = codTrib90Out;
    }
 
@@ -1130,6 +1196,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCompIpi(String compIpi) {
+        markAsChanged("COMPIPI", compIpi);
         this.compIpi = compIpi;
    }
 
@@ -1138,6 +1205,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCompIpiSepIcm(String compIpiSepIcm) {
+        markAsChanged("COMPIPISEPICM", compIpiSepIcm);
         this.compIpiSepIcm = compIpiSepIcm;
    }
 
@@ -1146,6 +1214,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setComplItemNota(String complItemNota) {
+        markAsChanged("COMPLITEMNOTA", complItemNota);
         this.complItemNota = complItemNota;
    }
 
@@ -1154,6 +1223,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsEntrPendWms(String consEntrPendWms) {
+        markAsChanged("CONSENTRPENDWMS", consEntrPendWms);
         this.consEntrPendWms = consEntrPendWms;
    }
 
@@ -1162,6 +1232,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsOutrosImp(String consOutrosImp) {
+        markAsChanged("CONSOUTROSIMP", consOutrosImp);
         this.consOutrosImp = consOutrosImp;
    }
 
@@ -1170,6 +1241,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsVlrLiqNfse(String consVlrLiqNfse) {
+        markAsChanged("CONSVLRLIQNFSE", consVlrLiqNfse);
         this.consVlrLiqNfse = consVlrLiqNfse;
    }
 
@@ -1178,6 +1250,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setContingenciaNfe(String contingenciaNfe) {
+        markAsChanged("CONTINGENCIANFE", contingenciaNfe);
         this.contingenciaNfe = contingenciaNfe;
    }
 
@@ -1186,6 +1259,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCopiasDanfe(BigDecimal copiasDanfe) {
+        markAsChanged("COPIASDANFE", copiasDanfe);
         this.copiasDanfe = copiasDanfe;
    }
 
@@ -1194,6 +1268,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCopiasDanfeConting(BigDecimal copiasDanfeConting) {
+        markAsChanged("COPIASDANFECONTING", copiasDanfeConting);
         this.copiasDanfeConting = copiasDanfeConting;
    }
 
@@ -1202,6 +1277,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndDiverg(BigDecimal codEndDiverg) {
+        markAsChanged("CODENDDIVERG", codEndDiverg);
         this.codEndDiverg = codEndDiverg;
    }
 
@@ -1210,6 +1286,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndPerda(BigDecimal codEndPerda) {
+        markAsChanged("CODENDPERDA", codEndPerda);
         this.codEndPerda = codEndPerda;
    }
 
@@ -1218,6 +1295,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPartIcMeta(BigDecimal partIcMeta) {
+        markAsChanged("PARTICMETA", partIcMeta);
         this.partIcMeta = partIcMeta;
    }
 
@@ -1226,6 +1304,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCfFab(BigDecimal percCfFab) {
+        markAsChanged("PERCCFFAB", percCfFab);
         this.percCfFab = percCfFab;
    }
 
@@ -1234,6 +1313,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCfOutros(BigDecimal percCfOutros) {
+        markAsChanged("PERCCFOUTROS", percCfOutros);
         this.percCfOutros = percCfOutros;
    }
 
@@ -1242,6 +1322,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCfServico(BigDecimal percCfServico) {
+        markAsChanged("PERCCFSERVICO", percCfServico);
         this.percCfServico = percCfServico;
    }
 
@@ -1250,6 +1331,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCofins(BigDecimal percCofins) {
+        markAsChanged("PERCCOFINS", percCofins);
         this.percCofins = percCofins;
    }
 
@@ -1258,6 +1340,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCsl(BigDecimal percCsl) {
+        markAsChanged("PERCCSL", percCsl);
         this.percCsl = percCsl;
    }
 
@@ -1266,6 +1349,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercCusVar(BigDecimal percCusVar) {
+        markAsChanged("PERCCUSVAR", percCusVar);
         this.percCusVar = percCusVar;
    }
 
@@ -1274,6 +1358,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercMargem(BigDecimal percMargem) {
+        markAsChanged("PERCMARGEM", percMargem);
         this.percMargem = percMargem;
    }
 
@@ -1282,6 +1367,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercPis(BigDecimal percPis) {
+        markAsChanged("PERCPIS", percPis);
         this.percPis = percPis;
    }
 
@@ -1290,6 +1376,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPerfilEfd(String perfilEfd) {
+        markAsChanged("PERFILEFD", perfilEfd);
         this.perfilEfd = perfilEfd;
    }
 
@@ -1298,6 +1385,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPercProj(String percProj) {
+        markAsChanged("PERPROJ", percProj);
         this.percProj = percProj;
    }
 
@@ -1306,6 +1394,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProdEpe(String prodEpe) {
+        markAsChanged("PRODEPE", prodEpe);
         this.prodEpe = prodEpe;
    }
 
@@ -1314,6 +1403,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProjOnline(String projOnline) {
+        markAsChanged("PROJONLINE", projOnline);
         this.projOnline = projOnline;
    }
 
@@ -1322,6 +1412,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRastrEstoque(String rastrEstoque) {
+        markAsChanged("RASTRESTOQUE", rastrEstoque);
         this.rastrEstoque = rastrEstoque;
    }
 
@@ -1330,6 +1421,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setReabCorrecaoWms(String reabCorrecaoWms) {
+        markAsChanged("REABCORRECAOWMS", reabCorrecaoWms);
         this.reabCorrecaoWms = reabCorrecaoWms;
    }
 
@@ -1338,6 +1430,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRecMinTare(String recMinTare) {
+        markAsChanged("RECMINTARE", recMinTare);
         this.recMinTare = recMinTare;
    }
 
@@ -1346,6 +1439,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setReg54Seq997St(String reg54Seq997St) {
+        markAsChanged("REG54SEQ997ST", reg54Seq997St);
         this.reg54Seq997St = reg54Seq997St;
    }
 
@@ -1354,6 +1448,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRegimeEspTribIss(String regimeEspTribIss) {
+        markAsChanged("REGIMEESPTRIBISS", regimeEspTribIss);
         this.regimeEspTribIss = regimeEspTribIss;
    }
 
@@ -1362,6 +1457,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSaldoLivQuinz(String saldoLivQuinz) {
+        markAsChanged("SALDOLIVQUINZ", saldoLivQuinz);
         this.saldoLivQuinz = saldoLivQuinz;
    }
 
@@ -1370,6 +1466,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib61(String codTrib61) {
+        markAsChanged("CODTRIB61", codTrib61);
         this.codTrib61 = codTrib61;
    }
 
@@ -1378,6 +1475,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPrefixSerieNacional(String prefixSerieNacional) {
+        markAsChanged("PREFIXSERIENACIONAL", prefixSerieNacional);
         this.prefixSerieNacional = prefixSerieNacional;
    }
 
@@ -1386,6 +1484,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSaldoLivQuinzIpi(String saldoLivQuinzIpi) {
+        markAsChanged("SALDOLIVQUINZIPI", saldoLivQuinzIpi);
         this.saldoLivQuinzIpi = saldoLivQuinzIpi;
    }
 
@@ -1394,6 +1493,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSenhaNfse(String senhaNfse) {
+        markAsChanged("SENHANFSE", senhaNfse);
         this.senhaNfse = senhaNfse;
    }
 
@@ -1402,6 +1502,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSerieAcompCf(String serieAcompCf) {
+        markAsChanged("SERIEACOMPCF", serieAcompCf);
         this.serieAcompCf = serieAcompCf;
    }
 
@@ -1410,6 +1511,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSerieDevWms(String serieDevWms) {
+        markAsChanged("SERIEDEVWMS", serieDevWms);
         this.serieDevWms = serieDevWms;
    }
 
@@ -1418,6 +1520,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setStInclusa(String stInclusa) {
+        markAsChanged("STINCLUSA", stInclusa);
         this.stInclusa = stInclusa;
    }
 
@@ -1426,6 +1529,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTelContador(String telContador) {
+        markAsChanged("TELCONTADOR", telContador);
         this.telContador = telContador;
    }
 
@@ -1434,6 +1538,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTemCofins(String temCofins) {
+        markAsChanged("TEMCOFINS", temCofins);
         this.temCofins = temCofins;
    }
 
@@ -1442,6 +1547,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTemCssl(String temCssl) {
+        markAsChanged("TEMCSSL", temCssl);
         this.temCssl = temCssl;
    }
 
@@ -1450,6 +1556,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTemPis(String temPis) {
+        markAsChanged("TEMPIS", temPis);
         this.temPis = temPis;
    }
 
@@ -1458,6 +1565,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTemReaIcms(String temReaIcms) {
+        markAsChanged("TEMREAICMS", temReaIcms);
         this.temReaIcms = temReaIcms;
    }
 
@@ -1466,6 +1574,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoAtividade(BigDecimal tipoAtividade) {
+        markAsChanged("TIPOATIVIDADE", tipoAtividade);
         this.tipoAtividade = tipoAtividade;
    }
 
@@ -1474,6 +1583,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoAtividadePisCofins(BigDecimal tipoAtividadePisCofins) {
+        markAsChanged("TIPOATIVIDADEPISCOFINS", tipoAtividadePisCofins);
         this.tipoAtividadePisCofins = tipoAtividadePisCofins;
    }
 
@@ -1482,6 +1592,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoCorteWms(String tipoCorteWms) {
+        markAsChanged("TIPOCORTEWMS", tipoCorteWms);
         this.tipoCorteWms = tipoCorteWms;
    }
 
@@ -1490,6 +1601,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoDanfe(String tipoDanfe) {
+        markAsChanged("TIPODANFE", tipoDanfe);
         this.tipoDanfe = tipoDanfe;
    }
 
@@ -1498,6 +1610,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoEnvioNfe(String tipoEnvioNfe) {
+        markAsChanged("TIPOENVIONFE", tipoEnvioNfe);
         this.tipoEnvioNfe = tipoEnvioNfe;
    }
 
@@ -1506,6 +1619,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoImpressora(String tipoImpressora) {
+        markAsChanged("TIPOIMPRESSORA", tipoImpressora);
         this.tipoImpressora = tipoImpressora;
    }
 
@@ -1514,6 +1628,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTiraServLrContab(String tiraServLrContab) {
+        markAsChanged("TIRASERVLRCONTAB", tiraServLrContab);
         this.tiraServLrContab = tiraServLrContab;
    }
 
@@ -1522,6 +1637,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopDevolucaoWms(BigDecimal topDevolucaoWms) {
+        markAsChanged("TOPDEVOLUCAOWMS", topDevolucaoWms);
         this.topDevolucaoWms = topDevolucaoWms;
    }
 
@@ -1530,6 +1646,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopEntradaWms(BigDecimal topEntradaWms) {
+        markAsChanged("TOPENTRADAWMS", topEntradaWms);
         this.topEntradaWms = topEntradaWms;
    }
 
@@ -1538,6 +1655,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopEnvWmsAgrup(BigDecimal topEnvWmsAgrup) {
+        markAsChanged("TOPENVWMSAGRUP", topEnvWmsAgrup);
         this.topEnvWmsAgrup = topEnvWmsAgrup;
    }
 
@@ -1546,6 +1664,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpAssinante(BigDecimal tpAssinante) {
+        markAsChanged("TPASSINANTE", tpAssinante);
         this.tpAssinante = tpAssinante;
    }
 
@@ -1554,6 +1673,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpAssinanteInf(String tpAssinanteInf) {
+        markAsChanged("TPASSINANTEINF", tpAssinanteInf);
         this.tpAssinanteInf = tpAssinanteInf;
    }
 
@@ -1562,6 +1682,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpLigacao(BigDecimal tpLigacao) {
+        markAsChanged("TPLIGACAO", tpLigacao);
         this.tpLigacao = tpLigacao;
    }
 
@@ -1570,6 +1691,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpLigacaoInf(String tpLigacaoInf) {
+        markAsChanged("TPLIGACAOINF", tpLigacaoInf);
         this.tpLigacaoInf = tpLigacaoInf;
    }
 
@@ -1578,6 +1700,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTrabComIpi(String trabComIpi) {
+        markAsChanged("TRABCOMIPI", trabComIpi);
         this.trabComIpi = trabComIpi;
    }
 
@@ -1586,6 +1709,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTratarDifParc(String tratarDifParc) {
+        markAsChanged("TRATARDIFPARC", tratarDifParc);
         this.tratarDifParc = tratarDifParc;
    }
 
@@ -1594,6 +1718,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTratarTribut(String tratarTribut) {
+        markAsChanged("TRATARTRIBUT", tratarTribut);
         this.tratarTribut = tratarTribut;
    }
 
@@ -1602,6 +1727,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTratarTributDefEmp(String tratarTributDefEmp) {
+        markAsChanged("TRATARTRIBUTDEFEMP", tratarTributDefEmp);
         this.tratarTributDefEmp = tratarTributDefEmp;
    }
 
@@ -1610,6 +1736,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTratoCWms(String tratoCWms) {
+        markAsChanged("TRATOCWMS", tratoCWms);
         this.tratoCWms = tratoCWms;
    }
 
@@ -1618,6 +1745,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUfCrContador(String ufCrContador) {
+        markAsChanged("UFCRCCONTADOR", ufCrContador);
         this.ufCrContador = ufCrContador;
    }
 
@@ -1626,6 +1754,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltAutorPag(BigDecimal ultAutorPag) {
+        markAsChanged("ULTAUTORPAG", ultAutorPag);
         this.ultAutorPag = ultAutorPag;
    }
 
@@ -1634,6 +1763,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltDupl(BigDecimal ultDupl) {
+        markAsChanged("ULTDUPL", ultDupl);
         this.ultDupl = ultDupl;
    }
 
@@ -1642,6 +1772,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagCiapModc(BigDecimal ultPagCiapModc) {
+        markAsChanged("ULTPAGCIAPMODC", ultPagCiapModc);
         this.ultPagCiapModc = ultPagCiapModc;
    }
 
@@ -1650,6 +1781,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagLivEntrad(BigDecimal ultPagLivEntrad) {
+        markAsChanged("ULTPAGLIVENTRAD", ultPagLivEntrad);
         this.ultPagLivEntrad = ultPagLivEntrad;
    }
 
@@ -1658,6 +1790,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagLivIcms(BigDecimal ultPagLivIcms) {
+        markAsChanged("ULTPAGLIVICMS", ultPagLivIcms);
         this.ultPagLivIcms = ultPagLivIcms;
    }
 
@@ -1666,6 +1799,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagLivIpi(BigDecimal ultPagLivIpi) {
+        markAsChanged("ULTPAGLIVIPI", ultPagLivIpi);
         this.ultPagLivIpi = ultPagLivIpi;
    }
 
@@ -1674,6 +1808,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagLivIss(BigDecimal ultPagLivIss) {
+        markAsChanged("ULTPAGLIVISS", ultPagLivIss);
         this.ultPagLivIss = ultPagLivIss;
    }
 
@@ -1682,6 +1817,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltPagLivSaida(BigDecimal ultPagLivSaida) {
+        markAsChanged("ULTPAGLIVSAIDA", ultPagLivSaida);
         this.ultPagLivSaida = ultPagLivSaida;
    }
 
@@ -1690,6 +1826,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaMovVertWms(String usaMovVertWms) {
+        markAsChanged("USAMOVVERTWMS", usaMovVertWms);
         this.usaMovVertWms = usaMovVertWms;
    }
 
@@ -1698,6 +1835,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaTributItens(String usaTributItens) {
+        markAsChanged("USATRIBUTITENS", usaTributItens);
         this.usaTributItens = usaTributItens;
    }
 
@@ -1706,6 +1844,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsuarioNfse(String usuarioNfse) {
+        markAsChanged("USUARIONFSE", usuarioNfse);
         this.usuarioNfse = usuarioNfse;
    }
 
@@ -1714,6 +1853,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizaWms(String utilizaWms) {
+        markAsChanged("UTILIZAWMS", utilizaWms);
         this.utilizaWms = utilizaWms;
    }
 
@@ -1722,6 +1862,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoNfe(BigDecimal versaoNfe) {
+        markAsChanged("VERSAONFE", versaoNfe);
         this.versaoNfe = versaoNfe;
    }
 
@@ -1730,6 +1871,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrLiqItemNfe(String vlrLiqItemNfe) {
+        markAsChanged("VLRLIQITEMNFE", vlrLiqItemNfe);
         this.vlrLiqItemNfe = vlrLiqItemNfe;
    }
 
@@ -1738,6 +1880,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsCodEndGar(BigDecimal wmsCodEndGar) {
+        markAsChanged("WMSCODENDGAR", wmsCodEndGar);
         this.wmsCodEndGar = wmsCodEndGar;
    }
 
@@ -1746,6 +1889,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsLocalAjEst(BigDecimal wmsLocalAjEst) {
+        markAsChanged("WMSLOCALAJEST", wmsLocalAjEst);
         this.wmsLocalAjEst = wmsLocalAjEst;
    }
 
@@ -1754,6 +1898,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsUsaRegVolFat(String wmsUsaRegVolFat) {
+        markAsChanged("WMSUSAREGVOLFAT", wmsUsaRegVolFat);
         this.wmsUsaRegVolFat = wmsUsaRegVolFat;
    }
 
@@ -1762,6 +1907,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtInicioKardex(Timestamp dtInicioKardex) {
+        markAsChanged("DTINICIOKARDEX", dtInicioKardex);
         this.dtInicioKardex = dtInicioKardex;
    }
 
@@ -1770,6 +1916,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerLdPerTri(String gerLdPerTri) {
+        markAsChanged("GERLDPERTRI", gerLdPerTri);
         this.gerLdPerTri = gerLdPerTri;
    }
 
@@ -1778,6 +1925,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIcmsScttd(String icmsScttd) {
+        markAsChanged("ICMSSCTTD", icmsScttd);
         this.icmsScttd = icmsScttd;
    }
 
@@ -1786,6 +1934,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMaxNotasLoteNfe(BigDecimal maxNotasLoteNfe) {
+        markAsChanged("MAXNOTASLOTENFE", maxNotasLoteNfe);
         this.maxNotasLoteNfe = maxNotasLoteNfe;
    }
 
@@ -1794,6 +1943,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setModDupl(BigDecimal modDupl) {
+        markAsChanged("MODDUPL", modDupl);
         this.modDupl = modDupl;
    }
 
@@ -1802,6 +1952,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setModExped(BigDecimal modExped) {
+        markAsChanged("MODEXPED", modExped);
         this.modExped = modExped;
    }
 
@@ -1810,6 +1961,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNatPessoaJuridica(String natPessoaJuridica) {
+        markAsChanged("NATPESSOAJURIDICA", natPessoaJuridica);
         this.natPessoaJuridica = natPessoaJuridica;
    }
 
@@ -1818,6 +1970,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNfe(String nfe) {
+        markAsChanged("NFE", nfe);
         this.nfe = nfe;
    }
 
@@ -1826,6 +1979,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNfse(String nfse) {
+        markAsChanged("NFSE", nfse);
         this.nfse = nfse;
    }
 
@@ -1834,6 +1988,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNomeContador(String nomeContador) {
+        markAsChanged("NOMECONTADOR", nomeContador);
         this.nomeContador = nomeContador;
    }
 
@@ -1842,6 +1997,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCcm(String ccm) {
+        markAsChanged("CCM", ccm);
         this.ccm = ccm;
    }
 
@@ -1850,6 +2006,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAgrupaServFat(String agrupaServFat) {
+        markAsChanged("AGRUPASERVFAT", agrupaServFat);
         this.agrupaServFat = agrupaServFat;
    }
 
@@ -1858,6 +2015,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAltContador(String altContador) {
+        markAsChanged("ALTCONTADOR", altContador);
         this.altContador = altContador;
    }
 
@@ -1866,6 +2024,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setArqModBoleto(String arqModBoleto) {
+        markAsChanged("ARQMODBOLETO", arqModBoleto);
         this.arqModBoleto = arqModBoleto;
    }
 
@@ -1874,6 +2033,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaSaiPerdaWms(BigDecimal notaSaiPerdaWms) {
+        markAsChanged("NOTASAIPERDAWMS", notaSaiPerdaWms);
         this.notaSaiPerdaWms = notaSaiPerdaWms;
    }
 
@@ -1882,6 +2042,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -1890,6 +2051,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNuRfeCartaCorr(BigDecimal nuRfeCartaCorr) {
+        markAsChanged("NURFECARTACORR", nuRfeCartaCorr);
         this.nuRfeCartaCorr = nuRfeCartaCorr;
    }
 
@@ -1898,6 +2060,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcIss(String calcIss) {
+        markAsChanged("CALCISS", calcIss);
         this.calcIss = calcIss;
    }
 
@@ -1906,6 +2069,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcPercPis(BigDecimal calcPercPis) {
+        markAsChanged("CALPERCPIS", calcPercPis);
         this.calcPercPis = calcPercPis;
    }
 
@@ -1914,6 +2078,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -1922,6 +2087,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCenCusDesp(BigDecimal codCenCusDesp) {
+        markAsChanged("CODCENCUSDESP", codCenCusDesp);
         this.codCenCusDesp = codCenCusDesp;
    }
 
@@ -1930,6 +2096,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtabCoIpad(BigDecimal codCtabCoIpad) {
+        markAsChanged("CODCTABCOIPAD", codCtabCoIpad);
         this.codCtabCoIpad = codCtabCoIpad;
    }
 
@@ -1938,6 +2105,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtActb1(BigDecimal codCtActb1) {
+        markAsChanged("CODCTACTB_1", codCtActb1);
         this.codCtActb1 = codCtActb1;
    }
 
@@ -1946,6 +2114,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtActb2(BigDecimal codCtActb2) {
+        markAsChanged("CODCTACTB_2", codCtActb2);
         this.codCtActb2 = codCtActb2;
    }
 
@@ -1954,6 +2123,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtActb3(BigDecimal codCtActb3) {
+        markAsChanged("CODCTACTB_3", codCtActb3);
         this.codCtActb3 = codCtActb3;
    }
 
@@ -1962,6 +2132,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -1970,6 +2141,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpMatrizEfd(BigDecimal codEmpMatrizEfd) {
+        markAsChanged("CODEMPMATRIZEFD", codEmpMatrizEfd);
         this.codEmpMatrizEfd = codEmpMatrizEfd;
    }
 
@@ -1978,6 +2150,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndSobra(BigDecimal codEndSobra) {
+        markAsChanged("CODENDSOBRA", codEndSobra);
         this.codEndSobra = codEndSobra;
    }
 
@@ -1986,6 +2159,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndWms(BigDecimal codEndWms) {
+        markAsChanged("CODENDWMS", codEndWms);
         this.codEndWms = codEndWms;
    }
 
@@ -1994,6 +2168,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodFormPrec(BigDecimal codFormPrec) {
+        markAsChanged("CODFORMPREC", codFormPrec);
         this.codFormPrec = codFormPrec;
    }
 
@@ -2002,6 +2177,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodGrupoTensao(String codGrupoTensao) {
+        markAsChanged("CODGRUPOTENSAO", codGrupoTensao);
         this.codGrupoTensao = codGrupoTensao;
    }
 
@@ -2010,6 +2186,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaSaiAjustEst(BigDecimal notaSaiAjustEst) {
+        markAsChanged("NOTASAIAJUSTEST", notaSaiAjustEst);
         this.notaSaiAjustEst = notaSaiAjustEst;
    }
 
@@ -2018,6 +2195,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizaMde(String utilizaMde) {
+        markAsChanged("UTILIZAMDE", utilizaMde);
         this.utilizaMde = utilizaMde;
    }
 
@@ -2026,6 +2204,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -2034,6 +2213,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcFunRural(String calcFunRural) {
+        markAsChanged("CALCFUNRURAL", calcFunRural);
         this.calcFunRural = calcFunRural;
    }
 
@@ -2042,6 +2222,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcIcms(String calcIcms) {
+        markAsChanged("CALCICMS", calcIcms);
         this.calcIcms = calcIcms;
    }
 
@@ -2050,6 +2231,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcIrrf(String calcIrrf) {
+        markAsChanged("CALCIRRF", calcIrrf);
         this.calcIrrf = calcIrrf;
    }
 
@@ -2058,6 +2240,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaEntAjustEst(BigDecimal notaEntAjustEst) {
+        markAsChanged("NOTAENTAJUSTEST", notaEntAjustEst);
         this.notaEntAjustEst = notaEntAjustEst;
    }
 
@@ -2066,6 +2249,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaEntSobraWms(BigDecimal notaEntSobraWms) {
+        markAsChanged("NOTAENTSOBRAWMS", notaEntSobraWms);
         this.notaEntSobraWms = notaEntSobraWms;
    }
 
@@ -2074,6 +2258,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTrib53(String codTrib53) {
+        markAsChanged("CODTRIB53", codTrib53);
         this.codTrib53 = codTrib53;
    }
 
@@ -2082,6 +2267,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvRespContNfe(String envRespContNfe) {
+        markAsChanged("ENVRESPCONTNFE", envRespContNfe);
         this.envRespContNfe = envRespContNfe;
    }
 
@@ -2090,6 +2276,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpObsFinG4000(BigDecimal tpObsFinG4000) {
+        markAsChanged("TPOBSFING4000", tpObsFinG4000);
         this.tpObsFinG4000 = tpObsFinG4000;
    }
 
@@ -2098,6 +2285,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpObsNotaG4000(BigDecimal tpObsNotaG4000) {
+        markAsChanged("TPOBSNOTAG4000", tpObsNotaG4000);
         this.tpObsNotaG4000 = tpObsNotaG4000;
    }
 
@@ -2106,6 +2294,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerObsFinG4000(String gerObsFinG4000) {
+        markAsChanged("GEROBSFING4000", gerObsFinG4000);
         this.gerObsFinG4000 = gerObsFinG4000;
    }
 
@@ -2114,6 +2303,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodBcoIpi(BigDecimal codBcoIpi) {
+        markAsChanged("CODBCOIPI", codBcoIpi);
         this.codBcoIpi = codBcoIpi;
    }
 
@@ -2122,6 +2312,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipTransmNfse(String tipTransmNfse) {
+        markAsChanged("TIPTRANSMNFSE", tipTransmNfse);
         this.tipTransmNfse = tipTransmNfse;
    }
 
@@ -2130,6 +2321,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodParcNfce(BigDecimal codParcNfce) {
+        markAsChanged("CODPARCNFCE", codParcNfce);
         this.codParcNfce = codParcNfce;
    }
 
@@ -2138,6 +2330,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIncentFiscalIssqn(String incentFiscalIssqn) {
+        markAsChanged("INCENTFISCALISSQN", incentFiscalIssqn);
         this.incentFiscalIssqn = incentFiscalIssqn;
    }
 
@@ -2146,6 +2339,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSerieTopDifMenor(String serieTopDifMenor) {
+        markAsChanged("SERIETOPDIFMENOR", serieTopDifMenor);
         this.serieTopDifMenor = serieTopDifMenor;
    }
 
@@ -2154,6 +2348,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSerieTopDifMaior(String serieTopDifMaior) {
+        markAsChanged("SERIETOPDIFMAIOR", serieTopDifMaior);
         this.serieTopDifMaior = serieTopDifMaior;
    }
 
@@ -2162,6 +2357,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipIcmsTopEntSimNac(String tipIcmsTopEntSimNac) {
+        markAsChanged("TIPICMSTOPENTSIMNAC", tipIcmsTopEntSimNac);
         this.tipIcmsTopEntSimNac = tipIcmsTopEntSimNac;
    }
 
@@ -2170,6 +2366,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEnqIpiEnt(BigDecimal codEnqIpiEnt) {
+        markAsChanged("CODENQIPIENT", codEnqIpiEnt);
         this.codEnqIpiEnt = codEnqIpiEnt;
    }
 
@@ -2178,6 +2375,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -2186,6 +2384,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModNfceCompl(BigDecimal codModNfceCompl) {
+        markAsChanged("CODMODNFCECOMPL", codModNfceCompl);
         this.codModNfceCompl = codModNfceCompl;
    }
 
@@ -2194,6 +2393,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModNfceSimpl(BigDecimal codModNfceSimpl) {
+        markAsChanged("CODMODNFCESIMPL", codModNfceSimpl);
         this.codModNfceSimpl = codModNfceSimpl;
    }
 
@@ -2202,6 +2402,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodenqipisai(BigDecimal codenqipisai) {
+        markAsChanged("CODENQIPISAI", codenqipisai);
         this.codenqipisai = codenqipisai;
    }
 
@@ -2210,6 +2411,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopsaidadifpesowms(BigDecimal topsaidadifpesowms) {
+        markAsChanged("TOPSAIDADIFPESOWMS", topsaidadifpesowms);
         this.topsaidadifpesowms = topsaidadifpesowms;
    }
 
@@ -2218,6 +2420,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodtabalt(BigDecimal codtabalt) {
+        markAsChanged("CODTABALT", codtabalt);
         this.codtabalt = codtabalt;
    }
 
@@ -2226,6 +2429,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodsmtp(BigDecimal codsmtp) {
+        markAsChanged("CODSMTP", codsmtp);
         this.codsmtp = codsmtp;
    }
 
@@ -2234,6 +2438,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopentdifpesowms(BigDecimal topentdifpesowms) {
+        markAsChanged("TOPENTDIFPESOWMS", topentdifpesowms);
         this.topentdifpesowms = topentdifpesowms;
    }
 
@@ -2242,6 +2447,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodtipparc(BigDecimal codtipparc) {
+        markAsChanged("CODTIPPARC", codtipparc);
         this.codtipparc = codtipparc;
    }
 
@@ -2250,6 +2456,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCoragendado(BigDecimal coragendado) {
+        markAsChanged("CORAGENDADO", coragendado);
         this.coragendado = coragendado;
    }
 
@@ -2258,6 +2465,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCoratendido(BigDecimal coratendido) {
+        markAsChanged("CORATENDIDO", coratendido);
         this.coratendido = coratendido;
    }
 
@@ -2266,6 +2474,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCorbloqueado(BigDecimal corbloqueado) {
+        markAsChanged("CORBLOQUEADO", corbloqueado);
         this.corbloqueado = corbloqueado;
    }
 
@@ -2274,6 +2483,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCorencaixado(BigDecimal corencaixado) {
+        markAsChanged("CORENCAIXADO", corencaixado);
         this.corencaixado = corencaixado;
    }
 
@@ -2282,6 +2492,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCorfaturado(BigDecimal corfaturado) {
+        markAsChanged("CORFATURADO", corfaturado);
         this.corfaturado = corfaturado;
    }
 
@@ -2290,6 +2501,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCorfixado(BigDecimal corfixado) {
+        markAsChanged("CORFIXADO", corfixado);
         this.corfixado = corfixado;
    }
 
@@ -2298,6 +2510,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setHorafinal(BigDecimal horafinal) {
+        markAsChanged("HORAFINAL", horafinal);
         this.horafinal = horafinal;
    }
 
@@ -2306,6 +2519,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setHorainicial(BigDecimal horainicial) {
+        markAsChanged("HORAINICIAL", horainicial);
         this.horainicial = horainicial;
    }
 
@@ -2314,6 +2528,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIntervalo(BigDecimal intervalo) {
+        markAsChanged("INTERVALO", intervalo);
         this.intervalo = intervalo;
    }
 
@@ -2322,6 +2537,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotamodelodagenda(BigDecimal notamodelodagenda) {
+        markAsChanged("NOTAMODELODAGENDA", notamodelodagenda);
         this.notamodelodagenda = notamodelodagenda;
    }
 
@@ -2330,6 +2546,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQtdlimitemes(BigDecimal qtdlimitemes) {
+        markAsChanged("QTDLIMITEMES", qtdlimitemes);
         this.qtdlimitemes = qtdlimitemes;
    }
 
@@ -2338,6 +2555,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setValidacpfcnpj(String validacpfcnpj) {
+        markAsChanged("VALIDACPFCNPJ", validacpfcnpj);
         this.validacpfcnpj = validacpfcnpj;
    }
 
@@ -2346,6 +2564,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsusaeqipal(String wmsusaeqipal) {
+        markAsChanged("WMSUSAETIQPAL", wmsusaeqipal);
         this.wmsusaeqipal = wmsusaeqipal;
    }
 
@@ -2354,6 +2573,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerobsnotag4000(String gerobsnotag4000) {
+        markAsChanged("GEROBSNOTAG4000", gerobsnotag4000);
         this.gerobsnotag4000 = gerobsnotag4000;
    }
 
@@ -2362,6 +2582,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMargsegpcp(BigDecimal margsegpcp) {
+        markAsChanged("MARGSEGPCP", margsegpcp);
         this.margsegpcp = margsegpcp;
    }
 
@@ -2370,6 +2591,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSeqtokennfce(BigDecimal seqtokennfce) {
+        markAsChanged("SEQTOKENNFCE", seqtokennfce);
         this.seqtokennfce = seqtokennfce;
    }
 
@@ -2378,6 +2600,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTokennfce(String tokennfce) {
+        markAsChanged("TOKENNFCE", tokennfce);
         this.tokennfce = tokennfce;
    }
 
@@ -2386,6 +2609,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpambmdfe(String tpambmdfe) {
+        markAsChanged("TPAMBMDFE", tpambmdfe);
         this.tpambmdfe = tpambmdfe;
    }
 
@@ -2394,6 +2618,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrliqitemnfce(String vlrliqitemnfce) {
+        markAsChanged("VLRLIQITEMNFCE", vlrliqitemnfce);
         this.vlrliqitemnfce = vlrliqitemnfce;
    }
 
@@ -2402,6 +2627,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setChavedigitalagiliblue(String chavedigitalagiliblue) {
+        markAsChanged("CHAVEDIGITALAGILIBLUE", chavedigitalagiliblue);
         this.chavedigitalagiliblue = chavedigitalagiliblue;
    }
 
@@ -2410,6 +2636,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodusunfse(String codusunfse) {
+        markAsChanged("CODUSUNFSE", codusunfse);
         this.codusunfse = codusunfse;
    }
 
@@ -2418,6 +2645,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodcontrinfse(String codcontrinfse) {
+        markAsChanged("CODCONTRINFSE", codcontrinfse);
         this.codcontrinfse = codcontrinfse;
    }
 
@@ -2426,6 +2654,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTemdenuespont(String temdenuespont) {
+        markAsChanged("TEMDENUESPONT", temdenuespont);
         this.temdenuespont = temdenuespont;
    }
 
@@ -2434,6 +2663,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPrztolcannota(BigDecimal prztolcannota) {
+        markAsChanged("PRZTOLCANNOTA", prztolcannota);
         this.prztolcannota = prztolcannota;
    }
 
@@ -2442,6 +2672,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPrzregcannota(BigDecimal przregcannota) {
+        markAsChanged("PRZREGCANNOTA", przregcannota);
         this.przregcannota = przregcannota;
    }
 
@@ -2450,6 +2681,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSernatribbaseiss(String sernatribbaseiss) {
+        markAsChanged("SERNAOTRIBBASEISS", sernatribbaseiss);
         this.sernatribbaseiss = sernatribbaseiss;
    }
 
@@ -2458,6 +2690,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodendarmindef(BigDecimal codendarmindef) {
+        markAsChanged("CODENDARMINDEF", codendarmindef);
         this.codendarmindef = codendarmindef;
    }
 
@@ -2466,6 +2699,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCopiasdacte(BigDecimal copiasdacte) {
+        markAsChanged("COPIASDACTE", copiasdacte);
         this.copiasdacte = copiasdacte;
    }
 
@@ -2474,6 +2708,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpambcte(String tpambcte) {
+        markAsChanged("TPAMBCTE", tpambcte);
         this.tpambcte = tpambcte;
    }
 
@@ -2482,6 +2717,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodmoddacte(BigDecimal codmoddacte) {
+        markAsChanged("CODMODDACTE", codmoddacte);
         this.codmoddacte = codmoddacte;
    }
 
@@ -2490,6 +2726,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoenviocte(String tipoenviocte) {
+        markAsChanged("TIPOENVIOCTE", tipoenviocte);
         this.tipoenviocte = tipoenviocte;
    }
 
@@ -2498,6 +2735,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setContingenciacte(String contingenciacte) {
+        markAsChanged("CONTINGENCIACTE", contingenciacte);
         this.contingenciacte = contingenciacte;
    }
 
@@ -2506,6 +2744,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipodacte(String tipodacte) {
+        markAsChanged("TIPODACTE", tipodacte);
         this.tipodacte = tipodacte;
    }
 
@@ -2514,6 +2753,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setJobkeyndd(String jobkeyndd) {
+        markAsChanged("JOBKEYNDD", jobkeyndd);
         this.jobkeyndd = jobkeyndd;
    }
 
@@ -2522,6 +2762,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConectornfse(String conectornfse) {
+        markAsChanged("CONECTORNFSE", conectornfse);
         this.conectornfse = conectornfse;
    }
 
@@ -2530,6 +2771,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodctactbdesc(BigDecimal codctactbdesc) {
+        markAsChanged("CODCTACTBDESC", codctactbdesc);
         this.codctactbdesc = codctactbdesc;
    }
 
@@ -2538,6 +2780,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodctactbjuros(BigDecimal codctactbjuros) {
+        markAsChanged("CODCTACTBJUROS", codctactbjuros);
         this.codctactbjuros = codctactbjuros;
    }
 
@@ -2546,6 +2789,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodctactbmult(BigDecimal codctactbmult) {
+        markAsChanged("CODCTACTBMULT", codctactbmult);
         this.codctactbmult = codctactbmult;
    }
 
@@ -2554,6 +2798,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodendcrossdock(BigDecimal codendcrossdock) {
+        markAsChanged("CODENDCROSSDOCK", codendcrossdock);
         this.codendcrossdock = codendcrossdock;
    }
 
@@ -2562,6 +2807,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodtrib90creddeb(String codtrib90creddeb) {
+        markAsChanged("CODTRIB90CREDDEB", codtrib90creddeb);
         this.codtrib90creddeb = codtrib90creddeb;
    }
 
@@ -2570,6 +2816,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConicmsmajfcpint(String conicmsmajfcpint) {
+        markAsChanged("CONICMSMAJFCPINT", conicmsmajfcpint);
         this.conicmsmajfcpint = conicmsmajfcpint;
    }
 
@@ -2578,6 +2825,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsdevevtr2050(String consdevevtr2050) {
+        markAsChanged("CONSDEVEVTR2050", consdevevtr2050);
         this.consdevevtr2050 = consdevevtr2050;
    }
 
@@ -2586,6 +2834,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsidbenef(String considbenef) {
+        markAsChanged("CONSIDBENEF", considbenef);
         this.considbenef = considbenef;
    }
 
@@ -2594,6 +2843,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setContingencianfce(String contingencianfce) {
+        markAsChanged("CONTINGENCIANFCE", contingencianfce);
         this.contingencianfce = contingencianfce;
    }
 
@@ -2602,6 +2852,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCopiasdanfce(BigDecimal copiasdanfce) {
+        markAsChanged("COPIASDANFCE", copiasdanfce);
         this.copiasdanfce = copiasdanfce;
    }
 
@@ -2610,6 +2861,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDescredifciap(String descredifciap) {
+        markAsChanged("DESCREDDIFCIAP", descredifciap);
         this.descredifciap = descredifciap;
    }
 
@@ -2618,6 +2870,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDifaliqfcpint(String difaliqfcpint) {
+        markAsChanged("DIFALIQFCPINT", difaliqfcpint);
         this.difaliqfcpint = difaliqfcpint;
    }
 
@@ -2626,6 +2879,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmailnotfecreinf(String emailnotfecreinf) {
+        markAsChanged("EMAILNOTFECREINF", emailnotfecreinf);
         this.emailnotfecreinf = emailnotfecreinf;
    }
 
@@ -2634,6 +2888,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvemailconf(String envemailconf) {
+        markAsChanged("ENVEMAILCONF", envemailconf);
         this.envemailconf = envemailconf;
    }
 
@@ -2642,6 +2897,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnviosincronocte(String enviosincronocte) {
+        markAsChanged("ENVIOSINCRONOCTE", enviosincronocte);
         this.enviosincronocte = enviosincronocte;
    }
 
@@ -2650,6 +2906,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnviosincrononfce(String enviosincrononfce) {
+        markAsChanged("ENVIOSINCRONONFCE", enviosincrononfce);
         this.enviosincrononfce = enviosincrononfce;
    }
 
@@ -2658,6 +2915,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnviosincrononfe(String enviosincrononfe) {
+        markAsChanged("ENVIOSINCRONONFE", enviosincrononfe);
         this.enviosincrononfe = enviosincrononfe;
    }
 
@@ -2666,6 +2924,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerarretencao(BigDecimal gerarretencao) {
+        markAsChanged("GERARRETENCAO", gerarretencao);
         this.gerarretencao = gerarretencao;
    }
 
@@ -2674,6 +2933,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerartaxfinembnfe(String gerartaxfinembnfe) {
+        markAsChanged("GERARTAXFINEMBNFE", gerartaxfinembnfe);
         this.gerartaxfinembnfe = gerartaxfinembnfe;
    }
 
@@ -2682,6 +2942,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIgcertifsmtpxml(String igcertifsmtpxml) {
+        markAsChanged("IGCERTIFSMTPXML", igcertifsmtpxml);
         this.igcertifsmtpxml = igcertifsmtpxml;
    }
 
@@ -2690,6 +2951,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setInsxmlporimpsmtpxml(String insxmlporimpsmtpxml) {
+        markAsChanged("INSXMLPORIMPSMTPXML", insxmlporimpsmtpxml);
         this.insxmlporimpsmtpxml = insxmlporimpsmtpxml;
    }
 
@@ -2698,6 +2960,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIntconssmtpxml(BigDecimal intconssmtpxml) {
+        markAsChanged("INTCONSSMTPXML", intconssmtpxml);
         this.intconssmtpxml = intconssmtpxml;
    }
 
@@ -2706,6 +2969,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNfestantconsfinal(String nfestantconsfinal) {
+        markAsChanged("NFESTANTCONSFINAL", nfestantconsfinal);
         this.nfestantconsfinal = nfestantconsfinal;
    }
 
@@ -2714,6 +2978,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaentajustestcons(BigDecimal notaentajustestcons) {
+        markAsChanged("NOTAENTAJUSTESTCONS", notaentajustestcons);
         this.notaentajustestcons = notaentajustestcons;
    }
 
@@ -2722,6 +2987,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaentajustestcter(BigDecimal notaentajustestcter) {
+        markAsChanged("NOTAENTAJUSTESTCTER", notaentajustestcter);
         this.notaentajustestcter = notaentajustestcter;
    }
 
@@ -2730,6 +2996,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaentajustestdter(BigDecimal notaentajustestdter) {
+        markAsChanged("NOTAENTAJUSTESTDTER", notaentajustestdter);
         this.notaentajustestdter = notaentajustestdter;
    }
 
@@ -2738,6 +3005,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotasaiajustbem(BigDecimal notasaiajustbem) {
+        markAsChanged("NOTASAIAJUSTBEM", notasaiajustbem);
         this.notasaiajustbem = notasaiajustbem;
    }
 
@@ -2746,6 +3014,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotasaiajustestcons(BigDecimal notasaiajustestcons) {
+        markAsChanged("NOTASAIAJUSTESTCONS", notasaiajustestcons);
         this.notasaiajustestcons = notasaiajustestcons;
    }
 
@@ -2754,6 +3023,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotasaiajustestcter(BigDecimal notasaiajustestcter) {
+        markAsChanged("NOTASAIAJUSTESTCTER", notasaiajustestcter);
         this.notasaiajustestcter = notasaiajustestcter;
    }
 
@@ -2762,6 +3032,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotasaiajustestdter(BigDecimal notasaiajustestdter) {
+        markAsChanged("NOTASAIAJUSTESTDTER", notasaiajustestdter);
         this.notasaiajustestdter = notasaiajustestdter;
    }
 
@@ -2770,6 +3041,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNumdocr2020(String numdocr2020) {
+        markAsChanged("NUMDOCR2020", numdocr2020);
         this.numdocr2020 = numdocr2020;
    }
 
@@ -2778,6 +3050,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNunotademfx(BigDecimal nunotademfx) {
+        markAsChanged("NUNOTADEMFX", nunotademfx);
         this.nunotademfx = nunotademfx;
    }
 
@@ -2786,6 +3059,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNunotamodfx(BigDecimal nunotamodfx) {
+        markAsChanged("NUNOTAMODFX", nunotamodfx);
         this.nunotamodfx = nunotamodfx;
    }
 
@@ -2794,6 +3068,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNunotatrcfx(BigDecimal nunotatrcfx) {
+        markAsChanged("NUNOTATRCFX", nunotatrcfx);
         this.nunotatrcfx = nunotatrcfx;
    }
 
@@ -2802,6 +3077,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setOrigprodcomipi(String origprodcomipi) {
+        markAsChanged("ORIGPRODCOMIPI", origprodcomipi);
         this.origprodcomipi = origprodcomipi;
    }
 
@@ -2810,6 +3086,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPermoutroususepped(String permoutroususepped) {
+        markAsChanged("PERMOUTROUSUSEPPED", permoutroususepped);
         this.permoutroususepped = permoutroususepped;
    }
 
@@ -2818,6 +3095,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPortasmtpxml(BigDecimal portasmtpxml) {
+        markAsChanged("PORTASMTPXML", portasmtpxml);
         this.portasmtpxml = portasmtpxml;
    }
 
@@ -2826,6 +3104,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProgaquisalim(String progaquisalim) {
+        markAsChanged("PROGAQUISALIM", progaquisalim);
         this.progaquisalim = progaquisalim;
    }
 
@@ -2834,6 +3113,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProxexecsmtpxml(Timestamp proxexecsmtpxml) {
+        markAsChanged("PROXEXECSMTPXML", proxexecsmtpxml);
         this.proxexecsmtpxml = proxexecsmtpxml;
    }
 
@@ -2842,6 +3122,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQrcodenfceversao2(String qrcodenfceversao2) {
+        markAsChanged("QRCODENFCEVERSAO2", qrcodenfceversao2);
         this.qrcodenfceversao2 = qrcodenfceversao2;
    }
 
@@ -2850,6 +3131,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedissbcpisconf(String redissbcpisconf) {
+        markAsChanged("REDISSBCPISCONF", redissbcpisconf);
         this.redissbcpisconf = redissbcpisconf;
    }
 
@@ -2858,6 +3140,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedstcompbcpiscofins(String redstcompbcpiscofins) {
+        markAsChanged("REDSTCOMPBCPISCOFINS", redstcompbcpiscofins);
         this.redstcompbcpiscofins = redstcompbcpiscofins;
    }
 
@@ -2866,6 +3149,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSenhasmtpxml(String senhasmtpxml) {
+        markAsChanged("SENHASMTPXML", senhasmtpxml);
         this.senhasmtpxml = senhasmtpxml;
    }
 
@@ -2874,6 +3158,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setServidorsmtpxml(String servidorsmtpxml) {
+        markAsChanged("SERVIDORSMTPXML", servidorsmtpxml);
         this.servidorsmtpxml = servidorsmtpxml;
    }
 
@@ -2882,6 +3167,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSuprimiremaildest(String suprimiremaildest) {
+        markAsChanged("SUPRIMIREMAILDEST", suprimiremaildest);
         this.suprimiremaildest = suprimiremaildest;
    }
 
@@ -2890,6 +3176,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipconexsmtpxml(String tipconexsmtpxml) {
+        markAsChanged("TIPCONEXSMTPXML", tipconexsmtpxml);
         this.tipconexsmtpxml = tipconexsmtpxml;
    }
 
@@ -2898,6 +3185,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipdataevtserv(String tipdataevtserv) {
+        markAsChanged("TIPDATAEVTSERV", tipdataevtserv);
         this.tipdataevtserv = tipdataevtserv;
    }
 
@@ -2906,6 +3194,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipgerinfgveicgreb(String tipgerinfgveicgreb) {
+        markAsChanged("TIPGERINFGVEICGREB", tipgerinfgveicgreb);
         this.tipgerinfgveicgreb = tipgerinfgveicgreb;
    }
 
@@ -2914,6 +3203,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoenvionfce(String tipoenvionfce) {
+        markAsChanged("TIPOENVIONFCE", tipoenvionfce);
         this.tipoenvionfce = tipoenvionfce;
    }
 
@@ -2922,6 +3212,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltnsucte(String ultnsucte) {
+        markAsChanged("ULTNSUCTE", ultnsucte);
         this.ultnsucte = ultnsucte;
    }
 
@@ -2930,6 +3221,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsacodbarrasconcatwms(String usacodbarrasconcatwms) {
+        markAsChanged("USACODBARRASCONCATWMS", usacodbarrasconcatwms);
         this.usacodbarrasconcatwms = usacodbarrasconcatwms;
    }
 
@@ -2938,6 +3230,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsanomecomplitem(String usanomecomplitem) {
+        markAsChanged("USANOMECOMPLITEM", usanomecomplitem);
         this.usanomecomplitem = usanomecomplitem;
    }
 
@@ -2946,6 +3239,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsarecparcial(String usarecparcial) {
+        markAsChanged("USARECPARCIAL", usarecparcial);
         this.usarecparcial = usarecparcial;
    }
 
@@ -2954,6 +3248,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsasttextnotarestst(String usasttextnotarestst) {
+        markAsChanged("USASTEXTNOTARESTST", usasttextnotarestst);
         this.usasttextnotarestst = usasttextnotarestst;
    }
 
@@ -2962,6 +3257,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsuariosmtpxml(String usuariosmtpxml) {
+        markAsChanged("USUARIOSMTPXML", usuariosmtpxml);
         this.usuariosmtpxml = usuariosmtpxml;
    }
 
@@ -2970,6 +3266,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizadfetransp(String utilizadfetransp) {
+        markAsChanged("UTILIZADFETRANSP", utilizadfetransp);
         this.utilizadfetransp = utilizadfetransp;
    }
 
@@ -2978,6 +3275,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizaexplotesep(String utilizaexplotesep) {
+        markAsChanged("UTILIZAEXPLOTESEP", utilizaexplotesep);
         this.utilizaexplotesep = utilizaexplotesep;
    }
 
@@ -2986,6 +3284,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizaseppulmao(String utilizaseppulmao) {
+        markAsChanged("UTILIZASEPPULMAO", utilizaseppulmao);
         this.utilizaseppulmao = utilizaseppulmao;
    }
 
@@ -2994,6 +3293,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizatricrossdocking(String utilizatricrossdocking) {
+        markAsChanged("UTILIZATRICROSSDOCKING", utilizatricrossdocking);
         this.utilizatricrossdocking = utilizatricrossdocking;
    }
 
@@ -3002,6 +3302,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoNt(BigDecimal versaoNt) {
+        markAsChanged("VERSAONT", versaoNt);
         this.versaoNt = versaoNt;
    }
 
@@ -3010,6 +3311,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoNtCte(BigDecimal versaoNtCte) {
+        markAsChanged("VERSAONTCTE", versaoNtCte);
         this.versaoNtCte = versaoNtCte;
    }
 
@@ -3018,6 +3320,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoNtMdfe(BigDecimal versaoNtMdfe) {
+        markAsChanged("VERSAONTMDFE", versaoNtMdfe);
         this.versaoNtMdfe = versaoNtMdfe;
    }
 
@@ -3026,6 +3329,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsArmTotalCol(String wmsArmTotalCol) {
+        markAsChanged("WMSARMTOTALCOL", wmsArmTotalCol);
         this.wmsArmTotalCol = wmsArmTotalCol;
    }
 
@@ -3034,6 +3338,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsInfoPesoDetVol(String wmsInfoPesoDetVol) {
+        markAsChanged("WMSINFOPESODETVOL", wmsInfoPesoDetVol);
         this.wmsInfoPesoDetVol = wmsInfoPesoDetVol;
    }
 
@@ -3042,6 +3347,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsMultiUsuConf(String wmsMultiUsuConf) {
+        markAsChanged("WMSMULTIUSUCONF", wmsMultiUsuConf);
         this.wmsMultiUsuConf = wmsMultiUsuConf;
    }
 
@@ -3050,6 +3356,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsUsaImpFechaVol(String wmsUsaImpFechaVol) {
+        markAsChanged("WMSUSAIMPFECHAVOL", wmsUsaImpFechaVol);
         this.wmsUsaImpFechaVol = wmsUsaImpFechaVol;
    }
 
@@ -3058,6 +3365,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsUsaRegVolRec(String wmsUsaRegVolRec) {
+        markAsChanged("WMSUSAREGVOLREC", wmsUsaRegVolRec);
         this.wmsUsaRegVolRec = wmsUsaRegVolRec;
    }
 
@@ -3066,6 +3374,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAedFe(String aedFe) {
+        markAsChanged("AEDFE", aedFe);
         this.aedFe = aedFe;
    }
 
@@ -3074,6 +3383,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAtualCbEnefFat(String atualCbEnefFat) {
+        markAsChanged("ATUALCBENEFFAT", atualCbEnefFat);
         this.atualCbEnefFat = atualCbEnefFat;
    }
 
@@ -3082,6 +3392,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcIcmsStNaoCont(String calcIcmsStNaoCont) {
+        markAsChanged("CALCICMSSTNAOCONT", calcIcmsStNaoCont);
         this.calcIcmsStNaoCont = calcIcmsStNaoCont;
    }
 
@@ -3090,6 +3401,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTabCkc(BigDecimal codTabCkc) {
+        markAsChanged("CODTABCKC", codTabCkc);
         this.codTabCkc = codTabCkc;
    }
 
@@ -3098,6 +3410,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setReabCompleto(String reabCompleto) {
+        markAsChanged("REABCOMPLETO", reabCompleto);
         this.reabCompleto = reabCompleto;
    }
 
@@ -3106,6 +3419,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqCfBonif(BigDecimal aliqCfBonif) {
+        markAsChanged("ALIQCFBONIF", aliqCfBonif);
         this.aliqCfBonif = aliqCfBonif;
    }
 
@@ -3114,6 +3428,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqPisBonif(BigDecimal aliqPisBonif) {
+        markAsChanged("ALIQPISBONIF", aliqPisBonif);
         this.aliqPisBonif = aliqPisBonif;
    }
 
@@ -3122,6 +3437,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtaCtbBonif(BigDecimal codCtaCtbBonif) {
+        markAsChanged("CODCTACTBBONIF", codCtaCtbBonif);
         this.codCtaCtbBonif = codCtaCtbBonif;
    }
 
@@ -3130,6 +3446,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodStPisCfBonif(String codStPisCfBonif) {
+        markAsChanged("CODSTPISCFBONIF", codStPisCfBonif);
         this.codStPisCfBonif = codStPisCfBonif;
    }
 
@@ -3138,6 +3455,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMdfeDocSemIsProp(String mdfeDocSemIsProp) {
+        markAsChanged("MDFEDOCSEMISPROPRIA", mdfeDocSemIsProp);
         this.mdfeDocSemIsProp = mdfeDocSemIsProp;
    }
 
@@ -3146,6 +3464,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNuRfeCartaCorrCte(BigDecimal nuRfeCartaCorrCte) {
+        markAsChanged("NURFECARTACORRCTE", nuRfeCartaCorrCte);
         this.nuRfeCartaCorrCte = nuRfeCartaCorrCte;
    }
 
@@ -3154,6 +3473,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTribPisCfBonif(String tribPisCfBonif) {
+        markAsChanged("TRIBPISCFBONIF", tribPisCfBonif);
         this.tribPisCfBonif = tribPisCfBonif;
    }
 
@@ -3162,6 +3482,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerLivIcmsEmpSn(String gerLivIcmsEmpSn) {
+        markAsChanged("GERLIVICMSEMPSN", gerLivIcmsEmpSn);
         this.gerLivIcmsEmpSn = gerLivIcmsEmpSn;
    }
 
@@ -3170,6 +3491,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodForDifAliq(BigDecimal codForDifAliq) {
+        markAsChanged("CODFORDIFALIQ", codForDifAliq);
         this.codForDifAliq = codForDifAliq;
    }
 
@@ -3178,6 +3500,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi00(String defCstIpi00) {
+        markAsChanged("DEFCSTIPI00", defCstIpi00);
         this.defCstIpi00 = defCstIpi00;
    }
 
@@ -3186,6 +3509,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi01(String defCstIpi01) {
+        markAsChanged("DEFCSTIPI01", defCstIpi01);
         this.defCstIpi01 = defCstIpi01;
    }
 
@@ -3194,6 +3518,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi02(String defCstIpi02) {
+        markAsChanged("DEFCSTIPI02", defCstIpi02);
         this.defCstIpi02 = defCstIpi02;
    }
 
@@ -3202,6 +3527,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi03(String defCstIpi03) {
+        markAsChanged("DEFCSTIPI03", defCstIpi03);
         this.defCstIpi03 = defCstIpi03;
    }
 
@@ -3210,6 +3536,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi04(String defCstIpi04) {
+        markAsChanged("DEFCSTIPI04", defCstIpi04);
         this.defCstIpi04 = defCstIpi04;
    }
 
@@ -3218,6 +3545,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi05(String defCstIpi05) {
+        markAsChanged("DEFCSTIPI05", defCstIpi05);
         this.defCstIpi05 = defCstIpi05;
    }
 
@@ -3226,6 +3554,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi49(String defCstIpi49) {
+        markAsChanged("DEFCSTIPI49", defCstIpi49);
         this.defCstIpi49 = defCstIpi49;
    }
 
@@ -3234,6 +3563,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi50(String defCstIpi50) {
+        markAsChanged("DEFCSTIPI50", defCstIpi50);
         this.defCstIpi50 = defCstIpi50;
    }
 
@@ -3242,6 +3572,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi51(String defCstIpi51) {
+        markAsChanged("DEFCSTIPI51", defCstIpi51);
         this.defCstIpi51 = defCstIpi51;
    }
 
@@ -3250,6 +3581,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi52(String defCstIpi52) {
+        markAsChanged("DEFCSTIPI52", defCstIpi52);
         this.defCstIpi52 = defCstIpi52;
    }
 
@@ -3258,6 +3590,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi53(String defCstIpi53) {
+        markAsChanged("DEFCSTIPI53", defCstIpi53);
         this.defCstIpi53 = defCstIpi53;
    }
 
@@ -3266,6 +3599,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi54(String defCstIpi54) {
+        markAsChanged("DEFCSTIPI54", defCstIpi54);
         this.defCstIpi54 = defCstIpi54;
    }
 
@@ -3274,6 +3608,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi55(String defCstIpi55) {
+        markAsChanged("DEFCSTIPI55", defCstIpi55);
         this.defCstIpi55 = defCstIpi55;
    }
 
@@ -3282,6 +3617,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDefCstIpi99(String defCstIpi99) {
+        markAsChanged("DEFCSTIPI99", defCstIpi99);
         this.defCstIpi99 = defCstIpi99;
    }
 
@@ -3290,6 +3626,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIpiTributDefEmp(String ipiTributDefEmp) {
+        markAsChanged("IPITRIBUTDEFEMP", ipiTributDefEmp);
         this.ipiTributDefEmp = ipiTributDefEmp;
    }
 
@@ -3298,6 +3635,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEscritCompraEmissProp(String escritCompraEmissProp) {
+        markAsChanged("ESCRITCOMPRAEMISSPROP", escritCompraEmissProp);
         this.escritCompraEmissProp = escritCompraEmissProp;
    }
 
@@ -3306,6 +3644,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerNotaEntCanc(String gerNotaEntCanc) {
+        markAsChanged("GERNOTAENTCANC", gerNotaEntCanc);
         this.gerNotaEntCanc = gerNotaEntCanc;
    }
 
@@ -3314,6 +3653,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMetCalcDifIcms(String metCalcDifIcms) {
+        markAsChanged("METCALCDIFICMS", metCalcDifIcms);
         this.metCalcDifIcms = metCalcDifIcms;
    }
 
@@ -3322,6 +3662,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPesMaxSepaGru(BigDecimal pesMaxSepaGru) {
+        markAsChanged("PESMAXSEPAGRU", pesMaxSepaGru);
         this.pesMaxSepaGru = pesMaxSepaGru;
    }
 
@@ -3330,6 +3671,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaSepaGruProd(String usaSepaGruProd) {
+        markAsChanged("USASEPAGRUPROD", usaSepaGruProd);
         this.usaSepaGruProd = usaSepaGruProd;
    }
 
@@ -3338,6 +3680,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQtPedSepaGr(BigDecimal qtPedSepaGr) {
+        markAsChanged("QTPEDSEPAGR", qtPedSepaGr);
         this.qtPedSepaGr = qtPedSepaGr;
    }
 
@@ -3346,6 +3689,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQtCheckSep(BigDecimal qtCheckSep) {
+        markAsChanged("QTCHECKSEP", qtCheckSep);
         this.qtCheckSep = qtCheckSep;
    }
 
@@ -3354,6 +3698,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVolCheckSepRod(BigDecimal volCheckSepRod) {
+        markAsChanged("VOLCHECKSEPROD", volCheckSepRod);
         this.volCheckSepRod = volCheckSepRod;
    }
 
@@ -3362,6 +3707,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsRepIcmsBasePisCof(String consRepIcmsBasePisCof) {
+        markAsChanged("CONSREPICMSBASEPISCOF", consRepIcmsBasePisCof);
         this.consRepIcmsBasePisCof = consRepIcmsBasePisCof;
    }
 
@@ -3370,6 +3716,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqPisDesc(BigDecimal aliqPisDesc) {
+        markAsChanged("ALIQPISDESC", aliqPisDesc);
         this.aliqPisDesc = aliqPisDesc;
    }
 
@@ -3378,6 +3725,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqCfJuros(BigDecimal aliqCfJuros) {
+        markAsChanged("ALIQCFJUROS", aliqCfJuros);
         this.aliqCfJuros = aliqCfJuros;
    }
 
@@ -3386,6 +3734,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setLocalPadEConect(BigDecimal localPadEConect) {
+        markAsChanged("LOCALPADECONECT", localPadEConect);
         this.localPadEConect = localPadEConect;
    }
 
@@ -3394,6 +3743,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqCfDesc(BigDecimal aliqCfDesc) {
+        markAsChanged("ALIQCFDESC", aliqCfDesc);
         this.aliqCfDesc = aliqCfDesc;
    }
 
@@ -3402,6 +3752,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setJobMdEndDigital(String jobMdEndDigital) {
+        markAsChanged("JOBMDENDDIGITAL", jobMdEndDigital);
         this.jobMdEndDigital = jobMdEndDigital;
    }
 
@@ -3410,6 +3761,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodStPisCfDesc(String codStPisCfDesc) {
+        markAsChanged("CODSTPISCFDESC", codStPisCfDesc);
         this.codStPisCfDesc = codStPisCfDesc;
    }
 
@@ -3418,6 +3770,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodStPisCfJuros(String codStPisCfJuros) {
+        markAsChanged("CODSTPISCFJUROS", codStPisCfJuros);
         this.codStPisCfJuros = codStPisCfJuros;
    }
 
@@ -3426,6 +3779,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqPisJuros(BigDecimal aliqPisJuros) {
+        markAsChanged("ALIQPISJUROS", aliqPisJuros);
         this.aliqPisJuros = aliqPisJuros;
    }
 
@@ -3434,6 +3788,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTribPisCfDesc(String tribPisCfDesc) {
+        markAsChanged("TRIBPISCFDESC", tribPisCfDesc);
         this.tribPisCfDesc = tribPisCfDesc;
    }
 
@@ -3442,6 +3797,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTribPisCfJuros(String tribPisCfJuros) {
+        markAsChanged("TRIBPISCFJUROS", tribPisCfJuros);
         this.tribPisCfJuros = tribPisCfJuros;
    }
 
@@ -3450,6 +3806,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqPisMult(BigDecimal aliqPisMult) {
+        markAsChanged("ALIQPISMULT", aliqPisMult);
         this.aliqPisMult = aliqPisMult;
    }
 
@@ -3458,6 +3815,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqCfMult(BigDecimal aliqCfMult) {
+        markAsChanged("ALIQCFMULT", aliqCfMult);
         this.aliqCfMult = aliqCfMult;
    }
 
@@ -3466,6 +3824,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodStPisCfMult(String codStPisCfMult) {
+        markAsChanged("CODSTPISCFMULT", codStPisCfMult);
         this.codStPisCfMult = codStPisCfMult;
    }
 
@@ -3474,6 +3833,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTribPisCfMult(String tribPisCfMult) {
+        markAsChanged("TRIBPISCFMULT", tribPisCfMult);
         this.tribPisCfMult = tribPisCfMult;
    }
 
@@ -3482,6 +3842,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCertificadoPix(String certificadoPix) {
+        markAsChanged("CERTIFICADOPIX", certificadoPix);
         this.certificadoPix = certificadoPix;
    }
 
@@ -3490,6 +3851,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpCteEmisProp(String impCteEmisProp) {
+        markAsChanged("IMPCTEEMISPROP", impCteEmisProp);
         this.impCteEmisProp = impCteEmisProp;
    }
 
@@ -3498,6 +3860,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEndRetExp(BigDecimal codEndRetExp) {
+        markAsChanged("CODENDRETEXP", codEndRetExp);
         this.codEndRetExp = codEndRetExp;
    }
 
@@ -3506,6 +3869,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedIcmsBcPisConfins(String redIcmsBcPisConfins) {
+        markAsChanged("REDICMSBCPISCONFINS", redIcmsBcPisConfins);
         this.redIcmsBcPisConfins = redIcmsBcPisConfins;
    }
 
@@ -3514,6 +3878,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUltNsu(String ultNsu) {
+        markAsChanged("ULTNSU", ultNsu);
         this.ultNsu = ultNsu;
    }
 
@@ -3522,6 +3887,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaInfoAdConfPed(String usaInfoAdConfPed) {
+        markAsChanged("USAINFOADCONFPED", usaInfoAdConfPed);
         this.usaInfoAdConfPed = usaInfoAdConfPed;
    }
 
@@ -3530,6 +3896,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNfSeObsIterPs(BigDecimal nfSeObsIterPs) {
+        markAsChanged("NFSEOBSITERPS", nfSeObsIterPs);
         this.nfSeObsIterPs = nfSeObsIterPs;
    }
 
@@ -3538,6 +3905,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQtdCarNfSeObsIterPs(BigDecimal qtdCarNfSeObsIterPs) {
+        markAsChanged("QTDCARNFSEOBSITERPS", qtdCarNfSeObsIterPs);
         this.qtdCarNfSeObsIterPs = qtdCarNfSeObsIterPs;
    }
 
@@ -3546,6 +3914,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCaepf(String caepf) {
+        markAsChanged("CAEPF", caepf);
         this.caepf = caepf;
    }
 
@@ -3554,6 +3923,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCafir(String cafir) {
+        markAsChanged("CAFIR", cafir);
         this.cafir = cafir;
    }
 
@@ -3562,6 +3932,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerAlcdPr(String gerAlcdPr) {
+        markAsChanged("GERALCDPR", gerAlcdPr);
         this.gerAlcdPr = gerAlcdPr;
    }
 
@@ -3570,6 +3941,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoExploracao(String tipoExploracao) {
+        markAsChanged("TIPOEXPLORACAO", tipoExploracao);
         this.tipoExploracao = tipoExploracao;
    }
 
@@ -3578,6 +3950,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setBaixaFinPreEmissNfce(String baixaFinPreEmissNfce) {
+        markAsChanged("BAIXAFINPREEMISSNFCE", baixaFinPreEmissNfce);
         this.baixaFinPreEmissNfce = baixaFinPreEmissNfce;
    }
 
@@ -3586,6 +3959,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIcmsNormalDifIcmsSn(String icmsNormalDifIcmsSn) {
+        markAsChanged("ICMSNORMALDIFICMSSN", icmsNormalDifIcmsSn);
         this.icmsNormalDifIcmsSn = icmsNormalDifIcmsSn;
    }
 
@@ -3594,6 +3968,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFcpfResp(String dirFcpfResp) {
+        markAsChanged("DIRFCPFRESP", dirFcpfResp);
         this.dirFcpfResp = dirFcpfResp;
    }
 
@@ -3602,6 +3977,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFDepDecJud(String dirFDepDecJud) {
+        markAsChanged("DIRFDEPDECJUD", dirFDepDecJud);
         this.dirFDepDecJud = dirFDepDecJud;
    }
 
@@ -3610,6 +3986,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFDepFunInv(String dirFDepFunInv) {
+        markAsChanged("DIRFDEPFUNINV", dirFDepFunInv);
         this.dirFDepFunInv = dirFDepFunInv;
    }
 
@@ -3618,6 +3995,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFdhEvento(Timestamp dirFdhEvento) {
+        markAsChanged("DIRFDHEVENTO", dirFdhEvento);
         this.dirFdhEvento = dirFdhEvento;
    }
 
@@ -3626,6 +4004,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFEntImune(String dirFEntImune) {
+        markAsChanged("DIRFENTIMUNE", dirFEntImune);
         this.dirFEntImune = dirFEntImune;
    }
 
@@ -3634,6 +4013,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFNatDecl(String dirFNatDecl) {
+        markAsChanged("DIRFNATDECL", dirFNatDecl);
         this.dirFNatDecl = dirFNatDecl;
    }
 
@@ -3642,6 +4022,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFPgExt(String dirFPgExt) {
+        markAsChanged("DIRFPGEXT", dirFPgExt);
         this.dirFPgExt = dirFPgExt;
    }
 
@@ -3650,6 +4031,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFPgFundPub(String dirFPgFundPub) {
+        markAsChanged("DIRFPGFUNDPUB", dirFPgFundPub);
         this.dirFPgFundPub = dirFPgFundPub;
    }
 
@@ -3658,6 +4040,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFPlPriAss(String dirFPlPriAss) {
+        markAsChanged("DIRFPLPRIASS", dirFPlPriAss);
         this.dirFPlPriAss = dirFPlPriAss;
    }
 
@@ -3666,6 +4049,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFSitEsp(String dirFSitEsp) {
+        markAsChanged("DIRFSITESP", dirFSitEsp);
         this.dirFSitEsp = dirFSitEsp;
    }
 
@@ -3674,6 +4058,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDirFSocost(String dirFSocost) {
+        markAsChanged("DIRFSOCOST", dirFSocost);
         this.dirFSocost = dirFSocost;
    }
 
@@ -3682,6 +4067,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTempRemicaoEstadual(String tempRemicaoEstadual) {
+        markAsChanged("TEMPREMIACAOESTADUAL", tempRemicaoEstadual);
         this.tempRemicaoEstadual = tempRemicaoEstadual;
    }
 
@@ -3690,6 +4076,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodClassifEstab(BigDecimal codClassifEstab) {
+        markAsChanged("CODCLASSIFESTAB", codClassifEstab);
         this.codClassifEstab = codClassifEstab;
    }
 
@@ -3698,6 +4085,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedPisBcPisCofins(String redPisBcPisCofins) {
+        markAsChanged("REDPISBCPISCOFINS", redPisBcPisCofins);
         this.redPisBcPisCofins = redPisBcPisCofins;
    }
 
@@ -3706,6 +4094,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNuRfeProducao(BigDecimal nuRfeProducao) {
+        markAsChanged("NURFEPRODUCAO", nuRfeProducao);
         this.nuRfeProducao = nuRfeProducao;
    }
 
@@ -3714,6 +4103,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpressoraEtqSep(String impressoraEtqSep) {
+        markAsChanged("IMPRESSORAETQSEP", impressoraEtqSep);
         this.impressoraEtqSep = impressoraEtqSep;
    }
 
@@ -3722,6 +4112,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFiltroAliqIcmsSql(String filtroAliqIcmsSql) {
+        markAsChanged("FILTROALIQICMSSQL", filtroAliqIcmsSql);
         this.filtroAliqIcmsSql = filtroAliqIcmsSql;
    }
 
@@ -3730,6 +4121,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setClasConsAgua(String clasConsAgua) {
+        markAsChanged("CLASCONS_AGUA", clasConsAgua);
         this.clasConsAgua = clasConsAgua;
    }
 
@@ -3738,6 +4130,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setClasConsEnerg(String clasConsEnerg) {
+        markAsChanged("CLASCONS_ENERG", clasConsEnerg);
         this.clasConsEnerg = clasConsEnerg;
    }
 
@@ -3746,6 +4139,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setClasConsGas(String clasConsGas) {
+        markAsChanged("CLASCONS_GAS", clasConsGas);
         this.clasConsGas = clasConsGas;
    }
 
@@ -3754,6 +4148,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIdentEct(String identEct) {
+        markAsChanged("IDENTECT", identEct);
         this.identEct = identEct;
    }
 
@@ -3762,6 +4157,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsDocASepBalcao(String wmsDocASepBalcao) {
+        markAsChanged("WMSDOCASEPBALCAO", wmsDocASepBalcao);
         this.wmsDocASepBalcao = wmsDocASepBalcao;
    }
 
@@ -3770,6 +4166,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdh010(String efdh010) {
+        markAsChanged("EFDH010", efdh010);
         this.efdh010 = efdh010;
    }
 
@@ -3778,6 +4175,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdh010PrTer(String efdh010PrTer) {
+        markAsChanged("EFDH010_PRTER", efdh010PrTer);
         this.efdh010PrTer = efdh010PrTer;
    }
 
@@ -3786,6 +4184,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdh010Ter(String efdh010Ter) {
+        markAsChanged("EFDH010_TER", efdh010Ter);
         this.efdh010Ter = efdh010Ter;
    }
 
@@ -3794,6 +4193,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUtilizaExplote(String utilizaExplote) {
+        markAsChanged("UTILIZAEXPLOTE", utilizaExplote);
         this.utilizaExplote = utilizaExplote;
    }
 
@@ -3802,6 +4202,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodRelMinutaOdp(BigDecimal codRelMinutaOdp) {
+        markAsChanged("CODRELMINUTAODP", codRelMinutaOdp);
         this.codRelMinutaOdp = codRelMinutaOdp;
    }
 
@@ -3810,6 +4211,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSenhaEct(String senhaEct) {
+        markAsChanged("SENHAECT", senhaEct);
         this.senhaEct = senhaEct;
    }
 
@@ -3818,6 +4220,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtRefPreProdFictReinf(Timestamp dtRefPreProdFictReinf) {
+        markAsChanged("DTREFPREPRODFICTREINF", dtRefPreProdFictReinf);
         this.dtRefPreProdFictReinf = dtRefPreProdFictReinf;
    }
 
@@ -3826,6 +4229,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtRefPreProdReaisReinf(Timestamp dtRefPreProdReaisReinf) {
+        markAsChanged("DTREFPREPRODREAISREINF", dtRefPreProdReaisReinf);
         this.dtRefPreProdReaisReinf = dtRefPreProdReaisReinf;
    }
 
@@ -3834,6 +4238,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtRefProdReinf(Timestamp dtRefProdReinf) {
+        markAsChanged("DTREFPRODREINF", dtRefProdReinf);
         this.dtRefProdReinf = dtRefProdReinf;
    }
 
@@ -3842,6 +4247,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtValFinReinf(Timestamp dtValFinReinf) {
+        markAsChanged("DTVALFINREINF", dtValFinReinf);
         this.dtValFinReinf = dtValFinReinf;
    }
 
@@ -3850,6 +4256,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtValIniReinf(Timestamp dtValIniReinf) {
+        markAsChanged("DTVALINIREINF", dtValIniReinf);
         this.dtValIniReinf = dtValIniReinf;
    }
 
@@ -3858,6 +4265,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmpAdmPubDir(String empAdmPubDir) {
+        markAsChanged("EMPADMPUBDIR", empAdmPubDir);
         this.empAdmPubDir = empAdmPubDir;
    }
 
@@ -3866,6 +4274,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEntregaEcd(String entregaEcd) {
+        markAsChanged("ENTREGAECD", entregaEcd);
         this.entregaEcd = entregaEcd;
    }
 
@@ -3874,6 +4283,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIdentEctRastreio(String identEctRastreio) {
+        markAsChanged("IDENTECTRASTREIO", identEctRastreio);
         this.identEctRastreio = identEctRastreio;
    }
 
@@ -3882,6 +4292,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpNfeEmissProp(String impNfeEmissProp) {
+        markAsChanged("IMPNFEEMISSPROP", impNfeEmissProp);
         this.impNfeEmissProp = impNfeEmissProp;
    }
 
@@ -3890,6 +4301,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPartCanalVerde(String partCanalVerde) {
+        markAsChanged("PARTCANALVERDE", partCanalVerde);
         this.partCanalVerde = partCanalVerde;
    }
 
@@ -3898,6 +4310,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAmbienteReinf(BigDecimal ambienteReinf) {
+        markAsChanged("AMBIENTEREINF", ambienteReinf);
         this.ambienteReinf = ambienteReinf;
    }
 
@@ -3906,6 +4319,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCamConvPref(String camConvPref) {
+        markAsChanged("CAMCONVPREF", camConvPref);
         this.camConvPref = camConvPref;
    }
 
@@ -3914,6 +4328,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCnpjEfrVinc(String cnpjEfrVinc) {
+        markAsChanged("CNPJEFRVINC", cnpjEfrVinc);
         this.cnpjEfrVinc = cnpjEfrVinc;
    }
 
@@ -3922,6 +4337,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDesonerafolhaCprb(String desonerafolhaCprb) {
+        markAsChanged("DESONERAFOLHACPRB", desonerafolhaCprb);
         this.desonerafolhaCprb = desonerafolhaCprb;
    }
 
@@ -3930,6 +4346,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRespEntReinf(BigDecimal respEntReinf) {
+        markAsChanged("RESPENTREINF", respEntReinf);
         this.respEntReinf = respEntReinf;
    }
 
@@ -3938,6 +4355,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSenhaEctRastreio(String senhaEctRastreio) {
+        markAsChanged("SENHAECTRASTREIO", senhaEctRastreio);
         this.senhaEctRastreio = senhaEctRastreio;
    }
 
@@ -3946,6 +4364,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSitEmpReinf(BigDecimal sitEmpReinf) {
+        markAsChanged("SITEMPREINF", sitEmpReinf);
         this.sitEmpReinf = sitEmpReinf;
    }
 
@@ -3954,6 +4373,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipCtActbEfd(String tipCtActbEfd) {
+        markAsChanged("TIPCTACTBEFD", tipCtActbEfd);
         this.tipCtActbEfd = tipCtActbEfd;
    }
 
@@ -3962,6 +4382,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopCorBanEconect(BigDecimal topCorBanEconect) {
+        markAsChanged("TOPCORBANECONECT", topCorBanEconect);
         this.topCorBanEconect = topCorBanEconect;
    }
 
@@ -3970,6 +4391,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTribReinf(BigDecimal tribReinf) {
+        markAsChanged("TRIBREINF", tribReinf);
         this.tribReinf = tribReinf;
    }
 
@@ -3978,6 +4400,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoCte(BigDecimal versaoCte) {
+        markAsChanged("VERSAOCTE", versaoCte);
         this.versaoCte = versaoCte;
    }
 
@@ -3986,6 +4409,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVinculoEfr(String vinculoEfr) {
+        markAsChanged("VINCULOEFR", vinculoEfr);
         this.vinculoEfr = vinculoEfr;
    }
 
@@ -3994,6 +4418,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNroMaxProd(BigDecimal nroMaxProd) {
+        markAsChanged("NROMAXPROD", nroMaxProd);
         this.nroMaxProd = nroMaxProd;
    }
 
@@ -4002,6 +4427,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTpoEmpresa(BigDecimal tpoEmpresa) {
+        markAsChanged("TPOEMPRESA", tpoEmpresa);
         this.tpoEmpresa = tpoEmpresa;
    }
 
@@ -4010,6 +4436,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoMdfe(BigDecimal versaoMdfe) {
+        markAsChanged("VERSAOMDFE", versaoMdfe);
         this.versaoMdfe = versaoMdfe;
    }
 
@@ -4018,6 +4445,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTranspCarga(String transpCarga) {
+        markAsChanged("TRANSPCARGA", transpCarga);
         this.transpCarga = transpCarga;
    }
 
@@ -4026,6 +4454,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaDtValLotNfe(String usaDtValLotNfe) {
+        markAsChanged("USADTVALLOTNFE", usaDtValLotNfe);
         this.usaDtValLotNfe = usaDtValLotNfe;
    }
 
@@ -4034,6 +4463,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaDtFabLotNfe(String usaDtFabLotNfe) {
+        markAsChanged("USADTFABLOTNFE", usaDtFabLotNfe);
         this.usaDtFabLotNfe = usaDtFabLotNfe;
    }
 
@@ -4042,6 +4472,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setModEtqVol(BigDecimal modEtqVol) {
+        markAsChanged("MODETQVOL", modEtqVol);
         this.modEtqVol = modEtqVol;
    }
 
@@ -4050,6 +4481,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIgPermCompProds(String igPermCompProds) {
+        markAsChanged("IGPERMCOMPPRODS", igPermCompProds);
         this.igPermCompProds = igPermCompProds;
    }
 
@@ -4058,6 +4490,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setImpressoraEtqVol(String impressoraEtqVol) {
+        markAsChanged("IMPRESSORAETQVOL", impressoraEtqVol);
         this.impressoraEtqVol = impressoraEtqVol;
    }
 
@@ -4066,6 +4499,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setChaveAcessoNfse(String chaveAcessoNfse) {
+        markAsChanged("CHAVEACESSONFSE", chaveAcessoNfse);
         this.chaveAcessoNfse = chaveAcessoNfse;
    }
 
@@ -4074,6 +4508,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodLojaEconect(BigDecimal codLojaEconect) {
+        markAsChanged("CODLOJAECONECT", codLojaEconect);
         this.codLojaEconect = codLojaEconect;
    }
 
@@ -4082,6 +4517,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopRecargaCelEconect(BigDecimal topRecargaCelEconect) {
+        markAsChanged("TOPRECARGACELECONECT", topRecargaCelEconect);
         this.topRecargaCelEconect = topRecargaCelEconect;
    }
 
@@ -4090,6 +4526,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopNfceEconect(BigDecimal topNfceEconect) {
+        markAsChanged("TOPNFCEECONECT", topNfceEconect);
         this.topNfceEconect = topNfceEconect;
    }
 
@@ -4098,6 +4535,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopSatEconect(BigDecimal topSatEconect) {
+        markAsChanged("TOPSATECONECT", topSatEconect);
         this.topSatEconect = topSatEconect;
    }
 
@@ -4106,6 +4544,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsCodEndFlut(BigDecimal wmsCodEndFlut) {
+        markAsChanged("WMSCODENDFLUT", wmsCodEndFlut);
         this.wmsCodEndFlut = wmsCodEndFlut;
    }
 
@@ -4114,6 +4553,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaTrocoCheckout(String usaTrocoCheckout) {
+        markAsChanged("USATROCOCHECKOUT", usaTrocoCheckout);
         this.usaTrocoCheckout = usaTrocoCheckout;
    }
 
@@ -4122,6 +4562,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpOrigMovFin(BigDecimal codEmpOrigMovFin) {
+        markAsChanged("CODEMPORIGMOVFIN", codEmpOrigMovFin);
         this.codEmpOrigMovFin = codEmpOrigMovFin;
    }
 
@@ -4130,6 +4571,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcVencGnreApu(String calcVencGnreApu) {
+        markAsChanged("CALCVENCGNREAPU", calcVencGnreApu);
         this.calcVencGnreApu = calcVencGnreApu;
    }
 
@@ -4138,6 +4580,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerObsIpiRegEnt(String gerObsIpiRegEnt) {
+        markAsChanged("GEROBSIPIREGENT", gerObsIpiRegEnt);
         this.gerObsIpiRegEnt = gerObsIpiRegEnt;
    }
 
@@ -4146,6 +4589,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerCteCredPisCof(String gerCteCredPisCof) {
+        markAsChanged("GERCTECREDPISCOF", gerCteCredPisCof);
         this.gerCteCredPisCof = gerCteCredPisCof;
    }
 
@@ -4154,6 +4598,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGer0220UndForn(String ger0220UndForn) {
+        markAsChanged("GER0220UNDFORN", ger0220UndForn);
         this.ger0220UndForn = ger0220UndForn;
    }
 
@@ -4162,6 +4607,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerChaveRefSig(String gerChaveRefSig) {
+        markAsChanged("GERCHAVEREFSIG", gerChaveRefSig);
         this.gerChaveRefSig = gerChaveRefSig;
    }
 
@@ -4170,6 +4616,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProibDigConfEnt(String proibDigConfEnt) {
+        markAsChanged("PROIBDIGCONFENT", proibDigConfEnt);
         this.proibDigConfEnt = proibDigConfEnt;
    }
 
@@ -4178,6 +4625,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setQtdConfEntWms(BigDecimal qtdConfEntWms) {
+        markAsChanged("QTDCONFENTWMS", qtdConfEntWms);
         this.qtdConfEntWms = qtdConfEntWms;
    }
 
@@ -4186,6 +4634,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEmpCentralMovFin(String empCentralMovFin) {
+        markAsChanged("EMPCENTRALMOVFIN", empCentralMovFin);
         this.empCentralMovFin = empCentralMovFin;
    }
 
@@ -4194,6 +4643,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModEmailNfe(BigDecimal codModEmailNfe) {
+        markAsChanged("CODMODEMAILNFE", codModEmailNfe);
         this.codModEmailNfe = codModEmailNfe;
    }
 
@@ -4202,6 +4652,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModDanfeSimplifNfe(BigDecimal codModDanfeSimplifNfe) {
+        markAsChanged("CODMODDANFESIMPLIFNFE", codModDanfeSimplifNfe);
         this.codModDanfeSimplifNfe = codModDanfeSimplifNfe;
    }
 
@@ -4210,6 +4661,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerCiapCompEfd(String gerCiapCompEfd) {
+        markAsChanged("GERCIAPCOMPEFD", gerCiapCompEfd);
         this.gerCiapCompEfd = gerCiapCompEfd;
    }
 
@@ -4218,6 +4670,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setModEmailLibLim(BigDecimal modEmailLibLim) {
+        markAsChanged("MODEMAILLIBLIM", modEmailLibLim);
         this.modEmailLibLim = modEmailLibLim;
    }
 
@@ -4226,6 +4679,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTokenNfse(String tokenNfse) {
+        markAsChanged("TOKENNFSE", tokenNfse);
         this.tokenNfse = tokenNfse;
    }
 
@@ -4234,6 +4688,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodBco(BigDecimal efdCodBco) {
+        markAsChanged("EFDCODBCO", efdCodBco);
         this.efdCodBco = efdCodBco;
    }
 
@@ -4242,6 +4697,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodCenCus(BigDecimal efdCodCenCus) {
+        markAsChanged("EFDCODCENCUS", efdCodCenCus);
         this.efdCodCenCus = efdCodCenCus;
    }
 
@@ -4250,6 +4706,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodCtaBcoInt(BigDecimal efdCodCtaBcoInt) {
+        markAsChanged("EFDCODCTABCOINT", efdCodCtaBcoInt);
         this.efdCodCtaBcoInt = efdCodCtaBcoInt;
    }
 
@@ -4258,6 +4715,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodNatDespRecIcms(BigDecimal efdCodNatDespRecIcms) {
+        markAsChanged("EFDCODNATDESPRECICMS", efdCodNatDespRecIcms);
         this.efdCodNatDespRecIcms = efdCodNatDespRecIcms;
    }
 
@@ -4266,6 +4724,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodTipoPer(BigDecimal efdCodTipoPer) {
+        markAsChanged("EFDCODTIPOPER", efdCodTipoPer);
         this.efdCodTipoPer = efdCodTipoPer;
    }
 
@@ -4274,6 +4733,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdCodTipTit(BigDecimal efdCodTipTit) {
+        markAsChanged("EFDCODTIPTIT", efdCodTipTit);
         this.efdCodTipTit = efdCodTipTit;
    }
 
@@ -4282,6 +4742,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdDiaVenc(BigDecimal efdDiaVenc) {
+        markAsChanged("EFDDIAVENC", efdDiaVenc);
         this.efdDiaVenc = efdDiaVenc;
    }
 
@@ -4290,6 +4751,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEfdTipoReenchNota(String efdTipoReenchNota) {
+        markAsChanged("EFDTIPREENCHNOTA", efdTipoReenchNota);
         this.efdTipoReenchNota = efdTipoReenchNota;
    }
 
@@ -4298,6 +4760,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIntFinObricmsStRec(String intFinObricmsStRec) {
+        markAsChanged("INTFINOBRICMSSTREC", intFinObricmsStRec);
         this.intFinObricmsStRec = intFinObricmsStRec;
    }
 
@@ -4306,6 +4769,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsRastSerMed(String wmsRastSerMed) {
+        markAsChanged("WMSRASTSERMED", wmsRastSerMed);
         this.wmsRastSerMed = wmsRastSerMed;
    }
 
@@ -4314,6 +4778,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodRespRetC180(String codRespRetC180) {
+        markAsChanged("CODRESPRETC180", codRespRetC180);
         this.codRespRetC180 = codRespRetC180;
    }
 
@@ -4322,6 +4787,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrBaseStC180(String vlrBaseStC180) {
+        markAsChanged("VLRBASESTC180", vlrBaseStC180);
         this.vlrBaseStC180 = vlrBaseStC180;
    }
 
@@ -4330,6 +4796,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrStC180(String vlrStC180) {
+        markAsChanged("VLRSTC180", vlrStC180);
         this.vlrStC180 = vlrStC180;
    }
 
@@ -4338,6 +4805,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopSangSupri(BigDecimal topSangSupri) {
+        markAsChanged("TOPSANGSUPRI", topSangSupri);
         this.topSangSupri = topSangSupri;
    }
 
@@ -4346,6 +4814,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaVlrMedTransfEmp(String usaVlrMedTransfEmp) {
+        markAsChanged("USAVLRMEDTRANSFEMP", usaVlrMedTransfEmp);
         this.usaVlrMedTransfEmp = usaVlrMedTransfEmp;
    }
 
@@ -4354,6 +4823,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopDespesa(BigDecimal topDespesa) {
+        markAsChanged("TOPDESPESA", topDespesa);
         this.topDespesa = topDespesa;
    }
 
@@ -4362,6 +4832,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaIndPresTopFat(String usaIndPresTopFat) {
+        markAsChanged("USAINDPRESTOPFAT", usaIndPresTopFat);
         this.usaIndPresTopFat = usaIndPresTopFat;
    }
 
@@ -4370,6 +4841,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoImpKitFox(String tipoImpKitFox) {
+        markAsChanged("TIPOIMPKITFOX", tipoImpKitFox);
         this.tipoImpKitFox = tipoImpKitFox;
    }
 
@@ -4378,6 +4850,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setApiKeyPixCheckout(String apiKeyPixCheckout) {
+        markAsChanged("APIKEYPIXCHECKOUT", apiKeyPixCheckout);
         this.apiKeyPixCheckout = apiKeyPixCheckout;
    }
 
@@ -4386,6 +4859,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setBancoPixCheckout(BigDecimal bancoPixCheckout) {
+        markAsChanged("BANCOPIXCHECKOUT", bancoPixCheckout);
         this.bancoPixCheckout = bancoPixCheckout;
    }
 
@@ -4394,6 +4868,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setClientIdPixCheckout(String clientIdPixCheckout) {
+        markAsChanged("CLIENTIDPIXCHECKOUT", clientIdPixCheckout);
         this.clientIdPixCheckout = clientIdPixCheckout;
    }
 
@@ -4402,6 +4877,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setClientSecretPixCheckout(String clientSecretPixCheckout) {
+        markAsChanged("CLIENTSECRETPIXCHECKOUT", clientSecretPixCheckout);
         this.clientSecretPixCheckout = clientSecretPixCheckout;
    }
 
@@ -4410,6 +4886,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCstNRedIcmsBcPisCof(String cstNRedIcmsBcPisCof) {
+        markAsChanged("CSTNREDICMSBCPISCOF", cstNRedIcmsBcPisCof);
         this.cstNRedIcmsBcPisCof = cstNRedIcmsBcPisCof;
    }
 
@@ -4418,6 +4895,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsDevNfeReinf(String consDevNfeReinf) {
+        markAsChanged("CONSDEVNFEREINF", consDevNfeReinf);
         this.consDevNfeReinf = consDevNfeReinf;
    }
 
@@ -4426,6 +4904,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAmbienteGnre(String ambienteGnre) {
+        markAsChanged("AMBIENTEGNRE", ambienteGnre);
         this.ambienteGnre = ambienteGnre;
    }
 
@@ -4434,6 +4913,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpMatrizGnre(BigDecimal codEmpMatrizGnre) {
+        markAsChanged("CODEMPMATRIZGNRE", codEmpMatrizGnre);
         this.codEmpMatrizGnre = codEmpMatrizGnre;
    }
 
@@ -4442,6 +4922,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVersaoGnre(String versaoGnre) {
+        markAsChanged("VERSAOGNRE", versaoGnre);
         this.versaoGnre = versaoGnre;
    }
 
@@ -4450,6 +4931,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpGrupoFrete(BigDecimal codEmpGrupoFrete) {
+        markAsChanged("CODEMPGRUPFRETE", codEmpGrupoFrete);
         this.codEmpGrupoFrete = codEmpGrupoFrete;
    }
 
@@ -4458,6 +4940,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcFetHab(String calcFetHab) {
+        markAsChanged("CALCFETHAB", calcFetHab);
         this.calcFetHab = calcFetHab;
    }
 
@@ -4466,6 +4949,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setMsgInfAdicFetHab(String msgInfAdicFetHab) {
+        markAsChanged("MSGINFADICFETHAB", msgInfAdicFetHab);
         this.msgInfAdicFetHab = msgInfAdicFetHab;
    }
 
@@ -4474,6 +4958,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqFuntTel(BigDecimal aliqFuntTel) {
+        markAsChanged("ALIQFUNTTEL", aliqFuntTel);
         this.aliqFuntTel = aliqFuntTel;
    }
 
@@ -4482,6 +4967,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAliqFust(BigDecimal aliqFust) {
+        markAsChanged("ALIQFUST", aliqFust);
         this.aliqFust = aliqFust;
    }
 
@@ -4490,6 +4976,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setFisTel(String fisTel) {
+        markAsChanged("FISTEL", fisTel);
         this.fisTel = fisTel;
    }
 
@@ -4498,6 +4985,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrIcmsOpAnt(String vlrIcmsOpAnt) {
+        markAsChanged("VLRICMSOPANT", vlrIcmsOpAnt);
         this.vlrIcmsOpAnt = vlrIcmsOpAnt;
    }
 
@@ -4506,6 +4994,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrStFcpOpAnt(String vlrStFcpOpAnt) {
+        markAsChanged("VLRSTFCPOPANT", vlrStFcpOpAnt);
         this.vlrStFcpOpAnt = vlrStFcpOpAnt;
    }
 
@@ -4514,6 +5003,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrStOpAnt(String vlrStOpAnt) {
+        markAsChanged("VLRSTOPANT", vlrStOpAnt);
         this.vlrStOpAnt = vlrStOpAnt;
    }
 
@@ -4522,6 +5012,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrUnitIcmsOp(String vlrUnitIcmsOp) {
+        markAsChanged("VLRUNITICMSOP", vlrUnitIcmsOp);
         this.vlrUnitIcmsOp = vlrUnitIcmsOp;
    }
 
@@ -4530,6 +5021,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIniBereabMaxPicking(String iniBereabMaxPicking) {
+        markAsChanged("INIBEREABMAXPICKING", iniBereabMaxPicking);
         this.iniBereabMaxPicking = iniBereabMaxPicking;
    }
 
@@ -4538,6 +5030,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTratSobFinConf(String tratSobFinConf) {
+        markAsChanged("TRATSOBFINCONF", tratSobFinConf);
         this.tratSobFinConf = tratSobFinConf;
    }
 
@@ -4546,6 +5039,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConEstOrigProd(BigDecimal conEstOrigProd) {
+        markAsChanged("CONESTORIGPROD", conEstOrigProd);
         this.conEstOrigProd = conEstOrigProd;
    }
 
@@ -4554,6 +5048,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setVlrUnitMerc(String vlrUnitMerc) {
+        markAsChanged("VLRUNITMERC", vlrUnitMerc);
         this.vlrUnitMerc = vlrUnitMerc;
    }
 
@@ -4562,6 +5057,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedDifAlBcPisCof(String redDifAlBcPisCof) {
+        markAsChanged("REDDIFALBCPISCOF", redDifAlBcPisCof);
         this.redDifAlBcPisCof = redDifAlBcPisCof;
    }
 
@@ -4570,6 +5066,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEntAutTarMapa(String entAutTarMapa) {
+        markAsChanged("ENTAUTTARMAPA", entAutTarMapa);
         this.entAutTarMapa = entAutTarMapa;
    }
 
@@ -4578,6 +5075,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPriorCodNat(BigDecimal priorCodNat) {
+        markAsChanged("PRIORCODNAT", priorCodNat);
         this.priorCodNat = priorCodNat;
    }
 
@@ -4586,6 +5084,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvRespContCte(String envRespContCte) {
+        markAsChanged("ENVRESPCONTCTE", envRespContCte);
         this.envRespContCte = envRespContCte;
    }
 
@@ -4594,6 +5093,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsDevTerevTr2050(String consDevTerevTr2050) {
+        markAsChanged("CONSDEVTEREVTR2050", consDevTerevTr2050);
         this.consDevTerevTr2050 = consDevTerevTr2050;
    }
 
@@ -4602,6 +5102,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvInutNotaExc(String envInutNotaExc) {
+        markAsChanged("ENVINUTNOTAEXC", envInutNotaExc);
         this.envInutNotaExc = envInutNotaExc;
    }
 
@@ -4610,6 +5111,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setJusInutNotaExc(String jusInutNotaExc) {
+        markAsChanged("JUSINUTNOTAEXC", jusInutNotaExc);
         this.jusInutNotaExc = jusInutNotaExc;
    }
 
@@ -4618,6 +5120,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsDocArep(String wmsDocArep) {
+        markAsChanged("WMSDOCAREP", wmsDocArep);
         this.wmsDocArep = wmsDocArep;
    }
 
@@ -4626,6 +5129,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDeduzFcpBcPisCofins(String deduzFcpBcPisCofins) {
+        markAsChanged("DEDUZFCPBCPISCOFINS", deduzFcpBcPisCofins);
         this.deduzFcpBcPisCofins = deduzFcpBcPisCofins;
    }
 
@@ -4634,6 +5138,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSepPulParcial(String sepPulParcial) {
+        markAsChanged("SEPPULPARCIAL", sepPulParcial);
         this.sepPulParcial = sepPulParcial;
    }
 
@@ -4642,6 +5147,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setObtStAntMedEnt(String obtStAntMedEnt) {
+        markAsChanged("OBTSTANTMEDENT", obtStAntMedEnt);
         this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
@@ -4650,6 +5156,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcIcmsAt(String calcIcmsAt) {
+        markAsChanged("CALCICMSAT", calcIcmsAt);
         this.calcIcmsAt = calcIcmsAt;
    }
 
@@ -4658,6 +5165,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setProibEscCheckoutPed(String proibEscCheckoutPed) {
+        markAsChanged("PROIBESCCHECKOUTPED", proibEscCheckoutPed);
         this.proibEscCheckoutPed = proibEscCheckoutPed;
    }
 
@@ -4666,6 +5174,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNfeCanExtCanMes(String nfeCanExtCanMes) {
+        markAsChanged("NFECANEXTCANMES", nfeCanExtCanMes);
         this.nfeCanExtCanMes = nfeCanExtCanMes;
    }
 
@@ -4674,6 +5183,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvMdfSinc(String envMdfSinc) {
+        markAsChanged("ENVMDFSINC", envMdfSinc);
         this.envMdfSinc = envMdfSinc;
    }
 
@@ -4682,6 +5192,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setWmsPersEpProdAp(String wmsPersEpProdAp) {
+        markAsChanged("WMSPERSEPPRODAP", wmsPersEpProdAp);
         this.wmsPersEpProdAp = wmsPersEpProdAp;
    }
 
@@ -4690,6 +5201,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsidQtCarDesc(String considQtCarDesc) {
+        markAsChanged("CONSIDQTCARCDESC", considQtCarDesc);
         this.considQtCarDesc = considQtCarDesc;
    }
 
@@ -4698,6 +5210,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvLeiTranspDesc(String envLeiTranspDesc) {
+        markAsChanged("ENVLEITRANSPDESC", envLeiTranspDesc);
         this.envLeiTranspDesc = envLeiTranspDesc;
    }
 
@@ -4706,6 +5219,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvLeiTranspTotObs(String envLeiTranspTotObs) {
+        markAsChanged("ENVLEITRANSPTOTOBS", envLeiTranspTotObs);
         this.envLeiTranspTotObs = envLeiTranspTotObs;
    }
 
@@ -4714,6 +5228,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCgcProcurador(String cgcProcurador) {
+        markAsChanged("CGCPROCURADOR", cgcProcurador);
         this.cgcProcurador = cgcProcurador;
    }
 
@@ -4722,6 +5237,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIniBloqRegConf(String iniBloqRegConf) {
+        markAsChanged("INIBLOQREGCONF", iniBloqRegConf);
         this.iniBloqRegConf = iniBloqRegConf;
    }
 
@@ -4730,6 +5246,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setBlqNfaCompNfcPend(String blqNfaCompNfcPend) {
+        markAsChanged("BLQNFACOMPNFCPEND", blqNfaCompNfcPend);
         this.blqNfaCompNfcPend = blqNfaCompNfcPend;
    }
 
@@ -4738,6 +5255,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDifAliqDespAcess(String difAliqDespAcess) {
+        markAsChanged("DIFALIQDESPACESS", difAliqDespAcess);
         this.difAliqDespAcess = difAliqDespAcess;
    }
 
@@ -4746,6 +5264,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setComplRestituicaoIcmsSt(String complRestituicaoIcmsSt) {
+        markAsChanged("COMPLRESTITUICAOICMSST", complRestituicaoIcmsSt);
         this.complRestituicaoIcmsSt = complRestituicaoIcmsSt;
    }
 
@@ -4754,6 +5273,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcPisCfsFin(String calcPisCfsFin) {
+        markAsChanged("CALCPISCFSFIN", calcPisCfsFin);
         this.calcPisCfsFin = calcPisCfsFin;
    }
 
@@ -4762,6 +5282,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIsAliqIntSexC(String isAliqIntSexC) {
+        markAsChanged("ISALIQINTSEXC", isAliqIntSexC);
         this.isAliqIntSexC = isAliqIntSexC;
    }
 
@@ -4770,6 +5291,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipIcmsFenValBem(BigDecimal tipIcmsFenValBem) {
+        markAsChanged("TIPICMSFENVALBEM", tipIcmsFenValBem);
         this.tipIcmsFenValBem = tipIcmsFenValBem;
    }
 
@@ -4778,6 +5300,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setChavePixCheckout(String chavePixCheckout) {
+        markAsChanged("CHAVEPIXCHECKOUT", chavePixCheckout);
         this.chavePixCheckout = chavePixCheckout;
    }
 
@@ -4786,6 +5309,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUrlPixCheckout(String urlPixCheckout) {
+        markAsChanged("URLPIXCHECKOUT", urlPixCheckout);
         this.urlPixCheckout = urlPixCheckout;
    }
 
@@ -4794,6 +5318,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCalcVlrAquisBem(BigDecimal calcVlrAquisBem) {
+        markAsChanged("CALCVLRAQUISBEM", calcVlrAquisBem);
         this.calcVlrAquisBem = calcVlrAquisBem;
    }
 
@@ -4802,6 +5327,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIniBelote(String iniBelote) {
+        markAsChanged("INIBELOTE", iniBelote);
         this.iniBelote = iniBelote;
    }
 
@@ -4810,6 +5336,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setContBaiBemSubImprec(String contBaiBemSubImprec) {
+        markAsChanged("CONTBAIBEMSUBIMPREC", contBaiBemSubImprec);
         this.contBaiBemSubImprec = contBaiBemSubImprec;
    }
 
@@ -4818,6 +5345,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtaPixTef(BigDecimal codCtaPixTef) {
+        markAsChanged("CODCTAPIXTEF", codCtaPixTef);
         this.codCtaPixTef = codCtaPixTef;
    }
 
@@ -4826,6 +5354,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCredIcmsCombus(String credIcmsCombus) {
+        markAsChanged("CREDICMSCOMBUS", credIcmsCombus);
         this.credIcmsCombus = credIcmsCombus;
    }
 
@@ -4834,6 +5363,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCredIcmsRemg(String credIcmsRemg) {
+        markAsChanged("CREDICMSREMG", credIcmsRemg);
         this.credIcmsRemg = credIcmsRemg;
    }
 
@@ -4842,6 +5372,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -4850,6 +5381,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDescrNat(String descrNat) {
+        markAsChanged("DESCRNAT", descrNat);
         this.descrNat = descrNat;
    }
 
@@ -4858,6 +5390,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDesTipIdEvCom(String desTipIdEvCom) {
+        markAsChanged("DESTIPIDEVCOM", desTipIdEvCom);
         this.desTipIdEvCom = desTipIdEvCom;
    }
 
@@ -4866,6 +5399,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNatCanPix(BigDecimal natCanPix) {
+        markAsChanged("NATCANPIX", natCanPix);
         this.natCanPix = natCanPix;
    }
 
@@ -4874,6 +5408,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRupturaEst(String rupturaEst) {
+        markAsChanged("RUPTURAEST", rupturaEst);
         this.rupturaEst = rupturaEst;
    }
 
@@ -4882,6 +5417,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setSomarFcpBcCiap(String somarFcpBcCiap) {
+        markAsChanged("SOMARFCPBCCIAP", somarFcpBcCiap);
         this.somarFcpBcCiap = somarFcpBcCiap;
    }
 
@@ -4890,6 +5426,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipoPix(String tipoPix) {
+        markAsChanged("TIPOPIX", tipoPix);
         this.tipoPix = tipoPix;
    }
 
@@ -4898,6 +5435,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopCanPixFin(BigDecimal topCanPixFin) {
+        markAsChanged("TOPCANPIXFIN", topCanPixFin);
         this.topCanPixFin = topCanPixFin;
    }
 
@@ -4906,6 +5444,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopCanPixPag(BigDecimal topCanPixPag) {
+        markAsChanged("TOPCANPIXPAG", topCanPixPag);
         this.topCanPixPag = topCanPixPag;
    }
 
@@ -4914,6 +5453,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTopCanPixRec(BigDecimal topCanPixRec) {
+        markAsChanged("TOPCANPIXREC", topCanPixRec);
         this.topCanPixRec = topCanPixRec;
    }
 
@@ -4922,6 +5462,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaMedDiaImp(String usaMedDiaImp) {
+        markAsChanged("USAMEDDIAIMP", usaMedDiaImp);
         this.usaMedDiaImp = usaMedDiaImp;
    }
 
@@ -4930,6 +5471,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCenCusIpi(BigDecimal codCenCusIpi) {
+        markAsChanged("CODCENCUSIPI", codCenCusIpi);
         this.codCenCusIpi = codCenCusIpi;
    }
 
@@ -4938,6 +5480,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodCtaBcoIpi(BigDecimal codCtaBcoIpi) {
+        markAsChanged("CODCTABCOIPI", codCtaBcoIpi);
         this.codCtaBcoIpi = codCtaBcoIpi;
    }
 
@@ -4946,6 +5489,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodEmpImposto(BigDecimal codEmpImposto) {
+        markAsChanged("CODEMPIMPOSTO", codEmpImposto);
         this.codEmpImposto = codEmpImposto;
    }
 
@@ -4954,6 +5498,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodModRetEstWms(BigDecimal codModRetEstWms) {
+        markAsChanged("CODMODRETESTWMS", codModRetEstWms);
         this.codModRetEstWms = codModRetEstWms;
    }
 
@@ -4962,6 +5507,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodNatIpi(BigDecimal codNatIpi) {
+        markAsChanged("CODNATIPI", codNatIpi);
         this.codNatIpi = codNatIpi;
    }
 
@@ -4970,6 +5516,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodParCipi(BigDecimal codParCipi) {
+        markAsChanged("CODPARCIPI", codParCipi);
         this.codParCipi = codParCipi;
    }
 
@@ -4978,6 +5525,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodReceitaIpi(String codReceitaIpi) {
+        markAsChanged("CODRECEITAIPI", codReceitaIpi);
         this.codReceitaIpi = codReceitaIpi;
    }
 
@@ -4986,6 +5534,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodReceitaReinf(String codReceitaReinf) {
+        markAsChanged("CODRECEITAREINF", codReceitaReinf);
         this.codReceitaReinf = codReceitaReinf;
    }
 
@@ -4994,6 +5543,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTipoPerIpi(BigDecimal codTipoPerIpi) {
+        markAsChanged("CODTIPOPERIPI", codTipoPerIpi);
         this.codTipoPerIpi = codTipoPerIpi;
    }
 
@@ -5002,6 +5552,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCodTipTitIpi(BigDecimal codTipTitIpi) {
+        markAsChanged("CODTIPTITIPI", codTipTitIpi);
         this.codTipTitIpi = codTipTitIpi;
    }
 
@@ -5010,6 +5561,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setConsDifParCoutIcms(String consDifParCoutIcms) {
+        markAsChanged("CONSDIFPARCOUTICMS", consDifParCoutIcms);
         this.consDifParCoutIcms = consDifParCoutIcms;
    }
 
@@ -5018,6 +5570,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCtaCtbAnlRegApur(String ctaCtbAnlRegApur) {
+        markAsChanged("CTACTBANLREGAPUR", ctaCtbAnlRegApur);
         this.ctaCtbAnlRegApur = ctaCtbAnlRegApur;
    }
 
@@ -5026,6 +5579,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDesRestrFcpCst(String desRestrFcpCst) {
+        markAsChanged("DESRESTRFCPCST", desRestrFcpCst);
         this.desRestrFcpCst = desRestrFcpCst;
    }
 
@@ -5034,6 +5588,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDesRestrFcpStCst(String desRestrFcpStCst) {
+        markAsChanged("DESRESTRFCPSTCST", desRestrFcpStCst);
         this.desRestrFcpStCst = desRestrFcpStCst;
    }
 
@@ -5042,6 +5597,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDiaVencIpi(BigDecimal diaVencIpi) {
+        markAsChanged("DIAVENCIPI", diaVencIpi);
         this.diaVencIpi = diaVencIpi;
    }
 
@@ -5050,6 +5606,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtObito(Timestamp dtObito) {
+        markAsChanged("DTOBITO", dtObito);
         this.dtObito = dtObito;
    }
 
@@ -5058,6 +5615,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtOpJuros(String dtOpJuros) {
+        markAsChanged("DTOPJUROS", dtOpJuros);
         this.dtOpJuros = dtOpJuros;
    }
 
@@ -5066,6 +5624,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtOpMulta(String dtOpMulta) {
+        markAsChanged("DTOPMULTA", dtOpMulta);
         this.dtOpMulta = dtOpMulta;
    }
 
@@ -5074,6 +5633,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtRefPreProdReaisReinfG4000(Timestamp dtRefPreProdReaisReinfG4000) {
+        markAsChanged("DTREFPREPRODREAISREINFG4000", dtRefPreProdReaisReinfG4000);
         this.dtRefPreProdReaisReinfG4000 = dtRefPreProdReaisReinfG4000;
    }
 
@@ -5082,6 +5642,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtRefProdReinfG4000(Timestamp dtRefProdReinfG4000) {
+        markAsChanged("DTREFPRODREINFG4000", dtRefProdReinfG4000);
         this.dtRefProdReinfG4000 = dtRefProdReinfG4000;
    }
 
@@ -5090,6 +5651,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDtTransfFinsLucr(Timestamp dtTransfFinsLucr) {
+        markAsChanged("DTTRANSFFINSLUCR", dtTransfFinsLucr);
         this.dtTransfFinsLucr = dtTransfFinsLucr;
    }
 
@@ -5098,6 +5660,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEnvInfIssSomDevido(String envInfIssSomDevido) {
+        markAsChanged("ENVINFISSSOMDEVIDO", envInfIssSomDevido);
         this.envInfIssSomDevido = envInfIssSomDevido;
    }
 
@@ -5106,6 +5669,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setEstrNcredIcmsSt(String estrNcredIcmsSt) {
+        markAsChanged("ESTRNCREDICMSST", estrNcredIcmsSt);
         this.estrNcredIcmsSt = estrNcredIcmsSt;
    }
 
@@ -5114,6 +5678,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGerMultPlacRes(String gerMultPlacRes) {
+        markAsChanged("GERMULTPLACRES", gerMultPlacRes);
         this.gerMultPlacRes = gerMultPlacRes;
    }
 
@@ -5122,6 +5687,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIndTipoLayoutK010(BigDecimal indTipoLayoutK010) {
+        markAsChanged("INDTIPLAYOUTK010", indTipoLayoutK010);
         this.indTipoLayoutK010 = indTipoLayoutK010;
    }
 
@@ -5130,6 +5696,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIndUniao(BigDecimal indUniao) {
+        markAsChanged("INDUNIAO", indUniao);
         this.indUniao = indUniao;
    }
 
@@ -5138,6 +5705,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setIntegrarIpiFin(String integrarIpiFin) {
+        markAsChanged("INTEGRARIPIFIN", integrarIpiFin);
         this.integrarIpiFin = integrarIpiFin;
    }
 
@@ -5146,6 +5714,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setModEstCpaWms(BigDecimal modEstCpaWms) {
+        markAsChanged("MODESTCPAWMS", modEstCpaWms);
         this.modEstCpaWms = modEstCpaWms;
    }
 
@@ -5154,6 +5723,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaEntAjusteReclas(BigDecimal notaEntAjusteReclas) {
+        markAsChanged("NOTAENTAJUSTERECLAS", notaEntAjusteReclas);
         this.notaEntAjusteReclas = notaEntAjusteReclas;
    }
 
@@ -5162,6 +5732,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setNotaSaiAjusteReclas(BigDecimal notaSaiAjusteReclas) {
+        markAsChanged("NOTASAIAJUSTERECLAS", notaSaiAjusteReclas);
         this.notaSaiAjusteReclas = notaSaiAjusteReclas;
    }
 
@@ -5170,6 +5741,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setOrigDescontos(BigDecimal origDescontos) {
+        markAsChanged("ORIGDESCONTOS", origDescontos);
         this.origDescontos = origDescontos;
    }
 
@@ -5178,6 +5750,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRedStBcPisCofins(String redStBcPisCofins) {
+        markAsChanged("REDSTBCPISCOFINS", redStBcPisCofins);
         this.redStBcPisCofins = redStBcPisCofins;
    }
 
@@ -5186,6 +5759,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setStInclusA70(String stInclusA70) {
+        markAsChanged("STINCLUSA70", stInclusA70);
         this.stInclusA70 = stInclusA70;
    }
 
@@ -5194,6 +5768,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipCtaCtbEfdF(String tipCtaCtbEfdF) {
+        markAsChanged("TIPCTACTBEFDF", tipCtaCtbEfdF);
         this.tipCtaCtbEfdF = tipCtaCtbEfdF;
    }
 
@@ -5202,6 +5777,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipDataEvtPag(String tipDataEvtPag) {
+        markAsChanged("TIPDATAEVTPAG", tipDataEvtPag);
         this.tipDataEvtPag = tipDataEvtPag;
    }
 
@@ -5210,6 +5786,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTipDataEvtPagXir(String tipDataEvtPagXir) {
+        markAsChanged("TIPDATAEVTPAGXIR", tipDataEvtPagXir);
         this.tipDataEvtPagXir = tipDataEvtPagXir;
    }
 
@@ -5218,6 +5795,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTokenIbpt(String tokenIbpt) {
+        markAsChanged("TOKENIBPT", tokenIbpt);
         this.tokenIbpt = tokenIbpt;
    }
 
@@ -5226,6 +5804,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaCusMedIcmsPro(String usaCusMedIcmsPro) {
+        markAsChanged("USACUSMEDICMPRO", usaCusMedIcmsPro);
         this.usaCusMedIcmsPro = usaCusMedIcmsPro;
    }
 
@@ -5234,6 +5813,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setUsaCustoMedioMps(String usaCustoMedioMps) {
+        markAsChanged("USACUSTOMEDIOMPS", usaCustoMedioMps);
         this.usaCustoMedioMps = usaCustoMedioMps;
    }
 
@@ -5242,6 +5822,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDesApCProDepE(String desApCProDepE) {
+        markAsChanged("DESAPCPRODEPE", desApCProDepE);
         this.desApCProDepE = desApCProDepE;
    }
 
@@ -5250,6 +5831,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setRegApurTribSn(String regApurTribSn) {
+        markAsChanged("REGAPURTRIBSN", regApurTribSn);
         this.regApurTribSn = regApurTribSn;
    }
 
@@ -5258,6 +5840,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setStatus(BigDecimal status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -5266,6 +5849,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setGeraDeducaoPf(String geraDeducaoPf) {
+        markAsChanged("GERADEDUCAOPF", geraDeducaoPf);
         this.geraDeducaoPf = geraDeducaoPf;
    }
 
@@ -5274,6 +5858,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setCredIcmsCst60Am(String credIcmsCst60Am) {
+        markAsChanged("CREDICMSCST60AM", credIcmsCst60Am);
         this.credIcmsCst60Am = credIcmsCst60Am;
    }
 
@@ -5282,6 +5867,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setDenuncEspCte(String denuncEspCte) {
+        markAsChanged("DENUNCESPCTE", denuncEspCte);
         this.denuncEspCte = denuncEspCte;
    }
 
@@ -5290,6 +5876,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPrazoRCancCte(BigDecimal prazoRCancCte) {
+        markAsChanged("PRAZORCANCCTE", prazoRCancCte);
         this.prazoRCancCte = prazoRCancCte;
    }
 
@@ -5298,6 +5885,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setPrazoTCancCte(BigDecimal prazoTCancCte) {
+        markAsChanged("PRAZOTCANCCTE", prazoTCancCte);
         this.prazoTCancCte = prazoTCancCte;
    }
 
@@ -5306,6 +5894,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setTerAcpCte(String terAcpCte) {
+        markAsChanged("TERACPCTE", terAcpCte);
         this.terAcpCte = terAcpCte;
    }
 
@@ -5314,6 +5903,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
    }
 
    public void setAplCalcDifAliqFrt(String aplCalcDifAliqFrt) {
+        markAsChanged("APLCALCDIFALIQFRT", aplCalcDifAliqFrt);
         this.aplCalcDifAliqFrt = aplCalcDifAliqFrt;
    }
 
@@ -5329,6 +5919,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
 
    @Override
    public EmpresaFinanceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLancBcoPag = vo.asBigDecimal("CODLANCBCOPAG");
         this.corTeFaltaWms = vo.asString("CORTEFALTAWMS");
         this.cpfContador = vo.asString("CPFCONTADOR");

@@ -17,6 +17,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    }
 
    public void setCodEndFim(BigDecimal codEndFim) {
+        markAsChanged("CODENDFIM", codEndFim);
         this.codEndFim = codEndFim;
    }
 
@@ -25,6 +26,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -33,6 +35,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -41,6 +44,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    }
 
    public void setCodEndIni(BigDecimal codEndIni) {
+        markAsChanged("CODENDINI", codEndIni);
         this.codEndIni = codEndIni;
    }
 
@@ -49,6 +53,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
+        markAsChanged("CODAREACONF", codAreaConf);
         this.codAreaConf = codAreaConf;
    }
 
@@ -64,6 +69,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
 
    @Override
    public EnderecoAreaConf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEndFim = vo.asBigDecimal("CODENDFIM");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

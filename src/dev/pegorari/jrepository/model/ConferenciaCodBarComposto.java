@@ -18,6 +18,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setCodBarComp(String codBarComp) {
+        markAsChanged("CODBARCOMP", codBarComp);
         this.codBarComp = codBarComp;
    }
 
@@ -26,6 +27,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -34,6 +36,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -42,6 +45,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setSeqConf(BigDecimal seqConf) {
+        markAsChanged("SEQCONF", seqConf);
         this.seqConf = seqConf;
    }
 
@@ -50,6 +54,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -58,6 +63,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setSeqConf2(BigDecimal seqConf2) {
+        markAsChanged("SEQCONF2", seqConf2);
         this.seqConf2 = seqConf2;
    }
 
@@ -66,6 +72,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
    }
 
    public void setNuConf2(BigDecimal nuConf2) {
+        markAsChanged("NUCONF2", nuConf2);
         this.nuConf2 = nuConf2;
    }
 
@@ -81,6 +88,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
 
    @Override
    public ConferenciaCodBarComposto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarComp = vo.asString("CODBARCOMP");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.nuNota = vo.asBigDecimal("NUNOTA");

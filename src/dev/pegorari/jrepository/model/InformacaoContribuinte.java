@@ -48,6 +48,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setCnpjEfr(String cnpjEfr) {
+        markAsChanged("CNPJEFR", cnpjEfr);
         this.cnpjEfr = cnpjEfr;
    }
 
@@ -56,6 +57,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -64,6 +66,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -72,6 +75,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setCpfCtt(String cpfCtt) {
+        markAsChanged("CPFCTT", cpfCtt);
         this.cpfCtt = cpfCtt;
    }
 
@@ -80,6 +84,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -88,6 +93,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setEmailCtt(String emailCtt) {
+        markAsChanged("EMAILCTT", emailCtt);
         this.emailCtt = emailCtt;
    }
 
@@ -96,6 +102,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setFimValid(Timestamp fimValid) {
+        markAsChanged("FIMVALID", fimValid);
         this.fimValid = fimValid;
    }
 
@@ -104,6 +111,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setFoneCel(String foneCel) {
+        markAsChanged("FONECEL", foneCel);
         this.foneCel = foneCel;
    }
 
@@ -112,6 +120,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setFoneFixoCtt(String foneFixoCtt) {
+        markAsChanged("FONEFIXOCTT", foneFixoCtt);
         this.foneFixoCtt = foneFixoCtt;
    }
 
@@ -120,6 +129,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIdeEfr(String ideEfr) {
+        markAsChanged("IDEEFR", ideEfr);
         this.ideEfr = ideEfr;
    }
 
@@ -128,6 +138,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -136,6 +147,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIndAcordoIsenMulta(BigDecimal indAcordoIsenMulta) {
+        markAsChanged("INDACORDOISENMULTA", indAcordoIsenMulta);
         this.indAcordoIsenMulta = indAcordoIsenMulta;
    }
 
@@ -144,6 +156,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIndDesoneracao(BigDecimal indDesoneracao) {
+        markAsChanged("INDDESONERACAO", indDesoneracao);
         this.indDesoneracao = indDesoneracao;
    }
 
@@ -152,6 +165,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIndEscrituracao(BigDecimal indEscrituracao) {
+        markAsChanged("INDESCRITURACAO", indEscrituracao);
         this.indEscrituracao = indEscrituracao;
    }
 
@@ -160,6 +174,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIndSitPj(BigDecimal indSitPj) {
+        markAsChanged("INDSITPJ", indSitPj);
         this.indSitPj = indSitPj;
    }
 
@@ -168,6 +183,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIniValid(Timestamp iniValid) {
+        markAsChanged("INIVALID", iniValid);
         this.iniValid = iniValid;
    }
 
@@ -176,6 +192,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setNmCtt(String nmCtt) {
+        markAsChanged("NMCTT", nmCtt);
         this.nmCtt = nmCtt;
    }
 
@@ -184,6 +201,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -192,6 +210,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -200,6 +219,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -208,6 +228,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -216,6 +237,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -224,6 +246,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -232,6 +255,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -240,6 +264,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -248,6 +273,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -256,6 +282,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setClassTrib(BigDecimal classTrib) {
+        markAsChanged("CLASSTRIB", classTrib);
         this.classTrib = classTrib;
    }
 
@@ -264,6 +291,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -272,6 +300,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setFimValidNovo(Timestamp fimValidNovo) {
+        markAsChanged("FIMVALIDNOVO", fimValidNovo);
         this.fimValidNovo = fimValidNovo;
    }
 
@@ -280,6 +309,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIniValidNovo(Timestamp iniValidNovo) {
+        markAsChanged("INIVALIDNOVO", iniValidNovo);
         this.iniValidNovo = iniValidNovo;
    }
 
@@ -288,6 +318,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -296,6 +327,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -304,6 +336,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -312,6 +345,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setDtObito(Timestamp dtObito) {
+        markAsChanged("DTOBITO", dtObito);
         this.dtObito = dtObito;
    }
 
@@ -320,6 +354,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setDtTransfFinsLucr(Timestamp dtTransfFinsLucr) {
+        markAsChanged("DTTRANSFFINSLUCR", dtTransfFinsLucr);
         this.dtTransfFinsLucr = dtTransfFinsLucr;
    }
 
@@ -328,6 +363,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
    }
 
    public void setIndUniao(BigDecimal indUniao) {
+        markAsChanged("INDUNIAO", indUniao);
         this.indUniao = indUniao;
    }
 
@@ -343,6 +379,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
 
    @Override
    public InformacaoContribuinte fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cnpjEfr = vo.asString("CNPJEFR");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

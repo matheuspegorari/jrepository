@@ -34,6 +34,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -42,6 +43,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setCodDmt(String codDmt) {
+        markAsChanged("CODDMT", codDmt);
         this.codDmt = codDmt;
    }
 
@@ -50,6 +52,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -58,6 +61,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setCodTdm(BigDecimal codTdm) {
+        markAsChanged("CODTDM", codTdm);
         this.codTdm = codTdm;
    }
 
@@ -66,6 +70,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -74,6 +79,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setDescImagem(String descImagem) {
+        markAsChanged("DESCIMAGEM", descImagem);
         this.descImagem = descImagem;
    }
 
@@ -82,6 +88,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -90,6 +97,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setFormatDtImpr(BigDecimal formatDtImpr) {
+        markAsChanged("FORMATDTIMPR", formatDtImpr);
         this.formatDtImpr = formatDtImpr;
    }
 
@@ -98,6 +106,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setGeraNeColunasValor(String geraNeColunasValor) {
+        markAsChanged("GERANECOLUNASVALOR", geraNeColunasValor);
         this.geraNeColunasValor = geraNeColunasValor;
    }
 
@@ -106,6 +115,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setGeraAssinatura(String geraAssinatura) {
+        markAsChanged("GERASSINATURA", geraAssinatura);
         this.geraAssinatura = geraAssinatura;
    }
 
@@ -114,6 +124,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setImagem(String imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -122,6 +133,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setIndEntTit(String indEntTit) {
+        markAsChanged("INDENTTIT", indEntTit);
         this.indEntTit = indEntTit;
    }
 
@@ -130,6 +142,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -138,6 +151,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setNuDnePai(BigDecimal nuDnePai) {
+        markAsChanged("NUDNEPAI", nuDnePai);
         this.nuDnePai = nuDnePai;
    }
 
@@ -146,6 +160,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
+        markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
         this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
@@ -154,6 +169,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setPercentual(String percentual) {
+        markAsChanged("PERCENTUAL", percentual);
         this.percentual = percentual;
    }
 
@@ -162,6 +178,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setQuebraPagina(String quebraPagina) {
+        markAsChanged("QUEBRAPAGINA", quebraPagina);
         this.quebraPagina = quebraPagina;
    }
 
@@ -170,6 +187,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -178,6 +196,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setSimbolos(BigDecimal simbolos) {
+        markAsChanged("SIMBOLOS", simbolos);
         this.simbolos = simbolos;
    }
 
@@ -186,6 +205,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setTexto(char[] texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -194,6 +214,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -202,6 +223,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -217,6 +239,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
 
    @Override
    public DemonstrativosNotaExplicativa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codDmt = vo.asString("CODDMT");
         this.codTab = vo.asBigDecimal("CODTAB");

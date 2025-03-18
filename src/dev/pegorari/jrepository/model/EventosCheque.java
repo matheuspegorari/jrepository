@@ -18,6 +18,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -26,6 +27,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setDetalhe(char[] detalhe) {
+        markAsChanged("DETALHE", detalhe);
         this.detalhe = detalhe;
    }
 
@@ -34,6 +36,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setDhEvento(Timestamp dhEvento) {
+        markAsChanged("DHEVENTO", dhEvento);
         this.dhEvento = dhEvento;
    }
 
@@ -42,6 +45,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setNuChq(BigDecimal nuChq) {
+        markAsChanged("NUCHQ", nuChq);
         this.nuChq = nuChq;
    }
 
@@ -50,6 +54,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setNuEvento(BigDecimal nuEvento) {
+        markAsChanged("NUEVENTO", nuEvento);
         this.nuEvento = nuEvento;
    }
 
@@ -58,6 +63,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -73,6 +79,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
 
    @Override
    public EventosCheque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.detalhe = vo.asClob("DETALHE");
         this.dhEvento = vo.asTimestamp("DHEVENTO");

@@ -17,6 +17,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -25,6 +26,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -33,6 +35,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -41,6 +44,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setSeqVisita(BigDecimal seqVisita) {
+        markAsChanged("SEQVISITA", seqVisita);
         this.seqVisita = seqVisita;
    }
 
@@ -49,6 +53,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -57,6 +62,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -72,6 +78,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
 
    @Override
    public ControleEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codReg = vo.asBigDecimal("CODREG");
         this.codVend = vo.asBigDecimal("CODVEND");

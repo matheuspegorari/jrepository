@@ -17,6 +17,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    }
 
    public void setCodEquip(BigDecimal codEquip) {
+        markAsChanged("CODEQUIP", codEquip);
         this.codEquip = codEquip;
    }
 
@@ -25,6 +26,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    }
 
    public void setCodMotPar(BigDecimal codMotPar) {
+        markAsChanged("CODMOTPAR", codMotPar);
         this.codMotPar = codMotPar;
    }
 
@@ -33,6 +35,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    }
 
    public void setDhFim(Timestamp dhFim) {
+        markAsChanged("DHFIM", dhFim);
         this.dhFim = dhFim;
    }
 
@@ -41,6 +44,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    }
 
    public void setDhInicio(Timestamp dhInicio) {
+        markAsChanged("DHINICIO", dhInicio);
         this.dhInicio = dhInicio;
    }
 
@@ -49,6 +53,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -64,6 +69,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
 
    @Override
    public RegistroParadaEquipamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEquip = vo.asBigDecimal("CODEQUIP");
         this.codMotPar = vo.asBigDecimal("CODMOTPAR");
         this.dhFim = vo.asTimestamp("DHFIM");

@@ -29,6 +29,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -37,6 +38,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setCodTipOper(String codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -45,6 +47,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -53,6 +56,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -61,6 +65,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setNuPlan(BigDecimal nuPlan) {
+        markAsChanged("NUPLAN", nuPlan);
         this.nuPlan = nuPlan;
    }
 
@@ -69,6 +74,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -77,6 +83,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setTotalItens(BigDecimal totalItens) {
+        markAsChanged("TOTALITENS", totalItens);
         this.totalItens = totalItens;
    }
 
@@ -85,6 +92,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setDhAlterTop(Timestamp dhAlterTop) {
+        markAsChanged("DHALTERTOP", dhAlterTop);
         this.dhAlterTop = dhAlterTop;
    }
 
@@ -93,6 +101,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -101,6 +110,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setNumNotaOrig(BigDecimal numNotaOrig) {
+        markAsChanged("NUMNOTAORIG", numNotaOrig);
         this.numNotaOrig = numNotaOrig;
    }
 
@@ -109,6 +119,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setModEntrega(String modEntrega) {
+        markAsChanged("MODENTREGA", modEntrega);
         this.modEntrega = modEntrega;
    }
 
@@ -117,6 +128,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setNuNotaDest(BigDecimal nuNotaDest) {
+        markAsChanged("NUNOTADEST", nuNotaDest);
         this.nuNotaDest = nuNotaDest;
    }
 
@@ -125,6 +137,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -133,6 +146,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setCodParc(String codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -141,6 +155,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setTotalCestasContato(BigDecimal totalCestasContato) {
+        markAsChanged("TOTALCESTASCONTATO", totalCestasContato);
         this.totalCestasContato = totalCestasContato;
    }
 
@@ -149,6 +164,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setCodEmp(String codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -157,6 +173,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
    }
 
    public void setNumNotaDest(BigDecimal numNotaDest) {
+        markAsChanged("NUMNOTADEST", numNotaDest);
         this.numNotaDest = numNotaDest;
    }
 
@@ -172,6 +189,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
 
    @Override
    public PlanejamentoEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.situacao = vo.asString("SITUACAO");
         this.codTipOper = vo.asString("CODTIPOPER");
         this.codUsu = vo.asBigDecimal("CODUSU");

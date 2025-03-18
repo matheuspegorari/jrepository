@@ -18,6 +18,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setVlrCarga(BigDecimal vlrCarga) {
+        markAsChanged("VLRCARGA", vlrCarga);
         this.vlrCarga = vlrCarga;
    }
 
@@ -26,6 +27,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setSeqSeg(BigDecimal seqSeg) {
+        markAsChanged("SEQSEG", seqSeg);
         this.seqSeg = seqSeg;
    }
 
@@ -34,6 +36,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setNumApo(String numApo) {
+        markAsChanged("NUMAPO", numApo);
         this.numApo = numApo;
    }
 
@@ -42,6 +45,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -50,6 +54,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setRespSeg(String respSeg) {
+        markAsChanged("RESPSEG", respSeg);
         this.respSeg = respSeg;
    }
 
@@ -58,6 +63,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setNomeSeg(String nomeSeg) {
+        markAsChanged("NOMESEG", nomeSeg);
         this.nomeSeg = nomeSeg;
    }
 
@@ -66,6 +72,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    }
 
    public void setNumAve(String numAve) {
+        markAsChanged("NUMAVE", numAve);
         this.numAve = numAve;
    }
 
@@ -81,6 +88,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
 
    @Override
    public SeguroTransporte fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.vlrCarga = vo.asBigDecimal("VLRCARGA");
         this.seqSeg = vo.asBigDecimal("SEQSEG");
         this.numApo = vo.asString("NUMAPO");

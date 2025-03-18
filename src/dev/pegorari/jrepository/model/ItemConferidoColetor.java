@@ -25,6 +25,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -33,6 +34,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -41,6 +43,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setNumVol(BigDecimal numVol) {
+        markAsChanged("NUMVOL", numVol);
         this.numVol = numVol;
    }
 
@@ -49,6 +52,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setQtdAvaria(BigDecimal qtdAvaria) {
+        markAsChanged("QTDAVARIA", qtdAvaria);
         this.qtdAvaria = qtdAvaria;
    }
 
@@ -57,6 +61,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setQuantidade(BigDecimal quantidade) {
+        markAsChanged("QUANTIDADE", quantidade);
         this.quantidade = quantidade;
    }
 
@@ -65,6 +70,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -73,6 +79,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -81,6 +88,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -89,6 +97,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -97,6 +106,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setConfUsuFinal(String confUsuFinal) {
+        markAsChanged("CONFUSUFINAL", confUsuFinal);
         this.confUsuFinal = confUsuFinal;
    }
 
@@ -105,6 +115,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setQtdPecas(BigDecimal qtdPecas) {
+        markAsChanged("QTDPECAS", qtdPecas);
         this.qtdPecas = qtdPecas;
    }
 
@@ -113,6 +124,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setSeriesNcm(String seriesNcm) {
+        markAsChanged("SERIESNCM", seriesNcm);
         this.seriesNcm = seriesNcm;
    }
 
@@ -121,6 +133,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    }
 
    public void setTipoLeitura(String tipoLeitura) {
+        markAsChanged("TIPO_LEITURA", tipoLeitura);
         this.tipoLeitura = tipoLeitura;
    }
 
@@ -136,6 +149,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
 
    @Override
    public ItemConferidoColetor fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtVal = vo.asTimestamp("DTVAL");
         this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
         this.numVol = vo.asBigDecimal("NUMVOL");

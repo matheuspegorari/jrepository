@@ -12,6 +12,7 @@ public class PrevisaoVendasAgendamento extends AbstractSankhyaEntity<PrevisaoVen
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -27,6 +28,7 @@ public class PrevisaoVendasAgendamento extends AbstractSankhyaEntity<PrevisaoVen
 
    @Override
    public PrevisaoVendasAgendamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codExec = vo.asBigDecimal("CODEXEC");
         return this;
    }

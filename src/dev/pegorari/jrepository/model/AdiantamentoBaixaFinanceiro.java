@@ -17,6 +17,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -25,6 +26,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    }
 
    public void setDhMov(Timestamp dhMov) {
+        markAsChanged("DHMOV", dhMov);
         this.dhMov = dhMov;
    }
 
@@ -33,6 +35,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    }
 
    public void setNuAntecipa(BigDecimal nuAntecipa) {
+        markAsChanged("NUANTECIPA", nuAntecipa);
         this.nuAntecipa = nuAntecipa;
    }
 
@@ -41,6 +44,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -49,6 +53,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    }
 
    public void setVlrTaxa(BigDecimal vlrTaxa) {
+        markAsChanged("VLRTAXA", vlrTaxa);
         this.vlrTaxa = vlrTaxa;
    }
 
@@ -64,6 +69,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
 
    @Override
    public AdiantamentoBaixaFinanceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhMov = vo.asTimestamp("DHMOV");
         this.nuAntecipa = vo.asBigDecimal("NUANTECIPA");

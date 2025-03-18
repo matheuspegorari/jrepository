@@ -20,6 +20,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -28,6 +29,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setDhaloc(Timestamp dhaloc) {
+        markAsChanged("DHALOC", dhaloc);
         this.dhaloc = dhaloc;
    }
 
@@ -36,6 +38,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setIdiAtv(BigDecimal idiAtv) {
+        markAsChanged("IDIATV", idiAtv);
         this.idiAtv = idiAtv;
    }
 
@@ -44,6 +47,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setCodUsuLibAloc(BigDecimal codUsuLibAloc) {
+        markAsChanged("CODUSULIBALOC", codUsuLibAloc);
         this.codUsuLibAloc = codUsuLibAloc;
    }
 
@@ -52,6 +56,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setCodUsuAloc(BigDecimal codUsuAloc) {
+        markAsChanged("CODUSUALOC", codUsuAloc);
         this.codUsuAloc = codUsuAloc;
    }
 
@@ -60,6 +65,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setDhLibAloc(Timestamp dhLibAloc) {
+        markAsChanged("DHLIBALOC", dhLibAloc);
         this.dhLibAloc = dhLibAloc;
    }
 
@@ -68,6 +74,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -76,6 +83,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    }
 
    public void setDescrAtv(String descrAtv) {
+        markAsChanged("DESCRATV", descrAtv);
         this.descrAtv = descrAtv;
    }
 
@@ -91,6 +99,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
 
    @Override
    public HistoricoWorkCenterAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.dhaloc = vo.asTimestamp("DHALOC");
         this.idiAtv = vo.asBigDecimal("IDIATV");

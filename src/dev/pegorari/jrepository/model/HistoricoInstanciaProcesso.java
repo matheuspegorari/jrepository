@@ -21,6 +21,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setDhExecucao(Timestamp dhExecucao) {
+        markAsChanged("DHEXECUCAO", dhExecucao);
         this.dhExecucao = dhExecucao;
    }
 
@@ -29,6 +30,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setIdElemento(String idElemento) {
+        markAsChanged("IDELEMENTO", idElemento);
         this.idElemento = idElemento;
    }
 
@@ -37,6 +39,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setIdInstEle(BigDecimal idInstEle) {
+        markAsChanged("IDINSTELE", idInstEle);
         this.idInstEle = idInstEle;
    }
 
@@ -45,6 +48,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
+        markAsChanged("IDINSTPRN", idInstPrn);
         this.idInstPrn = idInstPrn;
    }
 
@@ -53,6 +57,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setResumo(String resumo) {
+        markAsChanged("RESUMO", resumo);
         this.resumo = resumo;
    }
 
@@ -61,6 +66,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -69,6 +75,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -77,6 +84,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setTempoExecucao(BigDecimal tempoExecucao) {
+        markAsChanged("TEMPOEXECUCAO", tempoExecucao);
         this.tempoExecucao = tempoExecucao;
    }
 
@@ -85,6 +93,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
 
    @Override
    public HistoricoInstanciaProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhExecucao = vo.asTimestamp("DHEXECUCAO");
         this.idElemento = vo.asString("IDELEMENTO");
         this.idInstEle = vo.asBigDecimal("IDINSTELE");

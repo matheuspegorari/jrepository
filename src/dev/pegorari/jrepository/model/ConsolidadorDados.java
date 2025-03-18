@@ -36,6 +36,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -44,6 +45,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setCodConsolidacao(BigDecimal codConsolidacao) {
+        markAsChanged("CODCONSOLIDACAO", codConsolidacao);
         this.codConsolidacao = codConsolidacao;
    }
 
@@ -52,6 +54,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -60,6 +63,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setConsulta(char[] consulta) {
+        markAsChanged("CONSULTA", consulta);
         this.consulta = consulta;
    }
 
@@ -68,6 +72,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setDataInicial(Timestamp dataInicial) {
+        markAsChanged("DATAINICIAL", dataInicial);
         this.dataInicial = dataInicial;
    }
 
@@ -76,6 +81,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -84,6 +90,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -92,6 +99,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setDhProxExec(Timestamp dhProxExec) {
+        markAsChanged("DHPROXEXEC", dhProxExec);
         this.dhProxExec = dhProxExec;
    }
 
@@ -100,6 +108,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setDhUltExec(Timestamp dhUltExec) {
+        markAsChanged("DHULTEXEC", dhUltExec);
         this.dhUltExec = dhUltExec;
    }
 
@@ -108,6 +117,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setExpGatilho(String expGatilho) {
+        markAsChanged("EXPGATILHO", expGatilho);
         this.expGatilho = expGatilho;
    }
 
@@ -116,6 +126,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setFonteDados(String fonteDados) {
+        markAsChanged("FONTEDADOS", fonteDados);
         this.fonteDados = fonteDados;
    }
 
@@ -124,6 +135,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setInvalido(String invalido) {
+        markAsChanged("INVALIDO", invalido);
         this.invalido = invalido;
    }
 
@@ -132,6 +144,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setLogErro(String logErro) {
+        markAsChanged("LOG_ERRO", logErro);
         this.logErro = logErro;
    }
 
@@ -140,6 +153,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -148,6 +162,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setQtdMesesConsolidar(BigDecimal qtdMesesConsolidar) {
+        markAsChanged("QTDMESESCONSOLIDAR", qtdMesesConsolidar);
         this.qtdMesesConsolidar = qtdMesesConsolidar;
    }
 
@@ -156,6 +171,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setQtdMesesRetroagir(BigDecimal qtdMesesRetroagir) {
+        markAsChanged("QTDMESESRETROAGIR", qtdMesesRetroagir);
         this.qtdMesesRetroagir = qtdMesesRetroagir;
    }
 
@@ -164,6 +180,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -172,6 +189,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -180,6 +198,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTempoProcessamento(BigDecimal tempoProcessamento) {
+        markAsChanged("TEMPOPROCESSAMENTO", tempoProcessamento);
         this.tempoProcessamento = tempoProcessamento;
    }
 
@@ -188,6 +207,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTipConsolidacao(BigDecimal tipConsolidacao) {
+        markAsChanged("TIPCONSOLIDACAO", tipConsolidacao);
         this.tipConsolidacao = tipConsolidacao;
    }
 
@@ -196,6 +216,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTipGatilho(String tipGatilho) {
+        markAsChanged("TIPGATILHO", tipGatilho);
         this.tipGatilho = tipGatilho;
    }
 
@@ -204,6 +225,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTipIntervalo(String tipIntervalo) {
+        markAsChanged("TIPINTERVALO", tipIntervalo);
         this.tipIntervalo = tipIntervalo;
    }
 
@@ -212,6 +234,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setTipProcessamento(String tipProcessamento) {
+        markAsChanged("TIPPROCESSAMENTO", tipProcessamento);
         this.tipProcessamento = tipProcessamento;
    }
 
@@ -220,6 +243,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    }
 
    public void setVlrIntervalo(BigDecimal vlrIntervalo) {
+        markAsChanged("VLRINTERVALO", vlrIntervalo);
         this.vlrIntervalo = vlrIntervalo;
    }
 
@@ -235,6 +259,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
 
    @Override
    public ConsolidadorDados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codConsolidacao = vo.asBigDecimal("CODCONSOLIDACAO");
         this.codUsu = vo.asBigDecimal("CODUSU");

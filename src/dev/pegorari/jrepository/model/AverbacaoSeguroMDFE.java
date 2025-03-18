@@ -15,6 +15,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
    }
 
    public void setNuAverb(String nuAverb) {
+        markAsChanged("NUMAVERB", nuAverb);
         this.nuAverb = nuAverb;
    }
 
@@ -23,6 +24,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -31,6 +33,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
    }
 
    public void setNumApOlice(String numApOlice) {
+        markAsChanged("NUMAPOLICE", numApOlice);
         this.numApOlice = numApOlice;
    }
 
@@ -39,6 +42,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -54,6 +58,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
 
    @Override
    public AverbacaoSeguroMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuAverb = vo.asString("NUMAVERB");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.numApOlice = vo.asString("NUMAPOLICE");

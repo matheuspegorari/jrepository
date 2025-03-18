@@ -25,6 +25,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setCodCpm(BigDecimal codCpm) {
+        markAsChanged("CODCPM", codCpm);
         this.codCpm = codCpm;
    }
 
@@ -33,6 +34,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -41,6 +43,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -49,6 +52,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setDhMov(Timestamp dhMov) {
+        markAsChanged("DHMOV", dhMov);
         this.dhMov = dhMov;
    }
 
@@ -57,6 +61,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setIdIatv(BigDecimal idIatv) {
+        markAsChanged("IDIATV", idIatv);
         this.idIatv = idIatv;
    }
 
@@ -65,6 +70,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDIPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -73,6 +79,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setIdMer(BigDecimal idMer) {
+        markAsChanged("IDMER", idMer);
         this.idMer = idMer;
    }
 
@@ -81,6 +88,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setIdRpa(BigDecimal idRpa) {
+        markAsChanged("IDRPA", idRpa);
         this.idRpa = idRpa;
    }
 
@@ -89,6 +97,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -97,6 +106,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setSeqMer(BigDecimal seqMer) {
+        markAsChanged("SEQMER", seqMer);
         this.seqMer = seqMer;
    }
 
@@ -105,6 +115,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setSinal(BigDecimal sinal) {
+        markAsChanged("SINAL", sinal);
         this.sinal = sinal;
    }
 
@@ -113,6 +124,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setStatusExec(String statusExec) {
+        markAsChanged("STATUSEXEC", statusExec);
         this.statusExec = statusExec;
    }
 
@@ -121,6 +133,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
+        markAsChanged("QTDPERDA", qtdPerda);
         this.qtdPerda = qtdPerda;
    }
 
@@ -136,6 +149,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
 
    @Override
    public MovimentacaoRepositorioPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCpm = vo.asBigDecimal("CODCPM");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

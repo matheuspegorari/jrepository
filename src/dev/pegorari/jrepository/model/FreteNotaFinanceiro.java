@@ -15,6 +15,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -23,6 +24,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -31,6 +33,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
    }
 
    public void setVlrFrete(BigDecimal vlrFrete) {
+        markAsChanged("VLRFRETE", vlrFrete);
         this.vlrFrete = vlrFrete;
    }
 
@@ -39,6 +42,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
    }
 
    public void setTipFrete(String tipFrete) {
+        markAsChanged("TIPFRETE", tipFrete);
         this.tipFrete = tipFrete;
    }
 
@@ -54,6 +58,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
 
    @Override
    public FreteNotaFinanceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.vlrFrete = vo.asBigDecimal("VLRFRETE");

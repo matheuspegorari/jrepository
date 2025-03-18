@@ -41,6 +41,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -49,6 +50,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setCompSemMovto(Timestamp compSemMovto) {
+        markAsChanged("COMPSEMMOVTO", compSemMovto);
         this.compSemMovto = compSemMovto;
    }
 
@@ -57,6 +59,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setCpfResp(String cpfResp) {
+        markAsChanged("CPFRESP", cpfResp);
         this.cpfResp = cpfResp;
    }
 
@@ -65,6 +68,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -73,6 +77,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -81,6 +86,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtAssDesprec(String evtAssDesprec) {
+        markAsChanged("EVTASSDESPREC", evtAssDesprec);
         this.evtAssDesprec = evtAssDesprec;
    }
 
@@ -89,6 +95,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtAssDesprep(String evtAssDesprep) {
+        markAsChanged("EVTASSDESPREP", evtAssDesprep);
         this.evtAssDesprep = evtAssDesprep;
    }
 
@@ -97,6 +104,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtComProd(String evtComProd) {
+        markAsChanged("EVTCOMPROD", evtComProd);
         this.evtComProd = evtComProd;
    }
 
@@ -105,6 +113,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtCprb(String evtCprb) {
+        markAsChanged("EVTCPRB", evtCprb);
         this.evtCprb = evtCprb;
    }
 
@@ -113,6 +122,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtPgtos(String evtPgtos) {
+        markAsChanged("EVTPGTOS", evtPgtos);
         this.evtPgtos = evtPgtos;
    }
 
@@ -121,6 +131,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtServPr(String evtServPr) {
+        markAsChanged("EVTSERVPR", evtServPr);
         this.evtServPr = evtServPr;
    }
 
@@ -129,6 +140,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtServTm(String evtServTm) {
+        markAsChanged("EVTSERVTM", evtServTm);
         this.evtServTm = evtServTm;
    }
 
@@ -137,6 +149,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -145,6 +158,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setNmResp(String nmResp) {
+        markAsChanged("NMRESP", nmResp);
         this.nmResp = nmResp;
    }
 
@@ -153,6 +167,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -161,6 +176,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -169,6 +185,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -177,6 +194,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -185,6 +203,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -193,6 +212,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -201,6 +221,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -209,6 +230,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -217,6 +239,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -225,6 +248,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -233,6 +257,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setXmlConsulta(char[] xmlConsulta) {
+        markAsChanged("XMLCONSULTA", xmlConsulta);
         this.xmlConsulta = xmlConsulta;
    }
 
@@ -241,6 +266,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -249,6 +275,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -257,6 +284,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setXmlRetornoConsulta(char[] xmlRetornoConsulta) {
+        markAsChanged("XMLRETORNOCONSULTA", xmlRetornoConsulta);
         this.xmlRetornoConsulta = xmlRetornoConsulta;
    }
 
@@ -265,6 +293,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
    }
 
    public void setEvtAquis(String evtAquis) {
+        markAsChanged("EVTAQUIS", evtAquis);
         this.evtAquis = evtAquis;
    }
 
@@ -280,6 +309,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
 
    @Override
    public FechamentoEventoPeriodico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.compSemMovto = vo.asTimestamp("COMPSEMMOVTO");
         this.cpfResp = vo.asString("CPFRESP");

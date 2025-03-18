@@ -15,6 +15,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
    }
 
    public void setCnae(String cnae) {
+        markAsChanged("CNAE", cnae);
         this.cnae = cnae;
    }
 
@@ -23,6 +24,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -31,6 +33,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
    }
 
    public void setLocTribNormal(String locTribNormal) {
+        markAsChanged("LOCTRIBNORMAL", locTribNormal);
         this.locTribNormal = locTribNormal;
    }
 
@@ -39,6 +42,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
    }
 
    public void setLocTribRetido(String locTribRetido) {
+        markAsChanged("LOCTRIBRETIDO", locTribRetido);
         this.locTribRetido = locTribRetido;
    }
 
@@ -54,6 +58,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
 
    @Override
    public CNAEEmpresa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cnae = vo.asString("CNAE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.locTribNormal = vo.asString("LOCTRIBNORMAL");

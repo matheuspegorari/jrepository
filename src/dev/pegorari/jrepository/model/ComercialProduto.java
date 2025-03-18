@@ -26,6 +26,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setQtdPedVda(BigDecimal qtdPedVda) {
+        markAsChanged("QTDPEDVDA", qtdPedVda);
         this.qtdPedVda = qtdPedVda;
    }
 
@@ -34,6 +35,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -42,6 +44,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setQtdPed(BigDecimal qtdPed) {
+        markAsChanged("QTDPED", qtdPed);
         this.qtdPed = qtdPed;
    }
 
@@ -50,6 +53,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setCodForn(BigDecimal codForn) {
+        markAsChanged("CODFORN", codForn);
         this.codForn = codForn;
    }
 
@@ -58,6 +62,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -66,6 +71,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setDtPrevInst(Timestamp dtPrevInst) {
+        markAsChanged("DTPREVINST", dtPrevInst);
         this.dtPrevInst = dtPrevInst;
    }
 
@@ -74,6 +80,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -82,6 +89,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setImpNota(String impNota) {
+        markAsChanged("IMPNOTA", impNota);
         this.impNota = impNota;
    }
 
@@ -90,6 +98,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setImpOs(String impOs) {
+        markAsChanged("IMPOS", impOs);
         this.impOs = impOs;
    }
 
@@ -98,6 +107,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -106,6 +116,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setPrincipal(String principal) {
+        markAsChanged("PRINCIPAL", principal);
         this.principal = principal;
    }
 
@@ -114,6 +125,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -122,6 +134,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setComplDesc(String complDesc) {
+        markAsChanged("COMPLDESC", complDesc);
         this.complDesc = complDesc;
    }
 
@@ -130,6 +143,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
    }
 
    public void setQtdPedIr(BigDecimal qtdPedIr) {
+        markAsChanged("QTDPEDIR", qtdPedIr);
         this.qtdPedIr = qtdPedIr;
    }
 
@@ -145,6 +159,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
 
    @Override
    public ComercialProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.qtdPedVda = vo.asBigDecimal("QTDPEDVDA");
         this.valor = vo.asBigDecimal("VALOR");
         this.qtdPed = vo.asBigDecimal("QTDPED");

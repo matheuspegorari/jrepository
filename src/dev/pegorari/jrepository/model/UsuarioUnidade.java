@@ -13,6 +13,7 @@ public class UsuarioUnidade extends AbstractSankhyaEntity<UsuarioUnidade> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -21,6 +22,7 @@ public class UsuarioUnidade extends AbstractSankhyaEntity<UsuarioUnidade> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -36,6 +38,7 @@ public class UsuarioUnidade extends AbstractSankhyaEntity<UsuarioUnidade> {
 
    @Override
    public UsuarioUnidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVol = vo.asString("CODVOL");
         return this;

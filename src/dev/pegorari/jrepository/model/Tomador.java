@@ -20,6 +20,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -28,6 +29,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -36,6 +38,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -44,6 +47,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -52,6 +56,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -60,6 +65,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setDtFim(Timestamp dtFim) {
+        markAsChanged("DTFIM", dtFim);
         this.dtFim = dtFim;
    }
 
@@ -68,6 +74,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -76,6 +83,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -91,6 +99,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
 
    @Override
    public Tomador fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codParc = vo.asBigDecimal("CODPARC");

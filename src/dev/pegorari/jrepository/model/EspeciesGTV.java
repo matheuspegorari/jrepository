@@ -16,6 +16,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    }
 
    public void setIdInfGtv(String idInfGtv) {
+        markAsChanged("IDINFGTV", idInfGtv);
         this.idInfGtv = idInfGtv;
    }
 
@@ -24,6 +25,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    }
 
    public void setNumInfGtv(String numInfGtv) {
+        markAsChanged("NUMINFGTV", numInfGtv);
         this.numInfGtv = numInfGtv;
    }
 
@@ -32,6 +34,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -40,6 +43,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    }
 
    public void setTipoEspecie(BigDecimal tipoEspecie) {
+        markAsChanged("TIPOESPECIE", tipoEspecie);
         this.tipoEspecie = tipoEspecie;
    }
 
@@ -48,6 +52,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    }
 
    public void setVlrEspecie(BigDecimal vlrEspecie) {
+        markAsChanged("VLRESPECIE", vlrEspecie);
         this.vlrEspecie = vlrEspecie;
    }
 
@@ -63,6 +68,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
 
    @Override
    public EspeciesGTV fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idInfGtv = vo.asString("IDINFGTV");
         this.numInfGtv = vo.asString("NUMINFGTV");
         this.nuNota = vo.asBigDecimal("NUNOTA");

@@ -13,6 +13,7 @@ public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocRefe
    }
 
    public void setChaveRef(String chaveRef) {
+        markAsChanged("CHAVEREF", chaveRef);
         this.chaveRef = chaveRef;
    }
 
@@ -21,6 +22,7 @@ public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocRefe
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
+        markAsChanged("NUARQUIVO", nuArquivo);
         this.nuArquivo = nuArquivo;
    }
 
@@ -36,6 +38,7 @@ public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocRefe
 
    @Override
    public DocReferenciadoPortImportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveRef = vo.asString("CHAVEREF");
         this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         return this;

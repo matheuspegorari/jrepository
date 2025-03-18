@@ -22,6 +22,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setCodClc(BigDecimal codClc) {
+        markAsChanged("CODCLC", codClc);
         this.codClc = codClc;
    }
 
@@ -30,6 +31,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setCodClt(BigDecimal codClt) {
+        markAsChanged("CODCLT", codClt);
         this.codClt = codClt;
    }
 
@@ -38,6 +40,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setDescontar(BigDecimal descontar) {
+        markAsChanged("DESCONTAR", descontar);
         this.descontar = descontar;
    }
 
@@ -46,6 +49,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setFormulaDesc(String formulaDesc) {
+        markAsChanged("FORMULADESC", formulaDesc);
         this.formulaDesc = formulaDesc;
    }
 
@@ -54,6 +58,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setMaximo(BigDecimal maximo) {
+        markAsChanged("MAXIMO", maximo);
         this.maximo = maximo;
    }
 
@@ -62,6 +67,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setMinimo(BigDecimal minimo) {
+        markAsChanged("MINIMO", minimo);
         this.minimo = minimo;
    }
 
@@ -70,6 +76,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -78,6 +85,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setObrigatorio(String obrigatorio) {
+        markAsChanged("OBRIGATORIO", obrigatorio);
         this.obrigatorio = obrigatorio;
    }
 
@@ -86,6 +94,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setUsaIntervalo(String usaIntervalo) {
+        markAsChanged("USAINTERVALO", usaIntervalo);
         this.usaIntervalo = usaIntervalo;
    }
 
@@ -94,6 +103,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setUsaIndice(String usaIndice) {
+        markAsChanged("USAINDICE", usaIndice);
         this.usaIndice = usaIndice;
    }
 
@@ -102,6 +112,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    }
 
    public void setVlrCalcIndice(BigDecimal vlrCalcIndice) {
+        markAsChanged("VLRCALCINDICE", vlrCalcIndice);
         this.vlrCalcIndice = vlrCalcIndice;
    }
 
@@ -117,6 +128,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
 
    @Override
    public CaracteristicaClassificacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codClc = vo.asBigDecimal("CODCLC");
         this.codClt = vo.asBigDecimal("CODCLT");
         this.descontar = vo.asBigDecimal("DESCONTAR");

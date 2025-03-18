@@ -33,6 +33,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setDescrsituacao(String descrsituacao) {
+        markAsChanged("DESCRSITUACAO", descrsituacao);
         this.descrsituacao = descrsituacao;
    }
 
@@ -41,6 +42,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNumPedido2(String numPedido2) {
+        markAsChanged("NUMPEDIDO2", numPedido2);
         this.numPedido2 = numPedido2;
    }
 
@@ -49,6 +51,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setCodDoca(BigDecimal codDoca) {
+        markAsChanged("CODDOCA", codDoca);
         this.codDoca = codDoca;
    }
 
@@ -57,6 +60,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setCodEndDoca(BigDecimal codEndDoca) {
+        markAsChanged("CODENDDOCA", codEndDoca);
         this.codEndDoca = codEndDoca;
    }
 
@@ -65,6 +69,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -73,6 +78,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -81,6 +87,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setConfFinal(String confFinal) {
+        markAsChanged("CONFFINAL", confFinal);
         this.confFinal = confFinal;
    }
 
@@ -89,6 +96,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -97,6 +105,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setDtRecebimento(Timestamp dtRecebimento) {
+        markAsChanged("DTRECEBIMENTO", dtRecebimento);
         this.dtRecebimento = dtRecebimento;
    }
 
@@ -105,6 +114,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNomeParc(String nomeParc) {
+        markAsChanged("NOMEPARC", nomeParc);
         this.nomeParc = nomeParc;
    }
 
@@ -113,6 +123,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -121,6 +132,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -129,6 +141,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -137,6 +150,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -145,6 +159,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -153,6 +168,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setSituacao(BigDecimal situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -161,6 +177,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setStatusConf(BigDecimal statusConf) {
+        markAsChanged("STATUSCONF", statusConf);
         this.statusConf = statusConf;
    }
 
@@ -169,6 +186,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setUsaConfParcial(String usaConfParcial) {
+        markAsChanged("USACONFPARCIAL", usaConfParcial);
         this.usaConfParcial = usaConfParcial;
    }
 
@@ -177,6 +195,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setNuTarefaCan(BigDecimal nuTarefaCan) {
+        markAsChanged("NUTAREFACAN", nuTarefaCan);
         this.nuTarefaCan = nuTarefaCan;
    }
 
@@ -185,6 +204,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -193,6 +213,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    }
 
    public void setTipoNota(BigDecimal tipoNota) {
+        markAsChanged("TIPONOTA", tipoNota);
         this.tipoNota = tipoNota;
    }
 
@@ -208,6 +229,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
 
    @Override
    public Recebimento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descrsituacao = vo.asString("DESCRSITUACAO");
         this.numPedido2 = vo.asString("NUMPEDIDO2");
         this.codDoca = vo.asBigDecimal("CODDOCA");

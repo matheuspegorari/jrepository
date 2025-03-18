@@ -71,6 +71,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDhCadSefaz(Timestamp dhCadSefaz) {
+        markAsChanged("DHCADSEFAZ", dhCadSefaz);
         this.dhCadSefaz = dhCadSefaz;
    }
 
@@ -79,6 +80,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setSitCadSefaz(String sitCadSefaz) {
+        markAsChanged("SITCADSEFAZ", sitCadSefaz);
         this.sitCadSefaz = sitCadSefaz;
    }
 
@@ -87,6 +89,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -95,6 +98,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -103,6 +107,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -111,6 +116,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodParcB2b(BigDecimal codParcB2b) {
+        markAsChanged("CODPARCB2B", codParcB2b);
         this.codParcB2b = codParcB2b;
    }
 
@@ -119,6 +125,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -127,6 +134,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -135,6 +143,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -143,6 +152,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -151,6 +161,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDataEmissaoRg(Timestamp dataEmissaoRg) {
+        markAsChanged("DATAEMISSAORG", dataEmissaoRg);
         this.dataEmissaoRg = dataEmissaoRg;
    }
 
@@ -159,6 +170,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDiaPagto(BigDecimal diaPagto) {
+        markAsChanged("DIAPAGTO", diaPagto);
         this.diaPagto = diaPagto;
    }
 
@@ -167,6 +179,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDtCad(Timestamp dtCad) {
+        markAsChanged("DTCAD", dtCad);
         this.dtCad = dtCad;
    }
 
@@ -175,6 +188,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -183,6 +197,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -191,6 +206,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setEmissaoRg(String emissaoRg) {
+        markAsChanged("EMISSAORG", emissaoRg);
         this.emissaoRg = emissaoRg;
    }
 
@@ -199,6 +215,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setEndereco(String endereco) {
+        markAsChanged("ENDERECO", endereco);
         this.endereco = endereco;
    }
 
@@ -207,6 +224,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setEscolaridade(String escolaridade) {
+        markAsChanged("ESCOLARIDADE", escolaridade);
         this.escolaridade = escolaridade;
    }
 
@@ -215,6 +233,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setEstadoCivil(String estadoCivil) {
+        markAsChanged("ESTADOCIVIL", estadoCivil);
         this.estadoCivil = estadoCivil;
    }
 
@@ -223,6 +242,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setIdentInscEstad(String identInscEstad) {
+        markAsChanged("IDENTINSCESTAD", identInscEstad);
         this.identInscEstad = identInscEstad;
    }
 
@@ -231,6 +251,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setIsPropostaCartao(String isPropostaCartao) {
+        markAsChanged("ISPROPOSTACARTAO", isPropostaCartao);
         this.isPropostaCartao = isPropostaCartao;
    }
 
@@ -239,6 +260,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setLimCred(BigDecimal limCred) {
+        markAsChanged("LIMCRED", limCred);
         this.limCred = limCred;
    }
 
@@ -247,6 +269,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNaturalidade(BigDecimal naturalidade) {
+        markAsChanged("NATURALIDADE", naturalidade);
         this.naturalidade = naturalidade;
    }
 
@@ -255,6 +278,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomeBai(String nomeBai) {
+        markAsChanged("NOMEBAI", nomeBai);
         this.nomeBai = nomeBai;
    }
 
@@ -263,6 +287,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomeCartao(String nomeCartao) {
+        markAsChanged("NOMECARTAO", nomeCartao);
         this.nomeCartao = nomeCartao;
    }
 
@@ -271,6 +296,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomeCid(String nomeCid) {
+        markAsChanged("NOMECID", nomeCid);
         this.nomeCid = nomeCid;
    }
 
@@ -279,6 +305,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomeConjuge(String nomeConjuge) {
+        markAsChanged("NOMECONJUGE", nomeConjuge);
         this.nomeConjuge = nomeConjuge;
    }
 
@@ -287,6 +314,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomeMae(String nomeMae) {
+        markAsChanged("NOMEMAE", nomeMae);
         this.nomeMae = nomeMae;
    }
 
@@ -295,6 +323,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomePai(String nomePai) {
+        markAsChanged("NOMEPAI", nomePai);
         this.nomePai = nomePai;
    }
 
@@ -303,6 +332,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNomePap(String nomePap) {
+        markAsChanged("NOMEPAP", nomePap);
         this.nomePap = nomePap;
    }
 
@@ -311,6 +341,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNroAns(BigDecimal nroAns) {
+        markAsChanged("NROANS", nroAns);
         this.nroAns = nroAns;
    }
 
@@ -319,6 +350,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNroBen(BigDecimal nroBen) {
+        markAsChanged("NROBEN", nroBen);
         this.nroBen = nroBen;
    }
 
@@ -327,6 +359,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -335,6 +368,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setObservacoes(String observacoes) {
+        markAsChanged("OBSERVACOES", observacoes);
         this.observacoes = observacoes;
    }
 
@@ -343,6 +377,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setPossuiCartaoCredito(String possuiCartaoCredito) {
+        markAsChanged("POSSUICARTAOCREDITO", possuiCartaoCredito);
         this.possuiCartaoCredito = possuiCartaoCredito;
    }
 
@@ -351,6 +386,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setQtdeDependentes(BigDecimal qtdeDependentes) {
+        markAsChanged("QTDEDEPENDENTES", qtdeDependentes);
         this.qtdeDependentes = qtdeDependentes;
    }
 
@@ -359,6 +395,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setRazaoSocial(String razaoSocial) {
+        markAsChanged("RAZAOSOCIAL", razaoSocial);
         this.razaoSocial = razaoSocial;
    }
 
@@ -367,6 +404,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setRg(String rg) {
+        markAsChanged("RG", rg);
         this.rg = rg;
    }
 
@@ -375,6 +413,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setSexo(String sexo) {
+        markAsChanged("SEXO", sexo);
         this.sexo = sexo;
    }
 
@@ -383,6 +422,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setStatusProposta(String statusProposta) {
+        markAsChanged("STATUSPROPOSTA", statusProposta);
         this.statusProposta = statusProposta;
    }
 
@@ -391,6 +431,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setTelCelular(String telCelular) {
+        markAsChanged("TELCELULAR", telCelular);
         this.telCelular = telCelular;
    }
 
@@ -399,6 +440,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -407,6 +449,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setTipoResidencia(String tipoResidencia) {
+        markAsChanged("TIPORESIDENCIA", tipoResidencia);
         this.tipoResidencia = tipoResidencia;
    }
 
@@ -415,6 +458,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setTipPessoa(String tipPessoa) {
+        markAsChanged("TIPPESSOA", tipPessoa);
         this.tipPessoa = tipPessoa;
    }
 
@@ -423,6 +467,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setUfRg(BigDecimal ufRg) {
+        markAsChanged("UFRG", ufRg);
         this.ufRg = ufRg;
    }
 
@@ -431,6 +476,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCartaoCredito(String cartaoCredito) {
+        markAsChanged("CARTAOCREDITO", cartaoCredito);
         this.cartaoCredito = cartaoCredito;
    }
 
@@ -439,6 +485,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCarteiraTrab(BigDecimal carteiraTrab) {
+        markAsChanged("CARTEIRATRAB", carteiraTrab);
         this.carteiraTrab = carteiraTrab;
    }
 
@@ -447,6 +494,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCelularConjuge(String celularConjuge) {
+        markAsChanged("CELULARCONJUGE", celularConjuge);
         this.celularConjuge = celularConjuge;
    }
 
@@ -455,6 +503,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -463,6 +512,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setCnae(String cnae) {
+        markAsChanged("CNAE", cnae);
         this.cnae = cnae;
    }
 
@@ -471,6 +521,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDhCadRf(Timestamp dhCadRf) {
+        markAsChanged("DHCADRF", dhCadRf);
         this.dhCadRf = dhCadRf;
    }
 
@@ -479,6 +530,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDtBaixa(Timestamp dtBaixa) {
+        markAsChanged("DTBAIXA", dtBaixa);
         this.dtBaixa = dtBaixa;
    }
 
@@ -487,6 +539,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDtIniAtiv(Timestamp dtIniAtiv) {
+        markAsChanged("DTINIATIV", dtIniAtiv);
         this.dtIniAtiv = dtIniAtiv;
    }
 
@@ -495,6 +548,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setDtUltSit(Timestamp dtUltSit) {
+        markAsChanged("DTULTSIT", dtUltSit);
         this.dtUltSit = dtUltSit;
    }
 
@@ -503,6 +557,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setIndCredCte(BigDecimal indCredCte) {
+        markAsChanged("INDCREDCTE", indCredCte);
         this.indCredCte = indCredCte;
    }
 
@@ -511,6 +566,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setIndCredNfe(BigDecimal indCredNfe) {
+        markAsChanged("INDCREDNFE", indCredNfe);
         this.indCredNfe = indCredNfe;
    }
 
@@ -519,6 +575,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setRegApur(String regApur) {
+        markAsChanged("REGAPUR", regApur);
         this.regApur = regApur;
    }
 
@@ -527,6 +584,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setSitCadRf(BigDecimal sitCadRf) {
+        markAsChanged("SITCADRF", sitCadRf);
         this.sitCadRf = sitCadRf;
    }
 
@@ -535,6 +593,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
    }
 
    public void setIntervAnalisCred(BigDecimal intervAnalisCred) {
+        markAsChanged("INTERVANALISCRED", intervAnalisCred);
         this.intervAnalisCred = intervAnalisCred;
    }
 
@@ -550,6 +609,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
 
    @Override
    public ParceiroProspect fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhCadSefaz = vo.asTimestamp("DHCADSEFAZ");
         this.sitCadSefaz = vo.asString("SITCADSEFAZ");
         this.cgcCpf = vo.asString("CGC_CPF");

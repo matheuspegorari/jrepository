@@ -20,6 +20,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -28,6 +29,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -36,6 +38,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setSeqCompgFre(BigDecimal seqCompgFre) {
+        markAsChanged("SEQCOMPGFRE", seqCompgFre);
         this.seqCompgFre = seqCompgFre;
    }
 
@@ -44,6 +47,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -52,6 +56,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setSeqPgFre(BigDecimal seqPgFre) {
+        markAsChanged("SEQPGFRE", seqPgFre);
         this.seqPgFre = seqPgFre;
    }
 
@@ -60,6 +65,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setTpComp(String tpComp) {
+        markAsChanged("TPCOMP", tpComp);
         this.tpComp = tpComp;
    }
 
@@ -68,6 +74,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setVlrComp(BigDecimal vlrComp) {
+        markAsChanged("VLRCOMP", vlrComp);
         this.vlrComp = vlrComp;
    }
 
@@ -76,6 +83,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setIndAltodesemp(String indAltodesemp) {
+        markAsChanged("INDALTODESEMP", indAltodesemp);
         this.indAltodesemp = indAltodesemp;
    }
 
@@ -84,6 +92,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
    }
 
    public void setVlrAdiant(BigDecimal vlrAdiant) {
+        markAsChanged("VLRADIANT", vlrAdiant);
         this.vlrAdiant = vlrAdiant;
    }
 
@@ -99,6 +108,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
 
    @Override
    public ManifestoCompPgtoFrete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqCompgFre = vo.asBigDecimal("SEQCOMPGFRE");

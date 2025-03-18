@@ -38,6 +38,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -46,6 +47,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setDescrCargo(String descrCargo) {
+        markAsChanged("DESCRCARGO", descrCargo);
         this.descrCargo = descrCargo;
    }
 
@@ -54,6 +56,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -62,6 +65,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -70,6 +74,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setResponsabilidades(String responsabilidades) {
+        markAsChanged("RESPONSABILIDADES", responsabilidades);
         this.responsabilidades = responsabilidades;
    }
 
@@ -78,6 +83,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -86,6 +92,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -94,6 +101,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodCbo(BigDecimal codCbo) {
+        markAsChanged("CODCBO", codCbo);
         this.codCbo = codCbo;
    }
 
@@ -102,6 +110,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodNivelIni(BigDecimal codNivelIni) {
+        markAsChanged("CODNIVELINI", codNivelIni);
         this.codNivelIni = codNivelIni;
    }
 
@@ -110,6 +119,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setContagemEsp(BigDecimal contagemEsp) {
+        markAsChanged("CONTAGEMESP", contagemEsp);
         this.contagemEsp = contagemEsp;
    }
 
@@ -118,6 +128,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setAcumCargo(BigDecimal acumCargo) {
+        markAsChanged("ACUMCARGO", acumCargo);
         this.acumCargo = acumCargo;
    }
 
@@ -126,6 +137,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setAposentaEsp(String aposentaEsp) {
+        markAsChanged("APOSENTAESP", aposentaEsp);
         this.aposentaEsp = aposentaEsp;
    }
 
@@ -134,6 +146,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodCarreira(BigDecimal codCarreira) {
+        markAsChanged("CODCARREIRA", codCarreira);
         this.codCarreira = codCarreira;
    }
 
@@ -142,6 +155,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodEscala(BigDecimal codEscala) {
+        markAsChanged("CODESCALA", codEscala);
         this.codEscala = codEscala;
    }
 
@@ -150,6 +164,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodGrupoCargo(BigDecimal codGrupoCargo) {
+        markAsChanged("CODGRUPOCARGO", codGrupoCargo);
         this.codGrupoCargo = codGrupoCargo;
    }
 
@@ -158,6 +173,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setCodNivelFim(BigDecimal codNivelFim) {
+        markAsChanged("CODNIVELFIM", codNivelFim);
         this.codNivelFim = codNivelFim;
    }
 
@@ -166,6 +182,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setContagemTempo(String contagemTempo) {
+        markAsChanged("CONTAGEMTEMPO", contagemTempo);
         this.contagemTempo = contagemTempo;
    }
 
@@ -174,6 +191,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setDedicacaoExc(String dedicacaoExc) {
+        markAsChanged("DEDICACAOEXC", dedicacaoExc);
         this.dedicacaoExc = dedicacaoExc;
    }
 
@@ -182,6 +200,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setDtLei(Timestamp dtLei) {
+        markAsChanged("DTLEI", dtLei);
         this.dtLei = dtLei;
    }
 
@@ -190,6 +209,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setNrLei(String nrLei) {
+        markAsChanged("NRLEI", nrLei);
         this.nrLei = nrLei;
    }
 
@@ -198,6 +218,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setOrigAtiv(BigDecimal origAtiv) {
+        markAsChanged("ORIGATIV", origAtiv);
         this.origAtiv = origAtiv;
    }
 
@@ -206,6 +227,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setPossuiNivel(String possuiNivel) {
+        markAsChanged("POSSUINIVEL", possuiNivel);
         this.possuiNivel = possuiNivel;
    }
 
@@ -214,6 +236,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setSitCargo(BigDecimal sitCargo) {
+        markAsChanged("SITCARGO", sitCargo);
         this.sitCargo = sitCargo;
    }
 
@@ -222,6 +245,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setTecnicoCientifico(String tecnicoCientifico) {
+        markAsChanged("TECNICOCIENTIFICO", tecnicoCientifico);
         this.tecnicoCientifico = tecnicoCientifico;
    }
 
@@ -230,6 +254,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setTempoAso(BigDecimal tempoAso) {
+        markAsChanged("TEMPOASO", tempoAso);
         this.tempoAso = tempoAso;
    }
 
@@ -238,6 +263,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
    }
 
    public void setUsadoEsocial(String usadoEsocial) {
+        markAsChanged("USADOESOCIAL", usadoEsocial);
         this.usadoEsocial = usadoEsocial;
    }
 
@@ -253,6 +279,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
 
    @Override
    public Cargo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descrCargo = vo.asString("DESCRCARGO");
         this.dtAlter = vo.asTimestamp("DTALTER");

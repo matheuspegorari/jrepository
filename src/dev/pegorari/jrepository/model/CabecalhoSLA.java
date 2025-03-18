@@ -15,6 +15,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -23,6 +24,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -31,6 +33,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    }
 
    public void setNuSla(BigDecimal nuSla) {
+        markAsChanged("NUSLA", nuSla);
         this.nuSla = nuSla;
    }
 
@@ -39,6 +42,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    }
 
    public void setTipoFiltro(String tipoFiltro) {
+        markAsChanged("TIPOFILTRO", tipoFiltro);
         this.tipoFiltro = tipoFiltro;
    }
 
@@ -54,6 +58,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
 
    @Override
    public CabecalhoSLA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.descricao = vo.asString("DESCRICAO");
         this.nuSla = vo.asBigDecimal("NUSLA");

@@ -16,6 +16,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    }
 
    public void setNuMapolice(String nuMapolice) {
+        markAsChanged("NUMAPOLICE", nuMapolice);
         this.nuMapolice = nuMapolice;
    }
 
@@ -24,6 +25,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    }
 
    public void setCodParcSeg(BigDecimal codParcSeg) {
+        markAsChanged("CODPARCSEG", codParcSeg);
         this.codParcSeg = codParcSeg;
    }
 
@@ -32,6 +34,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -40,6 +43,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -48,6 +52,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    }
 
    public void setCodParcRespSeg(BigDecimal codParcRespSeg) {
+        markAsChanged("CODPARCRESPSEG", codParcRespSeg);
         this.codParcRespSeg = codParcRespSeg;
    }
 
@@ -63,6 +68,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
 
    @Override
    public SeguroMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuMapolice = vo.asString("NUMAPOLICE");
         this.codParcSeg = vo.asBigDecimal("CODPARCSEG");
         this.nuViag = vo.asBigDecimal("NUVIAG");

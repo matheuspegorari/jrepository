@@ -18,6 +18,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setDhUltPostagem(Timestamp dhUltPostagem) {
+        markAsChanged("DHULTPOSTAGEM", dhUltPostagem);
         this.dhUltPostagem = dhUltPostagem;
    }
 
@@ -26,6 +27,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -34,6 +36,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -42,6 +45,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setNumReg(BigDecimal numReg) {
+        markAsChanged("NUMREG", numReg);
         this.numReg = numReg;
    }
 
@@ -50,6 +54,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setNuSla(BigDecimal nuSla) {
+        markAsChanged("NUSLA", nuSla);
         this.nuSla = nuSla;
    }
 
@@ -58,6 +63,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    }
 
    public void setSeqNotifica(BigDecimal seqNotifica) {
+        markAsChanged("SEQNOTIFICA", seqNotifica);
         this.seqNotifica = seqNotifica;
    }
 
@@ -73,6 +79,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
 
    @Override
    public NotificacaoItem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhUltPostagem = vo.asTimestamp("DHULTPOSTAGEM");
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");

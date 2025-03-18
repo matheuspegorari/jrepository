@@ -17,6 +17,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -25,6 +26,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setLista(String lista) {
+        markAsChanged("LISTA", lista);
         this.lista = lista;
    }
 
@@ -33,6 +35,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -41,6 +44,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setTamanho(BigDecimal tamanho) {
+        markAsChanged("TAMANHO", tamanho);
         this.tamanho = tamanho;
    }
 
@@ -49,6 +53,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -57,6 +62,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -72,6 +78,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
 
    @Override
    public EstruturaLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.lista = vo.asString("LISTA");
         this.ordem = vo.asBigDecimal("ORDEM");

@@ -24,6 +24,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -32,6 +33,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setDocumentacao(char[] documentacao) {
+        markAsChanged("DOCUMENTACAO", documentacao);
         this.documentacao = documentacao;
    }
 
@@ -40,6 +42,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setExpressCandidade(String expressCandidade) {
+        markAsChanged("EXPRESSCANDITADE", expressCandidade);
         this.expressCandidade = expressCandidade;
    }
 
@@ -48,6 +51,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setExpressLanguage(String expressLanguage) {
+        markAsChanged("EXPRESSLANGUAGE", expressLanguage);
         this.expressLanguage = expressLanguage;
    }
 
@@ -56,6 +60,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setIdElemento(String idElemento) {
+        markAsChanged("IDELEMENTO", idElemento);
         this.idElemento = idElemento;
    }
 
@@ -64,6 +69,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -72,6 +78,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setNuEle(BigDecimal nuEle) {
+        markAsChanged("NUELE", nuEle);
         this.nuEle = nuEle;
    }
 
@@ -80,6 +87,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -88,6 +96,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -96,6 +105,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setHistoryTemplate(char[] historyTemplate) {
+        markAsChanged("HISTORYTEMPLATE", historyTemplate);
         this.historyTemplate = historyTemplate;
    }
 
@@ -104,6 +114,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setBackground(String background) {
+        markAsChanged("BACKGROUND", background);
         this.background = background;
    }
 
@@ -112,6 +123,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setNotificationCandidate(String notificationCandidate) {
+        markAsChanged("NOTIFICATIONCANDIDATE", notificationCandidate);
         this.notificationCandidate = notificationCandidate;
    }
 
@@ -120,6 +132,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
    }
 
    public void setNotificationOwner(String notificationOwner) {
+        markAsChanged("NOTIFICATIONOWNER", notificationOwner);
         this.notificationOwner = notificationOwner;
    }
 
@@ -135,6 +148,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
 
    @Override
    public ElementoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.documentacao = vo.asClob("DOCUMENTACAO");
         this.expressCandidade = vo.asString("EXPRESSCANDITADE");

@@ -32,6 +32,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -40,6 +41,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -48,6 +50,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodParcCompra(BigDecimal codParcCompra) {
+        markAsChanged("CODPARCCOMPRA", codParcCompra);
         this.codParcCompra = codParcCompra;
    }
 
@@ -56,6 +59,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodParcTranspCompra(BigDecimal codParcTranspCompra) {
+        markAsChanged("CODPARCTRANSPCOMPRA", codParcTranspCompra);
         this.codParcTranspCompra = codParcTranspCompra;
    }
 
@@ -64,6 +68,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodParcTranspVenda(BigDecimal codParcTranspVenda) {
+        markAsChanged("CODPARCTRANSPVENDA", codParcTranspVenda);
         this.codParcTranspVenda = codParcTranspVenda;
    }
 
@@ -72,6 +77,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodParcVenda(BigDecimal codParcVenda) {
+        markAsChanged("CODPARCVENDA", codParcVenda);
         this.codParcVenda = codParcVenda;
    }
 
@@ -80,6 +86,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -88,6 +95,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -96,6 +104,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -104,6 +113,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setExpGatilho(String expGatilho) {
+        markAsChanged("EXPGATILHO", expGatilho);
         this.expGatilho = expGatilho;
    }
 
@@ -112,6 +122,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -120,6 +131,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setRegiaoCompra(BigDecimal regiaoCompra) {
+        markAsChanged("REGIAOCOMPRA", regiaoCompra);
         this.regiaoCompra = regiaoCompra;
    }
 
@@ -128,6 +140,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setRegiaoVenda(BigDecimal regiaoVenda) {
+        markAsChanged("REGIAOVENDA", regiaoVenda);
         this.regiaoVenda = regiaoVenda;
    }
 
@@ -136,6 +149,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setTipGatilho(String tipGatilho) {
+        markAsChanged("TIPGATILHO", tipGatilho);
         this.tipGatilho = tipGatilho;
    }
 
@@ -144,6 +158,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setTipIntervalo(String tipIntervalo) {
+        markAsChanged("TIPINTERVALO", tipIntervalo);
         this.tipIntervalo = tipIntervalo;
    }
 
@@ -152,6 +167,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setTopCompra(BigDecimal topCompra) {
+        markAsChanged("TOPCOMPRA", topCompra);
         this.topCompra = topCompra;
    }
 
@@ -160,6 +176,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setTopVenda(BigDecimal topVenda) {
+        markAsChanged("TOPVENDA", topVenda);
         this.topVenda = topVenda;
    }
 
@@ -168,6 +185,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setVlrIntervalo(BigDecimal vlrIntervalo) {
+        markAsChanged("VLRINTERVALO", vlrIntervalo);
         this.vlrIntervalo = vlrIntervalo;
    }
 
@@ -176,6 +194,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setFiltroCompra(char[] filtroCompra) {
+        markAsChanged("FILTROCOMPRA", filtroCompra);
         this.filtroCompra = filtroCompra;
    }
 
@@ -184,6 +203,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
    }
 
    public void setFiltroVenda(char[] filtroVenda) {
+        markAsChanged("FILTROVENDA", filtroVenda);
         this.filtroVenda = filtroVenda;
    }
 
@@ -199,6 +219,7 @@ public class ConfiguracaoJobEmpenho extends AbstractSankhyaEntity<ConfiguracaoJo
 
    @Override
    public ConfiguracaoJobEmpenho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParcCompra = vo.asBigDecimal("CODPARCCOMPRA");

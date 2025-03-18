@@ -26,6 +26,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -34,6 +35,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setCodProc(BigDecimal codProc) {
+        markAsChanged("CODPROC", codProc);
         this.codProc = codProc;
    }
 
@@ -42,6 +44,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -50,6 +53,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -58,6 +62,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNumPesagem(BigDecimal numPesagem) {
+        markAsChanged("NUMPESAGEM", numPesagem);
         this.numPesagem = numPesagem;
    }
 
@@ -66,6 +71,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNumProd(BigDecimal numProd) {
+        markAsChanged("NUMPROD", numProd);
         this.numProd = numProd;
    }
 
@@ -74,6 +80,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -82,6 +89,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNuNotaDest(BigDecimal nuNotaDest) {
+        markAsChanged("NUNOTADEST", nuNotaDest);
         this.nuNotaDest = nuNotaDest;
    }
 
@@ -90,6 +98,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setPesoNf(BigDecimal pesoNf) {
+        markAsChanged("PESONF", pesoNf);
         this.pesoNf = pesoNf;
    }
 
@@ -98,6 +107,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setPesoRomaneio(BigDecimal pesoRomaneio) {
+        markAsChanged("PESOROMANEIO", pesoRomaneio);
         this.pesoRomaneio = pesoRomaneio;
    }
 
@@ -106,6 +116,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setValTotal(BigDecimal valTotal) {
+        markAsChanged("VALTOTAL", valTotal);
         this.valTotal = valTotal;
    }
 
@@ -114,6 +125,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setValUnit(BigDecimal valUnit) {
+        markAsChanged("VALUNIT", valUnit);
         this.valUnit = valUnit;
    }
 
@@ -122,6 +134,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -130,6 +143,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setNumNotaTrans(BigDecimal numNotaTrans) {
+        markAsChanged("NUMNOTATRANS", numNotaTrans);
         this.numNotaTrans = numNotaTrans;
    }
 
@@ -138,6 +152,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -153,6 +168,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
 
    @Override
    public ItensPesagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProc = vo.asBigDecimal("CODPROC");
         this.codProd = vo.asBigDecimal("CODPROD");

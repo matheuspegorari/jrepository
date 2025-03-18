@@ -21,6 +21,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -29,6 +30,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setCodParcTerc(BigDecimal codParcTerc) {
+        markAsChanged("CODPARCTERC", codParcTerc);
         this.codParcTerc = codParcTerc;
    }
 
@@ -37,6 +39,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -45,6 +48,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -53,6 +57,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setPreferencial(String preferencial) {
+        markAsChanged("PREFERENCIAL", preferencial);
         this.preferencial = preferencial;
    }
 
@@ -61,6 +66,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -69,6 +75,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -77,6 +84,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -85,6 +93,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -100,6 +109,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
 
    @Override
    public TerceiroProcessoProdutivo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codParcTerc = vo.asBigDecimal("CODPARCTERC");
         this.ideFx = vo.asBigDecimal("IDEFX");

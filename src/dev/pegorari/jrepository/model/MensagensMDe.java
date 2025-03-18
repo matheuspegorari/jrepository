@@ -18,6 +18,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -26,6 +27,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setChaveAcesso(String chaveAcesso) {
+        markAsChanged("CHAVEACESSO", chaveAcesso);
         this.chaveAcesso = chaveAcesso;
    }
 
@@ -34,6 +36,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -42,6 +45,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setStatusResp(BigDecimal statusResp) {
+        markAsChanged("STATUSRESP", statusResp);
         this.statusResp = statusResp;
    }
 
@@ -50,6 +54,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setDhResp(Timestamp dhResp) {
+        markAsChanged("DHRESP", dhResp);
         this.dhResp = dhResp;
    }
 
@@ -58,6 +63,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    }
 
    public void setMotivoResp(String motivoResp) {
+        markAsChanged("MOTIVORESP", motivoResp);
         this.motivoResp = motivoResp;
    }
 
@@ -73,6 +79,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
 
    @Override
    public MensagensMDe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.chaveAcesso = vo.asString("CHAVEACESSO");
         this.codEmp = vo.asBigDecimal("CODEMP");

@@ -20,6 +20,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -28,6 +29,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -36,6 +38,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCodCon(BigDecimal codCon) {
+        markAsChanged("CODCON", codCon);
         this.codCon = codCon;
    }
 
@@ -44,6 +47,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCodCont(BigDecimal codCont) {
+        markAsChanged("CODCONT", codCont);
         this.codCont = codCont;
    }
 
@@ -52,6 +56,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -60,6 +65,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -68,6 +74,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -76,6 +83,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -84,6 +92,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    }
 
    public void setNomeCon(String nomeCon) {
+        markAsChanged("NOMECON", nomeCon);
         this.nomeCon = nomeCon;
    }
 
@@ -99,6 +108,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
 
    @Override
    public MSDDestinatario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.celular = vo.asString("CELULAR");
         this.codCon = vo.asBigDecimal("CODCON");

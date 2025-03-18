@@ -21,6 +21,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setLeadTimeCql(BigDecimal leadTimeCql) {
+        markAsChanged("LEADTIMECQL", leadTimeCql);
         this.leadTimeCql = leadTimeCql;
    }
 
@@ -29,6 +30,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setAbreviacao(String abreviacao) {
+        markAsChanged("ABREVIACAO", abreviacao);
         this.abreviacao = abreviacao;
    }
 
@@ -37,6 +39,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setCodEst(BigDecimal codEst) {
+        markAsChanged("CODEST", codEst);
         this.codEst = codEst;
    }
 
@@ -45,6 +48,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setCodEtp(BigDecimal codEtp) {
+        markAsChanged("CODETP", codEtp);
         this.codEtp = codEtp;
    }
 
@@ -53,6 +57,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setCql(String cql) {
+        markAsChanged("CQL", cql);
         this.cql = cql;
    }
 
@@ -61,6 +66,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -69,6 +75,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setGeraProducao(String geraProducao) {
+        markAsChanged("GERAPRODUCAO", geraProducao);
         this.geraProducao = geraProducao;
    }
 
@@ -77,6 +84,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -85,6 +93,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setTopProd(BigDecimal topProd) {
+        markAsChanged("TOPPROD", topProd);
         this.topProd = topProd;
    }
 
@@ -93,6 +102,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    }
 
    public void setCompart(String compart) {
+        markAsChanged("COMPART", compart);
         this.compart = compart;
    }
 
@@ -108,6 +118,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
 
    @Override
    public EtapaEstruturaProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.leadTimeCql = vo.asBigDecimal("LEADTIMECQL");
         this.abreviacao = vo.asString("ABREVIACAO");
         this.codEst = vo.asBigDecimal("CODEST");

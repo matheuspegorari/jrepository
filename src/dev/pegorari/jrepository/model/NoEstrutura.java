@@ -18,6 +18,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setChaveRegistro(BigDecimal chaveRegistro) {
+        markAsChanged("CHAVEREGISTRO", chaveRegistro);
         this.chaveRegistro = chaveRegistro;
    }
 
@@ -26,6 +27,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -34,6 +36,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -42,6 +45,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setNuEst(BigDecimal nuEst) {
+        markAsChanged("NUEST", nuEst);
         this.nuEst = nuEst;
    }
 
@@ -50,6 +54,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -58,6 +63,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setNuNo(BigDecimal nuNo) {
+        markAsChanged("NUNO", nuNo);
         this.nuNo = nuNo;
    }
 
@@ -66,6 +72,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    }
 
    public void setNuNoPai(BigDecimal nuNoPai) {
+        markAsChanged("NUNOPAI", nuNoPai);
         this.nuNoPai = nuNoPai;
    }
 
@@ -81,6 +88,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
 
    @Override
    public NoEstrutura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveRegistro = vo.asBigDecimal("CHAVEREGISTRO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.nivel = vo.asBigDecimal("NIVEL");

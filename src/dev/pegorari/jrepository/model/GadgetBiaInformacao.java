@@ -19,6 +19,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setCampoAgrup(String campoAgrup) {
+        markAsChanged("CAMPOAGRUP", campoAgrup);
         this.campoAgrup = campoAgrup;
    }
 
@@ -27,6 +28,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setCampoValor(String campoValor) {
+        markAsChanged("CAMPOVALOR", campoValor);
         this.campoValor = campoValor;
    }
 
@@ -35,6 +37,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setCodGbi(BigDecimal codGbi) {
+        markAsChanged("CODGBI", codGbi);
         this.codGbi = codGbi;
    }
 
@@ -43,6 +46,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setDescrGbi(String descrGbi) {
+        markAsChanged("DESCRGBI", descrGbi);
         this.descrGbi = descrGbi;
    }
 
@@ -51,6 +55,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setIdCmp(String idCmp) {
+        markAsChanged("IDCMP", idCmp);
         this.idCmp = idCmp;
    }
 
@@ -59,6 +64,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setIdInfoBia(String idInfoBia) {
+        markAsChanged("IDINFOBIA", idInfoBia);
         this.idInfoBia = idInfoBia;
    }
 
@@ -67,6 +73,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setIdLvl(String idLvl) {
+        markAsChanged("IDLVL", idLvl);
         this.idLvl = idLvl;
    }
 
@@ -75,6 +82,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    }
 
    public void setNuGdg(BigDecimal nuGdg) {
+        markAsChanged("NUGDG", nuGdg);
         this.nuGdg = nuGdg;
    }
 
@@ -90,6 +98,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
 
    @Override
    public GadgetBiaInformacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.campoAgrup = vo.asString("CAMPOAGRUP");
         this.campoValor = vo.asString("CAMPOVALOR");
         this.codGbi = vo.asBigDecimal("CODGBI");

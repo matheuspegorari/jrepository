@@ -32,6 +32,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodCampoExtraGnre(BigDecimal codCampoExtraGnre) {
+        markAsChanged("CODCAMPOEXTRAGNRE", codCampoExtraGnre);
         this.codCampoExtraGnre = codCampoExtraGnre;
    }
 
@@ -40,6 +41,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodDetGnre(BigDecimal codDetGnre) {
+        markAsChanged("CODDETGNRE", codDetGnre);
         this.codDetGnre = codDetGnre;
    }
 
@@ -48,6 +50,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodFcpstGnre(BigDecimal codFcpstGnre) {
+        markAsChanged("CODFCPSTGNRE", codFcpstGnre);
         this.codFcpstGnre = codFcpstGnre;
    }
 
@@ -56,6 +59,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodGuf(BigDecimal codGuf) {
+        markAsChanged("CODGUF", codGuf);
         this.codGuf = codGuf;
    }
 
@@ -64,6 +68,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodProdGnre(BigDecimal codProdGnre) {
+        markAsChanged("CODPRODGNRE", codProdGnre);
         this.codProdGnre = codProdGnre;
    }
 
@@ -72,6 +77,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodStGnre(String codStGnre) {
+        markAsChanged("CODSTGNRE", codStGnre);
         this.codStGnre = codStGnre;
    }
 
@@ -80,6 +86,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -88,6 +95,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setGerInfCampAdicGnre(String gerInfCampAdicGnre) {
+        markAsChanged("GERINFCAMPADICGNRE", gerInfCampAdicGnre);
         this.gerInfCampAdicGnre = gerInfCampAdicGnre;
    }
 
@@ -96,6 +104,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setProtocoloConvenio(String protocoloConvenio) {
+        markAsChanged("PROTOCOLOCONVENIO", protocoloConvenio);
         this.protocoloConvenio = protocoloConvenio;
    }
 
@@ -104,6 +113,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setValorCampoExtra(String valorCampoExtra) {
+        markAsChanged("VALORCAMPOEXTRA", valorCampoExtra);
         this.valorCampoExtra = valorCampoExtra;
    }
 
@@ -112,6 +122,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setVersaoGnre(String versaoGnre) {
+        markAsChanged("VERSAOGNRE", versaoGnre);
         this.versaoGnre = versaoGnre;
    }
 
@@ -120,6 +131,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodObr(BigDecimal codObr) {
+        markAsChanged("CODOBR", codObr);
         this.codObr = codObr;
    }
 
@@ -128,6 +140,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setTipApuracao(String tipApuracao) {
+        markAsChanged("TIPAPURACAO", tipApuracao);
         this.tipApuracao = tipApuracao;
    }
 
@@ -136,6 +149,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodCampoExtraGnre2(BigDecimal codCampoExtraGnre2) {
+        markAsChanged("CODCAMPOEXTRAGNRE2", codCampoExtraGnre2);
         this.codCampoExtraGnre2 = codCampoExtraGnre2;
    }
 
@@ -144,6 +158,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setVlrPersGnre(String vlrPersGnre) {
+        markAsChanged("VLRPERSGNRE", vlrPersGnre);
         this.vlrPersGnre = vlrPersGnre;
    }
 
@@ -152,6 +167,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodClsVencDime(BigDecimal codClsVencDime) {
+        markAsChanged("CODCLSVENCDIME", codClsVencDime);
         this.codClsVencDime = codClsVencDime;
    }
 
@@ -160,6 +176,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodClsVencDimeFcpst(BigDecimal codClsVencDimeFcpst) {
+        markAsChanged("CODCLSVENCDIMEFCPST", codClsVencDimeFcpst);
         this.codClsVencDimeFcpst = codClsVencDimeFcpst;
    }
 
@@ -168,6 +185,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodRecDime(BigDecimal codRecDime) {
+        markAsChanged("CODRECDIME", codRecDime);
         this.codRecDime = codRecDime;
    }
 
@@ -176,6 +194,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setCodRecDimeFcpst(BigDecimal codRecDimeFcpst) {
+        markAsChanged("CODRECDIMEFCPST", codRecDimeFcpst);
         this.codRecDimeFcpst = codRecDimeFcpst;
    }
 
@@ -184,6 +203,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setTipoDoc(BigDecimal tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -192,6 +212,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
    }
 
    public void setTipoInfo(String tipoInfo) {
+        markAsChanged("TIPOINFO", tipoInfo);
         this.tipoInfo = tipoInfo;
    }
 
@@ -207,6 +228,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
 
    @Override
    public GNREUnidadeFederativa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCampoExtraGnre = vo.asBigDecimal("CODCAMPOEXTRAGNRE");
         this.codDetGnre = vo.asBigDecimal("CODDETGNRE");
         this.codFcpstGnre = vo.asBigDecimal("CODFCPSTGNRE");

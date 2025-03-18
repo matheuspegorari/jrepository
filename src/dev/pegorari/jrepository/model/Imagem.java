@@ -13,6 +13,7 @@ public class Imagem extends AbstractSankhyaEntity<Imagem> {
    }
 
    public void setCodImg(BigDecimal codImg) {
+        markAsChanged("CODIMG", codImg);
         this.codImg = codImg;
    }
 
@@ -21,6 +22,7 @@ public class Imagem extends AbstractSankhyaEntity<Imagem> {
    }
 
    public void setFoto(byte[] foto) {
+        markAsChanged("FOTO", foto);
         this.foto = foto;
    }
 
@@ -36,6 +38,7 @@ public class Imagem extends AbstractSankhyaEntity<Imagem> {
 
    @Override
    public Imagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codImg = vo.asBigDecimal("CODIMG");
         this.foto = vo.asBlob("FOTO");
         return this;

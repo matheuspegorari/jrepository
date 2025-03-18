@@ -22,6 +22,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setCnpj(String cnpj) {
+        markAsChanged("CNPJ", cnpj);
         this.cnpj = cnpj;
    }
 
@@ -30,6 +31,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setCnpjSuc(String cnpjSuc) {
+        markAsChanged("CNPJ_SUC", cnpjSuc);
         this.cnpjSuc = cnpjSuc;
    }
 
@@ -38,6 +40,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setCodemp(BigDecimal codemp) {
+        markAsChanged("CODEMP", codemp);
         this.codemp = codemp;
    }
 
@@ -46,6 +49,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setCodCred(BigDecimal codCred) {
+        markAsChanged("COD_CRED", codCred);
         this.codCred = codCred;
    }
 
@@ -54,6 +58,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setOrigCred(String origCred) {
+        markAsChanged("ORIG_CRED", origCred);
         this.origCred = origCred;
    }
 
@@ -62,6 +67,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setPerApuCred(Timestamp perApuCred) {
+        markAsChanged("PER_APU_CRED", perApuCred);
         this.perApuCred = perApuCred;
    }
 
@@ -70,6 +76,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setSaldo(BigDecimal saldo) {
+        markAsChanged("SALDO", saldo);
         this.saldo = saldo;
    }
 
@@ -78,6 +85,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -86,6 +94,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setVlCredApu(BigDecimal vlCredApu) {
+        markAsChanged("VL_CRED_APU", vlCredApu);
         this.vlCredApu = vlCredApu;
    }
 
@@ -94,6 +103,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    }
 
    public void setVlCredExtApu(BigDecimal vlCredExtApu) {
+        markAsChanged("VL_CRED_EXT_APU", vlCredExtApu);
         this.vlCredExtApu = vlCredExtApu;
    }
 
@@ -109,6 +119,7 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
 
    @Override
    public CreditoPisCofins fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cnpj = vo.asString("CNPJ");
         this.cnpjSuc = vo.asString("CNPJ_SUC");
         this.codemp = vo.asBigDecimal("CODEMP");

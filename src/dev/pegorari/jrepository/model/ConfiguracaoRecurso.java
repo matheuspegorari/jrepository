@@ -16,6 +16,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -24,6 +25,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
    }
 
    public void setChavePai(String chavePai) {
+        markAsChanged("CHAVEPAI", chavePai);
         this.chavePai = chavePai;
    }
 
@@ -32,6 +34,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -40,6 +43,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -48,6 +52,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -63,6 +68,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
 
    @Override
    public ConfiguracaoRecurso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.chavePai = vo.asString("CHAVEPAI");
         this.codUsu = vo.asBigDecimal("CODUSU");

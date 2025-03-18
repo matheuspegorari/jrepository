@@ -17,6 +17,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -25,6 +26,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    }
 
    public void setCotacao(BigDecimal cotacao) {
+        markAsChanged("COTACAO", cotacao);
         this.cotacao = cotacao;
    }
 
@@ -33,6 +35,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -41,6 +44,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    }
 
    public void setIndice2(BigDecimal indice2) {
+        markAsChanged("INDICE2", indice2);
         this.indice2 = indice2;
    }
 
@@ -49,6 +53,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    }
 
    public void setIndiceDesc(BigDecimal indiceDesc) {
+        markAsChanged("INDICEDESC", indiceDesc);
         this.indiceDesc = indiceDesc;
    }
 
@@ -64,6 +69,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
 
    @Override
    public CotacaoMoeda fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMoeda = vo.asBigDecimal("CODMOEDA");
         this.cotacao = vo.asBigDecimal("COTACAO");
         this.dtMov = vo.asTimestamp("DTMOV");

@@ -14,6 +14,7 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
    }
 
    public void setId(String id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -22,6 +23,7 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -30,6 +32,7 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -45,6 +48,7 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
 
    @Override
    public SincronizadorVersoesMobile fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.id = vo.asString("ID");
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.versao = vo.asBigDecimal("VERSAO");

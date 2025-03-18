@@ -15,6 +15,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -23,6 +24,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
    }
 
    public void setDescrNatOper(String descrNatOper) {
+        markAsChanged("DESCRNATOPER", descrNatOper);
         this.descrNatOper = descrNatOper;
    }
 
@@ -31,6 +33,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
    }
 
    public void setCodNatOper(String codNatOper) {
+        markAsChanged("CODNATOPER", codNatOper);
         this.codNatOper = codNatOper;
    }
 
@@ -39,6 +42,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
    }
 
    public void setCodMunFis(BigDecimal codMunFis) {
+        markAsChanged("CODMUNFIS", codMunFis);
         this.codMunFis = codMunFis;
    }
 
@@ -54,6 +58,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
 
    @Override
    public NaturezaOperacaoMunicipio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.descrNatOper = vo.asString("DESCRNATOPER");
         this.codNatOper = vo.asString("CODNATOPER");

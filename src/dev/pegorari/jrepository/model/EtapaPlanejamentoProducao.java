@@ -25,6 +25,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setNumPlan(BigDecimal numPlan) {
+        markAsChanged("NUMPLAN", numPlan);
         this.numPlan = numPlan;
    }
 
@@ -33,6 +34,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setAbrvEtapa(String abrvEtapa) {
+        markAsChanged("ABRVETAPA", abrvEtapa);
         this.abrvEtapa = abrvEtapa;
    }
 
@@ -41,6 +43,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setCql(String cql) {
+        markAsChanged("CQL", cql);
         this.cql = cql;
    }
 
@@ -49,6 +52,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setDtFim(Timestamp dtFim) {
+        markAsChanged("DTFIM", dtFim);
         this.dtFim = dtFim;
    }
 
@@ -57,6 +61,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setDtIni(Timestamp dtIni) {
+        markAsChanged("DTINI", dtIni);
         this.dtIni = dtIni;
    }
 
@@ -65,6 +70,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setEtapa(BigDecimal etapa) {
+        markAsChanged("ETAPA", etapa);
         this.etapa = etapa;
    }
 
@@ -73,6 +79,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setGeraProd(String geraProd) {
+        markAsChanged("GERAPROD", geraProd);
         this.geraProd = geraProd;
    }
 
@@ -81,6 +88,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -89,6 +97,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setLeadTimeFim(BigDecimal leadTimeFim) {
+        markAsChanged("LEADTIMEFIM", leadTimeFim);
         this.leadTimeFim = leadTimeFim;
    }
 
@@ -97,6 +106,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setLeadTimeTot(BigDecimal leadTimeTot) {
+        markAsChanged("LEADTIMETOT", leadTimeTot);
         this.leadTimeTot = leadTimeTot;
    }
 
@@ -105,6 +115,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -113,6 +124,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setTopProd(BigDecimal topProd) {
+        markAsChanged("TOPPROD", topProd);
         this.topProd = topProd;
    }
 
@@ -121,6 +133,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -136,6 +149,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
 
    @Override
    public EtapaPlanejamentoProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.numPlan = vo.asBigDecimal("NUMPLAN");
         this.abrvEtapa = vo.asString("ABRVETAPA");
         this.cql = vo.asString("CQL");

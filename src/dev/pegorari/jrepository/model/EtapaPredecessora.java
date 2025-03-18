@@ -15,6 +15,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -23,6 +24,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
    }
 
    public void setNuMetapa(BigDecimal nuMetapa) {
+        markAsChanged("NUMETAPA", nuMetapa);
         this.nuMetapa = nuMetapa;
    }
 
@@ -31,6 +33,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
    }
 
    public void setNuMetapaPred(BigDecimal nuMetapaPred) {
+        markAsChanged("NUMETAPAPRED", nuMetapaPred);
         this.nuMetapaPred = nuMetapaPred;
    }
 
@@ -39,6 +42,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -54,6 +58,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
 
    @Override
    public EtapaPredecessora fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuMetapa = vo.asBigDecimal("NUMETAPA");
         this.nuMetapaPred = vo.asBigDecimal("NUMETAPAPRED");

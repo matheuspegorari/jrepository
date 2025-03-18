@@ -21,6 +21,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setTipoQtd(String tipoQtd) {
+        markAsChanged("TIPOQTD", tipoQtd);
         this.tipoQtd = tipoQtd;
    }
 
@@ -29,6 +30,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -37,6 +39,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setQtdTotal(BigDecimal qtdTotal) {
+        markAsChanged("QTDTOTAL", qtdTotal);
         this.qtdTotal = qtdTotal;
    }
 
@@ -45,6 +48,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -53,6 +57,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -61,6 +66,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setSeqImps(BigDecimal seqImps) {
+        markAsChanged("SEQIMPS", seqImps);
         this.seqImps = seqImps;
    }
 
@@ -69,6 +75,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -77,6 +84,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setProdInterm(String prodInterm) {
+        markAsChanged("PRODINTERM", prodInterm);
         this.prodInterm = prodInterm;
    }
 
@@ -85,6 +93,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setTipoPi(String tipoPi) {
+        markAsChanged("TIPOPI", tipoPi);
         this.tipoPi = tipoPi;
    }
 
@@ -93,6 +102,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
    }
 
    public void setTipoSubOp(String tipoSubOp) {
+        markAsChanged("TIPOSUBOP", tipoSubOp);
         this.tipoSubOp = tipoSubOp;
    }
 
@@ -108,6 +118,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
 
    @Override
    public MaterialMRP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipoQtd = vo.asString("TIPOQTD");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.qtdTotal = vo.asBigDecimal("QTDTOTAL");

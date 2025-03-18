@@ -21,6 +21,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setCodModPed(BigDecimal codModPed) {
+        markAsChanged("CODMODPED", codModPed);
         this.codModPed = codModPed;
    }
 
@@ -29,6 +30,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setCodVtp(BigDecimal codVtp) {
+        markAsChanged("CODVTP", codVtp);
         this.codVtp = codVtp;
    }
 
@@ -37,6 +39,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -45,6 +48,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -53,6 +57,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setLeadTimeConf(BigDecimal leadTimeConf) {
+        markAsChanged("LEADTIMECONF", leadTimeConf);
         this.leadTimeConf = leadTimeConf;
    }
 
@@ -61,6 +66,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setLeadTimeDesp(BigDecimal leadTimeDesp) {
+        markAsChanged("LEADTIMEDESP", leadTimeDesp);
         this.leadTimeDesp = leadTimeDesp;
    }
 
@@ -69,6 +75,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setLeadTimeEmpc(BigDecimal leadTimeEmpc) {
+        markAsChanged("LEADTIMEEMPC", leadTimeEmpc);
         this.leadTimeEmpc = leadTimeEmpc;
    }
 
@@ -77,6 +84,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setLeadTimeProc(BigDecimal leadTimeProc) {
+        markAsChanged("LEADTIMEPROC", leadTimeProc);
         this.leadTimeProc = leadTimeProc;
    }
 
@@ -85,6 +93,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setQtdItens(BigDecimal qtdItens) {
+        markAsChanged("QTDITENS", qtdItens);
         this.qtdItens = qtdItens;
    }
 
@@ -93,6 +102,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -108,6 +118,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
 
    @Override
    public ViaTransporte fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModPed = vo.asBigDecimal("CODMODPED");
         this.codVtp = vo.asBigDecimal("CODVTP");
         this.descricao = vo.asString("DESCRICAO");

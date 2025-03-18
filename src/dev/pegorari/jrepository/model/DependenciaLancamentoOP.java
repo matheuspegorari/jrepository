@@ -25,6 +25,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -33,6 +34,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setTipoNroLote(String tipoNroLote) {
+        markAsChanged("TIPONROLOTE", tipoNroLote);
         this.tipoNroLote = tipoNroLote;
    }
 
@@ -41,6 +43,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -49,6 +52,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setSeqOppi(BigDecimal seqOppi) {
+        markAsChanged("SEQOPPI", seqOppi);
         this.seqOppi = seqOppi;
    }
 
@@ -57,6 +61,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setCodProdPi(BigDecimal codProdPi) {
+        markAsChanged("CODPRODPI", codProdPi);
         this.codProdPi = codProdPi;
    }
 
@@ -65,6 +70,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -73,6 +79,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -81,6 +88,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setControlePi(String controlePi) {
+        markAsChanged("CONTROLEPI", controlePi);
         this.controlePi = controlePi;
    }
 
@@ -89,6 +97,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setQtdPi(BigDecimal qtdPi) {
+        markAsChanged("QTDPI", qtdPi);
         this.qtdPi = qtdPi;
    }
 
@@ -97,6 +106,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setTipoSubOp(String tipoSubOp) {
+        markAsChanged("TIPOSUBOP", tipoSubOp);
         this.tipoSubOp = tipoSubOp;
    }
 
@@ -105,6 +115,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setQtdNecessario(BigDecimal qtdNecessario) {
+        markAsChanged("QTDNECESSARIO", qtdNecessario);
         this.qtdNecessario = qtdNecessario;
    }
 
@@ -113,6 +124,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setQtdEstoque(BigDecimal qtdEstoque) {
+        markAsChanged("QTDESTOQUE", qtdEstoque);
         this.qtdEstoque = qtdEstoque;
    }
 
@@ -121,6 +133,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setNecessidadeTotal(BigDecimal necessidadeTotal) {
+        markAsChanged("NECESSIDADETOTAL", necessidadeTotal);
         this.necessidadeTotal = necessidadeTotal;
    }
 
@@ -129,6 +142,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
    }
 
    public void setConsideraEstoque(String consideraEstoque) {
+        markAsChanged("CONSIDERAESTOQUE", consideraEstoque);
         this.consideraEstoque = consideraEstoque;
    }
 
@@ -144,6 +158,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
 
    @Override
    public DependenciaLancamentoOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.controlePa = vo.asString("CONTROLEPA");
         this.tipoNroLote = vo.asString("TIPONROLOTE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

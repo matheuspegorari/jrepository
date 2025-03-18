@@ -44,6 +44,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setAno(BigDecimal ano) {
+        markAsChanged("ANO", ano);
         this.ano = ano;
    }
 
@@ -52,6 +53,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -60,6 +62,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -68,6 +71,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -76,6 +80,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -84,6 +89,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -92,6 +98,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndAbril(BigDecimal indAbril) {
+        markAsChanged("INDABRIL", indAbril);
         this.indAbril = indAbril;
    }
 
@@ -100,6 +107,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndAgosto(BigDecimal indAgosto) {
+        markAsChanged("INDAGOSTO", indAgosto);
         this.indAgosto = indAgosto;
    }
 
@@ -108,6 +116,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndDezembro(BigDecimal indDezembro) {
+        markAsChanged("INDDEZEMBRO", indDezembro);
         this.indDezembro = indDezembro;
    }
 
@@ -116,6 +125,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndFevereiro(BigDecimal indFevereiro) {
+        markAsChanged("INDFEVEREIRO", indFevereiro);
         this.indFevereiro = indFevereiro;
    }
 
@@ -124,6 +134,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndJaneiro(BigDecimal indJaneiro) {
+        markAsChanged("INDJANEIRO", indJaneiro);
         this.indJaneiro = indJaneiro;
    }
 
@@ -132,6 +143,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndJulho(BigDecimal indJulho) {
+        markAsChanged("INDJULHO", indJulho);
         this.indJulho = indJulho;
    }
 
@@ -140,6 +152,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndJunho(BigDecimal indJunho) {
+        markAsChanged("INDJUNHO", indJunho);
         this.indJunho = indJunho;
    }
 
@@ -148,6 +161,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndMaio(BigDecimal indMaio) {
+        markAsChanged("INDMAIO", indMaio);
         this.indMaio = indMaio;
    }
 
@@ -156,6 +170,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndMarco(BigDecimal indMarco) {
+        markAsChanged("INDMARCO", indMarco);
         this.indMarco = indMarco;
    }
 
@@ -164,6 +179,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndNovembro(BigDecimal indNovembro) {
+        markAsChanged("INDNOVEMBRO", indNovembro);
         this.indNovembro = indNovembro;
    }
 
@@ -172,6 +188,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndOutubro(BigDecimal indOutubro) {
+        markAsChanged("INDOUTUBRO", indOutubro);
         this.indOutubro = indOutubro;
    }
 
@@ -180,6 +197,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setIndSetembro(BigDecimal indSetembro) {
+        markAsChanged("INDSETEMBRO", indSetembro);
         this.indSetembro = indSetembro;
    }
 
@@ -188,6 +206,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -196,6 +215,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setTipEvento(BigDecimal tipEvento) {
+        markAsChanged("TIPEVENTO", tipEvento);
         this.tipEvento = tipEvento;
    }
 
@@ -204,6 +224,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrAbril(BigDecimal vlrAbril) {
+        markAsChanged("VLRABRIL", vlrAbril);
         this.vlrAbril = vlrAbril;
    }
 
@@ -212,6 +233,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrAgosto(BigDecimal vlrAgosto) {
+        markAsChanged("VLRAGOSTO", vlrAgosto);
         this.vlrAgosto = vlrAgosto;
    }
 
@@ -220,6 +242,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrDezembro(BigDecimal vlrDezembro) {
+        markAsChanged("VLRDEZEMBRO", vlrDezembro);
         this.vlrDezembro = vlrDezembro;
    }
 
@@ -228,6 +251,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrFevereiro(BigDecimal vlrFevereiro) {
+        markAsChanged("VLRFEVEREIRO", vlrFevereiro);
         this.vlrFevereiro = vlrFevereiro;
    }
 
@@ -236,6 +260,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrJaneiro(BigDecimal vlrJaneiro) {
+        markAsChanged("VLRJANEIRO", vlrJaneiro);
         this.vlrJaneiro = vlrJaneiro;
    }
 
@@ -244,6 +269,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrJulho(BigDecimal vlrJulho) {
+        markAsChanged("VLRJULHO", vlrJulho);
         this.vlrJulho = vlrJulho;
    }
 
@@ -252,6 +278,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrJunho(BigDecimal vlrJunho) {
+        markAsChanged("VLRJUNHO", vlrJunho);
         this.vlrJunho = vlrJunho;
    }
 
@@ -260,6 +287,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrMaio(BigDecimal vlrMaio) {
+        markAsChanged("VLRMAIO", vlrMaio);
         this.vlrMaio = vlrMaio;
    }
 
@@ -268,6 +296,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrMarco(BigDecimal vlrMarco) {
+        markAsChanged("VLRMARCO", vlrMarco);
         this.vlrMarco = vlrMarco;
    }
 
@@ -276,6 +305,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrNovembro(BigDecimal vlrNovembro) {
+        markAsChanged("VLRNOVEMBRO", vlrNovembro);
         this.vlrNovembro = vlrNovembro;
    }
 
@@ -284,6 +314,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrOutubro(BigDecimal vlrOutubro) {
+        markAsChanged("VLROUTUBRO", vlrOutubro);
         this.vlrOutubro = vlrOutubro;
    }
 
@@ -292,6 +323,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
    }
 
    public void setVlrSetembro(BigDecimal vlrSetembro) {
+        markAsChanged("VLRSETEMBRO", vlrSetembro);
         this.vlrSetembro = vlrSetembro;
    }
 
@@ -307,6 +339,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
 
    @Override
    public AcumuladoAno fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ano = vo.asBigDecimal("ANO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");

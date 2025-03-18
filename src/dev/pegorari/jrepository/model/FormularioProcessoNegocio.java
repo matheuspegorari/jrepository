@@ -26,6 +26,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setCardinalidade(String cardinalidade) {
+        markAsChanged("CARDINALIDADE", cardinalidade);
         this.cardinalidade = cardinalidade;
    }
 
@@ -34,6 +35,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setConfigCampos(char[] configCampos) {
+        markAsChanged("CONFIGCAMPOS", configCampos);
         this.configCampos = configCampos;
    }
 
@@ -42,6 +44,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -50,6 +53,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setEscopo(String escopo) {
+        markAsChanged("ESCOPO", escopo);
         this.escopo = escopo;
    }
 
@@ -58,6 +62,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -66,6 +71,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setNuEle(BigDecimal nuEle) {
+        markAsChanged("NUELE", nuEle);
         this.nuEle = nuEle;
    }
 
@@ -74,6 +80,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setNuForm(BigDecimal nuForm) {
+        markAsChanged("NUFORM", nuForm);
         this.nuForm = nuForm;
    }
 
@@ -82,6 +89,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -90,6 +98,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setPoliticaReetrancia(String politicaReetrancia) {
+        markAsChanged("POLITICAREETRANCIA", politicaReetrancia);
         this.politicaReetrancia = politicaReetrancia;
    }
 
@@ -98,6 +107,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setNuFormPai(BigDecimal nuFormPai) {
+        markAsChanged("NUFORMPAI", nuFormPai);
         this.nuFormPai = nuFormPai;
    }
 
@@ -106,6 +116,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setOrdemAbas(String ordemAbas) {
+        markAsChanged("ORDEMABAS", ordemAbas);
         this.ordemAbas = ordemAbas;
    }
 
@@ -114,6 +125,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setSalvarDestino(String salvarDestino) {
+        markAsChanged("SALVARDESTINO", salvarDestino);
         this.salvarDestino = salvarDestino;
    }
 
@@ -122,6 +134,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -130,6 +143,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setUtilizaTarefa(String utilizaTarefa) {
+        markAsChanged("UTILIZATAREFA", utilizaTarefa);
         this.utilizaTarefa = utilizaTarefa;
    }
 
@@ -138,6 +152,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    }
 
    public void setSalvarFinalProcesso(String salvarFinalProcesso) {
+        markAsChanged("SALVARFINALPROCESSO", salvarFinalProcesso);
         this.salvarFinalProcesso = salvarFinalProcesso;
    }
 
@@ -153,6 +168,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
 
    @Override
    public FormularioProcessoNegocio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cardinalidade = vo.asString("CARDINALIDADE");
         this.configCampos = vo.asClob("CONFIGCAMPOS");
         this.descricao = vo.asString("DESCRICAO");

@@ -22,6 +22,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setAtualEstoque(BigDecimal atualEstoque) {
+        markAsChanged("ATUALESTOQUE", atualEstoque);
         this.atualEstoque = atualEstoque;
    }
 
@@ -30,6 +31,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setAvariado(String avariado) {
+        markAsChanged("AVARIADO", avariado);
         this.avariado = avariado;
    }
 
@@ -38,6 +40,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -46,6 +49,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -54,6 +58,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -62,6 +67,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -70,6 +76,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -78,6 +85,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -86,6 +94,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setSerieFab(String serieFab) {
+        markAsChanged("SERIEFAB", serieFab);
         this.serieFab = serieFab;
    }
 
@@ -94,6 +103,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
    }
 
    public void setSmartCard(String smartCard) {
+        markAsChanged("SMARTCARD", smartCard);
         this.smartCard = smartCard;
    }
 
@@ -109,6 +119,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
 
    @Override
    public SerieProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
         this.avariado = vo.asString("AVARIADO");
         this.codProd = vo.asBigDecimal("CODPROD");

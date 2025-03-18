@@ -24,6 +24,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
+        markAsChanged("CODUSULIB", codUsuLib);
         this.codUsuLib = codUsuLib;
    }
 
@@ -32,6 +33,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setCodUsuSolicit(BigDecimal codUsuSolicit) {
+        markAsChanged("CODUSUSOLICIT", codUsuSolicit);
         this.codUsuSolicit = codUsuSolicit;
    }
 
@@ -40,6 +42,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setDhSolicit(Timestamp dhSolicit) {
+        markAsChanged("DHSOLICIT", dhSolicit);
         this.dhSolicit = dhSolicit;
    }
 
@@ -48,6 +51,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setDtFinLib(Timestamp dtFinLib) {
+        markAsChanged("DTFINLIB", dtFinLib);
         this.dtFinLib = dtFinLib;
    }
 
@@ -56,6 +60,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setDtIniLib(Timestamp dtIniLib) {
+        markAsChanged("DTINILIB", dtIniLib);
         this.dtIniLib = dtIniLib;
    }
 
@@ -64,6 +69,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setNuBloqueio(BigDecimal nuBloqueio) {
+        markAsChanged("NUBLOQUEIO", nuBloqueio);
         this.nuBloqueio = nuBloqueio;
    }
 
@@ -72,6 +78,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setNuLiberacao(BigDecimal nuLiberacao) {
+        markAsChanged("NULIBERACAO", nuLiberacao);
         this.nuLiberacao = nuLiberacao;
    }
 
@@ -80,6 +87,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setRotinaCtb(String rotinaCtb) {
+        markAsChanged("ROTINACTB", rotinaCtb);
         this.rotinaCtb = rotinaCtb;
    }
 
@@ -88,6 +96,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setSeqBloqueio(BigDecimal seqBloqueio) {
+        markAsChanged("SEQBLOQUEIO", seqBloqueio);
         this.seqBloqueio = seqBloqueio;
    }
 
@@ -96,6 +105,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setStatusLib(String statusLib) {
+        markAsChanged("STATUSLIB", statusLib);
         this.statusLib = statusLib;
    }
 
@@ -104,6 +114,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setTipoAcao(String tipoAcao) {
+        markAsChanged("TIPOACAO", tipoAcao);
         this.tipoAcao = tipoAcao;
    }
 
@@ -112,6 +123,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    }
 
    public void setTipoMov(String tipoMov) {
+        markAsChanged("TIPOMOV", tipoMov);
         this.tipoMov = tipoMov;
    }
 
@@ -127,6 +139,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
 
    @Override
    public LiberacaoBloqueioContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");
         this.dhSolicit = vo.asTimestamp("DHSOLICIT");

@@ -17,6 +17,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setCodColRest(BigDecimal codColRest) {
+        markAsChanged("CODCOLREST", codColRest);
         this.codColRest = codColRest;
    }
 
@@ -25,6 +26,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -33,6 +35,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -41,6 +44,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setRestricao(String restricao) {
+        markAsChanged("RESTRICAO", restricao);
         this.restricao = restricao;
    }
 
@@ -49,6 +53,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -57,6 +62,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    }
 
    public void setTipRest(String tipRest) {
+        markAsChanged("TIPREST", tipRest);
         this.tipRest = tipRest;
    }
 
@@ -72,6 +78,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
 
    @Override
    public RestricaoTop fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codColRest = vo.asBigDecimal("CODCOLREST");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.descricao = vo.asString("DESCRICAO");

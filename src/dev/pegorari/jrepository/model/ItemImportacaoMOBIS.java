@@ -19,6 +19,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setInvoiceNumber(String invoiceNumber) {
+        markAsChanged("INVOICENUMBER", invoiceNumber);
         this.invoiceNumber = invoiceNumber;
    }
 
@@ -27,6 +28,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -35,6 +37,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setNuImp(BigDecimal nuImp) {
+        markAsChanged("NUIMP", nuImp);
         this.nuImp = nuImp;
    }
 
@@ -43,6 +46,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -51,6 +55,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setOrderNumber(String orderNumber) {
+        markAsChanged("ORDERNUMBER", orderNumber);
         this.orderNumber = orderNumber;
    }
 
@@ -59,6 +64,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setSeqImp(BigDecimal seqImp) {
+        markAsChanged("SEQIMP", seqImp);
         this.seqImp = seqImp;
    }
 
@@ -67,6 +73,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setLog(char[] log) {
+        markAsChanged("LOG", log);
         this.log = log;
    }
 
@@ -75,6 +82,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
    }
 
    public void setImpStatus(String impStatus) {
+        markAsChanged("IMPSTATUS", impStatus);
         this.impStatus = impStatus;
    }
 
@@ -90,6 +98,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
 
    @Override
    public ItemImportacaoMOBIS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.invoiceNumber = vo.asString("INVOICENUMBER");
         this.msg = vo.asClob("MSG");
         this.nuImp = vo.asBigDecimal("NUIMP");

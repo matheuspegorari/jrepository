@@ -23,6 +23,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -31,6 +32,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setDtFab(Timestamp dtFab) {
+        markAsChanged("DTFAB", dtFab);
         this.dtFab = dtFab;
    }
 
@@ -39,6 +41,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -47,6 +50,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -55,6 +59,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setConcluido(String concluido) {
+        markAsChanged("CONCLUIDO", concluido);
         this.concluido = concluido;
    }
 
@@ -63,6 +68,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -71,6 +77,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -79,6 +86,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setNroLote(String nroLote) {
+        markAsChanged("NROLOTE", nroLote);
         this.nroLote = nroLote;
    }
 
@@ -87,6 +95,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setQtdProduzir(BigDecimal qtdProduzir) {
+        markAsChanged("QTDPRODUZIR", qtdProduzir);
         this.qtdProduzir = qtdProduzir;
    }
 
@@ -95,6 +104,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setSaldoOp(BigDecimal saldoOp) {
+        markAsChanged("SALDOOP", saldoOp);
         this.saldoOp = saldoOp;
    }
 
@@ -103,6 +113,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    }
 
    public void setQtdProduzirOriginal(BigDecimal qtdProduzirOriginal) {
+        markAsChanged("QTDPRODUZIR_ORIGINAL", qtdProduzirOriginal);
         this.qtdProduzirOriginal = qtdProduzirOriginal;
    }
 
@@ -118,6 +129,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
 
    @Override
    public ProdutoAcabadoAProduzir fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtVal = vo.asTimestamp("DTVAL");
         this.dtFab = vo.asTimestamp("DTFAB");
         this.referencia = vo.asString("REFERENCIA");

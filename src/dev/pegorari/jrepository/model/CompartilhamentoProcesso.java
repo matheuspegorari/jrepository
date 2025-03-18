@@ -18,6 +18,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -26,6 +27,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setPermiteCompartilhar(String permiteCompartilhar) {
+        markAsChanged("PERMITECOMPARTILHAR", permiteCompartilhar);
         this.permiteCompartilhar = permiteCompartilhar;
    }
 
@@ -42,6 +45,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setPermiteEdicao(String permiteEdicao) {
+        markAsChanged("PERMITEEDICAO", permiteEdicao);
         this.permiteEdicao = permiteEdicao;
    }
 
@@ -50,6 +54,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setPermiteIniciar(String permiteIniciar) {
+        markAsChanged("PERMITEINICIAR", permiteIniciar);
         this.permiteIniciar = permiteIniciar;
    }
 
@@ -58,6 +63,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -66,6 +72,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
    }
 
    public void setTipUsuGru(String tipUsuGru) {
+        markAsChanged("TIPUSUGRU", tipUsuGru);
         this.tipUsuGru = tipUsuGru;
    }
 
@@ -81,6 +88,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
 
    @Override
    public CompartilhamentoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.permiteCompartilhar = vo.asString("PERMITECOMPARTILHAR");

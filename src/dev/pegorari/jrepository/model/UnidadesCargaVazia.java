@@ -16,6 +16,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    }
 
    public void setCodUnicv(BigDecimal codUnicv) {
+        markAsChanged("CODUNICV", codUnicv);
         this.codUnicv = codUnicv;
    }
 
@@ -24,6 +25,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    }
 
    public void setIdUnidCargaVazia(String idUnidCargaVazia) {
+        markAsChanged("IDUNIDCARGAVAZIA", idUnidCargaVazia);
         this.idUnidCargaVazia = idUnidCargaVazia;
    }
 
@@ -32,6 +34,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -40,6 +43,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -48,6 +52,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    }
 
    public void setTipoUniCargaVazia(BigDecimal tipoUniCargaVazia) {
+        markAsChanged("TIPOUNICARGAVAZIA", tipoUniCargaVazia);
         this.tipoUniCargaVazia = tipoUniCargaVazia;
    }
 
@@ -63,6 +68,7 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
 
    @Override
    public UnidadesCargaVazia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUnicv = vo.asBigDecimal("CODUNICV");
         this.idUnidCargaVazia = vo.asString("IDUNIDCARGAVAZIA");
         this.nuViag = vo.asBigDecimal("NUVIAG");

@@ -35,6 +35,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -43,6 +44,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -51,6 +53,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodForm(BigDecimal codForm) {
+        markAsChanged("CODFORM", codForm);
         this.codForm = codForm;
    }
 
@@ -59,6 +62,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -67,6 +71,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -75,6 +80,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -83,6 +89,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -91,6 +98,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setIndiceProdutividade(BigDecimal indiceProdutividade) {
+        markAsChanged("INDICEPRODUTIVIDADE", indiceProdutividade);
         this.indiceProdutividade = indiceProdutividade;
    }
 
@@ -99,6 +107,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNuFechamento(BigDecimal nuFechamento) {
+        markAsChanged("NUFECHAMENTO", nuFechamento);
         this.nuFechamento = nuFechamento;
    }
 
@@ -107,6 +116,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -115,6 +125,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
+        markAsChanged("NUFINORIG", nuFinOrig);
         this.nuFinOrig = nuFinOrig;
    }
 
@@ -123,6 +134,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNumItemOrig(BigDecimal numItemOrig) {
+        markAsChanged("NUMITEMORIG", numItemOrig);
         this.numItemOrig = numItemOrig;
    }
 
@@ -131,6 +143,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNumOsOrig(BigDecimal numOsOrig) {
+        markAsChanged("NUMOSORIG", numOsOrig);
         this.numOsOrig = numOsOrig;
    }
 
@@ -139,6 +152,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -147,6 +161,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setQtdHora(BigDecimal qtdHora) {
+        markAsChanged("QTDHORA", qtdHora);
         this.qtdHora = qtdHora;
    }
 
@@ -155,6 +170,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setQtdHoraExtra(BigDecimal qtdHoraExtra) {
+        markAsChanged("QTDHORAEXTRA", qtdHoraExtra);
         this.qtdHoraExtra = qtdHoraExtra;
    }
 
@@ -163,6 +179,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -171,6 +188,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -179,6 +197,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -187,6 +206,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setVlrCom(BigDecimal vlrCom) {
+        markAsChanged("VLRCOM", vlrCom);
         this.vlrCom = vlrCom;
    }
 
@@ -195,6 +215,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setVlrHora(BigDecimal vlrHora) {
+        markAsChanged("VLRHORA", vlrHora);
         this.vlrHora = vlrHora;
    }
 
@@ -203,6 +224,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setVlrHoraExtra(BigDecimal vlrHoraExtra) {
+        markAsChanged("VLRHORAEXTRA", vlrHoraExtra);
         this.vlrHoraExtra = vlrHoraExtra;
    }
 
@@ -211,6 +233,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    }
 
    public void setVlrResiduoCom(BigDecimal vlrResiduoCom) {
+        markAsChanged("VLRRESIDUOCOM", vlrResiduoCom);
         this.vlrResiduoCom = vlrResiduoCom;
    }
 
@@ -226,6 +249,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
 
    @Override
    public ValorComissaoVendedor fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codForm = vo.asBigDecimal("CODFORM");

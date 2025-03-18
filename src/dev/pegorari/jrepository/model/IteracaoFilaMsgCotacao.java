@@ -15,6 +15,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -23,6 +24,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -31,6 +33,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
    }
 
    public void setContador(BigDecimal contador) {
+        markAsChanged("CONTADOR", contador);
         this.contador = contador;
    }
 
@@ -39,6 +42,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -54,6 +58,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
 
    @Override
    public IteracaoFilaMsgCotacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.contador = vo.asBigDecimal("CONTADOR");

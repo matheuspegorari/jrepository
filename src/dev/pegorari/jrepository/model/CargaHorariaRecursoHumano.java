@@ -16,6 +16,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -24,6 +25,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
    }
 
    public void setCodRhp(BigDecimal codRhp) {
+        markAsChanged("CODRHP", codRhp);
         this.codRhp = codRhp;
    }
 
@@ -32,6 +34,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
    }
 
    public void setDtFinalVigor(Timestamp dtFinalVigor) {
+        markAsChanged("DTFINALVIGOR", dtFinalVigor);
         this.dtFinalVigor = dtFinalVigor;
    }
 
@@ -40,6 +43,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
    }
 
    public void setDtInicioVigor(Timestamp dtInicioVigor) {
+        markAsChanged("DTINICIOVIGOR", dtInicioVigor);
         this.dtInicioVigor = dtInicioVigor;
    }
 
@@ -55,6 +59,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
 
    @Override
    public CargaHorariaRecursoHumano fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.codRhp = vo.asBigDecimal("CODRHP");
         this.dtFinalVigor = vo.asTimestamp("DTFINALVIGOR");

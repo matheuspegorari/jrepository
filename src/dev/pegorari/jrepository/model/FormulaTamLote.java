@@ -14,6 +14,7 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
    }
 
    public void setDescFormula(String descFormula) {
+        markAsChanged("DESCFORMULA", descFormula);
         this.descFormula = descFormula;
    }
 
@@ -22,6 +23,7 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -30,6 +32,7 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
    }
 
    public void setIdFormula(BigDecimal idFormula) {
+        markAsChanged("IDFORMULA", idFormula);
         this.idFormula = idFormula;
    }
 
@@ -45,6 +48,7 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
 
    @Override
    public FormulaTamLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descFormula = vo.asString("DESCFORMULA");
         this.expressao = vo.asString("EXPRESSAO");
         this.idFormula = vo.asBigDecimal("IDFORMULA");

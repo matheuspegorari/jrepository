@@ -22,6 +22,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -30,6 +31,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setCodRec(BigDecimal codRec) {
+        markAsChanged("CODREC", codRec);
         this.codRec = codRec;
    }
 
@@ -38,6 +40,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setDtApuracao(Timestamp dtApuracao) {
+        markAsChanged("DTAPURACAO", dtApuracao);
         this.dtApuracao = dtApuracao;
    }
 
@@ -46,6 +49,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setDtRecolhimento(Timestamp dtRecolhimento) {
+        markAsChanged("DTRECOLHIMENTO", dtRecolhimento);
         this.dtRecolhimento = dtRecolhimento;
    }
 
@@ -54,6 +58,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setDtVencimento(Timestamp dtVencimento) {
+        markAsChanged("DTVENCIMENTO", dtVencimento);
         this.dtVencimento = dtVencimento;
    }
 
@@ -62,6 +67,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -70,6 +76,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setVlrJuros(BigDecimal vlrJuros) {
+        markAsChanged("VLRJUROS", vlrJuros);
         this.vlrJuros = vlrJuros;
    }
 
@@ -78,6 +85,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setVlrMulta(BigDecimal vlrMulta) {
+        markAsChanged("VLRMULTA", vlrMulta);
         this.vlrMulta = vlrMulta;
    }
 
@@ -86,6 +94,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setVlrPrincipal(BigDecimal vlrPrincipal) {
+        markAsChanged("VLRPRINCIPAL", vlrPrincipal);
         this.vlrPrincipal = vlrPrincipal;
    }
 
@@ -94,6 +103,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
    }
 
    public void setVlrTot(BigDecimal vlrTot) {
+        markAsChanged("VLRTOT", vlrTot);
         this.vlrTot = vlrTot;
    }
 
@@ -109,6 +119,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
 
    @Override
    public DarfRecolhidoApuracaoIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codRec = vo.asBigDecimal("CODREC");
         this.dtApuracao = vo.asTimestamp("DTAPURACAO");

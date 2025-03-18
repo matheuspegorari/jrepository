@@ -29,6 +29,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setAutorizacao(String autorizacao) {
+        markAsChanged("AUTORIZACAO", autorizacao);
         this.autorizacao = autorizacao;
    }
 
@@ -37,6 +38,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setBandeira(String bandeira) {
+        markAsChanged("BANDEIRA", bandeira);
         this.bandeira = bandeira;
    }
 
@@ -45,6 +47,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setCartao(String cartao) {
+        markAsChanged("CARTAO", cartao);
         this.cartao = cartao;
    }
 
@@ -53,6 +56,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -61,6 +65,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setCodControle(String codControle) {
+        markAsChanged("CODCONTROLE", codControle);
         this.codControle = codControle;
    }
 
@@ -69,6 +74,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setCodTiptit(BigDecimal codTiptit) {
+        markAsChanged("CODTIPTIT", codTiptit);
         this.codTiptit = codTiptit;
    }
 
@@ -77,6 +83,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -85,6 +92,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setDhTransacao(Timestamp dhTransacao) {
+        markAsChanged("DHTRANSACAO", dhTransacao);
         this.dhTransacao = dhTransacao;
    }
 
@@ -93,6 +101,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setGateway(String gateway) {
+        markAsChanged("GATEWAY", gateway);
         this.gateway = gateway;
    }
 
@@ -101,6 +110,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setHostname(String hostname) {
+        markAsChanged("HOSTNAME", hostname);
         this.hostname = hostname;
    }
 
@@ -109,6 +119,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setNomeRede(String nomeRede) {
+        markAsChanged("NOMEREDE", nomeRede);
         this.nomeRede = nomeRede;
    }
 
@@ -117,6 +128,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setNumNsu(String numNsu) {
+        markAsChanged("NUMNSU", numNsu);
         this.numNsu = numNsu;
    }
 
@@ -125,6 +137,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setOperacao(String operacao) {
+        markAsChanged("OPERACAO", operacao);
         this.operacao = operacao;
    }
 
@@ -133,6 +146,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setQtdParcelas(BigDecimal qtdParcelas) {
+        markAsChanged("QTDPARCELAS", qtdParcelas);
         this.qtdParcelas = qtdParcelas;
    }
 
@@ -141,6 +155,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setRetorno(char[] retorno) {
+        markAsChanged("RETORNO", retorno);
         this.retorno = retorno;
    }
 
@@ -149,6 +164,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -157,6 +173,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
    }
 
    public void setVlrTransacao(BigDecimal vlrTransacao) {
+        markAsChanged("VLRTRANSACAO", vlrTransacao);
         this.vlrTransacao = vlrTransacao;
    }
 
@@ -172,6 +189,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
 
    @Override
    public TEFPendente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.autorizacao = vo.asString("AUTORIZACAO");
         this.bandeira = vo.asString("BANDEIRA");
         this.cartao = vo.asString("CARTAO");

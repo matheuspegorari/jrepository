@@ -16,6 +16,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -24,6 +25,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -32,6 +34,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -40,6 +43,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -48,6 +52,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    }
 
    public void setRetemIss(String retemIss) {
+        markAsChanged("RETEMISS", retemIss);
         this.retemIss = retemIss;
    }
 
@@ -63,6 +68,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
 
    @Override
    public AliquotaISSParceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");

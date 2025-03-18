@@ -28,6 +28,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +37,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -44,6 +46,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -52,6 +55,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setFatorR(BigDecimal fatorR) {
+        markAsChanged("FATORR", fatorR);
         this.fatorR = fatorR;
    }
 
@@ -60,6 +64,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
+        markAsChanged("NUAPURACAO", nuApuracao);
         this.nuApuracao = nuApuracao;
    }
 
@@ -68,6 +73,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -76,6 +82,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setTipoInsercao(String tipoInsercao) {
+        markAsChanged("TIPOINSERCAO", tipoInsercao);
         this.tipoInsercao = tipoInsercao;
    }
 
@@ -84,6 +91,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecAcum(BigDecimal vlrTotRecAcum) {
+        markAsChanged("VLRTOTRECACUM", vlrTotRecAcum);
         this.vlrTotRecAcum = vlrTotRecAcum;
    }
 
@@ -92,6 +100,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecAcumExt(BigDecimal vlrTotRecAcumExt) {
+        markAsChanged("VLRTOTRECACUMEXT", vlrTotRecAcumExt);
         this.vlrTotRecAcumExt = vlrTotRecAcumExt;
    }
 
@@ -100,6 +109,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecAcumInt(BigDecimal vlrTotRecAcumInt) {
+        markAsChanged("VLRTOTRECACUMINT", vlrTotRecAcumInt);
         this.vlrTotRecAcumInt = vlrTotRecAcumInt;
    }
 
@@ -108,6 +118,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecMen(BigDecimal vlrTotRecMen) {
+        markAsChanged("VLRTOTRECMEN", vlrTotRecMen);
         this.vlrTotRecMen = vlrTotRecMen;
    }
 
@@ -116,6 +127,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecMenExt(BigDecimal vlrTotRecMenExt) {
+        markAsChanged("VLRTOTRECMENEXT", vlrTotRecMenExt);
         this.vlrTotRecMenExt = vlrTotRecMenExt;
    }
 
@@ -124,6 +136,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecMenInt(BigDecimal vlrTotRecMenInt) {
+        markAsChanged("VLRTOTRECMENINT", vlrTotRecMenInt);
         this.vlrTotRecMenInt = vlrTotRecMenInt;
    }
 
@@ -132,6 +145,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecProj(BigDecimal vlrTotRecProj) {
+        markAsChanged("VLRTOTRECPROJ", vlrTotRecProj);
         this.vlrTotRecProj = vlrTotRecProj;
    }
 
@@ -140,6 +154,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecProjExt(BigDecimal vlrTotRecProjExt) {
+        markAsChanged("VLRTOTRECPROJEXT", vlrTotRecProjExt);
         this.vlrTotRecProjExt = vlrTotRecProjExt;
    }
 
@@ -148,6 +163,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
    }
 
    public void setVlrTotRecProjInt(BigDecimal vlrTotRecProjInt) {
+        markAsChanged("VLRTOTRECPROJINT", vlrTotRecProjInt);
         this.vlrTotRecProjInt = vlrTotRecProjInt;
    }
 
@@ -163,6 +179,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
 
    @Override
    public ApuracaoReceitaMensal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");

@@ -13,6 +13,7 @@ public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatario
    }
 
    public void setCodCon(BigDecimal codCon) {
+        markAsChanged("CODCON", codCon);
         this.codCon = codCon;
    }
 
@@ -21,6 +22,7 @@ public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatario
    }
 
    public void setCodPer(BigDecimal codPer) {
+        markAsChanged("CODPER", codPer);
         this.codPer = codPer;
    }
 
@@ -36,6 +38,7 @@ public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatario
 
    @Override
    public MSDDestinatarioPerfil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.codPer = vo.asBigDecimal("CODPER");
         return this;

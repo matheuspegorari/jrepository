@@ -37,6 +37,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setTotalSemIcmsAnt(BigDecimal totalSemIcmsAnt) {
+        markAsChanged("TOTALSEMICMSANT", totalSemIcmsAnt);
         this.totalSemIcmsAnt = totalSemIcmsAnt;
    }
 
@@ -45,6 +46,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setAltPreco(String altPreco) {
+        markAsChanged("ALTPRECO", altPreco);
         this.altPreco = altPreco;
    }
 
@@ -53,6 +55,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setAutomatico(String automatico) {
+        markAsChanged("AUTOMATICO", automatico);
         this.automatico = automatico;
    }
 
@@ -61,6 +64,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -69,6 +73,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -77,6 +82,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -85,6 +91,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -93,6 +100,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusGer(BigDecimal cusGer) {
+        markAsChanged("CUSGER", cusGer);
         this.cusGer = cusGer;
    }
 
@@ -101,6 +109,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusMed(BigDecimal cusMed) {
+        markAsChanged("CUSMED", cusMed);
         this.cusMed = cusMed;
    }
 
@@ -109,6 +118,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusMedCalc(String cusMedCalc) {
+        markAsChanged("CUSMEDCALC", cusMedCalc);
         this.cusMedCalc = cusMedCalc;
    }
 
@@ -117,6 +127,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusMedIcm(BigDecimal cusMedIcm) {
+        markAsChanged("CUSMEDICM", cusMedIcm);
         this.cusMedIcm = cusMedIcm;
    }
 
@@ -125,6 +136,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusRep(BigDecimal cusRep) {
+        markAsChanged("CUSREP", cusRep);
         this.cusRep = cusRep;
    }
 
@@ -133,6 +145,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusSemIcm(BigDecimal cusSemIcm) {
+        markAsChanged("CUSSEMICM", cusSemIcm);
         this.cusSemIcm = cusSemIcm;
    }
 
@@ -141,6 +154,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setCusVariavel(BigDecimal cusVariavel) {
+        markAsChanged("CUSVARIAVEL", cusVariavel);
         this.cusVariavel = cusVariavel;
    }
 
@@ -149,6 +163,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setDtAtual(Timestamp dtAtual) {
+        markAsChanged("DTATUAL", dtAtual);
         this.dtAtual = dtAtual;
    }
 
@@ -157,6 +172,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setEntradaComIcms(BigDecimal entradaComIcms) {
+        markAsChanged("ENTRADACOMICMS", entradaComIcms);
         this.entradaComIcms = entradaComIcms;
    }
 
@@ -165,6 +181,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setEntradaSemIcms(BigDecimal entradaSemIcms) {
+        markAsChanged("ENTRADASEMICMS", entradaSemIcms);
         this.entradaSemIcms = entradaSemIcms;
    }
 
@@ -173,6 +190,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -181,6 +199,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -189,6 +208,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -197,6 +217,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setTotalComIcms(BigDecimal totalComIcms) {
+        markAsChanged("TOTALCOMICMS", totalComIcms);
         this.totalComIcms = totalComIcms;
    }
 
@@ -205,6 +226,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setTotalComIcmsAnt(BigDecimal totalComIcmsAnt) {
+        markAsChanged("TOTALCOMICMSANT", totalComIcmsAnt);
         this.totalComIcmsAnt = totalComIcmsAnt;
    }
 
@@ -213,6 +235,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setTotalSemIcms(BigDecimal totalSemIcms) {
+        markAsChanged("TOTALSEMICMS", totalSemIcms);
         this.totalSemIcms = totalSemIcms;
    }
 
@@ -221,6 +244,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setVlrVendaFixo(BigDecimal vlrVendaFixo) {
+        markAsChanged("VLRVENDAFIXO", vlrVendaFixo);
         this.vlrVendaFixo = vlrVendaFixo;
    }
 
@@ -229,6 +253,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
    }
 
    public void setProcesso(String processo) {
+        markAsChanged("PROCESSO", processo);
         this.processo = processo;
    }
 
@@ -244,6 +269,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
 
    @Override
    public Custo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.totalSemIcmsAnt = vo.asBigDecimal("TOTALSEMICMSANT");
         this.altPreco = vo.asString("ALTPRECO");
         this.automatico = vo.asString("AUTOMATICO");

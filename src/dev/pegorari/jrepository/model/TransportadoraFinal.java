@@ -255,6 +255,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIdentInscEstad(String identInscEstad) {
+        markAsChanged("IDENTINSCESTAD", identInscEstad);
         this.identInscEstad = identInscEstad;
    }
 
@@ -263,6 +264,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setImplAudolote(String implAudolote) {
+        markAsChanged("IMPLAUDOLOTE", implAudolote);
         this.implAudolote = implAudolote;
    }
 
@@ -271,6 +273,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndNatRet(String indNatRet) {
+        markAsChanged("INDNATRET", indNatRet);
         this.indNatRet = indNatRet;
    }
 
@@ -279,6 +282,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setInscEstadNauf(String inscEstadNauf) {
+        markAsChanged("INSCESTADNAUF", inscEstadNauf);
         this.inscEstadNauf = inscEstadNauf;
    }
 
@@ -287,6 +291,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAgencia(String agencia) {
+        markAsChanged("AGENCIA", agencia);
         this.agencia = agencia;
    }
 
@@ -295,6 +300,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAgronomo(String agronomo) {
+        markAsChanged("AGRONOMO", agronomo);
         this.agronomo = agronomo;
    }
 
@@ -303,6 +309,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAgrupar(String agrupar) {
+        markAsChanged("AGRUPAR", agrupar);
         this.agrupar = agrupar;
    }
 
@@ -311,6 +318,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAliqIssRetSimples(BigDecimal aliqIssRetSimples) {
+        markAsChanged("ALIQISSRETSIMPLES", aliqIssRetSimples);
         this.aliqIssRetSimples = aliqIssRetSimples;
    }
 
@@ -319,6 +327,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAluno(String aluno) {
+        markAsChanged("ALUNO", aluno);
         this.aluno = aluno;
    }
 
@@ -327,6 +336,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -335,6 +345,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setBloquear(String bloquear) {
+        markAsChanged("BLOQUEAR", bloquear);
         this.bloquear = bloquear;
    }
 
@@ -343,6 +354,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCaixaPostal(String caixaPostal) {
+        markAsChanged("CAIXAPOSTAL", caixaPostal);
         this.caixaPostal = caixaPostal;
    }
 
@@ -351,6 +363,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCalcInss(String calcInss) {
+        markAsChanged("CALCINSS", calcInss);
         this.calcInss = calcInss;
    }
 
@@ -359,6 +372,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCei(String cei) {
+        markAsChanged("CEI", cei);
         this.cei = cei;
    }
 
@@ -367,6 +381,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -375,6 +390,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -383,6 +399,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setClassificMs(String classificMs) {
+        markAsChanged("CLASSIFICMS", classificMs);
         this.classificMs = classificMs;
    }
 
@@ -391,6 +408,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCliente(String cliente) {
+        markAsChanged("CLIENTE", cliente);
         this.cliente = cliente;
    }
 
@@ -399,6 +417,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodAge(String codAge) {
+        markAsChanged("CODAGE", codAge);
         this.codAge = codAge;
    }
 
@@ -407,6 +426,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodAnt(BigDecimal codAnt) {
+        markAsChanged("CODANT", codAnt);
         this.codAnt = codAnt;
    }
 
@@ -415,6 +435,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodAssessor(BigDecimal codAssessor) {
+        markAsChanged("CODASSESSOR", codAssessor);
         this.codAssessor = codAssessor;
    }
 
@@ -423,6 +444,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -431,6 +453,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -439,6 +462,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -447,6 +471,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCred(BigDecimal codCred) {
+        markAsChanged("CODCRED", codCred);
         this.codCred = codCred;
    }
 
@@ -455,6 +480,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaBco(String codCtaBco) {
+        markAsChanged("CODCTABCO", codCtaBco);
         this.codCtaBco = codCtaBco;
    }
 
@@ -463,6 +489,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -471,6 +498,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -479,6 +507,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -487,6 +516,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaCtb3(BigDecimal codCtaCtb3) {
+        markAsChanged("CODCTACTB3", codCtaCtb3);
         this.codCtaCtb3 = codCtaCtb3;
    }
 
@@ -495,6 +525,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodCtaCtb4(BigDecimal codCtaCtb4) {
+        markAsChanged("CODCTACTB4", codCtaCtb4);
         this.codCtaCtb4 = codCtaCtb4;
    }
 
@@ -503,6 +534,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -511,6 +543,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodEmpPref(BigDecimal codEmpPref) {
+        markAsChanged("CODEMPPREF", codEmpPref);
         this.codEmpPref = codEmpPref;
    }
 
@@ -519,6 +552,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -527,6 +561,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodLocalPadrao(BigDecimal codLocalPadrao) {
+        markAsChanged("CODLOCALPADRAO", codLocalPadrao);
         this.codLocalPadrao = codLocalPadrao;
    }
 
@@ -535,6 +570,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -543,6 +579,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodParcMatriz(BigDecimal codParcMatriz) {
+        markAsChanged("CODPARCMATRIZ", codParcMatriz);
         this.codParcMatriz = codParcMatriz;
    }
 
@@ -551,6 +588,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -559,6 +597,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodRota(BigDecimal codRota) {
+        markAsChanged("CODROTA", codRota);
         this.codRota = codRota;
    }
 
@@ -567,6 +606,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -575,6 +615,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodTabSt(BigDecimal codTabSt) {
+        markAsChanged("CODTABST", codTabSt);
         this.codTabSt = codTabSt;
    }
 
@@ -583,6 +624,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -591,6 +633,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodUnimed(String codUnimed) {
+        markAsChanged("CODUNIMED", codUnimed);
         this.codUnimed = codUnimed;
    }
 
@@ -599,6 +642,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -607,6 +651,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodUsuCobr(BigDecimal codUsuCobr) {
+        markAsChanged("CODUSUCOBR", codUsuCobr);
         this.codUsuCobr = codUsuCobr;
    }
 
@@ -615,6 +660,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -623,6 +669,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -631,6 +678,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setContAcesso(String contAcesso) {
+        markAsChanged("CONTACESSO", contAcesso);
         this.contAcesso = contAcesso;
    }
 
@@ -639,6 +687,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCstIpiEnt(BigDecimal cstIpiEnt) {
+        markAsChanged("CSTIPIENT", cstIpiEnt);
         this.cstIpiEnt = cstIpiEnt;
    }
 
@@ -647,6 +696,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCstIpiSai(BigDecimal cstIpiSai) {
+        markAsChanged("CSTIPISAI", cstIpiSai);
         this.cstIpiSai = cstIpiSai;
    }
 
@@ -655,6 +705,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCtaAdiant(String ctaAdiant) {
+        markAsChanged("CTAADIANT", ctaAdiant);
         this.ctaAdiant = ctaAdiant;
    }
 
@@ -663,6 +714,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDescBonif(String descBonif) {
+        markAsChanged("DESCBONIF", descBonif);
         this.descBonif = descBonif;
    }
 
@@ -671,6 +723,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDescFin(BigDecimal descFin) {
+        markAsChanged("DESCFIN", descFin);
         this.descFin = descFin;
    }
 
@@ -679,6 +732,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDescrRota(String descrRota) {
+        markAsChanged("DESCRROTA", descrRota);
         this.descrRota = descrRota;
    }
 
@@ -687,6 +741,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDescStIva(String descStIva) {
+        markAsChanged("DESCSTIVA", descStIva);
         this.descStIva = descStIva;
    }
 
@@ -695,6 +750,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDiaSem(BigDecimal diaSem) {
+        markAsChanged("DIASEM", diaSem);
         this.diaSem = diaSem;
    }
 
@@ -703,6 +759,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDiasVarPagto(BigDecimal diasVarPagto) {
+        markAsChanged("DIASVARPAGTO", diasVarPagto);
         this.diasVarPagto = diasVarPagto;
    }
 
@@ -711,6 +768,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -719,6 +777,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtCad(Timestamp dtCad) {
+        markAsChanged("DTCAD", dtCad);
         this.dtCad = dtCad;
    }
 
@@ -727,6 +786,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -735,6 +795,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtUltContato(Timestamp dtUltContato) {
+        markAsChanged("DTULTCONTATO", dtUltContato);
         this.dtUltContato = dtUltContato;
    }
 
@@ -743,6 +804,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtUltNegoc(Timestamp dtUltNegoc) {
+        markAsChanged("DTULTNEGOC", dtUltNegoc);
         this.dtUltNegoc = dtUltNegoc;
    }
 
@@ -751,6 +813,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDhCadSefaz(Timestamp dhCadSefaz) {
+        markAsChanged("DHCADSEFAZ", dhCadSefaz);
         this.dhCadSefaz = dhCadSefaz;
    }
 
@@ -759,6 +822,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEVenda(String eVenda) {
+        markAsChanged("EVENDA", eVenda);
         this.eVenda = eVenda;
    }
 
@@ -767,6 +831,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setFax(String fax) {
+        markAsChanged("FAX", fax);
         this.fax = fax;
    }
 
@@ -775,6 +840,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmailDanfe(String emailDanfe) {
+        markAsChanged("EMAILDANFE", emailDanfe);
         this.emailDanfe = emailDanfe;
    }
 
@@ -783,6 +849,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmailNfe(String emailNfe) {
+        markAsChanged("EMAILNFE", emailNfe);
         this.emailNfe = emailNfe;
    }
 
@@ -791,6 +858,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEntregaEndContato(String entregaEndContato) {
+        markAsChanged("ENTREGAENDCONTATO", entregaEndContato);
         this.entregaEndContato = entregaEndContato;
    }
 
@@ -799,6 +867,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setFlex(String flex) {
+        markAsChanged("FLEX", flex);
         this.flex = flex;
    }
 
@@ -807,6 +876,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setFornecedor(String fornecedor) {
+        markAsChanged("FORNECEDOR", fornecedor);
         this.fornecedor = fornecedor;
    }
 
@@ -815,6 +885,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setGrupoAutor(String grupoAutor) {
+        markAsChanged("GRUPOAUTOR", grupoAutor);
         this.grupoAutor = grupoAutor;
    }
 
@@ -823,6 +894,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setHomePage(String homePage) {
+        markAsChanged("HOMEPAGE", homePage);
         this.homePage = homePage;
    }
 
@@ -831,6 +903,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setECompra(String eCompra) {
+        markAsChanged("ECOMPRA", eCompra);
         this.eCompra = eCompra;
    }
 
@@ -839,6 +912,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -847,6 +921,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodEnqIpiSai(BigDecimal codEnqIpiSai) {
+        markAsChanged("CODENQIPISAI", codEnqIpiSai);
         this.codEnqIpiSai = codEnqIpiSai;
    }
 
@@ -855,6 +930,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodEnqIpiEnt(BigDecimal codEnqIpiEnt) {
+        markAsChanged("CODENQIPIENT", codEnqIpiEnt);
         this.codEnqIpiEnt = codEnqIpiEnt;
    }
 
@@ -863,6 +939,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIdEstrangeiro(String idEstrangeiro) {
+        markAsChanged("IDESTRANGEIRO", idEstrangeiro);
         this.idEstrangeiro = idEstrangeiro;
    }
 
@@ -871,6 +948,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipGerBolCent(String tipGerBolCent) {
+        markAsChanged("TIPGERBOLCENT", tipGerBolCent);
         this.tipGerBolCent = tipGerBolCent;
    }
 
@@ -879,6 +957,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setComoConheceu(String comoConheceu) {
+        markAsChanged("COMOCONHECEU", comoConheceu);
         this.comoConheceu = comoConheceu;
    }
 
@@ -887,6 +966,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitCadSefaz(BigDecimal sitCadSefaz) {
+        markAsChanged("SITCADSEFAZ", sitCadSefaz);
         this.sitCadSefaz = sitCadSefaz;
    }
 
@@ -895,6 +975,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimProprieta(String timProprieta) {
+        markAsChanged("TIMPROPRIETA", timProprieta);
         this.timProprieta = timProprieta;
    }
 
@@ -903,6 +984,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimPropVenda(String timPropVenda) {
+        markAsChanged("TIMPROPVENDA", timPropVenda);
         this.timPropVenda = timPropVenda;
    }
 
@@ -911,6 +993,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimQuerComprar(String timQuerComprar) {
+        markAsChanged("TIMQUERCOMPRAR", timQuerComprar);
         this.timQuerComprar = timQuerComprar;
    }
 
@@ -919,6 +1002,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimReferencia01(String timReferencia01) {
+        markAsChanged("TIMREFERENCIA01", timReferencia01);
         this.timReferencia01 = timReferencia01;
    }
 
@@ -927,6 +1011,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimReferencia02(String timReferencia02) {
+        markAsChanged("TIMREFERENCIA02", timReferencia02);
         this.timReferencia02 = timReferencia02;
    }
 
@@ -935,6 +1020,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimSenhaDesc(String timSenhaDesc) {
+        markAsChanged("TIMSENHADESC", timSenhaDesc);
         this.timSenhaDesc = timSenhaDesc;
    }
 
@@ -943,6 +1029,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimSenhaSite(String timSenhaSite) {
+        markAsChanged("TIMSENHASITE", timSenhaSite);
         this.timSenhaSite = timSenhaSite;
    }
 
@@ -951,6 +1038,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimTelefone01(String timTelefone01) {
+        markAsChanged("TIMTELEFONE01", timTelefone01);
         this.timTelefone01 = timTelefone01;
    }
 
@@ -959,6 +1047,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimTelefone02(String timTelefone02) {
+        markAsChanged("TIMTELEFONE02", timTelefone02);
         this.timTelefone02 = timTelefone02;
    }
 
@@ -967,6 +1056,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimTipoMoradia(String timTipoMoradia) {
+        markAsChanged("TIMTIPOMORADIA", timTipoMoradia);
         this.timTipoMoradia = timTipoMoradia;
    }
 
@@ -975,6 +1065,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTruncParcela(String truncParcela) {
+        markAsChanged("TRUNCPARCELA", truncParcela);
         this.truncParcela = truncParcela;
    }
 
@@ -983,6 +1074,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setVlrLiqItemNfce(String vlrLiqItemNfce) {
+        markAsChanged("VLRLIQITEMNFCE", vlrLiqItemNfce);
         this.vlrLiqItemNfce = vlrLiqItemNfce;
    }
 
@@ -991,6 +1083,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setVlrLiqItemNfe(String vlrLiqItemNfe) {
+        markAsChanged("VLRLIQITEMNFE", vlrLiqItemNfe);
         this.vlrLiqItemNfe = vlrLiqItemNfe;
    }
 
@@ -999,6 +1092,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEnviaDanfeRedespacho(String enviaDanfeRedespacho) {
+        markAsChanged("ENVIADANFEREDESPACHO", enviaDanfeRedespacho);
         this.enviaDanfeRedespacho = enviaDanfeRedespacho;
    }
 
@@ -1007,6 +1101,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setExigContatoEntCab(String exigContatoEntCab) {
+        markAsChanged("EXIGCONTATOENTCAB", exigContatoEntCab);
         this.exigContatoEntCab = exigContatoEntCab;
    }
 
@@ -1015,6 +1110,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setParcSubstIss(String parcSubstIss) {
+        markAsChanged("PARCSUBSTISS", parcSubstIss);
         this.parcSubstIss = parcSubstIss;
    }
 
@@ -1023,6 +1119,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setArredPrimeiraParc(String arredPrimeiraParc) {
+        markAsChanged("ARREDPRIMEIRAPARC", arredPrimeiraParc);
         this.arredPrimeiraParc = arredPrimeiraParc;
    }
 
@@ -1031,6 +1128,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAssociacaoDesp(String associacaoDesp) {
+        markAsChanged("ASSOCIACAODESP", associacaoDesp);
         this.associacaoDesp = associacaoDesp;
    }
 
@@ -1039,6 +1137,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCnae(String cnae) {
+        markAsChanged("CNAE", cnae);
         this.cnae = cnae;
    }
 
@@ -1047,6 +1146,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodContatoPadCot(BigDecimal codContatoPadCot) {
+        markAsChanged("CODCONTATOPADCOT", codContatoPadCot);
         this.codContatoPadCot = codContatoPadCot;
    }
 
@@ -1055,6 +1155,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -1063,6 +1164,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodParcGruEconomico(BigDecimal codParcGruEconomico) {
+        markAsChanged("CODPARCGRUECONOMICO", codParcGruEconomico);
         this.codParcGruEconomico = codParcGruEconomico;
    }
 
@@ -1071,6 +1173,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCpfProdRural(String cpfProdRural) {
+        markAsChanged("CPFPRODRURAL", cpfProdRural);
         this.cpfProdRural = cpfProdRural;
    }
 
@@ -1079,6 +1182,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDhCadRf(Timestamp dhCadRf) {
+        markAsChanged("DHCADRF", dhCadRf);
         this.dhCadRf = dhCadRf;
    }
 
@@ -1087,6 +1191,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtBaixa(Timestamp dtBaixa) {
+        markAsChanged("DTBAIXA", dtBaixa);
         this.dtBaixa = dtBaixa;
    }
 
@@ -1095,6 +1200,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtIniAtiv(Timestamp dtIniAtiv) {
+        markAsChanged("DTINIATIV", dtIniAtiv);
         this.dtIniAtiv = dtIniAtiv;
    }
 
@@ -1103,6 +1209,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtUltSit(Timestamp dtUltSit) {
+        markAsChanged("DTULTSIT", dtUltSit);
         this.dtUltSit = dtUltSit;
    }
 
@@ -1111,6 +1218,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmailNfse(String emailNfse) {
+        markAsChanged("EMAILNFSE", emailNfse);
         this.emailNfse = emailNfse;
    }
 
@@ -1119,6 +1227,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEnqArt227(String enqArt227) {
+        markAsChanged("ENQART227", enqArt227);
         this.enqArt227 = enqArt227;
    }
 
@@ -1127,6 +1236,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndCredCte(BigDecimal indCredCte) {
+        markAsChanged("INDCREDCTE", indCredCte);
         this.indCredCte = indCredCte;
    }
 
@@ -1135,6 +1245,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndCredNfe(BigDecimal indCredNfe) {
+        markAsChanged("INDCREDNFE", indCredNfe);
         this.indCredNfe = indCredNfe;
    }
 
@@ -1143,6 +1254,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndOpCcp(BigDecimal indOpCcp) {
+        markAsChanged("INDOPCCP", indOpCcp);
         this.indOpCcp = indOpCcp;
    }
 
@@ -1151,6 +1263,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setModeloNotaCompra(BigDecimal modeloNotaCompra) {
+        markAsChanged("MODELONOTACOMPRA", modeloNotaCompra);
         this.modeloNotaCompra = modeloNotaCompra;
    }
 
@@ -1159,6 +1272,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNuFop(BigDecimal nuFop) {
+        markAsChanged("NUFOP", nuFop);
         this.nuFop = nuFop;
    }
 
@@ -1167,6 +1281,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setOrgPublNfse(String orgPublNfse) {
+        markAsChanged("ORGPUBLNFSE", orgPublNfse);
         this.orgPublNfse = orgPublNfse;
    }
 
@@ -1175,6 +1290,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setParcInter(String parcInter) {
+        markAsChanged("PARCINTER", parcInter);
         this.parcInter = parcInter;
    }
 
@@ -1183,6 +1299,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRegApur(String regApur) {
+        markAsChanged("REGAPUR", regApur);
         this.regApur = regApur;
    }
 
@@ -1191,6 +1308,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitCadRf(BigDecimal sitCadRf) {
+        markAsChanged("SITCADRF", sitCadRf);
         this.sitCadRf = sitCadRf;
    }
 
@@ -1199,6 +1317,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimAInvestir(BigDecimal timAInvestir) {
+        markAsChanged("TIMAINVESTIR", timAInvestir);
         this.timAInvestir = timAInvestir;
    }
 
@@ -1207,6 +1326,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimBairroCompra(BigDecimal timBairroCompra) {
+        markAsChanged("TIMBAIRROCOMPRA", timBairroCompra);
         this.timBairroCompra = timBairroCompra;
    }
 
@@ -1215,6 +1335,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimCartorio(BigDecimal timCartorio) {
+        markAsChanged("TIMCARTORIO", timCartorio);
         this.timCartorio = timCartorio;
    }
 
@@ -1223,6 +1344,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimCartRegimeBensV(String timCartRegimeBensV) {
+        markAsChanged("TIMCARTREGIMEBENSV", timCartRegimeBensV);
         this.timCartRegimeBensV = timCartRegimeBensV;
    }
 
@@ -1231,6 +1353,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimComprador(String timComprador) {
+        markAsChanged("TIMCOMPRADOR", timComprador);
         this.timComprador = timComprador;
    }
 
@@ -1239,6 +1362,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimCorrespBancario(String timCorrespBancario) {
+        markAsChanged("TIMCORRESPBANCARIO", timCorrespBancario);
         this.timCorrespBancario = timCorrespBancario;
    }
 
@@ -1247,6 +1371,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimCorretor(String timCorretor) {
+        markAsChanged("TIMCORRETOR", timCorretor);
         this.timCorretor = timCorretor;
    }
 
@@ -1255,6 +1380,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimDataCi(Timestamp timDataCi) {
+        markAsChanged("TIMDATACI", timDataCi);
         this.timDataCi = timDataCi;
    }
 
@@ -1263,6 +1389,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimEstadoCivil(String timEstadoCivil) {
+        markAsChanged("TIMESTADOCIVIL", timEstadoCivil);
         this.timEstadoCivil = timEstadoCivil;
    }
 
@@ -1271,6 +1398,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimFaixaSalarial(String timFaixaSalarial) {
+        markAsChanged("TIMFAIXASALARIAL", timFaixaSalarial);
         this.timFaixaSalarial = timFaixaSalarial;
    }
 
@@ -1279,6 +1407,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimFiador(String timFiador) {
+        markAsChanged("TIMFIADOR", timFiador);
         this.timFiador = timFiador;
    }
 
@@ -1287,6 +1416,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimInquilino(String timInquilino) {
+        markAsChanged("TIMINQUILINO", timInquilino);
         this.timInquilino = timInquilino;
    }
 
@@ -1295,6 +1425,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimMae(String timMae) {
+        markAsChanged("TIMMAE", timMae);
         this.timMae = timMae;
    }
 
@@ -1303,6 +1434,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimNacionalidad(BigDecimal timNacionalidad) {
+        markAsChanged("TIMNACIONALIDAD", timNacionalidad);
         this.timNacionalidad = timNacionalidad;
    }
 
@@ -1311,6 +1443,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimOrgao(String timOrgao) {
+        markAsChanged("TIMORGAO", timOrgao);
         this.timOrgao = timOrgao;
    }
 
@@ -1319,6 +1452,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimOutTels(String timOutTels) {
+        markAsChanged("TIMOUTTELS", timOutTels);
         this.timOutTels = timOutTels;
    }
 
@@ -1327,6 +1461,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimPai(String timPai) {
+        markAsChanged("TIMPAI", timPai);
         this.timPai = timPai;
    }
 
@@ -1335,6 +1470,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTimProfissao(BigDecimal timProfissao) {
+        markAsChanged("TIMPROFISSAO", timProfissao);
         this.timProfissao = timProfissao;
    }
 
@@ -1343,6 +1479,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCalcFetHab(String calcFetHab) {
+        markAsChanged("CALCFETHAB", calcFetHab);
         this.calcFetHab = calcFetHab;
    }
 
@@ -1351,6 +1488,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAplicLeiTransp(String aplicLeiTransp) {
+        markAsChanged("APLICLEITRANSP", aplicLeiTransp);
         this.aplicLeiTransp = aplicLeiTransp;
    }
 
@@ -1359,6 +1497,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmailNotifEntrega(String emailNotifEntrega) {
+        markAsChanged("EMAILNOTIFENTREGA", emailNotifEntrega);
         this.emailNotifEntrega = emailNotifEntrega;
    }
 
@@ -1367,6 +1506,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setImpAgrupFin(String impAgrupFin) {
+        markAsChanged("IMPAGRUPFIN", impAgrupFin);
         this.impAgrupFin = impAgrupFin;
    }
 
@@ -1375,6 +1515,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndAquisicao(String indAquisicao) {
+        markAsChanged("INDAQUISICAO", indAquisicao);
         this.indAquisicao = indAquisicao;
    }
 
@@ -1383,6 +1524,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIndComercializacao(String indComercializacao) {
+        markAsChanged("INDCOMERCIALIZACAO", indComercializacao);
         this.indComercializacao = indComercializacao;
    }
 
@@ -1391,6 +1533,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setUnidImport(BigDecimal unidImport) {
+        markAsChanged("UNIDIMPORT", unidImport);
         this.unidImport = unidImport;
    }
 
@@ -1399,6 +1542,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setInscMun(String inscMun) {
+        markAsChanged("INSCMUN", inscMun);
         this.inscMun = inscMun;
    }
 
@@ -1407,6 +1551,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIpiInciCms(String ipiInciCms) {
+        markAsChanged("IPIINCICMS", ipiInciCms);
         this.ipiInciCms = ipiInciCms;
    }
 
@@ -1415,6 +1560,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setLatitude(String latitude) {
+        markAsChanged("LATITUDE", latitude);
         this.latitude = latitude;
    }
 
@@ -1423,6 +1569,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setLimCred(BigDecimal limCred) {
+        markAsChanged("LIMCRED", limCred);
         this.limCred = limCred;
    }
 
@@ -1431,6 +1578,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setLimCredMensal(BigDecimal limCredMensal) {
+        markAsChanged("LIMCREDMENSAL", limCredMensal);
         this.limCredMensal = limCredMensal;
    }
 
@@ -1439,6 +1587,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setLongitude(String longitude) {
+        markAsChanged("LONGITUDE", longitude);
         this.longitude = longitude;
    }
 
@@ -1447,6 +1596,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setMedico(String medico) {
+        markAsChanged("MEDICO", medico);
         this.medico = medico;
    }
 
@@ -1455,6 +1605,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setMeiRj(String meiRj) {
+        markAsChanged("MEIRJ", meiRj);
         this.meiRj = meiRj;
    }
 
@@ -1463,6 +1614,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setModeloNfDes(String modeloNfDes) {
+        markAsChanged("MODELONFDES", modeloNfDes);
         this.modeloNfDes = modeloNfDes;
    }
 
@@ -1471,6 +1623,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setMotBloq(String motBloq) {
+        markAsChanged("MOTBLOQ", motBloq);
         this.motBloq = motBloq;
    }
 
@@ -1479,6 +1632,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setMotorista(String motorista) {
+        markAsChanged("MOTORISTA", motorista);
         this.motorista = motorista;
    }
 
@@ -1487,6 +1641,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNaturezaOperDes(String naturezaOperDes) {
+        markAsChanged("NATUREZAOPERDES", naturezaOperDes);
         this.naturezaOperDes = naturezaOperDes;
    }
 
@@ -1495,6 +1650,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNomeAge(String nomeAge) {
+        markAsChanged("NOMEAGE", nomeAge);
         this.nomeAge = nomeAge;
    }
 
@@ -1503,6 +1659,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNomeParc(String nomeParc) {
+        markAsChanged("NOMEPARC", nomeParc);
         this.nomeParc = nomeParc;
    }
 
@@ -1511,6 +1668,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -1519,6 +1677,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setObservacoes(String observacoes) {
+        markAsChanged("OBSERVACOES", observacoes);
         this.observacoes = observacoes;
    }
 
@@ -1527,6 +1686,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setOperLogist(String operLogist) {
+        markAsChanged("OPERLOGIST", operLogist);
         this.operLogist = operLogist;
    }
 
@@ -1535,6 +1695,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPercCusVar(BigDecimal percCusVar) {
+        markAsChanged("PERCCUSVAR", percCusVar);
         this.percCusVar = percCusVar;
    }
 
@@ -1543,6 +1704,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPercDescEspecial(BigDecimal percDescEspecial) {
+        markAsChanged("PERCDESCESPECIAL", percDescEspecial);
         this.percDescEspecial = percDescEspecial;
    }
 
@@ -1551,6 +1713,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPercJuro(BigDecimal percJuro) {
+        markAsChanged("PERCJURO", percJuro);
         this.percJuro = percJuro;
    }
 
@@ -1559,6 +1722,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPercMulta(BigDecimal percMulta) {
+        markAsChanged("PERCMULTA", percMulta);
         this.percMulta = percMulta;
    }
 
@@ -1567,6 +1731,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPotencialNeg(BigDecimal potencialNeg) {
+        markAsChanged("POTENCIALNEG", potencialNeg);
         this.potencialNeg = potencialNeg;
    }
 
@@ -1575,6 +1740,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPrazoContato(BigDecimal prazoContato) {
+        markAsChanged("PRAZOCONTATO", prazoContato);
         this.prazoContato = prazoContato;
    }
 
@@ -1583,6 +1749,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPrazoPag(BigDecimal prazoPag) {
+        markAsChanged("PRAZOPAG", prazoPag);
         this.prazoPag = prazoPag;
    }
 
@@ -1591,6 +1758,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setProdutorTemNf(String produtorTemNf) {
+        markAsChanged("PRODUTORTEMNF", produtorTemNf);
         this.produtorTemNf = produtorTemNf;
    }
 
@@ -1599,6 +1767,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setProfessor(String professor) {
+        markAsChanged("PROFESSOR", professor);
         this.professor = professor;
    }
 
@@ -1607,6 +1776,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setQtdMaxPedCpa(BigDecimal qtdMaxPedCpa) {
+        markAsChanged("QTDMAXPEDCPA", qtdMaxPedCpa);
         this.qtdMaxPedCpa = qtdMaxPedCpa;
    }
 
@@ -1615,6 +1785,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setQtdMaxTitVencidos(BigDecimal qtdMaxTitVencidos) {
+        markAsChanged("QTDMAXTITVENCIDOS", qtdMaxTitVencidos);
         this.qtdMaxTitVencidos = qtdMaxTitVencidos;
    }
 
@@ -1623,6 +1794,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRamal(BigDecimal ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -1631,6 +1803,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRazaoSocial(String razaoSocial) {
+        markAsChanged("RAZAOSOCIAL", razaoSocial);
         this.razaoSocial = razaoSocial;
    }
 
@@ -1639,6 +1812,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetemCofins(String retemCofins) {
+        markAsChanged("RETEMCOFINS", retemCofins);
         this.retemCofins = retemCofins;
    }
 
@@ -1647,6 +1821,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetemCsl(String retemCsl) {
+        markAsChanged("RETEMCSL", retemCsl);
         this.retemCsl = retemCsl;
    }
 
@@ -1655,6 +1830,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetemInss(String retemInss) {
+        markAsChanged("RETEMINSS", retemInss);
         this.retemInss = retemInss;
    }
 
@@ -1663,6 +1839,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetemIss(String retemIss) {
+        markAsChanged("RETEMISS", retemIss);
         this.retemIss = retemIss;
    }
 
@@ -1671,6 +1848,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetemPis(String retemPis) {
+        markAsChanged("RETEMPIS", retemPis);
         this.retemPis = retemPis;
    }
 
@@ -1679,6 +1857,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRetStVenda(String retStVenda) {
+        markAsChanged("RETSTVENDA", retStVenda);
         this.retStVenda = retStVenda;
    }
 
@@ -1687,6 +1866,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSelecionado(String selecionado) {
+        markAsChanged("SELECIONADO", selecionado);
         this.selecionado = selecionado;
    }
 
@@ -1695,6 +1875,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSerieNfDes(String serieNfDes) {
+        markAsChanged("SERIENFDES", serieNfDes);
         this.serieNfDes = serieNfDes;
    }
 
@@ -1703,6 +1884,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSexo(String sexo) {
+        markAsChanged("SEXO", sexo);
         this.sexo = sexo;
    }
 
@@ -1711,6 +1893,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSimples(String simples) {
+        markAsChanged("SIMPLES", simples);
         this.simples = simples;
    }
 
@@ -1719,6 +1902,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitCcf(String sitCcf) {
+        markAsChanged("SITCCF", sitCcf);
         this.sitCcf = sitCcf;
    }
 
@@ -1727,6 +1911,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitReceita(String sitReceita) {
+        markAsChanged("SITRECEITA", sitReceita);
         this.sitReceita = sitReceita;
    }
 
@@ -1735,6 +1920,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitSintegra(String sitSintegra) {
+        markAsChanged("SITSINTEGRA", sitSintegra);
         this.sitSintegra = sitSintegra;
    }
 
@@ -1743,6 +1929,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -1751,6 +1938,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setStatusEdz(String statusEdz) {
+        markAsChanged("STATUSEDZ", statusEdz);
         this.statusEdz = statusEdz;
    }
 
@@ -1759,6 +1947,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTare(String tare) {
+        markAsChanged("TARE", tare);
         this.tare = tare;
    }
 
@@ -1767,6 +1956,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -1775,6 +1965,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTemIpi(String temIpi) {
+        markAsChanged("TEMIPI", temIpi);
         this.temIpi = temIpi;
    }
 
@@ -1783,6 +1974,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipAnexoNfe(String tipAnexoNfe) {
+        markAsChanged("TIPANEXONFE", tipAnexoNfe);
         this.tipAnexoNfe = tipAnexoNfe;
    }
 
@@ -1791,6 +1983,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipJuro(String tipJuro) {
+        markAsChanged("TIPJURO", tipJuro);
         this.tipJuro = tipJuro;
    }
 
@@ -1799,6 +1992,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipoFatur(String tipoFatur) {
+        markAsChanged("TIPOFATUR", tipoFatur);
         this.tipoFatur = tipoFatur;
    }
 
@@ -1807,6 +2001,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipoGerBoleto(String tipoGerBoleto) {
+        markAsChanged("TIPOGERBOLETO", tipoGerBoleto);
         this.tipoGerBoleto = tipoGerBoleto;
    }
 
@@ -1815,6 +2010,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipoPessoa(String tipoPessoa) {
+        markAsChanged("TIPPESSOA", tipoPessoa);
         this.tipoPessoa = tipoPessoa;
    }
 
@@ -1823,6 +2019,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTolerInadImp(BigDecimal tolerInadImp) {
+        markAsChanged("TOLERINADIMP", tolerInadImp);
         this.tolerInadImp = tolerInadImp;
    }
 
@@ -1831,6 +2028,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTransportadora(String transportadora) {
+        markAsChanged("TRANSPORTADORA", transportadora);
         this.transportadora = transportadora;
    }
 
@@ -1839,6 +2037,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setUsaTabCrForn(String usaTabCrForn) {
+        markAsChanged("USATABCRFORN", usaTabCrForn);
         this.usaTabCrForn = usaTabCrForn;
    }
 
@@ -1847,6 +2046,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setUsuario(String usuario) {
+        markAsChanged("USUARIO", usuario);
         this.usuario = usuario;
    }
 
@@ -1855,6 +2055,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setValDescGrdCar(String valDescGrdCar) {
+        markAsChanged("VALDESCGRDCAR", valDescGrdCar);
         this.valDescGrdCar = valDescGrdCar;
    }
 
@@ -1863,6 +2064,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setVendedor(String vendedor) {
+        markAsChanged("VENDEDOR", vendedor);
         this.vendedor = vendedor;
    }
 
@@ -1871,6 +2073,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setVlrMinPedCpa(BigDecimal vlrMinPedCpa) {
+        markAsChanged("VLRMINPEDCPA", vlrMinPedCpa);
         this.vlrMinPedCpa = vlrMinPedCpa;
    }
 
@@ -1879,6 +2082,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTermAcord(String termAcord) {
+        markAsChanged("TERMACORD", termAcord);
         this.termAcord = termAcord;
    }
 
@@ -1887,6 +2091,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIntervAnalisCred(BigDecimal intervAnalisCred) {
+        markAsChanged("INTERVANALISCRED", intervAnalisCred);
         this.intervAnalisCred = intervAnalisCred;
    }
 
@@ -1895,6 +2100,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setVendaMin(BigDecimal vendaMin) {
+        markAsChanged("VENDAMIN", vendaMin);
         this.vendaMin = vendaMin;
    }
 
@@ -1903,6 +2109,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTranspPropria(String transpPropria) {
+        markAsChanged("TRANSPPROPRIA", transpPropria);
         this.transpPropria = transpPropria;
    }
 
@@ -1911,6 +2118,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setExigeNomeParc(String exigeNomeParc) {
+        markAsChanged("EXIGENOMEPARC", exigeNomeParc);
         this.exigeNomeParc = exigeNomeParc;
    }
 
@@ -1919,6 +2127,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEstabTransp(String estabTransp) {
+        markAsChanged("ESTABTRANSP", estabTransp);
         this.estabTransp = estabTransp;
    }
 
@@ -1927,6 +2136,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDtEmisNfeForn(Timestamp dtEmisNfeForn) {
+        markAsChanged("DTEMISNFEFORN", dtEmisNfeForn);
         this.dtEmisNfeForn = dtEmisNfeForn;
    }
 
@@ -1935,6 +2145,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPercRedInss(BigDecimal percRedInss) {
+        markAsChanged("PERCREDINSS", percRedInss);
         this.percRedInss = percRedInss;
    }
 
@@ -1943,6 +2154,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDiaPagtoEconect(BigDecimal diaPagtoEconect) {
+        markAsChanged("DIAPAGTOECONECT", diaPagtoEconect);
         this.diaPagtoEconect = diaPagtoEconect;
    }
 
@@ -1951,6 +2163,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDiaFechaEconect(BigDecimal diaFechaEconect) {
+        markAsChanged("DIAFECHAECONECT", diaFechaEconect);
         this.diaFechaEconect = diaFechaEconect;
    }
 
@@ -1959,6 +2172,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setIntegraEconect(String integraEconect) {
+        markAsChanged("INTEGRAECONECT", integraEconect);
         this.integraEconect = integraEconect;
    }
 
@@ -1967,6 +2181,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setBaseParcelEconect(BigDecimal baseParcelEconect) {
+        markAsChanged("BASEPARCELECONECT", baseParcelEconect);
         this.baseParcelEconect = baseParcelEconect;
    }
 
@@ -1975,6 +2190,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSenhaEconect(String senhaEconect) {
+        markAsChanged("SENHAECONECT", senhaEconect);
         this.senhaEconect = senhaEconect;
    }
 
@@ -1983,6 +2199,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPrazoParcEconect(String prazoParcEconect) {
+        markAsChanged("PRAZOPARCECONECT", prazoParcEconect);
         this.prazoParcEconect = prazoParcEconect;
    }
 
@@ -1991,6 +2208,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setParcelaMEconect(String parcelaMEconect) {
+        markAsChanged("PARCELAMECONECT", parcelaMEconect);
         this.parcelaMEconect = parcelaMEconect;
    }
 
@@ -1999,6 +2217,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setPerfilEconect(String perfilEconect) {
+        markAsChanged("PERFILECONECT", perfilEconect);
         this.perfilEconect = perfilEconect;
    }
 
@@ -2007,6 +2226,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setBasePrazoEconect(BigDecimal basePrazoEconect) {
+        markAsChanged("BASEPRAZOECONECT", basePrazoEconect);
         this.basePrazoEconect = basePrazoEconect;
    }
 
@@ -2015,6 +2235,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTiposParc(String tiposParc) {
+        markAsChanged("TIPOSPARC", tiposParc);
         this.tiposParc = tiposParc;
    }
 
@@ -2023,6 +2244,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEnviaPedEmailTop(String enviaPedEmailTop) {
+        markAsChanged("ENVIPEDEMAILTOP", enviaPedEmailTop);
         this.enviaPedEmailTop = enviaPedEmailTop;
    }
 
@@ -2031,6 +2253,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setMotNaoReterIssQn(String motNaoReterIssQn) {
+        markAsChanged("MOTNAORETERISSQN", motNaoReterIssQn);
         this.motNaoReterIssQn = motNaoReterIssQn;
    }
 
@@ -2039,6 +2262,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSitEspecialResp(String sitEspecialResp) {
+        markAsChanged("SITESPECIALRESP", sitEspecialResp);
         this.sitEspecialResp = sitEspecialResp;
    }
 
@@ -2047,6 +2271,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setProvaCresc(BigDecimal provaCresc) {
+        markAsChanged("PROVACRESC", provaCresc);
         this.provaCresc = provaCresc;
    }
 
@@ -2055,6 +2280,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSaldoDisp(BigDecimal saldoDisp) {
+        markAsChanged("SALDODISP", saldoDisp);
         this.saldoDisp = saldoDisp;
    }
 
@@ -2063,6 +2289,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipLotacao(String tipLotacao) {
+        markAsChanged("TIPLOTACAO", tipLotacao);
         this.tipLotacao = tipLotacao;
    }
 
@@ -2071,6 +2298,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setChavePix(String chavePix) {
+        markAsChanged("CHAVEPIX", chavePix);
         this.chavePix = chavePix;
    }
 
@@ -2079,6 +2307,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDesconsidEscBase(String desconsidEscBase) {
+        markAsChanged("DESCONSIDESCBASE", desconsidEscBase);
         this.desconsidEscBase = desconsidEscBase;
    }
 
@@ -2087,6 +2316,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setCodIdentCons(BigDecimal codIdentCons) {
+        markAsChanged("CODIDENTCONS", codIdentCons);
         this.codIdentCons = codIdentCons;
    }
 
@@ -2095,6 +2325,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setTipClienteServCom(BigDecimal tipClienteServCom) {
+        markAsChanged("TIPCLIENTESERVCOM", tipClienteServCom);
         this.tipClienteServCom = tipClienteServCom;
    }
 
@@ -2103,6 +2334,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setUtilizaNucadParc(String utilizaNucadParc) {
+        markAsChanged("UTILIZANUCADPARC", utilizaNucadParc);
         this.utilizaNucadParc = utilizaNucadParc;
    }
 
@@ -2111,6 +2343,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setProvaCrescCac(BigDecimal provaCrescCac) {
+        markAsChanged("PROVACRESCCAC", provaCrescCac);
         this.provaCrescCac = provaCrescCac;
    }
 
@@ -2119,6 +2352,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setSaldoDispCac(BigDecimal saldoDispCac) {
+        markAsChanged("SALDODISPCAC", saldoDispCac);
         this.saldoDispCac = saldoDispCac;
    }
 
@@ -2127,6 +2361,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -2135,6 +2370,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -2143,6 +2379,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setConsidTotItensTrib(String considTotItensTrib) {
+        markAsChanged("CONSIDTOTITENSTRIB", considTotItensTrib);
         this.considTotItensTrib = considTotItensTrib;
    }
 
@@ -2151,6 +2388,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDeduzIpiBcPisCf(String deduzIpiBcPisCf) {
+        markAsChanged("DEDUZIPIBCPISCF", deduzIpiBcPisCf);
         this.deduzIpiBcPisCf = deduzIpiBcPisCf;
    }
 
@@ -2159,6 +2397,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setConsParcAdrCst(String consParcAdrCst) {
+        markAsChanged("CONSPARCADRCST", consParcAdrCst);
         this.consParcAdrCst = consParcAdrCst;
    }
 
@@ -2167,6 +2406,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setDesconsDescInss(String desconsDescInss) {
+        markAsChanged("DESCONSDESCINSS", desconsDescInss);
         this.desconsDescInss = desconsDescInss;
    }
 
@@ -2175,6 +2415,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setEmailCte(String emailCte) {
+        markAsChanged("EMAILCTE", emailCte);
         this.emailCte = emailCte;
    }
 
@@ -2183,6 +2424,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setRede(String rede) {
+        markAsChanged("REDE", rede);
         this.rede = rede;
    }
 
@@ -2191,6 +2433,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
    }
 
    public void setGrupoPisCofins(BigDecimal grupoPisCofins) {
+        markAsChanged("GRUPOPISCOFINS", grupoPisCofins);
         this.grupoPisCofins = grupoPisCofins;
    }
 
@@ -2206,6 +2449,7 @@ public class TransportadoraFinal extends AbstractSankhyaEntity<TransportadoraFin
 
    @Override
    public TransportadoraFinal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.identInscEstad = vo.asString("IDENTINSCESTAD");
         this.implAudolote = vo.asString("IMPLAUDOLOTE");
         this.indNatRet = vo.asString("INDNATRET");

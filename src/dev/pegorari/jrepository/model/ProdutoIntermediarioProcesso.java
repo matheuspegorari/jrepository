@@ -31,6 +31,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -39,6 +40,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setTipoNroLote(String tipoNroLote) {
+        markAsChanged("TIPONROLOTE", tipoNroLote);
         this.tipoNroLote = tipoNroLote;
    }
 
@@ -47,6 +49,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -55,6 +58,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setAguardarSubop(String aguardarSubop) {
+        markAsChanged("AGUARDARSUBOP", aguardarSubop);
         this.aguardarSubop = aguardarSubop;
    }
 
@@ -63,6 +67,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -71,6 +76,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setTipoSubop(String tipoSubop) {
+        markAsChanged("TIPOSUBOP", tipoSubop);
         this.tipoSubop = tipoSubop;
    }
 
@@ -79,6 +85,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setCodProdPi(BigDecimal codProdPi) {
+        markAsChanged("CODPRODPI", codProdPi);
         this.codProdPi = codProdPi;
    }
 
@@ -87,6 +94,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setControlePi(String controlePi) {
+        markAsChanged("CONTROLEPI", controlePi);
         this.controlePi = controlePi;
    }
 
@@ -95,6 +103,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setTipoPi(String tipoPi) {
+        markAsChanged("TIPOPI", tipoPi);
         this.tipoPi = tipoPi;
    }
 
@@ -103,6 +112,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -111,6 +121,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setConsideraQtdEst(String consideraQtdEst) {
+        markAsChanged("CONSIDERAQTDEST", consideraQtdEst);
         this.consideraQtdEst = consideraQtdEst;
    }
 
@@ -119,6 +130,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setRedimensionaPa(String redimensionaPa) {
+        markAsChanged("REDIMENSIONAPA", redimensionaPa);
         this.redimensionaPa = redimensionaPa;
    }
 
@@ -127,6 +139,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setRedimensionaPaPerda(String redimensionaPaPerda) {
+        markAsChanged("REDIMENSIONAPAPERDA", redimensionaPaPerda);
         this.redimensionaPaPerda = redimensionaPaPerda;
    }
 
@@ -135,6 +148,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setBloqInitPa(String bloqInitPa) {
+        markAsChanged("BLOQINITPA", bloqInitPa);
         this.bloqInitPa = bloqInitPa;
    }
 
@@ -143,6 +157,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setConsideraLotePi(String consideraLotePi) {
+        markAsChanged("CONSIDERALOTEPI", consideraLotePi);
         this.consideraLotePi = consideraLotePi;
    }
 
@@ -151,6 +166,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -159,6 +175,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -167,6 +184,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -175,6 +193,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -190,6 +209,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
 
    @Override
    public ProdutoIntermediarioProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.tipoNroLote = vo.asString("TIPONROLOTE");
         this.controlePa = vo.asString("CONTROLEPA");

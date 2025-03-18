@@ -16,6 +16,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -24,6 +25,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
    }
 
    public void setDhTransf(Timestamp dhTransf) {
+        markAsChanged("DHTRANSF", dhTransf);
         this.dhTransf = dhTransf;
    }
 
@@ -32,6 +34,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
    }
 
    public void setNuTvo(BigDecimal nuTvo) {
+        markAsChanged("NUTVO", nuTvo);
         this.nuTvo = nuTvo;
    }
 
@@ -40,6 +43,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
    }
 
    public void setVlrTransf(BigDecimal vlrTransf) {
+        markAsChanged("VLRTRANSF", vlrTransf);
         this.vlrTransf = vlrTransf;
    }
 
@@ -55,6 +59,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
 
    @Override
    public TransferenciaVerbaOrcamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.dhTransf = vo.asTimestamp("DHTRANSF");
         this.nuTvo = vo.asBigDecimal("NUTVO");

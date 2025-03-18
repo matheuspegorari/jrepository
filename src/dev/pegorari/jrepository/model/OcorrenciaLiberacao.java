@@ -59,6 +59,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -67,6 +68,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -75,6 +77,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setNuAutInv(BigDecimal nuAutInv) {
+        markAsChanged("NUAUTINV", nuAutInv);
         this.nuAutInv = nuAutInv;
    }
 
@@ -83,6 +86,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -91,6 +95,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setNuMtransf(BigDecimal nuMtransf) {
+        markAsChanged("NUMTRANSF", nuMtransf);
         this.nuMtransf = nuMtransf;
    }
 
@@ -99,6 +104,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -107,6 +113,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -115,6 +122,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setObsLib(String obsLib) {
+        markAsChanged("OBSLIB", obsLib);
         this.obsLib = obsLib;
    }
 
@@ -123,6 +131,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setObsLib1(String obsLib1) {
+        markAsChanged("OBSLIB1", obsLib1);
         this.obsLib1 = obsLib1;
    }
 
@@ -131,6 +140,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setObsLib2(String obsLib2) {
+        markAsChanged("OBSLIB2", obsLib2);
         this.obsLib2 = obsLib2;
    }
 
@@ -139,6 +149,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setObsLib3(String obsLib3) {
+        markAsChanged("OBSLIB3", obsLib3);
         this.obsLib3 = obsLib3;
    }
 
@@ -147,6 +158,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -155,6 +167,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setSequenciaIte(BigDecimal sequenciaIte) {
+        markAsChanged("SEQUENCIAITE", sequenciaIte);
         this.sequenciaIte = sequenciaIte;
    }
 
@@ -163,6 +176,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setSinal(BigDecimal sinal) {
+        markAsChanged("SINAL", sinal);
         this.sinal = sinal;
    }
 
@@ -171,6 +185,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -179,6 +194,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -187,6 +203,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -195,6 +212,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setValorOrig(BigDecimal valorOrig) {
+        markAsChanged("VALOR_ORIG", valorOrig);
         this.valorOrig = valorOrig;
    }
 
@@ -203,6 +221,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setVlrDesdob(BigDecimal vlrDesdob) {
+        markAsChanged("VLRDESDOB", vlrDesdob);
         this.vlrDesdob = vlrDesdob;
    }
 
@@ -211,6 +230,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -219,6 +239,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -227,6 +248,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -235,6 +257,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -243,6 +266,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
+        markAsChanged("CODUSULIB", codUsuLib);
         this.codUsuLib = codUsuLib;
    }
 
@@ -251,6 +275,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -259,6 +284,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -267,6 +293,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setDia(BigDecimal dia) {
+        markAsChanged("DIA", dia);
         this.dia = dia;
    }
 
@@ -275,6 +302,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -283,6 +311,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -291,6 +320,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -299,6 +329,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -307,6 +338,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -315,6 +347,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -323,6 +356,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -331,6 +365,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -339,6 +374,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -347,6 +383,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -355,6 +392,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -363,6 +401,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -371,6 +410,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setExcluido(BigDecimal excluido) {
+        markAsChanged("EXCLUIDO", excluido);
         this.excluido = excluido;
    }
 
@@ -379,6 +419,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -387,6 +428,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -395,6 +437,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -403,6 +446,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -411,6 +455,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -419,6 +464,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setCodCenCusLib(BigDecimal codCenCusLib) {
+        markAsChanged("CODCENCUSLIB", codCenCusLib);
         this.codCenCusLib = codCenCusLib;
    }
 
@@ -427,6 +473,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
    }
 
    public void setNutVo(BigDecimal nutVo) {
+        markAsChanged("NUTVO", nutVo);
         this.nutVo = nutVo;
    }
 
@@ -442,6 +489,7 @@ public class OcorrenciaLiberacao extends AbstractSankhyaEntity<OcorrenciaLiberac
 
    @Override
    public OcorrenciaLiberacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.grau = vo.asBigDecimal("GRAU");
         this.marca = vo.asString("MARCA");
         this.nuAutInv = vo.asBigDecimal("NUAUTINV");

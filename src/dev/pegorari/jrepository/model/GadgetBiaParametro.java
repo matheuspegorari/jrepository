@@ -18,6 +18,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setVlrDec(BigDecimal vlrDec) {
+        markAsChanged("VLRDEC", vlrDec);
         this.vlrDec = vlrDec;
    }
 
@@ -26,6 +27,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setVlrTxt(String vlrTxt) {
+        markAsChanged("VLRTXT", vlrTxt);
         this.vlrTxt = vlrTxt;
    }
 
@@ -34,6 +36,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -42,6 +45,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setCodGbi(BigDecimal codGbi) {
+        markAsChanged("CODGBI", codGbi);
         this.codGbi = codGbi;
    }
 
@@ -50,6 +54,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -58,6 +63,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    }
 
    public void setVlrDat(Timestamp vlrDat) {
+        markAsChanged("VLRDAT", vlrDat);
         this.vlrDat = vlrDat;
    }
 
@@ -73,6 +79,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
 
    @Override
    public GadgetBiaParametro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.vlrDec = vo.asBigDecimal("VLRDEC");
         this.vlrTxt = vo.asString("VLRTXT");
         this.chave = vo.asString("CHAVE");

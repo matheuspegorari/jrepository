@@ -19,6 +19,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setArquivo(String arquivo) {
+        markAsChanged("ARQUIVO", arquivo);
         this.arquivo = arquivo;
    }
 
@@ -27,6 +28,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setCodCtabCoint(BigDecimal codCtabCoint) {
+        markAsChanged("CODCTABCOINT", codCtabCoint);
         this.codCtabCoint = codCtabCoint;
    }
 
@@ -35,6 +37,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setCodLayout(BigDecimal codLayout) {
+        markAsChanged("CODLAYOUT", codLayout);
         this.codLayout = codLayout;
    }
 
@@ -43,6 +46,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -51,6 +55,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -59,6 +64,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setNuRem(BigDecimal nuRem) {
+        markAsChanged("NUREM", nuRem);
         this.nuRem = nuRem;
    }
 
@@ -67,6 +73,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    }
 
    public void setNuRemessa(BigDecimal nuRemessa) {
+        markAsChanged("NUREMESSA", nuRemessa);
         this.nuRemessa = nuRemessa;
    }
 
@@ -82,6 +89,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
 
    @Override
    public LogRemessa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
         this.codLayout = vo.asBigDecimal("CODLAYOUT");

@@ -22,6 +22,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlIntegracao(char[] xmlIntegracao) {
+        markAsChanged("XMLINTEGRACAO", xmlIntegracao);
         this.xmlIntegracao = xmlIntegracao;
    }
 
@@ -30,6 +31,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setCodVerifNfse(String codVerifNfse) {
+        markAsChanged("CODVERIFNFSE", codVerifNfse);
         this.codVerifNfse = codVerifNfse;
    }
 
@@ -38,6 +40,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setDhemissNfse(Timestamp dhemissNfse) {
+        markAsChanged("DHEMISSNFSE", dhemissNfse);
         this.dhemissNfse = dhemissNfse;
    }
 
@@ -46,6 +49,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -54,6 +58,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlConfCanc(char[] xmlConfCanc) {
+        markAsChanged("XMLCONFCANC", xmlConfCanc);
         this.xmlConfCanc = xmlConfCanc;
    }
 
@@ -62,6 +67,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlNfse(char[] xmlNfse) {
+        markAsChanged("XMLNFSE", xmlNfse);
         this.xmlNfse = xmlNfse;
    }
 
@@ -70,6 +76,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlPedCanc(char[] xmlPedCanc) {
+        markAsChanged("XMLPEDCANC", xmlPedCanc);
         this.xmlPedCanc = xmlPedCanc;
    }
 
@@ -78,6 +85,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlRps(char[] xmlRps) {
+        markAsChanged("XMLRPS", xmlRps);
         this.xmlRps = xmlRps;
    }
 
@@ -86,6 +94,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setLinkNfse(String linkNfse) {
+        markAsChanged("LINKNFSE", linkNfse);
         this.linkNfse = linkNfse;
    }
 
@@ -94,6 +103,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    }
 
    public void setXmlDps(char[] xmlDps) {
+        markAsChanged("XMLDPS", xmlDps);
         this.xmlDps = xmlDps;
    }
 
@@ -109,6 +119,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
 
    @Override
    public ArquivoNFSe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.xmlIntegracao = vo.asClob("XMLINTEGRACAO");
         this.codVerifNfse = vo.asString("CODVERIFNFSE");
         this.dhemissNfse = vo.asTimestamp("DHEMISSNFSE");

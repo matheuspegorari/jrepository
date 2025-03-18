@@ -21,6 +21,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setCodFabricante(String codFabricante) {
+        markAsChanged("CODFABRICANTE", codFabricante);
         this.codFabricante = codFabricante;
    }
 
@@ -29,6 +30,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -37,6 +39,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -45,6 +48,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setNroAdicao(BigDecimal nroAdicao) {
+        markAsChanged("NROADICAO", nroAdicao);
         this.nroAdicao = nroAdicao;
    }
 
@@ -53,6 +57,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -61,6 +66,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setSeqAd(BigDecimal seqAd) {
+        markAsChanged("SEQAD", seqAd);
         this.seqAd = seqAd;
    }
 
@@ -69,6 +75,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setSeqDi(BigDecimal seqDi) {
+        markAsChanged("SEQDI", seqDi);
         this.seqDi = seqDi;
    }
 
@@ -77,6 +84,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -85,6 +93,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -100,6 +109,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
 
    @Override
    public AdicoesImportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFabricante = vo.asString("CODFABRICANTE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

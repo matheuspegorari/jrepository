@@ -26,6 +26,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setBaseSubstitCalc(BigDecimal baseSubstitCalc) {
+        markAsChanged("BASESUBSTITCALC", baseSubstitCalc);
         this.baseSubstitCalc = baseSubstitCalc;
    }
 
@@ -34,6 +35,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setBaseSubstitItem(BigDecimal baseSubstitItem) {
+        markAsChanged("BASESUBSTITITEM", baseSubstitItem);
         this.baseSubstitItem = baseSubstitItem;
    }
 
@@ -42,6 +44,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -50,6 +53,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setCodTrib(BigDecimal codTrib) {
+        markAsChanged("CODTRIB", codTrib);
         this.codTrib = codTrib;
    }
 
@@ -58,6 +62,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -66,6 +71,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -74,6 +80,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -82,6 +89,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setVlrSubstitCalc(BigDecimal vlrSubstitCalc) {
+        markAsChanged("VLRSUBSTCALC", vlrSubstitCalc);
         this.vlrSubstitCalc = vlrSubstitCalc;
    }
 
@@ -90,6 +98,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setVlrSubstitItem(BigDecimal vlrSubstitItem) {
+        markAsChanged("VLRSUBSTITEM", vlrSubstitItem);
         this.vlrSubstitItem = vlrSubstitItem;
    }
 
@@ -98,6 +107,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setBaseIcmsCalc(BigDecimal baseIcmsCalc) {
+        markAsChanged("BASEICMSCALC", baseIcmsCalc);
         this.baseIcmsCalc = baseIcmsCalc;
    }
 
@@ -106,6 +116,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setBaseIcmsIte(BigDecimal baseIcmsIte) {
+        markAsChanged("BASEICMSITE", baseIcmsIte);
         this.baseIcmsIte = baseIcmsIte;
    }
 
@@ -114,6 +125,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setVlrIcmsCalc(BigDecimal vlrIcmsCalc) {
+        markAsChanged("VLRICMSCALC", vlrIcmsCalc);
         this.vlrIcmsCalc = vlrIcmsCalc;
    }
 
@@ -122,6 +134,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setVlrIcmsIte(BigDecimal vlrIcmsIte) {
+        markAsChanged("VLRICMSITE", vlrIcmsIte);
         this.vlrIcmsIte = vlrIcmsIte;
    }
 
@@ -130,6 +143,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setDifVlrSubstit(BigDecimal difVlrSubstit) {
+        markAsChanged("DIFVLRSUBST", difVlrSubstit);
         this.difVlrSubstit = difVlrSubstit;
    }
 
@@ -138,6 +152,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
    }
 
    public void setIdAliqIcms(BigDecimal idAliqIcms) {
+        markAsChanged("IDALIQICMS", idAliqIcms);
         this.idAliqIcms = idAliqIcms;
    }
 
@@ -153,6 +168,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
 
    @Override
    public ItemDivergenciaICMSST fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
         this.baseSubstitItem = vo.asBigDecimal("BASESUBSTITITEM");
         this.codProd = vo.asBigDecimal("CODPROD");

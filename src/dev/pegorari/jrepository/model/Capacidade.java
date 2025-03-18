@@ -15,6 +15,7 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    }
 
    public void setCodCap(BigDecimal codCap) {
+        markAsChanged("CODCAP", codCap);
         this.codCap = codCap;
    }
 
@@ -23,6 +24,7 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -31,6 +33,7 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    }
 
    public void setUnidade(String unidade) {
+        markAsChanged("UNIDADE", unidade);
         this.unidade = unidade;
    }
 
@@ -39,6 +42,7 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    }
 
    public void setUntmp(String untmp) {
+        markAsChanged("UNTMP", untmp);
         this.untmp = untmp;
    }
 
@@ -54,6 +58,7 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
 
    @Override
    public Capacidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.descricao = vo.asString("DESCRICAO");
         this.unidade = vo.asString("UNIDADE");

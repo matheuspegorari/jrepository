@@ -26,6 +26,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -34,6 +35,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setBaseCalcTempo(String baseCalcTempo) {
+        markAsChanged("BASECALCTEMPO", baseCalcTempo);
         this.baseCalcTempo = baseCalcTempo;
    }
 
@@ -42,6 +44,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -50,6 +53,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setCodOcoros(BigDecimal codOcoros) {
+        markAsChanged("CODOCOROS", codOcoros);
         this.codOcoros = codOcoros;
    }
 
@@ -58,6 +62,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -66,6 +71,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -74,6 +80,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setNumReg(BigDecimal numReg) {
+        markAsChanged("NUMREG", numReg);
         this.numReg = numReg;
    }
 
@@ -82,6 +89,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setNuSla(BigDecimal nuSla) {
+        markAsChanged("NUSLA", nuSla);
         this.nuSla = nuSla;
    }
 
@@ -90,6 +98,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -98,6 +107,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -106,6 +116,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -114,6 +125,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setTempoTotal(BigDecimal tempoTotal) {
+        markAsChanged("TEMPOTOTAL", tempoTotal);
         this.tempoTotal = tempoTotal;
    }
 
@@ -122,6 +134,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setTipoTempo(String tipoTempo) {
+        markAsChanged("TIPOTEMPO", tipoTempo);
         this.tipoTempo = tipoTempo;
    }
 
@@ -130,6 +143,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setUsaRegraPadrao(String usaRegraPadrao) {
+        markAsChanged("USAREGRAPADRAO", usaRegraPadrao);
         this.usaRegraPadrao = usaRegraPadrao;
    }
 
@@ -138,6 +152,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
    }
 
    public void setValorTempo(BigDecimal valorTempo) {
+        markAsChanged("VALORTEMPO", valorTempo);
         this.valorTempo = valorTempo;
    }
 
@@ -153,6 +168,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
 
    @Override
    public RegraSLAPadrao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.baseCalcTempo = vo.asString("BASECALCTEMPO");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");

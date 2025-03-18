@@ -15,6 +15,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
    }
 
    public void setNuChave(BigDecimal nuChave) {
+        markAsChanged("NUCHAVE", nuChave);
         this.nuChave = nuChave;
    }
 
@@ -23,6 +24,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
    }
 
    public void setNuLiberacao(BigDecimal nuLiberacao) {
+        markAsChanged("NULIBERACAO", nuLiberacao);
         this.nuLiberacao = nuLiberacao;
    }
 
@@ -31,6 +33,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -39,6 +42,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -54,6 +58,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
 
    @Override
    public ItensLiberacaoBloqueioContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuChave = vo.asBigDecimal("NUCHAVE");
         this.nuLiberacao = vo.asBigDecimal("NULIBERACAO");
         this.tabela = vo.asString("TABELA");

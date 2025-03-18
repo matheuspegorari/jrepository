@@ -18,6 +18,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setCodPerfil(BigDecimal codPerfil) {
+        markAsChanged("CODPERFIL", codPerfil);
         this.codPerfil = codPerfil;
    }
 
@@ -26,6 +27,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -42,6 +45,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setImprescindivel(String imprescindivel) {
+        markAsChanged("IMPRESCINDIVEL", imprescindivel);
         this.imprescindivel = imprescindivel;
    }
 
@@ -50,6 +54,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -58,6 +63,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -73,6 +79,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
 
    @Override
    public PerfilRequisicao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

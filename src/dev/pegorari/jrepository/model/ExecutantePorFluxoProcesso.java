@@ -16,6 +16,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -24,6 +25,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -32,6 +34,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -40,6 +43,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -48,6 +52,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    }
 
    public void setVariacao(BigDecimal variacao) {
+        markAsChanged("VARIACAO", variacao);
         this.variacao = variacao;
    }
 
@@ -63,6 +68,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
 
    @Override
    public ExecutantePorFluxoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServ = vo.asBigDecimal("CODSERV");
         this.codUsu = vo.asBigDecimal("CODUSU");

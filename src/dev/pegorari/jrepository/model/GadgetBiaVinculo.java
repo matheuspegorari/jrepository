@@ -13,6 +13,7 @@ public class GadgetBiaVinculo extends AbstractSankhyaEntity<GadgetBiaVinculo> {
    }
 
    public void setCodGbc(BigDecimal codGbc) {
+        markAsChanged("CODGBC", codGbc);
         this.codGbc = codGbc;
    }
 
@@ -21,6 +22,7 @@ public class GadgetBiaVinculo extends AbstractSankhyaEntity<GadgetBiaVinculo> {
    }
 
    public void setCodGbi(BigDecimal codGbi) {
+        markAsChanged("CODGBI", codGbi);
         this.codGbi = codGbi;
    }
 
@@ -36,6 +38,7 @@ public class GadgetBiaVinculo extends AbstractSankhyaEntity<GadgetBiaVinculo> {
 
    @Override
    public GadgetBiaVinculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGbc = vo.asBigDecimal("CODGBC");
         this.codGbi = vo.asBigDecimal("CODGBI");
         return this;

@@ -19,6 +19,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setAbVatb(String abVatb) {
+        markAsChanged("ABVATB", abVatb);
         this.abVatb = abVatb;
    }
 
@@ -27,6 +28,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setIdAtb(BigDecimal idAtb) {
+        markAsChanged("IDATB", idAtb);
         this.idAtb = idAtb;
    }
 
@@ -35,6 +37,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setIdGrade(BigDecimal idGrade) {
+        markAsChanged("IDGRADE", idGrade);
         this.idGrade = idGrade;
    }
 
@@ -43,6 +46,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setNomeAtb(String nomeAtb) {
+        markAsChanged("NOMEATB", nomeAtb);
         this.nomeAtb = nomeAtb;
    }
 
@@ -51,6 +55,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setOrdCamp(BigDecimal ordCamp) {
+        markAsChanged("ORDCAMP", ordCamp);
         this.ordCamp = ordCamp;
    }
 
@@ -59,6 +64,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -67,6 +73,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setAtUnuVersao(String atUnuVersao) {
+        markAsChanged("ATUNUVERSAO", atUnuVersao);
         this.atUnuVersao = atUnuVersao;
    }
 
@@ -75,6 +82,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -90,6 +98,7 @@ public class DimensaoGrade extends AbstractSankhyaEntity<DimensaoGrade> {
 
    @Override
    public DimensaoGrade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abVatb = vo.asString("ABVATB");
         this.idAtb = vo.asBigDecimal("IDATB");
         this.idGrade = vo.asBigDecimal("IDGRADE");

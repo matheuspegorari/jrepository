@@ -24,6 +24,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -32,6 +33,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -40,6 +42,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setCodHistocor(BigDecimal codHistocor) {
+        markAsChanged("CODHISTOCOR", codHistocor);
         this.codHistocor = codHistocor;
    }
 
@@ -48,6 +51,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -56,6 +60,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setEntrada(BigDecimal entrada) {
+        markAsChanged("ENTRADA", entrada);
         this.entrada = entrada;
    }
 
@@ -64,6 +69,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setFalta(String falta) {
+        markAsChanged("FALTA", falta);
         this.falta = falta;
    }
 
@@ -72,6 +78,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -80,6 +87,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -88,6 +96,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
+        markAsChanged("NUOCOR", nuOcor);
         this.nuOcor = nuOcor;
    }
 
@@ -96,6 +105,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setSaida(BigDecimal saida) {
+        markAsChanged("SAIDA", saida);
         this.saida = saida;
    }
 
@@ -104,6 +114,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -112,6 +123,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    }
 
    public void setTurno(BigDecimal turno) {
+        markAsChanged("TURNO", turno);
         this.turno = turno;
    }
 
@@ -127,6 +139,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
 
    @Override
    public ControleTelaI18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistocor = vo.asBigDecimal("CODHISTOCOR");

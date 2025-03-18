@@ -18,6 +18,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setCodCla(BigDecimal codCla) {
+        markAsChanged("CODCLA", codCla);
         this.codCla = codCla;
    }
 
@@ -26,6 +27,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -34,6 +36,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
+        markAsChanged("CODUSUCRIAC", codUsuCriac);
         this.codUsuCriac = codUsuCriac;
    }
 
@@ -42,6 +45,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setDescCla(String descCla) {
+        markAsChanged("DESCCLA", descCla);
         this.descCla = descCla;
    }
 
@@ -50,6 +54,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -58,6 +63,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    }
 
    public void setDtCriac(Timestamp dtCriac) {
+        markAsChanged("DTCRIAC", dtCriac);
         this.dtCriac = dtCriac;
    }
 
@@ -73,6 +79,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
 
    @Override
    public ClassificacaoLgpd fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

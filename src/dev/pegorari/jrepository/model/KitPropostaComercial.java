@@ -17,6 +17,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setSeqKit(BigDecimal seqKit) {
+        markAsChanged("SEQKIT", seqKit);
         this.seqKit = seqKit;
    }
 
@@ -25,6 +26,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setTipKit(String tipKit) {
+        markAsChanged("TIPKIT", tipKit);
         this.tipKit = tipKit;
    }
 
@@ -33,6 +35,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -41,6 +44,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
+        markAsChanged("CODPARCFORN", codParcForn);
         this.codParcForn = codParcForn;
    }
 
@@ -49,6 +53,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setDescrKit(String descrKit) {
+        markAsChanged("DESCRKIT", descrKit);
         this.descrKit = descrKit;
    }
 
@@ -57,6 +62,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -72,6 +78,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
 
    @Override
    public KitPropostaComercial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqKit = vo.asBigDecimal("SEQKIT");
         this.tipKit = vo.asString("TIPKIT");
         this.versaoProjeto = vo.asString("VERSAOPROJETO");

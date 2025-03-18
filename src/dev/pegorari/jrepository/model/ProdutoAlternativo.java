@@ -19,6 +19,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -27,6 +28,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setCodProdAlt(BigDecimal codProdAlt) {
+        markAsChanged("CODPRODALT", codProdAlt);
         this.codProdAlt = codProdAlt;
    }
 
@@ -35,6 +37,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -43,6 +46,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setQuantidade(BigDecimal quantidade) {
+        markAsChanged("QUANTIDADE", quantidade);
         this.quantidade = quantidade;
    }
 
@@ -51,6 +55,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setReferenciaPa(String referenciaPa) {
+        markAsChanged("REFERENCIAPA", referenciaPa);
         this.referenciaPa = referenciaPa;
    }
 
@@ -59,6 +64,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setDtVigencia(Timestamp dtVigencia) {
+        markAsChanged("DTVIGENCIA", dtVigencia);
         this.dtVigencia = dtVigencia;
    }
 
@@ -67,6 +73,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    }
 
    public void setSubstituto(String substituto) {
+        markAsChanged("SUBSTITUTO", substituto);
         this.substituto = substituto;
    }
 
@@ -82,6 +89,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
 
    @Override
    public ProdutoAlternativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codProdAlt = vo.asBigDecimal("CODPRODALT");
         this.prioridade = vo.asBigDecimal("PRIORIDADE");

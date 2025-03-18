@@ -17,6 +17,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -25,6 +26,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -33,6 +35,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    }
 
    public void setCodigoItem(String codigoItem) {
+        markAsChanged("CODIGOITEM", codigoItem);
         this.codigoItem = codigoItem;
    }
 
@@ -41,6 +44,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -49,6 +53,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -64,6 +69,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
 
    @Override
    public CodigoItemIPM fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.codUf = vo.asBigDecimal("CODUF");
         this.codigoItem = vo.asString("CODIGOITEM");

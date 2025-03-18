@@ -22,6 +22,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -30,6 +31,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -38,6 +40,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -46,6 +49,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setControleMpAlt(String controleMpAlt) {
+        markAsChanged("CONTROLEMPALT", controleMpAlt);
         this.controleMpAlt = controleMpAlt;
    }
 
@@ -54,6 +58,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setCodProdMpAlt(BigDecimal codProdMpAlt) {
+        markAsChanged("CODPRODMPALT", codProdMpAlt);
         this.codProdMpAlt = codProdMpAlt;
    }
 
@@ -62,6 +67,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -70,6 +76,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -78,6 +85,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -86,6 +94,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -94,6 +103,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -102,6 +112,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    }
 
    public void setSeqMpa(BigDecimal seqMpa) {
+        markAsChanged("SEQMPA", seqMpa);
         this.seqMpa = seqMpa;
    }
 
@@ -117,6 +128,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
 
    @Override
    public MateriaPrimaAltLancamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuLop = vo.asBigDecimal("NULOP");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.ordem = vo.asBigDecimal("ORDEM");

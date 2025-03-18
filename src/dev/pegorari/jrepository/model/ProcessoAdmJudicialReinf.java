@@ -40,6 +40,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -48,6 +49,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -56,6 +58,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setCodMunic(BigDecimal codMunic) {
+        markAsChanged("CODMUNIC", codMunic);
         this.codMunic = codMunic;
    }
 
@@ -64,6 +67,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -72,6 +76,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -80,6 +85,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setFimValid(Timestamp fimValid) {
+        markAsChanged("FIMVALID", fimValid);
         this.fimValid = fimValid;
    }
 
@@ -88,6 +94,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -96,6 +103,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setIdVara(String idVara) {
+        markAsChanged("IDVARA", idVara);
         this.idVara = idVara;
    }
 
@@ -104,6 +112,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setIndAutoria(BigDecimal indAutoria) {
+        markAsChanged("INDAUTORIA", indAutoria);
         this.indAutoria = indAutoria;
    }
 
@@ -112,6 +121,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setIniValid(Timestamp iniValid) {
+        markAsChanged("INIVALID", iniValid);
         this.iniValid = iniValid;
    }
 
@@ -120,6 +130,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -128,6 +139,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -136,6 +148,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -144,6 +157,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setNrProc(String nrProc) {
+        markAsChanged("NRPROC", nrProc);
         this.nrProc = nrProc;
    }
 
@@ -152,6 +166,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setNuProcesso(BigDecimal nuProcesso) {
+        markAsChanged("NUPROCESSO", nuProcesso);
         this.nuProcesso = nuProcesso;
    }
 
@@ -160,6 +175,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -168,6 +184,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -176,6 +193,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -184,6 +202,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -192,6 +211,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -200,6 +220,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setTpProc(BigDecimal tpProc) {
+        markAsChanged("TPPROC", tpProc);
         this.tpProc = tpProc;
    }
 
@@ -208,6 +229,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setUfVara(String ufVara) {
+        markAsChanged("UFVARA", ufVara);
         this.ufVara = ufVara;
    }
 
@@ -216,6 +238,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -224,6 +247,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setFimValidNovo(Timestamp fimValidNovo) {
+        markAsChanged("FIMVALIDNOVO", fimValidNovo);
         this.fimValidNovo = fimValidNovo;
    }
 
@@ -232,6 +256,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setIniValidNovo(Timestamp iniValidNovo) {
+        markAsChanged("INIVALIDNOVO", iniValidNovo);
         this.iniValidNovo = iniValidNovo;
    }
 
@@ -240,6 +265,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -248,6 +274,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -256,6 +283,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -271,6 +299,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
 
    @Override
    public ProcessoAdmJudicialReinf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codMunic = vo.asBigDecimal("CODMUNIC");

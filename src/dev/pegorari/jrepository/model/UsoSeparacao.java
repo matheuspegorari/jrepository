@@ -20,6 +20,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setAgrupFinNotas(String agrupFinNotas) {
+        markAsChanged("AGRUPFINNOTAS", agrupFinNotas);
         this.agrupFinNotas = agrupFinNotas;
    }
 
@@ -28,6 +29,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setCodTipOperPrinc(BigDecimal codTipOperPrinc) {
+        markAsChanged("CODTIPOPERPRINC", codTipOperPrinc);
         this.codTipOperPrinc = codTipOperPrinc;
    }
 
@@ -36,6 +38,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setConfirmNotasFat(String confirmNotasFat) {
+        markAsChanged("CONFIRMNOTASFAT", confirmNotasFat);
         this.confirmNotasFat = confirmNotasFat;
    }
 
@@ -44,6 +47,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setSeriePrinc(String seriePrinc) {
+        markAsChanged("SERIEPRINC", seriePrinc);
         this.seriePrinc = seriePrinc;
    }
 
@@ -52,6 +56,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -60,6 +65,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -68,6 +74,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setCodTipOperSep(BigDecimal codTipOperSep) {
+        markAsChanged("CODTIPOPERSEP", codTipOperSep);
         this.codTipOperSep = codTipOperSep;
    }
 
@@ -76,6 +83,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setSerieSeparacao(String serieSeparacao) {
+        markAsChanged("SERIESEPARACAO", serieSeparacao);
         this.serieSeparacao = serieSeparacao;
    }
 
@@ -84,6 +92,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    }
 
    public void setUsoSeparacao(String usoSeparacao) {
+        markAsChanged("USOSEPARACAO", usoSeparacao);
         this.usoSeparacao = usoSeparacao;
    }
 
@@ -99,6 +108,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
 
    @Override
    public UsoSeparacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.agrupFinNotas = vo.asString("AGRUPFINNOTAS");
         this.codTipOperPrinc = vo.asBigDecimal("CODTIPOPERPRINC");
         this.confirmNotasFat = vo.asString("CONFIRMNOTASFAT");

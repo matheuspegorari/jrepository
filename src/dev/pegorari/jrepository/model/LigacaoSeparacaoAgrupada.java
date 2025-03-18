@@ -16,6 +16,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    }
 
    public void setNuSepFilha(BigDecimal nuSepFilha) {
+        markAsChanged("NUSEPFILHA", nuSepFilha);
         this.nuSepFilha = nuSepFilha;
    }
 
@@ -24,6 +25,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    }
 
    public void setSeqIttFilha(BigDecimal seqIttFilha) {
+        markAsChanged("SEQITTFILHA", seqIttFilha);
         this.seqIttFilha = seqIttFilha;
    }
 
@@ -32,6 +34,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    }
 
    public void setSeqIttMae(BigDecimal seqIttMae) {
+        markAsChanged("SEQITTMAE", seqIttMae);
         this.seqIttMae = seqIttMae;
    }
 
@@ -40,6 +43,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    }
 
    public void setNuSepMae(BigDecimal nuSepMae) {
+        markAsChanged("NUSEPMAE", nuSepMae);
         this.nuSepMae = nuSepMae;
    }
 
@@ -48,6 +52,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    }
 
    public void setQtdFilha(BigDecimal qtdFilha) {
+        markAsChanged("QTDFILHA", qtdFilha);
         this.qtdFilha = qtdFilha;
    }
 
@@ -63,6 +68,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
 
    @Override
    public LigacaoSeparacaoAgrupada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuSepFilha = vo.asBigDecimal("NUSEPFILHA");
         this.seqIttFilha = vo.asBigDecimal("SEQITTFILHA");
         this.seqIttMae = vo.asBigDecimal("SEQITTMAE");

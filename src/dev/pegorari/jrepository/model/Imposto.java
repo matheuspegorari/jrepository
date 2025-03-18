@@ -35,6 +35,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setAcumBaseIcms(String acumBaseIcms) {
+        markAsChanged("ACUMBASEICMS", acumBaseIcms);
         this.acumBaseIcms = acumBaseIcms;
    }
 
@@ -43,6 +44,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setAcumBaseIpi(String acumBaseIpi) {
+        markAsChanged("ACUMBASEIPI", acumBaseIpi);
         this.acumBaseIpi = acumBaseIpi;
    }
 
@@ -51,6 +53,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -59,6 +62,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCalcBaseMensal(String calcBaseMensal) {
+        markAsChanged("CALCBASEMENSAL", calcBaseMensal);
         this.calcBaseMensal = calcBaseMensal;
    }
 
@@ -67,6 +71,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCodCtaCtb1(BigDecimal codCtaCtb1) {
+        markAsChanged("CODCTACTB1", codCtaCtb1);
         this.codCtaCtb1 = codCtaCtb1;
    }
 
@@ -75,6 +80,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -83,6 +89,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCodImp(BigDecimal codImp) {
+        markAsChanged("CODIMP", codImp);
         this.codImp = codImp;
    }
 
@@ -91,6 +98,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -99,6 +107,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -107,6 +116,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setImpBaixaParcial(String impBaixaParcial) {
+        markAsChanged("IMPBAIXAPARCIAL", impBaixaParcial);
         this.impBaixaParcial = impBaixaParcial;
    }
 
@@ -115,6 +125,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setNomeImp(String nomeImp) {
+        markAsChanged("NOMEIMP", nomeImp);
         this.nomeImp = nomeImp;
    }
 
@@ -123,6 +134,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setRegra(String regra) {
+        markAsChanged("REGRA", regra);
         this.regra = regra;
    }
 
@@ -131,6 +143,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setTipoImposto(BigDecimal tipoImposto) {
+        markAsChanged("TIPOIMPOSTO", tipoImposto);
         this.tipoImposto = tipoImposto;
    }
 
@@ -139,6 +152,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setUsarPrecoCusto(String usarPrecoCusto) {
+        markAsChanged("USARPRECOCUSTO", usarPrecoCusto);
         this.usarPrecoCusto = usarPrecoCusto;
    }
 
@@ -147,6 +161,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setVlrMin(BigDecimal vlrMin) {
+        markAsChanged("VLRMIN", vlrMin);
         this.vlrMin = vlrMin;
    }
 
@@ -155,6 +170,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setGrupoVlrMin(String grupoVlrMin) {
+        markAsChanged("GRUPOVLRMIN", grupoVlrMin);
         this.grupoVlrMin = grupoVlrMin;
    }
 
@@ -163,6 +179,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setConsiderarImp(String considerarImp) {
+        markAsChanged("CONSIDERARIMP", considerarImp);
         this.considerarImp = considerarImp;
    }
 
@@ -171,6 +188,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setBaseImpFin(String baseImpFin) {
+        markAsChanged("BASEIMPFIN", baseImpFin);
         this.baseImpFin = baseImpFin;
    }
 
@@ -179,6 +197,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCodRec(String codRec) {
+        markAsChanged("CODREC", codRec);
         this.codRec = codRec;
    }
 
@@ -187,6 +206,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setImpFrete(String impFrete) {
+        markAsChanged("IMPFRETE", impFrete);
         this.impFrete = impFrete;
    }
 
@@ -195,6 +215,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setF600Efd(String f600Efd) {
+        markAsChanged("F600EFD", f600Efd);
         this.f600Efd = f600Efd;
    }
 
@@ -203,6 +224,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setVlrMaxInss(BigDecimal vlrMaxInss) {
+        markAsChanged("VLRMAXINSS", vlrMaxInss);
         this.vlrMaxInss = vlrMaxInss;
    }
 
@@ -211,6 +233,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setRegCalcImpRet(String regCalcImpRet) {
+        markAsChanged("REGCALCIMPRET", regCalcImpRet);
         this.regCalcImpRet = regCalcImpRet;
    }
 
@@ -219,6 +242,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
    }
 
    public void setCalcBaseDia(String calcBaseDia) {
+        markAsChanged("CALCBASDIA", calcBaseDia);
         this.calcBaseDia = calcBaseDia;
    }
 
@@ -234,6 +258,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
 
    @Override
    public Imposto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acumBaseIcms = vo.asString("ACUMBASEICMS");
         this.acumBaseIpi = vo.asString("ACUMBASEIPI");
         this.ativo = vo.asString("ATIVO");

@@ -43,6 +43,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setApresdecGraf(String apresdecGraf) {
+        markAsChanged("APRESDECGRAF", apresdecGraf);
         this.apresdecGraf = apresdecGraf;
    }
 
@@ -51,6 +52,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setCodInd(BigDecimal codInd) {
+        markAsChanged("CODIND", codInd);
         this.codInd = codInd;
    }
 
@@ -59,6 +61,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setCodUng(BigDecimal codUng) {
+        markAsChanged("CODUNG", codUng);
         this.codUng = codUng;
    }
 
@@ -67,6 +70,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -75,6 +79,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDhProxAtual(Timestamp dhProxAtual) {
+        markAsChanged("DHPROXATUAL", dhProxAtual);
         this.dhProxAtual = dhProxAtual;
    }
 
@@ -83,6 +88,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpSqlPrevAcum(char[] expSqlPrevAcum) {
+        markAsChanged("EXPSQLPREVACUM", expSqlPrevAcum);
         this.expSqlPrevAcum = expSqlPrevAcum;
    }
 
@@ -91,6 +97,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpSqlPrevPer(char[] expSqlPrevPer) {
+        markAsChanged("EXPSQLPREVPER", expSqlPrevPer);
         this.expSqlPrevPer = expSqlPrevPer;
    }
 
@@ -99,6 +106,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpSqlRealAcum(char[] expSqlRealAcum) {
+        markAsChanged("EXPSQLREALACUM", expSqlRealAcum);
         this.expSqlRealAcum = expSqlRealAcum;
    }
 
@@ -107,6 +115,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpSqlRealPer(char[] expSqlRealPer) {
+        markAsChanged("EXPSQLREALPER", expSqlRealPer);
         this.expSqlRealPer = expSqlRealPer;
    }
 
@@ -115,6 +124,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpValPrevAcum(char[] expValPrevAcum) {
+        markAsChanged("EXPVALPREVACUM", expValPrevAcum);
         this.expValPrevAcum = expValPrevAcum;
    }
 
@@ -123,6 +133,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpValPrevPer(char[] expValPrevPer) {
+        markAsChanged("EXPVALPREVPER", expValPrevPer);
         this.expValPrevPer = expValPrevPer;
    }
 
@@ -131,6 +142,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpValRealAcum(char[] expValRealAcum) {
+        markAsChanged("EXPVALREALACUM", expValRealAcum);
         this.expValRealAcum = expValRealAcum;
    }
 
@@ -139,6 +151,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setExpValRealPer(char[] expValRealPer) {
+        markAsChanged("EXPVALREALPER", expValRealPer);
         this.expValRealPer = expValRealPer;
    }
 
@@ -147,6 +160,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setHorarioAtu(BigDecimal horarioAtu) {
+        markAsChanged("HORARIOATU", horarioAtu);
         this.horarioAtu = horarioAtu;
    }
 
@@ -155,6 +169,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
+        markAsChanged("NUDSB", nuDsb);
         this.nuDsb = nuDsb;
    }
 
@@ -163,6 +178,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setNuMet(BigDecimal nuMet) {
+        markAsChanged("NUMET", nuMet);
         this.nuMet = nuMet;
    }
 
@@ -171,6 +187,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setNuMetPai(BigDecimal nuMetPai) {
+        markAsChanged("NUMETPAI", nuMetPai);
         this.nuMetPai = nuMetPai;
    }
 
@@ -179,6 +196,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setPeriodicidade(BigDecimal periodicidade) {
+        markAsChanged("PERIODICIDADE", periodicidade);
         this.periodicidade = periodicidade;
    }
 
@@ -187,6 +205,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setPeriodicidadeAtu(BigDecimal periodicidadeAtu) {
+        markAsChanged("PERIODICIDADEATU", periodicidadeAtu);
         this.periodicidadeAtu = periodicidadeAtu;
    }
 
@@ -195,6 +214,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setTipoAcumPrev(String tipoAcumPrev) {
+        markAsChanged("TIPOACUMPREV", tipoAcumPrev);
         this.tipoAcumPrev = tipoAcumPrev;
    }
 
@@ -203,6 +223,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setTipoRealAcum(String tipoRealAcum) {
+        markAsChanged("TIPOREALACUM", tipoRealAcum);
         this.tipoRealAcum = tipoRealAcum;
    }
 
@@ -211,6 +232,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setTipPrev(String tipPrev) {
+        markAsChanged("TIPPREV", tipPrev);
         this.tipPrev = tipPrev;
    }
 
@@ -219,6 +241,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDsPrevAcum(String dsPrevAcum) {
+        markAsChanged("DSPREVACUM", dsPrevAcum);
         this.dsPrevAcum = dsPrevAcum;
    }
 
@@ -227,6 +250,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDsPrevPer(String dsPrevPer) {
+        markAsChanged("DSPREVPER", dsPrevPer);
         this.dsPrevPer = dsPrevPer;
    }
 
@@ -235,6 +259,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDsRealAcum(String dsRealAcum) {
+        markAsChanged("DSREALACUM", dsRealAcum);
         this.dsRealAcum = dsRealAcum;
    }
 
@@ -243,6 +268,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setDsRealPer(String dsRealPer) {
+        markAsChanged("DSREALPER", dsRealPer);
         this.dsRealPer = dsRealPer;
    }
 
@@ -251,6 +277,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setInfoPeriodo(String infoPeriodo) {
+        markAsChanged("INFOPERIODO", infoPeriodo);
         this.infoPeriodo = infoPeriodo;
    }
 
@@ -259,6 +286,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setTipoReal(String tipoReal) {
+        markAsChanged("TIPOREAL", tipoReal);
         this.tipoReal = tipoReal;
    }
 
@@ -267,6 +295,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setQtdPerLinear(BigDecimal qtdPerLinear) {
+        markAsChanged("QTDPERLINEAR", qtdPerLinear);
         this.qtdPerLinear = qtdPerLinear;
    }
 
@@ -275,6 +304,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setCodInstQuebra(BigDecimal codInstQuebra) {
+        markAsChanged("CODINSTQUEBRA", codInstQuebra);
         this.codInstQuebra = codInstQuebra;
    }
 
@@ -283,6 +313,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    }
 
    public void setNomeInstaQuebra(String nomeInstaQuebra) {
+        markAsChanged("NOMEINSTAQUEBRA", nomeInstaQuebra);
         this.nomeInstaQuebra = nomeInstaQuebra;
    }
 
@@ -298,6 +329,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
 
    @Override
    public MetaGestaoIndicadores fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apresdecGraf = vo.asString("APRESDECGRAF");
         this.codInd = vo.asBigDecimal("CODIND");
         this.codUng = vo.asBigDecimal("CODUNG");

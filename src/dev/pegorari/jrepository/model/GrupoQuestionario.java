@@ -20,6 +20,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -28,6 +29,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +38,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setCodGrupoQuest(BigDecimal codGrupoQuest) {
+        markAsChanged("CODGRUPOQUEST", codGrupoQuest);
         this.codGrupoQuest = codGrupoQuest;
    }
 
@@ -44,6 +47,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setCodGrupoQuestPai(BigDecimal codGrupoQuestPai) {
+        markAsChanged("CODGRUPOQUESTPAI", codGrupoQuestPai);
         this.codGrupoQuestPai = codGrupoQuestPai;
    }
 
@@ -52,6 +56,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -60,6 +65,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setDescrGrupoQuest(String descrGrupoQuest) {
+        markAsChanged("DESCRGRUPOQUEST", descrGrupoQuest);
         this.descrGrupoQuest = descrGrupoQuest;
    }
 
@@ -68,6 +74,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -76,6 +83,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -91,6 +99,7 @@ public class GrupoQuestionario extends AbstractSankhyaEntity<GrupoQuestionario> 
 
    @Override
    public GrupoQuestionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codGrupoQuest = vo.asBigDecimal("CODGRUPOQUEST");

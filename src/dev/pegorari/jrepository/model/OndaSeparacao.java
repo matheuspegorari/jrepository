@@ -15,6 +15,7 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
    }
 
    public void setCodOnda(BigDecimal codOnda) {
+        markAsChanged("CODONDA", codOnda);
         this.codOnda = codOnda;
    }
 
@@ -23,6 +24,7 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -31,6 +33,7 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -46,6 +49,7 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
 
    @Override
    public OndaSeparacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codOnda = vo.asBigDecimal("CODONDA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

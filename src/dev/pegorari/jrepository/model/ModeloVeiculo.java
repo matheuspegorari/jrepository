@@ -15,6 +15,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    }
 
    public void setCilindrada(BigDecimal cilindrada) {
+        markAsChanged("CILINDRADA", cilindrada);
         this.cilindrada = cilindrada;
    }
 
@@ -23,6 +24,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    }
 
    public void setCodModVei(BigDecimal codModVei) {
+        markAsChanged("CODMODVEI", codModVei);
         this.codModVei = codModVei;
    }
 
@@ -31,6 +33,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    }
 
    public void setCombustivel(String combustivel) {
+        markAsChanged("COMBUSTIVEL", combustivel);
         this.combustivel = combustivel;
    }
 
@@ -39,6 +42,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    }
 
    public void setDescrModVei(String descrModVei) {
+        markAsChanged("DESCRMODVEI", descrModVei);
         this.descrModVei = descrModVei;
    }
 
@@ -54,6 +58,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
 
    @Override
    public ModeloVeiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cilindrada = vo.asBigDecimal("CILINDRADA");
         this.codModVei = vo.asBigDecimal("CODMODVEI");
         this.combustivel = vo.asString("COMBUSTIVEL");

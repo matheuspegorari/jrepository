@@ -20,6 +20,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -28,6 +29,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
+        markAsChanged("CODPARCTRANSP", codParctransp);
         this.codParctransp = codParctransp;
    }
 
@@ -36,6 +38,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -44,6 +47,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -52,6 +56,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -60,6 +65,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setDtVigor(Timestamp dtVigor) {
+        markAsChanged("DTVIGOR", dtVigor);
         this.dtVigor = dtVigor;
    }
 
@@ -68,6 +74,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setNuTabFret(BigDecimal nuTabFret) {
+        markAsChanged("NUTABFRET", nuTabFret);
         this.nuTabFret = nuTabFret;
    }
 
@@ -76,6 +83,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    }
 
    public void setPreco(BigDecimal preco) {
+        markAsChanged("PRECO", preco);
         this.preco = preco;
    }
 
@@ -91,6 +99,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
 
    @Override
    public HistoricoVeiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.codUsu = vo.asBigDecimal("CODUSU");

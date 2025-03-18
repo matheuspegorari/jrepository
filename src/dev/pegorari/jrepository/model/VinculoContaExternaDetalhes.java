@@ -22,6 +22,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -30,6 +31,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -38,6 +40,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCtaCtb(String ctaCtb) {
+        markAsChanged("CTACTB", ctaCtb);
         this.ctaCtb = ctaCtb;
    }
 
@@ -46,6 +49,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -54,6 +58,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -62,6 +67,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCtaCtbExt(String ctaCtbExt) {
+        markAsChanged("CTACTBEXT", ctaCtbExt);
         this.ctaCtbExt = ctaCtbExt;
    }
 
@@ -70,6 +76,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -78,6 +85,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCtaCtbExtImp(String ctaCtbExtImp) {
+        markAsChanged("CTACTBEXTIMP", ctaCtbExtImp);
         this.ctaCtbExtImp = ctaCtbExtImp;
    }
 
@@ -86,6 +94,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCrImportado(String crImportado) {
+        markAsChanged("CRIMPORTADO", crImportado);
         this.crImportado = crImportado;
    }
 
@@ -94,6 +103,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
    }
 
    public void setCrVinculado(String crVinculado) {
+        markAsChanged("CRVINCULADO", crVinculado);
         this.crVinculado = crVinculado;
    }
 
@@ -109,6 +119,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
 
    @Override
    public VinculoContaExternaDetalhes fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.ctaCtb = vo.asString("CTACTB");

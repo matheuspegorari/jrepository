@@ -17,6 +17,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -25,6 +26,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -33,6 +35,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
    }
 
    public void setOcorrencias(char[] ocorrencias) {
+        markAsChanged("OCORRENCIAS", ocorrencias);
         this.ocorrencias = ocorrencias;
    }
 
@@ -41,6 +44,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
    }
 
    public void setDhOcor(Timestamp dhOcor) {
+        markAsChanged("DHOCOR", dhOcor);
         this.dhOcor = dhOcor;
    }
 
@@ -49,6 +53,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -64,6 +69,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
 
    @Override
    public OcorrenciasManifesto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.ocorrencias = vo.asClob("OCORRENCIAS");

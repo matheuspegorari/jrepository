@@ -22,6 +22,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -30,6 +31,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setDhFim(Timestamp dhFim) {
+        markAsChanged("DHFIM", dhFim);
         this.dhFim = dhFim;
    }
 
@@ -38,6 +40,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setDhIni(Timestamp dhIni) {
+        markAsChanged("DHINI", dhIni);
         this.dhIni = dhIni;
    }
 
@@ -46,6 +49,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setIdProc(String idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -54,6 +58,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setMsgResult(char[] msgResult) {
+        markAsChanged("MSGRESULT", msgResult);
         this.msgResult = msgResult;
    }
 
@@ -62,6 +67,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setNroUnico(BigDecimal nroUnico) {
+        markAsChanged("NROUNICO", nroUnico);
         this.nroUnico = nroUnico;
    }
 
@@ -70,6 +76,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setParams(String params) {
+        markAsChanged("PARAMS", params);
         this.params = params;
    }
 
@@ -78,6 +85,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -86,6 +94,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -94,6 +103,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
    }
 
    public void setXmlResult(char[] xmlResult) {
+        markAsChanged("XMLRESULT", xmlResult);
         this.xmlResult = xmlResult;
    }
 
@@ -109,6 +119,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
 
    @Override
    public Processo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhFim = vo.asTimestamp("DHFIM");
         this.dhIni = vo.asTimestamp("DHINI");

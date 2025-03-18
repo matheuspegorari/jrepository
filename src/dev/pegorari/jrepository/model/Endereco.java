@@ -20,6 +20,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -28,6 +29,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setDescricaoCorreio(String descricaoCorreio) {
+        markAsChanged("DESCRICAOCORREIO", descricaoCorreio);
         this.descricaoCorreio = descricaoCorreio;
    }
 
@@ -36,6 +38,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -44,6 +47,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setNomeEnd(String nomeEnd) {
+        markAsChanged("NOMEEND", nomeEnd);
         this.nomeEnd = nomeEnd;
    }
 
@@ -52,6 +56,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -60,6 +65,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -68,6 +74,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setCodLogradouro(String codLogradouro) {
+        markAsChanged("CODLOGRADOURO", codLogradouro);
         this.codLogradouro = codLogradouro;
    }
 
@@ -76,6 +83,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    }
 
    public void setTipoEndereco(String tipoEndereco) {
+        markAsChanged("TIPOENDERECO", tipoEndereco);
         this.tipoEndereco = tipoEndereco;
    }
 
@@ -91,6 +99,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
 
    @Override
    public Endereco fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEnd = vo.asBigDecimal("CODEND");
         this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");
         this.dtAlter = vo.asTimestamp("DTALTER");

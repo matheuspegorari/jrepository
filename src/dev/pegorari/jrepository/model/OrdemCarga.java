@@ -65,6 +65,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodDoca(BigDecimal codDoca) {
+        markAsChanged("CODDOCA", codDoca);
         this.codDoca = codDoca;
    }
 
@@ -73,6 +74,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -81,6 +83,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -89,6 +92,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodParcDest(BigDecimal codParcDest) {
+        markAsChanged("CODPARCDEST", codParcDest);
         this.codParcDest = codParcDest;
    }
 
@@ -97,6 +101,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodParcMotorista(BigDecimal codParcMotorista) {
+        markAsChanged("CODPARCMOTORISTA", codParcMotorista);
         this.codParcMotorista = codParcMotorista;
    }
 
@@ -105,6 +110,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodParcOrig(BigDecimal codParcOrig) {
+        markAsChanged("CODPARCORIG", codParcOrig);
         this.codParcOrig = codParcOrig;
    }
 
@@ -113,6 +119,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodParcTransp(BigDecimal codParcTransp) {
+        markAsChanged("CODPARCTRANSP", codParcTransp);
         this.codParcTransp = codParcTransp;
    }
 
@@ -121,6 +128,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -129,6 +137,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodRota(BigDecimal codRota) {
+        markAsChanged("CODROTA", codRota);
         this.codRota = codRota;
    }
 
@@ -137,6 +146,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodTipoPerTransb(BigDecimal codTipoPerTransb) {
+        markAsChanged("CODTIPOPERTRANSB", codTipoPerTransb);
         this.codTipoPerTransb = codTipoPerTransb;
    }
 
@@ -145,6 +155,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -153,6 +164,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodUsuRetorno(BigDecimal codUsuRetorno) {
+        markAsChanged("CODUSURETORNO", codUsuRetorno);
         this.codUsuRetorno = codUsuRetorno;
    }
 
@@ -161,6 +173,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -169,6 +182,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDhFinalPesagem(Timestamp dhFinalPesagem) {
+        markAsChanged("DHFINALPESAGEM", dhFinalPesagem);
         this.dhFinalPesagem = dhFinalPesagem;
    }
 
@@ -177,6 +191,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDhInicialPesagem(Timestamp dhInicialPesagem) {
+        markAsChanged("DHINICIALPESAGEM", dhInicialPesagem);
         this.dhInicialPesagem = dhInicialPesagem;
    }
 
@@ -185,6 +200,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -193,6 +209,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDtAlterRotCat(Timestamp dtAlterRotCat) {
+        markAsChanged("DTALTERROTCAT", dtAlterRotCat);
         this.dtAlterRotCat = dtAlterRotCat;
    }
 
@@ -201,6 +218,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDtInic(Timestamp dtInic) {
+        markAsChanged("DTINIC", dtInic);
         this.dtInic = dtInic;
    }
 
@@ -209,6 +227,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDtPrevSaida(Timestamp dtPrevSaida) {
+        markAsChanged("DTPREVSAIDA", dtPrevSaida);
         this.dtPrevSaida = dtPrevSaida;
    }
 
@@ -217,6 +236,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setDtRetorno(Timestamp dtRetorno) {
+        markAsChanged("DTRETORNO", dtRetorno);
         this.dtRetorno = dtRetorno;
    }
 
@@ -225,6 +245,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setEntSai(String entSai) {
+        markAsChanged("ENTSAI", entSai);
         this.entSai = entSai;
    }
 
@@ -233,6 +254,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setFreteCalc(String freteCalc) {
+        markAsChanged("FRETECALC", freteCalc);
         this.freteCalc = freteCalc;
    }
 
@@ -241,6 +263,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -249,6 +272,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setNroFrota(BigDecimal nroFrota) {
+        markAsChanged("NROFROTA", nroFrota);
         this.nroFrota = nroFrota;
    }
 
@@ -257,6 +281,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
+        markAsChanged("NUCAIXA", nuCaixa);
         this.nuCaixa = nuCaixa;
    }
 
@@ -265,6 +290,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setNuFinAcerto(BigDecimal nuFinAcerto) {
+        markAsChanged("NUFINACERTO", nuFinAcerto);
         this.nuFinAcerto = nuFinAcerto;
    }
 
@@ -273,6 +299,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -281,6 +308,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setQtdEntrega(BigDecimal qtdEntrega) {
+        markAsChanged("QTDENTREGA", qtdEntrega);
         this.qtdEntrega = qtdEntrega;
    }
 
@@ -289,6 +317,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setRoteiro(String roteiro) {
+        markAsChanged("ROTEIRO", roteiro);
         this.roteiro = roteiro;
    }
 
@@ -297,6 +326,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTipDist(String tipDist) {
+        markAsChanged("TIPDIST", tipDist);
         this.tipDist = tipDist;
    }
 
@@ -305,6 +335,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTipEmbalagem(String tipEmbalagem) {
+        markAsChanged("TIPEMBALAGEM", tipEmbalagem);
         this.tipEmbalagem = tipEmbalagem;
    }
 
@@ -313,6 +344,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTotalCarga(BigDecimal totalCarga) {
+        markAsChanged("TOTALCARGA", totalCarga);
         this.totalCarga = totalCarga;
    }
 
@@ -321,6 +353,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setVincRot(String vincRot) {
+        markAsChanged("VINCROT", vincRot);
         this.vincRot = vincRot;
    }
 
@@ -329,6 +362,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setVlrDifAcerto(BigDecimal vlrDifAcerto) {
+        markAsChanged("VLRDIFACERTO", vlrDifAcerto);
         this.vlrDifAcerto = vlrDifAcerto;
    }
 
@@ -337,6 +371,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setVlrFrete(BigDecimal vlrFrete) {
+        markAsChanged("VLRFRETE", vlrFrete);
         this.vlrFrete = vlrFrete;
    }
 
@@ -345,6 +380,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setHoraSaida(Timestamp horaSaida) {
+        markAsChanged("HORASAIDA", horaSaida);
         this.horaSaida = horaSaida;
    }
 
@@ -353,6 +389,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setIdOrdemCarga(String idOrdemCarga) {
+        markAsChanged("IDORDEMCARGA", idOrdemCarga);
         this.idOrdemCarga = idOrdemCarga;
    }
 
@@ -361,6 +398,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setJustificativa(String justificativa) {
+        markAsChanged("JUSTIFICATIVA", justificativa);
         this.justificativa = justificativa;
    }
 
@@ -369,6 +407,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setKmFin(BigDecimal kmFin) {
+        markAsChanged("KMFIN", kmFin);
         this.kmFin = kmFin;
    }
 
@@ -377,6 +416,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setKmInic(BigDecimal kmInic) {
+        markAsChanged("KMINIC", kmInic);
         this.kmInic = kmInic;
    }
 
@@ -385,6 +425,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setStatusAval(String statusAval) {
+        markAsChanged("STATUSAVAL", statusAval);
         this.statusAval = statusAval;
    }
 
@@ -393,6 +434,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTemTransbordo(String temTransbordo) {
+        markAsChanged("TEMTRANSBORDO", temTransbordo);
         this.temTransbordo = temTransbordo;
    }
 
@@ -401,6 +443,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTipCalcFrete(BigDecimal tipCalcFrete) {
+        markAsChanged("TIPCALCFRETE", tipCalcFrete);
         this.tipCalcFrete = tipCalcFrete;
    }
 
@@ -409,6 +452,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setTipCarga(String tipCarga) {
+        markAsChanged("TIPCARGA", tipCarga);
         this.tipCarga = tipCarga;
    }
 
@@ -417,6 +461,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setSeqCarga(BigDecimal seqCarga) {
+        markAsChanged("SEQCARGA", seqCarga);
         this.seqCarga = seqCarga;
    }
 
@@ -425,6 +470,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -433,6 +479,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setObsMotorista(String obsMotorista) {
+        markAsChanged("OBSMOTORISTA", obsMotorista);
         this.obsMotorista = obsMotorista;
    }
 
@@ -441,6 +488,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -449,6 +497,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setOrdemCargaPai(BigDecimal ordemCargaPai) {
+        markAsChanged("ORDEMCARGAPAI", ordemCargaPai);
         this.ordemCargaPai = ordemCargaPai;
    }
 
@@ -457,6 +506,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -465,6 +515,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -473,6 +524,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setEnvioWms(String envioWms) {
+        markAsChanged("ENVIOWMS", envioWms);
         this.envioWms = envioWms;
    }
 
@@ -481,6 +533,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
    }
 
    public void setCodEmpPai(BigDecimal codEmpPai) {
+        markAsChanged("CODEMPPAI", codEmpPai);
         this.codEmpPai = codEmpPai;
    }
 
@@ -496,6 +549,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
 
    @Override
    public OrdemCarga fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codDoca = vo.asBigDecimal("CODDOCA");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

@@ -15,6 +15,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
    }
 
    public void setAprovarComRessalvas(String aprovarComRessalvas) {
+        markAsChanged("APROVARCOMRESSALVAS", aprovarComRessalvas);
         this.aprovarComRessalvas = aprovarComRessalvas;
    }
 
@@ -23,6 +24,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
    }
 
    public void setDescrCiclo(String descrCiclo) {
+        markAsChanged("DESCRCICLO", descrCiclo);
         this.descrCiclo = descrCiclo;
    }
 
@@ -31,6 +33,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
    }
 
    public void setIdCcq(BigDecimal idCcq) {
+        markAsChanged("IDCCQ", idCcq);
         this.idCcq = idCcq;
    }
 
@@ -39,6 +42,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -54,6 +58,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
 
    @Override
    public CicloControleQualidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aprovarComRessalvas = vo.asString("APROVARCOMRESSALVAS");
         this.descrCiclo = vo.asString("DESCRCICLO");
         this.idCcq = vo.asBigDecimal("IDCCQ");

@@ -52,6 +52,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setAgrupaLocValEst(String agrupaLocValEst) {
+        markAsChanged("AGRUPALOCVALEST", agrupaLocValEst);
         this.agrupaLocValEst = agrupaLocValEst;
    }
 
@@ -60,6 +61,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -68,6 +70,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setAprProdVda(String aprProdVda) {
+        markAsChanged("APRPRODVDA", aprProdVda);
         this.aprProdVda = aprProdVda;
    }
 
@@ -76,6 +79,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setAreaOcupUnid(BigDecimal areaOcupUnid) {
+        markAsChanged("AREAOCUPUNID", areaOcupUnid);
         this.areaOcupUnid = areaOcupUnid;
    }
 
@@ -84,6 +88,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -92,6 +97,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -100,6 +106,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodGrupai(BigDecimal codGrupai) {
+        markAsChanged("CODGRUPAI", codGrupai);
         this.codGrupai = codGrupai;
    }
 
@@ -108,6 +115,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -116,6 +124,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -124,6 +133,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -132,6 +142,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodRfa(BigDecimal codRfa) {
+        markAsChanged("CODRFA", codRfa);
         this.codRfa = codRfa;
    }
 
@@ -140,6 +151,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setComCurvaA(BigDecimal comCurvaA) {
+        markAsChanged("COMCURVA_A", comCurvaA);
         this.comCurvaA = comCurvaA;
    }
 
@@ -148,6 +160,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setComCurvaB(BigDecimal comCurvaB) {
+        markAsChanged("COMCURVA_B", comCurvaB);
         this.comCurvaB = comCurvaB;
    }
 
@@ -156,6 +169,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setComCurvaC(BigDecimal comCurvaC) {
+        markAsChanged("COMCURVA_C", comCurvaC);
         this.comCurvaC = comCurvaC;
    }
 
@@ -164,6 +178,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setDescrGrupoProd(String descrGrupoProd) {
+        markAsChanged("DESCRGRUPOPROD", descrGrupoProd);
         this.descrGrupoProd = descrGrupoProd;
    }
 
@@ -172,6 +187,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -180,6 +196,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setGrupoIcms(BigDecimal grupoIcms) {
+        markAsChanged("GRUPOICMS", grupoIcms);
         this.grupoIcms = grupoIcms;
    }
 
@@ -188,6 +205,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setImagem(byte[] imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -196,6 +214,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setLimCurvaB(BigDecimal limCurvaB) {
+        markAsChanged("LIMCURVA_B", limCurvaB);
         this.limCurvaB = limCurvaB;
    }
 
@@ -204,6 +223,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setLimCurvaC(BigDecimal limCurvaC) {
+        markAsChanged("LIMCURVA_C", limCurvaC);
         this.limCurvaC = limCurvaC;
    }
 
@@ -212,6 +232,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setMetaQtd(BigDecimal metaQtd) {
+        markAsChanged("METAQTD", metaQtd);
         this.metaQtd = metaQtd;
    }
 
@@ -220,6 +241,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setParticMeta(BigDecimal particMeta) {
+        markAsChanged("PARTICMETA", particMeta);
         this.particMeta = particMeta;
    }
 
@@ -228,6 +250,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPedirLib(String pedirLib) {
+        markAsChanged("PEDIRLIB", pedirLib);
         this.pedirLib = pedirLib;
    }
 
@@ -236,6 +259,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercMeta(BigDecimal percMeta) {
+        markAsChanged("PERCMETA", percMeta);
         this.percMeta = percMeta;
    }
 
@@ -244,6 +268,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercMetaContrib(BigDecimal percMetaContrib) {
+        markAsChanged("PERCMETACONTRIB", percMetaContrib);
         this.percMetaContrib = percMetaContrib;
    }
 
@@ -252,6 +277,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setQtdExposicao(BigDecimal qtdExposicao) {
+        markAsChanged("QTDEXPOSICAO", qtdExposicao);
         this.qtdExposicao = qtdExposicao;
    }
 
@@ -260,6 +286,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setSolCompra(String solCompra) {
+        markAsChanged("SOLCOMPRA", solCompra);
         this.solCompra = solCompra;
    }
 
@@ -268,6 +295,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setTipoImposto(String tipoImposto) {
+        markAsChanged("TIPOIMPOSTO", tipoImposto);
         this.tipoImposto = tipoImposto;
    }
 
@@ -276,6 +304,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setValEst(String valEst) {
+        markAsChanged("VALEST", valEst);
         this.valEst = valEst;
    }
 
@@ -284,6 +313,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercCmtImp(BigDecimal percCmtImp) {
+        markAsChanged("PERCCMTIMP", percCmtImp);
         this.percCmtImp = percCmtImp;
    }
 
@@ -292,6 +322,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercCmtNac(BigDecimal percCmtNac) {
+        markAsChanged("PERCCMTNAC", percCmtNac);
         this.percCmtNac = percCmtNac;
    }
 
@@ -300,6 +331,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setVisivelAppos(String visivelAppos) {
+        markAsChanged("VISIVELAPPOS", visivelAppos);
         this.visivelAppos = visivelAppos;
    }
 
@@ -308,6 +340,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setConsGruProdCat42(String consGruProdCat42) {
+        markAsChanged("CONSGRUPRODCAT42", consGruProdCat42);
         this.consGruProdCat42 = consGruProdCat42;
    }
 
@@ -316,6 +349,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercCmtEst(BigDecimal percCmtEst) {
+        markAsChanged("PERCCMTEST", percCmtEst);
         this.percCmtEst = percCmtEst;
    }
 
@@ -324,6 +358,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercCmtFed(BigDecimal percCmtFed) {
+        markAsChanged("PERCCMTFED", percCmtFed);
         this.percCmtFed = percCmtFed;
    }
 
@@ -332,6 +367,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setPercCmtMun(BigDecimal percCmtMun) {
+        markAsChanged("PERCCMTMUN", percCmtMun);
         this.percCmtMun = percCmtMun;
    }
 
@@ -340,6 +376,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -348,6 +385,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCalRupturaEstoque(String calRupturaEstoque) {
+        markAsChanged("CALRUPTURAESTOQUE", calRupturaEstoque);
         this.calRupturaEstoque = calRupturaEstoque;
    }
 
@@ -356,6 +394,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -364,6 +403,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -379,6 +419,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
 
    @Override
    public GrupoProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.agrupaLocValEst = vo.asString("AGRUPALOCVALEST");
         this.analitico = vo.asString("ANALITICO");
         this.aprProdVda = vo.asString("APRPRODVDA");

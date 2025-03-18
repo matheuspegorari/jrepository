@@ -30,6 +30,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -38,6 +39,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setCategoria(String categoria) {
+        markAsChanged("CATEGORIA", categoria);
         this.categoria = categoria;
    }
 
@@ -46,6 +48,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -54,6 +57,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setCodUsuInc(BigDecimal codUsuInc) {
+        markAsChanged("CODUSUINC", codUsuInc);
         this.codUsuInc = codUsuInc;
    }
 
@@ -62,6 +66,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -70,6 +75,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -78,6 +84,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -86,6 +93,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setNuGdg(BigDecimal nuGdg) {
+        markAsChanged("NUGDG", nuGdg);
         this.nuGdg = nuGdg;
    }
 
@@ -94,6 +102,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setThumbnail(byte[] thumbnail) {
+        markAsChanged("THUMBNAIL", thumbnail);
         this.thumbnail = thumbnail;
    }
 
@@ -102,6 +111,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -110,6 +120,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setUrlComponente(String urlComponente) {
+        markAsChanged("URLCOMPONENTE", urlComponente);
         this.urlComponente = urlComponente;
    }
 
@@ -118,6 +129,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setHtml5(byte[] html5) {
+        markAsChanged("HTML5", html5);
         this.html5 = html5;
    }
 
@@ -126,6 +138,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setTemHtml5(String temHtml5) {
+        markAsChanged("TEMHTML5", temHtml5);
         this.temHtml5 = temHtml5;
    }
 
@@ -134,6 +147,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setGdgAssinado(String gdgAssinado) {
+        markAsChanged("GDGASSINADO", gdgAssinado);
         this.gdgAssinado = gdgAssinado;
    }
 
@@ -142,6 +156,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setEvocard(String evocard) {
+        markAsChanged("EVOCARD", evocard);
         this.evocard = evocard;
    }
 
@@ -150,6 +165,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setLayout(String layout) {
+        markAsChanged("LAYOUT", layout);
         this.layout = layout;
    }
 
@@ -158,6 +174,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setQtdAnalisesUtilizadas(BigDecimal qtdAnalisesUtilizadas) {
+        markAsChanged("QTDANALISESUTILIZADAS", qtdAnalisesUtilizadas);
         this.qtdAnalisesUtilizadas = qtdAnalisesUtilizadas;
    }
 
@@ -166,6 +183,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
    }
 
    public void setApvNc(String apvNc) {
+        markAsChanged("APVNC", apvNc);
         this.apvNc = apvNc;
    }
 
@@ -181,6 +199,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
 
    @Override
    public Gadget fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.categoria = vo.asString("CATEGORIA");
         this.codUsu = vo.asBigDecimal("CODUSU");

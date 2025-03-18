@@ -19,6 +19,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -27,6 +28,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setMascCtaExt(String mascCtaExt) {
+        markAsChanged("MASCCTAEXT", mascCtaExt);
         this.mascCtaExt = mascCtaExt;
    }
 
@@ -43,6 +46,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setDescrVinculo(String descrVinculo) {
+        markAsChanged("DESCRVINCULO", descrVinculo);
         this.descrVinculo = descrVinculo;
    }
 
@@ -51,6 +55,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -59,6 +64,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setDtMudaPlano(Timestamp dtMudaPlano) {
+        markAsChanged("DTMUDAPLANO", dtMudaPlano);
         this.dtMudaPlano = dtMudaPlano;
    }
 
@@ -67,6 +73,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    }
 
    public void setGeraRi157Ecd(String geraRi157Ecd) {
+        markAsChanged("GERARI157ECD", geraRi157Ecd);
         this.geraRi157Ecd = geraRi157Ecd;
    }
 
@@ -82,6 +89,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
 
    @Override
    public VinculoContaExterna fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.mascCtaExt = vo.asString("MASCCTAEXT");

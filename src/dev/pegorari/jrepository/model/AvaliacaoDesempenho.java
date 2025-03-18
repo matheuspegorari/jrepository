@@ -17,6 +17,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    }
 
    public void setNuPla(BigDecimal nuPla) {
+        markAsChanged("NUPLA", nuPla);
         this.nuPla = nuPla;
    }
 
@@ -25,6 +26,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
+        markAsChanged("NUAVALIACAO", nuAvaliacao);
         this.nuAvaliacao = nuAvaliacao;
    }
 
@@ -33,6 +35,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    }
 
    public void setNuPlaAvaliado(BigDecimal nuPlaAvaliado) {
+        markAsChanged("NUPLAAVALIADO", nuPlaAvaliado);
         this.nuPlaAvaliado = nuPlaAvaliado;
    }
 
@@ -41,6 +44,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -49,6 +53,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -64,6 +69,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
 
    @Override
    public AvaliacaoDesempenho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuPla = vo.asBigDecimal("NUPLA");
         this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
         this.nuPlaAvaliado = vo.asBigDecimal("NUPLAAVALIADO");

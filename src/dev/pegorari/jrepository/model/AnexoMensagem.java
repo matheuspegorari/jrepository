@@ -16,6 +16,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    }
 
    public void setAnexo(byte[] anexo) {
+        markAsChanged("ANEXO", anexo);
         this.anexo = anexo;
    }
 
@@ -24,6 +25,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    }
 
    public void setCid(String cid) {
+        markAsChanged("CID", cid);
         this.cid = cid;
    }
 
@@ -32,6 +34,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -40,6 +43,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    }
 
    public void setNuAnexo(BigDecimal nuAnexo) {
+        markAsChanged("NUANEXO", nuAnexo);
         this.nuAnexo = nuAnexo;
    }
 
@@ -48,6 +52,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -63,6 +68,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
 
    @Override
    public AnexoMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.anexo = vo.asBlob("ANEXO");
         this.cid = vo.asString("CID");
         this.nomeArquivo = vo.asString("NOMEARQUIVO");

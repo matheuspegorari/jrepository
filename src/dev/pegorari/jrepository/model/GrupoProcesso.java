@@ -15,6 +15,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -23,6 +24,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -31,6 +33,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
    }
 
    public void setGrupoPai(BigDecimal grupoPai) {
+        markAsChanged("GRUPOPAI", grupoPai);
         this.grupoPai = grupoPai;
    }
 
@@ -39,6 +42,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
    }
 
    public void setNuGrupo(BigDecimal nuGrupo) {
+        markAsChanged("NUGRUPO", nuGrupo);
         this.nuGrupo = nuGrupo;
    }
 
@@ -54,6 +58,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
 
    @Override
    public GrupoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");
         this.grupoPai = vo.asBigDecimal("GRUPOPAI");

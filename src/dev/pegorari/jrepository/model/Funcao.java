@@ -19,6 +19,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setCodCbo(BigDecimal codCbo) {
+        markAsChanged("CODCBO", codCbo);
         this.codCbo = codCbo;
    }
 
@@ -27,6 +28,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setCodFuncao(BigDecimal codFuncao) {
+        markAsChanged("CODFUNCAO", codFuncao);
         this.codFuncao = codFuncao;
    }
 
@@ -35,6 +37,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setDescrFuncao(String descrFuncao) {
+        markAsChanged("DESCRFUNCAO", descrFuncao);
         this.descrFuncao = descrFuncao;
    }
 
@@ -43,6 +46,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -51,6 +55,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setIncaPont(String incaPont) {
+        markAsChanged("INCAPONT", incaPont);
         this.incaPont = incaPont;
    }
 
@@ -59,6 +64,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setPodeEncEmp(String podeEncEmp) {
+        markAsChanged("PODEENCEMP", podeEncEmp);
         this.podeEncEmp = podeEncEmp;
    }
 
@@ -67,6 +73,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
    }
 
    public void setPodeSupEmp(String podeSupEmp) {
+        markAsChanged("PODESUPEMP", podeSupEmp);
         this.podeSupEmp = podeSupEmp;
    }
 
@@ -82,6 +89,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
 
    @Override
    public Funcao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCbo = vo.asBigDecimal("CODCBO");
         this.codFuncao = vo.asBigDecimal("CODFUNCAO");
         this.descrFuncao = vo.asString("DESCRFUNCAO");

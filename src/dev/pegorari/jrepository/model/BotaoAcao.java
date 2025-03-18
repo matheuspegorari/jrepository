@@ -21,6 +21,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setCodModulo(BigDecimal codModulo) {
+        markAsChanged("CODMODULO", codModulo);
         this.codModulo = codModulo;
    }
 
@@ -29,6 +30,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -37,6 +39,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setControlaAcesso(String controlaAcesso) {
+        markAsChanged("CONTROLAACESSO", controlaAcesso);
         this.controlaAcesso = controlaAcesso;
    }
 
@@ -45,6 +48,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -53,6 +57,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setIdBtnAcao(BigDecimal idBtnAcao) {
+        markAsChanged("IDBTNACAO", idBtnAcao);
         this.idBtnAcao = idBtnAcao;
    }
 
@@ -61,6 +66,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -69,6 +75,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -77,6 +84,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -85,6 +93,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -93,6 +102,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
    }
 
    public void setTeclaAtalho(String teclaAtalho) {
+        markAsChanged("TECLAATALHO", teclaAtalho);
         this.teclaAtalho = teclaAtalho;
    }
 
@@ -108,6 +118,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
 
    @Override
    public BotaoAcao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModulo = vo.asBigDecimal("CODMODULO");
         this.config = vo.asClob("CONFIG");
         this.controlaAcesso = vo.asString("CONTROLAACESSO");

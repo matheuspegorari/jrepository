@@ -22,6 +22,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -30,6 +31,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -38,6 +40,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setExprDestinatarios(char[] exprDestinatarios) {
+        markAsChanged("EXPRDESTINATARIOS", exprDestinatarios);
         this.exprDestinatarios = exprDestinatarios;
    }
 
@@ -46,6 +49,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setNotificaPadrao(String notificaPadrao) {
+        markAsChanged("NOTIFICAPADRAO", notificaPadrao);
         this.notificaPadrao = notificaPadrao;
    }
 
@@ -54,6 +58,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setRegra(BigDecimal regra) {
+        markAsChanged("REGRA", regra);
         this.regra = regra;
    }
 
@@ -62,6 +67,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -70,6 +76,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -78,6 +85,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setTempoLimite(BigDecimal tempoLimite) {
+        markAsChanged("TEMPOLIMITE", tempoLimite);
         this.tempoLimite = tempoLimite;
    }
 
@@ -86,6 +94,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setTipoNotificacao(String tipoNotificacao) {
+        markAsChanged("TIPONOTIFICACAO", tipoNotificacao);
         this.tipoNotificacao = tipoNotificacao;
    }
 
@@ -94,6 +103,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -102,6 +112,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -117,6 +128,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
 
    @Override
    public AlertaSLA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codSmtp = vo.asBigDecimal("CODSMTP");
         this.exprDestinatarios = vo.asClob("EXPRDESTINATARIOS");

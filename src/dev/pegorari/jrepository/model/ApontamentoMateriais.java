@@ -25,6 +25,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -33,6 +34,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -41,6 +43,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -49,6 +52,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -57,6 +61,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -65,6 +70,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -73,6 +79,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setTipoUso(String tipoUso) {
+        markAsChanged("TIPOUSO", tipoUso);
         this.tipoUso = tipoUso;
    }
 
@@ -81,6 +88,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -89,6 +97,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setVinculoSeriePa(String vinculoSeriePa) {
+        markAsChanged("VINCULOSERIEPA", vinculoSeriePa);
         this.vinculoSeriePa = vinculoSeriePa;
    }
 
@@ -97,6 +106,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setSeqMp(BigDecimal seqMp) {
+        markAsChanged("SEQMP", seqMp);
         this.seqMp = seqMp;
    }
 
@@ -105,6 +115,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
+        markAsChanged("CODLOCALBAIXA", codLocalBaixa);
         this.codLocalBaixa = codLocalBaixa;
    }
 
@@ -113,6 +124,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setCodMpe(BigDecimal codMpe) {
+        markAsChanged("CODMPE", codMpe);
         this.codMpe = codMpe;
    }
 
@@ -121,6 +133,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setQtdMpe(BigDecimal qtdMpe) {
+        markAsChanged("QTDMPE", qtdMpe);
         this.qtdMpe = qtdMpe;
    }
 
@@ -129,6 +142,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
+        markAsChanged("QTDPERDA", qtdPerda);
         this.qtdPerda = qtdPerda;
    }
 
@@ -144,6 +158,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
 
    @Override
    public ApontamentoMateriais fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.codVol = vo.asString("CODVOL");
         this.seqApa = vo.asBigDecimal("SEQAPA");

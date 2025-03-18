@@ -17,6 +17,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -25,6 +26,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setCodServDest(BigDecimal codServDest) {
+        markAsChanged("CODSERVDEST", codServDest);
         this.codServDest = codServDest;
    }
 
@@ -33,6 +35,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setCodServOrig(BigDecimal codServOrig) {
+        markAsChanged("CODSERVORIG", codServOrig);
         this.codServOrig = codServOrig;
    }
 
@@ -41,6 +44,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setSequenciaDest(BigDecimal sequenciaDest) {
+        markAsChanged("SEQUENCIADEST", sequenciaDest);
         this.sequenciaDest = sequenciaDest;
    }
 
@@ -49,6 +53,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
+        markAsChanged("SEQUENCIAORIG", sequenciaOrig);
         this.sequenciaOrig = sequenciaOrig;
    }
 
@@ -57,6 +62,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
    }
 
    public void setVariacao(BigDecimal variacao) {
+        markAsChanged("VARIACAO", variacao);
         this.variacao = variacao;
    }
 
@@ -72,6 +78,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
 
    @Override
    public TransicaoPorFluxoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServDest = vo.asBigDecimal("CODSERVDEST");
         this.codServOrig = vo.asBigDecimal("CODSERVORIG");

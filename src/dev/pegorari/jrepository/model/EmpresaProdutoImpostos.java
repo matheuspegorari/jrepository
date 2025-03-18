@@ -59,6 +59,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setUsaLoteDtFab(String usaLoteDtFab) {
+        markAsChanged("USALOTEDTFAB", usaLoteDtFab);
         this.usaLoteDtFab = usaLoteDtFab;
    }
 
@@ -67,6 +68,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setUsaLoteDtVal(String usaLoteDtVal) {
+        markAsChanged("USALOTEDTVAL", usaLoteDtVal);
         this.usaLoteDtVal = usaLoteDtVal;
    }
 
@@ -75,6 +77,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -83,6 +86,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTipContEst(String tipContEst) {
+        markAsChanged("TIPCONTEST", tipContEst);
         this.tipContEst = tipContEst;
    }
 
@@ -91,6 +95,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -99,6 +104,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setLocalizacao(String localizacao) {
+        markAsChanged("LOCALIZACAO", localizacao);
         this.localizacao = localizacao;
    }
 
@@ -107,6 +113,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setAliqIcmsIntEfd(BigDecimal aliqIcmsIntEfd) {
+        markAsChanged("ALIQICMSINTEFD", aliqIcmsIntEfd);
         this.aliqIcmsIntEfd = aliqIcmsIntEfd;
    }
 
@@ -115,6 +122,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -123,6 +131,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodIcmsFast(BigDecimal codIcmsFast) {
+        markAsChanged("CODICMSFAST", codIcmsFast);
         this.codIcmsFast = codIcmsFast;
    }
 
@@ -131,6 +140,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -139,6 +149,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodProdRoi(String codProdRoi) {
+        markAsChanged("CODPRODROI", codProdRoi);
         this.codProdRoi = codProdRoi;
    }
 
@@ -147,6 +158,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setDescMax(BigDecimal descMax) {
+        markAsChanged("DESCMAX", descMax);
         this.descMax = descMax;
    }
 
@@ -155,6 +167,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setGrupoIcms(BigDecimal grupoIcms) {
+        markAsChanged("GRUPOICMS", grupoIcms);
         this.grupoIcms = grupoIcms;
    }
 
@@ -163,6 +176,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setLeadTime(BigDecimal leadTime) {
+        markAsChanged("LEADTIME", leadTime);
         this.leadTime = leadTime;
    }
 
@@ -171,6 +185,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setOrigProd(String origProd) {
+        markAsChanged("ORIGPROD", origProd);
         this.origProd = origProd;
    }
 
@@ -179,6 +194,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTemIcms(String temIcms) {
+        markAsChanged("TEMICMS", temIcms);
         this.temIcms = temIcms;
    }
 
@@ -187,6 +203,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTipSubst(String tipSubst) {
+        markAsChanged("TIPSUBST", tipSubst);
         this.tipSubst = tipSubst;
    }
 
@@ -195,6 +212,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setUsaIdPalete(String usaIdPalete) {
+        markAsChanged("USAIDPALETE", usaIdPalete);
         this.usaIdPalete = usaIdPalete;
    }
 
@@ -203,6 +221,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setUsoProd(String usoProd) {
+        markAsChanged("USOPROD", usoProd);
         this.usoProd = usoProd;
    }
 
@@ -211,6 +230,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCstIpiEnt(BigDecimal cstIpiEnt) {
+        markAsChanged("CSTIPIENT", cstIpiEnt);
         this.cstIpiEnt = cstIpiEnt;
    }
 
@@ -219,6 +239,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCstIpiSai(BigDecimal cstIpiSai) {
+        markAsChanged("CSTIPISAI", cstIpiSai);
         this.cstIpiSai = cstIpiSai;
    }
 
@@ -227,6 +248,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTemIpiCompra(String temIpiCompra) {
+        markAsChanged("TEMIPICOMPRA", temIpiCompra);
         this.temIpiCompra = temIpiCompra;
    }
 
@@ -235,6 +257,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTemIpiVenda(String temIpiVenda) {
+        markAsChanged("TEMIPIVENDA", temIpiVenda);
         this.temIpiVenda = temIpiVenda;
    }
 
@@ -243,6 +266,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodEnqIpiSai(BigDecimal codEnqIpiSai) {
+        markAsChanged("CODENQIPISAI", codEnqIpiSai);
         this.codEnqIpiSai = codEnqIpiSai;
    }
 
@@ -251,6 +275,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodEnqIpiEnt(BigDecimal codEnqIpiEnt) {
+        markAsChanged("CODENQIPIENT", codEnqIpiEnt);
         this.codEnqIpiEnt = codEnqIpiEnt;
    }
 
@@ -259,6 +284,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setAliqGeral(BigDecimal aliqGeral) {
+        markAsChanged("ALIQGERAL", aliqGeral);
         this.aliqGeral = aliqGeral;
    }
 
@@ -267,6 +293,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setGrupoIcms2(BigDecimal grupoIcms2) {
+        markAsChanged("GRUPOICMS2", grupoIcms2);
         this.grupoIcms2 = grupoIcms2;
    }
 
@@ -275,6 +302,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodLocalPad(BigDecimal codLocalPad) {
+        markAsChanged("CODLOCALPAD", codLocalPad);
         this.codLocalPad = codLocalPad;
    }
 
@@ -283,6 +311,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodEspecSt(BigDecimal codEspecSt) {
+        markAsChanged("CODESPECST", codEspecSt);
         this.codEspecSt = codEspecSt;
    }
 
@@ -291,6 +320,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setMvaPadrao(BigDecimal mvaPadrao) {
+        markAsChanged("MVAPADRAO", mvaPadrao);
         this.mvaPadrao = mvaPadrao;
    }
 
@@ -299,6 +329,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCat1799SpRes(String cat1799SpRes) {
+        markAsChanged("CAT1799SPRES", cat1799SpRes);
         this.cat1799SpRes = cat1799SpRes;
    }
 
@@ -307,6 +338,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodFci(String codFci) {
+        markAsChanged("CODFCI", codFci);
         this.codFci = codFci;
    }
 
@@ -315,6 +347,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setPercRedBaseIcmsEfet(BigDecimal percRedBaseIcmsEfet) {
+        markAsChanged("PERCREDBASEICMSEFET", percRedBaseIcmsEfet);
         this.percRedBaseIcmsEfet = percRedBaseIcmsEfet;
    }
 
@@ -323,6 +356,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setRastStUltEntrada(String rastStUltEntrada) {
+        markAsChanged("RASTSTULTENTRADA", rastStUltEntrada);
         this.rastStUltEntrada = rastStUltEntrada;
    }
 
@@ -331,6 +365,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTipoItemSped(String tipoItemSped) {
+        markAsChanged("TIPOITEMSPED", tipoItemSped);
         this.tipoItemSped = tipoItemSped;
    }
 
@@ -339,6 +374,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setPercCmtNac(BigDecimal percCmtNac) {
+        markAsChanged("PERCCMTNAC", percCmtNac);
         this.percCmtNac = percCmtNac;
    }
 
@@ -347,6 +383,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setPercCmtEst(BigDecimal percCmtEst) {
+        markAsChanged("PERCCMTEST", percCmtEst);
         this.percCmtEst = percCmtEst;
    }
 
@@ -355,6 +392,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setPercCmtFed(BigDecimal percCmtFed) {
+        markAsChanged("PERCCMTFED", percCmtFed);
         this.percCmtFed = percCmtFed;
    }
 
@@ -363,6 +401,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setPercCmtImp(BigDecimal percCmtImp) {
+        markAsChanged("PERCCMTIMP", percCmtImp);
         this.percCmtImp = percCmtImp;
    }
 
@@ -371,6 +410,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCalcDifAl(String calcDifAl) {
+        markAsChanged("CALCDIFAL", calcDifAl);
         this.calcDifAl = calcDifAl;
    }
 
@@ -379,6 +419,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -387,6 +428,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setTemRastroLote(String temRastroLote) {
+        markAsChanged("TEMRASTROLOTE", temRastroLote);
         this.temRastroLote = temRastroLote;
    }
 
@@ -395,6 +437,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setVlrComerc(BigDecimal vlrComerc) {
+        markAsChanged("VLRCOMERC", vlrComerc);
         this.vlrComerc = vlrComerc;
    }
 
@@ -403,6 +446,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setVlrParcImpExt(BigDecimal vlrParcImpExt) {
+        markAsChanged("VLRPARCIMPEXT", vlrParcImpExt);
         this.vlrParcImpExt = vlrParcImpExt;
    }
 
@@ -411,6 +455,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setObtStAntMedEnt(String obtStAntMedEnt) {
+        markAsChanged("OBTSTANTMEDENT", obtStAntMedEnt);
         this.obtStAntMedEnt = obtStAntMedEnt;
    }
 
@@ -419,6 +464,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setGradePadrao(char[] gradePadrao) {
+        markAsChanged("GRADEPADRAO", gradePadrao);
         this.gradePadrao = gradePadrao;
    }
 
@@ -427,6 +473,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setIdGrade(BigDecimal idGrade) {
+        markAsChanged("IDGRADE", idGrade);
         this.idGrade = idGrade;
    }
 
@@ -435,6 +482,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
    }
 
    public void setEnqReIntegra(BigDecimal enqReIntegra) {
+        markAsChanged("ENQREINTEGRA", enqReIntegra);
         this.enqReIntegra = enqReIntegra;
    }
 
@@ -450,6 +498,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
 
    @Override
    public EmpresaProdutoImpostos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.usaLoteDtFab = vo.asString("USALOTEDTFAB");
         this.usaLoteDtVal = vo.asString("USALOTEDTVAL");
         this.estMin = vo.asBigDecimal("ESTMIN");

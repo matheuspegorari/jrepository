@@ -28,6 +28,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setCodEmpoc(BigDecimal codEmpoc) {
+        markAsChanged("CODEMPOC", codEmpoc);
         this.codEmpoc = codEmpoc;
    }
 
@@ -36,6 +37,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setCodTarefa(BigDecimal codTarefa) {
+        markAsChanged("CODTAREFA", codTarefa);
         this.codTarefa = codTarefa;
    }
 
@@ -44,6 +46,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -52,6 +55,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -60,6 +64,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setDtTarefa(Timestamp dtTarefa) {
+        markAsChanged("DTTAREFA", dtTarefa);
         this.dtTarefa = dtTarefa;
    }
 
@@ -68,6 +73,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -76,6 +82,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setNuIvt(BigDecimal nuIvt) {
+        markAsChanged("NUIVT", nuIvt);
         this.nuIvt = nuIvt;
    }
 
@@ -84,6 +91,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -92,6 +100,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setNuTarefaDep(BigDecimal nuTarefaDep) {
+        markAsChanged("NUTAREFADEP", nuTarefaDep);
         this.nuTarefaDep = nuTarefaDep;
    }
 
@@ -100,6 +109,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setNuTarefaOrigem(BigDecimal nuTarefaOrigem) {
+        markAsChanged("NUTAREFAORIGEM", nuTarefaOrigem);
         this.nuTarefaOrigem = nuTarefaOrigem;
    }
 
@@ -108,6 +118,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -116,6 +127,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -124,6 +136,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setProAtiva(String proAtiva) {
+        markAsChanged("PROATIVA", proAtiva);
         this.proAtiva = proAtiva;
    }
 
@@ -132,6 +145,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setSequenciaDep(BigDecimal sequenciaDep) {
+        markAsChanged("SEQUENCIADEP", sequenciaDep);
         this.sequenciaDep = sequenciaDep;
    }
 
@@ -140,6 +154,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -148,6 +163,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -163,6 +179,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
 
    @Override
    public Tarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmpoc = vo.asBigDecimal("CODEMPOC");
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
         this.codUsu = vo.asBigDecimal("CODUSU");

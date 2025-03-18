@@ -14,6 +14,7 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -22,6 +23,7 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
    }
 
    public void setIdeFxPool(BigDecimal ideFxPool) {
+        markAsChanged("IDEFXPOOL", ideFxPool);
         this.ideFxPool = ideFxPool;
    }
 
@@ -30,6 +32,7 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
    }
 
    public void setIdRpaPadrao(BigDecimal idRpaPadrao) {
+        markAsChanged("IDRPAPADRAO", idRpaPadrao);
         this.idRpaPadrao = idRpaPadrao;
    }
 
@@ -45,6 +48,7 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
 
    @Override
    public Lane fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.ideFxPool = vo.asBigDecimal("IDEFXPOOL");
         this.idRpaPadrao = vo.asBigDecimal("IDRPAPADRAO");

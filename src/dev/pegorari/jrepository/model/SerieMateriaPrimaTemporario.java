@@ -17,6 +17,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -25,6 +26,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -33,6 +35,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setIdIProc(BigDecimal idIProc) {
+        markAsChanged("IDIPROC", idIProc);
         this.idIProc = idIProc;
    }
 
@@ -41,6 +44,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -49,6 +53,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setSerieMp(String serieMp) {
+        markAsChanged("SERIEMP", serieMp);
         this.serieMp = serieMp;
    }
 
@@ -57,6 +62,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
    }
 
    public void setSeriePa(String seriePa) {
+        markAsChanged("SERIEPA", seriePa);
         this.seriePa = seriePa;
    }
 
@@ -72,6 +78,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
 
    @Override
    public SerieMateriaPrimaTemporario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.idIProc = vo.asBigDecimal("IDIPROC");

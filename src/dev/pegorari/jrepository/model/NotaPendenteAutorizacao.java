@@ -20,6 +20,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -28,6 +29,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
+        markAsChanged("DHULTTENTA", dhUltTenta);
         this.dhUltTenta = dhUltTenta;
    }
 
@@ -36,6 +38,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setQtdenvio(BigDecimal qtdenvio) {
+        markAsChanged("QTDENVIO", qtdenvio);
         this.qtdenvio = qtdenvio;
    }
 
@@ -44,6 +47,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -52,6 +56,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -60,6 +65,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -68,6 +74,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -76,6 +83,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
    }
 
    public void setCompensar(String compensar) {
+        markAsChanged("COMPENSAR", compensar);
         this.compensar = compensar;
    }
 
@@ -91,6 +99,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
 
    @Override
    public NotaPendenteAutorizacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipo = vo.asString("TIPO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.qtdenvio = vo.asBigDecimal("QTDENVIO");

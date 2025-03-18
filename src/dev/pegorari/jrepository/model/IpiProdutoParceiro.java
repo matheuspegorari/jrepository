@@ -14,6 +14,7 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
    }
 
    public void setCodIpi(BigDecimal codIpi) {
+        markAsChanged("CODIPI", codIpi);
         this.codIpi = codIpi;
    }
 
@@ -22,6 +23,7 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -30,6 +32,7 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -45,6 +48,7 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
 
    @Override
    public IpiProdutoParceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codIpi = vo.asBigDecimal("CODIPI");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProd = vo.asBigDecimal("CODPROD");

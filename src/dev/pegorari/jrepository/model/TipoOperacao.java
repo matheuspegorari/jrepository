@@ -362,6 +362,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsarPrecoCusto(String usarPrecoCusto) {
+        markAsChanged("USARPRECOCUSTO", usarPrecoCusto);
         this.usarPrecoCusto = usarPrecoCusto;
    }
 
@@ -370,6 +371,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsoProdSeparacao(String usoProdSeparacao) {
+        markAsChanged("USOPRODSEPARACAO", usoProdSeparacao);
         this.usoProdSeparacao = usoProdSeparacao;
    }
 
@@ -378,6 +380,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValTbCompCr(String valTbCompCr) {
+        markAsChanged("VALTBCOMPCR", valTbCompCr);
         this.valTbCompCr = valTbCompCr;
    }
 
@@ -386,6 +389,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValVctLaudoEst(String valVctLaudoEst) {
+        markAsChanged("VALVCTLAUDOEST", valVctLaudoEst);
         this.valVctLaudoEst = valVctLaudoEst;
    }
 
@@ -394,6 +398,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setVendIte(String vendIte) {
+        markAsChanged("VENDITE", vendIte);
         this.vendIte = vendIte;
    }
 
@@ -402,6 +407,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModNfse(BigDecimal codModNfse) {
+        markAsChanged("CODMODNFSE", codModNfse);
         this.codModNfse = codModNfse;
    }
 
@@ -410,6 +416,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModRps(BigDecimal codModRps) {
+        markAsChanged("CODMODRPS", codModRps);
         this.codModRps = codModRps;
    }
 
@@ -418,6 +425,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodNatOperIss(String codNatOperIss) {
+        markAsChanged("CODNATOPERISS", codNatOperIss);
         this.codNatOperIss = codNatOperIss;
    }
 
@@ -426,6 +434,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcDifAlPart(String calcDifAlPart) {
+        markAsChanged("CALCDIFALPART", calcDifAlPart);
         this.calcDifAlPart = calcDifAlPart;
    }
 
@@ -434,6 +443,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValSitCadSefaz(String valSitCadSefaz) {
+        markAsChanged("VALSITCADSEFAZ", valSitCadSefaz);
         this.valSitCadSefaz = valSitCadSefaz;
    }
 
@@ -442,6 +452,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTransfCbGlobal(String transfCbGlobal) {
+        markAsChanged("TRANSFCBGLOBAL", transfCbGlobal);
         this.transfCbGlobal = transfCbGlobal;
    }
 
@@ -450,6 +461,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTransfWms(String transfWms) {
+        markAsChanged("TRANSFWMS", transfWms);
         this.transfWms = transfWms;
    }
 
@@ -458,6 +470,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTravafimImp(String travafimImp) {
+        markAsChanged("TRAVAFIMIMP", travafimImp);
         this.travafimImp = travafimImp;
    }
 
@@ -466,6 +479,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaCusMedBaseSt(String usaCusMedBaseSt) {
+        markAsChanged("USACUSMEDBASEST", usaCusMedBaseSt);
         this.usaCusMedBaseSt = usaCusMedBaseSt;
    }
 
@@ -474,6 +488,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsarConfCega(String usarConfCega) {
+        markAsChanged("USARCONFCEGA", usarConfCega);
         this.usarConfCega = usarConfCega;
    }
 
@@ -482,6 +497,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAceitaFatAcima(String aceitaFatAcima) {
+        markAsChanged("ACEITAFATACIMA", aceitaFatAcima);
         this.aceitaFatAcima = aceitaFatAcima;
    }
 
@@ -490,6 +506,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAgrupaProdNfe(String agrupaProdNfe) {
+        markAsChanged("AGRUPAPRODNFE", agrupaProdNfe);
         this.agrupaProdNfe = agrupaProdNfe;
    }
 
@@ -498,6 +515,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAgrupaServFat(String agrupaServFat) {
+        markAsChanged("AGRUPASERVFAT", agrupaServFat);
         this.agrupaServFat = agrupaServFat;
    }
 
@@ -506,6 +524,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAltItemParcFat(String altItemParcFat) {
+        markAsChanged("ALTITEMPARCFAT", altItemParcFat);
         this.altItemParcFat = altItemParcFat;
    }
 
@@ -514,6 +533,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAltNfConf(String altNfConf) {
+        markAsChanged("ALTNFCONF", altNfConf);
         this.altNfConf = altNfConf;
    }
 
@@ -522,6 +542,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAnaliseGiro(BigDecimal analiseGiro) {
+        markAsChanged("ANALISEGIRO", analiseGiro);
         this.analiseGiro = analiseGiro;
    }
 
@@ -530,6 +551,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setArmazenagem(String armazenagem) {
+        markAsChanged("ARMAZENAGEM", armazenagem);
         this.armazenagem = armazenagem;
    }
 
@@ -538,6 +560,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -546,6 +569,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualAcdc(String atualAcdc) {
+        markAsChanged("ATUALACDC", atualAcdc);
         this.atualAcdc = atualAcdc;
    }
 
@@ -554,6 +578,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualBem(String atualBem) {
+        markAsChanged("ATUALBEM", atualBem);
         this.atualBem = atualBem;
    }
 
@@ -562,6 +587,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualCom(String atualCom) {
+        markAsChanged("ATUALCOM", atualCom);
         this.atualCom = atualCom;
    }
 
@@ -570,6 +596,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualComOs(String atualComOs) {
+        markAsChanged("ATUALCOMOS", atualComOs);
         this.atualComOs = atualComOs;
    }
 
@@ -578,6 +605,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualCtb(String atualCtb) {
+        markAsChanged("ATUALCTB", atualCtb);
         this.atualCtb = atualCtb;
    }
 
@@ -586,6 +614,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualDatRecWms(String atualDatRecWms) {
+        markAsChanged("ATUALDATRECWMS", atualDatRecWms);
         this.atualDatRecWms = atualDatRecWms;
    }
 
@@ -594,6 +623,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualEst(String atualEst) {
+        markAsChanged("ATUALEST", atualEst);
         this.atualEst = atualEst;
    }
 
@@ -602,6 +632,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualEstMp(BigDecimal atualEstMp) {
+        markAsChanged("ATUALESTMP", atualEstMp);
         this.atualEstMp = atualEstMp;
    }
 
@@ -610,6 +641,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualEstTerc(String atualEstTerc) {
+        markAsChanged("ATUALESTTERC", atualEstTerc);
         this.atualEstTerc = atualEstTerc;
    }
 
@@ -618,6 +650,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualFin(BigDecimal atualFin) {
+        markAsChanged("ATUALFIN", atualFin);
         this.atualFin = atualFin;
    }
 
@@ -626,6 +659,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualFinTerc(String atualFinTerc) {
+        markAsChanged("ATUALFINTERC", atualFinTerc);
         this.atualFinTerc = atualFinTerc;
    }
 
@@ -634,6 +668,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualIndeniz(BigDecimal atualIndeniz) {
+        markAsChanged("ATUALINDENIZ", atualIndeniz);
         this.atualIndeniz = atualIndeniz;
    }
 
@@ -642,6 +677,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualizarAteio(String atualizarAteio) {
+        markAsChanged("ATUALIZARATEIO", atualizarAteio);
         this.atualizarAteio = atualizarAteio;
    }
 
@@ -650,6 +686,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualLivFis(String atualLivFis) {
+        markAsChanged("ATUALLIVFIS", atualLivFis);
         this.atualLivFis = atualLivFis;
    }
 
@@ -658,6 +695,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualLivIss(String atualLivIss) {
+        markAsChanged("ATUALLIVISS", atualLivIss);
         this.atualLivIss = atualLivIss;
    }
 
@@ -666,6 +704,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualPrecoFat(String atualPrecoFat) {
+        markAsChanged("ATUALPRECOFAT", atualPrecoFat);
         this.atualPrecoFat = atualPrecoFat;
    }
 
@@ -674,6 +713,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualTransg(BigDecimal atualTransg) {
+        markAsChanged("ATUALTRANSG", atualTransg);
         this.atualTransg = atualTransg;
    }
 
@@ -682,6 +722,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualUltimaComp(String atualUltimaComp) {
+        markAsChanged("ATUALULTIMACOMP", atualUltimaComp);
         this.atualUltimaComp = atualUltimaComp;
    }
 
@@ -690,6 +731,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualUltimaVend(String atualUltimaVend) {
+        markAsChanged("ATUALULTIMAVEND", atualUltimaVend);
         this.atualUltimaVend = atualUltimaVend;
    }
 
@@ -698,6 +740,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAutDigital(String autDigital) {
+        markAsChanged("AUTDIGITAL", autDigital);
         this.autDigital = autDigital;
    }
 
@@ -706,6 +749,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAvisarComp(String avisarComp) {
+        markAsChanged("AVISARCOMP", avisarComp);
         this.avisarComp = avisarComp;
    }
 
@@ -714,6 +758,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setBaseIcmsFreteCalcSt(String baseIcmsFreteCalcSt) {
+        markAsChanged("BASEICMSFRETECALCST", baseIcmsFreteCalcSt);
         this.baseIcmsFreteCalcSt = baseIcmsFreteCalcSt;
    }
 
@@ -722,6 +767,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setBaseNumeracao(String baseNumeracao) {
+        markAsChanged("BASENUMERACAO", baseNumeracao);
         this.baseNumeracao = baseNumeracao;
    }
 
@@ -730,6 +776,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setBloqEstVenc(String bloqEstVenc) {
+        markAsChanged("BLOQESTVENC", bloqEstVenc);
         this.bloqEstVenc = bloqEstVenc;
    }
 
@@ -738,6 +785,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setBonificacao(String bonificacao) {
+        markAsChanged("BONIFICACAO", bonificacao);
         this.bonificacao = bonificacao;
    }
 
@@ -746,6 +794,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setBusCmpTerc(String busCmpTerc) {
+        markAsChanged("BUSCMPTERC", busCmpTerc);
         this.busCmpTerc = busCmpTerc;
    }
 
@@ -754,6 +803,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcDifIcms(String calcDifIcms) {
+        markAsChanged("CALCDIFICMS", calcDifIcms);
         this.calcDifIcms = calcDifIcms;
    }
 
@@ -762,6 +812,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcIcms(String calcIcms) {
+        markAsChanged("CALCICMS", calcIcms);
         this.calcIcms = calcIcms;
    }
 
@@ -770,6 +821,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCamGerEdiConf(String camGerEdiConf) {
+        markAsChanged("CAMGEREDICONF", camGerEdiConf);
         this.camGerEdiConf = camGerEdiConf;
    }
 
@@ -778,6 +830,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setClassifIcms(String classifIcms) {
+        markAsChanged("CLASSIFICMS", classifIcms);
         this.classifIcms = classifIcms;
    }
 
@@ -786,6 +839,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoCombustLubrif(BigDecimal codCfoCombustLubrif) {
+        markAsChanged("CODCFO_COMBUST_LUBRIF", codCfoCombustLubrif);
         this.codCfoCombustLubrif = codCfoCombustLubrif;
    }
 
@@ -794,6 +848,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoEntrada(BigDecimal codCfoEntrada) {
+        markAsChanged("CODCFO_ENTRADA", codCfoEntrada);
         this.codCfoEntrada = codCfoEntrada;
    }
 
@@ -802,6 +857,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoEntradaFora(BigDecimal codCfoEntradaFora) {
+        markAsChanged("CODCFO_ENTRADA_FORA", codCfoEntradaFora);
         this.codCfoEntradaFora = codCfoEntradaFora;
    }
 
@@ -810,6 +866,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoSaida(BigDecimal codCfoSaida) {
+        markAsChanged("CODCFO_SAIDA", codCfoSaida);
         this.codCfoSaida = codCfoSaida;
    }
 
@@ -818,6 +875,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoSaidaFora(BigDecimal codCfoSaidaFora) {
+        markAsChanged("CODCFO_SAIDA_FORA", codCfoSaidaFora);
         this.codCfoSaidaFora = codCfoSaidaFora;
    }
 
@@ -826,6 +884,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfoTerc(BigDecimal codCfoTerc) {
+        markAsChanged("CODCFO_TERC", codCfoTerc);
         this.codCfoTerc = codCfoTerc;
    }
 
@@ -834,6 +893,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCfps(BigDecimal codCfps) {
+        markAsChanged("CODCFPS", codCfps);
         this.codCfps = codCfps;
    }
 
@@ -842,6 +902,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescRemail(String descRemail) {
+        markAsChanged("DESCREMAIL", descRemail);
         this.descRemail = descRemail;
    }
 
@@ -850,6 +911,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUtilizaWms(String utilizaWms) {
+        markAsChanged("UTILIZAWMS", utilizaWms);
         this.utilizaWms = utilizaWms;
    }
 
@@ -858,6 +920,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValEst(String valEst) {
+        markAsChanged("VALEST", valEst);
         this.valEst = valEst;
    }
 
@@ -866,6 +929,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValidaAgrupMin(String validaAgrupMin) {
+        markAsChanged("VALIDAAGRUPMIN", validaAgrupMin);
         this.validaAgrupMin = validaAgrupMin;
    }
 
@@ -874,6 +938,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValidaAtraso(String validaAtraso) {
+        markAsChanged("VALIDAATRASO", validaAtraso);
         this.validaAtraso = validaAtraso;
    }
 
@@ -882,6 +947,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValidaData(String validaData) {
+        markAsChanged("VALIDADATA", validaData);
         this.validaData = validaData;
    }
 
@@ -890,6 +956,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValidaMediaNegoc(String validaMediaNegoc) {
+        markAsChanged("VALIDAMEDIANEGOC", validaMediaNegoc);
         this.validaMediaNegoc = validaMediaNegoc;
    }
 
@@ -898,6 +965,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIntegSerCon(String integSerCon) {
+        markAsChanged("INTEGSERCON", integSerCon);
         this.integSerCon = integSerCon;
    }
 
@@ -906,6 +974,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setMarcarNaoPendente(String marcarNaoPendente) {
+        markAsChanged("MARCARNAOPENDENTE", marcarNaoPendente);
         this.marcarNaoPendente = marcarNaoPendente;
    }
 
@@ -914,6 +983,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setMpNumAutLote(String mpNumAutLote) {
+        markAsChanged("MPNUMAUTLOTE", mpNumAutLote);
         this.mpNumAutLote = mpNumAutLote;
    }
 
@@ -922,6 +992,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNaoIncConf(String naoIncConf) {
+        markAsChanged("NAOINCCONF", naoIncConf);
         this.naoIncConf = naoIncConf;
    }
 
@@ -930,6 +1001,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNatBcCred(String natBcCred) {
+        markAsChanged("NATBCCRED", natBcCred);
         this.natBcCred = natBcCred;
    }
 
@@ -938,6 +1010,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNatOperSped(String natOperSped) {
+        markAsChanged("NATOPERSPED", natOperSped);
         this.natOperSped = natOperSped;
    }
 
@@ -946,6 +1019,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNfe(String nfe) {
+        markAsChanged("NFE", nfe);
         this.nfe = nfe;
    }
 
@@ -954,6 +1028,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNfeEstorno(String nfeEstorno) {
+        markAsChanged("NFEESTORNO", nfeEstorno);
         this.nfeEstorno = nfeEstorno;
    }
 
@@ -962,6 +1037,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNfeSemDtEntSai(String nfeSemDtEntSai) {
+        markAsChanged("NFESEMDTENTSAI", nfeSemDtEntSai);
         this.nfeSemDtEntSai = nfeSemDtEntSai;
    }
 
@@ -970,6 +1046,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNfse(String nfse) {
+        markAsChanged("NFSE", nfse);
         this.nfse = nfse;
    }
 
@@ -978,6 +1055,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNfsePorNat(String nfsePorNat) {
+        markAsChanged("NFSEPORNAT", nfsePorNat);
         this.nfsePorNat = nfsePorNat;
    }
 
@@ -986,6 +1064,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNucCo(BigDecimal nucCo) {
+        markAsChanged("NUCCO", nucCo);
         this.nucCo = nucCo;
    }
 
@@ -994,6 +1073,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNuLayout(BigDecimal nuLayout) {
+        markAsChanged("NULAYOUT", nuLayout);
         this.nuLayout = nuLayout;
    }
 
@@ -1002,6 +1082,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNumSomAut(String numSomAut) {
+        markAsChanged("NUMSOMAUT", numSomAut);
         this.numSomAut = numSomAut;
    }
 
@@ -1010,6 +1091,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNuNotaModelo(BigDecimal nuNotaModelo) {
+        markAsChanged("NUNOTAMODELO", nuNotaModelo);
         this.nuNotaModelo = nuNotaModelo;
    }
 
@@ -1018,6 +1100,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setObterVlrMoedaFat(String obterVlrMoedaFat) {
+        markAsChanged("OBTERVLRMOEDAFAT", obterVlrMoedaFat);
         this.obterVlrMoedaFat = obterVlrMoedaFat;
    }
 
@@ -1026,6 +1109,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setOc(String oc) {
+        markAsChanged("OC", oc);
         this.oc = oc;
    }
 
@@ -1034,6 +1118,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPedFrete(String pedFrete) {
+        markAsChanged("PEDFRETE", pedFrete);
         this.pedFrete = pedFrete;
    }
 
@@ -1042,6 +1127,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPendente(String pendente) {
+        markAsChanged("PENDENTE", pendente);
         this.pendente = pendente;
    }
 
@@ -1050,6 +1136,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPermConfParcialWms(String permConfParcialWms) {
+        markAsChanged("PERMCONFPARCIALWMS", permConfParcialWms);
         this.permConfParcialWms = permConfParcialWms;
    }
 
@@ -1058,6 +1145,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPesaItem(String pesaItem) {
+        markAsChanged("PESAITEM", pesaItem);
         this.pesaItem = pesaItem;
    }
 
@@ -1066,6 +1154,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisPropDestaque(String pisPropDestaque) {
+        markAsChanged("PISPROPDESTAQUE", pisPropDestaque);
         this.pisPropDestaque = pisPropDestaque;
    }
 
@@ -1074,6 +1163,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisPropEmbalagem(String pisPropEmbalagem) {
+        markAsChanged("PISPROPEMBALAGEM", pisPropEmbalagem);
         this.pisPropEmbalagem = pisPropEmbalagem;
    }
 
@@ -1082,6 +1172,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisPropFrete(String pisPropFrete) {
+        markAsChanged("PISPROPFRETE", pisPropFrete);
         this.pisPropFrete = pisPropFrete;
    }
 
@@ -1090,6 +1181,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisPropJuro(String pisPropJuro) {
+        markAsChanged("PISPROPJURO", pisPropJuro);
         this.pisPropJuro = pisPropJuro;
    }
 
@@ -1098,6 +1190,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisPropSeg(String pisPropSeg) {
+        markAsChanged("PISPROPSEG", pisPropSeg);
         this.pisPropSeg = pisPropSeg;
    }
 
@@ -1106,6 +1199,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisStPropDestaque(String pisStPropDestaque) {
+        markAsChanged("PISSTPROPDESTAQUE", pisStPropDestaque);
         this.pisStPropDestaque = pisStPropDestaque;
    }
 
@@ -1114,6 +1208,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisStPropEmbalagem(String pisStPropEmbalagem) {
+        markAsChanged("PISSTPROPEMBALAGEM", pisStPropEmbalagem);
         this.pisStPropEmbalagem = pisStPropEmbalagem;
    }
 
@@ -1122,6 +1217,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisStPropFrete(String pisStPropFrete) {
+        markAsChanged("PISSTPROPFRETE", pisStPropFrete);
         this.pisStPropFrete = pisStPropFrete;
    }
 
@@ -1130,6 +1226,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisStPropJuro(String pisStPropJuro) {
+        markAsChanged("PISSTPROPJURO", pisStPropJuro);
         this.pisStPropJuro = pisStPropJuro;
    }
 
@@ -1138,6 +1235,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPisStPropSeg(String pisStPropSeg) {
+        markAsChanged("PISSTPROPSEG", pisStPropSeg);
         this.pisStPropSeg = pisStPropSeg;
    }
 
@@ -1146,6 +1244,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPodeAjustarOrigProdWms(String podeAjustarOrigProdWms) {
+        markAsChanged("PODEAJUSTARORIGPRODWMS", podeAjustarOrigProdWms);
         this.podeAjustarOrigProdWms = podeAjustarOrigProdWms;
    }
 
@@ -1154,6 +1253,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPodeFixar(String podeFixar) {
+        markAsChanged("PODEFIXAR", podeFixar);
         this.podeFixar = podeFixar;
    }
 
@@ -1162,6 +1262,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPodePesagem(String podePesagem) {
+        markAsChanged("PODEPESAGEM", podePesagem);
         this.podePesagem = podePesagem;
    }
 
@@ -1170,6 +1271,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPodeTransfEnt(String podeTransfEnt) {
+        markAsChanged("PODETRANSFENT", podeTransfEnt);
         this.podeTransfEnt = podeTransfEnt;
    }
 
@@ -1178,6 +1280,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPrecifica(String precifica) {
+        markAsChanged("PRECIFICA", precifica);
         this.precifica = precifica;
    }
 
@@ -1186,6 +1289,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setProdRep(String prodRep) {
+        markAsChanged("PRODREP", prodRep);
         this.prodRep = prodRep;
    }
 
@@ -1194,6 +1298,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setProvisEntrega(String provisEntrega) {
+        markAsChanged("PROVISENTREGA", provisEntrega);
         this.provisEntrega = provisEntrega;
    }
 
@@ -1202,6 +1307,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRatAutProd(String ratAutProd) {
+        markAsChanged("RATAUTPROD", ratAutProd);
         this.ratAutProd = ratAutProd;
    }
 
@@ -1210,6 +1316,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRefNfe(String refNfe) {
+        markAsChanged("REFNFE", refNfe);
         this.refNfe = refNfe;
    }
 
@@ -1218,6 +1325,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSepBalcao(String sepBalcao) {
+        markAsChanged("SEPBALCAO", sepBalcao);
         this.sepBalcao = sepBalcao;
    }
 
@@ -1226,6 +1334,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSolCompra(String solCompra) {
+        markAsChanged("SOLCOMPRA", solCompra);
         this.solCompra = solCompra;
    }
 
@@ -1234,6 +1343,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSomarCofinsSt(String somarCofinsSt) {
+        markAsChanged("SOMARCOFINSST", somarCofinsSt);
         this.somarCofinsSt = somarCofinsSt;
    }
 
@@ -1242,6 +1352,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSomarIpi(String somarIpi) {
+        markAsChanged("SOMARIPI", somarIpi);
         this.somarIpi = somarIpi;
    }
 
@@ -1250,6 +1361,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSomarPisSt(String somarPisSt) {
+        markAsChanged("SOMARPISST", somarPisSt);
         this.somarPisSt = somarPisSt;
    }
 
@@ -1258,6 +1370,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSomarSubst(String somarSubst) {
+        markAsChanged("SOMASUBST", somarSubst);
         this.somarSubst = somarSubst;
    }
 
@@ -1266,6 +1379,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStatusBaixaEst(String statusBaixaEst) {
+        markAsChanged("STATUSBAIXAEST", statusBaixaEst);
         this.statusBaixaEst = statusBaixaEst;
    }
 
@@ -1274,6 +1388,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStatusLote(String statusLote) {
+        markAsChanged("STATUSLOTE", statusLote);
         this.statusLote = statusLote;
    }
 
@@ -1282,6 +1397,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropDestaque(String stPropDestaque) {
+        markAsChanged("STPROPDESTAQUE", stPropDestaque);
         this.stPropDestaque = stPropDestaque;
    }
 
@@ -1290,6 +1406,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropEmbalagem(String stPropEmbalagem) {
+        markAsChanged("STPROPEMBALAGEM", stPropEmbalagem);
         this.stPropEmbalagem = stPropEmbalagem;
    }
 
@@ -1298,6 +1415,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropFrete(String stPropFrete) {
+        markAsChanged("STPROPFRETE", stPropFrete);
         this.stPropFrete = stPropFrete;
    }
 
@@ -1306,6 +1424,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropFreteExt(String stPropFreteExt) {
+        markAsChanged("STPROPFRETEEXT", stPropFreteExt);
         this.stPropFreteExt = stPropFreteExt;
    }
 
@@ -1314,6 +1433,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropJuro(String stPropJuro) {
+        markAsChanged("STPROPJURO", stPropJuro);
         this.stPropJuro = stPropJuro;
    }
 
@@ -1322,6 +1442,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setStPropSeg(String stPropSeg) {
+        markAsChanged("STPROPSEG", stPropSeg);
         this.stPropSeg = stPropSeg;
    }
 
@@ -1330,6 +1451,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSugereLocalParc(String sugereLocalParc) {
+        markAsChanged("SUGERELOCALPARC", sugereLocalParc);
         this.sugereLocalParc = sugereLocalParc;
    }
 
@@ -1338,6 +1460,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemCofins(String temCofins) {
+        markAsChanged("TEMCOFINS", temCofins);
         this.temCofins = temCofins;
    }
 
@@ -1346,6 +1469,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemCsl(String temCsl) {
+        markAsChanged("TEMCSL", temCsl);
         this.temCsl = temCsl;
    }
 
@@ -1354,6 +1478,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemFinOrigem(String temFinOrigem) {
+        markAsChanged("TEMFINORIGEM", temFinOrigem);
         this.temFinOrigem = temFinOrigem;
    }
 
@@ -1362,6 +1487,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemFunRural(String temFunRural) {
+        markAsChanged("TEMFUNRURAL", temFunRural);
         this.temFunRural = temFunRural;
    }
 
@@ -1370,6 +1496,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIcms(String temIcms) {
+        markAsChanged("TEMICMS", temIcms);
         this.temIcms = temIcms;
    }
 
@@ -1378,6 +1505,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIi(String temIi) {
+        markAsChanged("TEMII", temIi);
         this.temIi = temIi;
    }
 
@@ -1386,6 +1514,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIndex(String temIndex) {
+        markAsChanged("TEMINDEX", temIndex);
         this.temIndex = temIndex;
    }
 
@@ -1394,6 +1523,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIpi(String temIpi) {
+        markAsChanged("TEMIPI", temIpi);
         this.temIpi = temIpi;
    }
 
@@ -1402,6 +1532,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIrf(String temIrf) {
+        markAsChanged("TEMIRF", temIrf);
         this.temIrf = temIrf;
    }
 
@@ -1410,6 +1541,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemIss(String temIss) {
+        markAsChanged("TEMISS", temIss);
         this.temIss = temIss;
    }
 
@@ -1418,6 +1550,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemPis(String temPis) {
+        markAsChanged("TEMPIS", temPis);
         this.temPis = temPis;
    }
 
@@ -1426,6 +1559,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemReaIcms(String temReaIcms) {
+        markAsChanged("TEMREAICMS", temReaIcms);
         this.temReaIcms = temReaIcms;
    }
 
@@ -1434,6 +1568,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTemVavtcOn(String temVavtcOn) {
+        markAsChanged("TEMVAVTCON", temVavtcOn);
         this.temVavtcOn = temVavtcOn;
    }
 
@@ -1442,6 +1577,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipAltDtVenc(String tipAltDtVenc) {
+        markAsChanged("TIPALTDTVENC", tipAltDtVenc);
         this.tipAltDtVenc = tipAltDtVenc;
    }
 
@@ -1450,6 +1586,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipAtualFin(String tipAtualFin) {
+        markAsChanged("TIPATUALFIN", tipAtualFin);
         this.tipAtualFin = tipAtualFin;
    }
 
@@ -1458,6 +1595,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipAtualWms(String tipAtualWms) {
+        markAsChanged("TIPATUALWMS", tipAtualWms);
         this.tipAtualWms = tipAtualWms;
    }
 
@@ -1466,6 +1604,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipFatServ(String tipFatServ) {
+        markAsChanged("TIPFATSERV", tipFatServ);
         this.tipFatServ = tipFatServ;
    }
 
@@ -1474,6 +1613,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipIcms(String tipIcms) {
+        markAsChanged("TIPICMS", tipIcms);
         this.tipIcms = tipIcms;
    }
 
@@ -1482,6 +1622,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipIpi(String tipIpi) {
+        markAsChanged("TIPIPI", tipIpi);
         this.tipIpi = tipIpi;
    }
 
@@ -1490,6 +1631,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipIvaSubst(String tipIvaSubst) {
+        markAsChanged("TIPIVASUBST", tipIvaSubst);
         this.tipIvaSubst = tipIvaSubst;
    }
 
@@ -1498,6 +1640,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -1506,6 +1649,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipMovBemSped(String tipMovBemSped) {
+        markAsChanged("TIPMOVBEMSPED", tipMovBemSped);
         this.tipMovBemSped = tipMovBemSped;
    }
 
@@ -1514,6 +1658,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipoImpKit(String tipoImpKit) {
+        markAsChanged("TIPOIMPKIT", tipoImpKit);
         this.tipoImpKit = tipoImpKit;
    }
 
@@ -1522,6 +1667,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipoNumeracao(String tipoNumeracao) {
+        markAsChanged("TIPONUMERACAO", tipoNumeracao);
         this.tipoNumeracao = tipoNumeracao;
    }
 
@@ -1530,6 +1676,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setVlrBasePgto(BigDecimal vlrBasePgto) {
+        markAsChanged("VLRBASEPGTO", vlrBasePgto);
         this.vlrBasePgto = vlrBasePgto;
    }
 
@@ -1538,6 +1685,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setVlrMinAp(BigDecimal vlrMinAp) {
+        markAsChanged("VLRMINAP", vlrMinAp);
         this.vlrMinAp = vlrMinAp;
    }
 
@@ -1546,6 +1694,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiEmbut(String ipiEmbut) {
+        markAsChanged("IPIEMBUT", ipiEmbut);
         this.ipiEmbut = ipiEmbut;
    }
 
@@ -1554,6 +1703,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiIncIcms(String ipiIncIcms) {
+        markAsChanged("IPIINCICMS", ipiIncIcms);
         this.ipiIncIcms = ipiIncIcms;
    }
 
@@ -1562,6 +1712,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiPropDestaque(String ipiPropDestaque) {
+        markAsChanged("IPIPROPDESTAQUE", ipiPropDestaque);
         this.ipiPropDestaque = ipiPropDestaque;
    }
 
@@ -1570,6 +1721,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiPropEmbalagem(String ipiPropEmbalagem) {
+        markAsChanged("IPIPROPEMBALAGEM", ipiPropEmbalagem);
         this.ipiPropEmbalagem = ipiPropEmbalagem;
    }
 
@@ -1578,6 +1730,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiPropFrete(String ipiPropFrete) {
+        markAsChanged("IPIPROPFRETE", ipiPropFrete);
         this.ipiPropFrete = ipiPropFrete;
    }
 
@@ -1586,6 +1739,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiPropJuro(String ipiPropJuro) {
+        markAsChanged("IPIPROPJURO", ipiPropJuro);
         this.ipiPropJuro = ipiPropJuro;
    }
 
@@ -1594,6 +1748,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIpiPropSeg(String ipiPropSeg) {
+        markAsChanged("IPIPROPSEG", ipiPropSeg);
         this.ipiPropSeg = ipiPropSeg;
    }
 
@@ -1602,6 +1757,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setLaudoItem(String laudoItem) {
+        markAsChanged("LAUDOITEM", laudoItem);
         this.laudoItem = laudoItem;
    }
 
@@ -1610,6 +1766,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGerar1400Sped(String gerar1400Sped) {
+        markAsChanged("GERAR1400SPED", gerar1400Sped);
         this.gerar1400Sped = gerar1400Sped;
    }
 
@@ -1618,6 +1775,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaAliqNatRatF100(String usaAliqNatRatF100) {
+        markAsChanged("USAALIQNATRATF100", usaAliqNatRatF100);
         this.usaAliqNatRatF100 = usaAliqNatRatF100;
    }
 
@@ -1626,6 +1784,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValNum(String valNum) {
+        markAsChanged("VALNUM", valNum);
         this.valNum = valNum;
    }
 
@@ -1634,6 +1793,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setImpNaoConf(String impNaoConf) {
+        markAsChanged("IMPNAOCONF", impNaoConf);
         this.impNaoConf = impNaoConf;
    }
 
@@ -1642,6 +1802,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setImpNotaAdicional(String impNotaAdicional) {
+        markAsChanged("IMPNOTAADICIONAL", impNotaAdicional);
         this.impNotaAdicional = impNotaAdicional;
    }
 
@@ -1650,6 +1811,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodRemEdi(BigDecimal codRemEdi) {
+        markAsChanged("CODREMEDI", codRemEdi);
         this.codRemEdi = codRemEdi;
    }
 
@@ -1658,6 +1820,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -1666,6 +1829,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOperDeneg(BigDecimal codTipOperDeneg) {
+        markAsChanged("CODTIPOPERDENEG", codTipOperDeneg);
         this.codTipOperDeneg = codTipOperDeneg;
    }
 
@@ -1674,6 +1838,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOperDestino(BigDecimal codTipOperDestino) {
+        markAsChanged("CODTIPOPERDESTINO", codTipOperDestino);
         this.codTipOperDestino = codTipOperDestino;
    }
 
@@ -1682,6 +1847,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOperPenRet(BigDecimal codTipOperPenRet) {
+        markAsChanged("CODTIPOPERPENRET", codTipOperPenRet);
         this.codTipOperPenRet = codTipOperPenRet;
    }
 
@@ -1690,6 +1856,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOperRem(BigDecimal codTipOperRem) {
+        markAsChanged("CODTIPOPERREM", codTipOperRem);
         this.codTipOperRem = codTipOperRem;
    }
 
@@ -1698,6 +1865,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTipOperSeparacao(BigDecimal codTipOperSeparacao) {
+        markAsChanged("CODTIPOPERSEPARACAO", codTipOperSeparacao);
         this.codTipOperSeparacao = codTipOperSeparacao;
    }
 
@@ -1706,6 +1874,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTrib(BigDecimal codTrib) {
+        markAsChanged("CODTRIB", codTrib);
         this.codTrib = codTrib;
    }
 
@@ -1714,6 +1883,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -1722,6 +1892,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsPropDestaque(String cofinsPropDestaque) {
+        markAsChanged("COFINSPROPDESTAQUE", cofinsPropDestaque);
         this.cofinsPropDestaque = cofinsPropDestaque;
    }
 
@@ -1730,6 +1901,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsPropEmbalagem(String cofinsPropEmbalagem) {
+        markAsChanged("COFINSPROPEMBALAGEM", cofinsPropEmbalagem);
         this.cofinsPropEmbalagem = cofinsPropEmbalagem;
    }
 
@@ -1738,6 +1910,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsPropFrete(String cofinsPropFrete) {
+        markAsChanged("COFINSPROPFRETE", cofinsPropFrete);
         this.cofinsPropFrete = cofinsPropFrete;
    }
 
@@ -1746,6 +1919,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsPropJuro(String cofinsPropJuro) {
+        markAsChanged("COFINSPROPJURO", cofinsPropJuro);
         this.cofinsPropJuro = cofinsPropJuro;
    }
 
@@ -1754,6 +1928,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsPropSeg(String cofinsPropSeg) {
+        markAsChanged("COFINSPROPSEG", cofinsPropSeg);
         this.cofinsPropSeg = cofinsPropSeg;
    }
 
@@ -1762,6 +1937,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsStPropDestaque(String cofinsStPropDestaque) {
+        markAsChanged("COFINSSTPROPDESTAQUE", cofinsStPropDestaque);
         this.cofinsStPropDestaque = cofinsStPropDestaque;
    }
 
@@ -1770,6 +1946,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsStPropEmbalagem(String cofinsStPropEmbalagem) {
+        markAsChanged("COFINSSTPROPEMBALAGEM", cofinsStPropEmbalagem);
         this.cofinsStPropEmbalagem = cofinsStPropEmbalagem;
    }
 
@@ -1778,6 +1955,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsStPropFrete(String cofinsStPropFrete) {
+        markAsChanged("COFINSSTPROPFRETE", cofinsStPropFrete);
         this.cofinsStPropFrete = cofinsStPropFrete;
    }
 
@@ -1786,6 +1964,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsStPropJuro(String cofinsStPropJuro) {
+        markAsChanged("COFINSSTPROPJURO", cofinsStPropJuro);
         this.cofinsStPropJuro = cofinsStPropJuro;
    }
 
@@ -1794,6 +1973,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCofinsStPropSeg(String cofinsStPropSeg) {
+        markAsChanged("COFINSSTPROPSEG", cofinsStPropSeg);
         this.cofinsStPropSeg = cofinsStPropSeg;
    }
 
@@ -1802,6 +1982,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -1810,6 +1991,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConfCfop(String confCfop) {
+        markAsChanged("CONFCFOP", confCfop);
         this.confCfop = confCfop;
    }
 
@@ -1818,6 +2000,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConfImposto(String confImposto) {
+        markAsChanged("CONFIMPOSTO", confImposto);
         this.confImposto = confImposto;
    }
 
@@ -1826,6 +2009,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConsignacao(String consignacao) {
+        markAsChanged("CONSIGNACAO", consignacao);
         this.consignacao = consignacao;
    }
 
@@ -1834,6 +2018,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setContLaudoSint(String contLaudoSint) {
+        markAsChanged("CONTLAUDOSINT", contLaudoSint);
         this.contLaudoSint = contLaudoSint;
    }
 
@@ -1842,6 +2027,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCopiaDtPrevOrig(String copiaDtPrevOrig) {
+        markAsChanged("COPIADTPREVORIG", copiaDtPrevOrig);
         this.copiaDtPrevOrig = copiaDtPrevOrig;
    }
 
@@ -1850,6 +2036,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCopiarLiber(String copiarLiber) {
+        markAsChanged("COPIARLIBER", copiarLiber);
         this.copiarLiber = copiarLiber;
    }
 
@@ -1858,6 +2045,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCstIpiEnt(BigDecimal cstIpiEnt) {
+        markAsChanged("CSTIPIENT", cstIpiEnt);
         this.cstIpiEnt = cstIpiEnt;
    }
 
@@ -1866,6 +2054,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCstIpiSai(BigDecimal cstIpiSai) {
+        markAsChanged("CSTIPISAI", cstIpiSai);
         this.cstIpiSai = cstIpiSai;
    }
 
@@ -1874,6 +2063,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModDad(BigDecimal codModDad) {
+        markAsChanged("CODMODDAD", codModDad);
         this.codModDad = codModDad;
    }
 
@@ -1882,6 +2072,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -1890,6 +2081,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModDocIss(String codModDocIss) {
+        markAsChanged("CODMODDOCISS", codModDocIss);
         this.codModDocIss = codModDocIss;
    }
 
@@ -1898,6 +2090,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModNf(BigDecimal codModNf) {
+        markAsChanged("CODMODNF", codModNf);
         this.codModNf = codModNf;
    }
 
@@ -1906,6 +2099,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsPropJuro(String icmsPropJuro) {
+        markAsChanged("ICMSPROPJURO", icmsPropJuro);
         this.icmsPropJuro = icmsPropJuro;
    }
 
@@ -1914,6 +2108,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsPropSeg(String icmsPropSeg) {
+        markAsChanged("ICMSPROPSEG", icmsPropSeg);
         this.icmsPropSeg = icmsPropSeg;
    }
 
@@ -1922,6 +2117,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCupomFiscal(String cupomFiscal) {
+        markAsChanged("CUPOMFISCAL", cupomFiscal);
         this.cupomFiscal = cupomFiscal;
    }
 
@@ -1930,6 +2126,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDentroEstado(String dentroEstado) {
+        markAsChanged("DENTROESTADO", dentroEstado);
         this.dentroEstado = dentroEstado;
    }
 
@@ -1938,6 +2135,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescROper(String descROper) {
+        markAsChanged("DESCROPER", descROper);
         this.descROper = descROper;
    }
 
@@ -1946,6 +2144,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -1954,6 +2153,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDigInfImporta(String digInfImporta) {
+        markAsChanged("DIGINFIMPORTA", digInfImporta);
         this.digInfImporta = digInfImporta;
    }
 
@@ -1962,6 +2162,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDigPureza(String digPureza) {
+        markAsChanged("DIGPUREZA", digPureza);
         this.digPureza = digPureza;
    }
 
@@ -1970,6 +2171,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEditaAnaliseRentab(String editaAnaliseRentab) {
+        markAsChanged("EDITANALISERENTAB", editaAnaliseRentab);
         this.editaAnaliseRentab = editaAnaliseRentab;
    }
 
@@ -1978,6 +2180,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEmiteBoleta(String emiteBoleta) {
+        markAsChanged("EMITEBOLETA", emiteBoleta);
         this.emiteBoleta = emiteBoleta;
    }
 
@@ -1986,6 +2189,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEmiteNota(String emiteNota) {
+        markAsChanged("EMITENOTA", emiteNota);
         this.emiteNota = emiteNota;
    }
 
@@ -1994,6 +2198,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEmpFuncDif(String empFuncDif) {
+        markAsChanged("EMPFUNCDIF", empFuncDif);
         this.empFuncDif = empFuncDif;
    }
 
@@ -2002,6 +2207,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEnviarWmsConf(String enviarWmsConf) {
+        markAsChanged("ENVIARWMSCONF", enviarWmsConf);
         this.enviarWmsConf = enviarWmsConf;
    }
 
@@ -2010,6 +2216,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEnvWmsConfirmada(String envWmsConfirmada) {
+        markAsChanged("ENVWMSCONFIRMADA", envWmsConfirmada);
         this.envWmsConfirmada = envWmsConfirmada;
    }
 
@@ -2018,6 +2225,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExecIte(String execIte) {
+        markAsChanged("EXECITE", execIte);
         this.execIte = execIte;
    }
 
@@ -2026,6 +2234,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeAnalItens(String exigeAnalItens) {
+        markAsChanged("EXIGANALITENS", exigeAnalItens);
         this.exigeAnalItens = exigeAnalItens;
    }
 
@@ -2034,6 +2243,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeAgendaWms(String exigeAgendaWms) {
+        markAsChanged("EXIGEAGENDAWMS", exigeAgendaWms);
         this.exigeAgendaWms = exigeAgendaWms;
    }
 
@@ -2042,6 +2252,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeConf(String exigeConf) {
+        markAsChanged("EXIGECONF", exigeConf);
         this.exigeConf = exigeConf;
    }
 
@@ -2050,6 +2261,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeCotacao(String exigeCotacao) {
+        markAsChanged("EXIGECOTACAO", exigeCotacao);
         this.exigeCotacao = exigeCotacao;
    }
 
@@ -2058,6 +2270,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeDtVal(String exigeDtVal) {
+        markAsChanged("EXIGEDTVAL", exigeDtVal);
         this.exigeDtVal = exigeDtVal;
    }
 
@@ -2066,6 +2279,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeGar(String exigeGar) {
+        markAsChanged("EXIGEGAR", exigeGar);
         this.exigeGar = exigeGar;
    }
 
@@ -2074,6 +2288,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeLaudo(String exigeLaudo) {
+        markAsChanged("EXIGELAUDO", exigeLaudo);
         this.exigeLaudo = exigeLaudo;
    }
 
@@ -2082,6 +2297,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeLib(String exigeLib) {
+        markAsChanged("EXIGELIB", exigeLib);
         this.exigeLib = exigeLib;
    }
 
@@ -2090,6 +2306,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeLibSempre(String exigeLibSempre) {
+        markAsChanged("EXIGELIBSEMPRE", exigeLibSempre);
         this.exigeLibSempre = exigeLibSempre;
    }
 
@@ -2098,6 +2315,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigePedFret(String exigePedFret) {
+        markAsChanged("EXIGEPEDFRET", exigePedFret);
         this.exigePedFret = exigePedFret;
    }
 
@@ -2106,6 +2324,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeTransp(String exigeTransp) {
+        markAsChanged("EXIGETRANSP", exigeTransp);
         this.exigeTransp = exigeTransp;
    }
 
@@ -2114,6 +2333,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExpGrs(BigDecimal expGrs) {
+        markAsChanged("EXPGRS", expGrs);
         this.expGrs = expGrs;
    }
 
@@ -2122,6 +2342,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExporta(String exporta) {
+        markAsChanged("EXPORTA", exporta);
         this.exporta = exporta;
    }
 
@@ -2130,6 +2351,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExpTes(String expTes) {
+        markAsChanged("EXPTES", expTes);
         this.expTes = expTes;
    }
 
@@ -2138,6 +2360,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setFatContPorPeso(String fatContPorPeso) {
+        markAsChanged("FATCONTPORPESO", fatContPorPeso);
         this.fatContPorPeso = fatContPorPeso;
    }
 
@@ -2146,6 +2369,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setFatEntProd(String fatEntProd) {
+        markAsChanged("FATENTPROD", fatEntProd);
         this.fatEntProd = fatEntProd;
    }
 
@@ -2154,6 +2378,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setFatEstConf(String fatEstConf) {
+        markAsChanged("FATESTCONF", fatEstConf);
         this.fatEstConf = fatEstConf;
    }
 
@@ -2162,6 +2387,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraAmostraLaudo(String geraAmostraLaudo) {
+        markAsChanged("GERAAMOSTRALAUDO", geraAmostraLaudo);
         this.geraAmostraLaudo = geraAmostraLaudo;
    }
 
@@ -2170,6 +2396,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraBonPre(String geraBonPre) {
+        markAsChanged("GERABONPRE", geraBonPre);
         this.geraBonPre = geraBonPre;
    }
 
@@ -2178,6 +2405,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraGnre(String geraGnre) {
+        markAsChanged("GERAGNRE", geraGnre);
         this.geraGnre = geraGnre;
    }
 
@@ -2186,6 +2414,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraPlanProd(String geraPlanProd) {
+        markAsChanged("GERAPLANPROD", geraPlanProd);
         this.geraPlanProd = geraPlanProd;
    }
 
@@ -2194,6 +2423,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraRParcDest(String geraRParcDest) {
+        markAsChanged("GERARPARCDEST", geraRParcDest);
         this.geraRParcDest = geraRParcDest;
    }
 
@@ -2202,6 +2432,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraRTagJNfe(String geraRTagJNfe) {
+        markAsChanged("GERARTAGJNFE", geraRTagJNfe);
         this.geraRTagJNfe = geraRTagJNfe;
    }
 
@@ -2210,6 +2441,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGolDev(BigDecimal golDev) {
+        markAsChanged("GOLDEV", golDev);
         this.golDev = golDev;
    }
 
@@ -2218,6 +2450,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGolMpSinal(BigDecimal golMpSinal) {
+        markAsChanged("GOLMPSINAL", golMpSinal);
         this.golMpSinal = golMpSinal;
    }
 
@@ -2226,6 +2459,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGolSinal(BigDecimal golSinal) {
+        markAsChanged("GOLSINAL", golSinal);
         this.golSinal = golSinal;
    }
 
@@ -2234,6 +2468,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGraHisAltPed(String graHisAltPed) {
+        markAsChanged("GRAHISALTPED", graHisAltPed);
         this.graHisAltPed = graHisAltPed;
    }
 
@@ -2242,6 +2477,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGrupo(String grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -2250,6 +2486,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsPropDestaque(String icmsPropDestaque) {
+        markAsChanged("ICMSPROPDESTAQUE", icmsPropDestaque);
         this.icmsPropDestaque = icmsPropDestaque;
    }
 
@@ -2258,6 +2495,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsPropEmbalagem(String icmsPropEmbalagem) {
+        markAsChanged("ICMSPROPEMBALAGEM", icmsPropEmbalagem);
         this.icmsPropEmbalagem = icmsPropEmbalagem;
    }
 
@@ -2266,6 +2504,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsPropFrete(String icmsPropFrete) {
+        markAsChanged("ICMSPROPFRETE", icmsPropFrete);
         this.icmsPropFrete = icmsPropFrete;
    }
 
@@ -2274,6 +2513,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setFatForaPlanEnt(String fatForaPlanEnt) {
+        markAsChanged("FATFORAPLANENT", fatForaPlanEnt);
         this.fatForaPlanEnt = fatForaPlanEnt;
    }
 
@@ -2282,6 +2522,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraEndEntrNfe(String geraEndEntrNfe) {
+        markAsChanged("GERAENDENTRNFE", geraEndEntrNfe);
         this.geraEndEntrNfe = geraEndEntrNfe;
    }
 
@@ -2290,6 +2531,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeConfirmacaoMde(String exigeConfirmacaoMde) {
+        markAsChanged("EXIGECONFIRMACAOMDE", exigeConfirmacaoMde);
         this.exigeConfirmacaoMde = exigeConfirmacaoMde;
    }
 
@@ -2298,6 +2540,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModCfecanc(BigDecimal codModCfecanc) {
+        markAsChanged("CODMODCFECANC", codModCfecanc);
         this.codModCfecanc = codModCfecanc;
    }
 
@@ -2306,6 +2549,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConstOpApurSimp(String constOpApurSimp) {
+        markAsChanged("CONSTOPAPURSIMP", constOpApurSimp);
         this.constOpApurSimp = constOpApurSimp;
    }
 
@@ -2314,6 +2558,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGerInfoEfdPag(String gerInfoEfdPag) {
+        markAsChanged("GERINFOEFDPAG", gerInfoEfdPag);
         this.gerInfoEfdPag = gerInfoEfdPag;
    }
 
@@ -2322,6 +2567,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIgnExpAutLot(String ignExpAutLot) {
+        markAsChanged("IGNEXPAUTLOT", ignExpAutLot);
         this.ignExpAutLot = ignExpAutLot;
    }
 
@@ -2330,6 +2576,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNumProcesso(String numProcesso) {
+        markAsChanged("NUMPROCESSO", numProcesso);
         this.numProcesso = numProcesso;
    }
 
@@ -2338,6 +2585,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPermDestVbatPrebCus(String permDestVbatPrebCus) {
+        markAsChanged("PERMDESTVBATPREBCUS", permDestVbatPrebCus);
         this.permDestVbatPrebCus = permDestVbatPrebCus;
    }
 
@@ -2346,6 +2594,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRedStbCpIsCofins(String redStbCpIsCofins) {
+        markAsChanged("REDSTBCPISCOFINS", redStbCpIsCofins);
         this.redStbCpIsCofins = redStbCpIsCofins;
    }
 
@@ -2354,6 +2603,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaTabAltEmp(String usaTabAltEmp) {
+        markAsChanged("USATABALTEMP", usaTabAltEmp);
         this.usaTabAltEmp = usaTabAltEmp;
    }
 
@@ -2362,6 +2612,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodEnqIpiSai(BigDecimal codEnqIpiSai) {
+        markAsChanged("CODENQIPISAI", codEnqIpiSai);
         this.codEnqIpiSai = codEnqIpiSai;
    }
 
@@ -2370,6 +2621,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodEnqIpiEnt(BigDecimal codEnqIpiEnt) {
+        markAsChanged("CODENQIPIENT", codEnqIpiEnt);
         this.codEnqIpiEnt = codEnqIpiEnt;
    }
 
@@ -2378,6 +2630,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPermFinMenorVlrNota(String permFinMenorVlrNota) {
+        markAsChanged("PERMFINMENORVLRNOTA", permFinMenorVlrNota);
         this.permFinMenorVlrNota = permFinMenorVlrNota;
    }
 
@@ -2386,6 +2639,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setProdUetLoc(String prodUetLoc) {
+        markAsChanged("PRODUETLOC", prodUetLoc);
         this.prodUetLoc = prodUetLoc;
    }
 
@@ -2394,6 +2648,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPercMinBaseInss(BigDecimal percMinBaseInss) {
+        markAsChanged("PERCMINBASEINSS", percMinBaseInss);
         this.percMinBaseInss = percMinBaseInss;
    }
 
@@ -2402,6 +2657,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAjustaVp(String ajustaVp) {
+        markAsChanged("AJUSTAVP", ajustaVp);
         this.ajustaVp = ajustaVp;
    }
 
@@ -2410,6 +2666,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodMoedaVp(BigDecimal codMoedaVp) {
+        markAsChanged("CODMOEDAVP", codMoedaVp);
         this.codMoedaVp = codMoedaVp;
    }
 
@@ -2418,6 +2675,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIndPresNfce(String indPresNfce) {
+        markAsChanged("INDPRESNFCE", indPresNfce);
         this.indPresNfce = indPresNfce;
    }
 
@@ -2426,6 +2684,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTopAtendimento(BigDecimal topAtendimento) {
+        markAsChanged("TOPATENDIMENTO", topAtendimento);
         this.topAtendimento = topAtendimento;
    }
 
@@ -2434,6 +2693,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTopBackOrder(BigDecimal topBackOrder) {
+        markAsChanged("TOPBACKORDER", topBackOrder);
         this.topBackOrder = topBackOrder;
    }
 
@@ -2442,6 +2702,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIndNatFrt(String indNatFrt) {
+        markAsChanged("INDNATFRT", indNatFrt);
         this.indNatFrt = indNatFrt;
    }
 
@@ -2450,6 +2711,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setInfContrato(String infContrato) {
+        markAsChanged("INFCONTRATO", infContrato);
         this.infContrato = infContrato;
    }
 
@@ -2458,6 +2720,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIntegraEvento(String integraEvento) {
+        markAsChanged("INTEGRAEVENTO", integraEvento);
         this.integraEvento = integraEvento;
    }
 
@@ -2466,6 +2729,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValTotNotaGerLiv(String valTotNotaGerLiv) {
+        markAsChanged("VALTOTNOTAGERLIV", valTotNotaGerLiv);
         this.valTotNotaGerLiv = valTotNotaGerLiv;
    }
 
@@ -2474,6 +2738,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setOperComMoeda(String operComMoeda) {
+        markAsChanged("OPERCOMMOEDA", operComMoeda);
         this.operComMoeda = operComMoeda;
    }
 
@@ -2482,6 +2747,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPercTolVarVlrUnit(BigDecimal percTolVarVlrUnit) {
+        markAsChanged("PERCTOLVARVLRUNIT", percTolVarVlrUnit);
         this.percTolVarVlrUnit = percTolVarVlrUnit;
    }
 
@@ -2490,6 +2756,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCat1799SpcCo(BigDecimal cat1799SpcCo) {
+        markAsChanged("CAT1799SPCCO", cat1799SpcCo);
         this.cat1799SpcCo = cat1799SpcCo;
    }
 
@@ -2498,6 +2765,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCte(String cte) {
+        markAsChanged("CTE", cte);
         this.cte = cte;
    }
 
@@ -2506,6 +2774,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipServCte(BigDecimal tipServCte) {
+        markAsChanged("TIPSERVCTE", tipServCte);
         this.tipServCte = tipServCte;
    }
 
@@ -2514,6 +2783,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodTopDenegCte(BigDecimal codTopDenegCte) {
+        markAsChanged("CODTOPDENEGCTE", codTopDenegCte);
         this.codTopDenegCte = codTopDenegCte;
    }
 
@@ -2522,6 +2792,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipoCte(String tipoCte) {
+        markAsChanged("TIPOCTE", tipoCte);
         this.tipoCte = tipoCte;
    }
 
@@ -2530,6 +2801,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValVarIaCvlrUnit(String valVarIaCvlrUnit) {
+        markAsChanged("VALVARIACVLRUNIT", valVarIaCvlrUnit);
         this.valVarIaCvlrUnit = valVarIaCvlrUnit;
    }
 
@@ -2538,6 +2810,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConfValEvent68(BigDecimal confValEvent68) {
+        markAsChanged("CONFVALEVENT68", confValEvent68);
         this.confValEvent68 = confValEvent68;
    }
 
@@ -2546,6 +2819,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDataRetroFat(String dataRetroFat) {
+        markAsChanged("DATARETROFAT", dataRetroFat);
         this.dataRetroFat = dataRetroFat;
    }
 
@@ -2554,6 +2828,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConsVlrRemRetInd(BigDecimal consVlrRemRetInd) {
+        markAsChanged("CONSVLRREMRETIND", consVlrRemRetInd);
         this.consVlrRemRetInd = consVlrRemRetInd;
    }
 
@@ -2562,6 +2837,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDevSemDestaqueIpi(String devSemDestaqueIpi) {
+        markAsChanged("DEVSEMDESTAQUEIPI", devSemDestaqueIpi);
         this.devSemDestaqueIpi = devSemDestaqueIpi;
    }
 
@@ -2570,6 +2846,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDevSemDestaqueSt(String devSemDestaqueSt) {
+        markAsChanged("DEVSEMDESTAQUEST", devSemDestaqueSt);
         this.devSemDestaqueSt = devSemDestaqueSt;
    }
 
@@ -2578,6 +2855,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGeraDemandaMps(String geraDemandaMps) {
+        markAsChanged("GERADEMANDAMPS", geraDemandaMps);
         this.geraDemandaMps = geraDemandaMps;
    }
 
@@ -2586,6 +2864,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setGerCorApon(String gerCorApon) {
+        markAsChanged("GERCORAPON", gerCorApon);
         this.gerCorApon = gerCorApon;
    }
 
@@ -2594,6 +2873,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIgnoraAgrupMinDev(String ignoraAgrupMinDev) {
+        markAsChanged("IGNORARAGRUPMINDEV", ignoraAgrupMinDev);
         this.ignoraAgrupMinDev = ignoraAgrupMinDev;
    }
 
@@ -2602,6 +2882,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRedIcmsBcPisConfins(String redIcmsBcPisConfins) {
+        markAsChanged("REDICMSBCPISCONFINS", redIcmsBcPisConfins);
         this.redIcmsBcPisConfins = redIcmsBcPisConfins;
    }
 
@@ -2610,6 +2891,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSalvarConfSemPerg(String salvarConfSemPerg) {
+        markAsChanged("SALVARCONFSEMPERG", salvarConfSemPerg);
         this.salvarConfSemPerg = salvarConfSemPerg;
    }
 
@@ -2618,6 +2900,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSemCredIpiSt(String semCredIpiSt) {
+        markAsChanged("SEMCREDIPIST", semCredIpiSt);
         this.semCredIpiSt = semCredIpiSt;
    }
 
@@ -2626,6 +2909,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSemMoedaFin(String semMoedaFin) {
+        markAsChanged("SEMMOEDAFIN", semMoedaFin);
         this.semMoedaFin = semMoedaFin;
    }
 
@@ -2634,6 +2918,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipModalCte(String tipModalCte) {
+        markAsChanged("TIPMODALCTE", tipModalCte);
         this.tipModalCte = tipModalCte;
    }
 
@@ -2642,6 +2927,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaRecParcial(String usaRecParcial) {
+        markAsChanged("USARECPARCIAL", usaRecParcial);
         this.usaRecParcial = usaRecParcial;
    }
 
@@ -2650,6 +2936,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValSitCadRf(String valSitCadRf) {
+        markAsChanged("VALSITCADRF", valSitCadRf);
         this.valSitCadRf = valSitCadRf;
    }
 
@@ -2658,6 +2945,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setVlrLiqItemNfe(String vlrLiqItemNfe) {
+        markAsChanged("VLRLIQITEMNFE", vlrLiqItemNfe);
         this.vlrLiqItemNfe = vlrLiqItemNfe;
    }
 
@@ -2666,6 +2954,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcFetHab(String calcFetHab) {
+        markAsChanged("CALCFETHAB", calcFetHab);
         this.calcFetHab = calcFetHab;
    }
 
@@ -2674,6 +2963,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setExigeAnaliseCred(String exigeAnaliseCred) {
+        markAsChanged("EXIGEANALISECRED", exigeAnaliseCred);
         this.exigeAnaliseCred = exigeAnaliseCred;
    }
 
@@ -2682,6 +2972,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIndTipRec(String indTipRec) {
+        markAsChanged("INDTIPREC", indTipRec);
         this.indTipRec = indTipRec;
    }
 
@@ -2690,6 +2981,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcFcpInt(String calcFcpInt) {
+        markAsChanged("CALCFCPINT", calcFcpInt);
         this.calcFcpInt = calcFcpInt;
    }
 
@@ -2698,6 +2990,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConsAuxiliar(String consAuxiliar) {
+        markAsChanged("CONSAUXILIAR", consAuxiliar);
         this.consAuxiliar = consAuxiliar;
    }
 
@@ -2706,6 +2999,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescQtdGruDescPro(String descQtdGruDescPro) {
+        markAsChanged("DESCQTDGRUDESCPRO", descQtdGruDescPro);
         this.descQtdGruDescPro = descQtdGruDescPro;
    }
 
@@ -2714,6 +3008,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setReservaSemLote(String reservaSemLote) {
+        markAsChanged("RESERVASEMLOTE", reservaSemLote);
         this.reservaSemLote = reservaSemLote;
    }
 
@@ -2722,6 +3017,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setPermiteCnaeDifNota(String permiteCnaeDifNota) {
+        markAsChanged("PERMITECNAEDIFNOTA", permiteCnaeDifNota);
         this.permiteCnaeDifNota = permiteCnaeDifNota;
    }
 
@@ -2730,6 +3026,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIgnoraComplItem(String ignoraComplItem) {
+        markAsChanged("IGNORACOMPLITEM", ignoraComplItem);
         this.ignoraComplItem = ignoraComplItem;
    }
 
@@ -2738,6 +3035,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setOutDespStExtNota(String outDespStExtNota) {
+        markAsChanged("OUTDESPSTEXTNOTA", outDespStExtNota);
         this.outDespStExtNota = outDespStExtNota;
    }
 
@@ -2746,6 +3044,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEstoqueMpTerceiro(String estoqueMpTerceiro) {
+        markAsChanged("ESTOQUEMPTERCEIRO", estoqueMpTerceiro);
         this.estoqueMpTerceiro = estoqueMpTerceiro;
    }
 
@@ -2754,6 +3053,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRedPisBcPisCofins(String redPisBcPisCofins) {
+        markAsChanged("REDPISBCPISCOFINS", redPisBcPisCofins);
         this.redPisBcPisCofins = redPisBcPisCofins;
    }
 
@@ -2762,6 +3062,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcPesoConfirm(String calcPesoConfirm) {
+        markAsChanged("CALCPESOCONFIRM", calcPesoConfirm);
         this.calcPesoConfirm = calcPesoConfirm;
    }
 
@@ -2770,6 +3071,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAplicLeiTransp(String aplicLeiTransp) {
+        markAsChanged("APLICLEITRANSP", aplicLeiTransp);
         this.aplicLeiTransp = aplicLeiTransp;
    }
 
@@ -2778,6 +3080,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setEnvGarantia(String envGarantia) {
+        markAsChanged("ENVGARANTIA", envGarantia);
         this.envGarantia = envGarantia;
    }
 
@@ -2786,6 +3089,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDistStVlrUnitFat(String distStVlrUnitFat) {
+        markAsChanged("DISTSTVLRUNITFAT", distStVlrUnitFat);
         this.distStVlrUnitFat = distStVlrUnitFat;
    }
 
@@ -2794,6 +3098,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setSimulacAutoFrete(String simulacAutoFrete) {
+        markAsChanged("SIMULACAUTOFRETE", simulacAutoFrete);
         this.simulacAutoFrete = simulacAutoFrete;
    }
 
@@ -2802,6 +3107,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIcmsOrigEstPed(String icmsOrigEstPed) {
+        markAsChanged("ICMSORIGESTPED", icmsOrigEstPed);
         this.icmsOrigEstPed = icmsOrigEstPed;
    }
 
@@ -2810,6 +3116,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -2818,6 +3125,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setLigOrigOrig(String ligOrigOrig) {
+        markAsChanged("LIGORIGORIG", ligOrigOrig);
         this.ligOrigOrig = ligOrigOrig;
    }
 
@@ -2826,6 +3134,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIndTerc(String indTerc) {
+        markAsChanged("INDTERC", indTerc);
         this.indTerc = indTerc;
    }
 
@@ -2834,6 +3143,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setMovEndFlutuante(String movEndFlutuante) {
+        markAsChanged("MOVENDFLUTUANTE", movEndFlutuante);
         this.movEndFlutuante = movEndFlutuante;
    }
 
@@ -2842,6 +3152,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaServTabIrFinsS(String usaServTabIrFinsS) {
+        markAsChanged("USASERVTABIRFINSS", usaServTabIrFinsS);
         this.usaServTabIrFinsS = usaServTabIrFinsS;
    }
 
@@ -2850,6 +3161,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescOnNfse(String descOnNfse) {
+        markAsChanged("DESCONNFSE", descOnNfse);
         this.descOnNfse = descOnNfse;
    }
 
@@ -2858,6 +3170,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAplicTabIrFinsS(String aplicTabIrFinsS) {
+        markAsChanged("APLICTABIRFINSS", aplicTabIrFinsS);
         this.aplicTabIrFinsS = aplicTabIrFinsS;
    }
 
@@ -2866,6 +3179,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setFormRecIss(String formRecIss) {
+        markAsChanged("FORMRECISS", formRecIss);
         this.formRecIss = formRecIss;
    }
 
@@ -2874,6 +3188,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNatEfdContM410M810(BigDecimal natEfdContM410M810) {
+        markAsChanged("NATEFDCONTM410M810", natEfdContM410M810);
         this.natEfdContM410M810 = natEfdContM410M810;
    }
 
@@ -2882,6 +3197,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNuFop(BigDecimal nuFop) {
+        markAsChanged("NUFOP", nuFop);
         this.nuFop = nuFop;
    }
 
@@ -2890,6 +3206,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setOrcamento(String orcamento) {
+        markAsChanged("ORCAMENTO", orcamento);
         this.orcamento = orcamento;
    }
 
@@ -2898,6 +3215,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescOnSlcdPr(String descOnSlcdPr) {
+        markAsChanged("DESCONSLCDPR", descOnSlcdPr);
         this.descOnSlcdPr = descOnSlcdPr;
    }
 
@@ -2906,6 +3224,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodModRo(BigDecimal codModRo) {
+        markAsChanged("CODMODRO", codModRo);
         this.codModRo = codModRo;
    }
 
@@ -2914,6 +3233,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodLocalImpXml(BigDecimal codLocalImpXml) {
+        markAsChanged("CODLOCALIMPXML", codLocalImpXml);
         this.codLocalImpXml = codLocalImpXml;
    }
 
@@ -2922,6 +3242,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setImpXmlMantDespAces(String impXmlMantDespAces) {
+        markAsChanged("IMPXMLMANTDESPACES", impXmlMantDespAces);
         this.impXmlMantDespAces = impXmlMantDespAces;
    }
 
@@ -2930,6 +3251,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodContaRural(String codContaRural) {
+        markAsChanged("CODCONTARURAL", codContaRural);
         this.codContaRural = codContaRural;
    }
 
@@ -2938,6 +3260,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setArredQtdUnAlt(String arredQtdUnAlt) {
+        markAsChanged("ARREDQTDUNALT", arredQtdUnAlt);
         this.arredQtdUnAlt = arredQtdUnAlt;
    }
 
@@ -2946,6 +3269,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConsNfeRelCancEfd(String consNfeRelCancEfd) {
+        markAsChanged("CONSNFERELCANCEFD", consNfeRelCancEfd);
         this.consNfeRelCancEfd = consNfeRelCancEfd;
    }
 
@@ -2954,6 +3278,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIgnoraMppVpa(String ignoraMppVpa) {
+        markAsChanged("IGNORAMPPVPA", ignoraMppVpa);
         this.ignoraMppVpa = ignoraMppVpa;
    }
 
@@ -2962,6 +3287,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTopPisCofRedAquis(String topPisCofRedAquis) {
+        markAsChanged("TOPPISCOFREDAQUIS", topPisCofRedAquis);
         this.topPisCofRedAquis = topPisCofRedAquis;
    }
 
@@ -2970,6 +3296,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setTipComplCust(BigDecimal tipComplCust) {
+        markAsChanged("TIPCOMPLCUST", tipComplCust);
         this.tipComplCust = tipComplCust;
    }
 
@@ -2978,6 +3305,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setNuLayoutCvr(BigDecimal nuLayoutCvr) {
+        markAsChanged("NULAYOUTCVR", nuLayoutCvr);
         this.nuLayoutCvr = nuLayoutCvr;
    }
 
@@ -2986,6 +3314,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescTopAdrCst1400(String descTopAdrCst1400) {
+        markAsChanged("DESTOPADRCST1400", descTopAdrCst1400);
         this.descTopAdrCst1400 = descTopAdrCst1400;
    }
 
@@ -2994,6 +3323,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcFunTtelTop(String calcFunTtelTop) {
+        markAsChanged("CALCFUNTTELTOP", calcFunTtelTop);
         this.calcFunTtelTop = calcFunTtelTop;
    }
 
@@ -3002,6 +3332,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcFustTop(String calcFustTop) {
+        markAsChanged("CALCFUSTTOP", calcFustTop);
         this.calcFustTop = calcFustTop;
    }
 
@@ -3010,6 +3341,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcStFrtXtNotProp(String calcStFrtXtNotProp) {
+        markAsChanged("CALCSTFRTXTNOTPROP", calcStFrtXtNotProp);
         this.calcStFrtXtNotProp = calcStFrtXtNotProp;
    }
 
@@ -3018,6 +3350,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCodInterm(BigDecimal codInterm) {
+        markAsChanged("CODINTERM", codInterm);
         this.codInterm = codInterm;
    }
 
@@ -3026,6 +3359,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIntermed(String intermed) {
+        markAsChanged("INTERMED", intermed);
         this.intermed = intermed;
    }
 
@@ -3034,6 +3368,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValEstMaximo(String valEstMaximo) {
+        markAsChanged("VALESTMAXIMO", valEstMaximo);
         this.valEstMaximo = valEstMaximo;
    }
 
@@ -3042,6 +3377,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setIgnObsOrigRem(String ignObsOrigRem) {
+        markAsChanged("IGNOBSORIGREM", ignObsOrigRem);
         this.ignObsOrigRem = ignObsOrigRem;
    }
 
@@ -3050,6 +3386,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescOnSidPedXml(String descOnSidPedXml) {
+        markAsChanged("DESCONSIDPEDXML", descOnSidPedXml);
         this.descOnSidPedXml = descOnSidPedXml;
    }
 
@@ -3058,6 +3395,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setOperacaoAmostra(String operacaoAmostra) {
+        markAsChanged("OPERACAOAMOSTRA", operacaoAmostra);
         this.operacaoAmostra = operacaoAmostra;
    }
 
@@ -3066,6 +3404,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtualEstWmsTerc(String atualEstWmsTerc) {
+        markAsChanged("ATUALESTWMSTERC", atualEstWmsTerc);
         this.atualEstWmsTerc = atualEstWmsTerc;
    }
 
@@ -3074,6 +3413,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescOnSidNfeOrigem(String descOnSidNfeOrigem) {
+        markAsChanged("DESCONSIDNFEORIGEM", descOnSidNfeOrigem);
         this.descOnSidNfeOrigem = descOnSidNfeOrigem;
    }
 
@@ -3082,6 +3422,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDedFcpBcPisCofins(String dedFcpBcPisCofins) {
+        markAsChanged("DEDFCPBCPISCOFINS", dedFcpBcPisCofins);
         this.dedFcpBcPisCofins = dedFcpBcPisCofins;
    }
 
@@ -3090,6 +3431,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setArmTipApu(String armTipApu) {
+        markAsChanged("ARMTIPAPU", armTipApu);
         this.armTipApu = armTipApu;
    }
 
@@ -3098,6 +3440,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcPisCfsFin(String calcPisCfsFin) {
+        markAsChanged("CALCPISCFSFIN", calcPisCfsFin);
         this.calcPisCfsFin = calcPisCfsFin;
    }
 
@@ -3106,6 +3449,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setConfVlrEvent68(String confVlrEvent68) {
+        markAsChanged("CONFVLREVENT68", confVlrEvent68);
         this.confVlrEvent68 = confVlrEvent68;
    }
 
@@ -3114,6 +3458,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setCalcIcmsRegTts(String calcIcmsRegTts) {
+        markAsChanged("CALCICMSREGTTS", calcIcmsRegTts);
         this.calcIcmsRegTts = calcIcmsRegTts;
    }
 
@@ -3122,6 +3467,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setRecBrutaCiap(String recBrutaCiap) {
+        markAsChanged("RECBRUTACIAP", recBrutaCiap);
         this.recBrutaCiap = recBrutaCiap;
    }
 
@@ -3130,6 +3476,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setAtuSaldoCont(String atuSaldoCont) {
+        markAsChanged("ATUSALDOCONT", atuSaldoCont);
         this.atuSaldoCont = atuSaldoCont;
    }
 
@@ -3138,6 +3485,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setUsaVendaMais(String usaVendaMais) {
+        markAsChanged("USAVENDAMAIS", usaVendaMais);
         this.usaVendaMais = usaVendaMais;
    }
 
@@ -3146,6 +3494,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setDescCstBcPisCf(String descCstBcPisCf) {
+        markAsChanged("DESCCSTBCPISCF", descCstBcPisCf);
         this.descCstBcPisCf = descCstBcPisCf;
    }
 
@@ -3154,6 +3503,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
    }
 
    public void setValDispEstDev(String valDispEstDev) {
+        markAsChanged("VALDISPESTDEV", valDispEstDev);
         this.valDispEstDev = valDispEstDev;
    }
 
@@ -3169,6 +3519,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
 
    @Override
    public TipoOperacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.usarPrecoCusto = vo.asString("USARPRECOCUSTO");
         this.usoProdSeparacao = vo.asString("USOPRODSEPARACAO");
         this.valTbCompCr = vo.asString("VALTBCOMPCR");

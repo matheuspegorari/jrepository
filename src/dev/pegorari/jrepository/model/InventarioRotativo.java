@@ -37,6 +37,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -45,6 +46,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -53,6 +55,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -61,6 +64,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -69,6 +73,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -77,6 +82,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -85,6 +91,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -93,6 +100,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -101,6 +109,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -109,6 +118,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setDhContagem(Timestamp dhContagem) {
+        markAsChanged("DHCONTAGEM", dhContagem);
         this.dhContagem = dhContagem;
    }
 
@@ -117,6 +127,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setDivergenciaPad(BigDecimal divergenciaPad) {
+        markAsChanged("DIVERGENCIAPAD", divergenciaPad);
         this.divergenciaPad = divergenciaPad;
    }
 
@@ -125,6 +136,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -133,6 +145,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -141,6 +154,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setNuAjuste(BigDecimal nuAjuste) {
+        markAsChanged("NUAJUSTE", nuAjuste);
         this.nuAjuste = nuAjuste;
    }
 
@@ -149,6 +163,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setNuIvt(BigDecimal nuIvt) {
+        markAsChanged("NUIVT", nuIvt);
         this.nuIvt = nuIvt;
    }
 
@@ -157,6 +172,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstContada(BigDecimal qtdEstContada) {
+        markAsChanged("QTDESTCONTADA", qtdEstContada);
         this.qtdEstContada = qtdEstContada;
    }
 
@@ -165,6 +181,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstContadaPad(BigDecimal qtdEstContadaPad) {
+        markAsChanged("QTDESTCONTADAPAD", qtdEstContadaPad);
         this.qtdEstContadaPad = qtdEstContadaPad;
    }
 
@@ -173,6 +190,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstLogica(BigDecimal qtdEstLogica) {
+        markAsChanged("QTDESTLOGICA", qtdEstLogica);
         this.qtdEstLogica = qtdEstLogica;
    }
 
@@ -181,6 +199,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstLogicaPad(BigDecimal qtdEstLogicaPad) {
+        markAsChanged("QTDESTLOGICAPAD", qtdEstLogicaPad);
         this.qtdEstLogicaPad = qtdEstLogicaPad;
    }
 
@@ -189,6 +208,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -197,6 +217,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setTipoDivergencia(String tipoDivergencia) {
+        markAsChanged("TIPODIVERGENCIA", tipoDivergencia);
         this.tipoDivergencia = tipoDivergencia;
    }
 
@@ -205,6 +226,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setDivergencia(BigDecimal divergencia) {
+        markAsChanged("DIVERGENCIA", divergencia);
         this.divergencia = divergencia;
    }
 
@@ -213,6 +235,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setDtRec(Timestamp dtRec) {
+        markAsChanged("DTREC", dtRec);
         this.dtRec = dtRec;
    }
 
@@ -221,6 +244,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstLogicaUma(BigDecimal qtdEstLogicaUma) {
+        markAsChanged("QTDESTLOGICAUMA", qtdEstLogicaUma);
         this.qtdEstLogicaUma = qtdEstLogicaUma;
    }
 
@@ -229,6 +253,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
    }
 
    public void setQtdEstLogicaUmaPad(BigDecimal qtdEstLogicaUmaPad) {
+        markAsChanged("QTDESTLOGICAUMAPAD", qtdEstLogicaUmaPad);
         this.qtdEstLogicaUmaPad = qtdEstLogicaUmaPad;
    }
 
@@ -244,6 +269,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
 
    @Override
    public InventarioRotativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativa = vo.asString("ATIVA");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEnd = vo.asBigDecimal("CODEND");

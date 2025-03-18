@@ -23,6 +23,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setBaseSubstitCalc(BigDecimal baseSubstitCalc) {
+        markAsChanged("BASESUBSTITCALC", baseSubstitCalc);
         this.baseSubstitCalc = baseSubstitCalc;
    }
 
@@ -31,6 +32,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setBaseSubstitNota(BigDecimal baseSubstitNota) {
+        markAsChanged("BASESUBSTITNOTA", baseSubstitNota);
         this.baseSubstitNota = baseSubstitNota;
    }
 
@@ -39,6 +41,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -47,6 +50,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -55,6 +59,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -63,6 +68,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -71,6 +77,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -79,6 +86,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -87,6 +95,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setVlrSubstCalc(BigDecimal vlrSubstCalc) {
+        markAsChanged("VLRSUBSTCALC", vlrSubstCalc);
         this.vlrSubstCalc = vlrSubstCalc;
    }
 
@@ -95,6 +104,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setVlrSubstNota(BigDecimal vlrSubstNota) {
+        markAsChanged("VLRSUBSTNOTA", vlrSubstNota);
         this.vlrSubstNota = vlrSubstNota;
    }
 
@@ -103,6 +113,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    }
 
    public void setVlrTotDivSubst(BigDecimal vlrTotDivSubst) {
+        markAsChanged("VLRTOTDIVSUBST", vlrTotDivSubst);
         this.vlrTotDivSubst = vlrTotDivSubst;
    }
 
@@ -118,6 +129,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
 
    @Override
    public ApuracaoDivergenciaICMSST fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
         this.baseSubstitNota = vo.asBigDecimal("BASESUBSTITNOTA");
         this.digitado = vo.asString("DIGITADO");

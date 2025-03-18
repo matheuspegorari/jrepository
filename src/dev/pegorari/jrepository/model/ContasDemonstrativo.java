@@ -15,6 +15,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
    }
 
    public void setCodDmt(String codDmt) {
+        markAsChanged("CODDMT", codDmt);
         this.codDmt = codDmt;
    }
 
@@ -23,6 +24,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
    }
 
    public void setCodTdm(BigDecimal codTdm) {
+        markAsChanged("CODTDM", codTdm);
         this.codTdm = codTdm;
    }
 
@@ -31,6 +33,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -39,6 +42,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -54,6 +58,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
 
    @Override
    public ContasDemonstrativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codDmt = vo.asString("CODDMT");
         this.codTdm = vo.asBigDecimal("CODTDM");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");

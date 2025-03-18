@@ -13,6 +13,7 @@ public class TarefaEquipamento extends AbstractSankhyaEntity<TarefaEquipamento> 
    }
 
    public void setCodTarefa(BigDecimal codTarefa) {
+        markAsChanged("CODTAREFA", codTarefa);
         this.codTarefa = codTarefa;
    }
 
@@ -21,6 +22,7 @@ public class TarefaEquipamento extends AbstractSankhyaEntity<TarefaEquipamento> 
    }
 
    public void setCodTipEquip(BigDecimal codTipEquip) {
+        markAsChanged("CODTIPEQUIP", codTipEquip);
         this.codTipEquip = codTipEquip;
    }
 
@@ -36,6 +38,7 @@ public class TarefaEquipamento extends AbstractSankhyaEntity<TarefaEquipamento> 
 
    @Override
    public TarefaEquipamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
         this.codTipEquip = vo.asBigDecimal("CODTIPEQUIP");
         return this;

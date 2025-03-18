@@ -24,6 +24,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setCodAjuste(BigDecimal codAjuste) {
+        markAsChanged("CODAJUSTE", codAjuste);
         this.codAjuste = codAjuste;
    }
 
@@ -32,6 +33,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setCodCprb(String codCprb) {
+        markAsChanged("CODCPRB", codCprb);
         this.codCprb = codCprb;
    }
 
@@ -40,6 +42,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -48,6 +51,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setCodObra(String codObra) {
+        markAsChanged("CODOBRA", codObra);
         this.codObra = codObra;
    }
 
@@ -56,6 +60,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -64,6 +69,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setDhMov(Timestamp dhMov) {
+        markAsChanged("DHMOV", dhMov);
         this.dhMov = dhMov;
    }
 
@@ -72,6 +78,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setDtDoc(Timestamp dtDoc) {
+        markAsChanged("DTDOC", dtDoc);
         this.dtDoc = dtDoc;
    }
 
@@ -80,6 +87,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -88,6 +96,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -96,6 +105,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -104,6 +114,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setTipoAjuste(BigDecimal tipoAjuste) {
+        markAsChanged("TIPOAJUSTE", tipoAjuste);
         this.tipoAjuste = tipoAjuste;
    }
 
@@ -112,6 +123,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
+        markAsChanged("VLRAJUSTE", vlrAjuste);
         this.vlrAjuste = vlrAjuste;
    }
 
@@ -127,6 +139,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
 
    @Override
    public NotasAjustesCPRB fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codCprb = vo.asString("CODCPRB");
         this.codEmp = vo.asBigDecimal("CODEMP");

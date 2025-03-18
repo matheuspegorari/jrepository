@@ -27,6 +27,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -35,6 +36,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -43,6 +45,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -51,6 +54,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -59,6 +63,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -67,6 +72,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setDtFim(Timestamp dtFim) {
+        markAsChanged("DTFIM", dtFim);
         this.dtFim = dtFim;
    }
 
@@ -75,6 +81,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -83,6 +90,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -91,6 +99,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setEstMaxVolPad(BigDecimal estMaxVolPad) {
+        markAsChanged("ESTMAXVOLPAD", estMaxVolPad);
         this.estMaxVolPad = estMaxVolPad;
    }
 
@@ -99,6 +108,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -107,6 +117,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setEstMinVolPad(BigDecimal estMinVolPad) {
+        markAsChanged("ESTMINVOLPAD", estMinVolPad);
         this.estMinVolPad = estMinVolPad;
    }
 
@@ -115,6 +126,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -123,6 +135,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setPicking(String picking) {
+        markAsChanged("PICKING", picking);
         this.picking = picking;
    }
 
@@ -131,6 +144,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setUndPad(String undPad) {
+        markAsChanged("UNDPAD", undPad);
         this.undPad = undPad;
    }
 
@@ -139,6 +153,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    }
 
    public void setVinculoProd(String vinculoProd) {
+        markAsChanged("VINCULOPROD", vinculoProd);
         this.vinculoProd = vinculoProd;
    }
 
@@ -154,6 +169,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
 
    @Override
    public ProdutoEndereco fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEnd = vo.asBigDecimal("CODEND");
         this.codProd = vo.asBigDecimal("CODPROD");

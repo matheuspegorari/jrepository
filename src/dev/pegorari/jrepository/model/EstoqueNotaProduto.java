@@ -24,6 +24,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -32,6 +33,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -40,6 +42,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -48,6 +51,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -56,6 +60,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -64,6 +69,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -72,6 +78,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -80,6 +87,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setEstoqueVolPad(BigDecimal estoqueVolPad) {
+        markAsChanged("ESTOQUEVOLPAD", estoqueVolPad);
         this.estoqueVolPad = estoqueVolPad;
    }
 
@@ -88,6 +96,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -96,6 +105,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -104,6 +114,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -112,6 +123,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -127,6 +139,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
 
    @Override
    public EstoqueNotaProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVol = vo.asString("CODVOL");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codEnd = vo.asBigDecimal("CODEND");

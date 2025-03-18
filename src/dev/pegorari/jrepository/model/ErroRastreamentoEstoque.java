@@ -19,6 +19,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setChave(BigDecimal chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -27,6 +28,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +37,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -43,6 +46,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -51,6 +55,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -59,6 +64,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -67,6 +73,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    }
 
    public void setTipoErro(String tipoErro) {
+        markAsChanged("TIPOERRO", tipoErro);
         this.tipoErro = tipoErro;
    }
 
@@ -82,6 +89,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
 
    @Override
    public ErroRastreamentoEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");

@@ -19,6 +19,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -27,6 +28,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -35,6 +37,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setValUnit(BigDecimal valUnit) {
+        markAsChanged("VALUNIT", valUnit);
         this.valUnit = valUnit;
    }
 
@@ -43,6 +46,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setValTotal(BigDecimal valTotal) {
+        markAsChanged("VALTOTAL", valTotal);
         this.valTotal = valTotal;
    }
 
@@ -51,6 +55,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -59,6 +64,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setDescProd(String descProd) {
+        markAsChanged("DESCPROD", descProd);
         this.descProd = descProd;
    }
 
@@ -67,6 +73,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setUnidade(String unidade) {
+        markAsChanged("UNIDADE", unidade);
         this.unidade = unidade;
    }
 
@@ -75,6 +82,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    }
 
    public void setQuantidade(BigDecimal quantidade) {
+        markAsChanged("QUANTIDADE", quantidade);
         this.quantidade = quantidade;
    }
 
@@ -90,6 +98,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
 
    @Override
    public RelacaoItemCTe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqNota = vo.asBigDecimal("SEQNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.valUnit = vo.asBigDecimal("VALUNIT");

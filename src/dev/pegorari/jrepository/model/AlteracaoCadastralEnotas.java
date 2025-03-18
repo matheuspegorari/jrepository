@@ -15,6 +15,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -23,6 +24,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
    }
 
    public void setDhDone(Timestamp dhDone) {
+        markAsChanged("DHDONE", dhDone);
         this.dhDone = dhDone;
    }
 
@@ -31,6 +33,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
    }
 
    public void setId(String id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -39,6 +42,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -54,6 +58,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
 
    @Override
    public AlteracaoCadastralEnotas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhDone = vo.asTimestamp("DHDONE");
         this.id = vo.asString("ID");

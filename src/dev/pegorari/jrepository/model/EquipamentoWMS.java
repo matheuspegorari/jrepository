@@ -15,6 +15,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -23,6 +24,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
    }
 
    public void setCodEquip(BigDecimal codEquip) {
+        markAsChanged("CODEQUIP", codEquip);
         this.codEquip = codEquip;
    }
 
@@ -31,6 +33,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
    }
 
    public void setCodTipEquip(BigDecimal codTipEquip) {
+        markAsChanged("CODTIPEQUIP", codTipEquip);
         this.codTipEquip = codTipEquip;
    }
 
@@ -39,6 +42,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -54,6 +58,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
 
    @Override
    public EquipamentoWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEquip = vo.asBigDecimal("CODEQUIP");
         this.codTipEquip = vo.asBigDecimal("CODTIPEQUIP");

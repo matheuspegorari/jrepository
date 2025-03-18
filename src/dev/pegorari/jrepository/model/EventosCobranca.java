@@ -21,6 +21,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -29,6 +30,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setCodRegua(BigDecimal codRegua) {
+        markAsChanged("CODREGUA", codRegua);
         this.codRegua = codRegua;
    }
 
@@ -37,6 +39,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -45,6 +48,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -53,6 +57,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -61,6 +66,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setDiaExec(BigDecimal diaExec) {
+        markAsChanged("DIAEXEC", diaExec);
         this.diaExec = diaExec;
    }
 
@@ -69,6 +75,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setExecApos(BigDecimal execApos) {
+        markAsChanged("EXECAPOS", execApos);
         this.execApos = execApos;
    }
 
@@ -77,6 +84,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setFiltro(char[] filtro) {
+        markAsChanged("FILTRO", filtro);
         this.filtro = filtro;
    }
 
@@ -85,6 +93,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
 
    @Override
    public EventosCobranca fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.config = vo.asClob("CONFIG");

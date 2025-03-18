@@ -22,6 +22,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setBaseSubst(BigDecimal baseSubst) {
+        markAsChanged("BASESUBST", baseSubst);
         this.baseSubst = baseSubst;
    }
 
@@ -30,6 +31,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
+        markAsChanged("VLRSUBST", vlrSubst);
         this.vlrSubst = vlrSubst;
    }
 
@@ -38,6 +40,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -46,6 +49,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -54,6 +58,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setQtdSai(BigDecimal qtdSai) {
+        markAsChanged("QTDSAI", qtdSai);
         this.qtdSai = qtdSai;
    }
 
@@ -62,6 +67,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -70,6 +76,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
+        markAsChanged("SEQUENCIAORIG", sequenciaOrig);
         this.sequenciaOrig = sequenciaOrig;
    }
 
@@ -78,6 +85,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -86,6 +94,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setBaseStfcpInt(BigDecimal baseStfcpInt) {
+        markAsChanged("BASESTFCPINT", baseStfcpInt);
         this.baseStfcpInt = baseStfcpInt;
    }
 
@@ -94,6 +103,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setPercStfcpInt(BigDecimal percStfcpInt) {
+        markAsChanged("PERCSTFCPINT", percStfcpInt);
         this.percStfcpInt = percStfcpInt;
    }
 
@@ -102,6 +112,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    }
 
    public void setVlrStfcpInt(BigDecimal vlrStfcpInt) {
+        markAsChanged("VLRSTFCPINT", vlrStfcpInt);
         this.vlrStfcpInt = vlrStfcpInt;
    }
 
@@ -117,6 +128,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
 
    @Override
    public LigacaoNotasSaidasEntradas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseSubst = vo.asBigDecimal("BASESUBST");
         this.vlrSubst = vo.asBigDecimal("VLRSUBST");
         this.nuNota = vo.asBigDecimal("NUNOTA");

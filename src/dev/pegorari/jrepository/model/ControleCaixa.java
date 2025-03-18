@@ -22,6 +22,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setCodCtabcoint(BigDecimal codCtabcoint) {
+        markAsChanged("CODCTABCOINT", codCtabcoint);
         this.codCtabcoint = codCtabcoint;
    }
 
@@ -30,6 +31,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -38,6 +40,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setConferido(String conferido) {
+        markAsChanged("CONFERIDO", conferido);
         this.conferido = conferido;
    }
 
@@ -46,6 +49,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setDespesa(BigDecimal despesa) {
+        markAsChanged("DESPESA", despesa);
         this.despesa = despesa;
    }
 
@@ -54,6 +58,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setDtAbertura(Timestamp dtAbertura) {
+        markAsChanged("DTABERTURA", dtAbertura);
         this.dtAbertura = dtAbertura;
    }
 
@@ -62,6 +67,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setDtFechamento(Timestamp dtFechamento) {
+        markAsChanged("DTFECHAMENTO", dtFechamento);
         this.dtFechamento = dtFechamento;
    }
 
@@ -70,6 +76,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
+        markAsChanged("NUCAIXA", nuCaixa);
         this.nuCaixa = nuCaixa;
    }
 
@@ -78,6 +85,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setReceita(BigDecimal receita) {
+        markAsChanged("RECEITA", receita);
         this.receita = receita;
    }
 
@@ -86,6 +94,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setSaldoInicial(BigDecimal saldoInicial) {
+        markAsChanged("SALDOINICIAL", saldoInicial);
         this.saldoInicial = saldoInicial;
    }
 
@@ -94,6 +103,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    }
 
    public void setCodPdv(BigDecimal codPdv) {
+        markAsChanged("CODPDV", codPdv);
         this.codPdv = codPdv;
    }
 
@@ -109,6 +119,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
 
    @Override
    public ControleCaixa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conferido = vo.asString("CONFERIDO");

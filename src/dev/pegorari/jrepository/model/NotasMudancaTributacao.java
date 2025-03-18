@@ -22,6 +22,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
+        markAsChanged("BASESUBSTIT", baseSubstit);
         this.baseSubstit = baseSubstit;
    }
 
@@ -30,6 +31,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setBaseSubstitRec(BigDecimal baseSubstitRec) {
+        markAsChanged("BASESUBSTITREC", baseSubstitRec);
         this.baseSubstitRec = baseSubstitRec;
    }
 
@@ -38,6 +40,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setBaseSubstitUn(BigDecimal baseSubstitUn) {
+        markAsChanged("BASESUBSTITUN", baseSubstitUn);
         this.baseSubstitUn = baseSubstitUn;
    }
 
@@ -46,6 +49,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -54,6 +58,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -62,6 +67,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setDtMtp(Timestamp dtMtp) {
+        markAsChanged("DTMTP", dtMtp);
         this.dtMtp = dtMtp;
    }
 
@@ -70,6 +76,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setNuNotaCompra(BigDecimal nuNotaCompra) {
+        markAsChanged("NUNOTACOMPRA", nuNotaCompra);
         this.nuNotaCompra = nuNotaCompra;
    }
 
@@ -78,6 +85,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -86,6 +94,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setQtdRec(BigDecimal qtdRec) {
+        markAsChanged("QTDREC", qtdRec);
         this.qtdRec = qtdRec;
    }
 
@@ -94,6 +103,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -109,6 +119,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
 
    @Override
    public NotasMudancaTributacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
         this.baseSubstitRec = vo.asBigDecimal("BASESUBSTITREC");
         this.baseSubstitUn = vo.asBigDecimal("BASESUBSTITUN");

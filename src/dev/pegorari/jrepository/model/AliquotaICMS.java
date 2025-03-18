@@ -135,6 +135,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqFrete(BigDecimal aliqFrete) {
+        markAsChanged("ALIQFRETE", aliqFrete);
         this.aliqFrete = aliqFrete;
    }
 
@@ -143,6 +144,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqSubtrib(BigDecimal aliqSubtrib) {
+        markAsChanged("ALIQSUBTRIB", aliqSubtrib);
         this.aliqSubtrib = aliqSubtrib;
    }
 
@@ -151,6 +153,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqUfDest(BigDecimal aliqUfDest) {
+        markAsChanged("ALIQUFDEST", aliqUfDest);
         this.aliqUfDest = aliqUfDest;
    }
 
@@ -159,6 +162,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -167,6 +171,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setBaseStRed(String baseStRed) {
+        markAsChanged("BASESTRED", baseStRed);
         this.baseStRed = baseStRed;
    }
 
@@ -175,6 +180,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setBaseStUfDest(String baseStUfDest) {
+        markAsChanged("BASESTUFDEST", baseStUfDest);
         this.baseStUfDest = baseStUfDest;
    }
 
@@ -183,6 +189,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setBaseIcmMod(BigDecimal baseIcmMod) {
+        markAsChanged("BASICMMOD", baseIcmMod);
         this.baseIcmMod = baseIcmMod;
    }
 
@@ -191,6 +198,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setBaseIcmStMod(BigDecimal baseIcmStMod) {
+        markAsChanged("BASICMSTMOD", baseIcmStMod);
         this.baseIcmStMod = baseIcmStMod;
    }
 
@@ -199,6 +207,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcStExtraNota(String calcStExtraNota) {
+        markAsChanged("CALCSTEXTRANOTA", calcStExtraNota);
         this.calcStExtraNota = calcStExtraNota;
    }
 
@@ -207,6 +216,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodAntecipSt(String codAntecipSt) {
+        markAsChanged("CODANTECIPST", codAntecipSt);
         this.codAntecipSt = codAntecipSt;
    }
 
@@ -215,6 +225,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodMotDesoneraIcms(BigDecimal codMotDesoneraIcms) {
+        markAsChanged("CODMOTDESONERAICMS", codMotDesoneraIcms);
         this.codMotDesoneraIcms = codMotDesoneraIcms;
    }
 
@@ -223,6 +234,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
+        markAsChanged("CODOBSPADRAO", codObsPadrao);
         this.codObsPadrao = codObsPadrao;
    }
 
@@ -231,6 +243,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodRestricao(BigDecimal codRestricao) {
+        markAsChanged("CODRESTRICAO", codRestricao);
         this.codRestricao = codRestricao;
    }
 
@@ -239,6 +252,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodRestricao2(BigDecimal codRestricao2) {
+        markAsChanged("CODRESTRICAO2", codRestricao2);
         this.codRestricao2 = codRestricao2;
    }
 
@@ -247,6 +261,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -255,6 +270,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTabIcms(BigDecimal codTabIcms) {
+        markAsChanged("CODTABICMS", codTabIcms);
         this.codTabIcms = codTabIcms;
    }
 
@@ -263,6 +279,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTrib(BigDecimal codTrib) {
+        markAsChanged("CODTRIB", codTrib);
         this.codTrib = codTrib;
    }
 
@@ -271,6 +288,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setConvProduz(String convProduz) {
+        markAsChanged("CONVPRODUZ", convProduz);
         this.convProduz = convProduz;
    }
 
@@ -279,6 +297,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCsosn(BigDecimal csosn) {
+        markAsChanged("CSOSN", csosn);
         this.csosn = csosn;
    }
 
@@ -287,6 +306,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTabStAnt(BigDecimal codTabStAnt) {
+        markAsChanged("CODTABSTANT", codTabStAnt);
         this.codTabStAnt = codTabStAnt;
    }
 
@@ -295,6 +315,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTabStUfDest(BigDecimal codTabStUfDest) {
+        markAsChanged("CODTABSTUFDEST", codTabStUfDest);
         this.codTabStUfDest = codTabStUfDest;
    }
 
@@ -303,6 +324,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCusComIcmsBaseSt(String cusComIcmsBaseSt) {
+        markAsChanged("CUSCOMICMSBASEST", cusComIcmsBaseSt);
         this.cusComIcmsBaseSt = cusComIcmsBaseSt;
    }
 
@@ -311,6 +333,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setDescrRestricao(String descrRestricao) {
+        markAsChanged("DESCRRESTRICAO", descrRestricao);
         this.descrRestricao = descrRestricao;
    }
 
@@ -319,6 +342,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setDescrRestricao2(String descrRestricao2) {
+        markAsChanged("DESCRRESTRICAO2", descrRestricao2);
         this.descrRestricao2 = descrRestricao2;
    }
 
@@ -327,6 +351,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMaiorBaseIcms(String maiorBaseIcms) {
+        markAsChanged("MAIORBASEICMS", maiorBaseIcms);
         this.maiorBaseIcms = maiorBaseIcms;
    }
 
@@ -335,6 +360,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMaiorBaseSt(String maiorBaseSt) {
+        markAsChanged("MAIORBASEST", maiorBaseSt);
         this.maiorBaseSt = maiorBaseSt;
    }
 
@@ -343,6 +369,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMargLucro(BigDecimal margLucro) {
+        markAsChanged("MARGLUCRO", margLucro);
         this.margLucro = margLucro;
    }
 
@@ -351,6 +378,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMvaStUfDest(BigDecimal mvaStUfDest) {
+        markAsChanged("MVASTUFDEST", mvaStUfDest);
         this.mvaStUfDest = mvaStUfDest;
    }
 
@@ -359,6 +387,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setOutOrga(BigDecimal outOrga) {
+        markAsChanged("OUTORGA", outOrga);
         this.outOrga = outOrga;
    }
 
@@ -367,6 +396,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setProEmprego(String proEmprego) {
+        markAsChanged("PROEMPREGO", proEmprego);
         this.proEmprego = proEmprego;
    }
 
@@ -375,6 +405,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRedBase(BigDecimal redBase) {
+        markAsChanged("REDBASE", redBase);
         this.redBase = redBase;
    }
 
@@ -383,6 +414,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRedBaseFrete(BigDecimal redBaseFrete) {
+        markAsChanged("REDBASEFRETE", redBaseFrete);
         this.redBaseFrete = redBaseFrete;
    }
 
@@ -391,6 +423,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRedBaseSt(BigDecimal redBaseSt) {
+        markAsChanged("REDBASEST", redBaseSt);
         this.redBaseSt = redBaseSt;
    }
 
@@ -399,6 +432,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRedIcms(String redIcms) {
+        markAsChanged("REDICMS", redIcms);
         this.redIcms = redIcms;
    }
 
@@ -407,6 +441,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRepIcms(String repIcms) {
+        markAsChanged("REPICMS", repIcms);
         this.repIcms = repIcms;
    }
 
@@ -415,6 +450,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRepRedBase(String repRedBase) {
+        markAsChanged("REPREDBASE", repRedBase);
         this.repRedBase = repRedBase;
    }
 
@@ -423,6 +459,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRepRedBase2(String repRedBase2) {
+        markAsChanged("REPREDBASE2", repRedBase2);
         this.repRedBase2 = repRedBase2;
    }
 
@@ -431,6 +468,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipRestricao(String tipRestricao) {
+        markAsChanged("TIPRESTRICAO", tipRestricao);
         this.tipRestricao = tipRestricao;
    }
 
@@ -439,6 +477,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipRestricao2(String tipRestricao2) {
+        markAsChanged("TIPRESTRICAO2", tipRestricao2);
         this.tipRestricao2 = tipRestricao2;
    }
 
@@ -447,6 +486,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setUfDest(BigDecimal ufDest) {
+        markAsChanged("UFDEST", ufDest);
         this.ufDest = ufDest;
    }
 
@@ -455,6 +495,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setUfOrig(BigDecimal ufOrig) {
+        markAsChanged("UFORIG", ufOrig);
         this.ufOrig = ufOrig;
    }
 
@@ -463,6 +504,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setZerar(String zerar) {
+        markAsChanged("ZERAR", zerar);
         this.zerar = zerar;
    }
 
@@ -471,6 +513,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setZerarStNeg(String zerarStNeg) {
+        markAsChanged("ZERARSTNEG", zerarStNeg);
         this.zerarStNeg = zerarStNeg;
    }
 
@@ -479,6 +522,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercIcmsFcp(BigDecimal percIcmsFcp) {
+        markAsChanged("PERCICMSFCP", percIcmsFcp);
         this.percIcmsFcp = percIcmsFcp;
    }
 
@@ -487,6 +531,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercMinSubtrib(BigDecimal percMinSubtrib) {
+        markAsChanged("PERCMINSUBTRIB", percMinSubtrib);
         this.percMinSubtrib = percMinSubtrib;
    }
 
@@ -495,6 +540,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setIdAliq(BigDecimal idAliq) {
+        markAsChanged("IDALIQ", idAliq);
         this.idAliq = idAliq;
    }
 
@@ -503,6 +549,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTabCfop(String tabCfop) {
+        markAsChanged("TABCFOP", tabCfop);
         this.tabCfop = tabCfop;
    }
 
@@ -511,6 +558,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcMvaAjustado(String calcMvaAjustado) {
+        markAsChanged("CALCMVAAJUSTADO", calcMvaAjustado);
         this.calcMvaAjustado = calcMvaAjustado;
    }
 
@@ -519,6 +567,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIntDest(BigDecimal aliqIntDest) {
+        markAsChanged("ALIQINTDEST", aliqIntDest);
         this.aliqIntDest = aliqIntDest;
    }
 
@@ -527,6 +576,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcRepRedDentro(String calcRepRedDentro) {
+        markAsChanged("CALCREPREDDENTRO", calcRepRedDentro);
         this.calcRepRedDentro = calcRepRedDentro;
    }
 
@@ -535,6 +585,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodFormBaseIcms(BigDecimal codFormBaseIcms) {
+        markAsChanged("CODFORMBASICM", codFormBaseIcms);
         this.codFormBaseIcms = codFormBaseIcms;
    }
 
@@ -543,6 +594,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setFormaRepIcms(String formaRepIcms) {
+        markAsChanged("FORMAREPICMS", formaRepIcms);
         this.formaRepIcms = formaRepIcms;
    }
 
@@ -551,6 +603,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setIcmsDifPositiva(String icmsDifPositiva) {
+        markAsChanged("ICMSDIFPOSITIVA", icmsDifPositiva);
         this.icmsDifPositiva = icmsDifPositiva;
    }
 
@@ -559,6 +612,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMargLucroEst(BigDecimal margLucroEst) {
+        markAsChanged("MARGLUCROEST", margLucroEst);
         this.margLucroEst = margLucroEst;
    }
 
@@ -567,6 +621,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercMultCalcDp(BigDecimal percMultCalcDp) {
+        markAsChanged("PERCMULTCALCDP", percMultCalcDp);
         this.percMultCalcDp = percMultCalcDp;
    }
 
@@ -575,6 +630,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercRedBaseIcmsEfet(BigDecimal percRedBaseIcmsEfet) {
+        markAsChanged("PERCREDBASEICMSEFET", percRedBaseIcmsEfet);
         this.percRedBaseIcmsEfet = percRedBaseIcmsEfet;
    }
 
@@ -583,6 +639,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercTravaMed(BigDecimal percTravaMed) {
+        markAsChanged("PERCTRAVAMED", percTravaMed);
         this.percTravaMed = percTravaMed;
    }
 
@@ -591,6 +648,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRedBaseEstrangeira(BigDecimal redBaseEstrangeira) {
+        markAsChanged("REDBASEESTRANGEIRA", redBaseEstrangeira);
         this.redBaseEstrangeira = redBaseEstrangeira;
    }
 
@@ -599,6 +657,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setStSutri4302014Mg(String stSutri4302014Mg) {
+        markAsChanged("STSUTRI4302014MG", stSutri4302014Mg);
         this.stSutri4302014Mg = stSutri4302014Mg;
    }
 
@@ -607,6 +666,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcDifIcmsDentro(String calcDifIcmsDentro) {
+        markAsChanged("CALCDIFICMSDENTRO", calcDifIcmsDentro);
         this.calcDifIcmsDentro = calcDifIcmsDentro;
    }
 
@@ -615,6 +675,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsEfet(BigDecimal aliqIcmsEfet) {
+        markAsChanged("ALIQICMSEFET", aliqIcmsEfet);
         this.aliqIcmsEfet = aliqIcmsEfet;
    }
 
@@ -623,6 +684,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setBaseFcpInt(String baseFcpInt) {
+        markAsChanged("BASEFCPINT", baseFcpInt);
         this.baseFcpInt = baseFcpInt;
    }
 
@@ -631,6 +693,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqEstrangeira(BigDecimal aliqEstrangeira) {
+        markAsChanged("ALIQESTRANGEIRA", aliqEstrangeira);
         this.aliqEstrangeira = aliqEstrangeira;
    }
 
@@ -639,6 +702,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setDesconsideraRedBase(String desconsideraRedBase) {
+        markAsChanged("DESCONSIDERAREDBASE", desconsideraRedBase);
         this.desconsideraRedBase = desconsideraRedBase;
    }
 
@@ -647,6 +711,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRepPercBaseIcms(BigDecimal repPercBaseIcms) {
+        markAsChanged("REPPERCBASEICMS", repPercBaseIcms);
         this.repPercBaseIcms = repPercBaseIcms;
    }
 
@@ -655,6 +720,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRepDifAlFcp(String repDifAlFcp) {
+        markAsChanged("REPDIFALFCP", repDifAlFcp);
         this.repDifAlFcp = repDifAlFcp;
    }
 
@@ -663,6 +729,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercIcmsFcpInt(BigDecimal percIcmsFcpInt) {
+        markAsChanged("PERCICMSFCPINT", percIcmsFcpInt);
         this.percIcmsFcpInt = percIcmsFcpInt;
    }
 
@@ -671,6 +738,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercStFcpInt(BigDecimal percStFcpInt) {
+        markAsChanged("PERCSTFCPINT", percStFcpInt);
         this.percStFcpInt = percStFcpInt;
    }
 
@@ -679,6 +747,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMvaOriginal(String mvaOriginal) {
+        markAsChanged("MVAORIGINAL", mvaOriginal);
         this.mvaOriginal = mvaOriginal;
    }
 
@@ -687,6 +756,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setZerarDifAlRem(String zerarDifAlRem) {
+        markAsChanged("ZERARDIFALREM", zerarDifAlRem);
         this.zerarDifAlRem = zerarDifAlRem;
    }
 
@@ -695,6 +765,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipCalcStEspec(BigDecimal tipCalcStEspec) {
+        markAsChanged("TIPCALCSTESPEC", tipCalcStEspec);
         this.tipCalcStEspec = tipCalcStEspec;
    }
 
@@ -703,6 +774,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPautaVlrStFixo(String pautaVlrStFixo) {
+        markAsChanged("PAUTAVLRSTFIXO", pautaVlrStFixo);
         this.pautaVlrStFixo = pautaVlrStFixo;
    }
 
@@ -711,6 +783,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsLimiteCalcSt(BigDecimal aliqIcmsLimiteCalcSt) {
+        markAsChanged("ALIQICMSLIMITECALCST", aliqIcmsLimiteCalcSt);
         this.aliqIcmsLimiteCalcSt = aliqIcmsLimiteCalcSt;
    }
 
@@ -719,6 +792,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcStLivreCom(String calcStLivreCom) {
+        markAsChanged("CALCSTLIVRECOM", calcStLivreCom);
         this.calcStLivreCom = calcStLivreCom;
    }
 
@@ -727,6 +801,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -735,6 +810,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setIcmsUfOrigDifEmit(String icmsUfOrigDifEmit) {
+        markAsChanged("ICMSUFORIGDIFEMIT", icmsUfOrigDifEmit);
         this.icmsUfOrigDifEmit = icmsUfOrigDifEmit;
    }
 
@@ -743,6 +819,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercCargaTribMedia(BigDecimal percCargaTribMedia) {
+        markAsChanged("PERCCARGATRIBMEDIA", percCargaTribMedia);
         this.percCargaTribMedia = percCargaTribMedia;
    }
 
@@ -751,6 +828,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMvaSimplificado(String mvaSimplificado) {
+        markAsChanged("MVASIMPLIFICADO", mvaSimplificado);
         this.mvaSimplificado = mvaSimplificado;
    }
 
@@ -759,6 +837,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipCalcDifAl(BigDecimal tipCalcDifAl) {
+        markAsChanged("TIPCALCDIFAL", tipCalcDifAl);
         this.tipCalcDifAl = tipCalcDifAl;
    }
 
@@ -767,6 +846,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercRedBaseDest(BigDecimal percRedBaseDest) {
+        markAsChanged("PERCREDBASEDEST", percRedBaseDest);
         this.percRedBaseDest = percRedBaseDest;
    }
 
@@ -775,6 +855,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setStCat137Sp(String stCat137Sp) {
+        markAsChanged("STCAT137SP", stCat137Sp);
         this.stCat137Sp = stCat137Sp;
    }
 
@@ -783,6 +864,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcStConsuTri(String calcStConsuTri) {
+        markAsChanged("CALCSTCONSUTRI", calcStConsuTri);
         this.calcStConsuTri = calcStConsuTri;
    }
 
@@ -791,6 +873,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setConsidIpivLroProp(String considIpivLroProp) {
+        markAsChanged("CONSIDIPIVLROPPROP", considIpivLroProp);
         this.considIpivLroProp = considIpivLroProp;
    }
 
@@ -799,6 +882,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercPmpf(BigDecimal percPmpf) {
+        markAsChanged("PERCPMPF", percPmpf);
         this.percPmpf = percPmpf;
    }
 
@@ -807,6 +891,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcRedPreIcmCon(String calcRedPreIcmCon) {
+        markAsChanged("CALCREDPREICMCON", calcRedPreIcmCon);
         this.calcRedPreIcmCon = calcRedPreIcmCon;
    }
 
@@ -815,6 +900,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setNaoConsidMva(String naoConsidMva) {
+        markAsChanged("NAOCONSIDMVA", naoConsidMva);
         this.naoConsidMva = naoConsidMva;
    }
 
@@ -823,6 +909,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercRedPreIcmCon(BigDecimal percRedPreIcmCon) {
+        markAsChanged("PERCREDPREICMCON", percRedPreIcmCon);
         this.percRedPreIcmCon = percRedPreIcmCon;
    }
 
@@ -831,6 +918,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTabStFarPop(BigDecimal codTabStFarPop) {
+        markAsChanged("CODTABSTFARPOP", codTabStFarPop);
         this.codTabStFarPop = codTabStFarPop;
    }
 
@@ -839,6 +927,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodTabStPmpf(BigDecimal codTabStPmpf) {
+        markAsChanged("CODTABSTPMPF", codTabStPmpf);
         this.codTabStPmpf = codTabStPmpf;
    }
 
@@ -847,6 +936,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsCargTribRed(BigDecimal aliqIcmsCargTribRed) {
+        markAsChanged("ALIQICMSCARGTRIBRED", aliqIcmsCargTribRed);
         this.aliqIcmsCargTribRed = aliqIcmsCargTribRed;
    }
 
@@ -855,6 +945,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqStCargTribRed(BigDecimal aliqStCargTribRed) {
+        markAsChanged("ALIQSTCARGTRIBRED", aliqStCargTribRed);
         this.aliqStCargTribRed = aliqStCargTribRed;
    }
 
@@ -863,6 +954,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcPerRedBaseIcms(String calcPerRedBaseIcms) {
+        markAsChanged("CALPERREDBASEICMS", calcPerRedBaseIcms);
         this.calcPerRedBaseIcms = calcPerRedBaseIcms;
    }
 
@@ -871,6 +963,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcPerRedBaseSt(String calcPerRedBaseSt) {
+        markAsChanged("CALPERREDBASEST", calcPerRedBaseSt);
         this.calcPerRedBaseSt = calcPerRedBaseSt;
    }
 
@@ -879,6 +972,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsEspSt(BigDecimal aliqIcmsEspSt) {
+        markAsChanged("ALIQICMSESPST", aliqIcmsEspSt);
         this.aliqIcmsEspSt = aliqIcmsEspSt;
    }
 
@@ -887,6 +981,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercUsaquDecpe(BigDecimal percUsaquDecpe) {
+        markAsChanged("PERCUSAQUDECPE", percUsaquDecpe);
         this.percUsaquDecpe = percUsaquDecpe;
    }
 
@@ -895,6 +990,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipCusAquDecpe(String tipCusAquDecpe) {
+        markAsChanged("TIPCUSAQUDECPE", tipCusAquDecpe);
         this.tipCusAquDecpe = tipCusAquDecpe;
    }
 
@@ -903,6 +999,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setTipCalcFcpStEspec(BigDecimal tipCalcFcpStEspec) {
+        markAsChanged("TIPCALCFCPSTESPEC", tipCalcFcpStEspec);
         this.tipCalcFcpStEspec = tipCalcFcpStEspec;
    }
 
@@ -911,6 +1008,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcRepRedSt(String calcRepRedSt) {
+        markAsChanged("CALCREPREDST", calcRepRedSt);
         this.calcRepRedSt = calcRepRedSt;
    }
 
@@ -919,6 +1017,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodMotDesoneraSt(BigDecimal codMotDesoneraSt) {
+        markAsChanged("CODMOTDESONERAST", codMotDesoneraSt);
         this.codMotDesoneraSt = codMotDesoneraSt;
    }
 
@@ -927,6 +1026,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCaracTrib(String caracTrib) {
+        markAsChanged("CARACTRIB", caracTrib);
         this.caracTrib = caracTrib;
    }
 
@@ -935,6 +1035,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setFinalidade(String finalidade) {
+        markAsChanged("FINALIDADE", finalidade);
         this.finalidade = finalidade;
    }
 
@@ -943,6 +1044,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsAt(BigDecimal aliqIcmsAt) {
+        markAsChanged("ALIQICMSAT", aliqIcmsAt);
         this.aliqIcmsAt = aliqIcmsAt;
    }
 
@@ -951,6 +1053,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsAtImp(BigDecimal aliqIcmsAtImp) {
+        markAsChanged("ALIQICMSATIMP", aliqIcmsAtImp);
         this.aliqIcmsAtImp = aliqIcmsAtImp;
    }
 
@@ -959,6 +1062,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqIcmsAtInt(BigDecimal aliqIcmsAtInt) {
+        markAsChanged("ALIQICMSATINT", aliqIcmsAtInt);
         this.aliqIcmsAtInt = aliqIcmsAtInt;
    }
 
@@ -967,6 +1071,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodFormBcIcmsAt(BigDecimal codFormBcIcmsAt) {
+        markAsChanged("CODFORMBCICMSAT", codFormBcIcmsAt);
         this.codFormBcIcmsAt = codFormBcIcmsAt;
    }
 
@@ -975,6 +1080,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRegraCalcBcIcmsAt(String regraCalcBcIcmsAt) {
+        markAsChanged("REGRACALCBCICMSAT", regraCalcBcIcmsAt);
         this.regraCalcBcIcmsAt = regraCalcBcIcmsAt;
    }
 
@@ -983,6 +1089,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setRegraDeIcmsAt(String regraDeIcmsAt) {
+        markAsChanged("REGRADEDICMSAT", regraDeIcmsAt);
         this.regraDeIcmsAt = regraDeIcmsAt;
    }
 
@@ -991,6 +1098,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodFormBaseDifAl(BigDecimal codFormBaseDifAl) {
+        markAsChanged("CODFORMBASDIFAL", codFormBaseDifAl);
         this.codFormBaseDifAl = codFormBaseDifAl;
    }
 
@@ -999,6 +1107,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcStDecpr(String calcStDecpr) {
+        markAsChanged("CALCSTDECPR", calcStDecpr);
         this.calcStDecpr = calcStDecpr;
    }
 
@@ -1007,6 +1116,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodFormCalcDifAl(BigDecimal codFormCalcDifAl) {
+        markAsChanged("CODFORMCALCDIFAL", codFormCalcDifAl);
         this.codFormCalcDifAl = codFormCalcDifAl;
    }
 
@@ -1015,6 +1125,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCredPresDecpr(BigDecimal credPresDecpr) {
+        markAsChanged("CREDPRESDECPR", credPresDecpr);
         this.credPresDecpr = credPresDecpr;
    }
 
@@ -1023,6 +1134,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setDesIcmsSn(String desIcmsSn) {
+        markAsChanged("DESICMSSN", desIcmsSn);
         this.desIcmsSn = desIcmsSn;
    }
 
@@ -1031,6 +1143,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setFormCalcFcpDifAl(BigDecimal formCalcFcpDifAl) {
+        markAsChanged("FORMCALFCPDIFAL", formCalcFcpDifAl);
         this.formCalcFcpDifAl = formCalcFcpDifAl;
    }
 
@@ -1039,6 +1152,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercUsaquDecpeEst(BigDecimal percUsaquDecpeEst) {
+        markAsChanged("PERCUSAQUDECPEEST", percUsaquDecpeEst);
         this.percUsaquDecpeEst = percUsaquDecpeEst;
    }
 
@@ -1047,6 +1161,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqConsFin(BigDecimal aliqConsFin) {
+        markAsChanged("ALIQCONSFIN", aliqConsFin);
         this.aliqConsFin = aliqConsFin;
    }
 
@@ -1055,6 +1170,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodBen(String codBen) {
+        markAsChanged("CODBEN", codBen);
         this.codBen = codBen;
    }
 
@@ -1063,6 +1179,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCodFormVa(BigDecimal codFormVa) {
+        markAsChanged("CODFORMVA", codFormVa);
         this.codFormVa = codFormVa;
    }
 
@@ -1071,6 +1188,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercRedPr(BigDecimal percRedPr) {
+        markAsChanged("PERCREDPR", percRedPr);
         this.percRedPr = percRedPr;
    }
 
@@ -1079,6 +1197,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setConsPmvAbcIcm(String consPmvAbcIcm) {
+        markAsChanged("CONSPMVABCICM", consPmvAbcIcm);
         this.consPmvAbcIcm = consPmvAbcIcm;
    }
 
@@ -1087,6 +1206,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setCalcAliFcpSt(String calcAliFcpSt) {
+        markAsChanged("CALCALIFCPST", calcAliFcpSt);
         this.calcAliFcpSt = calcAliFcpSt;
    }
 
@@ -1095,6 +1215,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setAliqAdRemIcms(BigDecimal aliqAdRemIcms) {
+        markAsChanged("ALIQADREMICMS", aliqAdRemIcms);
         this.aliqAdRemIcms = aliqAdRemIcms;
    }
 
@@ -1103,6 +1224,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setMotRedAdRem(BigDecimal motRedAdRem) {
+        markAsChanged("MOTREDADREM", motRedAdRem);
         this.motRedAdRem = motRedAdRem;
    }
 
@@ -1111,6 +1233,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercAliqAdRemIcms(BigDecimal percAliqAdRemIcms) {
+        markAsChanged("PERCALIQADREMICMS", percAliqAdRemIcms);
         this.percAliqAdRemIcms = percAliqAdRemIcms;
    }
 
@@ -1119,6 +1242,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
    }
 
    public void setPercIcmsMonoRet(BigDecimal percIcmsMonoRet) {
+        markAsChanged("PERCICMSMONORET", percIcmsMonoRet);
         this.percIcmsMonoRet = percIcmsMonoRet;
    }
 
@@ -1134,6 +1258,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
 
    @Override
    public AliquotaICMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqFrete = vo.asBigDecimal("ALIQFRETE");
         this.aliqSubtrib = vo.asBigDecimal("ALIQSUBTRIB");
         this.aliqUfDest = vo.asBigDecimal("ALIQUFDEST");

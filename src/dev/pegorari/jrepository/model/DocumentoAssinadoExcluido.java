@@ -17,6 +17,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    }
 
    public void setChaveArquivo(String chaveArquivo) {
+        markAsChanged("CHAVEARQUIVO", chaveArquivo);
         this.chaveArquivo = chaveArquivo;
    }
 
@@ -25,6 +26,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
+        markAsChanged("NUDOC", nuDoc);
         this.nuDoc = nuDoc;
    }
 
@@ -33,6 +35,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    }
 
    public void setMotivoExc(String motivoExc) {
+        markAsChanged("MOTIVOEXC", motivoExc);
         this.motivoExc = motivoExc;
    }
 
@@ -41,6 +44,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    }
 
    public void setCodUsuExc(BigDecimal codUsuExc) {
+        markAsChanged("CODUSUEXC", codUsuExc);
         this.codUsuExc = codUsuExc;
    }
 
@@ -49,6 +53,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    }
 
    public void setDhExc(Timestamp dhExc) {
+        markAsChanged("DHEXC", dhExc);
         this.dhExc = dhExc;
    }
 
@@ -64,6 +69,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
 
    @Override
    public DocumentoAssinadoExcluido fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveArquivo = vo.asString("CHAVEARQUIVO");
         this.nuDoc = vo.asBigDecimal("NUDOC");
         this.motivoExc = vo.asString("MOTIVOEXC");

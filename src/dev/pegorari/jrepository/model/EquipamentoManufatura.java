@@ -16,6 +16,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -24,6 +25,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -32,6 +34,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -40,6 +43,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    }
 
    public void setNuEqp(BigDecimal nuEqp) {
+        markAsChanged("NUEQP", nuEqp);
         this.nuEqp = nuEqp;
    }
 
@@ -48,6 +52,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -63,6 +68,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
 
    @Override
    public EquipamentoManufatura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codPlp = vo.asBigDecimal("CODPLP");
         this.nome = vo.asString("NOME");

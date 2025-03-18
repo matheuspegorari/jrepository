@@ -20,6 +20,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setCodParcPag(BigDecimal codParcPag) {
+        markAsChanged("CODPARCPAG", codParcPag);
         this.codParcPag = codParcPag;
    }
 
@@ -28,6 +29,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
+        markAsChanged("CODPARCFORN", codParcForn);
         this.codParcForn = codParcForn;
    }
 
@@ -36,6 +38,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setNuCompra(String nuCompra) {
+        markAsChanged("NUCOMPRA", nuCompra);
         this.nuCompra = nuCompra;
    }
 
@@ -44,6 +47,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -52,6 +56,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -60,6 +65,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -68,6 +74,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setVlrPedagio(BigDecimal vlrPedagio) {
+        markAsChanged("VLRPEDAGIO", vlrPedagio);
         this.vlrPedagio = vlrPedagio;
    }
 
@@ -76,6 +83,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setCategCombVeic(String categCombVeic) {
+        markAsChanged("CATEGCOMBVEIC", categCombVeic);
         this.categCombVeic = categCombVeic;
    }
 
@@ -84,6 +92,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    }
 
    public void setTpValePed(String tpValePed) {
+        markAsChanged("TPVALEPED", tpValePed);
         this.tpValePed = tpValePed;
    }
 
@@ -99,6 +108,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
 
    @Override
    public ValePedagioMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParcPag = vo.asBigDecimal("CODPARCPAG");
         this.codParcForn = vo.asBigDecimal("CODPARCFORN");
         this.nuCompra = vo.asString("NUCOMPRA");

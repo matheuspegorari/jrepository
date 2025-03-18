@@ -24,6 +24,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -32,6 +33,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -40,6 +42,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -48,6 +51,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -56,6 +60,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -64,6 +69,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -72,6 +78,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setRazaoSocial(String razaoSocial) {
+        markAsChanged("RAZAOSOCIAL", razaoSocial);
         this.razaoSocial = razaoSocial;
    }
 
@@ -80,6 +87,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setRazaoSocialParc(String razaoSocialParc) {
+        markAsChanged("RAZAOSOCIALPARC", razaoSocialParc);
         this.razaoSocialParc = razaoSocialParc;
    }
 
@@ -88,6 +96,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -96,6 +105,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -104,6 +114,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -112,6 +123,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setIndReentrega(String indReentrega) {
+        markAsChanged("INDREENTREGA", indReentrega);
         this.indReentrega = indReentrega;
    }
 
@@ -120,6 +132,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    }
 
    public void setStatusEnvio(String statusEnvio) {
+        markAsChanged("STATUSENVIO", statusEnvio);
         this.statusEnvio = statusEnvio;
    }
 
@@ -135,6 +148,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
 
    @Override
    public NotasMDF fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.numNota = vo.asBigDecimal("NUMNOTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

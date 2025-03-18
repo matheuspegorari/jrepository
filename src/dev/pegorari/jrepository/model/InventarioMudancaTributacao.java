@@ -34,6 +34,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -42,6 +43,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -50,6 +52,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -58,6 +61,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -66,6 +70,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -74,6 +79,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setCustomTp(String customTp) {
+        markAsChanged("CUSTOMTP", customTp);
         this.customTp = customTp;
    }
 
@@ -82,6 +88,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -90,6 +97,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setDtMtp(Timestamp dtMtp) {
+        markAsChanged("DTMTP", dtMtp);
         this.dtMtp = dtMtp;
    }
 
@@ -98,6 +106,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setMotInv(String motInv) {
+        markAsChanged("MOTINV", motInv);
         this.motInv = motInv;
    }
 
@@ -106,6 +115,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setStatusEfd(String statusEfd) {
+        markAsChanged("STATUSEFD", statusEfd);
         this.statusEfd = statusEfd;
    }
 
@@ -114,6 +124,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setGravarIcmsNormSth020(String gravarIcmsNormSth020) {
+        markAsChanged("GRAVARICMSNORMSTH020", gravarIcmsNormSth020);
         this.gravarIcmsNormSth020 = gravarIcmsNormSth020;
    }
 
@@ -122,6 +133,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setUsaStant(String usaStant) {
+        markAsChanged("USASTANT", usaStant);
         this.usaStant = usaStant;
    }
 
@@ -130,6 +142,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setUsaVlrUnit(String usaVlrUnit) {
+        markAsChanged("USAVLRUNIT", usaVlrUnit);
         this.usaVlrUnit = usaVlrUnit;
    }
 
@@ -138,6 +151,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setProcPorMed(String procPorMed) {
+        markAsChanged("PROCPORMED", procPorMed);
         this.procPorMed = procPorMed;
    }
 
@@ -146,6 +160,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setGeraSpedBaseSt(String geraSpedBaseSt) {
+        markAsChanged("GERASPEDBASEST", geraSpedBaseSt);
         this.geraSpedBaseSt = geraSpedBaseSt;
    }
 
@@ -154,6 +169,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setDtRefEsc(Timestamp dtRefEsc) {
+        markAsChanged("DTREFESC", dtRefEsc);
         this.dtRefEsc = dtRefEsc;
    }
 
@@ -162,6 +178,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setUsaVlrCusto(String usaVlrCusto) {
+        markAsChanged("USAVLRCUSTO", usaVlrCusto);
         this.usaVlrCusto = usaVlrCusto;
    }
 
@@ -170,6 +187,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setAliqInterna(BigDecimal aliqInterna) {
+        markAsChanged("ALIQINTERNA", aliqInterna);
         this.aliqInterna = aliqInterna;
    }
 
@@ -178,6 +196,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setConsEmpUltCompra(String consEmpUltCompra) {
+        markAsChanged("CONSEMPULTCOMPRA", consEmpUltCompra);
         this.consEmpUltCompra = consEmpUltCompra;
    }
 
@@ -186,6 +205,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setGeraSpedVlrSt(String geraSpedVlrSt) {
+        markAsChanged("GERASPEDVLRST", geraSpedVlrSt);
         this.geraSpedVlrSt = geraSpedVlrSt;
    }
 
@@ -194,6 +214,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setUsaRicmsCalc(String usaRicmsCalc) {
+        markAsChanged("USARICMSCALC", usaRicmsCalc);
         this.usaRicmsCalc = usaRicmsCalc;
    }
 
@@ -202,6 +223,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    }
 
    public void setConsAntExNota(String consAntExNota) {
+        markAsChanged("CONSANTEXNOTA", consAntExNota);
         this.consAntExNota = consAntExNota;
    }
 
@@ -217,6 +239,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
 
    @Override
    public InventarioMudancaTributacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");

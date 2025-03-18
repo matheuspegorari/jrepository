@@ -26,6 +26,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setFimMes(String fimMes) {
+        markAsChanged("FIMMES", fimMes);
         this.fimMes = fimMes;
    }
 
@@ -34,6 +35,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setIndice(BigDecimal indice) {
+        markAsChanged("INDICE", indice);
         this.indice = indice;
    }
 
@@ -42,6 +44,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -50,6 +53,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -58,6 +62,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setSinal(BigDecimal sinal) {
+        markAsChanged("SINAL", sinal);
         this.sinal = sinal;
    }
 
@@ -66,6 +71,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setVlrJuro(BigDecimal vlrJuro) {
+        markAsChanged("VLRJURO", vlrJuro);
         this.vlrJuro = vlrJuro;
    }
 
@@ -74,6 +80,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setVlrJuroMes(BigDecimal vlrJuroMes) {
+        markAsChanged("VLRJUROMES", vlrJuroMes);
         this.vlrJuroMes = vlrJuroMes;
    }
 
@@ -82,6 +89,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setVlrJuroMes2(BigDecimal vlrJuroMes2) {
+        markAsChanged("VLRJUROMES2", vlrJuroMes2);
         this.vlrJuroMes2 = vlrJuroMes2;
    }
 
@@ -90,6 +98,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setVlrMulta(BigDecimal vlrMulta) {
+        markAsChanged("VLRMULTA", vlrMulta);
         this.vlrMulta = vlrMulta;
    }
 
@@ -98,6 +107,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setVlrMultaMes(BigDecimal vlrMultaMes) {
+        markAsChanged("VLRMULTAMES", vlrMultaMes);
         this.vlrMultaMes = vlrMultaMes;
    }
 
@@ -106,6 +116,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -114,6 +125,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -122,6 +134,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setCotacao(BigDecimal cotacao) {
+        markAsChanged("COTACAO", cotacao);
         this.cotacao = cotacao;
    }
 
@@ -130,6 +143,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -145,6 +159,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
 
    @Override
    public JuroMensal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.fimMes = vo.asString("FIMMES");
         this.indice = vo.asBigDecimal("INDICE");
         this.nuFin = vo.asBigDecimal("NUFIN");

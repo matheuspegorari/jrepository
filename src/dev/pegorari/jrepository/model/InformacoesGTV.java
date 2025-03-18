@@ -19,6 +19,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setCargaInfGtv(BigDecimal cargaInfGtv) {
+        markAsChanged("CARGAINFGTV", cargaInfGtv);
         this.cargaInfGtv = cargaInfGtv;
    }
 
@@ -27,6 +28,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -35,6 +37,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setDigVerInfGtv(BigDecimal digVerInfGtv) {
+        markAsChanged("DIGVERINFGTV", digVerInfGtv);
         this.digVerInfGtv = digVerInfGtv;
    }
 
@@ -43,6 +46,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setIdInfGtv(String idInfGtv) {
+        markAsChanged("IDINFGTV", idInfGtv);
         this.idInfGtv = idInfGtv;
    }
 
@@ -51,6 +55,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setNumInfGtv(String numInfGtv) {
+        markAsChanged("NUMINFGTV", numInfGtv);
         this.numInfGtv = numInfGtv;
    }
 
@@ -59,6 +64,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -67,6 +73,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setSerInfGtv(String serInfGtv) {
+        markAsChanged("SERINFGTV", serInfGtv);
         this.serInfGtv = serInfGtv;
    }
 
@@ -75,6 +82,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    }
 
    public void setSubSerInfGtv(String subSerInfGtv) {
+        markAsChanged("SUBSERINFGTV", subSerInfGtv);
         this.subSerInfGtv = subSerInfGtv;
    }
 
@@ -90,6 +98,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
 
    @Override
    public InformacoesGTV fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cargaInfGtv = vo.asBigDecimal("CARGAINFGTV");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.digVerInfGtv = vo.asBigDecimal("DIGVERINFGTV");

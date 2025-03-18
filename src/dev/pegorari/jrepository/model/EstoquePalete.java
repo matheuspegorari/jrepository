@@ -20,6 +20,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -28,6 +29,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -36,6 +38,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -44,6 +47,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -52,6 +56,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -60,6 +65,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -68,6 +74,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -76,6 +83,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -84,6 +92,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -99,6 +108,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
 
    @Override
    public EstoquePalete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEnd = vo.asBigDecimal("CODEND");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

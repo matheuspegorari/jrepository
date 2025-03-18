@@ -20,6 +20,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
+        markAsChanged("NUOCOR", nuOcor);
         this.nuOcor = nuOcor;
    }
 
@@ -28,6 +29,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -36,6 +38,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -44,6 +47,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -52,6 +56,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -60,6 +65,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -68,6 +74,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setDtPosse(Timestamp dtPosse) {
+        markAsChanged("DTPOSSE", dtPosse);
         this.dtPosse = dtPosse;
    }
 
@@ -76,6 +83,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    }
 
    public void setDtSaida(Timestamp dtSaida) {
+        markAsChanged("DTSAIDA", dtSaida);
         this.dtSaida = dtSaida;
    }
 
@@ -91,6 +99,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
 
    @Override
    public Lotacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuOcor = vo.asBigDecimal("NUOCOR");
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.codEmp = vo.asBigDecimal("CODEMP");

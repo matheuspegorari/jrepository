@@ -30,6 +30,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -38,6 +39,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setDtEmissao(Timestamp dtEmissao) {
+        markAsChanged("DTEMISSAO", dtEmissao);
         this.dtEmissao = dtEmissao;
    }
 
@@ -46,6 +48,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setNumero(String numero) {
+        markAsChanged("NUMERO", numero);
         this.numero = numero;
    }
 
@@ -54,6 +57,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -62,6 +66,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -70,6 +75,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -78,6 +84,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -86,6 +93,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setBaseSt(BigDecimal baseSt) {
+        markAsChanged("BASEST", baseSt);
         this.baseSt = baseSt;
    }
 
@@ -94,6 +102,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -102,6 +111,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -110,6 +120,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -118,6 +129,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setCfop(BigDecimal cfop) {
+        markAsChanged("CFOP", cfop);
         this.cfop = cfop;
    }
 
@@ -126,6 +138,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setVlrSt(BigDecimal vlrSt) {
+        markAsChanged("VLRST", vlrSt);
         this.vlrSt = vlrSt;
    }
 
@@ -134,6 +147,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setVlrTotProd(BigDecimal vlrTotProd) {
+        markAsChanged("VLRTOTPROD", vlrTotProd);
         this.vlrTotProd = vlrTotProd;
    }
 
@@ -142,6 +156,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setSegCodBar(String segCodBar) {
+        markAsChanged("SEGCODBAR", segCodBar);
         this.segCodBar = segCodBar;
    }
 
@@ -150,6 +165,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setDescrDoc(String descrDoc) {
+        markAsChanged("DESCRDOC", descrDoc);
         this.descrDoc = descrDoc;
    }
 
@@ -158,6 +174,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setPesoB(BigDecimal pesoB) {
+        markAsChanged("PESOB", pesoB);
         this.pesoB = pesoB;
    }
 
@@ -166,6 +183,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    }
 
    public void setPesoL(BigDecimal pesoL) {
+        markAsChanged("PESOL", pesoL);
         this.pesoL = pesoL;
    }
 
@@ -181,6 +199,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
 
    @Override
    public NotaConhecimentoTransporte fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.dtEmissao = vo.asTimestamp("DTEMISSAO");
         this.numero = vo.asString("NUMERO");

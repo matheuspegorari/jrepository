@@ -24,6 +24,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
+        markAsChanged("CODUSURESP", codUsuResp);
         this.codUsuResp = codUsuResp;
    }
 
@@ -32,6 +33,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setAgendamento(String agendamento) {
+        markAsChanged("AGENDAMENTO", agendamento);
         this.agendamento = agendamento;
    }
 
@@ -40,6 +42,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setArqModEmail(String arqModEmail) {
+        markAsChanged("ARQMODEMAIL", arqModEmail);
         this.arqModEmail = arqModEmail;
    }
 
@@ -48,6 +51,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -56,6 +60,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setDhFim(Timestamp dhFim) {
+        markAsChanged("DHFIM", dhFim);
         this.dhFim = dhFim;
    }
 
@@ -64,6 +69,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setDhIni(Timestamp dhIni) {
+        markAsChanged("DHINI", dhIni);
         this.dhIni = dhIni;
    }
 
@@ -72,6 +78,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setExecUnica(String execUnica) {
+        markAsChanged("EXECUNICA", execUnica);
         this.execUnica = execUnica;
    }
 
@@ -80,6 +87,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -88,6 +96,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setProxExec(Timestamp proxExec) {
+        markAsChanged("PROXEXEC", proxExec);
         this.proxExec = proxExec;
    }
 
@@ -96,6 +105,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -104,6 +114,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -112,6 +123,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    }
 
    public void setEmailManual(char[] emailManual) {
+        markAsChanged("EMAILMANUAL", emailManual);
         this.emailManual = emailManual;
    }
 
@@ -127,6 +139,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
 
    @Override
    public AgendamentoRelatorioFormatado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsuResp = vo.asBigDecimal("CODUSURESP");
         this.agendamento = vo.asString("AGENDAMENTO");
         this.arqModEmail = vo.asString("ARQMODEMAIL");

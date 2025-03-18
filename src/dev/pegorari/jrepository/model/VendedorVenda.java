@@ -14,6 +14,7 @@ public class VendedorVenda extends AbstractSankhyaEntity<VendedorVenda> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -22,6 +23,7 @@ public class VendedorVenda extends AbstractSankhyaEntity<VendedorVenda> {
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -30,6 +32,7 @@ public class VendedorVenda extends AbstractSankhyaEntity<VendedorVenda> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -45,6 +48,7 @@ public class VendedorVenda extends AbstractSankhyaEntity<VendedorVenda> {
 
    @Override
    public VendedorVenda fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTab = vo.asBigDecimal("CODTAB");
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.codVend = vo.asBigDecimal("CODVEND");

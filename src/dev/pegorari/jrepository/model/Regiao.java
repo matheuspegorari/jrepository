@@ -42,6 +42,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setAnalitica(String analitica) {
+        markAsChanged("ANALITICA", analitica);
         this.analitica = analitica;
    }
 
@@ -50,6 +51,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -58,6 +60,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -66,6 +69,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setCodRegPai(BigDecimal codRegPai) {
+        markAsChanged("CODREGPAI", codRegPai);
         this.codRegPai = codRegPai;
    }
 
@@ -74,6 +78,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -82,6 +87,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setCodTabMin(BigDecimal codTabMin) {
+        markAsChanged("CODTABMIN", codTabMin);
         this.codTabMin = codTabMin;
    }
 
@@ -90,6 +96,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -98,6 +105,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setFreteMin(BigDecimal freteMin) {
+        markAsChanged("FRETEMIN", freteMin);
         this.freteMin = freteMin;
    }
 
@@ -106,6 +114,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setGerarReceita(String gerarReceita) {
+        markAsChanged("GERARRECEITA", gerarReceita);
         this.gerarReceita = gerarReceita;
    }
 
@@ -114,6 +123,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -122,6 +132,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setNomeReg(String nomeReg) {
+        markAsChanged("NOMEREG", nomeReg);
         this.nomeReg = nomeReg;
    }
 
@@ -130,6 +141,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setPercAdicional(BigDecimal percAdicional) {
+        markAsChanged("PERCADICIONAL", percAdicional);
         this.percAdicional = percAdicional;
    }
 
@@ -138,6 +150,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setPercCusVar(BigDecimal percCusVar) {
+        markAsChanged("PERCCUSVAR", percCusVar);
         this.percCusVar = percCusVar;
    }
 
@@ -146,6 +159,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setPercDescFob(BigDecimal percDescFob) {
+        markAsChanged("PERCDESCFOB", percDescFob);
         this.percDescFob = percDescFob;
    }
 
@@ -154,6 +168,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setPercPremio(BigDecimal percPremio) {
+        markAsChanged("PERCPREMIO", percPremio);
         this.percPremio = percPremio;
    }
 
@@ -162,6 +177,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Dom(BigDecimal semana1Dom) {
+        markAsChanged("SEMANA1_DOM", semana1Dom);
         this.semana1Dom = semana1Dom;
    }
 
@@ -170,6 +186,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Qua(BigDecimal semana1Qua) {
+        markAsChanged("SEMANA1_QUA", semana1Qua);
         this.semana1Qua = semana1Qua;
    }
 
@@ -178,6 +195,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Qui(BigDecimal semana1Qui) {
+        markAsChanged("SEMANA1_QUI", semana1Qui);
         this.semana1Qui = semana1Qui;
    }
 
@@ -186,6 +204,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Sab(BigDecimal semana1Sab) {
+        markAsChanged("SEMANA1_SAB", semana1Sab);
         this.semana1Sab = semana1Sab;
    }
 
@@ -194,6 +213,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Seg(BigDecimal semana1Seg) {
+        markAsChanged("SEMANA1_SEG", semana1Seg);
         this.semana1Seg = semana1Seg;
    }
 
@@ -202,6 +222,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Sex(BigDecimal semana1Sex) {
+        markAsChanged("SEMANA1_SEX", semana1Sex);
         this.semana1Sex = semana1Sex;
    }
 
@@ -210,6 +231,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana1Ter(BigDecimal semana1Ter) {
+        markAsChanged("SEMANA1_TER", semana1Ter);
         this.semana1Ter = semana1Ter;
    }
 
@@ -218,6 +240,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Dom(BigDecimal semana2Dom) {
+        markAsChanged("SEMANA2_DOM", semana2Dom);
         this.semana2Dom = semana2Dom;
    }
 
@@ -226,6 +249,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Qua(BigDecimal semana2Qua) {
+        markAsChanged("SEMANA2_QUA", semana2Qua);
         this.semana2Qua = semana2Qua;
    }
 
@@ -234,6 +258,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Qui(BigDecimal semana2Qui) {
+        markAsChanged("SEMANA2_QUI", semana2Qui);
         this.semana2Qui = semana2Qui;
    }
 
@@ -242,6 +267,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Sab(BigDecimal semana2Sab) {
+        markAsChanged("SEMANA2_SAB", semana2Sab);
         this.semana2Sab = semana2Sab;
    }
 
@@ -250,6 +276,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Seg(BigDecimal semana2Seg) {
+        markAsChanged("SEMANA2_SEG", semana2Seg);
         this.semana2Seg = semana2Seg;
    }
 
@@ -258,6 +285,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Sex(BigDecimal semana2Sex) {
+        markAsChanged("SEMANA2_SEX", semana2Sex);
         this.semana2Sex = semana2Sex;
    }
 
@@ -266,6 +294,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setSemana2Ter(BigDecimal semana2Ter) {
+        markAsChanged("SEMANA2_TER", semana2Ter);
         this.semana2Ter = semana2Ter;
    }
 
@@ -274,6 +303,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setVlrAntecipacao(BigDecimal vlrAntecipacao) {
+        markAsChanged("VLRANTECIPACAO", vlrAntecipacao);
         this.vlrAntecipacao = vlrAntecipacao;
    }
 
@@ -282,6 +312,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
    }
 
    public void setVendaMin(BigDecimal vendaMin) {
+        markAsChanged("VENDAMIN", vendaMin);
         this.vendaMin = vendaMin;
    }
 
@@ -297,6 +328,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
 
    @Override
    public Regiao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitica = vo.asString("ANALITICA");
         this.ativa = vo.asString("ATIVA");
         this.codReg = vo.asBigDecimal("CODREG");

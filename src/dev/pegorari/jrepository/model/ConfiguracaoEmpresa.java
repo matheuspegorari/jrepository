@@ -20,6 +20,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCnae(BigDecimal cnae) {
+        markAsChanged("CNAE", cnae);
         this.cnae = cnae;
    }
 
@@ -28,6 +29,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -36,6 +38,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -44,6 +47,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -52,6 +56,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodTribMunIss(String codTribMunIss) {
+        markAsChanged("CODTRIBMUNISS", codTribMunIss);
         this.codTribMunIss = codTribMunIss;
    }
 
@@ -60,6 +65,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodNbs(BigDecimal codNbs) {
+        markAsChanged("CODNBS", codNbs);
         this.codNbs = codNbs;
    }
 
@@ -68,6 +74,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -76,6 +83,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
+        markAsChanged("TIPOSN", tipoSn);
         this.tipoSn = tipoSn;
    }
 
@@ -84,6 +92,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    }
 
    public void setEnqReIntegra(BigDecimal enqReIntegra) {
+        markAsChanged("ENQREINTEGRA", enqReIntegra);
         this.enqReIntegra = enqReIntegra;
    }
 
@@ -99,6 +108,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
 
    @Override
    public ConfiguracaoEmpresa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cnae = vo.asBigDecimal("CNAE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLst = vo.asBigDecimal("CODLST");

@@ -15,6 +15,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -23,6 +24,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    }
 
    public void setNomeCampo(String nomeCampo) {
+        markAsChanged("NOMECAMPO", nomeCampo);
         this.nomeCampo = nomeCampo;
    }
 
@@ -31,6 +33,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -39,6 +42,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -47,6 +51,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
    }
 
    public void setValor(String valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -62,6 +67,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
 
    @Override
    public OpcaoCampoI18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeCampo = vo.asString("NOMECAMPO");
         this.nomeTab = vo.asString("NOMETAB");

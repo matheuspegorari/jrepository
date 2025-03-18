@@ -22,6 +22,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -30,6 +31,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setDhProcess(Timestamp dhProcess) {
+        markAsChanged("DHPROCESS", dhProcess);
         this.dhProcess = dhProcess;
    }
 
@@ -38,6 +40,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -46,6 +49,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setIdEv(String idEv) {
+        markAsChanged("IDEV", idEv);
         this.idEv = idEv;
    }
 
@@ -54,6 +58,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setIndexistInfo(BigDecimal indexistInfo) {
+        markAsChanged("INDEXISTINFO", indexistInfo);
         this.indexistInfo = indexistInfo;
    }
 
@@ -62,6 +67,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -70,6 +76,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setNrRecArqBase(String nrRecArqBase) {
+        markAsChanged("NRRECARQBASE", nrRecArqBase);
         this.nrRecArqBase = nrRecArqBase;
    }
 
@@ -78,6 +85,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -86,6 +94,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -94,6 +103,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -109,6 +119,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
 
    @Override
    public ResumoPorReferencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dhProcess = vo.asTimestamp("DHPROCESS");
         this.dtRef = vo.asTimestamp("DTREF");

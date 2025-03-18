@@ -22,6 +22,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setCusAtend(BigDecimal cusAtend) {
+        markAsChanged("CUSATEND", cusAtend);
         this.cusAtend = cusAtend;
    }
 
@@ -30,6 +31,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setNroAtoConcdraw(String nroAtoConcdraw) {
+        markAsChanged("NROATOCONCDRAW", nroAtoConcdraw);
         this.nroAtoConcdraw = nroAtoConcdraw;
    }
 
@@ -38,6 +40,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setNroMemorando(BigDecimal nroMemorando) {
+        markAsChanged("NROMEMORANDO", nroMemorando);
         this.nroMemorando = nroMemorando;
    }
 
@@ -46,6 +49,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setNroRegExport(String nroRegExport) {
+        markAsChanged("NROREGEXPORT", nroRegExport);
         this.nroRegExport = nroRegExport;
    }
 
@@ -54,6 +58,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -62,6 +67,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -70,6 +76,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setOrdemProd(BigDecimal ordemProd) {
+        markAsChanged("ORDEMPROD", ordemProd);
         this.ordemProd = ordemProd;
    }
 
@@ -78,6 +85,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setQtdAtendida(BigDecimal qtdAtendida) {
+        markAsChanged("QTDATENDIDA", qtdAtendida);
         this.qtdAtendida = qtdAtendida;
    }
 
@@ -86,6 +94,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -94,6 +103,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
+        markAsChanged("SEQUENCIAORIG", sequenciaOrig);
         this.sequenciaOrig = sequenciaOrig;
    }
 
@@ -102,6 +112,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
    }
 
    public void setStatusNota(String statusNota) {
+        markAsChanged("STATUSNOTA", statusNota);
         this.statusNota = statusNota;
    }
 
@@ -117,6 +128,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
 
    @Override
    public LigacaoPedidoNotaTemp fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cusAtend = vo.asBigDecimal("CUSATEND");
         this.nroAtoConcdraw = vo.asString("NROATOCONCDRAW");
         this.nroMemorando = vo.asBigDecimal("NROMEMORANDO");

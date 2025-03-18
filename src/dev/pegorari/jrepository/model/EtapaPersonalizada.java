@@ -20,6 +20,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setArqModEmail(String arqModEmail) {
+        markAsChanged("ARQMODEMAIL", arqModEmail);
         this.arqModEmail = arqModEmail;
    }
 
@@ -28,6 +29,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setCodEpe(BigDecimal codEpe) {
+        markAsChanged("CODEPE", codEpe);
         this.codEpe = codEpe;
    }
 
@@ -36,6 +38,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -44,6 +47,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -52,6 +56,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setDtAbertura(Timestamp dtAbertura) {
+        markAsChanged("DTABERTURA", dtAbertura);
         this.dtAbertura = dtAbertura;
    }
 
@@ -60,6 +65,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -68,6 +74,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -76,6 +83,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -91,6 +99,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
 
    @Override
    public EtapaPersonalizada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqModEmail = vo.asString("ARQMODEMAIL");
         this.codEpe = vo.asBigDecimal("CODEPE");
         this.codEtapa = vo.asBigDecimal("CODETAPA");

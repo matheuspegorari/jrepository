@@ -18,6 +18,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -26,6 +27,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -34,6 +36,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setDescricaoCorreio(String descricaoCorreio) {
+        markAsChanged("DESCRICAOCORREIO", descricaoCorreio);
         this.descricaoCorreio = descricaoCorreio;
    }
 
@@ -42,6 +45,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -50,6 +54,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setNomeBai(String nomeBai) {
+        markAsChanged("NOMEBAI", nomeBai);
         this.nomeBai = nomeBai;
    }
 
@@ -58,6 +63,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -73,6 +79,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
 
    @Override
    public Bairro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codReg = vo.asBigDecimal("CODREG");
         this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");

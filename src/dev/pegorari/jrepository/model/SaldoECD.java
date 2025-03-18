@@ -22,6 +22,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setSaldoFinMes(BigDecimal saldoFinMes) {
+        markAsChanged("SALDOFINMES", saldoFinMes);
         this.saldoFinMes = saldoFinMes;
    }
 
@@ -30,6 +31,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -38,6 +40,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setIndStIni(String indStIni) {
+        markAsChanged("INDSTINI", indStIni);
         this.indStIni = indStIni;
    }
 
@@ -46,6 +49,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setCodCencus(String codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -54,6 +58,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setIndStFin(String indStFin) {
+        markAsChanged("INDSTFIN", indStFin);
         this.indStFin = indStFin;
    }
 
@@ -62,6 +67,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setSaldoInicMes(BigDecimal saldoInicMes) {
+        markAsChanged("SALDOINICMES", saldoInicMes);
         this.saldoInicMes = saldoInicMes;
    }
 
@@ -70,6 +76,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setCredMes(BigDecimal credMes) {
+        markAsChanged("CREDMES", credMes);
         this.credMes = credMes;
    }
 
@@ -78,6 +85,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setDebMes(BigDecimal debMes) {
+        markAsChanged("DEBMES", debMes);
         this.debMes = debMes;
    }
 
@@ -86,6 +94,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setCtaCtb(String ctaCtb) {
+        markAsChanged("CTACTB", ctaCtb);
         this.ctaCtb = ctaCtb;
    }
 
@@ -94,6 +103,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -109,6 +119,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
 
    @Override
    public SaldoECD fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.saldoFinMes = vo.asBigDecimal("SALDOFINMES");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.indStIni = vo.asString("INDSTINI");

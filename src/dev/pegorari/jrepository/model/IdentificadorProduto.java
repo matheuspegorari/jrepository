@@ -17,6 +17,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setIdentificador(String identificador) {
+        markAsChanged("IDENTIFICADOR", identificador);
         this.identificador = identificador;
    }
 
@@ -25,6 +26,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -33,6 +35,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -41,6 +44,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setSeqId(BigDecimal seqId) {
+        markAsChanged("SEQID", seqId);
         this.seqId = seqId;
    }
 
@@ -49,6 +53,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setAgrupamento(BigDecimal agrupamento) {
+        markAsChanged("AGRUPAMENTO", agrupamento);
         this.agrupamento = agrupamento;
    }
 
@@ -57,6 +62,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
    }
 
    public void setSeqConf(BigDecimal seqConf) {
+        markAsChanged("SEQCONF", seqConf);
         this.seqConf = seqConf;
    }
 
@@ -72,6 +78,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
 
    @Override
    public IdentificadorProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.identificador = vo.asString("IDENTIFICADOR");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.nome = vo.asString("NOME");

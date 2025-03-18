@@ -15,6 +15,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -23,6 +24,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -31,6 +33,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -39,6 +42,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -54,6 +58,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
 
    @Override
    public SerieEmpresa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

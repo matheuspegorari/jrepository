@@ -81,6 +81,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -89,6 +90,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setBaixaCerto(String baixaCerto) {
+        markAsChanged("BAIXACERTO", baixaCerto);
         this.baixaCerto = baixaCerto;
    }
 
@@ -97,6 +99,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCarencia(BigDecimal carencia) {
+        markAsChanged("CARENCIA", carencia);
         this.carencia = carencia;
    }
 
@@ -105,6 +108,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCartaoDesc(BigDecimal cartaoDesc) {
+        markAsChanged("CARTAODESC", cartaoDesc);
         this.cartaoDesc = cartaoDesc;
    }
 
@@ -113,6 +117,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCartaoTaxa(BigDecimal cartaoTaxa) {
+        markAsChanged("CARTAOTAXA", cartaoTaxa);
         this.cartaoTaxa = cartaoTaxa;
    }
 
@@ -121,6 +126,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -129,6 +135,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -137,6 +144,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodCtaCtb3(BigDecimal codCtaCtb3) {
+        markAsChanged("CODCTACTB3", codCtaCtb3);
         this.codCtaCtb3 = codCtaCtb3;
    }
 
@@ -145,6 +153,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodDetRecGnre(BigDecimal codDetRecGnre) {
+        markAsChanged("CODDETRECGNRE", codDetRecGnre);
         this.codDetRecGnre = codDetRecGnre;
    }
 
@@ -153,6 +162,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodGrupoTipTit(BigDecimal codGrupoTipTit) {
+        markAsChanged("CODGRUPOTIPTIT", codGrupoTipTit);
         this.codGrupoTipTit = codGrupoTipTit;
    }
 
@@ -161,6 +171,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -169,6 +180,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodParcTef(BigDecimal codParcTef) {
+        markAsChanged("CODPARCTEF", codParcTef);
         this.codParcTef = codParcTef;
    }
 
@@ -177,6 +189,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodProdGnre(BigDecimal codProdGnre) {
+        markAsChanged("CODPRODGNRE", codProdGnre);
         this.codProdGnre = codProdGnre;
    }
 
@@ -185,6 +198,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodRecGnre(BigDecimal codRecGnre) {
+        markAsChanged("CODRECGNRE", codRecGnre);
         this.codRecGnre = codRecGnre;
    }
 
@@ -193,6 +207,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -201,6 +216,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setConferencia(String conferencia) {
+        markAsChanged("CONFERENCIA", conferencia);
         this.conferencia = conferencia;
    }
 
@@ -209,6 +225,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setDescTipTit(String descTipTit) {
+        markAsChanged("DESCRTIPTIT", descTipTit);
         this.descTipTit = descTipTit;
    }
 
@@ -217,6 +234,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setEspDoc(String espDoc) {
+        markAsChanged("ESPDOC", espDoc);
         this.espDoc = espDoc;
    }
 
@@ -225,6 +243,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setExibBaix(String exibBaix) {
+        markAsChanged("EXIBBAIX", exibBaix);
         this.exibBaix = exibBaix;
    }
 
@@ -233,6 +252,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setExigBaixaAcerto(String exigBaixaAcerto) {
+        markAsChanged("EXIGBAIXAACERTO", exigBaixaAcerto);
         this.exigBaixaAcerto = exigBaixaAcerto;
    }
 
@@ -241,6 +261,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setExpGrs(BigDecimal expGrs) {
+        markAsChanged("EXPGRS", expGrs);
         this.expGrs = expGrs;
    }
 
@@ -249,6 +270,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setExpTes(String expTes) {
+        markAsChanged("EXPTES", expTes);
         this.expTes = expTes;
    }
 
@@ -257,6 +279,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setFastBaixa(String fastBaixa) {
+        markAsChanged("FASTBAIXA", fastBaixa);
         this.fastBaixa = fastBaixa;
    }
 
@@ -265,6 +288,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setFastUsa(String fastUsa) {
+        markAsChanged("FASTUSA", fastUsa);
         this.fastUsa = fastUsa;
    }
 
@@ -273,6 +297,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setFiscal(String fiscal) {
+        markAsChanged("FISCAL", fiscal);
         this.fiscal = fiscal;
    }
 
@@ -281,6 +306,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setGrupoLimCred(String grupoLimCred) {
+        markAsChanged("GRUPOLIMCRED", grupoLimCred);
         this.grupoLimCred = grupoLimCred;
    }
 
@@ -289,6 +315,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setImagem(byte[] imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -297,6 +324,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setImpBolReneg(String impBolReneg) {
+        markAsChanged("IMPBOLRENEG", impBolReneg);
         this.impBolReneg = impBolReneg;
    }
 
@@ -305,6 +333,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setIndTit(BigDecimal indTit) {
+        markAsChanged("INDTIT", indTit);
         this.indTit = indTit;
    }
 
@@ -313,6 +342,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setInfCmc7(String infCmc7) {
+        markAsChanged("INFCMC7", infCmc7);
         this.infCmc7 = infCmc7;
    }
 
@@ -321,6 +351,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setPercCusVar(BigDecimal percCusVar) {
+        markAsChanged("PERCCUSVAR", percCusVar);
         this.percCusVar = percCusVar;
    }
 
@@ -329,6 +360,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setPercJuros(BigDecimal percJuros) {
+        markAsChanged("PERCJUROS", percJuros);
         this.percJuros = percJuros;
    }
 
@@ -337,6 +369,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setPercMulta(BigDecimal percMulta) {
+        markAsChanged("PERCMULTA", percMulta);
         this.percMulta = percMulta;
    }
 
@@ -345,6 +378,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setPrazo(BigDecimal prazo) {
+        markAsChanged("PRAZO", prazo);
         this.prazo = prazo;
    }
 
@@ -353,6 +387,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setSubTipoVenda(String subTipoVenda) {
+        markAsChanged("SUBTIPOVENDA", subTipoVenda);
         this.subTipoVenda = subTipoVenda;
    }
 
@@ -361,6 +396,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTransfBaix(String transfBaix) {
+        markAsChanged("TRANSFBAIX", transfBaix);
         this.transfBaix = transfBaix;
    }
 
@@ -369,6 +405,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTransfDif(String transfDif) {
+        markAsChanged("TRANSFDIF", transfDif);
         this.transfDif = transfDif;
    }
 
@@ -377,6 +414,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTransfPend(String transfPend) {
+        markAsChanged("TRANSFPEND", transfPend);
         this.transfPend = transfPend;
    }
 
@@ -385,6 +423,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setValidaQtdMaxTitVencidos(String validaQtdMaxTitVencidos) {
+        markAsChanged("VALIDAQTDMAXTITVENCIDOS", validaQtdMaxTitVencidos);
         this.validaQtdMaxTitVencidos = validaQtdMaxTitVencidos;
    }
 
@@ -393,6 +432,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setVlrCusVar(BigDecimal vlrCusVar) {
+        markAsChanged("VLRCUSVAR", vlrCusVar);
         this.vlrCusVar = vlrCusVar;
    }
 
@@ -401,6 +441,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setImpComprovante(String impComprovante) {
+        markAsChanged("IMPCOMPROVANTE", impComprovante);
         this.impComprovante = impComprovante;
    }
 
@@ -409,6 +450,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setAjustavp(String ajustavp) {
+        markAsChanged("AJUSTAVP", ajustavp);
         this.ajustavp = ajustavp;
    }
 
@@ -417,6 +459,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTpAgNfce(String tpAgNfce) {
+        markAsChanged("TPAGNFCE", tpAgNfce);
         this.tpAgNfce = tpAgNfce;
    }
 
@@ -425,6 +468,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setUtilizaPos(String utilizaPos) {
+        markAsChanged("UTILIZAPOS", utilizaPos);
         this.utilizaPos = utilizaPos;
    }
 
@@ -433,6 +477,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setArredPrimeiraParc(String arredPrimeiraParc) {
+        markAsChanged("ARREDPRIMEIRAPARC", arredPrimeiraParc);
         this.arredPrimeiraParc = arredPrimeiraParc;
    }
 
@@ -441,6 +486,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setQtdParcelCtf(BigDecimal qtdParcelCtf) {
+        markAsChanged("QTDPARCELCTF", qtdParcelCtf);
         this.qtdParcelCtf = qtdParcelCtf;
    }
 
@@ -449,6 +495,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setRecebAntAprov(String recebAntAprov) {
+        markAsChanged("RECEBANTAPROV", recebAntAprov);
         this.recebAntAprov = recebAntAprov;
    }
 
@@ -457,6 +504,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTimUsadoLocacao(String timUsadoLocacao) {
+        markAsChanged("TIMUSADOLOCACAO", timUsadoLocacao);
         this.timUsadoLocacao = timUsadoLocacao;
    }
 
@@ -465,6 +513,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTruncParcela(String truncParcela) {
+        markAsChanged("TRUNCPARCELA", truncParcela);
         this.truncParcela = truncParcela;
    }
 
@@ -473,6 +522,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTipDocRural(String tipDocRural) {
+        markAsChanged("TIPDOCRURAL", tipDocRural);
         this.tipDocRural = tipDocRural;
    }
 
@@ -481,6 +531,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setNroParcelas(BigDecimal nroParcelas) {
+        markAsChanged("NROPARCELAS", nroParcelas);
         this.nroParcelas = nroParcelas;
    }
 
@@ -489,6 +540,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setOperacaoCtf(String operacaoCtf) {
+        markAsChanged("OPERACAOCTF", operacaoCtf);
         this.operacaoCtf = operacaoCtf;
    }
 
@@ -497,6 +549,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setTipVenc(String tipVenc) {
+        markAsChanged("TIPVENC", tipVenc);
         this.tipVenc = tipVenc;
    }
 
@@ -505,6 +558,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setDiaVenc(BigDecimal diaVenc) {
+        markAsChanged("DIAVENC", diaVenc);
         this.diaVenc = diaVenc;
    }
 
@@ -513,6 +567,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodBandeiraEconect(String codBandeiraEconect) {
+        markAsChanged("CODBANDEIRAECONECT", codBandeiraEconect);
         this.codBandeiraEconect = codBandeiraEconect;
    }
 
@@ -521,6 +576,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCodFinalizadora(BigDecimal codFinalizadora) {
+        markAsChanged("CODFINALIZADORA", codFinalizadora);
         this.codFinalizadora = codFinalizadora;
    }
 
@@ -529,6 +585,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setGrupoFinalizadora(BigDecimal grupoFinalizadora) {
+        markAsChanged("GRUPOFINALIZADORA", grupoFinalizadora);
         this.grupoFinalizadora = grupoFinalizadora;
    }
 
@@ -537,6 +594,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setIntegraEconect(String integraEconect) {
+        markAsChanged("INTEGRAECONECT", integraEconect);
         this.integraEconect = integraEconect;
    }
 
@@ -545,6 +603,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setConvenioEconect(String convenioEconect) {
+        markAsChanged("CONVENIOECONECT", convenioEconect);
         this.convenioEconect = convenioEconect;
    }
 
@@ -553,6 +612,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setIndReceFdCont(String indReceFdCont) {
+        markAsChanged("INDRECEFDCONT", indReceFdCont);
         this.indReceFdCont = indReceFdCont;
    }
 
@@ -561,6 +621,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setInfCompleFdCont(String infCompleFdCont) {
+        markAsChanged("INFCOMPLEFDCONT", infCompleFdCont);
         this.infCompleFdCont = infCompleFdCont;
    }
 
@@ -569,6 +630,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setNroParcelasMax(BigDecimal nroParcelasMax) {
+        markAsChanged("NROPARCELASMAX", nroParcelasMax);
         this.nroParcelasMax = nroParcelasMax;
    }
 
@@ -577,6 +639,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setAlteraSimulTpv(String alteraSimulTpv) {
+        markAsChanged("ALTERASIMULTPV", alteraSimulTpv);
         this.alteraSimulTpv = alteraSimulTpv;
    }
 
@@ -585,6 +648,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setDescTpagNfce(String descTpagNfce) {
+        markAsChanged("DESCRTPAGNFCE", descTpagNfce);
         this.descTpagNfce = descTpagNfce;
    }
 
@@ -593,6 +657,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setUltilizaPdvWeb(String ultilizaPdvWeb) {
+        markAsChanged("ULTILIZAPDVWEB", ultilizaPdvWeb);
         this.ultilizaPdvWeb = ultilizaPdvWeb;
    }
 
@@ -601,6 +666,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setProibImpBol(String proibImpBol) {
+        markAsChanged("PROIBIMPBOL", proibImpBol);
         this.proibImpBol = proibImpBol;
    }
 
@@ -609,6 +675,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setVlrParcMinCart(BigDecimal vlrParcMinCart) {
+        markAsChanged("VLRPARCMINCART", vlrParcMinCart);
         this.vlrParcMinCart = vlrParcMinCart;
    }
 
@@ -617,6 +684,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setConsDiasUteis(String consDiasUteis) {
+        markAsChanged("CONSDIASUTEIS", consDiasUteis);
         this.consDiasUteis = consDiasUteis;
    }
 
@@ -625,6 +693,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setCredenciadoraCfe(String credenciadoraCfe) {
+        markAsChanged("CREDENCIADORACFE", credenciadoraCfe);
         this.credenciadoraCfe = credenciadoraCfe;
    }
 
@@ -633,6 +702,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
    }
 
    public void setNsuOpcionalPos(String nsuOpcionalPos) {
+        markAsChanged("NSUOPCIONALPOS", nsuOpcionalPos);
         this.nsuOpcionalPos = nsuOpcionalPos;
    }
 
@@ -648,6 +718,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
 
    @Override
    public TipoTitulo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.baixaCerto = vo.asString("BAIXACERTO");
         this.carencia = vo.asBigDecimal("CARENCIA");

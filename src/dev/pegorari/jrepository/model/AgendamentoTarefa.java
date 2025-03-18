@@ -30,6 +30,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -38,6 +39,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -46,6 +48,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -54,6 +57,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -62,6 +66,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDhExecucao(Timestamp dhExecucao) {
+        markAsChanged("DHEXECUCAO", dhExecucao);
         this.dhExecucao = dhExecucao;
    }
 
@@ -70,6 +75,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDhProxExec(Timestamp dhProxExec) {
+        markAsChanged("DHPROXEXEC", dhProxExec);
         this.dhProxExec = dhProxExec;
    }
 
@@ -78,6 +84,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDhUltExec(Timestamp dhUltExec) {
+        markAsChanged("DHULTEXEC", dhUltExec);
         this.dhUltExec = dhUltExec;
    }
 
@@ -86,6 +93,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDiaMes(String diaMes) {
+        markAsChanged("DIAMES", diaMes);
         this.diaMes = diaMes;
    }
 
@@ -94,6 +102,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setDiaSemana(String diaSemana) {
+        markAsChanged("DIASEMANA", diaSemana);
         this.diaSemana = diaSemana;
    }
 
@@ -102,6 +111,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setHorario(String horario) {
+        markAsChanged("HORARIO", horario);
         this.horario = horario;
    }
 
@@ -110,6 +120,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setMes(String mes) {
+        markAsChanged("MES", mes);
         this.mes = mes;
    }
 
@@ -118,6 +129,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setNuAgendamento(BigDecimal nuAgendamento) {
+        markAsChanged("NUAGENDAMENTO", nuAgendamento);
         this.nuAgendamento = nuAgendamento;
    }
 
@@ -126,6 +138,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -134,6 +147,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setTipoAge(String tipoAge) {
+        markAsChanged("TIPOAGE", tipoAge);
         this.tipoAge = tipoAge;
    }
 
@@ -142,6 +156,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setTipoExec(String tipoExec) {
+        markAsChanged("TIPOEXEC", tipoExec);
         this.tipoExec = tipoExec;
    }
 
@@ -150,6 +165,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setInfo(char[] info) {
+        markAsChanged("INFO", info);
         this.info = info;
    }
 
@@ -158,6 +174,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setStatusUltExec(String statusUltExec) {
+        markAsChanged("STATUSULTEXEC", statusUltExec);
         this.statusUltExec = statusUltExec;
    }
 
@@ -166,6 +183,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
    }
 
    public void setGeraLotePara(String geraLotePara) {
+        markAsChanged("GERALOTEPARA", geraLotePara);
         this.geraLotePara = geraLotePara;
    }
 
@@ -181,6 +199,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
 
    @Override
    public AgendamentoTarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.config = vo.asClob("CONFIG");

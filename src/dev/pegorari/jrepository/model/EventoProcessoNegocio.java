@@ -23,6 +23,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setAcao(String acao) {
+        markAsChanged("ACAO", acao);
         this.acao = acao;
    }
 
@@ -31,6 +32,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setCodPrn(BigDecimal codPrn) {
+        markAsChanged("CODPRN", codPrn);
         this.codPrn = codPrn;
    }
 
@@ -39,6 +41,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setDescRevento(String descRevento) {
+        markAsChanged("DESCREVENTO", descRevento);
         this.descRevento = descRevento;
    }
 
@@ -47,6 +50,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setFormato(String formato) {
+        markAsChanged("FORMATO", formato);
         this.formato = formato;
    }
 
@@ -55,6 +59,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setFormulario(String formulario) {
+        markAsChanged("FORMULARIO", formulario);
         this.formulario = formulario;
    }
 
@@ -63,6 +68,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setIdElemento(String idElemento) {
+        markAsChanged("IDELEMENTO", idElemento);
         this.idElemento = idElemento;
    }
 
@@ -71,6 +77,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setNuEvent(BigDecimal nuEvent) {
+        markAsChanged("NUEVENT", nuEvent);
         this.nuEvent = nuEvent;
    }
 
@@ -79,6 +86,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setOnde(String onde) {
+        markAsChanged("ONDE", onde);
         this.onde = onde;
    }
 
@@ -87,6 +95,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setQuando(String quando) {
+        markAsChanged("QUANDO", quando);
         this.quando = quando;
    }
 
@@ -95,6 +104,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -103,6 +113,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setTipoAcao(BigDecimal tipoAcao) {
+        markAsChanged("TIPOACAO", tipoAcao);
         this.tipoAcao = tipoAcao;
    }
 
@@ -111,6 +122,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -126,6 +138,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
 
    @Override
    public EventoProcessoNegocio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acao = vo.asString("ACAO");
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.descRevento = vo.asString("DESCREVENTO");

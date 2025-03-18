@@ -78,6 +78,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodInc(BigDecimal codInc) {
+        markAsChanged("CODINC", codInc);
         this.codInc = codInc;
    }
 
@@ -86,6 +87,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -94,6 +96,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodTribMunIss(String codTribMunIss) {
+        markAsChanged("CODTRIBMUNISS", codTribMunIss);
         this.codTribMunIss = codTribMunIss;
    }
 
@@ -102,6 +105,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -110,6 +114,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setComIva(String comIva) {
+        markAsChanged("COMIVA", comIva);
         this.comIva = comIva;
    }
 
@@ -118,6 +123,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCst(BigDecimal cst) {
+        markAsChanged("CST", cst);
         this.cst = cst;
    }
 
@@ -126,6 +132,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -134,6 +141,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -142,6 +150,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setIva(BigDecimal iva) {
+        markAsChanged("IVA", iva);
         this.iva = iva;
    }
 
@@ -150,6 +159,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -158,6 +168,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPauta(BigDecimal pauta) {
+        markAsChanged("PAUTA", pauta);
         this.pauta = pauta;
    }
 
@@ -166,6 +177,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercVlr(String percVlr) {
+        markAsChanged("PERCVLR", percVlr);
         this.percVlr = percVlr;
    }
 
@@ -174,6 +186,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setRetemFin(String retemFin) {
+        markAsChanged("RETEMFIN", retemFin);
         this.retemFin = retemFin;
    }
 
@@ -182,6 +195,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -190,6 +204,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -198,6 +213,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTipoDeDiss(String tipoDeDiss) {
+        markAsChanged("TIPODEDISS", tipoDeDiss);
         this.tipoDeDiss = tipoDeDiss;
    }
 
@@ -206,6 +222,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -214,6 +231,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrCred(BigDecimal vlrCred) {
+        markAsChanged("VLRCRED", vlrCred);
         this.vlrCred = vlrCred;
    }
 
@@ -222,6 +240,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrRepRed(BigDecimal vlrRepRed) {
+        markAsChanged("VLRREPRED", vlrRepRed);
         this.vlrRepRed = vlrRepRed;
    }
 
@@ -230,6 +249,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercRedBase(BigDecimal percRedBase) {
+        markAsChanged("PERCREDBASE", percRedBase);
         this.percRedBase = percRedBase;
    }
 
@@ -238,6 +258,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrDifAlDest(BigDecimal vlrDifAlDest) {
+        markAsChanged("VLRDIFALDEST", vlrDifAlDest);
         this.vlrDifAlDest = vlrDifAlDest;
    }
 
@@ -246,6 +267,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrFcp(BigDecimal vlrFcp) {
+        markAsChanged("VLRFCP", vlrFcp);
         this.vlrFcp = vlrFcp;
    }
 
@@ -254,6 +276,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercFcp(BigDecimal percFcp) {
+        markAsChanged("PERCFCP", percFcp);
         this.percFcp = percFcp;
    }
 
@@ -262,6 +285,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercPartDifal(BigDecimal percPartDifal) {
+        markAsChanged("PERCPARTDIFAL", percPartDifal);
         this.percPartDifal = percPartDifal;
    }
 
@@ -270,6 +294,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliqIntDest(BigDecimal aliqIntDest) {
+        markAsChanged("ALIQINTDEST", aliqIntDest);
         this.aliqIntDest = aliqIntDest;
    }
 
@@ -278,6 +303,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrDifalRem(BigDecimal vlrDifalRem) {
+        markAsChanged("VLRDIFALREM", vlrDifalRem);
         this.vlrDifalRem = vlrDifalRem;
    }
 
@@ -286,6 +312,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseRed(BigDecimal baseRed) {
+        markAsChanged("BASERED", baseRed);
         this.baseRed = baseRed;
    }
 
@@ -294,6 +321,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodImp(BigDecimal codImp) {
+        markAsChanged("CODIMP", codImp);
         this.codImp = codImp;
    }
 
@@ -302,6 +330,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -310,6 +339,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliquotaNormal(BigDecimal aliquotaNormal) {
+        markAsChanged("ALIQUOTANORMAL", aliquotaNormal);
         this.aliquotaNormal = aliquotaNormal;
    }
 
@@ -318,6 +348,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBase(BigDecimal base) {
+        markAsChanged("BASE", base);
         this.base = base;
    }
 
@@ -326,6 +357,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliqDiferencial(BigDecimal aliqDiferencial) {
+        markAsChanged("ALIQDIFERENCIAL", aliqDiferencial);
         this.aliqDiferencial = aliqDiferencial;
    }
 
@@ -334,6 +366,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliquotaEfet(BigDecimal aliquotaEfet) {
+        markAsChanged("ALIQUOTAEFET", aliquotaEfet);
         this.aliquotaEfet = aliquotaEfet;
    }
 
@@ -342,6 +375,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseNormDifIcms(BigDecimal baseNormDifIcms) {
+        markAsChanged("BASENORMDIFICMS", baseNormDifIcms);
         this.baseNormDifIcms = baseNormDifIcms;
    }
 
@@ -350,6 +384,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseRedEfet(BigDecimal baseRedEfet) {
+        markAsChanged("BASEREDEFET", baseRedEfet);
         this.baseRedEfet = baseRedEfet;
    }
 
@@ -358,6 +393,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercRedBaseEfet(BigDecimal percRedBaseEfet) {
+        markAsChanged("PERCREDBASEEFET", percRedBaseEfet);
         this.percRedBaseEfet = percRedBaseEfet;
    }
 
@@ -366,6 +402,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setValorDiferencial(BigDecimal valorDiferencial) {
+        markAsChanged("VALORDIFERENCIAL", valorDiferencial);
         this.valorDiferencial = valorDiferencial;
    }
 
@@ -374,6 +411,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setValorEfet(BigDecimal valorEfet) {
+        markAsChanged("VALOREFET", valorEfet);
         this.valorEfet = valorEfet;
    }
 
@@ -382,6 +420,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrRepRedSemDesc(BigDecimal vlrRepRedSemDesc) {
+        markAsChanged("VLRREPREDSEMDESC", vlrRepRedSemDesc);
         this.vlrRepRedSemDesc = vlrRepRedSemDesc;
    }
 
@@ -390,6 +429,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliqParaDifal(BigDecimal aliqParaDifal) {
+        markAsChanged("ALIQPARADIFAL", aliqParaDifal);
         this.aliqParaDifal = aliqParaDifal;
    }
 
@@ -398,6 +438,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercInssEspecial(BigDecimal percInssEspecial) {
+        markAsChanged("PERCINSSESPECIAL", percInssEspecial);
         this.percInssEspecial = percInssEspecial;
    }
 
@@ -406,6 +447,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTipoInssEspecial(String tipoInssEspecial) {
+        markAsChanged("TIPOINSSESPECIAL", tipoInssEspecial);
         this.tipoInssEspecial = tipoInssEspecial;
    }
 
@@ -414,6 +456,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrIcmsParaDifal(BigDecimal vlrIcmsParaDifal) {
+        markAsChanged("VLRICMSPARADIFAL", vlrIcmsParaDifal);
         this.vlrIcmsParaDifal = vlrIcmsParaDifal;
    }
 
@@ -422,6 +465,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrInssEspecial(BigDecimal vlrInssEspecial) {
+        markAsChanged("VLRINSSESPECIAL", vlrInssEspecial);
         this.vlrInssEspecial = vlrInssEspecial;
    }
 
@@ -430,6 +474,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrRepDifalFcp(BigDecimal vlrRepDifalFcp) {
+        markAsChanged("VLRREPDIFALFCP", vlrRepDifalFcp);
         this.vlrRepDifalFcp = vlrRepDifalFcp;
    }
 
@@ -438,6 +483,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseFcp(BigDecimal baseFcp) {
+        markAsChanged("BASEFCP", baseFcp);
         this.baseFcp = baseFcp;
    }
 
@@ -446,6 +492,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseFcpInt(BigDecimal baseFcpInt) {
+        markAsChanged("BASEFCPINT", baseFcpInt);
         this.baseFcpInt = baseFcpInt;
    }
 
@@ -454,6 +501,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrFcpInt(BigDecimal vlrFcpInt) {
+        markAsChanged("VLRFCPINT", vlrFcpInt);
         this.vlrFcpInt = vlrFcpInt;
    }
 
@@ -462,6 +510,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercFcpInt(BigDecimal percFcpInt) {
+        markAsChanged("PERCFCPINT", percFcpInt);
         this.percFcpInt = percFcpInt;
    }
 
@@ -470,6 +519,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercRedVlrIpi(BigDecimal percRedVlrIpi) {
+        markAsChanged("PERCREDVLRIPI", percRedVlrIpi);
         this.percRedVlrIpi = percRedVlrIpi;
    }
 
@@ -478,6 +528,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliqDespAcess(BigDecimal aliqDespAcess) {
+        markAsChanged("ALIQDESPACESS", aliqDespAcess);
         this.aliqDespAcess = aliqDespAcess;
    }
 
@@ -486,6 +537,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setBaseDifal(BigDecimal baseDifal) {
+        markAsChanged("BASEDIFAL", baseDifal);
         this.baseDifal = baseDifal;
    }
 
@@ -494,6 +546,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTipCalcDifal(BigDecimal tipCalcDifal) {
+        markAsChanged("TIPCALCDIFAL", tipCalcDifal);
         this.tipCalcDifal = tipCalcDifal;
    }
 
@@ -502,6 +555,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setAliquotaDeson(BigDecimal aliquotaDeson) {
+        markAsChanged("ALIQUOTADESON", aliquotaDeson);
         this.aliquotaDeson = aliquotaDeson;
    }
 
@@ -510,6 +564,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setValorDeson(BigDecimal valorDeson) {
+        markAsChanged("VALORDESON", valorDeson);
         this.valorDeson = valorDeson;
    }
 
@@ -518,6 +573,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTipCalcFcpEspec(BigDecimal tipCalcFcpEspec) {
+        markAsChanged("TIPCALCFCPESPEC", tipCalcFcpEspec);
         this.tipCalcFcpEspec = tipCalcFcpEspec;
    }
 
@@ -526,6 +582,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodNatRend(BigDecimal codNatRend) {
+        markAsChanged("CODNATREND", codNatRend);
         this.codNatRend = codNatRend;
    }
 
@@ -534,6 +591,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
+        markAsChanged("TPIRRFEXT", tpIrrfExt);
         this.tpIrrfExt = tpIrrfExt;
    }
 
@@ -542,6 +600,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setCodBen(String codBen) {
+        markAsChanged("CODBEN", codBen);
         this.codBen = codBen;
    }
 
@@ -550,6 +609,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercRedPr(BigDecimal percRedPr) {
+        markAsChanged("PERCREDPR", percRedPr);
         this.percRedPr = percRedPr;
    }
 
@@ -558,6 +618,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrCredPr(BigDecimal vlrCredPr) {
+        markAsChanged("VLRCREDPR", vlrCredPr);
         this.vlrCredPr = vlrCredPr;
    }
 
@@ -566,6 +627,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setMotRedAdRem(BigDecimal motRedAdRem) {
+        markAsChanged("MOTREDADREM", motRedAdRem);
         this.motRedAdRem = motRedAdRem;
    }
 
@@ -574,6 +636,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setPercAliqAdRemIcms(BigDecimal percAliqAdRemIcms) {
+        markAsChanged("PERCALIQADREMICMS", percAliqAdRemIcms);
         this.percAliqAdRemIcms = percAliqAdRemIcms;
    }
 
@@ -582,6 +645,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrIcmsMonoDev(BigDecimal vlrIcmsMonoDev) {
+        markAsChanged("VLRICMSMONODEV", vlrIcmsMonoDev);
         this.vlrIcmsMonoDev = vlrIcmsMonoDev;
    }
 
@@ -590,6 +654,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setVlrIcmsMonoDif(BigDecimal vlrIcmsMonoDif) {
+        markAsChanged("VLRICMSMONODIF", vlrIcmsMonoDif);
         this.vlrIcmsMonoDif = vlrIcmsMonoDif;
    }
 
@@ -598,6 +663,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
    }
 
    public void setIdAliq(BigDecimal idAliq) {
+        markAsChanged("IDALIQ", idAliq);
         this.idAliq = idAliq;
    }
 
@@ -613,6 +679,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
 
    @Override
    public ImpostoItemNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codInc = vo.asBigDecimal("CODINC");
         this.codLst = vo.asBigDecimal("CODLST");
         this.codTribMunIss = vo.asString("CODTRIBMUNISS");

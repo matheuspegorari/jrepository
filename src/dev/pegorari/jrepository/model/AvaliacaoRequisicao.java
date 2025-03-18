@@ -19,6 +19,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setObsAvaliacao(String obsAvaliacao) {
+        markAsChanged("OBSAVALIACAO", obsAvaliacao);
         this.obsAvaliacao = obsAvaliacao;
    }
 
@@ -27,6 +28,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setCodMotivo(BigDecimal codMotivo) {
+        markAsChanged("CODMOTIVO", codMotivo);
         this.codMotivo = codMotivo;
    }
 
@@ -35,6 +37,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -43,6 +46,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
+        markAsChanged("NUAVALIACAO", nuAvaliacao);
         this.nuAvaliacao = nuAvaliacao;
    }
 
@@ -51,6 +55,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -59,6 +64,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setDhAvaliacao(Timestamp dhAvaliacao) {
+        markAsChanged("DHAVALIACAO", dhAvaliacao);
         this.dhAvaliacao = dhAvaliacao;
    }
 
@@ -67,6 +73,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -82,6 +89,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
 
    @Override
    public AvaliacaoRequisicao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.obsAvaliacao = vo.asString("OBSAVALIACAO");
         this.codMotivo = vo.asBigDecimal("CODMOTIVO");
         this.codUsu = vo.asBigDecimal("CODUSU");

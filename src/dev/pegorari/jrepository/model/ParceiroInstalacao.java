@@ -31,6 +31,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -39,6 +40,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -47,6 +49,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setContato(String contato) {
+        markAsChanged("CONTATO", contato);
         this.contato = contato;
    }
 
@@ -55,6 +58,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setDtInst(Timestamp dtInst) {
+        markAsChanged("DTINST", dtInst);
         this.dtInst = dtInst;
    }
 
@@ -63,6 +67,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setDtPrevInst(Timestamp dtPrevInst) {
+        markAsChanged("DTPREVINST", dtPrevInst);
         this.dtPrevInst = dtPrevInst;
    }
 
@@ -71,6 +76,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -79,6 +85,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -87,6 +94,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setObs1(String obs1) {
+        markAsChanged("OBS1", obs1);
         this.obs1 = obs1;
    }
 
@@ -95,6 +103,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -103,6 +112,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -111,6 +121,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setCgcCpf(BigDecimal cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -119,6 +130,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setCidadeParc(String cidadeParc) {
+        markAsChanged("CIDADE_PARC", cidadeParc);
         this.cidadeParc = cidadeParc;
    }
 
@@ -127,6 +139,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setComplementoParc(String complementoParc) {
+        markAsChanged("COMPLEMENTO_PARC", complementoParc);
         this.complementoParc = complementoParc;
    }
 
@@ -135,6 +148,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setEnderecoParc(String enderecoParc) {
+        markAsChanged("ENDERECO_PARC", enderecoParc);
         this.enderecoParc = enderecoParc;
    }
 
@@ -143,6 +157,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setEstadoParc(String estadoParc) {
+        markAsChanged("ESTADO_PARC", estadoParc);
         this.estadoParc = estadoParc;
    }
 
@@ -151,6 +166,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setNumeroParc(String numeroParc) {
+        markAsChanged("NUMERO_PARC", numeroParc);
         this.numeroParc = numeroParc;
    }
 
@@ -159,6 +175,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setTelefoneParc(String telefoneParc) {
+        markAsChanged("TELEFONE_PARC", telefoneParc);
         this.telefoneParc = telefoneParc;
    }
 
@@ -167,6 +184,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setTipoParc(String tipoParc) {
+        markAsChanged("TIPO_PARC", tipoParc);
         this.tipoParc = tipoParc;
    }
 
@@ -175,6 +193,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    }
 
    public void setCepParc(String cepParc) {
+        markAsChanged("CEP_PARC", cepParc);
         this.cepParc = cepParc;
    }
 
@@ -190,6 +209,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
 
    @Override
    public ParceiroInstalacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProj = vo.asBigDecimal("CODPROJ");
         this.contato = vo.asString("CONTATO");

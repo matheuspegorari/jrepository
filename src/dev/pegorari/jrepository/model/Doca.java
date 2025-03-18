@@ -21,6 +21,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setBalcao(String balcao) {
+        markAsChanged("BALCAO", balcao);
         this.balcao = balcao;
    }
 
@@ -29,6 +30,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setImpressoraDoca(String impressoraDoca) {
+        markAsChanged("IMPRESSORADOCA", impressoraDoca);
         this.impressoraDoca = impressoraDoca;
    }
 
@@ -37,6 +39,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setAltura(BigDecimal altura) {
+        markAsChanged("ALTURA", altura);
         this.altura = altura;
    }
 
@@ -45,6 +48,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -53,6 +57,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -61,6 +66,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -69,6 +75,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setTipDoca(String tipDoca) {
+        markAsChanged("TIPDOCA", tipDoca);
         this.tipDoca = tipDoca;
    }
 
@@ -77,6 +84,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setCodDoca(BigDecimal codDoca) {
+        markAsChanged("CODDOCA", codDoca);
         this.codDoca = codDoca;
    }
 
@@ -85,6 +93,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -93,6 +102,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    }
 
    public void setCodEndCrossdock(BigDecimal codEndCrossdock) {
+        markAsChanged("CODENDCROSSDOCK", codEndCrossdock);
         this.codEndCrossdock = codEndCrossdock;
    }
 
@@ -108,6 +118,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
 
    @Override
    public Doca fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.balcao = vo.asString("BALCAO");
         this.impressoraDoca = vo.asString("IMPRESSORADOCA");
         this.altura = vo.asBigDecimal("ALTURA");

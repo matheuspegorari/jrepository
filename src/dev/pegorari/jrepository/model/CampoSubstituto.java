@@ -15,6 +15,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    }
 
    public void setCampoSubstituto(String campoSubstituto) {
+        markAsChanged("CAMPOSUBSTITUTO", campoSubstituto);
         this.campoSubstituto = campoSubstituto;
    }
 
@@ -23,6 +24,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    }
 
    public void setCodCampo(String codCampo) {
+        markAsChanged("CODCAMPO", codCampo);
         this.codCampo = codCampo;
    }
 
@@ -31,6 +33,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -39,6 +42,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -54,6 +58,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
 
    @Override
    public CampoSubstituto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.campoSubstituto = vo.asString("CAMPOSUBSTITUTO");
         this.codCampo = vo.asString("CODCAMPO");
         this.codMeta = vo.asBigDecimal("CODMETA");

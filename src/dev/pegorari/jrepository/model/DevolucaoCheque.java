@@ -17,6 +17,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setALineaCheqDev(String aLineaCheqDev) {
+        markAsChanged("ALINEACHEQDEV", aLineaCheqDev);
         this.aLineaCheqDev = aLineaCheqDev;
    }
 
@@ -25,6 +26,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -33,6 +35,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setNuDev(BigDecimal nuDev) {
+        markAsChanged("NUDEV", nuDev);
         this.nuDev = nuDev;
    }
 
@@ -41,6 +44,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setNuFinDesp(BigDecimal nuFinDesp) {
+        markAsChanged("NUFINDESP", nuFinDesp);
         this.nuFinDesp = nuFinDesp;
    }
 
@@ -49,6 +53,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
+        markAsChanged("NUFINORIG", nuFinOrig);
         this.nuFinOrig = nuFinOrig;
    }
 
@@ -57,6 +62,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    }
 
    public void setNuFinRec(BigDecimal nuFinRec) {
+        markAsChanged("NUFINREC", nuFinRec);
         this.nuFinRec = nuFinRec;
    }
 
@@ -72,6 +78,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
 
    @Override
    public DevolucaoCheque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aLineaCheqDev = vo.asString("ALINEACHEQDEV");
         this.codTipTit = vo.asBigDecimal("CODTIPTIT");
         this.nuDev = vo.asBigDecimal("NUDEV");

@@ -18,6 +18,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -26,6 +27,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setDhExec(Timestamp dhExec) {
+        markAsChanged("DHEXEC", dhExec);
         this.dhExec = dhExec;
    }
 
@@ -34,6 +36,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setTipoServExec(BigDecimal tipoServExec) {
+        markAsChanged("TIPOSERVEXEC", tipoServExec);
         this.tipoServExec = tipoServExec;
    }
 
@@ -42,6 +45,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setTipoAge(String tipoAge) {
+        markAsChanged("TIPOAGE", tipoAge);
         this.tipoAge = tipoAge;
    }
 
@@ -50,6 +54,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -58,6 +63,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
    }
 
    public void setNuAgendamento(BigDecimal nuAgendamento) {
+        markAsChanged("NUAGENDAMENTO", nuAgendamento);
         this.nuAgendamento = nuAgendamento;
    }
 
@@ -73,6 +79,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
 
    @Override
    public HistoricoEnvioNotaSefaz fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.dhExec = vo.asTimestamp("DHEXEC");
         this.tipoServExec = vo.asBigDecimal("TIPOSERVEXEC");

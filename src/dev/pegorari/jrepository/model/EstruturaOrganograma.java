@@ -15,6 +15,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -23,6 +24,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
    }
 
    public void setDescrRoot(String descrRoot) {
+        markAsChanged("DESCRROOT", descrRoot);
         this.descrRoot = descrRoot;
    }
 
@@ -31,6 +33,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
    }
 
    public void setNuEst(BigDecimal nuEst) {
+        markAsChanged("NUEST", nuEst);
         this.nuEst = nuEst;
    }
 
@@ -39,6 +42,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
    }
 
    public void setTipVisual(String tipVisual) {
+        markAsChanged("TIPVISUAL", tipVisual);
         this.tipVisual = tipVisual;
    }
 
@@ -54,6 +58,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
 
    @Override
    public EstruturaOrganograma fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.descrRoot = vo.asString("DESCRROOT");
         this.nuEst = vo.asBigDecimal("NUEST");

@@ -35,6 +35,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -43,6 +44,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setCategoria(String categoria) {
+        markAsChanged("CATEGORIA", categoria);
         this.categoria = categoria;
    }
 
@@ -51,6 +53,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setCodExtracao(BigDecimal codExtracao) {
+        markAsChanged("CODEXTRACAO", codExtracao);
         this.codExtracao = codExtracao;
    }
 
@@ -59,6 +62,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setCodificacao(String codificacao) {
+        markAsChanged("CODIFICACAO", codificacao);
         this.codificacao = codificacao;
    }
 
@@ -67,6 +71,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -75,6 +80,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setCompactar(String compactar) {
+        markAsChanged("COMPACTAR", compactar);
         this.compactar = compactar;
    }
 
@@ -83,6 +89,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setConsulta(char[] consulta) {
+        markAsChanged("CONSULTA", consulta);
         this.consulta = consulta;
    }
 
@@ -91,6 +98,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -99,6 +107,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setDestinoArquivo(String destinoArquivo) {
+        markAsChanged("DESTINOARQUIVO", destinoArquivo);
         this.destinoArquivo = destinoArquivo;
    }
 
@@ -107,6 +116,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -115,6 +125,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setDhUltExec(Timestamp dhUltExec) {
+        markAsChanged("DHULTEXEC", dhUltExec);
         this.dhUltExec = dhUltExec;
    }
 
@@ -123,6 +134,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setExpGatilho(String expGatilho) {
+        markAsChanged("EXPGATILHO", expGatilho);
         this.expGatilho = expGatilho;
    }
 
@@ -131,6 +143,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setFonteDados(String fonteDados) {
+        markAsChanged("FONTEDADOS", fonteDados);
         this.fonteDados = fonteDados;
    }
 
@@ -139,6 +152,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setFormato(String formato) {
+        markAsChanged("FORMATO", formato);
         this.formato = formato;
    }
 
@@ -147,6 +161,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setIncluirData(String incluirData) {
+        markAsChanged("INCLUIRDATA", incluirData);
         this.incluirData = incluirData;
    }
 
@@ -155,6 +170,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setIncluirHora(String incluirHora) {
+        markAsChanged("INCLUIRHORA", incluirHora);
         this.incluirHora = incluirHora;
    }
 
@@ -163,6 +179,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setLogErro(char[] logErro) {
+        markAsChanged("LOGERRO", logErro);
         this.logErro = logErro;
    }
 
@@ -171,6 +188,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -179,6 +197,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -187,6 +206,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setTempoProcessamento(BigDecimal tempoProcessamento) {
+        markAsChanged("TEMPOPROCESSAMENTO", tempoProcessamento);
         this.tempoProcessamento = tempoProcessamento;
    }
 
@@ -195,6 +215,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setTipGatilho(String tipGatilho) {
+        markAsChanged("TIPGATILHO", tipGatilho);
         this.tipGatilho = tipGatilho;
    }
 
@@ -203,6 +224,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setTipIntervalo(String tipIntervalo) {
+        markAsChanged("TIPINTERVALO", tipIntervalo);
         this.tipIntervalo = tipIntervalo;
    }
 
@@ -211,6 +233,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
    }
 
    public void setVlrIntervalo(BigDecimal vlrIntervalo) {
+        markAsChanged("VLRINTERVALO", vlrIntervalo);
         this.vlrIntervalo = vlrIntervalo;
    }
 
@@ -226,6 +249,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
 
    @Override
    public ExtratorDados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.categoria = vo.asString("CATEGORIA");
         this.codExtracao = vo.asBigDecimal("CODEXTRACAO");

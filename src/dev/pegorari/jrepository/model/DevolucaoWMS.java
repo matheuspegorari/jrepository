@@ -19,6 +19,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -27,6 +28,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setQtdDevolver(BigDecimal qtdDevolver) {
+        markAsChanged("QTDDEVOLVER", qtdDevolver);
         this.qtdDevolver = qtdDevolver;
    }
 
@@ -35,6 +37,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -43,6 +46,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setNuDev(BigDecimal nuDev) {
+        markAsChanged("NUDEV", nuDev);
         this.nuDev = nuDev;
    }
 
@@ -51,6 +55,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -59,6 +64,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -67,6 +73,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    }
 
    public void setDhDev(Timestamp dhDev) {
+        markAsChanged("DHDEV", dhDev);
         this.dhDev = dhDev;
    }
 
@@ -82,6 +89,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
 
    @Override
    public DevolucaoWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.qtdDevolver = vo.asBigDecimal("QTDDEVOLVER");
         this.nuNota = vo.asBigDecimal("NUNOTA");

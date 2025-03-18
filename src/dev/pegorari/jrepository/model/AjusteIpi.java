@@ -28,6 +28,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -36,6 +37,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setCodAjuste(BigDecimal codAjuste) {
+        markAsChanged("CODAJUSTE", codAjuste);
         this.codAjuste = codAjuste;
    }
 
@@ -44,6 +46,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -52,6 +55,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -60,6 +64,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -68,6 +73,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -76,6 +82,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -84,6 +91,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -92,6 +100,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setDtDoc(Timestamp dtDoc) {
+        markAsChanged("DTDOC", dtDoc);
         this.dtDoc = dtDoc;
    }
 
@@ -100,6 +109,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -108,6 +118,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -116,6 +127,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -124,6 +136,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setOrigProcesso(BigDecimal origProcesso) {
+        markAsChanged("ORIGPROCESSO", origProcesso);
         this.origProcesso = origProcesso;
    }
 
@@ -132,6 +145,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -140,6 +154,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setTipImposto(String tipImposto) {
+        markAsChanged("TIPIMPOSTO", tipImposto);
         this.tipImposto = tipImposto;
    }
 
@@ -148,6 +163,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
+        markAsChanged("VLRAJUSTE", vlrAjuste);
         this.vlrAjuste = vlrAjuste;
    }
 
@@ -163,6 +179,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
 
    @Override
    public AjusteIpi fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveNfe = vo.asString("CHAVENFE");
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codEmp = vo.asBigDecimal("CODEMP");

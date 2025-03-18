@@ -30,6 +30,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -38,6 +39,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setNota(BigDecimal nota) {
+        markAsChanged("NOTA", nota);
         this.nota = nota;
    }
 
@@ -46,6 +48,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -54,6 +57,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -62,6 +66,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -70,6 +75,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setAceitaObservacao(String aceitaObservacao) {
+        markAsChanged("ACEITAOBSERVACAO", aceitaObservacao);
         this.aceitaObservacao = aceitaObservacao;
    }
 
@@ -78,6 +84,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setAnexo(byte[] anexo) {
+        markAsChanged("ANEXO", anexo);
         this.anexo = anexo;
    }
 
@@ -86,6 +93,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setCodPerg(BigDecimal codPerg) {
+        markAsChanged("CODPERG", codPerg);
         this.codPerg = codPerg;
    }
 
@@ -94,6 +102,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setCodResp(BigDecimal codResp) {
+        markAsChanged("CODRESP", codResp);
         this.codResp = codResp;
    }
 
@@ -102,6 +111,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -110,6 +120,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setPenalidade(BigDecimal penalidade) {
+        markAsChanged("PENALIDADE", penalidade);
         this.penalidade = penalidade;
    }
 
@@ -118,6 +129,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setSeqAgrupa(BigDecimal seqAgrupa) {
+        markAsChanged("SEQAGRUPA", seqAgrupa);
         this.seqAgrupa = seqAgrupa;
    }
 
@@ -126,6 +138,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setTamanhoMax(BigDecimal tamanhoMax) {
+        markAsChanged("TAMANHOMAX", tamanhoMax);
         this.tamanhoMax = tamanhoMax;
    }
 
@@ -134,6 +147,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setValorMax(BigDecimal valorMax) {
+        markAsChanged("VALORMAX", valorMax);
         this.valorMax = valorMax;
    }
 
@@ -142,6 +156,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setValorMin(BigDecimal valorMin) {
+        markAsChanged("VALORMIN", valorMin);
         this.valorMin = valorMin;
    }
 
@@ -150,6 +165,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setDescrResp(String descrResp) {
+        markAsChanged("DESCRRESP", descrResp);
         this.descrResp = descrResp;
    }
 
@@ -158,6 +174,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -166,6 +183,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    }
 
    public void setLimpaAgrupa(String limpaAgrupa) {
+        markAsChanged("LIMPAAGRUPA", limpaAgrupa);
         this.limpaAgrupa = limpaAgrupa;
    }
 
@@ -181,6 +199,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
 
    @Override
    public RespostaPergunta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.nota = vo.asBigDecimal("NOTA");
         this.ordem = vo.asBigDecimal("ORDEM");

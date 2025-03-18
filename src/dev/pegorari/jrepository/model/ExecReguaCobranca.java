@@ -25,6 +25,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setAcontece(String acontece) {
+        markAsChanged("ACONTECE", acontece);
         this.acontece = acontece;
    }
 
@@ -33,6 +34,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -41,6 +43,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setCodRegua(BigDecimal codRegua) {
+        markAsChanged("CODREGUA", codRegua);
         this.codRegua = codRegua;
    }
 
@@ -49,6 +52,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -57,6 +61,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setDhExec(Timestamp dhExec) {
+        markAsChanged("DHEXEC", dhExec);
         this.dhExec = dhExec;
    }
 
@@ -65,6 +70,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setQtdTituloFalha(BigDecimal qtdTituloFalha) {
+        markAsChanged("QTDTITULOFALHA", qtdTituloFalha);
         this.qtdTituloFalha = qtdTituloFalha;
    }
 
@@ -73,6 +79,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setQtdTituloSucesso(BigDecimal qtdTituloSucesso) {
+        markAsChanged("QTDTITULOSUCESSO", qtdTituloSucesso);
         this.qtdTituloSucesso = qtdTituloSucesso;
    }
 
@@ -81,6 +88,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setResultado(String resultado) {
+        markAsChanged("RESULTADO", resultado);
         this.resultado = resultado;
    }
 
@@ -89,6 +97,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setResumo(String resumo) {
+        markAsChanged("RESUMO", resumo);
         this.resumo = resumo;
    }
 
@@ -97,6 +106,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setSeqExec(BigDecimal seqExec) {
+        markAsChanged("SEQEXEC", seqExec);
         this.seqExec = seqExec;
    }
 
@@ -105,6 +115,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setTempoExecucao(BigDecimal tempoExecucao) {
+        markAsChanged("TEMPOEXECUCAO", tempoExecucao);
         this.tempoExecucao = tempoExecucao;
    }
 
@@ -113,6 +124,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setTipoEvento(BigDecimal tipoEvento) {
+        markAsChanged("TIPOEVENTO", tipoEvento);
         this.tipoEvento = tipoEvento;
    }
 
@@ -121,6 +133,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
    }
 
    public void setUltimaAlteracaoEvento(Timestamp ultimaAlteracaoEvento) {
+        markAsChanged("ULTIMAALTERACAOEVENTO", ultimaAlteracaoEvento);
         this.ultimaAlteracaoEvento = ultimaAlteracaoEvento;
    }
 
@@ -136,6 +149,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
 
    @Override
    public ExecReguaCobranca fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acontece = vo.asString("ACONTECE");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codRegua = vo.asBigDecimal("CODREGUA");

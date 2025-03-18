@@ -16,6 +16,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    }
 
    public void setNuCampo(BigDecimal nuCampo) {
+        markAsChanged("NUCAMPO", nuCampo);
         this.nuCampo = nuCampo;
    }
 
@@ -24,6 +25,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    }
 
    public void setOpcao(String opcao) {
+        markAsChanged("OPCAO", opcao);
         this.opcao = opcao;
    }
 
@@ -32,6 +34,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -40,6 +43,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -48,6 +52,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
    }
 
    public void setValor(String valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -63,6 +68,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
 
    @Override
    public OpcaoCampo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuCampo = vo.asBigDecimal("NUCAMPO");
         this.opcao = vo.asString("OPCAO");
         this.ordem = vo.asBigDecimal("ORDEM");

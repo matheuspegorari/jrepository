@@ -15,6 +15,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -23,6 +24,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
    }
 
    public void setOriginalPrinterName(String originalPrinterName) {
+        markAsChanged("ORIGINALPRINTERNAME", originalPrinterName);
         this.originalPrinterName = originalPrinterName;
    }
 
@@ -31,6 +33,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
    }
 
    public void setPrinterUri(String printerUri) {
+        markAsChanged("PRINTERURI", printerUri);
         this.printerUri = printerUri;
    }
 
@@ -39,6 +42,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
    }
 
    public void setTipoDoc(String tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -54,6 +58,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
 
    @Override
    public ImpressoraSubstituta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.originalPrinterName = vo.asString("ORIGINALPRINTERNAME");
         this.printerUri = vo.asString("PRINTERURI");

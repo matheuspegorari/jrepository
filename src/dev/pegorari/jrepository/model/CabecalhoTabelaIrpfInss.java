@@ -21,6 +21,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setCompetencia(Timestamp competencia) {
+        markAsChanged("COMPETENCIA", competencia);
         this.competencia = competencia;
    }
 
@@ -29,6 +30,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setRegime(String regime) {
+        markAsChanged("REGIME", regime);
         this.regime = regime;
    }
 
@@ -37,6 +39,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setVlrDependente(BigDecimal vlrDependente) {
+        markAsChanged("VLRDEPENDENTE", vlrDependente);
         this.vlrDependente = vlrDependente;
    }
 
@@ -45,6 +48,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setVlrMaximo(BigDecimal vlrMaximo) {
+        markAsChanged("VLRMAXIMO", vlrMaximo);
         this.vlrMaximo = vlrMaximo;
    }
 
@@ -53,6 +57,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setVlrMinimo(BigDecimal vlrMinimo) {
+        markAsChanged("VLRMINIMO", vlrMinimo);
         this.vlrMinimo = vlrMinimo;
    }
 
@@ -61,6 +66,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setVlrMinimoIrpf(BigDecimal vlrMinimoIrpf) {
+        markAsChanged("VLRMINIMOIRPF", vlrMinimoIrpf);
         this.vlrMinimoIrpf = vlrMinimoIrpf;
    }
 
@@ -69,6 +75,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setUsaCalcInssProg(String usaCalcInssProg) {
+        markAsChanged("USACALCINSSPROG", usaCalcInssProg);
         this.usaCalcInssProg = usaCalcInssProg;
    }
 
@@ -77,6 +84,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setUsaParcInssFunRural(String usaParcInssFunRural) {
+        markAsChanged("USAPARCINSSFUNRURAL", usaParcInssFunRural);
         this.usaParcInssFunRural = usaParcInssFunRural;
    }
 
@@ -85,6 +93,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    }
 
    public void setConsDescSimpIrpf(String consDescSimpIrpf) {
+        markAsChanged("CONSDESCSIMPIRPF", consDescSimpIrpf);
         this.consDescSimpIrpf = consDescSimpIrpf;
    }
 
@@ -100,6 +109,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
 
    @Override
    public CabecalhoTabelaIrpfInss fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.competencia = vo.asTimestamp("COMPETENCIA");
         this.regime = vo.asString("REGIME");
         this.vlrDependente = vo.asBigDecimal("VLRDEPENDENTE");

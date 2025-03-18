@@ -13,6 +13,7 @@ public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteV
    }
 
    public void setDescEvento(String descEvento) {
+        markAsChanged("DESCEVENTO", descEvento);
         this.descEvento = descEvento;
    }
 
@@ -21,6 +22,7 @@ public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteV
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -36,6 +38,7 @@ public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteV
 
    @Override
    public GuiaTransporteValores fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descEvento = vo.asString("DESCEVENTO");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;

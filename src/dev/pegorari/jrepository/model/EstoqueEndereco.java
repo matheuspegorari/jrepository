@@ -28,6 +28,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -36,6 +37,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -44,6 +46,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -52,6 +55,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -60,6 +64,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -68,6 +73,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -76,6 +82,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -84,6 +91,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setDtRec(Timestamp dtRec) {
+        markAsChanged("DTREC", dtRec);
         this.dtRec = dtRec;
    }
 
@@ -92,6 +100,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -100,6 +109,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setEntradasPend(BigDecimal entradasPend) {
+        markAsChanged("ENTRADASPEND", entradasPend);
         this.entradasPend = entradasPend;
    }
 
@@ -108,6 +118,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setEntrPendVolPad(BigDecimal entrPendVolPad) {
+        markAsChanged("ENTRPENDVOLPAD", entrPendVolPad);
         this.entrPendVolPad = entrPendVolPad;
    }
 
@@ -116,6 +127,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -124,6 +136,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setEstoqueVolPad(BigDecimal estoqueVolPad) {
+        markAsChanged("ESTOQUEVOLPAD", estoqueVolPad);
         this.estoqueVolPad = estoqueVolPad;
    }
 
@@ -132,6 +145,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -140,6 +154,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setSaidasPend(BigDecimal saidasPend) {
+        markAsChanged("SAIDASPEND", saidasPend);
         this.saidasPend = saidasPend;
    }
 
@@ -148,6 +163,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
    }
 
    public void setSaidPendVolPad(BigDecimal saidPendVolPad) {
+        markAsChanged("SAIDPENDVOLPAD", saidPendVolPad);
         this.saidPendVolPad = saidPendVolPad;
    }
 
@@ -163,6 +179,7 @@ public class EstoqueEndereco extends AbstractSankhyaEntity<EstoqueEndereco> {
 
    @Override
    public EstoqueEndereco fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEnd = vo.asBigDecimal("CODEND");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

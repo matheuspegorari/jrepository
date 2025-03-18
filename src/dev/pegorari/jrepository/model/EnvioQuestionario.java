@@ -22,6 +22,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setChave(BigDecimal chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -30,6 +31,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setChave2(BigDecimal chave2) {
+        markAsChanged("CHAVE2", chave2);
         this.chave2 = chave2;
    }
 
@@ -38,6 +40,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -46,6 +49,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setDhUltEnvio(Timestamp dhUltEnvio) {
+        markAsChanged("DHULTENVIO", dhUltEnvio);
         this.dhUltEnvio = dhUltEnvio;
    }
 
@@ -54,6 +58,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -62,6 +67,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -70,6 +76,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setNuPla(BigDecimal nuPla) {
+        markAsChanged("NUPLA", nuPla);
         this.nuPla = nuPla;
    }
 
@@ -78,6 +85,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setQtdEnvio(BigDecimal qtdEnvio) {
+        markAsChanged("QTDENVIO", qtdEnvio);
         this.qtdEnvio = qtdEnvio;
    }
 
@@ -86,6 +94,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setRespondido(String respondido) {
+        markAsChanged("RESPONDIDO", respondido);
         this.respondido = respondido;
    }
 
@@ -94,6 +103,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -109,6 +119,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
 
    @Override
    public EnvioQuestionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.chave2 = vo.asBigDecimal("CHAVE2");
         this.codFila = vo.asBigDecimal("CODFILA");

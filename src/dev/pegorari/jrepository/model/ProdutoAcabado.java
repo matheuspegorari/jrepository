@@ -33,6 +33,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setBasCalcDtVal(String basCalcDtVal) {
+        markAsChanged("BASCALCDTVAL", basCalcDtVal);
         this.basCalcDtVal = basCalcDtVal;
    }
 
@@ -41,6 +42,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -49,6 +51,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -57,6 +60,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -65,6 +69,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setMultiDeal(BigDecimal multiDeal) {
+        markAsChanged("MULTIDEAL", multiDeal);
         this.multiDeal = multiDeal;
    }
 
@@ -73,6 +78,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setQtdProdMin(BigDecimal qtdProdMin) {
+        markAsChanged("QTDPRODMIN", qtdProdMin);
         this.qtdProdMin = qtdProdMin;
    }
 
@@ -81,6 +87,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setTamLotePad(BigDecimal tamLotePad) {
+        markAsChanged("TAMLOTEPAD", tamLotePad);
         this.tamLotePad = tamLotePad;
    }
 
@@ -89,6 +96,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setTempoAtravess(BigDecimal tempoAtravess) {
+        markAsChanged("TEMPOATRAVESS", tempoAtravess);
         this.tempoAtravess = tempoAtravess;
    }
 
@@ -97,6 +105,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setUnTempoAtravess(String unTempoAtravess) {
+        markAsChanged("UNTEMPOATRAVESS", unTempoAtravess);
         this.unTempoAtravess = unTempoAtravess;
    }
 
@@ -105,6 +114,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -113,6 +123,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setMascSerie(String mascSerie) {
+        markAsChanged("MASCSERIE", mascSerie);
         this.mascSerie = mascSerie;
    }
 
@@ -121,6 +132,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setTempoFixo(BigDecimal tempoFixo) {
+        markAsChanged("TEMPOFIXO", tempoFixo);
         this.tempoFixo = tempoFixo;
    }
 
@@ -129,6 +141,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setTipoGeraSerie(String tipoGeraSerie) {
+        markAsChanged("TIPOGERASERIE", tipoGeraSerie);
         this.tipoGeraSerie = tipoGeraSerie;
    }
 
@@ -137,6 +150,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setTipoTempo(String tipoTempo) {
+        markAsChanged("TIPOTEMPO", tipoTempo);
         this.tipoTempo = tipoTempo;
    }
 
@@ -145,6 +159,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setValidaVersao(String validaVersao) {
+        markAsChanged("VALIDAVERSAO", validaVersao);
         this.validaVersao = validaVersao;
    }
 
@@ -153,6 +168,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setIdFormula(BigDecimal idFormula) {
+        markAsChanged("IDFORMULA", idFormula);
         this.idFormula = idFormula;
    }
 
@@ -161,6 +177,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setCodLocDest(BigDecimal codLocDest) {
+        markAsChanged("CODLOCDEST", codLocDest);
         this.codLocDest = codLocDest;
    }
 
@@ -169,6 +186,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -177,6 +195,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -185,6 +204,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -193,6 +213,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -208,6 +229,7 @@ public class ProdutoAcabado extends AbstractSankhyaEntity<ProdutoAcabado> {
 
    @Override
    public ProdutoAcabado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.basCalcDtVal = vo.asString("BASCALCDTVAL");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

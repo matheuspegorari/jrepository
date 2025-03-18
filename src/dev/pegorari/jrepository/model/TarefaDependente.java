@@ -16,6 +16,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    }
 
    public void setNuTarefaDep(BigDecimal nuTarefaDep) {
+        markAsChanged("NUTAREFADEP", nuTarefaDep);
         this.nuTarefaDep = nuTarefaDep;
    }
 
@@ -24,6 +25,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -32,6 +34,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    }
 
    public void setQtdDep(BigDecimal qtdDep) {
+        markAsChanged("QTDDEP", qtdDep);
         this.qtdDep = qtdDep;
    }
 
@@ -40,6 +43,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -48,6 +52,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    }
 
    public void setSequenciaDep(BigDecimal sequenciaDep) {
+        markAsChanged("SEQUENCIADEP", sequenciaDep);
         this.sequenciaDep = sequenciaDep;
    }
 
@@ -63,6 +68,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
 
    @Override
    public TarefaDependente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuTarefaDep = vo.asBigDecimal("NUTAREFADEP");
         this.nuTarefa = vo.asBigDecimal("NUTAREFA");
         this.qtdDep = vo.asBigDecimal("QTDDEP");

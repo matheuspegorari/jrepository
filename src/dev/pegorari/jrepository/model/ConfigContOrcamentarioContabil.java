@@ -26,6 +26,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setApresCod(String apresCod) {
+        markAsChanged("APRESCOD", apresCod);
         this.apresCod = apresCod;
    }
 
@@ -34,6 +35,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -42,6 +44,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setCodCco(BigDecimal codCco) {
+        markAsChanged("CODCCO", codCco);
         this.codCco = codCco;
    }
 
@@ -50,6 +53,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setCrPart(String crPart) {
+        markAsChanged("CRPART", crPart);
         this.crPart = crPart;
    }
 
@@ -58,6 +62,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setCtaCtbPart(String ctaCtbPart) {
+        markAsChanged("CTACTBPART", ctaCtbPart);
         this.ctaCtbPart = ctaCtbPart;
    }
 
@@ -66,6 +71,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -74,6 +80,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setDetalharPor(String detalharPor) {
+        markAsChanged("DETALHARPOR", detalharPor);
         this.detalharPor = detalharPor;
    }
 
@@ -82,6 +89,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setEmpPart(String empPart) {
+        markAsChanged("EMPPART", empPart);
         this.empPart = empPart;
    }
 
@@ -90,6 +98,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setGruCtaCtbPart(String gruCtaCtbPart) {
+        markAsChanged("GRUCTACTBPART", gruCtaCtbPart);
         this.gruCtaCtbPart = gruCtaCtbPart;
    }
 
@@ -98,6 +107,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setPeriodic(String periodic) {
+        markAsChanged("PERIODIC", periodic);
         this.periodic = periodic;
    }
 
@@ -106,6 +116,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setProjPart(String projPart) {
+        markAsChanged("PROJPART", projPart);
         this.projPart = projPart;
    }
 
@@ -114,6 +125,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setDtIniCorc(BigDecimal dtIniCorc) {
+        markAsChanged("DTINICORC", dtIniCorc);
         this.dtIniCorc = dtIniCorc;
    }
 
@@ -122,6 +134,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setCalDesInRecDesp(String calDesInRecDesp) {
+        markAsChanged("CALDESINRECDESP", calDesInRecDesp);
         this.calDesInRecDesp = calDesInRecDesp;
    }
 
@@ -130,6 +143,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setUsaSalConReali(String usaSalConReali) {
+        markAsChanged("USASALCONREALI", usaSalConReali);
         this.usaSalConReali = usaSalConReali;
    }
 
@@ -138,6 +152,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    }
 
    public void setZerarCtaCtab(String zerarCtaCtab) {
+        markAsChanged("ZERARCTACTAB", zerarCtaCtab);
         this.zerarCtaCtab = zerarCtaCtab;
    }
 
@@ -153,6 +168,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
 
    @Override
    public ConfigContOrcamentarioContabil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apresCod = vo.asString("APRESCOD");
         this.ativo = vo.asString("ATIVO");
         this.codCco = vo.asBigDecimal("CODCCO");

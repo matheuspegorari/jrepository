@@ -22,6 +22,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -30,6 +31,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -38,6 +40,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -46,6 +49,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -54,6 +58,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setData(Timestamp data) {
+        markAsChanged("DATA", data);
         this.data = data;
    }
 
@@ -62,6 +67,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setInteiro(BigDecimal inteiro) {
+        markAsChanged("INTEIRO", inteiro);
         this.inteiro = inteiro;
    }
 
@@ -70,6 +76,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setLogico(String logico) {
+        markAsChanged("LOGICO", logico);
         this.logico = logico;
    }
 
@@ -78,6 +85,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setNumero(BigDecimal numero) {
+        markAsChanged("NUMERO", numero);
         this.numero = numero;
    }
 
@@ -86,6 +94,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -94,6 +103,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -109,6 +119,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
 
    @Override
    public Lote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");

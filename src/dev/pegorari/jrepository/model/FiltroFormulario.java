@@ -18,6 +18,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -26,6 +27,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -34,6 +36,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -42,6 +45,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setNomeInstDest(String nomeInstDest) {
+        markAsChanged("NOMEINSTDEST", nomeInstDest);
         this.nomeInstDest = nomeInstDest;
    }
 
@@ -50,6 +54,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setNomeInstOrig(String nomeInstOrig) {
+        markAsChanged("NOMEINSTORIG", nomeInstOrig);
         this.nomeInstOrig = nomeInstOrig;
    }
 
@@ -58,6 +63,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    }
 
    public void setRelationName(String relationName) {
+        markAsChanged("RELATIONNAME", relationName);
         this.relationName = relationName;
    }
 
@@ -73,6 +79,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
 
    @Override
    public FiltroFormulario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.expressao = vo.asString("EXPRESSAO");

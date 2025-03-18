@@ -16,6 +16,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -24,6 +25,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    }
 
    public void setQtdTotProd(String qtdTotProd) {
+        markAsChanged("QTDTOTPROD", qtdTotProd);
         this.qtdTotProd = qtdTotProd;
    }
 
@@ -32,6 +34,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -40,6 +43,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -48,6 +52,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    }
 
    public void setNumOnu(String numOnu) {
+        markAsChanged("NUMONU", numOnu);
         this.numOnu = numOnu;
    }
 
@@ -63,6 +68,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
 
    @Override
    public ProdutoPerigosoNotaMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.qtdTotProd = vo.asString("QTDTOTPROD");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

@@ -16,6 +16,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    }
 
    public void setCodCtabcoint(BigDecimal codCtabcoint) {
+        markAsChanged("CODCTABCOINT", codCtabcoint);
         this.codCtabcoint = codCtabcoint;
    }
 
@@ -24,6 +25,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    }
 
    public void setCodigoEdi(BigDecimal codigoEdi) {
+        markAsChanged("CODIGOEDI", codigoEdi);
         this.codigoEdi = codigoEdi;
    }
 
@@ -32,6 +34,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -40,6 +43,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -48,6 +52,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    }
 
    public void setTipoLanc(BigDecimal tipoLanc) {
+        markAsChanged("TIPOLANC", tipoLanc);
         this.tipoLanc = tipoLanc;
    }
 
@@ -63,6 +68,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
 
    @Override
    public CategoriaLancamentoExtrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
         this.codigoEdi = vo.asBigDecimal("CODIGOEDI");
         this.descricao = vo.asString("DESCRICAO");

@@ -28,6 +28,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setArqConfirmado(String arqConfirmado) {
+        markAsChanged("ARQCONFIRMADO", arqConfirmado);
         this.arqConfirmado = arqConfirmado;
    }
 
@@ -36,6 +37,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -44,6 +46,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -52,6 +55,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -60,6 +64,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setDtInv(Timestamp dtInv) {
+        markAsChanged("DTINV", dtInv);
         this.dtInv = dtInv;
    }
 
@@ -68,6 +73,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setFinApresentacao(BigDecimal finApresentacao) {
+        markAsChanged("FINAPRESENTACAO", finApresentacao);
         this.finApresentacao = finApresentacao;
    }
 
@@ -76,6 +82,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setIndPerfil(String indPerfil) {
+        markAsChanged("INDPERFIL", indPerfil);
         this.indPerfil = indPerfil;
    }
 
@@ -84,6 +91,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
+        markAsChanged("VERSAOLAYOUT", versaoLayout);
         this.versaoLayout = versaoLayout;
    }
 
@@ -92,6 +100,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setTipEstoque(String tipEstoque) {
+        markAsChanged("TIPESTOQUE", tipEstoque);
         this.tipEstoque = tipEstoque;
    }
 
@@ -100,6 +109,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setAliqEfetiva(BigDecimal aliqEfetiva) {
+        markAsChanged("ALIQEFETIVA", aliqEfetiva);
         this.aliqEfetiva = aliqEfetiva;
    }
 
@@ -108,6 +118,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setListNotasReg2113Tip10(String listNotasReg2113Tip10) {
+        markAsChanged("LISTNOTASREG2113TIP10", listNotasReg2113Tip10);
         this.listNotasReg2113Tip10 = listNotasReg2113Tip10;
    }
 
@@ -116,6 +127,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setListNotasReg2113Tip20(String listNotasReg2113Tip20) {
+        markAsChanged("LISTNOTASREG2113TIP20", listNotasReg2113Tip20);
         this.listNotasReg2113Tip20 = listNotasReg2113Tip20;
    }
 
@@ -124,6 +136,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setListNotasReg2113Tip30(String listNotasReg2113Tip30) {
+        markAsChanged("LISTNOTASREG2113TIP30", listNotasReg2113Tip30);
         this.listNotasReg2113Tip30 = listNotasReg2113Tip30;
    }
 
@@ -132,6 +145,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setListNotasReg2130(String listNotasReg2130) {
+        markAsChanged("LISTNOTASREG2130", listNotasReg2130);
         this.listNotasReg2130 = listNotasReg2130;
    }
 
@@ -140,6 +154,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setPercSt60SemVlrAnt(String percSt60SemVlrAnt) {
+        markAsChanged("PERCST60SEMVLRANT", percSt60SemVlrAnt);
         this.percSt60SemVlrAnt = percSt60SemVlrAnt;
    }
 
@@ -148,6 +163,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
    }
 
    public void setPercMvndCst60(String percMvndCst60) {
+        markAsChanged("PERMVNDCST60", percMvndCst60);
         this.percMvndCst60 = percMvndCst60;
    }
 
@@ -163,6 +179,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
 
    @Override
    public DemonsApurRessarcimentoST fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtFinal = vo.asTimestamp("DTFINAL");

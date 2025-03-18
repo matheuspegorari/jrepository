@@ -16,6 +16,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    }
 
    public void setCampo(String campo) {
+        markAsChanged("CAMPO", campo);
         this.campo = campo;
    }
 
@@ -24,6 +25,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    }
 
    public void setCodCfg(BigDecimal codCfg) {
+        markAsChanged("CODCFG", codCfg);
         this.codCfg = codCfg;
    }
 
@@ -32,6 +34,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    }
 
    public void setEntidade(String entidade) {
+        markAsChanged("ENTIDADE", entidade);
         this.entidade = entidade;
    }
 
@@ -40,6 +43,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    }
 
    public void setRelevancia(BigDecimal relevancia) {
+        markAsChanged("RELEVANCIA", relevancia);
         this.relevancia = relevancia;
    }
 
@@ -48,6 +52,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -63,6 +68,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
 
    @Override
    public CamposTokenProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.campo = vo.asString("CAMPO");
         this.codCfg = vo.asBigDecimal("CODCFG");
         this.entidade = vo.asString("ENTIDADE");

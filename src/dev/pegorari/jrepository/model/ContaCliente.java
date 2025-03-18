@@ -16,6 +16,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    }
 
    public void setAgencia(String agencia) {
+        markAsChanged("AGENCIA", agencia);
         this.agencia = agencia;
    }
 
@@ -24,6 +25,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -32,6 +34,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -40,6 +43,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    }
 
    public void setConta(String conta) {
+        markAsChanged("CONTA", conta);
         this.conta = conta;
    }
 
@@ -48,6 +52,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
    }
 
    public void setNomeEmitente(String nomeEmitente) {
+        markAsChanged("NOMEEMITENTE", nomeEmitente);
         this.nomeEmitente = nomeEmitente;
    }
 
@@ -63,6 +68,7 @@ public class ContaCliente extends AbstractSankhyaEntity<ContaCliente> {
 
    @Override
    public ContaCliente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.agencia = vo.asString("AGENCIA");
         this.cgcCpf = vo.asString("CGC_CPF");
         this.codBco = vo.asBigDecimal("CODBCO");

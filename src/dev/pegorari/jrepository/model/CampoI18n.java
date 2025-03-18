@@ -14,6 +14,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -22,6 +23,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
    }
 
    public void setNomeCampo(String nomeCampo) {
+        markAsChanged("NOMECAMPO", nomeCampo);
         this.nomeCampo = nomeCampo;
    }
 
@@ -30,6 +32,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -38,6 +41,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -53,6 +57,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
 
    @Override
    public CampoI18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeCampo = vo.asString("NOMECAMPO");
         this.nomeTab = vo.asString("NOMETAB");

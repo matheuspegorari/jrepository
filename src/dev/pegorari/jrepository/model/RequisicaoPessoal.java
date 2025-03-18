@@ -47,6 +47,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setStatusAval(String statusAval) {
+        markAsChanged("STATUSAVAL", statusAval);
         this.statusAval = statusAval;
    }
 
@@ -55,6 +56,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setStatusSelecao(BigDecimal statusSelecao) {
+        markAsChanged("STATUSSELECAO", statusSelecao);
         this.statusSelecao = statusSelecao;
    }
 
@@ -63,6 +65,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -71,6 +74,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setTipoSelecao(BigDecimal tipoSelecao) {
+        markAsChanged("TIPOSELECAO", tipoSelecao);
         this.tipoSelecao = tipoSelecao;
    }
 
@@ -79,6 +83,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setTipVaga(String tipVaga) {
+        markAsChanged("TIPVAGA", tipVaga);
         this.tipVaga = tipVaga;
    }
 
@@ -87,6 +92,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setVinculo(BigDecimal vinculo) {
+        markAsChanged("VINCULO", vinculo);
         this.vinculo = vinculo;
    }
 
@@ -95,6 +101,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -103,6 +110,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -111,6 +119,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -119,6 +128,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -127,6 +137,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodMotivo(BigDecimal codMotivo) {
+        markAsChanged("CODMOTIVO", codMotivo);
         this.codMotivo = codMotivo;
    }
 
@@ -135,6 +146,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodMotivoAval(BigDecimal codMotivoAval) {
+        markAsChanged("CODMOTIVOAVAL", codMotivoAval);
         this.codMotivoAval = codMotivoAval;
    }
 
@@ -143,6 +155,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -151,6 +164,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -159,6 +173,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodUsuAval(BigDecimal codUsuAval) {
+        markAsChanged("CODUSUAVAL", codUsuAval);
         this.codUsuAval = codUsuAval;
    }
 
@@ -167,6 +182,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setCodUsuRequisitante(BigDecimal codUsuRequisitante) {
+        markAsChanged("CODUSUREQUISITANTE", codUsuRequisitante);
         this.codUsuRequisitante = codUsuRequisitante;
    }
 
@@ -175,6 +191,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setDescrRequisicao(String descrRequisicao) {
+        markAsChanged("DESCRREQUISICAO", descrRequisicao);
         this.descrRequisicao = descrRequisicao;
    }
 
@@ -183,6 +200,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setDhAvaliacao(Timestamp dhAvaliacao) {
+        markAsChanged("DHAVALIACAO", dhAvaliacao);
         this.dhAvaliacao = dhAvaliacao;
    }
 
@@ -191,6 +209,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -199,6 +218,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setDtPrevAtend(Timestamp dtPrevAtend) {
+        markAsChanged("DTPREVATEND", dtPrevAtend);
         this.dtPrevAtend = dtPrevAtend;
    }
 
@@ -207,6 +227,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setDtRequisicao(Timestamp dtRequisicao) {
+        markAsChanged("DTREQUISICAO", dtRequisicao);
         this.dtRequisicao = dtRequisicao;
    }
 
@@ -215,6 +236,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setFimFaixSal(BigDecimal fimFaixSal) {
+        markAsChanged("FIMFAIXSAL", fimFaixSal);
         this.fimFaixSal = fimFaixSal;
    }
 
@@ -223,6 +245,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setGrauInstr(BigDecimal grauInstr) {
+        markAsChanged("GRAUINSTR", grauInstr);
         this.grauInstr = grauInstr;
    }
 
@@ -231,6 +254,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setIniFaixSal(BigDecimal iniFaixSal) {
+        markAsChanged("INIFAIXSAL", iniFaixSal);
         this.iniFaixSal = iniFaixSal;
    }
 
@@ -239,6 +263,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setJustificativa(String justificativa) {
+        markAsChanged("JUSTIFICATIVA", justificativa);
         this.justificativa = justificativa;
    }
 
@@ -247,6 +272,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -255,6 +281,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -263,6 +290,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setObsAvaliacao(String obsAvaliacao) {
+        markAsChanged("OBSAVALIACAO", obsAvaliacao);
         this.obsAvaliacao = obsAvaliacao;
    }
 
@@ -271,6 +299,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setObsCargo(String obsCargo) {
+        markAsChanged("OBSCARGO", obsCargo);
         this.obsCargo = obsCargo;
    }
 
@@ -279,6 +308,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setPermiteExFunc(String permiteExFunc) {
+        markAsChanged("PERMITEEXFUNC", permiteExFunc);
         this.permiteExFunc = permiteExFunc;
    }
 
@@ -287,6 +317,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -295,6 +326,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setQtdVagas(BigDecimal qtdVagas) {
+        markAsChanged("QTDVAGAS", qtdVagas);
         this.qtdVagas = qtdVagas;
    }
 
@@ -303,6 +335,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setQtdVagasAtend(BigDecimal qtdVagasAtend) {
+        markAsChanged("QTDVAGASATEND", qtdVagasAtend);
         this.qtdVagasAtend = qtdVagasAtend;
    }
 
@@ -311,6 +344,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setSitRequisicao(BigDecimal sitRequisicao) {
+        markAsChanged("SITREQUISICAO", sitRequisicao);
         this.sitRequisicao = sitRequisicao;
    }
 
@@ -319,6 +353,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -334,6 +369,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
 
    @Override
    public RequisicaoPessoal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.statusAval = vo.asString("STATUSAVAL");
         this.statusSelecao = vo.asBigDecimal("STATUSSELECAO");
         this.tipo = vo.asBigDecimal("TIPO");

@@ -26,6 +26,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -34,6 +35,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -42,6 +44,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -50,6 +53,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setTamLote(BigDecimal tamLote) {
+        markAsChanged("TAMLOTE", tamLote);
         this.tamLote = tamLote;
    }
 
@@ -58,6 +62,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -66,6 +71,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setEditado(String editado) {
+        markAsChanged("EDITADO", editado);
         this.editado = editado;
    }
 
@@ -74,6 +80,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setNroLote(String nroLote) {
+        markAsChanged("NROLOTE", nroLote);
         this.nroLote = nroLote;
    }
 
@@ -82,6 +89,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -90,6 +98,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setMinLote(BigDecimal minLote) {
+        markAsChanged("MINLOTE", minLote);
         this.minLote = minLote;
    }
 
@@ -98,6 +107,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setMultLote(BigDecimal multLote) {
+        markAsChanged("MULTLOTE", multLote);
         this.multLote = multLote;
    }
 
@@ -106,6 +116,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setQtdProdMin(BigDecimal qtdProdMin) {
+        markAsChanged("QTDPRODMIN", qtdProdMin);
         this.qtdProdMin = qtdProdMin;
    }
 
@@ -114,6 +125,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setTamLotePad(BigDecimal tamLotePad) {
+        markAsChanged("TAMLOTEPAD", tamLotePad);
         this.tamLotePad = tamLotePad;
    }
 
@@ -122,6 +134,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setTipoGeraSerie(String tipoGeraSerie) {
+        markAsChanged("TIPOGERASERIE", tipoGeraSerie);
         this.tipoGeraSerie = tipoGeraSerie;
    }
 
@@ -130,6 +143,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setCalcTamLote(BigDecimal calcTamLote) {
+        markAsChanged("CALCTAMLOTE", calcTamLote);
         this.calcTamLote = calcTamLote;
    }
 
@@ -138,6 +152,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
    }
 
    public void setCodFormula(BigDecimal codFormula) {
+        markAsChanged("CODFORMULA", codFormula);
         this.codFormula = codFormula;
    }
 
@@ -153,6 +168,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
 
    @Override
    public ProdutoLancamentoDeOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

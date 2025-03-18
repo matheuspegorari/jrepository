@@ -21,6 +21,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -29,6 +30,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -37,6 +39,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setId(BigDecimal id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -45,6 +48,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setIdIatv(BigDecimal idIatv) {
+        markAsChanged("IDIATV", idIatv);
         this.idIatv = idIatv;
    }
 
@@ -53,6 +57,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -61,6 +66,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setNroLote(String nroLote) {
+        markAsChanged("NROLOTE", nroLote);
         this.nroLote = nroLote;
    }
 
@@ -69,6 +75,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -77,6 +84,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -85,6 +93,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
+        markAsChanged("PESOLIQ", pesoLiq);
         this.pesoLiq = pesoLiq;
    }
 
@@ -93,6 +102,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -108,6 +118,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
 
    @Override
    public ApontamentoVolumes fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");
         this.id = vo.asBigDecimal("ID");

@@ -39,6 +39,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setAbonoInicio(String abonoInicio) {
+        markAsChanged("ABONOINICIO", abonoInicio);
         this.abonoInicio = abonoInicio;
    }
 
@@ -47,6 +48,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setAbonoPec(BigDecimal abonoPec) {
+        markAsChanged("ABONOPEC", abonoPec);
         this.abonoPec = abonoPec;
    }
 
@@ -55,6 +57,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setAtualFergoz(String atualFergoz) {
+        markAsChanged("ATUALFERGOZ", atualFergoz);
         this.atualFergoz = atualFergoz;
    }
 
@@ -63,6 +66,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -71,6 +75,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -79,6 +84,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -87,6 +93,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtFinAqui(Timestamp dtFinAqui) {
+        markAsChanged("DTFINAQUI", dtFinAqui);
         this.dtFinAqui = dtFinAqui;
    }
 
@@ -95,6 +102,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtIniAqui(Timestamp dtIniAqui) {
+        markAsChanged("DTINIAQUI", dtIniAqui);
         this.dtIniAqui = dtIniAqui;
    }
 
@@ -103,6 +111,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtPrevista(Timestamp dtPrevista) {
+        markAsChanged("DTPREVISTA", dtPrevista);
         this.dtPrevista = dtPrevista;
    }
 
@@ -111,6 +120,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtSaida(Timestamp dtSaida) {
+        markAsChanged("DTSAIDA", dtSaida);
         this.dtSaida = dtSaida;
    }
 
@@ -119,6 +129,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setFaltPer(BigDecimal faltPer) {
+        markAsChanged("FALTPER", faltPer);
         this.faltPer = faltPer;
    }
 
@@ -127,6 +138,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNumDiasFer(BigDecimal numDiasFer) {
+        markAsChanged("NUMDIASFER", numDiasFer);
         this.numDiasFer = numDiasFer;
    }
 
@@ -135,6 +147,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNumDiasFerCol(BigDecimal numDiasFerCol) {
+        markAsChanged("NUMDIASFERCOL", numDiasFerCol);
         this.numDiasFerCol = numDiasFerCol;
    }
 
@@ -143,6 +156,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNumDiasLicRem(BigDecimal numDiasLicRem) {
+        markAsChanged("NUMDIASLICREM", numDiasLicRem);
         this.numDiasLicRem = numDiasLicRem;
    }
 
@@ -151,6 +165,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
+        markAsChanged("NUOCOR", nuOcor);
         this.nuOcor = nuOcor;
    }
 
@@ -159,6 +174,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setQtdParcelas(BigDecimal qtdParcelas) {
+        markAsChanged("QTDPARCELAS", qtdParcelas);
         this.qtdParcelas = qtdParcelas;
    }
 
@@ -167,6 +183,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -175,6 +192,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -183,6 +201,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -191,6 +210,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setAprovado(String aprovado) {
+        markAsChanged("APROVADO", aprovado);
         this.aprovado = aprovado;
    }
 
@@ -199,6 +219,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setSaldoDias(BigDecimal saldoDias) {
+        markAsChanged("SALDODIAS", saldoDias);
         this.saldoDias = saldoDias;
    }
 
@@ -207,6 +228,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setQtdDiasSolFerias(BigDecimal qtdDiasSolFerias) {
+        markAsChanged("QTDDIASSOLFERIAS", qtdDiasSolFerias);
         this.qtdDiasSolFerias = qtdDiasSolFerias;
    }
 
@@ -215,6 +237,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setDtLimGozFer(Timestamp dtLimGozFer) {
+        markAsChanged("DTLIMGOZFER", dtLimGozFer);
         this.dtLimGozFer = dtLimGozFer;
    }
 
@@ -223,6 +246,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setCodFervinc(BigDecimal codFervinc) {
+        markAsChanged("CODFERVINC", codFervinc);
         this.codFervinc = codFervinc;
    }
 
@@ -231,6 +255,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNumDiasFerReal(BigDecimal numDiasFerReal) {
+        markAsChanged("NUMDIASFERREAL", numDiasFerReal);
         this.numDiasFerReal = numDiasFerReal;
    }
 
@@ -239,6 +264,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setNumDiasLicRemReal(BigDecimal numDiasLicRemReal) {
+        markAsChanged("NUMDIASLICREMREAL", numDiasLicRemReal);
         this.numDiasLicRemReal = numDiasLicRemReal;
    }
 
@@ -247,6 +273,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    }
 
    public void setPerQuitado(String perQuitado) {
+        markAsChanged("PERQUITADO", perQuitado);
         this.perQuitado = perQuitado;
    }
 
@@ -262,6 +289,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
 
    @Override
    public ProgramacaoFerias fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abonoInicio = vo.asString("ABONOINICIO");
         this.abonoPec = vo.asBigDecimal("ABONOPEC");
         this.atualFergoz = vo.asString("ATUALFERGOZ");

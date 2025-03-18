@@ -41,6 +41,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setNuKc(BigDecimal nuKc) {
+        markAsChanged("NUCKC", nuKc);
         this.nuKc = nuKc;
    }
 
@@ -49,6 +50,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setNuPromocao(BigDecimal nuPromocao) {
+        markAsChanged("NUPROMOCAO", nuPromocao);
         this.nuPromocao = nuPromocao;
    }
 
@@ -57,6 +59,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setNuTab(BigDecimal nuTab) {
+        markAsChanged("NUTAB", nuTab);
         this.nuTab = nuTab;
    }
 
@@ -65,6 +68,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -73,6 +77,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setPrecoBase(BigDecimal precoBase) {
+        markAsChanged("PRECOBASE", precoBase);
         this.precoBase = precoBase;
    }
 
@@ -81,6 +86,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -89,6 +95,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setSeqCki(BigDecimal seqCki) {
+        markAsChanged("SEQCKI", seqCki);
         this.seqCki = seqCki;
    }
 
@@ -97,6 +104,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -105,6 +113,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setUsoProd(String usoProd) {
+        markAsChanged("USOPROD", usoProd);
         this.usoProd = usoProd;
    }
 
@@ -113,6 +122,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -121,6 +131,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrTot(BigDecimal vlrTot) {
+        markAsChanged("VLRTOT", vlrTot);
         this.vlrTot = vlrTot;
    }
 
@@ -129,6 +140,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrTotLiq(BigDecimal vlrTotLiq) {
+        markAsChanged("VLRTOTLIQ", vlrTotLiq);
         this.vlrTotLiq = vlrTotLiq;
    }
 
@@ -137,6 +149,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrUnit(BigDecimal vlrUnit) {
+        markAsChanged("VLRUNIT", vlrUnit);
         this.vlrUnit = vlrUnit;
    }
 
@@ -145,6 +158,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setMensagem(String mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -153,6 +167,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -161,6 +176,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
+        markAsChanged("CODLOCALORIG", codLocalOrig);
         this.codLocalOrig = codLocalOrig;
    }
 
@@ -169,6 +185,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -177,6 +194,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -185,6 +203,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -193,6 +212,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -201,6 +221,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -209,6 +230,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -217,6 +239,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setBaseIpi(BigDecimal baseIpi) {
+        markAsChanged("BASEIPI", baseIpi);
         this.baseIpi = baseIpi;
    }
 
@@ -225,6 +248,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setBaseIss(BigDecimal baseIss) {
+        markAsChanged("BASEISS", baseIss);
         this.baseIss = baseIss;
    }
 
@@ -233,6 +257,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
+        markAsChanged("BASESUBSTIT", baseSubstit);
         this.baseSubstit = baseSubstit;
    }
 
@@ -241,6 +266,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -249,6 +275,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrIpi(BigDecimal vlrIpi) {
+        markAsChanged("VLRIPI", vlrIpi);
         this.vlrIpi = vlrIpi;
    }
 
@@ -257,6 +284,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
+        markAsChanged("VLRISS", vlrIss);
         this.vlrIss = vlrIss;
    }
 
@@ -265,6 +293,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
+        markAsChanged("VLRSUBST", vlrSubst);
         this.vlrSubst = vlrSubst;
    }
 
@@ -280,6 +309,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
 
    @Override
    public CheckoutItem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuKc = vo.asBigDecimal("NUCKC");
         this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");
         this.nuTab = vo.asBigDecimal("NUTAB");

@@ -15,6 +15,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    }
 
    public void setCodRejeicao(BigDecimal codRejeicao) {
+        markAsChanged("CODREJEICAO", codRejeicao);
         this.codRejeicao = codRejeicao;
    }
 
@@ -23,6 +24,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    }
 
    public void setHashUtlRejeicao(String hashUtlRejeicao) {
+        markAsChanged("HASHUTLREJEICAO", hashUtlRejeicao);
         this.hashUtlRejeicao = hashUtlRejeicao;
    }
 
@@ -31,6 +33,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -39,6 +42,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    }
 
    public void setQtdRejeicoes(BigDecimal qtdRejeicoes) {
+        markAsChanged("QTDREJEICOES", qtdRejeicoes);
         this.qtdRejeicoes = qtdRejeicoes;
    }
 
@@ -54,6 +58,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
 
    @Override
    public RejeicaoNfe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codRejeicao = vo.asBigDecimal("CODREJEICAO");
         this.hashUtlRejeicao = vo.asString("HASHUTLREJEICAO");
         this.nuNota = vo.asBigDecimal("NUNOTA");

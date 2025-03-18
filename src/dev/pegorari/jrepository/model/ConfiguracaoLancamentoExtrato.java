@@ -27,6 +27,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -35,6 +36,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCatLanc(BigDecimal catLanc) {
+        markAsChanged("CATLANC", catLanc);
         this.catLanc = catLanc;
    }
 
@@ -43,6 +45,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -51,6 +54,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -59,6 +63,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -67,6 +72,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodLanc(BigDecimal codLanc) {
+        markAsChanged("CODLANC", codLanc);
         this.codLanc = codLanc;
    }
 
@@ -75,6 +81,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -83,6 +90,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -91,6 +99,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -99,6 +108,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -107,6 +117,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -115,6 +126,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -123,6 +135,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setHist(String hist) {
+        markAsChanged("HIST", hist);
         this.hist = hist;
    }
 
@@ -131,6 +144,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setTipoTransacao(String tipoTransacao) {
+        markAsChanged("TIPOTRANSACAO", tipoTransacao);
         this.tipoTransacao = tipoTransacao;
    }
 
@@ -139,6 +153,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodTipOperBaixa(BigDecimal codTipOperBaixa) {
+        markAsChanged("CODTIPOPERBAIXA", codTipOperBaixa);
         this.codTipOperBaixa = codTipOperBaixa;
    }
 
@@ -154,6 +169,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoLancamentoExtrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProj = vo.asBigDecimal("CODPROJ");
         this.catLanc = vo.asBigDecimal("CATLANC");
         this.codBco = vo.asBigDecimal("CODBCO");

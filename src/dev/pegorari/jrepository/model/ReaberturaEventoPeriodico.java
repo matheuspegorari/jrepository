@@ -25,6 +25,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +34,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -41,6 +43,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -49,6 +52,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -57,6 +61,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -65,6 +70,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -73,6 +79,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -81,6 +88,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -89,6 +97,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -97,6 +106,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -105,6 +115,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -113,6 +124,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -121,6 +133,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -136,6 +149,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
 
    @Override
    public ReaberturaEventoPeriodico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");
         this.idEvento = vo.asString("IDEVENTO");

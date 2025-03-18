@@ -18,6 +18,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setCasoUso(String casoUso) {
+        markAsChanged("CASOUSO", casoUso);
         this.casoUso = casoUso;
    }
 
@@ -26,6 +27,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setCodReq(BigDecimal codReq) {
+        markAsChanged("CODREQ", codReq);
         this.codReq = codReq;
    }
 
@@ -34,6 +36,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -42,6 +45,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -50,6 +54,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -58,6 +63,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -66,6 +72,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
    }
 
    public void setTodaEtapa(String todaEtapa) {
+        markAsChanged("TODAETAPA", todaEtapa);
         this.todaEtapa = todaEtapa;
    }
 
@@ -81,6 +88,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
 
    @Override
    public RequisitoFap fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.casoUso = vo.asString("CASOUSO");
         this.codReq = vo.asBigDecimal("CODREQ");
         this.descricao = vo.asString("DESCRICAO");

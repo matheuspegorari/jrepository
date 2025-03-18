@@ -26,6 +26,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDtIniPed(Timestamp dtIniPed) {
+        markAsChanged("DTINIPED", dtIniPed);
         this.dtIniPed = dtIniPed;
    }
 
@@ -34,6 +35,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -42,6 +44,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDtFinPed(Timestamp dtFinPed) {
+        markAsChanged("DTFINPED", dtFinPed);
         this.dtFinPed = dtFinPed;
    }
 
@@ -50,6 +53,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDtIniCmps(Timestamp dtIniCmps) {
+        markAsChanged("DTINICMPS", dtIniCmps);
         this.dtIniCmps = dtIniCmps;
    }
 
@@ -58,6 +62,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDtFinMps(Timestamp dtFinMps) {
+        markAsChanged("DTFINMPS", dtFinMps);
         this.dtFinMps = dtFinMps;
    }
 
@@ -66,6 +71,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -74,6 +80,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDhGerMrp(Timestamp dhGerMrp) {
+        markAsChanged("DHGERMRP", dhGerMrp);
         this.dhGerMrp = dhGerMrp;
    }
 
@@ -82,6 +89,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setNuMps(BigDecimal nuMps) {
+        markAsChanged("NUMPS", nuMps);
         this.nuMps = nuMps;
    }
 
@@ -90,6 +98,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setCodPlanta(BigDecimal codPlanta) {
+        markAsChanged("CODPLANTA", codPlanta);
         this.codPlanta = codPlanta;
    }
 
@@ -98,6 +107,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setCodCmps(BigDecimal codCmps) {
+        markAsChanged("CODCMPS", codCmps);
         this.codCmps = codCmps;
    }
 
@@ -106,6 +116,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -114,6 +125,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setPercAjusteDem(BigDecimal percAjusteDem) {
+        markAsChanged("PERCAJUSTEDEM", percAjusteDem);
         this.percAjusteDem = percAjusteDem;
    }
 
@@ -122,6 +134,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -130,6 +143,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
    }
 
    public void setObservacoes(String observacoes) {
+        markAsChanged("OBSERVACOES", observacoes);
         this.observacoes = observacoes;
    }
 
@@ -145,6 +159,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
 
    @Override
    public PlanoMestreProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtIniPed = vo.asTimestamp("DTINIPED");
         this.situacao = vo.asString("SITUACAO");
         this.dtFinPed = vo.asTimestamp("DTFINPED");

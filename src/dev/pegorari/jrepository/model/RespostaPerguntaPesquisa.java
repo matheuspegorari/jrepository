@@ -25,6 +25,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setAnexo(byte[] anexo) {
+        markAsChanged("ANEXO", anexo);
         this.anexo = anexo;
    }
 
@@ -33,6 +34,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setCodPerg(BigDecimal codPerg) {
+        markAsChanged("CODPERG", codPerg);
         this.codPerg = codPerg;
    }
 
@@ -41,6 +43,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setCodResp(BigDecimal codResp) {
+        markAsChanged("CODRESP", codResp);
         this.codResp = codResp;
    }
 
@@ -49,6 +52,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -57,6 +61,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setCodUsuCorretor(BigDecimal codUsuCorretor) {
+        markAsChanged("CODUSUCORRETOR", codUsuCorretor);
         this.codUsuCorretor = codUsuCorretor;
    }
 
@@ -65,6 +70,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -73,6 +79,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setDhCorrecao(Timestamp dhCorrecao) {
+        markAsChanged("DHCORRECAO", dhCorrecao);
         this.dhCorrecao = dhCorrecao;
    }
 
@@ -81,6 +88,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setNota(BigDecimal nota) {
+        markAsChanged("NOTA", nota);
         this.nota = nota;
    }
 
@@ -89,6 +97,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
+        markAsChanged("NUPESQ", nuPesq);
         this.nuPesq = nuPesq;
    }
 
@@ -97,6 +106,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -105,6 +115,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -113,6 +124,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -121,6 +133,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    }
 
    public void setProibElimepza(String proibElimepza) {
+        markAsChanged("PROIBELIMPEZA", proibElimepza);
         this.proibElimepza = proibElimepza;
    }
 
@@ -136,6 +149,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
 
    @Override
    public RespostaPerguntaPesquisa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.anexo = vo.asBlob("ANEXO");
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.codResp = vo.asBigDecimal("CODRESP");

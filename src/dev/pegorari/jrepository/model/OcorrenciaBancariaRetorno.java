@@ -41,6 +41,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setBaixaParcial(String baixaParcial) {
+        markAsChanged("BAIXAPARCIAL", baixaParcial);
         this.baixaParcial = baixaParcial;
    }
 
@@ -49,6 +50,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -57,6 +59,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -65,6 +68,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -73,6 +77,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -81,6 +86,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodOcorrencia(String codOcorrencia) {
+        markAsChanged("CODOCORRENCIA", codOcorrencia);
         this.codOcorrencia = codOcorrencia;
    }
 
@@ -89,6 +95,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -97,6 +104,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -105,6 +113,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -113,6 +122,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setConciliar(String conciliar) {
+        markAsChanged("CONCILIAR", conciliar);
         this.conciliar = conciliar;
    }
 
@@ -121,6 +131,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -129,6 +140,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setInserir(String inserir) {
+        markAsChanged("INSERIR", inserir);
         this.inserir = inserir;
    }
 
@@ -137,6 +149,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setInterromper(String interromper) {
+        markAsChanged("INTERROMPER", interromper);
         this.interromper = interromper;
    }
 
@@ -145,6 +158,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setRegistrarLog(String registrarLog) {
+        markAsChanged("REGISTRARLOG", registrarLog);
         this.registrarLog = registrarLog;
    }
 
@@ -153,6 +167,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setRegistrarNossoNum(String registrarNossoNum) {
+        markAsChanged("REGISTRARNOSSONUM", registrarNossoNum);
         this.registrarNossoNum = registrarNossoNum;
    }
 
@@ -161,6 +176,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setReportar(String reportar) {
+        markAsChanged("REPORTAR", reportar);
         this.reportar = reportar;
    }
 
@@ -169,6 +185,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -177,6 +194,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setTratarOcorrencia(String tratarOcorrencia) {
+        markAsChanged("TRATAROCORRENCIA", tratarOcorrencia);
         this.tratarOcorrencia = tratarOcorrencia;
    }
 
@@ -185,6 +203,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setBaixar(String baixar) {
+        markAsChanged("BAIXAR", baixar);
         this.baixar = baixar;
    }
 
@@ -193,6 +212,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setAlterar(String alterar) {
+        markAsChanged("ALTERAR", alterar);
         this.alterar = alterar;
    }
 
@@ -201,6 +221,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -209,6 +230,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -217,6 +239,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setRemoverMonCob(String removerMonCob) {
+        markAsChanged("REMOVERMONCOB", removerMonCob);
         this.removerMonCob = removerMonCob;
    }
 
@@ -225,6 +248,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodOcorEmessa(String codOcorEmessa) {
+        markAsChanged("CODOCOREMESSA", codOcorEmessa);
         this.codOcorEmessa = codOcorEmessa;
    }
 
@@ -233,6 +257,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setAtualizacaoRemessa(String atualizacaoRemessa) {
+        markAsChanged("ATUALIZACAOREMESSA", atualizacaoRemessa);
         this.atualizacaoRemessa = atualizacaoRemessa;
    }
 
@@ -241,6 +266,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCodModelo(BigDecimal codModelo) {
+        markAsChanged("CODMODELO", codModelo);
         this.codModelo = codModelo;
    }
 
@@ -249,6 +275,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setEnvPixEmail(String envPixEmail) {
+        markAsChanged("ENVPIXEMAIL", envPixEmail);
         this.envPixEmail = envPixEmail;
    }
 
@@ -257,6 +284,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -265,6 +293,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setRegistrarQrCode(String registrarQrCode) {
+        markAsChanged("REGISTRARQRCODE", registrarQrCode);
         this.registrarQrCode = registrarQrCode;
    }
 
@@ -273,6 +302,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
    }
 
    public void setCamposAjustar(char[] camposAjustar) {
+        markAsChanged("CAMPOSAJUSTAR", camposAjustar);
         this.camposAjustar = camposAjustar;
    }
 
@@ -288,6 +318,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
 
    @Override
    public OcorrenciaBancariaRetorno fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baixaParcial = vo.asString("BAIXAPARCIAL");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codEmp = vo.asBigDecimal("CODEMP");

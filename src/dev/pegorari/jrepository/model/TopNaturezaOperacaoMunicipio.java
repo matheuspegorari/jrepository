@@ -15,6 +15,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -23,6 +24,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -31,6 +33,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
    }
 
    public void setCodNatOper(String codNatOper) {
+        markAsChanged("CODNATOPER", codNatOper);
         this.codNatOper = codNatOper;
    }
 
@@ -39,6 +42,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -54,6 +58,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
 
    @Override
    public TopNaturezaOperacaoMunicipio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codNatOper = vo.asString("CODNATOPER");

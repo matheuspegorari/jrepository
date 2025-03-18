@@ -87,6 +87,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNuCurriculoBt(BigDecimal nuCurriculoBt) {
+        markAsChanged("NUCURRICULOBT", nuCurriculoBt);
         this.nuCurriculoBt = nuCurriculoBt;
    }
 
@@ -95,6 +96,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNumCps(BigDecimal numCps) {
+        markAsChanged("NUMCPS", numCps);
         this.numCps = numCps;
    }
 
@@ -103,6 +105,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setUsoApAuditivo(String usoApAuditivo) {
+        markAsChanged("USOAPAUDITIVO", usoApAuditivo);
         this.usoApAuditivo = usoApAuditivo;
    }
 
@@ -111,6 +114,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setVeicProprio(String veicProprio) {
+        markAsChanged("VEICPROPRIO", veicProprio);
         this.veicProprio = veicProprio;
    }
 
@@ -119,6 +123,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -127,6 +132,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setOrgaOrg(String orgaOrg) {
+        markAsChanged("ORGAORG", orgaOrg);
         this.orgaOrg = orgaOrg;
    }
 
@@ -135,6 +141,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setPais(String pais) {
+        markAsChanged("PAIS", pais);
         this.pais = pais;
    }
 
@@ -143,6 +150,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setPis(String pis) {
+        markAsChanged("PIS", pis);
         this.pis = pis;
    }
 
@@ -151,6 +159,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setPretSalarial(BigDecimal pretSalarial) {
+        markAsChanged("PRETSALARIAL", pretSalarial);
         this.pretSalarial = pretSalarial;
    }
 
@@ -159,6 +168,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setPretSalarialFinal(BigDecimal pretSalarialFinal) {
+        markAsChanged("PRETSALARIALFINAL", pretSalarialFinal);
         this.pretSalarialFinal = pretSalarialFinal;
    }
 
@@ -167,6 +177,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setPretSalarialInicial(BigDecimal pretSalarialInicial) {
+        markAsChanged("PRETSALARIALINICIAL", pretSalarialInicial);
         this.pretSalarialInicial = pretSalarialInicial;
    }
 
@@ -175,6 +186,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setRamal(String ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -183,6 +195,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setRne(String rne) {
+        markAsChanged("RNE", rne);
         this.rne = rne;
    }
 
@@ -191,6 +204,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setSerieCps(String serieCps) {
+        markAsChanged("SERIECPS", serieCps);
         this.serieCps = serieCps;
    }
 
@@ -199,6 +213,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setSexo(String sexo) {
+        markAsChanged("SEXO", sexo);
         this.sexo = sexo;
    }
 
@@ -207,6 +222,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setSitPais(String sitPais) {
+        markAsChanged("SITPAIS", sitPais);
         this.sitPais = sitPais;
    }
 
@@ -215,6 +231,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setSkype(String skype) {
+        markAsChanged("SKYPE", skype);
         this.skype = skype;
    }
 
@@ -223,6 +240,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setStatus(BigDecimal status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -231,6 +249,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTelCel(String telCel) {
+        markAsChanged("TELCEL", telCel);
         this.telCel = telCel;
    }
 
@@ -239,6 +258,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTelCom(String telCom) {
+        markAsChanged("TELCOM", telCom);
         this.telCom = telCom;
    }
 
@@ -247,6 +267,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTelPref(String telPref) {
+        markAsChanged("TELPREF", telPref);
         this.telPref = telPref;
    }
 
@@ -255,6 +276,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTelRes(String telRes) {
+        markAsChanged("TELRES", telRes);
         this.telRes = telRes;
    }
 
@@ -263,6 +285,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTipDeficiencia(BigDecimal tipDeficiencia) {
+        markAsChanged("TIPDEFICIENCIA", tipDeficiencia);
         this.tipDeficiencia = tipDeficiencia;
    }
 
@@ -271,6 +294,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTipoEnd(String tipoEnd) {
+        markAsChanged("TIPOEND", tipoEnd);
         this.tipoEnd = tipoEnd;
    }
 
@@ -279,6 +303,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTwitter(String twitter) {
+        markAsChanged("TWITTER", twitter);
         this.twitter = twitter;
    }
 
@@ -287,6 +312,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setUf(String uf) {
+        markAsChanged("UF", uf);
         this.uf = uf;
    }
 
@@ -295,6 +321,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setUfCps(BigDecimal ufCps) {
+        markAsChanged("UFCPS", ufCps);
         this.ufCps = ufCps;
    }
 
@@ -303,6 +330,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setAnoChegPais(BigDecimal anoChegPais) {
+        markAsChanged("ANOCHEGPAIS", anoChegPais);
         this.anoChegPais = anoChegPais;
    }
 
@@ -311,6 +339,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -319,6 +348,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setBairro(String bairro) {
+        markAsChanged("BAIRRO", bairro);
         this.bairro = bairro;
    }
 
@@ -327,6 +357,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCategoriaCnh(String categoriaCnh) {
+        markAsChanged("CATEGORIACNH", categoriaCnh);
         this.categoriaCnh = categoriaCnh;
    }
 
@@ -335,6 +366,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -343,6 +375,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCidade(String cidade) {
+        markAsChanged("CIDADE", cidade);
         this.cidade = cidade;
    }
 
@@ -351,6 +384,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCnh(String cnh) {
+        markAsChanged("CNH", cnh);
         this.cnh = cnh;
    }
 
@@ -359,6 +393,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -367,6 +402,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setInApropriado(String inApropriado) {
+        markAsChanged("INAPROPRIADO", inApropriado);
         this.inApropriado = inApropriado;
    }
 
@@ -375,6 +411,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -383,6 +420,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setComplEnd(String complEnd) {
+        markAsChanged("COMPLEND", complEnd);
         this.complEnd = complEnd;
    }
 
@@ -391,6 +429,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setConsideracoes(String consideracoes) {
+        markAsChanged("CONSIDERACOES", consideracoes);
         this.consideracoes = consideracoes;
    }
 
@@ -399,6 +438,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setCpf(String cpf) {
+        markAsChanged("CPF", cpf);
         this.cpf = cpf;
    }
 
@@ -407,6 +447,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefAuditivo(String defAuditivo) {
+        markAsChanged("DEFAUDITIVO", defAuditivo);
         this.defAuditivo = defAuditivo;
    }
 
@@ -415,6 +456,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefFala(String defFala) {
+        markAsChanged("DEFFALA", defFala);
         this.defFala = defFala;
    }
 
@@ -423,6 +465,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDeficiente(String deficiente) {
+        markAsChanged("DEFICIENTE", deficiente);
         this.deficiente = deficiente;
    }
 
@@ -431,6 +474,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefIndependente(String defIndependente) {
+        markAsChanged("DEFINDEPENDENTE", defIndependente);
         this.defIndependente = defIndependente;
    }
 
@@ -439,6 +483,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefIntelectual(String defIntelectual) {
+        markAsChanged("DEFINTELECTUAL", defIntelectual);
         this.defIntelectual = defIntelectual;
    }
 
@@ -447,6 +492,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefOutras(String defOutras) {
+        markAsChanged("DEFOUTRAS", defOutras);
         this.defOutras = defOutras;
    }
 
@@ -455,6 +501,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefOutrosRecursos(String defOutrosRecursos) {
+        markAsChanged("DEFOUTROSRECURSOS", defOutrosRecursos);
         this.defOutrosRecursos = defOutrosRecursos;
    }
 
@@ -463,6 +510,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefRecursos(BigDecimal defRecursos) {
+        markAsChanged("DEFRECURSOS", defRecursos);
         this.defRecursos = defRecursos;
    }
 
@@ -471,6 +519,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefRecursosImpres(BigDecimal defRecursosImpres) {
+        markAsChanged("DEFRECURSOSIMPRES", defRecursosImpres);
         this.defRecursosImpres = defRecursosImpres;
    }
 
@@ -479,6 +528,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDefVisual(String defVisual) {
+        markAsChanged("DEFVISUAL", defVisual);
         this.defVisual = defVisual;
    }
 
@@ -487,6 +537,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDescrDeficiencia(String descrDeficiencia) {
+        markAsChanged("DESCRDEFICIENCIA", descrDeficiencia);
         this.descrDeficiencia = descrDeficiencia;
    }
 
@@ -495,6 +546,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDispMudanca(String dispMudanca) {
+        markAsChanged("DISPMUDANCA", dispMudanca);
         this.dispMudanca = dispMudanca;
    }
 
@@ -503,6 +555,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDispViagem(String dispViagem) {
+        markAsChanged("DISPVIAGEM", dispViagem);
         this.dispViagem = dispViagem;
    }
 
@@ -511,6 +564,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -519,6 +573,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -527,6 +582,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -535,6 +591,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDtValCnh(Timestamp dtValCnh) {
+        markAsChanged("DTVALCNH", dtValCnh);
         this.dtValCnh = dtValCnh;
    }
 
@@ -543,6 +600,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDtValPais(Timestamp dtValPais) {
+        markAsChanged("DTVALPAIS", dtValPais);
         this.dtValPais = dtValPais;
    }
 
@@ -551,6 +609,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -559,6 +618,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setEstadoCivil(BigDecimal estadoCivil) {
+        markAsChanged("ESTADOCIVIL", estadoCivil);
         this.estadoCivil = estadoCivil;
    }
 
@@ -567,6 +627,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setEstrangeiro(String estrangeiro) {
+        markAsChanged("ESTRANGEIRO", estrangeiro);
         this.estrangeiro = estrangeiro;
    }
 
@@ -575,6 +636,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setFacebook(String facebook) {
+        markAsChanged("FACEBOOK", facebook);
         this.facebook = facebook;
    }
 
@@ -583,6 +645,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setFoto(byte[] foto) {
+        markAsChanged("FOTO", foto);
         this.foto = foto;
    }
 
@@ -591,6 +654,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setGooglePlus(String googlePlus) {
+        markAsChanged("GOOGLEPLUS", googlePlus);
         this.googlePlus = googlePlus;
    }
 
@@ -599,6 +663,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setGrauInstr(BigDecimal grauInstr) {
+        markAsChanged("GRAUINSTR", grauInstr);
         this.grauInstr = grauInstr;
    }
 
@@ -607,6 +672,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setIdentidade(String identidade) {
+        markAsChanged("IDENTIDADE", identidade);
         this.identidade = identidade;
    }
 
@@ -615,6 +681,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setInclusaoMge(String inclusaoMge) {
+        markAsChanged("INCLUSAOMGE", inclusaoMge);
         this.inclusaoMge = inclusaoMge;
    }
 
@@ -623,6 +690,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setIndicacao(String indicacao) {
+        markAsChanged("INDICACAO", indicacao);
         this.indicacao = indicacao;
    }
 
@@ -631,6 +699,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setLinkedin(String linkedin) {
+        markAsChanged("LINKEDIN", linkedin);
         this.linkedin = linkedin;
    }
 
@@ -639,6 +708,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNaturalidade(String naturalidade) {
+        markAsChanged("NATURALIDADE", naturalidade);
         this.naturalidade = naturalidade;
    }
 
@@ -647,6 +717,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNomeCandidato(String nomeCandidato) {
+        markAsChanged("NOMECANDIDATO", nomeCandidato);
         this.nomeCandidato = nomeCandidato;
    }
 
@@ -655,6 +726,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNomeEnd(String nomeEnd) {
+        markAsChanged("NOMEEND", nomeEnd);
         this.nomeEnd = nomeEnd;
    }
 
@@ -663,6 +735,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -671,6 +744,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setTipoCurriculo(BigDecimal tipoCurriculo) {
+        markAsChanged("TIPOCURRICULO", tipoCurriculo);
         this.tipoCurriculo = tipoCurriculo;
    }
 
@@ -679,6 +753,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
    }
 
    public void setDeficienteF(String deficienteF) {
+        markAsChanged("DEFICIENTEF", deficienteF);
         this.deficienteF = deficienteF;
    }
 
@@ -694,6 +769,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
 
    @Override
    public Curriculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuCurriculoBt = vo.asBigDecimal("NUCURRICULOBT");
         this.numCps = vo.asBigDecimal("NUMCPS");
         this.usoApAuditivo = vo.asString("USOAPAUDITIVO");

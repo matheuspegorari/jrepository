@@ -17,6 +17,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -25,6 +26,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +35,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
+        markAsChanged("CODPARCTRANSP", codParctransp);
         this.codParctransp = codParctransp;
    }
 
@@ -41,6 +44,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    }
 
    public void setNuOdp(BigDecimal nuOdp) {
+        markAsChanged("NUODP", nuOdp);
         this.nuOdp = nuOdp;
    }
 
@@ -49,6 +53,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -64,6 +69,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
 
    @Override
    public OrdemDespacho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.status = vo.asString("STATUS");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");

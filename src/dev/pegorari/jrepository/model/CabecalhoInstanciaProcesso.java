@@ -50,6 +50,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setNumps(BigDecimal numps) {
+        markAsChanged("NUMPS", numps);
         this.numps = numps;
    }
 
@@ -58,6 +59,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setNroLote(String nroLote) {
+        markAsChanged("NROLOTE", nroLote);
         this.nroLote = nroLote;
    }
 
@@ -66,6 +68,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setQtdProduzir(BigDecimal qtdProduzir) {
+        markAsChanged("QTDPRODUZIR", qtdProduzir);
         this.qtdProduzir = qtdProduzir;
    }
 
@@ -74,6 +77,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDhTermino(Timestamp dhTermino) {
+        markAsChanged("DHTERMINO", dhTermino);
         this.dhTermino = dhTermino;
    }
 
@@ -82,6 +86,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setIdIprocPai(BigDecimal idIprocPai) {
+        markAsChanged("IDIPROCPAI", idIprocPai);
         this.idIprocPai = idIprocPai;
    }
 
@@ -90,6 +95,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -98,6 +104,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -106,6 +113,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setNomeExec(String nomeExec) {
+        markAsChanged("NOMEEXEC", nomeExec);
         this.nomeExec = nomeExec;
    }
 
@@ -114,6 +122,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -122,6 +131,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setComplDescPa(String complDescPa) {
+        markAsChanged("COMPLDESCPA", complDescPa);
         this.complDescPa = complDescPa;
    }
 
@@ -130,6 +140,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDescrProdPa(String descrProdPa) {
+        markAsChanged("DESCRPRODPA", descrProdPa);
         this.descrProdPa = descrProdPa;
    }
 
@@ -138,6 +149,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodParcTerc(BigDecimal codParcTerc) {
+        markAsChanged("CODPARCTERC", codParcTerc);
         this.codParcTerc = codParcTerc;
    }
 
@@ -146,6 +158,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setNomeRpa(String nomeRpa) {
+        markAsChanged("NOMERPA", nomeRpa);
         this.nomeRpa = nomeRpa;
    }
 
@@ -154,6 +167,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setMultiProduto(String multiProduto) {
+        markAsChanged("MULTIPRODUTO", multiProduto);
         this.multiProduto = multiProduto;
    }
 
@@ -162,6 +176,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setQtdRpa(BigDecimal qtdRpa) {
+        markAsChanged("QTDRPA", qtdRpa);
         this.qtdRpa = qtdRpa;
    }
 
@@ -170,6 +185,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodGrupoProdPa(BigDecimal codGrupoProdPa) {
+        markAsChanged("CODGRUPOPRODPA", codGrupoProdPa);
         this.codGrupoProdPa = codGrupoProdPa;
    }
 
@@ -178,6 +194,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -186,6 +203,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDecQtd(BigDecimal decQtd) {
+        markAsChanged("DECQTD", decQtd);
         this.decQtd = decQtd;
    }
 
@@ -194,6 +212,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -202,6 +221,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodUsuInc(BigDecimal codUsuInc) {
+        markAsChanged("CODUSUINC", codUsuInc);
         this.codUsuInc = codUsuInc;
    }
 
@@ -210,6 +230,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -218,6 +239,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDhInst(Timestamp dhInst) {
+        markAsChanged("DHINST", dhInst);
         this.dhInst = dhInst;
    }
 
@@ -226,6 +248,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -234,6 +257,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -242,6 +266,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setIdWflow(String idWflow) {
+        markAsChanged("IDWFLOW", idWflow);
         this.idWflow = idWflow;
    }
 
@@ -250,6 +275,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -258,6 +284,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setStatusProc(String statusProc) {
+        markAsChanged("STATUSPROC", statusProc);
         this.statusProc = statusProc;
    }
 
@@ -266,6 +293,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -274,6 +302,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDtInicioMax(Timestamp dtInicioMax) {
+        markAsChanged("DTINICIOMAX", dtInicioMax);
         this.dtInicioMax = dtInicioMax;
    }
 
@@ -282,6 +311,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setDtPrevEnt(Timestamp dtPrevEnt) {
+        markAsChanged("DTPREVENT", dtPrevEnt);
         this.dtPrevEnt = dtPrevEnt;
    }
 
@@ -290,6 +320,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setIdIcop(BigDecimal idIcop) {
+        markAsChanged("IDICOP", idIcop);
         this.idIcop = idIcop;
    }
 
@@ -298,6 +329,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setTempoAtravess(BigDecimal tempoAtravess) {
+        markAsChanged("TEMPOATRAVESS", tempoAtravess);
         this.tempoAtravess = tempoAtravess;
    }
 
@@ -306,6 +338,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -314,6 +347,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodUsuFinal(BigDecimal codUsuFinal) {
+        markAsChanged("CODUSUFINAL", codUsuFinal);
         this.codUsuFinal = codUsuFinal;
    }
 
@@ -322,6 +356,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -330,6 +365,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setSaldoOp(BigDecimal saldoOp) {
+        markAsChanged("SALDOOP", saldoOp);
         this.saldoOp = saldoOp;
    }
 
@@ -338,6 +374,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -346,6 +383,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
    }
 
    public void setPeriodoMps(String periodoMps) {
+        markAsChanged("PERIODOMPS", periodoMps);
         this.periodoMps = periodoMps;
    }
 
@@ -361,6 +399,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
 
    @Override
    public CabecalhoInstanciaProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.numps = vo.asBigDecimal("NUMPS");
         this.nroLote = vo.asString("NROLOTE");
         this.qtdProduzir = vo.asBigDecimal("QTDPRODUZIR");

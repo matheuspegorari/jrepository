@@ -122,6 +122,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setAceitarHistZero(String aceitarHistZero) {
+        markAsChanged("ACEITARHISTZERO", aceitarHistZero);
         this.aceitarHistZero = aceitarHistZero;
    }
 
@@ -130,6 +131,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setAceitarVlrLanc(String aceitarVlrLanc) {
+        markAsChanged("ACEITARVLRLANC", aceitarVlrLanc);
         this.aceitarVlrLanc = aceitarVlrLanc;
    }
 
@@ -138,6 +140,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -146,6 +149,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCodEmpPlacta(BigDecimal codEmpPlacta) {
+        markAsChanged("CODEMPPLACTA", codEmpPlacta);
         this.codEmpPlacta = codEmpPlacta;
    }
 
@@ -154,6 +158,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setContador(String contador) {
+        markAsChanged("CONTADOR", contador);
         this.contador = contador;
    }
 
@@ -162,6 +167,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCrc(String crc) {
+        markAsChanged("CRC", crc);
         this.crc = crc;
    }
 
@@ -170,6 +176,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCtarEdaut(String ctarEdaut) {
+        markAsChanged("CTAREDAUT", ctarEdaut);
         this.ctarEdaut = ctarEdaut;
    }
 
@@ -178,6 +185,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDigCta(String digCta) {
+        markAsChanged("DIGCTA", digCta);
         this.digCta = digCta;
    }
 
@@ -186,6 +194,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDtAbertura(Timestamp dtAbertura) {
+        markAsChanged("DTABERTURA", dtAbertura);
         this.dtAbertura = dtAbertura;
    }
 
@@ -194,6 +203,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDtFimPerCtb(Timestamp dtFimPerCtb) {
+        markAsChanged("DTFIMPERCTB", dtFimPerCtb);
         this.dtFimPerCtb = dtFimPerCtb;
    }
 
@@ -202,6 +212,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDtInicPerCtb(Timestamp dtInicPerCtb) {
+        markAsChanged("DTINICPERCTB", dtInicPerCtb);
         this.dtInicPerCtb = dtInicPerCtb;
    }
 
@@ -210,6 +221,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setEmpConsolida(String empConsolida) {
+        markAsChanged("EMPCONSOLIDA", empConsolida);
         this.empConsolida = empConsolida;
    }
 
@@ -218,6 +230,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setMascCta(String mascCta) {
+        markAsChanged("MASCCTA", mascCta);
         this.mascCta = mascCta;
    }
 
@@ -226,6 +239,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNroLoteMnualFim(BigDecimal nroLoteMnualFim) {
+        markAsChanged("NROLOTEMNUALFIM", nroLoteMnualFim);
         this.nroLoteMnualFim = nroLoteMnualFim;
    }
 
@@ -234,6 +248,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNroLoteMnualIni(BigDecimal nroLoteMnualIni) {
+        markAsChanged("NROLOTEMNUALINI", nroLoteMnualIni);
         this.nroLoteMnualIni = nroLoteMnualIni;
    }
 
@@ -242,6 +257,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNumDiario(BigDecimal numDiario) {
+        markAsChanged("NUMDIARIO", numDiario);
         this.numDiario = numDiario;
    }
 
@@ -250,6 +266,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNumLotesAut(String numLotesAut) {
+        markAsChanged("NUMLOTESAUT", numLotesAut);
         this.numLotesAut = numLotesAut;
    }
 
@@ -258,6 +275,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -266,6 +284,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setSimbVlrNeg(String simbVlrNeg) {
+        markAsChanged("SIMBVLRNEG", simbVlrNeg);
         this.simbVlrNeg = simbVlrNeg;
    }
 
@@ -274,6 +293,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setTipAtualSaldos(String tipAtualSaldos) {
+        markAsChanged("TIPATUALSALDOS", tipAtualSaldos);
         this.tipAtualSaldos = tipAtualSaldos;
    }
 
@@ -282,6 +302,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUltPagDiario(BigDecimal ultPagDiario) {
+        markAsChanged("ULTPAGDIARIO", ultPagDiario);
         this.ultPagDiario = ultPagDiario;
    }
 
@@ -290,6 +311,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUtilCencus(String utilCencus) {
+        markAsChanged("UTILCENCUS", utilCencus);
         this.utilCencus = utilCencus;
    }
 
@@ -298,6 +320,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUtilProj(String utilProj) {
+        markAsChanged("UTILPROJ", utilProj);
         this.utilProj = utilProj;
    }
 
@@ -306,6 +329,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setPerAltQdCom(String perAltQdCom) {
+        markAsChanged("PERALTQDCOM", perAltQdCom);
         this.perAltQdCom = perAltQdCom;
    }
 
@@ -314,6 +338,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCodCtaCtbEncRes(BigDecimal codCtaCtbEncRes) {
+        markAsChanged("CODCTACTBENCRES", codCtaCtbEncRes);
         this.codCtaCtbEncRes = codCtaCtbEncRes;
    }
 
@@ -322,6 +347,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUfCrcContador(String ufCrcContador) {
+        markAsChanged("UFCRCCONTADOR", ufCrcContador);
         this.ufCrcContador = ufCrcContador;
    }
 
@@ -330,6 +356,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCodInstResp(String codInstResp) {
+        markAsChanged("CODINSTRESP", codInstResp);
         this.codInstResp = codInstResp;
    }
 
@@ -338,6 +365,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUltimoNumeroUsado(BigDecimal ultimoNumeroUsado) {
+        markAsChanged("ULTIMONUMEROUSADO", ultimoNumeroUsado);
         this.ultimoNumeroUsado = ultimoNumeroUsado;
    }
 
@@ -346,6 +374,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNroOrdem(BigDecimal nroOrdem) {
+        markAsChanged("NROORDEM", nroOrdem);
         this.nroOrdem = nroOrdem;
    }
 
@@ -354,6 +383,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setNroOrdemR(BigDecimal nroOrdemR) {
+        markAsChanged("NROORDEM_R", nroOrdemR);
         this.nroOrdemR = nroOrdemR;
    }
 
@@ -362,6 +392,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -370,6 +401,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setPercRateio(BigDecimal percRateio) {
+        markAsChanged("PERCRATEIO", percRateio);
         this.percRateio = percRateio;
    }
 
@@ -378,6 +410,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setEmpCopPla(BigDecimal empCopPla) {
+        markAsChanged("EMPCOPPLA", empCopPla);
         this.empCopPla = empCopPla;
    }
 
@@ -386,6 +419,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setTipPeriodo(String tipPeriodo) {
+        markAsChanged("TIPPERIODO", tipPeriodo);
         this.tipPeriodo = tipPeriodo;
    }
 
@@ -394,6 +428,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setCabDem(String cabDem) {
+        markAsChanged("CABDEM", cabDem);
         this.cabDem = cabDem;
    }
 
@@ -402,6 +437,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setArqLogoMarca(String arqLogoMarca) {
+        markAsChanged("ARQLOGOMARCA", arqLogoMarca);
         this.arqLogoMarca = arqLogoMarca;
    }
 
@@ -410,6 +446,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setUsaEmpAuxCtbz(String usaEmpAuxCtbz) {
+        markAsChanged("USAEMPAUXCTBZ", usaEmpAuxCtbz);
         this.usaEmpAuxCtbz = usaEmpAuxCtbz;
    }
 
@@ -418,6 +455,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDerEx(String derEx) {
+        markAsChanged("DEREX", derEx);
         this.derEx = derEx;
    }
 
@@ -426,6 +464,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRecReceita(BigDecimal indRecReceita) {
+        markAsChanged("INDRECRECEITA", indRecReceita);
         this.indRecReceita = indRecReceita;
    }
 
@@ -434,6 +473,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPaisaPais(String indPaisaPais) {
+        markAsChanged("INDPAISAPAIS", indPaisaPais);
         this.indPaisaPais = indPaisaPais;
    }
 
@@ -442,6 +482,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRetid(String indRetid) {
+        markAsChanged("INDRETID", indRetid);
         this.indRetid = indRetid;
    }
 
@@ -450,6 +491,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndResiduosSolid(String indResiduosSolid) {
+        markAsChanged("INDRESIDUOSSOLID", indResiduosSolid);
         this.indResiduosSolid = indResiduosSolid;
    }
 
@@ -458,6 +500,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRecOpa(String indRecOpa) {
+        markAsChanged("INDRECOPA", indRecOpa);
         this.indRecOpa = indRecOpa;
    }
 
@@ -466,6 +509,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndCopadomundo(String indCopadomundo) {
+        markAsChanged("INDCOPADOMUNDO", indCopadomundo);
         this.indCopadomundo = indCopadomundo;
    }
 
@@ -474,6 +518,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndOlimpiadas(String indOlimpiadas) {
+        markAsChanged("INDOLIMPIADAS", indOlimpiadas);
         this.indOlimpiadas = indOlimpiadas;
    }
 
@@ -482,6 +527,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepNblRedes(String indRepNblRedes) {
+        markAsChanged("INDREPNBLREDES", indRepNblRedes);
         this.indRepNblRedes = indRepNblRedes;
    }
 
@@ -490,6 +536,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndReif(String indReif) {
+        markAsChanged("INDREIF", indReif);
         this.indReif = indReif;
    }
 
@@ -498,6 +545,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRetAero(String indRetAero) {
+        markAsChanged("INDRETAERO", indRetAero);
         this.indRetAero = indRetAero;
    }
 
@@ -506,6 +554,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRecine(String indRecine) {
+        markAsChanged("INDRECINE", indRecine);
         this.indRecine = indRecine;
    }
 
@@ -514,6 +563,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepEnec(String indRepEnec) {
+        markAsChanged("INDREPENEC", indRepEnec);
         this.indRepEnec = indRepEnec;
    }
 
@@ -522,6 +572,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndReicomP(String indReicomP) {
+        markAsChanged("INDREICOMP", indReicomP);
         this.indReicomP = indReicomP;
    }
 
@@ -530,6 +581,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPadis(String indPadis) {
+        markAsChanged("INDPADIS", indPadis);
         this.indPadis = indPadis;
    }
 
@@ -538,6 +590,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRecap(String indRecap) {
+        markAsChanged("INDRECAP", indRecap);
         this.indRecap = indRecap;
    }
 
@@ -546,6 +599,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPatvd(String indPatvd) {
+        markAsChanged("INDPATVD", indPatvd);
         this.indPatvd = indPatvd;
    }
 
@@ -554,6 +608,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepes(String indRepes) {
+        markAsChanged("INDREPES", indRepes);
         this.indRepes = indRepes;
    }
 
@@ -562,6 +617,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndReidi(String indReidi) {
+        markAsChanged("INDREIDI", indReidi);
         this.indReidi = indReidi;
    }
 
@@ -570,6 +626,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndMudancPc(BigDecimal indMudancPc) {
+        markAsChanged("INDMUDANCPC", indMudancPc);
         this.indMudancPc = indMudancPc;
    }
 
@@ -578,6 +635,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setPjSujeitaCsll(String pjSujeitaCsll) {
+        markAsChanged("PJSUJEITACSLL", pjSujeitaCsll);
         this.pjSujeitaCsll = pjSujeitaCsll;
    }
 
@@ -586,6 +644,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setDiffCont(String diffCont) {
+        markAsChanged("DIFFCONT", diffCont);
         this.diffCont = diffCont;
    }
 
@@ -594,6 +653,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setFormatRib(BigDecimal formatRib) {
+        markAsChanged("FORMATRIB", formatRib);
         this.formatRib = formatRib;
    }
 
@@ -602,6 +662,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setOptExtRtt(String optExtRtt) {
+        markAsChanged("OPTEXTRTT", optExtRtt);
         this.optExtRtt = optExtRtt;
    }
 
@@ -610,6 +671,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setOptPaes(String optPaes) {
+        markAsChanged("OPTPAES", optPaes);
         this.optPaes = optPaes;
    }
 
@@ -618,6 +680,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndAreaCom(String indAreaCom) {
+        markAsChanged("INDAREACOM", indAreaCom);
         this.indAreaCom = indAreaCom;
    }
 
@@ -626,6 +689,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndOpExt(String indOpExt) {
+        markAsChanged("INDOPEXT", indOpExt);
         this.indOpExt = indOpExt;
    }
 
@@ -634,6 +698,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndVendExp(String indVendExp) {
+        markAsChanged("INDVENDEXP", indVendExp);
         this.indVendExp = indVendExp;
    }
 
@@ -642,6 +707,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPjEnquad(String indPjEnquad) {
+        markAsChanged("INDPJENQUAD", indPjEnquad);
         this.indPjEnquad = indPjEnquad;
    }
 
@@ -650,6 +716,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setTpoEmpresa(BigDecimal tpoEmpresa) {
+        markAsChanged("TPOEMPRESA", tpoEmpresa);
         this.tpoEmpresa = tpoEmpresa;
    }
 
@@ -658,6 +725,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndAdmFuncLu(String indAdmFuncLu) {
+        markAsChanged("INDADMFUNCLU", indAdmFuncLu);
         this.indAdmFuncLu = indAdmFuncLu;
    }
 
@@ -666,6 +734,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndCapInf(String indCapInf) {
+        markAsChanged("INDCAPINF", indCapInf);
         this.indCapInf = indCapInf;
    }
 
@@ -674,6 +743,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPoloAm(String indPoloAm) {
+        markAsChanged("INDPOLOAM", indPoloAm);
         this.indPoloAm = indPoloAm;
    }
 
@@ -682,6 +752,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPartExt(String indPartExt) {
+        markAsChanged("INDPARTEXT", indPartExt);
         this.indPartExt = indPartExt;
    }
 
@@ -690,6 +761,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRoyRec(String indRoyRec) {
+        markAsChanged("INDROYREC", indRoyRec);
         this.indRoyRec = indRoyRec;
    }
 
@@ -698,6 +770,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndLucExp(String indLucExp) {
+        markAsChanged("INDLUCEXP", indLucExp);
         this.indLucExp = indLucExp;
    }
 
@@ -706,6 +779,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndAtivExt(String indAtivExt) {
+        markAsChanged("INDATIVEXT", indAtivExt);
         this.indAtivExt = indAtivExt;
    }
 
@@ -714,6 +788,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPartColig(String indPartColig) {
+        markAsChanged("INDPARTCOLIG", indPartColig);
         this.indPartColig = indPartColig;
    }
 
@@ -722,6 +797,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPgtoExt(String indPgtoExt) {
+        markAsChanged("INDPGTOEXT", indPgtoExt);
         this.indPgtoExt = indPgtoExt;
    }
 
@@ -730,6 +806,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndFin(String indFin) {
+        markAsChanged("INDFIN", indFin);
         this.indFin = indFin;
    }
 
@@ -738,6 +815,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRendServ(String indRendServ) {
+        markAsChanged("INDRENDSERV", indRendServ);
         this.indRendServ = indRendServ;
    }
 
@@ -746,6 +824,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndZonExp(String indZonExp) {
+        markAsChanged("INDZONEXP", indZonExp);
         this.indZonExp = indZonExp;
    }
 
@@ -754,6 +833,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPartCons(String indPartCons) {
+        markAsChanged("INDPARTCONS", indPartCons);
         this.indPartCons = indPartCons;
    }
 
@@ -762,6 +842,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndOpVinc(String indOpVinc) {
+        markAsChanged("INDOPVINC", indOpVinc);
         this.indOpVinc = indOpVinc;
    }
 
@@ -770,6 +851,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRecExt(String indRecExt) {
+        markAsChanged("INDRECEXT", indRecExt);
         this.indRecExt = indRecExt;
    }
 
@@ -778,6 +860,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndAliqCsll(String indAliqCsll) {
+        markAsChanged("INDALIQCSLL", indAliqCsll);
         this.indAliqCsll = indAliqCsll;
    }
 
@@ -786,6 +869,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPjHab(String indPjHab) {
+        markAsChanged("INDPJHAB", indPjHab);
         this.indPjHab = indPjHab;
    }
 
@@ -794,6 +878,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndInovTec(String indInovTec) {
+        markAsChanged("INDINOVTEC", indInovTec);
         this.indInovTec = indInovTec;
    }
 
@@ -802,6 +887,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndAtivRural(String indAtivRural) {
+        markAsChanged("INDATIVRURAL", indAtivRural);
         this.indAtivRural = indAtivRural;
    }
 
@@ -810,6 +896,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRedisen(String indRedisen) {
+        markAsChanged("INDREDISEN", indRedisen);
         this.indRedisen = indRedisen;
    }
 
@@ -818,6 +905,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRoyPag(String indRoyPag) {
+        markAsChanged("INDROYPAG", indRoyPag);
         this.indRoyPag = indRoyPag;
    }
 
@@ -826,6 +914,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndEcomTi(String indEcomTi) {
+        markAsChanged("INDECOMTI", indEcomTi);
         this.indEcomTi = indEcomTi;
    }
 
@@ -834,6 +923,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndComExp(String indComExp) {
+        markAsChanged("INDCOMEXP", indComExp);
         this.indComExp = indComExp;
    }
 
@@ -842,6 +932,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndDoaEleit(String indDoaEleit) {
+        markAsChanged("INDDOAELEIT", indDoaEleit);
         this.indDoaEleit = indDoaEleit;
    }
 
@@ -850,6 +941,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndPgtoRem(String indPgtoRem) {
+        markAsChanged("INDPGTOREM", indPgtoRem);
         this.indPgtoRem = indPgtoRem;
    }
 
@@ -858,6 +950,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setTipEscPre(String tipEscPre) {
+        markAsChanged("TIPESCPRE", tipEscPre);
         this.tipEscPre = tipEscPre;
    }
 
@@ -866,6 +959,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setApurCsll(String apurCsll) {
+        markAsChanged("APURCSLL", apurCsll);
         this.apurCsll = apurCsll;
    }
 
@@ -874,6 +968,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setFormaApuri(String formaApuri) {
+        markAsChanged("FORMAAPURI", formaApuri);
         this.formaApuri = formaApuri;
    }
 
@@ -882,6 +977,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setTipEnt(String tipEnt) {
+        markAsChanged("TIPENT", tipEnt);
         this.tipEnt = tipEnt;
    }
 
@@ -890,6 +986,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setOptRefis(String optRefis) {
+        markAsChanged("OPTREFIS", optRefis);
         this.optRefis = optRefis;
    }
 
@@ -898,6 +995,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setFormaApur(String formaApur) {
+        markAsChanged("FORMAAPUR", formaApur);
         this.formaApur = formaApur;
    }
 
@@ -906,6 +1004,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setGerRegJperAnual(String gerRegJperAnual) {
+        markAsChanged("GERREGJPERANUAL", gerRegJperAnual);
         this.gerRegJperAnual = gerRegJperAnual;
    }
 
@@ -914,6 +1013,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndEbas(String indEbas) {
+        markAsChanged("INDEBAS", indEbas);
         this.indEbas = indEbas;
    }
 
@@ -922,6 +1022,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndOleoBunker(String indOleoBunker) {
+        markAsChanged("INDOLEOBUNKER", indOleoBunker);
         this.indOleoBunker = indOleoBunker;
    }
 
@@ -930,6 +1031,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepEper(String indRepEper) {
+        markAsChanged("INDREPEPER", indRepEper);
         this.indRepEper = indRepEper;
    }
 
@@ -938,6 +1040,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepEpetroInd(String indRepEpetroInd) {
+        markAsChanged("INDREPETROIND", indRepEpetroInd);
         this.indRepEpetroInd = indRepEpetroInd;
    }
 
@@ -946,6 +1049,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepEpetroNac(String indRepEpetroNac) {
+        markAsChanged("INDREPETRONAC", indRepEpetroNac);
         this.indRepEpetroNac = indRepEpetroNac;
    }
 
@@ -954,6 +1058,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepEpetroTemp(String indRepEpetroTemp) {
+        markAsChanged("INDREPETROTEMP", indRepEpetroTemp);
         this.indRepEpetroTemp = indRepEpetroTemp;
    }
 
@@ -962,6 +1067,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRepOrto(String indRepOrto) {
+        markAsChanged("INDREPORTO", indRepOrto);
         this.indRepOrto = indRepOrto;
    }
 
@@ -970,6 +1076,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRetEei(String indRetEei) {
+        markAsChanged("INDRETEEI", indRetEei);
         this.indRetEei = indRetEei;
    }
 
@@ -978,6 +1085,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRetIi(String indRetIi) {
+        markAsChanged("INDRETII", indRetIi);
         this.indRetIi = indRetIi;
    }
 
@@ -986,6 +1094,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setIndRetPmcmv(String indRetPmcmv) {
+        markAsChanged("INDRETPMCMV", indRetPmcmv);
         this.indRetPmcmv = indRetPmcmv;
    }
 
@@ -994,6 +1103,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
    }
 
    public void setOpcPtrf2023(String opcPtrf2023) {
+        markAsChanged("OPCPTRF2023", opcPtrf2023);
         this.opcPtrf2023 = opcPtrf2023;
    }
 
@@ -1009,6 +1119,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
 
    @Override
    public EmpresaContabilidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aceitarHistZero = vo.asString("ACEITARHISTZERO");
         this.aceitarVlrLanc = vo.asString("ACEITARVLRLANC");
         this.codEmp = vo.asBigDecimal("CODEMP");

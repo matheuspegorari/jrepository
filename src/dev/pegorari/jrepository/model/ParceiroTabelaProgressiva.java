@@ -18,6 +18,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -26,6 +27,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -34,6 +36,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setCompetencia(Timestamp competencia) {
+        markAsChanged("COMPETENCIA", competencia);
         this.competencia = competencia;
    }
 
@@ -42,6 +45,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setDependente(BigDecimal dependente) {
+        markAsChanged("DEPENDENTE", dependente);
         this.dependente = dependente;
    }
 
@@ -50,6 +54,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setTem13(String tem13) {
+        markAsChanged("TEM13", tem13);
         this.tem13 = tem13;
    }
 
@@ -58,6 +63,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    }
 
    public void setRetemInssOrigFin(String retemInssOrigFin) {
+        markAsChanged("RETEMINSSORIGFIN", retemInssOrigFin);
         this.retemInssOrigFin = retemInssOrigFin;
    }
 
@@ -73,6 +79,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
 
    @Override
    public ParceiroTabelaProgressiva fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.competencia = vo.asTimestamp("COMPETENCIA");

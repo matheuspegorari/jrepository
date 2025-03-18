@@ -19,6 +19,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -27,6 +28,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -35,6 +37,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -43,6 +46,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -51,6 +55,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setImpresso(String impresso) {
+        markAsChanged("IMPRESSO", impresso);
         this.impresso = impresso;
    }
 
@@ -59,6 +64,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setSeqPalete(BigDecimal seqPalete) {
+        markAsChanged("SEQPALETE", seqPalete);
         this.seqPalete = seqPalete;
    }
 
@@ -67,6 +73,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -75,6 +82,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -90,6 +98,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
 
    @Override
    public RegistroPalete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVol = vo.asString("CODVOL");
         this.controle = vo.asString("CONTROLE");

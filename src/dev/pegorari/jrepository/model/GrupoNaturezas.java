@@ -18,6 +18,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -26,6 +27,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -34,6 +36,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -42,6 +45,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setCodGrupoNatPai(BigDecimal codGrupoNatPai) {
+        markAsChanged("CODGRUPONATPAI", codGrupoNatPai);
         this.codGrupoNatPai = codGrupoNatPai;
    }
 
@@ -50,6 +54,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setDescrGrupoNat(String descrGrupoNat) {
+        markAsChanged("DESCRGRUPONAT", descrGrupoNat);
         this.descrGrupoNat = descrGrupoNat;
    }
 
@@ -58,6 +63,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -66,6 +72,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
    }
 
    public void setTipNat(String tipNat) {
+        markAsChanged("TIPNAT", tipNat);
         this.tipNat = tipNat;
    }
 
@@ -81,6 +88,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
 
    @Override
    public GrupoNaturezas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codGrupoNat = vo.asBigDecimal("CODGRUPONAT");

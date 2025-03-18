@@ -16,6 +16,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
    }
 
    public void setCodCon(BigDecimal codCon) {
+        markAsChanged("CODCON", codCon);
         this.codCon = codCon;
    }
 
@@ -24,6 +25,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -32,6 +34,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
    }
 
    public void setIntMin(BigDecimal intMin) {
+        markAsChanged("INTMIN", intMin);
         this.intMin = intMin;
    }
 
@@ -40,6 +43,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
    }
 
    public void setUltEnvio(Timestamp ultEnvio) {
+        markAsChanged("ULTENVIO", ultEnvio);
         this.ultEnvio = ultEnvio;
    }
 
@@ -55,6 +59,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
 
    @Override
    public MSDDestinatarioMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.intMin = vo.asBigDecimal("INTMIN");

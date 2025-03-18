@@ -19,6 +19,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setCodGru(BigDecimal codGru) {
+        markAsChanged("CODGRU", codGru);
         this.codGru = codGru;
    }
 
@@ -27,6 +28,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setEnviarEmail(String enviarEmail) {
+        markAsChanged("ENVIAREMAIL", enviarEmail);
         this.enviarEmail = enviarEmail;
    }
 
@@ -43,6 +46,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setEnviarSms(String enviarSms) {
+        markAsChanged("ENVIARSMS", enviarSms);
         this.enviarSms = enviarSms;
    }
 
@@ -51,6 +55,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setEvento(BigDecimal evento) {
+        markAsChanged("EVENTO", evento);
         this.evento = evento;
    }
 
@@ -59,6 +64,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setLimite(BigDecimal limite) {
+        markAsChanged("LIMITE", limite);
         this.limite = limite;
    }
 
@@ -67,6 +73,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setTipoEvento(String tipoEvento) {
+        markAsChanged("TIPOEVENTO", tipoEvento);
         this.tipoEvento = tipoEvento;
    }
 
@@ -75,6 +82,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
    }
 
    public void setTipoLimite(String tipoLimite) {
+        markAsChanged("TIPOLIMITE", tipoLimite);
         this.tipoLimite = tipoLimite;
    }
 
@@ -90,6 +98,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
 
    @Override
    public LimiteLiberacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGru = vo.asBigDecimal("CODGRU");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.enviarEmail = vo.asString("ENVIAREMAIL");

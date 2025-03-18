@@ -21,6 +21,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -29,6 +30,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setCodStaEtapa(BigDecimal codStaEtapa) {
+        markAsChanged("CODSTAETAPA", codStaEtapa);
         this.codStaEtapa = codStaEtapa;
    }
 
@@ -37,6 +39,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setDescRetapa(String descRetapa) {
+        markAsChanged("DESCRETAPA", descRetapa);
         this.descRetapa = descRetapa;
    }
 
@@ -45,6 +48,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setDescRnucurriculo(String descRnucurriculo) {
+        markAsChanged("DESCRNUCURRICULO", descRnucurriculo);
         this.descRnucurriculo = descRnucurriculo;
    }
 
@@ -53,6 +57,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setDescRrequisicao(String descRrequisicao) {
+        markAsChanged("DESCRREQUISICAO", descRrequisicao);
         this.descRrequisicao = descRrequisicao;
    }
 
@@ -61,6 +66,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -69,6 +75,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -77,6 +84,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -85,6 +93,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setStatusEtapa(String statusEtapa) {
+        markAsChanged("STATUSETAPA", statusEtapa);
         this.statusEtapa = statusEtapa;
    }
 
@@ -93,6 +102,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    }
 
    public void setTipoEtapa(String tipoEtapa) {
+        markAsChanged("TIPOETAPA", tipoEtapa);
         this.tipoEtapa = tipoEtapa;
    }
 
@@ -108,6 +118,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
 
    @Override
    public StatusEtapas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codStaEtapa = vo.asBigDecimal("CODSTAETAPA");
         this.descRetapa = vo.asString("DESCRETAPA");

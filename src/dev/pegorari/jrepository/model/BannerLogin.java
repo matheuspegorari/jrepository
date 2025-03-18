@@ -18,6 +18,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setNomeArq(String nomeArq) {
+        markAsChanged("NOMEARQ", nomeArq);
         this.nomeArq = nomeArq;
    }
 
@@ -26,6 +27,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
+        markAsChanged("NUARQUIVO", nuArquivo);
         this.nuArquivo = nuArquivo;
    }
 
@@ -34,6 +36,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -42,6 +45,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setTempo(BigDecimal tempo) {
+        markAsChanged("TEMPO", tempo);
         this.tempo = tempo;
    }
 
@@ -50,6 +54,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setUrl(String url) {
+        markAsChanged("URL", url);
         this.url = url;
    }
 
@@ -58,6 +63,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setProfile(String profile) {
+        markAsChanged("PROFILE", profile);
         this.profile = profile;
    }
 
@@ -66,6 +72,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    }
 
    public void setEvo(String evo) {
+        markAsChanged("EVO", evo);
         this.evo = evo;
    }
 
@@ -81,6 +88,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
 
    @Override
    public BannerLogin fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nomeArq = vo.asString("NOMEARQ");
         this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         this.ordem = vo.asBigDecimal("ORDEM");

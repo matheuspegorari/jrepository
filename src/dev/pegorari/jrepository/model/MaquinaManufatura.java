@@ -18,6 +18,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -26,6 +27,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setCodMqp(BigDecimal codMqp) {
+        markAsChanged("CODMQP", codMqp);
         this.codMqp = codMqp;
    }
 
@@ -34,6 +36,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -42,6 +45,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -50,6 +54,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setNumEq(BigDecimal numEq) {
+        markAsChanged("NUMEQ", numEq);
         this.numEq = numEq;
    }
 
@@ -58,6 +63,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -66,6 +72,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    }
 
    public void setDecQtd(BigDecimal decQtd) {
+        markAsChanged("DECQTD", decQtd);
         this.decQtd = decQtd;
    }
 
@@ -81,6 +88,7 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
 
    @Override
    public MaquinaManufatura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codMqp = vo.asBigDecimal("CODMQP");
         this.codPlp = vo.asBigDecimal("CODPLP");

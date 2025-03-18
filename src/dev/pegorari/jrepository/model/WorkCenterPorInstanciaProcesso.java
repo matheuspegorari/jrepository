@@ -16,6 +16,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -24,6 +25,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
    }
 
    public void setIdaWc(BigDecimal idaWc) {
+        markAsChanged("IDAWC", idaWc);
         this.idaWc = idaWc;
    }
 
@@ -32,6 +34,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -40,6 +43,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -48,6 +52,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -63,6 +68,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
 
    @Override
    public WorkCenterPorInstanciaProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.idaWc = vo.asBigDecimal("IDAWC");
         this.idIproc = vo.asBigDecimal("IDIPROC");

@@ -23,6 +23,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setDescansoSem(String descansoSem) {
+        markAsChanged("DESCANSOSEM", descansoSem);
         this.descansoSem = descansoSem;
    }
 
@@ -31,6 +32,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setDiaSem(BigDecimal diaSem) {
+        markAsChanged("DIASEM", diaSem);
         this.diaSem = diaSem;
    }
 
@@ -39,6 +41,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -47,6 +50,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setEntrada(BigDecimal entrada) {
+        markAsChanged("ENTRADA", entrada);
         this.entrada = entrada;
    }
 
@@ -55,6 +59,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setSaida(BigDecimal saida) {
+        markAsChanged("SAIDA", saida);
         this.saida = saida;
    }
 
@@ -63,6 +68,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setTurno(BigDecimal turno) {
+        markAsChanged("TURNO", turno);
         this.turno = turno;
    }
 
@@ -71,6 +77,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setValEntrada(String valEntrada) {
+        markAsChanged("VALENTRADA", valEntrada);
         this.valEntrada = valEntrada;
    }
 
@@ -79,6 +86,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setCargaHoraria(BigDecimal cargaHoraria) {
+        markAsChanged("CARGAHORARIA", cargaHoraria);
         this.cargaHoraria = cargaHoraria;
    }
 
@@ -87,6 +95,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -95,6 +104,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setValSaida(String valSaida) {
+        markAsChanged("VALSAIDA", valSaida);
         this.valSaida = valSaida;
    }
 
@@ -103,6 +113,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    }
 
    public void setDurJornadaEsocial(BigDecimal durJornadaEsocial) {
+        markAsChanged("DURJORNADAESOCIAL", durJornadaEsocial);
         this.durJornadaEsocial = durJornadaEsocial;
    }
 
@@ -118,6 +129,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
 
    @Override
    public CargaHoraria fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descansoSem = vo.asString("DESCANSOSEM");
         this.diaSem = vo.asBigDecimal("DIASEM");
         this.dtAlter = vo.asTimestamp("DTALTER");

@@ -21,6 +21,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -29,6 +30,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setSeqEtapa(BigDecimal seqEtapa) {
+        markAsChanged("SEQETAPA", seqEtapa);
         this.seqEtapa = seqEtapa;
    }
 
@@ -37,6 +39,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -45,6 +48,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -53,6 +57,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -61,6 +66,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -69,6 +75,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -77,6 +84,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setPontuacaoMinima(BigDecimal pontuacaoMinima) {
+        markAsChanged("PONTUACAOMINIMA", pontuacaoMinima);
         this.pontuacaoMinima = pontuacaoMinima;
    }
 
@@ -85,6 +93,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
    }
 
    public void setVlrEtapa(BigDecimal vlrEtapa) {
+        markAsChanged("VLRETAPA", vlrEtapa);
         this.vlrEtapa = vlrEtapa;
    }
 
@@ -100,6 +109,7 @@ public class EtapasSelecaoEmpresa extends AbstractSankhyaEntity<EtapasSelecaoEmp
 
    @Override
    public EtapasSelecaoEmpresa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.seqEtapa = vo.asBigDecimal("SEQETAPA");
         this.codCargo = vo.asBigDecimal("CODCARGO");

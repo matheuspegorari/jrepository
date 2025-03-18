@@ -16,6 +16,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -24,6 +25,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -32,6 +34,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -40,6 +43,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -48,6 +52,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
    }
 
    public void setIntervalo(String intervalo) {
+        markAsChanged("INTERVALO", intervalo);
         this.intervalo = intervalo;
    }
 
@@ -63,6 +68,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
 
    @Override
    public CEP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cep = vo.asString("CEP");
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codCid = vo.asBigDecimal("CODCID");

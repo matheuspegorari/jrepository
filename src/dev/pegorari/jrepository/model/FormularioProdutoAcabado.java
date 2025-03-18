@@ -15,6 +15,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -23,6 +24,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -31,6 +33,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
    }
 
    public void setIdForm(BigDecimal idForm) {
+        markAsChanged("IDFORM", idForm);
         this.idForm = idForm;
    }
 
@@ -39,6 +42,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -54,6 +58,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
 
    @Override
    public FormularioProdutoAcabado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.idForm = vo.asBigDecimal("IDFORM");

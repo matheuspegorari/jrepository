@@ -14,6 +14,7 @@ public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<Valida
    }
 
    public void setCodConcatenado(String codConcatenado) {
+        markAsChanged("CODCONCATENADO", codConcatenado);
         this.codConcatenado = codConcatenado;
    }
 
@@ -22,6 +23,7 @@ public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<Valida
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -30,6 +32,7 @@ public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<Valida
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -45,6 +48,7 @@ public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<Valida
 
    @Override
    public ValidacaoArmazenamentoExpresso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codConcatenado = vo.asString("CODCONCATENADO");
         this.nuTarefa = vo.asBigDecimal("NUTAREFA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

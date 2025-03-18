@@ -53,6 +53,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -61,6 +62,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -69,6 +71,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -77,6 +80,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -85,6 +89,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -93,6 +98,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setIndObra(BigDecimal indObra) {
+        markAsChanged("INDOBRA", indObra);
         this.indObra = indObra;
    }
 
@@ -101,6 +107,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -109,6 +116,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrInscEstabPrest(String nrInscEstabPrest) {
+        markAsChanged("NRINSCESTABPREST", nrInscEstabPrest);
         this.nrInscEstabPrest = nrInscEstabPrest;
    }
 
@@ -117,6 +125,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrInscTomador(String nrInscTomador) {
+        markAsChanged("NRINSCTOMADOR", nrInscTomador);
         this.nrInscTomador = nrInscTomador;
    }
 
@@ -125,6 +134,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrORecibo(String nrORecibo) {
+        markAsChanged("NRORECIBO", nrORecibo);
         this.nrORecibo = nrORecibo;
    }
 
@@ -133,6 +143,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrOReciboAnt(String nrOReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrOReciboAnt);
         this.nrOReciboAnt = nrOReciboAnt;
    }
 
@@ -141,6 +152,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -149,6 +161,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -157,6 +170,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -165,6 +179,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -173,6 +188,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTpInscEstabPrest(BigDecimal tpInscEstabPrest) {
+        markAsChanged("TPINSCESTABPREST", tpInscEstabPrest);
         this.tpInscEstabPrest = tpInscEstabPrest;
    }
 
@@ -181,6 +197,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTpInscTomador(BigDecimal tpInscTomador) {
+        markAsChanged("TPINSCTOMADOR", tpInscTomador);
         this.tpInscTomador = tpInscTomador;
    }
 
@@ -189,6 +206,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalBaseRet(BigDecimal vlrTotalBaseRet) {
+        markAsChanged("VLRTOTALBASERET", vlrTotalBaseRet);
         this.vlrTotalBaseRet = vlrTotalBaseRet;
    }
 
@@ -197,6 +215,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalBruto(BigDecimal vlrTotalBruto) {
+        markAsChanged("VLRTOTALBRUTO", vlrTotalBruto);
         this.vlrTotalBruto = vlrTotalBruto;
    }
 
@@ -205,6 +224,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalNRetAdic(BigDecimal vlrTotalNRetAdic) {
+        markAsChanged("VLRTOTALNRETADIC", vlrTotalNRetAdic);
         this.vlrTotalNRetAdic = vlrTotalNRetAdic;
    }
 
@@ -213,6 +233,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalNRetPrinc(BigDecimal vlrTotalNRetPrinc) {
+        markAsChanged("VLRTOTALNRETPRINC", vlrTotalNRetPrinc);
         this.vlrTotalNRetPrinc = vlrTotalNRetPrinc;
    }
 
@@ -221,6 +242,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetAdic(BigDecimal vlrTotalRetAdic) {
+        markAsChanged("VLRTOTALRETADIC", vlrTotalRetAdic);
         this.vlrTotalRetAdic = vlrTotalRetAdic;
    }
 
@@ -229,6 +251,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetPrinc(BigDecimal vlrTotalRetPrinc) {
+        markAsChanged("VLRTOTALRETPRINC", vlrTotalRetPrinc);
         this.vlrTotalRetPrinc = vlrTotalRetPrinc;
    }
 
@@ -237,6 +260,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setCodEmpEstabPrest(BigDecimal codEmpEstabPrest) {
+        markAsChanged("CODEMPESTABPREST", codEmpEstabPrest);
         this.codEmpEstabPrest = codEmpEstabPrest;
    }
 
@@ -245,6 +269,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setCodParcTomador(BigDecimal codParcTomador) {
+        markAsChanged("CODPARCTOMADOR", codParcTomador);
         this.codParcTomador = codParcTomador;
    }
 
@@ -253,6 +278,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -261,6 +287,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -269,6 +296,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setNrInscTomadorRet(String nrInscTomadorRet) {
+        markAsChanged("NRINSCTOMADORRET", nrInscTomadorRet);
         this.nrInscTomadorRet = nrInscTomadorRet;
    }
 
@@ -277,6 +305,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -285,6 +314,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setTpInscTomadorRet(BigDecimal tpInscTomadorRet) {
+        markAsChanged("TPINSCTOMADORRET", tpInscTomadorRet);
         this.tpInscTomadorRet = tpInscTomadorRet;
    }
 
@@ -293,6 +323,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalBaseRetRet(BigDecimal vlrTotalBaseRetRet) {
+        markAsChanged("VLRTOTALBASERETRET", vlrTotalBaseRetRet);
         this.vlrTotalBaseRetRet = vlrTotalBaseRetRet;
    }
 
@@ -301,6 +332,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalDifRet(BigDecimal vlrTotalDifRet) {
+        markAsChanged("VLRTOTALDIFRET", vlrTotalDifRet);
         this.vlrTotalDifRet = vlrTotalDifRet;
    }
 
@@ -309,6 +341,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalNRetAdicRet(BigDecimal vlrTotalNRetAdicRet) {
+        markAsChanged("VLRTOTALNRETADICRET", vlrTotalNRetAdicRet);
         this.vlrTotalNRetAdicRet = vlrTotalNRetAdicRet;
    }
 
@@ -317,6 +350,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalNRetPrincRet(BigDecimal vlrTotalNRetPrincRet) {
+        markAsChanged("VLRTOTALNRETPRINCRET", vlrTotalNRetPrincRet);
         this.vlrTotalNRetPrincRet = vlrTotalNRetPrincRet;
    }
 
@@ -325,6 +359,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetAdicCalc(BigDecimal vlrTotalRetAdicCalc) {
+        markAsChanged("VLRTOTALRETADICCALC", vlrTotalRetAdicCalc);
         this.vlrTotalRetAdicCalc = vlrTotalRetAdicCalc;
    }
 
@@ -333,6 +368,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetAdicDif(BigDecimal vlrTotalRetAdicDif) {
+        markAsChanged("VLRTOTALRETADICDIF", vlrTotalRetAdicDif);
         this.vlrTotalRetAdicDif = vlrTotalRetAdicDif;
    }
 
@@ -341,6 +377,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetAdicRet(BigDecimal vlrTotalRetAdicRet) {
+        markAsChanged("VLRTOTALRETADICRET", vlrTotalRetAdicRet);
         this.vlrTotalRetAdicRet = vlrTotalRetAdicRet;
    }
 
@@ -349,6 +386,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetencaoCalc(BigDecimal vlrTotalRetencaoCalc) {
+        markAsChanged("VLRTOTALRETENCAOCALC", vlrTotalRetencaoCalc);
         this.vlrTotalRetencaoCalc = vlrTotalRetencaoCalc;
    }
 
@@ -357,6 +395,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setVlrTotalRetPrincRet(BigDecimal vlrTotalRetPrincRet) {
+        markAsChanged("VLRTOTALRETPRINCRET", vlrTotalRetPrincRet);
         this.vlrTotalRetPrincRet = vlrTotalRetPrincRet;
    }
 
@@ -365,6 +404,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -373,6 +413,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -388,6 +429,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
 
    @Override
    public RetContribServicoPrestado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

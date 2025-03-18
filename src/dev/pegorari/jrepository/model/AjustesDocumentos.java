@@ -30,6 +30,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCodAjuste(String codAjuste) {
+        markAsChanged("CODAJUSTE", codAjuste);
         this.codAjuste = codAjuste;
    }
 
@@ -38,6 +39,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -46,6 +48,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
+        markAsChanged("CODOBSPADRAO", codObsPadrao);
         this.codObsPadrao = codObsPadrao;
    }
 
@@ -54,6 +57,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -62,6 +66,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCompAjuste(String compAjuste) {
+        markAsChanged("COMPAJUSTE", compAjuste);
         this.compAjuste = compAjuste;
    }
 
@@ -70,6 +75,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCompObsPadrao(String compObsPadrao) {
+        markAsChanged("COMPOBSPADRAO", compObsPadrao);
         this.compObsPadrao = compObsPadrao;
    }
 
@@ -78,6 +84,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -86,6 +93,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -94,6 +102,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -102,6 +111,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -110,6 +120,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -118,6 +129,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setVlrOutros(BigDecimal vlrOutros) {
+        markAsChanged("VLROUTROS", vlrOutros);
         this.vlrOutros = vlrOutros;
    }
 
@@ -126,6 +138,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -134,6 +147,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -142,6 +156,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setCodCfg(BigDecimal codCfg) {
+        markAsChanged("CODCFG", codCfg);
         this.codCfg = codCfg;
    }
 
@@ -150,6 +165,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setAgrupar(String agrupar) {
+        markAsChanged("AGRUPAR", agrupar);
         this.agrupar = agrupar;
    }
 
@@ -158,6 +174,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setIndSubApuracaoAj(String indSubApuracaoAj) {
+        markAsChanged("INDSUBAPURACAOAJ", indSubApuracaoAj);
         this.indSubApuracaoAj = indSubApuracaoAj;
    }
 
@@ -166,6 +183,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    }
 
    public void setSubApuracaoAj(String subApuracaoAj) {
+        markAsChanged("SUBAPURACAOAJ", subApuracaoAj);
         this.subApuracaoAj = subApuracaoAj;
    }
 
@@ -181,6 +199,7 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
 
    @Override
    public AjustesDocumentos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAjuste = vo.asString("CODAJUSTE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");

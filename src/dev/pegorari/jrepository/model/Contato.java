@@ -64,6 +64,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -72,6 +73,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setFax(String fax) {
+        markAsChanged("FAX", fax);
         this.fax = fax;
    }
 
@@ -80,6 +82,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setLatitude(String latitude) {
+        markAsChanged("LATITUDE", latitude);
         this.latitude = latitude;
    }
 
@@ -88,6 +91,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setLongitude(String longitude) {
+        markAsChanged("LONGITUDE", longitude);
         this.longitude = longitude;
    }
 
@@ -96,6 +100,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setNivelCob(BigDecimal nivelCob) {
+        markAsChanged("NIVELCOB", nivelCob);
         this.nivelCob = nivelCob;
    }
 
@@ -104,6 +109,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setNomeContato(String nomeContato) {
+        markAsChanged("NOMECONTATO", nomeContato);
         this.nomeContato = nomeContato;
    }
 
@@ -112,6 +118,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -120,6 +127,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setPossuiAcessoBt(String possuiAcessoBt) {
+        markAsChanged("POSSUIACESSOBT", possuiAcessoBt);
         this.possuiAcessoBt = possuiAcessoBt;
    }
 
@@ -128,6 +136,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -136,6 +145,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setRamal(BigDecimal ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -144,6 +154,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setRecebeBoletoEmail(String recebeBoletoEmail) {
+        markAsChanged("RECEBEBOLETOEMAIL", recebeBoletoEmail);
         this.recebeBoletoEmail = recebeBoletoEmail;
    }
 
@@ -152,6 +163,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setRecebeNotaEmail(String recebeNotaEmail) {
+        markAsChanged("RECEBENOTAEMAIL", recebeNotaEmail);
         this.recebeNotaEmail = recebeNotaEmail;
    }
 
@@ -160,6 +172,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setRecEmailImpPed(String recEmailImpPed) {
+        markAsChanged("RECEMAILIMPPED", recEmailImpPed);
         this.recEmailImpPed = recEmailImpPed;
    }
 
@@ -168,6 +181,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setSenhaAcesso(String senhaAcesso) {
+        markAsChanged("SENHAACESSO", senhaAcesso);
         this.senhaAcesso = senhaAcesso;
    }
 
@@ -176,6 +190,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setSocio(String socio) {
+        markAsChanged("SOCIO", socio);
         this.socio = socio;
    }
 
@@ -184,6 +199,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -192,6 +208,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTelResid(String telResid) {
+        markAsChanged("TELRESID", telResid);
         this.telResid = telResid;
    }
 
@@ -200,6 +217,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTipPessoa(String tipPessoa) {
+        markAsChanged("TIPPESSOA", tipPessoa);
         this.tipPessoa = tipPessoa;
    }
 
@@ -208,6 +226,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setApelido(String apelido) {
+        markAsChanged("APELIDO", apelido);
         this.apelido = apelido;
    }
 
@@ -216,6 +235,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -224,6 +244,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCargo(String cargo) {
+        markAsChanged("CARGO", cargo);
         this.cargo = cargo;
    }
 
@@ -232,6 +253,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -240,6 +262,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -248,6 +271,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCnpj(String cnpj) {
+        markAsChanged("CNPJ", cnpj);
         this.cnpj = cnpj;
    }
 
@@ -256,6 +280,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -264,6 +289,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -272,6 +298,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -280,6 +307,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -288,6 +316,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -296,6 +325,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -304,6 +334,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -312,6 +343,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCpf(String cpf) {
+        markAsChanged("CPF", cpf);
         this.cpf = cpf;
    }
 
@@ -320,6 +352,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setDtCad(Timestamp dtCad) {
+        markAsChanged("DTCAD", dtCad);
         this.dtCad = dtCad;
    }
 
@@ -328,6 +361,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -336,6 +370,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setQtdEntregaCestas(BigDecimal qtdEntregaCestas) {
+        markAsChanged("QTDENTREGACESTAS", qtdEntregaCestas);
         this.qtdEntregaCestas = qtdEntregaCestas;
    }
 
@@ -344,6 +379,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setHabPlanEntCestas(String habPlanEntCestas) {
+        markAsChanged("HABPLANENTCESTAS", habPlanEntCestas);
         this.habPlanEntCestas = habPlanEntCestas;
    }
 
@@ -352,6 +388,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -360,6 +397,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setInscEstad(String inscEstad) {
+        markAsChanged("INSCESTAD", inscEstad);
         this.inscEstad = inscEstad;
    }
 
@@ -368,6 +406,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setRespCobranca(String respCobranca) {
+        markAsChanged("RESPCOBRANCA", respCobranca);
         this.respCobranca = respCobranca;
    }
 
@@ -376,6 +415,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimAgencia(String timAgencia) {
+        markAsChanged("TIMAGENCIA", timAgencia);
         this.timAgencia = timAgencia;
    }
 
@@ -384,6 +424,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimBanco(BigDecimal timBanco) {
+        markAsChanged("TIMBANCO", timBanco);
         this.timBanco = timBanco;
    }
 
@@ -392,6 +433,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimBeneficiario(String timBeneficiario) {
+        markAsChanged("TIMBENEFICIARIO", timBeneficiario);
         this.timBeneficiario = timBeneficiario;
    }
 
@@ -400,6 +442,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimConta(String timConta) {
+        markAsChanged("TIMCONTA", timConta);
         this.timConta = timConta;
    }
 
@@ -408,6 +451,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimNacionalidad(BigDecimal timNacionalidad) {
+        markAsChanged("TIMNACIONALIDAD", timNacionalidad);
         this.timNacionalidad = timNacionalidad;
    }
 
@@ -416,6 +460,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimProcurador(BigDecimal timProcurador) {
+        markAsChanged("TIMPROCURADOR", timProcurador);
         this.timProcurador = timProcurador;
    }
 
@@ -424,6 +469,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimProfissao(BigDecimal timProfissao) {
+        markAsChanged("TIMPROFISSAO", timProfissao);
         this.timProfissao = timProfissao;
    }
 
@@ -432,6 +478,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimRepresentante(String timRepresentante) {
+        markAsChanged("TIMREPRESENTANTE", timRepresentante);
         this.timRepresentante = timRepresentante;
    }
 
@@ -440,6 +487,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimRg(String timRg) {
+        markAsChanged("TIMRG", timRg);
         this.timRg = timRg;
    }
 
@@ -448,6 +496,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setTimTipo(BigDecimal timTipo) {
+        markAsChanged("TIMTIPO", timTipo);
         this.timTipo = timTipo;
    }
 
@@ -456,6 +505,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setEnviaNotifCota(String enviaNotifCota) {
+        markAsChanged("ENVIANOTIFCOTA", enviaNotifCota);
         this.enviaNotifCota = enviaNotifCota;
    }
 
@@ -464,6 +514,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -472,6 +523,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -487,6 +539,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
 
    @Override
    public Contato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.email = vo.asString("EMAIL");
         this.fax = vo.asString("FAX");
         this.latitude = vo.asString("LATITUDE");

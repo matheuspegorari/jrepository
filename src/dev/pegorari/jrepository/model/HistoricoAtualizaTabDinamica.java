@@ -17,6 +17,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    }
 
    public void setCodHis(BigDecimal codHis) {
+        markAsChanged("CODHIS", codHis);
         this.codHis = codHis;
    }
 
@@ -25,6 +26,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -33,6 +35,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    }
 
    public void setDtExec(Timestamp dtExec) {
+        markAsChanged("DTEXEC", dtExec);
         this.dtExec = dtExec;
    }
 
@@ -41,6 +44,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    }
 
    public void setTipoAtualizacao(String tipoAtualizacao) {
+        markAsChanged("TIPOATUALIZACAO", tipoAtualizacao);
         this.tipoAtualizacao = tipoAtualizacao;
    }
 
@@ -49,6 +53,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    }
 
    public void setTempoGasto(BigDecimal tempoGasto) {
+        markAsChanged("TEMPOGASTO", tempoGasto);
         this.tempoGasto = tempoGasto;
    }
 
@@ -64,6 +69,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
 
    @Override
    public HistoricoAtualizaTabDinamica fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codHis = vo.asBigDecimal("CODHIS");
         this.msg = vo.asString("MSG");
         this.dtExec = vo.asTimestamp("DTEXEC");

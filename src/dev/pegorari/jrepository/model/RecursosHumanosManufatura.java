@@ -19,6 +19,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -27,6 +28,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -35,6 +37,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -43,6 +46,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -51,6 +55,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -59,6 +64,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodRhp(BigDecimal codRhp) {
+        markAsChanged("CODRHP", codRhp);
         this.codRhp = codRhp;
    }
 
@@ -67,6 +73,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -75,6 +82,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -90,6 +98,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
 
    @Override
    public RecursosHumanosManufatura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codFunc = vo.asBigDecimal("CODFUNC");

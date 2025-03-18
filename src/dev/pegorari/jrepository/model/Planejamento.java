@@ -28,6 +28,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setCodUsuAvaliador(BigDecimal codUsuAvaliador) {
+        markAsChanged("CODUSUAVALIADOR", codUsuAvaliador);
         this.codUsuAvaliador = codUsuAvaliador;
    }
 
@@ -36,6 +37,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setAssuntoEmail(String assuntoEmail) {
+        markAsChanged("ASSUNTOEMAIL", assuntoEmail);
         this.assuntoEmail = assuntoEmail;
    }
 
@@ -44,6 +46,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -52,6 +55,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -60,6 +64,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -68,6 +73,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -76,6 +82,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -84,6 +91,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setDtFim(Timestamp dtFim) {
+        markAsChanged("DTFIM", dtFim);
         this.dtFim = dtFim;
    }
 
@@ -92,6 +100,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -100,6 +109,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setFormaDeAplicar(String formaDeAplicar) {
+        markAsChanged("FORMADEAPLICAR", formaDeAplicar);
         this.formaDeAplicar = formaDeAplicar;
    }
 
@@ -108,6 +118,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setIntervaloEnvio(BigDecimal intervaloEnvio) {
+        markAsChanged("INTERVALOENVIO", intervaloEnvio);
         this.intervaloEnvio = intervaloEnvio;
    }
 
@@ -116,6 +127,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setMaxEnvio(BigDecimal maxEnvio) {
+        markAsChanged("MAXENVIO", maxEnvio);
         this.maxEnvio = maxEnvio;
    }
 
@@ -124,6 +136,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setModeloEmail(char[] modeloEmail) {
+        markAsChanged("MODELOEMAIL", modeloEmail);
         this.modeloEmail = modeloEmail;
    }
 
@@ -132,6 +145,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setNuPla(BigDecimal nuPla) {
+        markAsChanged("NUPLA", nuPla);
         this.nuPla = nuPla;
    }
 
@@ -140,6 +154,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -148,6 +163,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -163,6 +179,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
 
    @Override
    public Planejamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsuAvaliador = vo.asBigDecimal("CODUSUAVALIADOR");
         this.assuntoEmail = vo.asString("ASSUNTOEMAIL");
         this.codParc = vo.asBigDecimal("CODPARC");

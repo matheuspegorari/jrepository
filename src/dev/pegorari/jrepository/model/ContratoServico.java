@@ -16,6 +16,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -24,6 +25,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -32,6 +34,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    }
 
    public void setParcelas(BigDecimal parcelas) {
+        markAsChanged("PARCELAS", parcelas);
         this.parcelas = parcelas;
    }
 
@@ -40,6 +43,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -48,6 +52,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -63,6 +68,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
 
    @Override
    public ContratoServico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codServ = vo.asBigDecimal("CODSERV");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.parcelas = vo.asBigDecimal("PARCELAS");

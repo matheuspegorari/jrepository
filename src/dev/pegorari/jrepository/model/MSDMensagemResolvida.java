@@ -16,6 +16,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -24,6 +25,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -32,6 +34,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
    }
 
    public void setMensagem(char[] mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -40,6 +43,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
    }
 
    public void setNova(BigDecimal nova) {
+        markAsChanged("NOVA", nova);
         this.nova = nova;
    }
 
@@ -55,6 +59,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
 
    @Override
    public MSDMensagemResolvida fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.mensagem = vo.asClob("MENSAGEM");

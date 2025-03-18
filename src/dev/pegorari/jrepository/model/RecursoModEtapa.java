@@ -14,6 +14,7 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
    }
 
    public void setCodMetod(BigDecimal codMetod) {
+        markAsChanged("CODMETOD", codMetod);
         this.codMetod = codMetod;
    }
 
@@ -22,6 +23,7 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
    }
 
    public void setCodTipFuncao(BigDecimal codTipFuncao) {
+        markAsChanged("CODTIPFUNCAO", codTipFuncao);
         this.codTipFuncao = codTipFuncao;
    }
 
@@ -30,6 +32,7 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
    }
 
    public void setNumModelo(BigDecimal numModelo) {
+        markAsChanged("NUMMODELO", numModelo);
         this.numModelo = numModelo;
    }
 
@@ -45,6 +48,7 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
 
    @Override
    public RecursoModEtapa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMetod = vo.asBigDecimal("CODMETOD");
         this.codTipFuncao = vo.asBigDecimal("CODTIPFUNCAO");
         this.numModelo = vo.asBigDecimal("NUMMODELO");

@@ -27,6 +27,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlProtAutCte(char[] xmlProtAutCte) {
+        markAsChanged("XMLPROTAUTCTE", xmlProtAutCte);
         this.xmlProtAutCte = xmlProtAutCte;
    }
 
@@ -35,6 +36,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvCartEnvCli(char[] xmlEnvCartEnvCli) {
+        markAsChanged("XMLENVCARTENVCLI", xmlEnvCartEnvCli);
         this.xmlEnvCartEnvCli = xmlEnvCartEnvCli;
    }
 
@@ -43,6 +45,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvCli(char[] xmlEnvCli) {
+        markAsChanged("XMLENVCLI", xmlEnvCli);
         this.xmlEnvCli = xmlEnvCli;
    }
 
@@ -51,6 +54,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -59,6 +63,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXml(char[] xml) {
+        markAsChanged("XML", xml);
         this.xml = xml;
    }
 
@@ -67,6 +72,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setChaveCte(String chaveCte) {
+        markAsChanged("CHAVECTE", chaveCte);
         this.chaveCte = chaveCte;
    }
 
@@ -75,6 +81,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvCarta(char[] xmlEnvCarta) {
+        markAsChanged("XMLENVCARTA", xmlEnvCarta);
         this.xmlEnvCarta = xmlEnvCarta;
    }
 
@@ -83,6 +90,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlCanc(char[] xmlCanc) {
+        markAsChanged("XMLCANC", xmlCanc);
         this.xmlCanc = xmlCanc;
    }
 
@@ -91,6 +99,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlCancProtAut(char[] xmlCancProtAut) {
+        markAsChanged("XMLCANCPROTAUT", xmlCancProtAut);
         this.xmlCancProtAut = xmlCancProtAut;
    }
 
@@ -99,6 +108,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlCancEnvCli(char[] xmlCancEnvCli) {
+        markAsChanged("XMLCANCENVCLI", xmlCancEnvCli);
         this.xmlCancEnvCli = xmlCancEnvCli;
    }
 
@@ -107,6 +117,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvCartRotAut(char[] xmlEnvCartRotAut) {
+        markAsChanged("XMLENVCARTROTAUT", xmlEnvCartRotAut);
         this.xmlEnvCartRotAut = xmlEnvCartRotAut;
    }
 
@@ -115,6 +126,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlProtAutEpec(char[] xmlProtAutEpec) {
+        markAsChanged("XMLPROTAUTEPEC", xmlProtAutEpec);
         this.xmlProtAutEpec = xmlProtAutEpec;
    }
 
@@ -123,6 +135,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvEpec(char[] xmlEnvEpec) {
+        markAsChanged("XMLENVEPEC", xmlEnvEpec);
         this.xmlEnvEpec = xmlEnvEpec;
    }
 
@@ -131,6 +144,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlEnvCliCanc(char[] xmlEnvCliCanc) {
+        markAsChanged("XMLENVCLICANC", xmlEnvCliCanc);
         this.xmlEnvCliCanc = xmlEnvCliCanc;
    }
 
@@ -139,6 +153,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setXmlProtCanc(char[] xmlProtCanc) {
+        markAsChanged("XMLPROTCANC", xmlProtCanc);
         this.xmlProtCanc = xmlProtCanc;
    }
 
@@ -147,6 +162,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
    }
 
    public void setQrCode(String qrCode) {
+        markAsChanged("QRCODE", qrCode);
         this.qrCode = qrCode;
    }
 
@@ -162,6 +178,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
 
    @Override
    public ArquivoCTe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.xmlProtAutCte = vo.asClob("XMLPROTAUTCTE");
         this.xmlEnvCartEnvCli = vo.asClob("XMLENVCARTENVCLI");
         this.xmlEnvCli = vo.asClob("XMLENVCLI");

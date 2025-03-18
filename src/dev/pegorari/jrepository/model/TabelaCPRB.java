@@ -19,6 +19,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -27,6 +28,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -35,6 +37,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setCodCprb(String codCprb) {
+        markAsChanged("CODCPRB", codCprb);
         this.codCprb = codCprb;
    }
 
@@ -43,6 +46,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setCodRecolhimento(BigDecimal codRecolhimento) {
+        markAsChanged("CODRECOLHIMENTO", codRecolhimento);
         this.codRecolhimento = codRecolhimento;
    }
 
@@ -51,6 +55,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setDescAtividade(String descAtividade) {
+        markAsChanged("DESCATIVIDADE", descAtividade);
         this.descAtividade = descAtividade;
    }
 
@@ -59,6 +64,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -67,6 +73,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -82,6 +89,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
 
    @Override
    public TabelaCPRB fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.codCprb = vo.asString("CODCPRB");

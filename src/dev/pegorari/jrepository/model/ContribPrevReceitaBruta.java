@@ -39,6 +39,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setNroRecibo(String nroRecibo) {
+        markAsChanged("NRORECIBO", nroRecibo);
         this.nroRecibo = nroRecibo;
    }
 
@@ -47,6 +48,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setNroReciboAnt(String nroReciboAnt) {
+        markAsChanged("NRORECIBOANT", nroReciboAnt);
         this.nroReciboAnt = nroReciboAnt;
    }
 
@@ -55,6 +57,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +66,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -71,6 +75,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -79,6 +84,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -87,6 +93,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setTpInscEstab(BigDecimal tpInscEstab) {
+        markAsChanged("TPINSCESTAB", tpInscEstab);
         this.tpInscEstab = tpInscEstab;
    }
 
@@ -95,6 +102,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrCpApuTotal(BigDecimal vlrCpApuTotal) {
+        markAsChanged("VLRCPAPURTOTAL", vlrCpApuTotal);
         this.vlrCpApuTotal = vlrCpApuTotal;
    }
 
@@ -103,6 +111,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -111,6 +120,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -119,6 +129,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -127,6 +138,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -135,6 +147,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -143,6 +156,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -151,6 +165,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setNrInscEstab(String nrInscEstab) {
+        markAsChanged("NRINSCESTAB", nrInscEstab);
         this.nrInscEstab = nrInscEstab;
    }
 
@@ -159,6 +174,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrCpRbSuspTotal(BigDecimal vlrCpRbSuspTotal) {
+        markAsChanged("VLRCPRBSUSPTOTAL", vlrCpRbSuspTotal);
         this.vlrCpRbSuspTotal = vlrCpRbSuspTotal;
    }
 
@@ -167,6 +183,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrRecBrutaTotal(BigDecimal vlrRecBrutaTotal) {
+        markAsChanged("VLRRECBRUTATOTAL", vlrRecBrutaTotal);
         this.vlrRecBrutaTotal = vlrRecBrutaTotal;
    }
 
@@ -175,6 +192,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setCodEmpEstab(BigDecimal codEmpEstab) {
+        markAsChanged("CODEMPESTAB", codEmpEstab);
         this.codEmpEstab = codEmpEstab;
    }
 
@@ -183,6 +201,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setCodReceita(String codReceita) {
+        markAsChanged("CODRECEITA", codReceita);
         this.codReceita = codReceita;
    }
 
@@ -191,6 +210,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -199,6 +219,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -207,6 +228,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -215,6 +237,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrBcCpRbTotal(BigDecimal vlrBcCpRbTotal) {
+        markAsChanged("VLRBCCPRBTOTAL", vlrBcCpRbTotal);
         this.vlrBcCpRbTotal = vlrBcCpRbTotal;
    }
 
@@ -223,6 +246,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrCpApuTotalRet(BigDecimal vlrCpApuTotalRet) {
+        markAsChanged("VLRCPAPURTOTALRET", vlrCpApuTotalRet);
         this.vlrCpApuTotalRet = vlrCpApuTotalRet;
    }
 
@@ -231,6 +255,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setVlrCpRbSuspTotalRet(BigDecimal vlrCpRbSuspTotalRet) {
+        markAsChanged("VLRCPRBSUSPTOTALRET", vlrCpRbSuspTotalRet);
         this.vlrCpRbSuspTotalRet = vlrCpRbSuspTotalRet;
    }
 
@@ -239,6 +264,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -247,6 +273,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -262,6 +289,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
 
    @Override
    public ContribPrevReceitaBruta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nroRecibo = vo.asString("NRORECIBO");
         this.nroReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

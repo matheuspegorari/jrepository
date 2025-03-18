@@ -14,6 +14,7 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
    }
 
    public void setDtRe(Timestamp dtRe) {
+        markAsChanged("DTRE", dtRe);
         this.dtRe = dtRe;
    }
 
@@ -22,6 +23,7 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
    }
 
    public void setNroDeclaracao(String nroDeclaracao) {
+        markAsChanged("NRODECLARACAO", nroDeclaracao);
         this.nroDeclaracao = nroDeclaracao;
    }
 
@@ -30,6 +32,7 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
    }
 
    public void setNroRe(String nroRe) {
+        markAsChanged("NRORE", nroRe);
         this.nroRe = nroRe;
    }
 
@@ -45,6 +48,7 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
 
    @Override
    public InformacaoRegistroExportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtRe = vo.asTimestamp("DTRE");
         this.nroDeclaracao = vo.asString("NRODECLARACAO");
         this.nroRe = vo.asString("NRORE");

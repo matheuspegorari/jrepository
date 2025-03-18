@@ -17,6 +17,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setCodCwc(BigDecimal codCwc) {
+        markAsChanged("CODCWC", codCwc);
         this.codCwc = codCwc;
    }
 
@@ -25,6 +26,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setIdAwc(BigDecimal idAwc) {
+        markAsChanged("IDAWC", idAwc);
         this.idAwc = idAwc;
    }
 
@@ -33,6 +35,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -41,6 +44,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setTipAlocacao(String tipAlocacao) {
+        markAsChanged("TIPALOCACAO", tipAlocacao);
         this.tipAlocacao = tipAlocacao;
    }
 
@@ -49,6 +53,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -57,6 +62,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -72,6 +78,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
 
    @Override
    public AlocacaoWorkCenterProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCwc = vo.asBigDecimal("CODCWC");
         this.idAwc = vo.asBigDecimal("IDAWC");
         this.idProc = vo.asBigDecimal("IDPROC");

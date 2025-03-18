@@ -82,6 +82,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setClassificacao(String classificacao) {
+        markAsChanged("CLASSIFICACAO", classificacao);
         this.classificacao = classificacao;
    }
 
@@ -90,6 +91,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCobrar(String cobrar) {
+        markAsChanged("COBRAR", cobrar);
         this.cobrar = cobrar;
    }
 
@@ -98,6 +100,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodCencusPad(BigDecimal codCencusPad) {
+        markAsChanged("CODCENCUSPAD", codCencusPad);
         this.codCencusPad = codCencusPad;
    }
 
@@ -106,6 +109,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodEpv(BigDecimal codEpv) {
+        markAsChanged("CODEPV", codEpv);
         this.codEpv = codEpv;
    }
 
@@ -114,6 +118,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodOcorOs(BigDecimal codOcorOs) {
+        markAsChanged("CODOCOROS", codOcorOs);
         this.codOcorOs = codOcorOs;
    }
 
@@ -122,6 +127,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -130,6 +136,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -138,6 +145,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodReq(BigDecimal codReq) {
+        markAsChanged("CODREQ", codReq);
         this.codReq = codReq;
    }
 
@@ -146,6 +154,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -154,6 +163,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodServRaiz(BigDecimal codServRaiz) {
+        markAsChanged("CODSERVRAIZ", codServRaiz);
         this.codServRaiz = codServRaiz;
    }
 
@@ -162,6 +172,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodSit(BigDecimal codSit) {
+        markAsChanged("CODSIT", codSit);
         this.codSit = codSit;
    }
 
@@ -170,6 +181,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodUnnExec(BigDecimal codUnnExec) {
+        markAsChanged("CODUNNEXEC", codUnnExec);
         this.codUnnExec = codUnnExec;
    }
 
@@ -178,6 +190,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodUnnOs(BigDecimal codUnnOs) {
+        markAsChanged("CODUNNOS", codUnnOs);
         this.codUnnOs = codUnnOs;
    }
 
@@ -186,6 +199,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -194,6 +208,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -202,6 +217,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodUsuRem(BigDecimal codUsuRem) {
+        markAsChanged("CODUSUREM", codUsuRem);
         this.codUsuRem = codUsuRem;
    }
 
@@ -210,6 +226,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -218,6 +235,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCompletude(BigDecimal completude) {
+        markAsChanged("COMPLETUDE", completude);
         this.completude = completude;
    }
 
@@ -226,6 +244,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setContadorFluxo(BigDecimal contadorFluxo) {
+        markAsChanged("CONTADORFLUXO", contadorFluxo);
         this.contadorFluxo = contadorFluxo;
    }
 
@@ -234,6 +253,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setCorSla(BigDecimal corSla) {
+        markAsChanged("CORSLA", corSla);
         this.corSla = corSla;
    }
 
@@ -242,6 +262,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDescrCencus(String descrCencus) {
+        markAsChanged("DESCRCENCUS", descrCencus);
         this.descrCencus = descrCencus;
    }
 
@@ -250,6 +271,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDescServ(String descServ) {
+        markAsChanged("DESCSERV", descServ);
         this.descServ = descServ;
    }
 
@@ -258,6 +280,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhEmailVal(Timestamp dhEmailVal) {
+        markAsChanged("DHEMAILVAL", dhEmailVal);
         this.dhEmailVal = dhEmailVal;
    }
 
@@ -266,6 +289,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhEntrada(Timestamp dhEntrada) {
+        markAsChanged("DHENTRADA", dhEntrada);
         this.dhEntrada = dhEntrada;
    }
 
@@ -274,6 +298,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhLimiteSla(Timestamp dhLimiteSla) {
+        markAsChanged("DHLIMITESLA", dhLimiteSla);
         this.dhLimiteSla = dhLimiteSla;
    }
 
@@ -282,6 +307,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhPrevista(Timestamp dhPrevista) {
+        markAsChanged("DHPREVISTA", dhPrevista);
         this.dhPrevista = dhPrevista;
    }
 
@@ -290,6 +316,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhValidacao(Timestamp dhValidacao) {
+        markAsChanged("DHVALIDACAO", dhValidacao);
         this.dhValidacao = dhValidacao;
    }
 
@@ -298,6 +325,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -306,6 +334,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDtPrevFechamento(Timestamp dtPrevFechamento) {
+        markAsChanged("DTPREVFECHAMENTO", dtPrevFechamento);
         this.dtPrevFechamento = dtPrevFechamento;
    }
 
@@ -314,6 +343,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setExecutante(String executante) {
+        markAsChanged("EXECUTANTE", executante);
         this.executante = executante;
    }
 
@@ -322,6 +352,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setGrauDific(BigDecimal grauDific) {
+        markAsChanged("GRAUDIFIC", grauDific);
         this.grauDific = grauDific;
    }
 
@@ -330,6 +361,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setHrFinal(BigDecimal hrFinal) {
+        markAsChanged("HRFINAL", hrFinal);
         this.hrFinal = hrFinal;
    }
 
@@ -338,6 +370,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setHrInicial(BigDecimal hrInicial) {
+        markAsChanged("HRINICIAL", hrInicial);
         this.hrInicial = hrInicial;
    }
 
@@ -346,6 +379,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setInicExec(Timestamp inicExec) {
+        markAsChanged("INICEXEC", inicExec);
         this.inicExec = inicExec;
    }
 
@@ -354,6 +388,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setIntervalo(BigDecimal intervalo) {
+        markAsChanged("INTERVALO", intervalo);
         this.intervalo = intervalo;
    }
 
@@ -362,6 +397,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -370,6 +406,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNumEtapa(BigDecimal numEtapa) {
+        markAsChanged("NUMETAPA", numEtapa);
         this.numEtapa = numEtapa;
    }
 
@@ -378,6 +415,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNumFluxo(BigDecimal numFluxo) {
+        markAsChanged("NUMFLUXO", numFluxo);
         this.numFluxo = numFluxo;
    }
 
@@ -386,6 +424,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -394,6 +433,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -402,6 +442,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -410,6 +451,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setProdutividade(BigDecimal produtividade) {
+        markAsChanged("PRODUTIVIDADE", produtividade);
         this.produtividade = produtividade;
    }
 
@@ -418,6 +460,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHora(BigDecimal qtdHora) {
+        markAsChanged("QTDHORA", qtdHora);
         this.qtdHora = qtdHora;
    }
 
@@ -426,6 +469,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHoraBonif(BigDecimal qtdHoraBonif) {
+        markAsChanged("QTDHORABONIF", qtdHoraBonif);
         this.qtdHoraBonif = qtdHoraBonif;
    }
 
@@ -434,6 +478,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHoraComBonif(BigDecimal qtdHoraComBonif) {
+        markAsChanged("QTDHORACOMBONIF", qtdHoraComBonif);
         this.qtdHoraComBonif = qtdHoraComBonif;
    }
 
@@ -442,6 +487,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHoraExt(BigDecimal qtdHoraExt) {
+        markAsChanged("QTDHORAEXT", qtdHoraExt);
         this.qtdHoraExt = qtdHoraExt;
    }
 
@@ -450,6 +496,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHoraExtBonif(BigDecimal qtdHoraExtBonif) {
+        markAsChanged("QTDHORAEXTBONIF", qtdHoraExtBonif);
         this.qtdHoraExtBonif = qtdHoraExtBonif;
    }
 
@@ -458,6 +505,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdHoraExtComBonif(BigDecimal qtdHoraExtComBonif) {
+        markAsChanged("QTDHORAEXTCOMBONIF", qtdHoraExtComBonif);
         this.qtdHoraExtComBonif = qtdHoraExtComBonif;
    }
 
@@ -466,6 +514,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setQtdServ(BigDecimal qtdServ) {
+        markAsChanged("QTDSERV", qtdServ);
         this.qtdServ = qtdServ;
    }
 
@@ -474,6 +523,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setRetrabalho(String retrabalho) {
+        markAsChanged("RETRABALHO", retrabalho);
         this.retrabalho = retrabalho;
    }
 
@@ -482,6 +532,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setSeqFluxo(BigDecimal seqFluxo) {
+        markAsChanged("SEQFLUXO", seqFluxo);
         this.seqFluxo = seqFluxo;
    }
 
@@ -490,6 +541,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -498,6 +550,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setSolucao(String solucao) {
+        markAsChanged("SOLUCAO", solucao);
         this.solucao = solucao;
    }
 
@@ -506,6 +559,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTempGasto(BigDecimal tempGasto) {
+        markAsChanged("TEMPGASTO", tempGasto);
         this.tempGasto = tempGasto;
    }
 
@@ -514,6 +568,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTempoGastoSlaProc(BigDecimal tempoGastoSlaProc) {
+        markAsChanged("TEMPOGASTOSLAPROC", tempoGastoSlaProc);
         this.tempoGastoSlaProc = tempoGastoSlaProc;
    }
 
@@ -522,6 +577,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTempoGastoSlaSub(BigDecimal tempoGastoSlaSub) {
+        markAsChanged("TEMPOGASTOSLASUB", tempoGastoSlaSub);
         this.tempoGastoSlaSub = tempoGastoSlaSub;
    }
 
@@ -530,6 +586,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTempPrevisto(Timestamp tempPrevisto) {
+        markAsChanged("TEMPPREVISTO", tempPrevisto);
         this.tempPrevisto = tempPrevisto;
    }
 
@@ -538,6 +595,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTermExec(Timestamp termExec) {
+        markAsChanged("TERMEXEC", termExec);
         this.termExec = termExec;
    }
 
@@ -546,6 +604,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -554,6 +613,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTipoOs(String tipoOs) {
+        markAsChanged("TIPOOS", tipoOs);
         this.tipoOs = tipoOs;
    }
 
@@ -562,6 +622,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setTurno(BigDecimal turno) {
+        markAsChanged("TURNO", turno);
         this.turno = turno;
    }
 
@@ -570,6 +631,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrCobrado(BigDecimal vlrCobrado) {
+        markAsChanged("VLRCOBRADO", vlrCobrado);
         this.vlrCobrado = vlrCobrado;
    }
 
@@ -578,6 +640,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrComissao(BigDecimal vlrComissao) {
+        markAsChanged("VLRCOMISSAO", vlrComissao);
         this.vlrComissao = vlrComissao;
    }
 
@@ -586,6 +649,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrHoraCom(BigDecimal vlrHoraCom) {
+        markAsChanged("VLRHORACOM", vlrHoraCom);
         this.vlrHoraCom = vlrHoraCom;
    }
 
@@ -594,6 +658,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrHoraExtCom(BigDecimal vlrHoraExtCom) {
+        markAsChanged("VLRHORAEXTCOM", vlrHoraExtCom);
         this.vlrHoraExtCom = vlrHoraExtCom;
    }
 
@@ -602,6 +667,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrHoraExtFat(BigDecimal vlrHoraExtFat) {
+        markAsChanged("VLRHORAEXTFAT", vlrHoraExtFat);
         this.vlrHoraExtFat = vlrHoraExtFat;
    }
 
@@ -610,6 +676,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setVlrHoraFat(BigDecimal vlrHoraFat) {
+        markAsChanged("VLRHORAFAT", vlrHoraFat);
         this.vlrHoraFat = vlrHoraFat;
    }
 
@@ -618,6 +685,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNuNegociacao(BigDecimal nuNegociacao) {
+        markAsChanged("NUNEGOCIACAO", nuNegociacao);
         this.nuNegociacao = nuNegociacao;
    }
 
@@ -626,6 +694,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -634,6 +703,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
    }
 
    public void setDhPauseApp(Timestamp dhPauseApp) {
+        markAsChanged("DHPAUSEAPP", dhPauseApp);
         this.dhPauseApp = dhPauseApp;
    }
 
@@ -649,6 +719,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
 
    @Override
    public ItemOrdemServico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.classificacao = vo.asString("CLASSIFICACAO");
         this.cobrar = vo.asString("COBRAR");
         this.codCencusPad = vo.asBigDecimal("CODCENCUSPAD");

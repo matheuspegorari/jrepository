@@ -21,6 +21,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setUsaSqlNuFin(String usaSqlNuFin) {
+        markAsChanged("USASQLNUFIN", usaSqlNuFin);
         this.usaSqlNuFin = usaSqlNuFin;
    }
 
@@ -29,6 +30,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -37,6 +39,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -45,6 +48,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -53,6 +57,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setCodPai(BigDecimal codPai) {
+        markAsChanged("CODPAI", codPai);
         this.codPai = codPai;
    }
 
@@ -61,6 +66,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setConcExtBanc(String concExtBanc) {
+        markAsChanged("CONCEXTBANC", concExtBanc);
         this.concExtBanc = concExtBanc;
    }
 
@@ -69,6 +75,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -77,6 +84,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setSpChamada(String spChamada) {
+        markAsChanged("SP_CHAMADA", spChamada);
         this.spChamada = spChamada;
    }
 
@@ -85,6 +93,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -93,6 +102,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
    }
 
    public void setConfigTaxaAdmin(String configTaxaAdmin) {
+        markAsChanged("CONFIGTAXAADMIN", configTaxaAdmin);
         this.configTaxaAdmin = configTaxaAdmin;
    }
 
@@ -108,6 +118,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
 
    @Override
    public RetornoMovimentoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.usaSqlNuFin = vo.asString("USASQLNUFIN");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

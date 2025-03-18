@@ -21,6 +21,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -29,6 +30,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -37,6 +39,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setMes3BalRed(String mes3BalRed) {
+        markAsChanged("MES3BALRED", mes3BalRed);
         this.mes3BalRed = mes3BalRed;
    }
 
@@ -45,6 +48,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -53,6 +57,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setMes2BalRed(String mes2BalRed) {
+        markAsChanged("MES2BALRED", mes2BalRed);
         this.mes2BalRed = mes2BalRed;
    }
 
@@ -61,6 +66,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setTrimestre(BigDecimal trimestre) {
+        markAsChanged("TRIMESTRE", trimestre);
         this.trimestre = trimestre;
    }
 
@@ -69,6 +75,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setExercicio(BigDecimal exercicio) {
+        markAsChanged("EXERCICIO", exercicio);
         this.exercicio = exercicio;
    }
 
@@ -77,6 +84,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setFormaTribPer(String formaTribPer) {
+        markAsChanged("FORMATRIBPER", formaTribPer);
         this.formaTribPer = formaTribPer;
    }
 
@@ -85,6 +93,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    }
 
    public void setMes1BalRed(String mes1BalRed) {
+        markAsChanged("MES1BALRED", mes1BalRed);
         this.mes1BalRed = mes1BalRed;
    }
 
@@ -100,6 +109,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
 
    @Override
    public FormaTributacaoPeriodo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.mes3BalRed = vo.asString("MES3BALRED");

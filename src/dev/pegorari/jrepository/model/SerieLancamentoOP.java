@@ -15,6 +15,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -23,6 +24,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -31,6 +33,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -39,6 +42,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
    }
 
    public void setSeriePa(String seriePa) {
+        markAsChanged("SERIEPA", seriePa);
         this.seriePa = seriePa;
    }
 
@@ -54,6 +58,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
 
    @Override
    public SerieLancamentoOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.seqOp = vo.asBigDecimal("SEQOP");

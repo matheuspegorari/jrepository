@@ -31,6 +31,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -39,6 +40,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -47,6 +49,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodUsuPesq(BigDecimal codUsuPesq) {
+        markAsChanged("CODUSUPESQ", codUsuPesq);
         this.codUsuPesq = codUsuPesq;
    }
 
@@ -55,6 +58,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -63,6 +67,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setDtAplicacao(Timestamp dtAplicacao) {
+        markAsChanged("DTAPLICACAO", dtAplicacao);
         this.dtAplicacao = dtAplicacao;
    }
 
@@ -71,6 +76,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setHoraAplicacao(BigDecimal horaAplicacao) {
+        markAsChanged("HORAAPLICACAO", horaAplicacao);
         this.horaAplicacao = horaAplicacao;
    }
 
@@ -79,6 +85,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setNomePesq(String nomePesq) {
+        markAsChanged("NOMEPESQ", nomePesq);
         this.nomePesq = nomePesq;
    }
 
@@ -87,6 +94,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setNotaFinal(BigDecimal notaFinal) {
+        markAsChanged("NOTAFINAL", notaFinal);
         this.notaFinal = notaFinal;
    }
 
@@ -95,6 +103,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setNuCurriculoPesq(BigDecimal nuCurriculoPesq) {
+        markAsChanged("NUCURRICULOPESQ", nuCurriculoPesq);
         this.nuCurriculoPesq = nuCurriculoPesq;
    }
 
@@ -103,6 +112,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
+        markAsChanged("NUPESQ", nuPesq);
         this.nuPesq = nuPesq;
    }
 
@@ -111,6 +121,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setNuPla(BigDecimal nuPla) {
+        markAsChanged("NUPLA", nuPla);
         this.nuPla = nuPla;
    }
 
@@ -119,6 +130,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -127,6 +139,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setTipoPesq(String tipoPesq) {
+        markAsChanged("TIPOPESQ", tipoPesq);
         this.tipoPesq = tipoPesq;
    }
 
@@ -135,6 +148,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodProdPesq(BigDecimal codProdPesq) {
+        markAsChanged("CODPRODPESQ", codProdPesq);
         this.codProdPesq = codProdPesq;
    }
 
@@ -143,6 +157,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodContatoPesq(BigDecimal codContatoPesq) {
+        markAsChanged("CODCONTATOPESQ", codContatoPesq);
         this.codContatoPesq = codContatoPesq;
    }
 
@@ -151,6 +166,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodEmpFunPesq(BigDecimal codEmpFunPesq) {
+        markAsChanged("CODEMPFUNPESQ", codEmpFunPesq);
         this.codEmpFunPesq = codEmpFunPesq;
    }
 
@@ -159,6 +175,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodFuncPesq(BigDecimal codFuncPesq) {
+        markAsChanged("CODFUNCPESQ", codFuncPesq);
         this.codFuncPesq = codFuncPesq;
    }
 
@@ -167,6 +184,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodPapPesq(BigDecimal codPapPesq) {
+        markAsChanged("CODPAPPESQ", codPapPesq);
         this.codPapPesq = codPapPesq;
    }
 
@@ -175,6 +193,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
    }
 
    public void setCodParcPesq(BigDecimal codParcPesq) {
+        markAsChanged("CODPARCPESQ", codParcPesq);
         this.codParcPesq = codParcPesq;
    }
 
@@ -190,6 +209,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
 
    @Override
    public Pesquisa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codQuest = vo.asBigDecimal("CODQUEST");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuPesq = vo.asBigDecimal("CODUSUPESQ");

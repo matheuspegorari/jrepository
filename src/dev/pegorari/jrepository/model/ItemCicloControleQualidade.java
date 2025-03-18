@@ -20,6 +20,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setIdSubfluxo(String idSubfluxo) {
+        markAsChanged("IDSUBFLUXO", idSubfluxo);
         this.idSubfluxo = idSubfluxo;
    }
 
@@ -28,6 +29,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setResultado(String resultado) {
+        markAsChanged("RESULTADO", resultado);
         this.resultado = resultado;
    }
 
@@ -36,6 +38,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setIdCcq(BigDecimal idCcq) {
+        markAsChanged("IDCCQ", idCcq);
         this.idCcq = idCcq;
    }
 
@@ -44,6 +47,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setStatusCiclo(String statusCiclo) {
+        markAsChanged("STATUSCICLO", statusCiclo);
         this.statusCiclo = statusCiclo;
    }
 
@@ -52,6 +56,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setDhInicio(Timestamp dhInicio) {
+        markAsChanged("DHINICIO", dhInicio);
         this.dhInicio = dhInicio;
    }
 
@@ -60,6 +65,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -68,6 +74,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -76,6 +83,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    }
 
    public void setIdIccq(BigDecimal idIccq) {
+        markAsChanged("IDICCQ", idIccq);
         this.idIccq = idIccq;
    }
 
@@ -91,6 +99,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
 
    @Override
    public ItemCicloControleQualidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idSubfluxo = vo.asString("IDSUBFLUXO");
         this.resultado = vo.asString("RESULTADO");
         this.idCcq = vo.asBigDecimal("IDCCQ");

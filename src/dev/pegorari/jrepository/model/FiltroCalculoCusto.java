@@ -17,6 +17,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setCodChave(BigDecimal codChave) {
+        markAsChanged("CODCHAVE", codChave);
         this.codChave = codChave;
    }
 
@@ -25,6 +26,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setCodForm(BigDecimal codForm) {
+        markAsChanged("CODFORM", codForm);
         this.codForm = codForm;
    }
 
@@ -33,6 +35,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -41,6 +44,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setTipForm(String tipForm) {
+        markAsChanged("TIPFORM", tipForm);
         this.tipForm = tipForm;
    }
 
@@ -49,6 +53,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setCodEmpPla(BigDecimal codEmpPla) {
+        markAsChanged("CODEMPPLA", codEmpPla);
         this.codEmpPla = codEmpPla;
    }
 
@@ -57,6 +62,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    }
 
    public void setTipLancPla(String tipLancPla) {
+        markAsChanged("TIPLANCPLA", tipLancPla);
         this.tipLancPla = tipLancPla;
    }
 
@@ -72,6 +78,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
 
    @Override
    public FiltroCalculoCusto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codChave = vo.asBigDecimal("CODCHAVE");
         this.codForm = vo.asBigDecimal("CODFORM");
         this.tabela = vo.asString("TABELA");

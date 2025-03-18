@@ -19,6 +19,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -27,6 +28,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDescr(String descr) {
+        markAsChanged("DESCR", descr);
         this.descr = descr;
    }
 
@@ -35,6 +37,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -43,6 +46,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -51,6 +55,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -59,6 +64,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setReg(String reg) {
+        markAsChanged("REG", reg);
         this.reg = reg;
    }
 
@@ -67,6 +73,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    }
 
    public void setUnid(String unid) {
+        markAsChanged("UNID", unid);
         this.unid = unid;
    }
 
@@ -82,6 +89,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
 
    @Override
    public DemonsApurRessarcimentoSTR0190 fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descr = vo.asString("DESCR");
         this.digitado = vo.asString("DIGITADO");

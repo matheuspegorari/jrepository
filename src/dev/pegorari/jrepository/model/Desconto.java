@@ -42,6 +42,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setAvisarVct(String avisarVct) {
+        markAsChanged("AVISARVCT", avisarVct);
         this.avisarVct = avisarVct;
    }
 
@@ -50,6 +51,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -58,6 +60,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -66,6 +69,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -74,6 +78,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -82,6 +87,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setGrupoDescParc(String grupoDescParc) {
+        markAsChanged("GRUPODESCPARC", grupoDescParc);
         this.grupoDescParc = grupoDescParc;
    }
 
@@ -90,6 +96,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setGrupoDescProd(String grupoDescProd) {
+        markAsChanged("GRUPODESCPROD", grupoDescProd);
         this.grupoDescProd = grupoDescProd;
    }
 
@@ -98,6 +105,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setGrupoDescVend(String grupoDescVend) {
+        markAsChanged("GRUPODESCVEND", grupoDescVend);
         this.grupoDescVend = grupoDescVend;
    }
 
@@ -106,6 +114,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setNuPromocao(BigDecimal nuPromocao) {
+        markAsChanged("NUPROMOCAO", nuPromocao);
         this.nuPromocao = nuPromocao;
    }
 
@@ -114,6 +123,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setPercDescBonif(BigDecimal percDescBonif) {
+        markAsChanged("PERCDESCBONIF", percDescBonif);
         this.percDescBonif = percDescBonif;
    }
 
@@ -122,6 +132,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setPercentual(BigDecimal percentual) {
+        markAsChanged("PERCENTUAL", percentual);
         this.percentual = percentual;
    }
 
@@ -130,6 +141,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setTipGrupo(String tipGrupo) {
+        markAsChanged("TIPGRUPO", tipGrupo);
         this.tipGrupo = tipGrupo;
    }
 
@@ -138,6 +150,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setTipPromocao(String tipPromocao) {
+        markAsChanged("TIPPROMOCAO", tipPromocao);
         this.tipPromocao = tipPromocao;
    }
 
@@ -146,6 +159,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setUsaDescQtd(String usaDescQtd) {
+        markAsChanged("USADESCQTD", usaDescQtd);
         this.usaDescQtd = usaDescQtd;
    }
 
@@ -154,6 +168,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -162,6 +177,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setVlrVenda(BigDecimal vlrVenda) {
+        markAsChanged("VLRVENDA", vlrVenda);
         this.vlrVenda = vlrVenda;
    }
 
@@ -170,6 +186,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -178,6 +195,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -186,6 +204,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -194,6 +213,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -202,6 +222,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setTipGrupoProd(String tipGrupoProd) {
+        markAsChanged("TIPGRUPOPROD", tipGrupoProd);
         this.tipGrupoProd = tipGrupoProd;
    }
 
@@ -210,6 +231,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setDescrPromocao(String descrPromocao) {
+        markAsChanged("DESCRPROMOCAO", descrPromocao);
         this.descrPromocao = descrPromocao;
    }
 
@@ -218,6 +240,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setLiquidacao(String liquidacao) {
+        markAsChanged("LIQUIDACAO", liquidacao);
         this.liquidacao = liquidacao;
    }
 
@@ -226,6 +249,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setAplicDescPorLocal(String aplicDescPorLocal) {
+        markAsChanged("APLICDESCPORLOCAL", aplicDescPorLocal);
         this.aplicDescPorLocal = aplicDescPorLocal;
    }
 
@@ -234,6 +258,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setUsaDescCtrl(String usaDescCtrl) {
+        markAsChanged("USADESCCTRL", usaDescCtrl);
         this.usaDescCtrl = usaDescCtrl;
    }
 
@@ -242,6 +267,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -250,6 +276,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -258,6 +285,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setAtNuVersao(String atNuVersao) {
+        markAsChanged("ATUNUVERSAO", atNuVersao);
         this.atNuVersao = atNuVersao;
    }
 
@@ -266,6 +294,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -274,6 +303,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
    }
 
    public void setUsaDescEsp(String usaDescEsp) {
+        markAsChanged("USADESCESP", usaDescEsp);
         this.usaDescEsp = usaDescEsp;
    }
 
@@ -289,6 +319,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
 
    @Override
    public Desconto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.avisarVct = vo.asString("AVISARVCT");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

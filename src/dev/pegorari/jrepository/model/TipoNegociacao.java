@@ -68,6 +68,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setApresTransp(String apresTransp) {
+        markAsChanged("APRESTRANSP", apresTransp);
         this.apresTransp = apresTransp;
    }
 
@@ -76,6 +77,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -84,6 +86,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setBaixa(String baixa) {
+        markAsChanged("BAIXA", baixa);
         this.baixa = baixa;
    }
 
@@ -92,6 +95,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setBasePrazo(BigDecimal basePrazo) {
+        markAsChanged("BASEPRAZO", basePrazo);
         this.basePrazo = basePrazo;
    }
 
@@ -100,6 +104,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodCtaCtb1(BigDecimal codCtaCtb1) {
+        markAsChanged("CODCTACTB_1", codCtaCtb1);
         this.codCtaCtb1 = codCtaCtb1;
    }
 
@@ -108,6 +113,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB_2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -116,6 +122,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodFormDescMax(BigDecimal codFormDescMax) {
+        markAsChanged("CODFORMDESCMAX", codFormDescMax);
         this.codFormDescMax = codFormDescMax;
    }
 
@@ -124,6 +131,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodFormDescMaxItens(BigDecimal codFormDescMaxItens) {
+        markAsChanged("CODFORMDESCMAXITENS", codFormDescMaxItens);
         this.codFormDescMaxItens = codFormDescMaxItens;
    }
 
@@ -132,6 +140,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
+        markAsChanged("CODOBSPADRAO", codObsPadrao);
         this.codObsPadrao = codObsPadrao;
    }
 
@@ -140,6 +149,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -148,6 +158,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodTcf(BigDecimal codTcf) {
+        markAsChanged("CODTCF", codTcf);
         this.codTcf = codTcf;
    }
 
@@ -156,6 +167,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -164,6 +176,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -172,6 +185,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setComissao(BigDecimal comissao) {
+        markAsChanged("COMISSAO", comissao);
         this.comissao = comissao;
    }
 
@@ -180,6 +194,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setCompraMax(BigDecimal compraMax) {
+        markAsChanged("COMPRAMAX", compraMax);
         this.compraMax = compraMax;
    }
 
@@ -188,6 +203,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setDescMax(BigDecimal descMax) {
+        markAsChanged("DESCMAX", descMax);
         this.descMax = descMax;
    }
 
@@ -196,6 +212,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setDescProm(String descProm) {
+        markAsChanged("DESCPROM", descProm);
         this.descProm = descProm;
    }
 
@@ -204,6 +221,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setDescTipVenda(String descTipVenda) {
+        markAsChanged("DESCRTIPVENDA", descTipVenda);
         this.descTipVenda = descTipVenda;
    }
 
@@ -212,6 +230,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -220,6 +239,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setEditaSimulacao(String editaSimulacao) {
+        markAsChanged("EDITASIMULACAO", editaSimulacao);
         this.editaSimulacao = editaSimulacao;
    }
 
@@ -228,6 +248,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setEmiteBoleta(String emiteBoleta) {
+        markAsChanged("EMITEBOLETA", emiteBoleta);
         this.emiteBoleta = emiteBoleta;
    }
 
@@ -236,6 +257,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setEmiteDupl(String emiteDupl) {
+        markAsChanged("EMITEDUPL", emiteDupl);
         this.emiteDupl = emiteDupl;
    }
 
@@ -244,6 +266,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setFixaVenc(String fixaVenc) {
+        markAsChanged("FIXAVENC", fixaVenc);
         this.fixaVenc = fixaVenc;
    }
 
@@ -252,6 +275,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setFlex(String flex) {
+        markAsChanged("FLEX", flex);
         this.flex = flex;
    }
 
@@ -260,6 +284,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setGrupoAutor(String grupoAutor) {
+        markAsChanged("GRUPOAUTOR", grupoAutor);
         this.grupoAutor = grupoAutor;
    }
 
@@ -268,6 +293,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setLucroMin(BigDecimal lucroMin) {
+        markAsChanged("LUCROMIN", lucroMin);
         this.lucroMin = lucroMin;
    }
 
@@ -276,6 +302,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setMargemMin(BigDecimal margemMin) {
+        markAsChanged("MARGEMMIN", margemMin);
         this.margemMin = margemMin;
    }
 
@@ -284,6 +311,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setModeloPgto(String modeloPgto) {
+        markAsChanged("MODELOPGTO", modeloPgto);
         this.modeloPgto = modeloPgto;
    }
 
@@ -292,6 +320,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setNroParcelas(BigDecimal nroParcelas) {
+        markAsChanged("NROPARCELAS", nroParcelas);
         this.nroParcelas = nroParcelas;
    }
 
@@ -300,6 +329,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -308,6 +338,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPercMinEntrada(BigDecimal percMinEntrada) {
+        markAsChanged("PERCMINENTRADA", percMinEntrada);
         this.percMinEntrada = percMinEntrada;
    }
 
@@ -316,6 +347,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPodeConsumidor(String podeConsumidor) {
+        markAsChanged("PODECONSUMIDOR", podeConsumidor);
         this.podeConsumidor = podeConsumidor;
    }
 
@@ -324,6 +356,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPossuiSimSalva(String possuiSimSalva) {
+        markAsChanged("POSSUISIMSALVA", possuiSimSalva);
         this.possuiSimSalva = possuiSimSalva;
    }
 
@@ -332,6 +365,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPrazoMax(BigDecimal prazoMax) {
+        markAsChanged("PRAZOMAX", prazoMax);
         this.prazoMax = prazoMax;
    }
 
@@ -340,6 +374,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPrazoMaxPriParc(BigDecimal prazoMaxPriParc) {
+        markAsChanged("PRAZOMAXPRIPARC", prazoMaxPriParc);
         this.prazoMaxPriParc = prazoMaxPriParc;
    }
 
@@ -348,6 +383,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPrazoMedMax(BigDecimal prazoMedMax) {
+        markAsChanged("PRAZOMEDMAX", prazoMedMax);
         this.prazoMedMax = prazoMedMax;
    }
 
@@ -356,6 +392,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setPrazoMin(BigDecimal prazoMin) {
+        markAsChanged("PRAZOMIN", prazoMin);
         this.prazoMin = prazoMin;
    }
 
@@ -364,6 +401,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setSomaPrazoCliente(String somaPrazoCliente) {
+        markAsChanged("SOMAPRAZOCLIENTE", somaPrazoCliente);
         this.somaPrazoCliente = somaPrazoCliente;
    }
 
@@ -372,6 +410,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setSubTipoVenda(String subTipoVenda) {
+        markAsChanged("SUBTIPOVENDA", subTipoVenda);
         this.subTipoVenda = subTipoVenda;
    }
 
@@ -380,6 +419,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTaxaJuro(BigDecimal taxaJuro) {
+        markAsChanged("TAXAJURO", taxaJuro);
         this.taxaJuro = taxaJuro;
    }
 
@@ -388,6 +428,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTaxaJurSim(BigDecimal taxaJurSim) {
+        markAsChanged("TAXAJURSIM", taxaJurSim);
         this.taxaJurSim = taxaJurSim;
    }
 
@@ -396,6 +437,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTipJuro(String tipJuro) {
+        markAsChanged("TIPJURO", tipJuro);
         this.tipJuro = tipJuro;
    }
 
@@ -404,6 +446,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTipoJurSim(String tipoJurSim) {
+        markAsChanged("TIPOJURSIM", tipoJurSim);
         this.tipoJurSim = tipoJurSim;
    }
 
@@ -412,6 +455,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTipTaxa(String tipTaxa) {
+        markAsChanged("TIPTAXA", tipTaxa);
         this.tipTaxa = tipTaxa;
    }
 
@@ -420,6 +464,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTxParcAdm(BigDecimal txParcAdm) {
+        markAsChanged("TXPARCADM", txParcAdm);
         this.txParcAdm = txParcAdm;
    }
 
@@ -428,6 +473,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setValPrazoCliente(String valPrazoCliente) {
+        markAsChanged("VALPRAZOCLIENTE", valPrazoCliente);
         this.valPrazoCliente = valPrazoCliente;
    }
 
@@ -436,6 +482,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setVendaMax(BigDecimal vendaMax) {
+        markAsChanged("VENDAMAX", vendaMax);
         this.vendaMax = vendaMax;
    }
 
@@ -444,6 +491,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setVendaMin(BigDecimal vendaMin) {
+        markAsChanged("VENDAMIN", vendaMin);
         this.vendaMin = vendaMin;
    }
 
@@ -452,6 +500,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setArredPrimeiraParc(String arredPrimeiraParc) {
+        markAsChanged("ARREDPRIMEIRAPARC", arredPrimeiraParc);
         this.arredPrimeiraParc = arredPrimeiraParc;
    }
 
@@ -460,6 +509,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTimQtdParc(BigDecimal timQtdParc) {
+        markAsChanged("TIMQTDPARC", timQtdParc);
         this.timQtdParc = timQtdParc;
    }
 
@@ -468,6 +518,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setTruncParcela(String truncParcela) {
+        markAsChanged("TRUNCPARCELA", truncParcela);
         this.truncParcela = truncParcela;
    }
 
@@ -476,6 +527,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setFastUsa(String fastUsa) {
+        markAsChanged("FASTUSA", fastUsa);
         this.fastUsa = fastUsa;
    }
 
@@ -484,6 +536,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setVencPrefixPed(String vencPrefixPed) {
+        markAsChanged("VENCPREFIXPED", vencPrefixPed);
         this.vencPrefixPed = vencPrefixPed;
    }
 
@@ -492,6 +545,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setIntegraEconect(String integraEconect) {
+        markAsChanged("INTEGRAECONECT", integraEconect);
         this.integraEconect = integraEconect;
    }
 
@@ -500,6 +554,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setFormaRecBtoSocin(BigDecimal formaRecBtoSocin) {
+        markAsChanged("FORMARECBTOSOCIN", formaRecBtoSocin);
         this.formaRecBtoSocin = formaRecBtoSocin;
    }
 
@@ -508,6 +563,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
    }
 
    public void setExVendaMais(String exVendaMais) {
+        markAsChanged("EXVENDAMAIS", exVendaMais);
         this.exVendaMais = exVendaMais;
    }
 
@@ -523,6 +579,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
 
    @Override
    public TipoNegociacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apresTransp = vo.asString("APRESTRANSP");
         this.ativo = vo.asString("ATIVO");
         this.baixa = vo.asString("BAIXA");

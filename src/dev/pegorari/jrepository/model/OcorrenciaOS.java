@@ -15,6 +15,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    }
 
    public void setCobrar(String cobrar) {
+        markAsChanged("COBRAR", cobrar);
         this.cobrar = cobrar;
    }
 
@@ -23,6 +24,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    }
 
    public void setCodOcorOs(BigDecimal codOcorOs) {
+        markAsChanged("CODOCOROS", codOcorOs);
         this.codOcorOs = codOcorOs;
    }
 
@@ -31,6 +33,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    }
 
    public void setDescOcorOs(String descOcorOs) {
+        markAsChanged("DESCROCOROS", descOcorOs);
         this.descOcorOs = descOcorOs;
    }
 
@@ -39,6 +42,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    }
 
    public void setPrevisto(String previsto) {
+        markAsChanged("PREVISTO", previsto);
         this.previsto = previsto;
    }
 
@@ -54,6 +58,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
 
    @Override
    public OcorrenciaOS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cobrar = vo.asString("COBRAR");
         this.codOcorOs = vo.asBigDecimal("CODOCOROS");
         this.descOcorOs = vo.asString("DESCROCOROS");

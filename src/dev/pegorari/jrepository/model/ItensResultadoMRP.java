@@ -25,6 +25,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdPedCompra(BigDecimal qtdPedCompra) {
+        markAsChanged("QTDPEDCOMPRA", qtdPedCompra);
         this.qtdPedCompra = qtdPedCompra;
    }
 
@@ -33,6 +34,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -41,6 +43,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -49,6 +52,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdMrp(BigDecimal qtdMrp) {
+        markAsChanged("QTDMRP", qtdMrp);
         this.qtdMrp = qtdMrp;
    }
 
@@ -57,6 +61,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -65,6 +70,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdSaldo(BigDecimal qtdSaldo) {
+        markAsChanged("QTDSALDO", qtdSaldo);
         this.qtdSaldo = qtdSaldo;
    }
 
@@ -73,6 +79,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdEstoque(BigDecimal qtdEstoque) {
+        markAsChanged("QTDESTOQUE", qtdEstoque);
         this.qtdEstoque = qtdEstoque;
    }
 
@@ -81,6 +88,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setProdInterm(String prodInterm) {
+        markAsChanged("PRODINTERM", prodInterm);
         this.prodInterm = prodInterm;
    }
 
@@ -89,6 +97,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setNecessCompra(String necessCompra) {
+        markAsChanged("NECESSCOMPRA", necessCompra);
         this.necessCompra = necessCompra;
    }
 
@@ -97,6 +106,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdCot(BigDecimal qtdCot) {
+        markAsChanged("QTDCOT", qtdCot);
         this.qtdCot = qtdCot;
    }
 
@@ -105,6 +115,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setSeqImrp(BigDecimal seqImrp) {
+        markAsChanged("SEQIMRP", seqImrp);
         this.seqImrp = seqImrp;
    }
 
@@ -113,6 +124,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setQtdSaldoTotal(BigDecimal qtdSaldoTotal) {
+        markAsChanged("QTDSALDOTOTAL", qtdSaldoTotal);
         this.qtdSaldoTotal = qtdSaldoTotal;
    }
 
@@ -121,6 +133,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
    }
 
    public void setDataPdc(Timestamp dataPdc) {
+        markAsChanged("DATAPDC", dataPdc);
         this.dataPdc = dataPdc;
    }
 
@@ -136,6 +149,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
 
    @Override
    public ItensResultadoMRP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.qtdPedCompra = vo.asBigDecimal("QTDPEDCOMPRA");
         this.controleMp = vo.asString("CONTROLEMP");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

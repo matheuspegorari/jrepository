@@ -17,6 +17,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -25,6 +26,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -33,6 +35,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    }
 
    public void setSaldo(BigDecimal saldo) {
+        markAsChanged("SALDO", saldo);
         this.saldo = saldo;
    }
 
@@ -41,6 +44,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    }
 
    public void setTotalDep(BigDecimal totalDep) {
+        markAsChanged("TOTALDEP", totalDep);
         this.totalDep = totalDep;
    }
 
@@ -49,6 +53,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -64,6 +69,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
 
    @Override
    public saldoImobilizado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBem = vo.asString("CODBEM");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.saldo = vo.asBigDecimal("SALDO");

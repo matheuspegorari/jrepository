@@ -18,6 +18,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -26,6 +27,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -34,6 +36,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -42,6 +45,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setFatorCapacidade(BigDecimal fatorCapacidade) {
+        markAsChanged("FATORCAPACIDADE", fatorCapacidade);
         this.fatorCapacidade = fatorCapacidade;
    }
 
@@ -50,6 +54,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setModCapacidade(String modCapacidade) {
+        markAsChanged("MODCAPACIDADE", modCapacidade);
         this.modCapacidade = modCapacidade;
    }
 
@@ -58,6 +63,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
+        markAsChanged("QTDALOCADA", qtdAlocada);
         this.qtdAlocada = qtdAlocada;
    }
 
@@ -66,6 +72,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -81,6 +88,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
 
    @Override
    public RecursosPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

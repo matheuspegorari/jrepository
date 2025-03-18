@@ -19,6 +19,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -27,6 +28,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setCodMunFis(BigDecimal codMunFis) {
+        markAsChanged("CODMUNFIS", codMunFis);
         this.codMunFis = codMunFis;
    }
 
@@ -35,6 +37,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -43,6 +46,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setInscEstad(String inscEstad) {
+        markAsChanged("INSCESTAD", inscEstad);
         this.inscEstad = inscEstad;
    }
 
@@ -51,6 +55,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -59,6 +64,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -67,6 +73,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -75,6 +82,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    }
 
    public void setTipoTransp(BigDecimal tipoTransp) {
+        markAsChanged("TIPOTRANSP", tipoTransp);
         this.tipoTransp = tipoTransp;
    }
 
@@ -90,6 +98,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
 
    @Override
    public ColetaEntregaPorNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.codMunFis = vo.asBigDecimal("CODMUNFIS");
         this.codParc = vo.asBigDecimal("CODPARC");

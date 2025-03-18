@@ -22,6 +22,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -30,6 +31,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -38,6 +40,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -46,6 +49,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -54,6 +58,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodTribIss(BigDecimal codTribIss) {
+        markAsChanged("CODTRIBISS", codTribIss);
         this.codTribIss = codTribIss;
    }
 
@@ -62,6 +67,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setCodTribMunIss(String codTribMunIss) {
+        markAsChanged("CODTRIBMUNISS", codTribMunIss);
         this.codTribMunIss = codTribMunIss;
    }
 
@@ -70,6 +76,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setPercDeducao(BigDecimal percDeducao) {
+        markAsChanged("PERCDEDUCAO", percDeducao);
         this.percDeducao = percDeducao;
    }
 
@@ -78,6 +85,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setPercInss(BigDecimal percInss) {
+        markAsChanged("PERCINSS", percInss);
         this.percInss = percInss;
    }
 
@@ -86,6 +94,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setTipoDeducao(String tipoDeducao) {
+        markAsChanged("TIPODEDUCAO", tipoDeducao);
         this.tipoDeducao = tipoDeducao;
    }
 
@@ -94,6 +103,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setNaoCalcula(String naoCalcula) {
+        markAsChanged("NAOCALCULA", naoCalcula);
         this.naoCalcula = naoCalcula;
    }
 
@@ -102,6 +112,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
    }
 
    public void setIdAliq(BigDecimal idAliq) {
+        markAsChanged("IDALIQ", idAliq);
         this.idAliq = idAliq;
    }
 
@@ -117,6 +128,7 @@ public class AliquotaISS extends AbstractSankhyaEntity<AliquotaISS> {
 
    @Override
    public AliquotaISS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLst = vo.asBigDecimal("CODLST");

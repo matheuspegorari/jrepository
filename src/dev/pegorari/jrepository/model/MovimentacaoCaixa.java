@@ -21,6 +21,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -29,6 +30,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -37,6 +39,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setNroUnico(BigDecimal nroUnico) {
+        markAsChanged("NROUNICO", nroUnico);
         this.nroUnico = nroUnico;
    }
 
@@ -45,6 +48,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setNuBco(BigDecimal nuBco) {
+        markAsChanged("NUBCO", nuBco);
         this.nuBco = nuBco;
    }
 
@@ -53,6 +57,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
+        markAsChanged("NUCAIXA", nuCaixa);
         this.nuCaixa = nuCaixa;
    }
 
@@ -61,6 +66,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -69,6 +75,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -77,6 +84,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -85,6 +93,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    }
 
    public void setNumNsu(String numNsu) {
+        markAsChanged("NUMNSU", numNsu);
         this.numNsu = numNsu;
    }
 
@@ -100,6 +109,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
 
    @Override
    public MovimentacaoCaixa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nroUnico = vo.asBigDecimal("NROUNICO");

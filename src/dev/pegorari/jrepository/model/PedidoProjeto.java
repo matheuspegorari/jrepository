@@ -15,6 +15,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -23,6 +24,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -31,6 +33,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -39,6 +42,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    }
 
    public void setQtdHoras(BigDecimal qtdHoras) {
+        markAsChanged("QTDHORAS", qtdHoras);
         this.qtdHoras = qtdHoras;
    }
 
@@ -54,6 +58,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
 
    @Override
    public PedidoProjeto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuNota = vo.asBigDecimal("NUNOTA");

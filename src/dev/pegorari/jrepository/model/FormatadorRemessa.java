@@ -35,6 +35,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -43,6 +44,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -51,6 +53,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setCodPai(BigDecimal codPai) {
+        markAsChanged("CODPAI", codPai);
         this.codPai = codPai;
    }
 
@@ -59,6 +62,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setComGroupBy(String comGroupBy) {
+        markAsChanged("COMGROUPBY", comGroupBy);
         this.comGroupBy = comGroupBy;
    }
 
@@ -67,6 +71,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setComHaving(String comHaving) {
+        markAsChanged("COMHAVING", comHaving);
         this.comHaving = comHaving;
    }
 
@@ -75,6 +80,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setComOrderBy(String comOrderBy) {
+        markAsChanged("COMORDERBY", comOrderBy);
         this.comOrderBy = comOrderBy;
    }
 
@@ -83,6 +89,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setComSelect(String comSelect) {
+        markAsChanged("COMSELECT", comSelect);
         this.comSelect = comSelect;
    }
 
@@ -91,6 +98,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setConf(String conf) {
+        markAsChanged("CONF", conf);
         this.conf = conf;
    }
 
@@ -99,6 +107,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setFicha(String ficha) {
+        markAsChanged("FICHA", ficha);
         this.ficha = ficha;
    }
 
@@ -107,6 +116,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setFiltro(String filtro) {
+        markAsChanged("FILTRO", filtro);
         this.filtro = filtro;
    }
 
@@ -115,6 +125,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -123,6 +134,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setIniCarqRem(String iniCarqRem) {
+        markAsChanged("INICARQREM", iniCarqRem);
         this.iniCarqRem = iniCarqRem;
    }
 
@@ -131,6 +143,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setModulo(String modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -139,6 +152,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setNomeArq(String nomeArq) {
+        markAsChanged("NOMEARQ", nomeArq);
         this.nomeArq = nomeArq;
    }
 
@@ -147,6 +161,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setOrdenar(String ordenar) {
+        markAsChanged("ORDENAR", ordenar);
         this.ordenar = ordenar;
    }
 
@@ -155,6 +170,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setSeqInfo(BigDecimal seqInfo) {
+        markAsChanged("SEQINFO", seqInfo);
         this.seqInfo = seqInfo;
    }
 
@@ -163,6 +179,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setTamRegistro(BigDecimal tamRegistro) {
+        markAsChanged("TAMREGISTRO", tamRegistro);
         this.tamRegistro = tamRegistro;
    }
 
@@ -171,6 +188,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setTitulo(String titulo) {
+        markAsChanged("TITULO", titulo);
         this.titulo = titulo;
    }
 
@@ -179,6 +197,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setUtilizaSeqAlt(String utilizaSeqAlt) {
+        markAsChanged("UTILIZASEQALT", utilizaSeqAlt);
         this.utilizaSeqAlt = utilizaSeqAlt;
    }
 
@@ -187,6 +206,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setUtilizaSeqInfo(String utilizaSeqInfo) {
+        markAsChanged("UTILIZASEQINFO", utilizaSeqInfo);
         this.utilizaSeqInfo = utilizaSeqInfo;
    }
 
@@ -195,6 +215,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -203,6 +224,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setArqPorLinha(String arqPorLinha) {
+        markAsChanged("ARQPORLINHA", arqPorLinha);
         this.arqPorLinha = arqPorLinha;
    }
 
@@ -211,6 +233,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setConsultaSqlLote(String consultaSqlLote) {
+        markAsChanged("CONSULTASQLLOTE", consultaSqlLote);
         this.consultaSqlLote = consultaSqlLote;
    }
 
@@ -219,6 +242,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    }
 
    public void setArqPorLayoutDetalhe(String arqPorLayoutDetalhe) {
+        markAsChanged("ARQPORLAYOUTDETALHE", arqPorLayoutDetalhe);
         this.arqPorLayoutDetalhe = arqPorLayoutDetalhe;
    }
 
@@ -234,6 +258,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
 
    @Override
    public FormatadorRemessa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codigo = vo.asBigDecimal("CODIGO");
         this.codPai = vo.asBigDecimal("CODPAI");

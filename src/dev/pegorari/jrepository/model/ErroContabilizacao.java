@@ -23,6 +23,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -31,6 +32,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setContabilizado(String contabilizado) {
+        markAsChanged("CONTABILIZADO", contabilizado);
         this.contabilizado = contabilizado;
    }
 
@@ -39,6 +41,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -47,6 +50,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setDhCtz(Timestamp dhCtz) {
+        markAsChanged("DHCTZ", dhCtz);
         this.dhCtz = dhCtz;
    }
 
@@ -55,6 +59,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setNuAgendCtz(BigDecimal nuAgendCtz) {
+        markAsChanged("NUAGENDCTZ", nuAgendCtz);
         this.nuAgendCtz = nuAgendCtz;
    }
 
@@ -63,6 +68,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -71,6 +77,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setNuSeqErr(BigDecimal nuSeqErr) {
+        markAsChanged("NUSEQERR", nuSeqErr);
         this.nuSeqErr = nuSeqErr;
    }
 
@@ -79,6 +86,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -87,6 +95,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setSeqCtb(BigDecimal seqCtb) {
+        markAsChanged("SEQCTB", seqCtb);
         this.seqCtb = seqCtb;
    }
 
@@ -95,6 +104,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setTipLanc(String tipLanc) {
+        markAsChanged("TIPLANC", tipLanc);
         this.tipLanc = tipLanc;
    }
 
@@ -103,6 +113,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -118,6 +129,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
 
    @Override
    public ErroContabilizacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.contabilizado = vo.asString("CONTABILIZADO");
         this.descricao = vo.asString("DESCRICAO");

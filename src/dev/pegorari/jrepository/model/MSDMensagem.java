@@ -27,6 +27,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setIntMin(BigDecimal intMin) {
+        markAsChanged("INTMIN", intMin);
         this.intMin = intMin;
    }
 
@@ -35,6 +36,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setMensagem(char[] mensagem) {
+        markAsChanged("MENSAGEM", mensagem);
         this.mensagem = mensagem;
    }
 
@@ -43,6 +45,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setProxResol(Timestamp proxResol) {
+        markAsChanged("PROXRESOL", proxResol);
         this.proxResol = proxResol;
    }
 
@@ -51,6 +54,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setTentativas(BigDecimal tentativas) {
+        markAsChanged("TENTATIVAS", tentativas);
         this.tentativas = tentativas;
    }
 
@@ -59,6 +63,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setTipoConteudo(String tipoConteudo) {
+        markAsChanged("TIPOCONTEUDO", tipoConteudo);
         this.tipoConteudo = tipoConteudo;
    }
 
@@ -67,6 +72,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setUltResol(Timestamp ultResol) {
+        markAsChanged("ULTRESOL", ultResol);
         this.ultResol = ultResol;
    }
 
@@ -75,6 +81,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setAssunto(String assunto) {
+        markAsChanged("ASSUNTO", assunto);
         this.assunto = assunto;
    }
 
@@ -83,6 +90,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -91,6 +99,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setCfgDtResol(String cfgDtResol) {
+        markAsChanged("CFGDTRESOL", cfgDtResol);
         this.cfgDtResol = cfgDtResol;
    }
 
@@ -99,6 +108,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -107,6 +117,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -115,6 +126,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setCondicao(char[] condicao) {
+        markAsChanged("CONDICAO", condicao);
         this.condicao = condicao;
    }
 
@@ -123,6 +135,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -131,6 +144,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setIndicacao(String indicacao) {
+        markAsChanged("INDICACAO", indicacao);
         this.indicacao = indicacao;
    }
 
@@ -139,6 +153,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -154,6 +169,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
 
    @Override
    public MSDMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.intMin = vo.asBigDecimal("INTMIN");
         this.mensagem = vo.asClob("MENSAGEM");
         this.proxResol = vo.asTimestamp("PROXRESOL");

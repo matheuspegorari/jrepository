@@ -18,6 +18,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -26,6 +27,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -34,6 +36,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setQtdComp(BigDecimal qtdComp) {
+        markAsChanged("QTDCOMP", qtdComp);
         this.qtdComp = qtdComp;
    }
 
@@ -42,6 +45,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -50,6 +54,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -58,6 +63,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setCodCpm(BigDecimal codCpm) {
+        markAsChanged("CODCPM", codCpm);
         this.codCpm = codCpm;
    }
 
@@ -66,6 +72,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    }
 
    public void setCodCpmPai(BigDecimal codCpmPai) {
+        markAsChanged("CODCPMPAI", codCpmPai);
         this.codCpmPai = codCpmPai;
    }
 
@@ -81,6 +88,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
 
    @Override
    public ComponenteManufatura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.grau = vo.asBigDecimal("GRAU");
         this.qtdComp = vo.asBigDecimal("QTDCOMP");

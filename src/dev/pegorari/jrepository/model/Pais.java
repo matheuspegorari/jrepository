@@ -16,6 +16,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
    }
 
    public void setAbreviatura(String abreviatura) {
+        markAsChanged("ABREVIATURA", abreviatura);
         this.abreviatura = abreviatura;
    }
 
@@ -24,6 +25,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -32,6 +34,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
    }
 
    public void setCodPaisFis(BigDecimal codPaisFis) {
+        markAsChanged("CODPAISFIS", codPaisFis);
         this.codPaisFis = codPaisFis;
    }
 
@@ -40,6 +43,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -48,6 +52,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
    }
 
    public void setTimNacionalidad(String timNacionalidad) {
+        markAsChanged("TIMNACIONALIDAD", timNacionalidad);
         this.timNacionalidad = timNacionalidad;
    }
 
@@ -63,6 +68,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
 
    @Override
    public Pais fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.codPais = vo.asBigDecimal("CODPAIS");
         this.codPaisFis = vo.asBigDecimal("CODPAISFIS");

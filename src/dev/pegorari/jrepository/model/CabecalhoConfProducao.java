@@ -19,6 +19,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -27,6 +28,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -35,6 +37,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setIdAtv(BigDecimal idAtv) {
+        markAsChanged("IDIATV", idAtv);
         this.idAtv = idAtv;
    }
 
@@ -43,6 +46,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setDhFinConf(Timestamp dhFinConf) {
+        markAsChanged("DHFINCONF", dhFinConf);
         this.dhFinConf = dhFinConf;
    }
 
@@ -51,6 +55,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
+        markAsChanged("CODUSUCONF", codUsuConf);
         this.codUsuConf = codUsuConf;
    }
 
@@ -59,6 +64,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setDhIniConf(Timestamp dhIniConf) {
+        markAsChanged("DHINICONF", dhIniConf);
         this.dhIniConf = dhIniConf;
    }
 
@@ -67,6 +73,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -82,6 +89,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
 
    @Override
    public CabecalhoConfProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.status = vo.asString("STATUS");
         this.idAtv = vo.asBigDecimal("IDIATV");

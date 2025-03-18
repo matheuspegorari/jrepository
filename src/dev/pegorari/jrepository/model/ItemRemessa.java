@@ -20,6 +20,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setCampo(String campo) {
+        markAsChanged("CAMPO", campo);
         this.campo = campo;
    }
 
@@ -28,6 +29,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -36,6 +38,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setModulo(String modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -44,6 +47,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setPosFim(BigDecimal posFim) {
+        markAsChanged("POSFIM", posFim);
         this.posFim = posFim;
    }
 
@@ -52,6 +56,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setPosIni(BigDecimal posIni) {
+        markAsChanged("POSINI", posIni);
         this.posIni = posIni;
    }
 
@@ -60,6 +65,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setQtdDec(BigDecimal qtdDec) {
+        markAsChanged("QTDDEC", qtdDec);
         this.qtdDec = qtdDec;
    }
 
@@ -68,6 +74,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -76,6 +83,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setTamanho(BigDecimal tamanho) {
+        markAsChanged("TAMANHO", tamanho);
         this.tamanho = tamanho;
    }
 
@@ -84,6 +92,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -99,6 +108,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
 
    @Override
    public ItemRemessa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.campo = vo.asString("CAMPO");
         this.codigo = vo.asBigDecimal("CODIGO");
         this.modulo = vo.asString("MODULO");

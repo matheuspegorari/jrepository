@@ -19,6 +19,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -27,6 +28,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setTabela(BigDecimal tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -35,6 +37,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setArqPersonalizado(String arqPersonalizado) {
+        markAsChanged("ARQPERSONALIZADO", arqPersonalizado);
         this.arqPersonalizado = arqPersonalizado;
    }
 
@@ -43,6 +46,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -51,6 +55,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -59,6 +64,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setIdPasta(String idPasta) {
+        markAsChanged("IDPASTA", idPasta);
         this.idPasta = idPasta;
    }
 
@@ -67,6 +73,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
+        markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
         this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
@@ -82,6 +89,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
 
    @Override
    public ArqRelatoriosPersonalizados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.tabela = vo.asBigDecimal("TABELA");
         this.arqPersonalizado = vo.asString("ARQPERSONALIZADO");

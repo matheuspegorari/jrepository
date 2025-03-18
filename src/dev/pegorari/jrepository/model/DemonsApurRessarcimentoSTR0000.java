@@ -29,6 +29,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCnpj(String cnpj) {
+        markAsChanged("CNPJ", cnpj);
         this.cnpj = cnpj;
    }
 
@@ -37,6 +38,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -45,6 +47,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodFin(BigDecimal codFin) {
+        markAsChanged("CODFIN", codFin);
         this.codFin = codFin;
    }
 
@@ -53,6 +56,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodMun(BigDecimal codMun) {
+        markAsChanged("CODMUN", codMun);
         this.codMun = codMun;
    }
 
@@ -61,6 +65,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodVer(BigDecimal codVer) {
+        markAsChanged("CODVER", codVer);
         this.codVer = codVer;
    }
 
@@ -69,6 +74,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCpf(String cpf) {
+        markAsChanged("CPF", cpf);
         this.cpf = cpf;
    }
 
@@ -77,6 +83,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -85,6 +92,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -93,6 +101,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -101,6 +110,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setIe(String ie) {
+        markAsChanged("IE", ie);
         this.ie = ie;
    }
 
@@ -109,6 +119,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setIm(String im) {
+        markAsChanged("IM", im);
         this.im = im;
    }
 
@@ -117,6 +128,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setIndAtiv(BigDecimal indAtiv) {
+        markAsChanged("INDATIV", indAtiv);
         this.indAtiv = indAtiv;
    }
 
@@ -125,6 +137,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setIndPerfil(String indPerfil) {
+        markAsChanged("INDPERFIL", indPerfil);
         this.indPerfil = indPerfil;
    }
 
@@ -133,6 +146,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -141,6 +155,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setReg(String reg) {
+        markAsChanged("REG", reg);
         this.reg = reg;
    }
 
@@ -149,6 +164,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setSuframa(String suframa) {
+        markAsChanged("SUFRAMA", suframa);
         this.suframa = suframa;
    }
 
@@ -157,6 +173,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
    }
 
    public void setUf(String uf) {
+        markAsChanged("UF", uf);
         this.uf = uf;
    }
 
@@ -172,6 +189,7 @@ public class DemonsApurRessarcimentoSTR0000 extends AbstractSankhyaEntity<Demons
 
    @Override
    public DemonsApurRessarcimentoSTR0000 fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cnpj = vo.asString("CNPJ");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFin = vo.asBigDecimal("CODFIN");

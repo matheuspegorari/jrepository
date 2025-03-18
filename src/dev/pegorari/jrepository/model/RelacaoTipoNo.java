@@ -14,6 +14,7 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
    }
 
    public void setNuEst(BigDecimal nuEst) {
+        markAsChanged("NUEST", nuEst);
         this.nuEst = nuEst;
    }
 
@@ -22,6 +23,7 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
    }
 
    public void setNuInstanciaFilha(BigDecimal nuInstanciaFilha) {
+        markAsChanged("NUINSTANCIAFILHA", nuInstanciaFilha);
         this.nuInstanciaFilha = nuInstanciaFilha;
    }
 
@@ -30,6 +32,7 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
    }
 
    public void setNuInstanciaPai(BigDecimal nuInstanciaPai) {
+        markAsChanged("NUINSTANCIAPAI", nuInstanciaPai);
         this.nuInstanciaPai = nuInstanciaPai;
    }
 
@@ -45,6 +48,7 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
 
    @Override
    public RelacaoTipoNo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuEst = vo.asBigDecimal("NUEST");
         this.nuInstanciaFilha = vo.asBigDecimal("NUINSTANCIAFILHA");
         this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");

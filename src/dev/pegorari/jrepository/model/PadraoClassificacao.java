@@ -26,6 +26,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -34,6 +35,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setClassificacao(BigDecimal classificacao) {
+        markAsChanged("CLASSIFICACAO", classificacao);
         this.classificacao = classificacao;
    }
 
@@ -42,6 +44,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setCodClt(BigDecimal codClt) {
+        markAsChanged("CODCLT", codClt);
         this.codClt = codClt;
    }
 
@@ -50,6 +53,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -58,6 +62,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -66,6 +71,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setConfNegado(String confNegado) {
+        markAsChanged("CONFNEGADO", confNegado);
         this.confNegado = confNegado;
    }
 
@@ -74,6 +80,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setDescrClt(String descrClt) {
+        markAsChanged("DESCRCLT", descrClt);
         this.descrClt = descrClt;
    }
 
@@ -82,6 +89,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setExigeLib(String exigeLib) {
+        markAsChanged("EXIGELIB", exigeLib);
         this.exigeLib = exigeLib;
    }
 
@@ -90,6 +98,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -98,6 +107,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -106,6 +116,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setPrazoVal(BigDecimal prazoVal) {
+        markAsChanged("PRAZOVAL", prazoVal);
         this.prazoVal = prazoVal;
    }
 
@@ -114,6 +125,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setSigla(String sigla) {
+        markAsChanged("SIGLA", sigla);
         this.sigla = sigla;
    }
 
@@ -122,6 +134,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setTipoLaudo(String tipoLaudo) {
+        markAsChanged("TIPOLAUDO", tipoLaudo);
         this.tipoLaudo = tipoLaudo;
    }
 
@@ -130,6 +143,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setTipoRefPrzVal(String tipoRefPrzVal) {
+        markAsChanged("TIPOREFPRZVAL", tipoRefPrzVal);
         this.tipoRefPrzVal = tipoRefPrzVal;
    }
 
@@ -138,6 +152,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
    }
 
    public void setCodGpc(BigDecimal codGpc) {
+        markAsChanged("CODGPC", codGpc);
         this.codGpc = codGpc;
    }
 
@@ -153,6 +168,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
 
    @Override
    public PadraoClassificacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.classificacao = vo.asBigDecimal("CLASSIFICACAO");
         this.codClt = vo.asBigDecimal("CODCLT");

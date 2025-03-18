@@ -19,6 +19,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setAssunto(String assunto) {
+        markAsChanged("ASSUNTO", assunto);
         this.assunto = assunto;
    }
 
@@ -27,6 +28,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setCodModelo(BigDecimal codModelo) {
+        markAsChanged("CODMODELO", codModelo);
         this.codModelo = codModelo;
    }
 
@@ -35,6 +37,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -43,6 +46,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setConteudo(char[] conteudo) {
+        markAsChanged("CONTEUDO", conteudo);
         this.conteudo = conteudo;
    }
 
@@ -51,6 +55,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -59,6 +64,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setResponderPara(String responderPara) {
+        markAsChanged("RESPONDERPARA", responderPara);
         this.responderPara = responderPara;
    }
 
@@ -67,6 +73,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -75,6 +82,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    }
 
    public void setCodUsuRemet(BigDecimal codUsuRemet) {
+        markAsChanged("CODUSUREMET", codUsuRemet);
         this.codUsuRemet = codUsuRemet;
    }
 
@@ -90,6 +98,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
 
    @Override
    public ModeloEmail fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.assunto = vo.asString("ASSUNTO");
         this.codModelo = vo.asBigDecimal("CODMODELO");
         this.codSmtp = vo.asBigDecimal("CODSMTP");

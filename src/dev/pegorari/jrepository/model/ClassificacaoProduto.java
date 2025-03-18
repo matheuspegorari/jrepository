@@ -13,6 +13,7 @@ public class ClassificacaoProduto extends AbstractSankhyaEntity<ClassificacaoPro
    }
 
    public void setCodClassif(BigDecimal codClassif) {
+        markAsChanged("CODCLASSIF", codClassif);
         this.codClassif = codClassif;
    }
 
@@ -21,6 +22,7 @@ public class ClassificacaoProduto extends AbstractSankhyaEntity<ClassificacaoPro
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -36,6 +38,7 @@ public class ClassificacaoProduto extends AbstractSankhyaEntity<ClassificacaoPro
 
    @Override
    public ClassificacaoProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codClassif = vo.asBigDecimal("CODCLASSIF");
         this.descricao = vo.asString("DESCRICAO");
         return this;

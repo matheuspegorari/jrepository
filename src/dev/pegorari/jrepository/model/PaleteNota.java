@@ -14,6 +14,7 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
    }
 
    public void setIdPalete(BigDecimal idPalete) {
+        markAsChanged("IDPALETE", idPalete);
         this.idPalete = idPalete;
    }
 
@@ -22,6 +23,7 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -30,6 +32,7 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -45,6 +48,7 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
 
    @Override
    public PaleteNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idPalete = vo.asBigDecimal("IDPALETE");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

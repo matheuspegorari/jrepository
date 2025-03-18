@@ -18,6 +18,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setDtConhec(Timestamp dtConhec) {
+        markAsChanged("DTCONHEC", dtConhec);
         this.dtConhec = dtConhec;
    }
 
@@ -26,6 +27,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setNroConhec(String nroConhec) {
+        markAsChanged("NROCONHEC", nroConhec);
         this.nroConhec = nroConhec;
    }
 
@@ -34,6 +36,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setNroDeclaracao(String nroDeclaracao) {
+        markAsChanged("NRODECLARACAO", nroDeclaracao);
         this.nroDeclaracao = nroDeclaracao;
    }
 
@@ -42,6 +45,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setNroRe(String nroRe) {
+        markAsChanged("NRORE", nroRe);
         this.nroRe = nroRe;
    }
 
@@ -50,6 +54,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -58,6 +63,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
    }
 
    public void setTipoConhec(BigDecimal tipoConhec) {
+        markAsChanged("TIPOCONHEC", tipoConhec);
         this.tipoConhec = tipoConhec;
    }
 
@@ -73,6 +79,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
 
    @Override
    public InformacaoNotaExportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtConhec = vo.asTimestamp("DTCONHEC");
         this.nroConhec = vo.asString("NROCONHEC");
         this.nroDeclaracao = vo.asString("NRODECLARACAO");

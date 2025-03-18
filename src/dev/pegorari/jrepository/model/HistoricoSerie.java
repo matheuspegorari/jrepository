@@ -21,6 +21,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -29,6 +30,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -37,6 +39,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -45,6 +48,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -53,6 +57,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setOcorrencia(String ocorrencia) {
+        markAsChanged("OCORRENCIA", ocorrencia);
         this.ocorrencia = ocorrencia;
    }
 
@@ -61,6 +66,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setSeqHistSerie(BigDecimal seqHistSerie) {
+        markAsChanged("SEQHISTSERIE", seqHistSerie);
         this.seqHistSerie = seqHistSerie;
    }
 
@@ -69,6 +75,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -77,6 +84,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -85,6 +93,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -100,6 +109,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
 
    @Override
    public HistoricoSerie fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

@@ -17,6 +17,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
    }
 
    public void setCabArq(String cabArq) {
+        markAsChanged("CABARQ", cabArq);
         this.cabArq = cabArq;
    }
 
@@ -25,6 +26,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -33,6 +35,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
    }
 
    public void setDtProc(Timestamp dtProc) {
+        markAsChanged("DTPROC", dtProc);
         this.dtProc = dtProc;
    }
 
@@ -49,6 +53,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
    }
 
    public void setNuImport(BigDecimal nuImport) {
+        markAsChanged("NUIMPORT", nuImport);
         this.nuImport = nuImport;
    }
 
@@ -64,6 +69,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
 
    @Override
    public RegImportacaoPO fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cabArq = vo.asString("CABARQ");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");

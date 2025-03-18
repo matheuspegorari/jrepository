@@ -36,6 +36,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
+        markAsChanged("CODAREACONF", codAreaConf);
         this.codAreaConf = codAreaConf;
    }
 
@@ -44,6 +45,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -52,6 +54,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -60,6 +63,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setNomeAreaSep(String nomeAreaSep) {
+        markAsChanged("NOMEAREASEP", nomeAreaSep);
         this.nomeAreaSep = nomeAreaSep;
    }
 
@@ -68,6 +72,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -76,6 +81,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setTipoSep(String tipoSep) {
+        markAsChanged("TIPOSEP", tipoSep);
         this.tipoSep = tipoSep;
    }
 
@@ -84,6 +90,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
+        markAsChanged("CODAREASEP", codAreaSep);
         this.codAreaSep = codAreaSep;
    }
 
@@ -92,6 +99,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -100,6 +108,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setImpEtiqFechVol(String impEtiqFechVol) {
+        markAsChanged("IMPETIQFECHVOL", impEtiqFechVol);
         this.impEtiqFechVol = impEtiqFechVol;
    }
 
@@ -108,6 +117,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setQtdUmaPed(BigDecimal qtdUmaPed) {
+        markAsChanged("QTDUMAPED", qtdUmaPed);
         this.qtdUmaPed = qtdUmaPed;
    }
 
@@ -116,6 +126,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setVolContinuo(String volContinuo) {
+        markAsChanged("VOLCONTINUO", volContinuo);
         this.volContinuo = volContinuo;
    }
 
@@ -124,6 +135,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setUsaSepAgruProd(String usaSepAgruProd) {
+        markAsChanged("USASEPAGRUPROD", usaSepAgruProd);
         this.usaSepAgruProd = usaSepAgruProd;
    }
 
@@ -132,6 +144,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setQtPedSepAgr(BigDecimal qtPedSepAgr) {
+        markAsChanged("QTPEDSEPAGR", qtPedSepAgr);
         this.qtPedSepAgr = qtPedSepAgr;
    }
 
@@ -140,6 +153,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setPesMaxSepAgru(BigDecimal pesMaxSepAgru) {
+        markAsChanged("PESMAXSEPAGRU", pesMaxSepAgru);
         this.pesMaxSepAgru = pesMaxSepAgru;
    }
 
@@ -148,6 +162,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setVolCheckSepProd(BigDecimal volCheckSepProd) {
+        markAsChanged("VOLCHECKSEPROD", volCheckSepProd);
         this.volCheckSepProd = volCheckSepProd;
    }
 
@@ -156,6 +171,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setQtCheckSep(BigDecimal qtCheckSep) {
+        markAsChanged("QTCHECKSEP", qtCheckSep);
         this.qtCheckSep = qtCheckSep;
    }
 
@@ -164,6 +180,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setImpressoraEtqSep(String impressoraEtqSep) {
+        markAsChanged("IMPRESSORAETQSEP", impressoraEtqSep);
         this.impressoraEtqSep = impressoraEtqSep;
    }
 
@@ -172,6 +189,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setPosEsteiraSep(String posEsteiraSep) {
+        markAsChanged("POSESTEIRASEP", posEsteiraSep);
         this.posEsteiraSep = posEsteiraSep;
    }
 
@@ -180,6 +198,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setAgruparPedidosWms(String agruparPedidosWms) {
+        markAsChanged("AGRUPARPEDIDOSWMS", agruparPedidosWms);
         this.agruparPedidosWms = agruparPedidosWms;
    }
 
@@ -188,6 +207,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setImpressoraEtqVol(String impressoraEtqVol) {
+        markAsChanged("IMPRESSORAETQVOL", impressoraEtqVol);
         this.impressoraEtqVol = impressoraEtqVol;
    }
 
@@ -196,6 +216,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setModEtqVol(BigDecimal modEtqVol) {
+        markAsChanged("MODETQVOL", modEtqVol);
         this.modEtqVol = modEtqVol;
    }
 
@@ -204,6 +225,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setQtdSku(BigDecimal qtdSku) {
+        markAsChanged("QTDSKU", qtdSku);
         this.qtdSku = qtdSku;
    }
 
@@ -212,6 +234,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setToleranciaSku(BigDecimal toleranciaSku) {
+        markAsChanged("TOLERANCIASKU", toleranciaSku);
         this.toleranciaSku = toleranciaSku;
    }
 
@@ -220,6 +243,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    }
 
    public void setQuebraPorNorma(String quebraPorNorma) {
+        markAsChanged("QUEBRAPORNORMA", quebraPorNorma);
         this.quebraPorNorma = quebraPorNorma;
    }
 
@@ -235,6 +259,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
 
    @Override
    public AreaSeparacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.m3Max = vo.asBigDecimal("M3MAX");

@@ -24,6 +24,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -32,6 +33,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -40,6 +42,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setNuNegociacao(BigDecimal nuNegociacao) {
+        markAsChanged("NUNEGOCIACAO", nuNegociacao);
         this.nuNegociacao = nuNegociacao;
    }
 
@@ -48,6 +51,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setMultHoraExtra(BigDecimal multHoraExtra) {
+        markAsChanged("MULTHORAEXTRA", multHoraExtra);
         this.multHoraExtra = multHoraExtra;
    }
 
@@ -56,6 +60,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -64,6 +69,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setDtIni(Timestamp dtIni) {
+        markAsChanged("DTINI", dtIni);
         this.dtIni = dtIni;
    }
 
@@ -72,6 +78,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setCodUnnCompradora(BigDecimal codUnnCompradora) {
+        markAsChanged("CODUNNCOMPRADORA", codUnnCompradora);
         this.codUnnCompradora = codUnnCompradora;
    }
 
@@ -80,6 +87,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setCodUnnVendedora(BigDecimal codUnnVendedora) {
+        markAsChanged("CODUNNVENDEDORA", codUnnVendedora);
         this.codUnnVendedora = codUnnVendedora;
    }
 
@@ -88,6 +96,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setDtFin(Timestamp dtFin) {
+        markAsChanged("DTFIN", dtFin);
         this.dtFin = dtFin;
    }
 
@@ -96,6 +105,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -104,6 +114,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setVlrHora(BigDecimal vlrHora) {
+        markAsChanged("VLRHORA", vlrHora);
         this.vlrHora = vlrHora;
    }
 
@@ -112,6 +123,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -127,6 +139,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
 
    @Override
    public NegociacaoHorasCruzadas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuNegociacao = vo.asBigDecimal("NUNEGOCIACAO");

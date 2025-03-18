@@ -28,6 +28,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setAcessoVisualCab(String acessoVisualCab) {
+        markAsChanged("ACESSOVISUALCAB", acessoVisualCab);
         this.acessoVisualCab = acessoVisualCab;
    }
 
@@ -36,6 +37,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setAltCtaFat(String altCtaFat) {
+        markAsChanged("ALTCTAFAT", altCtaFat);
         this.altCtaFat = altCtaFat;
    }
 
@@ -44,6 +46,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setAltCtaImpBol(String altCtaImpBol) {
+        markAsChanged("ALTCTAIMPBOL", altCtaImpBol);
         this.altCtaImpBol = altCtaImpBol;
    }
 
@@ -52,6 +55,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setAltOrdCfech(String altOrdCfech) {
+        markAsChanged("ALTORDCFECH", altOrdCfech);
         this.altOrdCfech = altOrdCfech;
    }
 
@@ -60,6 +64,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setAprovCot(String aprovCot) {
+        markAsChanged("APROVCOT", aprovCot);
         this.aprovCot = aprovCot;
    }
 
@@ -68,6 +73,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setBaixaDesp(String baixaDesp) {
+        markAsChanged("BAIXADESP", baixaDesp);
         this.baixaDesp = baixaDesp;
    }
 
@@ -76,6 +82,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setBaixaRec(String baixaRec) {
+        markAsChanged("BAIXAREC", baixaRec);
         this.baixaRec = baixaRec;
    }
 
@@ -84,6 +91,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -92,6 +100,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setContAcesso(String contAcesso) {
+        markAsChanged("CONTACESSO", contAcesso);
         this.contAcesso = contAcesso;
    }
 
@@ -100,6 +109,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setContGol(String contGol) {
+        markAsChanged("CONTAGOL", contGol);
         this.contGol = contGol;
    }
 
@@ -108,6 +118,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setExibirValAnalRent(String exibirValAnalRent) {
+        markAsChanged("EXIBIRVALANALRENT", exibirValAnalRent);
         this.exibirValAnalRent = exibirValAnalRent;
    }
 
@@ -116,6 +127,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setImpNfCentral(String impNfCentral) {
+        markAsChanged("IMPNFCENTRAL", impNfCentral);
         this.impNfCentral = impNfCentral;
    }
 
@@ -124,6 +136,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setMinutosFin(BigDecimal minutosFin) {
+        markAsChanged("MINUTOSFIN", minutosFin);
         this.minutosFin = minutosFin;
    }
 
@@ -132,6 +145,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -140,6 +154,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setRestringeCart(String restringeCart) {
+        markAsChanged("RESTRINGECART", restringeCart);
         this.restringeCart = restringeCart;
    }
 
@@ -148,6 +163,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setSenhaNuncaExpira(String senhaNuncaExpira) {
+        markAsChanged("SENHANUNCAEXPIRA", senhaNuncaExpira);
         this.senhaNuncaExpira = senhaNuncaExpira;
    }
 
@@ -156,6 +172,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
    }
 
    public void setVerCabPropria(String verCabPropria) {
+        markAsChanged("VERCABPROPRIA", verCabPropria);
         this.verCabPropria = verCabPropria;
    }
 
@@ -171,6 +188,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
 
    @Override
    public UsuarioBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acessoVisualCab = vo.asString("ACESSOVISUALCAB");
         this.altCtaFat = vo.asString("ALTCTAFAT");
         this.altCtaImpBol = vo.asString("ALTCTAIMPBOL");

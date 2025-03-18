@@ -15,6 +15,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
    }
 
    public void setSeqConf(BigDecimal seqConf) {
+        markAsChanged("SEQCONF", seqConf);
         this.seqConf = seqConf;
    }
 
@@ -23,6 +24,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -31,6 +33,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
    }
 
    public void setIdentificador(String identificador) {
+        markAsChanged("IDENTIFICADOR", identificador);
         this.identificador = identificador;
    }
 
@@ -39,6 +42,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -54,6 +58,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
 
    @Override
    public SequenciaLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqConf = vo.asBigDecimal("SEQCONF");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.identificador = vo.asString("IDENTIFICADOR");

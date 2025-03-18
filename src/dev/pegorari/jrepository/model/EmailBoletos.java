@@ -13,6 +13,7 @@ public class EmailBoletos extends AbstractSankhyaEntity<EmailBoletos> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -21,6 +22,7 @@ public class EmailBoletos extends AbstractSankhyaEntity<EmailBoletos> {
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -36,6 +38,7 @@ public class EmailBoletos extends AbstractSankhyaEntity<EmailBoletos> {
 
    @Override
    public EmailBoletos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.codFila = vo.asBigDecimal("CODFILA");
         return this;

@@ -13,6 +13,7 @@ public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVei
    }
 
    public void setCodModVei(BigDecimal codModVei) {
+        markAsChanged("CODMODVEI", codModVei);
         this.codModVei = codModVei;
    }
 
@@ -21,6 +22,7 @@ public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVei
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -36,6 +38,7 @@ public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVei
 
    @Override
    public ProdutoModeloVeiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModVei = vo.asBigDecimal("CODMODVEI");
         this.codProd = vo.asBigDecimal("CODPROD");
         return this;

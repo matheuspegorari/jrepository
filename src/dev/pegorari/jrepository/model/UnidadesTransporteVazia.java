@@ -16,6 +16,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    }
 
    public void setCodUnitv(BigDecimal codUnitv) {
+        markAsChanged("CODUNITV", codUnitv);
         this.codUnitv = codUnitv;
    }
 
@@ -24,6 +25,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    }
 
    public void setIdUnidTransVazia(String idUnidTransVazia) {
+        markAsChanged("IDUNIDTRANSVAZIA", idUnidTransVazia);
         this.idUnidTransVazia = idUnidTransVazia;
    }
 
@@ -32,6 +34,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -40,6 +43,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -48,6 +52,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    }
 
    public void setTipoUnitransVazia(BigDecimal tipoUnitransVazia) {
+        markAsChanged("TIPOUNITRANSVAZIA", tipoUnitransVazia);
         this.tipoUnitransVazia = tipoUnitransVazia;
    }
 
@@ -63,6 +68,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
 
    @Override
    public UnidadesTransporteVazia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUnitv = vo.asBigDecimal("CODUNITV");
         this.idUnidTransVazia = vo.asString("IDUNIDTRANSVAZIA");
         this.nuViag = vo.asBigDecimal("NUVIAG");

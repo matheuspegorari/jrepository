@@ -32,6 +32,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setReferenciaMpAlt(String referenciaMpAlt) {
+        markAsChanged("REFERENCIAMPALT", referenciaMpAlt);
         this.referenciaMpAlt = referenciaMpAlt;
    }
 
@@ -40,6 +41,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setReferenciaMp(String referenciaMp) {
+        markAsChanged("REFERENCIAMP", referenciaMp);
         this.referenciaMp = referenciaMp;
    }
 
@@ -48,6 +50,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -56,6 +59,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodProdMpAlt(BigDecimal codProdMpAlt) {
+        markAsChanged("CODPRODMPALT", codProdMpAlt);
         this.codProdMpAlt = codProdMpAlt;
    }
 
@@ -64,6 +68,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -72,6 +77,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -80,6 +86,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setControleMpAlt(String controleMpAlt) {
+        markAsChanged("CONTROLEMPALT", controleMpAlt);
         this.controleMpAlt = controleMpAlt;
    }
 
@@ -88,6 +95,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -96,6 +104,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -104,6 +113,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -112,6 +122,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setSeqMpa(BigDecimal seqMpa) {
+        markAsChanged("SEQMPA", seqMpa);
         this.seqMpa = seqMpa;
    }
 
@@ -120,6 +131,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setUsoMpa(String usoMpa) {
+        markAsChanged("USOMPA", usoMpa);
         this.usoMpa = usoMpa;
    }
 
@@ -128,6 +140,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -136,6 +149,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setConjunto(BigDecimal conjunto) {
+        markAsChanged("CONJUNTO", conjunto);
         this.conjunto = conjunto;
    }
 
@@ -144,6 +158,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
+        markAsChanged("CODLOCALBAIXA", codLocalBaixa);
         this.codLocalBaixa = codLocalBaixa;
    }
 
@@ -152,6 +167,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
+        markAsChanged("CODLOCALORIG", codLocalOrig);
         this.codLocalOrig = codLocalOrig;
    }
 
@@ -160,6 +176,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -168,6 +185,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -176,6 +194,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -184,6 +203,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -199,6 +219,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
 
    @Override
    public MaterialAlternativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referenciaMpAlt = vo.asString("REFERENCIAMPALT");
         this.referenciaMp = vo.asString("REFERENCIAMP");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

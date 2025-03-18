@@ -93,6 +93,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNroCnh(String nroCnh) {
+        markAsChanged("NROCNH", nroCnh);
         this.nroCnh = nroCnh;
    }
 
@@ -101,6 +102,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNumEntrega(String numEntrega) {
+        markAsChanged("NUMENTREGA", numEntrega);
         this.numEntrega = numEntrega;
    }
 
@@ -109,6 +111,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNumReceb(String numReceb) {
+        markAsChanged("NUMRECEB", numReceb);
         this.numReceb = numReceb;
    }
 
@@ -117,6 +120,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSeqVisita(BigDecimal seqVisita) {
+        markAsChanged("SEQVISITA", seqVisita);
         this.seqVisita = seqVisita;
    }
 
@@ -125,6 +129,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setMultHoraExtra(BigDecimal multHoraExtra) {
+        markAsChanged("MULTHORAEXTRA", multHoraExtra);
         this.multHoraExtra = multHoraExtra;
    }
 
@@ -133,6 +138,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setIdentificacao(String identificacao) {
+        markAsChanged("IDENTIFICACAO", identificacao);
         this.identificacao = identificacao;
    }
 
@@ -141,6 +147,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setImagem(byte[] imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -149,6 +156,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setIsentoTaxaMinBoleta(String isentoTaxaMinBoleta) {
+        markAsChanged("ISENTOTAXAMINBOLETA", isentoTaxaMinBoleta);
         this.isentoTaxaMinBoleta = isentoTaxaMinBoleta;
    }
 
@@ -157,6 +165,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setLatitudeEntrega(String latitudeEntrega) {
+        markAsChanged("LATITUDEENTREGA", latitudeEntrega);
         this.latitudeEntrega = latitudeEntrega;
    }
 
@@ -165,6 +174,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setLogistica(String logistica) {
+        markAsChanged("LOGISTICA", logistica);
         this.logistica = logistica;
    }
 
@@ -173,6 +183,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCategoriaCnh(String categoriaCnh) {
+        markAsChanged("CATEGORIACNH", categoriaCnh);
         this.categoriaCnh = categoriaCnh;
    }
 
@@ -181,6 +192,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCepEntrega(String cepEntrega) {
+        markAsChanged("CEPENTREGA", cepEntrega);
         this.cepEntrega = cepEntrega;
    }
 
@@ -189,6 +201,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCepReceb(String cepReceb) {
+        markAsChanged("CEPRECEB", cepReceb);
         this.cepReceb = cepReceb;
    }
 
@@ -197,6 +210,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCepTrab(String cepTrab) {
+        markAsChanged("CEPTRAB", cepTrab);
         this.cepTrab = cepTrab;
    }
 
@@ -205,6 +219,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodBaiEntrega(BigDecimal codBaiEntrega) {
+        markAsChanged("CODBAIENTREGA", codBaiEntrega);
         this.codBaiEntrega = codBaiEntrega;
    }
 
@@ -213,6 +228,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodBaiReceb(BigDecimal codBaiReceb) {
+        markAsChanged("CODBAIRECEB", codBaiReceb);
         this.codBaiReceb = codBaiReceb;
    }
 
@@ -221,6 +237,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodBaiTrab(BigDecimal codBaiTrab) {
+        markAsChanged("CODBAITRAB", codBaiTrab);
         this.codBaiTrab = codBaiTrab;
    }
 
@@ -229,6 +246,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodCidEntrega(BigDecimal codCidEntrega) {
+        markAsChanged("CODCIDENTREGA", codCidEntrega);
         this.codCidEntrega = codCidEntrega;
    }
 
@@ -237,6 +255,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodCidReceb(BigDecimal codCidReceb) {
+        markAsChanged("CODCIDRECEB", codCidReceb);
         this.codCidReceb = codCidReceb;
    }
 
@@ -245,6 +264,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodCidTrab(BigDecimal codCidTrab) {
+        markAsChanged("CODCIDTRAB", codCidTrab);
         this.codCidTrab = codCidTrab;
    }
 
@@ -253,6 +273,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodCred(BigDecimal codCred) {
+        markAsChanged("CODCRED", codCred);
         this.codCred = codCred;
    }
 
@@ -261,6 +282,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodEndEntrega(BigDecimal codEndEntrega) {
+        markAsChanged("CODENDENTREGA", codEndEntrega);
         this.codEndEntrega = codEndEntrega;
    }
 
@@ -269,6 +291,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodEndReceb(BigDecimal codEndReceb) {
+        markAsChanged("CODENDRECEB", codEndReceb);
         this.codEndReceb = codEndReceb;
    }
 
@@ -277,6 +300,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodEndTrab(BigDecimal codEndTrab) {
+        markAsChanged("CODENDTRAB", codEndTrab);
         this.codEndTrab = codEndTrab;
    }
 
@@ -285,6 +309,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodMoedaLim(BigDecimal codMoedaLim) {
+        markAsChanged("CODMOEDALIM", codMoedaLim);
         this.codMoedaLim = codMoedaLim;
    }
 
@@ -293,6 +318,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodMoedaRenda(BigDecimal codMoedaRenda) {
+        markAsChanged("CODMOEDARENDA", codMoedaRenda);
         this.codMoedaRenda = codMoedaRenda;
    }
 
@@ -301,6 +327,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -309,6 +336,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodParcTransp(BigDecimal codParcTransp) {
+        markAsChanged("CODPARCTRANSP", codParcTransp);
         this.codParcTransp = codParcTransp;
    }
 
@@ -317,6 +345,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodSuframa(String codSuframa) {
+        markAsChanged("CODSUFRAMA", codSuframa);
         this.codSuframa = codSuframa;
    }
 
@@ -325,6 +354,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodTabCot(BigDecimal codTabCot) {
+        markAsChanged("CODTABCOT", codTabCot);
         this.codTabCot = codTabCot;
    }
 
@@ -333,6 +363,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -341,6 +372,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setComplEntrega(String complEntrega) {
+        markAsChanged("COMPLENTREGA", complEntrega);
         this.complEntrega = complEntrega;
    }
 
@@ -349,6 +381,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setComplReceb(String complReceb) {
+        markAsChanged("COMPLRECEB", complReceb);
         this.complReceb = complReceb;
    }
 
@@ -357,6 +390,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setComplTrab(String complTrab) {
+        markAsChanged("COMPLTRAB", complTrab);
         this.complTrab = complTrab;
    }
 
@@ -365,6 +399,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setConjuge(String conjuge) {
+        markAsChanged("CONJUGE", conjuge);
         this.conjuge = conjuge;
    }
 
@@ -373,6 +408,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCrea(String crea) {
+        markAsChanged("CREA", crea);
         this.crea = crea;
    }
 
@@ -381,6 +417,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag(BigDecimal diaPag) {
+        markAsChanged("DIAPAG", diaPag);
         this.diaPag = diaPag;
    }
 
@@ -389,6 +426,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDtAdm(Timestamp dtAdm) {
+        markAsChanged("DTADM", dtAdm);
         this.dtAdm = dtAdm;
    }
 
@@ -397,6 +435,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -405,6 +444,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDtCrea(Timestamp dtCrea) {
+        markAsChanged("DTCREA", dtCrea);
         this.dtCrea = dtCrea;
    }
 
@@ -413,6 +453,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setExigePedido(String exigePedido) {
+        markAsChanged("EXIGEPEDIDO", exigePedido);
         this.exigePedido = exigePedido;
    }
 
@@ -421,6 +462,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setFatMin(BigDecimal fatMin) {
+        markAsChanged("FATMIN", fatMin);
         this.fatMin = fatMin;
    }
 
@@ -429,6 +471,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setGerarFrete(String gerarFrete) {
+        markAsChanged("GERARFRETE", gerarFrete);
         this.gerarFrete = gerarFrete;
    }
 
@@ -437,6 +480,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSugTipNegEntr(BigDecimal sugTipNegEntr) {
+        markAsChanged("SUGTIPNEGENTR", sugTipNegEntr);
         this.sugTipNegEntr = sugTipNegEntr;
    }
 
@@ -445,6 +489,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSugTipNegSaid(BigDecimal sugTipNegSaid) {
+        markAsChanged("SUGTIPNEGSAID", sugTipNegSaid);
         this.sugTipNegSaid = sugTipNegSaid;
    }
 
@@ -453,6 +498,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTelTrab(String telTrab) {
+        markAsChanged("TELTRAB", telTrab);
         this.telTrab = telTrab;
    }
 
@@ -461,6 +507,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTempoResid(Timestamp tempoResid) {
+        markAsChanged("TEMPORESID", tempoResid);
         this.tempoResid = tempoResid;
    }
 
@@ -469,6 +516,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTipMoradia(String tipMoradia) {
+        markAsChanged("TIPMORADIA", tipMoradia);
         this.tipMoradia = tipMoradia;
    }
 
@@ -477,6 +525,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setUfCrea(String ufCrea) {
+        markAsChanged("UFCREA", ufCrea);
         this.ufCrea = ufCrea;
    }
 
@@ -485,6 +534,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setUsaSaidaFatPer(String usaSaidaFatPer) {
+        markAsChanged("USASAIDAFATPER", usaSaidaFatPer);
         this.usaSaidaFatPer = usaSaidaFatPer;
    }
 
@@ -493,6 +543,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setVencimentoCnh(Timestamp vencimentoCnh) {
+        markAsChanged("VENCIMENTOCNH", vencimentoCnh);
         this.vencimentoCnh = vencimentoCnh;
    }
 
@@ -501,6 +552,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setViaTransp(String viaTransp) {
+        markAsChanged("VIATRANSP", viaTransp);
         this.viaTransp = viaTransp;
    }
 
@@ -509,6 +561,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setGrupoDescParc(String grupoDescParc) {
+        markAsChanged("GRUPODESCPARC", grupoDescParc);
         this.grupoDescParc = grupoDescParc;
    }
 
@@ -517,6 +570,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setLimCredAutom(String limCredAutom) {
+        markAsChanged("LIMCREDAUTOM", limCredAutom);
         this.limCredAutom = limCredAutom;
    }
 
@@ -525,6 +579,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setLocalTrab(String localTrab) {
+        markAsChanged("LOCALTRAB", localTrab);
         this.localTrab = localTrab;
    }
 
@@ -533,6 +588,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNumTrab(String numTrab) {
+        markAsChanged("NUMTRAB", numTrab);
         this.numTrab = numTrab;
    }
 
@@ -541,6 +597,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setPai(String pai) {
+        markAsChanged("PAI", pai);
         this.pai = pai;
    }
 
@@ -549,6 +606,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setPlacaVeiculo(String placaVeiculo) {
+        markAsChanged("PLACAVEICULO", placaVeiculo);
         this.placaVeiculo = placaVeiculo;
    }
 
@@ -557,6 +615,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setRamal(BigDecimal ramal) {
+        markAsChanged("RAMAL", ramal);
         this.ramal = ramal;
    }
 
@@ -565,6 +624,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setRendaMensal(BigDecimal rendaMensal) {
+        markAsChanged("RENDAMENSAL", rendaMensal);
         this.rendaMensal = rendaMensal;
    }
 
@@ -573,6 +633,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSeqEntrega(BigDecimal seqEntrega) {
+        markAsChanged("SEQENTREGA", seqEntrega);
         this.seqEntrega = seqEntrega;
    }
 
@@ -581,6 +642,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setLongitudeEntrega(String longitudeEntrega) {
+        markAsChanged("LONGITUDEENTREGA", longitudeEntrega);
         this.longitudeEntrega = longitudeEntrega;
    }
 
@@ -589,6 +651,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setMae(String mae) {
+        markAsChanged("MAE", mae);
         this.mae = mae;
    }
 
@@ -597,6 +660,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDhCadSuframa(Timestamp dhCadSuframa) {
+        markAsChanged("DHCADSUFRAMA", dhCadSuframa);
         this.dhCadSuframa = dhCadSuframa;
    }
 
@@ -605,6 +669,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNacionalidade(BigDecimal nacionalidade) {
+        markAsChanged("NACIONALIDADE", nacionalidade);
         this.nacionalidade = nacionalidade;
    }
 
@@ -613,6 +678,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNaturalidade(BigDecimal naturalidade) {
+        markAsChanged("NATURALIDADE", naturalidade);
         this.naturalidade = naturalidade;
    }
 
@@ -621,6 +687,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSitCadSuframa(String sitCadSuframa) {
+        markAsChanged("SITCADSUFRAMA", sitCadSuframa);
         this.sitCadSuframa = sitCadSuframa;
    }
 
@@ -629,6 +696,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setSemRepRedAgro(String semRepRedAgro) {
+        markAsChanged("SEMREPREDAGRO", semRepRedAgro);
         this.semRepRedAgro = semRepRedAgro;
    }
 
@@ -637,6 +705,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaSemanaPag(BigDecimal diaSemanaPag) {
+        markAsChanged("DIASEMANAPAG", diaSemanaPag);
         this.diaSemanaPag = diaSemanaPag;
    }
 
@@ -645,6 +714,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodVolFat(String codVolFat) {
+        markAsChanged("CODVOLFAT", codVolFat);
         this.codVolFat = codVolFat;
    }
 
@@ -653,6 +723,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTemSuframaPiscof(String temSuframaPiscof) {
+        markAsChanged("TEMSUFRAMAPISCOF", temSuframaPiscof);
         this.temSuframaPiscof = temSuframaPiscof;
    }
 
@@ -661,6 +732,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag2(BigDecimal diaPag2) {
+        markAsChanged("DIAPAG2", diaPag2);
         this.diaPag2 = diaPag2;
    }
 
@@ -669,6 +741,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag3(BigDecimal diaPag3) {
+        markAsChanged("DIAPAG3", diaPag3);
         this.diaPag3 = diaPag3;
    }
 
@@ -677,6 +750,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag4(BigDecimal diaPag4) {
+        markAsChanged("DIAPAG4", diaPag4);
         this.diaPag4 = diaPag4;
    }
 
@@ -685,6 +759,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag5(BigDecimal diaPag5) {
+        markAsChanged("DIAPAG5", diaPag5);
         this.diaPag5 = diaPag5;
    }
 
@@ -693,6 +768,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setDiaPag6(BigDecimal diaPag6) {
+        markAsChanged("DIAPAG6", diaPag6);
         this.diaPag6 = diaPag6;
    }
 
@@ -701,6 +777,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setCodIndNif(BigDecimal codIndNif) {
+        markAsChanged("CODINDNIF", codIndNif);
         this.codIndNif = codIndNif;
    }
 
@@ -709,6 +786,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setInfoIsenImuni(BigDecimal infoIsenImuni) {
+        markAsChanged("INFOISENIMUNI", infoIsenImuni);
         this.infoIsenImuni = infoIsenImuni;
    }
 
@@ -717,6 +795,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setNumIndNif(String numIndNif) {
+        markAsChanged("NUMINDNIF", numIndNif);
         this.numIndNif = numIndNif;
    }
 
@@ -725,6 +804,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTpFontePag(BigDecimal tpFontePag) {
+        markAsChanged("TPFONTEPAG", tpFontePag);
         this.tpFontePag = tpFontePag;
    }
 
@@ -733,6 +813,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
    }
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
+        markAsChanged("TPIRRFEXT", tpIrrfExt);
         this.tpIrrfExt = tpIrrfExt;
    }
 
@@ -748,6 +829,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
 
    @Override
    public ComplementoParc fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nroCnh = vo.asString("NROCNH");
         this.numEntrega = vo.asString("NUMENTREGA");
         this.numReceb = vo.asString("NUMRECEB");

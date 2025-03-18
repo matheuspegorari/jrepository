@@ -31,6 +31,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -39,6 +40,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -47,6 +49,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -55,6 +58,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodProdSp(BigDecimal codProdSp) {
+        markAsChanged("CODPRODSP", codProdSp);
         this.codProdSp = codProdSp;
    }
 
@@ -63,6 +67,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -71,6 +76,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -79,6 +85,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setControleSp(String controleSp) {
+        markAsChanged("CONTROLESP", controleSp);
         this.controleSp = controleSp;
    }
 
@@ -87,6 +94,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setExigeApontamento(String exigeApontamento) {
+        markAsChanged("EXIGEAPONTAMENTO", exigeApontamento);
         this.exigeApontamento = exigeApontamento;
    }
 
@@ -95,6 +103,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -103,6 +112,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -111,6 +121,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setSeqLsp(BigDecimal seqLsp) {
+        markAsChanged("SEQLSP", seqLsp);
         this.seqLsp = seqLsp;
    }
 
@@ -119,6 +130,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setTipoControleSp(String tipoControleSp) {
+        markAsChanged("TIPOCONTROLESP", tipoControleSp);
         this.tipoControleSp = tipoControleSp;
    }
 
@@ -127,6 +139,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setTipoQtd(String tipoQtd) {
+        markAsChanged("TIPOQTD", tipoQtd);
         this.tipoQtd = tipoQtd;
    }
 
@@ -135,6 +148,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setSubprodutoPerda(String subprodutoPerda) {
+        markAsChanged("SUBPRODUTOPERDA", subprodutoPerda);
         this.subprodutoPerda = subprodutoPerda;
    }
 
@@ -143,6 +157,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setBasCalcDtValSp(String basCalcDtValSp) {
+        markAsChanged("BASCALCDTVALSP", basCalcDtValSp);
         this.basCalcDtValSp = basCalcDtValSp;
    }
 
@@ -151,6 +166,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -159,6 +175,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -167,6 +184,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -175,6 +193,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -190,6 +209,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
 
    @Override
    public ListaSubprodutos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.referencia = vo.asString("REFERENCIA");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

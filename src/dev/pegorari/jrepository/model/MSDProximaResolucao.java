@@ -12,6 +12,7 @@ public class MSDProximaResolucao extends AbstractSankhyaEntity<MSDProximaResoluc
    }
 
    public void setProxResol(Timestamp proxResol) {
+        markAsChanged("PROXRESOL", proxResol);
         this.proxResol = proxResol;
    }
 
@@ -27,6 +28,7 @@ public class MSDProximaResolucao extends AbstractSankhyaEntity<MSDProximaResoluc
 
    @Override
    public MSDProximaResolucao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.proxResol = vo.asTimestamp("PROXRESOL");
         return this;
    }

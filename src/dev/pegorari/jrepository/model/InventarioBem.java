@@ -24,6 +24,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setAjustado(String ajustado) {
+        markAsChanged("AJUSTADO", ajustado);
         this.ajustado = ajustado;
    }
 
@@ -32,6 +33,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -40,6 +42,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodDepCp(BigDecimal codDepCp) {
+        markAsChanged("CODDEPCP", codDepCp);
         this.codDepCp = codDepCp;
    }
 
@@ -48,6 +51,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodDepCt(BigDecimal codDepCt) {
+        markAsChanged("CODDEPCT", codDepCt);
         this.codDepCt = codDepCt;
    }
 
@@ -56,6 +60,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodDepSis(BigDecimal codDepSis) {
+        markAsChanged("CODDEPSIS", codDepSis);
         this.codDepSis = codDepSis;
    }
 
@@ -64,6 +69,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -72,6 +78,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodEmpSis(BigDecimal codEmpSis) {
+        markAsChanged("CODEMPSIS", codEmpSis);
         this.codEmpSis = codEmpSis;
    }
 
@@ -80,6 +87,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -88,6 +96,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setDtInvent(Timestamp dtInvent) {
+        markAsChanged("DTINVENT", dtInvent);
         this.dtInvent = dtInvent;
    }
 
@@ -96,6 +105,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setExistenacp(String existenacp) {
+        markAsChanged("EXISTENACP", existenacp);
         this.existenacp = existenacp;
    }
 
@@ -104,6 +114,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setExistenact(String existenact) {
+        markAsChanged("EXISTENACT", existenact);
         this.existenact = existenact;
    }
 
@@ -112,6 +123,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -127,6 +139,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
 
    @Override
    public InventarioBem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ajustado = vo.asString("AJUSTADO");
         this.codBem = vo.asString("CODBEM");
         this.codDepCp = vo.asBigDecimal("CODDEPCP");

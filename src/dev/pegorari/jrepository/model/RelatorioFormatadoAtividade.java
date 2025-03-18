@@ -14,6 +14,7 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -22,6 +23,7 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
    }
 
    public void setNuEle(BigDecimal nuEle) {
+        markAsChanged("NUELE", nuEle);
         this.nuEle = nuEle;
    }
 
@@ -30,6 +32,7 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -45,6 +48,7 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
 
    @Override
    public RelatorioFormatadoAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nuEle = vo.asBigDecimal("NUELE");
         this.nuRfe = vo.asBigDecimal("NURFE");

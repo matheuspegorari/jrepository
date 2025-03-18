@@ -30,6 +30,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setTara(BigDecimal tara) {
+        markAsChanged("TARA", tara);
         this.tara = tara;
    }
 
@@ -38,6 +39,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setVariasNotas(String variasNotas) {
+        markAsChanged("VARIASNOTAS", variasNotas);
         this.variasNotas = variasNotas;
    }
 
@@ -46,6 +48,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setNfTransp(String nfTransp) {
+        markAsChanged("NFTRANSP", nfTransp);
         this.nfTransp = nfTransp;
    }
 
@@ -54,6 +57,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -62,6 +66,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setNuNotaDest(BigDecimal nuNotaDest) {
+        markAsChanged("NUNOTADEST", nuNotaDest);
         this.nuNotaDest = nuNotaDest;
    }
 
@@ -70,6 +75,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setNuPesagem(BigDecimal nuPesagem) {
+        markAsChanged("NUPESAGEM", nuPesagem);
         this.nuPesagem = nuPesagem;
    }
 
@@ -78,6 +84,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -86,6 +93,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setBalancaPb(BigDecimal balancaPb) {
+        markAsChanged("BALANCAPB", balancaPb);
         this.balancaPb = balancaPb;
    }
 
@@ -94,6 +102,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setBalancaTara(BigDecimal balancaTara) {
+        markAsChanged("BALANCATARA", balancaTara);
         this.balancaTara = balancaTara;
    }
 
@@ -102,6 +111,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setCodParcTransp(BigDecimal codParcTransp) {
+        markAsChanged("CODPARCTRANSP", codParcTransp);
         this.codParcTransp = codParcTransp;
    }
 
@@ -110,6 +120,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setCodUsuPb(BigDecimal codUsuPb) {
+        markAsChanged("CODUSUPB", codUsuPb);
         this.codUsuPb = codUsuPb;
    }
 
@@ -118,6 +129,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setCodUsuTara(BigDecimal codUsuTara) {
+        markAsChanged("CODUSUTARA", codUsuTara);
         this.codUsuTara = codUsuTara;
    }
 
@@ -126,6 +138,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -134,6 +147,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setDhPesoBruto(Timestamp dhPesoBruto) {
+        markAsChanged("DHPESOBRUTO", dhPesoBruto);
         this.dhPesoBruto = dhPesoBruto;
    }
 
@@ -142,6 +156,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setDhTara(Timestamp dhTara) {
+        markAsChanged("DHTARA", dhTara);
         this.dhTara = dhTara;
    }
 
@@ -150,6 +165,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
+        markAsChanged("PESOLIQ", pesoLiq);
         this.pesoLiq = pesoLiq;
    }
 
@@ -158,6 +174,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setPesagemManual(String pesagemManual) {
+        markAsChanged("PESAGEMMANUAL", pesagemManual);
         this.pesagemManual = pesagemManual;
    }
 
@@ -166,6 +183,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -181,6 +199,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
 
    @Override
    public Pesagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tara = vo.asBigDecimal("TARA");
         this.variasNotas = vo.asString("VARIASNOTAS");
         this.nfTransp = vo.asString("NFTRANSP");

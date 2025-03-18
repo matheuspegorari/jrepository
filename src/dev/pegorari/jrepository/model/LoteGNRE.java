@@ -21,6 +21,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -29,6 +30,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setDhLote(Timestamp dhLote) {
+        markAsChanged("DHLOTE", dhLote);
         this.dhLote = dhLote;
    }
 
@@ -37,6 +39,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setNroLoteGnre(BigDecimal nroLoteGnre) {
+        markAsChanged("NROLOTEGNRE", nroLoteGnre);
         this.nroLoteGnre = nroLoteGnre;
    }
 
@@ -45,6 +48,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setNroProtLote(String nroProtLote) {
+        markAsChanged("NROPROTLOTE", nroProtLote);
         this.nroProtLote = nroProtLote;
    }
 
@@ -53,6 +57,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setQtdTit(BigDecimal qtdTit) {
+        markAsChanged("QTDTIT", qtdTit);
         this.qtdTit = qtdTit;
    }
 
@@ -61,6 +66,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setVlrTot(BigDecimal vlrTot) {
+        markAsChanged("VLRTOT", vlrTot);
         this.vlrTot = vlrTot;
    }
 
@@ -69,6 +75,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setXmlLote(char[] xmlLote) {
+        markAsChanged("XMLLOTE", xmlLote);
         this.xmlLote = xmlLote;
    }
 
@@ -77,6 +84,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setSituacaoAtualLote(String situacaoAtualLote) {
+        markAsChanged("SITUACAOATUALLOTE", situacaoAtualLote);
         this.situacaoAtualLote = situacaoAtualLote;
    }
 
@@ -85,6 +93,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    }
 
    public void setStatusLote(String statusLote) {
+        markAsChanged("STATUSLOTE", statusLote);
         this.statusLote = statusLote;
    }
 
@@ -100,6 +109,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
 
    @Override
    public LoteGNRE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhLote = vo.asTimestamp("DHLOTE");
         this.nroLoteGnre = vo.asBigDecimal("NROLOTEGNRE");

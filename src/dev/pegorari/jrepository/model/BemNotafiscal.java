@@ -16,6 +16,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -24,6 +25,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -32,6 +34,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -40,6 +43,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -48,6 +52,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
 
    @Override
    public BemNotafiscal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBem = vo.asString("CODBEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuNota = vo.asBigDecimal("NUNOTA");

@@ -18,6 +18,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -26,6 +27,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setCodMqp(BigDecimal codMqp) {
+        markAsChanged("CODMQP", codMqp);
         this.codMqp = codMqp;
    }
 
@@ -34,6 +36,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setCodRhp(BigDecimal codRhp) {
+        markAsChanged("CODRHP", codRhp);
         this.codRhp = codRhp;
    }
 
@@ -42,6 +45,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -50,6 +54,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -58,6 +63,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setNuEqp(BigDecimal nuEqp) {
+        markAsChanged("NUEQP", nuEqp);
         this.nuEqp = nuEqp;
    }
 
@@ -66,6 +72,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -81,6 +88,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
 
    @Override
    public ItensApontamentoRecursosWC fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codMqp = vo.asBigDecimal("CODMQP");
         this.codRhp = vo.asBigDecimal("CODRHP");

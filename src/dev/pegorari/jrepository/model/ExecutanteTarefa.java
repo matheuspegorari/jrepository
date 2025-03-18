@@ -19,6 +19,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setChave(BigDecimal chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -27,6 +28,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setCodUsuExec(BigDecimal codUsuExec) {
+        markAsChanged("CODUSUEXEC", codUsuExec);
         this.codUsuExec = codUsuExec;
    }
 
@@ -43,6 +46,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -51,6 +55,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -59,6 +64,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setSitTarefa(String sitTarefa) {
+        markAsChanged("SITTAREFA", sitTarefa);
         this.sitTarefa = sitTarefa;
    }
 
@@ -67,6 +73,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
    }
 
    public void setTipTarefa(String tipTarefa) {
+        markAsChanged("TIPTAREFA", tipTarefa);
         this.tipTarefa = tipTarefa;
    }
 
@@ -82,6 +89,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
 
    @Override
    public ExecutanteTarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuExec = vo.asBigDecimal("CODUSUEXEC");

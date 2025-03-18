@@ -42,6 +42,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCaminhoArqImp(String caminhoArqImp) {
+        markAsChanged("CAMINHOARQIMP", caminhoArqImp);
         this.caminhoArqImp = caminhoArqImp;
    }
 
@@ -50,6 +51,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCargoContato(String cargoContato) {
+        markAsChanged("CARGOCONTATO", cargoContato);
         this.cargoContato = cargoContato;
    }
 
@@ -58,6 +60,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCargoVendedor(String cargoVendedor) {
+        markAsChanged("CARGOVENDEDOR", cargoVendedor);
         this.cargoVendedor = cargoVendedor;
    }
 
@@ -66,6 +69,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCelularVendedor(String celularVendedor) {
+        markAsChanged("CELULARVENDEDOR", celularVendedor);
         this.celularVendedor = celularVendedor;
    }
 
@@ -74,6 +78,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -82,6 +87,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -90,6 +96,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -98,6 +105,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setDeptoContato(String deptoContato) {
+        markAsChanged("DEPTOCONTATO", deptoContato);
         this.deptoContato = deptoContato;
    }
 
@@ -106,6 +114,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setEmailContato(String emailContato) {
+        markAsChanged("EMAILCONTATO", emailContato);
         this.emailContato = emailContato;
    }
 
@@ -114,6 +123,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setEmailVendedor(String emailVendedor) {
+        markAsChanged("EMAILVENDEDOR", emailVendedor);
         this.emailVendedor = emailVendedor;
    }
 
@@ -122,6 +132,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setImpresso(String impresso) {
+        markAsChanged("IMPRESSO", impresso);
         this.impresso = impresso;
    }
 
@@ -130,6 +141,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setLogoParc(String logoParc) {
+        markAsChanged("LOGOPARC", logoParc);
         this.logoParc = logoParc;
    }
 
@@ -138,6 +150,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setModalidadeReposicao(String modalidadeReposicao) {
+        markAsChanged("MODALIDADEREPOSICAO", modalidadeReposicao);
         this.modalidadeReposicao = modalidadeReposicao;
    }
 
@@ -146,6 +159,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setModalidadeSuporte(String modalidadeSuporte) {
+        markAsChanged("MODALIDADESUPORTE", modalidadeSuporte);
         this.modalidadeSuporte = modalidadeSuporte;
    }
 
@@ -154,6 +168,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setNomeContato(String nomeContato) {
+        markAsChanged("NOMECONTATO", nomeContato);
         this.nomeContato = nomeContato;
    }
 
@@ -162,6 +177,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setNomeParc(String nomeParc) {
+        markAsChanged("NOMEPARC", nomeParc);
         this.nomeParc = nomeParc;
    }
 
@@ -170,6 +186,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setNomeVendedor(String nomeVendedor) {
+        markAsChanged("NOMEVENDEDOR", nomeVendedor);
         this.nomeVendedor = nomeVendedor;
    }
 
@@ -178,6 +195,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setNroImpressao(BigDecimal nroImpressao) {
+        markAsChanged("NROIMPRESSAO", nroImpressao);
         this.nroImpressao = nroImpressao;
    }
 
@@ -186,6 +204,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -194,6 +213,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setPrazoEntrega(BigDecimal prazoEntrega) {
+        markAsChanged("PRAZOENTREGA", prazoEntrega);
         this.prazoEntrega = prazoEntrega;
    }
 
@@ -202,6 +222,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setPrazoGarantia(BigDecimal prazoGarantia) {
+        markAsChanged("PRAZOGARANTIA", prazoGarantia);
         this.prazoGarantia = prazoGarantia;
    }
 
@@ -210,6 +231,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setPrazoInstalacao(BigDecimal prazoInstalacao) {
+        markAsChanged("PRAZOINSTALACAO", prazoInstalacao);
         this.prazoInstalacao = prazoInstalacao;
    }
 
@@ -218,6 +240,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setPrazoPagamento(BigDecimal prazoPagamento) {
+        markAsChanged("PRAZOPAGAMENTO", prazoPagamento);
         this.prazoPagamento = prazoPagamento;
    }
 
@@ -226,6 +249,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setPrazoSuporte(BigDecimal prazoSuporte) {
+        markAsChanged("PRAZOSUPORTE", prazoSuporte);
         this.prazoSuporte = prazoSuporte;
    }
 
@@ -234,6 +258,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setResumoObjeto(String resumoObjeto) {
+        markAsChanged("RESUMOOBJETO", resumoObjeto);
         this.resumoObjeto = resumoObjeto;
    }
 
@@ -242,6 +267,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setTelefoneContato(String telefoneContato) {
+        markAsChanged("TELEFONECONTATO", telefoneContato);
         this.telefoneContato = telefoneContato;
    }
 
@@ -250,6 +276,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setTelefoneVendedor(String telefoneVendedor) {
+        markAsChanged("TELEFONEVENDEDOR", telefoneVendedor);
         this.telefoneVendedor = telefoneVendedor;
    }
 
@@ -258,6 +285,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setTextoObjeto(char[] textoObjeto) {
+        markAsChanged("TEXTOOBJETO", textoObjeto);
         this.textoObjeto = textoObjeto;
    }
 
@@ -266,6 +294,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setTextoObs(char[] textoObs) {
+        markAsChanged("TEXTOOBS", textoObs);
         this.textoObs = textoObs;
    }
 
@@ -274,6 +303,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setTextoTreinamento(char[] textoTreinamento) {
+        markAsChanged("TEXTOTREINAMENTO", textoTreinamento);
         this.textoTreinamento = textoTreinamento;
    }
 
@@ -282,6 +312,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -297,6 +328,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoImpressaoProposta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.caminhoArqImp = vo.asString("CAMINHOARQIMP");
         this.cargoContato = vo.asString("CARGOCONTATO");
         this.cargoVendedor = vo.asString("CARGOVENDEDOR");

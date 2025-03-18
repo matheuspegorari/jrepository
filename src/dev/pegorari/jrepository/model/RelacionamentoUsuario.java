@@ -16,6 +16,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -24,6 +25,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    }
 
    public void setCodUsuRel(BigDecimal codUsuRel) {
+        markAsChanged("CODUSUREL", codUsuRel);
         this.codUsuRel = codUsuRel;
    }
 
@@ -32,6 +34,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -40,6 +43,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    }
 
    public void setVinculo(String vinculo) {
+        markAsChanged("VINCULO", vinculo);
         this.vinculo = vinculo;
    }
 
@@ -48,6 +52,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    }
 
    public void setLiderImediato(String liderImediato) {
+        markAsChanged("LIDERIMEDIATO", liderImediato);
         this.liderImediato = liderImediato;
    }
 
@@ -63,6 +68,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
 
    @Override
    public RelacionamentoUsuario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuRel = vo.asBigDecimal("CODUSUREL");
         this.tipo = vo.asString("TIPO");

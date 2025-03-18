@@ -20,6 +20,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -28,6 +29,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +38,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setCodGrupoPerg(BigDecimal codGrupoPerg) {
+        markAsChanged("CODGRUPOPERG", codGrupoPerg);
         this.codGrupoPerg = codGrupoPerg;
    }
 
@@ -44,6 +47,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setCodGrupoPergPai(BigDecimal codGrupoPergPai) {
+        markAsChanged("CODGRUPOPERGPAI", codGrupoPergPai);
         this.codGrupoPergPai = codGrupoPergPai;
    }
 
@@ -52,6 +56,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -60,6 +65,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setDescrGrupoPerg(String descrGrupoPerg) {
+        markAsChanged("DESCRGRUPOPERG", descrGrupoPerg);
         this.descrGrupoPerg = descrGrupoPerg;
    }
 
@@ -68,6 +74,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -76,6 +83,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -91,6 +99,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
 
    @Override
    public GrupoPergunta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");

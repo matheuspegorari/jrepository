@@ -41,6 +41,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -49,6 +50,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCodHistOcor(BigDecimal codHistOcor) {
+        markAsChanged("CODHISTOCOR", codHistOcor);
         this.codHistOcor = codHistOcor;
    }
 
@@ -57,6 +59,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDescOcor(String descOcor) {
+        markAsChanged("DESCROCOR", descOcor);
         this.descOcor = descOcor;
    }
 
@@ -65,6 +68,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -73,6 +77,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDtFinalOcor(Timestamp dtFinalOcor) {
+        markAsChanged("DTFINALOCOR", dtFinalOcor);
         this.dtFinalOcor = dtFinalOcor;
    }
 
@@ -81,6 +86,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDtInicOcor(Timestamp dtInicOcor) {
+        markAsChanged("DTINICOCOR", dtInicOcor);
         this.dtInicOcor = dtInicOcor;
    }
 
@@ -89,6 +95,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
+        markAsChanged("NUOCOR", nuOcor);
         this.nuOcor = nuOcor;
    }
 
@@ -97,6 +104,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setRecorrente(String recorrente) {
+        markAsChanged("RECORRENTE", recorrente);
         this.recorrente = recorrente;
    }
 
@@ -105,6 +113,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -113,6 +122,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDiasPrevRet(BigDecimal diasPrevRet) {
+        markAsChanged("DIASPREVRET", diasPrevRet);
         this.diasPrevRet = diasPrevRet;
    }
 
@@ -121,6 +131,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDtPrevRet(Timestamp dtPrevRet) {
+        markAsChanged("DTPREVRET", dtPrevRet);
         this.dtPrevRet = dtPrevRet;
    }
 
@@ -129,6 +140,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -137,6 +149,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuReincid(BigDecimal nuReincid) {
+        markAsChanged("NUREINCID", nuReincid);
         this.nuReincid = nuReincid;
    }
 
@@ -145,6 +158,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -153,6 +167,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setIndEfeitoRetro(String indEfeitoRetro) {
+        markAsChanged("INDEFEITORETRO", indEfeitoRetro);
         this.indEfeitoRetro = indEfeitoRetro;
    }
 
@@ -161,6 +176,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setForcaDtFim(String forcaDtFim) {
+        markAsChanged("FORCADTFIM", forcaDtFim);
         this.forcaDtFim = forcaDtFim;
    }
 
@@ -169,6 +185,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuFalta(BigDecimal nuFalta) {
+        markAsChanged("NUFALTA", nuFalta);
         this.nuFalta = nuFalta;
    }
 
@@ -177,6 +194,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuManejo(BigDecimal nuManejo) {
+        markAsChanged("NUMANEJO", nuManejo);
         this.nuManejo = nuManejo;
    }
 
@@ -185,6 +203,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuOcorOrig(BigDecimal nuOcorOrig) {
+        markAsChanged("NUOCORORIG", nuOcorOrig);
         this.nuOcorOrig = nuOcorOrig;
    }
 
@@ -193,6 +212,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setNuProcesso(BigDecimal nuProcesso) {
+        markAsChanged("NUPROCESSO", nuProcesso);
         this.nuProcesso = nuProcesso;
    }
 
@@ -201,6 +221,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setOrigRetif(BigDecimal origRetif) {
+        markAsChanged("ORIGRETIF", origRetif);
         this.origRetif = origRetif;
    }
 
@@ -209,6 +230,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setReajusteCct(String reajusteCct) {
+        markAsChanged("REAJUSTECCT", reajusteCct);
         this.reajusteCct = reajusteCct;
    }
 
@@ -217,6 +239,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCid(String cid) {
+        markAsChanged("CID", cid);
         this.cid = cid;
    }
 
@@ -225,6 +248,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setCodSind(BigDecimal codSind) {
+        markAsChanged("CODSIND", codSind);
         this.codSind = codSind;
    }
 
@@ -233,6 +257,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setDtInterrompFer(Timestamp dtInterrompFer) {
+        markAsChanged("DTINTERROMPEFER", dtInterrompFer);
         this.dtInterrompFer = dtInterrompFer;
    }
 
@@ -241,6 +266,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setEnvSocial(String envSocial) {
+        markAsChanged("ENVESOCIAL", envSocial);
         this.envSocial = envSocial;
    }
 
@@ -249,6 +275,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setEspecialidade(String especialidade) {
+        markAsChanged("ESPECIALIDADE", especialidade);
         this.especialidade = especialidade;
    }
 
@@ -257,6 +284,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setProcessoCnv(String processoCnv) {
+        markAsChanged("PROCESSOCNV", processoCnv);
         this.processoCnv = processoCnv;
    }
 
@@ -265,6 +293,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
    }
 
    public void setSequenciaCnv(BigDecimal sequenciaCnv) {
+        markAsChanged("SEQUENCIACNV", sequenciaCnv);
         this.sequenciaCnv = sequenciaCnv;
    }
 
@@ -280,6 +309,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
 
    @Override
    public RegistroOcorrencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistOcor = vo.asBigDecimal("CODHISTOCOR");
         this.descOcor = vo.asString("DESCROCOR");

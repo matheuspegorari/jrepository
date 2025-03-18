@@ -16,6 +16,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    }
 
    public void setApelido(String apelido) {
+        markAsChanged("APELIDO", apelido);
         this.apelido = apelido;
    }
 
@@ -24,6 +25,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    }
 
    public void setCodPerg(BigDecimal codPerg) {
+        markAsChanged("CODPERG", codPerg);
         this.codPerg = codPerg;
    }
 
@@ -32,6 +34,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -40,6 +43,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -48,6 +52,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -63,6 +68,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
 
    @Override
    public PerguntaQuestionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apelido = vo.asString("APELIDO");
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.codQuest = vo.asBigDecimal("CODQUEST");

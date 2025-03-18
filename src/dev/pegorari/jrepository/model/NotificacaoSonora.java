@@ -14,6 +14,7 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
    }
 
    public void setArqSom(String arqSom) {
+        markAsChanged("ARQSOM", arqSom);
         this.arqSom = arqSom;
    }
 
@@ -22,6 +23,7 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -30,6 +32,7 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -45,6 +48,7 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
 
    @Override
    public NotificacaoSonora fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqSom = vo.asString("ARQSOM");
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");

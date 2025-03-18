@@ -13,6 +13,7 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -21,6 +22,7 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
    }
 
    public void setInterno(String interno) {
+        markAsChanged("INTERNO", interno);
         this.interno = interno;
    }
 
@@ -29,6 +31,7 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -44,6 +47,7 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
 
    @Override
    public CertificadoDigital fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nomeArquivo = vo.asString("NOMEARQUIVO");
         this.interno = vo.asString("INTERNO");
         this.cgcCpf = vo.asString("CGC_CPF");

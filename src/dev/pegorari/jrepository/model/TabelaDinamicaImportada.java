@@ -18,6 +18,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setTipoLanc(String tipoLanc) {
+        markAsChanged("TIPOLANC", tipoLanc);
         this.tipoLanc = tipoLanc;
    }
 
@@ -26,6 +27,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -34,6 +36,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -42,6 +45,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setCodigo(String codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -50,6 +54,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -58,6 +63,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -73,6 +79,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
 
    @Override
    public TabelaDinamicaImportada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipoLanc = vo.asString("TIPOLANC");
         this.descricao = vo.asString("DESCRICAO");
         this.tabela = vo.asString("TABELA");

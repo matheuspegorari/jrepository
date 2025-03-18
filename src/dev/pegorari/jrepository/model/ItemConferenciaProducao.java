@@ -16,6 +16,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -24,6 +25,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -32,6 +34,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -40,6 +43,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    }
 
    public void setQtdConf(BigDecimal qtdConf) {
+        markAsChanged("QTDCONF", qtdConf);
         this.qtdConf = qtdConf;
    }
 
@@ -48,6 +52,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -63,6 +68,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
 
    @Override
    public ItemConferenciaProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuConf = vo.asBigDecimal("NUCONF");

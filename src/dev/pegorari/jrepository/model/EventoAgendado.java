@@ -45,6 +45,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -53,6 +54,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -61,6 +63,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -69,6 +72,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhAlterSinc(Timestamp dhAlterSinc) {
+        markAsChanged("DHALTERSINC", dhAlterSinc);
         this.dhAlterSinc = dhAlterSinc;
    }
 
@@ -77,6 +81,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -85,6 +90,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhInicio(Timestamp dhInicio) {
+        markAsChanged("DHINICIO", dhInicio);
         this.dhInicio = dhInicio;
    }
 
@@ -93,6 +99,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhInicioPai(Timestamp dhInicioPai) {
+        markAsChanged("DHINICIOPAI", dhInicioPai);
         this.dhInicioPai = dhInicioPai;
    }
 
@@ -101,6 +108,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhLcto(Timestamp dhLcto) {
+        markAsChanged("DHLCTO", dhLcto);
         this.dhLcto = dhLcto;
    }
 
@@ -109,6 +117,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDiaTodo(String diaTodo) {
+        markAsChanged("DIATODO", diaTodo);
         this.diaTodo = diaTodo;
    }
 
@@ -117,6 +126,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setIcalExp(String icalExp) {
+        markAsChanged("ICALEXP", icalExp);
         this.icalExp = icalExp;
    }
 
@@ -125,6 +135,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setIdSinc(String idSinc) {
+        markAsChanged("IDSINC", idSinc);
         this.idSinc = idSinc;
    }
 
@@ -133,6 +144,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setLocalEvento(String localEvento) {
+        markAsChanged("LOCALEVENTO", localEvento);
         this.localEvento = localEvento;
    }
 
@@ -141,6 +153,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuEvento(BigDecimal nuEvento) {
+        markAsChanged("NUEVENTO", nuEvento);
         this.nuEvento = nuEvento;
    }
 
@@ -149,6 +162,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuEventoPai(BigDecimal nuEventoPai) {
+        markAsChanged("NUEVENTOPAI", nuEventoPai);
         this.nuEventoPai = nuEventoPai;
    }
 
@@ -157,6 +171,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -165,6 +180,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuMetapa(BigDecimal nuMetapa) {
+        markAsChanged("NUMETAPA", nuMetapa);
         this.nuMetapa = nuMetapa;
    }
 
@@ -173,6 +189,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuMos(BigDecimal nuMos) {
+        markAsChanged("NUMOS", nuMos);
         this.nuMos = nuMos;
    }
 
@@ -181,6 +198,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setSincronizar(String sincronizar) {
+        markAsChanged("SINCRONIZAR", sincronizar);
         this.sincronizar = sincronizar;
    }
 
@@ -189,6 +207,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setSubOs(BigDecimal subOs) {
+        markAsChanged("SUBOS", subOs);
         this.subOs = subOs;
    }
 
@@ -197,6 +216,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCancelado(String cancelado) {
+        markAsChanged("CANCELADO", cancelado);
         this.cancelado = cancelado;
    }
 
@@ -205,6 +225,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -213,6 +234,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -221,6 +243,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCodUsuLancador(BigDecimal codUsuLancador) {
+        markAsChanged("CODUSULANCADOR", codUsuLancador);
         this.codUsuLancador = codUsuLancador;
    }
 
@@ -229,6 +252,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setConfirmado(String confirmado) {
+        markAsChanged("CONFIRMADO", confirmado);
         this.confirmado = confirmado;
    }
 
@@ -237,6 +261,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDescrAbrev(String descrAbrev) {
+        markAsChanged("DESCRABREV", descrAbrev);
         this.descrAbrev = descrAbrev;
    }
 
@@ -245,6 +270,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDescrLonga(String descrLonga) {
+        markAsChanged("DESCRLONGA", descrLonga);
         this.descrLonga = descrLonga;
    }
 
@@ -253,6 +279,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -261,6 +288,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setDhCancelamento(Timestamp dhCancelamento) {
+        markAsChanged("DHCANCELAMENTO", dhCancelamento);
         this.dhCancelamento = dhCancelamento;
    }
 
@@ -269,6 +297,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setChangeKey(String changeKey) {
+        markAsChanged("CHANGEKEY", changeKey);
         this.changeKey = changeKey;
    }
 
@@ -277,6 +306,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setIdOffice(String idOffice) {
+        markAsChanged("IDOFFICE", idOffice);
         this.idOffice = idOffice;
    }
 
@@ -285,6 +315,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setNuContrato(BigDecimal nuContrato) {
+        markAsChanged("NUMCONTRATO", nuContrato);
         this.nuContrato = nuContrato;
    }
 
@@ -293,6 +324,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setFalhaSinc(BigDecimal falhaSinc) {
+        markAsChanged("FALHASINC", falhaSinc);
         this.falhaSinc = falhaSinc;
    }
 
@@ -301,6 +333,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -316,6 +349,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
 
    @Override
    public EventoAgendado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
         this.codEtapa = vo.asBigDecimal("CODETAPA");

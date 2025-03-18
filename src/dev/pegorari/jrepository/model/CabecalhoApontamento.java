@@ -18,6 +18,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -26,6 +27,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -34,6 +36,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setIdAtv(BigDecimal idAtv) {
+        markAsChanged("IDIATV", idAtv);
         this.idAtv = idAtv;
    }
 
@@ -42,6 +45,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setDhApo(Timestamp dhApo) {
+        markAsChanged("DHAPO", dhApo);
         this.dhApo = dhApo;
    }
 
@@ -50,6 +54,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -58,6 +63,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -73,6 +79,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
 
    @Override
    public CabecalhoApontamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.idAtv = vo.asBigDecimal("IDIATV");

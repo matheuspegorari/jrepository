@@ -20,6 +20,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -28,6 +29,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -36,6 +38,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setGrupoIcms(BigDecimal grupoIcms) {
+        markAsChanged("GRUPOICMS", grupoIcms);
         this.grupoIcms = grupoIcms;
    }
 
@@ -44,6 +47,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setPercCmtNac(BigDecimal percCmtNac) {
+        markAsChanged("PERCCMTNAC", percCmtNac);
         this.percCmtNac = percCmtNac;
    }
 
@@ -52,6 +56,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setPercCmtMun(BigDecimal percCmtMun) {
+        markAsChanged("PERCCMTMUN", percCmtMun);
         this.percCmtMun = percCmtMun;
    }
 
@@ -60,6 +65,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setPercCmtEst(BigDecimal percCmtEst) {
+        markAsChanged("PERCCMTEST", percCmtEst);
         this.percCmtEst = percCmtEst;
    }
 
@@ -68,6 +74,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setPercCmtFed(BigDecimal percCmtFed) {
+        markAsChanged("PERCCMTFED", percCmtFed);
         this.percCmtFed = percCmtFed;
    }
 
@@ -76,6 +83,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setPercCmtImp(BigDecimal percCmtImp) {
+        markAsChanged("PERCCMTIMP", percCmtImp);
         this.percCmtImp = percCmtImp;
    }
 
@@ -84,6 +92,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -99,6 +108,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
 
    @Override
    public GrupoProdutoIcmsEmpresa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
         this.grupoIcms = vo.asBigDecimal("GRUPOICMS");

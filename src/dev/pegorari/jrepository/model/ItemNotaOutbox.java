@@ -15,6 +15,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    }
 
    public void setIdOutbox(String idOutbox) {
+        markAsChanged("IDOUTBOX", idOutbox);
         this.idOutbox = idOutbox;
    }
 
@@ -23,6 +24,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -31,6 +33,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -39,6 +42,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -54,6 +58,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
 
    @Override
    public ItemNotaOutbox fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idOutbox = vo.asString("IDOUTBOX");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.qtd = vo.asBigDecimal("QTD");

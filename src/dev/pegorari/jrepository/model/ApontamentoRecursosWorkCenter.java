@@ -20,6 +20,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -28,6 +29,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -36,6 +38,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -44,6 +47,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -52,6 +56,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setQtdApontada(BigDecimal qtdApontada) {
+        markAsChanged("QTDAPONTADA", qtdApontada);
         this.qtdApontada = qtdApontada;
    }
 
@@ -60,6 +65,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setQtdItensRec(BigDecimal qtdItensRec) {
+        markAsChanged("QTDITENSREC", qtdItensRec);
         this.qtdItensRec = qtdItensRec;
    }
 
@@ -68,6 +74,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setQtdRecApontar(BigDecimal qtdRecApontar) {
+        markAsChanged("QTDRECAPONTAR", qtdRecApontar);
         this.qtdRecApontar = qtdRecApontar;
    }
 
@@ -76,6 +83,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setQtdUtilizada(BigDecimal qtdUtilizada) {
+        markAsChanged("QTDUTILIZADA", qtdUtilizada);
         this.qtdUtilizada = qtdUtilizada;
    }
 
@@ -84,6 +92,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -99,6 +108,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
 
    @Override
    public ApontamentoRecursosWorkCenter fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codVol = vo.asString("CODVOL");
         this.codWcp = vo.asBigDecimal("CODWCP");

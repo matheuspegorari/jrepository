@@ -17,6 +17,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setNuCampoDest(BigDecimal nuCampoDest) {
+        markAsChanged("NUCAMPODEST", nuCampoDest);
         this.nuCampoDest = nuCampoDest;
    }
 
@@ -25,6 +26,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setNuCampoOrig(BigDecimal nuCampoOrig) {
+        markAsChanged("NUCAMPOORIG", nuCampoOrig);
         this.nuCampoOrig = nuCampoOrig;
    }
 
@@ -33,6 +35,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setNuInstDest(BigDecimal nuInstDest) {
+        markAsChanged("NUINSTDEST", nuInstDest);
         this.nuInstDest = nuInstDest;
    }
 
@@ -41,6 +44,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setNuInstOrig(BigDecimal nuInstOrig) {
+        markAsChanged("NUINSTORIG", nuInstOrig);
         this.nuInstOrig = nuInstOrig;
    }
 
@@ -49,6 +53,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -57,6 +62,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    }
 
    public void setOrigObrigatoria(String origObrigatoria) {
+        markAsChanged("ORIG_OBRIGATORIA", origObrigatoria);
         this.origObrigatoria = origObrigatoria;
    }
 
@@ -72,6 +78,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
 
    @Override
    public CampoLigacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuCampoDest = vo.asBigDecimal("NUCAMPODEST");
         this.nuCampoOrig = vo.asBigDecimal("NUCAMPOORIG");
         this.nuInstDest = vo.asBigDecimal("NUINSTDEST");

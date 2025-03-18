@@ -19,6 +19,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -27,6 +28,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -35,6 +37,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -43,6 +46,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -51,6 +55,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setDtEntrada(Timestamp dtEntrada) {
+        markAsChanged("DTENTRADA", dtEntrada);
         this.dtEntrada = dtEntrada;
    }
 
@@ -59,6 +64,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setDtSaida(Timestamp dtSaida) {
+        markAsChanged("DTSAIDA", dtSaida);
         this.dtSaida = dtSaida;
    }
 
@@ -67,6 +73,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
    }
 
    public void setNuNo(BigDecimal nuNo) {
+        markAsChanged("NUNO", nuNo);
         this.nuNo = nuNo;
    }
 
@@ -82,6 +89,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
 
    @Override
    public LotacaoFuncionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codUsu = vo.asBigDecimal("CODUSU");

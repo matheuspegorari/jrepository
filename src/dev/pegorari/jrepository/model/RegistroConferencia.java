@@ -28,6 +28,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -36,6 +37,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -44,6 +46,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
+        markAsChanged("CODUSUCONF", codUsuConf);
         this.codUsuConf = codUsuConf;
    }
 
@@ -52,6 +55,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -60,6 +64,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setDhFim(Timestamp dhFim) {
+        markAsChanged("DHFIM", dhFim);
         this.dhFim = dhFim;
    }
 
@@ -68,6 +73,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setDhIni(Timestamp dhIni) {
+        markAsChanged("DHINI", dhIni);
         this.dhIni = dhIni;
    }
 
@@ -76,6 +82,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setFechado(String fechado) {
+        markAsChanged("FECHADO", fechado);
         this.fechado = fechado;
    }
 
@@ -84,6 +91,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -92,6 +100,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -100,6 +109,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setQtdAvariaVolPad(BigDecimal qtdAvariaVolPad) {
+        markAsChanged("QTDAVARIAVOLPAD", qtdAvariaVolPad);
         this.qtdAvariaVolPad = qtdAvariaVolPad;
    }
 
@@ -108,6 +118,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setQtdRecebidaVolPad(BigDecimal qtdRecebidaVolPad) {
+        markAsChanged("QTDRECEBIDAVOLPAD", qtdRecebidaVolPad);
         this.qtdRecebidaVolPad = qtdRecebidaVolPad;
    }
 
@@ -116,6 +127,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setRecontagem(String recontagem) {
+        markAsChanged("RECONTAGEM", recontagem);
         this.recontagem = recontagem;
    }
 
@@ -124,6 +136,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setUma(String uma) {
+        markAsChanged("UMA", uma);
         this.uma = uma;
    }
 
@@ -132,6 +145,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setConfFinalizada(String confFinalizada) {
+        markAsChanged("CONFFINALIZADA", confFinalizada);
         this.confFinalizada = confFinalizada;
    }
 
@@ -140,6 +154,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -148,6 +163,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -163,6 +179,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
 
    @Override
    public RegistroConferencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");

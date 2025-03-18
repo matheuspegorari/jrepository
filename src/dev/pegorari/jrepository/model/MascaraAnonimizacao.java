@@ -19,6 +19,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setCodMasAno(BigDecimal codMasAno) {
+        markAsChanged("CODMASANO", codMasAno);
         this.codMasAno = codMasAno;
    }
 
@@ -27,6 +28,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -35,6 +37,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
+        markAsChanged("CODUSUCRIAC", codUsuCriac);
         this.codUsuCriac = codUsuCriac;
    }
 
@@ -43,6 +46,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setDescMasc(String descMasc) {
+        markAsChanged("DESCMASC", descMasc);
         this.descMasc = descMasc;
    }
 
@@ -51,6 +55,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -59,6 +64,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setDtCriac(Timestamp dtCriac) {
+        markAsChanged("DTCRIAC", dtCriac);
         this.dtCriac = dtCriac;
    }
 
@@ -67,6 +73,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    }
 
    public void setTipoCampo(String tipoCampo) {
+        markAsChanged("TIPOCAMPO", tipoCampo);
         this.tipoCampo = tipoCampo;
    }
 
@@ -82,6 +89,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
 
    @Override
    public MascaraAnonimizacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMasAno = vo.asBigDecimal("CODMASANO");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

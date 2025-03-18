@@ -19,6 +19,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setCodDoca(BigDecimal codDoca) {
+        markAsChanged("CODDOCA", codDoca);
         this.codDoca = codDoca;
    }
 
@@ -27,6 +28,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
+        markAsChanged("CODPARCTRANSP", codParctransp);
         this.codParctransp = codParctransp;
    }
 
@@ -35,6 +37,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setDhEntrada(Timestamp dhEntrada) {
+        markAsChanged("DHENTRADA", dhEntrada);
         this.dhEntrada = dhEntrada;
    }
 
@@ -43,6 +46,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setDhPrevista(Timestamp dhPrevista) {
+        markAsChanged("DHPREVISTA", dhPrevista);
         this.dhPrevista = dhPrevista;
    }
 
@@ -51,6 +55,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setDhSaida(Timestamp dhSaida) {
+        markAsChanged("DHSAIDA", dhSaida);
         this.dhSaida = dhSaida;
    }
 
@@ -59,6 +64,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -67,6 +73,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    }
 
    public void setNuAgenda(BigDecimal nuAgenda) {
+        markAsChanged("NUAGENDA", nuAgenda);
         this.nuAgenda = nuAgenda;
    }
 
@@ -82,6 +89,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
 
    @Override
    public AgendaWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codDoca = vo.asBigDecimal("CODDOCA");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.dhEntrada = vo.asTimestamp("DHENTRADA");

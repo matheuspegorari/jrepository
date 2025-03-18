@@ -17,6 +17,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -25,6 +26,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    }
 
    public void setCodCmps(BigDecimal codCmps) {
+        markAsChanged("CODCMPS", codCmps);
         this.codCmps = codCmps;
    }
 
@@ -33,6 +35,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -41,6 +44,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -49,6 +53,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -64,6 +69,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
 
    @Override
    public ConfiguracaoMPS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.codCmps = vo.asBigDecimal("CODCMPS");
         this.dhInc = vo.asTimestamp("DHINC");

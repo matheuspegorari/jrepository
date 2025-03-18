@@ -14,6 +14,7 @@ public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDad
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -22,6 +23,7 @@ public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDad
    }
 
    public void setMargem(BigDecimal margem) {
+        markAsChanged("MARGEM", margem);
         this.margem = margem;
    }
 
@@ -30,6 +32,7 @@ public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDad
    }
 
    public void setVendas(BigDecimal vendas) {
+        markAsChanged("VENDAS", vendas);
         this.vendas = vendas;
    }
 
@@ -45,6 +48,7 @@ public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDad
 
    @Override
    public PrevisaoVendasDados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.margem = vo.asBigDecimal("MARGEM");
         this.vendas = vo.asBigDecimal("VENDAS");

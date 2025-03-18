@@ -40,6 +40,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
+        markAsChanged("CODLOCALBAIXA", codLocalBaixa);
         this.codLocalBaixa = codLocalBaixa;
    }
 
@@ -48,6 +49,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setPercDesvioInf(BigDecimal percDesvioInf) {
+        markAsChanged("PERCDESVIOINF", percDesvioInf);
         this.percDesvioInf = percDesvioInf;
    }
 
@@ -56,6 +58,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
+        markAsChanged("PERCDESVIOSUP", percDesvioSup);
         this.percDesvioSup = percDesvioSup;
    }
 
@@ -64,6 +67,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setTipoControleMp(String tipoControleMp) {
+        markAsChanged("TIPOCONTROLEMP", tipoControleMp);
         this.tipoControleMp = tipoControleMp;
    }
 
@@ -72,6 +76,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
+        markAsChanged("CODLOCALORIG", codLocalOrig);
         this.codLocalOrig = codLocalOrig;
    }
 
@@ -80,6 +85,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -88,6 +94,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -96,6 +103,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -104,6 +112,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -112,6 +121,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -120,6 +130,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setGeraRequisicao(String geraRequisicao) {
+        markAsChanged("GERAREQUISICAO", geraRequisicao);
         this.geraRequisicao = geraRequisicao;
    }
 
@@ -128,6 +139,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -136,6 +148,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -144,6 +157,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setSeqMp(BigDecimal seqMp) {
+        markAsChanged("SEQMP", seqMp);
         this.seqMp = seqMp;
    }
 
@@ -152,6 +166,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setTipoUsoMp(String tipoUsoMp) {
+        markAsChanged("TIPOUSOMP", tipoUsoMp);
         this.tipoUsoMp = tipoUsoMp;
    }
 
@@ -160,6 +175,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setVerificaEst(String verificaEst) {
+        markAsChanged("VERIFICAEST", verificaEst);
         this.verificaEst = verificaEst;
    }
 
@@ -168,6 +184,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setTipoQtd(String tipoQtd) {
+        markAsChanged("TIPOQTD", tipoQtd);
         this.tipoQtd = tipoQtd;
    }
 
@@ -176,6 +193,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -184,6 +202,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setFixaQtdApo(String fixaQtdApo) {
+        markAsChanged("FIXAQTDAPO", fixaQtdApo);
         this.fixaQtdApo = fixaQtdApo;
    }
 
@@ -192,6 +211,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setConsuRefUgo(String consuRefUgo) {
+        markAsChanged("CONSUREFUGO", consuRefUgo);
         this.consuRefUgo = consuRefUgo;
    }
 
@@ -200,6 +220,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setVinculoSeriePa(String vinculoSeriePa) {
+        markAsChanged("VINCULOSERIEPA", vinculoSeriePa);
         this.vinculoSeriePa = vinculoSeriePa;
    }
 
@@ -208,6 +229,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setEstoqueTerceiro(String estoqueTerceiro) {
+        markAsChanged("ESTOQUETERCEIRO", estoqueTerceiro);
         this.estoqueTerceiro = estoqueTerceiro;
    }
 
@@ -216,6 +238,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setLiberaDesvio(String liberaDesvio) {
+        markAsChanged("LIBERADESVIO", liberaDesvio);
         this.liberaDesvio = liberaDesvio;
    }
 
@@ -224,6 +247,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -232,6 +256,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -240,6 +265,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -248,6 +274,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -256,6 +283,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    }
 
    public void setPropMpFixa(String propMpFixa) {
+        markAsChanged("PROPMPFIXA", propMpFixa);
         this.propMpFixa = propMpFixa;
    }
 
@@ -271,6 +299,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
 
    @Override
    public ListaMateriaisAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLocalBaixa = vo.asBigDecimal("CODLOCALBAIXA");
         this.percDesvioInf = vo.asBigDecimal("PERCDESVIOINF");
         this.percDesvioSup = vo.asBigDecimal("PERCDESVIOSUP");

@@ -75,6 +75,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCorDenatran(BigDecimal corDenatran) {
+        markAsChanged("CORDENATRAN", corDenatran);
         this.corDenatran = corDenatran;
    }
 
@@ -83,6 +84,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCorFab(String corFab) {
+        markAsChanged("CORFAB", corFab);
         this.corFab = corFab;
    }
 
@@ -91,6 +93,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setDescrEmpParc(String descrEmpParc) {
+        markAsChanged("DESCR_EMP_PARC", descrEmpParc);
         this.descrEmpParc = descrEmpParc;
    }
 
@@ -99,6 +102,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setDistEixos(String distEixos) {
+        markAsChanged("DISTEIXOS", distEixos);
         this.distEixos = distEixos;
    }
 
@@ -107,6 +111,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setEmiteExped(String emiteExped) {
+        markAsChanged("EMITEEXPED", emiteExped);
         this.emiteExped = emiteExped;
    }
 
@@ -115,6 +120,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setEmpParc(String empParc) {
+        markAsChanged("EMPPARC", empParc);
         this.empParc = empParc;
    }
 
@@ -123,6 +129,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setEspecieTipo(String especieTipo) {
+        markAsChanged("ESPECIETIPO", especieTipo);
         this.especieTipo = especieTipo;
    }
 
@@ -131,6 +138,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setEspVei(BigDecimal espVei) {
+        markAsChanged("ESPVEI", espVei);
         this.espVei = espVei;
    }
 
@@ -139,6 +147,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -147,6 +156,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setMarcaModelo(String marcaModelo) {
+        markAsChanged("MARCAMODELO", marcaModelo);
         this.marcaModelo = marcaModelo;
    }
 
@@ -155,6 +165,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setMarcaPlaca(String marcaPlaca) {
+        markAsChanged("MARCAPLACA", marcaPlaca);
         this.marcaPlaca = marcaPlaca;
    }
 
@@ -163,6 +174,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setMaxLotacao(BigDecimal maxLotacao) {
+        markAsChanged("MAXLOTACAO", maxLotacao);
         this.maxLotacao = maxLotacao;
    }
 
@@ -171,6 +183,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setNumMotor(String numMotor) {
+        markAsChanged("NUMMOTOR", numMotor);
         this.numMotor = numMotor;
    }
 
@@ -179,6 +192,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -187,6 +201,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setPlaca(String placa) {
+        markAsChanged("PLACA", placa);
         this.placa = placa;
    }
 
@@ -195,6 +210,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setPotencia(String potencia) {
+        markAsChanged("POTENCIA", potencia);
         this.potencia = potencia;
    }
 
@@ -203,6 +219,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setProprio(String proprio) {
+        markAsChanged("PROPRIO", proprio);
         this.proprio = proprio;
    }
 
@@ -211,6 +228,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setRenavam(String renavam) {
+        markAsChanged("RENAVAM", renavam);
         this.renavam = renavam;
    }
 
@@ -219,6 +237,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setRestricao(BigDecimal restricao) {
+        markAsChanged("RESTRICAO", restricao);
         this.restricao = restricao;
    }
 
@@ -227,6 +246,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setSerial(String serial) {
+        markAsChanged("SERIAL", serial);
         this.serial = serial;
    }
 
@@ -235,6 +255,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipFormFrete(String tipFormFrete) {
+        markAsChanged("TIPFORMFRETE", tipFormFrete);
         this.tipFormFrete = tipFormFrete;
    }
 
@@ -243,6 +264,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipInt(String tipInt) {
+        markAsChanged("TIPINT", tipInt);
         this.tipInt = tipInt;
    }
 
@@ -251,6 +273,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -259,6 +282,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoCombust(BigDecimal tipoCombust) {
+        markAsChanged("TIPOCOMBUST", tipoCombust);
         this.tipoCombust = tipoCombust;
    }
 
@@ -267,6 +291,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipVei(BigDecimal tipVei) {
+        markAsChanged("TIPVEI", tipVei);
         this.tipVei = tipVei;
    }
 
@@ -275,6 +300,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setViaTransp(String viaTransp) {
+        markAsChanged("VIATRANSP", viaTransp);
         this.viaTransp = viaTransp;
    }
 
@@ -283,6 +309,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setVlrDeprecMensal(BigDecimal vlrDeprecMensal) {
+        markAsChanged("VLRDEPRECMENSAL", vlrDeprecMensal);
         this.vlrDeprecMensal = vlrDeprecMensal;
    }
 
@@ -291,6 +318,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setVlrSegMensal(BigDecimal vlrSegMensal) {
+        markAsChanged("VLRSEGMENSAL", vlrSegMensal);
         this.vlrSegMensal = vlrSegMensal;
    }
 
@@ -299,6 +327,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setVoltagem(String voltagem) {
+        markAsChanged("VOLTAGEM", voltagem);
         this.voltagem = voltagem;
    }
 
@@ -307,6 +336,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setAnoFabric(BigDecimal anoFabric) {
+        markAsChanged("ANOFABRIC", anoFabric);
         this.anoFabric = anoFabric;
    }
 
@@ -315,6 +345,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setAnoMod(BigDecimal anoMod) {
+        markAsChanged("ANOMOD", anoMod);
         this.anoMod = anoMod;
    }
 
@@ -323,6 +354,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setAntt(String antt) {
+        markAsChanged("ANTT", antt);
         this.antt = antt;
    }
 
@@ -331,6 +363,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -339,6 +372,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -347,6 +381,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -355,6 +390,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodQuest(BigDecimal codQuest) {
+        markAsChanged("CODQUEST", codQuest);
         this.codQuest = codQuest;
    }
 
@@ -363,6 +399,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -371,6 +408,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCombustivel(String combustivel) {
+        markAsChanged("COMBUSTIVEL", combustivel);
         this.combustivel = combustivel;
    }
 
@@ -379,6 +417,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCondVei(BigDecimal condVei) {
+        markAsChanged("CONDVEI", condVei);
         this.condVei = condVei;
    }
 
@@ -387,6 +426,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCondVin(String condVin) {
+        markAsChanged("CONDVIN", condVin);
         this.condVin = condVin;
    }
 
@@ -395,6 +435,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCor(String cor) {
+        markAsChanged("COR", cor);
         this.cor = cor;
    }
 
@@ -403,6 +444,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -411,6 +453,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setChassis(String chassis) {
+        markAsChanged("CHASSIS", chassis);
         this.chassis = chassis;
    }
 
@@ -419,6 +462,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCmKg(String cmKg) {
+        markAsChanged("CMKG", cmKg);
         this.cmKg = cmKg;
    }
 
@@ -427,6 +471,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -435,6 +480,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodEmpFolha(BigDecimal codEmpFolha) {
+        markAsChanged("CODEMPFOLHA", codEmpFolha);
         this.codEmpFolha = codEmpFolha;
    }
 
@@ -443,6 +489,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodFormFrete(BigDecimal codFormFrete) {
+        markAsChanged("CODFORMFRETE", codFormFrete);
         this.codFormFrete = codFormFrete;
    }
 
@@ -451,6 +498,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -459,6 +507,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodMarcaMod(BigDecimal codMarcaMod) {
+        markAsChanged("CODMARCAMOD", codMarcaMod);
         this.codMarcaMod = codMarcaMod;
    }
 
@@ -467,6 +516,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodMotorista(BigDecimal codMotorista) {
+        markAsChanged("CODMOTORISTA", codMotorista);
         this.codMotorista = codMotorista;
    }
 
@@ -475,6 +525,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTara(BigDecimal tara) {
+        markAsChanged("TARA", tara);
         this.tara = tara;
    }
 
@@ -483,6 +534,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoCar(String tipoCar) {
+        markAsChanged("TIPOCAR", tipoCar);
         this.tipoCar = tipoCar;
    }
 
@@ -491,6 +543,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoProp(String tipoProp) {
+        markAsChanged("TIPOPROP", tipoProp);
         this.tipoProp = tipoProp;
    }
 
@@ -499,6 +552,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoRod(String tipoRod) {
+        markAsChanged("TIPOROD", tipoRod);
         this.tipoRod = tipoRod;
    }
 
@@ -507,6 +561,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCapPotCil(String capPotCil) {
+        markAsChanged("CAPPOTCIL", capPotCil);
         this.capPotCil = capPotCil;
    }
 
@@ -515,6 +570,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCategoria(String categoria) {
+        markAsChanged("CATEGORIA", categoria);
         this.categoria = categoria;
    }
 
@@ -523,6 +579,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setAfericao(String afericao) {
+        markAsChanged("AFERICAO", afericao);
         this.afericao = afericao;
    }
 
@@ -531,6 +588,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -539,6 +597,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoAfericao(String tipoAfericao) {
+        markAsChanged("TIPOAFERICAO", tipoAfericao);
         this.tipoAfericao = tipoAfericao;
    }
 
@@ -547,6 +606,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodEmbarcacao(String codEmbarcacao) {
+        markAsChanged("CODEMBARCACAO", codEmbarcacao);
         this.codEmbarcacao = codEmbarcacao;
    }
 
@@ -555,6 +615,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setNomeEmbarcacao(String nomeEmbarcacao) {
+        markAsChanged("NOMEEMBARCACAO", nomeEmbarcacao);
         this.nomeEmbarcacao = nomeEmbarcacao;
    }
 
@@ -563,6 +624,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoEmbarcacao(BigDecimal tipoEmbarcacao) {
+        markAsChanged("TIPOEMBARCACAO", tipoEmbarcacao);
         this.tipoEmbarcacao = tipoEmbarcacao;
    }
 
@@ -571,6 +633,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setTipoVeiculo(String tipoVeiculo) {
+        markAsChanged("TIPOVEICULO", tipoVeiculo);
         this.tipoVeiculo = tipoVeiculo;
    }
 
@@ -579,6 +642,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    }
 
    public void setCodParcPropAntt(BigDecimal codParcPropAntt) {
+        markAsChanged("CODPARCPROPANTT", codParcPropAntt);
         this.codParcPropAntt = codParcPropAntt;
    }
 
@@ -594,6 +658,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
 
    @Override
    public Veiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.corDenatran = vo.asBigDecimal("CORDENATRAN");
         this.corFab = vo.asString("CORFAB");
         this.descrEmpParc = vo.asString("DESCR_EMP_PARC");

@@ -29,6 +29,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setArquivo(String arquivo) {
+        markAsChanged("ARQUIVO", arquivo);
         this.arquivo = arquivo;
    }
 
@@ -37,6 +38,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setAutomatico(String automatico) {
+        markAsChanged("AUTOMATICO", automatico);
         this.automatico = automatico;
    }
 
@@ -45,6 +47,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -53,6 +56,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setCodMaq(BigDecimal codMaq) {
+        markAsChanged("CODMAQ", codMaq);
         this.codMaq = codMaq;
    }
 
@@ -61,6 +65,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -69,6 +74,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setDiasAviso(BigDecimal diasAviso) {
+        markAsChanged("DIASAVISO", diasAviso);
         this.diasAviso = diasAviso;
    }
 
@@ -77,6 +83,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -85,6 +92,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setImpNota(String impNota) {
+        markAsChanged("IMPNOTA", impNota);
         this.impNota = impNota;
    }
 
@@ -93,6 +101,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setModNotaFis(BigDecimal modNotaFis) {
+        markAsChanged("MODNOTAFIS", modNotaFis);
         this.modNotaFis = modNotaFis;
    }
 
@@ -101,6 +110,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setNomeArq(String nomeArq) {
+        markAsChanged("NOMEARQ", nomeArq);
         this.nomeArq = nomeArq;
    }
 
@@ -109,6 +119,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setQtdAviso(BigDecimal qtdAviso) {
+        markAsChanged("QTDAVISO", qtdAviso);
         this.qtdAviso = qtdAviso;
    }
 
@@ -117,6 +128,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -125,6 +137,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setTipoImpressora(String tipoImpressora) {
+        markAsChanged("TIPOIMPRESSORA", tipoImpressora);
         this.tipoImpressora = tipoImpressora;
    }
 
@@ -133,6 +146,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setTotItensNota(BigDecimal totItensNota) {
+        markAsChanged("TOTITENSNOTA", totItensNota);
         this.totItensNota = totItensNota;
    }
 
@@ -141,6 +155,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setTotServNota(BigDecimal totServNota) {
+        markAsChanged("TOTSERVNOTA", totServNota);
         this.totServNota = totServNota;
    }
 
@@ -149,6 +164,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setUltCod(BigDecimal ultCod) {
+        markAsChanged("ULTCOD", ultCod);
         this.ultCod = ultCod;
    }
 
@@ -157,6 +173,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
    }
 
    public void setUltNotaTalao(BigDecimal ultNotaTalao) {
+        markAsChanged("ULTNOTATALAO", ultNotaTalao);
         this.ultNotaTalao = ultNotaTalao;
    }
 
@@ -172,6 +189,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
 
    @Override
    public ControleNumeracao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.automatico = vo.asString("AUTOMATICO");
         this.codEmp = vo.asBigDecimal("CODEMP");

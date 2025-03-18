@@ -45,6 +45,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setAfastamento(String afastamento) {
+        markAsChanged("AFASTAMENTO", afastamento);
         this.afastamento = afastamento;
    }
 
@@ -53,6 +54,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodAfaCausa(BigDecimal codAfaCausa) {
+        markAsChanged("CODAFACAUSA", codAfaCausa);
         this.codAfaCausa = codAfaCausa;
    }
 
@@ -61,6 +63,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodAfaRais(BigDecimal codAfaRais) {
+        markAsChanged("CODAFARAIS", codAfaRais);
         this.codAfaRais = codAfaRais;
    }
 
@@ -69,6 +72,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodAfast(String codAfast) {
+        markAsChanged("CODAFAST", codAfast);
         this.codAfast = codAfast;
    }
 
@@ -77,6 +81,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodHistOcor(BigDecimal codHistOcor) {
+        markAsChanged("CODHISTOCOR", codHistOcor);
         this.codHistOcor = codHistOcor;
    }
 
@@ -85,6 +90,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setDescrHistOcor(String descrHistOcor) {
+        markAsChanged("DESCRHISTOCOR", descrHistOcor);
         this.descrHistOcor = descrHistOcor;
    }
 
@@ -93,6 +99,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -101,6 +108,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setFalta(String falta) {
+        markAsChanged("FALTA", falta);
         this.falta = falta;
    }
 
@@ -109,6 +117,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setTipTab(String tipTab) {
+        markAsChanged("TIPTAB", tipTab);
         this.tipTab = tipTab;
    }
 
@@ -117,6 +126,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setAbateAvisoPrevio(String abateAvisoPrevio) {
+        markAsChanged("ABATEAVISOPREVIO", abateAvisoPrevio);
         this.abateAvisoPrevio = abateAvisoPrevio;
    }
 
@@ -125,6 +135,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setAbsentismo(String absentismo) {
+        markAsChanged("ABSENTEISMO", absentismo);
         this.absentismo = absentismo;
    }
 
@@ -133,6 +144,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setAnexoObrigatorio(String anexoObrigatorio) {
+        markAsChanged("ANEXOOBRIGATORIO", anexoObrigatorio);
         this.anexoObrigatorio = anexoObrigatorio;
    }
 
@@ -141,6 +153,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setAparecePortal(String aparecePortal) {
+        markAsChanged("APARECEPORTAL", aparecePortal);
         this.aparecePortal = aparecePortal;
    }
 
@@ -149,6 +162,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setApelido(String apelido) {
+        markAsChanged("APELIDO", apelido);
         this.apelido = apelido;
    }
 
@@ -157,6 +171,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setBaixaProvisao(String baixaProvisao) {
+        markAsChanged("BAIXAPROVISAO", baixaProvisao);
         this.baixaProvisao = baixaProvisao;
    }
 
@@ -165,6 +180,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodGrupoOco(BigDecimal codGrupoOco) {
+        markAsChanged("CODGRUPOOCO", codGrupoOco);
         this.codGrupoOco = codGrupoOco;
    }
 
@@ -173,6 +189,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCodMotAfast(String codMotAfast) {
+        markAsChanged("CODMOTAFAST", codMotAfast);
         this.codMotAfast = codMotAfast;
    }
 
@@ -181,6 +198,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCompNProg(String compNProg) {
+        markAsChanged("COMPNPROG", compNProg);
         this.compNProg = compNProg;
    }
 
@@ -189,6 +207,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setCor(String cor) {
+        markAsChanged("COR", cor);
         this.cor = cor;
    }
 
@@ -197,6 +216,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setDescartaOPonto(String descartaOPonto) {
+        markAsChanged("DESCARTAOPONTO", descartaOPonto);
         this.descartaOPonto = descartaOPonto;
    }
 
@@ -205,6 +225,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setDireitoAdn(String direitoAdn) {
+        markAsChanged("DIREITOADN", direitoAdn);
         this.direitoAdn = direitoAdn;
    }
 
@@ -213,6 +234,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setHrCompl(BigDecimal hrCompl) {
+        markAsChanged("HRCOMPL", hrCompl);
         this.hrCompl = hrCompl;
    }
 
@@ -221,6 +243,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setIndenizaEstab(String indenizaEstab) {
+        markAsChanged("INDENIZAESTAB", indenizaEstab);
         this.indenizaEstab = indenizaEstab;
    }
 
@@ -229,6 +252,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setOcorrenciaAfdt(String ocorrenciaAfdt) {
+        markAsChanged("OCORRENCIAAFDT", ocorrenciaAfdt);
         this.ocorrenciaAfdt = ocorrenciaAfdt;
    }
 
@@ -237,6 +261,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setQFerAfart133(String qFerAfart133) {
+        markAsChanged("QFERAFART133", qFerAfart133);
         this.qFerAfart133 = qFerAfart133;
    }
 
@@ -245,6 +270,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setQtdMesesEstab(BigDecimal qtdMesesEstab) {
+        markAsChanged("QTDMESESESTAB", qtdMesesEstab);
         this.qtdMesesEstab = qtdMesesEstab;
    }
 
@@ -253,6 +279,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setQuitaFerLicRem(String quitaFerLicRem) {
+        markAsChanged("QUITAFERLICREM", quitaFerLicRem);
         this.quitaFerLicRem = quitaFerLicRem;
    }
 
@@ -261,6 +288,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setReajSalSind(String reajSalSind) {
+        markAsChanged("REAJSALSIND", reajSalSind);
         this.reajSalSind = reajSalSind;
    }
 
@@ -269,6 +297,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setReduzDiasTrab(String reduzDiasTrab) {
+        markAsChanged("REDUZDIASTRAB", reduzDiasTrab);
         this.reduzDiasTrab = reduzDiasTrab;
    }
 
@@ -277,6 +306,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setSuspComResiduo(String suspComResiduo) {
+        markAsChanged("SUSPCOMRESIDUO", suspComResiduo);
         this.suspComResiduo = suspComResiduo;
    }
 
@@ -285,6 +315,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setTipReg(String tipReg) {
+        markAsChanged("TIPREG", tipReg);
         this.tipReg = tipReg;
    }
 
@@ -293,6 +324,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setUtilizaMotivo(String utilizaMotivo) {
+        markAsChanged("UTILIZAMOTIVO", utilizaMotivo);
         this.utilizaMotivo = utilizaMotivo;
    }
 
@@ -301,6 +333,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    }
 
    public void setDeduzDiasAviso(String deduzDiasAviso) {
+        markAsChanged("DEDUZDIASAVISO", deduzDiasAviso);
         this.deduzDiasAviso = deduzDiasAviso;
    }
 
@@ -316,6 +349,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
 
    @Override
    public HistoricoOcorrencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.afastamento = vo.asString("AFASTAMENTO");
         this.codAfaCausa = vo.asBigDecimal("CODAFACAUSA");
         this.codAfaRais = vo.asBigDecimal("CODAFARAIS");

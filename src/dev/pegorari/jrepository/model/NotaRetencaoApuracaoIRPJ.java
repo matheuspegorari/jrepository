@@ -24,6 +24,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -32,6 +33,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -40,6 +42,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setDtEntSai(Timestamp dtEntSai) {
+        markAsChanged("DTENTSAI", dtEntSai);
         this.dtEntSai = dtEntSai;
    }
 
@@ -48,6 +51,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -56,6 +60,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -64,6 +69,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -72,6 +78,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -80,6 +87,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -88,6 +96,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setVlrCsll(BigDecimal vlrCsll) {
+        markAsChanged("VLRCSLL", vlrCsll);
         this.vlrCsll = vlrCsll;
    }
 
@@ -96,6 +105,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setVlrIrpj(BigDecimal vlrIrpj) {
+        markAsChanged("VLRIRPJ", vlrIrpj);
         this.vlrIrpj = vlrIrpj;
    }
 
@@ -104,6 +114,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -112,6 +123,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    }
 
    public void setRetemIrpjCsll(String retemIrpjCsll) {
+        markAsChanged("RETEMIRPJCSLL", retemIrpjCsll);
         this.retemIrpjCsll = retemIrpjCsll;
    }
 
@@ -127,6 +139,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
 
    @Override
    public NotaRetencaoApuracaoIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtEntSai = vo.asTimestamp("DTENTSAI");

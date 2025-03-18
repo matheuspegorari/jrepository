@@ -17,6 +17,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    }
 
    public void setAlteradoPeloUsuario(String alteradoPeloUsuario) {
+        markAsChanged("ALTERADOPELOUSUARIO", alteradoPeloUsuario);
         this.alteradoPeloUsuario = alteradoPeloUsuario;
    }
 
@@ -25,6 +26,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -33,6 +35,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -41,6 +44,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -49,6 +53,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -64,6 +69,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
 
    @Override
    public SugestaoAcessoCartaoEvo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.alteradoPeloUsuario = vo.asString("ALTERADOPELOUSUARIO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

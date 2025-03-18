@@ -22,6 +22,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setAbvVar(String abvVar) {
+        markAsChanged("ABVVAR", abvVar);
         this.abvVar = abvVar;
    }
 
@@ -30,6 +31,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setIdAtb(BigDecimal idAtb) {
+        markAsChanged("IDATB", idAtb);
         this.idAtb = idAtb;
    }
 
@@ -38,6 +40,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setIdGrade(BigDecimal idGrade) {
+        markAsChanged("IDGRADE", idGrade);
         this.idGrade = idGrade;
    }
 
@@ -46,6 +49,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setIdVcl(BigDecimal idVcl) {
+        markAsChanged("IDVCL", idVcl);
         this.idVcl = idVcl;
    }
 
@@ -54,6 +58,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setNomVar(String nomVar) {
+        markAsChanged("NOMVAR", nomVar);
         this.nomVar = nomVar;
    }
 
@@ -62,6 +67,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setOrdCamp(BigDecimal ordCamp) {
+        markAsChanged("ORDCAMP", ordCamp);
         this.ordCamp = ordCamp;
    }
 
@@ -70,6 +76,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setPrmCpr(String prmCpr) {
+        markAsChanged("PRMCPR", prmCpr);
         this.prmCpr = prmCpr;
    }
 
@@ -78,6 +85,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setPrmVnd(String prmVnd) {
+        markAsChanged("PRMVND", prmVnd);
         this.prmVnd = prmVnd;
    }
 
@@ -86,6 +94,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -94,6 +103,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setAtuniversao(String atuniversao) {
+        markAsChanged("ATUNUVERSAO", atuniversao);
         this.atuniversao = atuniversao;
    }
 
@@ -102,6 +112,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -117,6 +128,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
 
    @Override
    public VariacaoDimensaoGrade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abvVar = vo.asString("ABVVAR");
         this.idAtb = vo.asBigDecimal("IDATB");
         this.idGrade = vo.asBigDecimal("IDGRADE");

@@ -295,6 +295,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTipMulta(String tipMulta) {
+        markAsChanged("TIPMULTA", tipMulta);
         this.tipMulta = tipMulta;
    }
 
@@ -303,6 +304,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrALiberar(BigDecimal vlrALiberar) {
+        markAsChanged("VLRALIBERAR", vlrALiberar);
         this.vlrALiberar = vlrALiberar;
    }
 
@@ -311,6 +313,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrAtual(BigDecimal vlrAtual) {
+        markAsChanged("VLRATUAL", vlrAtual);
         this.vlrAtual = vlrAtual;
    }
 
@@ -319,6 +322,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrBaixa(BigDecimal vlrBaixa) {
+        markAsChanged("VLRBAIXA", vlrBaixa);
         this.vlrBaixa = vlrBaixa;
    }
 
@@ -327,6 +331,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrCessao(BigDecimal vlrCessao) {
+        markAsChanged("VLRCESSAO", vlrCessao);
         this.vlrCessao = vlrCessao;
    }
 
@@ -335,6 +340,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -343,6 +349,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodUsuBaixa(BigDecimal codUsuBaixa) {
+        markAsChanged("CODUSUBAIXA", codUsuBaixa);
         this.codUsuBaixa = codUsuBaixa;
    }
 
@@ -351,6 +358,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -359,6 +367,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAgenciaCmc7(String agenciaCmc7) {
+        markAsChanged("AGENCIA_CMC7", agenciaCmc7);
         this.agenciaCmc7 = agenciaCmc7;
    }
 
@@ -367,6 +376,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -375,6 +385,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAtraso(BigDecimal atraso) {
+        markAsChanged("ATRASO", atraso);
         this.atraso = atraso;
    }
 
@@ -383,6 +394,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAutorizado(String autorizado) {
+        markAsChanged("AUTORIZADO", autorizado);
         this.autorizado = autorizado;
    }
 
@@ -391,6 +403,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -399,6 +412,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCarta(BigDecimal carta) {
+        markAsChanged("CARTA", carta);
         this.carta = carta;
    }
 
@@ -407,6 +421,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCartaoDesc(BigDecimal cartaoDesc) {
+        markAsChanged("CARTAODESC", cartaoDesc);
         this.cartaoDesc = cartaoDesc;
    }
 
@@ -415,6 +430,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCgcCpfCmc7(String cgcCpfCmc7) {
+        markAsChanged("CGC_CPF_CMC7", cgcCpfCmc7);
         this.cgcCpfCmc7 = cgcCpfCmc7;
    }
 
@@ -423,6 +439,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCgcCpfParc(String cgcCpfParc) {
+        markAsChanged("CGC_CPF_PARC", cgcCpfParc);
         this.cgcCpfParc = cgcCpfParc;
    }
 
@@ -431,6 +448,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setChaveCte(String chaveCte) {
+        markAsChanged("CHAVECTE", chaveCte);
         this.chaveCte = chaveCte;
    }
 
@@ -439,6 +457,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setChaveCteRef(String chaveCteRef) {
+        markAsChanged("CHAVECTEREF", chaveCteRef);
         this.chaveCteRef = chaveCteRef;
    }
 
@@ -447,6 +466,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -455,6 +475,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -463,6 +484,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodBcoCmc7(BigDecimal codBcoCmc7) {
+        markAsChanged("CODBCO_CMC7", codBcoCmc7);
         this.codBcoCmc7 = codBcoCmc7;
    }
 
@@ -471,6 +493,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCc(BigDecimal codCc) {
+        markAsChanged("CODCC", codCc);
         this.codCc = codCc;
    }
 
@@ -479,6 +502,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -487,6 +511,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCfo(BigDecimal codCfo) {
+        markAsChanged("CODCFO", codCfo);
         this.codCfo = codCfo;
    }
 
@@ -495,6 +520,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -503,6 +529,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -511,6 +538,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -519,6 +547,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodEmpBaixa(BigDecimal codEmpBaixa) {
+        markAsChanged("CODEMPBAIXA", codEmpBaixa);
         this.codEmpBaixa = codEmpBaixa;
    }
 
@@ -527,6 +556,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -535,6 +565,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodHistAc(BigDecimal codHistAc) {
+        markAsChanged("CODHISTAC", codHistAc);
         this.codHistAc = codHistAc;
    }
 
@@ -543,6 +574,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodigoBarra(String codigoBarra) {
+        markAsChanged("CODIGOBARRA", codigoBarra);
         this.codigoBarra = codigoBarra;
    }
 
@@ -551,6 +583,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodLanc(BigDecimal codLanc) {
+        markAsChanged("CODLANC", codLanc);
         this.codLanc = codLanc;
    }
 
@@ -559,6 +592,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -567,6 +601,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -575,6 +610,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -583,6 +619,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
+        markAsChanged("VLRDESC", vlrDesc);
         this.vlrDesc = vlrDesc;
    }
 
@@ -591,6 +628,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrDescEmbut(BigDecimal vlrDescEmbut) {
+        markAsChanged("VLRDESCEMBUT", vlrDescEmbut);
         this.vlrDescEmbut = vlrDescEmbut;
    }
 
@@ -599,6 +637,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrDesdob(BigDecimal vlrDesdob) {
+        markAsChanged("VLRDESDOB", vlrDesdob);
         this.vlrDesdob = vlrDesdob;
    }
 
@@ -607,6 +646,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrFatCartao(BigDecimal vlrFatCartao) {
+        markAsChanged("VLRFATCARTAO", vlrFatCartao);
         this.vlrFatCartao = vlrFatCartao;
    }
 
@@ -615,6 +655,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -623,6 +664,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrInss(BigDecimal vlrInss) {
+        markAsChanged("VLRINSS", vlrInss);
         this.vlrInss = vlrInss;
    }
 
@@ -631,6 +673,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrIrf(BigDecimal vlrIrf) {
+        markAsChanged("VLRIRF", vlrIrf);
         this.vlrIrf = vlrIrf;
    }
 
@@ -639,6 +682,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
+        markAsChanged("VLRISS", vlrIss);
         this.vlrIss = vlrIss;
    }
 
@@ -647,6 +691,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJuro(BigDecimal vlrJuro) {
+        markAsChanged("VLRJURO", vlrJuro);
         this.vlrJuro = vlrJuro;
    }
 
@@ -655,6 +700,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJuroCalc(BigDecimal vlrJuroCalc) {
+        markAsChanged("VLRJUROCALC", vlrJuroCalc);
         this.vlrJuroCalc = vlrJuroCalc;
    }
 
@@ -663,6 +709,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJuroEmbut(BigDecimal vlrJuroEmbut) {
+        markAsChanged("VLRJUROEMBUT", vlrJuroEmbut);
         this.vlrJuroEmbut = vlrJuroEmbut;
    }
 
@@ -671,6 +718,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJuroLib(BigDecimal vlrJuroLib) {
+        markAsChanged("VLRJUROLIB", vlrJuroLib);
         this.vlrJuroLib = vlrJuroLib;
    }
 
@@ -679,6 +727,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJuroNegoc(BigDecimal vlrJuroNegoc) {
+        markAsChanged("VLRJURONEGOC", vlrJuroNegoc);
         this.vlrJuroNegoc = vlrJuroNegoc;
    }
 
@@ -687,6 +736,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodParcMatriz(BigDecimal codParcMatriz) {
+        markAsChanged("CODPARCMATRIZ", codParcMatriz);
         this.codParcMatriz = codParcMatriz;
    }
 
@@ -695,6 +745,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -703,6 +754,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -711,6 +763,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodTipOperBaixa(BigDecimal codTipOperBaixa) {
+        markAsChanged("CODTIPOPERBAIXA", codTipOperBaixa);
         this.codTipOperBaixa = codTipOperBaixa;
    }
 
@@ -719,6 +772,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
+        markAsChanged("CODTIPTIT", codTipTit);
         this.codTipTit = codTipTit;
    }
 
@@ -727,6 +781,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setBaixaApi(String baixaApi) {
+        markAsChanged("BAIXAAPI", baixaApi);
         this.baixaApi = baixaApi;
    }
 
@@ -735,6 +790,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrLiquido(BigDecimal vlrLiquido) {
+        markAsChanged("VLRLIQUIDO", vlrLiquido);
         this.vlrLiquido = vlrLiquido;
    }
 
@@ -743,6 +799,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMoeda(BigDecimal vlrMoeda) {
+        markAsChanged("VLRMOEDA", vlrMoeda);
         this.vlrMoeda = vlrMoeda;
    }
 
@@ -751,6 +808,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMoedaBaixa(BigDecimal vlrMoedaBaixa) {
+        markAsChanged("VLRMOEDABAIXA", vlrMoedaBaixa);
         this.vlrMoedaBaixa = vlrMoedaBaixa;
    }
 
@@ -759,6 +817,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMulta(BigDecimal vlrMulta) {
+        markAsChanged("VLRMULTA", vlrMulta);
         this.vlrMulta = vlrMulta;
    }
 
@@ -767,6 +826,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMultaCalc(BigDecimal vlrMultaCalc) {
+        markAsChanged("VLRMULTACALC", vlrMultaCalc);
         this.vlrMultaCalc = vlrMultaCalc;
    }
 
@@ -775,6 +835,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMultaEmbut(BigDecimal vlrMultaEmbut) {
+        markAsChanged("VLRMULTAEMBUT", vlrMultaEmbut);
         this.vlrMultaEmbut = vlrMultaEmbut;
    }
 
@@ -783,6 +844,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMultaLib(BigDecimal vlrMultaLib) {
+        markAsChanged("VLRMULTALIB", vlrMultaLib);
         this.vlrMultaLib = vlrMultaLib;
    }
 
@@ -791,6 +853,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrMultaNegoc(BigDecimal vlrMultaNegoc) {
+        markAsChanged("VLRMULTANEGOC", vlrMultaNegoc);
         this.vlrMultaNegoc = vlrMultaNegoc;
    }
 
@@ -799,6 +862,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrProv(BigDecimal vlrProv) {
+        markAsChanged("VLRPROV", vlrProv);
         this.vlrProv = vlrProv;
    }
 
@@ -807,6 +871,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrTotalCalc(BigDecimal vlrTotalCalc) {
+        markAsChanged("VLRTOTALCALC", vlrTotalCalc);
         this.vlrTotalCalc = vlrTotalCalc;
    }
 
@@ -815,6 +880,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrTroco(BigDecimal vlrTroco) {
+        markAsChanged("VLRTROCO", vlrTroco);
         this.vlrTroco = vlrTroco;
    }
 
@@ -823,6 +889,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrVarCambial(BigDecimal vlrVarCambial) {
+        markAsChanged("VLRVARCAMBIAL", vlrVarCambial);
         this.vlrVarCambial = vlrVarCambial;
    }
 
@@ -831,6 +898,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrVendor(BigDecimal vlrVendor) {
+        markAsChanged("VLRVENDOR", vlrVendor);
         this.vlrVendor = vlrVendor;
    }
 
@@ -839,6 +907,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -847,6 +916,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSerieEntSafFix(String serieEntSafFix) {
+        markAsChanged("SERIEENTSAFFIX", serieEntSafFix);
         this.serieEntSafFix = serieEntSafFix;
    }
 
@@ -855,6 +925,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSerieNfdEs(String serieNfdEs) {
+        markAsChanged("SERIENFDES", serieNfdEs);
         this.serieNfdEs = serieNfdEs;
    }
 
@@ -863,6 +934,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -871,6 +943,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSerieNotaCompl(String serieNotaCompl) {
+        markAsChanged("SERIENOTACOMPL", serieNotaCompl);
         this.serieNotaCompl = serieNotaCompl;
    }
 
@@ -879,6 +952,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setStatusGnre(String statusGnre) {
+        markAsChanged("STATUSGNRE", statusGnre);
         this.statusGnre = statusGnre;
    }
 
@@ -887,6 +961,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRetornadoAc(String retornadoAc) {
+        markAsChanged("RETORNADOAC", retornadoAc);
         this.retornadoAc = retornadoAc;
    }
 
@@ -895,6 +970,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -903,6 +979,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setContabilizadoPdd(String contabilizadoPdd) {
+        markAsChanged("CONTABILIZADOPDD", contabilizadoPdd);
         this.contabilizadoPdd = contabilizadoPdd;
    }
 
@@ -911,6 +988,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setContaCmc7(String contaCmc7) {
+        markAsChanged("CONTA_CMC7", contaCmc7);
         this.contaCmc7 = contaCmc7;
    }
 
@@ -919,6 +997,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setStatusLib(BigDecimal statusLib) {
+        markAsChanged("STATUSLIB", statusLib);
         this.statusLib = statusLib;
    }
 
@@ -927,6 +1006,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTipJuro(String tipJuro) {
+        markAsChanged("TIPJURO", tipJuro);
         this.tipJuro = tipJuro;
    }
 
@@ -935,6 +1015,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTipMarcCheq(String tipMarcCheq) {
+        markAsChanged("TIPMARCCHEQ", tipMarcCheq);
         this.tipMarcCheq = tipMarcCheq;
    }
 
@@ -943,6 +1024,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrCheque(BigDecimal vlrCheque) {
+        markAsChanged("VLRCHEQUE", vlrCheque);
         this.vlrCheque = vlrCheque;
    }
 
@@ -951,6 +1033,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodUsuCobr(BigDecimal codUsuCobr) {
+        markAsChanged("CODUSUCOBR", codUsuCobr);
         this.codUsuCobr = codUsuCobr;
    }
 
@@ -959,6 +1042,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrDescCalc(BigDecimal vlrDescCalc) {
+        markAsChanged("VLRDESCCALC", vlrDescCalc);
         this.vlrDescCalc = vlrDescCalc;
    }
 
@@ -967,6 +1051,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setJurosAvp(BigDecimal jurosAvp) {
+        markAsChanged("JUROSAVP", jurosAvp);
         this.jurosAvp = jurosAvp;
    }
 
@@ -975,6 +1060,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRateadoCab(String rateadoCab) {
+        markAsChanged("RATEADOCAB", rateadoCab);
         this.rateadoCab = rateadoCab;
    }
 
@@ -983,6 +1069,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTpAgNfce(String tpAgNfce) {
+        markAsChanged("TPAGNFCE", tpAgNfce);
         this.tpAgNfce = tpAgNfce;
    }
 
@@ -991,6 +1078,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setValorPresente(BigDecimal valorPresente) {
+        markAsChanged("VALORPRESENTE", valorPresente);
         this.valorPresente = valorPresente;
    }
 
@@ -999,6 +1087,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCtaBcoBaixa(String ctaBcoBaixa) {
+        markAsChanged("CTABCOBAIXA", ctaBcoBaixa);
         this.ctaBcoBaixa = ctaBcoBaixa;
    }
 
@@ -1007,6 +1096,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDescAlineaCheqDev(String descAlineaCheqDev) {
+        markAsChanged("DESCALINEACHEQDEV", descAlineaCheqDev);
         this.descAlineaCheqDev = descAlineaCheqDev;
    }
 
@@ -1015,6 +1105,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDescrHistAc(String descrHistAc) {
+        markAsChanged("DESCRHISTAC", descrHistAc);
         this.descrHistAc = descrHistAc;
    }
 
@@ -1023,6 +1114,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDescrLancBco(String descrLancBco) {
+        markAsChanged("DESCRLANCBCO", descrLancBco);
         this.descrLancBco = descrLancBco;
    }
 
@@ -1031,6 +1123,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDesdobDupl(String desdobDupl) {
+        markAsChanged("DESDOBDUPL", desdobDupl);
         this.desdobDupl = desdobDupl;
    }
 
@@ -1039,6 +1132,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDesdobramento(String desdobramento) {
+        markAsChanged("DESDOBRAMENTO", desdobramento);
         this.desdobramento = desdobramento;
    }
 
@@ -1047,6 +1141,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDespCart(BigDecimal despCart) {
+        markAsChanged("DESPCART", despCart);
         this.despCart = despCart;
    }
 
@@ -1055,6 +1150,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhBaixa(Timestamp dhBaixa) {
+        markAsChanged("DHBAIXA", dhBaixa);
         this.dhBaixa = dhBaixa;
    }
 
@@ -1063,6 +1159,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhMov(Timestamp dhMov) {
+        markAsChanged("DHMOV", dhMov);
         this.dhMov = dhMov;
    }
 
@@ -1071,6 +1168,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhTipOper(Timestamp dhTipOper) {
+        markAsChanged("DHTIPOPER", dhTipOper);
         this.dhTipOper = dhTipOper;
    }
 
@@ -1079,6 +1177,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhTipOperBaixa(Timestamp dhTipOperBaixa) {
+        markAsChanged("DHTIPOPERBAIXA", dhTipOperBaixa);
         this.dhTipOperBaixa = dhTipOperBaixa;
    }
 
@@ -1087,6 +1186,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDigSafra(String digSafra) {
+        markAsChanged("DIGSAFRA", digSafra);
         this.digSafra = digSafra;
    }
 
@@ -1095,6 +1195,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -1103,6 +1204,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtBaixaPrev(Timestamp dtBaixaPrev) {
+        markAsChanged("DTBAIXAPREV", dtBaixaPrev);
         this.dtBaixaPrev = dtBaixaPrev;
    }
 
@@ -1111,6 +1213,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtContab(Timestamp dtContab) {
+        markAsChanged("DTCONTAB", dtContab);
         this.dtContab = dtContab;
    }
 
@@ -1119,6 +1222,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtContabBaixa(Timestamp dtContabBaixa) {
+        markAsChanged("DTCONTABBAIXA", dtContabBaixa);
         this.dtContabBaixa = dtContabBaixa;
    }
 
@@ -1127,6 +1231,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtEntSai(Timestamp dtEntSai) {
+        markAsChanged("DTENTSAI", dtEntSai);
         this.dtEntSai = dtEntSai;
    }
 
@@ -1135,6 +1240,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -1143,6 +1249,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtNegFilter(Timestamp dtNegFilter) {
+        markAsChanged("DTNEGFILTER", dtNegFilter);
         this.dtNegFilter = dtNegFilter;
    }
 
@@ -1151,6 +1258,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtVenc(Timestamp dtVenc) {
+        markAsChanged("DTVENC", dtVenc);
         this.dtVenc = dtVenc;
    }
 
@@ -1159,6 +1267,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtVencInic(Timestamp dtVencInic) {
+        markAsChanged("DTVENCINIC", dtVencInic);
         this.dtVencInic = dtVencInic;
    }
 
@@ -1167,6 +1276,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setHistorico(String historico) {
+        markAsChanged("HISTORICO", historico);
         this.historico = historico;
    }
 
@@ -1175,6 +1285,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setBloqVar(String bloqVar) {
+        markAsChanged("BLOQVAR", bloqVar);
         this.bloqVar = bloqVar;
    }
 
@@ -1183,6 +1294,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIdLoteFdic(BigDecimal idLoteFdic) {
+        markAsChanged("IDLOTEFDIC", idLoteFdic);
         this.idLoteFdic = idLoteFdic;
    }
 
@@ -1191,6 +1303,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setInssRetido(String inssRetido) {
+        markAsChanged("INSSRETIDO", inssRetido);
         this.inssRetido = inssRetido;
    }
 
@@ -1199,6 +1312,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIrfRetido(String irfRetido) {
+        markAsChanged("IRFRETIDO", irfRetido);
         this.irfRetido = irfRetido;
    }
 
@@ -1207,6 +1321,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIssRetido(String issRetido) {
+        markAsChanged("ISSRETIDO", issRetido);
         this.issRetido = issRetido;
    }
 
@@ -1215,6 +1330,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setLinhaDigitavel(String linhaDigitavel) {
+        markAsChanged("LINHADIGITAVEL", linhaDigitavel);
         this.linhaDigitavel = linhaDigitavel;
    }
 
@@ -1223,6 +1339,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setM2(BigDecimal m2) {
+        markAsChanged("M2", m2);
         this.m2 = m2;
    }
 
@@ -1231,6 +1348,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setModeloNfdEs(String modeloNfdEs) {
+        markAsChanged("MODELONFDES", modeloNfdEs);
         this.modeloNfdEs = modeloNfdEs;
    }
 
@@ -1239,6 +1357,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setMostrarEneg(String mostrarEneg) {
+        markAsChanged("MOSTRARENEG", mostrarEneg);
         this.mostrarEneg = mostrarEneg;
    }
 
@@ -1247,6 +1366,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNaturezaOperDes(String naturezaOperDes) {
+        markAsChanged("NATUREZAOPERDES", naturezaOperDes);
         this.naturezaOperDes = naturezaOperDes;
    }
 
@@ -1255,6 +1375,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNfComplFix(BigDecimal nfComplFix) {
+        markAsChanged("NFCOMPLFIX", nfComplFix);
         this.nfComplFix = nfComplFix;
    }
 
@@ -1263,6 +1384,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNfEntSeqFix(String nfEntSeqFix) {
+        markAsChanged("NFENTSEQFIX", nfEntSeqFix);
         this.nfEntSeqFix = nfEntSeqFix;
    }
 
@@ -1271,6 +1393,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNomeEmitenteCmc7(String nomeEmitenteCmc7) {
+        markAsChanged("NOMEEMITENTE_CMC7", nomeEmitenteCmc7);
         this.nomeEmitenteCmc7 = nomeEmitenteCmc7;
    }
 
@@ -1279,6 +1402,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNossoNum(String nossoNum) {
+        markAsChanged("NOSSONUM", nossoNum);
         this.nossoNum = nossoNum;
    }
 
@@ -1287,6 +1411,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNroCessaoFdic(String nroCessaoFdic) {
+        markAsChanged("NROCESSAOFDIC", nroCessaoFdic);
         this.nroCessaoFdic = nroCessaoFdic;
    }
 
@@ -1295,6 +1420,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNroLoteGnre(BigDecimal nroLoteGnre) {
+        markAsChanged("NROLOTEGNRE", nroLoteGnre);
         this.nroLoteGnre = nroLoteGnre;
    }
 
@@ -1303,6 +1429,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuApon(BigDecimal nuApon) {
+        markAsChanged("NUAPONTA", nuApon);
         this.nuApon = nuApon;
    }
 
@@ -1311,6 +1438,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuBco(BigDecimal nuBco) {
+        markAsChanged("NUBCO", nuBco);
         this.nuBco = nuBco;
    }
 
@@ -1319,6 +1447,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuCcr(BigDecimal nuCcr) {
+        markAsChanged("NUCCR", nuCcr);
         this.nuCcr = nuCcr;
    }
 
@@ -1327,6 +1456,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuCompens(BigDecimal nuCompens) {
+        markAsChanged("NUCOMPENS", nuCompens);
         this.nuCompens = nuCompens;
    }
 
@@ -1335,6 +1465,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuDev(BigDecimal nuDev) {
+        markAsChanged("NUDEV", nuDev);
         this.nuDev = nuDev;
    }
 
@@ -1343,6 +1474,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -1351,6 +1483,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuFtc(BigDecimal nuFtc) {
+        markAsChanged("NUFTC", nuFtc);
         this.nuFtc = nuFtc;
    }
 
@@ -1359,6 +1492,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumBor(BigDecimal numBor) {
+        markAsChanged("NUMBOR", numBor);
         this.numBor = numBor;
    }
 
@@ -1367,6 +1501,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumComplFix(BigDecimal numComplFix) {
+        markAsChanged("NUMCOMPLFIX", numComplFix);
         this.numComplFix = numComplFix;
    }
 
@@ -1375,6 +1510,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -1383,6 +1519,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumDupl(BigDecimal numDupl) {
+        markAsChanged("NUMDUPL", numDupl);
         this.numDupl = numDupl;
    }
 
@@ -1391,6 +1528,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumEntSafFix(BigDecimal numEntSafFix) {
+        markAsChanged("NUMENTSAFFIX", numEntSafFix);
         this.numEntSafFix = numEntSafFix;
    }
 
@@ -1399,6 +1537,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumNfse(String numNfse) {
+        markAsChanged("NUMNFSE", numNfse);
         this.numNfse = numNfse;
    }
 
@@ -1407,6 +1546,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -1415,6 +1555,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -1423,6 +1564,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumRemessa(BigDecimal numRemessa) {
+        markAsChanged("NUMREMESSA", numRemessa);
         this.numRemessa = numRemessa;
    }
 
@@ -1431,6 +1573,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumTransf(BigDecimal numTransf) {
+        markAsChanged("NUMTRANSF", numTransf);
         this.numTransf = numTransf;
    }
 
@@ -1439,6 +1582,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -1447,6 +1591,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuPed(BigDecimal nuPed) {
+        markAsChanged("NUPED", nuPed);
         this.nuPed = nuPed;
    }
 
@@ -1455,6 +1600,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuReneg(BigDecimal nuReneg) {
+        markAsChanged("NURENEG", nuReneg);
         this.nuReneg = nuReneg;
    }
 
@@ -1463,6 +1609,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setObservacaoAc(String observacaoAc) {
+        markAsChanged("OBSERVACAOAC", observacaoAc);
         this.observacaoAc = observacaoAc;
    }
 
@@ -1471,6 +1618,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -1479,6 +1627,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -1487,6 +1636,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setParcReneg(String parcReneg) {
+        markAsChanged("PARCRENEG", parcReneg);
         this.parcReneg = parcReneg;
    }
 
@@ -1495,6 +1645,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPdd(String pdd) {
+        markAsChanged("PDD", pdd);
         this.pdd = pdd;
    }
 
@@ -1503,6 +1654,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPertenceAc(String pertenceAc) {
+        markAsChanged("PERTENCEAC", pertenceAc);
         this.pertenceAc = pertenceAc;
    }
 
@@ -1511,6 +1663,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPrazo(BigDecimal prazo) {
+        markAsChanged("PRAZO", prazo);
         this.prazo = prazo;
    }
 
@@ -1519,6 +1672,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setProvisao(String provisao) {
+        markAsChanged("PROVISAO", provisao);
         this.provisao = provisao;
    }
 
@@ -1527,6 +1681,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRateado(String rateado) {
+        markAsChanged("RATEADO", rateado);
         this.rateado = rateado;
    }
 
@@ -1535,6 +1690,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -1543,6 +1699,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRecDespFilter(String recDespFilter) {
+        markAsChanged("RECDESPFILTER", recDespFilter);
         this.recDespFilter = recDespFilter;
    }
 
@@ -1551,6 +1708,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRejeicaoGnre(String rejeicaoGnre) {
+        markAsChanged("REJEICAOGNRE", rejeicaoGnre);
         this.rejeicaoGnre = rejeicaoGnre;
    }
 
@@ -1559,6 +1717,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setChequeRastreadoCmc7(String chequeRastreadoCmc7) {
+        markAsChanged("CHEQUERASTREADO_CMC7", chequeRastreadoCmc7);
         this.chequeRastreadoCmc7 = chequeRastreadoCmc7;
    }
 
@@ -1567,6 +1726,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodIptu(BigDecimal codIptu) {
+        markAsChanged("CODIPTU", codIptu);
         this.codIptu = codIptu;
    }
 
@@ -1575,6 +1735,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodRegua(BigDecimal codRegua) {
+        markAsChanged("CODREGUA", codRegua);
         this.codRegua = codRegua;
    }
 
@@ -1583,6 +1744,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIdUnico(BigDecimal idUnico) {
+        markAsChanged("IDUNICO", idUnico);
         this.idUnico = idUnico;
    }
 
@@ -1591,6 +1753,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuChq(BigDecimal nuChq) {
+        markAsChanged("NUCHQ", nuChq);
         this.nuChq = nuChq;
    }
 
@@ -1599,6 +1762,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSeqCaixa(BigDecimal seqCaixa) {
+        markAsChanged("SEQCAIXA", seqCaixa);
         this.seqCaixa = seqCaixa;
    }
 
@@ -1607,6 +1771,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimBloqueada(String timBloqueada) {
+        markAsChanged("TIMBLOQUEADA", timBloqueada);
         this.timBloqueada = timBloqueada;
    }
 
@@ -1615,6 +1780,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimContaLanc(BigDecimal timContaLanc) {
+        markAsChanged("TIMCONTALANC", timContaLanc);
         this.timContaLanc = timContaLanc;
    }
 
@@ -1623,6 +1789,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimContaRep(BigDecimal timContaRep) {
+        markAsChanged("TIMCONTAREP", timContaRep);
         this.timContaRep = timContaRep;
    }
 
@@ -1631,6 +1798,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimContratoAdm(BigDecimal timContratoAdm) {
+        markAsChanged("TIMCONTRATOADM", timContratoAdm);
         this.timContratoAdm = timContratoAdm;
    }
 
@@ -1639,6 +1807,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimContratoLoc(BigDecimal timContratoLoc) {
+        markAsChanged("TIMCONTRATOLOC", timContratoLoc);
         this.timContratoLoc = timContratoLoc;
    }
 
@@ -1647,6 +1816,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimContratoLtv(BigDecimal timContratoLtv) {
+        markAsChanged("TIMCONTRATOLTV", timContratoLtv);
         this.timContratoLtv = timContratoLtv;
    }
 
@@ -1655,6 +1825,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDataDeJur(Timestamp timDataDeJur) {
+        markAsChanged("TIMDATADEJUR", timDataDeJur);
         this.timDataDeJur = timDataDeJur;
    }
 
@@ -1663,6 +1834,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDhBaixa(Timestamp timDhBaixa) {
+        markAsChanged("TIMDHBAIXA", timDhBaixa);
         this.timDhBaixa = timDhBaixa;
    }
 
@@ -1671,6 +1843,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDhGerRepasse(Timestamp timDhGerRepasse) {
+        markAsChanged("TIMDHGERREPASSE", timDhGerRepasse);
         this.timDhGerRepasse = timDhGerRepasse;
    }
 
@@ -1679,6 +1852,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDhGerRepParcial(Timestamp timDhGerRepParcial) {
+        markAsChanged("TIMDHGERREPPARCIAL", timDhGerRepParcial);
         this.timDhGerRepParcial = timDhGerRepParcial;
    }
 
@@ -1687,6 +1861,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDtImpBol(Timestamp timDtImpBol) {
+        markAsChanged("TIMDTIMPBOL", timDtImpBol);
         this.timDtImpBol = timDtImpBol;
    }
 
@@ -1695,6 +1870,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDtImpBolLocal(Timestamp timDtImpBolLocal) {
+        markAsChanged("TIMDTIMPBOLLOCAL", timDtImpBolLocal);
         this.timDtImpBolLocal = timDtImpBolLocal;
    }
 
@@ -1703,6 +1879,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDtRepasse(Timestamp timDtRepasse) {
+        markAsChanged("TIMDTREPASSE", timDtRepasse);
         this.timDtRepasse = timDtRepasse;
    }
 
@@ -1711,6 +1888,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimDtRepParcial(Timestamp timDtRepParcial) {
+        markAsChanged("TIMDTREPPARCIAL", timDtRepParcial);
         this.timDtRepParcial = timDtRepParcial;
    }
 
@@ -1719,6 +1897,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimEstagio(String timEstagio) {
+        markAsChanged("TIMESTAGIO", timEstagio);
         this.timEstagio = timEstagio;
    }
 
@@ -1727,6 +1906,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimFechamento(BigDecimal timFechamento) {
+        markAsChanged("TIMFECHAMENTO", timFechamento);
         this.timFechamento = timFechamento;
    }
 
@@ -1735,6 +1915,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimFechamentoAlu(BigDecimal timFechamentoAlu) {
+        markAsChanged("TIMFECHAMENTOALU", timFechamentoAlu);
         this.timFechamentoAlu = timFechamentoAlu;
    }
 
@@ -1743,6 +1924,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimFinGarantOrig(BigDecimal timFinGarantOrig) {
+        markAsChanged("TIMFINGARANTORIG", timFinGarantOrig);
         this.timFinGarantOrig = timFinGarantOrig;
    }
 
@@ -1751,6 +1933,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimImovel(BigDecimal timImovel) {
+        markAsChanged("TIMIMOVEL", timImovel);
         this.timImovel = timImovel;
    }
 
@@ -1759,6 +1942,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimNegociacao(BigDecimal timNegociacao) {
+        markAsChanged("TIMNEGOCIACAO", timNegociacao);
         this.timNegociacao = timNegociacao;
    }
 
@@ -1767,6 +1951,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimNomeAdvogado(String timNomeAdvogado) {
+        markAsChanged("TIMNOMEADVOGADO", timNomeAdvogado);
         this.timNomeAdvogado = timNomeAdvogado;
    }
 
@@ -1775,6 +1960,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimNuFinOrig(BigDecimal timNuFinOrig) {
+        markAsChanged("TIMNUFINORIG", timNuFinOrig);
         this.timNuFinOrig = timNuFinOrig;
    }
 
@@ -1783,6 +1969,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimNumReg(BigDecimal timNumReg) {
+        markAsChanged("TIMNUMREG", timNumReg);
         this.timNumReg = timNumReg;
    }
 
@@ -1791,6 +1978,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimOrigem(String timOrigem) {
+        markAsChanged("TIMORIGEM", timOrigem);
         this.timOrigem = timOrigem;
    }
 
@@ -1799,6 +1987,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimOrigReneg(String timOrigReneg) {
+        markAsChanged("TIMORIGRENEG", timOrigReneg);
         this.timOrigReneg = timOrigReneg;
    }
 
@@ -1807,6 +1996,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimParcela(BigDecimal timParcela) {
+        markAsChanged("TIMPARCELA", timParcela);
         this.timParcela = timParcela;
    }
 
@@ -1815,6 +2005,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRenegCancLote(BigDecimal timRenegCancLote) {
+        markAsChanged("TIMRENEGCANCLOTE", timRenegCancLote);
         this.timRenegCancLote = timRenegCancLote;
    }
 
@@ -1823,6 +2014,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRenegImv(BigDecimal timRenegImv) {
+        markAsChanged("TIMRENEGIMV", timRenegImv);
         this.timRenegImv = timRenegImv;
    }
 
@@ -1831,6 +2023,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRenegLote(BigDecimal timRenegLote) {
+        markAsChanged("TIMRENEGLOTE", timRenegLote);
         this.timRenegLote = timRenegLote;
    }
 
@@ -1839,6 +2032,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRepInteligente(BigDecimal timRepInteligente) {
+        markAsChanged("TIMREPINTELIGENTE", timRepInteligente);
         this.timRepInteligente = timRepInteligente;
    }
 
@@ -1847,6 +2041,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRepParcial(String timRepParcial) {
+        markAsChanged("TIMREPPARCIAL", timRepParcial);
         this.timRepParcial = timRepParcial;
    }
 
@@ -1855,6 +2050,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRescisaoLoc(BigDecimal timRescisaoLoc) {
+        markAsChanged("TIMRESCISAOLOC", timRescisaoLoc);
         this.timRescisaoLoc = timRescisaoLoc;
    }
 
@@ -1863,6 +2059,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimRescisaoLtv(BigDecimal timRescisaoLtv) {
+        markAsChanged("TIMRESCISAOLTV", timRescisaoLtv);
         this.timRescisaoLtv = timRescisaoLtv;
    }
 
@@ -1871,6 +2068,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimTipoIntermed(BigDecimal timTipoIntermed) {
+        markAsChanged("TIMTIPOINTERMED", timTipoIntermed);
         this.timTipoIntermed = timTipoIntermed;
    }
 
@@ -1879,6 +2077,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimTxAdmGeralU(String timTxAdmGeralU) {
+        markAsChanged("TIMTXADMGERALU", timTxAdmGeralU);
         this.timTxAdmGeralU = timTxAdmGeralU;
    }
 
@@ -1887,6 +2086,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVendaImv(BigDecimal timVendaImv) {
+        markAsChanged("TIMVENDAIMV", timVendaImv);
         this.timVendaImv = timVendaImv;
    }
 
@@ -1895,6 +2095,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVendaLote(BigDecimal timVendaLote) {
+        markAsChanged("TIMVENDALOTE", timVendaLote);
         this.timVendaLote = timVendaLote;
    }
 
@@ -1903,6 +2104,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVlrAluguel(BigDecimal timVlrAluguel) {
+        markAsChanged("TIMVLRALUGUEL", timVlrAluguel);
         this.timVlrAluguel = timVlrAluguel;
    }
 
@@ -1911,6 +2113,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVlrAmortContrato(BigDecimal timVlrAmortContrato) {
+        markAsChanged("TIMVLRAMORTCONTRATO", timVlrAmortContrato);
         this.timVlrAmortContrato = timVlrAmortContrato;
    }
 
@@ -1919,6 +2122,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVlrCorrMonet(BigDecimal timVlrCorrMonet) {
+        markAsChanged("TIMVLRCORRMONET", timVlrCorrMonet);
         this.timVlrCorrMonet = timVlrCorrMonet;
    }
 
@@ -1927,6 +2131,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimVlrJuroContrato(BigDecimal timVlrJuroContrato) {
+        markAsChanged("TIMVLRJUROCONTRATO", timVlrJuroContrato);
         this.timVlrJuroContrato = timVlrJuroContrato;
    }
 
@@ -1935,6 +2140,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
+        markAsChanged("CODOBSPADRAO", codObsPadrao);
         this.codObsPadrao = codObsPadrao;
    }
 
@@ -1943,6 +2149,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTimSac(BigDecimal timSac) {
+        markAsChanged("TIMSAC", timSac);
         this.timSac = timSac;
    }
 
@@ -1951,6 +2158,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAbatimentoCan(BigDecimal abatimentoCan) {
+        markAsChanged("ABATIMENTOCAN", abatimentoCan);
         this.abatimentoCan = abatimentoCan;
    }
 
@@ -1959,6 +2167,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAbatimento(BigDecimal abatimento) {
+        markAsChanged("ABATIMENTO", abatimento);
         this.abatimento = abatimento;
    }
 
@@ -1967,6 +2176,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodImovelRural(BigDecimal codImovelRural) {
+        markAsChanged("CODIMOVELRURAL", codImovelRural);
         this.codImovelRural = codImovelRural;
    }
 
@@ -1975,6 +2185,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRecAdiantamentoRural(String recAdiantamentoRural) {
+        markAsChanged("RECADIANTAMENTORURAL", recAdiantamentoRural);
         this.recAdiantamentoRural = recAdiantamentoRural;
    }
 
@@ -1983,6 +2194,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtPrazo(Timestamp dtPrazo) {
+        markAsChanged("DTPRAZO", dtPrazo);
         this.dtPrazo = dtPrazo;
    }
 
@@ -1991,6 +2203,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setBaseIrf(BigDecimal baseIrf) {
+        markAsChanged("BASEIRF", baseIrf);
         this.baseIrf = baseIrf;
    }
 
@@ -1999,6 +2212,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setBaseInss(BigDecimal baseInss) {
+        markAsChanged("BASEINSS", baseInss);
         this.baseInss = baseInss;
    }
 
@@ -2007,6 +2221,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setClassifCessaoObra(BigDecimal classifCessaoObra) {
+        markAsChanged("CLASSIFCESSAOOBRA", classifCessaoObra);
         this.classifCessaoObra = classifCessaoObra;
    }
 
@@ -2015,6 +2230,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCbe(BigDecimal codCbe) {
+        markAsChanged("CODCBE", codCbe);
         this.codCbe = codCbe;
    }
 
@@ -2023,6 +2239,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCidFimCte(BigDecimal codCidFimCte) {
+        markAsChanged("CODCIDFIMCTE", codCidFimCte);
         this.codCidFimCte = codCidFimCte;
    }
 
@@ -2031,6 +2248,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodCidIniCte(BigDecimal codCidIniCte) {
+        markAsChanged("CODCIDINICTE", codCidIniCte);
         this.codCidIniCte = codCidIniCte;
    }
 
@@ -2039,6 +2257,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -2047,6 +2266,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodObra(String codObra) {
+        markAsChanged("CODOBRA", codObra);
         this.codObra = codObra;
    }
 
@@ -2055,6 +2275,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodTrib(BigDecimal codTrib) {
+        markAsChanged("CODTRIB", codTrib);
         this.codTrib = codTrib;
    }
 
@@ -2063,6 +2284,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCustasProcessuais(String custasProcessuais) {
+        markAsChanged("CUSTASPROCESSUAIS", custasProcessuais);
         this.custasProcessuais = custasProcessuais;
    }
 
@@ -2071,6 +2293,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDepositoJudicial(String depositoJudicial) {
+        markAsChanged("DEPOSITOJUDICIAL", depositoJudicial);
         this.depositoJudicial = depositoJudicial;
    }
 
@@ -2079,6 +2302,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDespAdvogado(String despAdvogado) {
+        markAsChanged("DESPADVOGADO", despAdvogado);
         this.despAdvogado = despAdvogado;
    }
 
@@ -2087,6 +2311,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setExigeIssqn(String exigeIssqn) {
+        markAsChanged("EXIGEISSQN", exigeIssqn);
         this.exigeIssqn = exigeIssqn;
    }
 
@@ -2095,6 +2320,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setMotNaoReterIssqn(String motNaoReterIssqn) {
+        markAsChanged("MOTNAORETERISSQN", motNaoReterIssqn);
         this.motNaoReterIssqn = motNaoReterIssqn;
    }
 
@@ -2103,6 +2329,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumProcAdmJudic(String numProcAdmJudic) {
+        markAsChanged("NUMPROCADMJUDIC", numProcAdmJudic);
         this.numProcAdmJudic = numProcAdmJudic;
    }
 
@@ -2111,6 +2338,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setObraConstCivil(BigDecimal obraConstCivil) {
+        markAsChanged("OBRACONSTCIVIL", obraConstCivil);
         this.obraConstCivil = obraConstCivil;
    }
 
@@ -2119,6 +2347,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRegEspTribut(String regEspTribut) {
+        markAsChanged("REGESPTRIBUT", regEspTribut);
         this.regEspTribut = regEspTribut;
    }
 
@@ -2127,6 +2356,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSitEspecialResp(String sitEspecialResp) {
+        markAsChanged("SITESPECIALRESP", sitEspecialResp);
         this.sitEspecialResp = sitEspecialResp;
    }
 
@@ -2135,6 +2365,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRecebCartao(String recebCartao) {
+        markAsChanged("RECEBCARTAO", recebCartao);
         this.recebCartao = recebCartao;
    }
 
@@ -2143,6 +2374,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrJurosMaisMulta(BigDecimal vlrJurosMaisMulta) {
+        markAsChanged("VLRJUROSMAISMULTA", vlrJurosMaisMulta);
         this.vlrJurosMaisMulta = vlrJurosMaisMulta;
    }
 
@@ -2151,6 +2383,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAtrasoInicial(BigDecimal atrasoInicial) {
+        markAsChanged("ATRASOINICIAL", atrasoInicial);
         this.atrasoInicial = atrasoInicial;
    }
 
@@ -2159,6 +2392,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPrazoInicial(BigDecimal prazoInicial) {
+        markAsChanged("PRAZOINICIAL", prazoInicial);
         this.prazoInicial = prazoInicial;
    }
 
@@ -2167,6 +2401,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -2175,6 +2410,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setMonioCorEm(String monioCorEm) {
+        markAsChanged("MONIOCOREM", monioCorEm);
         this.monioCorEm = monioCorEm;
    }
 
@@ -2183,6 +2419,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuCkc(BigDecimal nuCkc) {
+        markAsChanged("NUCKC", nuCkc);
         this.nuCkc = nuCkc;
    }
 
@@ -2191,6 +2428,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setChaveNfeGnre(String chaveNfeGnre) {
+        markAsChanged("CHAVENFEGNRE", chaveNfeGnre);
         this.chaveNfeGnre = chaveNfeGnre;
    }
 
@@ -2199,6 +2437,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIndReceFdCont(String indReceFdCont) {
+        markAsChanged("INDRECEFDCONT", indReceFdCont);
         this.indReceFdCont = indReceFdCont;
    }
 
@@ -2207,6 +2446,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setInfCompleFdCont(String infCompleFdCont) {
+        markAsChanged("INFCOMPLEFDCONT", infCompleFdCont);
         this.infCompleFdCont = infCompleFdCont;
    }
 
@@ -2215,6 +2455,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setConciliado(String conciliado) {
+        markAsChanged("CONCILIADO", conciliado);
         this.conciliado = conciliado;
    }
 
@@ -2223,6 +2464,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhConcil(Timestamp dhConcil) {
+        markAsChanged("DHCONCIL", dhConcil);
         this.dhConcil = dhConcil;
    }
 
@@ -2231,6 +2473,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setEmvPix(String emvPix) {
+        markAsChanged("EMVPIX", emvPix);
         this.emvPix = emvPix;
    }
 
@@ -2239,6 +2482,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setChavePix(String chavePix) {
+        markAsChanged("CHAVEPIX", chavePix);
         this.chavePix = chavePix;
    }
 
@@ -2247,6 +2491,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtInitRefApuracao(Timestamp dtInitRefApuracao) {
+        markAsChanged("DTINITREFAPURACAO", dtInitRefApuracao);
         this.dtInitRefApuracao = dtInitRefApuracao;
    }
 
@@ -2255,6 +2500,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setIdTransacaoPix(String idTransacaoPix) {
+        markAsChanged("IDTRANSACAOPIX", idTransacaoPix);
         this.idTransacaoPix = idTransacaoPix;
    }
 
@@ -2263,6 +2509,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSubTipoVenda(BigDecimal subTipoVenda) {
+        markAsChanged("SUBTIPOVENDA", subTipoVenda);
         this.subTipoVenda = subTipoVenda;
    }
 
@@ -2271,6 +2518,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTrocoPdv(BigDecimal trocoPdv) {
+        markAsChanged("TROCOPDV", trocoPdv);
         this.trocoPdv = trocoPdv;
    }
 
@@ -2279,6 +2527,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTipApuracao(String tipApuracao) {
+        markAsChanged("TIPAPURACAO", tipApuracao);
         this.tipApuracao = tipApuracao;
    }
 
@@ -2287,6 +2536,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDescrTpagNfce(String descrTpagNfce) {
+        markAsChanged("DESCRTPAGNFCE", descrTpagNfce);
         this.descrTpagNfce = descrTpagNfce;
    }
 
@@ -2295,6 +2545,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtAntecipacao(Timestamp dtAntecipacao) {
+        markAsChanged("DTANTECIPACAO", dtAntecipacao);
         this.dtAntecipacao = dtAntecipacao;
    }
 
@@ -2303,6 +2554,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuAntBanc(BigDecimal nuAntBanc) {
+        markAsChanged("NUANTBANC", nuAntBanc);
         this.nuAntBanc = nuAntBanc;
    }
 
@@ -2311,6 +2563,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setAntecipado(String antecipado) {
+        markAsChanged("ANTECIPADO", antecipado);
         this.antecipado = antecipado;
    }
 
@@ -2319,6 +2572,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtEntSaiInfo(Timestamp dtEntSaiInfo) {
+        markAsChanged("DTENTSAIINFO", dtEntSaiInfo);
         this.dtEntSaiInfo = dtEntSaiInfo;
    }
 
@@ -2327,6 +2581,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrGnreDois(BigDecimal vlrGnreDois) {
+        markAsChanged("VLRGNREDOIS", vlrGnreDois);
         this.vlrGnreDois = vlrGnreDois;
    }
 
@@ -2335,6 +2590,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRecebido(String recebido) {
+        markAsChanged("RECEBIDO", recebido);
         this.recebido = recebido;
    }
 
@@ -2343,6 +2599,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setRefAtCon(Timestamp refAtCon) {
+        markAsChanged("REFATCON", refAtCon);
         this.refAtCon = refAtCon;
    }
 
@@ -2351,6 +2608,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodReceita(String codReceita) {
+        markAsChanged("CODRECEITA", codReceita);
         this.codReceita = codReceita;
    }
 
@@ -2359,6 +2617,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setContabilizado(String contabilizado) {
+        markAsChanged("CONTABILIZADO", contabilizado);
         this.contabilizado = contabilizado;
    }
 
@@ -2367,6 +2626,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtIntegracaoIpi(Timestamp dtIntegracaoIpi) {
+        markAsChanged("DTINTEGRACAOIPI", dtIntegracaoIpi);
         this.dtIntegracaoIpi = dtIntegracaoIpi;
    }
 
@@ -2375,6 +2635,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtReferencia(Timestamp dtReferencia) {
+        markAsChanged("DTREFERENCIA", dtReferencia);
         this.dtReferencia = dtReferencia;
    }
 
@@ -2383,6 +2644,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumDocArrecad(String numDocArrecad) {
+        markAsChanged("NUMDOCARRECAD", numDocArrecad);
         this.numDocArrecad = numDocArrecad;
    }
 
@@ -2391,6 +2653,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuVerba(BigDecimal nuVerba) {
+        markAsChanged("NUVERBA", nuVerba);
         this.nuVerba = nuVerba;
    }
 
@@ -2399,6 +2662,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrDesdobCalc(BigDecimal vlrDesdobCalc) {
+        markAsChanged("VLRDESDOBCALC", vlrDesdobCalc);
         this.vlrDesdobCalc = vlrDesdobCalc;
    }
 
@@ -2407,6 +2671,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrLancOrig(BigDecimal vlrLancOrig) {
+        markAsChanged("VLRLANCORIG", vlrLancOrig);
         this.vlrLancOrig = vlrLancOrig;
    }
 
@@ -2415,6 +2680,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNroImport(BigDecimal nroImport) {
+        markAsChanged("NROIMPORT", nroImport);
         this.nroImport = nroImport;
    }
 
@@ -2423,6 +2689,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
+        markAsChanged("NUCAIXA", nuCaixa);
         this.nuCaixa = nuCaixa;
    }
 
@@ -2431,6 +2698,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setSangDespPdv(String sangDespPdv) {
+        markAsChanged("SANGDESPDV", sangDespPdv);
         this.sangDespPdv = sangDespPdv;
    }
 
@@ -2439,6 +2707,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodPrOr(String codPrOr) {
+        markAsChanged("CODPROR", codPrOr);
         this.codPrOr = codPrOr;
    }
 
@@ -2447,6 +2716,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodUsuPrOr(BigDecimal codUsuPrOr) {
+        markAsChanged("CODUSUPROR", codUsuPrOr);
         this.codUsuPrOr = codUsuPrOr;
    }
 
@@ -2455,6 +2725,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDtPrOr(Timestamp dtPrOr) {
+        markAsChanged("DTPROR", dtPrOr);
         this.dtPrOr = dtPrOr;
    }
 
@@ -2463,6 +2734,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNvDtVenc(Timestamp nvDtVenc) {
+        markAsChanged("NVDTVENC", nvDtVenc);
         this.nvDtVenc = nvDtVenc;
    }
 
@@ -2471,6 +2743,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPendenteCriarDesp(String pendenteCriarDesp) {
+        markAsChanged("PENDENTECRIARDESP", pendenteCriarDesp);
         this.pendenteCriarDesp = pendenteCriarDesp;
    }
 
@@ -2479,6 +2752,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setProrrogado(String prorrogado) {
+        markAsChanged("PRORROGADO", prorrogado);
         this.prorrogado = prorrogado;
    }
 
@@ -2487,6 +2761,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setNumOcorrencias(String numOcorrencias) {
+        markAsChanged("NUMOCORRENCIAS", numOcorrencias);
         this.numOcorrencias = numOcorrencias;
    }
 
@@ -2495,6 +2770,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setMetodoCalcIrrf(String metodoCalcIrrf) {
+        markAsChanged("METODOCALCIRRF", metodoCalcIrrf);
         this.metodoCalcIrrf = metodoCalcIrrf;
    }
 
@@ -2503,6 +2779,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVlrIcmsXmlCte(BigDecimal vlrIcmsXmlCte) {
+        markAsChanged("VLRICMSXMLCTE", vlrIcmsXmlCte);
         this.vlrIcmsXmlCte = vlrIcmsXmlCte;
    }
 
@@ -2511,6 +2788,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setPixTef(BigDecimal pixTef) {
+        markAsChanged("PIXTEF", pixTef);
         this.pixTef = pixTef;
    }
 
@@ -2519,6 +2797,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setCodOperacaoVendaMais(String codOperacaoVendaMais) {
+        markAsChanged("CODOPERACAOVENDAMAIS", codOperacaoVendaMais);
         this.codOperacaoVendaMais = codOperacaoVendaMais;
    }
 
@@ -2527,6 +2806,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhAprovacaoVendaMais(Timestamp dhAprovacaoVendaMais) {
+        markAsChanged("DHAPROVACAOVENDAMAIS", dhAprovacaoVendaMais);
         this.dhAprovacaoVendaMais = dhAprovacaoVendaMais;
    }
 
@@ -2535,6 +2815,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setDhImpressao(Timestamp dhImpressao) {
+        markAsChanged("DH_IMPRESSAO", dhImpressao);
         this.dhImpressao = dhImpressao;
    }
 
@@ -2543,6 +2824,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setTaxaVendaMais(BigDecimal taxaVendaMais) {
+        markAsChanged("TAXAVENDAMAIS", taxaVendaMais);
         this.taxaVendaMais = taxaVendaMais;
    }
 
@@ -2551,6 +2833,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
    }
 
    public void setVendaMais(String vendaMais) {
+        markAsChanged("VENDAMAIS", vendaMais);
         this.vendaMais = vendaMais;
    }
 
@@ -2566,6 +2849,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
 
    @Override
    public Financiamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipMulta = vo.asString("TIPMULTA");
         this.vlrALiberar = vo.asBigDecimal("VLRALIBERAR");
         this.vlrAtual = vo.asBigDecimal("VLRATUAL");

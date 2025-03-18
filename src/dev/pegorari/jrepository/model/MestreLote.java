@@ -26,6 +26,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +35,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setComentarios(String comentarios) {
+        markAsChanged("COMENTARIOS", comentarios);
         this.comentarios = comentarios;
    }
 
@@ -42,6 +44,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -50,6 +53,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -58,6 +62,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setNumLote(BigDecimal numLote) {
+        markAsChanged("NUMLOTE", numLote);
         this.numLote = numLote;
    }
 
@@ -66,6 +71,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -74,6 +80,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -82,6 +89,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setTotLote(BigDecimal totLote) {
+        markAsChanged("TOTLOTE", totLote);
         this.totLote = totLote;
    }
 
@@ -90,6 +98,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setUltLanc(BigDecimal ultLanc) {
+        markAsChanged("ULTLANC", ultLanc);
         this.ultLanc = ultLanc;
    }
 
@@ -98,6 +107,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setVlrDebito(BigDecimal vlrDebito) {
+        markAsChanged("VLRDEBITO", vlrDebito);
         this.vlrDebito = vlrDebito;
    }
 
@@ -106,6 +116,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setQtdLanc(BigDecimal qtdLanc) {
+        markAsChanged("QTDLANC", qtdLanc);
         this.qtdLanc = qtdLanc;
    }
 
@@ -114,6 +125,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setVlrDiferenca(BigDecimal vlrDiferenca) {
+        markAsChanged("VLRDIFERENCA", vlrDiferenca);
         this.vlrDiferenca = vlrDiferenca;
    }
 
@@ -122,6 +134,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setVlrCredito(BigDecimal vlrCredito) {
+        markAsChanged("VLRCREDITO", vlrCredito);
         this.vlrCredito = vlrCredito;
    }
 
@@ -130,6 +143,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
    }
 
    public void setCodEmpConsolid(BigDecimal codEmpConsolid) {
+        markAsChanged("CODEMPCONSOLID", codEmpConsolid);
         this.codEmpConsolid = codEmpConsolid;
    }
 
@@ -145,6 +159,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
 
    @Override
    public MestreLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.comentarios = vo.asString("COMENTARIOS");
         this.codEmp = vo.asBigDecimal("CODEMP");

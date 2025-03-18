@@ -14,6 +14,7 @@ public class MSDDestFilaMensagem extends AbstractSankhyaEntity<MSDDestFilaMensag
    }
 
    public void setCodFila(BigDecimal codFila) {
+        markAsChanged("CODFILA", codFila);
         this.codFila = codFila;
    }
 
@@ -22,6 +23,7 @@ public class MSDDestFilaMensagem extends AbstractSankhyaEntity<MSDDestFilaMensag
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -30,6 +32,7 @@ public class MSDDestFilaMensagem extends AbstractSankhyaEntity<MSDDestFilaMensag
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -45,6 +48,7 @@ public class MSDDestFilaMensagem extends AbstractSankhyaEntity<MSDDestFilaMensag
 
    @Override
    public MSDDestFilaMensagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.email = vo.asString("EMAIL");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

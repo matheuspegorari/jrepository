@@ -21,6 +21,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -29,6 +30,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -37,6 +39,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setDtUltFatConfSep(Timestamp dtUltFatConfSep) {
+        markAsChanged("DTULTFATCONFSEP", dtUltFatConfSep);
         this.dtUltFatConfSep = dtUltFatConfSep;
    }
 
@@ -45,6 +48,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -53,6 +57,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setEnvNotaFat(String envNotaFat) {
+        markAsChanged("ENVNOTAFAT", envNotaFat);
         this.envNotaFat = envNotaFat;
    }
 
@@ -61,6 +66,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setEnvPedNaoFat(String envPedNaoFat) {
+        markAsChanged("ENVPEDNAOFAT", envPedNaoFat);
         this.envPedNaoFat = envPedNaoFat;
    }
 
@@ -69,6 +75,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -77,6 +84,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -85,6 +93,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
    }
 
    public void setFiltroFatAuto(char[] filtroFatAuto) {
+        markAsChanged("FILTROFATAUTO", filtroFatAuto);
         this.filtroFatAuto = filtroFatAuto;
    }
 
@@ -100,6 +109,7 @@ public class FaturamentoAutomaticoWMS extends AbstractSankhyaEntity<FaturamentoA
 
    @Override
    public FaturamentoAutomaticoWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtUltFatConfSep = vo.asTimestamp("DTULTFATCONFSEP");

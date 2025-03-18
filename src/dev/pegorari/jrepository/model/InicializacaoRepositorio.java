@@ -16,6 +16,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
    }
 
    public void setCodCpm(BigDecimal codCpm) {
+        markAsChanged("CODCPM", codCpm);
         this.codCpm = codCpm;
    }
 
@@ -24,6 +25,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
    }
 
    public void setCodProdpA(BigDecimal codProdpA) {
+        markAsChanged("CODPRODPA", codProdpA);
         this.codProdpA = codProdpA;
    }
 
@@ -32,6 +34,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -40,6 +43,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -48,6 +52,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -63,6 +68,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
 
    @Override
    public InicializacaoRepositorio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCpm = vo.asBigDecimal("CODCPM");
         this.codProdpA = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

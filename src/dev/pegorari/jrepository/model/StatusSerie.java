@@ -16,6 +16,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -24,6 +25,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -32,6 +34,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -40,6 +43,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -48,6 +52,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -63,6 +68,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
 
    @Override
    public StatusSerie fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.seqNota = vo.asBigDecimal("SEQNOTA");

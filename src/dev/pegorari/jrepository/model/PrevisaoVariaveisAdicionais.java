@@ -14,6 +14,7 @@ public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoV
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -22,6 +23,7 @@ public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoV
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -30,6 +32,7 @@ public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoV
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -45,6 +48,7 @@ public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoV
 
    @Override
    public PrevisaoVariaveisAdicionais fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.tipo = vo.asString("TIPO");

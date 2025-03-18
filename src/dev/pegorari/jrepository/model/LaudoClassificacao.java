@@ -41,6 +41,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -49,6 +50,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -57,6 +59,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -65,6 +68,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNuRam(BigDecimal nuRam) {
+        markAsChanged("NURAM", nuRam);
         this.nuRam = nuRam;
    }
 
@@ -73,6 +77,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNuLaudoPai(BigDecimal nuLaudoPai) {
+        markAsChanged("NULAUDOPAI", nuLaudoPai);
         this.nuLaudoPai = nuLaudoPai;
    }
 
@@ -81,6 +86,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setAprovado(String aprovado) {
+        markAsChanged("APROVADO", aprovado);
         this.aprovado = aprovado;
    }
 
@@ -89,6 +95,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodClt(BigDecimal codClt) {
+        markAsChanged("CODCLT", codClt);
         this.codClt = codClt;
    }
 
@@ -97,6 +104,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -105,6 +113,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -113,6 +122,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setDhAnalise(Timestamp dhAnalise) {
+        markAsChanged("DHANALISE", dhAnalise);
         this.dhAnalise = dhAnalise;
    }
 
@@ -121,6 +131,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNotaRomaneio(BigDecimal notaRomaneio) {
+        markAsChanged("NOTAROMANEIO", notaRomaneio);
         this.notaRomaneio = notaRomaneio;
    }
 
@@ -129,6 +140,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNuAmostra(BigDecimal nuAmostra) {
+        markAsChanged("NUAMOSTRA", nuAmostra);
         this.nuAmostra = nuAmostra;
    }
 
@@ -137,6 +149,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNuCll(BigDecimal nuCll) {
+        markAsChanged("NUCLL", nuCll);
         this.nuCll = nuCll;
    }
 
@@ -145,6 +158,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -153,6 +167,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -161,6 +176,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -169,6 +185,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -177,6 +194,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setTara(BigDecimal tara) {
+        markAsChanged("TARA", tara);
         this.tara = tara;
    }
 
@@ -185,6 +203,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -193,6 +212,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodPort(BigDecimal codPort) {
+        markAsChanged("CODPORT", codPort);
         this.codPort = codPort;
    }
 
@@ -201,6 +221,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setTransgenia(String transgenia) {
+        markAsChanged("TRANSGENIA", transgenia);
         this.transgenia = transgenia;
    }
 
@@ -209,6 +230,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -217,6 +239,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setModulo(String modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -225,6 +248,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNumPesagem(BigDecimal numPesagem) {
+        markAsChanged("NUMPESAGEM", numPesagem);
         this.numPesagem = numPesagem;
    }
 
@@ -233,6 +257,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodVeic(BigDecimal codVeic) {
+        markAsChanged("CODVEIC", codVeic);
         this.codVeic = codVeic;
    }
 
@@ -241,6 +266,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNumNotaTrans(BigDecimal numNotaTrans) {
+        markAsChanged("NUMNOTATRANS", numNotaTrans);
         this.numNotaTrans = numNotaTrans;
    }
 
@@ -249,6 +275,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -257,6 +284,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setNumPort(BigDecimal numPort) {
+        markAsChanged("NUMPORT", numPort);
         this.numPort = numPort;
    }
 
@@ -265,6 +293,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
    }
 
    public void setMotivoReprov(String motivoReprov) {
+        markAsChanged("MOTIVOREPROV", motivoReprov);
         this.motivoReprov = motivoReprov;
    }
 
@@ -280,6 +309,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
 
    @Override
    public LaudoClassificacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");

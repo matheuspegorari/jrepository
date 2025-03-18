@@ -28,6 +28,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setApresentacao(String apresentacao) {
+        markAsChanged("APRESENTACAO", apresentacao);
         this.apresentacao = apresentacao;
    }
 
@@ -36,6 +37,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setCalculado(String calculado) {
+        markAsChanged("CALCULADO", calculado);
         this.calculado = calculado;
    }
 
@@ -44,6 +46,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setDescrcampo(String descrcampo) {
+        markAsChanged("DESCRCAMPO", descrcampo);
         this.descrcampo = descrcampo;
    }
 
@@ -52,6 +55,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -60,6 +64,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setMascara(String mascara) {
+        markAsChanged("MASCARA", mascara);
         this.mascara = mascara;
    }
 
@@ -68,6 +73,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setNomecampo(String nomecampo) {
+        markAsChanged("NOMECAMPO", nomecampo);
         this.nomecampo = nomecampo;
    }
 
@@ -76,6 +82,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setNometab(String nometab) {
+        markAsChanged("NOMETAB", nometab);
         this.nometab = nometab;
    }
 
@@ -84,6 +91,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setNucampo(BigDecimal nucampo) {
+        markAsChanged("NUCAMPO", nucampo);
         this.nucampo = nucampo;
    }
 
@@ -92,6 +100,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -100,6 +109,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setPermitepadrao(String permitepadrao) {
+        markAsChanged("PERMITEPADRAO", permitepadrao);
         this.permitepadrao = permitepadrao;
    }
 
@@ -108,6 +118,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setPermitepesquisa(String permitepesquisa) {
+        markAsChanged("PERMITEPESQUISA", permitepesquisa);
         this.permitepesquisa = permitepesquisa;
    }
 
@@ -116,6 +127,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setSistema(String sistema) {
+        markAsChanged("SISTEMA", sistema);
         this.sistema = sistema;
    }
 
@@ -124,6 +136,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setTamanho(BigDecimal tamanho) {
+        markAsChanged("TAMANHO", tamanho);
         this.tamanho = tamanho;
    }
 
@@ -132,6 +145,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setTipcampo(String tipcampo) {
+        markAsChanged("TIPCAMPO", tipcampo);
         this.tipcampo = tipcampo;
    }
 
@@ -140,6 +154,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setTipoapresentacao(String tipoapresentacao) {
+        markAsChanged("TIPOAPRESENTACAO", tipoapresentacao);
         this.tipoapresentacao = tipoapresentacao;
    }
 
@@ -148,6 +163,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setVisivelgridpesquisa(String visivelgridpesquisa) {
+        markAsChanged("VISIVELGRIDPESQUISA", visivelgridpesquisa);
         this.visivelgridpesquisa = visivelgridpesquisa;
    }
 
@@ -156,6 +172,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
    }
 
    public void setRequerido(String requerido) {
+        markAsChanged("REQUERIDO", requerido);
         this.requerido = requerido;
    }
 
@@ -171,6 +188,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
 
    @Override
    public Campo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.apresentacao = vo.asString("APRESENTACAO");
         this.calculado = vo.asString("CALCULADO");
         this.descrcampo = vo.asString("DESCRCAMPO");

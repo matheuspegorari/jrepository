@@ -32,6 +32,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -40,6 +41,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -48,6 +50,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -56,6 +59,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setCodPlp(BigDecimal codPlp) {
+        markAsChanged("CODPLP", codPlp);
         this.codPlp = codPlp;
    }
 
@@ -64,6 +68,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -72,6 +77,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setCompartilha(String compartilha) {
+        markAsChanged("COMPARTILHA", compartilha);
         this.compartilha = compartilha;
    }
 
@@ -80,6 +86,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -88,6 +95,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setDescrProd(String descrProd) {
+        markAsChanged("DESCRPROD", descrProd);
         this.descrProd = descrProd;
    }
 
@@ -96,6 +104,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setDtInicioMax(Timestamp dtInicioMax) {
+        markAsChanged("DTINICIOMAX", dtInicioMax);
         this.dtInicioMax = dtInicioMax;
    }
 
@@ -104,6 +113,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setDtPrevent(Timestamp dtPrevent) {
+        markAsChanged("DTPREVENT", dtPrevent);
         this.dtPrevent = dtPrevent;
    }
 
@@ -112,6 +122,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setQtdPa(BigDecimal qtdPa) {
+        markAsChanged("QTDPA", qtdPa);
         this.qtdPa = qtdPa;
    }
 
@@ -120,6 +131,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -128,6 +140,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setSeqCop(BigDecimal seqCop) {
+        markAsChanged("SEQCOP", seqCop);
         this.seqCop = seqCop;
    }
 
@@ -136,6 +149,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setTamLote(BigDecimal tamLote) {
+        markAsChanged("TAMLOTE", tamLote);
         this.tamLote = tamLote;
    }
 
@@ -144,6 +158,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setTempoAtravess(BigDecimal tempoAtravess) {
+        markAsChanged("TEMPOATRAVESS", tempoAtravess);
         this.tempoAtravess = tempoAtravess;
    }
 
@@ -152,6 +167,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setTipoOp(String tipoOp) {
+        markAsChanged("TIPOOP", tipoOp);
         this.tipoOp = tipoOp;
    }
 
@@ -160,6 +176,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
+        markAsChanged("CODPARCTERC", codParcterc);
         this.codParcterc = codParcterc;
    }
 
@@ -168,6 +185,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -176,6 +194,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -184,6 +203,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -199,6 +219,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
 
    @Override
    public ItemDeLancamentoDeOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ordem = vo.asBigDecimal("ORDEM");
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.idProc = vo.asBigDecimal("IDPROC");

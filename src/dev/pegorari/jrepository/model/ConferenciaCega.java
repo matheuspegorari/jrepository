@@ -21,6 +21,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -29,6 +30,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setDestFinal(String destFinal) {
+        markAsChanged("DESTFINAL", destFinal);
         this.destFinal = destFinal;
    }
 
@@ -37,6 +39,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setDhFinalConf(Timestamp dhFinalConf) {
+        markAsChanged("DHFINALCONF", dhFinalConf);
         this.dhFinalConf = dhFinalConf;
    }
 
@@ -45,6 +48,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setDhInicioConf(Timestamp dhInicioConf) {
+        markAsChanged("DHINICIOCONF", dhInicioConf);
         this.dhInicioConf = dhInicioConf;
    }
 
@@ -53,6 +57,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -61,6 +66,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -69,6 +75,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setParcial(String parcial) {
+        markAsChanged("PARCIAL", parcial);
         this.parcial = parcial;
    }
 
@@ -77,6 +84,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -85,6 +93,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    }
 
    public void setTipConf(String tipConf) {
+        markAsChanged("TIPCONF", tipConf);
         this.tipConf = tipConf;
    }
 
@@ -100,6 +109,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
 
    @Override
    public ConferenciaCega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.destFinal = vo.asString("DESTFINAL");
         this.dhFinalConf = vo.asTimestamp("DHFINALCONF");

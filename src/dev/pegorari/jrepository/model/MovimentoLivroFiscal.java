@@ -80,6 +80,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -88,6 +89,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setEmpParc(String empParc) {
+        markAsChanged("EMPPARC", empParc);
         this.empParc = empParc;
    }
 
@@ -96,6 +98,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setEntSai(String entSai) {
+        markAsChanged("ENTSAI", entSai);
         this.entSai = entSai;
    }
 
@@ -104,6 +107,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setEspDoc(String espDoc) {
+        markAsChanged("ESPDOC", espDoc);
         this.espDoc = espDoc;
    }
 
@@ -112,6 +116,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setGtoTecf(BigDecimal gtoTecf) {
+        markAsChanged("GTOTECF", gtoTecf);
         this.gtoTecf = gtoTecf;
    }
 
@@ -120,6 +125,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setIcmsRetencao(BigDecimal icmsRetencao) {
+        markAsChanged("ICMSRETENCAO", icmsRetencao);
         this.icmsRetencao = icmsRetencao;
    }
 
@@ -128,6 +134,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setIsentasIcms(BigDecimal isentasIcms) {
+        markAsChanged("ISENTASICMS", isentasIcms);
         this.isentasIcms = isentasIcms;
    }
 
@@ -136,6 +143,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setIsentasIpi(BigDecimal isentasIpi) {
+        markAsChanged("ISENTASIPI", isentasIpi);
         this.isentasIpi = isentasIpi;
    }
 
@@ -144,6 +152,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setNumLanc(BigDecimal numLanc) {
+        markAsChanged("NUMLANC", numLanc);
         this.numLanc = numLanc;
    }
 
@@ -152,6 +161,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -160,6 +170,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setNumNota2(BigDecimal numNota2) {
+        markAsChanged("NUMNOTA2", numNota2);
         this.numNota2 = numNota2;
    }
 
@@ -168,6 +179,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -176,6 +188,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -184,6 +197,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -192,6 +206,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setOutrasIcms(BigDecimal outrasIcms) {
+        markAsChanged("OUTRASICMS", outrasIcms);
         this.outrasIcms = outrasIcms;
    }
 
@@ -200,6 +215,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setOutrasIpi(BigDecimal outrasIpi) {
+        markAsChanged("OUTRASIPI", outrasIpi);
         this.outrasIpi = outrasIpi;
    }
 
@@ -208,6 +224,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -216,6 +233,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -224,6 +242,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setTipIcms(String tipIcms) {
+        markAsChanged("TIPICMS", tipIcms);
         this.tipIcms = tipIcms;
    }
 
@@ -232,6 +251,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setTipIpi(String tipIpi) {
+        markAsChanged("TIPIPI", tipIpi);
         this.tipIpi = tipIpi;
    }
 
@@ -240,6 +260,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setUfDestino(String ufDestino) {
+        markAsChanged("UFDESTINO", ufDestino);
         this.ufDestino = ufDestino;
    }
 
@@ -248,6 +269,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setUfOrigem(String ufOrigem) {
+        markAsChanged("UFORIGEM", ufOrigem);
         this.ufOrigem = ufOrigem;
    }
 
@@ -256,6 +278,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrCtb(BigDecimal vlrCtb) {
+        markAsChanged("VLRCTB", vlrCtb);
         this.vlrCtb = vlrCtb;
    }
 
@@ -264,6 +287,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrCtbTare(BigDecimal vlrCtbTare) {
+        markAsChanged("VLRCTBTARE", vlrCtbTare);
         this.vlrCtbTare = vlrCtbTare;
    }
 
@@ -272,6 +296,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -280,6 +305,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsTare(BigDecimal vlrIcmsTare) {
+        markAsChanged("VLRICMSTARE", vlrIcmsTare);
         this.vlrIcmsTare = vlrIcmsTare;
    }
 
@@ -288,6 +314,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIpi(BigDecimal vlrIpi) {
+        markAsChanged("VLRIPI", vlrIpi);
         this.vlrIpi = vlrIpi;
    }
 
@@ -296,6 +323,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrTare(BigDecimal vlrTare) {
+        markAsChanged("VLRTARE", vlrTare);
         this.vlrTare = vlrTare;
    }
 
@@ -304,6 +332,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -312,6 +341,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodTrib(BigDecimal codTrib) {
+        markAsChanged("CODTRIB", codTrib);
         this.codTrib = codTrib;
    }
 
@@ -320,6 +350,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDhMov(Timestamp dhMov) {
+        markAsChanged("DHMOV", dhMov);
         this.dhMov = dhMov;
    }
 
@@ -328,6 +359,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDifIcms(BigDecimal difIcms) {
+        markAsChanged("DIFICMS", difIcms);
         this.difIcms = difIcms;
    }
 
@@ -336,6 +368,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -344,6 +377,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDtDoc(Timestamp dtDoc) {
+        markAsChanged("DTDOC", dtDoc);
         this.dtDoc = dtDoc;
    }
 
@@ -352,6 +386,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setChaveCte(String chaveCte) {
+        markAsChanged("CHAVECTE", chaveCte);
         this.chaveCte = chaveCte;
    }
 
@@ -360,6 +395,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setChaveCteRef(String chaveCteRef) {
+        markAsChanged("CHAVECTEREF", chaveCteRef);
         this.chaveCteRef = chaveCteRef;
    }
 
@@ -368,6 +404,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -376,6 +413,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodAntecipSt(String codAntecipSt) {
+        markAsChanged("CODANTECIPST", codAntecipSt);
         this.codAntecipSt = codAntecipSt;
    }
 
@@ -384,6 +422,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodCfo(BigDecimal codCfo) {
+        markAsChanged("CODCFO", codCfo);
         this.codCfo = codCfo;
    }
 
@@ -392,6 +431,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -400,6 +440,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -408,6 +449,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -416,6 +458,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
+        markAsChanged("ALIQIPI", aliqIpi);
         this.aliqIpi = aliqIpi;
    }
 
@@ -424,6 +467,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -432,6 +476,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setBaseIcmsTare(BigDecimal baseIcmsTare) {
+        markAsChanged("BASEICMSTARE", baseIcmsTare);
         this.baseIcmsTare = baseIcmsTare;
    }
 
@@ -440,6 +485,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setBaseIpi(BigDecimal baseIpi) {
+        markAsChanged("BASEIPI", baseIpi);
         this.baseIpi = baseIpi;
    }
 
@@ -448,6 +494,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setBaseRetencao(BigDecimal baseRetencao) {
+        markAsChanged("BASERETENCAO", baseRetencao);
         this.baseRetencao = baseRetencao;
    }
 
@@ -456,6 +503,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -464,6 +512,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setBaseRetencaoSemRed(BigDecimal baseRetencaoSemRed) {
+        markAsChanged("BASERETENCAOSEMRED", baseRetencaoSemRed);
         this.baseRetencaoSemRed = baseRetencaoSemRed;
    }
 
@@ -472,6 +521,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDtFilt(Timestamp dtFilt) {
+        markAsChanged("DTFILT", dtFilt);
         this.dtFilt = dtFilt;
    }
 
@@ -480,6 +530,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDtEntSaiInfo(Timestamp dtEntSaiInfo) {
+        markAsChanged("DTENTSAIINFO", dtEntSaiInfo);
         this.dtEntSaiInfo = dtEntSaiInfo;
    }
 
@@ -488,6 +539,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsCompl(BigDecimal vlrIcmsCompl) {
+        markAsChanged("VLRICMSCOMPL", vlrIcmsCompl);
         this.vlrIcmsCompl = vlrIcmsCompl;
    }
 
@@ -496,6 +548,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setUfEntrega(String ufEntrega) {
+        markAsChanged("UFENTREGA", ufEntrega);
         this.ufEntrega = ufEntrega;
    }
 
@@ -504,6 +557,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodContatoEntrega(BigDecimal codContatoEntrega) {
+        markAsChanged("CODCONTATOENTREGA", codContatoEntrega);
         this.codContatoEntrega = codContatoEntrega;
    }
 
@@ -512,6 +566,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodCidFimCte(BigDecimal codCidFimCte) {
+        markAsChanged("CODCIDFIMCTE", codCidFimCte);
         this.codCidFimCte = codCidFimCte;
    }
 
@@ -520,6 +575,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodCidIniCte(BigDecimal codCidIniCte) {
+        markAsChanged("CODCIDINICTE", codCidIniCte);
         this.codCidIniCte = codCidIniCte;
    }
 
@@ -528,6 +584,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsDifalRem(BigDecimal vlrIcmsDifalRem) {
+        markAsChanged("VLRICMSDIFALREM", vlrIcmsDifalRem);
         this.vlrIcmsDifalRem = vlrIcmsDifalRem;
    }
 
@@ -536,6 +593,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsFcp(BigDecimal vlrIcmsFcp) {
+        markAsChanged("VLRICMSFCP", vlrIcmsFcp);
         this.vlrIcmsFcp = vlrIcmsFcp;
    }
 
@@ -544,6 +602,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrStFcpInt(BigDecimal vlrStFcpInt) {
+        markAsChanged("VLRSTFCPINT", vlrStFcpInt);
         this.vlrStFcpInt = vlrStFcpInt;
    }
 
@@ -552,6 +611,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsFcpInt(BigDecimal vlrIcmsFcpInt) {
+        markAsChanged("VLRICMSFCPINT", vlrIcmsFcpInt);
         this.vlrIcmsFcpInt = vlrIcmsFcpInt;
    }
 
@@ -560,6 +620,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -568,6 +629,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setVlrIcmsDifalDest(BigDecimal vlrIcmsDifalDest) {
+        markAsChanged("VLRICMSDIFALDEST", vlrIcmsDifalDest);
         this.vlrIcmsDifalDest = vlrIcmsDifalDest;
    }
 
@@ -576,6 +638,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -584,6 +647,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDescrEmpParc(String descrEmpParc) {
+        markAsChanged("DESCR_EMP_PARC", descrEmpParc);
         this.descrEmpParc = descrEmpParc;
    }
 
@@ -592,6 +656,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDtCanc(Timestamp dtCanc) {
+        markAsChanged("DTCANC", dtCanc);
         this.dtCanc = dtCanc;
    }
 
@@ -600,6 +665,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -608,6 +674,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -616,6 +683,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -631,6 +699,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
 
    @Override
    public MovimentoLivroFiscal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.empParc = vo.asString("EMPPARC");
         this.entSai = vo.asString("ENTSAI");

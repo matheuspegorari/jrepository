@@ -18,6 +18,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -26,6 +27,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setCompromisso(String compromisso) {
+        markAsChanged("COMPROMISSO", compromisso);
         this.compromisso = compromisso;
    }
 
@@ -42,6 +45,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -50,6 +54,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -58,6 +63,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -73,6 +79,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
 
    @Override
    public TipoMeta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.compromisso = vo.asString("COMPROMISSO");

@@ -21,6 +21,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setConfTop(String confTop) {
+        markAsChanged("CONFTOP", confTop);
         this.confTop = confTop;
    }
 
@@ -29,6 +30,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setAbaSeg(String abaSeg) {
+        markAsChanged("ABASEG", abaSeg);
         this.abaSeg = abaSeg;
    }
 
@@ -37,6 +39,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -45,6 +48,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -53,6 +57,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -61,6 +66,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -69,6 +75,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setRemoveAnt(String removeAnt) {
+        markAsChanged("REMOVEANT", removeAnt);
         this.removeAnt = removeAnt;
    }
 
@@ -77,6 +84,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setSelecaoTelas(String selecaoTelas) {
+        markAsChanged("SELECAOTELAS", selecaoTelas);
         this.selecaoTelas = selecaoTelas;
    }
 
@@ -85,6 +93,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
 
    @Override
    public HistoricoCopiaConfiguracao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.confTop = vo.asString("CONFTOP");
         this.abaSeg = vo.asString("ABASEG");
         this.chave = vo.asString("CHAVE");

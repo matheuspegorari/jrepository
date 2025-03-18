@@ -32,6 +32,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCtaCtbConst(String ctaCtbConst) {
+        markAsChanged("CTACTBCONST", ctaCtbConst);
         this.ctaCtbConst = ctaCtbConst;
    }
 
@@ -40,6 +41,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setDc(String dc) {
+        markAsChanged("DC", dc);
         this.dc = dc;
    }
 
@@ -48,6 +50,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -56,6 +59,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setHistorico(String historico) {
+        markAsChanged("HISTORICO", historico);
         this.historico = historico;
    }
 
@@ -64,6 +68,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setLancamento(BigDecimal lancamento) {
+        markAsChanged("LANCAMENTO", lancamento);
         this.lancamento = lancamento;
    }
 
@@ -72,6 +77,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCenCusConst(String cenCusConst) {
+        markAsChanged("CENCUSCONST", cenCusConst);
         this.cenCusConst = cenCusConst;
    }
 
@@ -80,6 +86,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodCenCus(String codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -88,6 +95,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodCtaCtb(String codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -96,6 +104,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -104,6 +113,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodHistCtb(BigDecimal codHistCtb) {
+        markAsChanged("CODHISTCTB", codHistCtb);
         this.codHistCtb = codHistCtb;
    }
 
@@ -112,6 +122,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setProjConst(String projConst) {
+        markAsChanged("PROJCONST", projConst);
         this.projConst = projConst;
    }
 
@@ -120,6 +131,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -128,6 +140,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setSintetiza(String sintetiza) {
+        markAsChanged("SINTETIZA", sintetiza);
         this.sintetiza = sintetiza;
    }
 
@@ -136,6 +149,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setTipDt(String tipDt) {
+        markAsChanged("TIPDT", tipDt);
         this.tipDt = tipDt;
    }
 
@@ -144,6 +158,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodProj(String codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -152,6 +167,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -160,6 +176,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setTipoEmpOrig(String tipoEmpOrig) {
+        markAsChanged("TIPOEMPORIG", tipoEmpOrig);
         this.tipoEmpOrig = tipoEmpOrig;
    }
 
@@ -168,6 +185,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCodCtaCtbTrans(String codCtaCtbTrans) {
+        markAsChanged("CODCTACTBTRANS", codCtaCtbTrans);
         this.codCtaCtbTrans = codCtaCtbTrans;
    }
 
@@ -176,6 +194,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setCtaCtbConstTrans(String ctaCtbConstTrans) {
+        markAsChanged("CTACTBCONSTTRANS", ctaCtbConstTrans);
         this.ctaCtbConstTrans = ctaCtbConstTrans;
    }
 
@@ -184,6 +203,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setTipCtbzCompany(String tipCtbzCompany) {
+        markAsChanged("TIPCTBZCOMPANY", tipCtbzCompany);
         this.tipCtbzCompany = tipCtbzCompany;
    }
 
@@ -192,6 +212,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
    }
 
    public void setTipEmpCompany(String tipEmpCompany) {
+        markAsChanged("TIPEMPCOMPANY", tipEmpCompany);
         this.tipEmpCompany = tipEmpCompany;
    }
 
@@ -207,6 +228,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
 
    @Override
    public ParametroContabilizacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ctaCtbConst = vo.asString("CTACTBCONST");
         this.dc = vo.asString("DC");
         this.formula = vo.asString("FORMULA");

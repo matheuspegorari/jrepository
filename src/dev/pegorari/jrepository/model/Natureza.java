@@ -40,6 +40,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setAliqCofins(BigDecimal aliqCofins) {
+        markAsChanged("ALIQCOFINS", aliqCofins);
         this.aliqCofins = aliqCofins;
    }
 
@@ -48,6 +49,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setAliqPis(BigDecimal aliqPis) {
+        markAsChanged("ALIQPIS", aliqPis);
         this.aliqPis = aliqPis;
    }
 
@@ -56,6 +58,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setAnalitica(String analitica) {
+        markAsChanged("ANALITICA", analitica);
         this.analitica = analitica;
    }
 
@@ -64,6 +67,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -72,6 +76,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -80,6 +85,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -88,6 +94,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodCtaCtb2(BigDecimal codCtaCtb2) {
+        markAsChanged("CODCTACTB2", codCtaCtb2);
         this.codCtaCtb2 = codCtaCtb2;
    }
 
@@ -96,6 +103,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -104,6 +112,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodHistCtb(BigDecimal codHistCtb) {
+        markAsChanged("CODHISTCTB", codHistCtb);
         this.codHistCtb = codHistCtb;
    }
 
@@ -112,6 +121,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodHistCtb2(BigDecimal codHistCtb2) {
+        markAsChanged("CODHISTCTB2", codHistCtb2);
         this.codHistCtb2 = codHistCtb2;
    }
 
@@ -120,6 +130,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -128,6 +139,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodNatPai(BigDecimal codNatPai) {
+        markAsChanged("CODNATPAI", codNatPai);
         this.codNatPai = codNatPai;
    }
 
@@ -136,6 +148,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodServUnico(BigDecimal codServUnico) {
+        markAsChanged("CODSERVUNICO", codServUnico);
         this.codServUnico = codServUnico;
    }
 
@@ -144,6 +157,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCstCofins(BigDecimal cstCofins) {
+        markAsChanged("CSTCOFINS", cstCofins);
         this.cstCofins = cstCofins;
    }
 
@@ -152,6 +166,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCstPis(BigDecimal cstPis) {
+        markAsChanged("CSTPIS", cstPis);
         this.cstPis = cstPis;
    }
 
@@ -160,6 +175,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setDecVlr(BigDecimal decVlr) {
+        markAsChanged("DECVLR", decVlr);
         this.decVlr = decVlr;
    }
 
@@ -168,6 +184,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setDescrNat(String descrNat) {
+        markAsChanged("DESCRNAT", descrNat);
         this.descrNat = descrNat;
    }
 
@@ -176,6 +193,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -184,6 +202,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -192,6 +211,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setGrupoMkp(String grupoMkp) {
+        markAsChanged("GRUPOMKP", grupoMkp);
         this.grupoMkp = grupoMkp;
    }
 
@@ -200,6 +220,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setIncResult(String incResult) {
+        markAsChanged("INCRESULT", incResult);
         this.incResult = incResult;
    }
 
@@ -208,6 +229,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setNatBcCred(String natBcCred) {
+        markAsChanged("NATBCCRED", natBcCred);
         this.natBcCred = natBcCred;
    }
 
@@ -216,6 +238,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setRegimeEfd(String regimeEfd) {
+        markAsChanged("REGIMEEFD", regimeEfd);
         this.regimeEfd = regimeEfd;
    }
 
@@ -224,6 +247,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setSubGrupoMkp(String subGrupoMkp) {
+        markAsChanged("SUBGRUPOMKP", subGrupoMkp);
         this.subGrupoMkp = subGrupoMkp;
    }
 
@@ -232,6 +256,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setTipNat(String tipNat) {
+        markAsChanged("TIPNAT", tipNat);
         this.tipNat = tipNat;
    }
 
@@ -240,6 +265,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
+        markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
         this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
@@ -248,6 +274,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setRecAdiantRural(String recAdiantRural) {
+        markAsChanged("RECADIANTRURAL", recAdiantRural);
         this.recAdiantRural = recAdiantRural;
    }
 
@@ -256,6 +283,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setGeralCdPr(String geralCdPr) {
+        markAsChanged("GERALCDPR", geralCdPr);
         this.geralCdPr = geralCdPr;
    }
 
@@ -264,6 +292,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
    }
 
    public void setNatEfdContM410M810(BigDecimal natEfdContM410M810) {
+        markAsChanged("NATEFDCONTM410M810", natEfdContM410M810);
         this.natEfdContM410M810 = natEfdContM410M810;
    }
 
@@ -279,6 +308,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
 
    @Override
    public Natureza fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqCofins = vo.asBigDecimal("ALIQCOFINS");
         this.aliqPis = vo.asBigDecimal("ALIQPIS");
         this.analitica = vo.asString("ANALITICA");

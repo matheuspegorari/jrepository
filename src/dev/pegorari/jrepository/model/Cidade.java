@@ -70,6 +70,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setMascaraLc116(String mascaraLc116) {
+        markAsChanged("MASCARALC116", mascaraLc116);
         this.mascaraLc116 = mascaraLc116;
    }
 
@@ -78,6 +79,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -86,6 +88,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodMunDms(BigDecimal codMunDms) {
+        markAsChanged("CODMUNDMS", codMunDms);
         this.codMunDms = codMunDms;
    }
 
@@ -94,6 +97,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodMunFis(BigDecimal codMunFis) {
+        markAsChanged("CODMUNFIS", codMunFis);
         this.codMunFis = codMunFis;
    }
 
@@ -102,6 +106,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodMunSiafi(BigDecimal codMunSiafi) {
+        markAsChanged("CODMUNSIAFI", codMunSiafi);
         this.codMunSiafi = codMunSiafi;
    }
 
@@ -110,6 +115,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -118,6 +124,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setDdd(String ddd) {
+        markAsChanged("DDD", ddd);
         this.ddd = ddd;
    }
 
@@ -126,6 +133,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setDescricaoCorreio(String descricaoCorreio) {
+        markAsChanged("DESCRICAOCORREIO", descricaoCorreio);
         this.descricaoCorreio = descricaoCorreio;
    }
 
@@ -134,6 +142,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setDistancia(BigDecimal distancia) {
+        markAsChanged("DISTANCIA", distancia);
         this.distancia = distancia;
    }
 
@@ -142,6 +151,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -150,6 +160,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setNomeCid(String nomeCid) {
+        markAsChanged("NOMECID", nomeCid);
         this.nomeCid = nomeCid;
    }
 
@@ -158,6 +169,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setPopulacao(BigDecimal populacao) {
+        markAsChanged("POPULACAO", populacao);
         this.populacao = populacao;
    }
 
@@ -166,6 +178,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setSeqEntrega(BigDecimal seqEntrega) {
+        markAsChanged("SEQENTREGA", seqEntrega);
         this.seqEntrega = seqEntrega;
    }
 
@@ -174,6 +187,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setTipoFrete(String tipoFrete) {
+        markAsChanged("TIPOFRETE", tipoFrete);
         this.tipoFrete = tipoFrete;
    }
 
@@ -182,6 +196,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setUf(BigDecimal uf) {
+        markAsChanged("UF", uf);
         this.uf = uf;
    }
 
@@ -190,6 +205,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVlrFreteKm(BigDecimal vlrFreteKm) {
+        markAsChanged("VLRFRETEKM", vlrFreteKm);
         this.vlrFreteKm = vlrFreteKm;
    }
 
@@ -198,6 +214,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVlrFreteMin(BigDecimal vlrFreteMin) {
+        markAsChanged("VLRFRETEMIN", vlrFreteMin);
         this.vlrFreteMin = vlrFreteMin;
    }
 
@@ -206,6 +223,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVlrFreteTon(BigDecimal vlrFreteTon) {
+        markAsChanged("VLRFRETETON", vlrFreteTon);
         this.vlrFreteTon = vlrFreteTon;
    }
 
@@ -214,6 +232,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVlrTaxaEnt(BigDecimal vlrTaxaEnt) {
+        markAsChanged("VLRTAXAENT", vlrTaxaEnt);
         this.vlrTaxaEnt = vlrTaxaEnt;
    }
 
@@ -222,6 +241,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setLongitude(String longitude) {
+        markAsChanged("LONGITUDE", longitude);
         this.longitude = longitude;
    }
 
@@ -230,6 +250,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setLatitude(String latitude) {
+        markAsChanged("LATITUDE", latitude);
         this.latitude = latitude;
    }
 
@@ -238,6 +259,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setLinkAgua(String linkAgua) {
+        markAsChanged("LINKAGUA", linkAgua);
         this.linkAgua = linkAgua;
    }
 
@@ -246,6 +268,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setLinkEnergia(String linkEnergia) {
+        markAsChanged("LINKENERGIA", linkEnergia);
         this.linkEnergia = linkEnergia;
    }
 
@@ -254,6 +277,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setLinkIptu(String linkIptu) {
+        markAsChanged("LINKIPTU", linkIptu);
         this.linkIptu = linkIptu;
    }
 
@@ -262,6 +286,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setMaxNotaLoteNfse(BigDecimal maxNotaLoteNfse) {
+        markAsChanged("MAXNOTALOTENFSE", maxNotaLoteNfse);
         this.maxNotaLoteNfse = maxNotaLoteNfse;
    }
 
@@ -270,6 +295,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setMetarRedVlrIss(String metarRedVlrIss) {
+        markAsChanged("METARREDVLRISS", metarRedVlrIss);
         this.metarRedVlrIss = metarRedVlrIss;
    }
 
@@ -278,6 +304,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setMotCancSubNfse(String motCancSubNfse) {
+        markAsChanged("MOTCANCSUBNFSE", motCancSubNfse);
         this.motCancSubNfse = motCancSubNfse;
    }
 
@@ -286,6 +313,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setNfseTemplateSubst(String nfseTemplateSubst) {
+        markAsChanged("NFSETEMPLATESUBST", nfseTemplateSubst);
         this.nfseTemplateSubst = nfseTemplateSubst;
    }
 
@@ -294,6 +322,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setTimParcPrefeitura(BigDecimal timParcPrefeitura) {
+        markAsChanged("TIMPARCPREFEITURA", timParcPrefeitura);
         this.timParcPrefeitura = timParcPrefeitura;
    }
 
@@ -302,6 +331,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setTipoCnae(BigDecimal tipoCnae) {
+        markAsChanged("TIPOCNAE", tipoCnae);
         this.tipoCnae = tipoCnae;
    }
 
@@ -310,6 +340,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setTipCancNfse(String tipCancNfse) {
+        markAsChanged("TIPCANCNFSE", tipCancNfse);
         this.tipCancNfse = tipCancNfse;
    }
 
@@ -318,6 +349,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVlrLimCancNfse(BigDecimal vlrLimCancNfse) {
+        markAsChanged("VLRLIMCANCNFSE", vlrLimCancNfse);
         this.vlrLimCancNfse = vlrLimCancNfse;
    }
 
@@ -326,6 +358,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVendaMin(BigDecimal vendaMin) {
+        markAsChanged("VENDAMIN", vendaMin);
         this.vendaMin = vendaMin;
    }
 
@@ -334,6 +367,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setQtdSub(BigDecimal qtdSub) {
+        markAsChanged("QTDSUB", qtdSub);
         this.qtdSub = qtdSub;
    }
 
@@ -342,6 +376,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setQtdDiasSub(BigDecimal qtdDiasSub) {
+        markAsChanged("QTDDIASSUB", qtdDiasSub);
         this.qtdDiasSub = qtdDiasSub;
    }
 
@@ -350,6 +385,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setTemSubstitNfse(String temSubstitNfse) {
+        markAsChanged("TEMSUBSTITNFSE", temSubstitNfse);
         this.temSubstitNfse = temSubstitNfse;
    }
 
@@ -358,6 +394,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setNoFormatLc116(String noFormatLc116) {
+        markAsChanged("NOFORMATLC116", noFormatLc116);
         this.noFormatLc116 = noFormatLc116;
    }
 
@@ -366,6 +403,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCnaeFullNfse(String cnaeFullNfse) {
+        markAsChanged("CNAEFULLNFSE", cnaeFullNfse);
         this.cnaeFullNfse = cnaeFullNfse;
    }
 
@@ -374,6 +412,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setNoInscMunPar(String noInscMunPar) {
+        markAsChanged("NOINSCMUNPAR", noInscMunPar);
         this.noInscMunPar = noInscMunPar;
    }
 
@@ -382,6 +421,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setJsonSemAliDenMun(String jsonSemAliDenMun) {
+        markAsChanged("JSONSEMALIDENMUN", jsonSemAliDenMun);
         this.jsonSemAliDenMun = jsonSemAliDenMun;
    }
 
@@ -390,6 +430,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setCodParNfse(BigDecimal codParNfse) {
+        markAsChanged("CODPARCNFSE", codParNfse);
         this.codParNfse = codParNfse;
    }
 
@@ -398,6 +439,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setUfNomeCid(String ufNomeCid) {
+        markAsChanged("UFNOMECID", ufNomeCid);
         this.ufNomeCid = ufNomeCid;
    }
 
@@ -406,6 +448,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setPerCancNfseSubstit(String perCancNfseSubstit) {
+        markAsChanged("PERMCANCNFSESUBSTIT", perCancNfseSubstit);
         this.perCancNfseSubstit = perCancNfseSubstit;
    }
 
@@ -414,6 +457,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setVMinRetencaoIss(BigDecimal vMinRetencaoIss) {
+        markAsChanged("VMINRETENCAOISS", vMinRetencaoIss);
         this.vMinRetencaoIss = vMinRetencaoIss;
    }
 
@@ -422,6 +466,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setGerCodNatIssJson(String gerCodNatIssJson) {
+        markAsChanged("GERCODNATISSJSON", gerCodNatIssJson);
         this.gerCodNatIssJson = gerCodNatIssJson;
    }
 
@@ -430,6 +475,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setEnvItensSepJson(String envItensSepJson) {
+        markAsChanged("ENVITENSSEPJSON", envItensSepJson);
         this.envItensSepJson = envItensSepJson;
    }
 
@@ -438,6 +484,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setQtdMaxEnvItensJson(BigDecimal qtdMaxEnvItensJson) {
+        markAsChanged("QTDMAXENVITENSJSON", qtdMaxEnvItensJson);
         this.qtdMaxEnvItensJson = qtdMaxEnvItensJson;
    }
 
@@ -446,6 +493,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setObsJsonEnotas(String obsJsonEnotas) {
+        markAsChanged("OBSJSONENOTAS", obsJsonEnotas);
         this.obsJsonEnotas = obsJsonEnotas;
    }
 
@@ -454,6 +502,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setActCanExNt(String actCanExNt) {
+        markAsChanged("ACTCANEXNT", actCanExNt);
         this.actCanExNt = actCanExNt;
    }
 
@@ -462,6 +511,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setAtUnuVersao(String atUnuVersao) {
+        markAsChanged("ATUNUVERSAO", atUnuVersao);
         this.atUnuVersao = atUnuVersao;
    }
 
@@ -470,6 +520,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setEnvFpJson(String envFpJson) {
+        markAsChanged("ENVFPJSON", envFpJson);
         this.envFpJson = envFpJson;
    }
 
@@ -478,6 +529,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setEnvMulEmailJson(String envMulEmailJson) {
+        markAsChanged("ENVMULEMAILJSON", envMulEmailJson);
         this.envMulEmailJson = envMulEmailJson;
    }
 
@@ -486,6 +538,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setEnvTagDesconJson(String envTagDesconJson) {
+        markAsChanged("ENVTAGDESCONJSON", envTagDesconJson);
         this.envTagDesconJson = envTagDesconJson;
    }
 
@@ -494,6 +547,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setGerNuNfseInfCpm(String gerNuNfseInfCpm) {
+        markAsChanged("GERNUNFSEINFCPM", gerNuNfseInfCpm);
         this.gerNuNfseInfCpm = gerNuNfseInfCpm;
    }
 
@@ -502,6 +556,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setInfQtdVlrUniJson(String infQtdVlrUniJson) {
+        markAsChanged("INFQTDVLRUNIJSON", infQtdVlrUniJson);
         this.infQtdVlrUniJson = infQtdVlrUniJson;
    }
 
@@ -510,6 +565,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setRemZeroEsquerdaLc116(String remZeroEsquerdaLc116) {
+        markAsChanged("REMZEROESQUERDLC116", remZeroEsquerdaLc116);
         this.remZeroEsquerdaLc116 = remZeroEsquerdaLc116;
    }
 
@@ -518,6 +574,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setRegEspTrib(String regEspTrib) {
+        markAsChanged("REGESPTRIB", regEspTrib);
         this.regEspTrib = regEspTrib;
    }
 
@@ -526,6 +583,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
    }
 
    public void setGerCnaeMultJson(String gerCnaeMultJson) {
+        markAsChanged("GERCNAEMULTJSON", gerCnaeMultJson);
         this.gerCnaeMultJson = gerCnaeMultJson;
    }
 
@@ -541,6 +599,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
 
    @Override
    public Cidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.mascaraLc116 = vo.asString("MASCARALC116");
         this.codCid = vo.asBigDecimal("CODCID");
         this.codMunDms = vo.asBigDecimal("CODMUNDMS");

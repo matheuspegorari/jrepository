@@ -17,6 +17,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -25,6 +26,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -33,6 +35,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -41,6 +44,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    }
 
    public void setCnpj(String cnpj) {
+        markAsChanged("CNPJ", cnpj);
         this.cnpj = cnpj;
    }
 
@@ -49,6 +53,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -64,6 +69,7 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
 
    @Override
    public SociedadeCotaParticipacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

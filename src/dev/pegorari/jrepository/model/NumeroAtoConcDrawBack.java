@@ -15,6 +15,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
    }
 
    public void setSequenciaDraw(BigDecimal sequenciaDraw) {
+        markAsChanged("SEQUENCIADRAW", sequenciaDraw);
         this.sequenciaDraw = sequenciaDraw;
    }
 
@@ -23,6 +24,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -31,6 +33,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -39,6 +42,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
    }
 
    public void setNroAtoConcDraw(String nroAtoConcDraw) {
+        markAsChanged("NROATOCONCDRAW", nroAtoConcDraw);
         this.nroAtoConcDraw = nroAtoConcDraw;
    }
 
@@ -54,6 +58,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
 
    @Override
    public NumeroAtoConcDrawBack fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequenciaDraw = vo.asBigDecimal("SEQUENCIADRAW");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

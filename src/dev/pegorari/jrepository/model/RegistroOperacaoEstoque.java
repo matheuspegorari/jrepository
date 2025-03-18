@@ -23,6 +23,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setStatusExec(String statusExec) {
+        markAsChanged("STATUSEXEC", statusExec);
         this.statusExec = statusExec;
    }
 
@@ -31,6 +32,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -39,6 +41,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -47,6 +50,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setSeqOper(BigDecimal seqOper) {
+        markAsChanged("SEQOPER", seqOper);
         this.seqOper = seqOper;
    }
 
@@ -55,6 +59,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setSeqRope(BigDecimal seqRope) {
+        markAsChanged("SEQROPE", seqRope);
         this.seqRope = seqRope;
    }
 
@@ -63,6 +68,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -71,6 +77,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setIdIatv(BigDecimal idIatv) {
+        markAsChanged("IDIATV", idIatv);
         this.idIatv = idIatv;
    }
 
@@ -79,6 +86,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -87,6 +95,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setQtdBase(BigDecimal qtdBase) {
+        markAsChanged("QTDBASE", qtdBase);
         this.qtdBase = qtdBase;
    }
 
@@ -95,6 +104,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -103,6 +113,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setTipoOper(String tipoOper) {
+        markAsChanged("TIPOOPER", tipoOper);
         this.tipoOper = tipoOper;
    }
 
@@ -111,6 +122,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -126,6 +138,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
 
    @Override
    public RegistroOperacaoEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.statusExec = vo.asString("STATUSEXEC");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.ideFx = vo.asBigDecimal("IDEFX");

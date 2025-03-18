@@ -14,6 +14,7 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -22,6 +23,7 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -30,6 +32,7 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
    }
 
    public void setSeqMot(BigDecimal seqMot) {
+        markAsChanged("SEQMOT", seqMot);
         this.seqMot = seqMot;
    }
 
@@ -45,6 +48,7 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
 
    @Override
    public MotoristaCTe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.seqMot = vo.asBigDecimal("SEQMOT");

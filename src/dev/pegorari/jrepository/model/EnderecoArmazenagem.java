@@ -57,6 +57,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setAltura(BigDecimal altura) {
+        markAsChanged("ALTURA", altura);
         this.altura = altura;
    }
 
@@ -65,6 +66,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -73,6 +75,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setApenasContPorProd(String apenasContPorProd) {
+        markAsChanged("APENASCONTPORPROD", apenasContPorProd);
         this.apenasContPorProd = apenasContPorProd;
    }
 
@@ -81,6 +84,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -89,6 +93,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setBloqueado(String bloqueado) {
+        markAsChanged("BLOQUEADO", bloqueado);
         this.bloqueado = bloqueado;
    }
 
@@ -97,6 +102,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -105,6 +111,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -113,6 +120,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodEndPai(BigDecimal codEndPai) {
+        markAsChanged("CODENDPAI", codEndPai);
         this.codEndPai = codEndPai;
    }
 
@@ -121,6 +129,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodEndPref(BigDecimal codEndPref) {
+        markAsChanged("CODENDPREF", codEndPref);
         this.codEndPref = codEndPref;
    }
 
@@ -129,6 +138,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodEndSec(BigDecimal codEndSec) {
+        markAsChanged("CODENDSEC", codEndSec);
         this.codEndSec = codEndSec;
    }
 
@@ -137,6 +147,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -145,6 +156,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCodUsuTarContagem(BigDecimal codUsuTarContagem) {
+        markAsChanged("CODUSUTARCONTAGEM", codUsuTarContagem);
         this.codUsuTarContagem = codUsuTarContagem;
    }
 
@@ -153,6 +165,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setConexaoEntrada(String conexaoEntrada) {
+        markAsChanged("CONEXAOENTRADA", conexaoEntrada);
         this.conexaoEntrada = conexaoEntrada;
    }
 
@@ -161,6 +174,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setConexaoSaida(String conexaoSaida) {
+        markAsChanged("CONEXAOSAIDA", conexaoSaida);
         this.conexaoSaida = conexaoSaida;
    }
 
@@ -169,6 +183,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setDescrEnd(String descrEnd) {
+        markAsChanged("DESCREND", descrEnd);
         this.descrEnd = descrEnd;
    }
 
@@ -177,6 +192,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setEndereco(String endereco) {
+        markAsChanged("ENDERECO", endereco);
         this.endereco = endereco;
    }
 
@@ -185,6 +201,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setEndMovVertical(String endMovVertical) {
+        markAsChanged("ENDMOVVERTICAL", endMovVertical);
         this.endMovVertical = endMovVertical;
    }
 
@@ -193,6 +210,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setExclConf(String exclConf) {
+        markAsChanged("EXCLCONF", exclConf);
         this.exclConf = exclConf;
    }
 
@@ -201,6 +219,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setExpedicao(String expedicao) {
+        markAsChanged("EXPEDICAO", expedicao);
         this.expedicao = expedicao;
    }
 
@@ -209,6 +228,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setFlowRack(String flowRack) {
+        markAsChanged("FLOWRACK", flowRack);
         this.flowRack = flowRack;
    }
 
@@ -217,6 +237,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setFragmentaEst(String fragmentaEst) {
+        markAsChanged("FRAGMENTAEST", fragmentaEst);
         this.fragmentaEst = fragmentaEst;
    }
 
@@ -225,6 +246,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -233,6 +255,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setLargura(BigDecimal largura) {
+        markAsChanged("LARGURA", largura);
         this.largura = largura;
    }
 
@@ -241,6 +264,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -249,6 +273,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setMultiProd(String multiProd) {
+        markAsChanged("MULTIPROD", multiProd);
         this.multiProd = multiProd;
    }
 
@@ -257,6 +282,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setNivel(BigDecimal nivel) {
+        markAsChanged("NIVEL", nivel);
         this.nivel = nivel;
    }
 
@@ -265,6 +291,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -273,6 +300,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPar(String par) {
+        markAsChanged("PAR", par);
         this.par = par;
    }
 
@@ -281,6 +309,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -289,6 +318,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPicking(String picking) {
+        markAsChanged("PICKING", picking);
         this.picking = picking;
    }
 
@@ -297,6 +327,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPickingIntermediario(String pickingIntermediario) {
+        markAsChanged("PICKINGINTERMEDIARIO", pickingIntermediario);
         this.pickingIntermediario = pickingIntermediario;
    }
 
@@ -305,6 +336,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPossuiContPend(String possuiContPend) {
+        markAsChanged("POSSUICONTPEND", possuiContPend);
         this.possuiContPend = possuiContPend;
    }
 
@@ -313,6 +345,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setPossuiEstoque(String possuiEstoque) {
+        markAsChanged("POSSUIESTOQUE", possuiEstoque);
         this.possuiEstoque = possuiEstoque;
    }
 
@@ -321,6 +354,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setProfundidade(BigDecimal profundidade) {
+        markAsChanged("PROFUNDIDADE", profundidade);
         this.profundidade = profundidade;
    }
 
@@ -329,6 +363,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setProibirControle(String proibirControle) {
+        markAsChanged("PROIBIRCONTROLE", proibirControle);
         this.proibirControle = proibirControle;
    }
 
@@ -337,6 +372,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setProibirGrupo(String proibirGrupo) {
+        markAsChanged("PROIBIRGRUPO", proibirGrupo);
         this.proibirGrupo = proibirGrupo;
    }
 
@@ -345,6 +381,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setProibirLocal(String proibirLocal) {
+        markAsChanged("PROIBIRLOCAL", proibirLocal);
         this.proibirLocal = proibirLocal;
    }
 
@@ -353,6 +390,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setProibirProduto(String proibirProduto) {
+        markAsChanged("PROIBIRPRODUTO", proibirProduto);
         this.proibirProduto = proibirProduto;
    }
 
@@ -361,6 +399,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -369,6 +408,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setUsaPickingIntermediario(String usaPickingIntermediario) {
+        markAsChanged("USAPICKINGINTERMEDIARIO", usaPickingIntermediario);
         this.usaPickingIntermediario = usaPickingIntermediario;
    }
 
@@ -377,6 +417,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setCrossDock(String crossDock) {
+        markAsChanged("CROSSDOCK", crossDock);
         this.crossDock = crossDock;
    }
 
@@ -385,6 +426,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setReabPick(String reabPick) {
+        markAsChanged("REABPICK", reabPick);
         this.reabPick = reabPick;
    }
 
@@ -393,6 +435,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setNroMaxProd(BigDecimal nroMaxProd) {
+        markAsChanged("NROMAXPROD", nroMaxProd);
         this.nroMaxProd = nroMaxProd;
    }
 
@@ -401,6 +444,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setLoteUnico(String loteUnico) {
+        markAsChanged("LOTEUNICO", loteUnico);
         this.loteUnico = loteUnico;
    }
 
@@ -409,6 +453,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setQtdMaxUma(BigDecimal qtdMaxUma) {
+        markAsChanged("QTDMAXUMA", qtdMaxUma);
         this.qtdMaxUma = qtdMaxUma;
    }
 
@@ -417,6 +462,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    }
 
    public void setUtilizaUma(String utilizaUma) {
+        markAsChanged("UTILIZAUMA", utilizaUma);
         this.utilizaUma = utilizaUma;
    }
 
@@ -432,6 +478,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
 
    @Override
    public EnderecoArmazenagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.altura = vo.asBigDecimal("ALTURA");
         this.analitico = vo.asString("ANALITICO");
         this.apenasContPorProd = vo.asString("APENASCONTPORPROD");

@@ -18,6 +18,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setCodVar(BigDecimal codVar) {
+        markAsChanged("CODVAR", codVar);
         this.codVar = codVar;
    }
 
@@ -26,6 +27,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setCodVarRes(BigDecimal codVarRes) {
+        markAsChanged("CODVARRES", codVarRes);
         this.codVarRes = codVarRes;
    }
 
@@ -34,6 +36,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -42,6 +45,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -50,6 +54,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setValor(String valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -58,6 +63,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    }
 
    public void setValorNumerico(BigDecimal valorNumerico) {
+        markAsChanged("VALORNUMERICO", valorNumerico);
         this.valorNumerico = valorNumerico;
    }
 
@@ -73,6 +79,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
 
    @Override
    public MSDVarsResolvidas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVar = vo.asBigDecimal("CODVAR");
         this.codVarRes = vo.asBigDecimal("CODVARRES");
         this.dtAlter = vo.asTimestamp("DTALTER");

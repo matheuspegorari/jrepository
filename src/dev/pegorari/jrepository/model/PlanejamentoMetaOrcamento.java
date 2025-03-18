@@ -12,6 +12,7 @@ public class PlanejamentoMetaOrcamento extends AbstractSankhyaEntity<Planejament
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -20,6 +21,7 @@ public class PlanejamentoMetaOrcamento extends AbstractSankhyaEntity<Planejament
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -35,6 +37,7 @@ public class PlanejamentoMetaOrcamento extends AbstractSankhyaEntity<Planejament
 
    @Override
    public PlanejamentoMetaOrcamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.config = vo.asClob("CONFIG");
         return this;

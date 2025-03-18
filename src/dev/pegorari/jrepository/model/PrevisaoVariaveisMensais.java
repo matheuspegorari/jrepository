@@ -15,6 +15,7 @@ public class PrevisaoVariaveisMensais extends AbstractSankhyaEntity<PrevisaoVari
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -23,6 +24,7 @@ public class PrevisaoVariaveisMensais extends AbstractSankhyaEntity<PrevisaoVari
    }
 
    public void setMes(Timestamp mes) {
+        markAsChanged("MES", mes);
         this.mes = mes;
    }
 
@@ -31,6 +33,7 @@ public class PrevisaoVariaveisMensais extends AbstractSankhyaEntity<PrevisaoVari
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -46,6 +49,7 @@ public class PrevisaoVariaveisMensais extends AbstractSankhyaEntity<PrevisaoVari
 
    @Override
    public PrevisaoVariaveisMensais fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.mes = vo.asTimestamp("MES");
         this.valor = vo.asBigDecimal("VALOR");

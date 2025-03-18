@@ -18,6 +18,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -26,6 +27,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -34,6 +36,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -42,6 +45,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setNuPartilha(BigDecimal nuPartilha) {
+        markAsChanged("NUPARTILHA", nuPartilha);
         this.nuPartilha = nuPartilha;
    }
 
@@ -50,6 +54,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -58,6 +63,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
+        markAsChanged("TIPOSN", tipoSn);
         this.tipoSn = tipoSn;
    }
 
@@ -73,6 +79,7 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
 
    @Override
    public PartilhaSimplesNacXEmp fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dtRef = vo.asTimestamp("DTREF");

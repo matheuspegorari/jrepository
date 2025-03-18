@@ -33,6 +33,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodMoto(BigDecimal codMoto) {
+        markAsChanged("CODMOTO", codMoto);
         this.codMoto = codMoto;
    }
 
@@ -41,6 +42,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodPort(BigDecimal codPort) {
+        markAsChanged("CODPORT", codPort);
         this.codPort = codPort;
    }
 
@@ -49,6 +51,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -57,6 +60,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodVeic(BigDecimal codVeic) {
+        markAsChanged("CODVEIC", codVeic);
         this.codVeic = codVeic;
    }
 
@@ -65,6 +69,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setDhChega(Timestamp dhChega) {
+        markAsChanged("DHCHEGA", dhChega);
         this.dhChega = dhChega;
    }
 
@@ -73,6 +78,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setDhEntra(Timestamp dhEntra) {
+        markAsChanged("DHENTRA", dhEntra);
         this.dhEntra = dhEntra;
    }
 
@@ -81,6 +87,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setDhSaida(Timestamp dhSaida) {
+        markAsChanged("DHSAIDA", dhSaida);
         this.dhSaida = dhSaida;
    }
 
@@ -89,6 +96,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setObserv(String observ) {
+        markAsChanged("OBSERV", observ);
         this.observ = observ;
    }
 
@@ -97,6 +105,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -105,6 +114,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -113,6 +123,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -121,6 +132,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setMotorista(String motorista) {
+        markAsChanged("MOTORISTA", motorista);
         this.motorista = motorista;
    }
 
@@ -129,6 +141,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setPlaca(String placa) {
+        markAsChanged("PLACA", placa);
         this.placa = placa;
    }
 
@@ -137,6 +150,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -145,6 +159,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setNumPort(BigDecimal numPort) {
+        markAsChanged("NUMPORT", numPort);
         this.numPort = numPort;
    }
 
@@ -153,6 +168,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setDhPesoBruto(Timestamp dhPesoBruto) {
+        markAsChanged("DHPESOBRUTO", dhPesoBruto);
         this.dhPesoBruto = dhPesoBruto;
    }
 
@@ -161,6 +177,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setDhTara(Timestamp dhTara) {
+        markAsChanged("DHTARA", dhTara);
         this.dhTara = dhTara;
    }
 
@@ -169,6 +186,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -177,6 +195,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setNuCll(BigDecimal nuCll) {
+        markAsChanged("NUCLL", nuCll);
         this.nuCll = nuCll;
    }
 
@@ -185,6 +204,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setNumPesagem(BigDecimal numPesagem) {
+        markAsChanged("NUMPESAGEM", numPesagem);
         this.numPesagem = numPesagem;
    }
 
@@ -193,6 +213,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
    }
 
    public void setModalidade(String modalidade) {
+        markAsChanged("MODALIDADE", modalidade);
         this.modalidade = modalidade;
    }
 
@@ -208,6 +229,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
 
    @Override
    public ControlePortaria fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMoto = vo.asBigDecimal("CODMOTO");
         this.codPort = vo.asBigDecimal("CODPORT");
         this.codUsu = vo.asBigDecimal("CODUSU");

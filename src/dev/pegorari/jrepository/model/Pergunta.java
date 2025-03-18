@@ -29,6 +29,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setAceitaObservacao(String aceitaObservacao) {
+        markAsChanged("ACEITAOBSERVACAO", aceitaObservacao);
         this.aceitaObservacao = aceitaObservacao;
    }
 
@@ -37,6 +38,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setCodGrupoPerg(BigDecimal codGrupoPerg) {
+        markAsChanged("CODGRUPOPERG", codGrupoPerg);
         this.codGrupoPerg = codGrupoPerg;
    }
 
@@ -45,6 +47,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setCodPerg(BigDecimal codPerg) {
+        markAsChanged("CODPERG", codPerg);
         this.codPerg = codPerg;
    }
 
@@ -53,6 +56,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setCodPergTab(BigDecimal codPergTab) {
+        markAsChanged("CODPERGTAB", codPergTab);
         this.codPergTab = codPergTab;
    }
 
@@ -61,6 +65,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -69,6 +74,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setDescrPerg(String descrPerg) {
+        markAsChanged("DESCRPERG", descrPerg);
         this.descrPerg = descrPerg;
    }
 
@@ -77,6 +83,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -85,6 +92,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setInstrucaoAplicador(String instrucaoAplicador) {
+        markAsChanged("INSTRUCAOAPLICADOR", instrucaoAplicador);
         this.instrucaoAplicador = instrucaoAplicador;
    }
 
@@ -93,6 +101,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setNroTentativas(BigDecimal nroTentativas) {
+        markAsChanged("NROTENTATIVAS", nroTentativas);
         this.nroTentativas = nroTentativas;
    }
 
@@ -101,6 +110,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setObrigatoria(String obrigatoria) {
+        markAsChanged("OBRIGATORIA", obrigatoria);
         this.obrigatoria = obrigatoria;
    }
 
@@ -109,6 +119,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setOrdemTab(BigDecimal ordemTab) {
+        markAsChanged("ORDEMTAB", ordemTab);
         this.ordemTab = ordemTab;
    }
 
@@ -117,6 +128,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setPermiteAnexo(String permiteAnexo) {
+        markAsChanged("PERMITEANEXO", permiteAnexo);
         this.permiteAnexo = permiteAnexo;
    }
 
@@ -125,6 +137,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setQtdMaxEscolhas(BigDecimal qtdMaxEscolhas) {
+        markAsChanged("QTDMAXESCOLHAS", qtdMaxEscolhas);
         this.qtdMaxEscolhas = qtdMaxEscolhas;
    }
 
@@ -133,6 +146,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setQtdMaxLinhas(BigDecimal qtdMaxLinhas) {
+        markAsChanged("QTDMAXLINHAS", qtdMaxLinhas);
         this.qtdMaxLinhas = qtdMaxLinhas;
    }
 
@@ -141,6 +155,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setTempoParaResposta(BigDecimal tempoParaResposta) {
+        markAsChanged("TEMPOPARARESPOSTA", tempoParaResposta);
         this.tempoParaResposta = tempoParaResposta;
    }
 
@@ -149,6 +164,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -157,6 +173,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    }
 
    public void setPermiteFiltrar(String permiteFiltrar) {
+        markAsChanged("PERMITEFILTRAR", permiteFiltrar);
         this.permiteFiltrar = permiteFiltrar;
    }
 
@@ -172,6 +189,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
 
    @Override
    public Pergunta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aceitaObservacao = vo.asString("ACEITAOBSERVACAO");
         this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");
         this.codPerg = vo.asBigDecimal("CODPERG");

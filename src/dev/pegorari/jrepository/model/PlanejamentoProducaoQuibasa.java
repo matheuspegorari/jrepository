@@ -21,6 +21,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setNumPlan(BigDecimal numPlan) {
+        markAsChanged("NUMPLAN", numPlan);
         this.numPlan = numPlan;
    }
 
@@ -29,6 +30,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -37,6 +39,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -45,6 +48,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setConcluido(String concluido) {
+        markAsChanged("CONCLUIDO", concluido);
         this.concluido = concluido;
    }
 
@@ -53,6 +57,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -61,6 +66,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setNumLote(BigDecimal numLote) {
+        markAsChanged("NUMLOTE", numLote);
         this.numLote = numLote;
    }
 
@@ -69,6 +75,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -77,6 +84,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setQtdProd(BigDecimal qtdProd) {
+        markAsChanged("QTDPROD", qtdProd);
         this.qtdProd = qtdProd;
    }
 
@@ -85,6 +93,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -100,6 +109,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
 
    @Override
    public PlanejamentoProducaoQuibasa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.numPlan = vo.asBigDecimal("NUMPLAN");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");

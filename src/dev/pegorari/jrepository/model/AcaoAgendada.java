@@ -23,6 +23,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setNuAag(BigDecimal nuAag) {
+        markAsChanged("NUAAG", nuAag);
         this.nuAag = nuAag;
    }
 
@@ -31,6 +32,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setAutoTran(String autoTran) {
+        markAsChanged("AUTOTRAN", autoTran);
         this.autoTran = autoTran;
    }
 
@@ -39,6 +41,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setCodModulo(BigDecimal codModulo) {
+        markAsChanged("CODMODULO", codModulo);
         this.codModulo = codModulo;
    }
 
@@ -47,6 +50,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -55,6 +59,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setAcao(String acao) {
+        markAsChanged("ACAO", acao);
         this.acao = acao;
    }
 
@@ -63,6 +68,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -71,6 +77,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setFonteDados(String fonteDados) {
+        markAsChanged("FONTEDADOS", fonteDados);
         this.fonteDados = fonteDados;
    }
 
@@ -79,6 +86,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setTipoGatilho(String tipoGatilho) {
+        markAsChanged("TIPOGATILHO", tipoGatilho);
         this.tipoGatilho = tipoGatilho;
    }
 
@@ -87,6 +95,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setTipoAcao(String tipoAcao) {
+        markAsChanged("TIPOACAO", tipoAcao);
         this.tipoAcao = tipoAcao;
    }
 
@@ -95,6 +104,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -103,6 +113,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setCodUsuLogin(BigDecimal codUsuLogin) {
+        markAsChanged("CODUSULOGIN", codUsuLogin);
         this.codUsuLogin = codUsuLogin;
    }
 
@@ -111,6 +122,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
    }
 
    public void setExpGatilho(String expGatilho) {
+        markAsChanged("EXPGATILHO", expGatilho);
         this.expGatilho = expGatilho;
    }
 
@@ -126,6 +138,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
 
    @Override
    public AcaoAgendada fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuAag = vo.asBigDecimal("NUAAG");
         this.autoTran = vo.asString("AUTOTRAN");
         this.codModulo = vo.asBigDecimal("CODMODULO");

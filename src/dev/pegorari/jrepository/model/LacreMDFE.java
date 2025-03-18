@@ -14,6 +14,7 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -22,6 +23,7 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
    }
 
    public void setNumLacre(String numLacre) {
+        markAsChanged("NUMLACRE", numLacre);
         this.numLacre = numLacre;
    }
 
@@ -30,6 +32,7 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -45,6 +48,7 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
 
    @Override
    public LacreMDFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.numLacre = vo.asString("NUMLACRE");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

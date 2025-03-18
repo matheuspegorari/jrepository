@@ -16,6 +16,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -24,6 +25,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
    }
 
    public void setConf(String conf) {
+        markAsChanged("CONF", conf);
         this.conf = conf;
    }
 
@@ -32,6 +34,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
    }
 
    public void setForm(String form) {
+        markAsChanged("FORM", form);
         this.form = form;
    }
 
@@ -40,6 +43,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -48,6 +52,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class ConfiguracaoUsuarioBK extends AbstractSankhyaEntity<ConfiguracaoUsu
 
    @Override
    public ConfiguracaoUsuarioBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conf = vo.asString("CONF");
         this.form = vo.asString("FORM");

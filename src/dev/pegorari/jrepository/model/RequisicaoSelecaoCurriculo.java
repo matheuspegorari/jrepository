@@ -13,6 +13,7 @@ public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<Requisicao
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -21,6 +22,7 @@ public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<Requisicao
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -36,6 +38,7 @@ public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<Requisicao
 
    @Override
    public RequisicaoSelecaoCurriculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         return this;

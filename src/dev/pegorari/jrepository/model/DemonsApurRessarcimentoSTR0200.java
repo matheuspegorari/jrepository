@@ -30,6 +30,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -38,6 +39,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCest(BigDecimal cest) {
+        markAsChanged("CEST", cest);
         this.cest = cest;
    }
 
@@ -46,6 +48,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodAntItem(String codAntItem) {
+        markAsChanged("CODANTITEM", codAntItem);
         this.codAntItem = codAntItem;
    }
 
@@ -54,6 +57,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -62,6 +66,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -70,6 +75,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodGen(BigDecimal codGen) {
+        markAsChanged("CODGEN", codGen);
         this.codGen = codGen;
    }
 
@@ -78,6 +84,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodItem(String codItem) {
+        markAsChanged("CODITEM", codItem);
         this.codItem = codItem;
    }
 
@@ -86,6 +93,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -94,6 +102,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodNcm(String codNcm) {
+        markAsChanged("CODNCM", codNcm);
         this.codNcm = codNcm;
    }
 
@@ -102,6 +111,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -110,6 +120,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDescrItem(String descrItem) {
+        markAsChanged("DESCRITEM", descrItem);
         this.descrItem = descrItem;
    }
 
@@ -118,6 +129,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -126,6 +138,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -134,6 +147,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -142,6 +156,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setExIpi(BigDecimal exIpi) {
+        markAsChanged("EXIPI", exIpi);
         this.exIpi = exIpi;
    }
 
@@ -150,6 +165,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setReg(String reg) {
+        markAsChanged("REG", reg);
         this.reg = reg;
    }
 
@@ -158,6 +174,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setTipoItem(String tipoItem) {
+        markAsChanged("TIPOITEM", tipoItem);
         this.tipoItem = tipoItem;
    }
 
@@ -166,6 +183,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
    }
 
    public void setUnidInv(String unidInv) {
+        markAsChanged("UNIDINV", unidInv);
         this.unidInv = unidInv;
    }
 
@@ -181,6 +199,7 @@ public class DemonsApurRessarcimentoSTR0200 extends AbstractSankhyaEntity<Demons
 
    @Override
    public DemonsApurRessarcimentoSTR0200 fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.cest = vo.asBigDecimal("CEST");
         this.codAntItem = vo.asString("CODANTITEM");

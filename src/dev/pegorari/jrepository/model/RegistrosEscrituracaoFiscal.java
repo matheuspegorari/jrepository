@@ -19,6 +19,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setBloco(String bloco) {
+        markAsChanged("BLOCO", bloco);
         this.bloco = bloco;
    }
 
@@ -27,6 +28,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +37,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -43,6 +46,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setGerarEntrada(String gerarEntrada) {
+        markAsChanged("GERARENTRADA", gerarEntrada);
         this.gerarEntrada = gerarEntrada;
    }
 
@@ -51,6 +55,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setGerarRegistro(String gerarRegistro) {
+        markAsChanged("GERARREGISTRO", gerarRegistro);
         this.gerarRegistro = gerarRegistro;
    }
 
@@ -59,6 +64,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setGerarSaida(String gerarSaida) {
+        markAsChanged("GERARSAIDA", gerarSaida);
         this.gerarSaida = gerarSaida;
    }
 
@@ -67,6 +73,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setRegistro(String registro) {
+        markAsChanged("REGISTRO", registro);
         this.registro = registro;
    }
 
@@ -75,6 +82,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -90,6 +98,7 @@ public class RegistrosEscrituracaoFiscal extends AbstractSankhyaEntity<Registros
 
    @Override
    public RegistrosEscrituracaoFiscal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.bloco = vo.asString("BLOCO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descricao = vo.asString("DESCRICAO");

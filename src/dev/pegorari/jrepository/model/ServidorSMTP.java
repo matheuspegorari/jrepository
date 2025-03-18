@@ -28,6 +28,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setSenha(String senha) {
+        markAsChanged("SENHA", senha);
         this.senha = senha;
    }
 
@@ -36,6 +37,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setUsuario(String usuario) {
+        markAsChanged("USUARIO", usuario);
         this.usuario = usuario;
    }
 
@@ -44,6 +46,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setServidor(String servidor) {
+        markAsChanged("SERVIDOR", servidor);
         this.servidor = servidor;
    }
 
@@ -52,6 +55,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setPorta(BigDecimal porta) {
+        markAsChanged("PORTA", porta);
         this.porta = porta;
    }
 
@@ -60,6 +64,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
+        markAsChanged("CODSMTP", codSmtp);
         this.codSmtp = codSmtp;
    }
 
@@ -68,6 +73,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setRemetente(String remetente) {
+        markAsChanged("REMETENTE", remetente);
         this.remetente = remetente;
    }
 
@@ -76,6 +82,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setIgnoraCertificado(String ignoraCertificado) {
+        markAsChanged("IGNORACERTIFICADO", ignoraCertificado);
         this.ignoraCertificado = ignoraCertificado;
    }
 
@@ -84,6 +91,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -92,6 +100,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setPortaPop(BigDecimal portaPop) {
+        markAsChanged("PORTAPOP", portaPop);
         this.portaPop = portaPop;
    }
 
@@ -108,6 +118,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setServidorPop(String servidorPop) {
+        markAsChanged("SERVIDORPOP", servidorPop);
         this.servidorPop = servidorPop;
    }
 
@@ -116,6 +127,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setUtilDownXml(String utilDownXml) {
+        markAsChanged("UTILDOWNXML", utilDownXml);
         this.utilDownXml = utilDownXml;
    }
 
@@ -124,6 +136,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setAccessToken(String accessToken) {
+        markAsChanged("ACCESSTOKEN", accessToken);
         this.accessToken = accessToken;
    }
 
@@ -132,6 +145,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setCodAth(BigDecimal codAth) {
+        markAsChanged("CODATH", codAth);
         this.codAth = codAth;
    }
 
@@ -140,6 +154,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setExpiresIn(String expiresIn) {
+        markAsChanged("EXPIRESIN", expiresIn);
         this.expiresIn = expiresIn;
    }
 
@@ -148,6 +163,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setRefreshToken(String refreshToken) {
+        markAsChanged("REFRESHTOKEN", refreshToken);
         this.refreshToken = refreshToken;
    }
 
@@ -156,6 +172,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
    }
 
    public void setUseOauth(String useOauth) {
+        markAsChanged("USEOAUTH", useOauth);
         this.useOauth = useOauth;
    }
 
@@ -171,6 +188,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
 
    @Override
    public ServidorSMTP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.senha = vo.asString("SENHA");
         this.usuario = vo.asString("USUARIO");
         this.servidor = vo.asString("SERVIDOR");

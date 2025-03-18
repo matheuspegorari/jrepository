@@ -20,6 +20,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setDhIniPrev(Timestamp dhIniPrev) {
+        markAsChanged("DHINIPREV", dhIniPrev);
         this.dhIniPrev = dhIniPrev;
    }
 
@@ -28,6 +29,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -36,6 +38,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setIdEfx(BigDecimal idEfx) {
+        markAsChanged("IDEFX", idEfx);
         this.idEfx = idEfx;
    }
 
@@ -44,6 +47,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setDhFinPrev(Timestamp dhFinPrev) {
+        markAsChanged("DHFINPREV", dhFinPrev);
         this.dhFinPrev = dhFinPrev;
    }
 
@@ -52,6 +56,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setCodCwc(BigDecimal codCwc) {
+        markAsChanged("CODCWC", codCwc);
         this.codCwc = codCwc;
    }
 
@@ -60,6 +65,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -68,6 +74,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setIdAwc(BigDecimal idAwc) {
+        markAsChanged("IDAWC", idAwc);
         this.idAwc = idAwc;
    }
 
@@ -76,6 +83,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    }
 
    public void setJsonProg(char[] jsonProg) {
+        markAsChanged("JSONPROG", jsonProg);
         this.jsonProg = jsonProg;
    }
 
@@ -91,6 +99,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
 
    @Override
    public ProgramacaoPlanoProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhIniPrev = vo.asTimestamp("DHINIPREV");
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.idEfx = vo.asBigDecimal("IDEFX");

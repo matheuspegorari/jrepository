@@ -22,6 +22,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setCicloProducao(BigDecimal cicloProducao) {
+        markAsChanged("CICLOPRODUCAO", cicloProducao);
         this.cicloProducao = cicloProducao;
    }
 
@@ -30,6 +31,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -38,6 +40,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -46,6 +49,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -54,14 +58,16 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
-   public String getfinal() {
+   public String getFinal() {
         return _final;
    }
 
-   public void setfinal(String _final) {
+   public void setFinal(String _final) {
+        markAsChanged("FINAL", _final);
         this._final = _final;
    }
 
@@ -70,6 +76,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setObrigatoria(String obrigatoria) {
+        markAsChanged("OBRIGATORIA", obrigatoria);
         this.obrigatoria = obrigatoria;
    }
 
@@ -78,6 +85,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setOndeExec(String ondeExec) {
+        markAsChanged("ONDEEXEC", ondeExec);
         this.ondeExec = ondeExec;
    }
 
@@ -86,6 +94,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -94,6 +103,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setUnidCiclo(String unidCiclo) {
+        markAsChanged("UNIDCICLO", unidCiclo);
         this.unidCiclo = unidCiclo;
    }
 
@@ -102,6 +112,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
    }
 
    public void setVariacao(BigDecimal variacao) {
+        markAsChanged("VARIACAO", variacao);
         this.variacao = variacao;
    }
 
@@ -117,12 +128,13 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
 
    @Override
    public EtapaProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cicloProducao = vo.asBigDecimal("CICLOPRODUCAO");
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");
-        this._final = vo.asString("_final");
+        this._final = vo.asString("FINAL");
         this.obrigatoria = vo.asString("OBRIGATORIA");
         this.ondeExec = vo.asString("ONDEEXEC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

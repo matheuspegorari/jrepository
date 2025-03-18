@@ -19,6 +19,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -27,6 +28,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setCodUsuInc(BigDecimal codUsuInc) {
+        markAsChanged("CODUSUINC", codUsuInc);
         this.codUsuInc = codUsuInc;
    }
 
@@ -35,6 +37,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -43,6 +46,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -51,6 +55,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setNuSvp(BigDecimal nuSvp) {
+        markAsChanged("NUSVP", nuSvp);
         this.nuSvp = nuSvp;
    }
 
@@ -59,6 +64,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setPorta(BigDecimal porta) {
+        markAsChanged("PORTA", porta);
         this.porta = porta;
    }
 
@@ -67,6 +73,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
    }
 
    public void setUrl(String url) {
+        markAsChanged("URL", url);
         this.url = url;
    }
 
@@ -82,6 +89,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
 
    @Override
    public ServidorImpressao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codUsuInc = vo.asBigDecimal("CODUSUINC");
         this.descricao = vo.asString("DESCRICAO");

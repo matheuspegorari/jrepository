@@ -14,6 +14,7 @@ public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<Unidad
    }
 
    public void setCodUma(BigDecimal codUma) {
+        markAsChanged("CODUMA", codUma);
         this.codUma = codUma;
    }
 
@@ -22,6 +23,7 @@ public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<Unidad
    }
 
    public void setDescrUma(String descrUma) {
+        markAsChanged("DESCRUMA", descrUma);
         this.descrUma = descrUma;
    }
 
@@ -30,6 +32,7 @@ public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<Unidad
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -45,6 +48,7 @@ public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<Unidad
 
    @Override
    public UnidadeMovimentacaoArmazenagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUma = vo.asBigDecimal("CODUMA");
         this.descrUma = vo.asString("DESCRUMA");
         this.peso = vo.asBigDecimal("PESO");

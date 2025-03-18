@@ -16,6 +16,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    }
 
    public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
+        markAsChanged("CODCTABCOINT", codCtabcoInt);
         this.codCtabcoInt = codCtabcoInt;
    }
 
@@ -24,6 +25,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -32,6 +34,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    }
 
    public void setSaldoBco(BigDecimal saldoBco) {
+        markAsChanged("SALDOBCO", saldoBco);
         this.saldoBco = saldoBco;
    }
 
@@ -40,6 +43,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    }
 
    public void setSaldoReal(BigDecimal saldoReal) {
+        markAsChanged("SALDOREAL", saldoReal);
         this.saldoReal = saldoReal;
    }
 
@@ -55,6 +59,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
 
    @Override
    public SaldoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.saldoBco = vo.asBigDecimal("SALDOBCO");

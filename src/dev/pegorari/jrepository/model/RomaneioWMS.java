@@ -19,6 +19,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setRecontado(String recontado) {
+        markAsChanged("RECONTADO", recontado);
         this.recontado = recontado;
    }
 
@@ -27,6 +28,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -35,6 +37,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setCodBarraConcat(String codBarraConcat) {
+        markAsChanged("CODBARRACONCAT", codBarraConcat);
         this.codBarraConcat = codBarraConcat;
    }
 
@@ -43,6 +46,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -51,6 +55,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -59,6 +64,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -67,6 +73,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setQtdUnpad(BigDecimal qtdUnpad) {
+        markAsChanged("QTDUNPAD", qtdUnpad);
         this.qtdUnpad = qtdUnpad;
    }
 
@@ -75,6 +82,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -90,6 +98,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
 
    @Override
    public RomaneioWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.recontado = vo.asString("RECONTADO");
         this.codBarra = vo.asString("CODBARRA");
         this.codBarraConcat = vo.asString("CODBARRACONCAT");

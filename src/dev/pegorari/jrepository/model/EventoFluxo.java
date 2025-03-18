@@ -16,6 +16,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -24,6 +25,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    }
 
    public void setIdeFxAnexado(BigDecimal ideFxAnexado) {
+        markAsChanged("IDEFXANEXADO", ideFxAnexado);
         this.ideFxAnexado = ideFxAnexado;
    }
 
@@ -32,6 +34,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    }
 
    public void setIdentificador(String identificador) {
+        markAsChanged("IDENTIFICADOR", identificador);
         this.identificador = identificador;
    }
 
@@ -40,6 +43,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    }
 
    public void setIdRpAInicializa(BigDecimal idRpAInicializa) {
+        markAsChanged("IDRPAINICIALIZA", idRpAInicializa);
         this.idRpAInicializa = idRpAInicializa;
    }
 
@@ -48,6 +52,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    }
 
    public void setInterrompe(String interrompe) {
+        markAsChanged("INTERROMPE", interrompe);
         this.interrompe = interrompe;
    }
 
@@ -63,6 +68,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
 
    @Override
    public EventoFluxo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.ideFxAnexado = vo.asBigDecimal("IDEFXANEXADO");
         this.identificador = vo.asString("IDENTIFICADOR");

@@ -23,6 +23,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFintitiof(BigDecimal nuFintitiof) {
+        markAsChanged("NUFINTITIOF", nuFintitiof);
         this.nuFintitiof = nuFintitiof;
    }
 
@@ -31,6 +32,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setDocAntbanc(String docAntbanc) {
+        markAsChanged("DOCANTBANC", docAntbanc);
         this.docAntbanc = docAntbanc;
    }
 
@@ -39,6 +41,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setDtAntbanc(Timestamp dtAntbanc) {
+        markAsChanged("DTANTBANC", dtAntbanc);
         this.dtAntbanc = dtAntbanc;
    }
 
@@ -47,6 +50,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuAntbanc(BigDecimal nuAntbanc) {
+        markAsChanged("NUANTBANC", nuAntbanc);
         this.nuAntbanc = nuAntbanc;
    }
 
@@ -55,6 +59,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFindespadic(BigDecimal nuFindespadic) {
+        markAsChanged("NUFINDESPADIC", nuFindespadic);
         this.nuFindespadic = nuFindespadic;
    }
 
@@ -63,6 +68,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFintitban(BigDecimal nuFintitban) {
+        markAsChanged("NUFINTITBAN", nuFintitban);
         this.nuFintitban = nuFintitban;
    }
 
@@ -71,6 +77,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFintitjur(BigDecimal nuFintitjur) {
+        markAsChanged("NUFINTITJUR", nuFintitjur);
         this.nuFintitjur = nuFintitjur;
    }
 
@@ -79,6 +86,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFintitobr(BigDecimal nuFintitobr) {
+        markAsChanged("NUFINTITOBR", nuFintitobr);
         this.nuFintitobr = nuFintitobr;
    }
 
@@ -87,6 +95,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFintitori(BigDecimal nuFintitori) {
+        markAsChanged("NUFINTITORI", nuFintitori);
         this.nuFintitori = nuFintitori;
    }
 
@@ -95,6 +104,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setStatusAnt(String statusAnt) {
+        markAsChanged("STATUSANT", statusAnt);
         this.statusAnt = statusAnt;
    }
 
@@ -103,6 +113,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
    }
 
    public void setNuFindespop(BigDecimal nuFindespop) {
+        markAsChanged("NUFINDESPOP", nuFindespop);
         this.nuFindespop = nuFindespop;
    }
 
@@ -118,6 +129,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
 
    @Override
    public AntecipacaoRecebiveis fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFintitiof = vo.asBigDecimal("NUFINTITIOF");
         this.docAntbanc = vo.asString("DOCANTBANC");
         this.dtAntbanc = vo.asTimestamp("DTANTBANC");

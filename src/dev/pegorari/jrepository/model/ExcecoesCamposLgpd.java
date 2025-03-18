@@ -16,6 +16,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
    }
 
    public void setCodCla(BigDecimal codCla) {
+        markAsChanged("CODCLA", codCla);
         this.codCla = codCla;
    }
 
@@ -24,6 +25,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -32,6 +34,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
    }
 
    public void setNomeCampo(String nomeCampo) {
+        markAsChanged("NOMECAMPO", nomeCampo);
         this.nomeCampo = nomeCampo;
    }
 
@@ -40,6 +43,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -48,6 +52,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
    }
 
    public void setTipoVisu(String tipoVisu) {
+        markAsChanged("TIPOVISU", tipoVisu);
         this.tipoVisu = tipoVisu;
    }
 
@@ -63,6 +68,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
 
    @Override
    public ExcecoesCamposLgpd fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nomeCampo = vo.asString("NOMECAMPO");

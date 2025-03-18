@@ -15,6 +15,7 @@ public class MotivosPerda extends AbstractSankhyaEntity<MotivosPerda> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -23,6 +24,7 @@ public class MotivosPerda extends AbstractSankhyaEntity<MotivosPerda> {
    }
 
    public void setCodMpe(BigDecimal codMpe) {
+        markAsChanged("CODMPE", codMpe);
         this.codMpe = codMpe;
    }
 
@@ -31,6 +33,7 @@ public class MotivosPerda extends AbstractSankhyaEntity<MotivosPerda> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -39,6 +42,7 @@ public class MotivosPerda extends AbstractSankhyaEntity<MotivosPerda> {
    }
 
    public void setMotivoPerda(String motivoPerda) {
+        markAsChanged("MOTIVOPERDA", motivoPerda);
         this.motivoPerda = motivoPerda;
    }
 
@@ -54,6 +58,7 @@ public class MotivosPerda extends AbstractSankhyaEntity<MotivosPerda> {
 
    @Override
    public MotivosPerda fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codMpe = vo.asBigDecimal("CODMPE");
         this.descricao = vo.asString("DESCRICAO");

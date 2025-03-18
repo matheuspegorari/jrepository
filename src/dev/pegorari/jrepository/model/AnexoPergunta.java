@@ -17,6 +17,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setCodPerg(BigDecimal codPerg) {
+        markAsChanged("CODPERG", codPerg);
         this.codPerg = codPerg;
    }
 
@@ -25,6 +26,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setConteudo(byte[] conteudo) {
+        markAsChanged("CONTEUDO", conteudo);
         this.conteudo = conteudo;
    }
 
@@ -33,6 +35,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -41,6 +44,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -49,6 +53,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
+        markAsChanged("NUPESQ", nuPesq);
         this.nuPesq = nuPesq;
    }
 
@@ -57,6 +62,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -72,6 +78,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
 
    @Override
    public AnexoPergunta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.conteudo = vo.asBlob("CONTEUDO");
         this.descricao = vo.asString("DESCRICAO");

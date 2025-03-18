@@ -14,6 +14,7 @@ public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -22,6 +23,7 @@ public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria
    }
 
    public void setCodOcor(BigDecimal codOcor) {
+        markAsChanged("CODOCOR", codOcor);
         this.codOcor = codOcor;
    }
 
@@ -30,6 +32,7 @@ public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -45,6 +48,7 @@ public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria
 
    @Override
    public OcorrenciaBancaria fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codOcor = vo.asBigDecimal("CODOCOR");
         this.descricao = vo.asString("DESCRICAO");

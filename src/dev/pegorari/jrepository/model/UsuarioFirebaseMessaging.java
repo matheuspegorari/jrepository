@@ -17,6 +17,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
    }
 
    public void setCodFcm(String codFcm) {
+        markAsChanged("CODFCM", codFcm);
         this.codFcm = codFcm;
    }
 
@@ -25,6 +26,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
    }
 
    public void setDhRegistro(Timestamp dhRegistro) {
+        markAsChanged("DHREGISTRO", dhRegistro);
         this.dhRegistro = dhRegistro;
    }
 
@@ -33,6 +35,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -41,6 +44,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
    }
 
    public void setCodApp(String codApp) {
+        markAsChanged("CODAPP", codApp);
         this.codApp = codApp;
    }
 
@@ -49,6 +53,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
    }
 
    public void setPlataforma(String plataforma) {
+        markAsChanged("PLATAFORMA", plataforma);
         this.plataforma = plataforma;
    }
 
@@ -64,6 +69,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
 
    @Override
    public UsuarioFirebaseMessaging fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codFcm = vo.asString("CODFCM");
         this.dhRegistro = vo.asTimestamp("DHREGISTRO");
         this.codUsu = vo.asBigDecimal("CODUSU");

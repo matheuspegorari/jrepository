@@ -30,6 +30,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -38,6 +39,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodObr(BigDecimal codObr) {
+        markAsChanged("CODOBR", codObr);
         this.codObr = codObr;
    }
 
@@ -46,6 +48,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodRec(String codRec) {
+        markAsChanged("CODREC", codRec);
         this.codRec = codRec;
    }
 
@@ -54,6 +57,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -62,6 +66,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -70,6 +75,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setDescrCompl(String descrCompl) {
+        markAsChanged("DESCRCOMPL", descrCompl);
         this.descrCompl = descrCompl;
    }
 
@@ -78,6 +84,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setDescrProcesso(String descrProcesso) {
+        markAsChanged("DESCRPROCESSO", descrProcesso);
         this.descrProcesso = descrProcesso;
    }
 
@@ -86,6 +93,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -94,6 +102,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -102,6 +111,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setDtVcto(Timestamp dtVcto) {
+        markAsChanged("DTVCTO", dtVcto);
         this.dtVcto = dtVcto;
    }
 
@@ -110,6 +120,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setNumProcesso(String numProcesso) {
+        markAsChanged("NUMPROCESSO", numProcesso);
         this.numProcesso = numProcesso;
    }
 
@@ -118,6 +129,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setOrigProcesso(BigDecimal origProcesso) {
+        markAsChanged("ORIGPROCESSO", origProcesso);
         this.origProcesso = origProcesso;
    }
 
@@ -126,6 +138,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -134,6 +147,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setTipApuracao(String tipApuracao) {
+        markAsChanged("TIPAPURACAO", tipApuracao);
         this.tipApuracao = tipApuracao;
    }
 
@@ -142,6 +156,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -150,6 +165,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setIndSubApuracao(String indSubApuracao) {
+        markAsChanged("INDSUBAPURACAO", indSubApuracao);
         this.indSubApuracao = indSubApuracao;
    }
 
@@ -158,6 +174,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodClsVencDime(BigDecimal codClsVencDime) {
+        markAsChanged("CODCLSVENCDIME", codClsVencDime);
         this.codClsVencDime = codClsVencDime;
    }
 
@@ -166,6 +183,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
    }
 
    public void setCodRecDime(String codRecDime) {
+        markAsChanged("CODRECDIME", codRecDime);
         this.codRecDime = codRecDime;
    }
 
@@ -181,6 +199,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
 
    @Override
    public ObrigacoesICMSSTRecolher fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codObr = vo.asBigDecimal("CODOBR");
         this.codRec = vo.asString("CODREC");

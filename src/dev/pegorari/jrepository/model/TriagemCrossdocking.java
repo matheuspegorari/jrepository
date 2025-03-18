@@ -22,6 +22,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -30,6 +31,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -38,6 +40,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
+        markAsChanged("CODUSUCONF", codUsuConf);
         this.codUsuConf = codUsuConf;
    }
 
@@ -46,6 +49,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -54,6 +58,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setCrossdocking(String crossdocking) {
+        markAsChanged("CROSSDOCKING", crossdocking);
         this.crossdocking = crossdocking;
    }
 
@@ -62,6 +67,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -70,6 +76,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -78,6 +85,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setQtdTriada(BigDecimal qtdTriada) {
+        markAsChanged("QTDTRIADA", qtdTriada);
         this.qtdTriada = qtdTriada;
    }
 
@@ -86,6 +94,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setQtdTriadaVolPad(BigDecimal qtdTriadaVolPad) {
+        markAsChanged("QTDTRIADAVOLPAD", qtdTriadaVolPad);
         this.qtdTriadaVolPad = qtdTriadaVolPad;
    }
 
@@ -94,6 +103,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -109,6 +119,7 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
 
    @Override
    public TriagemCrossdocking fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");

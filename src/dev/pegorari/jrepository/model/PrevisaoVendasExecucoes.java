@@ -16,6 +16,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -24,6 +25,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -32,6 +34,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -40,6 +43,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    }
 
    public void setDiretorio(String diretorio) {
+        markAsChanged("DIRETORIO", diretorio);
         this.diretorio = diretorio;
    }
 
@@ -48,6 +52,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -63,6 +68,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
 
    @Override
    public PrevisaoVendasExecucoes fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codProd = vo.asBigDecimal("CODPROD");

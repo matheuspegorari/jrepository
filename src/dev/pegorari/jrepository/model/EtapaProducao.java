@@ -39,6 +39,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setAjustarMps(String ajustarMps) {
+        markAsChanged("AJUSTARMPS", ajustarMps);
         this.ajustarMps = ajustarMps;
    }
 
@@ -47,6 +48,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setGerarAmostra(String gerarAmostra) {
+        markAsChanged("GERARAMOSTRA", gerarAmostra);
         this.gerarAmostra = gerarAmostra;
    }
 
@@ -55,6 +57,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setLocalOrigEnt(String localOrigEnt) {
+        markAsChanged("LOCALORIGENT", localOrigEnt);
         this.localOrigEnt = localOrigEnt;
    }
 
@@ -63,6 +66,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setLocalOrigSai(String localOrigSai) {
+        markAsChanged("LOCALORIGSAI", localOrigSai);
         this.localOrigSai = localOrigSai;
    }
 
@@ -71,6 +75,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setNomeEtapa(String nomeEtapa) {
+        markAsChanged("NOMEETAPA", nomeEtapa);
         this.nomeEtapa = nomeEtapa;
    }
 
@@ -79,6 +84,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -87,6 +93,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setPendenteEnt(String pendenteEnt) {
+        markAsChanged("PENDENTEENT", pendenteEnt);
         this.pendenteEnt = pendenteEnt;
    }
 
@@ -95,6 +102,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setPendenteSai(String pendenteSai) {
+        markAsChanged("PENDENTESAI", pendenteSai);
         this.pendenteSai = pendenteSai;
    }
 
@@ -103,6 +111,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setSeqOtica(BigDecimal seqOtica) {
+        markAsChanged("SEQOTICA", seqOtica);
         this.seqOtica = seqOtica;
    }
 
@@ -111,6 +120,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -119,6 +129,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setTopDevMp(BigDecimal topDevMp) {
+        markAsChanged("TOPDEVMP", topDevMp);
         this.topDevMp = topDevMp;
    }
 
@@ -127,6 +138,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setTopEntrada(BigDecimal topEntrada) {
+        markAsChanged("TOPENTRADA", topEntrada);
         this.topEntrada = topEntrada;
    }
 
@@ -135,6 +147,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setTopProducao(BigDecimal topProducao) {
+        markAsChanged("TOPPRODUCAO", topProducao);
         this.topProducao = topProducao;
    }
 
@@ -143,6 +156,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setTopSaida(BigDecimal topSaida) {
+        markAsChanged("TOPSAIDA", topSaida);
         this.topSaida = topSaida;
    }
 
@@ -151,6 +165,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setUsaLocEntDestPa(String usaLocEntDestPa) {
+        markAsChanged("USALOCENTDESTPA", usaLocEntDestPa);
         this.usaLocEntDestPa = usaLocEntDestPa;
    }
 
@@ -159,6 +174,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setUsaLocEntOrigPa(String usaLocEntOrigPa) {
+        markAsChanged("USALOCENTORIGPA", usaLocEntOrigPa);
         this.usaLocEntOrigPa = usaLocEntOrigPa;
    }
 
@@ -167,6 +183,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setUsaLocSaiDestPa(String usaLocSaiDestPa) {
+        markAsChanged("USALOCSAIDESTPA", usaLocSaiDestPa);
         this.usaLocSaiDestPa = usaLocSaiDestPa;
    }
 
@@ -175,6 +192,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setUsaLocSaiOrigPa(String usaLocSaiOrigPa) {
+        markAsChanged("USALOCSAIORIGPA", usaLocSaiOrigPa);
         this.usaLocSaiOrigPa = usaLocSaiOrigPa;
    }
 
@@ -183,6 +201,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setValidaWms(String validaWms) {
+        markAsChanged("VALIDAWMS", validaWms);
         this.validaWms = validaWms;
    }
 
@@ -191,6 +210,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -199,6 +219,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodEmpDest(BigDecimal codEmpDest) {
+        markAsChanged("CODEMPDEST", codEmpDest);
         this.codEmpDest = codEmpDest;
    }
 
@@ -207,6 +228,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -215,6 +237,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
+        markAsChanged("CODETAPA", codEtapa);
         this.codEtapa = codEtapa;
    }
 
@@ -223,6 +246,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodEtapaMp(BigDecimal codEtapaMp) {
+        markAsChanged("CODETAPAMP", codEtapaMp);
         this.codEtapaMp = codEtapaMp;
    }
 
@@ -231,6 +255,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodLocalEntDest(BigDecimal codLocalEntDest) {
+        markAsChanged("CODLOCALENTDEST", codLocalEntDest);
         this.codLocalEntDest = codLocalEntDest;
    }
 
@@ -239,6 +264,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodLocalEntOrig(BigDecimal codLocalEntOrig) {
+        markAsChanged("CODLOCALENTORIG", codLocalEntOrig);
         this.codLocalEntOrig = codLocalEntOrig;
    }
 
@@ -247,6 +273,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodLocalSaiDest(BigDecimal codLocalSaiDest) {
+        markAsChanged("CODLOCALSAIDEST", codLocalSaiDest);
         this.codLocalSaiDest = codLocalSaiDest;
    }
 
@@ -255,6 +282,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    }
 
    public void setCodLocalSaiOrig(BigDecimal codLocalSaiOrig) {
+        markAsChanged("CODLOCALSAIORIG", codLocalSaiOrig);
         this.codLocalSaiOrig = codLocalSaiOrig;
    }
 
@@ -270,6 +298,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
 
    @Override
    public EtapaProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ajustarMps = vo.asString("AJUSTARMPS");
         this.gerarAmostra = vo.asString("GERARAMOSTRA");
         this.localOrigEnt = vo.asString("LOCALORIGENT");

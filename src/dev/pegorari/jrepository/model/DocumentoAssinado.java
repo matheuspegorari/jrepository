@@ -28,6 +28,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setDhSolic(Timestamp dhSolic) {
+        markAsChanged("DHSOLIC", dhSolic);
         this.dhSolic = dhSolic;
    }
 
@@ -36,6 +37,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setNomeArquivo(String nomeArquivo) {
+        markAsChanged("NOMEARQUIVO", nomeArquivo);
         this.nomeArquivo = nomeArquivo;
    }
 
@@ -44,6 +46,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
+        markAsChanged("NUDOC", nuDoc);
         this.nuDoc = nuDoc;
    }
 
@@ -52,6 +55,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -60,6 +64,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setHashArquivo(String hashArquivo) {
+        markAsChanged("HASHARQUIVO", hashArquivo);
         this.hashArquivo = hashArquivo;
    }
 
@@ -68,6 +73,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -76,6 +82,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setTransactionId(String transactionId) {
+        markAsChanged("TRANSACTIONID", transactionId);
         this.transactionId = transactionId;
    }
 
@@ -84,6 +91,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -92,6 +100,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setChaveArquivo(String chaveArquivo) {
+        markAsChanged("CHAVEARQUIVO", chaveArquivo);
         this.chaveArquivo = chaveArquivo;
    }
 
@@ -100,6 +109,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setDhResp(Timestamp dhResp) {
+        markAsChanged("DHRESP", dhResp);
         this.dhResp = dhResp;
    }
 
@@ -108,6 +118,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setIdDestinatario(String idDestinatario) {
+        markAsChanged("IDDESTINATARIO", idDestinatario);
         this.idDestinatario = idDestinatario;
    }
 
@@ -116,6 +127,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setIdSolicitante(String idSolicitante) {
+        markAsChanged("IDSOLICITANTE", idSolicitante);
         this.idSolicitante = idSolicitante;
    }
 
@@ -124,6 +136,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setTipoNotific(String tipoNotific) {
+        markAsChanged("TIPONOTIFIC", tipoNotific);
         this.tipoNotific = tipoNotific;
    }
 
@@ -132,6 +145,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setNomeSolicitante(String nomeSolicitante) {
+        markAsChanged("NOMESOLICITANTE", nomeSolicitante);
         this.nomeSolicitante = nomeSolicitante;
    }
 
@@ -140,6 +154,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setNomeDestinatario(String nomeDestinatario) {
+        markAsChanged("NOMEDESTINATARIO", nomeDestinatario);
         this.nomeDestinatario = nomeDestinatario;
    }
 
@@ -148,6 +163,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
    }
 
    public void setDetalhesStatus(String detalhesStatus) {
+        markAsChanged("DETALHESTATUS", detalhesStatus);
         this.detalhesStatus = detalhesStatus;
    }
 
@@ -163,6 +179,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
 
    @Override
    public DocumentoAssinado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhSolic = vo.asTimestamp("DHSOLIC");
         this.nomeArquivo = vo.asString("NOMEARQUIVO");
         this.nuDoc = vo.asBigDecimal("NUDOC");

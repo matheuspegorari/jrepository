@@ -14,6 +14,7 @@ public class TaxasJurosDescontos extends AbstractSankhyaEntity<TaxasJurosDescont
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -22,6 +23,7 @@ public class TaxasJurosDescontos extends AbstractSankhyaEntity<TaxasJurosDescont
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -30,6 +32,7 @@ public class TaxasJurosDescontos extends AbstractSankhyaEntity<TaxasJurosDescont
    }
 
    public void setTaxa(BigDecimal taxa) {
+        markAsChanged("TAXA", taxa);
         this.taxa = taxa;
    }
 
@@ -45,6 +48,7 @@ public class TaxasJurosDescontos extends AbstractSankhyaEntity<TaxasJurosDescont
 
    @Override
    public TaxasJurosDescontos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.taxa = vo.asBigDecimal("TAXA");

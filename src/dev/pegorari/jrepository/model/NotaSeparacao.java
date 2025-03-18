@@ -15,6 +15,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -23,6 +24,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -31,6 +33,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    }
 
    public void setNuTarefacan(BigDecimal nuTarefacan) {
+        markAsChanged("NUTAREFACAN", nuTarefacan);
         this.nuTarefacan = nuTarefacan;
    }
 
@@ -39,6 +42,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    }
 
    public void setStatusNota(String statusNota) {
+        markAsChanged("STATUSNOTA", statusNota);
         this.statusNota = statusNota;
    }
 
@@ -54,6 +58,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
 
    @Override
    public NotaSeparacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");

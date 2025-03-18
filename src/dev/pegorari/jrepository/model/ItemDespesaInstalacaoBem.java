@@ -16,6 +16,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -24,6 +25,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -32,6 +34,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
+        markAsChanged("NURATEIO", nuRateio);
         this.nuRateio = nuRateio;
    }
 
@@ -40,6 +43,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    }
 
    public void setVlrIcmsRateio(BigDecimal vlrIcmsRateio) {
+        markAsChanged("VLRICMSRATEIO", vlrIcmsRateio);
         this.vlrIcmsRateio = vlrIcmsRateio;
    }
 
@@ -48,6 +52,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    }
 
    public void setVlrRateio(BigDecimal vlrRateio) {
+        markAsChanged("VLRRATEIO", vlrRateio);
         this.vlrRateio = vlrRateio;
    }
 
@@ -63,6 +68,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
 
    @Override
    public ItemDespesaInstalacaoBem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBem = vo.asString("CODBEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuRateio = vo.asBigDecimal("NURATEIO");

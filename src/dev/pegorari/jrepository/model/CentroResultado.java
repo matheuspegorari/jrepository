@@ -33,6 +33,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -41,6 +42,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setArea(BigDecimal area) {
+        markAsChanged("AREA", area);
         this.area = area;
    }
 
@@ -49,6 +51,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setAreaCont(BigDecimal areaCont) {
+        markAsChanged("AREACONT", areaCont);
         this.areaCont = areaCont;
    }
 
@@ -57,6 +60,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setAreaPerm(BigDecimal areaPerm) {
+        markAsChanged("AREAPERM", areaPerm);
         this.areaPerm = areaPerm;
    }
 
@@ -65,6 +69,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setAreaReal(BigDecimal areaReal) {
+        markAsChanged("AREAREAL", areaReal);
         this.areaReal = areaReal;
    }
 
@@ -73,6 +78,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -81,6 +87,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -89,6 +96,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodCenCusPai(BigDecimal codCenCusPai) {
+        markAsChanged("CODCENCUSPAI", codCenCusPai);
         this.codCenCusPai = codCenCusPai;
    }
 
@@ -97,6 +105,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -105,6 +114,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -113,6 +123,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodUng(BigDecimal codUng) {
+        markAsChanged("CODUNG", codUng);
         this.codUng = codUng;
    }
 
@@ -121,6 +132,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodUnn(BigDecimal codUnn) {
+        markAsChanged("CODUNN", codUnn);
         this.codUnn = codUnn;
    }
 
@@ -129,6 +141,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
+        markAsChanged("CODUSURESP", codUsuResp);
         this.codUsuResp = codUsuResp;
    }
 
@@ -137,6 +150,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setDescrCenCus(String descrCenCus) {
+        markAsChanged("DESCRCENCUS", descrCenCus);
         this.descrCenCus = descrCenCus;
    }
 
@@ -145,6 +159,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -153,6 +168,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setFracCont(BigDecimal fracCont) {
+        markAsChanged("FRACCONT", fracCont);
         this.fracCont = fracCont;
    }
 
@@ -161,6 +177,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setFracGeren(BigDecimal fracGeren) {
+        markAsChanged("FRACGEREN", fracGeren);
         this.fracGeren = fracGeren;
    }
 
@@ -169,6 +186,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -177,6 +195,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setVeiculo(String veiculo) {
+        markAsChanged("VEICULO", veiculo);
         this.veiculo = veiculo;
    }
 
@@ -185,6 +204,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCodParcResp(BigDecimal codParcResp) {
+        markAsChanged("CODPARCRESP", codParcResp);
         this.codParcResp = codParcResp;
    }
 
@@ -193,6 +213,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    }
 
    public void setCalcElalurPartea(String calcElalurPartea) {
+        markAsChanged("CALCELALURPARTEA", calcElalurPartea);
         this.calcElalurPartea = calcElalurPartea;
    }
 
@@ -208,6 +229,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
 
    @Override
    public CentroResultado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.area = vo.asBigDecimal("AREA");
         this.areaCont = vo.asBigDecimal("AREACONT");

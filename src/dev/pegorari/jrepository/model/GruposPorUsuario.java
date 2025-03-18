@@ -18,6 +18,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -26,6 +27,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setDataFim(Timestamp dataFim) {
+        markAsChanged("DATAFIM", dataFim);
         this.dataFim = dataFim;
    }
 
@@ -42,6 +45,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setDataInicio(Timestamp dataInicio) {
+        markAsChanged("DATAINICIO", dataInicio);
         this.dataInicio = dataInicio;
    }
 
@@ -50,6 +54,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setRepassar(String repassar) {
+        markAsChanged("REPASSAR", repassar);
         this.repassar = repassar;
    }
 
@@ -58,6 +63,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -73,6 +79,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
 
    @Override
    public GruposPorUsuario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dataFim = vo.asTimestamp("DATAFIM");

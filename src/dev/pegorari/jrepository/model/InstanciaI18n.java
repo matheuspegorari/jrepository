@@ -13,6 +13,7 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -21,6 +22,7 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -29,6 +31,7 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -44,6 +47,7 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
 
    @Override
    public InstanciaI18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.texto = vo.asString("TEXTO");

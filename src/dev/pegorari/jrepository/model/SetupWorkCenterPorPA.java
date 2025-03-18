@@ -19,6 +19,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -27,6 +28,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -35,6 +37,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setNuAst(BigDecimal nuAst) {
+        markAsChanged("NUAST", nuAst);
         this.nuAst = nuAst;
    }
 
@@ -43,6 +46,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setVal(String val) {
+        markAsChanged("VAL", val);
         this.val = val;
    }
 
@@ -51,6 +55,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setValDecimal(BigDecimal valDecimal) {
+        markAsChanged("VALDECIMAL", valDecimal);
         this.valDecimal = valDecimal;
    }
 
@@ -59,6 +64,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setValInteiro(BigDecimal valInteiro) {
+        markAsChanged("VALINTEIRO", valInteiro);
         this.valInteiro = valInteiro;
    }
 
@@ -67,6 +73,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setValMemo(String valMemo) {
+        markAsChanged("VALMEMO", valMemo);
         this.valMemo = valMemo;
    }
 
@@ -75,6 +82,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
    }
 
    public void setValTexto(String valTexto) {
+        markAsChanged("VALTEXTO", valTexto);
         this.valTexto = valTexto;
    }
 
@@ -90,6 +98,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
 
    @Override
    public SetupWorkCenterPorPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.nuAst = vo.asBigDecimal("NUAST");

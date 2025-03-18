@@ -26,6 +26,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -34,6 +35,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setBase(BigDecimal base) {
+        markAsChanged("BASE", base);
         this.base = base;
    }
 
@@ -42,6 +44,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -50,6 +53,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setCodImp(BigDecimal codImp) {
+        markAsChanged("CODIMP", codImp);
         this.codImp = codImp;
    }
 
@@ -58,6 +62,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -66,6 +71,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -74,6 +80,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -82,6 +89,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setTipImp(BigDecimal tipImp) {
+        markAsChanged("TIPIMP", tipImp);
         this.tipImp = tipImp;
    }
 
@@ -90,6 +98,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -98,6 +107,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setPercInssEspecial(BigDecimal percInssEspecial) {
+        markAsChanged("PERCINSSESPECIAL", percInssEspecial);
         this.percInssEspecial = percInssEspecial;
    }
 
@@ -106,6 +116,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setTipoInssEspecial(String tipoInssEspecial) {
+        markAsChanged("TIPOINSSESPECIAL", tipoInssEspecial);
         this.tipoInssEspecial = tipoInssEspecial;
    }
 
@@ -114,6 +125,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setVlrInssEspecial(BigDecimal vlrInssEspecial) {
+        markAsChanged("VLRINSSESPECIAL", vlrInssEspecial);
         this.vlrInssEspecial = vlrInssEspecial;
    }
 
@@ -122,6 +134,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setCodNatRend(BigDecimal codNatRend) {
+        markAsChanged("CODNATREND", codNatRend);
         this.codNatRend = codNatRend;
    }
 
@@ -130,6 +143,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setCodReceita(String codReceita) {
+        markAsChanged("CODRECEITA", codReceita);
         this.codReceita = codReceita;
    }
 
@@ -138,6 +152,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
    }
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
+        markAsChanged("TPIRRFEXT", tpIrrfExt);
         this.tpIrrfExt = tpIrrfExt;
    }
 
@@ -153,6 +168,7 @@ public class ImpostoNota extends AbstractSankhyaEntity<ImpostoNota> {
 
    @Override
    public ImpostoNota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.base = vo.asBigDecimal("BASE");
         this.codCid = vo.asBigDecimal("CODCID");

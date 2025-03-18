@@ -21,6 +21,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -29,6 +30,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setDhAcesso(Timestamp dhAcesso) {
+        markAsChanged("DHACESSO", dhAcesso);
         this.dhAcesso = dhAcesso;
    }
 
@@ -37,6 +39,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setHostname(String hostname) {
+        markAsChanged("HOSTNAME", hostname);
         this.hostname = hostname;
    }
 
@@ -45,6 +48,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setIp(String ip) {
+        markAsChanged("IP", ip);
         this.ip = ip;
    }
 
@@ -53,6 +57,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setModulo(String modulo) {
+        markAsChanged("MODULO", modulo);
         this.modulo = modulo;
    }
 
@@ -61,6 +66,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setSid(BigDecimal sid) {
+        markAsChanged("SID", sid);
         this.sid = sid;
    }
 
@@ -69,6 +75,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setSucesso(String sucesso) {
+        markAsChanged("SUCESSO", sucesso);
         this.sucesso = sucesso;
    }
 
@@ -77,6 +84,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setTerminal(String terminal) {
+        markAsChanged("TERMINAL", terminal);
         this.terminal = terminal;
    }
 
@@ -85,6 +93,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
    }
 
    public void setUsuario(String usuario) {
+        markAsChanged("USUARIO", usuario);
         this.usuario = usuario;
    }
 
@@ -100,6 +109,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
 
    @Override
    public LogAcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.dhAcesso = vo.asTimestamp("DHACESSO");
         this.hostname = vo.asString("HOSTNAME");

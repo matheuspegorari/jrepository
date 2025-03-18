@@ -13,6 +13,7 @@ public class I18n extends AbstractSankhyaEntity<I18n> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -21,6 +22,7 @@ public class I18n extends AbstractSankhyaEntity<I18n> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -29,6 +31,7 @@ public class I18n extends AbstractSankhyaEntity<I18n> {
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -44,6 +47,7 @@ public class I18n extends AbstractSankhyaEntity<I18n> {
 
    @Override
    public I18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.locale = vo.asString("LOCALE");
         this.texto = vo.asString("TEXTO");
         this.chave = vo.asString("CHAVE");

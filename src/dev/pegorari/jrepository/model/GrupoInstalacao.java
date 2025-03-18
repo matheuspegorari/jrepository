@@ -14,6 +14,7 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
    }
 
    public void setGrupo(BigDecimal grupo) {
+        markAsChanged("GRUPO", grupo);
         this.grupo = grupo;
    }
 
@@ -22,6 +23,7 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -30,6 +32,7 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
    }
 
    public void setQtdParc(BigDecimal qtdParc) {
+        markAsChanged("QTDPARC", qtdParc);
         this.qtdParc = qtdParc;
    }
 
@@ -45,6 +48,7 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
 
    @Override
    public GrupoInstalacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.grupo = vo.asBigDecimal("GRUPO");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.qtdParc = vo.asBigDecimal("QTDPARC");

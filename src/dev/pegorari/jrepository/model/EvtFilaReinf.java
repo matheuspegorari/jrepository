@@ -40,6 +40,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setAcao(String acao) {
+        markAsChanged("ACAO", acao);
         this.acao = acao;
    }
 
@@ -48,6 +49,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -56,6 +58,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setChaveEvento(String chaveEvento) {
+        markAsChanged("CHAVEEVENTO", chaveEvento);
         this.chaveEvento = chaveEvento;
    }
 
@@ -64,6 +67,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -72,6 +76,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setCodRetorno(BigDecimal codRetorno) {
+        markAsChanged("CODRETORNO", codRetorno);
         this.codRetorno = codRetorno;
    }
 
@@ -80,6 +85,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setCodUsuInc(BigDecimal codUsuInc) {
+        markAsChanged("CODUSUINC", codUsuInc);
         this.codUsuInc = codUsuInc;
    }
 
@@ -88,6 +94,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setDescEvt(String descEvt) {
+        markAsChanged("DESCREVT", descEvt);
         this.descEvt = descEvt;
    }
 
@@ -96,6 +103,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -104,6 +112,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setDhProc(Timestamp dhProc) {
+        markAsChanged("DHPROC", dhProc);
         this.dhProc = dhProc;
    }
 
@@ -112,6 +121,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setFimValid(Timestamp fimValid) {
+        markAsChanged("FIMVALID", fimValid);
         this.fimValid = fimValid;
    }
 
@@ -120,6 +130,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setIndApuracao(BigDecimal indApuracao) {
+        markAsChanged("INDAPURACAO", indApuracao);
         this.indApuracao = indApuracao;
    }
 
@@ -128,6 +139,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setIndRetif(BigDecimal indRetif) {
+        markAsChanged("INDRETIF", indRetif);
         this.indRetif = indRetif;
    }
 
@@ -136,6 +148,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setIniValid(Timestamp iniValid) {
+        markAsChanged("INIVALID", iniValid);
         this.iniValid = iniValid;
    }
 
@@ -144,6 +157,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -152,6 +166,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setNroProtLote(String nroProtLote) {
+        markAsChanged("NROPROTLOTE", nroProtLote);
         this.nroProtLote = nroProtLote;
    }
 
@@ -160,6 +175,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setNroRecibo(String nroRecibo) {
+        markAsChanged("NRORECIBO", nroRecibo);
         this.nroRecibo = nroRecibo;
    }
 
@@ -168,6 +184,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setNuLote(BigDecimal nuLote) {
+        markAsChanged("NULOTE", nuLote);
         this.nuLote = nuLote;
    }
 
@@ -176,6 +193,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -184,6 +202,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -192,6 +211,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setSeqEvento(BigDecimal seqEvento) {
+        markAsChanged("SEQEVENTO", seqEvento);
         this.seqEvento = seqEvento;
    }
 
@@ -200,6 +220,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -208,6 +229,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -216,6 +238,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setTipoEvento(String tipoEvento) {
+        markAsChanged("TIPOEVENTO", tipoEvento);
         this.tipoEvento = tipoEvento;
    }
 
@@ -224,6 +247,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setTpAmb(BigDecimal tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -232,6 +256,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setVerProc(String verProc) {
+        markAsChanged("VERPROC", verProc);
         this.verProc = verProc;
    }
 
@@ -240,6 +265,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -248,6 +274,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -256,6 +283,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
+        markAsChanged("VERSAOLAYOUT", versaoLayout);
         this.versaoLayout = versaoLayout;
    }
 
@@ -271,6 +299,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
 
    @Override
    public EvtFilaReinf fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acao = vo.asString("ACAO");
         this.chave = vo.asString("CHAVE");
         this.chaveEvento = vo.asString("CHAVEEVENTO");

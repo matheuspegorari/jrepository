@@ -21,6 +21,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setCodMtp(BigDecimal codMtp) {
+        markAsChanged("CODMTP", codMtp);
         this.codMtp = codMtp;
    }
 
@@ -29,6 +30,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -37,6 +39,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -45,6 +48,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setDhInicio(Timestamp dhInicio) {
+        markAsChanged("DHINICIO", dhInicio);
         this.dhInicio = dhInicio;
    }
 
@@ -53,6 +57,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -61,6 +66,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -69,6 +75,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setIdeiAtv(BigDecimal ideiAtv) {
+        markAsChanged("IDEIATV", ideiAtv);
         this.ideiAtv = ideiAtv;
    }
 
@@ -77,6 +84,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -85,6 +93,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    }
 
    public void setIdAtv(BigDecimal idAtv) {
+        markAsChanged("IDIATV", idAtv);
         this.idAtv = idAtv;
    }
 
@@ -100,6 +109,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
 
    @Override
    public ExecucaoAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMtp = vo.asBigDecimal("CODMTP");
         this.observacao = vo.asString("OBSERVACAO");
         this.tipo = vo.asString("TIPO");

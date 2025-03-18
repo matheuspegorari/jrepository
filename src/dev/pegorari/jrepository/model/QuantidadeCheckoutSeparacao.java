@@ -16,6 +16,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -24,6 +25,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -32,6 +34,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
    }
 
    public void setQtdCheckouts(BigDecimal qtdCheckouts) {
+        markAsChanged("QTDCHECKOUTS", qtdCheckouts);
         this.qtdCheckouts = qtdCheckouts;
    }
 
@@ -40,6 +43,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
    }
 
    public void setNuSepMae(BigDecimal nuSepMae) {
+        markAsChanged("NUSEPMAE", nuSepMae);
         this.nuSepMae = nuSepMae;
    }
 
@@ -48,6 +52,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -63,6 +68,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
 
    @Override
    public QuantidadeCheckoutSeparacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.qtdCheckouts = vo.asBigDecimal("QTDCHECKOUTS");

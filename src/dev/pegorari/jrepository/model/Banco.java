@@ -16,6 +16,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
    }
 
    public void setAbreviatura(String abreviatura) {
+        markAsChanged("ABREVIATURA", abreviatura);
         this.abreviatura = abreviatura;
    }
 
@@ -24,6 +25,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -32,6 +34,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
    }
 
    public void setNomeBco(String nomeBco) {
+        markAsChanged("NOMEBCO", nomeBco);
         this.nomeBco = nomeBco;
    }
 
@@ -40,6 +43,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
    }
 
    public void setCtaCmc7Ini(BigDecimal ctaCmc7Ini) {
+        markAsChanged("CTACMC7INI", ctaCmc7Ini);
         this.ctaCmc7Ini = ctaCmc7Ini;
    }
 
@@ -48,6 +52,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
    }
 
    public void setCtaCmc7Fim(BigDecimal ctaCmc7Fim) {
+        markAsChanged("CTACMC7FIM", ctaCmc7Fim);
         this.ctaCmc7Fim = ctaCmc7Fim;
    }
 
@@ -63,6 +68,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
 
    @Override
    public Banco fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.codBco = vo.asBigDecimal("CODBCO");
         this.nomeBco = vo.asString("NOMEBCO");

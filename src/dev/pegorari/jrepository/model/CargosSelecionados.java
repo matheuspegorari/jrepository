@@ -15,6 +15,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -23,6 +24,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -31,6 +33,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
    }
 
    public void setTriagem(String triagem) {
+        markAsChanged("TRIAGEM", triagem);
         this.triagem = triagem;
    }
 
@@ -39,6 +42,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
    }
 
    public void setCandidato(String candidato) {
+        markAsChanged("CANDIDATO", candidato);
         this.candidato = candidato;
    }
 
@@ -54,6 +58,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
 
    @Override
    public CargosSelecionados fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
         this.triagem = vo.asString("TRIAGEM");

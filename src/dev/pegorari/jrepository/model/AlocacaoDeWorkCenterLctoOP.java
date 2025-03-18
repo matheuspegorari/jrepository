@@ -19,6 +19,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setSeqOp(BigDecimal seqOp) {
+        markAsChanged("SEQOP", seqOp);
         this.seqOp = seqOp;
    }
 
@@ -27,6 +28,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setNuLop(BigDecimal nuLop) {
+        markAsChanged("NULOP", nuLop);
         this.nuLop = nuLop;
    }
 
@@ -35,6 +37,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setIdAwc(BigDecimal idAwc) {
+        markAsChanged("IDAWC", idAwc);
         this.idAwc = idAwc;
    }
 
@@ -43,6 +46,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -51,6 +55,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -59,6 +64,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setCodCwc(BigDecimal codCwc) {
+        markAsChanged("CODCWC", codCwc);
         this.codCwc = codCwc;
    }
 
@@ -67,6 +73,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setDescrCwc(String descrCwc) {
+        markAsChanged("DESCRCWC", descrCwc);
         this.descrCwc = descrCwc;
    }
 
@@ -75,6 +82,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    }
 
    public void setDescrAtv(String descrAtv) {
+        markAsChanged("DESCRATV", descrAtv);
         this.descrAtv = descrAtv;
    }
 
@@ -90,6 +98,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
 
    @Override
    public AlocacaoDeWorkCenterLctoOP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.idAwc = vo.asBigDecimal("IDAWC");

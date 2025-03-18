@@ -17,6 +17,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    }
 
    public void setSeqImps(BigDecimal seqImps) {
+        markAsChanged("SEQIMPS", seqImps);
         this.seqImps = seqImps;
    }
 
@@ -25,6 +26,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    }
 
    public void setNumPs(BigDecimal numPs) {
+        markAsChanged("NUMPS", numPs);
         this.numPs = numPs;
    }
 
@@ -33,6 +35,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    }
 
    public void setQtdGiro(BigDecimal qtdGiro) {
+        markAsChanged("QTDGIRO", qtdGiro);
         this.qtdGiro = qtdGiro;
    }
 
@@ -41,6 +44,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    }
 
    public void setPerIni(Timestamp perIni) {
+        markAsChanged("PERINI", perIni);
         this.perIni = perIni;
    }
 
@@ -49,6 +53,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
    }
 
    public void setPerFin(Timestamp perFin) {
+        markAsChanged("PERFIN", perFin);
         this.perFin = perFin;
    }
 
@@ -64,6 +69,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
 
    @Override
    public DetalhesGiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqImps = vo.asBigDecimal("SEQIMPS");
         this.numPs = vo.asBigDecimal("NUMPS");
         this.qtdGiro = vo.asBigDecimal("QTDGIRO");

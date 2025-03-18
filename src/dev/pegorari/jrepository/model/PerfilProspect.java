@@ -13,6 +13,7 @@ public class PerfilProspect extends AbstractSankhyaEntity<PerfilProspect> {
    }
 
    public void setCodPap(BigDecimal codPap) {
+        markAsChanged("CODPAP", codPap);
         this.codPap = codPap;
    }
 
@@ -21,6 +22,7 @@ public class PerfilProspect extends AbstractSankhyaEntity<PerfilProspect> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -36,6 +38,7 @@ public class PerfilProspect extends AbstractSankhyaEntity<PerfilProspect> {
 
    @Override
    public PerfilProspect fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPap = vo.asBigDecimal("CODPAP");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");
         return this;

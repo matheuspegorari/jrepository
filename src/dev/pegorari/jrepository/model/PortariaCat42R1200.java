@@ -40,6 +40,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -48,6 +49,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setBaseIcmstot(BigDecimal baseIcmstot) {
+        markAsChanged("BASEICMSTOT", baseIcmstot);
         this.baseIcmstot = baseIcmstot;
    }
 
@@ -56,6 +58,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodCfo(BigDecimal codCfo) {
+        markAsChanged("CODCFO", codCfo);
         this.codCfo = codCfo;
    }
 
@@ -64,6 +67,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -72,6 +76,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodItem(String codItem) {
+        markAsChanged("CODITEM", codItem);
         this.codItem = codItem;
    }
 
@@ -80,6 +85,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodLegal(BigDecimal codLegal) {
+        markAsChanged("CODLEGAL", codLegal);
         this.codLegal = codLegal;
    }
 
@@ -88,6 +94,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodMod(String codMod) {
+        markAsChanged("CODMOD", codMod);
         this.codMod = codMod;
    }
 
@@ -96,6 +103,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -104,6 +112,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -112,6 +121,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setData(Timestamp data) {
+        markAsChanged("DATA", data);
         this.data = data;
    }
 
@@ -120,6 +130,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -128,6 +139,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setDtFinal(Timestamp dtFinal) {
+        markAsChanged("DTFINAL", dtFinal);
         this.dtFinal = dtFinal;
    }
 
@@ -136,6 +148,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setDtInicial(Timestamp dtInicial) {
+        markAsChanged("DTINICIAL", dtInicial);
         this.dtInicial = dtInicial;
    }
 
@@ -144,6 +157,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setEcfFab(String ecfFab) {
+        markAsChanged("ECFFAB", ecfFab);
         this.ecfFab = ecfFab;
    }
 
@@ -152,6 +166,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setIcmsTot(BigDecimal icmsTot) {
+        markAsChanged("ICMSTOT", icmsTot);
         this.icmsTot = icmsTot;
    }
 
@@ -160,6 +175,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setIndOper(BigDecimal indOper) {
+        markAsChanged("INDOPER", indOper);
         this.indOper = indOper;
    }
 
@@ -168,6 +184,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setNumDoc(BigDecimal numDoc) {
+        markAsChanged("NUMDOC", numDoc);
         this.numDoc = numDoc;
    }
 
@@ -176,6 +193,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -184,6 +202,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -192,6 +211,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setReg(String reg) {
+        markAsChanged("REG", reg);
         this.reg = reg;
    }
 
@@ -200,6 +220,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -208,6 +229,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setSer(String ser) {
+        markAsChanged("SER", ser);
         this.ser = ser;
    }
 
@@ -216,6 +238,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -224,6 +247,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setVlConfr(BigDecimal vlConfr) {
+        markAsChanged("VLCONFR", vlConfr);
         this.vlConfr = vlConfr;
    }
 
@@ -232,6 +256,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setVlrParaAtualSaldo(BigDecimal vlrParaAtualSaldo) {
+        markAsChanged("VLRPARAATUALSALDO", vlrParaAtualSaldo);
         this.vlrParaAtualSaldo = vlrParaAtualSaldo;
    }
 
@@ -240,6 +265,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setVlrUnit(BigDecimal vlrUnit) {
+        markAsChanged("VLRUNIT", vlrUnit);
         this.vlrUnit = vlrUnit;
    }
 
@@ -248,6 +274,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -256,6 +283,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
    }
 
    public void setTipoDivergencia(BigDecimal tipoDivergencia) {
+        markAsChanged("TIPODIVERGENCIA", tipoDivergencia);
         this.tipoDivergencia = tipoDivergencia;
    }
 
@@ -271,6 +299,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
 
    @Override
    public PortariaCat42R1200 fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.baseIcmstot = vo.asBigDecimal("BASEICMSTOT");
         this.codCfo = vo.asBigDecimal("CODCFO");

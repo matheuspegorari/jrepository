@@ -23,6 +23,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setCusAtend(BigDecimal cusAtend) {
+        markAsChanged("CUSATEND", cusAtend);
         this.cusAtend = cusAtend;
    }
 
@@ -31,6 +32,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -39,6 +41,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -47,6 +50,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setOrdemProd(BigDecimal ordemProd) {
+        markAsChanged("ORDEMPROD", ordemProd);
         this.ordemProd = ordemProd;
    }
 
@@ -55,6 +59,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setQtdAtendida(BigDecimal qtdAtendida) {
+        markAsChanged("QTDATENDIDA", qtdAtendida);
         this.qtdAtendida = qtdAtendida;
    }
 
@@ -63,6 +68,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -71,6 +77,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
+        markAsChanged("SEQUENCIAORIG", sequenciaOrig);
         this.sequenciaOrig = sequenciaOrig;
    }
 
@@ -79,6 +86,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setStatusNota(String statusNota) {
+        markAsChanged("STATUSNOTA", statusNota);
         this.statusNota = statusNota;
    }
 
@@ -87,6 +95,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setNroRegExport(String nroRegExport) {
+        markAsChanged("NROREGEXPORT", nroRegExport);
         this.nroRegExport = nroRegExport;
    }
 
@@ -95,6 +104,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setNroAtoConcDraw(String nroAtoConcDraw) {
+        markAsChanged("NROATOCONCDRAW", nroAtoConcDraw);
         this.nroAtoConcDraw = nroAtoConcDraw;
    }
 
@@ -103,6 +113,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setNroMemorando(BigDecimal nroMemorando) {
+        markAsChanged("NROMEMORANDO", nroMemorando);
         this.nroMemorando = nroMemorando;
    }
 
@@ -111,6 +122,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
    }
 
    public void setFixacao(String fixacao) {
+        markAsChanged("FIXACAO", fixacao);
         this.fixacao = fixacao;
    }
 
@@ -126,6 +138,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
 
    @Override
    public CompraVendavariosPedido fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cusAtend = vo.asBigDecimal("CUSATEND");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuNotaOrig = vo.asBigDecimal("NUNOTAORIG");

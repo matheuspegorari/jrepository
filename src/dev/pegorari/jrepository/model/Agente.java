@@ -24,6 +24,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setSchedule(String schedule) {
+        markAsChanged("SCHEDULE", schedule);
         this.schedule = schedule;
    }
 
@@ -32,6 +33,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setVersao(String versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -40,6 +42,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -48,6 +51,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setConteudo(byte[] conteudo) {
+        markAsChanged("CONTEUDO", conteudo);
         this.conteudo = conteudo;
    }
 
@@ -56,6 +60,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setDescritor(char[] descritor) {
+        markAsChanged("DESCRITOR", descritor);
         this.descritor = descritor;
    }
 
@@ -64,6 +69,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setId(String id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -72,6 +78,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -80,6 +87,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setNotificado(String notificado) {
+        markAsChanged("NOTIFICADO", notificado);
         this.notificado = notificado;
    }
 
@@ -88,6 +96,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setDescragente(String descragente) {
+        markAsChanged("DESCRAGENTE", descragente);
         this.descragente = descragente;
    }
 
@@ -96,6 +105,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setQtdexec(BigDecimal qtdexec) {
+        markAsChanged("QTDEXEC", qtdexec);
         this.qtdexec = qtdexec;
    }
 
@@ -104,6 +114,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setHash(String hash) {
+        markAsChanged("HASH", hash);
         this.hash = hash;
    }
 
@@ -112,6 +123,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
    }
 
    public void setUltlog(char[] ultlog) {
+        markAsChanged("ULTLOG", ultlog);
         this.ultlog = ultlog;
    }
 
@@ -127,6 +139,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
 
    @Override
    public Agente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.schedule = vo.asString("SCHEDULE");
         this.versao = vo.asString("VERSAO");
         this.dhInc = vo.asTimestamp("DHINC");

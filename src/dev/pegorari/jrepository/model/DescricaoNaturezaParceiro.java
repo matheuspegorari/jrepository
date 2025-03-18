@@ -14,6 +14,7 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -22,6 +23,7 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -30,6 +32,7 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
    }
 
    public void setDescrNat(String descrNat) {
+        markAsChanged("DESCRNAT", descrNat);
         this.descrNat = descrNat;
    }
 
@@ -45,6 +48,7 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
 
    @Override
    public DescricaoNaturezaParceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codNat = vo.asBigDecimal("CODNAT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.descrNat = vo.asString("DESCRNAT");

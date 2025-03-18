@@ -19,6 +19,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -27,6 +28,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setNomeArquivoSkw(String nomeArquivoSkw) {
+        markAsChanged("NOMEARQUIVOSKW", nomeArquivoSkw);
         this.nomeArquivoSkw = nomeArquivoSkw;
    }
 
@@ -35,6 +37,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setCaminhoArquivo(String caminhoArquivo) {
+        markAsChanged("CAMINHOARQUIVO", caminhoArquivo);
         this.caminhoArquivo = caminhoArquivo;
    }
 
@@ -43,6 +46,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setTipoDoc(String tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -51,6 +55,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -59,6 +64,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -67,6 +73,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -82,6 +89,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
 
    @Override
    public ArquivoAnexoECD fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nomeArquivoSkw = vo.asString("NOMEARQUIVOSKW");
         this.caminhoArquivo = vo.asString("CAMINHOARQUIVO");

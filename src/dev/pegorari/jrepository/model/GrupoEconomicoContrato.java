@@ -14,6 +14,7 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -22,6 +23,7 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -30,6 +32,7 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
    }
 
    public void setPercCusto(BigDecimal percCusto) {
+        markAsChanged("PERCCUSTO", percCusto);
         this.percCusto = percCusto;
    }
 
@@ -45,6 +48,7 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
 
    @Override
    public GrupoEconomicoContrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.percCusto = vo.asBigDecimal("PERCCUSTO");

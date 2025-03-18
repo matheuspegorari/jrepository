@@ -21,6 +21,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setQtdFatNota(BigDecimal qtdFatNota) {
+        markAsChanged("QTDFATNOTA", qtdFatNota);
         this.qtdFatNota = qtdFatNota;
    }
 
@@ -29,6 +30,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
+        markAsChanged("QTDMISTURA", qtdMistura);
         this.qtdMistura = qtdMistura;
    }
 
@@ -37,6 +39,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -45,6 +48,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setControleMpAlt(String controleMpAlt) {
+        markAsChanged("CONTROLEMPALT", controleMpAlt);
         this.controleMpAlt = controleMpAlt;
    }
 
@@ -53,6 +57,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setCodProdMpAlt(BigDecimal codProdMpAlt) {
+        markAsChanged("CODPRODMPALT", codProdMpAlt);
         this.codProdMpAlt = codProdMpAlt;
    }
 
@@ -61,6 +66,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -69,6 +75,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -77,6 +84,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -85,6 +93,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -93,6 +102,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -108,6 +118,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
 
    @Override
    public ItemMateriaPrimaAlternativa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.qtdFatNota = vo.asBigDecimal("QTDFATNOTA");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.ordem = vo.asBigDecimal("ORDEM");

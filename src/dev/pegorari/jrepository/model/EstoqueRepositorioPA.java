@@ -20,6 +20,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setCodCpm(BigDecimal codCpm) {
+        markAsChanged("CODCPM", codCpm);
         this.codCpm = codCpm;
    }
 
@@ -28,6 +29,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -36,6 +38,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -44,6 +47,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -52,6 +56,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -60,6 +65,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setIdRpa(BigDecimal idRpa) {
+        markAsChanged("IDRPA", idRpa);
         this.idRpa = idRpa;
    }
 
@@ -68,6 +74,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setStatusExec(String statusExec) {
+        markAsChanged("STATUSEXEC", statusExec);
         this.statusExec = statusExec;
    }
 
@@ -76,6 +83,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -84,6 +92,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    }
 
    public void setEstoquePerda(BigDecimal estoquePerda) {
+        markAsChanged("ESTOQUEPERDA", estoquePerda);
         this.estoquePerda = estoquePerda;
    }
 
@@ -99,6 +108,7 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
 
    @Override
    public EstoqueRepositorioPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCpm = vo.asBigDecimal("CODCPM");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

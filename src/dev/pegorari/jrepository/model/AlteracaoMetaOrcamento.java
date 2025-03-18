@@ -51,6 +51,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto4(BigDecimal previsto4) {
+        markAsChanged("PREVISTO4", previsto4);
         this.previsto4 = previsto4;
    }
 
@@ -59,6 +60,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto5(BigDecimal previsto5) {
+        markAsChanged("PREVISTO5", previsto5);
         this.previsto5 = previsto5;
    }
 
@@ -67,6 +69,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto6(BigDecimal previsto6) {
+        markAsChanged("PREVISTO6", previsto6);
         this.previsto6 = previsto6;
    }
 
@@ -75,6 +78,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto7(BigDecimal previsto7) {
+        markAsChanged("PREVISTO7", previsto7);
         this.previsto7 = previsto7;
    }
 
@@ -83,6 +87,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto8(BigDecimal previsto8) {
+        markAsChanged("PREVISTO8", previsto8);
         this.previsto8 = previsto8;
    }
 
@@ -91,6 +96,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto9(BigDecimal previsto9) {
+        markAsChanged("PREVISTO9", previsto9);
         this.previsto9 = previsto9;
    }
 
@@ -99,6 +105,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setRecDesp(String recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -107,6 +114,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setVendedor(BigDecimal vendedor) {
+        markAsChanged("VENDEDOR", vendedor);
         this.vendedor = vendedor;
    }
 
@@ -115,6 +123,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setVendItem(BigDecimal vendItem) {
+        markAsChanged("VENDITEM", vendItem);
         this.vendItem = vendItem;
    }
 
@@ -123,6 +132,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setAno(BigDecimal ano) {
+        markAsChanged("ANO", ano);
         this.ano = ano;
    }
 
@@ -131,6 +141,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -139,6 +150,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -147,6 +159,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -155,6 +168,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -163,6 +177,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -171,6 +186,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -179,6 +195,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -187,6 +204,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -195,6 +213,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -203,6 +222,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -211,6 +231,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -219,6 +240,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -227,6 +249,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -235,6 +258,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -243,6 +267,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodSolicitante(BigDecimal codSolicitante) {
+        markAsChanged("CODSOLICITANTE", codSolicitante);
         this.codSolicitante = codSolicitante;
    }
 
@@ -251,6 +276,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -259,6 +285,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -267,6 +294,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -275,6 +303,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -283,6 +312,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setDhIntUnico(Timestamp dhIntUnico) {
+        markAsChanged("DHINTUNICO", dhIntUnico);
         this.dhIntUnico = dhIntUnico;
    }
 
@@ -291,6 +321,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setExecutante(BigDecimal executante) {
+        markAsChanged("EXECUTANTE", executante);
         this.executante = executante;
    }
 
@@ -299,6 +330,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -307,6 +339,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setNuSolicitacao(BigDecimal nuSolicitacao) {
+        markAsChanged("NUSOLICITACAO", nuSolicitacao);
         this.nuSolicitacao = nuSolicitacao;
    }
 
@@ -315,6 +348,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto1(BigDecimal previsto1) {
+        markAsChanged("PREVISTO1", previsto1);
         this.previsto1 = previsto1;
    }
 
@@ -323,6 +357,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto10(BigDecimal previsto10) {
+        markAsChanged("PREVISTO10", previsto10);
         this.previsto10 = previsto10;
    }
 
@@ -331,6 +366,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto11(BigDecimal previsto11) {
+        markAsChanged("PREVISTO11", previsto11);
         this.previsto11 = previsto11;
    }
 
@@ -339,6 +375,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto12(BigDecimal previsto12) {
+        markAsChanged("PREVISTO12", previsto12);
         this.previsto12 = previsto12;
    }
 
@@ -347,6 +384,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto2(BigDecimal previsto2) {
+        markAsChanged("PREVISTO2", previsto2);
         this.previsto2 = previsto2;
    }
 
@@ -355,6 +393,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
    }
 
    public void setPrevisto3(BigDecimal previsto3) {
+        markAsChanged("PREVISTO3", previsto3);
         this.previsto3 = previsto3;
    }
 
@@ -370,6 +409,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
 
    @Override
    public AlteracaoMetaOrcamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.previsto4 = vo.asBigDecimal("PREVISTO4");
         this.previsto5 = vo.asBigDecimal("PREVISTO5");
         this.previsto6 = vo.asBigDecimal("PREVISTO6");

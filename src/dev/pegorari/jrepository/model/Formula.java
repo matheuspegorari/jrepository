@@ -19,6 +19,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setFormulaWeb(String formulaWeb) {
+        markAsChanged("FORMULAWEB", formulaWeb);
         this.formulaWeb = formulaWeb;
    }
 
@@ -27,6 +28,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setTipDist(String tipDist) {
+        markAsChanged("TIPDIST", tipDist);
         this.tipDist = tipDist;
    }
 
@@ -35,6 +37,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setTipForm(String tipForm) {
+        markAsChanged("TIPFORM", tipForm);
         this.tipForm = tipForm;
    }
 
@@ -43,6 +46,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setCodForm(BigDecimal codForm) {
+        markAsChanged("CODFORM", codForm);
         this.codForm = codForm;
    }
 
@@ -51,6 +55,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setDescrForm(String descrForm) {
+        markAsChanged("DESCRFORM", descrForm);
         this.descrForm = descrForm;
    }
 
@@ -59,6 +64,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -67,6 +73,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setIndCusto(BigDecimal indCusto) {
+        markAsChanged("INDCUSTO", indCusto);
         this.indCusto = indCusto;
    }
 
@@ -75,6 +82,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    }
 
    public void setConsiderarRateio(String considerarRateio) {
+        markAsChanged("CONSIDERARRATEIO", considerarRateio);
         this.considerarRateio = considerarRateio;
    }
 
@@ -90,6 +98,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
 
    @Override
    public Formula fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.formulaWeb = vo.asString("FORMULAWEB");
         this.tipDist = vo.asString("TIPDIST");
         this.tipForm = vo.asString("TIPFORM");

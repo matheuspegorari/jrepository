@@ -31,6 +31,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -39,6 +40,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setCicloProducao(BigDecimal cicloProducao) {
+        markAsChanged("CICLOPRODUCAO", cicloProducao);
         this.cicloProducao = cicloProducao;
    }
 
@@ -47,6 +49,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -55,6 +58,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -63,6 +67,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -71,6 +76,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setDesvio(BigDecimal desvio) {
+        markAsChanged("DESVIO", desvio);
         this.desvio = desvio;
    }
 
@@ -79,6 +85,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setDesvioInf(BigDecimal desvioInf) {
+        markAsChanged("DESVIOINF", desvioInf);
         this.desvioInf = desvioInf;
    }
 
@@ -87,6 +94,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setFormPrincipal(String formPrincipal) {
+        markAsChanged("FORMPRINCIPAL", formPrincipal);
         this.formPrincipal = formPrincipal;
    }
 
@@ -95,6 +103,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setMargLucro(BigDecimal margLucro) {
+        markAsChanged("MARGLUCRO", margLucro);
         this.margLucro = margLucro;
    }
 
@@ -103,6 +112,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setMenorDtVal(String menorDtVal) {
+        markAsChanged("MENORDTVAL", menorDtVal);
         this.menorDtVal = menorDtVal;
    }
 
@@ -111,6 +121,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setMultiploIdeal(BigDecimal multiploIdeal) {
+        markAsChanged("MULTIPLOIDEAL", multiploIdeal);
         this.multiploIdeal = multiploIdeal;
    }
 
@@ -119,6 +130,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -127,6 +139,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setProducaoMin(BigDecimal producaoMin) {
+        markAsChanged("PRODUCAOMIN", producaoMin);
         this.producaoMin = producaoMin;
    }
 
@@ -135,6 +148,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setRegMapa(String regMapa) {
+        markAsChanged("REGMAPA", regMapa);
         this.regMapa = regMapa;
    }
 
@@ -143,6 +157,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setUnidCiclo(String unidCiclo) {
+        markAsChanged("UNIDCICLO", unidCiclo);
         this.unidCiclo = unidCiclo;
    }
 
@@ -151,6 +166,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setVariacao(BigDecimal variacao) {
+        markAsChanged("VARIACAO", variacao);
         this.variacao = variacao;
    }
 
@@ -159,6 +175,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setVariacaoRel(BigDecimal variacaoRel) {
+        markAsChanged("VARIACAOREL", variacaoRel);
         this.variacaoRel = variacaoRel;
    }
 
@@ -167,6 +184,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setCodEst(BigDecimal codEst) {
+        markAsChanged("CODEST", codEst);
         this.codEst = codEst;
    }
 
@@ -175,6 +193,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setCodPrc(BigDecimal codPrc) {
+        markAsChanged("CODPRC", codPrc);
         this.codPrc = codPrc;
    }
 
@@ -183,6 +202,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -198,6 +218,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
 
    @Override
    public FormulaComposicaoProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.cicloProducao = vo.asBigDecimal("CICLOPRODUCAO");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

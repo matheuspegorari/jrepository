@@ -46,6 +46,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodCtabcoContra(BigDecimal codCtabcoContra) {
+        markAsChanged("CODCTABCOCONTRA", codCtabcoContra);
         this.codCtabcoContra = codCtabcoContra;
    }
 
@@ -54,6 +55,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
+        markAsChanged("CODCTABCOINT", codCtabcoInt);
         this.codCtabcoInt = codCtabcoInt;
    }
 
@@ -62,6 +64,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodCtabcoIntDest(BigDecimal codCtabcoIntDest) {
+        markAsChanged("CODCTABCOINTDEST", codCtabcoIntDest);
         this.codCtabcoIntDest = codCtabcoIntDest;
    }
 
@@ -70,6 +73,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodLanc(BigDecimal codLanc) {
+        markAsChanged("CODLANC", codLanc);
         this.codLanc = codLanc;
    }
 
@@ -78,6 +82,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodLancDest(BigDecimal codLancDest) {
+        markAsChanged("CODLANCDEST", codLancDest);
         this.codLancDest = codLancDest;
    }
 
@@ -86,6 +91,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -94,6 +100,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -102,6 +109,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setConciliado(String conciliado) {
+        markAsChanged("CONCILIADO", conciliado);
         this.conciliado = conciliado;
    }
 
@@ -110,6 +118,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setConciliadoDest(String conciliadoDest) {
+        markAsChanged("CONCILIADODEST", conciliadoDest);
         this.conciliadoDest = conciliadoDest;
    }
 
@@ -118,6 +127,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDhConciliacao(Timestamp dhConciliacao) {
+        markAsChanged("DHCONCILIACAO", dhConciliacao);
         this.dhConciliacao = dhConciliacao;
    }
 
@@ -126,6 +136,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDhTipOper(Timestamp dhTipOper) {
+        markAsChanged("DHTIPOPER", dhTipOper);
         this.dhTipOper = dhTipOper;
    }
 
@@ -134,6 +145,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -142,6 +154,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDtContab(Timestamp dtContab) {
+        markAsChanged("DTCONTAB", dtContab);
         this.dtContab = dtContab;
    }
 
@@ -150,6 +163,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -158,6 +172,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setDtLanc(Timestamp dtLanc) {
+        markAsChanged("DTLANC", dtLanc);
         this.dtLanc = dtLanc;
    }
 
@@ -166,6 +181,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setHistorico(String historico) {
+        markAsChanged("HISTORICO", historico);
         this.historico = historico;
    }
 
@@ -174,6 +190,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNuBco(BigDecimal nuBco) {
+        markAsChanged("NUBCO", nuBco);
         this.nuBco = nuBco;
    }
 
@@ -182,6 +199,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNuBcoCp(BigDecimal nuBcoCp) {
+        markAsChanged("NUBCOCP", nuBcoCp);
         this.nuBcoCp = nuBcoCp;
    }
 
@@ -190,6 +208,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNumDoc(BigDecimal numDoc) {
+        markAsChanged("NUMDOC", numDoc);
         this.numDoc = numDoc;
    }
 
@@ -198,6 +217,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNumTransf(BigDecimal numTransf) {
+        markAsChanged("NUMTRANSF", numTransf);
         this.numTransf = numTransf;
    }
 
@@ -206,6 +226,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setOrigMov(String origMov) {
+        markAsChanged("ORIGMOV", origMov);
         this.origMov = origMov;
    }
 
@@ -214,6 +235,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setPreData(Timestamp preData) {
+        markAsChanged("PREDATA", preData);
         this.preData = preData;
    }
 
@@ -222,6 +244,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -230,6 +253,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setSaldo(BigDecimal saldo) {
+        markAsChanged("SALDO", saldo);
         this.saldo = saldo;
    }
 
@@ -238,6 +262,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setTalao(BigDecimal talao) {
+        markAsChanged("TALAO", talao);
         this.talao = talao;
    }
 
@@ -246,6 +271,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setVlrCheque(BigDecimal vlrCheque) {
+        markAsChanged("VLRCHEQUE", vlrCheque);
         this.vlrCheque = vlrCheque;
    }
 
@@ -254,6 +280,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setVlrLanc(BigDecimal vlrLanc) {
+        markAsChanged("VLRLANC", vlrLanc);
         this.vlrLanc = vlrLanc;
    }
 
@@ -262,6 +289,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setVlrLancDestino(BigDecimal vlrLancDestino) {
+        markAsChanged("VLRLANC_DESTINO", vlrLancDestino);
         this.vlrLancDestino = vlrLancDestino;
    }
 
@@ -270,6 +298,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setVlrMoeda(BigDecimal vlrMoeda) {
+        markAsChanged("VLRMOEDA", vlrMoeda);
         this.vlrMoeda = vlrMoeda;
    }
 
@@ -278,6 +307,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setVlrTroco(BigDecimal vlrTroco) {
+        markAsChanged("VLRTROCO", vlrTroco);
         this.vlrTroco = vlrTroco;
    }
 
@@ -286,6 +316,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setCodPdv(BigDecimal codPdv) {
+        markAsChanged("CODPDV", codPdv);
         this.codPdv = codPdv;
    }
 
@@ -294,6 +325,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setContabilizado(String contabilizado) {
+        markAsChanged("CONTABILIZADO", contabilizado);
         this.contabilizado = contabilizado;
    }
 
@@ -302,6 +334,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNroImport(BigDecimal nroImport) {
+        markAsChanged("NROIMPORT", nroImport);
         this.nroImport = nroImport;
    }
 
@@ -310,6 +343,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
+        markAsChanged("NUCAIXA", nuCaixa);
         this.nuCaixa = nuCaixa;
    }
 
@@ -325,6 +359,7 @@ public class MovimentoBancario extends AbstractSankhyaEntity<MovimentoBancario> 
 
    @Override
    public MovimentoBancario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtabcoContra = vo.asBigDecimal("CODCTABCOCONTRA");
         this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.codCtabcoIntDest = vo.asBigDecimal("CODCTABCOINTDEST");

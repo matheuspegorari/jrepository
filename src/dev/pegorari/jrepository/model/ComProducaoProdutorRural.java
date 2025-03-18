@@ -48,6 +48,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setChave(String chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -56,6 +57,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -64,6 +66,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -72,6 +75,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -80,6 +84,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setIdEvento(String idEvento) {
+        markAsChanged("IDEVENTO", idEvento);
         this.idEvento = idEvento;
    }
 
@@ -88,6 +93,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setNrInsc(String nrInsc) {
+        markAsChanged("NRINSC", nrInsc);
         this.nrInsc = nrInsc;
    }
 
@@ -96,6 +102,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setNrInscEstab(String nrInscEstab) {
+        markAsChanged("NRINSCESTAB", nrInscEstab);
         this.nrInscEstab = nrInscEstab;
    }
 
@@ -104,6 +111,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setNrRecibo(String nrRecibo) {
+        markAsChanged("NRORECIBO", nrRecibo);
         this.nrRecibo = nrRecibo;
    }
 
@@ -112,6 +120,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setNrReciboAnt(String nrReciboAnt) {
+        markAsChanged("NRORECIBOANT", nrReciboAnt);
         this.nrReciboAnt = nrReciboAnt;
    }
 
@@ -120,6 +129,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -128,6 +138,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setStatusReg(String statusReg) {
+        markAsChanged("STATUSREG", statusReg);
         this.statusReg = statusReg;
    }
 
@@ -136,6 +147,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -144,6 +156,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
+        markAsChanged("TPINSC", tpInsc);
         this.tpInsc = tpInsc;
    }
 
@@ -152,6 +165,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setTpInscEstab(BigDecimal tpInscEstab) {
+        markAsChanged("TPINSCESTAB", tpInscEstab);
         this.tpInscEstab = tpInscEstab;
    }
 
@@ -160,6 +174,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrCpApur(BigDecimal vlrCpApur) {
+        markAsChanged("VLRCPAPUR", vlrCpApur);
         this.vlrCpApur = vlrCpApur;
    }
 
@@ -168,6 +183,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrCpSuspTotal(BigDecimal vlrCpSuspTotal) {
+        markAsChanged("VLRCPSUSPTOTAL", vlrCpSuspTotal);
         this.vlrCpSuspTotal = vlrCpSuspTotal;
    }
 
@@ -176,6 +192,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrRatApur(BigDecimal vlrRatApur) {
+        markAsChanged("VLRRATAPUR", vlrRatApur);
         this.vlrRatApur = vlrRatApur;
    }
 
@@ -184,6 +201,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrRatSuspTotal(BigDecimal vlrRatSuspTotal) {
+        markAsChanged("VLRRATSUSPTOTAL", vlrRatSuspTotal);
         this.vlrRatSuspTotal = vlrRatSuspTotal;
    }
 
@@ -192,6 +210,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrRecBrutaTotal(BigDecimal vlrRecBrutaTotal) {
+        markAsChanged("VLRRECBRUTATOTAL", vlrRecBrutaTotal);
         this.vlrRecBrutaTotal = vlrRecBrutaTotal;
    }
 
@@ -200,6 +219,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrSenarApur(BigDecimal vlrSenarApur) {
+        markAsChanged("VLRSENARAPUR", vlrSenarApur);
         this.vlrSenarApur = vlrSenarApur;
    }
 
@@ -208,6 +228,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrSenarSuspTotal(BigDecimal vlrSenarSuspTotal) {
+        markAsChanged("VLRSENARSUSPTOTAL", vlrSenarSuspTotal);
         this.vlrSenarSuspTotal = vlrSenarSuspTotal;
    }
 
@@ -216,6 +237,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setCodEmpEstab(BigDecimal codEmpEstab) {
+        markAsChanged("CODEMPESTAB", codEmpEstab);
         this.codEmpEstab = codEmpEstab;
    }
 
@@ -224,6 +246,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setDataChange(char[] dataChange) {
+        markAsChanged("DATACHANGE", dataChange);
         this.dataChange = dataChange;
    }
 
@@ -232,6 +255,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -240,6 +264,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -248,6 +273,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrBaseCpApur(BigDecimal vlrBaseCpApur) {
+        markAsChanged("VLRBASECPAPUR", vlrBaseCpApur);
         this.vlrBaseCpApur = vlrBaseCpApur;
    }
 
@@ -256,6 +282,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrBaseRatApur(BigDecimal vlrBaseRatApur) {
+        markAsChanged("VLRBASERATAPUR", vlrBaseRatApur);
         this.vlrBaseRatApur = vlrBaseRatApur;
    }
 
@@ -264,6 +291,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrBaseSenarApur(BigDecimal vlrBaseSenarApur) {
+        markAsChanged("VLRBASESENARAPUR", vlrBaseSenarApur);
         this.vlrBaseSenarApur = vlrBaseSenarApur;
    }
 
@@ -272,6 +300,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrCpApurRet(BigDecimal vlrCpApurRet) {
+        markAsChanged("VLRCPAPURRET", vlrCpApurRet);
         this.vlrCpApurRet = vlrCpApurRet;
    }
 
@@ -280,6 +309,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrCpSuspTotalRet(BigDecimal vlrCpSuspTotalRet) {
+        markAsChanged("VLRCPSUSPTOTALRET", vlrCpSuspTotalRet);
         this.vlrCpSuspTotalRet = vlrCpSuspTotalRet;
    }
 
@@ -288,6 +318,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrRatApurRet(BigDecimal vlrRatApurRet) {
+        markAsChanged("VLRRATAPURRET", vlrRatApurRet);
         this.vlrRatApurRet = vlrRatApurRet;
    }
 
@@ -296,6 +327,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrRatSuspTotalRet(BigDecimal vlrRatSuspTotalRet) {
+        markAsChanged("VLRRATSUSPTOTALRET", vlrRatSuspTotalRet);
         this.vlrRatSuspTotalRet = vlrRatSuspTotalRet;
    }
 
@@ -304,6 +336,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrSenarApurRet(BigDecimal vlrSenarApurRet) {
+        markAsChanged("VLRSENARAPURRET", vlrSenarApurRet);
         this.vlrSenarApurRet = vlrSenarApurRet;
    }
 
@@ -312,6 +345,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setVlrSenarSuspTotalRet(BigDecimal vlrSenarSuspTotalRet) {
+        markAsChanged("VLRSENARSUSPTOTALRET", vlrSenarSuspTotalRet);
         this.vlrSenarSuspTotalRet = vlrSenarSuspTotalRet;
    }
 
@@ -320,6 +354,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -328,6 +363,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
+        markAsChanged("XMLRETORNO", xmlRetorno);
         this.xmlRetorno = xmlRetorno;
    }
 
@@ -343,6 +379,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
 
    @Override
    public ComProducaoProdutorRural fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

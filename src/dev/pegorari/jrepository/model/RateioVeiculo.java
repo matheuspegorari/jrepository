@@ -28,6 +28,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setAfericao(BigDecimal afericao) {
+        markAsChanged("AFERICAO", afericao);
         this.afericao = afericao;
    }
 
@@ -36,6 +37,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -44,6 +46,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodCtactb(BigDecimal codCtactb) {
+        markAsChanged("CODCTACTB", codCtactb);
         this.codCtactb = codCtactb;
    }
 
@@ -52,6 +55,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -60,6 +64,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -68,6 +73,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -76,6 +82,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodSite(BigDecimal codSite) {
+        markAsChanged("CODSITE", codSite);
         this.codSite = codSite;
    }
 
@@ -84,6 +91,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -92,6 +100,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -100,6 +109,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -108,6 +118,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -116,6 +127,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -124,6 +136,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -132,6 +145,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -140,6 +154,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setPercRateio(BigDecimal percRateio) {
+        markAsChanged("PERCRATEIO", percRateio);
         this.percRateio = percRateio;
    }
 
@@ -148,6 +163,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
    }
 
    public void setTipoAfericao(String tipoAfericao) {
+        markAsChanged("TIPOAFERICAO", tipoAfericao);
         this.tipoAfericao = tipoAfericao;
    }
 
@@ -163,6 +179,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
 
    @Override
    public RateioVeiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.afericao = vo.asBigDecimal("AFERICAO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

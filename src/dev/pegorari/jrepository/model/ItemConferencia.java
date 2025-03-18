@@ -35,6 +35,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setAceitarDif(String aceitarDif) {
+        markAsChanged("ACEITARDIF", aceitarDif);
         this.aceitarDif = aceitarDif;
    }
 
@@ -43,6 +44,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -51,6 +53,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -59,6 +62,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -67,6 +71,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodVolCompra(String codVolCompra) {
+        markAsChanged("CODVOLCOMPRA", codVolCompra);
         this.codVolCompra = codVolCompra;
    }
 
@@ -75,6 +80,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodVolume(BigDecimal codVolume) {
+        markAsChanged("CODVOLUME", codVolume);
         this.codVolume = codVolume;
    }
 
@@ -83,6 +89,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -91,6 +98,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -99,6 +107,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -107,6 +116,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setDtValMin(Timestamp dtValMin) {
+        markAsChanged("DTVALMIN", dtValMin);
         this.dtValMin = dtValMin;
    }
 
@@ -115,6 +125,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setIgnorar(String ignorar) {
+        markAsChanged("IGNORAR", ignorar);
         this.ignorar = ignorar;
    }
 
@@ -123,6 +134,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -131,6 +143,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setQtdAvaria(BigDecimal qtdAvaria) {
+        markAsChanged("QTDAVARIA", qtdAvaria);
         this.qtdAvaria = qtdAvaria;
    }
 
@@ -139,6 +152,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setQtdeConf(BigDecimal qtdeConf) {
+        markAsChanged("QTDECONF", qtdeConf);
         this.qtdeConf = qtdeConf;
    }
 
@@ -147,6 +161,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setRecontagem(String recontagem) {
+        markAsChanged("RECONTAGEM", recontagem);
         this.recontagem = recontagem;
    }
 
@@ -155,6 +170,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -163,6 +179,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setTipoVolume(String tipoVolume) {
+        markAsChanged("TIPOVOLUME", tipoVolume);
         this.tipoVolume = tipoVolume;
    }
 
@@ -171,6 +188,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodMdiv(BigDecimal codMdiv) {
+        markAsChanged("CODMDIV", codMdiv);
         this.codMdiv = codMdiv;
    }
 
@@ -179,6 +197,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setQtdeDif(BigDecimal qtdeDif) {
+        markAsChanged("QTDEDIF", qtdeDif);
         this.qtdeDif = qtdeDif;
    }
 
@@ -187,6 +206,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setCodUsuDiv(BigDecimal codUsuDiv) {
+        markAsChanged("CODUSUDIV", codUsuDiv);
         this.codUsuDiv = codUsuDiv;
    }
 
@@ -195,6 +215,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setDevolver(String devolver) {
+        markAsChanged("DEVOLVER", devolver);
         this.devolver = devolver;
    }
 
@@ -203,6 +224,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setReceberAvaria(String receberAvaria) {
+        markAsChanged("RECEBERAVARIA", receberAvaria);
         this.receberAvaria = receberAvaria;
    }
 
@@ -211,6 +233,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
    }
 
    public void setQtdPecas(BigDecimal qtdPecas) {
+        markAsChanged("QTDPECAS", qtdPecas);
         this.qtdPecas = qtdPecas;
    }
 
@@ -226,6 +249,7 @@ public class ItemConferencia extends AbstractSankhyaEntity<ItemConferencia> {
 
    @Override
    public ItemConferencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aceitarDif = vo.asString("ACEITARDIF");
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");

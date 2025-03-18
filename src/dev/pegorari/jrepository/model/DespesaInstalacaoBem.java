@@ -19,6 +19,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -27,6 +28,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -35,6 +37,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setNuNotaDesp(BigDecimal nuNotaDesp) {
+        markAsChanged("NUNOTADESP", nuNotaDesp);
         this.nuNotaDesp = nuNotaDesp;
    }
 
@@ -43,6 +46,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
+        markAsChanged("NURATEIO", nuRateio);
         this.nuRateio = nuRateio;
    }
 
@@ -51,6 +55,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setStatusRateio(String statusRateio) {
+        markAsChanged("STATUSRATEIO", statusRateio);
         this.statusRateio = statusRateio;
    }
 
@@ -59,6 +64,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setVlrPendNota(BigDecimal vlrPendNota) {
+        markAsChanged("VLRPENDNOTA", vlrPendNota);
         this.vlrPendNota = vlrPendNota;
    }
 
@@ -67,6 +73,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    }
 
    public void setVlrTotRateio(BigDecimal vlrTotRateio) {
+        markAsChanged("VLRTOTRATEIO", vlrTotRateio);
         this.vlrTotRateio = vlrTotRateio;
    }
 
@@ -82,6 +89,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
 
    @Override
    public DespesaInstalacaoBem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuNotaDesp = vo.asBigDecimal("NUNOTADESP");

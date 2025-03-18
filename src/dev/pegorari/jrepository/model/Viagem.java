@@ -27,6 +27,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +36,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -43,6 +45,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodVeiprin(BigDecimal codVeiprin) {
+        markAsChanged("CODVEIPRIN", codVeiprin);
         this.codVeiprin = codVeiprin;
    }
 
@@ -51,6 +54,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodVeireb1(BigDecimal codVeireb1) {
+        markAsChanged("CODVEIREB1", codVeireb1);
         this.codVeireb1 = codVeireb1;
    }
 
@@ -59,6 +63,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodVeireb2(BigDecimal codVeireb2) {
+        markAsChanged("CODVEIREB2", codVeireb2);
         this.codVeireb2 = codVeireb2;
    }
 
@@ -67,6 +72,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setCodVeireb3(BigDecimal codVeireb3) {
+        markAsChanged("CODVEIREB3", codVeireb3);
         this.codVeireb3 = codVeireb3;
    }
 
@@ -75,6 +81,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -83,6 +90,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -91,6 +99,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -99,6 +108,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setStatusDoc(String statusDoc) {
+        markAsChanged("STATUSDOC", statusDoc);
         this.statusDoc = statusDoc;
    }
 
@@ -107,6 +117,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setTipAmb(String tipAmb) {
+        markAsChanged("TIPAMB", tipAmb);
         this.tipAmb = tipAmb;
    }
 
@@ -115,6 +126,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setTipModalmdfe(String tipModalmdfe) {
+        markAsChanged("TIPMODALMDFE", tipModalmdfe);
         this.tipModalmdfe = tipModalmdfe;
    }
 
@@ -123,6 +135,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setUsaTomServcontr(String usaTomServcontr) {
+        markAsChanged("USATOMSERVCONTR", usaTomServcontr);
         this.usaTomServcontr = usaTomServcontr;
    }
 
@@ -131,6 +144,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setUsaCiotctevinc(String usaCiotctevinc) {
+        markAsChanged("USACIOTCTEVINC", usaCiotctevinc);
         this.usaCiotctevinc = usaCiotctevinc;
    }
 
@@ -139,6 +153,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
    }
 
    public void setContemDocterc(String contemDocterc) {
+        markAsChanged("CONTEMDOCTERC", contemDocterc);
         this.contemDocterc = contemDocterc;
    }
 
@@ -154,6 +169,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
 
    @Override
    public Viagem fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVeiprin = vo.asBigDecimal("CODVEIPRIN");

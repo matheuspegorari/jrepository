@@ -13,6 +13,7 @@ public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
    }
 
    public void setIdContainers(String idContainers) {
+        markAsChanged("IDCONTAINERS", idContainers);
         this.idContainers = idContainers;
    }
 
@@ -21,6 +22,7 @@ public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -36,6 +38,7 @@ public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
 
    @Override
    public ContainerCTe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idContainers = vo.asString("IDCONTAINERS");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;

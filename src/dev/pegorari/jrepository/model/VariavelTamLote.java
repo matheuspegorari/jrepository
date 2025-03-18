@@ -15,6 +15,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -23,6 +24,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
    }
 
    public void setIdFormula(BigDecimal idFormula) {
+        markAsChanged("IDFORMULA", idFormula);
         this.idFormula = idFormula;
    }
 
@@ -31,6 +33,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
    }
 
    public void setNomeVar(String nomeVar) {
+        markAsChanged("NOMEVAR", nomeVar);
         this.nomeVar = nomeVar;
    }
 
@@ -39,6 +42,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -54,6 +58,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
 
    @Override
    public VariavelTamLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.expressao = vo.asString("EXPRESSAO");
         this.idFormula = vo.asBigDecimal("IDFORMULA");
         this.nomeVar = vo.asString("NOMEVAR");

@@ -22,6 +22,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -30,6 +31,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -38,6 +40,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setQtdEntrega(BigDecimal qtdEntrega) {
+        markAsChanged("QTDENTREGA", qtdEntrega);
         this.qtdEntrega = qtdEntrega;
    }
 
@@ -46,6 +49,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -54,6 +58,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setCabecalho(String cabecalho) {
+        markAsChanged("CABECALHO", cabecalho);
         this.cabecalho = cabecalho;
    }
 
@@ -62,6 +67,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setDataEntrega(Timestamp dataEntrega) {
+        markAsChanged("DATAENTREGA", dataEntrega);
         this.dataEntrega = dataEntrega;
    }
 
@@ -70,6 +76,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -78,6 +85,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -86,6 +94,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setDiferenciador(BigDecimal diferenciador) {
+        markAsChanged("DIFERENCIADOR", diferenciador);
         this.diferenciador = diferenciador;
    }
 
@@ -94,6 +103,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -109,6 +119,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
 
    @Override
    public MultiplasDatasEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.qtdEntrega = vo.asBigDecimal("QTDENTREGA");

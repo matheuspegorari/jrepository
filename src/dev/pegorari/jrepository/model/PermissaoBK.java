@@ -18,6 +18,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setAcesso(String acesso) {
+        markAsChanged("ACESSO", acesso);
         this.acesso = acesso;
    }
 
@@ -26,6 +27,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -34,6 +36,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -42,6 +45,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setIdAcesso(String idAcesso) {
+        markAsChanged("IDACESSO", idAcesso);
         this.idAcesso = idAcesso;
    }
 
@@ -50,6 +54,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -58,6 +63,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -66,6 +72,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    }
 
    public void setVersao(BigDecimal versao) {
+        markAsChanged("VERSAO", versao);
         this.versao = versao;
    }
 
@@ -81,6 +88,7 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
 
    @Override
    public PermissaoBK fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.acesso = vo.asString("ACESSO");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");

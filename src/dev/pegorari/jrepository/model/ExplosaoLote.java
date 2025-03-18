@@ -19,6 +19,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setCodEndOrigem(BigDecimal codEndOrigem) {
+        markAsChanged("CODENDORIGEM", codEndOrigem);
         this.codEndOrigem = codEndOrigem;
    }
 
@@ -27,6 +28,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -35,6 +37,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -43,6 +46,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -51,6 +55,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -59,6 +64,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setQuantidade(BigDecimal quantidade) {
+        markAsChanged("QUANTIDADE", quantidade);
         this.quantidade = quantidade;
    }
 
@@ -67,6 +73,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -82,6 +89,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
 
    @Override
    public ExplosaoLote fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEndOrigem = vo.asBigDecimal("CODENDORIGEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");

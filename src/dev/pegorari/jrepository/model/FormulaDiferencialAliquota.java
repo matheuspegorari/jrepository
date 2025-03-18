@@ -14,6 +14,7 @@ public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDif
    }
 
    public void setCodForm(BigDecimal codForm) {
+        markAsChanged("CODFORM", codForm);
         this.codForm = codForm;
    }
 
@@ -22,6 +23,7 @@ public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDif
    }
 
    public void setDescrForm(String descrForm) {
+        markAsChanged("DESCRFORM", descrForm);
         this.descrForm = descrForm;
    }
 
@@ -30,6 +32,7 @@ public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDif
    }
 
    public void setFormula(String formula) {
+        markAsChanged("FORMULA", formula);
         this.formula = formula;
    }
 
@@ -45,6 +48,7 @@ public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDif
 
    @Override
    public FormulaDiferencialAliquota fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codForm = vo.asBigDecimal("CODFORM");
         this.descrForm = vo.asString("DESCRFORM");
         this.formula = vo.asString("FORMULA");

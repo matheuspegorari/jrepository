@@ -16,6 +16,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    }
 
    public void setCodLogradouro(String codLogradouro) {
+        markAsChanged("CODLOGRADOURO", codLogradouro);
         this.codLogradouro = codLogradouro;
    }
 
@@ -24,6 +25,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -32,6 +34,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    }
 
    public void setDescrLogradouro(String descrLogradouro) {
+        markAsChanged("DESCRLOGRADOURO", descrLogradouro);
         this.descrLogradouro = descrLogradouro;
    }
 
@@ -40,6 +43,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -55,6 +59,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
 
    @Override
    public Logradouro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLogradouro = vo.asString("CODLOGRADOURO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descrLogradouro = vo.asString("DESCRLOGRADOURO");

@@ -25,6 +25,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setArquivosKw(String arquivosKw) {
+        markAsChanged("ARQUIVOSKW", arquivosKw);
         this.arquivosKw = arquivosKw;
    }
 
@@ -33,6 +34,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -41,6 +43,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setBloco(String bloco) {
+        markAsChanged("BLOCO", bloco);
         this.bloco = bloco;
    }
 
@@ -49,6 +52,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -57,6 +61,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setCmdSql(String cmdSql) {
+        markAsChanged("CMDSQL", cmdSql);
         this.cmdSql = cmdSql;
    }
 
@@ -65,6 +70,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setRegistro(BigDecimal registro) {
+        markAsChanged("REGISTRO", registro);
         this.registro = registro;
    }
 
@@ -73,6 +79,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setCodigo(String codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -81,6 +88,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setPermVlrZerado(String permVlrZerado) {
+        markAsChanged("PERMVLRZERADO", permVlrZerado);
         this.permVlrZerado = permVlrZerado;
    }
 
@@ -89,6 +97,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -97,6 +106,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -105,6 +115,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -113,6 +124,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -121,6 +133,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -136,6 +149,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
 
    @Override
    public ConfiguradorBlocoRegistro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arquivosKw = vo.asString("ARQUIVOSKW");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.bloco = vo.asString("BLOCO");

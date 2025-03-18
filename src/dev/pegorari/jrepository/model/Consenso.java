@@ -20,6 +20,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
+        markAsChanged("NUAVALIACAO", nuAvaliacao);
         this.nuAvaliacao = nuAvaliacao;
    }
 
@@ -28,6 +29,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
+        markAsChanged("NUPESQ", nuPesq);
         this.nuPesq = nuPesq;
    }
 
@@ -36,6 +38,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -44,6 +47,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setNuPesqConsenso(BigDecimal nuPesqConsenso) {
+        markAsChanged("NUPESQCONSENSO", nuPesqConsenso);
         this.nuPesqConsenso = nuPesqConsenso;
    }
 
@@ -52,6 +56,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -60,6 +65,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setNuPesqAvaliado(BigDecimal nuPesqAvaliado) {
+        markAsChanged("NUPESQAVALIADO", nuPesqAvaliado);
         this.nuPesqAvaliado = nuPesqAvaliado;
    }
 
@@ -68,6 +74,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -76,6 +83,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    }
 
    public void setPlanoDeAcao(String planoDeAcao) {
+        markAsChanged("PLANODEACAO", planoDeAcao);
         this.planoDeAcao = planoDeAcao;
    }
 
@@ -91,6 +99,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
 
    @Override
    public Consenso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
         this.nuPesq = vo.asBigDecimal("NUPESQ");
         this.codUsu = vo.asBigDecimal("CODUSU");

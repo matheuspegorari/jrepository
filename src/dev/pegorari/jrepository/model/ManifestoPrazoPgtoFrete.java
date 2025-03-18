@@ -19,6 +19,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -27,6 +28,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setParcela(BigDecimal parcela) {
+        markAsChanged("PARCELA", parcela);
         this.parcela = parcela;
    }
 
@@ -35,6 +37,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -43,6 +46,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setSeqPgFre(BigDecimal seqPgFre) {
+        markAsChanged("SEQPGFRE", seqPgFre);
         this.seqPgFre = seqPgFre;
    }
 
@@ -51,6 +55,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setSeqPraPgFre(BigDecimal seqPraPgFre) {
+        markAsChanged("SEQPRAPGFRE", seqPraPgFre);
         this.seqPraPgFre = seqPraPgFre;
    }
 
@@ -59,6 +64,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -67,6 +73,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    }
 
    public void setVencimento(Timestamp vencimento) {
+        markAsChanged("VENCIMENTO", vencimento);
         this.vencimento = vencimento;
    }
 
@@ -82,6 +89,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
 
    @Override
    public ManifestoPrazoPgtoFrete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.parcela = vo.asBigDecimal("PARCELA");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

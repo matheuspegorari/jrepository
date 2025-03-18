@@ -27,6 +27,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setIdTela(String idTela) {
+        markAsChanged("IDTELA", idTela);
         this.idTela = idTela;
    }
 
@@ -35,6 +36,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -43,6 +45,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -51,6 +54,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setNuRfeDependente(BigDecimal nuRfeDependente) {
+        markAsChanged("NURFEDEPENDENTE", nuRfeDependente);
         this.nuRfeDependente = nuRfeDependente;
    }
 
@@ -59,6 +63,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -67,6 +72,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -75,6 +81,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -83,6 +90,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -91,6 +99,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -99,6 +108,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setExpFiltroInstancia(String expFiltroInstancia) {
+        markAsChanged("EXPFILTROINSTANCIA", expFiltroInstancia);
         this.expFiltroInstancia = expFiltroInstancia;
    }
 
@@ -107,6 +117,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setFormato(String formato) {
+        markAsChanged("FORMATO", formato);
         this.formato = formato;
    }
 
@@ -115,6 +126,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setCategoria(String categoria) {
+        markAsChanged("CATEGORIA", categoria);
         this.categoria = categoria;
    }
 
@@ -123,6 +135,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setDsName(String dsName) {
+        markAsChanged("DSNAME", dsName);
         this.dsName = dsName;
    }
 
@@ -131,6 +144,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setPrefixoAnexo(String prefixoAnexo) {
+        markAsChanged("PREFIXOANEXO", prefixoAnexo);
         this.prefixoAnexo = prefixoAnexo;
    }
 
@@ -139,6 +153,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    }
 
    public void setNomeImpressora(String nomeImpressora) {
+        markAsChanged("NOMEIMPRESSORA", nomeImpressora);
         this.nomeImpressora = nomeImpressora;
    }
 
@@ -154,6 +169,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
 
    @Override
    public RelatorioMinutaDespacho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.idTela = vo.asString("IDTELA");
         this.nuInstancia = vo.asBigDecimal("NUINSTANCIA");
         this.nuRfe = vo.asBigDecimal("NURFE");

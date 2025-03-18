@@ -20,6 +20,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -28,6 +29,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -36,6 +38,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setDtPrev(Timestamp dtPrev) {
+        markAsChanged("DTPREV", dtPrev);
         this.dtPrev = dtPrev;
    }
 
@@ -44,6 +47,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -52,6 +56,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -60,6 +65,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setQtdEntregue(BigDecimal qtdEntregue) {
+        markAsChanged("QTDENTREGUE", qtdEntregue);
         this.qtdEntregue = qtdEntregue;
    }
 
@@ -68,6 +74,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setSeqPrev(BigDecimal seqPrev) {
+        markAsChanged("SEQPREV", seqPrev);
         this.seqPrev = seqPrev;
    }
 
@@ -76,6 +83,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -91,6 +99,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
 
    @Override
    public PrevisaoEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.dtPrev = vo.asTimestamp("DTPREV");

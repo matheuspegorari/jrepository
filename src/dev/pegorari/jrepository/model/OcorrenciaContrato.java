@@ -20,6 +20,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -28,6 +29,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setCodOcor(BigDecimal codOcor) {
+        markAsChanged("CODOCOR", codOcor);
         this.codOcor = codOcor;
    }
 
@@ -36,6 +38,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -44,6 +47,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -52,6 +56,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -60,6 +65,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -68,6 +74,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setDtOcor(Timestamp dtOcor) {
+        markAsChanged("DTOCOR", dtOcor);
         this.dtOcor = dtOcor;
    }
 
@@ -76,6 +83,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -91,6 +99,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
 
    @Override
    public OcorrenciaContrato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codOcor = vo.asBigDecimal("CODOCOR");
         this.codParc = vo.asBigDecimal("CODPARC");

@@ -58,6 +58,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setTipoConferencia(String tipoConferencia) {
+        markAsChanged("TIPOCONFERENCIA", tipoConferencia);
         this.tipoConferencia = tipoConferencia;
    }
 
@@ -66,6 +67,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setConcluIcq(String concluIcq) {
+        markAsChanged("CONCLUICQ", concluIcq);
         this.concluIcq = concluIcq;
    }
 
@@ -74,6 +76,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setUsaSeqCodBar(String usaSeqCodBar) {
+        markAsChanged("USASEQCODBAR", usaSeqCodBar);
         this.usaSeqCodBar = usaSeqCodBar;
    }
 
@@ -82,6 +85,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setSepSeqCodBar(String sepSeqCodBar) {
+        markAsChanged("SEPSEQCODBAR", sepSeqCodBar);
         this.sepSeqCodBar = sepSeqCodBar;
    }
 
@@ -90,6 +94,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -98,6 +103,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setExecTerceiro(String execTerceiro) {
+        markAsChanged("EXECTERCEIRO", execTerceiro);
         this.execTerceiro = execTerceiro;
    }
 
@@ -106,6 +112,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setCodUsuLogon(BigDecimal codUsuLogon) {
+        markAsChanged("CODUSULOGON", codUsuLogon);
         this.codUsuLogon = codUsuLogon;
    }
 
@@ -114,6 +121,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setLiberarWcManual(String liberarWcManual) {
+        markAsChanged("LIBERARWCMANUAL", liberarWcManual);
         this.liberarWcManual = liberarWcManual;
    }
 
@@ -122,6 +130,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setListaMpPadrao(String listaMpPadrao) {
+        markAsChanged("LISTAMPPADRAO", listaMpPadrao);
         this.listaMpPadrao = listaMpPadrao;
    }
 
@@ -130,6 +139,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setOperCq(String operCq) {
+        markAsChanged("OPERCQ", operCq);
         this.operCq = operCq;
    }
 
@@ -138,6 +148,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setPermiteNovoPa(String permiteNovoPa) {
+        markAsChanged("PERMITENOVOPA", permiteNovoPa);
         this.permiteNovoPa = permiteNovoPa;
    }
 
@@ -146,6 +157,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setPermiteParcial(String permiteParcial) {
+        markAsChanged("PERMITEPARCIAL", permiteParcial);
         this.permiteParcial = permiteParcial;
    }
 
@@ -154,6 +166,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setQtdBaseApon(String qtdBaseApon) {
+        markAsChanged("QTDBASEAPON", qtdBaseApon);
         this.qtdBaseApon = qtdBaseApon;
    }
 
@@ -162,6 +175,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setTempoAtividade(BigDecimal tempoAtividade) {
+        markAsChanged("TEMPOATIVIDADE", tempoAtividade);
         this.tempoAtividade = tempoAtividade;
    }
 
@@ -170,6 +184,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setTipoReprocesso(String tipoReprocesso) {
+        markAsChanged("TIPOREPROCESSO", tipoReprocesso);
         this.tipoReprocesso = tipoReprocesso;
    }
 
@@ -178,6 +193,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setUnTempo(String unTempo) {
+        markAsChanged("UNTEMPO", unTempo);
         this.unTempo = unTempo;
    }
 
@@ -186,6 +202,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setValidaCq(String validaCq) {
+        markAsChanged("VALIDACQ", validaCq);
         this.validaCq = validaCq;
    }
 
@@ -194,6 +211,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdAwc(BigDecimal idAwc) {
+        markAsChanged("IDAWC", idAwc);
         this.idAwc = idAwc;
    }
 
@@ -202,6 +220,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdCcq(BigDecimal idCcq) {
+        markAsChanged("IDCCQ", idCcq);
         this.idCcq = idCcq;
    }
 
@@ -210,6 +229,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdEfx(BigDecimal idEfx) {
+        markAsChanged("IDEFX", idEfx);
         this.idEfx = idEfx;
    }
 
@@ -218,6 +238,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdRpadEst(BigDecimal idRpadEst) {
+        markAsChanged("IDRPADEST", idRpadEst);
         this.idRpadEst = idRpadEst;
    }
 
@@ -226,6 +247,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setIdRpaOper(BigDecimal idRpaOper) {
+        markAsChanged("IDRPAOPER", idRpaOper);
         this.idRpaOper = idRpaOper;
    }
 
@@ -234,6 +256,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setInicializarPa(String inicializarPa) {
+        markAsChanged("INICIALIZARPA", inicializarPa);
         this.inicializarPa = inicializarPa;
    }
 
@@ -242,6 +265,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setLiberarWcFinal(String liberarWcFinal) {
+        markAsChanged("LIBERARWCFINAL", liberarWcFinal);
         this.liberarWcFinal = liberarWcFinal;
    }
 
@@ -250,6 +274,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setAltStatusProc(String altStatusProc) {
+        markAsChanged("ALTSTATUSPROC", altStatusProc);
         this.altStatusProc = altStatusProc;
    }
 
@@ -258,6 +283,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setApontaComp(String apontaComp) {
+        markAsChanged("APONTACOMP", apontaComp);
         this.apontaComp = apontaComp;
    }
 
@@ -266,6 +292,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setApontaMp(String apontaMp) {
+        markAsChanged("APONTAMP", apontaMp);
         this.apontaMp = apontaMp;
    }
 
@@ -274,6 +301,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setApontaPa(String apontaPa) {
+        markAsChanged("APONTAPA", apontaPa);
         this.apontaPa = apontaPa;
    }
 
@@ -282,6 +310,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setApontaSp(String apontaSp) {
+        markAsChanged("APONTASP", apontaSp);
         this.apontaSp = apontaSp;
    }
 
@@ -290,6 +319,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setCodPrcSub(BigDecimal codPrcSub) {
+        markAsChanged("CODPRCSUB", codPrcSub);
         this.codPrcSub = codPrcSub;
    }
 
@@ -298,6 +328,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setApontaRecWc(String apontaRecWc) {
+        markAsChanged("APONTARECWC", apontaRecWc);
         this.apontaRecWc = apontaRecWc;
    }
 
@@ -306,6 +337,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setCodMtpFinTurno(BigDecimal codMtpFinTurno) {
+        markAsChanged("CODMTPFINTURNO", codMtpFinTurno);
         this.codMtpFinTurno = codMtpFinTurno;
    }
 
@@ -314,6 +346,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setMultiTurno(String multiTurno) {
+        markAsChanged("MULTITURNO", multiTurno);
         this.multiTurno = multiTurno;
    }
 
@@ -322,6 +355,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setContCumulativa(String contCumulativa) {
+        markAsChanged("CONTCUMULATIVA", contCumulativa);
         this.contCumulativa = contCumulativa;
    }
 
@@ -330,6 +364,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setSubApoPorConf(String subApoPorConf) {
+        markAsChanged("SUBAPOPORCONF", subApoPorConf);
         this.subApoPorConf = subApoPorConf;
    }
 
@@ -338,6 +373,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setQtdConfiguais(BigDecimal qtdConfiguais) {
+        markAsChanged("QTDCONFIGUAIS", qtdConfiguais);
         this.qtdConfiguais = qtdConfiguais;
    }
 
@@ -346,6 +382,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setQtdRecontagens(BigDecimal qtdRecontagens) {
+        markAsChanged("QTDRECONTAGENS", qtdRecontagens);
         this.qtdRecontagens = qtdRecontagens;
    }
 
@@ -354,6 +391,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setTipoTempo(String tipoTempo) {
+        markAsChanged("TIPOTEMPO", tipoTempo);
         this.tipoTempo = tipoTempo;
    }
 
@@ -362,6 +400,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setProibeApont(String proibeApont) {
+        markAsChanged("PROIBEAPONT", proibeApont);
         this.proibeApont = proibeApont;
    }
 
@@ -370,6 +409,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setSeqExecucao(String seqExecucao) {
+        markAsChanged("SEQEXECUCAO", seqExecucao);
         this.seqExecucao = seqExecucao;
    }
 
@@ -378,6 +418,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -386,6 +427,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setPermitePerdaTotal(String permitePerdaTotal) {
+        markAsChanged("PERMITEPERDATOTAL", permitePerdaTotal);
         this.permitePerdaTotal = permitePerdaTotal;
    }
 
@@ -394,6 +436,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setSetup(String setup) {
+        markAsChanged("SETUP", setup);
         this.setup = setup;
    }
 
@@ -402,6 +445,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setAprovarStatusLote(String aprovarStatusLote) {
+        markAsChanged("APROVARSTATUSLOTE", aprovarStatusLote);
         this.aprovarStatusLote = aprovarStatusLote;
    }
 
@@ -410,6 +454,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setDataHoraApontamento(String dataHoraApontamento) {
+        markAsChanged("DATAHORAAPONTAMENTO", dataHoraApontamento);
         this.dataHoraApontamento = dataHoraApontamento;
    }
 
@@ -418,6 +463,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setGeraMlaudo(String geraMlaudo) {
+        markAsChanged("GERAMLAUDO", geraMlaudo);
         this.geraMlaudo = geraMlaudo;
    }
 
@@ -426,6 +472,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
    }
 
    public void setPermiteAltLocMp(String permiteAltLocMp) {
+        markAsChanged("PERMITEALTLOCMP", permiteAltLocMp);
         this.permiteAltLocMp = permiteAltLocMp;
    }
 
@@ -441,6 +488,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
 
    @Override
    public Atividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipoConferencia = vo.asString("TIPOCONFERENCIA");
         this.concluIcq = vo.asString("CONCLUICQ");
         this.usaSeqCodBar = vo.asString("USASEQCODBAR");

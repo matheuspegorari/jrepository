@@ -28,6 +28,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -36,6 +37,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setAutoria(String autoria) {
+        markAsChanged("AUTORIA", autoria);
         this.autoria = autoria;
    }
 
@@ -44,6 +46,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -52,6 +55,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setCodIdentVara(String codIdentVara) {
+        markAsChanged("CODIDENTVARA", codIdentVara);
         this.codIdentVara = codIdentVara;
    }
 
@@ -60,6 +64,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -68,6 +73,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -76,6 +82,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setDtFimValidade(Timestamp dtFimValidade) {
+        markAsChanged("DTFIMVALIDADE", dtFimValidade);
         this.dtFimValidade = dtFimValidade;
    }
 
@@ -84,6 +91,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setDtIniValidade(Timestamp dtIniValidade) {
+        markAsChanged("DTINIVALIDADE", dtIniValidade);
         this.dtIniValidade = dtIniValidade;
    }
 
@@ -92,6 +100,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setIndOrigProc(BigDecimal indOrigProc) {
+        markAsChanged("INDORIGPROC", indOrigProc);
         this.indOrigProc = indOrigProc;
    }
 
@@ -100,6 +109,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setNumProcesso(String numProcesso) {
+        markAsChanged("NUMPROCESSO", numProcesso);
         this.numProcesso = numProcesso;
    }
 
@@ -108,6 +118,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setNuProcesso(BigDecimal nuProcesso) {
+        markAsChanged("NUPROCESSO", nuProcesso);
         this.nuProcesso = nuProcesso;
    }
 
@@ -116,6 +127,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -124,6 +136,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setDescrComplReg1011(String descrComplReg1011) {
+        markAsChanged("DESCRCOMPLREG1011", descrComplReg1011);
         this.descrComplReg1011 = descrComplReg1011;
    }
 
@@ -132,6 +145,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setTipAtoConces(BigDecimal tipAtoConces) {
+        markAsChanged("TIPATOCONCES", tipAtoConces);
         this.tipAtoConces = tipAtoConces;
    }
 
@@ -140,6 +154,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setGerTagProXmlNfe(String gerTagProXmlNfe) {
+        markAsChanged("GERTAGPROXMLNFE", gerTagProXmlNfe);
         this.gerTagProXmlNfe = gerTagProXmlNfe;
    }
 
@@ -148,6 +163,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    }
 
    public void setOrigemProcesso(BigDecimal origemProcesso) {
+        markAsChanged("ORIGEMPROCESSO", origemProcesso);
         this.origemProcesso = origemProcesso;
    }
 
@@ -163,6 +179,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
 
    @Override
    public ProcessoAdmJudicial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.autoria = vo.asString("AUTORIA");
         this.codCid = vo.asBigDecimal("CODCID");

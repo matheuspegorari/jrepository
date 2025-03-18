@@ -53,6 +53,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setChaveMdfe(String chaveMdfe) {
+        markAsChanged("CHAVEMDFE", chaveMdfe);
         this.chaveMdfe = chaveMdfe;
    }
 
@@ -61,6 +62,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -69,6 +71,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -77,6 +80,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setDhEmiss(Timestamp dhEmiss) {
+        markAsChanged("DHEMISS", dhEmiss);
         this.dhEmiss = dhEmiss;
    }
 
@@ -85,6 +89,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setDhRecibo(Timestamp dhRecibo) {
+        markAsChanged("DHRECIBO", dhRecibo);
         this.dhRecibo = dhRecibo;
    }
 
@@ -93,6 +98,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNroRecibo(String nroRecibo) {
+        markAsChanged("NRORECIBO", nroRecibo);
         this.nroRecibo = nroRecibo;
    }
 
@@ -101,6 +107,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNumAleatorio(BigDecimal numAleatorio) {
+        markAsChanged("NUMALEATORIO", numAleatorio);
         this.numAleatorio = numAleatorio;
    }
 
@@ -109,6 +116,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNumMdfe(BigDecimal numMdfe) {
+        markAsChanged("NUMMDFE", numMdfe);
         this.numMdfe = numMdfe;
    }
 
@@ -117,6 +125,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNumViag(BigDecimal numViag) {
+        markAsChanged("NUVIAG", numViag);
         this.numViag = numViag;
    }
 
@@ -125,6 +134,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -133,6 +143,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setStatusMdfe(String statusMdfe) {
+        markAsChanged("STATUSMDFE", statusMdfe);
         this.statusMdfe = statusMdfe;
    }
 
@@ -141,6 +152,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setTipEmiss(String tipEmiss) {
+        markAsChanged("TIPEMISS", tipEmiss);
         this.tipEmiss = tipEmiss;
    }
 
@@ -149,6 +161,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setUfFinal(BigDecimal ufFinal) {
+        markAsChanged("UFFINAL", ufFinal);
         this.ufFinal = ufFinal;
    }
 
@@ -157,6 +170,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setXml(char[] xml) {
+        markAsChanged("XML", xml);
         this.xml = xml;
    }
 
@@ -165,6 +179,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCodCidEncerramento(BigDecimal codCidEncerramento) {
+        markAsChanged("CODCIDENCERRAMENTO", codCidEncerramento);
         this.codCidEncerramento = codCidEncerramento;
    }
 
@@ -173,6 +188,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCodPortoDestino(String codPortoDestino) {
+        markAsChanged("CODPORTODESTINO", codPortoDestino);
         this.codPortoDestino = codPortoDestino;
    }
 
@@ -181,6 +197,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCodPortoEmbarque(String codPortoEmbarque) {
+        markAsChanged("CODPORTOEMBARQUE", codPortoEmbarque);
         this.codPortoEmbarque = codPortoEmbarque;
    }
 
@@ -189,6 +206,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCodPortoTransbordo(String codPortoTransbordo) {
+        markAsChanged("CODPORTOTRANSBORDO", codPortoTransbordo);
         this.codPortoTransbordo = codPortoTransbordo;
    }
 
@@ -197,6 +215,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setIrInNavio(String irInNavio) {
+        markAsChanged("IRINNAVIO", irInNavio);
         this.irInNavio = irInNavio;
    }
 
@@ -205,6 +224,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setQrCode(String qrCode) {
+        markAsChanged("QRCODE", qrCode);
         this.qrCode = qrCode;
    }
 
@@ -213,6 +233,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setTipoNavegacao(BigDecimal tipoNavegacao) {
+        markAsChanged("TIPONAVEGACAO", tipoNavegacao);
         this.tipoNavegacao = tipoNavegacao;
    }
 
@@ -221,6 +242,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setUsaPesoBrutoNfe(String usaPesoBrutoNfe) {
+        markAsChanged("USAPESOBRUTONFE", usaPesoBrutoNfe);
         this.usaPesoBrutoNfe = usaPesoBrutoNfe;
    }
 
@@ -229,6 +251,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setPesoBrutoTot(BigDecimal pesoBrutoTot) {
+        markAsChanged("PESOBRUTOTOT", pesoBrutoTot);
         this.pesoBrutoTot = pesoBrutoTot;
    }
 
@@ -237,6 +260,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setUnMed(String unMed) {
+        markAsChanged("UNMED", unMed);
         this.unMed = unMed;
    }
 
@@ -245,6 +269,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setUfInicial(BigDecimal ufInicial) {
+        markAsChanged("UFINICIAL", ufInicial);
         this.ufInicial = ufInicial;
    }
 
@@ -253,6 +278,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setXmlEnvCli(char[] xmlEnvCli) {
+        markAsChanged("XMLENVCLI", xmlEnvCli);
         this.xmlEnvCli = xmlEnvCli;
    }
 
@@ -261,6 +287,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setXmlProtAut(char[] xmlProtAut) {
+        markAsChanged("XMLPROTAUT", xmlProtAut);
         this.xmlProtAut = xmlProtAut;
    }
 
@@ -269,6 +296,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNuLoteMdfe(BigDecimal nuLoteMdfe) {
+        markAsChanged("NULOTEMDFE", nuLoteMdfe);
         this.nuLoteMdfe = nuLoteMdfe;
    }
 
@@ -277,6 +305,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCepCar(String cepCar) {
+        markAsChanged("CEPCAR", cepCar);
         this.cepCar = cepCar;
    }
 
@@ -285,6 +314,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setCepDescar(String cepDescar) {
+        markAsChanged("CEPDESCAR", cepDescar);
         this.cepDescar = cepDescar;
    }
 
@@ -293,6 +323,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setDescProd(String descProd) {
+        markAsChanged("DESCPROD", descProd);
         this.descProd = descProd;
    }
 
@@ -301,6 +332,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setEan(String ean) {
+        markAsChanged("EAN", ean);
         this.ean = ean;
    }
 
@@ -309,6 +341,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setLatCar(BigDecimal latCar) {
+        markAsChanged("LATCAR", latCar);
         this.latCar = latCar;
    }
 
@@ -317,6 +350,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setLatDescar(BigDecimal latDescar) {
+        markAsChanged("LATDESCAR", latDescar);
         this.latDescar = latDescar;
    }
 
@@ -325,6 +359,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setLonDesgCar(BigDecimal lonDesgCar) {
+        markAsChanged("LONDESGCAR", lonDesgCar);
         this.lonDesgCar = lonDesgCar;
    }
 
@@ -333,6 +368,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setLongCar(BigDecimal longCar) {
+        markAsChanged("LONGCAR", longCar);
         this.longCar = longCar;
    }
 
@@ -341,6 +377,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setNcm(String ncm) {
+        markAsChanged("NCM", ncm);
         this.ncm = ncm;
    }
 
@@ -349,6 +386,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setTpCarga(String tpCarga) {
+        markAsChanged("TPCARGA", tpCarga);
         this.tpCarga = tpCarga;
    }
 
@@ -357,6 +395,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setIndCarregPost(String indCarregPost) {
+        markAsChanged("INDCARREGPOST", indCarregPost);
         this.indCarregPost = indCarregPost;
    }
 
@@ -365,6 +404,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setMunFinal(BigDecimal munFinal) {
+        markAsChanged("MUNFINAL", munFinal);
         this.munFinal = munFinal;
    }
 
@@ -373,6 +413,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    }
 
    public void setMunInicial(BigDecimal munInicial) {
+        markAsChanged("MUNINICIAL", munInicial);
         this.munInicial = munInicial;
    }
 
@@ -388,6 +429,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
 
    @Override
    public Manifesto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveMdfe = vo.asString("CHAVEMDFE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

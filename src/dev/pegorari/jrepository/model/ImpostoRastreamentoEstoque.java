@@ -32,6 +32,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setBaseStfcpIntAnt(BigDecimal baseStfcpIntAnt) {
+        markAsChanged("BASESTFCPINTANT", baseStfcpIntAnt);
         this.baseStfcpIntAnt = baseStfcpIntAnt;
    }
 
@@ -40,6 +41,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setBaseSubst(BigDecimal baseSubst) {
+        markAsChanged("BASESUBST", baseSubst);
         this.baseSubst = baseSubst;
    }
 
@@ -48,6 +50,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -56,6 +59,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -64,6 +68,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -72,6 +77,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -80,6 +86,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -88,6 +95,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -96,6 +104,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setNuNotaCompra(BigDecimal nuNotaCompra) {
+        markAsChanged("NUNOTACOMPRA", nuNotaCompra);
         this.nuNotaCompra = nuNotaCompra;
    }
 
@@ -104,6 +113,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setPercStfcpIntAnt(BigDecimal percStfcpIntAnt) {
+        markAsChanged("PERCSTFCPINTANT", percStfcpIntAnt);
         this.percStfcpIntAnt = percStfcpIntAnt;
    }
 
@@ -112,6 +122,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -120,6 +131,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -128,6 +140,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setSequenciaCompra(BigDecimal sequenciaCompra) {
+        markAsChanged("SEQUENCIACOMPRA", sequenciaCompra);
         this.sequenciaCompra = sequenciaCompra;
    }
 
@@ -136,6 +149,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -144,6 +158,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setVlrStfcpIntAnt(BigDecimal vlrStfcpIntAnt) {
+        markAsChanged("VLRSTFCPINTANT", vlrStfcpIntAnt);
         this.vlrStfcpIntAnt = vlrStfcpIntAnt;
    }
 
@@ -152,6 +167,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
+        markAsChanged("VLRSUBST", vlrSubst);
         this.vlrSubst = vlrSubst;
    }
 
@@ -160,6 +176,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setPercSubst(BigDecimal percSubst) {
+        markAsChanged("PERCSUBST", percSubst);
         this.percSubst = percSubst;
    }
 
@@ -168,6 +185,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setCodCfo(BigDecimal codCfo) {
+        markAsChanged("CODCFO", codCfo);
         this.codCfo = codCfo;
    }
 
@@ -176,6 +194,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -184,6 +203,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -199,6 +219,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
 
    @Override
    public ImpostoRastreamentoEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.baseStfcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
         this.baseSubst = vo.asBigDecimal("BASESUBST");
         this.codEmp = vo.asBigDecimal("CODEMP");

@@ -18,6 +18,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -26,6 +27,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setCodRegua(BigDecimal codRegua) {
+        markAsChanged("CODREGUA", codRegua);
         this.codRegua = codRegua;
    }
 
@@ -34,6 +36,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -42,6 +45,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setDescRegua(String descRegua) {
+        markAsChanged("DESCREGUA", descRegua);
         this.descRegua = descRegua;
    }
 
@@ -50,6 +54,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setHoraExec(BigDecimal horaExec) {
+        markAsChanged("HORAEXEC", horaExec);
         this.horaExec = horaExec;
    }
 
@@ -58,6 +63,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    }
 
    public void setUltExecucao(Timestamp ultExecucao) {
+        markAsChanged("ULTEXECUCAO", ultExecucao);
         this.ultExecucao = ultExecucao;
    }
 
@@ -73,6 +79,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
 
    @Override
    public ReguaCobranca fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.config = vo.asClob("CONFIG");

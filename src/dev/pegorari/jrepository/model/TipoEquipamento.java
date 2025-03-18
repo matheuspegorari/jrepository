@@ -20,6 +20,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -28,6 +29,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setCodTipEquip(BigDecimal codTipEquip) {
+        markAsChanged("CODTIPEQUIP", codTipEquip);
         this.codTipEquip = codTipEquip;
    }
 
@@ -36,6 +38,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -44,6 +47,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setM3Max(BigDecimal m3Max) {
+        markAsChanged("M3MAX", m3Max);
         this.m3Max = m3Max;
    }
 
@@ -52,6 +56,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setNivelMax(BigDecimal nivelMax) {
+        markAsChanged("NIVELMAX", nivelMax);
         this.nivelMax = nivelMax;
    }
 
@@ -60,6 +65,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setNivelMin(BigDecimal nivelMin) {
+        markAsChanged("NIVELMIN", nivelMin);
         this.nivelMin = nivelMin;
    }
 
@@ -68,6 +74,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
+        markAsChanged("PESOMAX", pesoMax);
         this.pesoMax = pesoMax;
    }
 
@@ -76,6 +83,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setPesoMin(BigDecimal pesoMin) {
+        markAsChanged("PESOMIN", pesoMin);
         this.pesoMin = pesoMin;
    }
 
@@ -84,6 +92,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -99,6 +108,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
 
    @Override
    public TipoEquipamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codTipEquip = vo.asBigDecimal("CODTIPEQUIP");
         this.descricao = vo.asString("DESCRICAO");

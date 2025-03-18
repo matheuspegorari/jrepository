@@ -22,6 +22,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -30,6 +31,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -38,6 +40,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setDhInicial(Timestamp dhInicial) {
+        markAsChanged("DHINICIAL", dhInicial);
         this.dhInicial = dhInicial;
    }
 
@@ -46,6 +49,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
+        markAsChanged("IDINSTPRN", idInstPrn);
         this.idInstPrn = idInstPrn;
    }
 
@@ -54,6 +58,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setIdInstTar(BigDecimal idInstTar) {
+        markAsChanged("IDINSTTAR", idInstTar);
         this.idInstTar = idInstTar;
    }
 
@@ -62,6 +67,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -70,6 +76,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setTempo(BigDecimal tempo) {
+        markAsChanged("TEMPO", tempo);
         this.tempo = tempo;
    }
 
@@ -78,6 +85,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -86,6 +94,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -94,6 +103,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setIntervalo(BigDecimal intervalo) {
+        markAsChanged("INTERVALO", intervalo);
         this.intervalo = intervalo;
    }
 
@@ -109,6 +119,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
 
    @Override
    public ApontamentoExecucaoTarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhFinal = vo.asTimestamp("DHFINAL");
         this.dhInicial = vo.asTimestamp("DHINICIAL");

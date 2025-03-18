@@ -16,6 +16,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    }
 
    public void setArquivo(char[] arquivo) {
+        markAsChanged("ARQUIVO", arquivo);
         this.arquivo = arquivo;
    }
 
@@ -24,6 +25,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    }
 
    public void setArquivoBin(byte[] arquivoBin) {
+        markAsChanged("ARQUIVOBIN", arquivoBin);
         this.arquivoBin = arquivoBin;
    }
 
@@ -32,6 +34,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -40,6 +43,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -48,6 +52,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
 
    @Override
    public ArquivoRelatorio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arquivo = vo.asClob("ARQUIVO");
         this.arquivoBin = vo.asBlob("ARQUIVOBIN");
         this.nome = vo.asString("NOME");

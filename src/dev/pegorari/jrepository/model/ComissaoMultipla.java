@@ -15,6 +15,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -23,6 +24,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -31,6 +33,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -39,6 +42,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
    }
 
    public void setPercCom(BigDecimal percCom) {
+        markAsChanged("PERCCOM", percCom);
         this.percCom = percCom;
    }
 
@@ -54,6 +58,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
 
    @Override
    public ComissaoMultipla fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codVend = vo.asBigDecimal("CODVEND");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.obs = vo.asString("OBS");

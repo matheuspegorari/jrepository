@@ -27,6 +27,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -35,6 +36,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
+        markAsChanged("CODUSULIB", codUsuLib);
         this.codUsuLib = codUsuLib;
    }
 
@@ -43,6 +45,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setCodUsuSolicit(BigDecimal codUsuSolicit) {
+        markAsChanged("CODUSUSOLICIT", codUsuSolicit);
         this.codUsuSolicit = codUsuSolicit;
    }
 
@@ -51,6 +54,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setDhLiberacao(Timestamp dhLiberacao) {
+        markAsChanged("DHLIBERACAO", dhLiberacao);
         this.dhLiberacao = dhLiberacao;
    }
 
@@ -59,6 +63,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setDhSolicitacao(Timestamp dhSolicitacao) {
+        markAsChanged("DHSOLICITACAO", dhSolicitacao);
         this.dhSolicitacao = dhSolicitacao;
    }
 
@@ -67,6 +72,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -75,6 +81,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -83,6 +90,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -91,6 +99,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setQtdEndAtual(BigDecimal qtdEndAtual) {
+        markAsChanged("QTDENDATUAL", qtdEndAtual);
         this.qtdEndAtual = qtdEndAtual;
    }
 
@@ -99,6 +108,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setQtdEndereco(BigDecimal qtdEndereco) {
+        markAsChanged("QTDENDERECO", qtdEndereco);
         this.qtdEndereco = qtdEndereco;
    }
 
@@ -107,6 +117,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setQtdFalta(BigDecimal qtdFalta) {
+        markAsChanged("QTDFALTA", qtdFalta);
         this.qtdFalta = qtdFalta;
    }
 
@@ -115,6 +126,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setQtdOutrosEnd(BigDecimal qtdOutrosEnd) {
+        markAsChanged("QTDOUTROSEND", qtdOutrosEnd);
         this.qtdOutrosEnd = qtdOutrosEnd;
    }
 
@@ -123,6 +135,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setQtdSaidasPend(BigDecimal qtdSaidasPend) {
+        markAsChanged("QTDSAIDASPEND", qtdSaidasPend);
         this.qtdSaidasPend = qtdSaidasPend;
    }
 
@@ -131,6 +144,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setSeqTarefa(BigDecimal seqTarefa) {
+        markAsChanged("SEQTAREFA", seqTarefa);
         this.seqTarefa = seqTarefa;
    }
 
@@ -139,6 +153,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -154,6 +169,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
 
    @Override
    public LiberacaoOcorrencia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");

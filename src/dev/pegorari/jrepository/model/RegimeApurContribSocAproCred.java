@@ -25,6 +25,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -33,6 +34,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setIndRegCum(BigDecimal indRegCum) {
+        markAsChanged("INDREGCUM", indRegCum);
         this.indRegCum = indRegCum;
    }
 
@@ -41,6 +43,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -49,6 +52,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setDtFimRegime(Timestamp dtFimRegime) {
+        markAsChanged("DTFIMREGIME", dtFimRegime);
         this.dtFimRegime = dtFimRegime;
    }
 
@@ -57,6 +61,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -65,6 +70,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setCodIncTrib(BigDecimal codIncTrib) {
+        markAsChanged("CODINCTRIB", codIncTrib);
         this.codIncTrib = codIncTrib;
    }
 
@@ -73,6 +79,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setDtIniRegime(Timestamp dtIniRegime) {
+        markAsChanged("DTINIREGIME", dtIniRegime);
         this.dtIniRegime = dtIniRegime;
    }
 
@@ -81,6 +88,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setCodTipoCont(BigDecimal codTipoCont) {
+        markAsChanged("CODTIPOCONT", codTipoCont);
         this.codTipoCont = codTipoCont;
    }
 
@@ -89,6 +97,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setIndApropCred(BigDecimal indApropCred) {
+        markAsChanged("INDAPROPCRED", indApropCred);
         this.indApropCred = indApropCred;
    }
 
@@ -97,6 +106,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setExcluiPisCofinsBaseDep(String excluiPisCofinsBaseDep) {
+        markAsChanged("EXCLUIPISCOFINSBASEDEP", excluiPisCofinsBaseDep);
         this.excluiPisCofinsBaseDep = excluiPisCofinsBaseDep;
    }
 
@@ -105,6 +115,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setConsMovDevVendF550(String consMovDevVendF550) {
+        markAsChanged("CONSMOVDEVVENDF550", consMovDevVendF550);
         this.consMovDevVendF550 = consMovDevVendF550;
    }
 
@@ -113,6 +124,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setConsValJurMulF525(String consValJurMulF525) {
+        markAsChanged("CONSVALJURMULF525", consValJurMulF525);
         this.consValJurMulF525 = consValJurMulF525;
    }
 
@@ -121,6 +133,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
    }
 
    public void setDescIteTercF525(String descIteTercF525) {
+        markAsChanged("DESCITETERCF525", descIteTercF525);
         this.descIteTercF525 = descIteTercF525;
    }
 
@@ -136,6 +149,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
 
    @Override
    public RegimeApurContribSocAproCred fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.indRegCum = vo.asBigDecimal("INDREGCUM");
         this.dhAlter = vo.asTimestamp("DHALTER");

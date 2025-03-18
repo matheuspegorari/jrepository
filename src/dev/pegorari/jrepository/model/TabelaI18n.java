@@ -13,6 +13,7 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
    }
 
    public void setLocale(String locale) {
+        markAsChanged("LOCALE", locale);
         this.locale = locale;
    }
 
@@ -21,6 +22,7 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -29,6 +31,7 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
    }
 
    public void setTexto(String texto) {
+        markAsChanged("TEXTO", texto);
         this.texto = texto;
    }
 
@@ -44,6 +47,7 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
 
    @Override
    public TabelaI18n fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeTab = vo.asString("NOMETAB");
         this.texto = vo.asString("TEXTO");

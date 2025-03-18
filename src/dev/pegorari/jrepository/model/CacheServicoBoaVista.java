@@ -18,6 +18,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setCgcCpf(String cgcCpf) {
+        markAsChanged("CGC_CPF", cgcCpf);
         this.cgcCpf = cgcCpf;
    }
 
@@ -26,6 +27,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setCmc7(String cmc7) {
+        markAsChanged("CMC7", cmc7);
         this.cmc7 = cmc7;
    }
 
@@ -34,6 +36,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -42,6 +45,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setDhConsulta(Timestamp dhConsulta) {
+        markAsChanged("DHCONSULTA", dhConsulta);
         this.dhConsulta = dhConsulta;
    }
 
@@ -50,6 +54,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setResposta(char[] resposta) {
+        markAsChanged("RESPOSTA", resposta);
         this.resposta = resposta;
    }
 
@@ -58,6 +63,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    }
 
    public void setTipConsulta(String tipConsulta) {
+        markAsChanged("TIPCONSULTA", tipConsulta);
         this.tipConsulta = tipConsulta;
    }
 
@@ -73,6 +79,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
 
    @Override
    public CacheServicoBoaVista fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");
         this.codUsu = vo.asBigDecimal("CODUSU");

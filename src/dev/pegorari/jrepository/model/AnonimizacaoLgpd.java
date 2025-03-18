@@ -18,6 +18,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setCodAnon(BigDecimal codAnon) {
+        markAsChanged("CODANON", codAnon);
         this.codAnon = codAnon;
    }
 
@@ -26,6 +27,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
+        markAsChanged("CODUSUALTER", codUsuAlter);
         this.codUsuAlter = codUsuAlter;
    }
 
@@ -34,6 +36,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
+        markAsChanged("CODUSUCRIAC", codUsuCriac);
         this.codUsuCriac = codUsuCriac;
    }
 
@@ -42,6 +45,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setDescAnon(String descAnon) {
+        markAsChanged("DESCANON", descAnon);
         this.descAnon = descAnon;
    }
 
@@ -50,6 +54,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -58,6 +63,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    }
 
    public void setDtCriac(Timestamp dtCriac) {
+        markAsChanged("DTCRIAC", dtCriac);
         this.dtCriac = dtCriac;
    }
 
@@ -73,6 +79,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
 
    @Override
    public AnonimizacaoLgpd fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAnon = vo.asBigDecimal("CODANON");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

@@ -31,6 +31,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setAliq(BigDecimal aliq) {
+        markAsChanged("ALIQ", aliq);
         this.aliq = aliq;
    }
 
@@ -39,6 +40,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setAliqCred(BigDecimal aliqCred) {
+        markAsChanged("ALIQCRED", aliqCred);
         this.aliqCred = aliqCred;
    }
 
@@ -47,6 +49,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -55,6 +58,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -63,6 +67,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -71,6 +76,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -79,6 +85,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setCst(BigDecimal cst) {
+        markAsChanged("CST", cst);
         this.cst = cst;
    }
 
@@ -87,6 +94,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setEntSai(String entSai) {
+        markAsChanged("ENTSAI", entSai);
         this.entSai = entSai;
    }
 
@@ -95,6 +103,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setGrupoImp(String grupoImp) {
+        markAsChanged("GRUPOIMP", grupoImp);
         this.grupoImp = grupoImp;
    }
 
@@ -103,6 +112,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setIpiIncBase(String ipiIncBase) {
+        markAsChanged("IPIINCBASE", ipiIncBase);
         this.ipiIncBase = ipiIncBase;
    }
 
@@ -111,6 +121,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setIva(BigDecimal iva) {
+        markAsChanged("IVA", iva);
         this.iva = iva;
    }
 
@@ -119,6 +130,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setNomeImp(String nomeImp) {
+        markAsChanged("NOMEIMP", nomeImp);
         this.nomeImp = nomeImp;
    }
 
@@ -127,6 +139,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setPercVlr(String percVlr) {
+        markAsChanged("PERCVLR", percVlr);
         this.percVlr = percVlr;
    }
 
@@ -135,6 +148,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setRedBase(BigDecimal redBase) {
+        markAsChanged("REDBASE", redBase);
         this.redBase = redBase;
    }
 
@@ -143,6 +157,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setRetemFin(String retemFin) {
+        markAsChanged("RETEMFIN", retemFin);
         this.retemFin = retemFin;
    }
 
@@ -151,6 +166,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setVlrPauta(BigDecimal vlrPauta) {
+        markAsChanged("VLRPAUTA", vlrPauta);
         this.vlrPauta = vlrPauta;
    }
 
@@ -159,6 +175,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setVlrPautaCred(BigDecimal vlrPautaCred) {
+        markAsChanged("VLRPAUTACRED", vlrPautaCred);
         this.vlrPautaCred = vlrPautaCred;
    }
 
@@ -167,6 +184,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setAliqSuframa(BigDecimal aliqSuframa) {
+        markAsChanged("ALIQSUFRAMA", aliqSuframa);
         this.aliqSuframa = aliqSuframa;
    }
 
@@ -175,6 +193,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setProdSemTrib(String prodSemTrib) {
+        markAsChanged("PRODSEMTRIB", prodSemTrib);
         this.prodSemTrib = prodSemTrib;
    }
 
@@ -183,6 +202,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
    }
 
    public void setIdAliq(BigDecimal idAliq) {
+        markAsChanged("IDALIQ", idAliq);
         this.idAliq = idAliq;
    }
 
@@ -198,6 +218,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
 
    @Override
    public AliquotaPisCofinsCssl fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliq = vo.asBigDecimal("ALIQ");
         this.aliqCred = vo.asBigDecimal("ALIQCRED");
         this.codEmp = vo.asBigDecimal("CODEMP");

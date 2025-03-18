@@ -22,6 +22,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -30,6 +31,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setEscopo(String escopo) {
+        markAsChanged("ESCOPO", escopo);
         this.escopo = escopo;
    }
 
@@ -38,6 +40,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setLeitura(String leitura) {
+        markAsChanged("LEITURA", leitura);
         this.leitura = leitura;
    }
 
@@ -46,6 +49,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -54,6 +58,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setNuEle(BigDecimal nuEle) {
+        markAsChanged("NUELE", nuEle);
         this.nuEle = nuEle;
    }
 
@@ -62,6 +67,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setNuVar(BigDecimal nuVar) {
+        markAsChanged("NUVAR", nuVar);
         this.nuVar = nuVar;
    }
 
@@ -70,6 +76,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setObrigatorio(String obrigatorio) {
+        markAsChanged("OBRIGATORIO", obrigatorio);
         this.obrigatorio = obrigatorio;
    }
 
@@ -78,6 +85,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -86,6 +94,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -94,6 +103,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setValorPadrao(String valorPadrao) {
+        markAsChanged("VALORPADRAO", valorPadrao);
         this.valorPadrao = valorPadrao;
    }
 
@@ -102,6 +112,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    }
 
    public void setDefaultLong(String defaultLong) {
+        markAsChanged("DEFAULTLONG", defaultLong);
         this.defaultLong = defaultLong;
    }
 
@@ -117,6 +128,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
 
    @Override
    public VariavelProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.escopo = vo.asString("ESCOPO");
         this.leitura = vo.asString("LEITURA");

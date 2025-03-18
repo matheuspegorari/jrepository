@@ -42,6 +42,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCofins(BigDecimal aliqCofins) {
+        markAsChanged("ALIQCOFINS", aliqCofins);
         this.aliqCofins = aliqCofins;
    }
 
@@ -50,6 +51,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCpp(BigDecimal aliqCpp) {
+        markAsChanged("ALIQCPP", aliqCpp);
         this.aliqCpp = aliqCpp;
    }
 
@@ -58,6 +60,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCsll(BigDecimal aliqCsll) {
+        markAsChanged("ALIQCSLL", aliqCsll);
         this.aliqCsll = aliqCsll;
    }
 
@@ -66,6 +69,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
+        markAsChanged("ALIQICMS", aliqIcms);
         this.aliqIcms = aliqIcms;
    }
 
@@ -74,6 +78,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
+        markAsChanged("ALIQIPI", aliqIpi);
         this.aliqIpi = aliqIpi;
    }
 
@@ -82,6 +87,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIrpj(BigDecimal aliqIrpj) {
+        markAsChanged("ALIQIRPJ", aliqIrpj);
         this.aliqIrpj = aliqIrpj;
    }
 
@@ -90,6 +96,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIss(BigDecimal aliqIss) {
+        markAsChanged("ALIQISS", aliqIss);
         this.aliqIss = aliqIss;
    }
 
@@ -98,6 +105,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqPisPasep(BigDecimal aliqPisPasep) {
+        markAsChanged("ALIQPISPASEP", aliqPisPasep);
         this.aliqPisPasep = aliqPisPasep;
    }
 
@@ -106,6 +114,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -114,6 +123,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -122,6 +132,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -130,6 +141,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setNuPartilha(BigDecimal nuPartilha) {
+        markAsChanged("NUPARTILHA", nuPartilha);
         this.nuPartilha = nuPartilha;
    }
 
@@ -138,6 +150,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
+        markAsChanged("TIPOSN", tipoSn);
         this.tipoSn = tipoSn;
    }
 
@@ -146,6 +159,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setVlrRecBruta(BigDecimal vlrRecBruta) {
+        markAsChanged("VLRRECBRUTA", vlrRecBruta);
         this.vlrRecBruta = vlrRecBruta;
    }
 
@@ -154,6 +168,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setTipoMercado(String tipoMercado) {
+        markAsChanged("TIPOMERCADO", tipoMercado);
         this.tipoMercado = tipoMercado;
    }
 
@@ -162,6 +177,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setNuFaixa(BigDecimal nuFaixa) {
+        markAsChanged("NUFAIXA", nuFaixa);
         this.nuFaixa = nuFaixa;
    }
 
@@ -170,6 +186,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
+        markAsChanged("NUAPURACAO", nuApuracao);
         this.nuApuracao = nuApuracao;
    }
 
@@ -178,6 +195,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCofinsAliefe(BigDecimal aliqCofinsAliefe) {
+        markAsChanged("ALIQCOFINSALIEFE", aliqCofinsAliefe);
         this.aliqCofinsAliefe = aliqCofinsAliefe;
    }
 
@@ -186,6 +204,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCppAliefe(BigDecimal aliqCppAliefe) {
+        markAsChanged("ALIQCPPALIEFE", aliqCppAliefe);
         this.aliqCppAliefe = aliqCppAliefe;
    }
 
@@ -194,6 +213,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqCsllAliefe(BigDecimal aliqCsllAliefe) {
+        markAsChanged("ALIQCSLLALIEFE", aliqCsllAliefe);
         this.aliqCsllAliefe = aliqCsllAliefe;
    }
 
@@ -202,6 +222,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIcmsAliefe(BigDecimal aliqIcmsAliefe) {
+        markAsChanged("ALIQICMSALIEFE", aliqIcmsAliefe);
         this.aliqIcmsAliefe = aliqIcmsAliefe;
    }
 
@@ -210,6 +231,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIpiAliefe(BigDecimal aliqIpiAliefe) {
+        markAsChanged("ALIQIPIALIEFE", aliqIpiAliefe);
         this.aliqIpiAliefe = aliqIpiAliefe;
    }
 
@@ -218,6 +240,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIrpjAliefe(BigDecimal aliqIrpjAliefe) {
+        markAsChanged("ALIQIRPJALIEFE", aliqIrpjAliefe);
         this.aliqIrpjAliefe = aliqIrpjAliefe;
    }
 
@@ -226,6 +249,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqIssAliefe(BigDecimal aliqIssAliefe) {
+        markAsChanged("ALIQISSALIEFE", aliqIssAliefe);
         this.aliqIssAliefe = aliqIssAliefe;
    }
 
@@ -234,6 +258,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliqPisPasepAliefe(BigDecimal aliqPisPasepAliefe) {
+        markAsChanged("ALIQPISPASEPALIEFE", aliqPisPasepAliefe);
         this.aliqPisPasepAliefe = aliqPisPasepAliefe;
    }
 
@@ -242,6 +267,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setAliquotaAliefe(BigDecimal aliquotaAliefe) {
+        markAsChanged("ALIQUOTAALIEFE", aliquotaAliefe);
         this.aliquotaAliefe = aliquotaAliefe;
    }
 
@@ -250,6 +276,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setNuFaixaAliefe(BigDecimal nuFaixaAliefe) {
+        markAsChanged("NUFAIXAALIEFE", nuFaixaAliefe);
         this.nuFaixaAliefe = nuFaixaAliefe;
    }
 
@@ -258,6 +285,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setTipoMercadoAliefe(String tipoMercadoAliefe) {
+        markAsChanged("TIPOMERCADOALIEFE", tipoMercadoAliefe);
         this.tipoMercadoAliefe = tipoMercadoAliefe;
    }
 
@@ -266,6 +294,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setTipoSnAliefe(BigDecimal tipoSnAliefe) {
+        markAsChanged("TIPOSNALIEFE", tipoSnAliefe);
         this.tipoSnAliefe = tipoSnAliefe;
    }
 
@@ -274,6 +303,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    }
 
    public void setVlrRecBrutaAliefe(BigDecimal vlrRecBrutaAliefe) {
+        markAsChanged("VLRRECBRUTAALIEFE", vlrRecBrutaAliefe);
         this.vlrRecBrutaAliefe = vlrRecBrutaAliefe;
    }
 
@@ -289,6 +319,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
 
    @Override
    public PartilhaSimplesNacional fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliqCofins = vo.asBigDecimal("ALIQCOFINS");
         this.aliqCpp = vo.asBigDecimal("ALIQCPP");
         this.aliqCsll = vo.asBigDecimal("ALIQCSLL");

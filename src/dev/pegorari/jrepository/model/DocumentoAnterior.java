@@ -22,6 +22,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setChaveDant(String chaveDant) {
+        markAsChanged("CHAVEDANT", chaveDant);
         this.chaveDant = chaveDant;
    }
 
@@ -30,6 +31,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -38,6 +40,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -46,6 +49,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setSeqDant(BigDecimal seqDant) {
+        markAsChanged("SEQDANT", seqDant);
         this.seqDant = seqDant;
    }
 
@@ -54,6 +58,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setCteRef(String cteRef) {
+        markAsChanged("CTEREF", cteRef);
         this.cteRef = cteRef;
    }
 
@@ -62,6 +67,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setDemi(Timestamp demi) {
+        markAsChanged("DEMI", demi);
         this.demi = demi;
    }
 
@@ -70,6 +76,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setNDoc(String nDoc) {
+        markAsChanged("NDOC", nDoc);
         this.nDoc = nDoc;
    }
 
@@ -78,6 +85,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setSerie(String serie) {
+        markAsChanged("SERIE", serie);
         this.serie = serie;
    }
 
@@ -86,6 +94,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setSubSer(String subSer) {
+        markAsChanged("SUBSER", subSer);
         this.subSer = subSer;
    }
 
@@ -94,6 +103,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    }
 
    public void setTpDocta(String tpDocta) {
+        markAsChanged("TPDOCTA", tpDocta);
         this.tpDocta = tpDocta;
    }
 
@@ -109,6 +119,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
 
    @Override
    public DocumentoAnterior fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveDant = vo.asString("CHAVEDANT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.nuNota = vo.asBigDecimal("NUNOTA");

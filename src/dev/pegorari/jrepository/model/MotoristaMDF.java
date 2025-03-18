@@ -13,6 +13,7 @@ public class MotoristaMDF extends AbstractSankhyaEntity<MotoristaMDF> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -21,6 +22,7 @@ public class MotoristaMDF extends AbstractSankhyaEntity<MotoristaMDF> {
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -36,6 +38,7 @@ public class MotoristaMDF extends AbstractSankhyaEntity<MotoristaMDF> {
 
    @Override
    public MotoristaMDF fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         return this;

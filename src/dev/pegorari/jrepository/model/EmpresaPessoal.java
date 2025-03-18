@@ -178,6 +178,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setSocioOstensivo(String socioOstensivo) {
+        markAsChanged("SOCIOOSTENSIVO", socioOstensivo);
         this.socioOstensivo = socioOstensivo;
    }
 
@@ -186,6 +187,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setSugereDatPag(String sugereDatPag) {
+        markAsChanged("SUGEREDATPAG", sugereDatPag);
         this.sugereDatPag = sugereDatPag;
    }
 
@@ -194,6 +196,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setTipDiaPag(String tipDiaPag) {
+        markAsChanged("TIPDIAPAG", tipDiaPag);
         this.tipDiaPag = tipDiaPag;
    }
 
@@ -202,6 +205,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setTipEventoEsp(BigDecimal tipEventoEsp) {
+        markAsChanged("TIPEVENTOESP", tipEventoEsp);
         this.tipEventoEsp = tipEventoEsp;
    }
 
@@ -210,6 +214,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setAlterouEnd(String alterouEnd) {
+        markAsChanged("ALTEROUEND", alterouEnd);
         this.alterouEnd = alterouEnd;
    }
 
@@ -218,6 +223,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -226,6 +232,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCategFgts(BigDecimal categFgts) {
+        markAsChanged("CATEGFGTS", categFgts);
         this.categFgts = categFgts;
    }
 
@@ -234,6 +241,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCentralizadora(String centralizadora) {
+        markAsChanged("CENTRALIZADORA", centralizadora);
         this.centralizadora = centralizadora;
    }
 
@@ -242,6 +250,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCgcAnt(String cgcAnt) {
+        markAsChanged("CGCANT", cgcAnt);
         this.cgcAnt = cgcAnt;
    }
 
@@ -250,6 +259,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCgcSindPatronal(String cgcSindPatronal) {
+        markAsChanged("CGCSINDPATRONAL", cgcSindPatronal);
         this.cgcSindPatronal = cgcSindPatronal;
    }
 
@@ -258,6 +268,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setClubeInvest(String clubeInvest) {
+        markAsChanged("CLUBEINVEST", clubeInvest);
         this.clubeInvest = clubeInvest;
    }
 
@@ -266,6 +277,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
+        markAsChanged("CODCENCUS", codCenCus);
         this.codCenCus = codCenCus;
    }
 
@@ -274,6 +286,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodCtabCoint(BigDecimal codCtabCoint) {
+        markAsChanged("CODCTABCOINT", codCtabCoint);
         this.codCtabCoint = codCtabCoint;
    }
 
@@ -282,6 +295,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodCtactbRever13(BigDecimal codCtactbRever13) {
+        markAsChanged("CODCTACTBREVER13", codCtactbRever13);
         this.codCtactbRever13 = codCtactbRever13;
    }
 
@@ -290,6 +304,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -298,6 +313,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodEmpModHol(BigDecimal codEmpModHol) {
+        markAsChanged("CODEMPMODHOL", codEmpModHol);
         this.codEmpModHol = codEmpModHol;
    }
 
@@ -306,6 +322,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodEmpOrg(BigDecimal codEmpOrg) {
+        markAsChanged("CODEMPORG", codEmpOrg);
         this.codEmpOrg = codEmpOrg;
    }
 
@@ -314,6 +331,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodHistCtbRever13(BigDecimal codHistCtbRever13) {
+        markAsChanged("CODHISTCTBREVER13", codHistCtbRever13);
         this.codHistCtbRever13 = codHistCtbRever13;
    }
 
@@ -322,6 +340,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodPref(BigDecimal codPref) {
+        markAsChanged("CODPREF", codPref);
         this.codPref = codPref;
    }
 
@@ -330,6 +349,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodRegFis(BigDecimal codRegFis) {
+        markAsChanged("CODREGFIS", codRegFis);
         this.codRegFis = codRegFis;
    }
 
@@ -338,6 +358,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCpfRespCnpj(String cpfRespCnpj) {
+        markAsChanged("CPFRESPCNPJ", cpfRespCnpj);
         this.cpfRespCnpj = cpfRespCnpj;
    }
 
@@ -346,6 +367,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCtaCtbReverSao(BigDecimal ctaCtbReverSao) {
+        markAsChanged("CTACTBREVERSAO", ctaCtbReverSao);
         this.ctaCtbReverSao = ctaCtbReverSao;
    }
 
@@ -354,6 +376,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCtaFgts(BigDecimal ctaFgts) {
+        markAsChanged("CTAFGTS", ctaFgts);
         this.ctaFgts = ctaFgts;
    }
 
@@ -362,6 +385,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDepositoJud(String depositoJud) {
+        markAsChanged("DEPOSITOJUD", depositoJud);
         this.depositoJud = depositoJud;
    }
 
@@ -370,6 +394,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaPagFerias(BigDecimal diaPagFerias) {
+        markAsChanged("DIAPAGFERIAS", diaPagFerias);
         this.diaPagFerias = diaPagFerias;
    }
 
@@ -378,6 +403,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaPagMensal(BigDecimal diaPagMensal) {
+        markAsChanged("DIAPAGMENSAL", diaPagMensal);
         this.diaPagMensal = diaPagMensal;
    }
 
@@ -386,6 +412,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaPagQuinz(BigDecimal diaPagQuinz) {
+        markAsChanged("DIAPAGQUINZ", diaPagQuinz);
         this.diaPagQuinz = diaPagQuinz;
    }
 
@@ -394,6 +421,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaPagQuinz2(BigDecimal diaPagQuinz2) {
+        markAsChanged("DIAPAGQUINZ_2", diaPagQuinz2);
         this.diaPagQuinz2 = diaPagQuinz2;
    }
 
@@ -402,6 +430,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaPagSem(BigDecimal diaPagSem) {
+        markAsChanged("DIAPAGSEM", diaPagSem);
         this.diaPagSem = diaPagSem;
    }
 
@@ -410,6 +439,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfCpf(String dirfCpf) {
+        markAsChanged("DIRFCPF", dirfCpf);
         this.dirfCpf = dirfCpf;
    }
 
@@ -418,6 +448,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfDdd(String dirfDdd) {
+        markAsChanged("DIRFDDD", dirfDdd);
         this.dirfDdd = dirfDdd;
    }
 
@@ -426,6 +457,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfEmail(String dirfEmail) {
+        markAsChanged("DIRFEMAIL", dirfEmail);
         this.dirfEmail = dirfEmail;
    }
 
@@ -434,6 +466,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfFax(String dirfFax) {
+        markAsChanged("DIRFFAX", dirfFax);
         this.dirfFax = dirfFax;
    }
 
@@ -442,6 +475,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfFone(String dirfFone) {
+        markAsChanged("DIRFFONE", dirfFone);
         this.dirfFone = dirfFone;
    }
 
@@ -450,6 +484,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfNome(String dirfNome) {
+        markAsChanged("DIRFNOME", dirfNome);
         this.dirfNome = dirfNome;
    }
 
@@ -458,6 +493,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDirfRamal(String dirfRamal) {
+        markAsChanged("DIRFRAMAL", dirfRamal);
         this.dirfRamal = dirfRamal;
    }
 
@@ -466,6 +502,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtAtual(Timestamp dtAtual) {
+        markAsChanged("DTATUAL", dtAtual);
         this.dtAtual = dtAtual;
    }
 
@@ -474,6 +511,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtEvento(Timestamp dtEvento) {
+        markAsChanged("DTEVENTO", dtEvento);
         this.dtEvento = dtEvento;
    }
 
@@ -482,6 +520,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setEmAtividade(String emAtividade) {
+        markAsChanged("EMATIVIDADE", emAtividade);
         this.emAtividade = emAtividade;
    }
 
@@ -490,6 +529,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setEmpDestinoCtb(BigDecimal empDestinoCtb) {
+        markAsChanged("EMPDESTINOCTB", empDestinoCtb);
         this.empDestinoCtb = empDestinoCtb;
    }
 
@@ -498,6 +538,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setEmpDestinoGrelha(BigDecimal empDestinoGrelha) {
+        markAsChanged("EMPDESTINOGRELHA", empDestinoGrelha);
         this.empDestinoGrelha = empDestinoGrelha;
    }
 
@@ -506,6 +547,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setGeraMatricula(String geraMatricula) {
+        markAsChanged("GERAMATRICULA", geraMatricula);
         this.geraMatricula = geraMatricula;
    }
 
@@ -514,6 +556,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setHistCtbReverSao(BigDecimal histCtbReverSao) {
+        markAsChanged("HISTCTBREVERSAO", histCtbReverSao);
         this.histCtbReverSao = histCtbReverSao;
    }
 
@@ -522,6 +565,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setMesDissidio(BigDecimal mesDissidio) {
+        markAsChanged("MESDISSIDIO", mesDissidio);
         this.mesDissidio = mesDissidio;
    }
 
@@ -530,6 +574,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setModHollerit(BigDecimal modHollerit) {
+        markAsChanged("MODHOLLERIT", modHollerit);
         this.modHollerit = modHollerit;
    }
 
@@ -538,6 +583,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNumConvInt(BigDecimal numConvInt) {
+        markAsChanged("NUMCONVINT", numConvInt);
         this.numConvInt = numConvInt;
    }
 
@@ -546,6 +592,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPagaExterior(String pagaExterior) {
+        markAsChanged("PAGAEXTERIOR", pagaExterior);
         this.pagaExterior = pagaExterior;
    }
 
@@ -554,6 +601,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercAlimConv(BigDecimal percAlimConv) {
+        markAsChanged("PERCALIMCONV", percAlimConv);
         this.percAlimConv = percAlimConv;
    }
 
@@ -562,6 +610,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercCestAlim(BigDecimal percCestAlim) {
+        markAsChanged("PERCCESTALIM", percCestAlim);
         this.percCestAlim = percCestAlim;
    }
 
@@ -570,6 +619,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setVlrConfederativa(BigDecimal vlrConfederativa) {
+        markAsChanged("VLRCONFEDERATIVA", vlrConfederativa);
         this.vlrConfederativa = vlrConfederativa;
    }
 
@@ -578,6 +628,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setVlrSindical(BigDecimal vlrSindical) {
+        markAsChanged("VLRSINDICAL", vlrSindical);
         this.vlrSindical = vlrSindical;
    }
 
@@ -586,6 +637,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercServico(BigDecimal percServico) {
+        markAsChanged("PERCSERVICO", percServico);
         this.percServico = percServico;
    }
 
@@ -594,6 +646,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercTranspo(BigDecimal percTranspo) {
+        markAsChanged("PERCTRANSPO", percTranspo);
         this.percTranspo = percTranspo;
    }
 
@@ -602,6 +655,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPorte(BigDecimal porte) {
+        markAsChanged("PORTE", porte);
         this.porte = porte;
    }
 
@@ -610,6 +664,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setProgAlimTrab(String progAlimTrab) {
+        markAsChanged("PROGALIMTRAB", progAlimTrab);
         this.progAlimTrab = progAlimTrab;
    }
 
@@ -618,6 +673,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -626,6 +682,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setSindicalizada(String sindicalizada) {
+        markAsChanged("SINDICALIZADA", sindicalizada);
         this.sindicalizada = sindicalizada;
    }
 
@@ -634,6 +691,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setSituacaoEsp(String situacaoEsp) {
+        markAsChanged("SITUACAOESP", situacaoEsp);
         this.situacaoEsp = situacaoEsp;
    }
 
@@ -642,6 +700,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercCozinha(BigDecimal percCozinha) {
+        markAsChanged("PERCCOZINHA", percCozinha);
         this.percCozinha = percCozinha;
    }
 
@@ -650,6 +709,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercRefeicao(BigDecimal percRefeicao) {
+        markAsChanged("PERCREFEICAO", percRefeicao);
         this.percRefeicao = percRefeicao;
    }
 
@@ -658,6 +718,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setVlrAssistencial(BigDecimal vlrAssistencial) {
+        markAsChanged("VLRASSISTENCIAL", vlrAssistencial);
         this.vlrAssistencial = vlrAssistencial;
    }
 
@@ -666,6 +727,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setVlrAssociativa(BigDecimal vlrAssociativa) {
+        markAsChanged("VLRASSOCIATIVA", vlrAssociativa);
         this.vlrAssociativa = vlrAssociativa;
    }
 
@@ -674,6 +736,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setInibePonto(String inibePonto) {
+        markAsChanged("INIBEPONTO", inibePonto);
         this.inibePonto = inibePonto;
    }
 
@@ -682,6 +745,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setModPonto(BigDecimal modPonto) {
+        markAsChanged("MODPONTO", modPonto);
         this.modPonto = modPonto;
    }
 
@@ -690,6 +754,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setArqModEmail(String arqModEmail) {
+        markAsChanged("ARQMODEMAIL", arqModEmail);
         this.arqModEmail = arqModEmail;
    }
 
@@ -698,6 +763,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setImpPortalRh(String impPortalRh) {
+        markAsChanged("IMPPORTALRH", impPortalRh);
         this.impPortalRh = impPortalRh;
    }
 
@@ -706,6 +772,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setInibeHollerit(String inibeHollerit) {
+        markAsChanged("INIBEHOLLERIT", inibeHollerit);
         this.inibeHollerit = inibeHollerit;
    }
 
@@ -714,6 +781,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPortalApto(String portalApto) {
+        markAsChanged("PORTALAPONTO", portalApto);
         this.portalApto = portalApto;
    }
 
@@ -722,6 +790,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPortalEvolucao(String portalEvolucao) {
+        markAsChanged("PORTALEVOLUCAO", portalEvolucao);
         this.portalEvolucao = portalEvolucao;
    }
 
@@ -730,6 +799,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPortalProgFerias(String portalProgFerias) {
+        markAsChanged("PORTALPROGFERIAS", portalProgFerias);
         this.portalProgFerias = portalProgFerias;
    }
 
@@ -738,6 +808,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setImportaPonto(String importaPonto) {
+        markAsChanged("IMPORTAPONTO", importaPonto);
         this.importaPonto = importaPonto;
    }
 
@@ -746,6 +817,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndDesfolha(BigDecimal indDesfolha) {
+        markAsChanged("INDDESFOLHA", indDesfolha);
         this.indDesfolha = indDesfolha;
    }
 
@@ -754,6 +826,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndEnted(String indEnted) {
+        markAsChanged("INDENTED", indEnted);
         this.indEnted = indEnted;
    }
 
@@ -762,6 +835,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndEtt(String indEtt) {
+        markAsChanged("INDETT", indEtt);
         this.indEtt = indEtt;
    }
 
@@ -770,6 +844,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndOptRegEletron(BigDecimal indOptRegEletron) {
+        markAsChanged("INDOPTREGELETRON", indOptRegEletron);
         this.indOptRegEletron = indOptRegEletron;
    }
 
@@ -778,6 +853,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndRpps(String indRpps) {
+        markAsChanged("INDRPPS", indRpps);
         this.indRpps = indRpps;
    }
 
@@ -786,6 +862,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndSimples(BigDecimal indSimples) {
+        markAsChanged("INDSIMPLES", indSimples);
         this.indSimples = indSimples;
    }
 
@@ -794,6 +871,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIndSitPj(BigDecimal indSitPj) {
+        markAsChanged("INDSITPJ", indSitPj);
         this.indSitPj = indSitPj;
    }
 
@@ -802,6 +880,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIniValSocial(Timestamp iniValSocial) {
+        markAsChanged("INIVALESOCIAL", iniValSocial);
         this.iniValSocial = iniValSocial;
    }
 
@@ -810,6 +889,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setLogoFolha(String logoFolha) {
+        markAsChanged("LOGOFOLHA", logoFolha);
         this.logoFolha = logoFolha;
    }
 
@@ -818,6 +898,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNmEnte(String nmEnte) {
+        markAsChanged("NMENTE", nmEnte);
         this.nmEnte = nmEnte;
    }
 
@@ -826,6 +907,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNroCertif(String nroCertif) {
+        markAsChanged("NROCERTIF", nroCertif);
         this.nroCertif = nroCertif;
    }
 
@@ -834,6 +916,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNroProtRenov(String nroProtRenov) {
+        markAsChanged("NROPROTRENOV", nroProtRenov);
         this.nroProtRenov = nroProtRenov;
    }
 
@@ -842,6 +925,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNrRegEtt(String nrRegEtt) {
+        markAsChanged("NRREGETT", nrRegEtt);
         this.nrRegEtt = nrRegEtt;
    }
 
@@ -850,6 +934,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNrSiafi(BigDecimal nrSiafi) {
+        markAsChanged("NRSIAFI", nrSiafi);
         this.nrSiafi = nrSiafi;
    }
 
@@ -858,6 +943,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNuProcAltOutent(BigDecimal nuProcAltOutent) {
+        markAsChanged("NUPROCALTOUTENT", nuProcAltOutent);
         this.nuProcAltOutent = nuProcAltOutent;
    }
 
@@ -866,6 +952,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNuProcessoApr(BigDecimal nuProcessoApr) {
+        markAsChanged("NUPROCESSOAPR", nuProcessoApr);
         this.nuProcessoApr = nuProcessoApr;
    }
 
@@ -874,6 +961,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNuProcessoFap(BigDecimal nuProcessoFap) {
+        markAsChanged("NUPROCESSOFAP", nuProcessoFap);
         this.nuProcessoFap = nuProcessoFap;
    }
 
@@ -882,6 +970,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNuProcessoPcd(BigDecimal nuProcessoPcd) {
+        markAsChanged("NUPROCESSOPCD", nuProcessoPcd);
         this.nuProcessoPcd = nuProcessoPcd;
    }
 
@@ -890,6 +979,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setNuProcessoRat(BigDecimal nuProcessoRat) {
+        markAsChanged("NUPROCESSORAT", nuProcessoRat);
         this.nuProcessoRat = nuProcessoRat;
    }
 
@@ -898,6 +988,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPagDou(BigDecimal pagDou) {
+        markAsChanged("PAGDOU", pagDou);
         this.pagDou = pagDou;
    }
 
@@ -906,6 +997,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPastaDoPonto(String pastaDoPonto) {
+        markAsChanged("PASTADOPONTO", pastaDoPonto);
         this.pastaDoPonto = pastaDoPonto;
    }
 
@@ -914,6 +1006,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercEnte(BigDecimal percEnte) {
+        markAsChanged("PERCENTE", percEnte);
         this.percEnte = percEnte;
    }
 
@@ -922,6 +1015,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercSeg(BigDecimal percSeg) {
+        markAsChanged("PERCSEG", percSeg);
         this.percSeg = percSeg;
    }
 
@@ -930,6 +1024,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPercSupl(BigDecimal percSupl) {
+        markAsChanged("PERCSUPL", percSupl);
         this.percSupl = percSupl;
    }
 
@@ -938,6 +1033,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPeriodoImpPonto(BigDecimal periodoImpPonto) {
+        markAsChanged("PERIODOIMPPONTO", periodoImpPonto);
         this.periodoImpPonto = periodoImpPonto;
    }
 
@@ -946,6 +1042,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setReciboEsocial(String reciboEsocial) {
+        markAsChanged("RECIBOESOCIAL", reciboEsocial);
         this.reciboEsocial = reciboEsocial;
    }
 
@@ -954,6 +1051,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setRegimeRetirRfcx(String regimeRetirRfcx) {
+        markAsChanged("REGIMERETIRRFCX", regimeRetirRfcx);
         this.regimeRetirRfcx = regimeRetirRfcx;
    }
 
@@ -962,6 +1060,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setSiglaMin(String siglaMin) {
+        markAsChanged("SIGLAMIN", siglaMin);
         this.siglaMin = siglaMin;
    }
 
@@ -970,6 +1069,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setTipLotacao(BigDecimal tipLotacao) {
+        markAsChanged("TIPLOTACAO", tipLotacao);
         this.tipLotacao = tipLotacao;
    }
 
@@ -978,6 +1078,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setTipPonto(String tipPonto) {
+        markAsChanged("TIPPONTO", tipPonto);
         this.tipPonto = tipPonto;
    }
 
@@ -986,6 +1087,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setUsadoEsocial(String usadoEsocial) {
+        markAsChanged("USADOESOCIAL", usadoEsocial);
         this.usadoEsocial = usadoEsocial;
    }
 
@@ -994,6 +1096,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setValidaBaseImp(String validaBaseImp) {
+        markAsChanged("VALIDABASEIMP", validaBaseImp);
         this.validaBaseImp = validaBaseImp;
    }
 
@@ -1002,6 +1105,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setValSubTeto(BigDecimal valSubTeto) {
+        markAsChanged("VALSUBTETO", valSubTeto);
         this.valSubTeto = valSubTeto;
    }
 
@@ -1010,6 +1114,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setJesPon(String jesPon) {
+        markAsChanged("JESPON", jesPon);
         this.jesPon = jesPon;
    }
 
@@ -1018,6 +1123,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setAliquotaFap(BigDecimal aliquotaFap) {
+        markAsChanged("ALIQUOTAFAP", aliquotaFap);
         this.aliquotaFap = aliquotaFap;
    }
 
@@ -1026,6 +1132,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setAliquotaRat(BigDecimal aliquotaRat) {
+        markAsChanged("ALIQUOTARAT", aliquotaRat);
         this.aliquotaRat = aliquotaRat;
    }
 
@@ -1034,6 +1141,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCnpjEfr(String cnpjEfr) {
+        markAsChanged("CNPJEFR", cnpjEfr);
         this.cnpjEfr = cnpjEfr;
    }
 
@@ -1042,6 +1150,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCnpjProcurador(String cnpjProcurador) {
+        markAsChanged("CNPJPROCURADOR", cnpjProcurador);
         this.cnpjProcurador = cnpjProcurador;
    }
 
@@ -1050,6 +1159,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodBcoFin(BigDecimal codBcoFin) {
+        markAsChanged("CODBCOFIN", codBcoFin);
         this.codBcoFin = codBcoFin;
    }
 
@@ -1058,6 +1168,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodCenCusAtoCoop(BigDecimal codCenCusAtoCoop) {
+        markAsChanged("CODCENCUSATOCOOP", codCenCusAtoCoop);
         this.codCenCusAtoCoop = codCenCusAtoCoop;
    }
 
@@ -1066,6 +1177,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodCtabCofin(BigDecimal codCtabCofin) {
+        markAsChanged("CODCTABCOFIN", codCtabCofin);
         this.codCtabCofin = codCtabCofin;
    }
 
@@ -1074,6 +1186,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodEmpLotacao(BigDecimal codEmpLotacao) {
+        markAsChanged("CODEMPLOTACAO", codEmpLotacao);
         this.codEmpLotacao = codEmpLotacao;
    }
 
@@ -1082,6 +1195,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodGrelha(BigDecimal codGrelha) {
+        markAsChanged("CODGRELHA", codGrelha);
         this.codGrelha = codGrelha;
    }
 
@@ -1090,6 +1204,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodInfFisc(BigDecimal codInfFisc) {
+        markAsChanged("CODINFFISC", codInfFisc);
         this.codInfFisc = codInfFisc;
    }
 
@@ -1098,6 +1213,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodNatFpas(BigDecimal codNatFpas) {
+        markAsChanged("CODNATFPAS", codNatFpas);
         this.codNatFpas = codNatFpas;
    }
 
@@ -1106,6 +1222,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodNatSaldoRet(BigDecimal codNatSaldoRet) {
+        markAsChanged("CODNATSALDORET", codNatSaldoRet);
         this.codNatSaldoRet = codNatSaldoRet;
    }
 
@@ -1114,6 +1231,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodProjAtoCoop(BigDecimal codProjAtoCoop) {
+        markAsChanged("CODPROJATOCOOP", codProjAtoCoop);
         this.codProjAtoCoop = codProjAtoCoop;
    }
 
@@ -1122,6 +1240,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setContaPr(String contaPr) {
+        markAsChanged("CONTAPR", contaPr);
         this.contaPr = contaPr;
    }
 
@@ -1130,6 +1249,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setConteNted(String conteNted) {
+        markAsChanged("CONTENTED", conteNted);
         this.conteNted = conteNted;
    }
 
@@ -1138,6 +1258,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setContPcd(String contPcd) {
+        markAsChanged("CONTPCD", contPcd);
         this.contPcd = contPcd;
    }
 
@@ -1146,6 +1267,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setControlePonto(BigDecimal controlePonto) {
+        markAsChanged("CONTROLEPONTO", controlePonto);
         this.controlePonto = controlePonto;
    }
 
@@ -1154,6 +1276,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCpfProdrural(String cpfProdrural) {
+        markAsChanged("CPFPRODRURAL", cpfProdrural);
         this.cpfProdrural = cpfProdrural;
    }
 
@@ -1162,6 +1285,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCtaCtbCrAtoCoop(BigDecimal ctaCtbCrAtoCoop) {
+        markAsChanged("CTACTBCRATOCOOP", ctaCtbCrAtoCoop);
         this.ctaCtbCrAtoCoop = ctaCtbCrAtoCoop;
    }
 
@@ -1170,6 +1294,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCtaCtbDbAtoCoop(BigDecimal ctaCtbDbAtoCoop) {
+        markAsChanged("CTACTBDBATOCOOP", ctaCtbDbAtoCoop);
         this.ctaCtbDbAtoCoop = ctaCtbDbAtoCoop;
    }
 
@@ -1178,6 +1303,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDhUltimaImpPto(Timestamp dhUltimaImpPto) {
+        markAsChanged("DHULTIMAIMPPTO", dhUltimaImpPto);
         this.dhUltimaImpPto = dhUltimaImpPto;
    }
 
@@ -1186,6 +1312,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDiaApuraPonto(BigDecimal diaApuraPonto) {
+        markAsChanged("DIAAPURAPONTO", diaApuraPonto);
         this.diaApuraPonto = diaApuraPonto;
    }
 
@@ -1194,6 +1321,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtCargaInicial(Timestamp dtCargaInicial) {
+        markAsChanged("DTCARGAINICIAL", dtCargaInicial);
         this.dtCargaInicial = dtCargaInicial;
    }
 
@@ -1202,6 +1330,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtDou(Timestamp dtDou) {
+        markAsChanged("DTDOU", dtDou);
         this.dtDou = dtDou;
    }
 
@@ -1210,6 +1339,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtEmiCertif(Timestamp dtEmiCertif) {
+        markAsChanged("DTEMICERTIF", dtEmiCertif);
         this.dtEmiCertif = dtEmiCertif;
    }
 
@@ -1218,6 +1348,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtIncEsocial(Timestamp dtIncEsocial) {
+        markAsChanged("DTINC_ESOCIAL", dtIncEsocial);
         this.dtIncEsocial = dtIncEsocial;
    }
 
@@ -1226,6 +1357,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtInicioEsocial(Timestamp dtInicioEsocial) {
+        markAsChanged("DTINICIOESOCIAL", dtInicioEsocial);
         this.dtInicioEsocial = dtInicioEsocial;
    }
 
@@ -1234,6 +1366,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtProtRenov(Timestamp dtProtRenov) {
+        markAsChanged("DTPROTRENOV", dtProtRenov);
         this.dtProtRenov = dtProtRenov;
    }
 
@@ -1242,6 +1375,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtSesmt(Timestamp dtSesmt) {
+        markAsChanged("DTSESMT", dtSesmt);
         this.dtSesmt = dtSesmt;
    }
 
@@ -1250,6 +1384,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtTerceiraFase(Timestamp dtTerceiraFase) {
+        markAsChanged("DTTERCEIRAFASE", dtTerceiraFase);
         this.dtTerceiraFase = dtTerceiraFase;
    }
 
@@ -1258,6 +1393,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtUltEnvEsocial(Timestamp dtUltEnvEsocial) {
+        markAsChanged("DTULTENV_ESOCIAL", dtUltEnvEsocial);
         this.dtUltEnvEsocial = dtUltEnvEsocial;
    }
 
@@ -1266,6 +1402,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtVencCertif(Timestamp dtVencCertif) {
+        markAsChanged("DTVENCCERTIF", dtVencCertif);
         this.dtVencCertif = dtVencCertif;
    }
 
@@ -1274,6 +1411,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setEnvEsocial(String envEsocial) {
+        markAsChanged("ENVESOCIAL", envEsocial);
         this.envEsocial = envEsocial;
    }
 
@@ -1282,6 +1420,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setEnviaEmp(String enviaEmp) {
+        markAsChanged("ENVIAEMP", enviaEmp);
         this.enviaEmp = enviaEmp;
    }
 
@@ -1290,6 +1429,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setFeriasIntegral(String feriasIntegral) {
+        markAsChanged("FERIASINTEGRAL", feriasIntegral);
         this.feriasIntegral = feriasIntegral;
    }
 
@@ -1298,6 +1438,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setFimValeSocial(Timestamp fimValeSocial) {
+        markAsChanged("FIMVALESOCIAL", fimValeSocial);
         this.fimValeSocial = fimValeSocial;
    }
 
@@ -1306,6 +1447,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setGrupoEsocial(String grupoEsocial) {
+        markAsChanged("GRUPOESOCIAL", grupoEsocial);
         this.grupoEsocial = grupoEsocial;
    }
 
@@ -1314,6 +1456,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setHistCtbCrAtoCoop(BigDecimal histCtbCrAtoCoop) {
+        markAsChanged("HISTCTBCRATOCOOP", histCtbCrAtoCoop);
         this.histCtbCrAtoCoop = histCtbCrAtoCoop;
    }
 
@@ -1322,6 +1465,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setHistCtbDbAtoCoop(BigDecimal histCtbDbAtoCoop) {
+        markAsChanged("HISTCTBDBATOCOOP", histCtbDbAtoCoop);
         this.histCtbDbAtoCoop = histCtbDbAtoCoop;
    }
 
@@ -1330,6 +1474,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIdeEfr(String ideEfr) {
+        markAsChanged("IDEEFR", ideEfr);
         this.ideEfr = ideEfr;
    }
 
@@ -1338,6 +1483,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIdeSubTeto(BigDecimal ideSubTeto) {
+        markAsChanged("IDESUBTETO", ideSubTeto);
         this.ideSubTeto = ideSubTeto;
    }
 
@@ -1346,6 +1492,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIdMaior(BigDecimal idMaior) {
+        markAsChanged("IDMAIOR", idMaior);
         this.idMaior = idMaior;
    }
 
@@ -1354,6 +1501,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPermFracionarFer(String permFracionarFer) {
+        markAsChanged("PERMFRACIONARFER", permFracionarFer);
         this.permFracionarFer = permFracionarFer;
    }
 
@@ -1362,6 +1510,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPermAbonoPec(String permAbonoPec) {
+        markAsChanged("PERMABONOPEC", permAbonoPec);
         this.permAbonoPec = permAbonoPec;
    }
 
@@ -1370,6 +1519,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIntegraEmpPortalRh(String integraEmpPortalRh) {
+        markAsChanged("INTEGRAEMPPORTALRH", integraEmpPortalRh);
         this.integraEmpPortalRh = integraEmpPortalRh;
    }
 
@@ -1378,6 +1528,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setCodEmpFin(BigDecimal codEmpFin) {
+        markAsChanged("CODEMPFIN", codEmpFin);
         this.codEmpFin = codEmpFin;
    }
 
@@ -1386,6 +1537,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setAprovadp(String aprovadp) {
+        markAsChanged("APROVADP", aprovadp);
         this.aprovadp = aprovadp;
    }
 
@@ -1394,6 +1546,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPortalAltCargaHoraria(String portalAltCargaHoraria) {
+        markAsChanged("PORTALALTCARGAHORARIA", portalAltCargaHoraria);
         this.portalAltCargaHoraria = portalAltCargaHoraria;
    }
 
@@ -1402,6 +1555,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setFapNaoPublicada(String fapNaoPublicada) {
+        markAsChanged("FAPNAOPUBLICADA", fapNaoPublicada);
         this.fapNaoPublicada = fapNaoPublicada;
    }
 
@@ -1410,6 +1564,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDebSusEsocial(String debSusEsocial) {
+        markAsChanged("DEBSUSESOCIAL", debSusEsocial);
         this.debSusEsocial = debSusEsocial;
    }
 
@@ -1418,6 +1573,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPermFeriasAntecip(String permFeriasAntecip) {
+        markAsChanged("PERMFERIASANTECIP", permFeriasAntecip);
         this.permFeriasAntecip = permFeriasAntecip;
    }
 
@@ -1426,6 +1582,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setApuracaoCompetencia(Timestamp apuracaoCompetencia) {
+        markAsChanged("APURACOMPETENCIA", apuracaoCompetencia);
         this.apuracaoCompetencia = apuracaoCompetencia;
    }
 
@@ -1434,6 +1591,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPermApuracaoCompet(String permApuracaoCompet) {
+        markAsChanged("PERMAPURACOMPET", permApuracaoCompet);
         this.permApuracaoCompet = permApuracaoCompet;
    }
 
@@ -1442,6 +1600,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setDtVirada(Timestamp dtVirada) {
+        markAsChanged("DTVIRADA", dtVirada);
         this.dtVirada = dtVirada;
    }
 
@@ -1450,6 +1609,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setInAptApInexist(String inAptApInexist) {
+        markAsChanged("INAPTAPINEXIST", inAptApInexist);
         this.inAptApInexist = inAptApInexist;
    }
 
@@ -1458,6 +1618,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setIsMatriz(String isMatriz) {
+        markAsChanged("ISMATRIZ", isMatriz);
         this.isMatriz = isMatriz;
    }
 
@@ -1466,6 +1627,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setPossuiS1000(String possuiS1000) {
+        markAsChanged("POSSUIS1000", possuiS1000);
         this.possuiS1000 = possuiS1000;
    }
 
@@ -1474,6 +1636,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setTpAmbEsocial(String tpAmbEsocial) {
+        markAsChanged("TPAMBESOCIAL", tpAmbEsocial);
         this.tpAmbEsocial = tpAmbEsocial;
    }
 
@@ -1482,6 +1645,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setBloqAcessoRh(String bloqAcessoRh) {
+        markAsChanged("BLOQACESSORH", bloqAcessoRh);
         this.bloqAcessoRh = bloqAcessoRh;
    }
 
@@ -1490,6 +1654,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setBloqAcessoSnk(String bloqAcessoSnk) {
+        markAsChanged("BLOQACESSOSNK", bloqAcessoSnk);
         this.bloqAcessoSnk = bloqAcessoSnk;
    }
 
@@ -1498,6 +1663,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
    }
 
    public void setBloqExibAniv(String bloqExibAniv) {
+        markAsChanged("BLOQEXIBANIV", bloqExibAniv);
         this.bloqExibAniv = bloqExibAniv;
    }
 
@@ -1513,6 +1679,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
 
    @Override
    public EmpresaPessoal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.socioOstensivo = vo.asString("SOCIOOSTENSIVO");
         this.sugereDatPag = vo.asString("SUGEREDATPAG");
         this.tipDiaPag = vo.asString("TIPDIAPAG");

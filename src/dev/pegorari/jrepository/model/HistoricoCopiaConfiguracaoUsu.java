@@ -13,6 +13,7 @@ public class HistoricoCopiaConfiguracaoUsu extends AbstractSankhyaEntity<Histori
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -21,6 +22,7 @@ public class HistoricoCopiaConfiguracaoUsu extends AbstractSankhyaEntity<Histori
    }
 
    public void setNuNico(BigDecimal nuNico) {
+        markAsChanged("NUNICO", nuNico);
         this.nuNico = nuNico;
    }
 
@@ -36,6 +38,7 @@ public class HistoricoCopiaConfiguracaoUsu extends AbstractSankhyaEntity<Histori
 
    @Override
    public HistoricoCopiaConfiguracaoUsu fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuNico = vo.asBigDecimal("NUNICO");
         return this;

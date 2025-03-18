@@ -15,6 +15,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -23,6 +24,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
    }
 
    public void setCodFld(BigDecimal codFld) {
+        markAsChanged("CODFLD", codFld);
         this.codFld = codFld;
    }
 
@@ -31,6 +33,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -39,6 +42,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
    }
 
    public void setFluxo(char[] fluxo) {
+        markAsChanged("FLUXO", fluxo);
         this.fluxo = fluxo;
    }
 
@@ -54,6 +58,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
 
    @Override
    public FluxoDiagnostico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codFld = vo.asBigDecimal("CODFLD");
         this.descricao = vo.asString("DESCRICAO");

@@ -25,6 +25,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setPercRateio(BigDecimal percRateio) {
+        markAsChanged("PERCRATEIO", percRateio);
         this.percRateio = percRateio;
    }
 
@@ -33,6 +34,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -41,6 +43,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -49,6 +52,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -57,6 +61,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -65,6 +70,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -73,6 +79,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -81,6 +88,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -89,6 +97,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -97,6 +106,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -105,6 +115,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -113,6 +124,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodSite(BigDecimal codSite) {
+        markAsChanged("CODSITE", codSite);
         this.codSite = codSite;
    }
 
@@ -121,6 +133,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -136,6 +149,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
 
    @Override
    public RateioRecDesp fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.percRateio = vo.asBigDecimal("PERCRATEIO");
         this.digitado = vo.asString("DIGITADO");
         this.dtAlter = vo.asTimestamp("DTALTER");

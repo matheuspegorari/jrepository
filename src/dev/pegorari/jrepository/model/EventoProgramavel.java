@@ -19,6 +19,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -27,6 +28,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setConfig(char[] config) {
+        markAsChanged("CONFIG", config);
         this.config = config;
    }
 
@@ -35,6 +37,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -43,6 +46,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -51,6 +55,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setNuEvento(BigDecimal nuEvento) {
+        markAsChanged("NUEVENTO", nuEvento);
         this.nuEvento = nuEvento;
    }
 
@@ -59,6 +64,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -67,6 +73,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -75,6 +82,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -90,6 +98,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
 
    @Override
    public EventoProgramavel fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.config = vo.asClob("CONFIG");
         this.descricao = vo.asString("DESCRICAO");

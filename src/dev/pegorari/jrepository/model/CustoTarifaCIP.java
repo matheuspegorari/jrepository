@@ -16,6 +16,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
    }
 
    public void setDtAtual(Timestamp dtAtual) {
+        markAsChanged("DTATUAL", dtAtual);
         this.dtAtual = dtAtual;
    }
 
@@ -24,6 +25,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -32,6 +34,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
    }
 
    public void setCusApurado(BigDecimal cusApurado) {
+        markAsChanged("CUSAPURADO", cusApurado);
         this.cusApurado = cusApurado;
    }
 
@@ -40,6 +43,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -55,6 +59,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
 
    @Override
    public CustoTarifaCIP fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtAtual = vo.asTimestamp("DTATUAL");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.cusApurado = vo.asBigDecimal("CUSAPURADO");

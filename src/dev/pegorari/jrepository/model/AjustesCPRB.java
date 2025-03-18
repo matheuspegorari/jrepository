@@ -18,6 +18,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setCodCprb(String codCprb) {
+        markAsChanged("CODCPRB", codCprb);
         this.codCprb = codCprb;
    }
 
@@ -26,6 +27,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -34,6 +36,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setCodObra(String codObra) {
+        markAsChanged("CODOBRA", codObra);
         this.codObra = codObra;
    }
 
@@ -42,6 +45,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -50,6 +54,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setVlrTotAdicao(BigDecimal vlrTotAdicao) {
+        markAsChanged("VLRTOTADICAO", vlrTotAdicao);
         this.vlrTotAdicao = vlrTotAdicao;
    }
 
@@ -58,6 +63,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    }
 
    public void setVlrTotExclusao(BigDecimal vlrTotExclusao) {
+        markAsChanged("VLRTOTEXCLUSAO", vlrTotExclusao);
         this.vlrTotExclusao = vlrTotExclusao;
    }
 
@@ -73,6 +79,7 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
 
    @Override
    public AjustesCPRB fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCprb = vo.asString("CODCPRB");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codObra = vo.asString("CODOBRA");

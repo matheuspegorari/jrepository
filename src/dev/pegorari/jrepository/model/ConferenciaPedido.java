@@ -19,6 +19,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -27,6 +28,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setNuConf(BigDecimal nuConf) {
+        markAsChanged("NUCONF", nuConf);
         this.nuConf = nuConf;
    }
 
@@ -43,6 +46,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -51,6 +55,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -59,6 +64,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setTipoConf(String tipoConf) {
+        markAsChanged("TIPOCONF", tipoConf);
         this.tipoConf = tipoConf;
    }
 
@@ -67,6 +73,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    }
 
    public void setDhConf(Timestamp dhConf) {
+        markAsChanged("DHCONF", dhConf);
         this.dhConf = dhConf;
    }
 
@@ -82,6 +89,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
 
    @Override
    public ConferenciaPedido fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuConf = vo.asBigDecimal("NUCONF");

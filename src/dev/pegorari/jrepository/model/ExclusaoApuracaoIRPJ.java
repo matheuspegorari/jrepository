@@ -19,6 +19,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -27,6 +28,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -35,6 +37,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setCtaCtb(String ctaCtb) {
+        markAsChanged("CTACTB", ctaCtb);
         this.ctaCtb = ctaCtb;
    }
 
@@ -43,6 +46,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -51,6 +55,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -59,6 +64,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setTipoImposto(String tipoImposto) {
+        markAsChanged("TIPOIMPOSTO", tipoImposto);
         this.tipoImposto = tipoImposto;
    }
 
@@ -67,6 +73,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    }
 
    public void setVlrLanc(BigDecimal vlrLanc) {
+        markAsChanged("VLRLANC", vlrLanc);
         this.vlrLanc = vlrLanc;
    }
 
@@ -82,6 +89,7 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
 
    @Override
    public ExclusaoApuracaoIRPJ fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.ctaCtb = vo.asString("CTACTB");

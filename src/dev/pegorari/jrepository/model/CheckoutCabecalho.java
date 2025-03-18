@@ -22,6 +22,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -30,6 +31,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -38,6 +40,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -46,6 +49,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -54,6 +58,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -62,6 +67,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -70,6 +76,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -78,6 +85,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -86,6 +94,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setNuKc(BigDecimal nuKc) {
+        markAsChanged("NUCKC", nuKc);
         this.nuKc = nuKc;
    }
 
@@ -94,6 +103,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setNuLayout(BigDecimal nuLayout) {
+        markAsChanged("NULAYOUT", nuLayout);
         this.nuLayout = nuLayout;
    }
 
@@ -102,6 +112,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    }
 
    public void setCpfCnpjAdquirEnte(String cpfCnpjAdquirEnte) {
+        markAsChanged("CPFCNPJADQUIRENTE", cpfCnpjAdquirEnte);
         this.cpfCnpjAdquirEnte = cpfCnpjAdquirEnte;
    }
 
@@ -117,6 +128,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
 
    @Override
    public CheckoutCabecalho fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codNat = vo.asBigDecimal("CODNAT");

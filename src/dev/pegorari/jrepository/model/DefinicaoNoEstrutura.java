@@ -17,6 +17,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setMultipocor(String multipocor) {
+        markAsChanged("MULTIPOCOR", multipocor);
         this.multipocor = multipocor;
    }
 
@@ -25,6 +26,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setNivelFinal(BigDecimal nivelFinal) {
+        markAsChanged("NIVELFINAL", nivelFinal);
         this.nivelFinal = nivelFinal;
    }
 
@@ -33,6 +35,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setNivelInicial(BigDecimal nivelInicial) {
+        markAsChanged("NIVELINICIAL", nivelInicial);
         this.nivelInicial = nivelInicial;
    }
 
@@ -41,6 +44,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setNuEst(BigDecimal nuEst) {
+        markAsChanged("NUEST", nuEst);
         this.nuEst = nuEst;
    }
 
@@ -49,6 +53,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -57,6 +62,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -72,6 +78,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
 
    @Override
    public DefinicaoNoEstrutura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.multipocor = vo.asString("MULTIPOCOR");
         this.nivelFinal = vo.asBigDecimal("NIVELFINAL");
         this.nivelInicial = vo.asBigDecimal("NIVELINICIAL");

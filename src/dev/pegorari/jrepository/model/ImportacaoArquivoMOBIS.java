@@ -22,6 +22,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setDhImp(Timestamp dhImp) {
+        markAsChanged("DHIMP", dhImp);
         this.dhImp = dhImp;
    }
 
@@ -30,6 +31,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setMsg(char[] msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -38,6 +40,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setNomeArq(String nomeArq) {
+        markAsChanged("NOMEARQ", nomeArq);
         this.nomeArq = nomeArq;
    }
 
@@ -46,6 +49,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setNuImp(BigDecimal nuImp) {
+        markAsChanged("NUIMP", nuImp);
         this.nuImp = nuImp;
    }
 
@@ -54,6 +58,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setQtdPedImp(BigDecimal qtdPedImp) {
+        markAsChanged("QTDPEDIMP", qtdPedImp);
         this.qtdPedImp = qtdPedImp;
    }
 
@@ -62,6 +67,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setQtdProc(BigDecimal qtdProc) {
+        markAsChanged("QTDPROC", qtdProc);
         this.qtdProc = qtdProc;
    }
 
@@ -70,6 +76,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setQtdTotPed(BigDecimal qtdTotPed) {
+        markAsChanged("QTDTOTPED", qtdTotPed);
         this.qtdTotPed = qtdTotPed;
    }
 
@@ -78,6 +85,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setReprocessar(String reprocessar) {
+        markAsChanged("REPROCESSAR", reprocessar);
         this.reprocessar = reprocessar;
    }
 
@@ -86,6 +94,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setTipArquivo(String tipArquivo) {
+        markAsChanged("TIPARQUIVO", tipArquivo);
         this.tipArquivo = tipArquivo;
    }
 
@@ -94,6 +103,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    }
 
    public void setArqHeader(String arqHeader) {
+        markAsChanged("ARQHEADER", arqHeader);
         this.arqHeader = arqHeader;
    }
 
@@ -109,6 +119,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
 
    @Override
    public ImportacaoArquivoMOBIS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhImp = vo.asTimestamp("DHIMP");
         this.msg = vo.asClob("MSG");
         this.nomeArq = vo.asString("NOMEARQ");

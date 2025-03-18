@@ -29,6 +29,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -37,6 +38,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setDescrTab(String descrTab) {
+        markAsChanged("DESCRTAB", descrTab);
         this.descrTab = descrTab;
    }
 
@@ -45,6 +47,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -53,6 +56,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setLimFaixa(BigDecimal limFaixa) {
+        markAsChanged("LIMFAIXA", limFaixa);
         this.limFaixa = limFaixa;
    }
 
@@ -61,6 +65,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -69,6 +74,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setTipoTab(String tipoTab) {
+        markAsChanged("TIPOTAB", tipoTab);
         this.tipoTab = tipoTab;
    }
 
@@ -77,6 +83,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor1(BigDecimal valor1) {
+        markAsChanged("VALOR1", valor1);
         this.valor1 = valor1;
    }
 
@@ -85,6 +92,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor2(BigDecimal valor2) {
+        markAsChanged("VALOR2", valor2);
         this.valor2 = valor2;
    }
 
@@ -93,6 +101,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor3(BigDecimal valor3) {
+        markAsChanged("VALOR3", valor3);
         this.valor3 = valor3;
    }
 
@@ -101,6 +110,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor4(BigDecimal valor4) {
+        markAsChanged("VALOR4", valor4);
         this.valor4 = valor4;
    }
 
@@ -109,6 +119,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor5(BigDecimal valor5) {
+        markAsChanged("VALOR5", valor5);
         this.valor5 = valor5;
    }
 
@@ -117,6 +128,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor6(BigDecimal valor6) {
+        markAsChanged("VALOR6", valor6);
         this.valor6 = valor6;
    }
 
@@ -125,6 +137,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor10(BigDecimal valor10) {
+        markAsChanged("VALOR10", valor10);
         this.valor10 = valor10;
    }
 
@@ -133,6 +146,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor11(BigDecimal valor11) {
+        markAsChanged("VALOR11", valor11);
         this.valor11 = valor11;
    }
 
@@ -141,6 +155,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor7(BigDecimal valor7) {
+        markAsChanged("VALOR7", valor7);
         this.valor7 = valor7;
    }
 
@@ -149,6 +164,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor8(BigDecimal valor8) {
+        markAsChanged("VALOR8", valor8);
         this.valor8 = valor8;
    }
 
@@ -157,6 +173,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
    }
 
    public void setValor9(BigDecimal valor9) {
+        markAsChanged("VALOR9", valor9);
         this.valor9 = valor9;
    }
 
@@ -172,6 +189,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
 
    @Override
    public TabelaFaixas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTab = vo.asBigDecimal("CODTAB");
         this.descrTab = vo.asString("DESCRTAB");
         this.dtAlter = vo.asTimestamp("DTALTER");

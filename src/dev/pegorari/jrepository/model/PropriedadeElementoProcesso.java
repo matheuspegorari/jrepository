@@ -14,6 +14,7 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -22,6 +23,7 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
    }
 
    public void setNuEle(BigDecimal nuEle) {
+        markAsChanged("NUELE", nuEle);
         this.nuEle = nuEle;
    }
 
@@ -30,6 +32,7 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
    }
 
    public void setValor(String valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -45,6 +48,7 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
 
    @Override
    public PropriedadeElementoProcesso fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nome = vo.asString("NOME");
         this.nuEle = vo.asBigDecimal("NUELE");
         this.valor = vo.asString("VALOR");

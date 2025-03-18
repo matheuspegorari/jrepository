@@ -26,6 +26,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setChaveDoc(String chaveDoc) {
+        markAsChanged("CHAVEDOC", chaveDoc);
         this.chaveDoc = chaveDoc;
    }
 
@@ -34,6 +35,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -42,6 +44,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -50,6 +53,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setDetalhesStatus(String detalhesStatus) {
+        markAsChanged("DETALHES_STATUS", detalhesStatus);
         this.detalhesStatus = detalhesStatus;
    }
 
@@ -58,6 +62,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setDhEvento(Timestamp dhEvento) {
+        markAsChanged("DHEVENTO", dhEvento);
         this.dhEvento = dhEvento;
    }
 
@@ -66,6 +71,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setErro(char[] erro) {
+        markAsChanged("ERRO", erro);
         this.erro = erro;
    }
 
@@ -74,6 +80,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setHashArquivo(String hashArquivo) {
+        markAsChanged("HASHARQUIVO", hashArquivo);
         this.hashArquivo = hashArquivo;
    }
 
@@ -82,6 +89,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setId(BigDecimal id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -90,6 +98,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setMsg(String msg) {
+        markAsChanged("MSG", msg);
         this.msg = msg;
    }
 
@@ -98,6 +107,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
+        markAsChanged("NUDOC", nuDoc);
         this.nuDoc = nuDoc;
    }
 
@@ -106,6 +116,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setSolicitacaoManual(BigDecimal solicitacaoManual) {
+        markAsChanged("SOLICITACAO_MANUAL", solicitacaoManual);
         this.solicitacaoManual = solicitacaoManual;
    }
 
@@ -114,6 +125,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setStatusAssinatura(String statusAssinatura) {
+        markAsChanged("STATUS_ASSINATURA", statusAssinatura);
         this.statusAssinatura = statusAssinatura;
    }
 
@@ -122,6 +134,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setTipoDoc(String tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -130,6 +143,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    }
 
    public void setTransactionId(String transactionId) {
+        markAsChanged("TRANSACTIONID", transactionId);
         this.transactionId = transactionId;
    }
 
@@ -145,6 +159,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
 
    @Override
    public HistoricoAssinaturaDigital fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveDoc = vo.asString("CHAVEDOC");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codUsu = vo.asBigDecimal("CODUSU");

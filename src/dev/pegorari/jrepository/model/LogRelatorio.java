@@ -19,6 +19,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setClassName(String className) {
+        markAsChanged("CLASSNAME", className);
         this.className = className;
    }
 
@@ -27,6 +28,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -35,6 +37,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setConsulta(String consulta) {
+        markAsChanged("CONSULTA", consulta);
         this.consulta = consulta;
    }
 
@@ -43,6 +46,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -51,6 +55,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setImpressora(String impressora) {
+        markAsChanged("IMPRESSORA", impressora);
         this.impressora = impressora;
    }
 
@@ -59,6 +64,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setNuRel(BigDecimal nuRel) {
+        markAsChanged("NUREL", nuRel);
         this.nuRel = nuRel;
    }
 
@@ -67,6 +73,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -82,6 +89,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
 
    @Override
    public LogRelatorio fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.className = vo.asString("CLASSNAME");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.consulta = vo.asString("CONSULTA");

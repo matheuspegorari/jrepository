@@ -19,6 +19,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -27,6 +28,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -35,6 +37,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setIdGrade(BigDecimal idGrade) {
+        markAsChanged("IDGRADE", idGrade);
         this.idGrade = idGrade;
    }
 
@@ -43,6 +46,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setNomGrd(String nomGrd) {
+        markAsChanged("NOMGRD", nomGrd);
         this.nomGrd = nomGrd;
    }
 
@@ -51,6 +55,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setAtuNuVersao(String atuNuVersao) {
+        markAsChanged("ATUNUVERSAO", atuNuVersao);
         this.atuNuVersao = atuNuVersao;
    }
 
@@ -59,6 +64,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
+        markAsChanged("NUVERSAO", nuVersao);
         this.nuVersao = nuVersao;
    }
 
@@ -67,6 +73,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    }
 
    public void setUsaMascara(String usaMascara) {
+        markAsChanged("USAMASCARA", usaMascara);
         this.usaMascara = usaMascara;
    }
 
@@ -82,6 +89,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
 
    @Override
    public ConfiguracaoGradeProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhCad = vo.asTimestamp("DHCAD");
         this.idGrade = vo.asBigDecimal("IDGRADE");

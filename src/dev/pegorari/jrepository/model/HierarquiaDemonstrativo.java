@@ -31,6 +31,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setGeradra(String geradra) {
+        markAsChanged("GERADRA", geradra);
         this.geradra = geradra;
    }
 
@@ -39,6 +40,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setGrupdemonSdfc(String grupdemonSdfc) {
+        markAsChanged("GRUPDEMONSDFC", grupdemonSdfc);
         this.grupdemonSdfc = grupdemonSdfc;
    }
 
@@ -47,6 +49,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setGrupodemonst(String grupodemonst) {
+        markAsChanged("GRUPODEMONST", grupodemonst);
         this.grupodemonst = grupodemonst;
    }
 
@@ -55,6 +58,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setIndgrpdre(String indgrpdre) {
+        markAsChanged("INDGRPDRE", indgrpdre);
         this.indgrpdre = indgrpdre;
    }
 
@@ -63,6 +67,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setInvertvlralt(String invertvlralt) {
+        markAsChanged("INVERTVLRALT", invertvlralt);
         this.invertvlralt = invertvlralt;
    }
 
@@ -71,6 +76,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setSitdfc(String sitdfc) {
+        markAsChanged("SITDFC", sitdfc);
         this.sitdfc = sitdfc;
    }
 
@@ -79,6 +85,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setInddcctafin(String inddcctafin) {
+        markAsChanged("INDDCCTAFIN", inddcctafin);
         this.inddcctafin = inddcctafin;
    }
 
@@ -87,6 +94,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setInddcctaini(String inddcctaini) {
+        markAsChanged("INDDCCTAINI", inddcctaini);
         this.inddcctaini = inddcctaini;
    }
 
@@ -95,6 +103,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setNuordem(BigDecimal nuordem) {
+        markAsChanged("NUORDEM", nuordem);
         this.nuordem = nuordem;
    }
 
@@ -103,6 +112,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -111,6 +121,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setAgrupdlpa(String agrupdlpa) {
+        markAsChanged("AGRUPDLPA", agrupdlpa);
         this.agrupdlpa = agrupdlpa;
    }
 
@@ -119,6 +130,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setIndgrubal(String indgrubal) {
+        markAsChanged("INDGRUBAL", indgrubal);
         this.indgrubal = indgrubal;
    }
 
@@ -127,6 +139,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -135,6 +148,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setCoddmtpai(String coddmtpai) {
+        markAsChanged("CODDMTPAI", coddmtpai);
         this.coddmtpai = coddmtpai;
    }
 
@@ -143,6 +157,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setCodemp(BigDecimal codemp) {
+        markAsChanged("CODEMP", codemp);
         this.codemp = codemp;
    }
 
@@ -151,6 +166,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setCoddmt(String coddmt) {
+        markAsChanged("CODDMT", coddmt);
         this.coddmt = coddmt;
    }
 
@@ -159,6 +175,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setCodtdm(BigDecimal codtdm) {
+        markAsChanged("CODTDM", codtdm);
         this.codtdm = codtdm;
    }
 
@@ -167,6 +184,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -175,6 +193,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -183,6 +202,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
    }
 
    public void setDescrdmt(String descrdmt) {
+        markAsChanged("DESCRDMT", descrdmt);
         this.descrdmt = descrdmt;
    }
 
@@ -198,6 +218,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
 
    @Override
    public HierarquiaDemonstrativo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.geradra = vo.asString("GERADRA");
         this.grupdemonSdfc = vo.asString("GRUPDEMONSDFC");
         this.grupodemonst = vo.asString("GRUPODEMONST");

@@ -13,6 +13,7 @@ public class SituacaoSubOs extends AbstractSankhyaEntity<SituacaoSubOs> {
    }
 
    public void setCodSit(BigDecimal codSit) {
+        markAsChanged("CODSIT", codSit);
         this.codSit = codSit;
    }
 
@@ -21,6 +22,7 @@ public class SituacaoSubOs extends AbstractSankhyaEntity<SituacaoSubOs> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -36,6 +38,7 @@ public class SituacaoSubOs extends AbstractSankhyaEntity<SituacaoSubOs> {
 
    @Override
    public SituacaoSubOs fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codSit = vo.asBigDecimal("CODSIT");
         this.descricao = vo.asString("DESCRICAO");
         return this;

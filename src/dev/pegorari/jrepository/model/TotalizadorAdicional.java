@@ -12,6 +12,7 @@ public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdici
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -27,6 +28,7 @@ public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdici
 
    @Override
    public TotalizadorAdicional fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }

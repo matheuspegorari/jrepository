@@ -31,6 +31,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setCodCtaCtbEncRes(BigDecimal codCtaCtbEncRes) {
+        markAsChanged("CODCTACTBENCRES", codCtaCtbEncRes);
         this.codCtaCtbEncRes = codCtaCtbEncRes;
    }
 
@@ -39,6 +40,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setAceitarHistZero(String aceitarHistZero) {
+        markAsChanged("ACEITARHISTZERO", aceitarHistZero);
         this.aceitarHistZero = aceitarHistZero;
    }
 
@@ -47,6 +49,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setCorEmpresa(BigDecimal corEmpresa) {
+        markAsChanged("COREMPRESA", corEmpresa);
         this.corEmpresa = corEmpresa;
    }
 
@@ -55,6 +58,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -63,6 +67,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -71,6 +76,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setRazaoSocial(String razaoSocial) {
+        markAsChanged("RAZAOSOCIAL", razaoSocial);
         this.razaoSocial = razaoSocial;
    }
 
@@ -79,6 +85,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setUltimoNumeroUsado(BigDecimal ultimoNumeroUsado) {
+        markAsChanged("ULTIMONUMEROUSADO", ultimoNumeroUsado);
         this.ultimoNumeroUsado = ultimoNumeroUsado;
    }
 
@@ -87,6 +94,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setDtFimPerCtb(Timestamp dtFimPerCtb) {
+        markAsChanged("DTFIMPERCTB", dtFimPerCtb);
         this.dtFimPerCtb = dtFimPerCtb;
    }
 
@@ -95,6 +103,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setNroLoteMnualIni(BigDecimal nroLoteMnualIni) {
+        markAsChanged("NROLOTEMNUALINI", nroLoteMnualIni);
         this.nroLoteMnualIni = nroLoteMnualIni;
    }
 
@@ -103,6 +112,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setNumLoteSaut(String numLoteSaut) {
+        markAsChanged("NUMLOTESAUT", numLoteSaut);
         this.numLoteSaut = numLoteSaut;
    }
 
@@ -111,6 +121,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setNroLoteMnualFim(BigDecimal nroLoteMnualFim) {
+        markAsChanged("NROLOTEMNUALFIM", nroLoteMnualFim);
         this.nroLoteMnualFim = nroLoteMnualFim;
    }
 
@@ -119,6 +130,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setMascCta(String mascCta) {
+        markAsChanged("MASCCTA", mascCta);
         this.mascCta = mascCta;
    }
 
@@ -127,6 +139,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setDtInicPerCtb(Timestamp dtInicPerCtb) {
+        markAsChanged("DTINICPERCTB", dtInicPerCtb);
         this.dtInicPerCtb = dtInicPerCtb;
    }
 
@@ -135,6 +148,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setPerAltQdCom(String perAltQdCom) {
+        markAsChanged("PERALTQDCOM", perAltQdCom);
         this.perAltQdCom = perAltQdCom;
    }
 
@@ -143,6 +157,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setCodEmpPlaCta(BigDecimal codEmpPlaCta) {
+        markAsChanged("CODEMPPLACTA", codEmpPlaCta);
         this.codEmpPlaCta = codEmpPlaCta;
    }
 
@@ -151,6 +166,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setUtilProj(String utilProj) {
+        markAsChanged("UTILPROJ", utilProj);
         this.utilProj = utilProj;
    }
 
@@ -159,6 +175,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setUtilCencus(String utilCencus) {
+        markAsChanged("UTILCENCUS", utilCencus);
         this.utilCencus = utilCencus;
    }
 
@@ -167,6 +184,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setCodInstResp(String codInstResp) {
+        markAsChanged("CODINSTRESP", codInstResp);
         this.codInstResp = codInstResp;
    }
 
@@ -175,6 +193,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    }
 
    public void setMascCtaExt(String mascCtaExt) {
+        markAsChanged("MASCCTAEXT", mascCtaExt);
         this.mascCtaExt = mascCtaExt;
    }
 
@@ -190,6 +209,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
 
    @Override
    public ViewEmpresaContabilidade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCtaCtbEncRes = vo.asBigDecimal("CODCTACTBENCRES");
         this.aceitarHistZero = vo.asString("ACEITARHISTZERO");
         this.corEmpresa = vo.asBigDecimal("COREMPRESA");

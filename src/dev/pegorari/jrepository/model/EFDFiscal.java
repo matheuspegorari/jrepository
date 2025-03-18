@@ -17,6 +17,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    }
 
    public void setArqConfirmado(String arqConfirmado) {
+        markAsChanged("ARQCONFIRMADO", arqConfirmado);
         this.arqConfirmado = arqConfirmado;
    }
 
@@ -25,6 +26,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -33,6 +35,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -41,6 +44,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
+        markAsChanged("VERSAOLAYOUT", versaoLayout);
         this.versaoLayout = versaoLayout;
    }
 
@@ -49,6 +53,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
    }
 
    public void setCodFinCsll(BigDecimal codFinCsll) {
+        markAsChanged("COD_FIN_CSLL", codFinCsll);
         this.codFinCsll = codFinCsll;
    }
 
@@ -64,6 +69,7 @@ public class EFDFiscal extends AbstractSankhyaEntity<EFDFiscal> {
 
    @Override
    public EFDFiscal fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");

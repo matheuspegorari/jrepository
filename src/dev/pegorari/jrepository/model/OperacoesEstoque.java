@@ -59,6 +59,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoMaterial(String tipoMaterial) {
+        markAsChanged("TIPOMATERIAL", tipoMaterial);
         this.tipoMaterial = tipoMaterial;
    }
 
@@ -67,6 +68,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setSeqOper(BigDecimal seqOper) {
+        markAsChanged("SEQOPER", seqOper);
         this.seqOper = seqOper;
    }
 
@@ -75,6 +77,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setStatusExec(String statusExec) {
+        markAsChanged("STATUSEXEC", statusExec);
         this.statusExec = statusExec;
    }
 
@@ -83,6 +86,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoItens(String tipoItens) {
+        markAsChanged("TIPOITENS", tipoItens);
         this.tipoItens = tipoItens;
    }
 
@@ -91,6 +95,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setBaixarReservaEst(String baixarReservaEst) {
+        markAsChanged("BAIXARESERVAEST", baixarReservaEst);
         this.baixarReservaEst = baixarReservaEst;
    }
 
@@ -99,6 +104,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setUsarParcTerc(String usarParcTerc) {
+        markAsChanged("USARPARCTERC", usarParcTerc);
         this.usarParcTerc = usarParcTerc;
    }
 
@@ -107,6 +113,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoExec(String tipoExec) {
+        markAsChanged("TIPOEXEC", tipoExec);
         this.tipoExec = tipoExec;
    }
 
@@ -115,6 +122,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodLocalBaixaMp(BigDecimal codLocalBaixaMp) {
+        markAsChanged("CODLOCALBAIXAMP", codLocalBaixaMp);
         this.codLocalBaixaMp = codLocalBaixaMp;
    }
 
@@ -123,6 +131,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -131,6 +140,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodEmpDest(BigDecimal codEmpDest) {
+        markAsChanged("CODEMPDEST", codEmpDest);
         this.codEmpDest = codEmpDest;
    }
 
@@ -139,6 +149,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -147,6 +158,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodLocalDest(BigDecimal codLocalDest) {
+        markAsChanged("CODLOCALDEST", codLocalDest);
         this.codLocalDest = codLocalDest;
    }
 
@@ -155,6 +167,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
+        markAsChanged("CODLOCALORIG", codLocalOrig);
         this.codLocalOrig = codLocalOrig;
    }
 
@@ -163,6 +176,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -171,6 +185,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -179,6 +194,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -187,6 +203,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -195,6 +212,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -203,6 +221,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setConfirmar(String confirmar) {
+        markAsChanged("CONFIRMAR", confirmar);
         this.confirmar = confirmar;
    }
 
@@ -211,6 +230,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -219,6 +239,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setIdeFxBase(BigDecimal ideFxBase) {
+        markAsChanged("IDEFXBASE", ideFxBase);
         this.ideFxBase = ideFxBase;
    }
 
@@ -227,6 +248,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setIdForm(BigDecimal idForm) {
+        markAsChanged("IDFORM", idForm);
         this.idForm = idForm;
    }
 
@@ -235,6 +257,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setNomeImpressora(String nomeImpressora) {
+        markAsChanged("NOMEIMPRESSORA", nomeImpressora);
         this.nomeImpressora = nomeImpressora;
    }
 
@@ -243,6 +266,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setNuNotaModelo(BigDecimal nuNotaModelo) {
+        markAsChanged("NUNOTAMODELO", nuNotaModelo);
         this.nuNotaModelo = nuNotaModelo;
    }
 
@@ -251,6 +275,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -259,6 +284,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setQuando(String quando) {
+        markAsChanged("QUANDO", quando);
         this.quando = quando;
    }
 
@@ -267,6 +293,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setSelImpressora(String selImpressora) {
+        markAsChanged("SELIMPRESSORA", selImpressora);
         this.selImpressora = selImpressora;
    }
 
@@ -275,6 +302,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setConsumirEstoque(String consumirEstoque) {
+        markAsChanged("CONSUMIRESTOQUE", consumirEstoque);
         this.consumirEstoque = consumirEstoque;
    }
 
@@ -283,6 +311,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -291,6 +320,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setObrigatorio(String obrigatorio) {
+        markAsChanged("OBRIGATORIO", obrigatorio);
         this.obrigatorio = obrigatorio;
    }
 
@@ -299,6 +329,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoOper(String tipoOper) {
+        markAsChanged("TIPOOPER", tipoOper);
         this.tipoOper = tipoOper;
    }
 
@@ -307,6 +338,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setAnulaOperEst(String anulaOperEst) {
+        markAsChanged("ANULAOPEREST", anulaOperEst);
         this.anulaOperEst = anulaOperEst;
    }
 
@@ -315,6 +347,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodLocalDestPerda(BigDecimal codLocalDestPerda) {
+        markAsChanged("CODLOCALDESTPERDA", codLocalDestPerda);
         this.codLocalDestPerda = codLocalDestPerda;
    }
 
@@ -323,6 +356,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodTipOperPerda(BigDecimal codTipOperPerda) {
+        markAsChanged("CODTIPOPERPERDA", codTipOperPerda);
         this.codTipOperPerda = codTipOperPerda;
    }
 
@@ -331,6 +365,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodEmpDestEncad(BigDecimal codEmpDestEncad) {
+        markAsChanged("CODEMPDESTENCAD", codEmpDestEncad);
         this.codEmpDestEncad = codEmpDestEncad;
    }
 
@@ -339,6 +374,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodLocalDestEncad(BigDecimal codLocalDestEncad) {
+        markAsChanged("CODLOCALDESTENCAD", codLocalDestEncad);
         this.codLocalDestEncad = codLocalDestEncad;
    }
 
@@ -347,6 +383,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodParcEncad(BigDecimal codParcEncad) {
+        markAsChanged("CODPARCENCAD", codParcEncad);
         this.codParcEncad = codParcEncad;
    }
 
@@ -355,6 +392,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodTipOperEncad(BigDecimal codTipOperEncad) {
+        markAsChanged("CODTIPOPERENCAD", codTipOperEncad);
         this.codTipOperEncad = codTipOperEncad;
    }
 
@@ -363,6 +401,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setConfirmEncad(String confirmEncad) {
+        markAsChanged("CONFIRMENCAD", confirmEncad);
         this.confirmEncad = confirmEncad;
    }
 
@@ -371,6 +410,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setNuModeloEncad(BigDecimal nuModeloEncad) {
+        markAsChanged("NUMODELOENCAD", nuModeloEncad);
         this.nuModeloEncad = nuModeloEncad;
    }
 
@@ -379,6 +419,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setObrigEncad(String obrigEncad) {
+        markAsChanged("OBRIGENCAD", obrigEncad);
         this.obrigEncad = obrigEncad;
    }
 
@@ -387,6 +428,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoOperEncad(String tipoOperEncad) {
+        markAsChanged("TIPOOPERENCAD", tipoOperEncad);
         this.tipoOperEncad = tipoOperEncad;
    }
 
@@ -395,6 +437,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setTipoProducao(String tipoProducao) {
+        markAsChanged("TIPOPRODUCAO", tipoProducao);
         this.tipoProducao = tipoProducao;
    }
 
@@ -403,6 +446,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setUtilizaLocalOrig(String utilizaLocalOrig) {
+        markAsChanged("UTILIZALOCALORIG", utilizaLocalOrig);
         this.utilizaLocalOrig = utilizaLocalOrig;
    }
 
@@ -411,6 +455,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setCodTipOperKanban(BigDecimal codTipOperKanban) {
+        markAsChanged("CODTIPOPERKANBAN", codTipOperKanban);
         this.codTipOperKanban = codTipOperKanban;
    }
 
@@ -419,6 +464,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setKanban(String kanban) {
+        markAsChanged("KANBAN", kanban);
         this.kanban = kanban;
    }
 
@@ -427,6 +473,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setNuNotaModeloKanban(BigDecimal nuNotaModeloKanban) {
+        markAsChanged("NUNOTAMODELOKANBAN", nuNotaModeloKanban);
         this.nuNotaModeloKanban = nuNotaModeloKanban;
    }
 
@@ -435,6 +482,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    }
 
    public void setUsarParcTercEncad(String usarParcTercEncad) {
+        markAsChanged("USARPARCTERCENCAD", usarParcTercEncad);
         this.usarParcTercEncad = usarParcTercEncad;
    }
 
@@ -450,6 +498,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
 
    @Override
    public OperacoesEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipoMaterial = vo.asString("TIPOMATERIAL");
         this.seqOper = vo.asBigDecimal("SEQOPER");
         this.statusExec = vo.asString("STATUSEXEC");

@@ -20,6 +20,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setCodAprovador(BigDecimal codAprovador) {
+        markAsChanged("CODAPROVADOR", codAprovador);
         this.codAprovador = codAprovador;
    }
 
@@ -28,6 +29,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -36,6 +38,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setCodSolicitante(BigDecimal codSolicitante) {
+        markAsChanged("CODSOLICITANTE", codSolicitante);
         this.codSolicitante = codSolicitante;
    }
 
@@ -44,6 +47,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setDhAprovacao(Timestamp dhAprovacao) {
+        markAsChanged("DHAPROVACAO", dhAprovacao);
         this.dhAprovacao = dhAprovacao;
    }
 
@@ -52,6 +56,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setDhSolicitacao(Timestamp dhSolicitacao) {
+        markAsChanged("DHSOLICITACAO", dhSolicitacao);
         this.dhSolicitacao = dhSolicitacao;
    }
 
@@ -60,6 +65,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setNuSolicitacao(BigDecimal nuSolicitacao) {
+        markAsChanged("NUSOLICITACAO", nuSolicitacao);
         this.nuSolicitacao = nuSolicitacao;
    }
 
@@ -68,6 +74,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -76,6 +83,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -91,6 +99,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
 
    @Override
    public SolicitacaoLiberacaoOrcamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAprovador = vo.asBigDecimal("CODAPROVADOR");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codSolicitante = vo.asBigDecimal("CODSOLICITANTE");

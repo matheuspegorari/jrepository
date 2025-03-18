@@ -25,6 +25,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setDiasAbonoPec(BigDecimal diasAbonoPec) {
+        markAsChanged("DIASABONOPEC", diasAbonoPec);
         this.diasAbonoPec = diasAbonoPec;
    }
 
@@ -33,6 +34,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setId(BigDecimal id) {
+        markAsChanged("ID", id);
         this.id = id;
    }
 
@@ -41,6 +43,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setDtIniAqui(Timestamp dtIniAqui) {
+        markAsChanged("DTINIAQUI", dtIniAqui);
         this.dtIniAqui = dtIniAqui;
    }
 
@@ -49,6 +52,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setSeqFer(BigDecimal seqFer) {
+        markAsChanged("SEQFER", seqFer);
         this.seqFer = seqFer;
    }
 
@@ -57,6 +61,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -65,6 +70,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setAbonoPecUniario(String abonoPecUniario) {
+        markAsChanged("ABONOPECUNIARIO", abonoPecUniario);
         this.abonoPecUniario = abonoPecUniario;
    }
 
@@ -73,6 +79,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -81,6 +88,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -89,6 +97,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setDhSolicit(Timestamp dhSolicit) {
+        markAsChanged("DHSOLICIT", dhSolicit);
         this.dhSolicit = dhSolicit;
    }
 
@@ -97,6 +106,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setNuSolicit(BigDecimal nuSolicit) {
+        markAsChanged("NUSOLICIT", nuSolicit);
         this.nuSolicit = nuSolicit;
    }
 
@@ -105,6 +115,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setPrevInicio(Timestamp prevInicio) {
+        markAsChanged("PREVINICIO", prevInicio);
         this.prevInicio = prevInicio;
    }
 
@@ -113,6 +124,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -121,6 +133,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    }
 
    public void setDiasSolicitados(BigDecimal diasSolicitados) {
+        markAsChanged("DIASSOLICITADOS", diasSolicitados);
         this.diasSolicitados = diasSolicitados;
    }
 
@@ -136,6 +149,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
 
    @Override
    public SolicitacaoFerias fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.diasAbonoPec = vo.asBigDecimal("DIASABONOPEC");
         this.id = vo.asBigDecimal("ID");
         this.dtIniAqui = vo.asTimestamp("DTINIAQUI");

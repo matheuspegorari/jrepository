@@ -34,6 +34,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setAtual(String atual) {
+        markAsChanged("ATUAL", atual);
         this.atual = atual;
    }
 
@@ -42,6 +43,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setBairro(String bairro) {
+        markAsChanged("BAIRRO", bairro);
         this.bairro = bairro;
    }
 
@@ -50,6 +52,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -58,6 +61,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setCidade(String cidade) {
+        markAsChanged("CIDADE", cidade);
         this.cidade = cidade;
    }
 
@@ -66,6 +70,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setComplEnd(String complEnd) {
+        markAsChanged("COMPLEND", complEnd);
         this.complEnd = complEnd;
    }
 
@@ -74,6 +79,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setDataDm(Timestamp dataDm) {
+        markAsChanged("DATADM", dataDm);
         this.dataDm = dataDm;
    }
 
@@ -82,6 +88,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setDataDem(Timestamp dataDem) {
+        markAsChanged("DATDEM", dataDem);
         this.dataDem = dataDem;
    }
 
@@ -90,6 +97,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setDescAtividades(String descAtividades) {
+        markAsChanged("DESCRATIVIDADES", descAtividades);
         this.descAtividades = descAtividades;
    }
 
@@ -98,6 +106,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -106,6 +115,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setFaixaSalarialFinal(BigDecimal faixaSalarialFinal) {
+        markAsChanged("FAIXASALARIALFINAL", faixaSalarialFinal);
         this.faixaSalarialFinal = faixaSalarialFinal;
    }
 
@@ -114,6 +124,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setFaixaSalarialInicial(BigDecimal faixaSalarialInicial) {
+        markAsChanged("FAIXASALARIALINICIAL", faixaSalarialInicial);
         this.faixaSalarialInicial = faixaSalarialInicial;
    }
 
@@ -122,6 +133,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setNomeEmpresa(String nomeEmpresa) {
+        markAsChanged("NOMEEMPRESA", nomeEmpresa);
         this.nomeEmpresa = nomeEmpresa;
    }
 
@@ -130,6 +142,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setNomeEnd(String nomeEnd) {
+        markAsChanged("NOMEEND", nomeEnd);
         this.nomeEnd = nomeEnd;
    }
 
@@ -138,6 +151,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -146,6 +160,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -154,6 +169,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -162,6 +178,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -170,6 +187,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setTipoEmpresa(String tipoEmpresa) {
+        markAsChanged("TIPOEMPRESA", tipoEmpresa);
         this.tipoEmpresa = tipoEmpresa;
    }
 
@@ -178,6 +196,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setTipoEnd(String tipoEnd) {
+        markAsChanged("TIPOEND", tipoEnd);
         this.tipoEnd = tipoEnd;
    }
 
@@ -186,6 +205,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setUf(String uf) {
+        markAsChanged("UF", uf);
         this.uf = uf;
    }
 
@@ -194,6 +214,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setUltCargoOcupado(String ultCargoOcupado) {
+        markAsChanged("ULTCARGOOCUPADO", ultCargoOcupado);
         this.ultCargoOcupado = ultCargoOcupado;
    }
 
@@ -202,6 +223,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    }
 
    public void setUltSalario(BigDecimal ultSalario) {
+        markAsChanged("ULTSALARIO", ultSalario);
         this.ultSalario = ultSalario;
    }
 
@@ -217,6 +239,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
 
    @Override
    public ExperienciaProfissional fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.atual = vo.asString("ATUAL");
         this.bairro = vo.asString("BAIRRO");
         this.cep = vo.asString("CEP");

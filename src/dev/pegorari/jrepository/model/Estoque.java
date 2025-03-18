@@ -32,6 +32,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -40,6 +41,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -48,6 +50,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setEstDocAwms(BigDecimal estDocAwms) {
+        markAsChanged("ESTDOCAWMS", estDocAwms);
         this.estDocAwms = estDocAwms;
    }
 
@@ -56,6 +59,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -64,6 +68,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setDtFabricacao(Timestamp dtFabricacao) {
+        markAsChanged("DTFABRICACAO", dtFabricacao);
         this.dtFabricacao = dtFabricacao;
    }
 
@@ -72,6 +77,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -80,6 +86,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setEstMax(BigDecimal estMax) {
+        markAsChanged("ESTMAX", estMax);
         this.estMax = estMax;
    }
 
@@ -88,6 +95,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setEstMin(BigDecimal estMin) {
+        markAsChanged("ESTMIN", estMin);
         this.estMin = estMin;
    }
 
@@ -96,6 +104,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setEstoque(BigDecimal estoque) {
+        markAsChanged("ESTOQUE", estoque);
         this.estoque = estoque;
    }
 
@@ -104,6 +113,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setPercGermin(BigDecimal percGermin) {
+        markAsChanged("PERCGERMIN", percGermin);
         this.percGermin = percGermin;
    }
 
@@ -112,6 +122,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setPercPureza(BigDecimal percPureza) {
+        markAsChanged("PERCPUREZA", percPureza);
         this.percPureza = percPureza;
    }
 
@@ -120,6 +131,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setReservado(BigDecimal reservado) {
+        markAsChanged("RESERVADO", reservado);
         this.reservado = reservado;
    }
 
@@ -128,6 +140,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setStatusLote(String statusLote) {
+        markAsChanged("STATUSLOTE", statusLote);
         this.statusLote = statusLote;
    }
 
@@ -136,6 +149,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -144,6 +158,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setWmsBloqueado(BigDecimal wmsBloqueado) {
+        markAsChanged("WMSBLOQUEADO", wmsBloqueado);
         this.wmsBloqueado = wmsBloqueado;
    }
 
@@ -152,6 +167,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -160,6 +176,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodBarra(String codBarra) {
+        markAsChanged("CODBARRA", codBarra);
         this.codBarra = codBarra;
    }
 
@@ -168,6 +185,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -176,6 +194,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -184,6 +203,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
    }
 
    public void setCodAgregacao(String codAgregacao) {
+        markAsChanged("CODAGREGACAO", codAgregacao);
         this.codAgregacao = codAgregacao;
    }
 
@@ -199,6 +219,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
 
    @Override
    public Estoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.estDocAwms = vo.asBigDecimal("ESTDOCAWMS");

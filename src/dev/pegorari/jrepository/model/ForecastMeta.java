@@ -40,6 +40,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -48,6 +49,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setExecutante(BigDecimal executante) {
+        markAsChanged("EXECUTANTE", executante);
         this.executante = executante;
    }
 
@@ -56,6 +58,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setMarca(String marca) {
+        markAsChanged("MARCA", marca);
         this.marca = marca;
    }
 
@@ -64,6 +67,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setNomeCenario(String nomeCenario) {
+        markAsChanged("NOMECENARIO", nomeCenario);
         this.nomeCenario = nomeCenario;
    }
 
@@ -72,6 +76,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -80,6 +85,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setVendedor(BigDecimal vendedor) {
+        markAsChanged("VENDEDOR", vendedor);
         this.vendedor = vendedor;
    }
 
@@ -88,6 +94,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setVendItem(BigDecimal vendItem) {
+        markAsChanged("VENDITEM", vendItem);
         this.vendItem = vendItem;
    }
 
@@ -96,6 +103,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCampoDetalhe(String campoDetalhe) {
+        markAsChanged("CAMPODETALHE", campoDetalhe);
         this.campoDetalhe = campoDetalhe;
    }
 
@@ -104,6 +112,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodCenario(BigDecimal codCenario) {
+        markAsChanged("CODCENARIO", codCenario);
         this.codCenario = codCenario;
    }
 
@@ -112,6 +121,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -120,6 +130,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -128,6 +139,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -136,6 +148,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodGer(BigDecimal codGer) {
+        markAsChanged("CODGER", codGer);
         this.codGer = codGer;
    }
 
@@ -144,6 +157,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodGrupoNat(BigDecimal codGrupoNat) {
+        markAsChanged("CODGRUPONAT", codGrupoNat);
         this.codGrupoNat = codGrupoNat;
    }
 
@@ -152,6 +166,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -160,6 +175,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -168,6 +184,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -176,6 +193,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -184,6 +202,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodPais(BigDecimal codPais) {
+        markAsChanged("CODPAIS", codPais);
         this.codPais = codPais;
    }
 
@@ -192,6 +211,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -200,6 +220,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -208,6 +229,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -216,6 +238,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodReg(BigDecimal codReg) {
+        markAsChanged("CODREG", codReg);
         this.codReg = codReg;
    }
 
@@ -224,6 +247,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -232,6 +256,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodUf(BigDecimal codUf) {
+        markAsChanged("CODUF", codUf);
         this.codUf = codUf;
    }
 
@@ -240,6 +265,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -248,6 +274,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -256,6 +283,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setAno(BigDecimal ano) {
+        markAsChanged("ANO", ano);
         this.ano = ano;
    }
 
@@ -264,6 +292,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
    }
 
    public void setMes(BigDecimal mes) {
+        markAsChanged("MES", mes);
         this.mes = mes;
    }
 
@@ -279,6 +308,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
 
    @Override
    public ForecastMeta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.controle = vo.asString("CONTROLE");
         this.executante = vo.asBigDecimal("EXECUTANTE");
         this.marca = vo.asString("MARCA");

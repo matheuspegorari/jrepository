@@ -19,6 +19,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setCodCenario(BigDecimal codCenario) {
+        markAsChanged("CODCENARIO", codCenario);
         this.codCenario = codCenario;
    }
 
@@ -27,6 +28,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -35,6 +37,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -43,6 +46,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -51,6 +55,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setPrevisto(BigDecimal previsto) {
+        markAsChanged("PREVISTO", previsto);
         this.previsto = previsto;
    }
 
@@ -59,6 +64,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setRecDesp(String recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -67,6 +73,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    }
 
    public void setValueDetail(String valueDetail) {
+        markAsChanged("VALUEDETAIL", valueDetail);
         this.valueDetail = valueDetail;
    }
 
@@ -82,6 +89,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
 
    @Override
    public DetailMetaForecast fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCenario = vo.asBigDecimal("CODCENARIO");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");

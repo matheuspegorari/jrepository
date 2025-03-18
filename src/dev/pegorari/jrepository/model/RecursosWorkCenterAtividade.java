@@ -23,6 +23,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setCodCre(BigDecimal codCre) {
+        markAsChanged("CODCRE", codCre);
         this.codCre = codCre;
    }
 
@@ -31,6 +32,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -39,6 +41,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -47,6 +50,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -55,6 +59,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setQtdUtilizacao(BigDecimal qtdUtilizacao) {
+        markAsChanged("QTDUTILIZACAO", qtdUtilizacao);
         this.qtdUtilizacao = qtdUtilizacao;
    }
 
@@ -63,6 +68,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setSeqRec(BigDecimal seqRec) {
+        markAsChanged("SEQREC", seqRec);
         this.seqRec = seqRec;
    }
 
@@ -71,6 +77,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setMultUtilizacao(BigDecimal multUtilizacao) {
+        markAsChanged("MULTUTILIZACAO", multUtilizacao);
         this.multUtilizacao = multUtilizacao;
    }
 
@@ -79,6 +86,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -87,6 +95,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -95,6 +104,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -103,6 +113,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -118,6 +129,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
 
    @Override
    public RecursosWorkCenterAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

@@ -18,6 +18,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -26,6 +27,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -34,6 +36,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -42,6 +45,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setLiberado(String liberado) {
+        markAsChanged("LIBERADO", liberado);
         this.liberado = liberado;
    }
 
@@ -50,6 +54,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -58,6 +63,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setSerieMp(String serieMp) {
+        markAsChanged("SERIEMP", serieMp);
         this.serieMp = serieMp;
    }
 
@@ -66,6 +72,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    }
 
    public void setSeriePa(String seriePa) {
+        markAsChanged("SERIEPA", seriePa);
         this.seriePa = seriePa;
    }
 
@@ -81,6 +88,7 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
 
    @Override
    public SerieMateriaPrima fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.idIproc = vo.asBigDecimal("IDIPROC");

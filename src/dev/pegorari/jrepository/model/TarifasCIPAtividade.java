@@ -25,6 +25,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -33,6 +34,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setCodProdTar(BigDecimal codProdTar) {
+        markAsChanged("CODPRODTAR", codProdTar);
         this.codProdTar = codProdTar;
    }
 
@@ -41,6 +43,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -49,6 +52,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -57,6 +61,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -65,6 +70,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setIdProc(BigDecimal idProc) {
+        markAsChanged("IDPROC", idProc);
         this.idProc = idProc;
    }
 
@@ -73,6 +79,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -81,6 +88,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setTipoExec(String tipoExec) {
+        markAsChanged("TIPOEXEC", tipoExec);
         this.tipoExec = tipoExec;
    }
 
@@ -89,6 +97,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setTipoIndice(String tipoIndice) {
+        markAsChanged("TIPOINDICE", tipoIndice);
         this.tipoIndice = tipoIndice;
    }
 
@@ -97,6 +106,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
+        markAsChanged("CODUSUALT", codUsuAlt);
         this.codUsuAlt = codUsuAlt;
    }
 
@@ -105,6 +115,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
+        markAsChanged("CODUSUCAD", codUsuCad);
         this.codUsuCad = codUsuCad;
    }
 
@@ -113,6 +124,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -121,6 +133,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    }
 
    public void setDhCad(Timestamp dhCad) {
+        markAsChanged("DHCAD", dhCad);
         this.dhCad = dhCad;
    }
 
@@ -136,6 +149,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
 
    @Override
    public TarifasCIPAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codProdTar = vo.asBigDecimal("CODPRODTAR");
         this.codVol = vo.asString("CODVOL");

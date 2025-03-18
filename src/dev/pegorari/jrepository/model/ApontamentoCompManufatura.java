@@ -16,6 +16,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -24,6 +25,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -32,6 +34,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -40,6 +43,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setSeqIte(BigDecimal seqIte) {
+        markAsChanged("SEQITE", seqIte);
         this.seqIte = seqIte;
    }
 
@@ -48,6 +52,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
    }
 
    public void setQtd(BigDecimal qtd) {
+        markAsChanged("QTD", qtd);
         this.qtd = qtd;
    }
 
@@ -63,6 +68,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
 
    @Override
    public ApontamentoCompManufatura fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.seqApa = vo.asBigDecimal("SEQAPA");

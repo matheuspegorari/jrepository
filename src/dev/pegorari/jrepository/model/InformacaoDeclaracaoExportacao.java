@@ -18,6 +18,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setCodPaisDestino(BigDecimal codPaisDestino) {
+        markAsChanged("CODPAISDESTINO", codPaisDestino);
         this.codPaisDestino = codPaisDestino;
    }
 
@@ -26,6 +27,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setDtaVerbacao(Timestamp dtaVerbacao) {
+        markAsChanged("DTAVERBACAO", dtaVerbacao);
         this.dtaVerbacao = dtaVerbacao;
    }
 
@@ -34,6 +36,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setDtDeclaracao(Timestamp dtDeclaracao) {
+        markAsChanged("DTDECLARACAO", dtDeclaracao);
         this.dtDeclaracao = dtDeclaracao;
    }
 
@@ -42,6 +45,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setNatureza(String natureza) {
+        markAsChanged("NATUREZA", natureza);
         this.natureza = natureza;
    }
 
@@ -50,6 +54,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setNroDeclaracao(String nroDeclaracao) {
+        markAsChanged("NRODECLARACAO", nroDeclaracao);
         this.nroDeclaracao = nroDeclaracao;
    }
 
@@ -58,6 +63,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    }
 
    public void setTipoDec(BigDecimal tipoDec) {
+        markAsChanged("TIPODEC", tipoDec);
         this.tipoDec = tipoDec;
    }
 
@@ -73,6 +79,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
 
    @Override
    public InformacaoDeclaracaoExportacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPaisDestino = vo.asBigDecimal("CODPAISDESTINO");
         this.dtaVerbacao = vo.asTimestamp("DTAVERBACAO");
         this.dtDeclaracao = vo.asTimestamp("DTDECLARACAO");

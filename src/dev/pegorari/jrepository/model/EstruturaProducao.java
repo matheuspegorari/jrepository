@@ -14,6 +14,7 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -22,6 +23,7 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
    }
 
    public void setCodEst(BigDecimal codEst) {
+        markAsChanged("CODEST", codEst);
         this.codEst = codEst;
    }
 
@@ -30,6 +32,7 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -45,6 +48,7 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
 
    @Override
    public EstruturaProducao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codEst = vo.asBigDecimal("CODEST");
         this.descricao = vo.asString("DESCRICAO");

@@ -60,6 +60,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setAnalitica(String analitica) {
+        markAsChanged("ANALITICA", analitica);
         this.analitica = analitica;
    }
 
@@ -68,6 +69,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -76,6 +78,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setBemOriginal(String bemOriginal) {
+        markAsChanged("BEMORIGINAL", bemOriginal);
         this.bemOriginal = bemOriginal;
    }
 
@@ -84,6 +87,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setBemOutros(String bemOutros) {
+        markAsChanged("BEMOUTROS", bemOutros);
         this.bemOutros = bemOutros;
    }
 
@@ -92,6 +96,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setBemResreav(String bemResreav) {
+        markAsChanged("BEMRESREAV", bemResreav);
         this.bemResreav = bemResreav;
    }
 
@@ -100,6 +105,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCencusObrig(String cencusObrig) {
+        markAsChanged("CENCUSOBRIG", cencusObrig);
         this.cencusObrig = cencusObrig;
    }
 
@@ -108,6 +114,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodCtaCtbPai(BigDecimal codCtaCtbPai) {
+        markAsChanged("CODCTACTBPAI", codCtaCtbPai);
         this.codCtaCtbPai = codCtaCtbPai;
    }
 
@@ -116,6 +123,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -124,6 +132,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodGrupoCta(String codGrupoCta) {
+        markAsChanged("CODGRUPOCTA", codGrupoCta);
         this.codGrupoCta = codGrupoCta;
    }
 
@@ -132,6 +141,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setConvSaldoMoeda(String convSaldoMoeda) {
+        markAsChanged("CONVSALDOMOEDA", convSaldoMoeda);
         this.convSaldoMoeda = convSaldoMoeda;
    }
 
@@ -140,6 +150,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -148,6 +159,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCtaCtb(String ctaCtb) {
+        markAsChanged("CTACTB", ctaCtb);
         this.ctaCtb = ctaCtb;
    }
 
@@ -156,6 +168,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDescrCta(String descrCta) {
+        markAsChanged("DESCRCTA", descrCta);
         this.descrCta = descrCta;
    }
 
@@ -164,6 +177,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDtBaseConvMoeda(String dtBaseConvMoeda) {
+        markAsChanged("DTBASECONVMOEDA", dtBaseConvMoeda);
         this.dtBaseConvMoeda = dtBaseConvMoeda;
    }
 
@@ -172,6 +186,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -180,6 +195,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setObservacoes(String observacoes) {
+        markAsChanged("OBSERVACOES", observacoes);
         this.observacoes = observacoes;
    }
 
@@ -188,6 +204,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setPlanta(BigDecimal planta) {
+        markAsChanged("PLANTA", planta);
         this.planta = planta;
    }
 
@@ -196,6 +213,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setProcesso(BigDecimal processo) {
+        markAsChanged("PROCESSO", processo);
         this.processo = processo;
    }
 
@@ -204,6 +222,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setProduto(BigDecimal produto) {
+        markAsChanged("PRODUTO", produto);
         this.produto = produto;
    }
 
@@ -212,6 +231,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setProjObrig(String projObrig) {
+        markAsChanged("PROJOBRIG", projObrig);
         this.projObrig = projObrig;
    }
 
@@ -220,6 +240,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setPodeLancToManual(String podeLancToManual) {
+        markAsChanged("PODELANCTOMANUAL", podeLancToManual);
         this.podeLancToManual = podeLancToManual;
    }
 
@@ -228,6 +249,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodCtaCtbSubst(BigDecimal codCtaCtbSubst) {
+        markAsChanged("CODCTACTBSUBST", codCtaCtbSubst);
         this.codCtaCtbSubst = codCtaCtbSubst;
    }
 
@@ -236,6 +258,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
+        markAsChanged("DTINCLUSAO", dtInclusao);
         this.dtInclusao = dtInclusao;
    }
 
@@ -244,6 +267,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -252,6 +276,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -260,6 +285,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDtInativ(Timestamp dtInativ) {
+        markAsChanged("DTINATIV", dtInativ);
         this.dtInativ = dtInativ;
    }
 
@@ -268,6 +294,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setLalurACred(String lalurACred) {
+        markAsChanged("LALUR_A_CRED", lalurACred);
         this.lalurACred = lalurACred;
    }
 
@@ -276,6 +303,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setRecDesp(String recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -284,6 +312,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setTabelaCred(String tabelaCred) {
+        markAsChanged("TABELACRED", tabelaCred);
         this.tabelaCred = tabelaCred;
    }
 
@@ -292,6 +321,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setNaturezaEfd(BigDecimal naturezaEfd) {
+        markAsChanged("NATUREZAEFD", naturezaEfd);
         this.naturezaEfd = naturezaEfd;
    }
 
@@ -300,6 +330,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodRazAux(BigDecimal codRazAux) {
+        markAsChanged("CODRAZAUX", codRazAux);
         this.codRazAux = codRazAux;
    }
 
@@ -308,6 +339,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -316,6 +348,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setTipSalAlur(BigDecimal tipSalAlur) {
+        markAsChanged("TIPSALALUR", tipSalAlur);
         this.tipSalAlur = tipSalAlur;
    }
 
@@ -324,6 +357,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setLalurA(String lalurA) {
+        markAsChanged("LALUR_A", lalurA);
         this.lalurA = lalurA;
    }
 
@@ -332,6 +366,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodConta(BigDecimal codConta) {
+        markAsChanged("CODCONTA", codConta);
         this.codConta = codConta;
    }
 
@@ -340,6 +375,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setCodLalurB(String codLalurB) {
+        markAsChanged("CODLALURB", codLalurB);
         this.codLalurB = codLalurB;
    }
 
@@ -348,6 +384,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setDescrConta(String descrConta) {
+        markAsChanged("DESCRCONTA", descrConta);
         this.descrConta = descrConta;
    }
 
@@ -356,6 +393,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setIndTribLalurB(String indTribLalurB) {
+        markAsChanged("INDTRIBLALURB", indTribLalurB);
         this.indTribLalurB = indTribLalurB;
    }
 
@@ -364,6 +402,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setConResultCsll(String conResultCsll) {
+        markAsChanged("CONRESULTCSLL", conResultCsll);
         this.conResultCsll = conResultCsll;
    }
 
@@ -372,6 +411,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setConResultIrpj(String conResultIrpj) {
+        markAsChanged("CONRESULTIRPJ", conResultIrpj);
         this.conResultIrpj = conResultIrpj;
    }
 
@@ -380,6 +420,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setExclusoesCsll(String exclusoesCsll) {
+        markAsChanged("EXCLUSOESCSLL", exclusoesCsll);
         this.exclusoesCsll = exclusoesCsll;
    }
 
@@ -388,6 +429,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setExclusoesIrpj(String exclusoesIrpj) {
+        markAsChanged("EXCLUSOESIRPJ", exclusoesIrpj);
         this.exclusoesIrpj = exclusoesIrpj;
    }
 
@@ -396,6 +438,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setPat4Irpj(String pat4Irpj) {
+        markAsChanged("PAT4IRPJ", pat4Irpj);
         this.pat4Irpj = pat4Irpj;
    }
 
@@ -404,6 +447,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setZeraCrCsll(String zeraCrCsll) {
+        markAsChanged("ZERACRCSLL", zeraCrCsll);
         this.zeraCrCsll = zeraCrCsll;
    }
 
@@ -412,6 +456,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setZeraCrIrpj(String zeraCrIrpj) {
+        markAsChanged("ZERACRIRPJ", zeraCrIrpj);
         this.zeraCrIrpj = zeraCrIrpj;
    }
 
@@ -420,6 +465,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setClassifCsll(String classifCsll) {
+        markAsChanged("CLASSIFCSLL", classifCsll);
         this.classifCsll = classifCsll;
    }
 
@@ -428,6 +474,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setClassifIrpj(String classifIrpj) {
+        markAsChanged("CLASSIFIRPJ", classifIrpj);
         this.classifIrpj = classifIrpj;
    }
 
@@ -436,6 +483,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
    }
 
    public void setTabelaLalurB(String tabelaLalurB) {
+        markAsChanged("TABELALALURB", tabelaLalurB);
         this.tabelaLalurB = tabelaLalurB;
    }
 
@@ -451,6 +499,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
 
    @Override
    public PlanoConta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitica = vo.asString("ANALITICA");
         this.ativa = vo.asString("ATIVA");
         this.bemOriginal = vo.asString("BEMORIGINAL");

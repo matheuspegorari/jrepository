@@ -21,6 +21,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -29,6 +30,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -37,6 +39,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -45,6 +48,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setCodLstPai(BigDecimal codLstPai) {
+        markAsChanged("CODLSTPAI", codLstPai);
         this.codLstPai = codLstPai;
    }
 
@@ -53,6 +57,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setDescrLst(String descrLst) {
+        markAsChanged("DESCRLST", descrLst);
         this.descrLst = descrLst;
    }
 
@@ -61,6 +66,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -69,6 +75,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setInformaCodObra(String informaCodObra) {
+        markAsChanged("INFORMACODOBRA", informaCodObra);
         this.informaCodObra = informaCodObra;
    }
 
@@ -77,6 +84,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setTipoRepasse(BigDecimal tipoRepasse) {
+        markAsChanged("TIPOREPASSE", tipoRepasse);
         this.tipoRepasse = tipoRepasse;
    }
 
@@ -85,6 +93,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setGeraVlrTotRec(String geraVlrTotRec) {
+        markAsChanged("GERAVLRTOTREC", geraVlrTotRec);
         this.geraVlrTotRec = geraVlrTotRec;
    }
 
@@ -93,6 +102,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    }
 
    public void setDesdNac(String desdNac) {
+        markAsChanged("DESDNAC", desdNac);
         this.desdNac = desdNac;
    }
 
@@ -108,6 +118,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
 
    @Override
    public ListaServicoSintegra fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codLst = vo.asBigDecimal("CODLST");

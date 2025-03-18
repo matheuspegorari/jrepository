@@ -47,6 +47,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrRedBaseIss(BigDecimal vlrRedBaseIss) {
+        markAsChanged("VLRREDBASEISS", vlrRedBaseIss);
         this.vlrRedBaseIss = vlrRedBaseIss;
    }
 
@@ -55,6 +56,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrSub(BigDecimal vlrSub) {
+        markAsChanged("VLRSUB", vlrSub);
         this.vlrSub = vlrSub;
    }
 
@@ -63,6 +65,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -71,6 +74,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -79,6 +83,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setAliqIss(BigDecimal aliqIss) {
+        markAsChanged("ALIQISS", aliqIss);
         this.aliqIss = aliqIss;
    }
 
@@ -87,6 +92,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setBaseIss(BigDecimal baseIss) {
+        markAsChanged("BASEISS", baseIss);
         this.baseIss = baseIss;
    }
 
@@ -95,6 +101,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodCfps(BigDecimal codCfps) {
+        markAsChanged("CODCFPS", codCfps);
         this.codCfps = codCfps;
    }
 
@@ -103,6 +110,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodCidDestino(BigDecimal codCidDestino) {
+        markAsChanged("CODCIDDESTINO", codCidDestino);
         this.codCidDestino = codCidDestino;
    }
 
@@ -111,6 +119,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodCidExecServ(BigDecimal codCidExecServ) {
+        markAsChanged("CODCIDEXECSERV", codCidExecServ);
         this.codCidExecServ = codCidExecServ;
    }
 
@@ -119,6 +128,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodCidOrigem(BigDecimal codCidOrigem) {
+        markAsChanged("CODCIDORIGEM", codCidOrigem);
         this.codCidOrigem = codCidOrigem;
    }
 
@@ -127,6 +137,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -135,6 +146,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -143,6 +155,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodModDocIss(String codModDocIss) {
+        markAsChanged("CODMODDOCISS", codModDocIss);
         this.codModDocIss = codModDocIss;
    }
 
@@ -151,6 +164,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -159,6 +173,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodTribIss(BigDecimal codTribIss) {
+        markAsChanged("CODTRIBISS", codTribIss);
         this.codTribIss = codTribIss;
    }
 
@@ -167,6 +182,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -175,6 +191,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setDtDoc(Timestamp dtDoc) {
+        markAsChanged("DTDOC", dtDoc);
         this.dtDoc = dtDoc;
    }
 
@@ -183,6 +200,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setDtFilt(Timestamp dtFilt) {
+        markAsChanged("DTFILT", dtFilt);
         this.dtFilt = dtFilt;
    }
 
@@ -191,6 +209,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -199,6 +218,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setEntSai(String entSai) {
+        markAsChanged("ENTSAI", entSai);
         this.entSai = entSai;
    }
 
@@ -207,6 +227,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setIsentasIss(BigDecimal isentasIss) {
+        markAsChanged("ISENTASISS", isentasIss);
         this.isentasIss = isentasIss;
    }
 
@@ -215,6 +236,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setNaoTribIss(BigDecimal naoTribIss) {
+        markAsChanged("NAOTRIBISS", naoTribIss);
         this.naoTribIss = naoTribIss;
    }
 
@@ -223,6 +245,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -231,6 +254,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setNumNota2(BigDecimal numNota2) {
+        markAsChanged("NUMNOTA2", numNota2);
         this.numNota2 = numNota2;
    }
 
@@ -239,6 +263,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -247,6 +272,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
+        markAsChanged("VLRISS", vlrIss);
         this.vlrIss = vlrIss;
    }
 
@@ -255,6 +281,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrMat(BigDecimal vlrMat) {
+        markAsChanged("VLRMAT", vlrMat);
         this.vlrMat = vlrMat;
    }
 
@@ -263,6 +290,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrMatTerc(BigDecimal vlrMatTerc) {
+        markAsChanged("VLRMATTERC", vlrMatTerc);
         this.vlrMatTerc = vlrMatTerc;
    }
 
@@ -271,6 +299,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -279,6 +308,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setOrigem(String origem) {
+        markAsChanged("ORIGEM", origem);
         this.origem = origem;
    }
 
@@ -287,6 +317,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setRetido(String retido) {
+        markAsChanged("RETIDO", retido);
         this.retido = retido;
    }
 
@@ -295,6 +326,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setUfDestino(String ufDestino) {
+        markAsChanged("UFDESTINO", ufDestino);
         this.ufDestino = ufDestino;
    }
 
@@ -303,6 +335,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setUfOrigem(String ufOrigem) {
+        markAsChanged("UFORIGEM", ufOrigem);
         this.ufOrigem = ufOrigem;
    }
 
@@ -311,6 +344,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setVlrCtb(BigDecimal vlrCtb) {
+        markAsChanged("VLRCTB", vlrCtb);
         this.vlrCtb = vlrCtb;
    }
 
@@ -319,6 +353,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    }
 
    public void setCodLst(BigDecimal codLst) {
+        markAsChanged("CODLST", codLst);
         this.codLst = codLst;
    }
 
@@ -334,6 +369,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
 
    @Override
    public RegistroIss fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.vlrRedBaseIss = vo.asBigDecimal("VLRREDBASEISS");
         this.vlrSub = vo.asBigDecimal("VLRSUB");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

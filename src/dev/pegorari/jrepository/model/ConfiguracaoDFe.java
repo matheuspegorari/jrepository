@@ -18,6 +18,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -26,6 +27,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setMdeProxConsCte(Timestamp mdeProxConsCte) {
+        markAsChanged("MDEPROXCONSCTE", mdeProxConsCte);
         this.mdeProxConsCte = mdeProxConsCte;
    }
 
@@ -34,6 +36,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setMdeProxConsulta(Timestamp mdeProxConsulta) {
+        markAsChanged("MDEPROXCONSULTA", mdeProxConsulta);
         this.mdeProxConsulta = mdeProxConsulta;
    }
 
@@ -42,6 +45,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setMdeProxDownload(Timestamp mdeProxDownload) {
+        markAsChanged("MDEPROXDOWNLOAD", mdeProxDownload);
         this.mdeProxDownload = mdeProxDownload;
    }
 
@@ -50,6 +54,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setUltNsu(String ultNsu) {
+        markAsChanged("ULTNSU", ultNsu);
         this.ultNsu = ultNsu;
    }
 
@@ -58,6 +63,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
    }
 
    public void setUltNsuCte(String ultNsuCte) {
+        markAsChanged("ULTNSUCTE", ultNsuCte);
         this.ultNsuCte = ultNsuCte;
    }
 
@@ -73,6 +79,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
 
    @Override
    public ConfiguracaoDFe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.mdeProxConsCte = vo.asTimestamp("MDEPROXCONSCTE");
         this.mdeProxConsulta = vo.asTimestamp("MDEPROXCONSULTA");

@@ -20,6 +20,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setCodClc(BigDecimal codClc) {
+        markAsChanged("CODCLC", codClc);
         this.codClc = codClc;
    }
 
@@ -28,6 +29,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setCodClt(BigDecimal codClt) {
+        markAsChanged("CODCLT", codClt);
         this.codClt = codClt;
    }
 
@@ -36,6 +38,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setDescontar(BigDecimal descontar) {
+        markAsChanged("DESCONTAR", descontar);
         this.descontar = descontar;
    }
 
@@ -44,6 +47,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setNuCll(BigDecimal nuCll) {
+        markAsChanged("NUCLL", nuCll);
         this.nuCll = nuCll;
    }
 
@@ -52,6 +56,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -60,6 +65,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setResultado(BigDecimal resultado) {
+        markAsChanged("RESULTADO", resultado);
         this.resultado = resultado;
    }
 
@@ -68,6 +74,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setAprovadorResultado(String aprovadorResultado) {
+        markAsChanged("APROVADORESULTADO", aprovadorResultado);
         this.aprovadorResultado = aprovadorResultado;
    }
 
@@ -76,6 +83,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -84,6 +92,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
    }
 
    public void setResultadoConf(String resultadoConf) {
+        markAsChanged("RESULTADOCONF", resultadoConf);
         this.resultadoConf = resultadoConf;
    }
 
@@ -99,6 +108,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
 
    @Override
    public ItemLaudo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codClc = vo.asBigDecimal("CODCLC");
         this.codClt = vo.asBigDecimal("CODCLT");
         this.descontar = vo.asBigDecimal("DESCONTAR");

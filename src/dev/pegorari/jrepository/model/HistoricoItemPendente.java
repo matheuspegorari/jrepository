@@ -19,6 +19,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setSeqHip(BigDecimal seqHip) {
+        markAsChanged("SEQHIP", seqHip);
         this.seqHip = seqHip;
    }
 
@@ -27,6 +28,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -35,6 +37,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -43,6 +46,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -51,6 +55,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -59,6 +64,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -67,6 +73,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -82,6 +89,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
 
    @Override
    public HistoricoItemPendente fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqHip = vo.asBigDecimal("SEQHIP");
         this.descricao = vo.asString("DESCRICAO");
         this.status = vo.asString("STATUS");

@@ -20,6 +20,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setCodAjuste(BigDecimal codAjuste) {
+        markAsChanged("CODAJUSTE", codAjuste);
         this.codAjuste = codAjuste;
    }
 
@@ -28,6 +29,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setCodCprb(String codCprb) {
+        markAsChanged("CODCPRB", codCprb);
         this.codCprb = codCprb;
    }
 
@@ -36,6 +38,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -44,6 +47,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setCodObra(String codObra) {
+        markAsChanged("CODOBRA", codObra);
         this.codObra = codObra;
    }
 
@@ -52,6 +56,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setDescRAjuste(String descRAjuste) {
+        markAsChanged("DESCRAJUSTE", descRAjuste);
         this.descRAjuste = descRAjuste;
    }
 
@@ -60,6 +65,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setDtRef(Timestamp dtRef) {
+        markAsChanged("DTREF", dtRef);
         this.dtRef = dtRef;
    }
 
@@ -68,6 +74,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setTipoAjuste(BigDecimal tipoAjuste) {
+        markAsChanged("TIPOAJUSTE", tipoAjuste);
         this.tipoAjuste = tipoAjuste;
    }
 
@@ -76,6 +83,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
+        markAsChanged("VLRAJUSTE", vlrAjuste);
         this.vlrAjuste = vlrAjuste;
    }
 
@@ -91,6 +99,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
 
    @Override
    public DetalhesAjustesCPRB fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codCprb = vo.asString("CODCPRB");
         this.codEmp = vo.asBigDecimal("CODEMP");

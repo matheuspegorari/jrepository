@@ -42,6 +42,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setAbreviatura(String abreviatura) {
+        markAsChanged("ABREVIATURA", abreviatura);
         this.abreviatura = abreviatura;
    }
 
@@ -50,6 +51,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setAmostraCusMax(BigDecimal amostraCusMax) {
+        markAsChanged("AMOSTRACUSMAX", amostraCusMax);
         this.amostraCusMax = amostraCusMax;
    }
 
@@ -58,6 +60,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -66,6 +69,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -74,6 +78,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCargaHorMax(BigDecimal cargaHorMax) {
+        markAsChanged("CARGAHORMAX", cargaHorMax);
         this.cargaHorMax = cargaHorMax;
    }
 
@@ -82,6 +87,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodClt(BigDecimal codClt) {
+        markAsChanged("CODCLT", codClt);
         this.codClt = codClt;
    }
 
@@ -90,6 +96,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodCtActb(BigDecimal codCtActb) {
+        markAsChanged("CODCTACTB", codCtActb);
         this.codCtActb = codCtActb;
    }
 
@@ -98,6 +105,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodCtActb2(BigDecimal codCtActb2) {
+        markAsChanged("CODCTACTB2", codCtActb2);
         this.codCtActb2 = codCtActb2;
    }
 
@@ -106,6 +114,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -114,6 +123,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -122,6 +132,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -130,6 +141,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodProjPai(BigDecimal codProjPai) {
+        markAsChanged("CODPROJPAI", codProjPai);
         this.codProjPai = codProjPai;
    }
 
@@ -138,6 +150,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
+        markAsChanged("CODUSURESP", codUsuResp);
         this.codUsuResp = codUsuResp;
    }
 
@@ -146,6 +159,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -154,6 +168,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setDtTermino(Timestamp dtTermino) {
+        markAsChanged("DTTERMINO", dtTermino);
         this.dtTermino = dtTermino;
    }
 
@@ -162,6 +177,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -170,6 +186,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setHrFinalMax(BigDecimal hrFinalMax) {
+        markAsChanged("HRFINALMAX", hrFinalMax);
         this.hrFinalMax = hrFinalMax;
    }
 
@@ -178,6 +195,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setHrInicialMin(BigDecimal hrInicialMin) {
+        markAsChanged("HRINICIALMIN", hrInicialMin);
         this.hrInicialMin = hrInicialMin;
    }
 
@@ -186,6 +204,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setIdentificacao(String identificacao) {
+        markAsChanged("IDENTIFICACAO", identificacao);
         this.identificacao = identificacao;
    }
 
@@ -194,6 +213,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setIntervaloMax(BigDecimal intervaloMax) {
+        markAsChanged("INTERVALOMAX", intervaloMax);
         this.intervaloMax = intervaloMax;
    }
 
@@ -202,6 +222,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setIntervaloMin(BigDecimal intervaloMin) {
+        markAsChanged("INTERVALOMIN", intervaloMin);
         this.intervaloMin = intervaloMin;
    }
 
@@ -210,6 +231,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setLimBonif(BigDecimal limBonif) {
+        markAsChanged("LIMBONIF", limBonif);
         this.limBonif = limBonif;
    }
 
@@ -218,6 +240,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setNuQue(BigDecimal nuQue) {
+        markAsChanged("NUQUE", nuQue);
         this.nuQue = nuQue;
    }
 
@@ -226,6 +249,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setPercRetencao(BigDecimal percRetencao) {
+        markAsChanged("PERCRETENCAO", percRetencao);
         this.percRetencao = percRetencao;
    }
 
@@ -234,6 +258,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setRetencaoAtiva(String retencaoAtiva) {
+        markAsChanged("RETENCAOATIVA", retencaoAtiva);
         this.retencaoAtiva = retencaoAtiva;
    }
 
@@ -242,6 +267,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setUltimoRdo(BigDecimal ultimoRdo) {
+        markAsChanged("ULTIMORDO", ultimoRdo);
         this.ultimoRdo = ultimoRdo;
    }
 
@@ -250,6 +276,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setTimContaCompart(String timContaCompart) {
+        markAsChanged("TIMCONTACOMPART", timContaCompart);
         this.timContaCompart = timContaCompart;
    }
 
@@ -258,6 +285,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setTimNmCtaComp(BigDecimal timNmCtaComp) {
+        markAsChanged("TIMNMCTACOMP", timNmCtaComp);
         this.timNmCtaComp = timNmCtaComp;
    }
 
@@ -266,6 +294,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setTimParcProj(BigDecimal timParcProj) {
+        markAsChanged("TIMPARCPROJ", timParcProj);
         this.timParcProj = timParcProj;
    }
 
@@ -274,6 +303,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
    }
 
    public void setTimTxPart(BigDecimal timTxPart) {
+        markAsChanged("TIMTXPART", timTxPart);
         this.timTxPart = timTxPart;
    }
 
@@ -289,6 +319,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
 
    @Override
    public Projeto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.amostraCusMax = vo.asBigDecimal("AMOSTRACUSMAX");
         this.analitico = vo.asString("ANALITICO");

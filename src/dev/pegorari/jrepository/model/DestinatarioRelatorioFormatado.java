@@ -14,6 +14,7 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
    }
 
    public void setCodCon(BigDecimal codCon) {
+        markAsChanged("CODCON", codCon);
         this.codCon = codCon;
    }
 
@@ -22,6 +23,7 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
+        markAsChanged("NURFE", nuRfe);
         this.nuRfe = nuRfe;
    }
 
@@ -30,6 +32,7 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -45,6 +48,7 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
 
    @Override
    public DestinatarioRelatorioFormatado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.nuRfe = vo.asBigDecimal("NURFE");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

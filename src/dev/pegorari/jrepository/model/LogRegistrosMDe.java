@@ -38,6 +38,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -46,6 +47,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setDescRevento(String descRevento) {
+        markAsChanged("DESCREVENTO", descRevento);
         this.descRevento = descRevento;
    }
 
@@ -54,6 +56,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setDhEvento(Timestamp dhEvento) {
+        markAsChanged("DHEVENTO", dhEvento);
         this.dhEvento = dhEvento;
    }
 
@@ -62,6 +65,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setEmisSterc(String emisSterc) {
+        markAsChanged("EMISSTERC", emisSterc);
         this.emisSterc = emisSterc;
    }
 
@@ -70,6 +74,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setInfCompl(String infCompl) {
+        markAsChanged("INFCOMPL", infCompl);
         this.infCompl = infCompl;
    }
 
@@ -78,6 +83,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setJustificativa(String justificativa) {
+        markAsChanged("JUSTIFICATIVA", justificativa);
         this.justificativa = justificativa;
    }
 
@@ -86,6 +92,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNomeParcDest(String nomeParcDest) {
+        markAsChanged("NOMEPARCDEST", nomeParcDest);
         this.nomeParcDest = nomeParcDest;
    }
 
@@ -94,6 +101,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNomeParcEmit(String nomeParcEmit) {
+        markAsChanged("NOMEPARCEMIT", nomeParcEmit);
         this.nomeParcEmit = nomeParcEmit;
    }
 
@@ -102,6 +110,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNomeParcRec(String nomeParcRec) {
+        markAsChanged("NOMEPARCREC", nomeParcRec);
         this.nomeParcRec = nomeParcRec;
    }
 
@@ -110,6 +119,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNomeParcTransp(String nomeParcTransp) {
+        markAsChanged("NOMEPARCTRANSP", nomeParcTransp);
         this.nomeParcTransp = nomeParcTransp;
    }
 
@@ -118,6 +128,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNsu(String nsu) {
+        markAsChanged("NSU", nsu);
         this.nsu = nsu;
    }
 
@@ -126,6 +137,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setNumProtoc(String numProtoc) {
+        markAsChanged("NUMPROTOC", numProtoc);
         this.numProtoc = numProtoc;
    }
 
@@ -134,6 +146,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setSeqEvento(BigDecimal seqEvento) {
+        markAsChanged("SEQEVENTO", seqEvento);
         this.seqEvento = seqEvento;
    }
 
@@ -142,6 +155,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setSituacaoCte(String situacaoCte) {
+        markAsChanged("SITUACAOCTE", situacaoCte);
         this.situacaoCte = situacaoCte;
    }
 
@@ -150,6 +164,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setTpAmb(String tpAmb) {
+        markAsChanged("TPAMB", tpAmb);
         this.tpAmb = tpAmb;
    }
 
@@ -158,6 +173,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setTpDoc(BigDecimal tpDoc) {
+        markAsChanged("TPDOC", tpDoc);
         this.tpDoc = tpDoc;
    }
 
@@ -166,6 +182,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setTpEvento(BigDecimal tpEvento) {
+        markAsChanged("TPEVENTO", tpEvento);
         this.tpEvento = tpEvento;
    }
 
@@ -174,6 +191,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setXmlEvento(char[] xmlEvento) {
+        markAsChanged("XMLEVENTO", xmlEvento);
         this.xmlEvento = xmlEvento;
    }
 
@@ -182,6 +200,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setMotivoNdDigital(String motivoNdDigital) {
+        markAsChanged("MOTIVONDDIGITAL", motivoNdDigital);
         this.motivoNdDigital = motivoNdDigital;
    }
 
@@ -190,6 +209,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -198,6 +218,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setSituacaoNfe(String situacaoNfe) {
+        markAsChanged("SITUACAONFE", situacaoNfe);
         this.situacaoNfe = situacaoNfe;
    }
 
@@ -206,6 +227,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -214,6 +236,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -222,6 +245,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -230,6 +254,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setSituacaoMde(String situacaoMde) {
+        markAsChanged("SITUACAOMDE", situacaoMde);
         this.situacaoMde = situacaoMde;
    }
 
@@ -238,6 +263,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    }
 
    public void setChaveAcesso(String chaveAcesso) {
+        markAsChanged("CHAVEACESSO", chaveAcesso);
         this.chaveAcesso = chaveAcesso;
    }
 
@@ -253,6 +279,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
 
    @Override
    public LogRegistrosMDe fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descRevento = vo.asString("DESCREVENTO");
         this.dhEvento = vo.asTimestamp("DHEVENTO");

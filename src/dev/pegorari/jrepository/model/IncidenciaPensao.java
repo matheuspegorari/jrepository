@@ -18,6 +18,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -26,6 +27,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -34,6 +36,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setCodEvento(BigDecimal codEvento) {
+        markAsChanged("CODEVENTO", codEvento);
         this.codEvento = codEvento;
    }
 
@@ -42,6 +45,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -50,6 +54,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -58,6 +63,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    }
 
    public void setOrigPens(String origPens) {
+        markAsChanged("ORIGPENS", origPens);
         this.origPens = origPens;
    }
 
@@ -73,6 +79,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
 
    @Override
    public IncidenciaPensao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");

@@ -18,6 +18,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -26,6 +27,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -34,6 +36,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -42,6 +45,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -50,6 +54,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setNuTransferencia(BigDecimal nuTransferencia) {
+        markAsChanged("NUTRANSFERENCIA", nuTransferencia);
         this.nuTransferencia = nuTransferencia;
    }
 
@@ -58,6 +63,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -73,6 +79,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
 
    @Override
    public TransferenciaWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");

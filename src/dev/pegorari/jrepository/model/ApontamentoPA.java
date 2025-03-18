@@ -22,6 +22,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -30,6 +31,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setQtdFatsp(BigDecimal qtdFatsp) {
+        markAsChanged("QTDFATSP", qtdFatsp);
         this.qtdFatsp = qtdFatsp;
    }
 
@@ -38,6 +40,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setQtdApontada(BigDecimal qtdApontada) {
+        markAsChanged("QTDAPONTADA", qtdApontada);
         this.qtdApontada = qtdApontada;
    }
 
@@ -46,6 +49,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -54,6 +58,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setCodProdpa(BigDecimal codProdpa) {
+        markAsChanged("CODPRODPA", codProdpa);
         this.codProdpa = codProdpa;
    }
 
@@ -62,6 +67,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setSeqApa(BigDecimal seqApa) {
+        markAsChanged("SEQAPA", seqApa);
         this.seqApa = seqApa;
    }
 
@@ -70,6 +76,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setQtdFat(BigDecimal qtdFat) {
+        markAsChanged("QTDFAT", qtdFat);
         this.qtdFat = qtdFat;
    }
 
@@ -78,6 +85,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setNuApo(BigDecimal nuApo) {
+        markAsChanged("NUAPO", nuApo);
         this.nuApo = nuApo;
    }
 
@@ -86,6 +94,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setCodMpe(BigDecimal codMpe) {
+        markAsChanged("CODMPE", codMpe);
         this.codMpe = codMpe;
    }
 
@@ -94,6 +103,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
+        markAsChanged("QTDPERDA", qtdPerda);
         this.qtdPerda = qtdPerda;
    }
 
@@ -102,6 +112,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    }
 
    public void setQtdMpe(BigDecimal qtdMpe) {
+        markAsChanged("QTDMPE", qtdMpe);
         this.qtdMpe = qtdMpe;
    }
 
@@ -117,6 +128,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
 
    @Override
    public ApontamentoPA fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.qtdFatsp = vo.asBigDecimal("QTDFATSP");
         this.qtdApontada = vo.asBigDecimal("QTDAPONTADA");

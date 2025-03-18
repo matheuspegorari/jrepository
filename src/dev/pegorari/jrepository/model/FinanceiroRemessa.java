@@ -13,6 +13,7 @@ public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> 
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -21,6 +22,7 @@ public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> 
    }
 
    public void setNuRem(BigDecimal nuRem) {
+        markAsChanged("NUREM", nuRem);
         this.nuRem = nuRem;
    }
 
@@ -36,6 +38,7 @@ public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> 
 
    @Override
    public FinanceiroRemessa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuRem = vo.asBigDecimal("NUREM");
         return this;

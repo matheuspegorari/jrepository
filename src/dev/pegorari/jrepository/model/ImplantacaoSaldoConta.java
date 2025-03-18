@@ -126,6 +126,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodAgeBenef(BigDecimal codAgeBenef) {
+        markAsChanged("CODAGEBENEF", codAgeBenef);
         this.codAgeBenef = codAgeBenef;
    }
 
@@ -134,6 +135,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaBenef(BigDecimal codCtaBenef) {
+        markAsChanged("CODCTABENEF", codCtaBenef);
         this.codCtaBenef = codCtaBenef;
    }
 
@@ -142,6 +144,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setIdCliente(String idCliente) {
+        markAsChanged("IDCLIENTE", idCliente);
         this.idCliente = idCliente;
    }
 
@@ -150,6 +153,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSaldoReal(BigDecimal saldoReal) {
+        markAsChanged("SALDOREAL", saldoReal);
         this.saldoReal = saldoReal;
    }
 
@@ -158,6 +162,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSeqRem(BigDecimal seqRem) {
+        markAsChanged("SEQREM", seqRem);
         this.seqRem = seqRem;
    }
 
@@ -166,6 +171,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSeqRem2(BigDecimal seqRem2) {
+        markAsChanged("SEQREM2", seqRem2);
         this.seqRem2 = seqRem2;
    }
 
@@ -174,6 +180,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTaxa(BigDecimal taxa) {
+        markAsChanged("TAXA", taxa);
         this.taxa = taxa;
    }
 
@@ -182,6 +189,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipoImpressora(String tipoImpressora) {
+        markAsChanged("TIPOIMPRESSORA", tipoImpressora);
         this.tipoImpressora = tipoImpressora;
    }
 
@@ -190,6 +198,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setVlrMinBoleta(BigDecimal vlrMinBoleta) {
+        markAsChanged("VLRMINBOLETA", vlrMinBoleta);
         this.vlrMinBoleta = vlrMinBoleta;
    }
 
@@ -198,6 +207,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setZerarAut(String zerarAut) {
+        markAsChanged("ZERARAUT", zerarAut);
         this.zerarAut = zerarAut;
    }
 
@@ -206,6 +216,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNumCliente(BigDecimal numCliente) {
+        markAsChanged("NUMCLIENTE", numCliente);
         this.numCliente = numCliente;
    }
 
@@ -214,6 +225,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setBjbbaiBolPag(String bjbbaiBolPag) {
+        markAsChanged("BJBBAIBOLPAG", bjbbaiBolPag);
         this.bjbbaiBolPag = bjbbaiBolPag;
    }
 
@@ -222,6 +234,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaBaixa(BigDecimal codCtaBaixa) {
+        markAsChanged("CODCTABAIXA", codCtaBaixa);
         this.codCtaBaixa = codCtaBaixa;
    }
 
@@ -230,6 +243,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodLancBaixaBolRap(BigDecimal codLancBaixaBolRap) {
+        markAsChanged("CODLANCBAIXABOLRAP", codLancBaixaBolRap);
         this.codLancBaixaBolRap = codLancBaixaBolRap;
    }
 
@@ -238,6 +252,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodTipOperBaixaBolRap(BigDecimal codTipOperBaixaBolRap) {
+        markAsChanged("CODTIPOPERBAIXABOLRAP", codTipOperBaixaBolRap);
         this.codTipOperBaixaBolRap = codTipOperBaixaBolRap;
    }
 
@@ -246,6 +261,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setPjbChave(String pjbChave) {
+        markAsChanged("PJBCHAVE", pjbChave);
         this.pjbChave = pjbChave;
    }
 
@@ -254,6 +270,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setPjbConBaixCred(String pjbConBaixCred) {
+        markAsChanged("PJBCONBAIXCRED", pjbConBaixCred);
         this.pjbConBaixCred = pjbConBaixCred;
    }
 
@@ -262,6 +279,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setPjbCred(String pjbCred) {
+        markAsChanged("PJBCRED", pjbCred);
         this.pjbCred = pjbCred;
    }
 
@@ -270,6 +288,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipoBoleto(String tipoBoleto) {
+        markAsChanged("TIPOBOLETO", tipoBoleto);
         this.tipoBoleto = tipoBoleto;
    }
 
@@ -278,6 +297,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNuContrato(BigDecimal nuContrato) {
+        markAsChanged("NUCONTRATO", nuContrato);
         this.nuContrato = nuContrato;
    }
 
@@ -286,6 +306,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCampoLivre(String campoLivre) {
+        markAsChanged("CAMPOLIVRE", campoLivre);
         this.campoLivre = campoLivre;
    }
 
@@ -294,6 +315,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRestoSubst2(BigDecimal restoSubst2) {
+        markAsChanged("RESTOSUBST2", restoSubst2);
         this.restoSubst2 = restoSubst2;
    }
 
@@ -302,6 +324,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDigitoSubst1(String digitoSubst1) {
+        markAsChanged("DIGITOSUBST1", digitoSubst1);
         this.digitoSubst1 = digitoSubst1;
    }
 
@@ -310,6 +333,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRestoSubst3(BigDecimal restoSubst3) {
+        markAsChanged("RESTOSUBST3", restoSubst3);
         this.restoSubst3 = restoSubst3;
    }
 
@@ -318,6 +342,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRestoSubst1(BigDecimal restoSubst1) {
+        markAsChanged("RESTOSUBST1", restoSubst1);
         this.restoSubst1 = restoSubst1;
    }
 
@@ -326,6 +351,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSubRestModulo(String subRestModulo) {
+        markAsChanged("SUBRESTMODULO", subRestModulo);
         this.subRestModulo = subRestModulo;
    }
 
@@ -334,6 +360,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipMultipSoma(String tipMultipSoma) {
+        markAsChanged("TIPMULTIPSOMA", tipMultipSoma);
         this.tipMultipSoma = tipMultipSoma;
    }
 
@@ -342,6 +369,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setAtiva(String ativa) {
+        markAsChanged("ATIVA", ativa);
         this.ativa = ativa;
    }
 
@@ -350,6 +378,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCarteira(BigDecimal carteira) {
+        markAsChanged("CARTEIRA", carteira);
         this.carteira = carteira;
    }
 
@@ -358,6 +387,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCategLanChq(BigDecimal categLanChq) {
+        markAsChanged("CATEGLANCHQ", categLanChq);
         this.categLanChq = categLanChq;
    }
 
@@ -366,6 +396,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setClasse(String classe) {
+        markAsChanged("CLASSE", classe);
         this.classe = classe;
    }
 
@@ -374,6 +405,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodAge(String codAge) {
+        markAsChanged("CODAGE", codAge);
         this.codAge = codAge;
    }
 
@@ -382,6 +414,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -390,6 +423,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCorrBco(BigDecimal codCorrBco) {
+        markAsChanged("CODCORRBCO", codCorrBco);
         this.codCorrBco = codCorrBco;
    }
 
@@ -398,6 +432,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaBco(String codCtaBco) {
+        markAsChanged("CODCTABCO", codCtaBco);
         this.codCtaBco = codCtaBco;
    }
 
@@ -406,6 +441,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaBcoInt(BigDecimal codCtaBcoInt) {
+        markAsChanged("CODCTABCOINT", codCtaBcoInt);
         this.codCtaBcoInt = codCtaBcoInt;
    }
 
@@ -414,6 +450,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaBcoIntRem(BigDecimal codCtaBcoIntRem) {
+        markAsChanged("CODCTABCOINTREM", codCtaBcoIntRem);
         this.codCtaBcoIntRem = codCtaBcoIntRem;
    }
 
@@ -422,6 +459,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
+        markAsChanged("CODCTACTB", codCtaCtb);
         this.codCtaCtb = codCtaCtb;
    }
 
@@ -430,6 +468,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -438,6 +477,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -446,6 +486,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodOperExcl(BigDecimal codOperExcl) {
+        markAsChanged("CODOPEREXCL", codOperExcl);
         this.codOperExcl = codOperExcl;
    }
 
@@ -454,6 +495,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -462,6 +504,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -470,6 +513,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCodContaRural(String codContaRural) {
+        markAsChanged("CODCONTARURAL", codContaRural);
         this.codContaRural = codContaRural;
    }
 
@@ -478,6 +522,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setMultipNossoNum(String multipNossoNum) {
+        markAsChanged("MULTIPNOSSONUM", multipNossoNum);
         this.multipNossoNum = multipNossoNum;
    }
 
@@ -486,6 +531,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDigitoSubst3(String digitoSubst3) {
+        markAsChanged("DIGITOSUBST3", digitoSubst3);
         this.digitoSubst3 = digitoSubst3;
    }
 
@@ -494,6 +540,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNossoNumero(String nossoNumero) {
+        markAsChanged("NOSSONUMERO", nossoNumero);
         this.nossoNumero = nossoNumero;
    }
 
@@ -502,6 +549,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipModNossoNum(String tipModNossoNum) {
+        markAsChanged("TIPMODNOSSNUM", tipModNossoNum);
         this.tipModNossoNum = tipModNossoNum;
    }
 
@@ -510,6 +558,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDigitoSubst2(String digitoSubst2) {
+        markAsChanged("DIGITOSUBST2", digitoSubst2);
         this.digitoSubst2 = digitoSubst2;
    }
 
@@ -518,6 +567,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNossoNumAtivo(String nossoNumAtivo) {
+        markAsChanged("NOSSONUMATIVO", nossoNumAtivo);
         this.nossoNumAtivo = nossoNumAtivo;
    }
 
@@ -526,6 +576,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setLinhaDigAtivo(String linhaDigAtivo) {
+        markAsChanged("LINHADIGATIVO", linhaDigAtivo);
         this.linhaDigAtivo = linhaDigAtivo;
    }
 
@@ -534,6 +585,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setConvenio(BigDecimal convenio) {
+        markAsChanged("CONVENIO", convenio);
         this.convenio = convenio;
    }
 
@@ -542,6 +594,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCtaDefEmiBol(String ctaDefEmiBol) {
+        markAsChanged("CTADEFEMIBOL", ctaDefEmiBol);
         this.ctaDefEmiBol = ctaDefEmiBol;
    }
 
@@ -550,6 +603,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setCtaMinBoleta(BigDecimal ctaMinBoleta) {
+        markAsChanged("CTAMINBOLETA", ctaMinBoleta);
         this.ctaMinBoleta = ctaMinBoleta;
    }
 
@@ -558,6 +612,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -566,6 +621,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDiasProt(BigDecimal diasProt) {
+        markAsChanged("DIASPROT", diasProt);
         this.diasProt = diasProt;
    }
 
@@ -574,6 +630,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -582,6 +639,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDtImplant(Timestamp dtImplant) {
+        markAsChanged("DTIMPLANT", dtImplant);
         this.dtImplant = dtImplant;
    }
 
@@ -590,6 +648,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setEmiteBoleta(String emiteBoleta) {
+        markAsChanged("EMITEBOLETA", emiteBoleta);
         this.emiteBoleta = emiteBoleta;
    }
 
@@ -598,6 +657,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setExclusiva(String exclusiva) {
+        markAsChanged("EXCLUSIVA", exclusiva);
         this.exclusiva = exclusiva;
    }
 
@@ -606,6 +666,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setImpBoleta(String impBoleta) {
+        markAsChanged("IMPBOLETA", impBoleta);
         this.impBoleta = impBoleta;
    }
 
@@ -614,6 +675,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setInstrucaoI(BigDecimal instrucaoI) {
+        markAsChanged("INSTRUCAOI", instrucaoI);
         this.instrucaoI = instrucaoI;
    }
 
@@ -622,6 +684,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setInstrucaoII(BigDecimal instrucaoII) {
+        markAsChanged("INSTRUCAOII", instrucaoII);
         this.instrucaoII = instrucaoII;
    }
 
@@ -630,6 +693,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setModalidade(BigDecimal modalidade) {
+        markAsChanged("MODALIDADE", modalidade);
         this.modalidade = modalidade;
    }
 
@@ -638,6 +702,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setModBoleta(BigDecimal modBoleta) {
+        markAsChanged("MODBOLETA", modBoleta);
         this.modBoleta = modBoleta;
    }
 
@@ -646,6 +711,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNumCheq(BigDecimal numCheq) {
+        markAsChanged("NUMCHEQ", numCheq);
         this.numCheq = numCheq;
    }
 
@@ -654,6 +720,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNuRfeModCheqG(BigDecimal nuRfeModCheqG) {
+        markAsChanged("NURFEMODCHEQG", nuRfeModCheqG);
         this.nuRfeModCheqG = nuRfeModCheqG;
    }
 
@@ -662,6 +729,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRemBco(BigDecimal remBco) {
+        markAsChanged("REMBCO", remBco);
         this.remBco = remBco;
    }
 
@@ -670,6 +738,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRemBcoMax(BigDecimal remBcoMax) {
+        markAsChanged("REMBCOMAX", remBcoMax);
         this.remBcoMax = remBcoMax;
    }
 
@@ -678,6 +747,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRemFinal(BigDecimal remFinal) {
+        markAsChanged("REMFINAL", remFinal);
         this.remFinal = remFinal;
    }
 
@@ -686,6 +756,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRemFinal2(BigDecimal remFinal2) {
+        markAsChanged("REMFINAL2", remFinal2);
         this.remFinal2 = remFinal2;
    }
 
@@ -694,6 +765,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSaldoBco(BigDecimal saldoBco) {
+        markAsChanged("SALDOBCO", saldoBco);
         this.saldoBco = saldoBco;
    }
 
@@ -702,6 +774,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setContabilizarDias(String contabilizarDias) {
+        markAsChanged("CONTABILIZARDIAS", contabilizarDias);
         this.contabilizarDias = contabilizarDias;
    }
 
@@ -710,6 +783,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setIdSeqBol(BigDecimal idSeqBol) {
+        markAsChanged("IDSEQBOL", idSeqBol);
         this.idSeqBol = idSeqBol;
    }
 
@@ -718,6 +792,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setInstrucaoNegativacao(BigDecimal instrucaoNegativacao) {
+        markAsChanged("INSTRUCAONEGATIVACAO", instrucaoNegativacao);
         this.instrucaoNegativacao = instrucaoNegativacao;
    }
 
@@ -726,6 +801,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setInstrucaoProtesto(BigDecimal instrucaoProtesto) {
+        markAsChanged("INSTRUCAOPROTESTO", instrucaoProtesto);
         this.instrucaoProtesto = instrucaoProtesto;
    }
 
@@ -734,6 +810,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDesConsLcdPr(String desConsLcdPr) {
+        markAsChanged("DESCONSLCDPR", desConsLcdPr);
         this.desConsLcdPr = desConsLcdPr;
    }
 
@@ -742,6 +819,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNumContaRural(String numContaRural) {
+        markAsChanged("NUMCONTARURAL", numContaRural);
         this.numContaRural = numContaRural;
    }
 
@@ -750,6 +828,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setChavePix(String chavePix) {
+        markAsChanged("CHAVEPIX", chavePix);
         this.chavePix = chavePix;
    }
 
@@ -758,6 +837,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setQtdDiasValPix(BigDecimal qtdDiasValPix) {
+        markAsChanged("QTDDIASVALPIX", qtdDiasValPix);
         this.qtdDiasValPix = qtdDiasValPix;
    }
 
@@ -766,6 +846,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setUrlPix(String urlPix) {
+        markAsChanged("URLPIX", urlPix);
         this.urlPix = urlPix;
    }
 
@@ -774,6 +855,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setChaveApiPix(String chaveApiPix) {
+        markAsChanged("CHAVEAPIPIX", chaveApiPix);
         this.chaveApiPix = chaveApiPix;
    }
 
@@ -782,6 +864,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setConcAutRecebPix(String concAutRecebPix) {
+        markAsChanged("CONCAUTRECEBPIX", concAutRecebPix);
         this.concAutRecebPix = concAutRecebPix;
    }
 
@@ -790,6 +873,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setIdCliPix(String idCliPix) {
+        markAsChanged("IDCLIPIX", idCliPix);
         this.idCliPix = idCliPix;
    }
 
@@ -798,6 +882,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setMenAdicPix(String menAdicPix) {
+        markAsChanged("MENADICPIX", menAdicPix);
         this.menAdicPix = menAdicPix;
    }
 
@@ -806,6 +891,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setNuRfeModBoleto(BigDecimal nuRfeModBoleto) {
+        markAsChanged("NURFEMODBOLETO", nuRfeModBoleto);
         this.nuRfeModBoleto = nuRfeModBoleto;
    }
 
@@ -814,6 +900,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setSenCliPix(String senCliPix) {
+        markAsChanged("SENCLIPIX", senCliPix);
         this.senCliPix = senCliPix;
    }
 
@@ -822,6 +909,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTitInfAdicPix(String titInfAdicPix) {
+        markAsChanged("TITINFADICPIX", titInfAdicPix);
         this.titInfAdicPix = titInfAdicPix;
    }
 
@@ -830,6 +918,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setLogoUrl(String logoUrl) {
+        markAsChanged("LOGOURL", logoUrl);
         this.logoUrl = logoUrl;
    }
 
@@ -838,6 +927,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDtEnvioApiBanco(Timestamp dtEnvioApiBanco) {
+        markAsChanged("DTENVIOAPIBANCO", dtEnvioApiBanco);
         this.dtEnvioApiBanco = dtEnvioApiBanco;
    }
 
@@ -846,6 +936,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setAceitaTituloVencido(String aceitaTituloVencido) {
+        markAsChanged("ACEITATITULOVENCIDO", aceitaTituloVencido);
         this.aceitaTituloVencido = aceitaTituloVencido;
    }
 
@@ -854,6 +945,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setApiBaixaAutomatica(String apiBaixaAutomatica) {
+        markAsChanged("APIBAIXAAUTOMATICA", apiBaixaAutomatica);
         this.apiBaixaAutomatica = apiBaixaAutomatica;
    }
 
@@ -862,6 +954,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setApiConciliacaoAutomatica(String apiConciliacaoAutomatica) {
+        markAsChanged("APICONCILIACAOAUTOMATICA", apiConciliacaoAutomatica);
         this.apiConciliacaoAutomatica = apiConciliacaoAutomatica;
    }
 
@@ -870,6 +963,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDataMulta(String dataMulta) {
+        markAsChanged("DATAMULTA", dataMulta);
         this.dataMulta = dataMulta;
    }
 
@@ -878,6 +972,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDiasMulta(BigDecimal diasMulta) {
+        markAsChanged("DIASMULTA", diasMulta);
         this.diasMulta = diasMulta;
    }
 
@@ -886,6 +981,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDiasParaNegativacao(BigDecimal diasParaNegativacao) {
+        markAsChanged("DIASPARANEGATIVACAO", diasParaNegativacao);
         this.diasParaNegativacao = diasParaNegativacao;
    }
 
@@ -894,6 +990,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDiasProtesto(BigDecimal diasProtesto) {
+        markAsChanged("DIASPROTESTO", diasProtesto);
         this.diasProtesto = diasProtesto;
    }
 
@@ -902,6 +999,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDtRegConta(Timestamp dtRegConta) {
+        markAsChanged("DTREGCONTA", dtRegConta);
         this.dtRegConta = dtRegConta;
    }
 
@@ -910,6 +1008,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setIdApiBanco(BigDecimal idApiBanco) {
+        markAsChanged("IDAPIBANCO", idApiBanco);
         this.idApiBanco = idApiBanco;
    }
 
@@ -918,6 +1017,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setIndicadorPix(String indicadorPix) {
+        markAsChanged("INDICADORPIX", indicadorPix);
         this.indicadorPix = indicadorPix;
    }
 
@@ -926,6 +1026,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setOrgaoNegativador(BigDecimal orgaoNegativador) {
+        markAsChanged("ORGAONEGATIVADOR", orgaoNegativador);
         this.orgaoNegativador = orgaoNegativador;
    }
 
@@ -934,6 +1035,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRecebimentoDias(BigDecimal recebimentoDias) {
+        markAsChanged("RECEBIMENTODIAS", recebimentoDias);
         this.recebimentoDias = recebimentoDias;
    }
 
@@ -942,6 +1044,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setRecebimentoParcial(String recebimentoParcial) {
+        markAsChanged("RECEBIMENTOPARCIAL", recebimentoParcial);
         this.recebimentoParcial = recebimentoParcial;
    }
 
@@ -950,6 +1053,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setStatusApi(String statusApi) {
+        markAsChanged("STATUSAPI", statusApi);
         this.statusApi = statusApi;
    }
 
@@ -958,6 +1062,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipoApiBoleto(String tipoApiBoleto) {
+        markAsChanged("TIPOAPIBOLETO", tipoApiBoleto);
         this.tipoApiBoleto = tipoApiBoleto;
    }
 
@@ -966,6 +1071,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipoJuros(String tipoJuros) {
+        markAsChanged("TIPOJUROS", tipoJuros);
         this.tipoJuros = tipoJuros;
    }
 
@@ -974,6 +1080,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setTipoMulta(String tipoMulta) {
+        markAsChanged("TIPOMULTA", tipoMulta);
         this.tipoMulta = tipoMulta;
    }
 
@@ -982,6 +1089,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setValorJuros(BigDecimal valorJuros) {
+        markAsChanged("VALORJUROS", valorJuros);
         this.valorJuros = valorJuros;
    }
 
@@ -990,6 +1098,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setValorMulta(BigDecimal valorMulta) {
+        markAsChanged("VALORMULTA", valorMulta);
         this.valorMulta = valorMulta;
    }
 
@@ -998,6 +1107,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setVariacao(BigDecimal variacao) {
+        markAsChanged("VARIACAO", variacao);
         this.variacao = variacao;
    }
 
@@ -1006,6 +1116,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setUtilizaPixPdv(String utilizaPixPdv) {
+        markAsChanged("UTILIZAPIXPDV", utilizaPixPdv);
         this.utilizaPixPdv = utilizaPixPdv;
    }
 
@@ -1014,6 +1125,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDtDescRedConta(Timestamp dtDescRedConta) {
+        markAsChanged("DTDESCREDCONTA", dtDescRedConta);
         this.dtDescRedConta = dtDescRedConta;
    }
 
@@ -1022,6 +1134,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDataJuro(String dataJuro) {
+        markAsChanged("DATAJURO", dataJuro);
         this.dataJuro = dataJuro;
    }
 
@@ -1030,6 +1143,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
    }
 
    public void setDiasJuro(BigDecimal diasJuro) {
+        markAsChanged("DIASJURO", diasJuro);
         this.diasJuro = diasJuro;
    }
 
@@ -1045,6 +1159,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
 
    @Override
    public ImplantacaoSaldoConta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codAgeBenef = vo.asBigDecimal("CODAGEBENEF");
         this.codCtaBenef = vo.asBigDecimal("CODCTABENEF");
         this.idCliente = vo.asString("IDCLIENTE");

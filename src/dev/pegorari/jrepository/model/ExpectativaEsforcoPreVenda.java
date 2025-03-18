@@ -14,6 +14,7 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
    }
 
    public void setCodEpv(BigDecimal codEpv) {
+        markAsChanged("CODEPV", codEpv);
         this.codEpv = codEpv;
    }
 
@@ -22,6 +23,7 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -30,6 +32,7 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
    }
 
    public void setPercPro(BigDecimal percPro) {
+        markAsChanged("PERCPRO", percPro);
         this.percPro = percPro;
    }
 
@@ -45,6 +48,7 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
 
    @Override
    public ExpectativaEsforcoPreVenda fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEpv = vo.asBigDecimal("CODEPV");
         this.descricao = vo.asString("DESCRICAO");
         this.percPro = vo.asBigDecimal("PERCPRO");

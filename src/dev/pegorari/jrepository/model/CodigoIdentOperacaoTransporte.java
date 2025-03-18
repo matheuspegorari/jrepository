@@ -15,6 +15,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -23,6 +24,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
    }
 
    public void setCiot(String ciot) {
+        markAsChanged("CIOT", ciot);
         this.ciot = ciot;
    }
 
@@ -31,6 +33,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -39,6 +42,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
    }
 
    public void setCodParCciot(BigDecimal codParCciot) {
+        markAsChanged("CODPARCCIOT", codParCciot);
         this.codParCciot = codParCciot;
    }
 
@@ -54,6 +58,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
 
    @Override
    public CodigoIdentOperacaoTransporte fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.ciot = vo.asString("CIOT");
         this.nuViag = vo.asBigDecimal("NUVIAG");

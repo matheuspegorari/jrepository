@@ -28,6 +28,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -36,6 +37,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
+        markAsChanged("CODUSUCONF", codUsuConf);
         this.codUsuConf = codUsuConf;
    }
 
@@ -44,6 +46,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setDhFinConf(Timestamp dhFinConf) {
+        markAsChanged("DHFINCONF", dhFinConf);
         this.dhFinConf = dhFinConf;
    }
 
@@ -52,6 +55,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setDhImpressao(Timestamp dhImpressao) {
+        markAsChanged("DHIMPRESSAO", dhImpressao);
         this.dhImpressao = dhImpressao;
    }
 
@@ -60,6 +64,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -68,6 +73,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setDhIniConf(Timestamp dhIniConf) {
+        markAsChanged("DHINICONF", dhIniConf);
         this.dhIniConf = dhIniConf;
    }
 
@@ -76,6 +82,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setExigeConf(String exigeConf) {
+        markAsChanged("EXIGECONF", exigeConf);
         this.exigeConf = exigeConf;
    }
 
@@ -84,6 +91,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setIdRev(BigDecimal idRev) {
+        markAsChanged("IDREV", idRev);
         this.idRev = idRev;
    }
 
@@ -92,6 +100,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -100,6 +109,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -108,6 +118,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setSeqEtiqueta(BigDecimal seqEtiqueta) {
+        markAsChanged("SEQETIQUETA", seqEtiqueta);
         this.seqEtiqueta = seqEtiqueta;
    }
 
@@ -116,6 +127,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -124,6 +136,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setNomeImpressora(String nomeImpressora) {
+        markAsChanged("NOMEIMPRESSORA", nomeImpressora);
         this.nomeImpressora = nomeImpressora;
    }
 
@@ -132,6 +145,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setTotVolumes(BigDecimal totVolumes) {
+        markAsChanged("TOTVOLUMES", totVolumes);
         this.totVolumes = totVolumes;
    }
 
@@ -140,6 +154,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -148,6 +163,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    }
 
    public void setDescrProd(String descrProd) {
+        markAsChanged("DESCRPROD", descrProd);
         this.descrProd = descrProd;
    }
 
@@ -163,6 +179,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
 
    @Override
    public RegistroEtiquetaVolume fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.peso = vo.asBigDecimal("PESO");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
         this.dhFinConf = vo.asTimestamp("DHFINCONF");

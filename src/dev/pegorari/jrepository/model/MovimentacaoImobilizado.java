@@ -26,6 +26,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setCodBem(String codBem) {
+        markAsChanged("CODBEM", codBem);
         this.codBem = codBem;
    }
 
@@ -34,6 +35,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -42,6 +44,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -50,6 +53,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -58,6 +62,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -66,6 +71,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setDtMovto(Timestamp dtMovto) {
+        markAsChanged("DTMOVTO", dtMovto);
         this.dtMovto = dtMovto;
    }
 
@@ -74,6 +80,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setNumLanc(BigDecimal numLanc) {
+        markAsChanged("NUMLANC", numLanc);
         this.numLanc = numLanc;
    }
 
@@ -82,6 +89,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setNumLote(BigDecimal numLote) {
+        markAsChanged("NUMLOTE", numLote);
         this.numLote = numLote;
    }
 
@@ -90,6 +98,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setReferencia(Timestamp referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -98,6 +107,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -106,6 +116,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -114,6 +125,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setTipo(BigDecimal tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -122,6 +134,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -130,6 +143,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
    }
 
    public void setVlrDep(BigDecimal vlrDep) {
+        markAsChanged("VLRDEP", vlrDep);
         this.vlrDep = vlrDep;
    }
 
@@ -145,6 +159,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
 
    @Override
    public MovimentacaoImobilizado fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codBem = vo.asString("CODBEM");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codDep = vo.asBigDecimal("CODDEP");

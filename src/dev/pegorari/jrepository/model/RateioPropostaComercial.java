@@ -23,6 +23,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setChave(BigDecimal chave) {
+        markAsChanged("CHAVE", chave);
         this.chave = chave;
    }
 
@@ -31,6 +32,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -39,6 +41,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -47,6 +50,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
+        markAsChanged("NUPROJETO", nuProjeto);
         this.nuProjeto = nuProjeto;
    }
 
@@ -55,6 +59,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setPercRateio(BigDecimal percRateio) {
+        markAsChanged("PERCRATEIO", percRateio);
         this.percRateio = percRateio;
    }
 
@@ -63,6 +68,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setRateado(String rateado) {
+        markAsChanged("RATEADO", rateado);
         this.rateado = rateado;
    }
 
@@ -71,6 +77,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setSeqItem(BigDecimal seqItem) {
+        markAsChanged("SEQITEM", seqItem);
         this.seqItem = seqItem;
    }
 
@@ -79,6 +86,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setSeqKit(BigDecimal seqKit) {
+        markAsChanged("SEQKIT", seqKit);
         this.seqKit = seqKit;
    }
 
@@ -87,6 +95,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -95,6 +104,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
+        markAsChanged("VERSAOPROJETO", versaoProjeto);
         this.versaoProjeto = versaoProjeto;
    }
 
@@ -103,6 +113,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    }
 
    public void setVlrRateio(BigDecimal vlrRateio) {
+        markAsChanged("VLRRATEIO", vlrRateio);
         this.vlrRateio = vlrRateio;
    }
 
@@ -118,6 +129,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
 
    @Override
    public RateioPropostaComercial fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

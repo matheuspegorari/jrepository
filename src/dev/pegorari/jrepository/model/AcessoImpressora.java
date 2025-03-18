@@ -16,6 +16,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    }
 
    public void setCodigo(BigDecimal codigo) {
+        markAsChanged("CODIGO", codigo);
         this.codigo = codigo;
    }
 
@@ -24,6 +25,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -32,6 +34,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    }
 
    public void setNuPrinter(BigDecimal nuPrinter) {
+        markAsChanged("NUPRINTER", nuPrinter);
         this.nuPrinter = nuPrinter;
    }
 
@@ -40,6 +43,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    }
 
    public void setNuSvp(BigDecimal nuSvp) {
+        markAsChanged("NUSVP", nuSvp);
         this.nuSvp = nuSvp;
    }
 
@@ -48,6 +52,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -63,6 +68,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
 
    @Override
    public AcessoImpressora fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.nome = vo.asString("NOME");
         this.nuPrinter = vo.asBigDecimal("NUPRINTER");

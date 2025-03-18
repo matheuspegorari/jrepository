@@ -14,6 +14,7 @@ public class ExcecoesGruposLgpd extends AbstractSankhyaEntity<ExcecoesGruposLgpd
    }
 
    public void setCodCla(BigDecimal codCla) {
+        markAsChanged("CODCLA", codCla);
         this.codCla = codCla;
    }
 
@@ -22,6 +23,7 @@ public class ExcecoesGruposLgpd extends AbstractSankhyaEntity<ExcecoesGruposLgpd
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
+        markAsChanged("CODGRUPO", codGrupo);
         this.codGrupo = codGrupo;
    }
 
@@ -30,6 +32,7 @@ public class ExcecoesGruposLgpd extends AbstractSankhyaEntity<ExcecoesGruposLgpd
    }
 
    public void setTipoVisu(String tipoVisu) {
+        markAsChanged("TIPOVISU", tipoVisu);
         this.tipoVisu = tipoVisu;
    }
 
@@ -45,6 +48,7 @@ public class ExcecoesGruposLgpd extends AbstractSankhyaEntity<ExcecoesGruposLgpd
 
    @Override
    public ExcecoesGruposLgpd fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.tipoVisu = vo.asString("TIPOVISU");

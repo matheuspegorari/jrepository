@@ -30,6 +30,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -38,6 +39,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setCopies(BigDecimal copies) {
+        markAsChanged("COPIES", copies);
         this.copies = copies;
    }
 
@@ -46,6 +48,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setDescription(String description) {
+        markAsChanged("DESCRIPTION", description);
         this.description = description;
    }
 
@@ -54,6 +57,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -62,6 +66,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setDhUltEnv(Timestamp dhUltEnv) {
+        markAsChanged("DHULTENV", dhUltEnv);
         this.dhUltEnv = dhUltEnv;
    }
 
@@ -70,6 +75,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setFileName(String fileName) {
+        markAsChanged("FILENAME", fileName);
         this.fileName = fileName;
    }
 
@@ -78,6 +84,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setIdDoc(String idDoc) {
+        markAsChanged("IDDOC", idDoc);
         this.idDoc = idDoc;
    }
 
@@ -86,6 +93,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setIdGrupoJob(String idGrupoJob) {
+        markAsChanged("IDGRUPOJOB", idGrupoJob);
         this.idGrupoJob = idGrupoJob;
    }
 
@@ -94,6 +102,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setJobStatus(String jobStatus) {
+        markAsChanged("JOBSTATUS", jobStatus);
         this.jobStatus = jobStatus;
    }
 
@@ -102,6 +111,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setMimeType(String mimeType) {
+        markAsChanged("MIMETYPE", mimeType);
         this.mimeType = mimeType;
    }
 
@@ -110,6 +120,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setMsgErro(String msgErro) {
+        markAsChanged("MSGERRO", msgErro);
         this.msgErro = msgErro;
    }
 
@@ -118,6 +129,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setNuJpr(BigDecimal nuJpr) {
+        markAsChanged("NUJPR", nuJpr);
         this.nuJpr = nuJpr;
    }
 
@@ -126,6 +138,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setNumTentativas(BigDecimal numTentativas) {
+        markAsChanged("NUMTENTATIVAS", numTentativas);
         this.numTentativas = numTentativas;
    }
 
@@ -134,6 +147,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setOriginalPrinter(String originalPrinter) {
+        markAsChanged("ORIGINALPRINTER", originalPrinter);
         this.originalPrinter = originalPrinter;
    }
 
@@ -142,6 +156,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setPrinterUri(String printerUri) {
+        markAsChanged("PRINTERURI", printerUri);
         this.printerUri = printerUri;
    }
 
@@ -150,6 +165,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setPrintServerUri(String printServerUri) {
+        markAsChanged("PRINTSERVERURI", printServerUri);
         this.printServerUri = printServerUri;
    }
 
@@ -158,6 +174,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setTipoDoc(String tipoDoc) {
+        markAsChanged("TIPODOC", tipoDoc);
         this.tipoDoc = tipoDoc;
    }
 
@@ -166,6 +183,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
    }
 
    public void setJobId(String jobId) {
+        markAsChanged("JOBID", jobId);
         this.jobId = jobId;
    }
 
@@ -181,6 +199,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
 
    @Override
    public TrabalhoImpressao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.copies = vo.asBigDecimal("COPIES");
         this.description = vo.asString("DESCRIPTION");

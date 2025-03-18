@@ -18,6 +18,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -26,6 +27,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
+        markAsChanged("DHULTTENTA", dhUltTenta);
         this.dhUltTenta = dhUltTenta;
    }
 
@@ -34,6 +36,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setNumLote(BigDecimal numLote) {
+        markAsChanged("NUMLOTE", numLote);
         this.numLote = numLote;
    }
 
@@ -42,6 +45,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -50,6 +54,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setQtdTentFat(BigDecimal qtdTentFat) {
+        markAsChanged("QTDTENTFAT", qtdTentFat);
         this.qtdTentFat = qtdTentFat;
    }
 
@@ -58,6 +63,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -73,6 +79,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
 
    @Override
    public ResumoLoteFaturamento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.numLote = vo.asBigDecimal("NUMLOTE");

@@ -19,6 +19,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setDefStatusExec(String defStatusExec) {
+        markAsChanged("DEFSTATUSEXEC", defStatusExec);
         this.defStatusExec = defStatusExec;
    }
 
@@ -27,6 +28,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setExpCondicao(String expCondicao) {
+        markAsChanged("EXPCONDICAO", expCondicao);
         this.expCondicao = expCondicao;
    }
 
@@ -35,6 +37,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -43,6 +46,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setIdeFxDest(BigDecimal ideFxDest) {
+        markAsChanged("IDEFXDEST", ideFxDest);
         this.ideFxDest = ideFxDest;
    }
 
@@ -51,6 +55,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setIdeFxOrig(BigDecimal ideFxOrig) {
+        markAsChanged("IDEFXORIG", ideFxOrig);
         this.ideFxOrig = ideFxOrig;
    }
 
@@ -59,6 +64,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setOrdemAval(BigDecimal ordemAval) {
+        markAsChanged("ORDEMAVAL", ordemAval);
         this.ordemAval = ordemAval;
    }
 
@@ -67,6 +73,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setPadrao(String padrao) {
+        markAsChanged("PADRAO", padrao);
         this.padrao = padrao;
    }
 
@@ -75,6 +82,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    }
 
    public void setPrioritario(String prioritario) {
+        markAsChanged("PRIORITARIO", prioritario);
         this.prioritario = prioritario;
    }
 
@@ -90,6 +98,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
 
    @Override
    public TransicaoFluxo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.defStatusExec = vo.asString("DEFSTATUSEXEC");
         this.expCondicao = vo.asString("EXPCONDICAO");
         this.ideFx = vo.asBigDecimal("IDEFX");

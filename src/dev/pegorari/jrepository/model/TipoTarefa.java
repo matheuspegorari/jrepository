@@ -13,6 +13,7 @@ public class TipoTarefa extends AbstractSankhyaEntity<TipoTarefa> {
    }
 
    public void setCodTarefa(BigDecimal codTarefa) {
+        markAsChanged("CODTAREFA", codTarefa);
         this.codTarefa = codTarefa;
    }
 
@@ -21,6 +22,7 @@ public class TipoTarefa extends AbstractSankhyaEntity<TipoTarefa> {
    }
 
    public void setDescTarefa(String descTarefa) {
+        markAsChanged("DESCRTAREFA", descTarefa);
         this.descTarefa = descTarefa;
    }
 
@@ -36,6 +38,7 @@ public class TipoTarefa extends AbstractSankhyaEntity<TipoTarefa> {
 
    @Override
    public TipoTarefa fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
         this.descTarefa = vo.asString("DESCRTAREFA");
         return this;

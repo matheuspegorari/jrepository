@@ -21,6 +21,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -29,6 +30,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -37,6 +39,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setCodOat(BigDecimal codOat) {
+        markAsChanged("CODOAT", codOat);
         this.codOat = codOat;
    }
 
@@ -45,6 +48,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setCodOatPai(BigDecimal codOatPai) {
+        markAsChanged("CODOATPAI", codOatPai);
         this.codOatPai = codOatPai;
    }
 
@@ -53,6 +57,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -61,6 +66,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setDescOat(String descOat) {
+        markAsChanged("DESCROAT", descOat);
         this.descOat = descOat;
    }
 
@@ -69,6 +75,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -77,6 +84,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -85,6 +93,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -100,6 +109,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
 
    @Override
    public OrigemAtendimento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codOat = vo.asBigDecimal("CODOAT");

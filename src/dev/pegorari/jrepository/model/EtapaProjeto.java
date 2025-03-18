@@ -36,6 +36,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setChaveImp(BigDecimal chaveImp) {
+        markAsChanged("CHAVEIMP", chaveImp);
         this.chaveImp = chaveImp;
    }
 
@@ -44,6 +45,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -52,6 +54,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setConcluida(String concluida) {
+        markAsChanged("CONCLUIDA", concluida);
         this.concluida = concluida;
    }
 
@@ -60,6 +63,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setConclusaoAutomatica(String conclusaoAutomatica) {
+        markAsChanged("CONCLUSAOAUTOMATICA", conclusaoAutomatica);
         this.conclusaoAutomatica = conclusaoAutomatica;
    }
 
@@ -68,6 +72,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -76,6 +81,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setDtCedOfImpPrev(Timestamp dtCedOfImpPrev) {
+        markAsChanged("DTCEDOFIMPREV", dtCedOfImpPrev);
         this.dtCedOfImpPrev = dtCedOfImpPrev;
    }
 
@@ -84,6 +90,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setDtCedOiNiPrev(Timestamp dtCedOiNiPrev) {
+        markAsChanged("DTCEDOINIPREV", dtCedOiNiPrev);
         this.dtCedOiNiPrev = dtCedOiNiPrev;
    }
 
@@ -92,6 +99,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setDtTarDefImpPrev(Timestamp dtTarDefImpPrev) {
+        markAsChanged("DTTARDEFIMPREV", dtTarDefImpPrev);
         this.dtTarDefImpPrev = dtTarDefImpPrev;
    }
 
@@ -100,6 +108,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setDtTarDeiNiPrev(Timestamp dtTarDeiNiPrev) {
+        markAsChanged("DTTARDEINIPREV", dtTarDeiNiPrev);
         this.dtTarDeiNiPrev = dtTarDeiNiPrev;
    }
 
@@ -108,6 +117,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setExigeReq(String exigeReq) {
+        markAsChanged("EXIGEREQ", exigeReq);
         this.exigeReq = exigeReq;
    }
 
@@ -116,6 +126,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setNuFap(BigDecimal nuFap) {
+        markAsChanged("NUFAP", nuFap);
         this.nuFap = nuFap;
    }
 
@@ -124,6 +135,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setNumEtapa(BigDecimal numEtapa) {
+        markAsChanged("NUMETAPA", numEtapa);
         this.numEtapa = numEtapa;
    }
 
@@ -132,6 +144,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setNumEtapaPai(BigDecimal numEtapaPai) {
+        markAsChanged("NUMETAPAPAI", numEtapaPai);
         this.numEtapaPai = numEtapaPai;
    }
 
@@ -140,6 +153,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setNumSeq(BigDecimal numSeq) {
+        markAsChanged("NUMSEQ", numSeq);
         this.numSeq = numSeq;
    }
 
@@ -148,6 +162,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -156,6 +171,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setSuplementa(String suplementa) {
+        markAsChanged("SUPLEMENTA", suplementa);
         this.suplementa = suplementa;
    }
 
@@ -164,6 +180,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setSuplementado(String suplementado) {
+        markAsChanged("SUPLEMENTADO", suplementado);
         this.suplementado = suplementado;
    }
 
@@ -172,6 +189,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setTipValor(String tipValor) {
+        markAsChanged("TIPVALOR", tipValor);
         this.tipValor = tipValor;
    }
 
@@ -180,6 +198,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -188,6 +207,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setVlrSuplementa(BigDecimal vlrSuplementa) {
+        markAsChanged("VLRSUPLEMENTA", vlrSuplementa);
         this.vlrSuplementa = vlrSuplementa;
    }
 
@@ -196,6 +216,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setVlrSuplementado(BigDecimal vlrSuplementado) {
+        markAsChanged("VLRSUPLEMENTADO", vlrSuplementado);
         this.vlrSuplementado = vlrSuplementado;
    }
 
@@ -204,6 +225,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setVlrSuplementadoRea(BigDecimal vlrSuplementadoRea) {
+        markAsChanged("VLRSUPLEMENTADOREA", vlrSuplementadoRea);
         this.vlrSuplementadoRea = vlrSuplementadoRea;
    }
 
@@ -212,6 +234,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setVlrSuplementaRea(BigDecimal vlrSuplementaRea) {
+        markAsChanged("VLRSUPLEMENTAREA", vlrSuplementaRea);
         this.vlrSuplementaRea = vlrSuplementaRea;
    }
 
@@ -220,6 +243,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
    }
 
    public void setNumModelo(BigDecimal numModelo) {
+        markAsChanged("NUMMODELO", numModelo);
         this.numModelo = numModelo;
    }
 
@@ -235,6 +259,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
 
    @Override
    public EtapaProjeto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveImp = vo.asBigDecimal("CHAVEIMP");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.concluida = vo.asString("CONCLUIDA");

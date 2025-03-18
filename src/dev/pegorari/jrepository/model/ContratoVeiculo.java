@@ -23,6 +23,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setCodServ(BigDecimal codServ) {
+        markAsChanged("CODSERV", codServ);
         this.codServ = codServ;
    }
 
@@ -31,6 +32,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -39,6 +41,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -47,6 +50,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -55,6 +59,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setDtDesinstal(Timestamp dtDesinstal) {
+        markAsChanged("DTDESINSTAL", dtDesinstal);
         this.dtDesinstal = dtDesinstal;
    }
 
@@ -63,6 +68,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setDtInstal(Timestamp dtInstal) {
+        markAsChanged("DTINSTAL", dtInstal);
         this.dtInstal = dtInstal;
    }
 
@@ -71,6 +77,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -79,6 +86,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setNumOsDesinstal(BigDecimal numOsDesinstal) {
+        markAsChanged("NUMOSDESINSTAL", numOsDesinstal);
         this.numOsDesinstal = numOsDesinstal;
    }
 
@@ -87,6 +95,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setNumOsInstal(BigDecimal numOsInstal) {
+        markAsChanged("NUMOSINSTAL", numOsInstal);
         this.numOsInstal = numOsInstal;
    }
 
@@ -95,6 +104,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -103,6 +113,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -118,6 +129,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
 
    @Override
    public ContratoVeiculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codServ = vo.asBigDecimal("CODSERV");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");

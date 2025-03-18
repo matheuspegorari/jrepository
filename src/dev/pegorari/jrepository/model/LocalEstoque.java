@@ -34,6 +34,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setAceitaNovoProd(String aceitaNovoProd) {
+        markAsChanged("ACEITANOVAPROD", aceitaNovoProd);
         this.aceitaNovoProd = aceitaNovoProd;
    }
 
@@ -42,6 +43,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setAnalitico(String analitico) {
+        markAsChanged("ANALITICO", analitico);
         this.analitico = analitico;
    }
 
@@ -50,6 +52,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -58,6 +61,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setCapacidadeProducao(BigDecimal capacidadeProducao) {
+        markAsChanged("CAPACIDADEPRODUCAO", capacidadeProducao);
         this.capacidadeProducao = capacidadeProducao;
    }
 
@@ -66,6 +70,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setCodLocal(BigDecimal codLocal) {
+        markAsChanged("CODLOCAL", codLocal);
         this.codLocal = codLocal;
    }
 
@@ -74,6 +79,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setCodLocalPai(BigDecimal codLocalPai) {
+        markAsChanged("CODLOCALPAI", codLocalPai);
         this.codLocalPai = codLocalPai;
    }
 
@@ -82,6 +88,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -90,6 +97,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setCodTab(BigDecimal codTab) {
+        markAsChanged("CODTAB", codTab);
         this.codTab = codTab;
    }
 
@@ -98,6 +106,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setDescrLocal(String descrLocal) {
+        markAsChanged("DESCRLOCAL", descrLocal);
         this.descrLocal = descrLocal;
    }
 
@@ -106,6 +115,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setDiasProducao(BigDecimal diasProducao) {
+        markAsChanged("DIASPRODUCAO", diasProducao);
         this.diasProducao = diasProducao;
    }
 
@@ -114,6 +124,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setDomingo(String domingo) {
+        markAsChanged("DOMINGO", domingo);
         this.domingo = domingo;
    }
 
@@ -122,6 +133,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setGrau(BigDecimal grau) {
+        markAsChanged("GRAU", grau);
         this.grau = grau;
    }
 
@@ -130,6 +142,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setIncSobreIrf(String incSobreIrf) {
+        markAsChanged("INCSOBREIRF", incSobreIrf);
         this.incSobreIrf = incSobreIrf;
    }
 
@@ -138,6 +151,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setQuarta(String quarta) {
+        markAsChanged("QUARTA", quarta);
         this.quarta = quarta;
    }
 
@@ -146,6 +160,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setQuinta(String quinta) {
+        markAsChanged("QUINTA", quinta);
         this.quinta = quinta;
    }
 
@@ -154,6 +169,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setSabado(String sabado) {
+        markAsChanged("SABADO", sabado);
         this.sabado = sabado;
    }
 
@@ -162,6 +178,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setSegunda(String segunda) {
+        markAsChanged("SEGUNDA", segunda);
         this.segunda = segunda;
    }
 
@@ -170,6 +187,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setSexta(String sexta) {
+        markAsChanged("SEXTA", sexta);
         this.sexta = sexta;
    }
 
@@ -178,6 +196,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setTerca(String terca) {
+        markAsChanged("TERCA", terca);
         this.terca = terca;
    }
 
@@ -186,6 +205,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setUtilizaWms(String utilizaWms) {
+        markAsChanged("UTILIZAWMS", utilizaWms);
         this.utilizaWms = utilizaWms;
    }
 
@@ -194,6 +214,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setValEstIndep(String valEstIndep) {
+        markAsChanged("VALESTINDEP", valEstIndep);
         this.valEstIndep = valEstIndep;
    }
 
@@ -202,6 +223,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setVlrCus(BigDecimal vlrCus) {
+        markAsChanged("VLRCUS", vlrCus);
         this.vlrCus = vlrCus;
    }
 
@@ -210,6 +232,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    }
 
    public void setVlrVenda(BigDecimal vlrVenda) {
+        markAsChanged("VLRVENDA", vlrVenda);
         this.vlrVenda = vlrVenda;
    }
 
@@ -225,6 +248,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
 
    @Override
    public LocalEstoque fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aceitaNovoProd = vo.asString("ACEITANOVAPROD");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

@@ -15,6 +15,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -23,6 +24,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -31,6 +33,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -39,6 +42,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -54,6 +58,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
 
    @Override
    public FaturamentoHorasCruzadas fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.numOs = vo.asBigDecimal("NUMOS");

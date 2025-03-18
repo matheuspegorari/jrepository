@@ -26,6 +26,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setAuthCode(String authCode) {
+        markAsChanged("AUTHCODE", authCode);
         this.authCode = authCode;
    }
 
@@ -34,6 +35,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setEmailEnviado(String emailEnviado) {
+        markAsChanged("EMAILENVIADO", emailEnviado);
         this.emailEnviado = emailEnviado;
    }
 
@@ -42,6 +44,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setRefreshToken(String refreshToken) {
+        markAsChanged("REFRESHTOKEN", refreshToken);
         this.refreshToken = refreshToken;
    }
 
@@ -50,6 +53,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setToken(String token) {
+        markAsChanged("TOKEN", token);
         this.token = token;
    }
 
@@ -58,6 +62,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -66,6 +71,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setContaSincAgenda(String contaSincAgenda) {
+        markAsChanged("CONTASINCAGENDA", contaSincAgenda);
         this.contaSincAgenda = contaSincAgenda;
    }
 
@@ -74,6 +80,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setDhUltSincAgenda(Timestamp dhUltSincAgenda) {
+        markAsChanged("DHULTSINCAGENDA", dhUltSincAgenda);
         this.dhUltSincAgenda = dhUltSincAgenda;
    }
 
@@ -82,6 +89,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setIdSincAgenda(String idSincAgenda) {
+        markAsChanged("IDSINCAGENDA", idSincAgenda);
         this.idSincAgenda = idSincAgenda;
    }
 
@@ -90,6 +98,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setSenhaSincAgenda(String senhaSincAgenda) {
+        markAsChanged("SENHASINCAGENDA", senhaSincAgenda);
         this.senhaSincAgenda = senhaSincAgenda;
    }
 
@@ -98,6 +107,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setSincAgenda(String sincAgenda) {
+        markAsChanged("SINCAGENDA", sincAgenda);
         this.sincAgenda = sincAgenda;
    }
 
@@ -106,6 +116,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setDhToken(Timestamp dhToken) {
+        markAsChanged("DHTOKEN", dhToken);
         this.dhToken = dhToken;
    }
 
@@ -114,6 +125,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setExpireIn(BigDecimal expireIn) {
+        markAsChanged("EXPIREIN", expireIn);
         this.expireIn = expireIn;
    }
 
@@ -122,6 +134,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -130,6 +143,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    }
 
    public void setSincStatus(String sincStatus) {
+        markAsChanged("SINCSTATUS", sincStatus);
         this.sincStatus = sincStatus;
    }
 
@@ -145,6 +159,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
 
    @Override
    public ContaSincAgenda fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.authCode = vo.asString("AUTHCODE");
         this.emailEnviado = vo.asString("EMAILENVIADO");
         this.refreshToken = vo.asString("REFRESHTOKEN");

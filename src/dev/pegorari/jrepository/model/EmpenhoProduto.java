@@ -25,6 +25,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setChaveNfe(String chaveNfe) {
+        markAsChanged("CHAVENFE", chaveNfe);
         this.chaveNfe = chaveNfe;
    }
 
@@ -33,6 +34,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -41,6 +43,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -49,6 +52,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -57,6 +61,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setControle(String controle) {
+        markAsChanged("CONTROLE", controle);
         this.controle = controle;
    }
 
@@ -65,6 +70,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setDescrSituacao(String descrSituacao) {
+        markAsChanged("DESCRSITUACAO", descrSituacao);
         this.descrSituacao = descrSituacao;
    }
 
@@ -73,6 +79,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -81,6 +88,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -89,6 +97,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setNuNotaPedVen(BigDecimal nuNotaPedVen) {
+        markAsChanged("NUNOTAPEDVEN", nuNotaPedVen);
         this.nuNotaPedVen = nuNotaPedVen;
    }
 
@@ -97,6 +106,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
+        markAsChanged("NURECEBIMENTO", nuRecebimento);
         this.nuRecebimento = nuRecebimento;
    }
 
@@ -105,6 +115,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setPendente(String pendente) {
+        markAsChanged("PENDENTE", pendente);
         this.pendente = pendente;
    }
 
@@ -113,6 +124,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setQtdEmpenho(BigDecimal qtdEmpenho) {
+        markAsChanged("QTDEMPENHO", qtdEmpenho);
         this.qtdEmpenho = qtdEmpenho;
    }
 
@@ -121,6 +133,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -136,6 +149,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
 
    @Override
    public EmpenhoProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.chaveNfe = vo.asString("CHAVENFE");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");

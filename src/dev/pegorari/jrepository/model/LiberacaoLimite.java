@@ -43,6 +43,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setAntecipacao(String antecipacao) {
+        markAsChanged("ANTECIPACAO", antecipacao);
         this.antecipacao = antecipacao;
    }
 
@@ -51,6 +52,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -59,6 +61,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setCodMeta(BigDecimal codMeta) {
+        markAsChanged("CODMETA", codMeta);
         this.codMeta = codMeta;
    }
 
@@ -67,6 +70,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -75,6 +79,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
+        markAsChanged("CODUSULIB", codUsuLib);
         this.codUsuLib = codUsuLib;
    }
 
@@ -83,6 +88,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setCodUsuSolicit(BigDecimal codUsuSolicit) {
+        markAsChanged("CODUSUSOLICIT", codUsuSolicit);
         this.codUsuSolicit = codUsuSolicit;
    }
 
@@ -91,6 +97,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setDhLib(Timestamp dhLib) {
+        markAsChanged("DHLIB", dhLib);
         this.dhLib = dhLib;
    }
 
@@ -99,6 +106,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setDhSolicit(Timestamp dhSolicit) {
+        markAsChanged("DHSOLICIT", dhSolicit);
         this.dhSolicit = dhSolicit;
    }
 
@@ -107,6 +115,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setEvento(BigDecimal evento) {
+        markAsChanged("EVENTO", evento);
         this.evento = evento;
    }
 
@@ -115,6 +124,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setNuChave(BigDecimal nuChave) {
+        markAsChanged("NUCHAVE", nuChave);
         this.nuChave = nuChave;
    }
 
@@ -123,6 +133,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setNuCll(BigDecimal nuCll) {
+        markAsChanged("NUCLL", nuCll);
         this.nuCll = nuCll;
    }
 
@@ -131,6 +142,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setNuLbo(BigDecimal nuLbo) {
+        markAsChanged("NULBO", nuLbo);
         this.nuLbo = nuLbo;
    }
 
@@ -139,6 +151,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setNuRng(BigDecimal nuRng) {
+        markAsChanged("NURNG", nuRng);
         this.nuRng = nuRng;
    }
 
@@ -147,6 +160,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -155,6 +169,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setObsLib(String obsLib) {
+        markAsChanged("OBSLIB", obsLib);
         this.obsLib = obsLib;
    }
 
@@ -163,6 +178,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -171,6 +187,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setPercAnterior(BigDecimal percAnterior) {
+        markAsChanged("PERCANTERIOR", percAnterior);
         this.percAnterior = percAnterior;
    }
 
@@ -179,6 +196,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setPercLimite(BigDecimal percLimite) {
+        markAsChanged("PERCLIMITE", percLimite);
         this.percLimite = percLimite;
    }
 
@@ -187,6 +205,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setReprovado(String reprovado) {
+        markAsChanged("REPROVADO", reprovado);
         this.reprovado = reprovado;
    }
 
@@ -195,6 +214,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setSeqCascata(BigDecimal seqCascata) {
+        markAsChanged("SEQCASCATA", seqCascata);
         this.seqCascata = seqCascata;
    }
 
@@ -203,6 +223,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -211,6 +232,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setSuplemento(String suplemento) {
+        markAsChanged("SUPLEMENTO", suplemento);
         this.suplemento = suplemento;
    }
 
@@ -219,6 +241,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setTabela(String tabela) {
+        markAsChanged("TABELA", tabela);
         this.tabela = tabela;
    }
 
@@ -227,6 +250,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setTransf(String transf) {
+        markAsChanged("TRANSF", transf);
         this.transf = transf;
    }
 
@@ -235,6 +259,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrAnterior(BigDecimal vlrAnterior) {
+        markAsChanged("VLRANTERIOR", vlrAnterior);
         this.vlrAnterior = vlrAnterior;
    }
 
@@ -243,6 +268,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrAtual(BigDecimal vlrAtual) {
+        markAsChanged("VLRATUAL", vlrAtual);
         this.vlrAtual = vlrAtual;
    }
 
@@ -251,6 +277,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrDesdob(BigDecimal vlrDesdob) {
+        markAsChanged("VLRDESDOB", vlrDesdob);
         this.vlrDesdob = vlrDesdob;
    }
 
@@ -259,6 +286,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrLiberado(BigDecimal vlrLiberado) {
+        markAsChanged("VLRLIBERADO", vlrLiberado);
         this.vlrLiberado = vlrLiberado;
    }
 
@@ -267,6 +295,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrLimite(BigDecimal vlrLimite) {
+        markAsChanged("VLRLIMITE", vlrLimite);
         this.vlrLimite = vlrLimite;
    }
 
@@ -275,6 +304,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setVlrTotal(BigDecimal vlrTotal) {
+        markAsChanged("VLRTOTAL", vlrTotal);
         this.vlrTotal = vlrTotal;
    }
 
@@ -283,6 +313,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
    }
 
    public void setObsCompl(String obsCompl) {
+        markAsChanged("OBSCOMPL", obsCompl);
         this.obsCompl = obsCompl;
    }
 
@@ -298,6 +329,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
 
    @Override
    public LiberacaoLimite fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.antecipacao = vo.asString("ANTECIPACAO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codMeta = vo.asBigDecimal("CODMETA");

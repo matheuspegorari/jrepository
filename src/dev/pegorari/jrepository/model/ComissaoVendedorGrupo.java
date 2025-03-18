@@ -15,6 +15,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
+        markAsChanged("CODTIPPARC", codTipParc);
         this.codTipParc = codTipParc;
    }
 
@@ -23,6 +24,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -31,6 +33,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
    }
 
    public void setComissao(BigDecimal comissao) {
+        markAsChanged("COMISSAO", comissao);
         this.comissao = comissao;
    }
 
@@ -39,6 +42,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
+        markAsChanged("CODGRUPOPROD", codGrupoProd);
         this.codGrupoProd = codGrupoProd;
    }
 
@@ -54,6 +58,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
 
    @Override
    public ComissaoVendedorGrupo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");
         this.codVend = vo.asBigDecimal("CODVEND");
         this.comissao = vo.asBigDecimal("COMISSAO");

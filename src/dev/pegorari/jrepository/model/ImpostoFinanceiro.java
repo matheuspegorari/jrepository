@@ -24,6 +24,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -32,6 +33,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setBase(BigDecimal base) {
+        markAsChanged("BASE", base);
         this.base = base;
    }
 
@@ -40,6 +42,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setCodImp(BigDecimal codImp) {
+        markAsChanged("CODIMP", codImp);
         this.codImp = codImp;
    }
 
@@ -48,6 +51,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setDigitado(String digitado) {
+        markAsChanged("DIGITADO", digitado);
         this.digitado = digitado;
    }
 
@@ -56,6 +60,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -64,6 +69,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setTipImp(BigDecimal tipImp) {
+        markAsChanged("TIPIMP", tipImp);
         this.tipImp = tipImp;
    }
 
@@ -72,6 +78,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setValor(BigDecimal valor) {
+        markAsChanged("VALOR", valor);
         this.valor = valor;
    }
 
@@ -80,6 +87,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setPercInssEspecial(BigDecimal percInssEspecial) {
+        markAsChanged("PERCINSSESPECIAL", percInssEspecial);
         this.percInssEspecial = percInssEspecial;
    }
 
@@ -88,6 +96,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setTipoInssEspecial(String tipoInssEspecial) {
+        markAsChanged("TIPOINSSESPECIAL", tipoInssEspecial);
         this.tipoInssEspecial = tipoInssEspecial;
    }
 
@@ -96,6 +105,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setVlrInssEspecial(BigDecimal vlrInssEspecial) {
+        markAsChanged("VLRINSSESPECIAL", vlrInssEspecial);
         this.vlrInssEspecial = vlrInssEspecial;
    }
 
@@ -104,6 +114,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setCodNatRend(BigDecimal codNatRend) {
+        markAsChanged("CODNATREND", codNatRend);
         this.codNatRend = codNatRend;
    }
 
@@ -112,6 +123,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setCodReceita(String codReceita) {
+        markAsChanged("CODRECEITA", codReceita);
         this.codReceita = codReceita;
    }
 
@@ -120,6 +132,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
    }
 
    public void setTpIrrfExt(BigDecimal tpIrrfExt) {
+        markAsChanged("TPIRRFEXT", tpIrrfExt);
         this.tpIrrfExt = tpIrrfExt;
    }
 
@@ -135,6 +148,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
 
    @Override
    public ImpostoFinanceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.base = vo.asBigDecimal("BASE");
         this.codImp = vo.asBigDecimal("CODIMP");

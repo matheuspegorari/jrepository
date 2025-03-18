@@ -44,6 +44,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -52,6 +53,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setStatusInstCicloContQual(String statusInstCicloContQual) {
+        markAsChanged("STATUSINSTCICLOCONTQUAL", statusInstCicloContQual);
         this.statusInstCicloContQual = statusInstCicloContQual;
    }
 
@@ -60,6 +62,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setNroLote(String nroLote) {
+        markAsChanged("NROLOTE", nroLote);
         this.nroLote = nroLote;
    }
 
@@ -68,6 +71,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setMultiProduto(String multiProduto) {
+        markAsChanged("MULTIPRODUTO", multiProduto);
         this.multiProduto = multiProduto;
    }
 
@@ -76,6 +80,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodVolPa(String codVolPa) {
+        markAsChanged("CODVOLPA", codVolPa);
         this.codVolPa = codVolPa;
    }
 
@@ -84,6 +89,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setQtdProduzir(BigDecimal qtdProduzir) {
+        markAsChanged("QTDPRODUZIR", qtdProduzir);
         this.qtdProduzir = qtdProduzir;
    }
 
@@ -92,6 +98,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDescrProdPa(String descrProdPa) {
+        markAsChanged("DESCRPRODPA", descrProdPa);
         this.descrProdPa = descrProdPa;
    }
 
@@ -100,6 +107,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhFinPrev(Timestamp dhFinPrev) {
+        markAsChanged("DHFINPREV", dhFinPrev);
         this.dhFinPrev = dhFinPrev;
    }
 
@@ -108,6 +116,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhIniPrev(Timestamp dhIniPrev) {
+        markAsChanged("DHINIPREV", dhIniPrev);
         this.dhIniPrev = dhIniPrev;
    }
 
@@ -116,6 +125,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
+        markAsChanged("DHINCLUSAO", dhInclusao);
         this.dhInclusao = dhInclusao;
    }
 
@@ -124,6 +134,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDescrGrupoProdPa(String descrGrupoProdPa) {
+        markAsChanged("DESCRGRUPOPRODPA", descrGrupoProdPa);
         this.descrGrupoProdPa = descrGrupoProdPa;
    }
 
@@ -132,6 +143,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
+        markAsChanged("CODPARCTERC", codParcterc);
         this.codParcterc = codParcterc;
    }
 
@@ -140,6 +152,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -148,6 +161,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -156,6 +170,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodGrupoProdPa(BigDecimal codGrupoProdPa) {
+        markAsChanged("CODGRUPOPRODPA", codGrupoProdPa);
         this.codGrupoProdPa = codGrupoProdPa;
    }
 
@@ -164,6 +179,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setComplDescPa(String complDescPa) {
+        markAsChanged("COMPLDESCPA", complDescPa);
         this.complDescPa = complDescPa;
    }
 
@@ -172,6 +188,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -180,6 +197,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -188,6 +206,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setReferencia(String referencia) {
+        markAsChanged("REFERENCIA", referencia);
         this.referencia = referencia;
    }
 
@@ -196,6 +215,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodExec(BigDecimal codExec) {
+        markAsChanged("CODEXEC", codExec);
         this.codExec = codExec;
    }
 
@@ -204,6 +224,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodWcp(BigDecimal codWcp) {
+        markAsChanged("CODWCP", codWcp);
         this.codWcp = codWcp;
    }
 
@@ -212,6 +233,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhAceite(Timestamp dhAceite) {
+        markAsChanged("DHACEITE", dhAceite);
         this.dhAceite = dhAceite;
    }
 
@@ -220,6 +242,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhFinal(Timestamp dhFinal) {
+        markAsChanged("DHFINAL", dhFinal);
         this.dhFinal = dhFinal;
    }
 
@@ -228,6 +251,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setDhInicio(Timestamp dhInicio) {
+        markAsChanged("DHINICIO", dhInicio);
         this.dhInicio = dhInicio;
    }
 
@@ -236,6 +260,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setIdEfx(BigDecimal idEfx) {
+        markAsChanged("IDEFX", idEfx);
         this.idEfx = idEfx;
    }
 
@@ -244,6 +269,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setIdExecWflow(String idExecWflow) {
+        markAsChanged("IDEXECWFLOW", idExecWflow);
         this.idExecWflow = idExecWflow;
    }
 
@@ -252,6 +278,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setIdIatv(BigDecimal idIatv) {
+        markAsChanged("IDIATV", idIatv);
         this.idIatv = idIatv;
    }
 
@@ -260,6 +287,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setIdIproc(BigDecimal idIproc) {
+        markAsChanged("IDIPROC", idIproc);
         this.idIproc = idIproc;
    }
 
@@ -268,6 +296,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setTempoGastoMin(BigDecimal tempoGastoMin) {
+        markAsChanged("TEMPOGASTOMIN", tempoGastoMin);
         this.tempoGastoMin = tempoGastoMin;
    }
 
@@ -276,6 +305,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodMtp(BigDecimal codMtp) {
+        markAsChanged("CODMTP", codMtp);
         this.codMtp = codMtp;
    }
 
@@ -284,6 +314,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodUltExec(BigDecimal codUltExec) {
+        markAsChanged("CODULTEXEC", codUltExec);
         this.codUltExec = codUltExec;
    }
 
@@ -292,6 +323,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
    }
 
    public void setCodUsuFin(BigDecimal codUsuFin) {
+        markAsChanged("CODUSUFIN", codUsuFin);
         this.codUsuFin = codUsuFin;
    }
 
@@ -307,6 +339,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
 
    @Override
    public InstanciaAtividade fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.statusInstCicloContQual = vo.asString("STATUSINSTCICLOCONTQUAL");
         this.nroLote = vo.asString("NROLOTE");

@@ -58,6 +58,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setAtuMovMen(String atuMovMen) {
+        markAsChanged("ATUMOVMEN", atuMovMen);
         this.atuMovMen = atuMovMen;
    }
 
@@ -66,6 +67,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCalcFerPerAqui(String calcFerPerAqui) {
+        markAsChanged("CALCFERPERAQUI", calcFerPerAqui);
         this.calcFerPerAqui = calcFerPerAqui;
    }
 
@@ -74,6 +76,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCalcParcFer(String calcParcFer) {
+        markAsChanged("CALCPARCFER", calcParcFer);
         this.calcParcFer = calcParcFer;
    }
 
@@ -82,6 +85,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCalcResiduo(String calcResiduo) {
+        markAsChanged("CALCRESIDUO", calcResiduo);
         this.calcResiduo = calcResiduo;
    }
 
@@ -90,6 +94,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCentIrf(String centIrf) {
+        markAsChanged("CENTIRF", centIrf);
         this.centIrf = centIrf;
    }
 
@@ -98,6 +103,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCentValores(String centValores) {
+        markAsChanged("CENTVALORES", centValores);
         this.centValores = centValores;
    }
 
@@ -106,6 +112,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenBHoras(BigDecimal codEvenBHoras) {
+        markAsChanged("CODEVENBHORAS", codEvenBHoras);
         this.codEvenBHoras = codEvenBHoras;
    }
 
@@ -114,6 +121,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenCred(BigDecimal codEvenCred) {
+        markAsChanged("CODEVENCRED", codEvenCred);
         this.codEvenCred = codEvenCred;
    }
 
@@ -122,6 +130,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenDeb(BigDecimal codEvenDeb) {
+        markAsChanged("CODEVENDEB", codEvenDeb);
         this.codEvenDeb = codEvenDeb;
    }
 
@@ -130,6 +139,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenDomIn(BigDecimal codEvenDomIn) {
+        markAsChanged("CODEVENDOMIN", codEvenDomIn);
         this.codEvenDomIn = codEvenDomIn;
    }
 
@@ -138,6 +148,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenNotUr(BigDecimal codEvenNotUr) {
+        markAsChanged("CODEVENNOTUR", codEvenNotUr);
         this.codEvenNotUr = codEvenNotUr;
    }
 
@@ -146,6 +157,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenPadrao(BigDecimal codEvenPadrao) {
+        markAsChanged("CODEVENPADRAO", codEvenPadrao);
         this.codEvenPadrao = codEvenPadrao;
    }
 
@@ -154,6 +166,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenPosPri(BigDecimal codEvenPosPri) {
+        markAsChanged("CODEVENPOSPRI", codEvenPosPri);
         this.codEvenPosPri = codEvenPosPri;
    }
 
@@ -162,6 +175,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodEvenPri(BigDecimal codEvenPri) {
+        markAsChanged("CODEVENPRI", codEvenPri);
         this.codEvenPri = codEvenPri;
    }
 
@@ -170,6 +184,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodPref(BigDecimal codPref) {
+        markAsChanged("CODPREF", codPref);
         this.codPref = codPref;
    }
 
@@ -178,6 +193,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -186,6 +202,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setCompensacao(String compensacao) {
+        markAsChanged("COMPENSACAO", compensacao);
         this.compensacao = compensacao;
    }
 
@@ -194,6 +211,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setDescricao(String descricao) {
+        markAsChanged("DESCRICAO", descricao);
         this.descricao = descricao;
    }
 
@@ -202,6 +220,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setDiaRetiradPd(BigDecimal diaRetiradPd) {
+        markAsChanged("DIARETIRADPD", diaRetiradPd);
         this.diaRetiradPd = diaRetiradPd;
    }
 
@@ -210,6 +229,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -218,6 +238,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setFerPerPerAqui(String ferPerPerAqui) {
+        markAsChanged("FERPROPERAQUI", ferPerPerAqui);
         this.ferPerPerAqui = ferPerPerAqui;
    }
 
@@ -226,6 +247,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setFormaCalcMedias(String formaCalcMedias) {
+        markAsChanged("FORMACALCMEDIAS", formaCalcMedias);
         this.formaCalcMedias = formaCalcMedias;
    }
 
@@ -234,6 +256,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setIrfMin(BigDecimal irfMin) {
+        markAsChanged("IRFMIN", irfMin);
         this.irfMin = irfMin;
    }
 
@@ -242,6 +265,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setLancFerAdiant(String lancFerAdiant) {
+        markAsChanged("LANCFERADIANT", lancFerAdiant);
         this.lancFerAdiant = lancFerAdiant;
    }
 
@@ -250,6 +274,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setLimMinHExtra(BigDecimal limMinHExtra) {
+        markAsChanged("LIMMINHEXTRA", limMinHExtra);
         this.limMinHExtra = limMinHExtra;
    }
 
@@ -258,6 +283,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setLimMinTolAtr(BigDecimal limMinTolAtr) {
+        markAsChanged("LIMMINTOLATR", limMinTolAtr);
         this.limMinTolAtr = limMinTolAtr;
    }
 
@@ -266,6 +292,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMediaAritim13(String mediaAritim13) {
+        markAsChanged("MEDIAARITIM13", mediaAritim13);
         this.mediaAritim13 = mediaAritim13;
    }
 
@@ -274,6 +301,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMediaPerFerias(String mediaPerFerias) {
+        markAsChanged("MEDIAPERFERIAS", mediaPerFerias);
         this.mediaPerFerias = mediaPerFerias;
    }
 
@@ -282,6 +310,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesCarencia(BigDecimal mesCarencia) {
+        markAsChanged("MESCARENCIA", mesCarencia);
         this.mesCarencia = mesCarencia;
    }
 
@@ -290,6 +319,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesDataBase(BigDecimal mesDataBase) {
+        markAsChanged("MESDATABASE", mesDataBase);
         this.mesDataBase = mesDataBase;
    }
 
@@ -298,6 +328,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMedia13s(BigDecimal mesesMedia13s) {
+        markAsChanged("MESESMEDIA13S", mesesMedia13s);
         this.mesesMedia13s = mesesMedia13s;
    }
 
@@ -306,6 +337,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMedia13s2(BigDecimal mesesMedia13s2) {
+        markAsChanged("MESESMEDIA13S2", mesesMedia13s2);
         this.mesesMedia13s2 = mesesMedia13s2;
    }
 
@@ -314,6 +346,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMediaFer(BigDecimal mesesMediaFer) {
+        markAsChanged("MESESMEDIAFER", mesesMediaFer);
         this.mesesMediaFer = mesesMediaFer;
    }
 
@@ -322,6 +355,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMediaFer2(BigDecimal mesesMediaFer2) {
+        markAsChanged("MESESMEDIAFER2", mesesMediaFer2);
         this.mesesMediaFer2 = mesesMediaFer2;
    }
 
@@ -330,6 +364,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMediaResc(BigDecimal mesesMediaResc) {
+        markAsChanged("MESESMEDIARESC", mesesMediaResc);
         this.mesesMediaResc = mesesMediaResc;
    }
 
@@ -338,6 +373,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setMesesMediaResc2(BigDecimal mesesMediaResc2) {
+        markAsChanged("MESESMEDIARESC2", mesesMediaResc2);
         this.mesesMediaResc2 = mesesMediaResc2;
    }
 
@@ -346,6 +382,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setPagAtraso(BigDecimal pagAtraso) {
+        markAsChanged("PAGATRASO", pagAtraso);
         this.pagAtraso = pagAtraso;
    }
 
@@ -354,6 +391,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setPagHsExtra(BigDecimal pagHsExtra) {
+        markAsChanged("PAGHSEXTRA", pagHsExtra);
         this.pagHsExtra = pagHsExtra;
    }
 
@@ -362,6 +400,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setProvFerMedias(String provFerMedias) {
+        markAsChanged("PROVFERMEDIAS", provFerMedias);
         this.provFerMedias = provFerMedias;
    }
 
@@ -370,6 +409,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setQtdMaiores(BigDecimal qtdMaiores) {
+        markAsChanged("QTDMAIORES", qtdMaiores);
         this.qtdMaiores = qtdMaiores;
    }
 
@@ -378,6 +418,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setRemuMinima(BigDecimal remuMinima) {
+        markAsChanged("REMUMINIMA", remuMinima);
         this.remuMinima = remuMinima;
    }
 
@@ -386,6 +427,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setRespFolha(String respFolha) {
+        markAsChanged("RESPFOLHA", respFolha);
         this.respFolha = respFolha;
    }
 
@@ -394,6 +436,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setTipArred(String tipArred) {
+        markAsChanged("TIPARRED", tipArred);
         this.tipArred = tipArred;
    }
 
@@ -402,6 +445,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setTipMes(String tipMes) {
+        markAsChanged("TIPMES", tipMes);
         this.tipMes = tipMes;
    }
 
@@ -410,6 +454,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setTipMovMedias(String tipMovMedias) {
+        markAsChanged("TIPMOVMEDIAS", tipMovMedias);
         this.tipMovMedias = tipMovMedias;
    }
 
@@ -418,6 +463,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    }
 
    public void setArredSalLiq(BigDecimal arredSalLiq) {
+        markAsChanged("ARREDSALLIQ", arredSalLiq);
         this.arredSalLiq = arredSalLiq;
    }
 
@@ -433,6 +479,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
 
    @Override
    public RegraCalculo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.atuMovMen = vo.asString("ATUMOVMEN");
         this.calcFerPerAqui = vo.asString("CALCFERPERAQUI");
         this.calcParcFer = vo.asString("CALCPARCFER");

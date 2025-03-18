@@ -22,6 +22,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setAgencia(String agencia) {
+        markAsChanged("AGENCIA", agencia);
         this.agencia = agencia;
    }
 
@@ -30,6 +31,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setCodBanco(String codBanco) {
+        markAsChanged("CODBANCO", codBanco);
         this.codBanco = codBanco;
    }
 
@@ -38,6 +40,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -46,6 +49,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setCodParcIntPgFre(BigDecimal codParcIntPgFre) {
+        markAsChanged("CODPARCINTPGFRE", codParcIntPgFre);
         this.codParcIntPgFre = codParcIntPgFre;
    }
 
@@ -54,6 +58,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setEnvio(String envio) {
+        markAsChanged("ENVIO", envio);
         this.envio = envio;
    }
 
@@ -62,6 +67,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setIndPag(String indPag) {
+        markAsChanged("INDPAG", indPag);
         this.indPag = indPag;
    }
 
@@ -70,6 +76,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setNuViag(BigDecimal nuViag) {
+        markAsChanged("NUVIAG", nuViag);
         this.nuViag = nuViag;
    }
 
@@ -78,6 +85,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
+        markAsChanged("SEQMDFE", seqMdfe);
         this.seqMdfe = seqMdfe;
    }
 
@@ -86,6 +94,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setSeqPgFre(BigDecimal seqPgFre) {
+        markAsChanged("SEQPGFRE", seqPgFre);
         this.seqPgFre = seqPgFre;
    }
 
@@ -94,6 +103,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setVlrContrato(BigDecimal vlrContrato) {
+        markAsChanged("VLRCONTRATO", vlrContrato);
         this.vlrContrato = vlrContrato;
    }
 
@@ -102,6 +112,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
    }
 
    public void setChavePix(String chavePix) {
+        markAsChanged("CHAVEPIX", chavePix);
         this.chavePix = chavePix;
    }
 
@@ -117,6 +128,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
 
    @Override
    public ManifestoPgtoFrete fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.agencia = vo.asString("AGENCIA");
         this.codBanco = vo.asString("CODBANCO");
         this.codParc = vo.asBigDecimal("CODPARC");

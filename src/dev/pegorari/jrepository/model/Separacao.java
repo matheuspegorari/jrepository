@@ -51,6 +51,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setStatusConf(BigDecimal statusConf) {
+        markAsChanged("STATUSCONF", statusConf);
         this.statusConf = statusConf;
    }
 
@@ -59,6 +60,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setTipoSplit(BigDecimal tipoSplit) {
+        markAsChanged("TIPOSPLIT", tipoSplit);
         this.tipoSplit = tipoSplit;
    }
 
@@ -67,6 +69,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
+        markAsChanged("CODAREACONF", codAreaConf);
         this.codAreaConf = codAreaConf;
    }
 
@@ -75,6 +78,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
+        markAsChanged("CODAREASEP", codAreaSep);
         this.codAreaSep = codAreaSep;
    }
 
@@ -83,6 +87,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodDoca(BigDecimal codDoca) {
+        markAsChanged("CODDOCA", codDoca);
         this.codDoca = codDoca;
    }
 
@@ -91,6 +96,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodEmpoc(BigDecimal codEmpoc) {
+        markAsChanged("CODEMPOC", codEmpoc);
         this.codEmpoc = codEmpoc;
    }
 
@@ -99,6 +105,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodEndDoca(BigDecimal codEndDoca) {
+        markAsChanged("CODENDDOCA", codEndDoca);
         this.codEndDoca = codEndDoca;
    }
 
@@ -107,6 +114,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -115,6 +123,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -123,6 +132,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setDtSeparacao(Timestamp dtSeparacao) {
+        markAsChanged("DTSEPARACAO", dtSeparacao);
         this.dtSeparacao = dtSeparacao;
    }
 
@@ -131,6 +141,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setFlowRack(String flowRack) {
+        markAsChanged("FLOWRACK", flowRack);
         this.flowRack = flowRack;
    }
 
@@ -139,6 +150,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setLiberada(String liberada) {
+        markAsChanged("LIBERADA", liberada);
         this.liberada = liberada;
    }
 
@@ -147,6 +159,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setLiberaReab(String liberaReab) {
+        markAsChanged("LIBERAREAB", liberaReab);
         this.liberaReab = liberaReab;
    }
 
@@ -155,6 +168,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNroPalete(BigDecimal nroPalete) {
+        markAsChanged("NROPALETE", nroPalete);
         this.nroPalete = nroPalete;
    }
 
@@ -163,6 +177,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
+        markAsChanged("NUCONFERENCIA", nuConferencia);
         this.nuConferencia = nuConferencia;
    }
 
@@ -171,6 +186,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -179,6 +195,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -187,6 +204,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -195,6 +213,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
+        markAsChanged("NUTAREFA", nuTarefa);
         this.nuTarefa = nuTarefa;
    }
 
@@ -203,6 +222,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -211,6 +231,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setPrioridade(BigDecimal prioridade) {
+        markAsChanged("PRIORIDADE", prioridade);
         this.prioridade = prioridade;
    }
 
@@ -219,6 +240,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setQtdCxsFlowRack(BigDecimal qtdCxsFlowRack) {
+        markAsChanged("QTDCXSFLOWRACK", qtdCxsFlowRack);
         this.qtdCxsFlowRack = qtdCxsFlowRack;
    }
 
@@ -227,6 +249,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setSituacao(BigDecimal situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -235,6 +258,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setEnviadoDoca(String enviadoDoca) {
+        markAsChanged("ENVIADODOCA", enviadoDoca);
         this.enviadoDoca = enviadoDoca;
    }
 
@@ -243,6 +267,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCancelada(String cancelada) {
+        markAsChanged("CANCELADA", cancelada);
         this.cancelada = cancelada;
    }
 
@@ -251,6 +276,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -259,6 +285,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
+        markAsChanged("CODUSUCONF", codUsuConf);
         this.codUsuConf = codUsuConf;
    }
 
@@ -267,6 +294,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNomeUsuConf(String nomeUsuConf) {
+        markAsChanged("NOMEUSUCONF", nomeUsuConf);
         this.nomeUsuConf = nomeUsuConf;
    }
 
@@ -275,6 +303,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setTriado(String triado) {
+        markAsChanged("TRIADO", triado);
         this.triado = triado;
    }
 
@@ -283,6 +312,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
+        markAsChanged("PESOBRUTO", pesoBruto);
         this.pesoBruto = pesoBruto;
    }
 
@@ -291,6 +321,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setDescrSituacao(BigDecimal descrSituacao) {
+        markAsChanged("DESCRSITUACAO", descrSituacao);
         this.descrSituacao = descrSituacao;
    }
 
@@ -299,6 +330,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setM3Bruto(BigDecimal m3Bruto) {
+        markAsChanged("M3BRUTO", m3Bruto);
         this.m3Bruto = m3Bruto;
    }
 
@@ -307,6 +339,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodOnda(BigDecimal codOnda) {
+        markAsChanged("CODONDA", codOnda);
         this.codOnda = codOnda;
    }
 
@@ -315,6 +348,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setTipoSep(String tipoSep) {
+        markAsChanged("TIPOSEP", tipoSep);
         this.tipoSep = tipoSep;
    }
 
@@ -323,6 +357,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setQtdTarefas(BigDecimal qtdTarefas) {
+        markAsChanged("QTDTAREFAS", qtdTarefas);
         this.qtdTarefas = qtdTarefas;
    }
 
@@ -331,6 +366,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setNuSepMae(BigDecimal nuSepMae) {
+        markAsChanged("NUSEPMAE", nuSepMae);
         this.nuSepMae = nuSepMae;
    }
 
@@ -339,6 +375,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setQtdCheckouts(BigDecimal qtdCheckouts) {
+        markAsChanged("QTDCHECKOUTS", qtdCheckouts);
         this.qtdCheckouts = qtdCheckouts;
    }
 
@@ -347,6 +384,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setSituacaoAnt(BigDecimal situacaoAnt) {
+        markAsChanged("SITUACAOANT", situacaoAnt);
         this.situacaoAnt = situacaoAnt;
    }
 
@@ -355,6 +393,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -370,6 +409,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
 
    @Override
    public Separacao fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.statusConf = vo.asBigDecimal("STATUSCONF");
         this.tipoSplit = vo.asBigDecimal("TIPOSPLIT");
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");

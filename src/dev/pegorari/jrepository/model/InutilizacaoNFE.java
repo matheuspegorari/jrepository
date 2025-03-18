@@ -23,6 +23,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -31,6 +32,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
+        markAsChanged("CODMODDOC", codModDoc);
         this.codModDoc = codModDoc;
    }
 
@@ -39,6 +41,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -47,6 +50,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setDhProtoc(Timestamp dhProtoc) {
+        markAsChanged("DHPROTOC", dhProtoc);
         this.dhProtoc = dhProtoc;
    }
 
@@ -55,6 +59,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -63,6 +68,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setMotivo(String motivo) {
+        markAsChanged("MOTIVO", motivo);
         this.motivo = motivo;
    }
 
@@ -71,6 +77,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -79,6 +86,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setNumProtoc(String numProtoc) {
+        markAsChanged("NUMPROTOC", numProtoc);
         this.numProtoc = numProtoc;
    }
 
@@ -87,6 +95,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -95,6 +104,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setEntSai(String entSai) {
+        markAsChanged("ENTSAI", entSai);
         this.entSai = entSai;
    }
 
@@ -103,6 +113,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    }
 
    public void setTpAmbNfe(String tpAmbNfe) {
+        markAsChanged("TPAMBNFE", tpAmbNfe);
         this.tpAmbNfe = tpAmbNfe;
    }
 
@@ -118,6 +129,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
 
    @Override
    public InutilizacaoNFE fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.codUsu = vo.asBigDecimal("CODUSU");

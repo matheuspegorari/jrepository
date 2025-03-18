@@ -23,6 +23,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -31,6 +32,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setCodPerfil(BigDecimal codPerfil) {
+        markAsChanged("CODPERFIL", codPerfil);
         this.codPerfil = codPerfil;
    }
 
@@ -39,6 +41,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -47,6 +50,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -55,6 +59,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setDtFim(Timestamp dtFim) {
+        markAsChanged("DTFIM", dtFim);
         this.dtFim = dtFim;
    }
 
@@ -63,6 +68,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setDtInicio(Timestamp dtInicio) {
+        markAsChanged("DTINICIO", dtInicio);
         this.dtInicio = dtInicio;
    }
 
@@ -71,6 +77,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setImprescindivel(String imprescindivel) {
+        markAsChanged("IMPRESCINDIVEL", imprescindivel);
         this.imprescindivel = imprescindivel;
    }
 
@@ -79,6 +86,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setObs(String obs) {
+        markAsChanged("OBS", obs);
         this.obs = obs;
    }
 
@@ -87,6 +95,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setPeriodicidade(BigDecimal periodicidade) {
+        markAsChanged("PERIODICIDADE", periodicidade);
         this.periodicidade = periodicidade;
    }
 
@@ -95,6 +104,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -103,6 +113,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
    }
 
    public void setTipoPeriodo(String tipoPeriodo) {
+        markAsChanged("TIPOPERIODO", tipoPeriodo);
         this.tipoPeriodo = tipoPeriodo;
    }
 
@@ -118,6 +129,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
 
    @Override
    public PerfilCargo fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codUsu = vo.asBigDecimal("CODUSU");

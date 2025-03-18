@@ -18,6 +18,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
+        markAsChanged("CODPRODPA", codProdPa);
         this.codProdPa = codProdPa;
    }
 
@@ -26,6 +27,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -34,6 +36,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setControlePa(String controlePa) {
+        markAsChanged("CONTROLEPA", controlePa);
         this.controlePa = controlePa;
    }
 
@@ -42,6 +45,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setIdCop(BigDecimal idCop) {
+        markAsChanged("IDCOP", idCop);
         this.idCop = idCop;
    }
 
@@ -50,6 +54,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setPercQtdRend(BigDecimal percQtdRend) {
+        markAsChanged("PERCQTDREND", percQtdRend);
         this.percQtdRend = percQtdRend;
    }
 
@@ -58,6 +63,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setPercDesvioInf(BigDecimal percDesvioInf) {
+        markAsChanged("PERCDESVIOINF", percDesvioInf);
         this.percDesvioInf = percDesvioInf;
    }
 
@@ -66,6 +72,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    }
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
+        markAsChanged("PERCDESVIOSUP", percDesvioSup);
         this.percDesvioSup = percDesvioSup;
    }
 
@@ -81,6 +88,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
 
    @Override
    public ItensCoProdutos fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codVol = vo.asString("CODVOL");
         this.controlePa = vo.asString("CONTROLEPA");

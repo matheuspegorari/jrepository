@@ -28,6 +28,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNuInstanciaExt(BigDecimal nuInstanciaExt) {
+        markAsChanged("NUINSTANCIAEXT", nuInstanciaExt);
         this.nuInstanciaExt = nuInstanciaExt;
    }
 
@@ -36,6 +37,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNuInstanciaPai(BigDecimal nuInstanciaPai) {
+        markAsChanged("NUINSTANCIAPAI", nuInstanciaPai);
         this.nuInstanciaPai = nuInstanciaPai;
    }
 
@@ -44,6 +46,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setRaiz(String raiz) {
+        markAsChanged("RAIZ", raiz);
         this.raiz = raiz;
    }
 
@@ -52,6 +55,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setDefinicaoInst(String definicaoInst) {
+        markAsChanged("DEFINICAOINST", definicaoInst);
         this.definicaoInst = definicaoInst;
    }
 
@@ -60,6 +64,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setIsLib(String isLib) {
+        markAsChanged("ISLIB", isLib);
         this.isLib = isLib;
    }
 
@@ -68,6 +73,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setResourceId(String resourceId) {
+        markAsChanged("RESOURCEID", resourceId);
         this.resourceId = resourceId;
    }
 
@@ -76,6 +82,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -84,6 +91,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setDescrInstancia(String descrInstancia) {
+        markAsChanged("DESCRINSTANCIA", descrInstancia);
         this.descrInstancia = descrInstancia;
    }
 
@@ -92,6 +100,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setExpressao(String expressao) {
+        markAsChanged("EXPRESSAO", expressao);
         this.expressao = expressao;
    }
 
@@ -100,6 +109,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setFiltro(String filtro) {
+        markAsChanged("FILTRO", filtro);
         this.filtro = filtro;
    }
 
@@ -108,6 +118,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNomeInstancia(String nomeInstancia) {
+        markAsChanged("NOMEINSTANCIA", nomeInstancia);
         this.nomeInstancia = nomeInstancia;
    }
 
@@ -116,6 +127,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNomeScriptChave(String nomeScriptChave) {
+        markAsChanged("NOMESCRIPTCHAVE", nomeScriptChave);
         this.nomeScriptChave = nomeScriptChave;
    }
 
@@ -124,6 +136,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNomeTab(String nomeTab) {
+        markAsChanged("NOMETAB", nomeTab);
         this.nomeTab = nomeTab;
    }
 
@@ -132,6 +145,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
+        markAsChanged("NUINSTANCIA", nuInstancia);
         this.nuInstancia = nuInstancia;
    }
 
@@ -140,6 +154,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setTipoForm(String tipoForm) {
+        markAsChanged("TIPOFORM", tipoForm);
         this.tipoForm = tipoForm;
    }
 
@@ -148,6 +163,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setCategoria(String categoria) {
+        markAsChanged("CATEGORIA", categoria);
         this.categoria = categoria;
    }
 
@@ -156,6 +172,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
    }
 
    public void setDescrTela(String descrTela) {
+        markAsChanged("DESCRTELA", descrTela);
         this.descrTela = descrTela;
    }
 
@@ -171,6 +188,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
 
    @Override
    public Instancia fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuInstanciaExt = vo.asBigDecimal("NUINSTANCIAEXT");
         this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");
         this.raiz = vo.asString("RAIZ");

@@ -17,6 +17,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    }
 
    public void setTipTabela(String tipTabela) {
+        markAsChanged("TIPTABELA", tipTabela);
         this.tipTabela = tipTabela;
    }
 
@@ -25,6 +26,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    }
 
    public void setAliquota(BigDecimal aliquota) {
+        markAsChanged("ALIQUOTA", aliquota);
         this.aliquota = aliquota;
    }
 
@@ -33,6 +35,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    }
 
    public void setCompetencia(Timestamp competencia) {
+        markAsChanged("COMPETENCIA", competencia);
         this.competencia = competencia;
    }
 
@@ -41,6 +44,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    }
 
    public void setVlrDeducao(BigDecimal vlrDeducao) {
+        markAsChanged("VLRDEDUCAO", vlrDeducao);
         this.vlrDeducao = vlrDeducao;
    }
 
@@ -49,6 +53,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    }
 
    public void setVlrLimite(BigDecimal vlrLimite) {
+        markAsChanged("VLRLIMITE", vlrLimite);
         this.vlrLimite = vlrLimite;
    }
 
@@ -64,6 +69,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
 
    @Override
    public TabelaIRPF fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.tipTabela = vo.asString("TIPTABELA");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.competencia = vo.asTimestamp("COMPETENCIA");

@@ -26,6 +26,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -34,6 +35,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -42,6 +44,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -50,6 +53,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setCodUsuAprov(BigDecimal codUsuAprov) {
+        markAsChanged("CODUSUAPROV", codUsuAprov);
         this.codUsuAprov = codUsuAprov;
    }
 
@@ -58,6 +62,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -66,6 +71,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setDtAprov(Timestamp dtAprov) {
+        markAsChanged("DTAPROV", dtAprov);
         this.dtAprov = dtAprov;
    }
 
@@ -74,6 +80,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setNotaSelecao(BigDecimal notaSelecao) {
+        markAsChanged("NOTASELECAO", notaSelecao);
         this.notaSelecao = notaSelecao;
    }
 
@@ -82,6 +89,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
+        markAsChanged("NUCURRICULO", nuCurriculo);
         this.nuCurriculo = nuCurriculo;
    }
 
@@ -90,6 +98,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -98,6 +107,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
+        markAsChanged("NUSELECAO", nuSelecao);
         this.nuSelecao = nuSelecao;
    }
 
@@ -106,6 +116,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setObsAprov(String obsAprov) {
+        markAsChanged("OBSAPROV", obsAprov);
         this.obsAprov = obsAprov;
    }
 
@@ -114,6 +125,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setResultado(BigDecimal resultado) {
+        markAsChanged("RESULTADO", resultado);
         this.resultado = resultado;
    }
 
@@ -122,6 +134,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setStatus(String status) {
+        markAsChanged("STATUS", status);
         this.status = status;
    }
 
@@ -130,6 +143,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
    }
 
    public void setStatusAprov(String statusAprov) {
+        markAsChanged("STATUSAPROV", statusAprov);
         this.statusAprov = statusAprov;
    }
 
@@ -145,6 +159,7 @@ public class Candidato extends AbstractSankhyaEntity<Candidato> {
 
    @Override
    public Candidato fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codUsu = vo.asBigDecimal("CODUSU");

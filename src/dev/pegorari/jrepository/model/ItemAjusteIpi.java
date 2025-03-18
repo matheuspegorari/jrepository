@@ -18,6 +18,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -26,6 +27,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -34,6 +36,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -42,6 +45,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -50,6 +54,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -58,6 +63,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
+        markAsChanged("VLRAJUSTE", vlrAjuste);
         this.vlrAjuste = vlrAjuste;
    }
 
@@ -73,6 +79,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
 
    @Override
    public ItemAjusteIpi fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

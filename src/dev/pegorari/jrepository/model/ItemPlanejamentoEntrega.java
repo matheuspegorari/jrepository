@@ -18,6 +18,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setNuPlan(BigDecimal nuPlan) {
+        markAsChanged("NUPLAN", nuPlan);
         this.nuPlan = nuPlan;
    }
 
@@ -26,6 +27,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
+        markAsChanged("QTDNEG", qtdNeg);
         this.qtdNeg = qtdNeg;
    }
 
@@ -34,6 +36,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -42,6 +45,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setCodParcFat(BigDecimal codParcFat) {
+        markAsChanged("CODPARCFAT", codParcFat);
         this.codParcFat = codParcFat;
    }
 
@@ -50,6 +54,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setCodProd(BigDecimal codProd) {
+        markAsChanged("CODPROD", codProd);
         this.codProd = codProd;
    }
 
@@ -58,6 +63,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
+        markAsChanged("SEQUENCIAORIG", sequenciaOrig);
         this.sequenciaOrig = sequenciaOrig;
    }
 
@@ -66,6 +72,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
+        markAsChanged("NUNOTAORIG", nuNotaOrig);
         this.nuNotaOrig = nuNotaOrig;
    }
 
@@ -81,6 +88,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
 
    @Override
    public ItemPlanejamentoEntrega fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuPlan = vo.asBigDecimal("NUPLAN");
         this.qtdNeg = vo.asBigDecimal("QTDNEG");
         this.codContato = vo.asBigDecimal("CODCONTATO");

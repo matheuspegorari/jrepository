@@ -19,6 +19,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setDatVal(Timestamp datVal) {
+        markAsChanged("DATVAL", datVal);
         this.datVal = datVal;
    }
 
@@ -27,6 +28,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setDecVal(BigDecimal decVal) {
+        markAsChanged("DECVAL", decVal);
         this.decVal = decVal;
    }
 
@@ -35,6 +37,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setIdeFx(BigDecimal ideFx) {
+        markAsChanged("IDEFX", ideFx);
         this.ideFx = ideFx;
    }
 
@@ -43,6 +46,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setIntVal(BigDecimal intVal) {
+        markAsChanged("INTVAL", intVal);
         this.intVal = intVal;
    }
 
@@ -51,6 +55,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setNome(String nome) {
+        markAsChanged("NOME", nome);
         this.nome = nome;
    }
 
@@ -59,6 +64,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setTextVal(String textVal) {
+        markAsChanged("TEXTVAL", textVal);
         this.textVal = textVal;
    }
 
@@ -67,6 +73,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -82,6 +89,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
 
    @Override
    public PropriedadeElemento fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.datVal = vo.asTimestamp("DATVAL");
         this.decVal = vo.asBigDecimal("DECVAL");
         this.ideFx = vo.asBigDecimal("IDEFX");

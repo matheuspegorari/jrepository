@@ -18,6 +18,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setAtivo(String ativo) {
+        markAsChanged("ATIVO", ativo);
         this.ativo = ativo;
    }
 
@@ -26,6 +27,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
+        markAsChanged("CODPRODMP", codProdMp);
         this.codProdMp = codProdMp;
    }
 
@@ -34,6 +36,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setCodVol(String codVol) {
+        markAsChanged("CODVOL", codVol);
         this.codVol = codVol;
    }
 
@@ -42,6 +45,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setControleMp(String controleMp) {
+        markAsChanged("CONTROLEMP", controleMp);
         this.controleMp = controleMp;
    }
 
@@ -50,6 +54,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setDescrCop(String descrCop) {
+        markAsChanged("DESCRCOP", descrCop);
         this.descrCop = descrCop;
    }
 
@@ -58,6 +63,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setIdCop(BigDecimal idCop) {
+        markAsChanged("IDCOP", idCop);
         this.idCop = idCop;
    }
 
@@ -66,6 +72,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    }
 
    public void setQtdProcess(BigDecimal qtdProcess) {
+        markAsChanged("QTDPROCESS", qtdProcess);
         this.qtdProcess = qtdProcess;
    }
 
@@ -81,6 +88,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
 
    @Override
    public GrupoCoProduto fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.ativo = vo.asString("ATIVO");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codVol = vo.asString("CODVOL");

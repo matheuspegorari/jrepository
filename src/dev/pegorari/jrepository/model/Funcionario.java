@@ -350,6 +350,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDependConvMed(BigDecimal dependConvMed) {
+        markAsChanged("DEPENDCONVMED", dependConvMed);
         this.dependConvMed = dependConvMed;
    }
 
@@ -358,6 +359,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDependIrf(BigDecimal dependIrf) {
+        markAsChanged("DEPENDIRF", dependIrf);
         this.dependIrf = dependIrf;
    }
 
@@ -366,6 +368,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDependSalFam(BigDecimal dependSalFam) {
+        markAsChanged("DEPENDSALFAM", dependSalFam);
         this.dependSalFam = dependSalFam;
    }
 
@@ -374,6 +377,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiaApuraPonto(BigDecimal diaApuraPonto) {
+        markAsChanged("DIAAPURAPONTO", diaApuraPonto);
         this.diaApuraPonto = diaApuraPonto;
    }
 
@@ -382,6 +386,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiaCadPis(BigDecimal diaCadPis) {
+        markAsChanged("DIACADPIS", diaCadPis);
         this.diaCadPis = diaCadPis;
    }
 
@@ -390,6 +395,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiasFerias(BigDecimal diasFerias) {
+        markAsChanged("DIASFERIAS", diasFerias);
         this.diasFerias = diasFerias;
    }
 
@@ -398,6 +404,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAjudaComp(String ajudaComp) {
+        markAsChanged("AJUDACOMP", ajudaComp);
         this.ajudaComp = ajudaComp;
    }
 
@@ -406,6 +413,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAprendContrInd(String aprendContrInd) {
+        markAsChanged("APRENDCONTRIND", aprendContrInd);
         this.aprendContrInd = aprendContrInd;
    }
 
@@ -414,6 +422,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setBloqueiaBatidaOnline(String bloqueiaBatidaOnline) {
+        markAsChanged("BLOQUEIABATIDAONLINE", bloqueiaBatidaOnline);
         this.bloqueiaBatidaOnline = bloqueiaBatidaOnline;
    }
 
@@ -422,6 +431,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodMadDem(BigDecimal codMadDem) {
+        markAsChanged("CODMADDEM", codMadDem);
         this.codMadDem = codMadDem;
    }
 
@@ -430,6 +440,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtFimContrInt(Timestamp dtFimContrInt) {
+        markAsChanged("DTFIMCONTRINT", dtFimContrInt);
         this.dtFimContrInt = dtFimContrInt;
    }
 
@@ -438,6 +449,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtFimRed(Timestamp dtFimRed) {
+        markAsChanged("DTFIMRED", dtFimRed);
         this.dtFimRed = dtFimRed;
    }
 
@@ -446,6 +458,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtInicioRed(Timestamp dtInicioRed) {
+        markAsChanged("DTINICIORED", dtInicioRed);
         this.dtInicioRed = dtInicioRed;
    }
 
@@ -454,6 +467,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setHorasSemCpu(BigDecimal horasSemCpu) {
+        markAsChanged("HORASSEMCPU", horasSemCpu);
         this.horasSemCpu = horasSemCpu;
    }
 
@@ -462,6 +476,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setHorasSemRed(BigDecimal horasSemRed) {
+        markAsChanged("HORASSEMRED", horasSemRed);
         this.horasSemRed = horasSemRed;
    }
 
@@ -470,6 +485,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiasPeriodo1(BigDecimal diasPeriodo1) {
+        markAsChanged("DIASPERIODO1", diasPeriodo1);
         this.diasPeriodo1 = diasPeriodo1;
    }
 
@@ -478,6 +494,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiasPeriodo2(BigDecimal diasPeriodo2) {
+        markAsChanged("DIASPERIODO2", diasPeriodo2);
         this.diasPeriodo2 = diasPeriodo2;
    }
 
@@ -486,6 +503,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDirReciproco(String dirReciproco) {
+        markAsChanged("DIRRECIPROCO", dirReciproco);
         this.dirReciproco = dirReciproco;
    }
 
@@ -494,6 +512,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAdm(Timestamp dtAdm) {
+        markAsChanged("DTADM", dtAdm);
         this.dtAdm = dtAdm;
    }
 
@@ -502,6 +521,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAfastamento(Timestamp dtAfastamento) {
+        markAsChanged("DTAFASTAMENTO", dtAfastamento);
         this.dtAfastamento = dtAfastamento;
    }
 
@@ -510,6 +530,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -518,6 +539,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodSind(BigDecimal codSind) {
+        markAsChanged("CODSIND", codSind);
         this.codSind = codSind;
    }
 
@@ -526,6 +548,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodTomador(BigDecimal codTomador) {
+        markAsChanged("CODTOMADOR", codTomador);
         this.codTomador = codTomador;
    }
 
@@ -534,6 +557,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -542,6 +566,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setComplemento(String complemento) {
+        markAsChanged("COMPLEMENTO", complemento);
         this.complemento = complemento;
    }
 
@@ -550,6 +575,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setConvMed(String convMed) {
+        markAsChanged("CONVMED", convMed);
         this.convMed = convMed;
    }
 
@@ -558,6 +584,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCpf(String cpf) {
+        markAsChanged("CPF", cpf);
         this.cpf = cpf;
    }
 
@@ -566,6 +593,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCtaFgts(String ctaFgts) {
+        markAsChanged("CTAFGTS", ctaFgts);
         this.ctaFgts = ctaFgts;
    }
 
@@ -574,6 +602,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDeficienteFisico(String deficienteFisico) {
+        markAsChanged("DEFICIENTEFISICO", deficienteFisico);
         this.deficienteFisico = deficienteFisico;
    }
 
@@ -582,6 +611,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAfastFgts(String afastFgts) {
+        markAsChanged("AFASTFGTS", afastFgts);
         this.afastFgts = afastFgts;
    }
 
@@ -590,6 +620,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAfastRais(BigDecimal afastRais) {
+        markAsChanged("AFASTRAIS", afastRais);
         this.afastRais = afastRais;
    }
 
@@ -598,6 +629,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAnoChegPais(BigDecimal anoChegPais) {
+        markAsChanged("ANOCHEGPAIS", anoChegPais);
         this.anoChegPais = anoChegPais;
    }
 
@@ -606,6 +638,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCategoriaCnh(String categoriaCnh) {
+        markAsChanged("CATEGORIACNH", categoriaCnh);
         this.categoriaCnh = categoriaCnh;
    }
 
@@ -614,6 +647,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCausaAfast(BigDecimal causaAfast) {
+        markAsChanged("CAUSAAFAST", causaAfast);
         this.causaAfast = causaAfast;
    }
 
@@ -622,6 +656,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCelular(String celular) {
+        markAsChanged("CELULAR", celular);
         this.celular = celular;
    }
 
@@ -630,6 +665,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCep(String cep) {
+        markAsChanged("CEP", cep);
         this.cep = cep;
    }
 
@@ -638,6 +674,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCidNasc(BigDecimal cidNasc) {
+        markAsChanged("CIDNASC", cidNasc);
         this.cidNasc = cidNasc;
    }
 
@@ -646,6 +683,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodAdmFgts(String codAdmFgts) {
+        markAsChanged("CODADMFGTS", codAdmFgts);
         this.codAdmFgts = codAdmFgts;
    }
 
@@ -654,6 +692,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodAdmFgtsIi(String codAdmFgtsIi) {
+        markAsChanged("CODADMFGTSII", codAdmFgtsIi);
         this.codAdmFgtsIi = codAdmFgtsIi;
    }
 
@@ -662,6 +701,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodAge(String codAge) {
+        markAsChanged("CODAGE", codAge);
         this.codAge = codAge;
    }
 
@@ -670,6 +710,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodBai(BigDecimal codBai) {
+        markAsChanged("CODBAI", codBai);
         this.codBai = codBai;
    }
 
@@ -678,6 +719,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodBco(BigDecimal codBco) {
+        markAsChanged("CODBCO", codBco);
         this.codBco = codBco;
    }
 
@@ -686,6 +728,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
+        markAsChanged("CODCARGAHOR", codCargaHor);
         this.codCargaHor = codCargaHor;
    }
 
@@ -694,6 +737,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCargo(BigDecimal codCargo) {
+        markAsChanged("CODCARGO", codCargo);
         this.codCargo = codCargo;
    }
 
@@ -702,6 +746,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCateg(BigDecimal codCateg) {
+        markAsChanged("CODCATEG", codCateg);
         this.codCateg = codCateg;
    }
 
@@ -710,6 +755,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCid(BigDecimal codCid) {
+        markAsChanged("CODCID", codCid);
         this.codCid = codCid;
    }
 
@@ -718,6 +764,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCidTrab(BigDecimal codCidTrab) {
+        markAsChanged("CODCIDTRAB", codCidTrab);
         this.codCidTrab = codCidTrab;
    }
 
@@ -726,6 +773,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCtBco(String codCtBco) {
+        markAsChanged("CODCTABCO", codCtBco);
         this.codCtBco = codCtBco;
    }
 
@@ -734,6 +782,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodDep(BigDecimal codDep) {
+        markAsChanged("CODDEP", codDep);
         this.codDep = codDep;
    }
 
@@ -742,6 +791,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -750,6 +800,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
+        markAsChanged("CODEMPORIG", codEmpOrig);
         this.codEmpOrig = codEmpOrig;
    }
 
@@ -758,6 +809,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEnd(BigDecimal codEnd) {
+        markAsChanged("CODEND", codEnd);
         this.codEnd = codEnd;
    }
 
@@ -766,6 +818,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFunc(BigDecimal codFunc) {
+        markAsChanged("CODFUNC", codFunc);
         this.codFunc = codFunc;
    }
 
@@ -774,6 +827,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFuncao(BigDecimal codFuncao) {
+        markAsChanged("CODFUNCAO", codFuncao);
         this.codFuncao = codFuncao;
    }
 
@@ -782,6 +836,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFuncOrig(BigDecimal codFuncOrig) {
+        markAsChanged("CODFUNCORIG", codFuncOrig);
         this.codFuncOrig = codFuncOrig;
    }
 
@@ -790,6 +845,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAvisoPrevio(Timestamp dtAvisoPrevio) {
+        markAsChanged("DTAVISOPREVIO", dtAvisoPrevio);
         this.dtAvisoPrevio = dtAvisoPrevio;
    }
 
@@ -798,6 +854,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtCadPis(Timestamp dtCadPis) {
+        markAsChanged("DTCADPIS", dtCadPis);
         this.dtCadPis = dtCadPis;
    }
 
@@ -806,6 +863,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtCarteiraSaude(Timestamp dtCarteiraSaude) {
+        markAsChanged("DTCARTEIRASAUDE", dtCarteiraSaude);
         this.dtCarteiraSaude = dtCarteiraSaude;
    }
 
@@ -814,6 +872,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtCps(Timestamp dtCps) {
+        markAsChanged("DTCPS", dtCps);
         this.dtCps = dtCps;
    }
 
@@ -822,6 +881,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtDem(Timestamp dtDem) {
+        markAsChanged("DTDEM", dtDem);
         this.dtDem = dtDem;
    }
 
@@ -830,6 +890,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtNasc(Timestamp dtNasc) {
+        markAsChanged("DTNASC", dtNasc);
         this.dtNasc = dtNasc;
    }
 
@@ -838,6 +899,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtOptFgts(Timestamp dtOptFgts) {
+        markAsChanged("DTOPTFGTS", dtOptFgts);
         this.dtOptFgts = dtOptFgts;
    }
 
@@ -846,6 +908,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtRg(Timestamp dtRg) {
+        markAsChanged("DTRG", dtRg);
         this.dtRg = dtRg;
    }
 
@@ -854,6 +917,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtTransferencia(Timestamp dtTransferencia) {
+        markAsChanged("DTTRANSFERENCIA", dtTransferencia);
         this.dtTransferencia = dtTransferencia;
    }
 
@@ -862,6 +926,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtValPais(Timestamp dtValPais) {
+        markAsChanged("DTVALPAIS", dtValPais);
         this.dtValPais = dtValPais;
    }
 
@@ -870,6 +935,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtVencExp1(Timestamp dtVencExp1) {
+        markAsChanged("DTVENCEXP1", dtVencExp1);
         this.dtVencExp1 = dtVencExp1;
    }
 
@@ -878,6 +944,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtVencExp2(Timestamp dtVencExp2) {
+        markAsChanged("DTVENCEXP2", dtVencExp2);
         this.dtVencExp2 = dtVencExp2;
    }
 
@@ -886,6 +953,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setEmail(String email) {
+        markAsChanged("EMAIL", email);
         this.email = email;
    }
 
@@ -894,6 +962,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setEstadoCivil(BigDecimal estadoCivil) {
+        markAsChanged("ESTADOCIVIL", estadoCivil);
         this.estadoCivil = estadoCivil;
    }
 
@@ -902,6 +971,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setHorasSem(BigDecimal horasSem) {
+        markAsChanged("HORASSEM", horasSem);
         this.horasSem = horasSem;
    }
 
@@ -910,6 +980,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIdentidade(String identidade) {
+        markAsChanged("IDENTIDADE", identidade);
         this.identidade = identidade;
    }
 
@@ -918,6 +989,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setImagem(byte[] imagem) {
+        markAsChanged("IMAGEM", imagem);
         this.imagem = imagem;
    }
 
@@ -926,6 +998,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatricula(BigDecimal matricula) {
+        markAsChanged("MATRICULA", matricula);
         this.matricula = matricula;
    }
 
@@ -934,6 +1007,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMesDia(BigDecimal mesDia) {
+        markAsChanged("MESDIA", mesDia);
         this.mesDia = mesDia;
    }
 
@@ -942,6 +1016,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNacionalidade(BigDecimal nacionalidade) {
+        markAsChanged("NACIONALIDADE", nacionalidade);
         this.nacionalidade = nacionalidade;
    }
 
@@ -950,6 +1025,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNacionalPais(BigDecimal nacionalPais) {
+        markAsChanged("NACIONALPAIS", nacionalPais);
         this.nacionalPais = nacionalPais;
    }
 
@@ -958,6 +1034,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNivEsc(BigDecimal nivEsc) {
+        markAsChanged("NIVESC", nivEsc);
         this.nivEsc = nivEsc;
    }
 
@@ -966,6 +1043,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNomeFunc(String nomeFunc) {
+        markAsChanged("NOMEFUNC", nomeFunc);
         this.nomeFunc = nomeFunc;
    }
 
@@ -974,6 +1052,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNomeMae(String nomeMae) {
+        markAsChanged("NOMEMAE", nomeMae);
         this.nomeMae = nomeMae;
    }
 
@@ -982,6 +1061,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNomePai(String nomePai) {
+        markAsChanged("NOMEPAI", nomePai);
         this.nomePai = nomePai;
    }
 
@@ -990,6 +1070,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroCnh(String nroCnh) {
+        markAsChanged("NROCNH", nroCnh);
         this.nroCnh = nroCnh;
    }
 
@@ -998,6 +1079,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroReservista(String nroReservista) {
+        markAsChanged("NRORESERVISTA", nroReservista);
         this.nroReservista = nroReservista;
    }
 
@@ -1006,6 +1088,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNumCartaoPonto(BigDecimal numCartaoPonto) {
+        markAsChanged("NUMCARTAOPONTO", numCartaoPonto);
         this.numCartaoPonto = numCartaoPonto;
    }
 
@@ -1014,6 +1097,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNumCps(BigDecimal numCps) {
+        markAsChanged("NUMCPS", numCps);
         this.numCps = numCps;
    }
 
@@ -1022,6 +1106,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNumEnd(String numEnd) {
+        markAsChanged("NUMEND", numEnd);
         this.numEnd = numEnd;
    }
 
@@ -1030,6 +1115,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrgaoRg(String orgaoRg) {
+        markAsChanged("ORGAORG", orgaoRg);
         this.orgaoRg = orgaoRg;
    }
 
@@ -1038,6 +1124,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPartPat(String partPat) {
+        markAsChanged("PARTPAT", partPat);
         this.partPat = partPat;
    }
 
@@ -1046,6 +1133,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPercAdiantamento(BigDecimal percAdiantamento) {
+        markAsChanged("PERCADIANTAMENTO", percAdiantamento);
         this.percAdiantamento = percAdiantamento;
    }
 
@@ -1054,6 +1142,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPercConv(BigDecimal percConv) {
+        markAsChanged("PERCCONV", percConv);
         this.percConv = percConv;
    }
 
@@ -1062,6 +1151,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPis(String pis) {
+        markAsChanged("PIS", pis);
         this.pis = pis;
    }
 
@@ -1070,6 +1160,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPrimeiraCnh(Timestamp primeiraCnh) {
+        markAsChanged("PRIMEIRACNH", primeiraCnh);
         this.primeiraCnh = primeiraCnh;
    }
 
@@ -1078,6 +1169,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPrimEmprego(String primEmprego) {
+        markAsChanged("PRIMEMPREGO", primEmprego);
         this.primEmprego = primEmprego;
    }
 
@@ -1086,6 +1178,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRacaFuncionario(BigDecimal racaFuncionario) {
+        markAsChanged("RACAFUNCIONARIO", racaFuncionario);
         this.racaFuncionario = racaFuncionario;
    }
 
@@ -1094,6 +1187,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRegime(BigDecimal regime) {
+        markAsChanged("REGIME", regime);
         this.regime = regime;
    }
 
@@ -1102,6 +1196,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRemuMinima(BigDecimal remuMinima) {
+        markAsChanged("REMUMINIMA", remuMinima);
         this.remuMinima = remuMinima;
    }
 
@@ -1110,6 +1205,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRne(String rne) {
+        markAsChanged("RNE", rne);
         this.rne = rne;
    }
 
@@ -1118,6 +1214,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalBase(BigDecimal salBase) {
+        markAsChanged("SALBASE", salBase);
         this.salBase = salBase;
    }
 
@@ -1126,6 +1223,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSecaoEleitoral(BigDecimal secaoEleitoral) {
+        markAsChanged("SECAOELEITORAL", secaoEleitoral);
         this.secaoEleitoral = secaoEleitoral;
    }
 
@@ -1134,6 +1232,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSenha(String senha) {
+        markAsChanged("SENHA", senha);
         this.senha = senha;
    }
 
@@ -1142,6 +1241,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSerieCps(String serieCps) {
+        markAsChanged("SERIECPS", serieCps);
         this.serieCps = serieCps;
    }
 
@@ -1150,6 +1250,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSexo(String sexo) {
+        markAsChanged("SEXO", sexo);
         this.sexo = sexo;
    }
 
@@ -1158,6 +1259,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSindicalizado(String sindicalizado) {
+        markAsChanged("SINDICALIZADO", sindicalizado);
         this.sindicalizado = sindicalizado;
    }
 
@@ -1166,6 +1268,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSitPais(String sitPais) {
+        markAsChanged("SITPAIS", sitPais);
         this.sitPais = sitPais;
    }
 
@@ -1174,6 +1277,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSitSind(String sitSind) {
+        markAsChanged("SITSIND", sitSind);
         this.sitSind = sitSind;
    }
 
@@ -1182,6 +1286,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSituacao(String situacao) {
+        markAsChanged("SITUACAO", situacao);
         this.situacao = situacao;
    }
 
@@ -1190,6 +1295,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTelefone(String telefone) {
+        markAsChanged("TELEFONE", telefone);
         this.telefone = telefone;
    }
 
@@ -1198,6 +1304,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipConta(String tipConta) {
+        markAsChanged("TIPCONTA", tipConta);
         this.tipConta = tipConta;
    }
 
@@ -1206,6 +1313,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipDeficiencia(BigDecimal tipDeficiencia) {
+        markAsChanged("TIPDEFICIENCIA", tipDeficiencia);
         this.tipDeficiencia = tipDeficiencia;
    }
 
@@ -1214,6 +1322,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipPonto(String tipPonto) {
+        markAsChanged("TIPPONTO", tipPonto);
         this.tipPonto = tipPonto;
    }
 
@@ -1222,6 +1331,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipReceb(String tipReceb) {
+        markAsChanged("TIPRECEB", tipReceb);
         this.tipReceb = tipReceb;
    }
 
@@ -1230,6 +1340,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipSal(String tipSal) {
+        markAsChanged("TIPSAL", tipSal);
         this.tipSal = tipSal;
    }
 
@@ -1238,6 +1349,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipTab(String tipTab) {
+        markAsChanged("TIPTAB", tipTab);
         this.tipTab = tipTab;
    }
 
@@ -1246,6 +1358,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTitEleitoral(String titEleitoral) {
+        markAsChanged("TITELEITORAL", titEleitoral);
         this.titEleitoral = titEleitoral;
    }
 
@@ -1254,6 +1367,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTrabOutraEmp(String trabOutraEmp) {
+        markAsChanged("TRABOUTRAEMP", trabOutraEmp);
         this.trabOutraEmp = trabOutraEmp;
    }
 
@@ -1262,6 +1376,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUfCps(BigDecimal ufCps) {
+        markAsChanged("UFCPS", ufCps);
         this.ufCps = ufCps;
    }
 
@@ -1270,6 +1385,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setVencimentoCnh(Timestamp vencimentoCnh) {
+        markAsChanged("VENCIMENTOCNH", vencimentoCnh);
         this.vencimentoCnh = vencimentoCnh;
    }
 
@@ -1278,6 +1394,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setVinculo(BigDecimal vinculo) {
+        markAsChanged("VINCULO", vinculo);
         this.vinculo = vinculo;
    }
 
@@ -1286,6 +1403,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setZonaEleitoral(BigDecimal zonaEleitoral) {
+        markAsChanged("ZONAELEITORAL", zonaEleitoral);
         this.zonaEleitoral = zonaEleitoral;
    }
 
@@ -1294,6 +1412,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodGrupoCtbz(BigDecimal codGrupoCtbz) {
+        markAsChanged("CODGRUPOCTBZ", codGrupoCtbz);
         this.codGrupoCtbz = codGrupoCtbz;
    }
 
@@ -1302,6 +1421,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -1310,6 +1430,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodSaq(BigDecimal codSaq) {
+        markAsChanged("CODSAQ", codSaq);
         this.codSaq = codSaq;
    }
 
@@ -1318,6 +1439,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCasadoBr(String casadoBr) {
+        markAsChanged("CASADOBR", casadoBr);
         this.casadoBr = casadoBr;
    }
 
@@ -1326,6 +1448,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setClasTrabEstrang(BigDecimal clasTrabEstrang) {
+        markAsChanged("CLASSTRABESTRANG", clasTrabEstrang);
         this.clasTrabEstrang = clasTrabEstrang;
    }
 
@@ -1334,6 +1457,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtChegPais(Timestamp dtChegPais) {
+        markAsChanged("DTCHEGPAIS", dtChegPais);
         this.dtChegPais = dtChegPais;
    }
 
@@ -1342,6 +1466,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtExpRne(Timestamp dtExpRne) {
+        markAsChanged("DTEXPRNE", dtExpRne);
         this.dtExpRne = dtExpRne;
    }
 
@@ -1350,6 +1475,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtNatural(Timestamp dtNatural) {
+        markAsChanged("DTNATURAL", dtNatural);
         this.dtNatural = dtNatural;
    }
 
@@ -1358,6 +1484,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setFilhosBr(String filhosBr) {
+        markAsChanged("FILHOSBR", filhosBr);
         this.filhosBr = filhosBr;
    }
 
@@ -1366,6 +1493,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndAdmissao(BigDecimal indAdmissao) {
+        markAsChanged("INDADMISSAO", indAdmissao);
         this.indAdmissao = indAdmissao;
    }
 
@@ -1374,6 +1502,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroNatural(String nroNatural) {
+        markAsChanged("NRONATURAL", nroNatural);
         this.nroNatural = nroNatural;
    }
 
@@ -1382,6 +1511,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObsDeficiencia(String obsDeficiencia) {
+        markAsChanged("OBSDEFICIENCIA", obsDeficiencia);
         this.obsDeficiencia = obsDeficiencia;
    }
 
@@ -1390,6 +1520,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOptFgts(BigDecimal optFgts) {
+        markAsChanged("OPTFGTS", optFgts);
         this.optFgts = optFgts;
    }
 
@@ -1398,6 +1529,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrgaoCnh(String orgaoCnh) {
+        markAsChanged("ORGAOCNH", orgaoCnh);
         this.orgaoCnh = orgaoCnh;
    }
 
@@ -1406,6 +1538,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrgaoRne(String orgaoRne) {
+        markAsChanged("ORGAORNE", orgaoRne);
         this.orgaoRne = orgaoRne;
    }
 
@@ -1414,6 +1547,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRegimeJor(BigDecimal regimeJor) {
+        markAsChanged("REGIMEJOR", regimeJor);
         this.regimeJor = regimeJor;
    }
 
@@ -1422,6 +1556,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRegimeTrab(BigDecimal regimeTrab) {
+        markAsChanged("REGIMETRAB", regimeTrab);
         this.regimeTrab = regimeTrab;
    }
 
@@ -1430,6 +1565,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCarreira(BigDecimal codCarreira) {
+        markAsChanged("CODCARREIRA", codCarreira);
         this.codCarreira = codCarreira;
    }
 
@@ -1438,6 +1574,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCategTrabCedido(BigDecimal codCategTrabCedido) {
+        markAsChanged("CODCATEGTRABCEDIDO", codCategTrabCedido);
         this.codCategTrabCedido = codCategTrabCedido;
    }
 
@@ -1446,6 +1583,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCidCertCivil(BigDecimal codCidCertCivil) {
+        markAsChanged("CODCIDCERTCIVIL", codCidCertCivil);
         this.codCidCertCivil = codCidCertCivil;
    }
 
@@ -1454,6 +1592,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodConvenio(BigDecimal codConvenio) {
+        markAsChanged("CODCONVENIO", codConvenio);
         this.codConvenio = codConvenio;
    }
 
@@ -1462,6 +1601,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmpDest(BigDecimal codEmpDest) {
+        markAsChanged("CODEMPDEST", codEmpDest);
         this.codEmpDest = codEmpDest;
    }
 
@@ -1470,6 +1610,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmpFuncSubst(BigDecimal codEmpFuncSubst) {
+        markAsChanged("CODEMPFUNCSUBST", codEmpFuncSubst);
         this.codEmpFuncSubst = codEmpFuncSubst;
    }
 
@@ -1478,6 +1619,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmpFuncSup(BigDecimal codEmpFuncSup) {
+        markAsChanged("CODEMPFUNCSUP", codEmpFuncSup);
         this.codEmpFuncSup = codEmpFuncSup;
    }
 
@@ -1486,6 +1628,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodEmpRespNis(BigDecimal codEmpRespNis) {
+        markAsChanged("CODEMPRESPNIS", codEmpRespNis);
         this.codEmpRespNis = codEmpRespNis;
    }
 
@@ -1494,6 +1637,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFuncDest(BigDecimal codFuncDest) {
+        markAsChanged("CODFUNCDEST", codFuncDest);
         this.codFuncDest = codFuncDest;
    }
 
@@ -1502,6 +1646,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFuncSubst(BigDecimal codFuncSubst) {
+        markAsChanged("CODFUNCSUBST", codFuncSubst);
         this.codFuncSubst = codFuncSubst;
    }
 
@@ -1510,6 +1655,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodFuncSup(BigDecimal codFuncSup) {
+        markAsChanged("CODFUNCSUP", codFuncSup);
         this.codFuncSup = codFuncSup;
    }
 
@@ -1518,6 +1664,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodGrupoHorario(BigDecimal codGrupoHorario) {
+        markAsChanged("CODGRUPOHORARIO", codGrupoHorario);
         this.codGrupoHorario = codGrupoHorario;
    }
 
@@ -1526,6 +1673,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodMotDesligTransf(String codMotDesligTransf) {
+        markAsChanged("CODMOTDESLIGTRANSF", codMotDesligTransf);
         this.codMotDesligTransf = codMotDesligTransf;
    }
 
@@ -1534,6 +1682,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodNivel(BigDecimal codNivel) {
+        markAsChanged("CODNIVEL", codNivel);
         this.codNivel = codNivel;
    }
 
@@ -1542,6 +1691,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodTpr(BigDecimal codTpr) {
+        markAsChanged("CODTPR", codTpr);
         this.codTpr = codTpr;
    }
 
@@ -1550,6 +1700,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCompensaSabado(String compensaSabado) {
+        markAsChanged("COMPENSASABADO", compensaSabado);
         this.compensaSabado = compensaSabado;
    }
 
@@ -1558,6 +1709,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCompSalario(BigDecimal compSalario) {
+        markAsChanged("COMPSALARIO", compSalario);
         this.compSalario = compSalario;
    }
 
@@ -1566,6 +1718,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setContratoSusp(String contratoSusp) {
+        markAsChanged("CONTRATOSUSP", contratoSusp);
         this.contratoSusp = contratoSusp;
    }
 
@@ -1574,6 +1727,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setContTrabTemp(BigDecimal contTrabTemp) {
+        markAsChanged("CONTTRABTEMP", contTrabTemp);
         this.contTrabTemp = contTrabTemp;
    }
 
@@ -1582,6 +1736,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCpfAnt(String cpfAnt) {
+        markAsChanged("CPFANT", cpfAnt);
         this.cpfAnt = cpfAnt;
    }
 
@@ -1590,6 +1745,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCpfSubstituido(String cpfSubstituido) {
+        markAsChanged("CPFSUBSTITUIDO", cpfSubstituido);
         this.cpfSubstituido = cpfSubstituido;
    }
 
@@ -1598,6 +1754,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCrmMedicoAso(String crmMedicoAso) {
+        markAsChanged("CRMMEDICOASO", crmMedicoAso);
         this.crmMedicoAso = crmMedicoAso;
    }
 
@@ -1606,6 +1763,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiasAvisoPrevio(BigDecimal diasAvisoPrevio) {
+        markAsChanged("DIASAVISOPREVIO", diasAvisoPrevio);
         this.diasAvisoPrevio = diasAvisoPrevio;
    }
 
@@ -1614,6 +1772,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDiaSemGrupoHr(BigDecimal diaSemGrupoHr) {
+        markAsChanged("DIASEMGRUPOHR", diaSemGrupoHr);
         this.diaSemGrupoHr = diaSemGrupoHr;
    }
 
@@ -1622,6 +1781,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDispensaPonto(String dispensaPonto) {
+        markAsChanged("DISPENSAPONTO", dispensaPonto);
         this.dispensaPonto = dispensaPonto;
    }
 
@@ -1630,6 +1790,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDispPerExp(String dispPerExp) {
+        markAsChanged("DISPPEREXP", dispPerExp);
         this.dispPerExp = dispPerExp;
    }
 
@@ -1638,6 +1799,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDscAtivDes(String dscAtivDes) {
+        markAsChanged("DSCATIVDES", dscAtivDes);
         this.dscAtivDes = dscAtivDes;
    }
 
@@ -1646,6 +1808,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAdmEmpCed(Timestamp dtAdmEmpCed) {
+        markAsChanged("DTADMEMPCED", dtAdmEmpCed);
         this.dtAdmEmpCed = dtAdmEmpCed;
    }
 
@@ -1654,6 +1817,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAltCpf(Timestamp dtAltCpf) {
+        markAsChanged("DTALTCPF", dtAltCpf);
         this.dtAltCpf = dtAltCpf;
    }
 
@@ -1662,6 +1826,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAso(Timestamp dtAso) {
+        markAsChanged("DTASO", dtAso);
         this.dtAso = dtAso;
    }
 
@@ -1670,6 +1835,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtEmiCertCivil(Timestamp dtEmiCertCivil) {
+        markAsChanged("DTEMICERTCIVIL", dtEmiCertCivil);
         this.dtEmiCertCivil = dtEmiCertCivil;
    }
 
@@ -1678,6 +1844,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtEmiPorte(Timestamp dtEmiPorte) {
+        markAsChanged("DTEMIPPORTE", dtEmiPorte);
         this.dtEmiPorte = dtEmiPorte;
    }
 
@@ -1686,6 +1853,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtEsocial2205(Timestamp dtEsocial2205) {
+        markAsChanged("DTESOCIAL2205", dtEsocial2205);
         this.dtEsocial2205 = dtEsocial2205;
    }
 
@@ -1694,6 +1862,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtEsocial2206(Timestamp dtEsocial2206) {
+        markAsChanged("DTESOCIAL2206", dtEsocial2206);
         this.dtEsocial2206 = dtEsocial2206;
    }
 
@@ -1702,6 +1871,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtExpOc(Timestamp dtExpOc) {
+        markAsChanged("DTEXPOC", dtExpOc);
         this.dtExpOc = dtExpOc;
    }
 
@@ -1710,6 +1880,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtFimQuarentena(Timestamp dtFimQuarentena) {
+        markAsChanged("DTFIMQUARENTENA", dtFimQuarentena);
         this.dtFimQuarentena = dtFimQuarentena;
    }
 
@@ -1718,6 +1889,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtIncEsocial(Timestamp dtIncEsocial) {
+        markAsChanged("DTINC_ESOCIAL", dtIncEsocial);
         this.dtIncEsocial = dtIncEsocial;
    }
 
@@ -1726,6 +1898,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtIniGrupoHr(Timestamp dtIniGrupoHr) {
+        markAsChanged("DTINIGRUPOHR", dtIniGrupoHr);
         this.dtIniGrupoHr = dtIniGrupoHr;
    }
 
@@ -1734,6 +1907,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtLaudoRra(Timestamp dtLaudoRra) {
+        markAsChanged("DTLAUDORRA", dtLaudoRra);
         this.dtLaudoRra = dtLaudoRra;
    }
 
@@ -1742,6 +1916,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtLoteNis(Timestamp dtLoteNis) {
+        markAsChanged("DTLOTENIS", dtLoteNis);
         this.dtLoteNis = dtLoteNis;
    }
 
@@ -1750,6 +1925,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtQuitacao(Timestamp dtQuitacao) {
+        markAsChanged("DTQUITACAO", dtQuitacao);
         this.dtQuitacao = dtQuitacao;
    }
 
@@ -1758,6 +1934,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtTermino(Timestamp dtTermino) {
+        markAsChanged("DTTERMINO", dtTermino);
         this.dtTermino = dtTermino;
    }
 
@@ -1766,6 +1943,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtTransfDest(Timestamp dtTransfDest) {
+        markAsChanged("DTTRANSFDEST", dtTransfDest);
         this.dtTransfDest = dtTransfDest;
    }
 
@@ -1774,6 +1952,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtUltEnvEsocial(Timestamp dtUltEnvEsocial) {
+        markAsChanged("DTULTENV_ESOCIAL", dtUltEnvEsocial);
         this.dtUltEnvEsocial = dtUltEnvEsocial;
    }
 
@@ -1782,6 +1961,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtValOc(Timestamp dtValOc) {
+        markAsChanged("DTVALOC", dtValOc);
         this.dtValOc = dtValOc;
    }
 
@@ -1790,6 +1970,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtValPorte(Timestamp dtValPorte) {
+        markAsChanged("DTVALPPORTE", dtValPorte);
         this.dtValPorte = dtValPorte;
    }
 
@@ -1798,6 +1979,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtVencExp1Or(Timestamp dtVencExp1Or) {
+        markAsChanged("DTVENCEXP1OR", dtVencExp1Or);
         this.dtVencExp1Or = dtVencExp1Or;
    }
 
@@ -1806,6 +1988,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtVencExp2Or(Timestamp dtVencExp2Or) {
+        markAsChanged("DTVENCEXP2OR", dtVencExp2Or);
         this.dtVencExp2Or = dtVencExp2Or;
    }
 
@@ -1814,6 +1997,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtVincEmpAnt(Timestamp dtVincEmpAnt) {
+        markAsChanged("DTVINCEMPANT", dtVincEmpAnt);
         this.dtVincEmpAnt = dtVincEmpAnt;
    }
 
@@ -1822,6 +2006,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setEmissorPorte(String emissorPorte) {
+        markAsChanged("EMISSORPPORTE", emissorPorte);
         this.emissorPorte = emissorPorte;
    }
 
@@ -1830,6 +2015,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setEnvEsocial(String envEsocial) {
+        markAsChanged("ENVESOCIAL", envEsocial);
         this.envEsocial = envEsocial;
    }
 
@@ -1838,6 +2024,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setFimValeSocial(Timestamp fimValeSocial) {
+        markAsChanged("FIMVALESOCIAL", fimValeSocial);
         this.fimValeSocial = fimValeSocial;
    }
 
@@ -1846,6 +2033,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIdConsig(String idConsig) {
+        markAsChanged("IDCONSIG", idConsig);
         this.idConsig = idConsig;
    }
 
@@ -1854,6 +2042,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndCumprParc(BigDecimal indCumprParc) {
+        markAsChanged("INDCUMPRPARC", indCumprParc);
         this.indCumprParc = indCumprParc;
    }
 
@@ -1862,6 +2051,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndMv(BigDecimal indMv) {
+        markAsChanged("INDMV", indMv);
         this.indMv = indMv;
    }
 
@@ -1870,6 +2060,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndNif(String indNif) {
+        markAsChanged("INDNIF", indNif);
         this.indNif = indNif;
    }
 
@@ -1878,6 +2069,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setInfoCota(String infoCota) {
+        markAsChanged("INFOCOTA", infoCota);
         this.infoCota = infoCota;
    }
 
@@ -1886,6 +2078,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setInfoOnus(BigDecimal infoOnus) {
+        markAsChanged("INFOONUS", infoOnus);
         this.infoOnus = infoOnus;
    }
 
@@ -1894,6 +2087,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIniValeSocial(Timestamp iniValeSocial) {
+        markAsChanged("INIVALESOCIAL", iniValeSocial);
         this.iniValeSocial = iniValeSocial;
    }
 
@@ -1902,6 +2096,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setInsConsig(String insConsig) {
+        markAsChanged("INSCONSIG", insConsig);
         this.insConsig = insConsig;
    }
 
@@ -1910,6 +2105,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setJornadaEspProf(String jornadaEspProf) {
+        markAsChanged("JORNADAESPPROF", jornadaEspProf);
         this.jornadaEspProf = jornadaEspProf;
    }
 
@@ -1918,6 +2114,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setJornadaProf(BigDecimal jornadaProf) {
+        markAsChanged("JORNADAPROF", jornadaProf);
         this.jornadaProf = jornadaProf;
    }
 
@@ -1926,6 +2123,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setJustContr(String justContr) {
+        markAsChanged("JUSTCONTR", justContr);
         this.justContr = justContr;
    }
 
@@ -1934,6 +2132,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setJustProrr(String justProrr) {
+        markAsChanged("JUSTPRORR", justProrr);
         this.justProrr = justProrr;
    }
 
@@ -1942,6 +2141,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatricAnt(BigDecimal matricAnt) {
+        markAsChanged("MATRICANT", matricAnt);
         this.matricAnt = matricAnt;
    }
 
@@ -1950,6 +2150,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatriculaEmpAnt(String matriculaEmpAnt) {
+        markAsChanged("MATRICULAEMPANT", matriculaEmpAnt);
         this.matriculaEmpAnt = matriculaEmpAnt;
    }
 
@@ -1958,6 +2159,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatriculaEmpCed(String matriculaEmpCed) {
+        markAsChanged("MATRICULAEMPCED", matriculaEmpCed);
         this.matriculaEmpCed = matriculaEmpCed;
    }
 
@@ -1966,6 +2168,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatriculaOld(String matriculaOld) {
+        markAsChanged("MATRICULAOLD", matriculaOld);
         this.matriculaOld = matriculaOld;
    }
 
@@ -1974,6 +2177,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMedicoAso(String medicoAso) {
+        markAsChanged("MEDICOASO", medicoAso);
         this.medicoAso = medicoAso;
    }
 
@@ -1982,6 +2186,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMei(String mei) {
+        markAsChanged("MEI", mei);
         this.mei = mei;
    }
 
@@ -1990,6 +2195,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMetErg(String metErg) {
+        markAsChanged("METERG", metErg);
         this.metErg = metErg;
    }
 
@@ -1998,6 +2204,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMtvDesligTsv(BigDecimal mtvDesligTsv) {
+        markAsChanged("MTVDESLIGTSV", mtvDesligTsv);
         this.mtvDesligTsv = mtvDesligTsv;
    }
 
@@ -2006,6 +2213,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNifBenef(String nifBenef) {
+        markAsChanged("NIFBENEF", nifBenef);
         this.nifBenef = nifBenef;
    }
 
@@ -2014,6 +2222,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNisEnviado(String nisEnviado) {
+        markAsChanged("NISENVIADO", nisEnviado);
         this.nisEnviado = nisEnviado;
    }
 
@@ -2022,6 +2231,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNmSocial(String nmSocial) {
+        markAsChanged("NMSOCIAL", nmSocial);
         this.nmSocial = nmSocial;
    }
 
@@ -2030,6 +2240,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNomeArqHomologNet(String nomeArqHomologNet) {
+        markAsChanged("NOMEARQHOMOLOGNET", nomeArqHomologNet);
         this.nomeArqHomologNet = nomeArqHomologNet;
    }
 
@@ -2038,6 +2249,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNovoEmprego(String novoEmprego) {
+        markAsChanged("NOVOEMPREGO", novoEmprego);
         this.novoEmprego = novoEmprego;
    }
 
@@ -2046,6 +2258,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrCertObito(String nrCertObito) {
+        markAsChanged("NRCERTOBITO", nrCertObito);
         this.nrCertObito = nrCertObito;
    }
 
@@ -2054,6 +2267,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrContr(String nrContr) {
+        markAsChanged("NRCONTR", nrContr);
         this.nrContr = nrContr;
    }
 
@@ -2062,6 +2276,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrInscEstabVinc(String nrInscEstabVinc) {
+        markAsChanged("NRINSCESTABVINC", nrInscEstabVinc);
         this.nrInscEstabVinc = nrInscEstabVinc;
    }
 
@@ -2070,6 +2285,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrInscTomador(String nrInscTomador) {
+        markAsChanged("NRINSCTOMADOR", nrInscTomador);
         this.nrInscTomador = nrInscTomador;
    }
 
@@ -2078,6 +2294,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroC(String nroC) {
+        markAsChanged("NROC", nroC);
         this.nroC = nroC;
    }
 
@@ -2086,6 +2303,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroCertCivil(String nroCertCivil) {
+        markAsChanged("NROCERTCIVIL", nroCertCivil);
         this.nroCertCivil = nroCertCivil;
    }
 
@@ -2094,6 +2312,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroFolhaReg(String nroFolhaReg) {
+        markAsChanged("NROFOLHAREG", nroFolhaReg);
         this.nroFolhaReg = nroFolhaReg;
    }
 
@@ -2102,6 +2321,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroLivroReg(String nroLivroReg) {
+        markAsChanged("NROLIVROREG", nroLivroReg);
         this.nroLivroReg = nroLivroReg;
    }
 
@@ -2110,6 +2330,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroPassaporte(String nroPassaporte) {
+        markAsChanged("NROPASSAPORTE", nroPassaporte);
         this.nroPassaporte = nroPassaporte;
    }
 
@@ -2118,6 +2339,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroProcessoRra(String nroProcessoRra) {
+        markAsChanged("NROPROCESSORRA", nroProcessoRra);
         this.nroProcessoRra = nroProcessoRra;
    }
 
@@ -2126,6 +2348,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNumLoteNis(BigDecimal numLoteNis) {
+        markAsChanged("NUMLOTENIS", numLoteNis);
         this.numLoteNis = numLoteNis;
    }
 
@@ -2134,6 +2357,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNuProcessoJud(BigDecimal nuProcessoJud) {
+        markAsChanged("NUPROCESSOJUD", nuProcessoJud);
         this.nuProcessoJud = nuProcessoJud;
    }
 
@@ -2142,6 +2366,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNuProcessoTrab(BigDecimal nuProcessoTrab) {
+        markAsChanged("NUPROCESSOTRAB", nuProcessoTrab);
         this.nuProcessoTrab = nuProcessoTrab;
    }
 
@@ -2150,6 +2375,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
+        markAsChanged("NUREQUISICAO", nuRequisicao);
         this.nuRequisicao = nuRequisicao;
    }
 
@@ -2158,6 +2384,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObjDet(String objDet) {
+        markAsChanged("OBJDET", objDet);
         this.objDet = objDet;
    }
 
@@ -2166,6 +2393,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObsAltCpf(String obsAltCpf) {
+        markAsChanged("OBSALTCPF", obsAltCpf);
         this.obsAltCpf = obsAltCpf;
    }
 
@@ -2174,6 +2402,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObsEmpAnt(String obsEmpAnt) {
+        markAsChanged("OBSEMPANT", obsEmpAnt);
         this.obsEmpAnt = obsEmpAnt;
    }
 
@@ -2182,6 +2411,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -2190,6 +2420,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObsVariavel(String obsVariavel) {
+        markAsChanged("OBSVARIAVEL", obsVariavel);
         this.obsVariavel = obsVariavel;
    }
 
@@ -2198,6 +2429,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCnpjEmpCed(String cnpjEmpCed) {
+        markAsChanged("CNPJEMPCED", cnpjEmpCed);
         this.cnpjEmpCed = cnpjEmpCed;
    }
 
@@ -2206,6 +2438,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrdemGrupoHr(BigDecimal ordemGrupoHr) {
+        markAsChanged("ORDEMGRUPOHR", ordemGrupoHr);
         this.ordemGrupoHr = ordemGrupoHr;
    }
 
@@ -2214,6 +2447,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrgaoOc(String orgaoOc) {
+        markAsChanged("ORGAOOC", orgaoOc);
         this.orgaoOc = orgaoOc;
    }
 
@@ -2222,6 +2456,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPercInsal(BigDecimal percInsal) {
+        markAsChanged("PERCINSAL", percInsal);
         this.percInsal = percInsal;
    }
 
@@ -2230,6 +2465,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPercPeric(BigDecimal percPeric) {
+        markAsChanged("PERCPERIC", percPeric);
         this.percPeric = percPeric;
    }
 
@@ -2238,6 +2474,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPertenceDp(String pertenceDp) {
+        markAsChanged("PERTENCEDP", pertenceDp);
         this.pertenceDp = pertenceDp;
    }
 
@@ -2246,6 +2483,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPossuiRra(String possuiRra) {
+        markAsChanged("POSSUIRRA", possuiRra);
         this.possuiRra = possuiRra;
    }
 
@@ -2254,6 +2492,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setProvisao13(String provisao13) {
+        markAsChanged("PROVISAO13", provisao13);
         this.provisao13 = provisao13;
    }
 
@@ -2262,6 +2501,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setProvisaoFerias(String provisaoFerias) {
+        markAsChanged("PROVISAOFERIAS", provisaoFerias);
         this.provisaoFerias = provisaoFerias;
    }
 
@@ -2270,6 +2510,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setQuemPagaRra(BigDecimal quemPagaRra) {
+        markAsChanged("QUEMPAGARRA", quemPagaRra);
         this.quemPagaRra = quemPagaRra;
    }
 
@@ -2278,6 +2519,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setReciboEsocial(String reciboEsocial) {
+        markAsChanged("RECIBOESOCIAL", reciboEsocial);
         this.reciboEsocial = reciboEsocial;
    }
 
@@ -2286,6 +2528,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRemunBase(BigDecimal remunBase) {
+        markAsChanged("REMUNBASE", remunBase);
         this.remunBase = remunBase;
    }
 
@@ -2294,6 +2537,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setRemuneracaoMesAnt(BigDecimal remuneracaoMesAnt) {
+        markAsChanged("REMUNERAMESANT", remuneracaoMesAnt);
         this.remuneracaoMesAnt = remuneracaoMesAnt;
    }
 
@@ -2302,6 +2546,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalAjustadoSind(BigDecimal salAjustadoSind) {
+        markAsChanged("SALAJUSTADOSIND", salAjustadoSind);
         this.salAjustadoSind = salAjustadoSind;
    }
 
@@ -2310,6 +2555,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalBaseAnterior(BigDecimal salBaseAnterior) {
+        markAsChanged("SALBASEANTERIOR", salBaseAnterior);
         this.salBaseAnterior = salBaseAnterior;
    }
 
@@ -2318,6 +2564,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalProfessor(BigDecimal salProfessor) {
+        markAsChanged("SALPROFESSOR", salProfessor);
         this.salProfessor = salProfessor;
    }
 
@@ -2326,6 +2573,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSegDesemprego(String segDesemprego) {
+        markAsChanged("SEGDESEMPREGO", segDesemprego);
         this.segDesemprego = segDesemprego;
    }
 
@@ -2334,6 +2582,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSemanasPorMes(BigDecimal semanasPorMes) {
+        markAsChanged("SEMANASPORMES", semanasPorMes);
         this.semanasPorMes = semanasPorMes;
    }
 
@@ -2342,6 +2591,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSemIntegral(String semIntegral) {
+        markAsChanged("SEMINTEGRAL", semIntegral);
         this.semIntegral = semIntegral;
    }
 
@@ -2350,6 +2600,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSitEsocial(String sitEsocial) {
+        markAsChanged("SITESOCIAL", sitEsocial);
         this.sitEsocial = sitEsocial;
    }
 
@@ -2358,6 +2609,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setStep(String step) {
+        markAsChanged("STEP", step);
         this.step = step;
    }
 
@@ -2366,6 +2618,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSuspExpAfast(String suspExpAfast) {
+        markAsChanged("SUSPEXPAFAST", suspExpAfast);
         this.suspExpAfast = suspExpAfast;
    }
 
@@ -2374,6 +2627,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTelMedicoAso(String telMedicoAso) {
+        markAsChanged("TELMEDICOASO", telMedicoAso);
         this.telMedicoAso = telMedicoAso;
    }
 
@@ -2382,6 +2636,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTemContribSindical(String temContribSindical) {
+        markAsChanged("TEMCONTRIBSINDICAL", temContribSindical);
         this.temContribSindical = temContribSindical;
    }
 
@@ -2390,6 +2645,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTemDescAssist(String temDescAssist) {
+        markAsChanged("TEMDESCASSIST", temDescAssist);
         this.temDescAssist = temDescAssist;
    }
 
@@ -2398,6 +2654,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTempoParcial(String tempoParcial) {
+        markAsChanged("TEMPOPARCIAL", tempoParcial);
         this.tempoParcial = tempoParcial;
    }
 
@@ -2406,6 +2663,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTipCertidao(String tipCertidao) {
+        markAsChanged("TIPCERTIDAO", tipCertidao);
         this.tipCertidao = tipCertidao;
    }
 
@@ -2414,6 +2672,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpInclContr(BigDecimal tpInclContr) {
+        markAsChanged("TPINCLCONTR", tpInclContr);
         this.tpInclContr = tpInclContr;
    }
 
@@ -2422,6 +2681,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpInscEstabVinc(BigDecimal tpInscEstabVinc) {
+        markAsChanged("TPINSCESTABVINC", tpInscEstabVinc);
         this.tpInscEstabVinc = tpInscEstabVinc;
    }
 
@@ -2430,6 +2690,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpInscTomador(BigDecimal tpInscTomador) {
+        markAsChanged("TPINSCTOMADOR", tpInscTomador);
         this.tpInscTomador = tpInscTomador;
    }
 
@@ -2438,6 +2699,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpRegPrevCed(BigDecimal tpRegPrevCed) {
+        markAsChanged("TPREGPREVCED", tpRegPrevCed);
         this.tpRegPrevCed = tpRegPrevCed;
    }
 
@@ -2446,6 +2708,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpRegTrabCed(BigDecimal tpRegTrabCed) {
+        markAsChanged("TPREGTRABCED", tpRegTrabCed);
         this.tpRegTrabCed = tpRegTrabCed;
    }
 
@@ -2454,6 +2717,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTrabAposent(String trabAposent) {
+        markAsChanged("TRABAPOSENT", trabAposent);
         this.trabAposent = trabAposent;
    }
 
@@ -2462,6 +2726,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUfCrmMedAso(String ufCrmMedAso) {
+        markAsChanged("UFCRMMEDASO", ufCrmMedAso);
         this.ufCrmMedAso = ufCrmMedAso;
    }
 
@@ -2470,6 +2735,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUfPorte(BigDecimal ufPorte) {
+        markAsChanged("UFPPORTE", ufPorte);
         this.ufPorte = ufPorte;
    }
 
@@ -2478,6 +2744,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCategEsocial(BigDecimal codCategEsocial) {
+        markAsChanged("CODCATEGESOCIAL", codCategEsocial);
         this.codCategEsocial = codCategEsocial;
    }
 
@@ -2486,6 +2753,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCidRic(BigDecimal codCidRic) {
+        markAsChanged("CODCIDRIC", codCidRic);
         this.codCidRic = codCidRic;
    }
 
@@ -2494,6 +2762,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setComplementoRg(String complementoRg) {
+        markAsChanged("COMPLEMENTORG", complementoRg);
         this.complementoRg = complementoRg;
    }
 
@@ -2502,6 +2771,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtEmiRic(Timestamp dtEmiRic) {
+        markAsChanged("DTEMIRIC", dtEmiRic);
         this.dtEmiRic = dtEmiRic;
    }
 
@@ -2510,6 +2780,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtExpCnh(Timestamp dtExpCnh) {
+        markAsChanged("DTEXPCNH", dtExpCnh);
         this.dtExpCnh = dtExpCnh;
    }
 
@@ -2518,6 +2789,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNroRic(String nroRic) {
+        markAsChanged("NRORIC", nroRic);
         this.nroRic = nroRic;
    }
 
@@ -2526,6 +2798,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrgaoRic(String orgaoRic) {
+        markAsChanged("ORGAORIC", orgaoRic);
         this.orgaoRic = orgaoRic;
    }
 
@@ -2534,6 +2807,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUfCnh(BigDecimal ufCnh) {
+        markAsChanged("UFCNH", ufCnh);
         this.ufCnh = ufCnh;
    }
 
@@ -2542,6 +2816,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUfRg(BigDecimal ufRg) {
+        markAsChanged("UFRG", ufRg);
         this.ufRg = ufRg;
    }
 
@@ -2550,6 +2825,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setUsuVpjSup(BigDecimal usuVpjSup) {
+        markAsChanged("USUVPJSUP", usuVpjSup);
         this.usuVpjSup = usuVpjSup;
    }
 
@@ -2558,6 +2834,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAprendizGravida(String aprendizGravida) {
+        markAsChanged("APRENDIZGRAVIDA", aprendizGravida);
         this.aprendizGravida = aprendizGravida;
    }
 
@@ -2566,6 +2843,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCadIni(String cadIni) {
+        markAsChanged("CADINI", cadIni);
         this.cadIni = cadIni;
    }
 
@@ -2574,6 +2852,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCagedAdm(String cagedAdm) {
+        markAsChanged("CAGEDADM", cagedAdm);
         this.cagedAdm = cagedAdm;
    }
 
@@ -2582,6 +2861,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCaixaPostal(String caixaPostal) {
+        markAsChanged("CAIXAPOSTAL", caixaPostal);
         this.caixaPostal = caixaPostal;
    }
 
@@ -2590,6 +2870,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCartorio(String cartorio) {
+        markAsChanged("CARTORIO", cartorio);
         this.cartorio = cartorio;
    }
 
@@ -2598,6 +2879,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCnpjDestTransf(String cnpjDestTransf) {
+        markAsChanged("CNPJDESTTRANSF", cnpjDestTransf);
         this.cnpjDestTransf = cnpjDestTransf;
    }
 
@@ -2606,6 +2888,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCnpjEmpAnt(String cnpjEmpAnt) {
+        markAsChanged("CNPJEMPANT", cnpjEmpAnt);
         this.cnpjEmpAnt = cnpjEmpAnt;
    }
 
@@ -2614,6 +2897,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodPaisNac(BigDecimal codPaisNac) {
+        markAsChanged("CODPAISNAC", codPaisNac);
         this.codPaisNac = codPaisNac;
    }
 
@@ -2622,6 +2906,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtFimRemun(Timestamp dtFimRemun) {
+        markAsChanged("DTFIMREMUN", dtFimRemun);
         this.dtFimRemun = dtFimRemun;
    }
 
@@ -2630,6 +2915,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setEndFiscExt(String endFiscExt) {
+        markAsChanged("ENDFISCEXT", endFiscExt);
         this.endFiscExt = endFiscExt;
    }
 
@@ -2638,6 +2924,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setFormTribu(BigDecimal formTribu) {
+        markAsChanged("FORMTRIBU", formTribu);
         this.formTribu = formTribu;
    }
 
@@ -2646,6 +2933,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndSitRemunDeslig(BigDecimal indSitRemunDeslig) {
+        markAsChanged("INDSITREMUNDESLIG", indSitRemunDeslig);
         this.indSitRemunDeslig = indSitRemunDeslig;
    }
 
@@ -2654,6 +2942,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMotExpatriado(BigDecimal motExpatriado) {
+        markAsChanged("MOTEXPATRIADO", motExpatriado);
         this.motExpatriado = motExpatriado;
    }
 
@@ -2662,6 +2951,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCondIngEstrang(String condIngEstrang) {
+        markAsChanged("CONDINGESTRANG", condIngEstrang);
         this.condIngEstrang = condIngEstrang;
    }
 
@@ -2670,6 +2960,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTmpResidTrabEstrang(String tmpResidTrabEstrang) {
+        markAsChanged("TMPRESIDTRABESTRANG", tmpResidTrabEstrang);
         this.tmpResidTrabEstrang = tmpResidTrabEstrang;
    }
 
@@ -2678,6 +2969,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNumProcTsvE(String numProcTsvE) {
+        markAsChanged("NUMPROCTSVE", numProcTsvE);
         this.numProcTsvE = numProcTsvE;
    }
 
@@ -2686,6 +2978,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTransfExterna(String transfExterna) {
+        markAsChanged("TRANSFEXTERNA", transfExterna);
         this.transfExterna = transfExterna;
    }
 
@@ -2694,6 +2987,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCtpsDigital(String ctpsDigital) {
+        markAsChanged("CTPSDIGITAL", ctpsDigital);
         this.ctpsDigital = ctpsDigital;
    }
 
@@ -2702,6 +2996,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSituacaoAnt(String situacaoAnt) {
+        markAsChanged("SITUACAOANT", situacaoAnt);
         this.situacaoAnt = situacaoAnt;
    }
 
@@ -2710,6 +3005,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAcessoPortalRh(String acessoPortalRh) {
+        markAsChanged("ACESSOPORTALRH", acessoPortalRh);
         this.acessoPortalRh = acessoPortalRh;
    }
 
@@ -2718,6 +3014,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAfastFgtsAnt(String afastFgtsAnt) {
+        markAsChanged("AFASTFGTSANT", afastFgtsAnt);
         this.afastFgtsAnt = afastFgtsAnt;
    }
 
@@ -2726,6 +3023,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setAfastRaisAnt(BigDecimal afastRaisAnt) {
+        markAsChanged("AFASTRAISANT", afastRaisAnt);
         this.afastRaisAnt = afastRaisAnt;
    }
 
@@ -2734,6 +3032,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCausaAfastAnt(BigDecimal causaAfastAnt) {
+        markAsChanged("CAUSAAFASTANT", causaAfastAnt);
         this.causaAfastAnt = causaAfastAnt;
    }
 
@@ -2742,6 +3041,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCnpjEntQual(String cnpjEntQual) {
+        markAsChanged("CNPJENTQUAL", cnpjEntQual);
         this.cnpjEntQual = cnpjEntQual;
    }
 
@@ -2750,6 +3050,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCnpjPrat(String cnpjPrat) {
+        markAsChanged("CNPJPRAT", cnpjPrat);
         this.cnpjPrat = cnpjPrat;
    }
 
@@ -2758,6 +3059,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodCategEsocialAnt(BigDecimal codCategEsocialAnt) {
+        markAsChanged("CODCATEGESOCIALANT", codCategEsocialAnt);
         this.codCategEsocialAnt = codCategEsocialAnt;
    }
 
@@ -2766,6 +3068,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodTprJud(BigDecimal codTprJud) {
+        markAsChanged("CODTPRJUD", codTprJud);
         this.codTprJud = codTprJud;
    }
 
@@ -2774,6 +3077,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodUsuSnk(BigDecimal codUsuSnk) {
+        markAsChanged("CODUSUSNK", codUsuSnk);
         this.codUsuSnk = codUsuSnk;
    }
 
@@ -2782,6 +3086,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAdmJud(Timestamp dtAdmJud) {
+        markAsChanged("DTADMJUD", dtAdmJud);
         this.dtAdmJud = dtAdmJud;
    }
 
@@ -2790,6 +3095,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAltS2200(Timestamp dtAltS2200) {
+        markAsChanged("DTALTS2200", dtAltS2200);
         this.dtAltS2200 = dtAltS2200;
    }
 
@@ -2798,6 +3104,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtAltS2299(Timestamp dtAltS2299) {
+        markAsChanged("DTALTS2299", dtAltS2299);
         this.dtAltS2299 = dtAltS2299;
    }
 
@@ -2806,6 +3113,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtDemJud(Timestamp dtDemJud) {
+        markAsChanged("DTDEMJUD", dtDemJud);
         this.dtDemJud = dtDemJud;
    }
 
@@ -2814,6 +3122,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtSentProcTrab(Timestamp dtSentProcTrab) {
+        markAsChanged("DTSENTPROCTRAB", dtSentProcTrab);
         this.dtSentProcTrab = dtSentProcTrab;
    }
 
@@ -2822,6 +3131,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIdentidadeGenero(String identidadeGenero) {
+        markAsChanged("IDENTIDADEGENERO", identidadeGenero);
         this.identidadeGenero = identidadeGenero;
    }
 
@@ -2830,6 +3140,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setIndAdmissaoAnt(BigDecimal indAdmissaoAnt) {
+        markAsChanged("INDADMISSAOANT", indAdmissaoAnt);
         this.indAdmissaoAnt = indAdmissaoAnt;
    }
 
@@ -2838,6 +3149,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMatAnotJud(String matAnotJud) {
+        markAsChanged("MATANOTJUD", matAnotJud);
         this.matAnotJud = matAnotJud;
    }
 
@@ -2846,6 +3158,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMotDesligEsocial(String motDesligEsocial) {
+        markAsChanged("MOTDESLIGESOCIAL", motDesligEsocial);
         this.motDesligEsocial = motDesligEsocial;
    }
 
@@ -2854,6 +3167,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setMotDesligEsocialAnt(String motDesligEsocialAnt) {
+        markAsChanged("MOTDESLIGESOCIALANT", motDesligEsocialAnt);
         this.motDesligEsocialAnt = motDesligEsocialAnt;
    }
 
@@ -2862,6 +3176,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNatAtividade(String natAtividade) {
+        markAsChanged("NATATIVIDADE", natAtividade);
         this.natAtividade = natAtividade;
    }
 
@@ -2870,6 +3185,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNatAtividadeAnt(String natAtividadeAnt) {
+        markAsChanged("NATATIVIDADEANT", natAtividadeAnt);
         this.natAtividadeAnt = natAtividadeAnt;
    }
 
@@ -2878,6 +3194,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrInscAprend(String nrInscAprend) {
+        markAsChanged("NRINSCAPREND", nrInscAprend);
         this.nrInscAprend = nrInscAprend;
    }
 
@@ -2886,6 +3203,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrProcTrabAnt(String nrProcTrabAnt) {
+        markAsChanged("NRPROCTRABANT", nrProcTrabAnt);
         this.nrProcTrabAnt = nrProcTrabAnt;
    }
 
@@ -2894,6 +3212,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrProcTrabDeslig(String nrProcTrabDeslig) {
+        markAsChanged("NRPROCTRABDESLIG", nrProcTrabDeslig);
         this.nrProcTrabDeslig = nrProcTrabDeslig;
    }
 
@@ -2902,6 +3221,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setOrientacaoSexual(String orientacaoSexual) {
+        markAsChanged("ORIENTACAOSEXUAL", orientacaoSexual);
         this.orientacaoSexual = orientacaoSexual;
    }
 
@@ -2910,6 +3230,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPossuiFilhos(String possuiFilhos) {
+        markAsChanged("POSSUIFILHOS", possuiFilhos);
         this.possuiFilhos = possuiFilhos;
    }
 
@@ -2918,6 +3239,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPvd(String pvd) {
+        markAsChanged("PVD", pvd);
         this.pvd = pvd;
    }
 
@@ -2926,6 +3248,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setReciboEsocial2200(String reciboEsocial2200) {
+        markAsChanged("RECIBOESOCIAL2200", reciboEsocial2200);
         this.reciboEsocial2200 = reciboEsocial2200;
    }
 
@@ -2934,6 +3257,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setReciboEsocial2205(String reciboEsocial2205) {
+        markAsChanged("RECIBOESOCIAL2205", reciboEsocial2205);
         this.reciboEsocial2205 = reciboEsocial2205;
    }
 
@@ -2942,6 +3266,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setReciboEsocial2206(String reciboEsocial2206) {
+        markAsChanged("RECIBOESOCIAL2206", reciboEsocial2206);
         this.reciboEsocial2206 = reciboEsocial2206;
    }
 
@@ -2950,6 +3275,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTemUsuSnk(String temUsuSnk) {
+        markAsChanged("TEMUSUSNK", temUsuSnk);
         this.temUsuSnk = temUsuSnk;
    }
 
@@ -2958,6 +3284,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTpInscAprend(BigDecimal tpInscAprend) {
+        markAsChanged("TPINSCAPREND", tpInscAprend);
         this.tpInscAprend = tpInscAprend;
    }
 
@@ -2966,6 +3293,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setNrProcTrab(String nrProcTrab) {
+        markAsChanged("NRPROCTRAB", nrProcTrab);
         this.nrProcTrab = nrProcTrab;
    }
 
@@ -2974,6 +3302,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setObservacaoMp(String observacaoMp) {
+        markAsChanged("OBSERVACAOMP", observacaoMp);
         this.observacaoMp = observacaoMp;
    }
 
@@ -2982,6 +3311,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setPerRedCpu(BigDecimal perRedCpu) {
+        markAsChanged("PERREDCPU", perRedCpu);
         this.perRedCpu = perRedCpu;
    }
 
@@ -2990,6 +3320,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setReplider(String replider) {
+        markAsChanged("REPLIDER", replider);
         this.replider = replider;
    }
 
@@ -2998,6 +3329,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalBaseCpu(BigDecimal salBaseCpu) {
+        markAsChanged("SALBASECPU", salBaseCpu);
         this.salBaseCpu = salBaseCpu;
    }
 
@@ -3006,6 +3338,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSalBaseRed(BigDecimal salBaseRed) {
+        markAsChanged("SALBASERED", salBaseRed);
         this.salBaseRed = salBaseRed;
    }
 
@@ -3014,6 +3347,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setSuspContrato(String suspContrato) {
+        markAsChanged("SUSPCONTRATO", suspContrato);
         this.suspContrato = suspContrato;
    }
 
@@ -3022,6 +3356,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setDtDispensaPonto(Timestamp dtDispensaPonto) {
+        markAsChanged("DTDISPENSAPONTO", dtDispensaPonto);
         this.dtDispensaPonto = dtDispensaPonto;
    }
 
@@ -3030,6 +3365,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setCodLocalPonto(BigDecimal codLocalPonto) {
+        markAsChanged("CODLOCALPONTO", codLocalPonto);
         this.codLocalPonto = codLocalPonto;
    }
 
@@ -3038,6 +3374,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setValidado(String validado) {
+        markAsChanged("VALIDADO", validado);
         this.validado = validado;
    }
 
@@ -3046,6 +3383,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
    }
 
    public void setTransfSemOnusCedente(String transfSemOnusCedente) {
+        markAsChanged("TRANSFSEMONUSCEDENTE", transfSemOnusCedente);
         this.transfSemOnusCedente = transfSemOnusCedente;
    }
 
@@ -3061,6 +3399,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
 
    @Override
    public Funcionario fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.dependConvMed = vo.asBigDecimal("DEPENDCONVMED");
         this.dependIrf = vo.asBigDecimal("DEPENDIRF");
         this.dependSalFam = vo.asBigDecimal("DEPENDSALFAM");

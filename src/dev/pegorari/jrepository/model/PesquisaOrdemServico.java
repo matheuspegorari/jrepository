@@ -16,6 +16,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    }
 
    public void setAplicavel(String aplicavel) {
+        markAsChanged("APLICAVEL", aplicavel);
         this.aplicavel = aplicavel;
    }
 
@@ -24,6 +25,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    }
 
    public void setCodFld(BigDecimal codFld) {
+        markAsChanged("CODFLD", codFld);
         this.codFld = codFld;
    }
 
@@ -32,6 +34,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    }
 
    public void setNumItem(BigDecimal numItem) {
+        markAsChanged("NUMITEM", numItem);
         this.numItem = numItem;
    }
 
@@ -40,6 +43,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    }
 
    public void setNumOs(BigDecimal numOs) {
+        markAsChanged("NUMOS", numOs);
         this.numOs = numOs;
    }
 
@@ -48,6 +52,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
+        markAsChanged("NUPESQ", nuPesq);
         this.nuPesq = nuPesq;
    }
 
@@ -63,6 +68,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
 
    @Override
    public PesquisaOrdemServico fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.aplicavel = vo.asString("APLICAVEL");
         this.codFld = vo.asBigDecimal("CODFLD");
         this.numItem = vo.asBigDecimal("NUMITEM");

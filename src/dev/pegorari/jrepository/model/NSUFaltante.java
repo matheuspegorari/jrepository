@@ -19,6 +19,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -27,6 +28,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -35,6 +37,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setNsu(String nsu) {
+        markAsChanged("NSU", nsu);
         this.nsu = nsu;
    }
 
@@ -43,6 +46,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setDhInc(Timestamp dhInc) {
+        markAsChanged("DHINC", dhInc);
         this.dhInc = dhInc;
    }
 
@@ -51,6 +55,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setDhLimConsulta(Timestamp dhLimConsulta) {
+        markAsChanged("DHLIMCONSULTA", dhLimConsulta);
         this.dhLimConsulta = dhLimConsulta;
    }
 
@@ -59,6 +64,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -67,6 +73,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    }
 
    public void setLocalizado(String localizado) {
+        markAsChanged("LOCALIZADO", localizado);
         this.localizado = localizado;
    }
 
@@ -82,6 +89,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
 
    @Override
    public NSUFaltante fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.tipo = vo.asString("TIPO");
         this.nsu = vo.asString("NSU");

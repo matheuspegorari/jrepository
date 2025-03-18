@@ -16,6 +16,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -24,6 +25,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
+        markAsChanged("NUSEPARACAO", nuSeparacao);
         this.nuSeparacao = nuSeparacao;
    }
 
@@ -32,6 +34,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    }
 
    public void setQtdWms(BigDecimal qtdWms) {
+        markAsChanged("QTDWMS", qtdWms);
         this.qtdWms = qtdWms;
    }
 
@@ -40,6 +43,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    }
 
    public void setSeqNota(BigDecimal seqNota) {
+        markAsChanged("SEQNOTA", seqNota);
         this.seqNota = seqNota;
    }
 
@@ -48,6 +52,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    }
 
    public void setSequencia(BigDecimal sequencia) {
+        markAsChanged("SEQUENCIA", sequencia);
         this.sequencia = sequencia;
    }
 
@@ -63,6 +68,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
 
    @Override
    public ItemNotaWMS fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.qtdWms = vo.asBigDecimal("QTDWMS");

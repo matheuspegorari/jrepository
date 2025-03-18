@@ -120,6 +120,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParctranspFinal(BigDecimal codParctranspFinal) {
+        markAsChanged("CODPARCTRANSPFINAL", codParctranspFinal);
         this.codParctranspFinal = codParctranspFinal;
    }
 
@@ -128,6 +129,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrFreteTotal(BigDecimal vlrFreteTotal) {
+        markAsChanged("VLRFRETETOTAL", vlrFreteTotal);
         this.vlrFreteTotal = vlrFreteTotal;
    }
 
@@ -136,6 +138,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumNfse(String numNfse) {
+        markAsChanged("NUMNFSE", numNfse);
         this.numNfse = numNfse;
    }
 
@@ -144,6 +147,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDhTipVenda(Timestamp dhTipVenda) {
+        markAsChanged("DHTIPVENDA", dhTipVenda);
         this.dhTipVenda = dhTipVenda;
    }
 
@@ -152,6 +156,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtAlter(Timestamp dtAlter) {
+        markAsChanged("DTALTER", dtAlter);
         this.dtAlter = dtAlter;
    }
 
@@ -160,6 +165,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtContab(Timestamp dtContab) {
+        markAsChanged("DTCONTAB", dtContab);
         this.dtContab = dtContab;
    }
 
@@ -168,6 +174,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtEntSai(Timestamp dtEntSai) {
+        markAsChanged("DTENTSAI", dtEntSai);
         this.dtEntSai = dtEntSai;
    }
 
@@ -176,6 +183,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtFatur(Timestamp dtFatur) {
+        markAsChanged("DTFATUR", dtFatur);
         this.dtFatur = dtFatur;
    }
 
@@ -184,6 +192,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtMov(Timestamp dtMov) {
+        markAsChanged("DTMOV", dtMov);
         this.dtMov = dtMov;
    }
 
@@ -192,6 +201,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtNeg(Timestamp dtNeg) {
+        markAsChanged("DTNEG", dtNeg);
         this.dtNeg = dtNeg;
    }
 
@@ -200,6 +210,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDtVal(Timestamp dtVal) {
+        markAsChanged("DTVAL", dtVal);
         this.dtVal = dtVal;
    }
 
@@ -208,6 +219,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setHostname(String hostname) {
+        markAsChanged("HOSTNAME", hostname);
         this.hostname = hostname;
    }
 
@@ -216,6 +228,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setHrMov(BigDecimal hrMov) {
+        markAsChanged("HRMOV", hrMov);
         this.hrMov = hrMov;
    }
 
@@ -224,6 +237,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setIcmsFrete(BigDecimal icmsFrete) {
+        markAsChanged("ICMSFRETE", icmsFrete);
         this.icmsFrete = icmsFrete;
    }
 
@@ -232,6 +246,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setIpiEmb(BigDecimal ipiEmb) {
+        markAsChanged("IPIEMB", ipiEmb);
         this.ipiEmb = ipiEmb;
    }
 
@@ -240,6 +255,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setIrFretido(String irFretido) {
+        markAsChanged("IRFRETIDO", irFretido);
         this.irFretido = irFretido;
    }
 
@@ -248,6 +264,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setIssRetido(String issRetido) {
+        markAsChanged("ISSRETIDO", issRetido);
         this.issRetido = issRetido;
    }
 
@@ -256,6 +273,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setKmVeiculo(BigDecimal kmVeiculo) {
+        markAsChanged("KMVEICULO", kmVeiculo);
         this.kmVeiculo = kmVeiculo;
    }
 
@@ -264,6 +282,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setLocalColeta(String localColeta) {
+        markAsChanged("LOCALCOLETA", localColeta);
         this.localColeta = localColeta;
    }
 
@@ -272,6 +291,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setLocalEntrega(String localEntrega) {
+        markAsChanged("LOCALENTREGA", localEntrega);
         this.localEntrega = localEntrega;
    }
 
@@ -280,6 +300,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNotaScf(String notaScf) {
+        markAsChanged("NOTASCF", notaScf);
         this.notaScf = notaScf;
    }
 
@@ -288,6 +309,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNroRedz(BigDecimal nroRedz) {
+        markAsChanged("NROREDZ", nroRedz);
         this.nroRedz = nroRedz;
    }
 
@@ -296,6 +318,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNtUsername(String ntUsername) {
+        markAsChanged("NT_USERNAME", ntUsername);
         this.ntUsername = ntUsername;
    }
 
@@ -304,6 +327,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumContrato(BigDecimal numContrato) {
+        markAsChanged("NUMCONTRATO", numContrato);
         this.numContrato = numContrato;
    }
 
@@ -312,6 +336,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
+        markAsChanged("NUMCOTACAO", numCotacao);
         this.numCotacao = numCotacao;
    }
 
@@ -320,6 +345,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumNota(BigDecimal numNota) {
+        markAsChanged("NUMNOTA", numNota);
         this.numNota = numNota;
    }
 
@@ -328,6 +354,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNuNota(BigDecimal nuNota) {
+        markAsChanged("NUNOTA", nuNota);
         this.nuNota = nuNota;
    }
 
@@ -336,6 +363,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setObservacao(String observacao) {
+        markAsChanged("OBSERVACAO", observacao);
         this.observacao = observacao;
    }
 
@@ -344,6 +372,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
+        markAsChanged("ORDEMCARGA", ordemCarga);
         this.ordemCarga = ordemCarga;
    }
 
@@ -352,6 +381,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setPendente(String pendente) {
+        markAsChanged("PENDENTE", pendente);
         this.pendente = pendente;
    }
 
@@ -360,6 +390,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setPercDesc(BigDecimal percDesc) {
+        markAsChanged("PERCDESC", percDesc);
         this.percDesc = percDesc;
    }
 
@@ -368,6 +399,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setPeso(BigDecimal peso) {
+        markAsChanged("PESO", peso);
         this.peso = peso;
    }
 
@@ -376,6 +408,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setQtdVol(BigDecimal qtdVol) {
+        markAsChanged("QTDVOL", qtdVol);
         this.qtdVol = qtdVol;
    }
 
@@ -384,6 +417,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setRateado(String rateado) {
+        markAsChanged("RATEADO", rateado);
         this.rateado = rateado;
    }
 
@@ -392,6 +426,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setSeqCarga(BigDecimal seqCarga) {
+        markAsChanged("SEQCARGA", seqCarga);
         this.seqCarga = seqCarga;
    }
 
@@ -400,6 +435,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setSerieNota(String serieNota) {
+        markAsChanged("SERIENOTA", serieNota);
         this.serieNota = serieNota;
    }
 
@@ -408,6 +444,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setStatusNota(String statusNota) {
+        markAsChanged("STATUSNOTA", statusNota);
         this.statusNota = statusNota;
    }
 
@@ -416,6 +453,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setTipFrete(String tipFrete) {
+        markAsChanged("TIPFRETE", tipFrete);
         this.tipFrete = tipFrete;
    }
 
@@ -424,6 +462,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setTipIpiEmb(String tipIpiEmb) {
+        markAsChanged("TIPIPIEMB", tipIpiEmb);
         this.tipIpiEmb = tipIpiEmb;
    }
 
@@ -432,6 +471,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setTipMov(String tipMov) {
+        markAsChanged("TIPMOV", tipMov);
         this.tipMov = tipMov;
    }
 
@@ -440,6 +480,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVencFrete(Timestamp vencFrete) {
+        markAsChanged("VENCFRETE", vencFrete);
         this.vencFrete = vencFrete;
    }
 
@@ -448,6 +489,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVencIpi(Timestamp vencIpi) {
+        markAsChanged("VENCIPI", vencIpi);
         this.vencIpi = vencIpi;
    }
 
@@ -456,6 +498,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrDescServ(BigDecimal vlrDescServ) {
+        markAsChanged("VLRDESCSERV", vlrDescServ);
         this.vlrDescServ = vlrDescServ;
    }
 
@@ -464,6 +507,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrDescTot(BigDecimal vlrDescTot) {
+        markAsChanged("VLRDESCTOT", vlrDescTot);
         this.vlrDescTot = vlrDescTot;
    }
 
@@ -472,6 +516,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrDescTotItem(BigDecimal vlrDescTotItem) {
+        markAsChanged("VLRDESCTOTITEM", vlrDescTotItem);
         this.vlrDescTotItem = vlrDescTotItem;
    }
 
@@ -480,6 +525,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrDestaque(BigDecimal vlrDestaque) {
+        markAsChanged("VLRDESTAQUE", vlrDestaque);
         this.vlrDestaque = vlrDestaque;
    }
 
@@ -488,6 +534,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrEmb(BigDecimal vlrEmb) {
+        markAsChanged("VLREMB", vlrEmb);
         this.vlrEmb = vlrEmb;
    }
 
@@ -496,6 +543,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrFrete(BigDecimal vlrFrete) {
+        markAsChanged("VLRFRETE", vlrFrete);
         this.vlrFrete = vlrFrete;
    }
 
@@ -504,6 +552,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsFcp(BigDecimal vlrIcmsFcp) {
+        markAsChanged("VLRICMSFCP", vlrIcmsFcp);
         this.vlrIcmsFcp = vlrIcmsFcp;
    }
 
@@ -512,6 +561,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsDifAlDest(BigDecimal vlrIcmsDifAlDest) {
+        markAsChanged("VLRICMSDIFALDEST", vlrIcmsDifAlDest);
         this.vlrIcmsDifAlDest = vlrIcmsDifAlDest;
    }
 
@@ -520,6 +570,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsDifAlRem(BigDecimal vlrIcmsDifAlRem) {
+        markAsChanged("VLRICMSDIFALREM", vlrIcmsDifAlRem);
         this.vlrIcmsDifAlRem = vlrIcmsDifAlRem;
    }
 
@@ -528,6 +579,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
+        markAsChanged("VLRICMS", vlrIcms);
         this.vlrIcms = vlrIcms;
    }
 
@@ -536,6 +588,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsEmb(BigDecimal vlrIcmsEmb) {
+        markAsChanged("VLRICMSEMB", vlrIcmsEmb);
         this.vlrIcmsEmb = vlrIcmsEmb;
    }
 
@@ -544,6 +597,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsSeg(BigDecimal vlrIcmsSeg) {
+        markAsChanged("VLRICMSSEG", vlrIcmsSeg);
         this.vlrIcmsSeg = vlrIcmsSeg;
    }
 
@@ -552,6 +606,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrInss(BigDecimal vlrInss) {
+        markAsChanged("VLRINSS", vlrInss);
         this.vlrInss = vlrInss;
    }
 
@@ -560,6 +615,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIpi(BigDecimal vlrIpi) {
+        markAsChanged("VLRIPI", vlrIpi);
         this.vlrIpi = vlrIpi;
    }
 
@@ -568,6 +624,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIrf(BigDecimal vlrIrf) {
+        markAsChanged("VLRIRF", vlrIrf);
         this.vlrIrf = vlrIrf;
    }
 
@@ -576,6 +633,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
+        markAsChanged("VLRISS", vlrIss);
         this.vlrIss = vlrIss;
    }
 
@@ -584,6 +642,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrJuro(BigDecimal vlrJuro) {
+        markAsChanged("VLRJURO", vlrJuro);
         this.vlrJuro = vlrJuro;
    }
 
@@ -592,6 +651,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrMercadoria(BigDecimal vlrMercadoria) {
+        markAsChanged("VLRMERCADORIA", vlrMercadoria);
         this.vlrMercadoria = vlrMercadoria;
    }
 
@@ -600,6 +660,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
+        markAsChanged("VLRNOTA", vlrNota);
         this.vlrNota = vlrNota;
    }
 
@@ -608,6 +669,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrOutros(BigDecimal vlrOutros) {
+        markAsChanged("VLROUTROS", vlrOutros);
         this.vlrOutros = vlrOutros;
    }
 
@@ -616,6 +678,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrRepredTot(BigDecimal vlrRepredTot) {
+        markAsChanged("VLRREPREDTOT", vlrRepredTot);
         this.vlrRepredTot = vlrRepredTot;
    }
 
@@ -624,6 +687,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrSeg(BigDecimal vlrSeg) {
+        markAsChanged("VLRSEG", vlrSeg);
         this.vlrSeg = vlrSeg;
    }
 
@@ -632,6 +696,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
+        markAsChanged("VLRSUBST", vlrSubst);
         this.vlrSubst = vlrSubst;
    }
 
@@ -640,6 +705,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrVendor(BigDecimal vlrVendor) {
+        markAsChanged("VLRVENDOR", vlrVendor);
         this.vlrVendor = vlrVendor;
    }
 
@@ -648,6 +714,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVolume(String volume) {
+        markAsChanged("VOLUME", volume);
         this.volume = volume;
    }
 
@@ -656,6 +723,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setAprovado(String aprovado) {
+        markAsChanged("APROVADO", aprovado);
         this.aprovado = aprovado;
    }
 
@@ -664,6 +732,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
+        markAsChanged("BASEICMS", baseIcms);
         this.baseIcms = baseIcms;
    }
 
@@ -672,6 +741,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseIcmsFrete(BigDecimal baseIcmsFrete) {
+        markAsChanged("BASEICMSFRETE", baseIcmsFrete);
         this.baseIcmsFrete = baseIcmsFrete;
    }
 
@@ -680,6 +750,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseInss(BigDecimal baseInss) {
+        markAsChanged("BASEINSS", baseInss);
         this.baseInss = baseInss;
    }
 
@@ -688,6 +759,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseIpi(BigDecimal baseIpi) {
+        markAsChanged("BASEIPI", baseIpi);
         this.baseIpi = baseIpi;
    }
 
@@ -696,6 +768,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseIss(BigDecimal baseIss) {
+        markAsChanged("BASEISS", baseIss);
         this.baseIss = baseIss;
    }
 
@@ -704,6 +777,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
+        markAsChanged("BASESUBSTIT", baseSubstit);
         this.baseSubstit = baseSubstit;
    }
 
@@ -712,6 +786,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCifFob(String cifFob) {
+        markAsChanged("CIF_FOB", cifFob);
         this.cifFob = cifFob;
    }
 
@@ -720,6 +795,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodCencus(BigDecimal codCencus) {
+        markAsChanged("CODCENCUS", codCencus);
         this.codCencus = codCencus;
    }
 
@@ -728,6 +804,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodContato(BigDecimal codContato) {
+        markAsChanged("CODCONTATO", codContato);
         this.codContato = codContato;
    }
 
@@ -736,6 +813,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodEmp(BigDecimal codEmp) {
+        markAsChanged("CODEMP", codEmp);
         this.codEmp = codEmp;
    }
 
@@ -744,6 +822,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodEmpNegoc(BigDecimal codEmpNegoc) {
+        markAsChanged("CODEMPNEGOC", codEmpNegoc);
         this.codEmpNegoc = codEmpNegoc;
    }
 
@@ -752,6 +831,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodMaq(BigDecimal codMaq) {
+        markAsChanged("CODMAQ", codMaq);
         this.codMaq = codMaq;
    }
 
@@ -760,6 +840,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
+        markAsChanged("CODMOEDA", codMoeda);
         this.codMoeda = codMoeda;
    }
 
@@ -768,6 +849,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodNat(BigDecimal codNat) {
+        markAsChanged("CODNAT", codNat);
         this.codNat = codNat;
    }
 
@@ -776,6 +858,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
+        markAsChanged("CODOBSPADRAO", codObsPadrao);
         this.codObsPadrao = codObsPadrao;
    }
 
@@ -784,6 +867,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParc(BigDecimal codParc) {
+        markAsChanged("CODPARC", codParc);
         this.codParc = codParc;
    }
 
@@ -792,6 +876,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParcConsignatario(BigDecimal codParcConsignatario) {
+        markAsChanged("CODPARCCONSIGNATARIO", codParcConsignatario);
         this.codParcConsignatario = codParcConsignatario;
    }
 
@@ -800,6 +885,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParcDest(BigDecimal codParcDest) {
+        markAsChanged("CODPARCDEST", codParcDest);
         this.codParcDest = codParcDest;
    }
 
@@ -808,6 +894,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParcRedespacho(BigDecimal codParcRedespacho) {
+        markAsChanged("CODPARCREDESPACHO", codParcRedespacho);
         this.codParcRedespacho = codParcRedespacho;
    }
 
@@ -816,6 +903,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParcRemetente(BigDecimal codParcRemetente) {
+        markAsChanged("CODPARCREMETENTE", codParcRemetente);
         this.codParcRemetente = codParcRemetente;
    }
 
@@ -824,6 +912,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
+        markAsChanged("CODPARCTRANSP", codParctransp);
         this.codParctransp = codParctransp;
    }
 
@@ -832,6 +921,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodProj(BigDecimal codProj) {
+        markAsChanged("CODPROJ", codProj);
         this.codProj = codProj;
    }
 
@@ -840,6 +930,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
+        markAsChanged("CODTIPOPER", codTipOper);
         this.codTipOper = codTipOper;
    }
 
@@ -848,6 +939,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
+        markAsChanged("CODTIPVENDA", codTipVenda);
         this.codTipVenda = codTipVenda;
    }
 
@@ -856,6 +948,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodUsu(BigDecimal codUsu) {
+        markAsChanged("CODUSU", codUsu);
         this.codUsu = codUsu;
    }
 
@@ -864,6 +957,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
+        markAsChanged("CODVEICULO", codVeiculo);
         this.codVeiculo = codVeiculo;
    }
 
@@ -872,6 +966,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setCodVend(BigDecimal codVend) {
+        markAsChanged("CODVEND", codVend);
         this.codVend = codVend;
    }
 
@@ -880,6 +975,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setComGer(BigDecimal comGer) {
+        markAsChanged("COMGER", comGer);
         this.comGer = comGer;
    }
 
@@ -888,6 +984,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setComissao(BigDecimal comissao) {
+        markAsChanged("COMISSAO", comissao);
         this.comissao = comissao;
    }
 
@@ -896,6 +993,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDhExclusao(Timestamp dhExclusao) {
+        markAsChanged("DHEXCLUSAO", dhExclusao);
         this.dhExclusao = dhExclusao;
    }
 
@@ -904,6 +1002,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setDhTipOper(Timestamp dhTipOper) {
+        markAsChanged("DHTIPOPER", dhTipOper);
         this.dhTipOper = dhTipOper;
    }
 
@@ -912,6 +1011,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrStFcpIntAnt(BigDecimal vlrStFcpIntAnt) {
+        markAsChanged("VLRSTFCPINTANT", vlrStFcpIntAnt);
         this.vlrStFcpIntAnt = vlrStFcpIntAnt;
    }
 
@@ -920,6 +1020,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrIcmsFcpInt(BigDecimal vlrIcmsFcpInt) {
+        markAsChanged("VLRICMSFCPINT", vlrIcmsFcpInt);
         this.vlrIcmsFcpInt = vlrIcmsFcpInt;
    }
 
@@ -928,6 +1029,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setVlrStFcpInt(BigDecimal vlrStFcpInt) {
+        markAsChanged("VLRSTFCPINT", vlrStFcpInt);
         this.vlrStFcpInt = vlrStFcpInt;
    }
 
@@ -936,6 +1038,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setFistel(String fistel) {
+        markAsChanged("FISTEL", fistel);
         this.fistel = fistel;
    }
 
@@ -944,6 +1047,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setMd5ModComTel(String md5ModComTel) {
+        markAsChanged("MD5MODCOMTEL", md5ModComTel);
         this.md5ModComTel = md5ModComTel;
    }
 
@@ -952,6 +1056,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumCstc(BigDecimal numCstc) {
+        markAsChanged("NUMCSTC", numCstc);
         this.numCstc = numCstc;
    }
 
@@ -960,6 +1065,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setNumTermTel(String numTermTel) {
+        markAsChanged("NUMTERMTEL", numTermTel);
         this.numTermTel = numTermTel;
    }
 
@@ -968,6 +1074,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setQtdUsu(BigDecimal qtdUsu) {
+        markAsChanged("QTDUSU", qtdUsu);
         this.qtdUsu = qtdUsu;
    }
 
@@ -976,6 +1083,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
    }
 
    public void setTipClienteServCom(BigDecimal tipClienteServCom) {
+        markAsChanged("TIPCLIENTESERVCOM", tipClienteServCom);
         this.tipClienteServCom = tipClienteServCom;
    }
 
@@ -991,6 +1099,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
 
    @Override
    public CabecalhoNotaExcluida fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codParctranspFinal = vo.asBigDecimal("CODPARCTRANSPFINAL");
         this.vlrFreteTotal = vo.asBigDecimal("VLRFRETETOTAL");
         this.numNfse = vo.asString("NUMNFSE");

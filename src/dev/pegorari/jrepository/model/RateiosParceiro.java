@@ -15,6 +15,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    }
 
    public void setNuFin(BigDecimal nuFin) {
+        markAsChanged("NUFIN", nuFin);
         this.nuFin = nuFin;
    }
 
@@ -23,6 +24,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
+        markAsChanged("NURATEIO", nuRateio);
         this.nuRateio = nuRateio;
    }
 
@@ -31,6 +33,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    }
 
    public void setRecDesp(BigDecimal recDesp) {
+        markAsChanged("RECDESP", recDesp);
         this.recDesp = recDesp;
    }
 
@@ -39,6 +42,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    }
 
    public void setTipo(String tipo) {
+        markAsChanged("TIPO", tipo);
         this.tipo = tipo;
    }
 
@@ -54,6 +58,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
 
    @Override
    public RateiosParceiro fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuRateio = vo.asBigDecimal("NURATEIO");
         this.recDesp = vo.asBigDecimal("RECDESP");

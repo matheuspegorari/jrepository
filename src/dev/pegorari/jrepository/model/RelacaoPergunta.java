@@ -17,6 +17,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    }
 
    public void setCodPergDep(BigDecimal codPergDep) {
+        markAsChanged("CODPERGDEP", codPergDep);
         this.codPergDep = codPergDep;
    }
 
@@ -25,6 +26,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    }
 
    public void setCodPergMestre(BigDecimal codPergMestre) {
+        markAsChanged("CODPERGMESTRE", codPergMestre);
         this.codPergMestre = codPergMestre;
    }
 
@@ -33,6 +35,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    }
 
    public void setCodRespMestre(BigDecimal codRespMestre) {
+        markAsChanged("CODRESPMESTRE", codRespMestre);
         this.codRespMestre = codRespMestre;
    }
 
@@ -41,6 +44,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    }
 
    public void setDhAlter(Timestamp dhAlter) {
+        markAsChanged("DHALTER", dhAlter);
         this.dhAlter = dhAlter;
    }
 
@@ -49,6 +53,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    }
 
    public void setOrdem(BigDecimal ordem) {
+        markAsChanged("ORDEM", ordem);
         this.ordem = ordem;
    }
 
@@ -64,6 +69,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
 
    @Override
    public RelacaoPergunta fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codPergDep = vo.asBigDecimal("CODPERGDEP");
         this.codPergMestre = vo.asBigDecimal("CODPERGMESTRE");
         this.codRespMestre = vo.asBigDecimal("CODRESPMESTRE");

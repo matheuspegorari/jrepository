@@ -13,6 +13,7 @@ public class MSDMensagemPerfil extends AbstractSankhyaEntity<MSDMensagemPerfil> 
    }
 
    public void setCodMsg(BigDecimal codMsg) {
+        markAsChanged("CODMSG", codMsg);
         this.codMsg = codMsg;
    }
 
@@ -21,6 +22,7 @@ public class MSDMensagemPerfil extends AbstractSankhyaEntity<MSDMensagemPerfil> 
    }
 
    public void setCodPer(BigDecimal codPer) {
+        markAsChanged("CODPER", codPer);
         this.codPer = codPer;
    }
 
@@ -36,6 +38,7 @@ public class MSDMensagemPerfil extends AbstractSankhyaEntity<MSDMensagemPerfil> 
 
    @Override
    public MSDMensagemPerfil fromVO(DynamicVO vo) {
+        this.setOriginalVO(vo);
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.codPer = vo.asBigDecimal("CODPER");
         return this;

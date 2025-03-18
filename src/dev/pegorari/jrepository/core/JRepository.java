@@ -15,6 +15,9 @@ public class JRepository {
     public static <T extends SankhyaEntity<T>> T findByPK(T template, Object... pkValues) throws Exception {
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findByPK(pkValues);
+        if (vo == null) {
+            return null;
+        }
         return createEntity(template, vo);
     }
 
@@ -45,22 +48,28 @@ public class JRepository {
     public static <T extends SankhyaEntity<T>> T findOne(T template, String where) throws Exception {
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findOne(where);
+        if (vo == null) {
+            return null;
+        }
         return createEntity(template, vo);
     }
 
     public static <T extends SankhyaEntity<T>> T findOne(T template, String where, Object... params) throws Exception {
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findOne(where, params);
+        if (vo == null) {
+            return null;
+        }
         return createEntity(template, vo);
     }
 
-    public static void update(SankhyaEntity<?>... entities) throws Exception {
+    public static void update(SankhyaEntity<?>... entities) {
         for (SankhyaEntity<?> entity : entities) {
             updateEntity(entity);
         }
     }
 
-    private static void updateEntity(SankhyaEntity<?> entity) throws Exception {
+    private static void updateEntity(SankhyaEntity<?> entity) {
         DynamicVO originalVO = entity.getOriginalVO();
         if (originalVO == null) {
             throw new IllegalArgumentException("Entidade não foi carregada do banco de dados");

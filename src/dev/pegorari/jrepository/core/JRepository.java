@@ -1,7 +1,8 @@
-package dev.pegorari.jrepository.wrapper;
+package dev.pegorari.jrepository.core;
 
 import br.com.sankhya.jape.vo.DynamicVO;
 import br.com.sankhya.jape.wrapper.JapeFactory;
+import br.com.sankhya.jape.wrapper.fluid.FluidCreateVO;
 import br.com.sankhya.jape.wrapper.fluid.FluidUpdateVO;
 import dev.pegorari.jrepository.interfaces.SankhyaEntity;
 
@@ -53,18 +54,18 @@ public class JRepository {
             throw new IllegalArgumentException("Entidade não foi carregada do banco de dados");
         }
 
-        Map<String,Object> changes = entity.getChanges();
+        Map<String, Object> changes = entity.getChanges();
         if (changes.isEmpty()) {
             return;
         }
 
         String entityName = entity.getEntityName();
         FluidUpdateVO updater = JapeFactory.dao(entityName).prepareToUpdate(originalVO);
-
-        for (Map.Entry<String, Object> entry : changes.entrySet()) {
-            updater.set(entry.getKey(), entry.getValue());
-        }
         try {
+            for (Map.Entry<String, Object> entry : changes.entrySet()) {
+                updater.set(entry.getKey(), entry.getValue());
+            }
+
             updater.update();
         } catch (Exception e) {
             e.printStackTrace();
@@ -74,8 +75,38 @@ public class JRepository {
         entity.clearChanges();
     }
 
-    public static <T extends SankhyaEntity<T>> void create(T entity) {
-        throw new UnsupportedOperationException("Not implemented yet");
+    public static void create(SankhyaEntity<?>... entities) throws Exception {
+        for (SankhyaEntity<?> entity : entities) {
+            createEntity(entity);
+        }
+    }
+
+    private static void createEntity(SankhyaEntity<?> entity) {
+        DynamicVO vo = entity.getOriginalVO();
+        if (vo != null) {
+            throw new IllegalArgumentException("Entidade já foi criada no banco de dados. Utilize o método update para atualizar");
+        }
+
+        Map<String, Object> changes = entity.getChanges();
+        if (changes.isEmpty()) {
+            return;
+        }
+        DynamicVO persistedEntity = null;
+        String entityName = entity.getEntityName();
+        try {
+            FluidCreateVO inserter = JapeFactory.dao(entityName).create();
+
+            for (Map.Entry<String, Object> entry : changes.entrySet()) {
+                inserter.set(entry.getKey(), entry.getValue());
+            }
+
+            persistedEntity = inserter.save();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao criar entidade", e);
+        }
+        entity.fromVO(persistedEntity);
+        entity.clearChanges();
     }
 
     @SuppressWarnings("unchecked")

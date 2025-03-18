@@ -16,8 +16,11 @@ public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implemen
     }
 
     protected void setOriginalVO(DynamicVO vo) {
+        if (this.originalVO != null) {
+            throw new IllegalStateException("DynamicVO para este objeto já foi definido. Crie outra instância.");
+        }
         this.originalVO = vo;
-        this.changes.clear();
+        clearChanges();
     }
 
     protected void markAsChanged(String fieldName, Object value) {

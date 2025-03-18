@@ -8,7 +8,7 @@ import java.util.Map;
 
 public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implements SankhyaEntity<T> {
     private transient DynamicVO originalVO;
-    private final transient Map<String, Object> dirtyFields = new HashMap<>();
+    private final transient Map<String, Object> changes = new HashMap<>();
 
     @Override
     public DynamicVO getOriginalVO() {
@@ -17,15 +17,20 @@ public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implemen
 
     protected void setOriginalVO(DynamicVO vo) {
         this.originalVO = vo;
-        this.dirtyFields.clear();
+        this.changes.clear();
     }
 
-    protected void markDirty(String fieldName, Object value) {
-        dirtyFields.put(fieldName, value);
+    protected void markAsChanged(String fieldName, Object value) {
+        changes.put(fieldName, value);
     }
 
     @Override
-    public Map<String, Object> getDirtyFields() {
-        return dirtyFields;
+    public Map<String, Object> getChanges() {
+        return changes;
+    }
+
+    @Override
+    public void clearChanges() {
+        changes.clear();
     }
 }

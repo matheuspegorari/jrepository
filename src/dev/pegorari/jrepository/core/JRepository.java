@@ -42,6 +42,18 @@ public class JRepository {
         return entities;
     }
 
+    public static <T extends SankhyaEntity<T>> T findOne(T template, String where) throws Exception {
+        String entityName = template.getEntityName();
+        DynamicVO vo = JapeFactory.dao(entityName).findOne(where);
+        return createEntity(template, vo);
+    }
+
+    public static <T extends SankhyaEntity<T>> T findOne(T template, String where, Object... params) throws Exception {
+        String entityName = template.getEntityName();
+        DynamicVO vo = JapeFactory.dao(entityName).findOne(where, params);
+        return createEntity(template, vo);
+    }
+
     public static void update(SankhyaEntity<?>... entities) throws Exception {
         for (SankhyaEntity<?> entity : entities) {
             updateEntity(entity);

@@ -127,7 +127,6 @@ public class JRepository {
             throw new RuntimeException("Erro ao criar entidade", e);
         }
         entity.fromVO(persistedEntity);
-        entity.clearChanges();
     }
 
     @SuppressWarnings("unchecked")

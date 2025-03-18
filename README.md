@@ -9,6 +9,7 @@
 - **Encapsula a lógica de acesso aos dados** dentro das entidades.
 - **Fornece operações genéricas** como busca e atualização.
 - **Segue a filosofia do Spring Data JPA**, facilitando a adoção por novos desenvolvedores.
+- **Suporta operações em lote** para atualização e criação de múltiplas entidades em uma única chamada.
 
 ## 🏗️ Instalação
 
@@ -112,12 +113,34 @@ public void beforeInsert(PersistenceEvent persistenceEvent) throws Exception {
 }
 ```
 
+### 📌 Caso de Uso 3: Atualizando múltiplas entidades em lote
+
+Uma funcionalidade implementada com sucesso no JRepository é a capacidade de atualizar múltiplas entidades em uma única chamada:
+
+```java
+public void atualizarClienteEEndereco() {
+    // Busca o cliente e seu endereço
+    Parceiro cliente = JRepository.findByPK(new Parceiro(), new BigDecimal(1001));
+    Bairro bairro = JRepository.findByPK(new Bairro(), cliente.getCodBai());
+    CEP cep = JRepository.findByPK(new CEP(), cliente.getCep());
+    
+    // Atualiza informações em múltiplas entidades
+    cliente.setNomeParc("Novo Nome Cliente");
+    bairro.setNomeBai("Novo Nome Bairro");
+    cep.setIntervalo("100-200");
+    
+    // Atualiza todas as entidades de uma só vez
+    JRepository.update(cliente, bairro, cep);
+}
+```
+
 ### 🏆 Benefícios do JRepository
 
 ✅ **Código mais limpo e modular** – Fácil de entender e manter.  
 ✅ **Evita instanciar manualmente DAOs** – Reduz o risco de erros e inconsistências.  
 ✅ **Utiliza objetos de domínio** – Maior organização e reutilização do código.  
 ✅ **Facilidade para escalar** – Reaproveitamento de código em diferentes processos.  
+✅ **Operações em lote** – Atualização e criação de múltiplas entidades em uma única chamada.  
 ✅ **Sintaxe inspirada no Spring Data JPA**, facilitando a adaptação para novos desenvolvedores.
 
 ## 📚 Componentes Principais
@@ -125,7 +148,7 @@ public void beforeInsert(PersistenceEvent persistenceEvent) throws Exception {
 ### `JRepository`
 A classe principal que gerencia as operações de **busca e atualização** de dados.
 
-#### Métodos:
+#### Métodos Implementados:
 
 - **`findByPK(T template, Object... pkValues) -> T`**  
   Retorna um registro pelo seu identificador primário.
@@ -133,33 +156,48 @@ A classe principal que gerencia as operações de **busca e atualização** de d
 - **`find(T template, String where, Object... params) -> List<T>`**  
   Retorna uma lista de registros que atendem a uma condição.
 
-- **`update(T entity)`** *(Ainda não implementado)*  
-  Atualiza um registro existente.
+- **`update(SankhyaEntity<?>... entities)`**  
+  Atualiza um ou mais registros existentes com as mudanças rastreadas.
 
-- **`create(T entity)`** *(Ainda não implementado)*  
-  Cria um novo registro.
+- **`create(SankhyaEntity<?>... entities)`**  
+  Cria um ou mais novos registros.
 
 ### `SankhyaEntity`
 Interface que define o contrato para todas as entidades usadas no JRepository.
 
 ```java
 public interface SankhyaEntity<T extends SankhyaEntity<T>> {
+    String getTableName();
     String getEntityName();
     T fromVO(DynamicVO vo);
+    DynamicVO getOriginalVO();
+    Map<String,Object> getChanges();
+    void clearChanges();
 }
 ```
 
-## 🚀 Roadmap
+## 🚀 Recursos Implementados
 
-- ✅ Implementação de `findByPK` e `find`.
-- ⏳ Implementação de `update`.
-- ⏳ Implementação de `create`.
+As seguintes funcionalidades foram implementadas com sucesso:
+
+- ✅ Busca de entidades por chave primária com `findByPK()`.
+- ✅ Busca de entidades por condições personalizadas com `find()`.
+- ✅ Atualização de registros com `update()`, incluindo suporte a atualizações em lote.
+- ✅ Criação de novos registros com `create()`, incluindo suporte a criações em lote.
+- ✅ Rastreamento automático de mudanças em entidades.
+- ✅ Conversão automática entre objetos VO e entidades de domínio.
+
+## 🛣️ Próximos Passos
+
 - ⏳ **Suporte para ligações entre entidades** (exemplo: buscar um parceiro e automaticamente carregar seu endereço e contatos).
-
-## 🤝 Contribuindo
-
-Fique à vontade para abrir issues ou enviar pull requests para aprimorar este projeto!
+- ⏳ Implementação de transações mais robustas.
+- ⏳ Otimização de desempenho para operações em lote com grandes volumes.
+- ⏳ Implementação de cache para consultas frequentes.
 
 ---
 
 🎯 **JRepository** torna o acesso aos dados do Sankhya mais **simples, rápido e organizado**, reduzindo a barreira de entrada para novos desenvolvedores ao trazer conceitos inspirados no **Spring Data JPA**.
+
+## 🤝 Contribuindo
+
+Fique à vontade para abrir issues ou enviar pull requests para aprimorar este projeto!

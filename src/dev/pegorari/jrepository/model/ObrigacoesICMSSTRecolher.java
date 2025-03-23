@@ -199,7 +199,7 @@ public class ObrigacoesICMSSTRecolher extends AbstractSankhyaEntity<ObrigacoesIC
 
    @Override
    public ObrigacoesICMSSTRecolher fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codObr = vo.asBigDecimal("CODOBR");
         this.codRec = vo.asString("CODREC");

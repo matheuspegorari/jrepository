@@ -98,7 +98,7 @@ public class SetupWorkCenterPorPA extends AbstractSankhyaEntity<SetupWorkCenterP
 
    @Override
    public SetupWorkCenterPorPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.nuAst = vo.asBigDecimal("NUAST");

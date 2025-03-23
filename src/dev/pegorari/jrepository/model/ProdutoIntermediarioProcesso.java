@@ -209,7 +209,7 @@ public class ProdutoIntermediarioProcesso extends AbstractSankhyaEntity<ProdutoI
 
    @Override
    public ProdutoIntermediarioProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.tipoNroLote = vo.asString("TIPONROLOTE");
         this.controlePa = vo.asString("CONTROLEPA");

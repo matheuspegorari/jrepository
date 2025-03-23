@@ -68,7 +68,7 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
 
    @Override
    public TarefaDependente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuTarefaDep = vo.asBigDecimal("NUTAREFADEP");
         this.nuTarefa = vo.asBigDecimal("NUTAREFA");
         this.qtdDep = vo.asBigDecimal("QTDDEP");

@@ -69,7 +69,7 @@ public class OcorrenciasManifesto extends AbstractSankhyaEntity<OcorrenciasManif
 
    @Override
    public OcorrenciasManifesto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.ocorrencias = vo.asClob("OCORRENCIAS");

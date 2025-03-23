@@ -38,7 +38,7 @@ public class PerfilVaga extends AbstractSankhyaEntity<PerfilVaga> {
 
    @Override
    public PerfilVaga fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codAnuncio = vo.asBigDecimal("CODANUNCIO");
         return this;

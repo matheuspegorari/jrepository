@@ -148,7 +148,7 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
 
    @Override
    public NotasMDF fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.numNota = vo.asBigDecimal("NUMNOTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

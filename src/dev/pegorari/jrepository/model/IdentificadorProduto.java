@@ -78,7 +78,7 @@ public class IdentificadorProduto extends AbstractSankhyaEntity<IdentificadorPro
 
    @Override
    public IdentificadorProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.identificador = vo.asString("IDENTIFICADOR");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.nome = vo.asString("NOME");

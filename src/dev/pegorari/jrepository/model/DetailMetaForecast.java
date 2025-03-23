@@ -89,7 +89,7 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
 
    @Override
    public DetailMetaForecast fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCenario = vo.asBigDecimal("CODCENARIO");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");

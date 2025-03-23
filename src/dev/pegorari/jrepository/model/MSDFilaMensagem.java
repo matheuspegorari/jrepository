@@ -269,7 +269,7 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
 
    @Override
    public MSDFilaMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.assunto = vo.asString("ASSUNTO");
         this.codCon = vo.asBigDecimal("CODCON");

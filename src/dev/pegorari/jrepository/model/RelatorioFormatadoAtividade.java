@@ -48,7 +48,7 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
 
    @Override
    public RelatorioFormatadoAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nuEle = vo.asBigDecimal("NUELE");
         this.nuRfe = vo.asBigDecimal("NURFE");

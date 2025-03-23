@@ -58,7 +58,7 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
 
    @Override
    public MensagemConsultaSerasa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuConsulta = vo.asBigDecimal("NUCONSULTA");
         this.msg = vo.asString("MSG");
         this.codMsg = vo.asBigDecimal("CODMSG");

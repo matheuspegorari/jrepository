@@ -108,7 +108,7 @@ public class ItemMovTabelaAdicional extends AbstractSankhyaEntity<ItemMovTabelaA
 
    @Override
    public ItemMovTabelaAdicional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codClc = vo.asBigDecimal("CODCLC");
         this.codClt = vo.asBigDecimal("CODCLT");
         this.descontar = vo.asBigDecimal("DESCONTAR");

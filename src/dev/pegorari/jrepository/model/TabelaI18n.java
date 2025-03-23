@@ -47,7 +47,7 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
 
    @Override
    public TabelaI18n fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeTab = vo.asString("NOMETAB");
         this.texto = vo.asString("TEXTO");

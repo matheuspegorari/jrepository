@@ -38,7 +38,7 @@ public class ClassificacaoProduto extends AbstractSankhyaEntity<ClassificacaoPro
 
    @Override
    public ClassificacaoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codClassif = vo.asBigDecimal("CODCLASSIF");
         this.descricao = vo.asString("DESCRICAO");
         return this;

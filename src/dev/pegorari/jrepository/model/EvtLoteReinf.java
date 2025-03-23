@@ -109,7 +109,7 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
 
    @Override
    public EvtLoteReinf fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhInc = vo.asTimestamp("DHINC");
         this.dhPrevConsulta = vo.asTimestamp("DHPREVCONSULTA");
         this.msg = vo.asClob("MSG");

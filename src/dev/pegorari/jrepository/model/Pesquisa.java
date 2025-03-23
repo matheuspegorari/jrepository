@@ -209,7 +209,7 @@ public class Pesquisa extends AbstractSankhyaEntity<Pesquisa> {
 
    @Override
    public Pesquisa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codQuest = vo.asBigDecimal("CODQUEST");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuPesq = vo.asBigDecimal("CODUSUPESQ");

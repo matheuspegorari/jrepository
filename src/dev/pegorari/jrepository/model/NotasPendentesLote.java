@@ -59,7 +59,7 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
 
    @Override
    public NotasPendentesLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

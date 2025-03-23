@@ -38,7 +38,7 @@ public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocRefe
 
    @Override
    public DocReferenciadoPortImportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveRef = vo.asString("CHAVEREF");
         this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         return this;

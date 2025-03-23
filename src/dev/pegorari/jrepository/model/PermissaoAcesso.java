@@ -58,7 +58,7 @@ public class PermissaoAcesso extends AbstractSankhyaEntity<PermissaoAcesso> {
 
    @Override
    public PermissaoAcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.permissao = vo.asString("PERMISSAO");

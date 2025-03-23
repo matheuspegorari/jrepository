@@ -228,7 +228,7 @@ public class GNREUnidadeFederativa extends AbstractSankhyaEntity<GNREUnidadeFede
 
    @Override
    public GNREUnidadeFederativa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCampoExtraGnre = vo.asBigDecimal("CODCAMPOEXTRAGNRE");
         this.codDetGnre = vo.asBigDecimal("CODDETGNRE");
         this.codFcpstGnre = vo.asBigDecimal("CODFCPSTGNRE");

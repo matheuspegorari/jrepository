@@ -38,7 +38,7 @@ public class Imagem extends AbstractSankhyaEntity<Imagem> {
 
    @Override
    public Imagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codImg = vo.asBigDecimal("CODIMG");
         this.foto = vo.asBlob("FOTO");
         return this;

@@ -199,7 +199,7 @@ public class ExtratoBancario extends AbstractSankhyaEntity<ExtratoBancario> {
 
    @Override
    public ExtratoBancario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCateg = vo.asBigDecimal("CODCATEG");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conciliado = vo.asString("CONCILIADO");

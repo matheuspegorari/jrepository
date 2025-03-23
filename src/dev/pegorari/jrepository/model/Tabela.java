@@ -58,7 +58,7 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
 
    @Override
    public Tabela fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descTab = vo.asString("DESCRTAB");
         this.nomeTab = vo.asString("NOMETAB");
         this.nuCampoNumeracao = vo.asBigDecimal("NUCAMPONUMERACAO");

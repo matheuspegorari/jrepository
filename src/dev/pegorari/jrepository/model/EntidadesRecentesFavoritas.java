@@ -69,7 +69,7 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
 
    @Override
    public EntidadesRecentesFavoritas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.dhUltimoAcesso = vo.asTimestamp("DHULTIMOACESSO");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -328,7 +328,7 @@ public class ConfiguracaoImpressaoProposta extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoImpressaoProposta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.caminhoArqImp = vo.asString("CAMINHOARQIMP");
         this.cargoContato = vo.asString("CARGOCONTATO");
         this.cargoVendedor = vo.asString("CARGOVENDEDOR");

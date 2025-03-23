@@ -149,7 +149,7 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
 
    @Override
    public MovimentacaoRepositorioPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCpm = vo.asBigDecimal("CODCPM");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

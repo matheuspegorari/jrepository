@@ -48,7 +48,7 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
 
    @Override
    public EmbarcacoesComboio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

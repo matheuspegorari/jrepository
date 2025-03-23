@@ -78,7 +78,7 @@ public class SerieMateriaPrimaTemporario extends AbstractSankhyaEntity<SerieMate
 
    @Override
    public SerieMateriaPrimaTemporario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.idIProc = vo.asBigDecimal("IDIPROC");

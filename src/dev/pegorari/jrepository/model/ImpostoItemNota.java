@@ -679,7 +679,7 @@ public class ImpostoItemNota extends AbstractSankhyaEntity<ImpostoItemNota> {
 
    @Override
    public ImpostoItemNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codInc = vo.asBigDecimal("CODINC");
         this.codLst = vo.asBigDecimal("CODLST");
         this.codTribMunIss = vo.asString("CODTRIBMUNISS");

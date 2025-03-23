@@ -3519,7 +3519,7 @@ public class TipoOperacao extends AbstractSankhyaEntity<TipoOperacao> {
 
    @Override
    public TipoOperacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.usarPrecoCusto = vo.asString("USARPRECOCUSTO");
         this.usoProdSeparacao = vo.asString("USOPRODSEPARACAO");
         this.valTbCompCr = vo.asString("VALTBCOMPCR");

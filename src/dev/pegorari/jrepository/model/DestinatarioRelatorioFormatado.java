@@ -48,7 +48,7 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
 
    @Override
    public DestinatarioRelatorioFormatado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.nuRfe = vo.asBigDecimal("NURFE");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

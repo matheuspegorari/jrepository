@@ -239,7 +239,7 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
 
    @Override
    public ExperienciaProfissional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.atual = vo.asString("ATUAL");
         this.bairro = vo.asString("BAIRRO");
         this.cep = vo.asString("CEP");

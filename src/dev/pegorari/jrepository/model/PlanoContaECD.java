@@ -149,7 +149,7 @@ public class PlanoContaECD extends AbstractSankhyaEntity<PlanoContaECD> {
 
    @Override
    public PlanoContaECD fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtPrimImp = vo.asTimestamp("DTPRIMIMP");
         this.descrCta = vo.asString("DESCRCTA");
         this.dtInclusao = vo.asTimestamp("DTINCLUSAO");

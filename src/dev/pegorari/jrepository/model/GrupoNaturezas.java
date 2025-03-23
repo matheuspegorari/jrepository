@@ -88,7 +88,7 @@ public class GrupoNaturezas extends AbstractSankhyaEntity<GrupoNaturezas> {
 
    @Override
    public GrupoNaturezas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codGrupoNat = vo.asBigDecimal("CODGRUPONAT");

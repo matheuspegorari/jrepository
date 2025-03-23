@@ -68,7 +68,7 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
 
    @Override
    public ContratoServico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codServ = vo.asBigDecimal("CODSERV");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.parcelas = vo.asBigDecimal("PARCELAS");

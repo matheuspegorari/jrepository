@@ -158,7 +158,7 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
 
    @Override
    public ApontamentoMateriais fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.codVol = vo.asString("CODVOL");
         this.seqApa = vo.asBigDecimal("SEQAPA");

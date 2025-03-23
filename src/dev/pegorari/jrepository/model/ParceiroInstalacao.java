@@ -209,7 +209,7 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
 
    @Override
    public ParceiroInstalacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProj = vo.asBigDecimal("CODPROJ");
         this.contato = vo.asString("CONTATO");

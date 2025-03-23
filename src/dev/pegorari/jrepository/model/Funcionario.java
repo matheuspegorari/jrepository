@@ -3399,7 +3399,7 @@ public class Funcionario extends AbstractSankhyaEntity<Funcionario> {
 
    @Override
    public Funcionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dependConvMed = vo.asBigDecimal("DEPENDCONVMED");
         this.dependIrf = vo.asBigDecimal("DEPENDIRF");
         this.dependSalFam = vo.asBigDecimal("DEPENDSALFAM");

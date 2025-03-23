@@ -199,7 +199,7 @@ public class Gadget extends AbstractSankhyaEntity<Gadget> {
 
    @Override
    public Gadget fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.categoria = vo.asString("CATEGORIA");
         this.codUsu = vo.asBigDecimal("CODUSU");

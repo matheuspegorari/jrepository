@@ -119,7 +119,7 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
 
    @Override
    public HistoricoCompraMRP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqImrp = vo.asBigDecimal("SEQIMRP");
         this.cancelado = vo.asString("CANCELADO");
         this.codProd = vo.asBigDecimal("CODPROD");

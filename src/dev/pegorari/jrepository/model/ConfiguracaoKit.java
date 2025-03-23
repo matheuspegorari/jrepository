@@ -128,7 +128,7 @@ public class ConfiguracaoKit extends AbstractSankhyaEntity<ConfiguracaoKit> {
 
    @Override
    public ConfiguracaoKit fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.distDescKitComp = vo.asString("DISTDESCKITCOMP");
         this.calcImpKit = vo.asString("CALCIMPKIT");
         this.distribuiKitComp = vo.asString("DISTRIBUIKITCOMP");

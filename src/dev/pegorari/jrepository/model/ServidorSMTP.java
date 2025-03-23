@@ -188,7 +188,7 @@ public class ServidorSMTP extends AbstractSankhyaEntity<ServidorSMTP> {
 
    @Override
    public ServidorSMTP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.senha = vo.asString("SENHA");
         this.usuario = vo.asString("USUARIO");
         this.servidor = vo.asString("SERVIDOR");

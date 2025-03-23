@@ -138,7 +138,7 @@ public class RegistroOperacaoEstoque extends AbstractSankhyaEntity<RegistroOpera
 
    @Override
    public RegistroOperacaoEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.statusExec = vo.asString("STATUSEXEC");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.ideFx = vo.asBigDecimal("IDEFX");

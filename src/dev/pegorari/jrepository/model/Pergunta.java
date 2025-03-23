@@ -189,7 +189,7 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
 
    @Override
    public Pergunta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aceitaObservacao = vo.asString("ACEITAOBSERVACAO");
         this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");
         this.codPerg = vo.asBigDecimal("CODPERG");

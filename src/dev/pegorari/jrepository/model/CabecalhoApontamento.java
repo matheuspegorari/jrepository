@@ -79,7 +79,7 @@ public class CabecalhoApontamento extends AbstractSankhyaEntity<CabecalhoApontam
 
    @Override
    public CabecalhoApontamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.idAtv = vo.asBigDecimal("IDIATV");

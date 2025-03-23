@@ -168,7 +168,7 @@ public class ClassificacaoFiscalOperacao extends AbstractSankhyaEntity<Classific
 
    @Override
    public ClassificacaoFiscalOperacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.calcDifIcms = vo.asString("CALCDIFICMS");
         this.codCfo = vo.asBigDecimal("CODCFO");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

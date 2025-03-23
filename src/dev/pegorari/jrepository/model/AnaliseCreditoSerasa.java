@@ -109,7 +109,7 @@ public class AnaliseCreditoSerasa extends AbstractSankhyaEntity<AnaliseCreditoSe
 
    @Override
    public AnaliseCreditoSerasa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.urlEnvio = vo.asString("URLENVIO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhConsulta = vo.asTimestamp("DHCONSULTA");

@@ -78,7 +78,7 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
 
    @Override
    public FinanceiroPropostaComercial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codNat = vo.asBigDecimal("CODNAT");
         this.nuProjeto = vo.asBigDecimal("NUPROJETO");
         this.rateado = vo.asString("RATEADO");

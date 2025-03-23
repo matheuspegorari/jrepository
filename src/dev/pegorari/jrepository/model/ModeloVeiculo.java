@@ -58,7 +58,7 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
 
    @Override
    public ModeloVeiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cilindrada = vo.asBigDecimal("CILINDRADA");
         this.codModVei = vo.asBigDecimal("CODMODVEI");
         this.combustivel = vo.asString("COMBUSTIVEL");

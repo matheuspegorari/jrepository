@@ -68,7 +68,7 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
 
    @Override
    public RecursoPorWorkCenter fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdAlocada = vo.asBigDecimal("QTDALOCADA");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codWcp = vo.asBigDecimal("CODWCP");

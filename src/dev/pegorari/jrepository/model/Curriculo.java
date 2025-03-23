@@ -769,7 +769,7 @@ public class Curriculo extends AbstractSankhyaEntity<Curriculo> {
 
    @Override
    public Curriculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuCurriculoBt = vo.asBigDecimal("NUCURRICULOBT");
         this.numCps = vo.asBigDecimal("NUMCPS");
         this.usoApAuditivo = vo.asString("USOAPAUDITIVO");

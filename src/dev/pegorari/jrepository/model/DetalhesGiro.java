@@ -69,7 +69,7 @@ public class DetalhesGiro extends AbstractSankhyaEntity<DetalhesGiro> {
 
    @Override
    public DetalhesGiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqImps = vo.asBigDecimal("SEQIMPS");
         this.numPs = vo.asBigDecimal("NUMPS");
         this.qtdGiro = vo.asBigDecimal("QTDGIRO");

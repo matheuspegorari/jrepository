@@ -59,7 +59,7 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
 
    @Override
    public MSDDestinatarioMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.intMin = vo.asBigDecimal("INTMIN");

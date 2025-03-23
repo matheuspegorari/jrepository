@@ -68,7 +68,7 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
 
    @Override
    public UnidadeMedida fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipMed = vo.asString("TIPMED");
         this.qtdMed = vo.asBigDecimal("QTDMED");
         this.seqMed = vo.asBigDecimal("SEQMED");

@@ -47,7 +47,7 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
 
    @Override
    public InstanciaI18n fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.texto = vo.asString("TEXTO");

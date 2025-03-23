@@ -89,7 +89,7 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
 
    @Override
    public TabelaCPRB fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.codCprb = vo.asString("CODCPRB");

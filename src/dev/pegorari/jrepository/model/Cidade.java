@@ -599,7 +599,7 @@ public class Cidade extends AbstractSankhyaEntity<Cidade> {
 
    @Override
    public Cidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.mascaraLc116 = vo.asString("MASCARALC116");
         this.codCid = vo.asBigDecimal("CODCID");
         this.codMunDms = vo.asBigDecimal("CODMUNDMS");

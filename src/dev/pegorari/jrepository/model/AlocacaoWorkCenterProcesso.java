@@ -78,7 +78,7 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
 
    @Override
    public AlocacaoWorkCenterProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCwc = vo.asBigDecimal("CODCWC");
         this.idAwc = vo.asBigDecimal("IDAWC");
         this.idProc = vo.asBigDecimal("IDPROC");

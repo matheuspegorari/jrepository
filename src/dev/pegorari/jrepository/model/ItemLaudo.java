@@ -108,7 +108,7 @@ public class ItemLaudo extends AbstractSankhyaEntity<ItemLaudo> {
 
    @Override
    public ItemLaudo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codClc = vo.asBigDecimal("CODCLC");
         this.codClt = vo.asBigDecimal("CODCLT");
         this.descontar = vo.asBigDecimal("DESCONTAR");

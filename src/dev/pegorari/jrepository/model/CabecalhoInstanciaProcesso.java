@@ -399,7 +399,7 @@ public class CabecalhoInstanciaProcesso extends AbstractSankhyaEntity<CabecalhoI
 
    @Override
    public CabecalhoInstanciaProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.numps = vo.asBigDecimal("NUMPS");
         this.nroLote = vo.asString("NROLOTE");
         this.qtdProduzir = vo.asBigDecimal("QTDPRODUZIR");

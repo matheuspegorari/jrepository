@@ -58,7 +58,7 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
 
    @Override
    public PermissaoAgente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhAutorizacao = vo.asTimestamp("DHAUTORIZACAO");
         this.id = vo.asString("ID");
         this.permissao = vo.asString("PERMISSAO");

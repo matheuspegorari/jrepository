@@ -119,7 +119,7 @@ public class SerieProduto extends AbstractSankhyaEntity<SerieProduto> {
 
    @Override
    public SerieProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
         this.avariado = vo.asString("AVARIADO");
         this.codProd = vo.asBigDecimal("CODPROD");

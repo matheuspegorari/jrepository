@@ -89,7 +89,7 @@ public class Funcao extends AbstractSankhyaEntity<Funcao> {
 
    @Override
    public Funcao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCbo = vo.asBigDecimal("CODCBO");
         this.codFuncao = vo.asBigDecimal("CODFUNCAO");
         this.descrFuncao = vo.asString("DESCRFUNCAO");

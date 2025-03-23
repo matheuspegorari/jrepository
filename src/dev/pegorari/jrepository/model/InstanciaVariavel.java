@@ -109,7 +109,7 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
 
    @Override
    public InstanciaVariavel fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dta = vo.asTimestamp("DTA");
         this.idInstPrn = vo.asBigDecimal("IDINSTPRN");
         this.idInstTar = vo.asBigDecimal("IDINSTTAR");

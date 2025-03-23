@@ -68,7 +68,7 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
 
    @Override
    public EspeciesGTV fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idInfGtv = vo.asString("IDINFGTV");
         this.numInfGtv = vo.asString("NUMINFGTV");
         this.nuNota = vo.asBigDecimal("NUNOTA");

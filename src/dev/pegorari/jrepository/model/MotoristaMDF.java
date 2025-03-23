@@ -38,7 +38,7 @@ public class MotoristaMDF extends AbstractSankhyaEntity<MotoristaMDF> {
 
    @Override
    public MotoristaMDF fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         return this;

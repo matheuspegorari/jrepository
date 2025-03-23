@@ -99,7 +99,7 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
 
    @Override
    public EtapaPersonalizada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arqModEmail = vo.asString("ARQMODEMAIL");
         this.codEpe = vo.asBigDecimal("CODEPE");
         this.codEtapa = vo.asBigDecimal("CODETAPA");

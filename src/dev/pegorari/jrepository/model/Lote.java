@@ -119,7 +119,7 @@ public class Lote extends AbstractSankhyaEntity<Lote> {
 
    @Override
    public Lote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");

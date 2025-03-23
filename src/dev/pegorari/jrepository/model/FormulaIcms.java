@@ -48,7 +48,7 @@ public class FormulaIcms extends AbstractSankhyaEntity<FormulaIcms> {
 
    @Override
    public FormulaIcms fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codForm = vo.asBigDecimal("CODFORM");
         this.descrForm = vo.asString("DESCRFORM");
         this.formula = vo.asString("FORMULA");

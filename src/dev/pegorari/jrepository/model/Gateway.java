@@ -28,7 +28,7 @@ public class Gateway extends AbstractSankhyaEntity<Gateway> {
 
    @Override
    public Gateway fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         return this;
    }

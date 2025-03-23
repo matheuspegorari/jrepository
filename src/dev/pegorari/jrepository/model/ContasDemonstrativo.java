@@ -58,7 +58,7 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
 
    @Override
    public ContasDemonstrativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDmt = vo.asString("CODDMT");
         this.codTdm = vo.asBigDecimal("CODTDM");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");

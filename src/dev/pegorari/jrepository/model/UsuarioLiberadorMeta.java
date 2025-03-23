@@ -38,7 +38,7 @@ public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberador
 
    @Override
    public UsuarioLiberadorMeta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         return this;

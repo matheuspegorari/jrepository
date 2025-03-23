@@ -108,7 +108,7 @@ public class TipoEquipamento extends AbstractSankhyaEntity<TipoEquipamento> {
 
    @Override
    public TipoEquipamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codTipEquip = vo.asBigDecimal("CODTIPEQUIP");
         this.descricao = vo.asString("DESCRICAO");

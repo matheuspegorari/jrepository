@@ -119,7 +119,7 @@ public class HistoricoContabilizacao extends AbstractSankhyaEntity<HistoricoCont
 
    @Override
    public HistoricoContabilizacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhctz = vo.asTimestamp("DHCTZ");
         this.erroExec = vo.asClob("ERROEXEC");
         this.minutosCtz = vo.asBigDecimal("MINUTOSCTZ");

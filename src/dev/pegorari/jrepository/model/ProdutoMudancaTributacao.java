@@ -329,7 +329,7 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
 
    @Override
    public ProdutoMudancaTributacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqSt = vo.asBigDecimal("ALIQST");
         this.baseIcms = vo.asBigDecimal("BASEICMS");

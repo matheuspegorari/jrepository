@@ -58,7 +58,7 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
 
    @Override
    public ServicoModEtapa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMetod = vo.asBigDecimal("CODMETOD");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.complementar = vo.asString("COMPLEMENTAR");

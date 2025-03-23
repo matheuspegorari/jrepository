@@ -98,7 +98,7 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
 
    @Override
    public AlocacaoDeWorkCenterLctoOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.idAwc = vo.asBigDecimal("IDAWC");

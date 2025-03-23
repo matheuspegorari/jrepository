@@ -379,7 +379,7 @@ public class InformacaoContribuinte extends AbstractSankhyaEntity<InformacaoCont
 
    @Override
    public InformacaoContribuinte fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cnpjEfr = vo.asString("CNPJEFR");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

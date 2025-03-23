@@ -79,7 +79,7 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
 
    @Override
    public GruposPorUsuario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dataFim = vo.asTimestamp("DATAFIM");

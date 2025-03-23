@@ -68,7 +68,7 @@ public class PesoConferencia extends AbstractSankhyaEntity<PesoConferencia> {
 
    @Override
    public PesoConferencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPcon = vo.asBigDecimal("CODPCON");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.pesoBruto = vo.asBigDecimal("PESOBRUTO");

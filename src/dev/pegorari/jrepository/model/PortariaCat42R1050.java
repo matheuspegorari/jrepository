@@ -169,7 +169,7 @@ public class PortariaCat42R1050 extends AbstractSankhyaEntity<PortariaCat42R1050
 
    @Override
    public PortariaCat42R1050 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdFim = vo.asBigDecimal("QTDFIM");
         this.qtdIni = vo.asBigDecimal("QTDINI");
         this.reg = vo.asString("REG");

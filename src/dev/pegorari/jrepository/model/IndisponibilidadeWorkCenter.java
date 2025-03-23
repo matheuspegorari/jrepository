@@ -109,7 +109,7 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
 
    @Override
    public IndisponibilidadeWorkCenter fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.dhAlter = vo.asTimestamp("DHALTER");

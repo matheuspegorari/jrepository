@@ -1599,7 +1599,7 @@ public class ContratoArmazenagemGeral extends AbstractSankhyaEntity<ContratoArma
 
    @Override
    public ContratoArmazenagemGeral fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.temIrf = vo.asString("TEMIRF");
         this.temIss = vo.asString("TEMISS");
         this.temMed = vo.asString("TEMMED");

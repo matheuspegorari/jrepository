@@ -99,7 +99,7 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
 
    @Override
    public SolicitacaoLiberacaoOrcamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAprovador = vo.asBigDecimal("CODAPROVADOR");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codSolicitante = vo.asBigDecimal("CODSOLICITANTE");

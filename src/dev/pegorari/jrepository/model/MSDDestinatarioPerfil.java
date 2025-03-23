@@ -38,7 +38,7 @@ public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatario
 
    @Override
    public MSDDestinatarioPerfil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCon = vo.asBigDecimal("CODCON");
         this.codPer = vo.asBigDecimal("CODPER");
         return this;

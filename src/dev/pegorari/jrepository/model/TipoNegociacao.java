@@ -579,7 +579,7 @@ public class TipoNegociacao extends AbstractSankhyaEntity<TipoNegociacao> {
 
    @Override
    public TipoNegociacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apresTransp = vo.asString("APRESTRANSP");
         this.ativo = vo.asString("ATIVO");
         this.baixa = vo.asString("BAIXA");

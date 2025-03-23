@@ -279,7 +279,7 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
 
    @Override
    public LogRegistrosMDe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descRevento = vo.asString("DESCREVENTO");
         this.dhEvento = vo.asTimestamp("DHEVENTO");

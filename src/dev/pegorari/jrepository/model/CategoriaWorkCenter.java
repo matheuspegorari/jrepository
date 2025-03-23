@@ -128,7 +128,7 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
 
    @Override
    public CategoriaWorkCenter fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCwc = vo.asBigDecimal("CODCWC");
         this.codWcppadrao = vo.asBigDecimal("CODWCPPADRAO");

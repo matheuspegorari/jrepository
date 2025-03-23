@@ -69,7 +69,7 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
 
    @Override
    public AreaConferencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.impSep = vo.asString("IMPSEP");
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");
         this.codUsu = vo.asBigDecimal("CODUSU");

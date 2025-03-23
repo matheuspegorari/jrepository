@@ -98,7 +98,7 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
 
    @Override
    public InformacoesGTV fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cargaInfGtv = vo.asBigDecimal("CARGAINFGTV");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.digVerInfGtv = vo.asBigDecimal("DIGVERINFGTV");

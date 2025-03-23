@@ -129,7 +129,7 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
 
    @Override
    public RateioPropostaComercial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

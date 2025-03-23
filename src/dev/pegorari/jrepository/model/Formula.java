@@ -98,7 +98,7 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
 
    @Override
    public Formula fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.formulaWeb = vo.asString("FORMULAWEB");
         this.tipDist = vo.asString("TIPDIST");
         this.tipForm = vo.asString("TIPFORM");

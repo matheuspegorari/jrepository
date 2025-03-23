@@ -79,7 +79,7 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
 
    @Override
    public TipoMeta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.compromisso = vo.asString("COMPROMISSO");

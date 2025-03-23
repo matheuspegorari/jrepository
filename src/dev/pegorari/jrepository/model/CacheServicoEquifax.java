@@ -79,7 +79,7 @@ public class CacheServicoEquifax extends AbstractSankhyaEntity<CacheServicoEquif
 
    @Override
    public CacheServicoEquifax fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");
         this.codUsu = vo.asBigDecimal("CODUSU");

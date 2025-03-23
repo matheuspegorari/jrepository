@@ -59,7 +59,7 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
 
    @Override
    public Logradouro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLogradouro = vo.asString("CODLOGRADOURO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descrLogradouro = vo.asString("DESCRLOGRADOURO");

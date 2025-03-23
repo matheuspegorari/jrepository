@@ -38,7 +38,7 @@ public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
 
    @Override
    public AnexoPorMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.nuAnexo = vo.asBigDecimal("NUANEXO");
         return this;

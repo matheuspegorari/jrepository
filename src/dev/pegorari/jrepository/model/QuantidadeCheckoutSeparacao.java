@@ -68,7 +68,7 @@ public class QuantidadeCheckoutSeparacao extends AbstractSankhyaEntity<Quantidad
 
    @Override
    public QuantidadeCheckoutSeparacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.qtdCheckouts = vo.asBigDecimal("QTDCHECKOUTS");

@@ -68,7 +68,7 @@ public class AcessoImpressora extends AbstractSankhyaEntity<AcessoImpressora> {
 
    @Override
    public AcessoImpressora fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.nome = vo.asString("NOME");
         this.nuPrinter = vo.asBigDecimal("NUPRINTER");

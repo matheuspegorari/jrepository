@@ -159,7 +159,7 @@ public class ComercialProduto extends AbstractSankhyaEntity<ComercialProduto> {
 
    @Override
    public ComercialProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdPedVda = vo.asBigDecimal("QTDPEDVDA");
         this.valor = vo.asBigDecimal("VALOR");
         this.qtdPed = vo.asBigDecimal("QTDPED");

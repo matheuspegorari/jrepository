@@ -48,7 +48,7 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
 
    @Override
    public EstruturaProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codEst = vo.asBigDecimal("CODEST");
         this.descricao = vo.asString("DESCRICAO");

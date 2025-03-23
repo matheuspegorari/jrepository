@@ -239,7 +239,7 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoBloqueioMovimento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -279,7 +279,7 @@ public class LivroCDProdutorRuralRQ100 extends AbstractSankhyaEntity<LivroCDProd
 
    @Override
    public LivroCDProdutorRuralRQ100 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codConta = vo.asString("CODCONTA");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codImovel = vo.asString("CODIMOVEL");

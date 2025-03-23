@@ -38,7 +38,7 @@ public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
 
    @Override
    public ContainerCTe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idContainers = vo.asString("IDCONTAINERS");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;

@@ -68,7 +68,7 @@ public class ApontamentoCompManufatura extends AbstractSankhyaEntity<Apontamento
 
    @Override
    public ApontamentoCompManufatura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.seqApa = vo.asBigDecimal("SEQAPA");

@@ -179,7 +179,7 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
 
    @Override
    public RegistroEtiquetaVolume fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.peso = vo.asBigDecimal("PESO");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
         this.dhFinConf = vo.asTimestamp("DHFINCONF");

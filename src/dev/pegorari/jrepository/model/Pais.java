@@ -68,7 +68,7 @@ public class Pais extends AbstractSankhyaEntity<Pais> {
 
    @Override
    public Pais fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.codPais = vo.asBigDecimal("CODPAIS");
         this.codPaisFis = vo.asBigDecimal("CODPAISFIS");

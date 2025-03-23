@@ -79,7 +79,7 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
 
    @Override
    public GadgetBiaParametro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.vlrDec = vo.asBigDecimal("VLRDEC");
         this.vlrTxt = vo.asString("VLRTXT");
         this.chave = vo.asString("CHAVE");

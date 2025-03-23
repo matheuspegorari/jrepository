@@ -179,7 +179,7 @@ public class EstatisticasJob extends AbstractSankhyaEntity<EstatisticasJob> {
 
    @Override
    public EstatisticasJob fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.descricao = vo.asString("DESCRICAO");
         this.dhexec = vo.asTimestamp("DHEXEC");

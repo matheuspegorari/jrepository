@@ -69,7 +69,7 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
 
    @Override
    public DocumentoAssinadoExcluido fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveArquivo = vo.asString("CHAVEARQUIVO");
         this.nuDoc = vo.asBigDecimal("NUDOC");
         this.motivoExc = vo.asString("MOTIVOEXC");

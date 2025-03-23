@@ -369,7 +369,7 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
 
    @Override
    public RegistroIss fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.vlrRedBaseIss = vo.asBigDecimal("VLRREDBASEISS");
         this.vlrSub = vo.asBigDecimal("VLRSUB");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

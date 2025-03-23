@@ -219,7 +219,7 @@ public class BoletoRapido extends AbstractSankhyaEntity<BoletoRapido> {
 
    @Override
    public BoletoRapido fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtCred = vo.asTimestamp("DTCRED");

@@ -89,7 +89,7 @@ public class AdicaoApuracaoIRPJ extends AbstractSankhyaEntity<AdicaoApuracaoIRPJ
 
    @Override
    public AdicaoApuracaoIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.ctaCtb = vo.asString("CTACTB");

@@ -478,7 +478,7 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
 
    @Override
    public EnderecoArmazenagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.altura = vo.asBigDecimal("ALTURA");
         this.analitico = vo.asString("ANALITICO");
         this.apenasContPorProd = vo.asString("APENASCONTPORPROD");

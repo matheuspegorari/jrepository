@@ -69,7 +69,7 @@ public class RegImportacaoPO extends AbstractSankhyaEntity<RegImportacaoPO> {
 
    @Override
    public RegImportacaoPO fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cabArq = vo.asString("CABARQ");
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.codUsu = vo.asBigDecimal("CODUSU");

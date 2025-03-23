@@ -169,7 +169,7 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
 
    @Override
    public ProdutoEndereco fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEnd = vo.asBigDecimal("CODEND");
         this.codProd = vo.asBigDecimal("CODPROD");

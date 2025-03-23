@@ -58,7 +58,7 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
 
    @Override
    public EstruturaOrganograma fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.descrRoot = vo.asString("DESCRROOT");
         this.nuEst = vo.asBigDecimal("NUEST");

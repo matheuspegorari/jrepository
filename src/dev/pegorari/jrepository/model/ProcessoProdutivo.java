@@ -509,7 +509,7 @@ public class ProcessoProdutivo extends AbstractSankhyaEntity<ProcessoProdutivo> 
 
    @Override
    public ProcessoProdutivo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.padrao = vo.asString("PADRAO");
         this.codPrcProducao = vo.asBigDecimal("CODPRCPRODUCAO");
         this.procDesmonte = vo.asString("PROCDESMONTE");

@@ -78,7 +78,7 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
 
    @Override
    public Repasse fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuCnd = vo.asBigDecimal("NUCND");
         this.nuFinDesp = vo.asBigDecimal("NUFINDESP");
         this.nuFinOrig = vo.asBigDecimal("NUFINORIG");

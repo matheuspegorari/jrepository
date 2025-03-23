@@ -99,7 +99,7 @@ public class PedEletronicoRestituicaoAIRPJ extends AbstractSankhyaEntity<PedElet
 
    @Override
    public PedEletronicoRestituicaoAIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDarf = vo.asBigDecimal("CODDARF");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.numPerd = vo.asString("NUMPERD");

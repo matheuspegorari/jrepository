@@ -139,7 +139,7 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
 
    @Override
    public NotaRetencaoApuracaoIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtEntSai = vo.asTimestamp("DTENTSAI");

@@ -68,7 +68,7 @@ public class WorkCenterPorInstanciaProcesso extends AbstractSankhyaEntity<WorkCe
 
    @Override
    public WorkCenterPorInstanciaProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.idaWc = vo.asBigDecimal("IDAWC");
         this.idIproc = vo.asBigDecimal("IDIPROC");

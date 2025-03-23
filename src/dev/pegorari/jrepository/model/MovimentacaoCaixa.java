@@ -109,7 +109,7 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
 
    @Override
    public MovimentacaoCaixa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nroUnico = vo.asBigDecimal("NROUNICO");

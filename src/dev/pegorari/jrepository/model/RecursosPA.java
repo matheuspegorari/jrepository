@@ -88,7 +88,7 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
 
    @Override
    public RecursosPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

@@ -118,7 +118,7 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
 
    @Override
    public ApontamentoVolumes fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");
         this.id = vo.asBigDecimal("ID");

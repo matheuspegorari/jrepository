@@ -109,7 +109,7 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
 
    @Override
    public ImpostosImportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseImposto = vo.asBigDecimal("BASEIMPOSTO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

@@ -159,7 +159,7 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
 
    @Override
    public HistoricoAssinaturaDigital fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveDoc = vo.asString("CHAVEDOC");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codUsu = vo.asBigDecimal("CODUSU");

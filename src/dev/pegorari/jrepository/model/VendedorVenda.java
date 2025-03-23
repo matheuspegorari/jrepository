@@ -48,7 +48,7 @@ public class VendedorVenda extends AbstractSankhyaEntity<VendedorVenda> {
 
    @Override
    public VendedorVenda fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTab = vo.asBigDecimal("CODTAB");
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.codVend = vo.asBigDecimal("CODVEND");

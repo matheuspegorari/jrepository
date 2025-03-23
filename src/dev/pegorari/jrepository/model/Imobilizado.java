@@ -749,7 +749,7 @@ public class Imobilizado extends AbstractSankhyaEntity<Imobilizado> {
 
    @Override
    public Imobilizado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descrLocal = vo.asString("DESCRLOCAL");
         this.dtBaixa = vo.asTimestamp("DTBAIXA");
         this.dtCompra = vo.asTimestamp("DTCOMPRA");

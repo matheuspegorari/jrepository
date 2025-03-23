@@ -159,7 +159,7 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
 
    @Override
    public ContaSincAgenda fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.authCode = vo.asString("AUTHCODE");
         this.emailEnviado = vo.asString("EMAILENVIADO");
         this.refreshToken = vo.asString("REFRESHTOKEN");

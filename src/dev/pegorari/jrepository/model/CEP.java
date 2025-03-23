@@ -68,7 +68,7 @@ public class CEP extends AbstractSankhyaEntity<CEP> {
 
    @Override
    public CEP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cep = vo.asString("CEP");
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codCid = vo.asBigDecimal("CODCID");

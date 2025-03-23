@@ -69,7 +69,7 @@ public class EventoVeiculoCadastro extends AbstractSankhyaEntity<EventoVeiculoCa
 
    @Override
    public EventoVeiculoCadastro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");
         this.dtRef = vo.asTimestamp("DTREF");

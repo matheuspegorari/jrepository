@@ -48,7 +48,7 @@ public class OcorrenciaBancaria extends AbstractSankhyaEntity<OcorrenciaBancaria
 
    @Override
    public OcorrenciaBancaria fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codOcor = vo.asBigDecimal("CODOCOR");
         this.descricao = vo.asString("DESCRICAO");

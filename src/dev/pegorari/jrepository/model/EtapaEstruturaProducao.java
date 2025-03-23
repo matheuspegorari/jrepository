@@ -118,7 +118,7 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
 
    @Override
    public EtapaEstruturaProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.leadTimeCql = vo.asBigDecimal("LEADTIMECQL");
         this.abreviacao = vo.asString("ABREVIACAO");
         this.codEst = vo.asBigDecimal("CODEST");

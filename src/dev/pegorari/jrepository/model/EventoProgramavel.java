@@ -98,7 +98,7 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
 
    @Override
    public EventoProgramavel fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.config = vo.asClob("CONFIG");
         this.descricao = vo.asString("DESCRICAO");

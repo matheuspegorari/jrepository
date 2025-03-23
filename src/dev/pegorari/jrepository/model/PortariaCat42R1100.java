@@ -249,7 +249,7 @@ public class PortariaCat42R1100 extends AbstractSankhyaEntity<PortariaCat42R1100
 
    @Override
    public PortariaCat42R1100 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.data = vo.asTimestamp("DATA");
         this.digitado = vo.asString("DIGITADO");

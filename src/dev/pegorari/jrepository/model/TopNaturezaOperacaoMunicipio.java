@@ -58,7 +58,7 @@ public class TopNaturezaOperacaoMunicipio extends AbstractSankhyaEntity<TopNatur
 
    @Override
    public TopNaturezaOperacaoMunicipio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codNatOper = vo.asString("CODNATOPER");

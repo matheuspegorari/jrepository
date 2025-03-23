@@ -58,7 +58,7 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
 
    @Override
    public RejeicaoNfe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codRejeicao = vo.asBigDecimal("CODREJEICAO");
         this.hashUtlRejeicao = vo.asString("HASHUTLREJEICAO");
         this.nuNota = vo.asBigDecimal("NUNOTA");

@@ -249,7 +249,7 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
 
    @Override
    public ValorComissaoVendedor fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codForm = vo.asBigDecimal("CODFORM");

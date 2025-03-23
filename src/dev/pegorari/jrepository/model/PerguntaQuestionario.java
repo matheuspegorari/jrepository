@@ -68,7 +68,7 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
 
    @Override
    public PerguntaQuestionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apelido = vo.asString("APELIDO");
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.codQuest = vo.asBigDecimal("CODQUEST");

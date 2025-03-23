@@ -89,7 +89,7 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
 
    @Override
    public MascaraAnonimizacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMasAno = vo.asBigDecimal("CODMASANO");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

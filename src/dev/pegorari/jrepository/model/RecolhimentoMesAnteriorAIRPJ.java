@@ -79,7 +79,7 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
 
    @Override
    public RecolhimentoMesAnteriorAIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.digitado = vo.asString("DIGITADO");
         this.mesPagamento = vo.asTimestamp("MESPAGAMENTO");

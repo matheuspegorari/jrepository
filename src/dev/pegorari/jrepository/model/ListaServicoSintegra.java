@@ -118,7 +118,7 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
 
    @Override
    public ListaServicoSintegra fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codLst = vo.asBigDecimal("CODLST");

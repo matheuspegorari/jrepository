@@ -239,7 +239,7 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
 
    @Override
    public InventarioMudancaTributacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");

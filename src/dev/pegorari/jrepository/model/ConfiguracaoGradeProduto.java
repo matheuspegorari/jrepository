@@ -89,7 +89,7 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
 
    @Override
    public ConfiguracaoGradeProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhCad = vo.asTimestamp("DHCAD");
         this.idGrade = vo.asBigDecimal("IDGRADE");

@@ -119,7 +119,7 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
 
    @Override
    public ComissaoNegociacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVend = vo.asBigDecimal("CODVEND");
         this.nuComissao = vo.asBigDecimal("NUCOMISSAO");
         this.codNat = vo.asBigDecimal("CODNAT");

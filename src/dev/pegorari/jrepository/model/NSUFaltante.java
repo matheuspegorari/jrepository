@@ -89,7 +89,7 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
 
    @Override
    public NSUFaltante fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.tipo = vo.asString("TIPO");
         this.nsu = vo.asString("NSU");

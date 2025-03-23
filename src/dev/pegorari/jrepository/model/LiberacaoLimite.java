@@ -329,7 +329,7 @@ public class LiberacaoLimite extends AbstractSankhyaEntity<LiberacaoLimite> {
 
    @Override
    public LiberacaoLimite fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.antecipacao = vo.asString("ANTECIPACAO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codMeta = vo.asBigDecimal("CODMETA");

@@ -58,7 +58,7 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
 
    @Override
    public FreteNotaFinanceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.vlrFrete = vo.asBigDecimal("VLRFRETE");

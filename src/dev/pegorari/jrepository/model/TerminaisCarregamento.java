@@ -68,7 +68,7 @@ public class TerminaisCarregamento extends AbstractSankhyaEntity<TerminaisCarreg
 
    @Override
    public TerminaisCarregamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTercar = vo.asBigDecimal("CODTERCAR");
         this.codTermCarreg = vo.asString("CODTERMCARREG");
         this.nomeTermCarreg = vo.asString("NOMETERMCARREG");

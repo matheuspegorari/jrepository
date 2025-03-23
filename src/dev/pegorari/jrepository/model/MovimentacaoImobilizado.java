@@ -159,7 +159,7 @@ public class MovimentacaoImobilizado extends AbstractSankhyaEntity<MovimentacaoI
 
    @Override
    public MovimentacaoImobilizado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBem = vo.asString("CODBEM");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codDep = vo.asBigDecimal("CODDEP");

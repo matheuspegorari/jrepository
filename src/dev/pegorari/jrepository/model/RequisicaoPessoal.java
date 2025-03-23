@@ -369,7 +369,7 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
 
    @Override
    public RequisicaoPessoal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.statusAval = vo.asString("STATUSAVAL");
         this.statusSelecao = vo.asBigDecimal("STATUSSELECAO");
         this.tipo = vo.asBigDecimal("TIPO");

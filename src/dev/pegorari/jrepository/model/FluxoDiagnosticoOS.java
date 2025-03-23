@@ -38,7 +38,7 @@ public class FluxoDiagnosticoOS extends AbstractSankhyaEntity<FluxoDiagnosticoOS
 
    @Override
    public FluxoDiagnosticoOS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFld = vo.asBigDecimal("CODFLD");
         this.numOs = vo.asBigDecimal("NUMOS");
         return this;

@@ -129,7 +129,7 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
 
    @Override
    public AcompanhamentoNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhOcor = vo.asTimestamp("DHOCOR");
         this.digitado = vo.asString("DIGITADO");

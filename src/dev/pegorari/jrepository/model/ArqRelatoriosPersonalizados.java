@@ -89,7 +89,7 @@ public class ArqRelatoriosPersonalizados extends AbstractSankhyaEntity<ArqRelato
 
    @Override
    public ArqRelatoriosPersonalizados fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.tabela = vo.asBigDecimal("TABELA");
         this.arqPersonalizado = vo.asString("ARQPERSONALIZADO");

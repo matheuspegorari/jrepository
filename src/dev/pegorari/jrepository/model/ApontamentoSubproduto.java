@@ -88,7 +88,7 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
 
    @Override
    public ApontamentoSubproduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.qtd = vo.asBigDecimal("QTD");
         this.seqApa = vo.asBigDecimal("SEQAPA");

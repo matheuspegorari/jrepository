@@ -118,7 +118,7 @@ public class BotaoAcao extends AbstractSankhyaEntity<BotaoAcao> {
 
    @Override
    public BotaoAcao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModulo = vo.asBigDecimal("CODMODULO");
         this.config = vo.asClob("CONFIG");
         this.controlaAcesso = vo.asString("CONTROLAACESSO");

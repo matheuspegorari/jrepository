@@ -1679,7 +1679,7 @@ public class EmpresaPessoal extends AbstractSankhyaEntity<EmpresaPessoal> {
 
    @Override
    public EmpresaPessoal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.socioOstensivo = vo.asString("SOCIOOSTENSIVO");
         this.sugereDatPag = vo.asString("SUGEREDATPAG");
         this.tipDiaPag = vo.asString("TIPDIAPAG");

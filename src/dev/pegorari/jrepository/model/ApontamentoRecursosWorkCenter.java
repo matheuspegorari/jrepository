@@ -108,7 +108,7 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
 
    @Override
    public ApontamentoRecursosWorkCenter fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codVol = vo.asString("CODVOL");
         this.codWcp = vo.asBigDecimal("CODWCP");

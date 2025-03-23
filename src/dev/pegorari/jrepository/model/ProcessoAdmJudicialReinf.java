@@ -299,7 +299,7 @@ public class ProcessoAdmJudicialReinf extends AbstractSankhyaEntity<ProcessoAdmJ
 
    @Override
    public ProcessoAdmJudicialReinf fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codMunic = vo.asBigDecimal("CODMUNIC");

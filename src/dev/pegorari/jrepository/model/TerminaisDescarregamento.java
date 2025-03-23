@@ -68,7 +68,7 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
 
    @Override
    public TerminaisDescarregamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTerdes = vo.asBigDecimal("CODTERDES");
         this.codTermdesc = vo.asString("CODTERMDESC");
         this.nomeTermdesc = vo.asString("NOMETERMDESC");

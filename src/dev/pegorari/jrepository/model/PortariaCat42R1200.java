@@ -299,7 +299,7 @@ public class PortariaCat42R1200 extends AbstractSankhyaEntity<PortariaCat42R1200
 
    @Override
    public PortariaCat42R1200 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.baseIcmstot = vo.asBigDecimal("BASEICMSTOT");
         this.codCfo = vo.asBigDecimal("CODCFO");

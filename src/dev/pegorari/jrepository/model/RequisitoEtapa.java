@@ -48,7 +48,7 @@ public class RequisitoEtapa extends AbstractSankhyaEntity<RequisitoEtapa> {
 
    @Override
    public RequisitoEtapa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codReq = vo.asBigDecimal("CODREQ");
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuMetapa = vo.asBigDecimal("NUMETAPA");

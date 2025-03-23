@@ -2449,7 +2449,7 @@ public class Transportadora extends AbstractSankhyaEntity<Transportadora> {
 
    @Override
    public Transportadora fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.identInscEstad = vo.asString("IDENTINSCESTAD");
         this.implAudLote = vo.asString("IMPLAUDOLOTE");
         this.indNatRet = vo.asString("INDNATRET");

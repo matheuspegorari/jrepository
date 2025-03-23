@@ -68,7 +68,7 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
 
    @Override
    public ProdutoPerigosoNotaMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.qtdTotProd = vo.asString("QTDTOTPROD");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

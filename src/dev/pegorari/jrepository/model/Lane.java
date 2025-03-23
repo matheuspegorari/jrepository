@@ -48,7 +48,7 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
 
    @Override
    public Lane fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.ideFxPool = vo.asBigDecimal("IDEFXPOOL");
         this.idRpaPadrao = vo.asBigDecimal("IDRPAPADRAO");

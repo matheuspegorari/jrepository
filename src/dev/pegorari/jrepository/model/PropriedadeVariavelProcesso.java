@@ -48,7 +48,7 @@ public class PropriedadeVariavelProcesso extends AbstractSankhyaEntity<Proprieda
 
    @Override
    public PropriedadeVariavelProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nome = vo.asString("NOME");
         this.nuVar = vo.asBigDecimal("NUVAR");
         this.valor = vo.asString("VALOR");

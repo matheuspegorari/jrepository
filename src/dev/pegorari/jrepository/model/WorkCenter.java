@@ -298,7 +298,7 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
 
    @Override
    public WorkCenter fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

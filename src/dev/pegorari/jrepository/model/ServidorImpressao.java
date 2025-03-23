@@ -89,7 +89,7 @@ public class ServidorImpressao extends AbstractSankhyaEntity<ServidorImpressao> 
 
    @Override
    public ServidorImpressao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codUsuInc = vo.asBigDecimal("CODUSUINC");
         this.descricao = vo.asString("DESCRICAO");

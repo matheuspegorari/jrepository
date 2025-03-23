@@ -119,7 +119,7 @@ public class PlanoContaReferencial extends AbstractSankhyaEntity<PlanoContaRefer
 
    @Override
    public PlanoContaReferencial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descrCtaRef = vo.asString("DESCRCTAREF");
         this.grau = vo.asBigDecimal("GRAU");
         this.tipo = vo.asBigDecimal("TIPO");

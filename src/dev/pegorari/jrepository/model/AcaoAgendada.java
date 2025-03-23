@@ -138,7 +138,7 @@ public class AcaoAgendada extends AbstractSankhyaEntity<AcaoAgendada> {
 
    @Override
    public AcaoAgendada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuAag = vo.asBigDecimal("NUAAG");
         this.autoTran = vo.asString("AUTOTRAN");
         this.codModulo = vo.asBigDecimal("CODMODULO");

@@ -149,7 +149,7 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
 
    @Override
    public TarifasCIPAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codProdTar = vo.asBigDecimal("CODPRODTAR");
         this.codVol = vo.asString("CODVOL");

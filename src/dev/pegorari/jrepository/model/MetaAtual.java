@@ -429,7 +429,7 @@ public class MetaAtual extends AbstractSankhyaEntity<MetaAtual> {
 
    @Override
    public MetaAtual fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.antecipDesp = vo.asBigDecimal("ANTECIPDESP");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

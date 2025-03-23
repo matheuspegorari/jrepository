@@ -89,7 +89,7 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
 
    @Override
    public LogRemessa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
         this.codLayout = vo.asBigDecimal("CODLAYOUT");

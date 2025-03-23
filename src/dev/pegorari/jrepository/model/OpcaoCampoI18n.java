@@ -67,7 +67,7 @@ public class OpcaoCampoI18n extends AbstractSankhyaEntity<OpcaoCampoI18n> {
 
    @Override
    public OpcaoCampoI18n fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeCampo = vo.asString("NOMECAMPO");
         this.nomeTab = vo.asString("NOMETAB");

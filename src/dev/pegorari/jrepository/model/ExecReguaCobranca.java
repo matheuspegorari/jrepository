@@ -149,7 +149,7 @@ public class ExecReguaCobranca extends AbstractSankhyaEntity<ExecReguaCobranca> 
 
    @Override
    public ExecReguaCobranca fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acontece = vo.asString("ACONTECE");
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codRegua = vo.asBigDecimal("CODREGUA");

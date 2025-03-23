@@ -58,7 +58,7 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
 
    @Override
    public PedidoProjeto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuNota = vo.asBigDecimal("NUNOTA");

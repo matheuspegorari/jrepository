@@ -79,7 +79,7 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
 
    @Override
    public MensagensMDe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.chaveAcesso = vo.asString("CHAVEACESSO");
         this.codEmp = vo.asBigDecimal("CODEMP");

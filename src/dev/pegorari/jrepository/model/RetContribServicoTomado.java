@@ -459,7 +459,7 @@ public class RetContribServicoTomado extends AbstractSankhyaEntity<RetContribSer
 
    @Override
    public RetContribServicoTomado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.cnpjPrestador = vo.asString("CNPJPRESTADOR");
         this.codEmp = vo.asBigDecimal("CODEMP");

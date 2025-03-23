@@ -108,7 +108,7 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
 
    @Override
    public UsoSeparacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.agrupFinNotas = vo.asString("AGRUPFINNOTAS");
         this.codTipOperPrinc = vo.asBigDecimal("CODTIPOPERPRINC");
         this.confirmNotasFat = vo.asString("CONFIRMNOTASFAT");

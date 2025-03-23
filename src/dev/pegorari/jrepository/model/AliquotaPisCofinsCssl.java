@@ -218,7 +218,7 @@ public class AliquotaPisCofinsCssl extends AbstractSankhyaEntity<AliquotaPisCofi
 
    @Override
    public AliquotaPisCofinsCssl fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliq = vo.asBigDecimal("ALIQ");
         this.aliqCred = vo.asBigDecimal("ALIQCRED");
         this.codEmp = vo.asBigDecimal("CODEMP");

@@ -289,7 +289,7 @@ public class RecRepassadosAssoDesp extends AbstractSankhyaEntity<RecRepassadosAs
 
    @Override
    public RecRepassadosAssoDesp fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEmpEstab = vo.asBigDecimal("CODEMPESTAB");

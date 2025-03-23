@@ -109,7 +109,7 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
 
    @Override
    public HistoricoSerie fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

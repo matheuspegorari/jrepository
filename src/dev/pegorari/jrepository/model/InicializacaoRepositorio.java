@@ -68,7 +68,7 @@ public class InicializacaoRepositorio extends AbstractSankhyaEntity<Inicializaca
 
    @Override
    public InicializacaoRepositorio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCpm = vo.asBigDecimal("CODCPM");
         this.codProdpA = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

@@ -149,7 +149,7 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
 
    @Override
    public CabecalhoPlanejamentoEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codEnd = vo.asBigDecimal("CODEND");

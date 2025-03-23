@@ -209,7 +209,7 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
 
    @Override
    public ListaSubprodutos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.referencia = vo.asString("REFERENCIA");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

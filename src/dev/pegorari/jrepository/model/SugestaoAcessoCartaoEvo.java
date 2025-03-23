@@ -69,7 +69,7 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
 
    @Override
    public SugestaoAcessoCartaoEvo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.alteradoPeloUsuario = vo.asString("ALTERADOPELOUSUARIO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

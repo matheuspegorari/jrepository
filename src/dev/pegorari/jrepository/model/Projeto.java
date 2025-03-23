@@ -319,7 +319,7 @@ public class Projeto extends AbstractSankhyaEntity<Projeto> {
 
    @Override
    public Projeto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.amostraCusMax = vo.asBigDecimal("AMOSTRACUSMAX");
         this.analitico = vo.asString("ANALITICO");

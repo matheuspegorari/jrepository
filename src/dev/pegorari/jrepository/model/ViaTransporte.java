@@ -118,7 +118,7 @@ public class ViaTransporte extends AbstractSankhyaEntity<ViaTransporte> {
 
    @Override
    public ViaTransporte fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModPed = vo.asBigDecimal("CODMODPED");
         this.codVtp = vo.asBigDecimal("CODVTP");
         this.descricao = vo.asString("DESCRICAO");

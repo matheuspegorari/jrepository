@@ -129,7 +129,7 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
 
    @Override
    public ContratoVeiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codServ = vo.asBigDecimal("CODSERV");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVeiculo = vo.asBigDecimal("CODVEICULO");

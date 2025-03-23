@@ -68,7 +68,7 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
 
    @Override
    public UnidadeMovArmazenagemProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUma = vo.asBigDecimal("CODUMA");

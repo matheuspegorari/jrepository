@@ -88,7 +88,7 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
 
    @Override
    public ItemPlanejamentoEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuPlan = vo.asBigDecimal("NUPLAN");
         this.qtdNeg = vo.asBigDecimal("QTDNEG");
         this.codContato = vo.asBigDecimal("CODCONTATO");

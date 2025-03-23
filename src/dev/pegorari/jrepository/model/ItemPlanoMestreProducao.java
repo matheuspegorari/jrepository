@@ -379,7 +379,7 @@ public class ItemPlanoMestreProducao extends AbstractSankhyaEntity<ItemPlanoMest
 
    @Override
    public ItemPlanoMestreProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdDemAjustada = vo.asBigDecimal("QTDDEMAJUSTADA");
         this.fixado = vo.asString("FIXADO");
         this.prodInterm = vo.asString("PRODINTERM");

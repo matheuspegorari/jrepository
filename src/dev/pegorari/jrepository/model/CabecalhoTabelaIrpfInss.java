@@ -109,7 +109,7 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
 
    @Override
    public CabecalhoTabelaIrpfInss fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.competencia = vo.asTimestamp("COMPETENCIA");
         this.regime = vo.asString("REGIME");
         this.vlrDependente = vo.asBigDecimal("VLRDEPENDENTE");

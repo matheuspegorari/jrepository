@@ -109,7 +109,7 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
 
    @Override
    public OrigemAtendimento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codOat = vo.asBigDecimal("CODOAT");

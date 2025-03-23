@@ -88,7 +88,7 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
 
    @Override
    public BannerLogin fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nomeArq = vo.asString("NOMEARQ");
         this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         this.ordem = vo.asBigDecimal("ORDEM");

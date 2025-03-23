@@ -328,7 +328,7 @@ public class Regiao extends AbstractSankhyaEntity<Regiao> {
 
    @Override
    public Regiao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitica = vo.asString("ANALITICA");
         this.ativa = vo.asString("ATIVA");
         this.codReg = vo.asBigDecimal("CODREG");

@@ -229,7 +229,7 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
 
    @Override
    public ItemLigacaoConfirmedOrder fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.amendCodeCo = vo.asString("AMENDCODECO");
         this.amendCodeIv = vo.asString("AMENDCODEIV");
         this.amendCodeSr = vo.asString("AMENDCODESR");

@@ -309,7 +309,7 @@ public class LaudoClassificacao extends AbstractSankhyaEntity<LaudoClassificacao
 
    @Override
    public LaudoClassificacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");

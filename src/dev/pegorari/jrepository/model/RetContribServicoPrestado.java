@@ -429,7 +429,7 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
 
    @Override
    public RetContribServicoPrestado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

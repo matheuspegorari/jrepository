@@ -169,7 +169,7 @@ public class Viagem extends AbstractSankhyaEntity<Viagem> {
 
    @Override
    public Viagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVeiprin = vo.asBigDecimal("CODVEIPRIN");

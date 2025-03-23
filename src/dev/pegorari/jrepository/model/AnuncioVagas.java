@@ -139,7 +139,7 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
 
    @Override
    public AnuncioVagas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipo = vo.asString("TIPO");
         this.resumo = vo.asString("RESUMO");
         this.descrVaga = vo.asString("DESCRVAGA");

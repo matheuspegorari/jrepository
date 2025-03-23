@@ -1258,7 +1258,7 @@ public class AliquotaICMS extends AbstractSankhyaEntity<AliquotaICMS> {
 
    @Override
    public AliquotaICMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqFrete = vo.asBigDecimal("ALIQFRETE");
         this.aliqSubtrib = vo.asBigDecimal("ALIQSUBTRIB");
         this.aliqUfDest = vo.asBigDecimal("ALIQUFDEST");

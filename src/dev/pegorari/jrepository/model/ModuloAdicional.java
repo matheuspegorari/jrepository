@@ -48,7 +48,7 @@ public class ModuloAdicional extends AbstractSankhyaEntity<ModuloAdicional> {
 
    @Override
    public ModuloAdicional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModulo = vo.asBigDecimal("CODMODULO");
         this.descrModulo = vo.asString("DESCRMODULO");
         this.resourceId = vo.asString("RESOURCEID");

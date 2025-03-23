@@ -1099,7 +1099,7 @@ public class CabecalhoNotaExcluida extends AbstractSankhyaEntity<CabecalhoNotaEx
 
    @Override
    public CabecalhoNotaExcluida fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParctranspFinal = vo.asBigDecimal("CODPARCTRANSPFINAL");
         this.vlrFreteTotal = vo.asBigDecimal("VLRFRETETOTAL");
         this.numNfse = vo.asString("NUMNFSE");

@@ -79,7 +79,7 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
 
    @Override
    public ParceiroTabelaProgressiva fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.competencia = vo.asTimestamp("COMPETENCIA");

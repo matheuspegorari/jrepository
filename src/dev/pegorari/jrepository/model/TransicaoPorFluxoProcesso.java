@@ -78,7 +78,7 @@ public class TransicaoPorFluxoProcesso extends AbstractSankhyaEntity<TransicaoPo
 
    @Override
    public TransicaoPorFluxoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServDest = vo.asBigDecimal("CODSERVDEST");
         this.codServOrig = vo.asBigDecimal("CODSERVORIG");

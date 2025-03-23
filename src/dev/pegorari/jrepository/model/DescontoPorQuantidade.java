@@ -99,7 +99,7 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
 
    @Override
    public DescontoPorQuantidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");

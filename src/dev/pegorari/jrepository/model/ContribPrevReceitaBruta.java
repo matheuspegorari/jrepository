@@ -289,7 +289,7 @@ public class ContribPrevReceitaBruta extends AbstractSankhyaEntity<ContribPrevRe
 
    @Override
    public ContribPrevReceitaBruta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nroRecibo = vo.asString("NRORECIBO");
         this.nroReciboAnt = vo.asString("NRORECIBOANT");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

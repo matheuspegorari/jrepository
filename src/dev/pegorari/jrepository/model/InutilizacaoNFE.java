@@ -129,7 +129,7 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
 
    @Override
    public InutilizacaoNFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.codUsu = vo.asBigDecimal("CODUSU");

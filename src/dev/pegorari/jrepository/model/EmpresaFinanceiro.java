@@ -5919,7 +5919,7 @@ public class EmpresaFinanceiro extends AbstractSankhyaEntity<EmpresaFinanceiro> 
 
    @Override
    public EmpresaFinanceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLancBcoPag = vo.asBigDecimal("CODLANCBCOPAG");
         this.corTeFaltaWms = vo.asString("CORTEFALTAWMS");
         this.cpfContador = vo.asString("CPFCONTADOR");

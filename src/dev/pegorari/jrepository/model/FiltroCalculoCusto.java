@@ -78,7 +78,7 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
 
    @Override
    public FiltroCalculoCusto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codChave = vo.asBigDecimal("CODCHAVE");
         this.codForm = vo.asBigDecimal("CODFORM");
         this.tabela = vo.asString("TABELA");

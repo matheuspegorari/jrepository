@@ -239,7 +239,7 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
 
    @Override
    public DeclaracaoImportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUfDesemb = vo.asBigDecimal("CODUFDESEMB");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

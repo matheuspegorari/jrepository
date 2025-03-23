@@ -79,7 +79,7 @@ public class HistoricoEnvioNotaSefaz extends AbstractSankhyaEntity<HistoricoEnvi
 
    @Override
    public HistoricoEnvioNotaSefaz fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.dhExec = vo.asTimestamp("DHEXEC");
         this.tipoServExec = vo.asBigDecimal("TIPOSERVEXEC");

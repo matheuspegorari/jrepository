@@ -79,7 +79,7 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
 
    @Override
    public MSDVarsResolvidas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVar = vo.asBigDecimal("CODVAR");
         this.codVarRes = vo.asBigDecimal("CODVARRES");
         this.dtAlter = vo.asTimestamp("DTALTER");

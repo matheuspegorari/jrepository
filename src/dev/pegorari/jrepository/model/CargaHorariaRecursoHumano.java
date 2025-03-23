@@ -59,7 +59,7 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
 
    @Override
    public CargaHorariaRecursoHumano fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.codRhp = vo.asBigDecimal("CODRHP");
         this.dtFinalVigor = vo.asTimestamp("DTFINALVIGOR");

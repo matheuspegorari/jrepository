@@ -89,7 +89,7 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
 
    @Override
    public VinculoContaExterna fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.mascCtaExt = vo.asString("MASCCTAEXT");

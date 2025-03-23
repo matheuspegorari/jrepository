@@ -129,7 +129,7 @@ public class AntecipacaoRecebiveis extends AbstractSankhyaEntity<AntecipacaoRece
 
    @Override
    public AntecipacaoRecebiveis fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFintitiof = vo.asBigDecimal("NUFINTITIOF");
         this.docAntbanc = vo.asString("DOCANTBANC");
         this.dtAntbanc = vo.asTimestamp("DTANTBANC");

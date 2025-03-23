@@ -429,7 +429,7 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
 
    @Override
    public Manifesto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveMdfe = vo.asString("CHAVEMDFE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

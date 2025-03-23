@@ -48,7 +48,7 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
 
    @Override
    public RelacaoTipoNo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuEst = vo.asBigDecimal("NUEST");
         this.nuInstanciaFilha = vo.asBigDecimal("NUINSTANCIAFILHA");
         this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");

@@ -68,7 +68,7 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
 
    @Override
    public EquipamentoManufatura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codPlp = vo.asBigDecimal("CODPLP");
         this.nome = vo.asString("NOME");

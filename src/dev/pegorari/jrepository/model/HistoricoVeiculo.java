@@ -99,7 +99,7 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
 
    @Override
    public HistoricoVeiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -69,7 +69,7 @@ public class CodigoBarras extends AbstractSankhyaEntity<CodigoBarras> {
 
    @Override
    public CodigoBarras fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");

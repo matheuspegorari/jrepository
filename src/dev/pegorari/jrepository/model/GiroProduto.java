@@ -4289,7 +4289,7 @@ public class GiroProduto extends AbstractSankhyaEntity<GiroProduto> {
 
    @Override
    public GiroProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codParcForn = vo.asBigDecimal("CODPARCFORN");
         this.codProd = vo.asBigDecimal("CODPROD");

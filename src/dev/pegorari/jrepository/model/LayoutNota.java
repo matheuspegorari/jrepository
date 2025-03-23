@@ -98,7 +98,7 @@ public class LayoutNota extends AbstractSankhyaEntity<LayoutNota> {
 
    @Override
    public LayoutNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.modulo = vo.asBigDecimal("MODULO");
         this.descricao = vo.asString("DESCRICAO");
         this.layout = vo.asClob("LAYOUT");

@@ -168,7 +168,7 @@ public class RegraSLAPadrao extends AbstractSankhyaEntity<RegraSLAPadrao> {
 
    @Override
    public RegraSLAPadrao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.baseCalcTempo = vo.asString("BASECALCTEMPO");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");

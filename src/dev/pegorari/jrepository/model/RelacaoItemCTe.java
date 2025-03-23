@@ -98,7 +98,7 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
 
    @Override
    public RelacaoItemCTe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqNota = vo.asBigDecimal("SEQNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.valUnit = vo.asBigDecimal("VALUNIT");

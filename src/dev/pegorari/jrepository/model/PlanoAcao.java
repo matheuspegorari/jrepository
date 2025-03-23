@@ -279,7 +279,7 @@ public class PlanoAcao extends AbstractSankhyaEntity<PlanoAcao> {
 
    @Override
    public PlanoAcao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codExe = vo.asBigDecimal("CODEXE");
         this.completude = vo.asBigDecimal("COMPLETUDE");
         this.esforcoPrevisto = vo.asString("ESFORCOPREVISTO");

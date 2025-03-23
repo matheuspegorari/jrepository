@@ -58,7 +58,7 @@ public class AlteracaoCadastralEnotas extends AbstractSankhyaEntity<AlteracaoCad
 
    @Override
    public AlteracaoCadastralEnotas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhDone = vo.asTimestamp("DHDONE");
         this.id = vo.asString("ID");

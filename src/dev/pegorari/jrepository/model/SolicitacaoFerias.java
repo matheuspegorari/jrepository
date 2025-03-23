@@ -149,7 +149,7 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
 
    @Override
    public SolicitacaoFerias fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.diasAbonoPec = vo.asBigDecimal("DIASABONOPEC");
         this.id = vo.asBigDecimal("ID");
         this.dtIniAqui = vo.asTimestamp("DTINIAQUI");

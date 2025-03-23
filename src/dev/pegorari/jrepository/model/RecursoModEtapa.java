@@ -48,7 +48,7 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
 
    @Override
    public RecursoModEtapa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMetod = vo.asBigDecimal("CODMETOD");
         this.codTipFuncao = vo.asBigDecimal("CODTIPFUNCAO");
         this.numModelo = vo.asBigDecimal("NUMMODELO");

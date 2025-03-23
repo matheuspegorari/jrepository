@@ -59,7 +59,7 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
 
    @Override
    public MSDMensagemResolvida fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.mensagem = vo.asClob("MENSAGEM");

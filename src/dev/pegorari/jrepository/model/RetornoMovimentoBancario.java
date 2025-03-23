@@ -118,7 +118,7 @@ public class RetornoMovimentoBancario extends AbstractSankhyaEntity<RetornoMovim
 
    @Override
    public RetornoMovimentoBancario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.usaSqlNuFin = vo.asString("USASQLNUFIN");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

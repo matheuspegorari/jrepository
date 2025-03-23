@@ -258,7 +258,7 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
 
    @Override
    public FormatadorRemessa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codigo = vo.asBigDecimal("CODIGO");
         this.codPai = vo.asBigDecimal("CODPAI");

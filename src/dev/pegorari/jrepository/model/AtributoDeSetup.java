@@ -108,7 +108,7 @@ public class AtributoDeSetup extends AbstractSankhyaEntity<AtributoDeSetup> {
 
    @Override
    public AtributoDeSetup fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descratributo = vo.asString("DESCRATRIBUTO");
         this.codWcp = vo.asBigDecimal("CODWCP");
         this.estadoWc = vo.asString("ESTADOWC");

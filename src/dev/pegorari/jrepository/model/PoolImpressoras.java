@@ -48,7 +48,7 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
 
    @Override
    public PoolImpressoras fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.caminhoSps = vo.asString("CAMINHOSPS");
         this.nomeImpLocal = vo.asString("NOMEIMPLOCAL");
         this.nuNip = vo.asBigDecimal("NUNIP");

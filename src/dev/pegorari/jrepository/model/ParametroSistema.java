@@ -139,7 +139,7 @@ public class ParametroSistema extends AbstractSankhyaEntity<ParametroSistema> {
 
    @Override
    public ParametroSistema fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aba = vo.asString("ABA");
         this.chave = vo.asString("CHAVE");
         this.classe = vo.asString("CLASSE");

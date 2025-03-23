@@ -68,7 +68,7 @@ public class Banco extends AbstractSankhyaEntity<Banco> {
 
    @Override
    public Banco fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.codBco = vo.asBigDecimal("CODBCO");
         this.nomeBco = vo.asString("NOMEBCO");

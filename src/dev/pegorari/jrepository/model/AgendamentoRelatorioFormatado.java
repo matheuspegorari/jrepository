@@ -139,7 +139,7 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
 
    @Override
    public AgendamentoRelatorioFormatado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsuResp = vo.asBigDecimal("CODUSURESP");
         this.agendamento = vo.asString("AGENDAMENTO");
         this.arqModEmail = vo.asString("ARQMODEMAIL");

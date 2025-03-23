@@ -58,7 +58,7 @@ public class ConsolidacaoAcessos extends AbstractSankhyaEntity<ConsolidacaoAcess
 
    @Override
    public ConsolidacaoAcessos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.consultar = vo.asString("CONSULTAR");

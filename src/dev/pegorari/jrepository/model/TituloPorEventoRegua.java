@@ -68,7 +68,7 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
 
    @Override
    public TituloPorEventoRegua fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.mensagem = vo.asString("MENSAGEM");
         this.nuFin = vo.asBigDecimal("NUFIN");

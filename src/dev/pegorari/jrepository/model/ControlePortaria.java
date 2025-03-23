@@ -229,7 +229,7 @@ public class ControlePortaria extends AbstractSankhyaEntity<ControlePortaria> {
 
    @Override
    public ControlePortaria fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMoto = vo.asBigDecimal("CODMOTO");
         this.codPort = vo.asBigDecimal("CODPORT");
         this.codUsu = vo.asBigDecimal("CODUSU");

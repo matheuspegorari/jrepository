@@ -99,7 +99,7 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
 
    @Override
    public ProgramacaoPlanoProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhIniPrev = vo.asTimestamp("DHINIPREV");
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.idEfx = vo.asBigDecimal("IDEFX");

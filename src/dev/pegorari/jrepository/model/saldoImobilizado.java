@@ -69,7 +69,7 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
 
    @Override
    public saldoImobilizado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBem = vo.asString("CODBEM");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.saldo = vo.asBigDecimal("SALDO");

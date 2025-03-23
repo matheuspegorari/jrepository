@@ -78,7 +78,7 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
 
    @Override
    public KitPropostaComercial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqKit = vo.asBigDecimal("SEQKIT");
         this.tipKit = vo.asString("TIPKIT");
         this.versaoProjeto = vo.asString("VERSAOPROJETO");

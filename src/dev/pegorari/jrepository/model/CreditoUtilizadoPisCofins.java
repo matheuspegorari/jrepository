@@ -129,7 +129,7 @@ public class CreditoUtilizadoPisCofins extends AbstractSankhyaEntity<CreditoUtil
 
    @Override
    public CreditoUtilizadoPisCofins fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cnpj = vo.asString("CNPJ");
         this.cnpjSuc = vo.asString("CNPJ_SUC");
         this.codemp = vo.asBigDecimal("CODEMP");

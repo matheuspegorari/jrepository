@@ -38,7 +38,7 @@ public class UsuarioUnidade extends AbstractSankhyaEntity<UsuarioUnidade> {
 
    @Override
    public UsuarioUnidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVol = vo.asString("CODVOL");
         return this;

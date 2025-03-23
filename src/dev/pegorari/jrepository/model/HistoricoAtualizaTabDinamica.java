@@ -69,7 +69,7 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
 
    @Override
    public HistoricoAtualizaTabDinamica fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codHis = vo.asBigDecimal("CODHIS");
         this.msg = vo.asString("MSG");
         this.dtExec = vo.asTimestamp("DTEXEC");

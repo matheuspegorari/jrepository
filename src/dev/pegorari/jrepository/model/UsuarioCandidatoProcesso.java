@@ -128,7 +128,7 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
 
    @Override
    public UsuarioCandidatoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEquipe = vo.asBigDecimal("CODEQUIPE");
         this.codGrupoUsu = vo.asBigDecimal("CODGRUPOUSU");

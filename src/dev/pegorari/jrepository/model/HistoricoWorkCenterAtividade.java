@@ -99,7 +99,7 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
 
    @Override
    public HistoricoWorkCenterAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.dhaloc = vo.asTimestamp("DHALOC");
         this.idiAtv = vo.asBigDecimal("IDIATV");

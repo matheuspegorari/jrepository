@@ -699,7 +699,7 @@ public class MovimentoLivroFiscal extends AbstractSankhyaEntity<MovimentoLivroFi
 
    @Override
    public MovimentoLivroFiscal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.empParc = vo.asString("EMPPARC");
         this.entSai = vo.asString("ENTSAI");

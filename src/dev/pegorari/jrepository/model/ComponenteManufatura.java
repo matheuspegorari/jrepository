@@ -88,7 +88,7 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
 
    @Override
    public ComponenteManufatura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.grau = vo.asBigDecimal("GRAU");
         this.qtdComp = vo.asBigDecimal("QTDCOMP");

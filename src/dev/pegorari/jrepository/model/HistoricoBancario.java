@@ -58,7 +58,7 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
 
    @Override
    public HistoricoBancario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aceitaDev = vo.asString("ACEITADEV");
         this.codLanc = vo.asBigDecimal("CODLANC");
         this.descrLancBco = vo.asString("DESCRLANCBCO");

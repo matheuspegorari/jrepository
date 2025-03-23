@@ -108,7 +108,7 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
 
    @Override
    public ConfiguracaoEmpresa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cnae = vo.asBigDecimal("CNAE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLst = vo.asBigDecimal("CODLST");

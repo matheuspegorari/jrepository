@@ -79,7 +79,7 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
 
    @Override
    public AnonimizacaoLgpd fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAnon = vo.asBigDecimal("CODANON");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

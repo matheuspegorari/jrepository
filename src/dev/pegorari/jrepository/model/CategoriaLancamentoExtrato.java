@@ -68,7 +68,7 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
 
    @Override
    public CategoriaLancamentoExtrato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
         this.codigoEdi = vo.asBigDecimal("CODIGOEDI");
         this.descricao = vo.asString("DESCRICAO");

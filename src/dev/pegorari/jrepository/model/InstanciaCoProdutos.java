@@ -58,7 +58,7 @@ public class InstanciaCoProdutos extends AbstractSankhyaEntity<InstanciaCoProdut
 
    @Override
    public InstanciaCoProdutos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idCop = vo.asBigDecimal("IDCOP");
         this.idICop = vo.asBigDecimal("IDICOP");
         this.idIProc = vo.asBigDecimal("IDIPROC");

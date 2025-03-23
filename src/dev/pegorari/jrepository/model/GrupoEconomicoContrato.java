@@ -48,7 +48,7 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
 
    @Override
    public GrupoEconomicoContrato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.percCusto = vo.asBigDecimal("PERCCUSTO");

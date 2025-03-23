@@ -99,7 +99,7 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
 
    @Override
    public ImportacaoExtratoBancario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.dhProcesso = vo.asTimestamp("DHPROCESSO");

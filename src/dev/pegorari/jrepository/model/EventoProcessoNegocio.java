@@ -138,7 +138,7 @@ public class EventoProcessoNegocio extends AbstractSankhyaEntity<EventoProcessoN
 
    @Override
    public EventoProcessoNegocio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acao = vo.asString("ACAO");
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.descRevento = vo.asString("DESCREVENTO");

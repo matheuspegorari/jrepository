@@ -169,7 +169,7 @@ public class ProcessoSelecao extends AbstractSankhyaEntity<ProcessoSelecao> {
 
    @Override
    public ProcessoSelecao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         this.codAnuncio = vo.asBigDecimal("CODANUNCIO");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -59,7 +59,7 @@ public class MSDGrupo extends AbstractSankhyaEntity<MSDGrupo> {
 
    @Override
    public MSDGrupo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.descrGrupo = vo.asString("DESCRGRUPO");
         this.dtAlter = vo.asTimestamp("DTALTER");

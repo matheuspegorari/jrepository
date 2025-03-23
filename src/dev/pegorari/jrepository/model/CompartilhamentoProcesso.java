@@ -88,7 +88,7 @@ public class CompartilhamentoProcesso extends AbstractSankhyaEntity<Compartilham
 
    @Override
    public CompartilhamentoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.permiteCompartilhar = vo.asString("PERMITECOMPARTILHAR");

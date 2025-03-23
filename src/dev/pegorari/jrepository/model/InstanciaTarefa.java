@@ -189,7 +189,7 @@ public class InstanciaTarefa extends AbstractSankhyaEntity<InstanciaTarefa> {
 
    @Override
    public InstanciaTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsuDono = vo.asBigDecimal("CODUSUDONO");
         this.dhAceite = vo.asTimestamp("DHACEITE");
         this.dhConclusao = vo.asTimestamp("DHCONCLUSAO");

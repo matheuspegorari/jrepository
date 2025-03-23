@@ -38,7 +38,7 @@ public class RepositorioPA extends AbstractSankhyaEntity<RepositorioPA> {
 
    @Override
    public RepositorioPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.idRpa = vo.asBigDecimal("IDRPA");
         return this;

@@ -419,7 +419,7 @@ public class GrupoProduto extends AbstractSankhyaEntity<GrupoProduto> {
 
    @Override
    public GrupoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.agrupaLocValEst = vo.asString("AGRUPALOCVALEST");
         this.analitico = vo.asString("ANALITICO");
         this.aprProdVda = vo.asString("APRPRODVDA");

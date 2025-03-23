@@ -479,7 +479,7 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
 
    @Override
    public RegraCalculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.atuMovMen = vo.asString("ATUMOVMEN");
         this.calcFerPerAqui = vo.asString("CALCFERPERAQUI");
         this.calcParcFer = vo.asString("CALCPARCFER");

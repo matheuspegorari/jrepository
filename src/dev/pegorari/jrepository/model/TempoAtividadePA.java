@@ -149,7 +149,7 @@ public class TempoAtividadePA extends AbstractSankhyaEntity<TempoAtividadePA> {
 
    @Override
    public TempoAtividadePA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.controlePa = vo.asString("CONTROLEPA");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

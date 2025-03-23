@@ -98,7 +98,7 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
 
    @Override
    public GadgetBiaInformacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.campoAgrup = vo.asString("CAMPOAGRUP");
         this.campoValor = vo.asString("CAMPOVALOR");
         this.codGbi = vo.asBigDecimal("CODGBI");

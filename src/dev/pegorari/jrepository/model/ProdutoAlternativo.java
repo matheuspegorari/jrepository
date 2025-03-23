@@ -89,7 +89,7 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
 
    @Override
    public ProdutoAlternativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codProdAlt = vo.asBigDecimal("CODPRODALT");
         this.prioridade = vo.asBigDecimal("PRIORIDADE");

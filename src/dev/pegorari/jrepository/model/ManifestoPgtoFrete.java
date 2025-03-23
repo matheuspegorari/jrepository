@@ -128,7 +128,7 @@ public class ManifestoPgtoFrete extends AbstractSankhyaEntity<ManifestoPgtoFrete
 
    @Override
    public ManifestoPgtoFrete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.agencia = vo.asString("AGENCIA");
         this.codBanco = vo.asString("CODBANCO");
         this.codParc = vo.asBigDecimal("CODPARC");

@@ -128,7 +128,7 @@ public class FiltroPorTransicao extends AbstractSankhyaEntity<FiltroPorTransicao
 
    @Override
    public FiltroPorTransicao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

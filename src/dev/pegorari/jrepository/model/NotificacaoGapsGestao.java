@@ -58,7 +58,7 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
 
    @Override
    public NotificacaoGapsGestao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuAviso = vo.asBigDecimal("NUAVISO");
         this.rotina = vo.asString("ROTINA");
         this.codFila = vo.asBigDecimal("CODFILA");

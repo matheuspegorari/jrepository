@@ -48,7 +48,7 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
 
    @Override
    public PrevisaoVendasGrupo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.descrGrupo = vo.asString("DESCRGRUPO");
         this.nomeGrupo = vo.asString("NOMEGRUPO");

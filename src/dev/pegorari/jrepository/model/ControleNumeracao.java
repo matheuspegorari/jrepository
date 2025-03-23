@@ -189,7 +189,7 @@ public class ControleNumeracao extends AbstractSankhyaEntity<ControleNumeracao> 
 
    @Override
    public ControleNumeracao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.automatico = vo.asString("AUTOMATICO");
         this.codEmp = vo.asBigDecimal("CODEMP");

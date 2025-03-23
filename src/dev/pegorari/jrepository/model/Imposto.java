@@ -258,7 +258,7 @@ public class Imposto extends AbstractSankhyaEntity<Imposto> {
 
    @Override
    public Imposto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acumBaseIcms = vo.asString("ACUMBASEICMS");
         this.acumBaseIpi = vo.asString("ACUMBASEIPI");
         this.ativo = vo.asString("ATIVO");

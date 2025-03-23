@@ -99,7 +99,7 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
 
    @Override
    public Consenso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
         this.nuPesq = vo.asBigDecimal("NUPESQ");
         this.codUsu = vo.asBigDecimal("CODUSU");

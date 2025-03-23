@@ -409,7 +409,7 @@ public class Meta extends AbstractSankhyaEntity<Meta> {
 
    @Override
    public Meta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.antecipDesp = vo.asBigDecimal("ANTECIPDESP");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

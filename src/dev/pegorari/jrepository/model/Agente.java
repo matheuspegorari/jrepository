@@ -139,7 +139,7 @@ public class Agente extends AbstractSankhyaEntity<Agente> {
 
    @Override
    public Agente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.schedule = vo.asString("SCHEDULE");
         this.versao = vo.asString("VERSAO");
         this.dhInc = vo.asTimestamp("DHINC");

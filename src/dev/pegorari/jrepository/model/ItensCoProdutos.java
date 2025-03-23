@@ -88,7 +88,7 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
 
    @Override
    public ItensCoProdutos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codVol = vo.asString("CODVOL");
         this.controlePa = vo.asString("CONTROLEPA");

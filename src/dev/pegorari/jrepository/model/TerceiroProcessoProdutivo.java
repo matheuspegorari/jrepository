@@ -109,7 +109,7 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
 
    @Override
    public TerceiroProcessoProdutivo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codParcTerc = vo.asBigDecimal("CODPARCTERC");
         this.ideFx = vo.asBigDecimal("IDEFX");

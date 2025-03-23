@@ -58,7 +58,7 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
 
    @Override
    public CampoSubstituto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.campoSubstituto = vo.asString("CAMPOSUBSTITUTO");
         this.codCampo = vo.asString("CODCAMPO");
         this.codMeta = vo.asBigDecimal("CODMETA");

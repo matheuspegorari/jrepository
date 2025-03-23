@@ -28,7 +28,7 @@ public class MSDProximaResolucaoMensagens extends AbstractSankhyaEntity<MSDProxi
 
    @Override
    public MSDProximaResolucaoMensagens fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.proxResol = vo.asTimestamp("PROXRESOL");
         return this;
    }

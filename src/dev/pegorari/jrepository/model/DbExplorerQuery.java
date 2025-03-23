@@ -69,7 +69,7 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
 
    @Override
    public DbExplorerQuery fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.textoQuery = vo.asClob("TEXTOQUERY");
         this.tituloQuery = vo.asString("TITULOQUERY");

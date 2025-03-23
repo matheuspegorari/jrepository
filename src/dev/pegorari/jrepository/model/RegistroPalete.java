@@ -98,7 +98,7 @@ public class RegistroPalete extends AbstractSankhyaEntity<RegistroPalete> {
 
    @Override
    public RegistroPalete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codVol = vo.asString("CODVOL");
         this.controle = vo.asString("CONTROLE");

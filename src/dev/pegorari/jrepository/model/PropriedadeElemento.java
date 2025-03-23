@@ -89,7 +89,7 @@ public class PropriedadeElemento extends AbstractSankhyaEntity<PropriedadeElemen
 
    @Override
    public PropriedadeElemento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.datVal = vo.asTimestamp("DATVAL");
         this.decVal = vo.asBigDecimal("DECVAL");
         this.ideFx = vo.asBigDecimal("IDEFX");

@@ -58,7 +58,7 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
 
    @Override
    public RateiosParceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuRateio = vo.asBigDecimal("NURATEIO");
         this.recDesp = vo.asBigDecimal("RECDESP");

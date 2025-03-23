@@ -58,7 +58,7 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
 
    @Override
    public ItensLiberacaoBloqueioContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuChave = vo.asBigDecimal("NUCHAVE");
         this.nuLiberacao = vo.asBigDecimal("NULIBERACAO");
         this.tabela = vo.asString("TABELA");

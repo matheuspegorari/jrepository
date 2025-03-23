@@ -198,7 +198,7 @@ public class Departamento extends AbstractSankhyaEntity<Departamento> {
 
    @Override
    public Departamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

@@ -58,7 +58,7 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
 
    @Override
    public NotaSeparacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");

@@ -58,7 +58,7 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
 
    @Override
    public SerieEmpresa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

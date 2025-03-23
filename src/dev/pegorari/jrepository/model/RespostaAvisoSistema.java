@@ -48,7 +48,7 @@ public class RespostaAvisoSistema extends AbstractSankhyaEntity<RespostaAvisoSis
 
    @Override
    public RespostaAvisoSistema fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuAviso = vo.asBigDecimal("NUAVISO");
         this.nuRespAviso = vo.asBigDecimal("NURESPAVISO");

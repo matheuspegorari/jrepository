@@ -88,7 +88,7 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
 
    @Override
    public GrupoCoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");
         this.codVol = vo.asString("CODVOL");

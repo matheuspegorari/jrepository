@@ -179,7 +179,7 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
 
    @Override
    public AjusteIpi fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveNfe = vo.asString("CHAVENFE");
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codEmp = vo.asBigDecimal("CODEMP");

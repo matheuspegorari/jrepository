@@ -248,7 +248,7 @@ public class LocalFinanceiro extends AbstractSankhyaEntity<LocalFinanceiro> {
 
    @Override
    public LocalFinanceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aceitaNovaprod = vo.asString("ACEITANOVAPROD");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

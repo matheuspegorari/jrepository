@@ -98,7 +98,7 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
 
    @Override
    public Volume fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVol = vo.asString("CODVOL");
         this.descrVol = vo.asString("DESCRVOL");
         this.utiliRegVolWms = vo.asString("UTILIREGVOLWMS");

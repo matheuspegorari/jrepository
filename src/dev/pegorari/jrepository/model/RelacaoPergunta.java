@@ -69,7 +69,7 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
 
    @Override
    public RelacaoPergunta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPergDep = vo.asBigDecimal("CODPERGDEP");
         this.codPergMestre = vo.asBigDecimal("CODPERGMESTRE");
         this.codRespMestre = vo.asBigDecimal("CODRESPMESTRE");

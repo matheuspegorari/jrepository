@@ -118,7 +118,7 @@ public class MaterialMRP extends AbstractSankhyaEntity<MaterialMRP> {
 
    @Override
    public MaterialMRP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipoQtd = vo.asString("TIPOQTD");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.qtdTotal = vo.asBigDecimal("QTDTOTAL");

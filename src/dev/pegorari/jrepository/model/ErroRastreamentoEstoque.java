@@ -89,7 +89,7 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
 
    @Override
    public ErroRastreamentoEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");

@@ -219,7 +219,7 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
 
    @Override
    public ImpostoRastreamentoEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseStfcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
         this.baseSubst = vo.asBigDecimal("BASESUBST");
         this.codEmp = vo.asBigDecimal("CODEMP");

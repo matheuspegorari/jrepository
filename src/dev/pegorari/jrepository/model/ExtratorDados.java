@@ -249,7 +249,7 @@ public class ExtratorDados extends AbstractSankhyaEntity<ExtratorDados> {
 
    @Override
    public ExtratorDados fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.categoria = vo.asString("CATEGORIA");
         this.codExtracao = vo.asBigDecimal("CODEXTRACAO");

@@ -48,7 +48,7 @@ public class MSDDestFilaMensagem extends AbstractSankhyaEntity<MSDDestFilaMensag
 
    @Override
    public MSDDestFilaMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.email = vo.asString("EMAIL");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

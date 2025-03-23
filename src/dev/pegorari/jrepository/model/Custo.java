@@ -269,7 +269,7 @@ public class Custo extends AbstractSankhyaEntity<Custo> {
 
    @Override
    public Custo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.totalSemIcmsAnt = vo.asBigDecimal("TOTALSEMICMSANT");
         this.altPreco = vo.asString("ALTPRECO");
         this.automatico = vo.asString("AUTOMATICO");

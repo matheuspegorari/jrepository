@@ -119,7 +119,7 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
 
    @Override
    public ControleCaixa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conferido = vo.asString("CONFERIDO");

@@ -58,7 +58,7 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
 
    @Override
    public SequenciaLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqConf = vo.asBigDecimal("SEQCONF");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.identificador = vo.asString("IDENTIFICADOR");

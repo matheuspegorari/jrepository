@@ -129,7 +129,7 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
 
    @Override
    public ApuracaoDivergenciaICMSST fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
         this.baseSubstitNota = vo.asBigDecimal("BASESUBSTITNOTA");
         this.digitado = vo.asString("DIGITADO");

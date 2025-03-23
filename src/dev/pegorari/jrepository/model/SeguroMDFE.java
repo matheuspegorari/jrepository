@@ -68,7 +68,7 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
 
    @Override
    public SeguroMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuMapolice = vo.asString("NUMAPOLICE");
         this.codParcSeg = vo.asBigDecimal("CODPARCSEG");
         this.nuViag = vo.asBigDecimal("NUVIAG");

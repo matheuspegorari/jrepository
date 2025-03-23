@@ -98,7 +98,7 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
 
    @Override
    public ModeloEmail fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.assunto = vo.asString("ASSUNTO");
         this.codModelo = vo.asBigDecimal("CODMODELO");
         this.codSmtp = vo.asBigDecimal("CODSMTP");

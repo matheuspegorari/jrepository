@@ -49,7 +49,7 @@ public class ConfiguracaoTokenProduto extends AbstractSankhyaEntity<Configuracao
 
    @Override
    public ConfiguracaoTokenProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codCfg = vo.asBigDecimal("CODCFG");
         this.dhUltExec = vo.asTimestamp("DHULTEXEC");

@@ -169,7 +169,7 @@ public class MSDMensagem extends AbstractSankhyaEntity<MSDMensagem> {
 
    @Override
    public MSDMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.intMin = vo.asBigDecimal("INTMIN");
         this.mensagem = vo.asClob("MENSAGEM");
         this.proxResol = vo.asTimestamp("PROXRESOL");

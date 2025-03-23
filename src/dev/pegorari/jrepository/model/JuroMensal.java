@@ -159,7 +159,7 @@ public class JuroMensal extends AbstractSankhyaEntity<JuroMensal> {
 
    @Override
    public JuroMensal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.fimMes = vo.asString("FIMMES");
         this.indice = vo.asBigDecimal("INDICE");
         this.nuFin = vo.asBigDecimal("NUFIN");

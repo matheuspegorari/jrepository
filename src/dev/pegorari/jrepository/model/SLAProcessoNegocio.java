@@ -128,7 +128,7 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
 
    @Override
    public SLAProcessoNegocio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.cargaHoraria = vo.asBigDecimal("CARGAHORARIA");
         this.codPrn = vo.asBigDecimal("CODPRN");

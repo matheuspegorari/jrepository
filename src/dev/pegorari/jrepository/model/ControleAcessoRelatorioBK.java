@@ -118,7 +118,7 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
 
    @Override
    public ControleAcessoRelatorioBK fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.altera = vo.asString("ALTERA");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codRel = vo.asBigDecimal("CODREL");

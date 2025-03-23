@@ -138,7 +138,7 @@ public class CompraVendavariosPedido extends AbstractSankhyaEntity<CompraVendava
 
    @Override
    public CompraVendavariosPedido fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cusAtend = vo.asBigDecimal("CUSATEND");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuNotaOrig = vo.asBigDecimal("NUNOTAORIG");

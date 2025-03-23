@@ -379,7 +379,7 @@ public class ComProducaoProdutorRural extends AbstractSankhyaEntity<ComProducaoP
 
    @Override
    public ComProducaoProdutorRural fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");

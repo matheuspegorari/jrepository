@@ -119,7 +119,7 @@ public class DependenciaEntreOps extends AbstractSankhyaEntity<DependenciaEntreO
 
    @Override
    public DependenciaEntreOps fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referenciaPi = vo.asString("REFERENCIAPI");
         this.referenciaPa = vo.asString("REFERENCIAPA");
         this.idIprocPi = vo.asBigDecimal("IDIPROCPI");

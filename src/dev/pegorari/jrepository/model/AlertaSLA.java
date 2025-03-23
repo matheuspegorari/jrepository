@@ -128,7 +128,7 @@ public class AlertaSLA extends AbstractSankhyaEntity<AlertaSLA> {
 
    @Override
    public AlertaSLA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codSmtp = vo.asBigDecimal("CODSMTP");
         this.exprDestinatarios = vo.asClob("EXPRDESTINATARIOS");

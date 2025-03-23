@@ -109,7 +109,7 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
 
    @Override
    public LoteGNRE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhLote = vo.asTimestamp("DHLOTE");
         this.nroLoteGnre = vo.asBigDecimal("NROLOTEGNRE");

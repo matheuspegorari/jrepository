@@ -349,7 +349,7 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
 
    @Override
    public HistoricoOcorrencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.afastamento = vo.asString("AFASTAMENTO");
         this.codAfaCausa = vo.asBigDecimal("CODAFACAUSA");
         this.codAfaRais = vo.asBigDecimal("CODAFARAIS");

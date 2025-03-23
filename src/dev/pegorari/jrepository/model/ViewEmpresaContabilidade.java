@@ -209,7 +209,7 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
 
    @Override
    public ViewEmpresaContabilidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtaCtbEncRes = vo.asBigDecimal("CODCTACTBENCRES");
         this.aceitarHistZero = vo.asString("ACEITARHISTZERO");
         this.corEmpresa = vo.asBigDecimal("COREMPRESA");

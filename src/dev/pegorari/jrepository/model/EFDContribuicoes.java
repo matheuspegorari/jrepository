@@ -79,7 +79,7 @@ public class EFDContribuicoes extends AbstractSankhyaEntity<EFDContribuicoes> {
 
    @Override
    public EFDContribuicoes fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");

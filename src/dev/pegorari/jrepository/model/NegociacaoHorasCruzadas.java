@@ -139,7 +139,7 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
 
    @Override
    public NegociacaoHorasCruzadas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuNegociacao = vo.asBigDecimal("NUNEGOCIACAO");

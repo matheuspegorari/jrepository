@@ -38,7 +38,7 @@ public class HistoricoPadrao extends AbstractSankhyaEntity<HistoricoPadrao> {
 
    @Override
    public HistoricoPadrao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codHistCtb = vo.asBigDecimal("CODHISTCTB");
         this.historico = vo.asString("HISTORICO");
         return this;

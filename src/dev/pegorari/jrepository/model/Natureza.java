@@ -308,7 +308,7 @@ public class Natureza extends AbstractSankhyaEntity<Natureza> {
 
    @Override
    public Natureza fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqCofins = vo.asBigDecimal("ALIQCOFINS");
         this.aliqPis = vo.asBigDecimal("ALIQPIS");
         this.analitica = vo.asString("ANALITICA");

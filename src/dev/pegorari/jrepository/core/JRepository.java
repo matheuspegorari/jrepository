@@ -63,14 +63,8 @@ public class JRepository {
         return createEntity(template, vo);
     }
 
-    public static void update(SankhyaEntity<?>... entities) {
-        for (SankhyaEntity<?> entity : entities) {
-            updateEntity(entity);
-        }
-    }
-
-    private static void updateEntity(SankhyaEntity<?> entity) {
-        DynamicVO originalVO = entity.getOriginalVO();
+    public static void updateEntity(SankhyaEntity<?> entity) {
+        DynamicVO originalVO = entity.getVo();
         if (originalVO == null) {
             throw new IllegalArgumentException("Entidade não foi carregada do banco de dados");
         }
@@ -96,14 +90,8 @@ public class JRepository {
         entity.clearChanges();
     }
 
-    public static void create(SankhyaEntity<?>... entities) throws Exception {
-        for (SankhyaEntity<?> entity : entities) {
-            createEntity(entity);
-        }
-    }
-
-    private static void createEntity(SankhyaEntity<?> entity) {
-        DynamicVO vo = entity.getOriginalVO();
+    public static void createEntity(SankhyaEntity<?> entity) {
+        DynamicVO vo = entity.getVo();
         if (vo != null) {
             throw new IllegalArgumentException("Entidade já foi criada no banco de dados. Utilize o método update para atualizar");
         }
@@ -142,4 +130,6 @@ public class JRepository {
     public static <T extends SankhyaEntity<T>> T createEntity(T template, DynamicVO vo) {
         return template.fromVO(vo);
     }
+
+
 }

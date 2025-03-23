@@ -79,7 +79,7 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
 
    @Override
    public PerfilRequisicao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

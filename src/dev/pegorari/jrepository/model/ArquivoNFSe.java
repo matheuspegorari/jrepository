@@ -119,7 +119,7 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
 
    @Override
    public ArquivoNFSe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.xmlIntegracao = vo.asClob("XMLINTEGRACAO");
         this.codVerifNfse = vo.asString("CODVERIFNFSE");
         this.dhemissNfse = vo.asTimestamp("DHEMISSNFSE");

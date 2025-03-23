@@ -89,7 +89,7 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
 
    @Override
    public DespesaInstalacaoBem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuNotaDesp = vo.asBigDecimal("NUNOTADESP");

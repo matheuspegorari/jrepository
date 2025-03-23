@@ -38,7 +38,7 @@ public class TipoTarefa extends AbstractSankhyaEntity<TipoTarefa> {
 
    @Override
    public TipoTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
         this.descTarefa = vo.asString("DESCRTAREFA");
         return this;

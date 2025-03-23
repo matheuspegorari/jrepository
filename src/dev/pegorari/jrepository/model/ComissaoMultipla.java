@@ -58,7 +58,7 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
 
    @Override
    public ComissaoMultipla fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVend = vo.asBigDecimal("CODVEND");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.obs = vo.asString("OBS");

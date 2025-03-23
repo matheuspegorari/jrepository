@@ -68,7 +68,7 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
 
    @Override
    public PrevisaoVendasExecucoes fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codProd = vo.asBigDecimal("CODPROD");

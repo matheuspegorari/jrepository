@@ -298,7 +298,7 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
 
    @Override
    public EtapaProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ajustarMps = vo.asString("AJUSTARMPS");
         this.gerarAmostra = vo.asString("GERARAMOSTRA");
         this.localOrigEnt = vo.asString("LOCALORIGENT");

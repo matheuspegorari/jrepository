@@ -69,7 +69,7 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
 
    @Override
    public RegistroParadaEquipamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEquip = vo.asBigDecimal("CODEQUIP");
         this.codMotPar = vo.asBigDecimal("CODMOTPAR");
         this.dhFim = vo.asTimestamp("DHFIM");

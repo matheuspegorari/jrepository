@@ -139,7 +139,7 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
 
    @Override
    public InventarioBem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ajustado = vo.asString("AJUSTADO");
         this.codBem = vo.asString("CODBEM");
         this.codDepCp = vo.asBigDecimal("CODDEPCP");

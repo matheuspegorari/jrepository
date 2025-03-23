@@ -329,7 +329,7 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
 
    @Override
    public MetaGestaoIndicadores fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apresdecGraf = vo.asString("APRESDECGRAF");
         this.codInd = vo.asBigDecimal("CODIND");
         this.codUng = vo.asBigDecimal("CODUNG");

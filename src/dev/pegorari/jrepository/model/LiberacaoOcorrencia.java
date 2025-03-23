@@ -169,7 +169,7 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
 
    @Override
    public LiberacaoOcorrencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");

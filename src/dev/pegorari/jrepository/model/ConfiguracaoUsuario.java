@@ -48,7 +48,7 @@ public class ConfiguracaoUsuario extends AbstractSankhyaEntity<ConfiguracaoUsuar
 
    @Override
    public ConfiguracaoUsuario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.conf = vo.asString("CONF");
         this.form = vo.asString("FORM");

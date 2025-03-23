@@ -78,7 +78,7 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
 
    @Override
    public ControleEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codReg = vo.asBigDecimal("CODREG");
         this.codVend = vo.asBigDecimal("CODVEND");

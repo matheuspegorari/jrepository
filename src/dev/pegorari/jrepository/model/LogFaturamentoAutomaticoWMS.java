@@ -59,7 +59,7 @@ public class LogFaturamentoAutomaticoWMS extends AbstractSankhyaEntity<LogFatura
 
    @Override
    public LogFaturamentoAutomaticoWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.log = vo.asClob("LOG");
         this.numNota = vo.asBigDecimal("NUMNOTA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

@@ -109,7 +109,7 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
 
    @Override
    public ConferenciaCega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.destFinal = vo.asString("DESTFINAL");
         this.dhFinalConf = vo.asTimestamp("DHFINALCONF");

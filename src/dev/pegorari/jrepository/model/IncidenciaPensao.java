@@ -79,7 +79,7 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
 
    @Override
    public IncidenciaPensao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");

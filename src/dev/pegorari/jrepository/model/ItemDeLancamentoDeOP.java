@@ -219,7 +219,7 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
 
    @Override
    public ItemDeLancamentoDeOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ordem = vo.asBigDecimal("ORDEM");
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.idProc = vo.asBigDecimal("IDPROC");

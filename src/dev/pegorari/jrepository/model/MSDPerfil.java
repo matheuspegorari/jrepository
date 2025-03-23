@@ -88,7 +88,7 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
 
    @Override
    public MSDPerfil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPer = vo.asBigDecimal("CODPER");
         this.descPer = vo.asString("DESCPER");
         this.envUlt = vo.asString("ENVULT");

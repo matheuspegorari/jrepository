@@ -188,7 +188,7 @@ public class Campo extends AbstractSankhyaEntity<Campo> {
 
    @Override
    public Campo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apresentacao = vo.asString("APRESENTACAO");
         this.calculado = vo.asString("CALCULADO");
         this.descrcampo = vo.asString("DESCRCAMPO");

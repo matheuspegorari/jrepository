@@ -149,7 +149,7 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
 
    @Override
    public ItemConferidoColetor fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtVal = vo.asTimestamp("DTVAL");
         this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
         this.numVol = vo.asBigDecimal("NUMVOL");

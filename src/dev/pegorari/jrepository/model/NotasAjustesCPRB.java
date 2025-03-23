@@ -139,7 +139,7 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
 
    @Override
    public NotasAjustesCPRB fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codCprb = vo.asString("CODCPRB");
         this.codEmp = vo.asBigDecimal("CODEMP");

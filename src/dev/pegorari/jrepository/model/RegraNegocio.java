@@ -128,7 +128,7 @@ public class RegraNegocio extends AbstractSankhyaEntity<RegraNegocio> {
 
    @Override
    public RegraNegocio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.descricao = vo.asString("DESCRICAO");

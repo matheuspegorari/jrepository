@@ -209,7 +209,7 @@ public class Anexo extends AbstractSankhyaEntity<Anexo> {
 
    @Override
    public Anexo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arquivo = vo.asString("ARQUIVO");
         this.coData = vo.asBigDecimal("CODATA");
         this.codEmp = vo.asBigDecimal("CODEMP");

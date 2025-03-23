@@ -49,7 +49,7 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
 
    @Override
    public OndaSeparacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codOnda = vo.asBigDecimal("CODONDA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

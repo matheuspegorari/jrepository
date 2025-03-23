@@ -139,7 +139,7 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
 
    @Override
    public ControleTelaI18n fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistocor = vo.asBigDecimal("CODHISTOCOR");

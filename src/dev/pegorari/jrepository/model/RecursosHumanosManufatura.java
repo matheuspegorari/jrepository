@@ -98,7 +98,7 @@ public class RecursosHumanosManufatura extends AbstractSankhyaEntity<RecursosHum
 
    @Override
    public RecursosHumanosManufatura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codFunc = vo.asBigDecimal("CODFUNC");

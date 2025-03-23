@@ -59,7 +59,7 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
 
    @Override
    public SaldoBancario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.saldoBco = vo.asBigDecimal("SALDOBCO");

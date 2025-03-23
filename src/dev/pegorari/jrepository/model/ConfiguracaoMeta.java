@@ -519,7 +519,7 @@ public class ConfiguracaoMeta extends AbstractSankhyaEntity<ConfiguracaoMeta> {
 
    @Override
    public ConfiguracaoMeta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.investimento = vo.asString("INVESTIMENTO");
         this.grupoNat = vo.asBigDecimal("GRUPONAT");
         this.local = vo.asBigDecimal("LOCAL");

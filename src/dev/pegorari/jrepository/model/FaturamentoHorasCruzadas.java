@@ -58,7 +58,7 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
 
    @Override
    public FaturamentoHorasCruzadas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.numOs = vo.asBigDecimal("NUMOS");

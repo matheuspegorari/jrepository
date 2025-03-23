@@ -99,7 +99,7 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
 
    @Override
    public OcorrenciaContrato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codOcor = vo.asBigDecimal("CODOCOR");
         this.codParc = vo.asBigDecimal("CODPARC");

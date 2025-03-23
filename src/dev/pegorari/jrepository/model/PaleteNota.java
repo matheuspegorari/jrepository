@@ -48,7 +48,7 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
 
    @Override
    public PaleteNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idPalete = vo.asBigDecimal("IDPALETE");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

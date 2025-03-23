@@ -68,7 +68,7 @@ public class FaturamentoDeApontamento extends AbstractSankhyaEntity<FaturamentoD
 
    @Override
    public FaturamentoDeApontamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.seqApa = vo.asBigDecimal("SEQAPA");

@@ -168,7 +168,7 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
 
    @Override
    public ConfigContOrcamentarioContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apresCod = vo.asString("APRESCOD");
         this.ativo = vo.asString("ATIVO");
         this.codCco = vo.asBigDecimal("CODCCO");

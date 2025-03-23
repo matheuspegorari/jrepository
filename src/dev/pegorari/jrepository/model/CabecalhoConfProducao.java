@@ -89,7 +89,7 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
 
    @Override
    public CabecalhoConfProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuApo = vo.asBigDecimal("NUAPO");
         this.status = vo.asString("STATUS");
         this.idAtv = vo.asBigDecimal("IDIATV");

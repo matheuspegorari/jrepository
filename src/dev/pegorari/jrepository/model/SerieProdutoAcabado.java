@@ -78,7 +78,7 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
 
    @Override
    public SerieProdutoAcabado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.idiProc = vo.asBigDecimal("IDIPROC");
         this.liberado = vo.asString("LIBERADO");

@@ -69,7 +69,7 @@ public class UsuarioFirebaseMessaging extends AbstractSankhyaEntity<UsuarioFireb
 
    @Override
    public UsuarioFirebaseMessaging fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFcm = vo.asString("CODFCM");
         this.dhRegistro = vo.asTimestamp("DHREGISTRO");
         this.codUsu = vo.asBigDecimal("CODUSU");

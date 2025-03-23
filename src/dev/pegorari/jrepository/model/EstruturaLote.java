@@ -78,7 +78,7 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
 
    @Override
    public EstruturaLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.lista = vo.asString("LISTA");
         this.ordem = vo.asBigDecimal("ORDEM");

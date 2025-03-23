@@ -68,7 +68,7 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
 
    @Override
    public BemNotafiscal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBem = vo.asString("CODBEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuNota = vo.asBigDecimal("NUNOTA");

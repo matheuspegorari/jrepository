@@ -57,7 +57,7 @@ public class CampoI18n extends AbstractSankhyaEntity<CampoI18n> {
 
    @Override
    public CampoI18n fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.locale = vo.asString("LOCALE");
         this.nomeCampo = vo.asString("NOMECAMPO");
         this.nomeTab = vo.asString("NOMETAB");

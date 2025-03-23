@@ -79,7 +79,7 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
 
    @Override
    public InformacaoQuestionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codQuest = vo.asBigDecimal("CODQUEST");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");

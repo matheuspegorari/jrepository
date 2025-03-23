@@ -109,7 +109,7 @@ public class HistoricoCopiaConfiguracao extends AbstractSankhyaEntity<HistoricoC
 
    @Override
    public HistoricoCopiaConfiguracao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.confTop = vo.asString("CONFTOP");
         this.abaSeg = vo.asString("ABASEG");
         this.chave = vo.asString("CHAVE");

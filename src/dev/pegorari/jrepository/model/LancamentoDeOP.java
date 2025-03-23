@@ -79,7 +79,7 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
 
    @Override
    public LancamentoDeOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuLop = vo.asBigDecimal("NULOP");
         this.dhInc = vo.asTimestamp("DHINC");
         this.codUsu = vo.asBigDecimal("CODUSU");

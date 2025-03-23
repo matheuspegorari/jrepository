@@ -38,7 +38,7 @@ public class HistoricoCopiaConfiguracaoUsu extends AbstractSankhyaEntity<Histori
 
    @Override
    public HistoricoCopiaConfiguracaoUsu fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuNico = vo.asBigDecimal("NUNICO");
         return this;

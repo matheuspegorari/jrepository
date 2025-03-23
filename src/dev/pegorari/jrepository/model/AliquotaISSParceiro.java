@@ -68,7 +68,7 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
 
    @Override
    public AliquotaISSParceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParc = vo.asBigDecimal("CODPARC");

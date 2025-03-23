@@ -78,7 +78,7 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
 
    @Override
    public DevolucaoCheque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aLineaCheqDev = vo.asString("ALINEACHEQDEV");
         this.codTipTit = vo.asBigDecimal("CODTIPTIT");
         this.nuDev = vo.asBigDecimal("NUDEV");

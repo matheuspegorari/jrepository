@@ -58,7 +58,7 @@ public class EquipamentoWMS extends AbstractSankhyaEntity<EquipamentoWMS> {
 
    @Override
    public EquipamentoWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEquip = vo.asBigDecimal("CODEQUIP");
         this.codTipEquip = vo.asBigDecimal("CODTIPEQUIP");

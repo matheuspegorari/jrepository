@@ -58,7 +58,7 @@ public class NotasRecebimento extends AbstractSankhyaEntity<NotasRecebimento> {
 
    @Override
    public NotasRecebimento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
         this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");

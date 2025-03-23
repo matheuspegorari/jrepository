@@ -79,7 +79,7 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
 
    @Override
    public EventosCheque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.detalhe = vo.asClob("DETALHE");
         this.dhEvento = vo.asTimestamp("DHEVENTO");

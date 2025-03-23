@@ -48,7 +48,7 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
 
    @Override
    public DescricaoNaturezaParceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codNat = vo.asBigDecimal("CODNAT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.descrNat = vo.asString("DESCRNAT");

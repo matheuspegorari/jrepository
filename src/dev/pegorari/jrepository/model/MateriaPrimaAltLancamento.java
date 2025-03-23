@@ -128,7 +128,7 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
 
    @Override
    public MateriaPrimaAltLancamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuLop = vo.asBigDecimal("NULOP");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.ordem = vo.asBigDecimal("ORDEM");

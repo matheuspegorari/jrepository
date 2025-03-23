@@ -149,7 +149,7 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
 
    @Override
    public EtapaPlanejamentoProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.numPlan = vo.asBigDecimal("NUMPLAN");
         this.abrvEtapa = vo.asString("ABRVETAPA");
         this.cql = vo.asString("CQL");

@@ -298,7 +298,7 @@ public class UnidadeFederativa extends AbstractSankhyaEntity<UnidadeFederativa> 
 
    @Override
    public UnidadeFederativa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDetGnre = vo.asBigDecimal("CODDETGNRE");
         this.codIbge = vo.asBigDecimal("CODIBGE");
         this.codPais = vo.asBigDecimal("CODPAIS");

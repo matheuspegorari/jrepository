@@ -99,7 +99,7 @@ public class EmailReciver extends AbstractSankhyaEntity<EmailReciver> {
 
    @Override
    public EmailReciver fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.situacaoNfe = vo.asString("SITUACAONFE");
         this.nuMail = vo.asBigDecimal("NUMAIL");
         this.chaveDoc = vo.asString("CHAVEDOC");

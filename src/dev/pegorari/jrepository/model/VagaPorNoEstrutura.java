@@ -69,7 +69,7 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
 
    @Override
    public VagaPorNoEstrutura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -108,7 +108,7 @@ public class ManifestoCompPgtoFrete extends AbstractSankhyaEntity<ManifestoCompP
 
    @Override
    public ManifestoCompPgtoFrete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.seqCompgFre = vo.asBigDecimal("SEQCOMPGFRE");

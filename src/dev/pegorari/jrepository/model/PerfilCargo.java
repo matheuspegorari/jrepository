@@ -129,7 +129,7 @@ public class PerfilCargo extends AbstractSankhyaEntity<PerfilCargo> {
 
    @Override
    public PerfilCargo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.codPerfil = vo.asBigDecimal("CODPERFIL");
         this.codUsu = vo.asBigDecimal("CODUSU");

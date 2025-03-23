@@ -499,7 +499,7 @@ public class NotaCancelada extends AbstractSankhyaEntity<NotaCancelada> {
 
    @Override
    public NotaCancelada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.atualliviss = vo.asString("ATUALLIVISS");

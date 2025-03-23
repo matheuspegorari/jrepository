@@ -779,7 +779,7 @@ public class Empresa extends AbstractSankhyaEntity<Empresa> {
 
    @Override
    public Empresa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativecon = vo.asBigDecimal("ATIVECON");
         this.cargas = vo.asString("CARGAS");
         this.cep = vo.asString("CEP");

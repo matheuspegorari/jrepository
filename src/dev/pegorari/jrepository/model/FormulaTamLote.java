@@ -48,7 +48,7 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
 
    @Override
    public FormulaTamLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descFormula = vo.asString("DESCFORMULA");
         this.expressao = vo.asString("EXPRESSAO");
         this.idFormula = vo.asBigDecimal("IDFORMULA");

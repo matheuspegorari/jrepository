@@ -68,7 +68,7 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
 
    @Override
    public PesquisaOrdemServico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aplicavel = vo.asString("APLICAVEL");
         this.codFld = vo.asBigDecimal("CODFLD");
         this.numItem = vo.asBigDecimal("NUMITEM");

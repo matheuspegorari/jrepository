@@ -58,7 +58,7 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
 
    @Override
    public NaturezaOperacaoMunicipio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.descrNatOper = vo.asString("DESCRNATOPER");
         this.codNatOper = vo.asString("CODNATOPER");

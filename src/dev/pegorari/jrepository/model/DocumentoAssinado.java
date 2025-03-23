@@ -179,7 +179,7 @@ public class DocumentoAssinado extends AbstractSankhyaEntity<DocumentoAssinado> 
 
    @Override
    public DocumentoAssinado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhSolic = vo.asTimestamp("DHSOLIC");
         this.nomeArquivo = vo.asString("NOMEARQUIVO");
         this.nuDoc = vo.asBigDecimal("NUDOC");

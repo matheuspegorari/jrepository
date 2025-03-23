@@ -58,7 +58,7 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
 
    @Override
    public FluxoDiagnostico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codFld = vo.asBigDecimal("CODFLD");
         this.descricao = vo.asString("DESCRICAO");

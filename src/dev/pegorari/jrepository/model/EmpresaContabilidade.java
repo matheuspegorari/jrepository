@@ -1119,7 +1119,7 @@ public class EmpresaContabilidade extends AbstractSankhyaEntity<EmpresaContabili
 
    @Override
    public EmpresaContabilidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aceitarHistZero = vo.asString("ACEITARHISTZERO");
         this.aceitarVlrLanc = vo.asString("ACEITARVLRLANC");
         this.codEmp = vo.asBigDecimal("CODEMP");

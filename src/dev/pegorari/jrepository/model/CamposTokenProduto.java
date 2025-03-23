@@ -68,7 +68,7 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
 
    @Override
    public CamposTokenProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.campo = vo.asString("CAMPO");
         this.codCfg = vo.asBigDecimal("CODCFG");
         this.entidade = vo.asString("ENTIDADE");

@@ -239,7 +239,7 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
 
    @Override
    public DemonstrativosNotaExplicativa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codDmt = vo.asString("CODDMT");
         this.codTab = vo.asBigDecimal("CODTAB");

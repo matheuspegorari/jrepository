@@ -159,7 +159,7 @@ public class AnexoSistema extends AbstractSankhyaEntity<AnexoSistema> {
 
    @Override
    public AnexoSistema fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhCad = vo.asTimestamp("DHCAD");
         this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
         this.pkRegistro = vo.asString("PKREGISTRO");

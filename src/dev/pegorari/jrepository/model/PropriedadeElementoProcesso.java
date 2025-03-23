@@ -48,7 +48,7 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
 
    @Override
    public PropriedadeElementoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nome = vo.asString("NOME");
         this.nuEle = vo.asBigDecimal("NUELE");
         this.valor = vo.asString("VALOR");

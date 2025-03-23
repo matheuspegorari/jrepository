@@ -79,7 +79,7 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
 
    @Override
    public TransferenciaWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");

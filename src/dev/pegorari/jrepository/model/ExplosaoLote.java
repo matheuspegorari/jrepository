@@ -89,7 +89,7 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
 
    @Override
    public ExplosaoLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEndOrigem = vo.asBigDecimal("CODENDORIGEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.controle = vo.asString("CONTROLE");

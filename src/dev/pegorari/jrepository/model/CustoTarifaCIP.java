@@ -59,7 +59,7 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
 
    @Override
    public CustoTarifaCIP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtAtual = vo.asTimestamp("DTATUAL");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.cusApurado = vo.asBigDecimal("CUSAPURADO");

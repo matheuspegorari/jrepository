@@ -108,7 +108,7 @@ public class ContatoProspect extends AbstractSankhyaEntity<ContatoProspect> {
 
    @Override
    public ContatoProspect fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.apelido = vo.asString("APELIDO");
         this.cargo = vo.asString("CARGO");
         this.celular = vo.asString("CELULAR");

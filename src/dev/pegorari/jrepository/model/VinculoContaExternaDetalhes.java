@@ -119,7 +119,7 @@ public class VinculoContaExternaDetalhes extends AbstractSankhyaEntity<VinculoCo
 
    @Override
    public VinculoContaExternaDetalhes fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.ctaCtb = vo.asString("CTACTB");

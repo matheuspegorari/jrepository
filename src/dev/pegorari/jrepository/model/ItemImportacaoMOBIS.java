@@ -98,7 +98,7 @@ public class ItemImportacaoMOBIS extends AbstractSankhyaEntity<ItemImportacaoMOB
 
    @Override
    public ItemImportacaoMOBIS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.invoiceNumber = vo.asString("INVOICENUMBER");
         this.msg = vo.asClob("MSG");
         this.nuImp = vo.asBigDecimal("NUIMP");

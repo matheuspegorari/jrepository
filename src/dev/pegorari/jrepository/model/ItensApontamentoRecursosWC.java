@@ -88,7 +88,7 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
 
    @Override
    public ItensApontamentoRecursosWC fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codMqp = vo.asBigDecimal("CODMQP");
         this.codRhp = vo.asBigDecimal("CODRHP");

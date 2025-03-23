@@ -38,7 +38,7 @@ public class GadgetBiaVinculo extends AbstractSankhyaEntity<GadgetBiaVinculo> {
 
    @Override
    public GadgetBiaVinculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGbc = vo.asBigDecimal("CODGBC");
         this.codGbi = vo.asBigDecimal("CODGBI");
         return this;

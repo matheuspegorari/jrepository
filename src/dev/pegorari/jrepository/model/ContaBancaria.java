@@ -1159,7 +1159,7 @@ public class ContaBancaria extends AbstractSankhyaEntity<ContaBancaria> {
 
    @Override
    public ContaBancaria fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAgeBenef = vo.asBigDecimal("CODAGEBENEF");
         this.codCtaBenef = vo.asBigDecimal("CODCTABENEF");
         this.idCliente = vo.asString("IDCLIENTE");

@@ -48,7 +48,7 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
 
    @Override
    public PerfilParceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");

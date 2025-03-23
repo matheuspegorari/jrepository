@@ -48,7 +48,7 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
 
    @Override
    public GrupoInstalacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.grupo = vo.asBigDecimal("GRUPO");
         this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         this.qtdParc = vo.asBigDecimal("QTDPARC");

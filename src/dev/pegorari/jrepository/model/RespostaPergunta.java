@@ -199,7 +199,7 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
 
    @Override
    public RespostaPergunta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.nota = vo.asBigDecimal("NOTA");
         this.ordem = vo.asBigDecimal("ORDEM");

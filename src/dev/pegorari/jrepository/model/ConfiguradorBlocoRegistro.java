@@ -149,7 +149,7 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
 
    @Override
    public ConfiguradorBlocoRegistro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arquivosKw = vo.asString("ARQUIVOSKW");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.bloco = vo.asString("BLOCO");

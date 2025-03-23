@@ -88,7 +88,7 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
 
    @Override
    public NoEstrutura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveRegistro = vo.asBigDecimal("CHAVEREGISTRO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.nivel = vo.asBigDecimal("NIVEL");

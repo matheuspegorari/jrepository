@@ -48,7 +48,7 @@ public class TaxasJurosDescontos extends AbstractSankhyaEntity<TaxasJurosDescont
 
    @Override
    public TaxasJurosDescontos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.taxa = vo.asBigDecimal("TAXA");

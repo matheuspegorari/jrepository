@@ -188,7 +188,7 @@ public class Instancia extends AbstractSankhyaEntity<Instancia> {
 
    @Override
    public Instancia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuInstanciaExt = vo.asBigDecimal("NUINSTANCIAEXT");
         this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");
         this.raiz = vo.asString("RAIZ");

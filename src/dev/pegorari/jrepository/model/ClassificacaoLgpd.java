@@ -79,7 +79,7 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
 
    @Override
    public ClassificacaoLgpd fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
         this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");

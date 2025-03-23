@@ -68,7 +68,7 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
 
    @Override
    public ArquivoRelatorio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arquivo = vo.asClob("ARQUIVO");
         this.arquivoBin = vo.asBlob("ARQUIVOBIN");
         this.nome = vo.asString("NOME");

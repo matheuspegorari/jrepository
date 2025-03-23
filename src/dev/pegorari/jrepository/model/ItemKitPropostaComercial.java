@@ -618,7 +618,7 @@ public class ItemKitPropostaComercial extends AbstractSankhyaEntity<ItemKitPropo
 
    @Override
    public ItemKitPropostaComercial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.vlrUnitPis = vo.asBigDecimal("VLRUNITPIS");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.descrItem = vo.asString("DESCRITEM");

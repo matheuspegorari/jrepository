@@ -68,7 +68,7 @@ public class ExcecoesCamposLgpd extends AbstractSankhyaEntity<ExcecoesCamposLgpd
 
    @Override
    public ExcecoesCamposLgpd fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nomeCampo = vo.asString("NOMECAMPO");

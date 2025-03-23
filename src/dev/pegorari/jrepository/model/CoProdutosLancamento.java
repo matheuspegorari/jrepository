@@ -58,7 +58,7 @@ public class CoProdutosLancamento extends AbstractSankhyaEntity<CoProdutosLancam
 
    @Override
    public CoProdutosLancamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idCop = vo.asBigDecimal("IDCOP");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.qtdConsumida = vo.asBigDecimal("QTDCONSUMIDA");

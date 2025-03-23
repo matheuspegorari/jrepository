@@ -68,7 +68,7 @@ public class AnexoMensagem extends AbstractSankhyaEntity<AnexoMensagem> {
 
    @Override
    public AnexoMensagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.anexo = vo.asBlob("ANEXO");
         this.cid = vo.asString("CID");
         this.nomeArquivo = vo.asString("NOMEARQUIVO");

@@ -218,7 +218,7 @@ public class HierarquiaDemonstrativo extends AbstractSankhyaEntity<HierarquiaDem
 
    @Override
    public HierarquiaDemonstrativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.geradra = vo.asString("GERADRA");
         this.grupdemonSdfc = vo.asString("GRUPDEMONSDFC");
         this.grupodemonst = vo.asString("GRUPODEMONST");

@@ -149,7 +149,7 @@ public class ReaberturaEventoPeriodico extends AbstractSankhyaEntity<ReaberturaE
 
    @Override
    public ReaberturaEventoPeriodico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");
         this.idEvento = vo.asString("IDEVENTO");

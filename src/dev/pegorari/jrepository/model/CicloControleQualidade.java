@@ -58,7 +58,7 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
 
    @Override
    public CicloControleQualidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aprovarComRessalvas = vo.asString("APROVARCOMRESSALVAS");
         this.descrCiclo = vo.asString("DESCRCICLO");
         this.idCcq = vo.asBigDecimal("IDCCQ");

@@ -58,7 +58,7 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
 
    @Override
    public NumeroAtoConcDrawBack fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequenciaDraw = vo.asBigDecimal("SEQUENCIADRAW");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.nuNota = vo.asBigDecimal("NUNOTA");

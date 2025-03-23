@@ -3809,7 +3809,7 @@ public class TarifasCIP extends AbstractSankhyaEntity<TarifasCIP> {
 
    @Override
    public TarifasCIP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdSubKit = vo.asBigDecimal("CODPRODSUBKIT");
         this.enqReintegra = vo.asString("ENQREINTEGRA");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");

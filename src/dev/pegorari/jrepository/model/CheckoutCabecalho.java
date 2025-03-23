@@ -128,7 +128,7 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
 
    @Override
    public CheckoutCabecalho fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codNat = vo.asBigDecimal("CODNAT");

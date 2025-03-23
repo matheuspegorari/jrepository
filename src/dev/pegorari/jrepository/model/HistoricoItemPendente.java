@@ -89,7 +89,7 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
 
    @Override
    public HistoricoItemPendente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqHip = vo.asBigDecimal("SEQHIP");
         this.descricao = vo.asString("DESCRICAO");
         this.status = vo.asString("STATUS");

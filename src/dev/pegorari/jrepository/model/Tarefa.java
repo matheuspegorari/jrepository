@@ -179,7 +179,7 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
 
    @Override
    public Tarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmpoc = vo.asBigDecimal("CODEMPOC");
         this.codTarefa = vo.asBigDecimal("CODTAREFA");
         this.codUsu = vo.asBigDecimal("CODUSU");

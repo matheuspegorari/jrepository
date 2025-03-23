@@ -109,7 +109,7 @@ public class HistoricoInstanciaProcesso extends AbstractSankhyaEntity<HistoricoI
 
    @Override
    public HistoricoInstanciaProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhExecucao = vo.asTimestamp("DHEXECUCAO");
         this.idElemento = vo.asString("IDELEMENTO");
         this.idInstEle = vo.asBigDecimal("IDINSTELE");

@@ -48,7 +48,7 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
 
    @Override
    public IpiProdutoParceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codIpi = vo.asBigDecimal("CODIPI");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProd = vo.asBigDecimal("CODPROD");

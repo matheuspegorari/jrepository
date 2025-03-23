@@ -38,7 +38,7 @@ public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> 
 
    @Override
    public FinanceiroRemessa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.nuRem = vo.asBigDecimal("NUREM");
         return this;

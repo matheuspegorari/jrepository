@@ -199,7 +199,7 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
 
    @Override
    public Pesagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tara = vo.asBigDecimal("TARA");
         this.variasNotas = vo.asString("VARIASNOTAS");
         this.nfTransp = vo.asString("NFTRANSP");

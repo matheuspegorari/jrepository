@@ -1159,7 +1159,7 @@ public class ImplantacaoSaldoConta extends AbstractSankhyaEntity<ImplantacaoSald
 
    @Override
    public ImplantacaoSaldoConta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAgeBenef = vo.asBigDecimal("CODAGEBENEF");
         this.codCtaBenef = vo.asBigDecimal("CODCTABENEF");
         this.idCliente = vo.asString("IDCLIENTE");

@@ -69,7 +69,7 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
 
    @Override
    public ManutencaoProgramada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhParada = vo.asTimestamp("DHPARADA");
         this.hrIndisp = vo.asBigDecimal("HRINDISP");

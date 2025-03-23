@@ -238,7 +238,7 @@ public class Beneficio extends AbstractSankhyaEntity<Beneficio> {
 
    @Override
    public Beneficio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBco = vo.asBigDecimal("CODBCO");
         this.codBen = vo.asBigDecimal("CODBEN");
         this.codCencus = vo.asBigDecimal("CODCENCUS");

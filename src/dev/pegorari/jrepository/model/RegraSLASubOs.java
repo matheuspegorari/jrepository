@@ -58,7 +58,7 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
 
    @Override
    public RegraSLASubOs fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");
         this.numReg = vo.asBigDecimal("NUMREG");

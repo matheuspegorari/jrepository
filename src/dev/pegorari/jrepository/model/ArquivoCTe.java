@@ -178,7 +178,7 @@ public class ArquivoCTe extends AbstractSankhyaEntity<ArquivoCTe> {
 
    @Override
    public ArquivoCTe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.xmlProtAutCte = vo.asClob("XMLPROTAUTCTE");
         this.xmlEnvCartEnvCli = vo.asClob("XMLENVCARTENVCLI");
         this.xmlEnvCli = vo.asClob("XMLENVCLI");

@@ -78,7 +78,7 @@ public class DefinicaoNoEstrutura extends AbstractSankhyaEntity<DefinicaoNoEstru
 
    @Override
    public DefinicaoNoEstrutura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.multipocor = vo.asString("MULTIPOCOR");
         this.nivelFinal = vo.asBigDecimal("NIVELFINAL");
         this.nivelInicial = vo.asBigDecimal("NIVELINICIAL");

@@ -48,7 +48,7 @@ public class ExcecoesUsuariosLgpd extends AbstractSankhyaEntity<ExcecoesUsuarios
 
    @Override
    public ExcecoesUsuariosLgpd fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.tipoVisu = vo.asString("TIPOVISU");

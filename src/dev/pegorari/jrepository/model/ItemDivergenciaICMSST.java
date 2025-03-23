@@ -168,7 +168,7 @@ public class ItemDivergenciaICMSST extends AbstractSankhyaEntity<ItemDivergencia
 
    @Override
    public ItemDivergenciaICMSST fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
         this.baseSubstitItem = vo.asBigDecimal("BASESUBSTITITEM");
         this.codProd = vo.asBigDecimal("CODPROD");

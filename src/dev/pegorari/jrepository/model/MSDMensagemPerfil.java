@@ -38,7 +38,7 @@ public class MSDMensagemPerfil extends AbstractSankhyaEntity<MSDMensagemPerfil> 
 
    @Override
    public MSDMensagemPerfil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMsg = vo.asBigDecimal("CODMSG");
         this.codPer = vo.asBigDecimal("CODPER");
         return this;

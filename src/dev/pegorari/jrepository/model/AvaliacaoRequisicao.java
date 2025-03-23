@@ -89,7 +89,7 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
 
    @Override
    public AvaliacaoRequisicao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.obsAvaliacao = vo.asString("OBSAVALIACAO");
         this.codMotivo = vo.asBigDecimal("CODMOTIVO");
         this.codUsu = vo.asBigDecimal("CODUSU");

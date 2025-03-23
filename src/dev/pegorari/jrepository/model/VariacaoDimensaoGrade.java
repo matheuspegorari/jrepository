@@ -128,7 +128,7 @@ public class VariacaoDimensaoGrade extends AbstractSankhyaEntity<VariacaoDimensa
 
    @Override
    public VariacaoDimensaoGrade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abvVar = vo.asString("ABVVAR");
         this.idAtb = vo.asBigDecimal("IDATB");
         this.idGrade = vo.asBigDecimal("IDGRADE");

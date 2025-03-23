@@ -58,7 +58,7 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
 
    @Override
    public IteracaoFilaMsgCotacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.contador = vo.asBigDecimal("CONTADOR");

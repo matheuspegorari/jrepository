@@ -49,7 +49,7 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
 
    @Override
    public PerfilUsuarioEvo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.perfil = vo.asString("PERFIL");

@@ -229,7 +229,7 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
 
    @Override
    public CentroResultado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.area = vo.asBigDecimal("AREA");
         this.areaCont = vo.asBigDecimal("AREACONT");

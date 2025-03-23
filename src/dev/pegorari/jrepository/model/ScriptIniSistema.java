@@ -48,7 +48,7 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
 
    @Override
    public ScriptIniSistema fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nome = vo.asString("NOME");
         this.execucao = vo.asString("EXECUCAO");
         this.dtExecucao = vo.asTimestamp("DTEXECUCAO");

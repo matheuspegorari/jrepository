@@ -99,7 +99,7 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
 
    @Override
    public DescontoFinanceiroAplicado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDesc = vo.asBigDecimal("CODDESC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.difContratAplicad = vo.asBigDecimal("DIFCONTRATPLICAD");

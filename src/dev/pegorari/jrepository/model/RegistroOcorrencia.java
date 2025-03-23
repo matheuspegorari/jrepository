@@ -309,7 +309,7 @@ public class RegistroOcorrencia extends AbstractSankhyaEntity<RegistroOcorrencia
 
    @Override
    public RegistroOcorrencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistOcor = vo.asBigDecimal("CODHISTOCOR");
         this.descOcor = vo.asString("DESCROCOR");

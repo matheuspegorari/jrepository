@@ -168,7 +168,7 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
 
    @Override
    public FormularioProcessoNegocio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cardinalidade = vo.asString("CARDINALIDADE");
         this.configCampos = vo.asClob("CONFIGCAMPOS");
         this.descricao = vo.asString("DESCRICAO");

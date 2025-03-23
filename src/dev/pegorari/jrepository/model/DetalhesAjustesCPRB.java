@@ -99,7 +99,7 @@ public class DetalhesAjustesCPRB extends AbstractSankhyaEntity<DetalhesAjustesCP
 
    @Override
    public DetalhesAjustesCPRB fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAjuste = vo.asBigDecimal("CODAJUSTE");
         this.codCprb = vo.asString("CODCPRB");
         this.codEmp = vo.asBigDecimal("CODEMP");

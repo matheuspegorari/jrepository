@@ -108,7 +108,7 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
 
    @Override
    public CriterioRateio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.automatico = vo.asString("AUTOMATICO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCriterio = vo.asBigDecimal("CODCRITERIO");

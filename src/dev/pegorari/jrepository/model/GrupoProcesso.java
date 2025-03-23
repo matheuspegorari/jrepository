@@ -58,7 +58,7 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
 
    @Override
    public GrupoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");
         this.grupoPai = vo.asBigDecimal("GRUPOPAI");

@@ -28,7 +28,7 @@ public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdici
 
    @Override
    public TotalizadorAdicional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }

@@ -68,7 +68,7 @@ public class PlantaManufatura extends AbstractSankhyaEntity<PlantaManufatura> {
 
    @Override
    public PlantaManufatura fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codEmp = vo.asBigDecimal("CODEMP");

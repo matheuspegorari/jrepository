@@ -169,7 +169,7 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
 
    @Override
    public AvisoSistema fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuRemetente = vo.asBigDecimal("CODUSUREMETENTE");

@@ -88,7 +88,7 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
 
    @Override
    public SeparacaoFaturamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.codTipOperDest = vo.asBigDecimal("CODTIPOPERDEST");

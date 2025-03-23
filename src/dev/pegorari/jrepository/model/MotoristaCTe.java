@@ -48,7 +48,7 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
 
    @Override
    public MotoristaCTe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.seqMot = vo.asBigDecimal("SEQMOT");

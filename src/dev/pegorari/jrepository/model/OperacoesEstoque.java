@@ -498,7 +498,7 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
 
    @Override
    public OperacoesEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipoMaterial = vo.asString("TIPOMATERIAL");
         this.seqOper = vo.asBigDecimal("SEQOPER");
         this.statusExec = vo.asString("STATUSEXEC");

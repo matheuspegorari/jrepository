@@ -609,7 +609,7 @@ public class ParceiroProspect extends AbstractSankhyaEntity<ParceiroProspect> {
 
    @Override
    public ParceiroProspect fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhCadSefaz = vo.asTimestamp("DHCADSEFAZ");
         this.sitCadSefaz = vo.asString("SITCADSEFAZ");
         this.cgcCpf = vo.asString("CGC_CPF");

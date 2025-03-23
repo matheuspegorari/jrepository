@@ -98,7 +98,7 @@ public class CaixaFlowrack extends AbstractSankhyaEntity<CaixaFlowrack> {
 
    @Override
    public CaixaFlowrack fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVolume = vo.asBigDecimal("CODVOLUME");
         this.conferido = vo.asString("CONFERIDO");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");

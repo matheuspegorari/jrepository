@@ -289,7 +289,7 @@ public class ParcelaPagamento extends AbstractSankhyaEntity<ParcelaPagamento> {
 
    @Override
    public ParcelaPagamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baixa = vo.asString("BAIXA");
         this.codBcoPad = vo.asBigDecimal("CODBCOPAD");
         this.codCenCusPad = vo.asBigDecimal("CODCENCUSPAD");

@@ -229,7 +229,7 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
 
    @Override
    public ProdutoServicoContrato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParcPref = vo.asBigDecimal("CODPARCPREF");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.dtVersao = vo.asTimestamp("DTVERSAO");

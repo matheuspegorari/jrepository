@@ -148,7 +148,7 @@ public class ElementoFluxoOrigem extends AbstractSankhyaEntity<ElementoFluxoOrig
 
    @Override
    public ElementoFluxoOrigem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.corFonte = vo.asString("CORFONTE");
         this.corPreenchimento = vo.asString("CORPREENCHIMENTO");
         this.descricao = vo.asString("DESCRICAO");

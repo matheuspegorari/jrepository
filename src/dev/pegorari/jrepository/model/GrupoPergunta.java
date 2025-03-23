@@ -99,7 +99,7 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
 
    @Override
    public GrupoPergunta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");

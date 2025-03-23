@@ -48,7 +48,7 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
 
    @Override
    public ExpectativaEsforcoPreVenda fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEpv = vo.asBigDecimal("CODEPV");
         this.descricao = vo.asString("DESCRICAO");
         this.percPro = vo.asBigDecimal("PERCPRO");

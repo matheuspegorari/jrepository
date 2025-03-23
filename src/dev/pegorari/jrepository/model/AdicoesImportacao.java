@@ -109,7 +109,7 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
 
    @Override
    public AdicoesImportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFabricante = vo.asString("CODFABRICANTE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

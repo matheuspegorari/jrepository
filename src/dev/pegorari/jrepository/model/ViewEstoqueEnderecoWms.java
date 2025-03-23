@@ -529,7 +529,7 @@ public class ViewEstoqueEnderecoWms extends AbstractSankhyaEntity<ViewEstoqueEnd
 
    @Override
    public ViewEstoqueEnderecoWms fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.exclConf = vo.asString("EXCLCONF");
         this.localizacao = vo.asString("LOCALIZACAO");
         this.entradasPend = vo.asBigDecimal("ENTRADASPEND");

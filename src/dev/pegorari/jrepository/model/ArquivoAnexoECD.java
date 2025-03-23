@@ -89,7 +89,7 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
 
    @Override
    public ArquivoAnexoECD fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.nomeArquivoSkw = vo.asString("NOMEARQUIVOSKW");
         this.caminhoArquivo = vo.asString("CAMINHOARQUIVO");

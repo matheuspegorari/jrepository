@@ -79,7 +79,7 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
 
    @Override
    public TabelaDinamicaImportada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipoLanc = vo.asString("TIPOLANC");
         this.descricao = vo.asString("DESCRICAO");
         this.tabela = vo.asString("TABELA");

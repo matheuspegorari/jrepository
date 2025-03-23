@@ -58,7 +58,7 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
 
    @Override
    public OcorrenciaOS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cobrar = vo.asString("COBRAR");
         this.codOcorOs = vo.asBigDecimal("CODOCOROS");
         this.descOcorOs = vo.asString("DESCROCOROS");

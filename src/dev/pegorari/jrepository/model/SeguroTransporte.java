@@ -88,7 +88,7 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
 
    @Override
    public SeguroTransporte fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.vlrCarga = vo.asBigDecimal("VLRCARGA");
         this.seqSeg = vo.asBigDecimal("SEQSEG");
         this.numApo = vo.asString("NUMAPO");

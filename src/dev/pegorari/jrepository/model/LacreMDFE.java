@@ -48,7 +48,7 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
 
    @Override
    public LacreMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.numLacre = vo.asString("NUMLACRE");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

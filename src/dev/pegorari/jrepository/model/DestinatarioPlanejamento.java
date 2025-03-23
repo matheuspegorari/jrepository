@@ -78,7 +78,7 @@ public class DestinatarioPlanejamento extends AbstractSankhyaEntity<Destinatario
 
    @Override
    public DestinatarioPlanejamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuPla = vo.asBigDecimal("NUPLA");
         this.apresentacao = vo.asString("APRESENTACAO");
         this.chave = vo.asBigDecimal("CHAVE");

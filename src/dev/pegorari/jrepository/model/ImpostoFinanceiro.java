@@ -148,7 +148,7 @@ public class ImpostoFinanceiro extends AbstractSankhyaEntity<ImpostoFinanceiro> 
 
    @Override
    public ImpostoFinanceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.base = vo.asBigDecimal("BASE");
         this.codImp = vo.asBigDecimal("CODIMP");

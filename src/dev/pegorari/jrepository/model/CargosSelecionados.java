@@ -58,7 +58,7 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
 
    @Override
    public CargosSelecionados fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
         this.triagem = vo.asString("TRIAGEM");

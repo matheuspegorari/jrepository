@@ -69,7 +69,7 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
 
    @Override
    public BoletoRapidoHist fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlt = vo.asTimestamp("DTALT");
         this.idUnico = vo.asBigDecimal("IDUNICO");

@@ -109,7 +109,7 @@ public class EtapasSelecaoCargo extends AbstractSankhyaEntity<EtapasSelecaoCargo
 
    @Override
    public EtapasSelecaoCargo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.seqEtapa = vo.asBigDecimal("SEQETAPA");
         this.codCargo = vo.asBigDecimal("CODCARGO");

@@ -359,7 +359,7 @@ public class ItemTarefa extends AbstractSankhyaEntity<ItemTarefa> {
 
    @Override
    public ItemTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
         this.codArmazenagem = vo.asBigDecimal("CODARMAZENAGEM");
         this.codAreaSep = vo.asBigDecimal("CODAREASEP");

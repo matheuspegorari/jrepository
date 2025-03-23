@@ -168,7 +168,7 @@ public class PadraoClassificacao extends AbstractSankhyaEntity<PadraoClassificac
 
    @Override
    public PadraoClassificacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.classificacao = vo.asBigDecimal("CLASSIFICACAO");
         this.codClt = vo.asBigDecimal("CODCLT");

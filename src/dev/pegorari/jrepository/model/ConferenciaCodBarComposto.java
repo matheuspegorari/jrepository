@@ -88,7 +88,7 @@ public class ConferenciaCodBarComposto extends AbstractSankhyaEntity<Conferencia
 
    @Override
    public ConferenciaCodBarComposto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarComp = vo.asString("CODBARCOMP");
         this.nuConf = vo.asBigDecimal("NUCONF");
         this.nuNota = vo.asBigDecimal("NUNOTA");

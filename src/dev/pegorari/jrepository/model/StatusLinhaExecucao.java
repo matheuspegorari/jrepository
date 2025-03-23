@@ -48,7 +48,7 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
 
    @Override
    public StatusLinhaExecucao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idAtvStatusNormal = vo.asBigDecimal("IDATVSTATUSNORMAL");
         this.idExecWflow = vo.asString("IDEXECWFLOW");
         this.statusExec = vo.asString("STATUSEXEC");

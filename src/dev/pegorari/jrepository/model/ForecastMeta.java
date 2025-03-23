@@ -308,7 +308,7 @@ public class ForecastMeta extends AbstractSankhyaEntity<ForecastMeta> {
 
    @Override
    public ForecastMeta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.controle = vo.asString("CONTROLE");
         this.executante = vo.asBigDecimal("EXECUTANTE");
         this.marca = vo.asString("MARCA");

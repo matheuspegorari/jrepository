@@ -68,7 +68,7 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
 
    @Override
    public TerceiroLancamentoDeOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.ideFx = vo.asBigDecimal("IDEFX");

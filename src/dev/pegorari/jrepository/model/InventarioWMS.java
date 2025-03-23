@@ -209,7 +209,7 @@ public class InventarioWMS extends AbstractSankhyaEntity<InventarioWMS> {
 
    @Override
    public InventarioWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
         this.codBarra = vo.asString("CODBARRA");

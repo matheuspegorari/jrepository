@@ -79,7 +79,7 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
 
    @Override
    public ReguaCobranca fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.config = vo.asClob("CONFIG");

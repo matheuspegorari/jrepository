@@ -38,7 +38,7 @@ public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteV
 
    @Override
    public GuiaTransporteValores fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descEvento = vo.asString("DESCEVENTO");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;

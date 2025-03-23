@@ -189,7 +189,7 @@ public class TEFPendente extends AbstractSankhyaEntity<TEFPendente> {
 
    @Override
    public TEFPendente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.autorizacao = vo.asString("AUTORIZACAO");
         this.bandeira = vo.asString("BANDEIRA");
         this.cartao = vo.asString("CARTAO");

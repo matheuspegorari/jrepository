@@ -579,7 +579,7 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
 
    @Override
    public OrdemServico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.contato = vo.asString("CONTATO");
         this.descricao = vo.asString("DESCRICAO");
         this.dhChamada = vo.asTimestamp("DHCHAMADA");

@@ -179,7 +179,7 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
 
    @Override
    public Planejamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsuAvaliador = vo.asBigDecimal("CODUSUAVALIADOR");
         this.assuntoEmail = vo.asString("ASSUNTOEMAIL");
         this.codParc = vo.asBigDecimal("CODPARC");

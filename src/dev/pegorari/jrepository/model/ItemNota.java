@@ -2139,7 +2139,7 @@ public class ItemNota extends AbstractSankhyaEntity<ItemNota> {
 
    @Override
    public ItemNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqIcmsRed = vo.asBigDecimal("ALIQICMSRED");
         this.aliqIpi = vo.asBigDecimal("ALIQIPI");

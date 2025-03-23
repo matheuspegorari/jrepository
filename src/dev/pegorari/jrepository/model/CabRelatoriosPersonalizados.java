@@ -59,7 +59,7 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
 
    @Override
    public CabRelatoriosPersonalizados fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuPeriodoCtb = vo.asBigDecimal("NUPERIODOCTB");

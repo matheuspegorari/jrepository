@@ -58,7 +58,7 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
 
    @Override
    public CodigoIdentOperacaoTransporte fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.ciot = vo.asString("CIOT");
         this.nuViag = vo.asBigDecimal("NUVIAG");

@@ -79,7 +79,7 @@ public class InformacaoNotaExportacao extends AbstractSankhyaEntity<InformacaoNo
 
    @Override
    public InformacaoNotaExportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtConhec = vo.asTimestamp("DTCONHEC");
         this.nroConhec = vo.asString("NROCONHEC");
         this.nroDeclaracao = vo.asString("NRODECLARACAO");

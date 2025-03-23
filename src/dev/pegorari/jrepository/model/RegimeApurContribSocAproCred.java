@@ -149,7 +149,7 @@ public class RegimeApurContribSocAproCred extends AbstractSankhyaEntity<RegimeAp
 
    @Override
    public RegimeApurContribSocAproCred fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.indRegCum = vo.asBigDecimal("INDREGCUM");
         this.dhAlter = vo.asTimestamp("DHALTER");

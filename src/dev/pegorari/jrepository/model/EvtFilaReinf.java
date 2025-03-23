@@ -299,7 +299,7 @@ public class EvtFilaReinf extends AbstractSankhyaEntity<EvtFilaReinf> {
 
    @Override
    public EvtFilaReinf fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acao = vo.asString("ACAO");
         this.chave = vo.asString("CHAVE");
         this.chaveEvento = vo.asString("CHAVEEVENTO");

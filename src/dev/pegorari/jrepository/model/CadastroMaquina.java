@@ -178,7 +178,7 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
 
    @Override
    public CadastroMaquina fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codMaq = vo.asBigDecimal("CODMAQ");
         this.codNacionalIdent = vo.asString("CODNACIONALIDENT");

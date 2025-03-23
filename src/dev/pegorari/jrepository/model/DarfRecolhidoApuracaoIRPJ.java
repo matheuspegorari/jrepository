@@ -119,7 +119,7 @@ public class DarfRecolhidoApuracaoIRPJ extends AbstractSankhyaEntity<DarfRecolhi
 
    @Override
    public DarfRecolhidoApuracaoIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codRec = vo.asBigDecimal("CODREC");
         this.dtApuracao = vo.asTimestamp("DTAPURACAO");

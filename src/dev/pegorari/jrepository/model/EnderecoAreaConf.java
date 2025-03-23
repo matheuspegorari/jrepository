@@ -69,7 +69,7 @@ public class EnderecoAreaConf extends AbstractSankhyaEntity<EnderecoAreaConf> {
 
    @Override
    public EnderecoAreaConf fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEndFim = vo.asBigDecimal("CODENDFIM");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");

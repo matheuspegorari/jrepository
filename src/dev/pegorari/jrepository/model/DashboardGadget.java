@@ -38,7 +38,7 @@ public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
 
    @Override
    public DashboardGadget fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuDsb = vo.asBigDecimal("NUDSB");
         this.nuGdg = vo.asBigDecimal("NUGDG");
         return this;

@@ -68,7 +68,7 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
 
    @Override
    public ItemConferenciaProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuConf = vo.asBigDecimal("NUCONF");

@@ -118,7 +118,7 @@ public class WorkCenterPorPA extends AbstractSankhyaEntity<WorkCenterPorPA> {
 
    @Override
    public WorkCenterPorPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.codWcp = vo.asBigDecimal("CODWCP");

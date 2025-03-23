@@ -128,7 +128,7 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
 
    @Override
    public CaracteristicaClassificacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codClc = vo.asBigDecimal("CODCLC");
         this.codClt = vo.asBigDecimal("CODCLT");
         this.descontar = vo.asBigDecimal("DESCONTAR");

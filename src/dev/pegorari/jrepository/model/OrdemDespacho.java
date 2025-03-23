@@ -69,7 +69,7 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
 
    @Override
    public OrdemDespacho fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.status = vo.asString("STATUS");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");

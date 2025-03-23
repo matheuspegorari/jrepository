@@ -149,7 +149,7 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
 
    @Override
    public RespostaPerguntaPesquisa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.anexo = vo.asBlob("ANEXO");
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.codResp = vo.asBigDecimal("CODRESP");

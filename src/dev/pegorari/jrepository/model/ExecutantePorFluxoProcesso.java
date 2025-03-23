@@ -68,7 +68,7 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
 
    @Override
    public ExecutantePorFluxoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codServ = vo.asBigDecimal("CODSERV");
         this.codUsu = vo.asBigDecimal("CODUSU");

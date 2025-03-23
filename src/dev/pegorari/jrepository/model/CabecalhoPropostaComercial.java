@@ -599,7 +599,7 @@ public class CabecalhoPropostaComercial extends AbstractSankhyaEntity<CabecalhoP
 
    @Override
    public CabecalhoPropostaComercial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.percDesconto = vo.asBigDecimal("PERCDESCONTO");
         this.percDescProd = vo.asBigDecimal("PERCDESCPROD");
         this.percDescServ = vo.asBigDecimal("PERCDESCSERV");

@@ -68,7 +68,7 @@ public class QuestionarioFluxo extends AbstractSankhyaEntity<QuestionarioFluxo> 
 
    @Override
    public QuestionarioFluxo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFld = vo.asBigDecimal("CODFLD");
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.codQuest = vo.asBigDecimal("CODQUEST");

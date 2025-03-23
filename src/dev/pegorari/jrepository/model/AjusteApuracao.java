@@ -259,7 +259,7 @@ public class AjusteApuracao extends AbstractSankhyaEntity<AjusteApuracao> {
 
    @Override
    public AjusteApuracao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAjuste = vo.asString("CODAJUSTE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");

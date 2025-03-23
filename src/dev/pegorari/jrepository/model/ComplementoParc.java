@@ -829,7 +829,7 @@ public class ComplementoParc extends AbstractSankhyaEntity<ComplementoParc> {
 
    @Override
    public ComplementoParc fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nroCnh = vo.asString("NROCNH");
         this.numEntrega = vo.asString("NUMENTREGA");
         this.numReceb = vo.asString("NUMRECEB");

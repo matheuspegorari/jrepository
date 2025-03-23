@@ -109,7 +109,7 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
 
    @Override
    public ExecucaoAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMtp = vo.asBigDecimal("CODMTP");
         this.observacao = vo.asString("OBSERVACAO");
         this.tipo = vo.asString("TIPO");

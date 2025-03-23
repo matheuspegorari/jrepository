@@ -149,7 +149,7 @@ public class ItensResultadoMRP extends AbstractSankhyaEntity<ItensResultadoMRP> 
 
    @Override
    public ItensResultadoMRP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdPedCompra = vo.asBigDecimal("QTDPEDCOMPRA");
         this.controleMp = vo.asString("CONTROLEMP");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

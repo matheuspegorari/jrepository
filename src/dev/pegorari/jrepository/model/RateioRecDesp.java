@@ -149,7 +149,7 @@ public class RateioRecDesp extends AbstractSankhyaEntity<RateioRecDesp> {
 
    @Override
    public RateioRecDesp fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.percRateio = vo.asBigDecimal("PERCRATEIO");
         this.digitado = vo.asString("DIGITADO");
         this.dtAlter = vo.asTimestamp("DTALTER");

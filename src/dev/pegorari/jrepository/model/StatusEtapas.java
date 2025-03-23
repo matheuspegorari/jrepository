@@ -118,7 +118,7 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
 
    @Override
    public StatusEtapas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codStaEtapa = vo.asBigDecimal("CODSTAETAPA");
         this.descRetapa = vo.asString("DESCRETAPA");

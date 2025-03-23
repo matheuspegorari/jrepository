@@ -108,7 +108,7 @@ public class EstoquePalete extends AbstractSankhyaEntity<EstoquePalete> {
 
    @Override
    public EstoquePalete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEnd = vo.asBigDecimal("CODEND");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

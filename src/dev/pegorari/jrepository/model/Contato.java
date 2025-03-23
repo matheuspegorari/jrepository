@@ -539,7 +539,7 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
 
    @Override
    public Contato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.email = vo.asString("EMAIL");
         this.fax = vo.asString("FAX");
         this.latitude = vo.asString("LATITUDE");

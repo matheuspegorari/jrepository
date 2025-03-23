@@ -58,7 +58,7 @@ public class CNAEEmpresa extends AbstractSankhyaEntity<CNAEEmpresa> {
 
    @Override
    public CNAEEmpresa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cnae = vo.asString("CNAE");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.locTribNormal = vo.asString("LOCTRIBNORMAL");

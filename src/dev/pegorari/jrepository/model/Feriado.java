@@ -109,7 +109,7 @@ public class Feriado extends AbstractSankhyaEntity<Feriado> {
 
    @Override
    public Feriado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCid = vo.asBigDecimal("CODCID");
         this.codPais = vo.asBigDecimal("CODPAIS");
         this.codUf = vo.asBigDecimal("CODUF");

@@ -248,7 +248,7 @@ public class VolumeAlternativo extends AbstractSankhyaEntity<VolumeAlternativo> 
 
    @Override
    public VolumeAlternativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.camadas = vo.asBigDecimal("CAMADAS");
         this.codBarra = vo.asString("CODBARRA");

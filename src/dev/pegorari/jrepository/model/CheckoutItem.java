@@ -309,7 +309,7 @@ public class CheckoutItem extends AbstractSankhyaEntity<CheckoutItem> {
 
    @Override
    public CheckoutItem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuKc = vo.asBigDecimal("NUCKC");
         this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");
         this.nuTab = vo.asBigDecimal("NUTAB");

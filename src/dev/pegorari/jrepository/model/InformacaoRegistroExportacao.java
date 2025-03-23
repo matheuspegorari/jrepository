@@ -48,7 +48,7 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
 
    @Override
    public InformacaoRegistroExportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtRe = vo.asTimestamp("DTRE");
         this.nroDeclaracao = vo.asString("NRODECLARACAO");
         this.nroRe = vo.asString("NRORE");

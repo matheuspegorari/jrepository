@@ -68,7 +68,7 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
 
    @Override
    public AliquotaInternaDestino fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.percIcmFcp = vo.asBigDecimal("PERCICMSFCP");
         this.codUf = vo.asBigDecimal("CODUF");
         this.codProd = vo.asBigDecimal("CODPROD");

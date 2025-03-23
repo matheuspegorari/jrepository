@@ -429,7 +429,7 @@ public class ApuracaoIRPJ extends AbstractSankhyaEntity<ApuracaoIRPJ> {
 
    @Override
    public ApuracaoIRPJ fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseAjustada = vo.asBigDecimal("BASEAJUSTADA");
         this.baseAjustadaCsll = vo.asBigDecimal("BASEAJUSTADA_CSLL");
         this.codEmp = vo.asBigDecimal("CODEMP");

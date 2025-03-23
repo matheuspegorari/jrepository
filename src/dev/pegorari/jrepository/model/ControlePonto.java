@@ -139,7 +139,7 @@ public class ControlePonto extends AbstractSankhyaEntity<ControlePonto> {
 
    @Override
    public ControlePonto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codHistocor = vo.asBigDecimal("CODHISTOCOR");

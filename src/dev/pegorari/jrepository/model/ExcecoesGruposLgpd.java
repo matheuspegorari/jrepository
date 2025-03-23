@@ -48,7 +48,7 @@ public class ExcecoesGruposLgpd extends AbstractSankhyaEntity<ExcecoesGruposLgpd
 
    @Override
    public ExcecoesGruposLgpd fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCla = vo.asBigDecimal("CODCLA");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");
         this.tipoVisu = vo.asString("TIPOVISU");

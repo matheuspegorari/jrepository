@@ -79,7 +79,7 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
 
    @Override
    public EventoPeriodico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descricao = vo.asString("DESCRICAO");

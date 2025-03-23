@@ -339,7 +339,7 @@ public class AcumuladoAno extends AbstractSankhyaEntity<AcumuladoAno> {
 
    @Override
    public AcumuladoAno fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ano = vo.asBigDecimal("ANO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEvento = vo.asBigDecimal("CODEVENTO");

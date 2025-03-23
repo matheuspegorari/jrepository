@@ -119,7 +119,7 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
 
    @Override
    public DocumentoAnterior fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveDant = vo.asString("CHAVEDANT");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.nuNota = vo.asBigDecimal("NUNOTA");

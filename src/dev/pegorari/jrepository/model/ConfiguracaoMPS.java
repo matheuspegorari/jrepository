@@ -69,7 +69,7 @@ public class ConfiguracaoMPS extends AbstractSankhyaEntity<ConfiguracaoMPS> {
 
    @Override
    public ConfiguracaoMPS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.codCmps = vo.asBigDecimal("CODCMPS");
         this.dhInc = vo.asTimestamp("DHINC");

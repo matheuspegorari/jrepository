@@ -118,7 +118,7 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
 
    @Override
    public Doca fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.balcao = vo.asString("BALCAO");
         this.impressoraDoca = vo.asString("IMPRESSORADOCA");
         this.altura = vo.asBigDecimal("ALTURA");

@@ -168,7 +168,7 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
 
    @Override
    public ItensPesagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codProc = vo.asBigDecimal("CODPROC");
         this.codProd = vo.asBigDecimal("CODPROD");

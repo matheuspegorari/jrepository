@@ -129,7 +129,7 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
 
    @Override
    public RecursosWorkCenterAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

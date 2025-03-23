@@ -128,7 +128,7 @@ public class LigacaoPedidoNotaTemp extends AbstractSankhyaEntity<LigacaoPedidoNo
 
    @Override
    public LigacaoPedidoNotaTemp fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cusAtend = vo.asBigDecimal("CUSATEND");
         this.nroAtoConcdraw = vo.asString("NROATOCONCDRAW");
         this.nroMemorando = vo.asBigDecimal("NROMEMORANDO");

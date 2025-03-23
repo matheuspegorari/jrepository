@@ -78,7 +78,7 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
 
    @Override
    public CampoLigacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuCampoDest = vo.asBigDecimal("NUCAMPODEST");
         this.nuCampoOrig = vo.asBigDecimal("NUCAMPOORIG");
         this.nuInstDest = vo.asBigDecimal("NUINSTDEST");

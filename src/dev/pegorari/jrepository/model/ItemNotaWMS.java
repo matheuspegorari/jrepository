@@ -68,7 +68,7 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
 
    @Override
    public ItemNotaWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
         this.qtdWms = vo.asBigDecimal("QTDWMS");

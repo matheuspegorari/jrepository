@@ -199,7 +199,7 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
 
    @Override
    public NotaConhecimentoTransporte fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModDoc = vo.asBigDecimal("CODMODDOC");
         this.dtEmissao = vo.asTimestamp("DTEMISSAO");
         this.numero = vo.asString("NUMERO");

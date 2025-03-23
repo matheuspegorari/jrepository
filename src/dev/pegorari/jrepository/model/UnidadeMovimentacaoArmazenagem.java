@@ -48,7 +48,7 @@ public class UnidadeMovimentacaoArmazenagem extends AbstractSankhyaEntity<Unidad
 
    @Override
    public UnidadeMovimentacaoArmazenagem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUma = vo.asBigDecimal("CODUMA");
         this.descrUma = vo.asString("DESCRUMA");
         this.peso = vo.asBigDecimal("PESO");

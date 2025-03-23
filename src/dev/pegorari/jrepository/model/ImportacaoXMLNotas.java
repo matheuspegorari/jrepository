@@ -709,7 +709,7 @@ public class ImportacaoXMLNotas extends AbstractSankhyaEntity<ImportacaoXMLNotas
 
    @Override
    public ImportacaoXMLNotas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhEmiss = vo.asTimestamp("DHEMISS");
         this.vlrNota = vo.asBigDecimal("VLRNOTA");
         this.situacaoMde = vo.asString("SITUACAOMDE");

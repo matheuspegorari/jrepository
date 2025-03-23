@@ -498,7 +498,7 @@ public class EmpresaProdutoImpostos extends AbstractSankhyaEntity<EmpresaProduto
 
    @Override
    public EmpresaProdutoImpostos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.usaLoteDtFab = vo.asString("USALOTEDTFAB");
         this.usaLoteDtVal = vo.asString("USALOTEDTVAL");
         this.estMin = vo.asBigDecimal("ESTMIN");

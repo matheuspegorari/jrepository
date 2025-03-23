@@ -68,7 +68,7 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
 
    @Override
    public LigacaoSeparacaoAgrupada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuSepFilha = vo.asBigDecimal("NUSEPFILHA");
         this.seqIttFilha = vo.asBigDecimal("SEQITTFILHA");
         this.seqIttMae = vo.asBigDecimal("SEQITTMAE");

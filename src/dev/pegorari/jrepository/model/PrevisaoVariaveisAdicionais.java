@@ -48,7 +48,7 @@ public class PrevisaoVariaveisAdicionais extends AbstractSankhyaEntity<PrevisaoV
 
    @Override
    public PrevisaoVariaveisAdicionais fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.codExec = vo.asBigDecimal("CODEXEC");
         this.tipo = vo.asString("TIPO");

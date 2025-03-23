@@ -168,7 +168,7 @@ public class ProdutoLancamentoDeOP extends AbstractSankhyaEntity<ProdutoLancamen
 
    @Override
    public ProdutoLancamentoDeOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqOp = vo.asBigDecimal("SEQOP");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");

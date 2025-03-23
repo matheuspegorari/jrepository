@@ -68,7 +68,7 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
 
    @Override
    public Rejeicao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.codOcorrencia = vo.asString("CODOCORRENCIA");
         this.codRej = vo.asString("CODREJ");

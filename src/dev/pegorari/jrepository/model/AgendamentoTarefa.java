@@ -199,7 +199,7 @@ public class AgendamentoTarefa extends AbstractSankhyaEntity<AgendamentoTarefa> 
 
    @Override
    public AgendamentoTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.config = vo.asClob("CONFIG");

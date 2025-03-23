@@ -69,7 +69,7 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
 
    @Override
    public CotacaoMoeda fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMoeda = vo.asBigDecimal("CODMOEDA");
         this.cotacao = vo.asBigDecimal("COTACAO");
         this.dtMov = vo.asTimestamp("DTMOV");

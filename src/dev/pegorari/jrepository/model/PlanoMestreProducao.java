@@ -159,7 +159,7 @@ public class PlanoMestreProducao extends AbstractSankhyaEntity<PlanoMestreProduc
 
    @Override
    public PlanoMestreProducao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtIniPed = vo.asTimestamp("DTINIPED");
         this.situacao = vo.asString("SITUACAO");
         this.dtFinPed = vo.asTimestamp("DTFINPED");

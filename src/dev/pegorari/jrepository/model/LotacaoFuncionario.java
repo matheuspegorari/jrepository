@@ -89,7 +89,7 @@ public class LotacaoFuncionario extends AbstractSankhyaEntity<LotacaoFuncionario
 
    @Override
    public LotacaoFuncionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codUsu = vo.asBigDecimal("CODUSU");

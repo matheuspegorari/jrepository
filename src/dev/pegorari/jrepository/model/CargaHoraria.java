@@ -129,7 +129,7 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
 
    @Override
    public CargaHoraria fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descansoSem = vo.asString("DESCANSOSEM");
         this.diaSem = vo.asBigDecimal("DIASEM");
         this.dtAlter = vo.asTimestamp("DTALTER");

@@ -69,7 +69,7 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
 
    @Override
    public TabelaIRPF fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipTabela = vo.asString("TIPTABELA");
         this.aliquota = vo.asBigDecimal("ALIQUOTA");
         this.competencia = vo.asTimestamp("COMPETENCIA");

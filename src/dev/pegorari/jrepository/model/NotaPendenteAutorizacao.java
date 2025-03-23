@@ -99,7 +99,7 @@ public class NotaPendenteAutorizacao extends AbstractSankhyaEntity<NotaPendenteA
 
    @Override
    public NotaPendenteAutorizacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipo = vo.asString("TIPO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.qtdenvio = vo.asBigDecimal("QTDENVIO");

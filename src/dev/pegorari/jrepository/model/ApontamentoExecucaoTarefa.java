@@ -119,7 +119,7 @@ public class ApontamentoExecucaoTarefa extends AbstractSankhyaEntity<Apontamento
 
    @Override
    public ApontamentoExecucaoTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhFinal = vo.asTimestamp("DHFINAL");
         this.dhInicial = vo.asTimestamp("DHINICIAL");

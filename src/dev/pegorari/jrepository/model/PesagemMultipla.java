@@ -379,7 +379,7 @@ public class PesagemMultipla extends AbstractSankhyaEntity<PesagemMultipla> {
 
    @Override
    public PesagemMultipla fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.balancaPb = vo.asBigDecimal("BALANCAPB");
         this.balancaTara = vo.asBigDecimal("BALANCATARA");
         this.codPort = vo.asBigDecimal("CODPORT");

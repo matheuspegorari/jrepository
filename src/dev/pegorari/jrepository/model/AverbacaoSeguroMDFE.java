@@ -58,7 +58,7 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
 
    @Override
    public AverbacaoSeguroMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuAverb = vo.asString("NUMAVERB");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.numApOlice = vo.asString("NUMAPOLICE");

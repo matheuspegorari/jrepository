@@ -49,7 +49,7 @@ public class PrevisaoVariaveisDiarias extends AbstractSankhyaEntity<PrevisaoVari
 
    @Override
    public PrevisaoVariaveisDiarias fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.dia = vo.asTimestamp("DIA");
         this.valor = vo.asBigDecimal("VALOR");

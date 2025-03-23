@@ -47,7 +47,7 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
 
    @Override
    public CertificadoDigital fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nomeArquivo = vo.asString("NOMEARQUIVO");
         this.interno = vo.asString("INTERNO");
         this.cgcCpf = vo.asString("CGC_CPF");

@@ -109,7 +109,7 @@ public class EventosCobranca extends AbstractSankhyaEntity<EventosCobranca> {
 
    @Override
    public EventosCobranca fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEvento = vo.asBigDecimal("CODEVENTO");
         this.codRegua = vo.asBigDecimal("CODREGUA");
         this.config = vo.asClob("CONFIG");

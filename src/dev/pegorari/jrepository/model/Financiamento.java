@@ -2849,7 +2849,7 @@ public class Financiamento extends AbstractSankhyaEntity<Financiamento> {
 
    @Override
    public Financiamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipMulta = vo.asString("TIPMULTA");
         this.vlrALiberar = vo.asBigDecimal("VLRALIBERAR");
         this.vlrAtual = vo.asBigDecimal("VLRATUAL");

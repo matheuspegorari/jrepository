@@ -68,7 +68,7 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
 
    @Override
    public EventoProdutoIntermediario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.controlePi = vo.asString("CONTROLEPI");
         this.codProdPi = vo.asBigDecimal("CODPRODPI");

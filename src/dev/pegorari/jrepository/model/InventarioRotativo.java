@@ -269,7 +269,7 @@ public class InventarioRotativo extends AbstractSankhyaEntity<InventarioRotativo
 
    @Override
    public InventarioRotativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativa = vo.asString("ATIVA");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codEnd = vo.asBigDecimal("CODEND");

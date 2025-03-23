@@ -89,7 +89,7 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
 
    @Override
    public ManifestoPrazoPgtoFrete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuViag = vo.asBigDecimal("NUVIAG");
         this.parcela = vo.asBigDecimal("PARCELA");
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");

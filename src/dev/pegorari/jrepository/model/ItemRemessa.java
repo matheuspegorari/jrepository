@@ -108,7 +108,7 @@ public class ItemRemessa extends AbstractSankhyaEntity<ItemRemessa> {
 
    @Override
    public ItemRemessa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.campo = vo.asString("CAMPO");
         this.codigo = vo.asBigDecimal("CODIGO");
         this.modulo = vo.asString("MODULO");

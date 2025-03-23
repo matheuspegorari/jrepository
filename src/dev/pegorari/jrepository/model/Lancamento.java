@@ -279,7 +279,7 @@ public class Lancamento extends AbstractSankhyaEntity<Lancamento> {
 
    @Override
    public Lancamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codConPar = vo.asBigDecimal("CODCONPAR");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");

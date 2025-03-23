@@ -38,7 +38,7 @@ public class SituacaoSubOs extends AbstractSankhyaEntity<SituacaoSubOs> {
 
    @Override
    public SituacaoSubOs fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codSit = vo.asBigDecimal("CODSIT");
         this.descricao = vo.asString("DESCRICAO");
         return this;

@@ -99,7 +99,7 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
 
    @Override
    public Impressora fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliasLocal = vo.asString("ALIASLOCAL");
         this.ativo = vo.asString("ATIVO");
         this.dhStatus = vo.asTimestamp("DHSTATUS");

@@ -48,7 +48,7 @@ public class TaxasEspeciais extends AbstractSankhyaEntity<TaxasEspeciais> {
 
    @Override
    public TaxasEspeciais fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
         this.taxaJuro = vo.asBigDecimal("TAXAJURO");

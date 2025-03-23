@@ -78,7 +78,7 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
 
    @Override
    public GadgetBiaConhecimento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGbc = vo.asBigDecimal("CODGBC");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuDsb = vo.asBigDecimal("NUDSB");

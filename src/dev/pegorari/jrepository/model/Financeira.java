@@ -48,7 +48,7 @@ public class Financeira extends AbstractSankhyaEntity<Financeira> {
 
    @Override
    public Financeira fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codFila = vo.asBigDecimal("CODFILA");
         this.email = vo.asString("EMAIL");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

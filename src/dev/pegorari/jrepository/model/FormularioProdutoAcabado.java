@@ -58,7 +58,7 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
 
    @Override
    public FormularioProdutoAcabado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.controlePa = vo.asString("CONTROLEPA");
         this.idForm = vo.asBigDecimal("IDFORM");

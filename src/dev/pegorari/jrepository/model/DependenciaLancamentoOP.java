@@ -158,7 +158,7 @@ public class DependenciaLancamentoOP extends AbstractSankhyaEntity<DependenciaLa
 
    @Override
    public DependenciaLancamentoOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.controlePa = vo.asString("CONTROLEPA");
         this.tipoNroLote = vo.asString("TIPONROLOTE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

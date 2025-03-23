@@ -139,7 +139,7 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
 
    @Override
    public EstoqueNotaProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codVol = vo.asString("CODVOL");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.codEnd = vo.asBigDecimal("CODEND");

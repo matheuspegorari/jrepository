@@ -119,7 +119,7 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
 
    @Override
    public Questionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.perguntasPorGrupo = vo.asString("PERGUNTASPORGRUPO");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.exiberespCorreta = vo.asString("EXIBERESPCORRETA");

@@ -228,7 +228,7 @@ public class ParametroContabilizacao extends AbstractSankhyaEntity<ParametroCont
 
    @Override
    public ParametroContabilizacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ctaCtbConst = vo.asString("CTACTBCONST");
         this.dc = vo.asString("DC");
         this.formula = vo.asString("FORMULA");

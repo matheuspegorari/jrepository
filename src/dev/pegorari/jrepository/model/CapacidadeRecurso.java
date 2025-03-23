@@ -118,7 +118,7 @@ public class CapacidadeRecurso extends AbstractSankhyaEntity<CapacidadeRecurso> 
 
    @Override
    public CapacidadeRecurso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCap = vo.asBigDecimal("CODCAP");
         this.codCre = vo.asBigDecimal("CODCRE");
         this.codProdPa = vo.asBigDecimal("CODPRODPA");

@@ -69,7 +69,7 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
 
    @Override
    public CodigoItemIPM fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.codUf = vo.asBigDecimal("CODUF");
         this.codigoItem = vo.asString("CODIGOITEM");

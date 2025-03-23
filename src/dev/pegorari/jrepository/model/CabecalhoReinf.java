@@ -169,7 +169,7 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
 
    @Override
    public CabecalhoReinf fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.controle = vo.asString("CONTROLE");
         this.dtRef = vo.asTimestamp("DTREF");

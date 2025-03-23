@@ -79,7 +79,7 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
 
    @Override
    public CacheServicoBoaVista fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");
         this.codUsu = vo.asBigDecimal("CODUSU");

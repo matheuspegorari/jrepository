@@ -48,7 +48,7 @@ public class ContratanteMDFE extends AbstractSankhyaEntity<ContratanteMDFE> {
 
    @Override
    public ContratanteMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.codParcContr = vo.asBigDecimal("CODPARCCONTR");
         this.nuViag = vo.asBigDecimal("NUVIAG");

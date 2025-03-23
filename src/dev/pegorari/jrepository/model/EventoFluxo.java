@@ -68,7 +68,7 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
 
    @Override
    public EventoFluxo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.ideFxAnexado = vo.asBigDecimal("IDEFXANEXADO");
         this.identificador = vo.asString("IDENTIFICADOR");

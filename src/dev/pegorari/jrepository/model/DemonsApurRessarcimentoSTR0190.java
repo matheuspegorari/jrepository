@@ -89,7 +89,7 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
 
    @Override
    public DemonsApurRessarcimentoSTR0190 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descr = vo.asString("DESCR");
         this.digitado = vo.asString("DIGITADO");

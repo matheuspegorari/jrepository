@@ -69,7 +69,7 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
 
    @Override
    public AvaliacaoDesempenho fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuPla = vo.asBigDecimal("NUPLA");
         this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
         this.nuPlaAvaliado = vo.asBigDecimal("NUPLAAVALIADO");

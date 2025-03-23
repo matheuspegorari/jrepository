@@ -259,7 +259,7 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
 
    @Override
    public ConsolidadorDados fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codConsolidacao = vo.asBigDecimal("CODCONSOLIDACAO");
         this.codUsu = vo.asBigDecimal("CODUSU");

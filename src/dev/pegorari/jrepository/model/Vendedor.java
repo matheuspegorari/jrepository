@@ -389,7 +389,7 @@ public class Vendedor extends AbstractSankhyaEntity<Vendedor> {
 
    @Override
    public Vendedor fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acrescMax = vo.asBigDecimal("ACRESCMAX");
         this.apelido = vo.asString("APELIDO");
         this.ativo = vo.asString("ATIVO");

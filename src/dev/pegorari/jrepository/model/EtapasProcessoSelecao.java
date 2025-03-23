@@ -109,7 +109,7 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
 
    @Override
    public EtapasProcessoSelecao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arqModEmail = vo.asString("ARQMODEMAIL");
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codQuestionario = vo.asBigDecimal("CODQUESTIONARIO");

@@ -58,7 +58,7 @@ public class VariavelTamLote extends AbstractSankhyaEntity<VariavelTamLote> {
 
    @Override
    public VariavelTamLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.expressao = vo.asString("EXPRESSAO");
         this.idFormula = vo.asBigDecimal("IDFORMULA");
         this.nomeVar = vo.asString("NOMEVAR");

@@ -89,7 +89,7 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
 
    @Override
    public AgendaWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDoca = vo.asBigDecimal("CODDOCA");
         this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
         this.dhEntrada = vo.asTimestamp("DHENTRADA");

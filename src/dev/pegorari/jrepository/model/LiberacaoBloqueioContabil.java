@@ -139,7 +139,7 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
 
    @Override
    public LiberacaoBloqueioContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsuLib = vo.asBigDecimal("CODUSULIB");
         this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");
         this.dhSolicit = vo.asTimestamp("DHSOLICIT");

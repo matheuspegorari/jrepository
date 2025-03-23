@@ -309,7 +309,7 @@ public class FechamentoEventoPeriodico extends AbstractSankhyaEntity<FechamentoE
 
    @Override
    public FechamentoEventoPeriodico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.compSemMovto = vo.asTimestamp("COMPSEMMOVTO");
         this.cpfResp = vo.asString("CPFRESP");

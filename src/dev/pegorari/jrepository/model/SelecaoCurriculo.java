@@ -159,7 +159,7 @@ public class SelecaoCurriculo extends AbstractSankhyaEntity<SelecaoCurriculo> {
 
    @Override
    public SelecaoCurriculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codUsu = vo.asBigDecimal("CODUSU");

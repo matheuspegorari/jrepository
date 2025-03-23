@@ -128,7 +128,7 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
 
    @Override
    public VariavelProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descricao = vo.asString("DESCRICAO");
         this.escopo = vo.asString("ESCOPO");
         this.leitura = vo.asString("LEITURA");

@@ -68,7 +68,7 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
 
    @Override
    public ItemDespesaInstalacaoBem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBem = vo.asString("CODBEM");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuRateio = vo.asBigDecimal("NURATEIO");

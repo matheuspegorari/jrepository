@@ -58,7 +58,7 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
 
    @Override
    public EtapaPredecessora fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFap = vo.asBigDecimal("NUFAP");
         this.nuMetapa = vo.asBigDecimal("NUMETAPA");
         this.nuMetapaPred = vo.asBigDecimal("NUMETAPAPRED");

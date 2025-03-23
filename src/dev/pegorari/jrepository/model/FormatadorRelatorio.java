@@ -349,7 +349,7 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
 
    @Override
    public FormatadorRelatorio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acessoCubo = vo.asString("ACESSOCUBO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoRel = vo.asBigDecimal("CODGRUPOREL");

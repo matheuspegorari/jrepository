@@ -119,7 +119,7 @@ public class NotasMudancaTributacao extends AbstractSankhyaEntity<NotasMudancaTr
 
    @Override
    public NotasMudancaTributacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
         this.baseSubstitRec = vo.asBigDecimal("BASESUBSTITREC");
         this.baseSubstitUn = vo.asBigDecimal("BASESUBSTITUN");

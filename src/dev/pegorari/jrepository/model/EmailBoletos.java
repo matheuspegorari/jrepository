@@ -38,7 +38,7 @@ public class EmailBoletos extends AbstractSankhyaEntity<EmailBoletos> {
 
    @Override
    public EmailBoletos fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuFin = vo.asBigDecimal("NUFIN");
         this.codFila = vo.asBigDecimal("CODFILA");
         return this;

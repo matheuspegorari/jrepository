@@ -98,7 +98,7 @@ public class LimiteLiberacao extends AbstractSankhyaEntity<LimiteLiberacao> {
 
    @Override
    public LimiteLiberacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codGru = vo.asBigDecimal("CODGRU");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.enviarEmail = vo.asString("ENVIAREMAIL");

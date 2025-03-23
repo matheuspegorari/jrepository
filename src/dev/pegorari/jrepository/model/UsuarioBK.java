@@ -188,7 +188,7 @@ public class UsuarioBK extends AbstractSankhyaEntity<UsuarioBK> {
 
    @Override
    public UsuarioBK fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.acessoVisualCab = vo.asString("ACESSOVISUALCAB");
         this.altCtaFat = vo.asString("ALTCTAFAT");
         this.altCtaImpBol = vo.asString("ALTCTAIMPBOL");

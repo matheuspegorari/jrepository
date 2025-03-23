@@ -79,7 +79,7 @@ public class Bairro extends AbstractSankhyaEntity<Bairro> {
 
    @Override
    public Bairro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBai = vo.asBigDecimal("CODBAI");
         this.codReg = vo.asBigDecimal("CODREG");
         this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");

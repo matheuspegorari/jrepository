@@ -109,7 +109,7 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
 
    @Override
    public MovimentoMensalSintetico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ano = vo.asBigDecimal("ANO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");

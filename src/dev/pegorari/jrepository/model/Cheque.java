@@ -139,7 +139,7 @@ public class Cheque extends AbstractSankhyaEntity<Cheque> {
 
    @Override
    public Cheque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.agencia = vo.asString("AGENCIA");
         this.cgcCpf = vo.asString("CGC_CPF");
         this.cmc7 = vo.asString("CMC7");

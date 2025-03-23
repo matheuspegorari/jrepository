@@ -128,7 +128,7 @@ public class EtapaProduto extends AbstractSankhyaEntity<EtapaProduto> {
 
    @Override
    public EtapaProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cicloProducao = vo.asBigDecimal("CICLOPRODUCAO");
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

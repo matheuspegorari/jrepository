@@ -179,7 +179,7 @@ public class DemonsApurRessarcimentoST extends AbstractSankhyaEntity<DemonsApurR
 
    @Override
    public DemonsApurRessarcimentoST fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arqConfirmado = vo.asString("ARQCONFIRMADO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtFinal = vo.asTimestamp("DTFINAL");

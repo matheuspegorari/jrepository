@@ -88,7 +88,7 @@ public class BannerLoginJiva extends AbstractSankhyaEntity<BannerLoginJiva> {
 
    @Override
    public BannerLoginJiva fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nomeArq = vo.asString("NOMEARQ");
         this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         this.ordem = vo.asBigDecimal("ORDEM");

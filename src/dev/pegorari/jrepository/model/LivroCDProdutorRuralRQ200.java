@@ -129,7 +129,7 @@ public class LivroCDProdutorRuralRQ200 extends AbstractSankhyaEntity<LivroCDProd
 
    @Override
    public LivroCDProdutorRuralRQ200 fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.digitado = vo.asString("DIGITADO");
         this.dtFinal = vo.asTimestamp("DTFINAL");

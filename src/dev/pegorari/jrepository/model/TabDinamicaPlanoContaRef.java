@@ -79,7 +79,7 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
 
    @Override
    public TabDinamicaPlanoContaRef fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipo = vo.asBigDecimal("TIPO");
         this.tabela = vo.asString("TABELA");
         this.ano = vo.asBigDecimal("ANO");

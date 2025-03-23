@@ -99,7 +99,7 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
 
    @Override
    public Tomador fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codFunc = vo.asBigDecimal("CODFUNC");
         this.codParc = vo.asBigDecimal("CODPARC");

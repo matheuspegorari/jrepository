@@ -319,7 +319,7 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
 
    @Override
    public PartilhaSimplesNacional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqCofins = vo.asBigDecimal("ALIQCOFINS");
         this.aliqCpp = vo.asBigDecimal("ALIQCPP");
         this.aliqCsll = vo.asBigDecimal("ALIQCSLL");

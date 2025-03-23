@@ -219,7 +219,7 @@ public class Estoque extends AbstractSankhyaEntity<Estoque> {
 
    @Override
    public Estoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.estDocAwms = vo.asBigDecimal("ESTDOCAWMS");

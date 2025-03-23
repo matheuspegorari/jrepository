@@ -99,7 +99,7 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
 
    @Override
    public PrevisaoEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.dtPrev = vo.asTimestamp("DTPREV");

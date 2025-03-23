@@ -169,7 +169,7 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
 
    @Override
    public ProcessoNegocio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");

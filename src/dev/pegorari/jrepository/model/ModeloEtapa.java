@@ -168,7 +168,7 @@ public class ModeloEtapa extends AbstractSankhyaEntity<ModeloEtapa> {
 
    @Override
    public ModeloEtapa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMetod = vo.asBigDecimal("CODMETOD");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.descricao = vo.asString("DESCRICAO");

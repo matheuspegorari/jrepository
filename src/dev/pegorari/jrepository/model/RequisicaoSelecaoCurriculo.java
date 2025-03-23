@@ -38,7 +38,7 @@ public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<Requisicao
 
    @Override
    public RequisicaoSelecaoCurriculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         return this;

@@ -319,7 +319,7 @@ public class Desconto extends AbstractSankhyaEntity<Desconto> {
 
    @Override
    public Desconto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.avisarVct = vo.asString("AVISARVCT");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

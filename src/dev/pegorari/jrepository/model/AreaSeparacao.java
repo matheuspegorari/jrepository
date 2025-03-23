@@ -259,7 +259,7 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
 
    @Override
    public AreaSeparacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.m3Max = vo.asBigDecimal("M3MAX");

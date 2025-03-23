@@ -68,7 +68,7 @@ public class OpcaoCampo extends AbstractSankhyaEntity<OpcaoCampo> {
 
    @Override
    public OpcaoCampo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuCampo = vo.asBigDecimal("NUCAMPO");
         this.opcao = vo.asString("OPCAO");
         this.ordem = vo.asBigDecimal("ORDEM");

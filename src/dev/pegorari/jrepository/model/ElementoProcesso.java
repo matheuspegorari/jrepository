@@ -148,7 +148,7 @@ public class ElementoProcesso extends AbstractSankhyaEntity<ElementoProcesso> {
 
    @Override
    public ElementoProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.documentacao = vo.asClob("DOCUMENTACAO");
         this.expressCandidade = vo.asString("EXPRESSCANDITADE");

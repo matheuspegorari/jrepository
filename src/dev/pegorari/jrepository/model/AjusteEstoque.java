@@ -69,7 +69,7 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
 
    @Override
    public AjusteEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuAjuste = vo.asBigDecimal("NUAJUSTE");

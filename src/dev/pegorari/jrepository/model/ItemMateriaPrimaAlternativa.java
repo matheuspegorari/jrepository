@@ -118,7 +118,7 @@ public class ItemMateriaPrimaAlternativa extends AbstractSankhyaEntity<ItemMater
 
    @Override
    public ItemMateriaPrimaAlternativa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.qtdFatNota = vo.asBigDecimal("QTDFATNOTA");
         this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
         this.ordem = vo.asBigDecimal("ORDEM");

@@ -69,7 +69,7 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
 
    @Override
    public TerceiroAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.codParcterc = vo.asBigDecimal("CODPARCTERC");

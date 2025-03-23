@@ -409,7 +409,7 @@ public class AlteracaoMetaOrcamento extends AbstractSankhyaEntity<AlteracaoMetaO
 
    @Override
    public AlteracaoMetaOrcamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.previsto4 = vo.asBigDecimal("PREVISTO4");
         this.previsto5 = vo.asBigDecimal("PREVISTO5");
         this.previsto6 = vo.asBigDecimal("PREVISTO6");

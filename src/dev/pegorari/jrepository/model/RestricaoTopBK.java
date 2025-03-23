@@ -88,7 +88,7 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
 
    @Override
    public RestricaoTopBK fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.restricao = vo.asString("RESTRICAO");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.codColRest = vo.asBigDecimal("CODCOLREST");

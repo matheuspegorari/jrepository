@@ -149,7 +149,7 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
 
    @Override
    public EmpenhoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveNfe = vo.asString("CHAVENFE");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");

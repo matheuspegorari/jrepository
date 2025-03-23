@@ -98,7 +98,7 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
 
    @Override
    public RomaneioWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.recontado = vo.asString("RECONTADO");
         this.codBarra = vo.asString("CODBARRA");
         this.codBarraConcat = vo.asString("CODBARRACONCAT");

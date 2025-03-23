@@ -3809,7 +3809,7 @@ public class ProdutoMateriaPrima extends AbstractSankhyaEntity<ProdutoMateriaPri
 
    @Override
    public ProdutoMateriaPrima fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdSubKit = vo.asBigDecimal("CODPRODSUBKIT");
         this.enqReintegra = vo.asString("ENQREINTEGRA");
         this.margLucro = vo.asBigDecimal("MARGLUCRO");

@@ -658,7 +658,7 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
 
    @Override
    public Veiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.corDenatran = vo.asBigDecimal("CORDENATRAN");
         this.corFab = vo.asString("CORFAB");
         this.descrEmpParc = vo.asString("DESCR_EMP_PARC");

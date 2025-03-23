@@ -109,7 +109,7 @@ public class LogAcesso extends AbstractSankhyaEntity<LogAcesso> {
 
    @Override
    public LogAcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.dhAcesso = vo.asTimestamp("DHACESSO");
         this.hostname = vo.asString("HOSTNAME");

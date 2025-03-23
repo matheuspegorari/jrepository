@@ -189,7 +189,7 @@ public class PlanejamentoEntrega extends AbstractSankhyaEntity<PlanejamentoEntre
 
    @Override
    public PlanejamentoEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.situacao = vo.asString("SITUACAO");
         this.codTipOper = vo.asString("CODTIPOPER");
         this.codUsu = vo.asBigDecimal("CODUSU");

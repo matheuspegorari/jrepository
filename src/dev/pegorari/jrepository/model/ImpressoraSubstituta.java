@@ -58,7 +58,7 @@ public class ImpressoraSubstituta extends AbstractSankhyaEntity<ImpressoraSubsti
 
    @Override
    public ImpressoraSubstituta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.originalPrinterName = vo.asString("ORIGINALPRINTERNAME");
         this.printerUri = vo.asString("PRINTERURI");

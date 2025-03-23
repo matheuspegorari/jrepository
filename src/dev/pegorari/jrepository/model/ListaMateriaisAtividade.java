@@ -299,7 +299,7 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
 
    @Override
    public ListaMateriaisAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLocalBaixa = vo.asBigDecimal("CODLOCALBAIXA");
         this.percDesvioInf = vo.asBigDecimal("PERCDESVIOINF");
         this.percDesvioSup = vo.asBigDecimal("PERCDESVIOSUP");

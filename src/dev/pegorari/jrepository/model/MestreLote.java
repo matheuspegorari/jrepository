@@ -159,7 +159,7 @@ public class MestreLote extends AbstractSankhyaEntity<MestreLote> {
 
    @Override
    public MestreLote fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.comentarios = vo.asString("COMENTARIOS");
         this.codEmp = vo.asBigDecimal("CODEMP");

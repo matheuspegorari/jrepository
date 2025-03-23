@@ -79,7 +79,7 @@ public class ConfiguracaoDFe extends AbstractSankhyaEntity<ConfiguracaoDFe> {
 
    @Override
    public ConfiguracaoDFe fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.mdeProxConsCte = vo.asTimestamp("MDEPROXCONSCTE");
         this.mdeProxConsulta = vo.asTimestamp("MDEPROXCONSULTA");

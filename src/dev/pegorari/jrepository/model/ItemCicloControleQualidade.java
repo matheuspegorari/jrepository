@@ -99,7 +99,7 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
 
    @Override
    public ItemCicloControleQualidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idSubfluxo = vo.asString("IDSUBFLUXO");
         this.resultado = vo.asString("RESULTADO");
         this.idCcq = vo.asBigDecimal("IDCCQ");

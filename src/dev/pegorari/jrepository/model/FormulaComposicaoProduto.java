@@ -218,7 +218,7 @@ public class FormulaComposicaoProduto extends AbstractSankhyaEntity<FormulaCompo
 
    @Override
    public FormulaComposicaoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.cicloProducao = vo.asBigDecimal("CICLOPRODUCAO");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

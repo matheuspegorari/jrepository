@@ -68,7 +68,7 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
 
    @Override
    public FormularioElemento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ideFx = vo.asBigDecimal("IDEFX");
         this.idForm = vo.asBigDecimal("IDFORM");
         this.obrigatorio = vo.asString("OBRIGATORIO");

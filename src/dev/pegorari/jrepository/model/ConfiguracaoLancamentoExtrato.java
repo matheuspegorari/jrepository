@@ -169,7 +169,7 @@ public class ConfiguracaoLancamentoExtrato extends AbstractSankhyaEntity<Configu
 
    @Override
    public ConfiguracaoLancamentoExtrato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProj = vo.asBigDecimal("CODPROJ");
         this.catLanc = vo.asBigDecimal("CATLANC");
         this.codBco = vo.asBigDecimal("CODBCO");

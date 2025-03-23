@@ -79,7 +79,7 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
 
    @Override
    public InformacaoDeclaracaoExportacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPaisDestino = vo.asBigDecimal("CODPAISDESTINO");
         this.dtaVerbacao = vo.asTimestamp("DTAVERBACAO");
         this.dtDeclaracao = vo.asTimestamp("DTDECLARACAO");

@@ -138,7 +138,7 @@ public class CategoriaRecurso extends AbstractSankhyaEntity<CategoriaRecurso> {
 
    @Override
    public CategoriaRecurso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");
         this.codCre = vo.asBigDecimal("CODCRE");

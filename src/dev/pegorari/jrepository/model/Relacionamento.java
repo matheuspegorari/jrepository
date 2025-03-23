@@ -219,7 +219,7 @@ public class Relacionamento extends AbstractSankhyaEntity<Relacionamento> {
 
    @Override
    public Relacionamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codAtendente = vo.asBigDecimal("CODATENDENTE");
         this.codContato = vo.asBigDecimal("CODCONTATO");
         this.codHist = vo.asBigDecimal("CODHIST");

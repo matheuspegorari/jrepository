@@ -409,7 +409,7 @@ public class Separacao extends AbstractSankhyaEntity<Separacao> {
 
    @Override
    public Separacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.statusConf = vo.asBigDecimal("STATUSCONF");
         this.tipoSplit = vo.asBigDecimal("TIPOSPLIT");
         this.codAreaConf = vo.asBigDecimal("CODAREACONF");

@@ -99,7 +99,7 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
 
    @Override
    public AcertoFrete fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.nuAcerto = vo.asBigDecimal("NUACERTO");

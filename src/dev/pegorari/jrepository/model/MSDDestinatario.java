@@ -108,7 +108,7 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
 
    @Override
    public MSDDestinatario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.celular = vo.asString("CELULAR");
         this.codCon = vo.asBigDecimal("CODCON");

@@ -209,7 +209,7 @@ public class MSDVariavel extends AbstractSankhyaEntity<MSDVariavel> {
 
    @Override
    public MSDVariavel fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativa = vo.asString("ATIVA");
         this.cfgDtResol = vo.asString("CFGDTRESOL");
         this.codGrupo = vo.asBigDecimal("CODGRUPO");

@@ -59,7 +59,7 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
 
    @Override
    public TransferenciaVerbaOrcamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codMeta = vo.asBigDecimal("CODMETA");
         this.dhTransf = vo.asTimestamp("DHTRANSF");
         this.nuTvo = vo.asBigDecimal("NUTVO");

@@ -129,7 +129,7 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
 
    @Override
    public ErroContabilizacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.contabilizado = vo.asString("CONTABILIZADO");
         this.descricao = vo.asString("DESCRICAO");

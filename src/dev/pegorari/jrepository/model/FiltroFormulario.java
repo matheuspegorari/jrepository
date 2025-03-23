@@ -79,7 +79,7 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
 
    @Override
    public FiltroFormulario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhAlter = vo.asTimestamp("DHALTER");
         this.expressao = vo.asString("EXPRESSAO");

@@ -119,7 +119,7 @@ public class ResumoPorReferencia extends AbstractSankhyaEntity<ResumoPorReferenc
 
    @Override
    public ResumoPorReferencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dhProcess = vo.asTimestamp("DHPROCESS");
         this.dtRef = vo.asTimestamp("DTREF");

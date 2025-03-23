@@ -58,7 +58,7 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
 
    @Override
    public CabecalhoSLA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
         this.descricao = vo.asString("DESCRICAO");
         this.nuSla = vo.asBigDecimal("NUSLA");

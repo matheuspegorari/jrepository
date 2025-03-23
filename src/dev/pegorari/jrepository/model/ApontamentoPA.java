@@ -128,7 +128,7 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
 
    @Override
    public ApontamentoPA fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referencia = vo.asString("REFERENCIA");
         this.qtdFatsp = vo.asBigDecimal("QTDFATSP");
         this.qtdApontada = vo.asBigDecimal("QTDAPONTADA");

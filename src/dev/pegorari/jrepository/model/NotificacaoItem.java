@@ -79,7 +79,7 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
 
    @Override
    public NotificacaoItem fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhUltPostagem = vo.asTimestamp("DHULTPOSTAGEM");
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");

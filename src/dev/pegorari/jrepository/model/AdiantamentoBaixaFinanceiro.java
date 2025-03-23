@@ -69,7 +69,7 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
 
    @Override
    public AdiantamentoBaixaFinanceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhMov = vo.asTimestamp("DHMOV");
         this.nuAntecipa = vo.asBigDecimal("NUANTECIPA");

@@ -58,7 +58,7 @@ public class ComissaoVendedorGrupo extends AbstractSankhyaEntity<ComissaoVendedo
 
    @Override
    public ComissaoVendedorGrupo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTipParc = vo.asBigDecimal("CODTIPPARC");
         this.codVend = vo.asBigDecimal("CODVEND");
         this.comissao = vo.asBigDecimal("COMISSAO");

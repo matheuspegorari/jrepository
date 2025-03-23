@@ -119,7 +119,7 @@ public class EnvioQuestionario extends AbstractSankhyaEntity<EnvioQuestionario> 
 
    @Override
    public EnvioQuestionario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.chave2 = vo.asBigDecimal("CHAVE2");
         this.codFila = vo.asBigDecimal("CODFILA");

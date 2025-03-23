@@ -179,7 +179,7 @@ public class RateioVeiculo extends AbstractSankhyaEntity<RateioVeiculo> {
 
    @Override
    public RateioVeiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.afericao = vo.asBigDecimal("AFERICAO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

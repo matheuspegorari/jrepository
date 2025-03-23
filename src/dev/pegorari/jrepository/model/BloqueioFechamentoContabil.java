@@ -249,7 +249,7 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
 
    @Override
    public BloqueioFechamentoContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dtFechamentoBco = vo.asTimestamp("DTFECHAMENTOBCO");
         this.dtFechamentoCtb = vo.asTimestamp("DTFECHAMENTOCTB");

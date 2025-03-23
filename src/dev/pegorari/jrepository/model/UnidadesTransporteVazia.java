@@ -68,7 +68,7 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
 
    @Override
    public UnidadesTransporteVazia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUnitv = vo.asBigDecimal("CODUNITV");
         this.idUnidTransVazia = vo.asString("IDUNIDTRANSVAZIA");
         this.nuViag = vo.asBigDecimal("NUVIAG");

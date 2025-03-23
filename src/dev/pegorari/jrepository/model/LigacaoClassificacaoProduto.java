@@ -38,7 +38,7 @@ public class LigacaoClassificacaoProduto extends AbstractSankhyaEntity<LigacaoCl
 
    @Override
    public LigacaoClassificacaoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codClassif = vo.asBigDecimal("CODCLASSIF");
         this.codProd = vo.asBigDecimal("CODPROD");
         return this;

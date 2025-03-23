@@ -259,7 +259,7 @@ public class Site extends AbstractSankhyaEntity<Site> {
 
    @Override
    public Site fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abreviatura = vo.asString("ABREVIATURA");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

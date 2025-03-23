@@ -88,7 +88,7 @@ public class RequisitoFap extends AbstractSankhyaEntity<RequisitoFap> {
 
    @Override
    public RequisitoFap fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.casoUso = vo.asString("CASOUSO");
         this.codReq = vo.asBigDecimal("CODREQ");
         this.descricao = vo.asString("DESCRICAO");

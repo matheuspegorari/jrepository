@@ -89,7 +89,7 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
 
    @Override
    public DevolucaoWMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.qtdDevolver = vo.asBigDecimal("QTDDEVOLVER");
         this.nuNota = vo.asBigDecimal("NUNOTA");

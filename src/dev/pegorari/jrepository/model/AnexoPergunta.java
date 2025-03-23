@@ -78,7 +78,7 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
 
    @Override
    public AnexoPergunta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPerg = vo.asBigDecimal("CODPERG");
         this.conteudo = vo.asBlob("CONTEUDO");
         this.descricao = vo.asString("DESCRICAO");

@@ -119,7 +119,7 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
 
    @Override
    public SaldoECD fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.saldoFinMes = vo.asBigDecimal("SALDOFINMES");
         this.referencia = vo.asTimestamp("REFERENCIA");
         this.indStIni = vo.asString("INDSTINI");

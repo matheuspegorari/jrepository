@@ -78,7 +78,7 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
 
    @Override
    public RestricaoTop fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codColRest = vo.asBigDecimal("CODCOLREST");
         this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         this.descricao = vo.asString("DESCRICAO");

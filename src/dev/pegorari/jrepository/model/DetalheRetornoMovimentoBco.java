@@ -98,7 +98,7 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
 
    @Override
    public DetalheRetornoMovimentoBco fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.idLinha = vo.asString("IDLINHA");
         this.idValor = vo.asString("IDVALOR");

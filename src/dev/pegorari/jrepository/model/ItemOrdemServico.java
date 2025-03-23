@@ -719,7 +719,7 @@ public class ItemOrdemServico extends AbstractSankhyaEntity<ItemOrdemServico> {
 
    @Override
    public ItemOrdemServico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.classificacao = vo.asString("CLASSIFICACAO");
         this.cobrar = vo.asString("COBRAR");
         this.codCencusPad = vo.asBigDecimal("CODCENCUSPAD");

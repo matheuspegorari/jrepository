@@ -339,7 +339,7 @@ public class InstanciaAtividade extends AbstractSankhyaEntity<InstanciaAtividade
 
    @Override
    public InstanciaAtividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.statusInstCicloContQual = vo.asString("STATUSINSTCICLOCONTQUAL");
         this.nroLote = vo.asString("NROLOTE");

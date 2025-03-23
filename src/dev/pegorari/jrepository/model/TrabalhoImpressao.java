@@ -199,7 +199,7 @@ public class TrabalhoImpressao extends AbstractSankhyaEntity<TrabalhoImpressao> 
 
    @Override
    public TrabalhoImpressao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.copies = vo.asBigDecimal("COPIES");
         this.description = vo.asString("DESCRIPTION");

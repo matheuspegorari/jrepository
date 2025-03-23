@@ -38,7 +38,7 @@ public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVei
 
    @Override
    public ProdutoModeloVeiculo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codModVei = vo.asBigDecimal("CODMODVEI");
         this.codProd = vo.asBigDecimal("CODPROD");
         return this;

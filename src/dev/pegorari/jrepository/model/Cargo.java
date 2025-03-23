@@ -279,7 +279,7 @@ public class Cargo extends AbstractSankhyaEntity<Cargo> {
 
    @Override
    public Cargo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.descrCargo = vo.asString("DESCRCARGO");
         this.dtAlter = vo.asTimestamp("DTALTER");

@@ -349,7 +349,7 @@ public class EventoAgendado extends AbstractSankhyaEntity<EventoAgendado> {
 
    @Override
    public EventoAgendado fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
         this.codEtapa = vo.asBigDecimal("CODETAPA");

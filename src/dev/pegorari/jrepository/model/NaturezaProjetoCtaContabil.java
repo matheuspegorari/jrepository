@@ -58,7 +58,7 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
 
    @Override
    public NaturezaProjetoCtaContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.priorizarRateio = vo.asString("PRIORIZARRATEIO");
         this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
         this.codProj = vo.asBigDecimal("CODPROJ");

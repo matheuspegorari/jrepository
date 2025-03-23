@@ -89,7 +89,7 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
 
    @Override
    public ConferenciaPedido fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.nuConf = vo.asBigDecimal("NUCONF");

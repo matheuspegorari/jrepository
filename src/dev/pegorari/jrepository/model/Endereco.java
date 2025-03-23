@@ -99,7 +99,7 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
 
    @Override
    public Endereco fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEnd = vo.asBigDecimal("CODEND");
         this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");
         this.dtAlter = vo.asTimestamp("DTALTER");

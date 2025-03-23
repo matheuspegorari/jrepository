@@ -2449,7 +2449,7 @@ public class Parceiro extends AbstractSankhyaEntity<Parceiro> {
 
    @Override
    public Parceiro fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.identInscEstad = vo.asString("IDENTINSCESTAD");
         this.implAudolote = vo.asString("IMPLAUDOLOTE");
         this.indNatRet = vo.asString("INDNATRET");

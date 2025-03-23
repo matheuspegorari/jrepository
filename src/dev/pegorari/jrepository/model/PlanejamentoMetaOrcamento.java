@@ -37,7 +37,7 @@ public class PlanejamentoMetaOrcamento extends AbstractSankhyaEntity<Planejament
 
    @Override
    public PlanejamentoMetaOrcamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.config = vo.asClob("CONFIG");
         return this;

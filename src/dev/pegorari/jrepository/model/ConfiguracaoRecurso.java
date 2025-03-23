@@ -68,7 +68,7 @@ public class ConfiguracaoRecurso extends AbstractSankhyaEntity<ConfiguracaoRecur
 
    @Override
    public ConfiguracaoRecurso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asString("CHAVE");
         this.chavePai = vo.asString("CHAVEPAI");
         this.codUsu = vo.asBigDecimal("CODUSU");

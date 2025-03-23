@@ -68,7 +68,7 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
 
    @Override
    public RelacionamentoUsuario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuRel = vo.asBigDecimal("CODUSUREL");
         this.tipo = vo.asString("TIPO");

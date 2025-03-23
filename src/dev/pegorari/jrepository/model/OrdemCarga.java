@@ -549,7 +549,7 @@ public class OrdemCarga extends AbstractSankhyaEntity<OrdemCarga> {
 
    @Override
    public OrdemCarga fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codDoca = vo.asBigDecimal("CODDOCA");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codLocal = vo.asBigDecimal("CODLOCAL");

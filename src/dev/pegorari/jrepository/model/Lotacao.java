@@ -99,7 +99,7 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
 
    @Override
    public Lotacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.nuOcor = vo.asBigDecimal("NUOCOR");
         this.codCargo = vo.asBigDecimal("CODCARGO");
         this.codEmp = vo.asBigDecimal("CODEMP");

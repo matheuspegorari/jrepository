@@ -138,7 +138,7 @@ public class ConfigsOAuth extends AbstractSankhyaEntity<ConfigsOAuth> {
 
    @Override
    public ConfigsOAuth fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.clientId = vo.asString("CLIENTID");
         this.clientSecret = vo.asString("CLIENTSECRET");
         this.codAth = vo.asBigDecimal("CODATH");

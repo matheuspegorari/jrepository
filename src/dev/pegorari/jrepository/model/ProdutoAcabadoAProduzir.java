@@ -129,7 +129,7 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
 
    @Override
    public ProdutoAcabadoAProduzir fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtVal = vo.asTimestamp("DTVAL");
         this.dtFab = vo.asTimestamp("DTFAB");
         this.referencia = vo.asString("REFERENCIA");

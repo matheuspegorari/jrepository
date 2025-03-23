@@ -109,7 +109,7 @@ public class CargosEtapasProcesso extends AbstractSankhyaEntity<CargosEtapasProc
 
    @Override
    public CargosEtapasProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEtapa = vo.asBigDecimal("CODETAPA");
         this.seqEtapa = vo.asBigDecimal("SEQETAPA");
         this.codCargo = vo.asBigDecimal("CODCARGO");

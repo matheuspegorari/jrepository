@@ -129,7 +129,7 @@ public class MetaContabil extends AbstractSankhyaEntity<MetaContabil> {
 
    @Override
    public MetaContabil fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCco = vo.asBigDecimal("CODCCO");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codCtactb = vo.asBigDecimal("CODCTACTB");

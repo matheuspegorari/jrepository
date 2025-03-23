@@ -128,7 +128,7 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
 
    @Override
    public LigacaoNotasSaidasEntradas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baseSubst = vo.asBigDecimal("BASESUBST");
         this.vlrSubst = vo.asBigDecimal("VLRSUBST");
         this.nuNota = vo.asBigDecimal("NUNOTA");

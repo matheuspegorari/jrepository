@@ -219,7 +219,7 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
 
    @Override
    public MaterialAlternativo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.referenciaMpAlt = vo.asString("REFERENCIAMPALT");
         this.referenciaMp = vo.asString("REFERENCIAMP");
         this.codProdMp = vo.asBigDecimal("CODPRODMP");

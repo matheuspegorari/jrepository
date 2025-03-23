@@ -179,7 +179,7 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
 
    @Override
    public ProcessoAdmJudicial fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.autoria = vo.asString("AUTORIA");
         this.codCid = vo.asBigDecimal("CODCID");

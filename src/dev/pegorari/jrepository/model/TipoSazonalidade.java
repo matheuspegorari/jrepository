@@ -38,7 +38,7 @@ public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
 
    @Override
    public TipoSazonalidade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTipSaz = vo.asBigDecimal("CODTIPSAZ");
         this.descricao = vo.asString("DESCRICAO");
         return this;

@@ -78,7 +78,7 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
 
    @Override
    public ExecutanteCandidato fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codigo = vo.asBigDecimal("CODIGO");
         this.formula = vo.asString("FORMULA");
         this.ideFx = vo.asBigDecimal("IDEFX");

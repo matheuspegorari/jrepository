@@ -949,7 +949,7 @@ public class ItemCotacao extends AbstractSankhyaEntity<ItemCotacao> {
 
    @Override
    public ItemCotacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqIcms = vo.asBigDecimal("ALIQICMS");
         this.aliqIpi = vo.asBigDecimal("ALIQIPI");
         this.cabecalho = vo.asString("CABECALHO");

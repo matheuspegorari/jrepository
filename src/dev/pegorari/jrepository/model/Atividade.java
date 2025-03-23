@@ -488,7 +488,7 @@ public class Atividade extends AbstractSankhyaEntity<Atividade> {
 
    @Override
    public Atividade fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.tipoConferencia = vo.asString("TIPOCONFERENCIA");
         this.concluIcq = vo.asString("CONCLUICQ");
         this.usaSeqCodBar = vo.asString("USASEQCODBAR");

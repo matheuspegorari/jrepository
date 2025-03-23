@@ -109,7 +109,7 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
 
    @Override
    public FormaTributacaoPeriodo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");
         this.mes3BalRed = vo.asString("MES3BALRED");

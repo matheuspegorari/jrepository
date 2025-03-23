@@ -78,7 +78,7 @@ public class ContaSMS extends AbstractSankhyaEntity<ContaSMS> {
 
    @Override
    public ContaSMS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codContaSms = vo.asBigDecimal("CODCONTASMS");
         this.descricao = vo.asString("DESCRICAO");
         this.nomeRemetente = vo.asString("NOMEREMETENTE");

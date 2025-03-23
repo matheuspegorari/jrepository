@@ -89,7 +89,7 @@ public class ExecutanteTarefa extends AbstractSankhyaEntity<ExecutanteTarefa> {
 
    @Override
    public ExecutanteTarefa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chave = vo.asBigDecimal("CHAVE");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.codUsuExec = vo.asBigDecimal("CODUSUEXEC");

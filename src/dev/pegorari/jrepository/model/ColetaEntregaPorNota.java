@@ -98,7 +98,7 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
 
    @Override
    public ColetaEntregaPorNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.cgcCpf = vo.asString("CGC_CPF");
         this.codMunFis = vo.asBigDecimal("CODMUNFIS");
         this.codParc = vo.asBigDecimal("CODPARC");

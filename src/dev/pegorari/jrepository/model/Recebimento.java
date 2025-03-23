@@ -229,7 +229,7 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
 
    @Override
    public Recebimento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.descrsituacao = vo.asString("DESCRSITUACAO");
         this.numPedido2 = vo.asString("NUMPEDIDO2");
         this.codDoca = vo.asBigDecimal("CODDOCA");

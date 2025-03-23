@@ -179,7 +179,7 @@ public class InstanciaProcesso extends AbstractSankhyaEntity<InstanciaProcesso> 
 
    @Override
    public InstanciaProcesso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codPrn = vo.asBigDecimal("CODPRN");
         this.codUsuInc = vo.asBigDecimal("CODUSUINC");
         this.dhConclusao = vo.asTimestamp("DHCONCLUSAO");

@@ -289,7 +289,7 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
 
    @Override
    public ProgramacaoFerias fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.abonoInicio = vo.asString("ABONOINICIO");
         this.abonoPec = vo.asBigDecimal("ABONOPEC");
         this.atualFergoz = vo.asString("ATUALFERGOZ");

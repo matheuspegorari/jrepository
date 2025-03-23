@@ -179,7 +179,7 @@ public class ApuracaoReceitaMensal extends AbstractSankhyaEntity<ApuracaoReceita
 
    @Override
    public ApuracaoReceitaMensal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.dtRef = vo.asTimestamp("DTREF");

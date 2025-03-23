@@ -179,7 +179,7 @@ public class RegistroConferencia extends AbstractSankhyaEntity<RegistroConferenc
 
    @Override
    public RegistroConferencia fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codBarra = vo.asString("CODBARRA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsuConf = vo.asBigDecimal("CODUSUCONF");

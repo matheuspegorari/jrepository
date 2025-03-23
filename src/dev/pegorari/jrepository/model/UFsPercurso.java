@@ -68,7 +68,7 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
 
    @Override
    public UFsPercurso fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         this.codUf = vo.asBigDecimal("CODUF");
         this.nuViag = vo.asBigDecimal("NUVIAG");

@@ -68,7 +68,7 @@ public class ProdutoDivergente extends AbstractSankhyaEntity<ProdutoDivergente> 
 
    @Override
    public ProdutoDivergente fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codVol = vo.asString("CODVOL");
         this.controle = vo.asString("CONTROLE");

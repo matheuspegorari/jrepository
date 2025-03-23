@@ -119,7 +119,7 @@ public class MultiplasDatasEntrega extends AbstractSankhyaEntity<MultiplasDatasE
 
    @Override
    public MultiplasDatasEntrega fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.sequencia = vo.asBigDecimal("SEQUENCIA");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.qtdEntrega = vo.asBigDecimal("QTDENTREGA");

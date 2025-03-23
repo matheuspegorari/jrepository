@@ -79,7 +79,7 @@ public class ResumoLoteFaturamento extends AbstractSankhyaEntity<ResumoLoteFatur
 
    @Override
    public ResumoLoteFaturamento fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
         this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
         this.numLote = vo.asBigDecimal("NUMLOTE");

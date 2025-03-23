@@ -138,7 +138,7 @@ public class ApuracaoSimplesNacional extends AbstractSankhyaEntity<ApuracaoSimpl
 
    @Override
    public ApuracaoSimplesNacional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aliqEfetivaMercExt = vo.asBigDecimal("ALIQEFETIVAMERCEXT");
         this.aliqEfetivaMercInt = vo.asBigDecimal("ALIQEFETIVAMERCINT");
         this.faixaMercExt = vo.asBigDecimal("FAIXAMERCEXT");

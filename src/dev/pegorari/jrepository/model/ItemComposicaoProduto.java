@@ -498,7 +498,7 @@ public class ItemComposicaoProduto extends AbstractSankhyaEntity<ItemComposicaoP
 
    @Override
    public ItemComposicaoProduto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.preco = vo.asBigDecimal("PRECO");
         this.referenciaMp = vo.asString("REFERENCIAMP");
         this.atualEstoque = vo.asString("ATUALESTOQUE");

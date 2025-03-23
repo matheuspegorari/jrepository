@@ -58,7 +58,7 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
 
    @Override
    public ItemNotaOutbox fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idOutbox = vo.asString("IDOUTBOX");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.qtd = vo.asBigDecimal("QTD");

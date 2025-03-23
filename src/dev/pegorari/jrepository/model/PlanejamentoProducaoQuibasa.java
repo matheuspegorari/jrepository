@@ -109,7 +109,7 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
 
    @Override
    public PlanejamentoProducaoQuibasa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.numPlan = vo.asBigDecimal("NUMPLAN");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codProd = vo.asBigDecimal("CODPROD");

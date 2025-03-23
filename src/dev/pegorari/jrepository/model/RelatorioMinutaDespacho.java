@@ -169,7 +169,7 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
 
    @Override
    public RelatorioMinutaDespacho fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idTela = vo.asString("IDTELA");
         this.nuInstancia = vo.asBigDecimal("NUINSTANCIA");
         this.nuRfe = vo.asBigDecimal("NURFE");

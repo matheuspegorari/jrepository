@@ -499,7 +499,7 @@ public class PlanoConta extends AbstractSankhyaEntity<PlanoConta> {
 
    @Override
    public PlanoConta fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.analitica = vo.asString("ANALITICA");
         this.ativa = vo.asString("ATIVA");
         this.bemOriginal = vo.asString("BEMORIGINAL");

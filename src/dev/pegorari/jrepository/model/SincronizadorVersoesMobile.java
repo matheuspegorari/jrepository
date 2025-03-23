@@ -48,7 +48,7 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
 
    @Override
    public SincronizadorVersoesMobile fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.id = vo.asString("ID");
         this.nomeInstancia = vo.asString("NOMEINSTANCIA");
         this.versao = vo.asBigDecimal("VERSAO");

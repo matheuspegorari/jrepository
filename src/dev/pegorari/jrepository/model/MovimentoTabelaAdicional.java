@@ -359,7 +359,7 @@ public class MovimentoTabelaAdicional extends AbstractSankhyaEntity<MovimentoTab
 
    @Override
    public MovimentoTabelaAdicional fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codCtabcoContra = vo.asBigDecimal("CODCTABCOCONTRA");
         this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
         this.codCtabcoIntDest = vo.asBigDecimal("CODCTABCOINTDEST");

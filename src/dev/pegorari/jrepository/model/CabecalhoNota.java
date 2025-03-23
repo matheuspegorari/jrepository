@@ -3689,7 +3689,7 @@ public class CabecalhoNota extends AbstractSankhyaEntity<CabecalhoNota> {
 
    @Override
    public CabecalhoNota fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
         this.codParc = vo.asBigDecimal("CODPARC");
         this.codParcConsignatario = vo.asBigDecimal("CODPARCCONSIGNATARIO");

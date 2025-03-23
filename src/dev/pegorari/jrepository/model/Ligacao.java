@@ -118,7 +118,7 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
 
    @Override
    public Ligacao fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.alterar = vo.asString("ALTERAR");
         this.condicao = vo.asString("CONDICAO");
         this.excluir = vo.asString("EXCLUIR");

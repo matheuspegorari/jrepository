@@ -79,7 +79,7 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
 
    @Override
    public ItemAjusteIpi fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dtAlter = vo.asTimestamp("DTALTER");

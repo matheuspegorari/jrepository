@@ -48,7 +48,7 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
 
    @Override
    public NotificacaoSonora fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.arqSom = vo.asString("ARQSOM");
         this.numItem = vo.asBigDecimal("NUMITEM");
         this.numOs = vo.asBigDecimal("NUMOS");

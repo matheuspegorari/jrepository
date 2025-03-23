@@ -259,7 +259,7 @@ public class EtapaProjeto extends AbstractSankhyaEntity<EtapaProjeto> {
 
    @Override
    public EtapaProjeto fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.chaveImp = vo.asBigDecimal("CHAVEIMP");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.concluida = vo.asString("CONCLUIDA");

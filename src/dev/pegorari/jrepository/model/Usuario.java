@@ -1129,7 +1129,7 @@ public class Usuario extends AbstractSankhyaEntity<Usuario> {
 
    @Override
    public Usuario fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dtLimAcesso = vo.asTimestamp("DTLIMACESSO");
         this.exibirValAnalRent = vo.asString("EXIBIRVALANALRENT");
         this.foto = vo.asBlob("FOTO");

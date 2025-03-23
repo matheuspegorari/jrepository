@@ -89,7 +89,7 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
 
    @Override
    public LogRelatorio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.className = vo.asString("CLASSNAME");
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.consulta = vo.asString("CONSULTA");

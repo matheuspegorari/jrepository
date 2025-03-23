@@ -189,7 +189,7 @@ public class TabelaFaixas extends AbstractSankhyaEntity<TabelaFaixas> {
 
    @Override
    public TabelaFaixas fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codTab = vo.asBigDecimal("CODTAB");
         this.descrTab = vo.asString("DESCRTAB");
         this.dtAlter = vo.asTimestamp("DTALTER");

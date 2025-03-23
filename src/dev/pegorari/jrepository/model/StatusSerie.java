@@ -68,7 +68,7 @@ public class StatusSerie extends AbstractSankhyaEntity<StatusSerie> {
 
    @Override
    public StatusSerie fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProd = vo.asBigDecimal("CODPROD");
         this.nuNota = vo.asBigDecimal("NUNOTA");
         this.seqNota = vo.asBigDecimal("SEQNOTA");

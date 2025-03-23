@@ -48,7 +48,7 @@ public class LogImportacaoPO extends AbstractSankhyaEntity<LogImportacaoPO> {
 
    @Override
    public LogImportacaoPO fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.erro = vo.asString("ERRO");
         this.nroLinha = vo.asBigDecimal("NROLINHA");
         this.nuImport = vo.asBigDecimal("NUIMPORT");

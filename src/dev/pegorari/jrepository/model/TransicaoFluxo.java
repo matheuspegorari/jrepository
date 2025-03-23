@@ -98,7 +98,7 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
 
    @Override
    public TransicaoFluxo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.defStatusExec = vo.asString("DEFSTATUSEXEC");
         this.expCondicao = vo.asString("EXPCONDICAO");
         this.ideFx = vo.asBigDecimal("IDEFX");

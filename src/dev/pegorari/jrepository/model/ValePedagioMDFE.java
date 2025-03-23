@@ -108,7 +108,7 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
 
    @Override
    public ValePedagioMDFE fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codParcPag = vo.asBigDecimal("CODPARCPAG");
         this.codParcForn = vo.asBigDecimal("CODPARCFORN");
         this.nuCompra = vo.asString("NUCOMPRA");

@@ -108,7 +108,7 @@ public class GrupoProdutoIcmsEmpresa extends AbstractSankhyaEntity<GrupoProdutoI
 
    @Override
    public GrupoProdutoIcmsEmpresa fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
         this.grupoIcms = vo.asBigDecimal("GRUPOICMS");

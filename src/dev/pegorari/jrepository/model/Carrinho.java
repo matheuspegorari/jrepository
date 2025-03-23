@@ -178,7 +178,7 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
 
    @Override
    public Carrinho fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codLocal = vo.asBigDecimal("CODLOCAL");
         this.codProd = vo.asBigDecimal("CODPROD");
         this.codVol = vo.asString("CODVOL");

@@ -318,7 +318,7 @@ public class OcorrenciaBancariaRetorno extends AbstractSankhyaEntity<OcorrenciaB
 
    @Override
    public OcorrenciaBancariaRetorno fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.baixaParcial = vo.asString("BAIXAPARCIAL");
         this.codCencus = vo.asBigDecimal("CODCENCUS");
         this.codEmp = vo.asBigDecimal("CODEMP");

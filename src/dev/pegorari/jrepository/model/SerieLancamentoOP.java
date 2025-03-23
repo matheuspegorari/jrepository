@@ -58,7 +58,7 @@ public class SerieLancamentoOP extends AbstractSankhyaEntity<SerieLancamentoOP> 
 
    @Override
    public SerieLancamentoOP fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codProdPa = vo.asBigDecimal("CODPRODPA");
         this.nuLop = vo.asBigDecimal("NULOP");
         this.seqOp = vo.asBigDecimal("SEQOP");

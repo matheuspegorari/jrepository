@@ -68,7 +68,7 @@ public class MotivosParada extends AbstractSankhyaEntity<MotivosParada> {
 
    @Override
    public MotivosParada fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.codMtp = vo.asBigDecimal("CODMTP");
         this.descricao = vo.asString("DESCRICAO");

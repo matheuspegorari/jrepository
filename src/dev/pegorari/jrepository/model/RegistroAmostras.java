@@ -279,7 +279,7 @@ public class RegistroAmostras extends AbstractSankhyaEntity<RegistroAmostras> {
 
    @Override
    public RegistroAmostras fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.idIproc = vo.asBigDecimal("IDIPROC");
         this.referencia = vo.asString("REFERENCIA");
         this.codUsu = vo.asBigDecimal("CODUSU");

@@ -178,7 +178,7 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
 
    @Override
    public RelatorioHierarquico fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.alinhamento = vo.asBigDecimal("ALINHAMENTO");
         this.codCampo = vo.asBigDecimal("CODCAMPO");
         this.codCampoPai = vo.asBigDecimal("CODCAMPOPAI");

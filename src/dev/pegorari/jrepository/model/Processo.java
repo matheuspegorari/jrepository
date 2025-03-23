@@ -119,7 +119,7 @@ public class Processo extends AbstractSankhyaEntity<Processo> {
 
    @Override
    public Processo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.codUsu = vo.asBigDecimal("CODUSU");
         this.dhFim = vo.asTimestamp("DHFIM");
         this.dhIni = vo.asTimestamp("DHINI");

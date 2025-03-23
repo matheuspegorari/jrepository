@@ -248,7 +248,7 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
 
    @Override
    public LocalEstoque fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.aceitaNovoProd = vo.asString("ACEITANOVAPROD");
         this.analitico = vo.asString("ANALITICO");
         this.ativo = vo.asString("ATIVO");

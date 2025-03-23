@@ -718,7 +718,7 @@ public class TipoTitulo extends AbstractSankhyaEntity<TipoTitulo> {
 
    @Override
    public TipoTitulo fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.ativo = vo.asString("ATIVO");
         this.baixaCerto = vo.asString("BAIXACERTO");
         this.carencia = vo.asBigDecimal("CARENCIA");

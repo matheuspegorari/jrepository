@@ -119,7 +119,7 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
 
    @Override
    public ImportacaoArquivoMOBIS fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.dhImp = vo.asTimestamp("DHIMP");
         this.msg = vo.asClob("MSG");
         this.nomeArq = vo.asString("NOMEARQ");

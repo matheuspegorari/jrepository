@@ -179,7 +179,7 @@ public class LancamentoBeneficio extends AbstractSankhyaEntity<LancamentoBenefic
 
    @Override
    public LancamentoBeneficio fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.vlrTitular = vo.asBigDecimal("VLRTITULAR");
         this.nomeFunc = vo.asString("NOMEFUNC");
         this.sequencia = vo.asBigDecimal("SEQUENCIA");

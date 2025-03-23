@@ -78,7 +78,7 @@ public class BlocosEscrituracaoFiscal extends AbstractSankhyaEntity<BlocosEscrit
 
    @Override
    public BlocosEscrituracaoFiscal fromVO(DynamicVO vo) {
-        this.setOriginalVO(vo);
+        this.setVo(vo);
         this.bloco = vo.asString("BLOCO");
         this.codEmp = vo.asBigDecimal("CODEMP");
         this.descricao = vo.asString("DESCRICAO");

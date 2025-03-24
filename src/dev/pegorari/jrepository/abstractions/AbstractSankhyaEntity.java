@@ -1,4 +1,5 @@
 package dev.pegorari.jrepository.abstractions;
+
 import br.com.sankhya.jape.vo.DynamicVO;
 import dev.pegorari.jrepository.core.JRepository;
 import dev.pegorari.jrepository.interfaces.SankhyaEntity;
@@ -10,8 +11,8 @@ import java.util.Map;
 
 
 public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implements SankhyaEntity<T> {
-    private transient DynamicVO vo;
     private final transient Map<String, Object> changes = new HashMap<>();
+    private transient DynamicVO vo;
 
     @Override
     public DynamicVO getVo() {

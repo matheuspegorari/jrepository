@@ -6,13 +6,14 @@ import br.com.sankhya.jape.wrapper.fluid.FluidCreateVO;
 import br.com.sankhya.jape.wrapper.fluid.FluidUpdateVO;
 import dev.pegorari.jrepository.interfaces.SankhyaEntity;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JRepository {
     public static <T extends SankhyaEntity<T>> T findByPK(T template, Object... pkValues) throws Exception {
+        if (pkValues == null || pkValues.length == 0) {
+            throw new IllegalArgumentException("É necessário fornecer pelo menos um valor de chave primária para o método findByPK");
+        }
+
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findByPK(pkValues);
         if (vo == null) {
@@ -22,6 +23,8 @@ public class JRepository {
     }
 
     public static <T extends SankhyaEntity<T>> List<T> find(T template, String where) throws Exception {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
+
         String entityName = template.getEntityName();
         Collection<DynamicVO> vos = JapeFactory.dao(entityName).find(where);
 

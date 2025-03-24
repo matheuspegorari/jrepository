@@ -80,6 +80,10 @@ public abstract class AbstractSankhyaEntity<T extends SankhyaEntity<T>> implemen
         return getVo().asLong(fieldName);
     }
 
+    public void set(String fieldName, Object value) {
+        markAsChanged(fieldName, value);
+    }
+
     public void persist() throws Exception {
         if (this.getVo() == null) {
             JRepository.createEntity(this);

@@ -23,10 +23,6 @@ public class AdEntity extends AbstractSankhyaEntity<AdEntity> {
         return entityName;
     }
 
-    public void set(String fieldName, Object value) {
-        markAsChanged(fieldName, value);
-    }
-
     @Override
     public AdEntity fromVO(DynamicVO vo) {
         setVo(vo);

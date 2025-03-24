@@ -1,180 +1,194 @@
-# JRepository - Acesso Simplificado ao Banco de Dados no Sankhya
+# JRepository - Acesso Tipado e Seguro ao Banco de Dados no Sankhya
 
-**JRepository** é uma camada de abstração que simplifica a interação com o **Jape Framework** do Sankhya. Inspirado no **Spring Data JPA**, ele reduz a barreira de entrada para novos desenvolvedores no ecossistema Sankhya, tornando o acesso e manipulação aos dados mais intuitivo, eficiente e escalável.
+**JRepository** é uma camada de abstração que traz forte tipagem e segurança para aplicações Sankhya. Ele transforma a interação com o **Jape Framework** em uma experiência mais robusta, previsível e manutenível, eliminando erros comuns e facilitando o desenvolvimento. Sintaxe e conceitos inspirados no **Spring Data JPA**. 
+## 🔒 Vantagens da Tipagem Forte
 
-## 🚀 Recursos
+A principal inovação do JRepository está na forte tipagem que garante:
 
-- **Reduz código repetitivo**, eliminando chamadas manuais ao `JapeFactory`.
-- **Facilita a manutenção e escalabilidade** com um design mais limpo.
-- **Encapsula a lógica de acesso aos dados** dentro das entidades.
-- **Fornece operações genéricas** como busca e atualização.
-- **Segue a filosofia do Spring Data JPA**, facilitando a adoção por novos desenvolvedores.
-- **Suporta operações em lote** para atualização e criação de múltiplas entidades em uma única chamada.
+- **Segurança em tempo de compilação**: erros são identificados antes da execução
+- **Autocompletar preciso**: seu IDE sugere apenas campos que realmente existem
+- **Validação automática**: dados incorretos são rejeitados precocemente
+- **Conversão de tipos automática**: sem necessidade de casting manual
+- **Rastreamento de mudanças**: apenas campos alterados são atualizados
+
+## ❌ Imunidade a Erros Comuns
+
+O JRepository previne diversos erros frequentes:
+
+- **Erros de digitação em nomes de campos**: impossíveis com propriedades tipadas
+- **Conversões de tipos inconsistentes**: manipulação segura com getters/setters tipados
+- **Chamadas incorretas à API**: métodos padronizados para todas operações
 
 ## 🏗️ Instalação
 
-Para usar o JRepository no seu projeto, certifique-se de ter as dependências do **Sankhya Jape** configuradas no seu projeto.
+### No Projeto de Desenvolvimento
 
-```xml
-<dependency>
-    <groupId>br.com.sankhya</groupId>
-    <artifactId>jape</artifactId>
-    <version>SUA_VERSÃO_AQUI</version>
-</dependency>
-```
+Para utilizar o JRepository no seu projeto de desenvolvimento:
 
-## 🛠️ Exemplos de Uso
+1. Baixe a versão mais recente do arquivo `jrepository-1.0.0.jar`
+2. Adicione o JAR como dependência no seu projeto:
 
-### 📌 Caso de Uso 1: Buscando um parceiro e alterando o nome do bairro dele
+**IntelliJ IDEA**:
+  - Vá para File > Project Structure > Modules
+  - Na aba Dependencies, clique em "+" e selecione "JARs or directories"
+  - Navegue até o local do `jrepository-1.0.0.jar` e adicione-o
 
-O exemplo a seguir mostra como recuperar um **parceiro** (cliente ou fornecedor) pelo seu ID, obter o bairro onde ele está localizado e alterar o nome desse bairro no banco de dados.
+**Eclipse**:
+  - Clique com o botão direito no projeto > Build Path > Configure Build Path
+  - Na aba Libraries, clique em "Add External JARs"
+  - Navegue até o local do `jrepository-1.0.0.jar` e adicione-o
 
-#### 🛑 Abordagem Tradicional (JapeWrapper)
+**Maven/Gradle**:
+ - ⏳ Em breve
+
+### No Sankhya
+
+Ao implantar sua personalização que utiliza o JRepository:
+
+1. Acesse o Sankhya
+2. Navegue a tela **Módulo Java**
+3. Clique em "Incluir" para adicionar um novo módulo
+4. Preencha os campos necessários
+5. **Importante**: Você deve adicionar tanto o JAR da sua personalização quanto o `jrepository-1.0.0.jar`
+
+> **Nota importante**: O JAR da biblioteca JRepository deve ser incluído no mesmo **Módulo Java** que a sua personalização. Isso é importante para que as classes do **JRepository** estejam disponíveis em tempo de execução.
+
+
+
+## 📊 Abordagem Antiga vs Nova
+
+### Exemplo: Buscando um parceiro e alterando seu endereço
+
+#### ❌ Abordagem Tradicional (JapeWrapper)
 
 ```java
-private static void jeitoAntigo() {
     // Obtém o parceiro pelo ID
-    JapeWrapper daoParceiro = JapeFactory.dao(DynamicEntityNames.PARCEIRO);
-    DynamicVO parceiro = daoParceiro.findByPK(BigDecimal.ONE);
+    JapeWrapper daoParceiro = JapeFactory.dao("Parceiro");
+    DynamicVO parceiro = daoParceiro.findByPK(new BigDecimal(1001));
 
-    // Obtém o código do bairro do parceiro
+    // Extraindo valores - propenso a erros de digitação e tipos
+    String nomeAtual = parceiro.asString("NOMEFARC");  // ERRO: nome do campo incorreto!
     BigDecimal codBairro = parceiro.asBigDecimal("CODBAI");
 
-    // Busca o bairro associado ao parceiro
-    JapeWrapper daoBairro = JapeFactory.dao(DynamicEntityNames.BAIRRO);
-    DynamicVO bairro = daoBairro.findByPK(codBairro);
-
-    // Atualiza o nome do bairro no banco de dados
-    daoBairro.prepareToUpdate(bairro)
-            .set("NOMEBAI", "Bairro Teste")
+    // Alteração usando builder - propenso a erros
+    daoParceiro.prepareToUpdate(parceiro)
+            .set("NUMEND", "123")  // Se o campo estiver errado, só descobrirá em tempo de execução
+            .set("COMPLEMENTO", "Apto 101")
             .update();
-}
 ```
 
 #### ✅ Nova Abordagem com JRepository
 
 ```java
-private static void jeitoNovo() {
-    // Obtém o parceiro diretamente pelo ID
-    Parceiro parceiro = JRepository.findByPK(new Parceiro(), BigDecimal.ONE);
+    // Busca tipada e segura
+    Parceiro parceiro = JRepository.findByPK(new Parceiro(), new BigDecimal(1001));
 
-    // Obtém o código do bairro associado ao parceiro
-    BigDecimal codBairro = parceiro.getCodBai();
+    // Acesso a propriedades com autocompletar e verificação de tipos
+    String nomeAtual = parceiro.getNomeParc();  // Nome correto sugerido pelo IDE
+    BigDecimal codBairro = parceiro.getCodBai();  // Tipo correto garantido
 
-    // Busca o bairro e altera o nome dele
-    Bairro bairro = JRepository.findByPK(new Bairro(), codBairro);
-    bairro.setNomeBai("Bairro Teste");
-    JRepository.update(bairro);
-}
+    // Alteração direta e segura
+    parceiro.setNumEnd("123");  // IDE mostra apenas campos válidos
+    parceiro.setComplemento("Apto 101");
+    parceiro.persist();  // Método unificado para persistência - detecta se é update
 ```
 
-### 📌 Caso de Uso 2: Utilizando em um Evento Programável
+## 🌟 Exemplos Práticos
 
-Aqui, verificamos se a operação fiscal associada a um documento está **isenta de ICMS**. Se estiver, adicionamos automaticamente uma observação explicativa na nota.
-
-#### 🛑 Abordagem Tradicional (JapeWrapper)
+### Exemplo 1: Criando uma Nova Entidade do Zero
 
 ```java
-@Override
-public void beforeInsert(PersistenceEvent persistenceEvent) throws Exception {
-    // Obtém os valores do evento de persistência
-    DynamicVO vo = (DynamicVO) persistenceEvent.getVo();
-
-    // Busca a operação pelo código e data/hora
-    JapeWrapper daoTop = JapeFactory.dao("TipoOperacao");
-    DynamicVO top = daoTop.findByPK(vo.asBigDecimal("CODTIPOPER"), vo.asTimestamp("DHTIPOPER"));
-    
-    // Se a classificação ICMS for "I" (Isento), adiciona a observação na nota
-    if (top.asString("CLASSIFICMS").equals("I")) {
-        JapeFactory.dao("CabecalhoNota").prepareToUpdate(vo)
-            .set("OBSERVACAO", "Isenção de ICMS segundo o decreto 1234/2021")
-            .update();
+public void cadastrarNovoBairro() {
+    try {
+        // Cria uma nova instância do bairro
+        Bairro novoBairro = new Bairro();
+        
+        // Define os valores usando métodos tipados
+        novoBairro.setNomeBai("Jardim América");
+        novoBairro.setCodReg(new BigDecimal(5)); // Código da região
+        novoBairro.setDescricaoCorreio("JARDIM AMERICA");
+        
+        // Persiste a nova entidade no banco de dados
+        novoBairro.persist();
+        
+        // Após a persistência, o objeto terá o VO preenchido
+        BigDecimal codBairroGerado = novoBairro.getCodBai();
+        System.out.println("Novo bairro criado com código: " + codBairroGerado);
+        
+    } catch (Exception e) {
+        throw new RuntimeException("Erro ao cadastrar novo bairro", e);
     }
 }
 ```
 
-#### ✅ Nova Abordagem com JRepository
+### Exemplo 2: Evento Programável com Verificação Fiscal
 
 ```java
 @Override
 public void beforeInsert(PersistenceEvent persistenceEvent) throws Exception {
-    // Converte o VO para um objeto da classe CabecalhoNota
-    DynamicVO vo = (DynamicVO) persistenceEvent.getVo();
-    CabecalhoNota cab = new CabecalhoNota().fromVO(vo);
-
-    // Busca a operação pelo código e data/hora
-    TipoOperacao top = JRepository.findByPK(new TipoOperacao(), cab.getCodTipOper(), cab.getDhTipOper());
-
-    // Se a operação tiver isenção de ICMS, adiciona a observação na nota
-    if (top.getClassifIcms().equals("I")) {
-        cab.setObservacao("Isenção de ICMS segundo o decreto 1234/2021");
-        JRepository.update(cab);
+    // Converte o evento em uma entidade fortemente tipada
+    CabecalhoNota cabecalho = new CabecalhoNota().fromVO((DynamicVO) persistenceEvent.getVo());
+    
+    // Busca a operação fiscal com validação automática de tipos
+    TipoOperacao tipoOperacao = JRepository.findByPK(
+        new TipoOperacao(), 
+        cabecalho.getCodTipOper(), 
+        cabecalho.getDhTipOper()
+    );
+    
+    // Verificação de isenção com campos tipados - sem risco de erros
+    if ("I".equals(tipoOperacao.getClassifIcms())) {
+        // Atualização segura com propriedades nomeadas
+        cabecalho.setObservacao("Isenção de ICMS conforme decreto 1234/2021");
+        cabecalho.persist(); // Persiste as alterações
     }
 }
 ```
 
-### 📌 Caso de Uso 3: Atualizando múltiplas entidades em lote
-
-Uma funcionalidade implementada com sucesso no JRepository é a capacidade de atualizar múltiplas entidades em uma única chamada:
-
+## 🧩 Entidades Customizadas (AD_)
+Para entidades customizadas (tabelas AD_), é possível utilizar a classe `AdEntity` para manipulação de registros.
+### Exemplo 1: Criando novo registro de tabela AD
 ```java
-public void atualizarClienteEEndereco() {
-    // Busca o cliente e seu endereço
-    Parceiro cliente = JRepository.findByPK(new Parceiro(), new BigDecimal(1001));
-    Bairro bairro = JRepository.findByPK(new Bairro(), cliente.getCodBai());
-    CEP cep = JRepository.findByPK(new CEP(), cliente.getCep());
-    
-    // Atualiza informações em múltiplas entidades
-    cliente.setNomeParc("Novo Nome Cliente");
-    bairro.setNomeBai("Novo Nome Bairro");
-    cep.setIntervalo("100-200");
-    
-    // Atualiza todas as entidades de uma só vez
-    JRepository.update(cliente, bairro, cep);
-}
+    public void cadastrarFrete() {
+        AdEntity tabelaFretes = new AdEntity("AD_FRETES"); // construtor exige o nome da entidade
+        tabelaFretes.set("CODFRETE", new BigDecimal(1)); // setando valores
+        tabelaFretes.set("VALOR", new BigDecimal(100.0));
+        tabelaFretes.persist(); // persiste a entidade
+    }
 ```
 
-### 🏆 Benefícios do JRepository
-
-✅ **Código mais limpo e modular** – Fácil de entender e manter.  
-✅ **Evita instanciar manualmente DAOs** – Reduz o risco de erros e inconsistências.  
-✅ **Utiliza objetos de domínio** – Maior organização e reutilização do código.  
-✅ **Facilidade para escalar** – Reaproveitamento de código em diferentes processos.  
-✅ **Operações em lote** – Atualização e criação de múltiplas entidades em uma única chamada.  
-✅ **Sintaxe inspirada no Spring Data JPA**, facilitando a adaptação para novos desenvolvedores.
-
-## 📚 Componentes Principais
-
-### `JRepository`
-A classe principal que gerencia as operações de **busca e atualização** de dados.
-
-#### Métodos Implementados:
-
-- **`findByPK(T template, Object... pkValues) -> T`**  
-  Retorna um registro pelo seu identificador primário.
-
-- **`find(T template, String where, Object... params) -> List<T>`**  
-  Retorna uma lista de registros que atendem a uma condição.
-
-- **`update(SankhyaEntity<?>... entities)`**  
-  Atualiza um ou mais registros existentes com as mudanças rastreadas.
-
-- **`create(SankhyaEntity<?>... entities)`**  
-  Cria um ou mais novos registros.
-
-### `SankhyaEntity`
-Interface que define o contrato para todas as entidades usadas no JRepository.
-
+### Exemplo 2: Instanciando e fazendo realizando atualização
 ```java
-public interface SankhyaEntity<T extends SankhyaEntity<T>> {
-    String getTableName();
-    String getEntityName();
-    T fromVO(DynamicVO vo);
-    DynamicVO getOriginalVO();
-    Map<String,Object> getChanges();
-    void clearChanges();
-}
+    public void atualizarFrete() {
+        AdEntity tabelaFretes = new AdEntity("AD_FRETES");
+        tabelaFretes.set("VALOR", new BigDecimal(149.9));
+        tabelaFretes.set("CODMOTORISTA", new BigDecimal(10));
+        tabelaFretes.persist(); // persiste a entidade
+    }
 ```
+### Exemplo 3: Campos AD em tabelas nativas
+O model do JRepository conta apenas com os campos nativos do Sankhya. E será atualizado de tempos em tempos. 
+Porém sempre será possível utilizar os métodos genéricos tradicionais.
+```java
+    // instanciando o parceiro    
+    Parceiro parceiro = JRepository.findByPK(new Parceiro(), new BigDecimal(1001)); 
+    BigDecimal percDesc = parceiro.asBigDecimal("AD_PERCDESC"); // obtendo um campo AD
+    parceiro.set("AD_PERCDESC", new BigDecimal(10)); // atualizando um campo AD
+    parceiro.persist();    
+```
+## 🛠️ Instalação
+- 
+
+
+## 🛠️ Ganhos Principais
+
+- **Prevenção de erros em tempo de compilação**: detecte problemas antes da execução
+- **Método unificado de persistência**: `persist()` identifica automaticamente se deve fazer insert ou update
+- **Tipagem forte**: acesso seguro a propriedades com getters/setters tipados
+- **Rastreamento automático de mudanças**: apenas campos alterados são enviados ao banco
+- **Objetos de domínio**: trabalhe com classes Java em vez de objetos genéricos
+- **Redução de código boilerplate**: menos linhas de código, maior legibilidade
+
 
 ## 🚀 Recursos Implementados
 
@@ -182,22 +196,18 @@ As seguintes funcionalidades foram implementadas com sucesso:
 
 - ✅ Busca de entidades por chave primária com `findByPK()`.
 - ✅ Busca de entidades por condições personalizadas com `find()`.
-- ✅ Atualização de registros com `update()`, incluindo suporte a atualizações em lote.
-- ✅ Criação de novos registros com `create()`, incluindo suporte a criações em lote.
+- ✅ Persistência de registros com `persist()`, incluindo suporte a inserções e atualizações automáticas.
+- ✅ Atualização de registros com `update()`.
+- ✅ Criação de novos registros com `create()`.
 - ✅ Rastreamento automático de mudanças em entidades.
 - ✅ Conversão automática entre objetos VO e entidades de domínio.
 
 ## 🛣️ Próximos Passos
 
 - ⏳ **Suporte para ligações entre entidades** (exemplo: buscar um parceiro e automaticamente carregar seu endereço e contatos).
-- ⏳ Implementação de transações mais robustas.
-- ⏳ Otimização de desempenho para operações em lote com grandes volumes.
-- ⏳ Implementação de cache para consultas frequentes.
-
+- ⏳ **Suporte para deleção de registros** (Por PK ou por condições).
+- ⏳ Página de documentação detalhada.
+- ⏳ Implementação de forma nativa no Sankhya
 ---
 
-🎯 **JRepository** torna o acesso aos dados do Sankhya mais **simples, rápido e organizado**, reduzindo a barreira de entrada para novos desenvolvedores ao trazer conceitos inspirados no **Spring Data JPA**.
-
-## 🤝 Contribuindo
-
-Fique à vontade para abrir issues ou enviar pull requests para aprimorar este projeto!
+🔐 **JRepository**: Transformando o acesso a dados no Sankhya em uma experiência tipada, segura e produtiva.

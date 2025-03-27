@@ -176,9 +176,6 @@ Porém sempre será possível utilizar os métodos genéricos tradicionais.
     parceiro.set("AD_PERCDESC", new BigDecimal(10)); // atualizando um campo AD
     parceiro.persist();    
 ```
-## 🛠️ Instalação
-- 
-
 
 ## 🛠️ Ganhos Principais
 
@@ -210,4 +207,4 @@ As seguintes funcionalidades foram implementadas com sucesso:
 - ⏳ Implementação de forma nativa no Sankhya
 ---
 
-🔐 **JRepository**: Transformando o acesso a dados no Sankhya em uma experiência tipada, segura e produtiva.
+🔐 **JRepository**: Built with ❤️ by pegorari.dev

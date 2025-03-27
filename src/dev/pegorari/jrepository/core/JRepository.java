@@ -10,6 +10,7 @@ import java.util.*;
 
 public class JRepository {
     public static <T extends SankhyaEntity<T>> T findByPK(T template, Object... pkValues) throws Exception {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         if (pkValues == null || pkValues.length == 0) {
             throw new IllegalArgumentException("É necessário fornecer pelo menos um valor de chave primária para o método findByPK");
         }
@@ -37,6 +38,7 @@ public class JRepository {
     }
 
     public static <T extends SankhyaEntity<T>> List<T> find(T template, String where, Object... params) throws Exception {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         String entityName = template.getEntityName();
         Collection<DynamicVO> vos = JapeFactory.dao(entityName).find(where, params);
 
@@ -49,6 +51,7 @@ public class JRepository {
     }
 
     public static <T extends SankhyaEntity<T>> T findOne(T template, String where) throws Exception {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findOne(where);
         if (vo == null) {
@@ -58,6 +61,7 @@ public class JRepository {
     }
 
     public static <T extends SankhyaEntity<T>> T findOne(T template, String where, Object... params) throws Exception {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         String entityName = template.getEntityName();
         DynamicVO vo = JapeFactory.dao(entityName).findOne(where, params);
         if (vo == null) {
@@ -87,7 +91,7 @@ public class JRepository {
             updater.update();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Erro ao atualizar entidade", e);
+            throw new RuntimeException("Erro ao atualizar entidade. " + e.getMessage(), e);
         }
 
         entity.clearChanges();
@@ -115,22 +119,24 @@ public class JRepository {
             persistedEntity = inserter.save();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Erro ao criar entidade", e);
+            throw new RuntimeException("Erro ao criar entidade. " + e.getMessage(), e);
         }
         entity.fromVO(persistedEntity);
     }
 
     @SuppressWarnings("unchecked")
     private static <T extends SankhyaEntity<T>> T createNewInstance(T template) {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         try {
             return (T) template.getClass().getDeclaredConstructor().newInstance();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Erro ao criar nova instância", e);
+            throw new RuntimeException("Erro ao criar nova instância. " + e.getMessage(), e);
         }
     }
 
     public static <T extends SankhyaEntity<T>> T createEntity(T template, DynamicVO vo) {
+        Objects.requireNonNull(template, "Template não pode ser \"null\"");
         return template.fromVO(vo);
     }
 

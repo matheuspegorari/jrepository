@@ -25,18 +25,19 @@ O JRepository previne diversos erros frequentes:
 
 Para utilizar o JRepository no seu projeto de desenvolvimento:
 
-1. Baixe a versão mais recente do arquivo `jrepository-1.0.0.jar`
-2. Adicione o JAR como dependência no seu projeto:
+1. Acesse a página [Releases](https://github.com/matheuspegorari/jrepository/releases/).
+2. Baixe a versão mais recente do arquivo `jrepository-1.x.x.jar`
+3. Adicione o JAR como dependência no seu projeto:
 
 **IntelliJ IDEA**:
   - Vá para File > Project Structure > Modules
   - Na aba Dependencies, clique em "+" e selecione "JARs or directories"
-  - Navegue até o local do `jrepository-1.0.0.jar` e adicione-o
+  - Navegue até o local do `jrepository-1.x.x.jar` e adicione-o
 
 **Eclipse**:
   - Clique com o botão direito no projeto > Build Path > Configure Build Path
   - Na aba Libraries, clique em "Add External JARs"
-  - Navegue até o local do `jrepository-1.0.0.jar` e adicione-o
+  - Navegue até o local do `jrepository-1.x.x.jar` e adicione-o
 
 **Maven/Gradle**:
  - ⏳ Em breve

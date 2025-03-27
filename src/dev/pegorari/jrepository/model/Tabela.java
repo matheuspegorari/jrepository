@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Tabela extends AbstractSankhyaEntity<Tabela> {
-   private String descTab;
-   private String nomeTab;
-   private BigDecimal nuCampoNumeracao;
-   private String tipoNumeracao;
-
    public String getDescTab() {
-        return descTab;
+        return this.getVo().asString("DESCRTAB");
    }
 
    public void setDescTab(String descTab) {
         markAsChanged("DESCRTAB", descTab);
-        this.descTab = descTab;
    }
 
    public String getNomeTab() {
-        return nomeTab;
+        return this.getVo().asString("NOMETAB");
    }
 
    public void setNomeTab(String nomeTab) {
         markAsChanged("NOMETAB", nomeTab);
-        this.nomeTab = nomeTab;
    }
 
    public BigDecimal getNuCampoNumeracao() {
-        return nuCampoNumeracao;
+        return this.getVo().asBigDecimal("NUCAMPONUMERACAO");
    }
 
    public void setNuCampoNumeracao(BigDecimal nuCampoNumeracao) {
         markAsChanged("NUCAMPONUMERACAO", nuCampoNumeracao);
-        this.nuCampoNumeracao = nuCampoNumeracao;
    }
 
    public String getTipoNumeracao() {
-        return tipoNumeracao;
+        return this.getVo().asString("TIPONUMERACAO");
    }
 
    public void setTipoNumeracao(String tipoNumeracao) {
         markAsChanged("TIPONUMERACAO", tipoNumeracao);
-        this.tipoNumeracao = tipoNumeracao;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class Tabela extends AbstractSankhyaEntity<Tabela> {
    @Override
    public Tabela fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descTab = vo.asString("DESCRTAB");
-        this.nomeTab = vo.asString("NOMETAB");
-        this.nuCampoNumeracao = vo.asBigDecimal("NUCAMPONUMERACAO");
-        this.tipoNumeracao = vo.asString("TIPONUMERACAO");
         return this;
    }
 }

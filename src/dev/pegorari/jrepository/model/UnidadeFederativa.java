@@ -5,285 +5,228 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UnidadeFederativa extends AbstractSankhyaEntity<UnidadeFederativa> {
-   private BigDecimal codDetGnre;
-   private BigDecimal codIbge;
-   private BigDecimal codPais;
-   private BigDecimal codParcSecRecEst;
-   private BigDecimal codProdGnre;
-   private String codStGnre;
-   private BigDecimal codUf;
-   private String descricao;
-   private String protocoloConvenio;
-   private String uf;
-   private BigDecimal codCampoExtraGnre;
-   private BigDecimal codFcpStGnre;
-   private String gerInfCampAdicGnre;
-   private BigDecimal tipTitGnreFcpSt;
-   private String valorCampoExtra;
-   private String versaoGnre;
-   private String estornoNfe;
-   private BigDecimal codCampoExtraGnre2;
-   private String vlrPersGnre;
-   private BigDecimal codClsVencDime;
-   private BigDecimal codClsVencDimeFcpSt;
-   private BigDecimal codRecDime;
-   private BigDecimal codRecDimeFcpSt;
-   private BigDecimal tipoDoc;
-   private String tipoInfo;
-   private String usaWebServiceGnre;
-   private BigDecimal tabPrecoPf;
-   private BigDecimal tabPrecoPmc;
-
    public BigDecimal getCodDetGnre() {
-        return codDetGnre;
+        return this.getVo().asBigDecimal("CODDETGNRE");
    }
 
    public void setCodDetGnre(BigDecimal codDetGnre) {
         markAsChanged("CODDETGNRE", codDetGnre);
-        this.codDetGnre = codDetGnre;
    }
 
    public BigDecimal getCodIbge() {
-        return codIbge;
+        return this.getVo().asBigDecimal("CODIBGE");
    }
 
    public void setCodIbge(BigDecimal codIbge) {
         markAsChanged("CODIBGE", codIbge);
-        this.codIbge = codIbge;
    }
 
    public BigDecimal getCodPais() {
-        return codPais;
+        return this.getVo().asBigDecimal("CODPAIS");
    }
 
    public void setCodPais(BigDecimal codPais) {
         markAsChanged("CODPAIS", codPais);
-        this.codPais = codPais;
    }
 
    public BigDecimal getCodParcSecRecEst() {
-        return codParcSecRecEst;
+        return this.getVo().asBigDecimal("CODPARCSECRECEST");
    }
 
    public void setCodParcSecRecEst(BigDecimal codParcSecRecEst) {
         markAsChanged("CODPARCSECRECEST", codParcSecRecEst);
-        this.codParcSecRecEst = codParcSecRecEst;
    }
 
    public BigDecimal getCodProdGnre() {
-        return codProdGnre;
+        return this.getVo().asBigDecimal("CODPRODGNRE");
    }
 
    public void setCodProdGnre(BigDecimal codProdGnre) {
         markAsChanged("CODPRODGNRE", codProdGnre);
-        this.codProdGnre = codProdGnre;
    }
 
    public String getCodStGnre() {
-        return codStGnre;
+        return this.getVo().asString("CODSTGNRE");
    }
 
    public void setCodStGnre(String codStGnre) {
         markAsChanged("CODSTGNRE", codStGnre);
-        this.codStGnre = codStGnre;
    }
 
    public BigDecimal getCodUf() {
-        return codUf;
+        return this.getVo().asBigDecimal("CODUF");
    }
 
    public void setCodUf(BigDecimal codUf) {
         markAsChanged("CODUF", codUf);
-        this.codUf = codUf;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getProtocoloConvenio() {
-        return protocoloConvenio;
+        return this.getVo().asString("PROTOCOLOCONVENIO");
    }
 
    public void setProtocoloConvenio(String protocoloConvenio) {
         markAsChanged("PROTOCOLOCONVENIO", protocoloConvenio);
-        this.protocoloConvenio = protocoloConvenio;
    }
 
    public String getUf() {
-        return uf;
+        return this.getVo().asString("UF");
    }
 
    public void setUf(String uf) {
         markAsChanged("UF", uf);
-        this.uf = uf;
    }
 
    public BigDecimal getCodCampoExtraGnre() {
-        return codCampoExtraGnre;
+        return this.getVo().asBigDecimal("CODCAMPOEXTRAGNRE");
    }
 
    public void setCodCampoExtraGnre(BigDecimal codCampoExtraGnre) {
         markAsChanged("CODCAMPOEXTRAGNRE", codCampoExtraGnre);
-        this.codCampoExtraGnre = codCampoExtraGnre;
    }
 
    public BigDecimal getCodFcpStGnre() {
-        return codFcpStGnre;
+        return this.getVo().asBigDecimal("CODFCPSTGNRE");
    }
 
    public void setCodFcpStGnre(BigDecimal codFcpStGnre) {
         markAsChanged("CODFCPSTGNRE", codFcpStGnre);
-        this.codFcpStGnre = codFcpStGnre;
    }
 
    public String getGerInfCampAdicGnre() {
-        return gerInfCampAdicGnre;
+        return this.getVo().asString("GERINFCAMPADICGNRE");
    }
 
    public void setGerInfCampAdicGnre(String gerInfCampAdicGnre) {
         markAsChanged("GERINFCAMPADICGNRE", gerInfCampAdicGnre);
-        this.gerInfCampAdicGnre = gerInfCampAdicGnre;
    }
 
    public BigDecimal getTipTitGnreFcpSt() {
-        return tipTitGnreFcpSt;
+        return this.getVo().asBigDecimal("TIPTITGNREFCPST");
    }
 
    public void setTipTitGnreFcpSt(BigDecimal tipTitGnreFcpSt) {
         markAsChanged("TIPTITGNREFCPST", tipTitGnreFcpSt);
-        this.tipTitGnreFcpSt = tipTitGnreFcpSt;
    }
 
    public String getValorCampoExtra() {
-        return valorCampoExtra;
+        return this.getVo().asString("VALORCAMPOEXTRA");
    }
 
    public void setValorCampoExtra(String valorCampoExtra) {
         markAsChanged("VALORCAMPOEXTRA", valorCampoExtra);
-        this.valorCampoExtra = valorCampoExtra;
    }
 
    public String getVersaoGnre() {
-        return versaoGnre;
+        return this.getVo().asString("VERSAOGNRE");
    }
 
    public void setVersaoGnre(String versaoGnre) {
         markAsChanged("VERSAOGNRE", versaoGnre);
-        this.versaoGnre = versaoGnre;
    }
 
    public String getEstornoNfe() {
-        return estornoNfe;
+        return this.getVo().asString("ESTORNONFE");
    }
 
    public void setEstornoNfe(String estornoNfe) {
         markAsChanged("ESTORNONFE", estornoNfe);
-        this.estornoNfe = estornoNfe;
    }
 
    public BigDecimal getCodCampoExtraGnre2() {
-        return codCampoExtraGnre2;
+        return this.getVo().asBigDecimal("CODCAMPOEXTRAGNRE2");
    }
 
    public void setCodCampoExtraGnre2(BigDecimal codCampoExtraGnre2) {
         markAsChanged("CODCAMPOEXTRAGNRE2", codCampoExtraGnre2);
-        this.codCampoExtraGnre2 = codCampoExtraGnre2;
    }
 
    public String getVlrPersGnre() {
-        return vlrPersGnre;
+        return this.getVo().asString("VLRPERSGNRE");
    }
 
    public void setVlrPersGnre(String vlrPersGnre) {
         markAsChanged("VLRPERSGNRE", vlrPersGnre);
-        this.vlrPersGnre = vlrPersGnre;
    }
 
    public BigDecimal getCodClsVencDime() {
-        return codClsVencDime;
+        return this.getVo().asBigDecimal("CODCLSVENCDIME");
    }
 
    public void setCodClsVencDime(BigDecimal codClsVencDime) {
         markAsChanged("CODCLSVENCDIME", codClsVencDime);
-        this.codClsVencDime = codClsVencDime;
    }
 
    public BigDecimal getCodClsVencDimeFcpSt() {
-        return codClsVencDimeFcpSt;
+        return this.getVo().asBigDecimal("CODCLSVENCDIMEFCPST");
    }
 
    public void setCodClsVencDimeFcpSt(BigDecimal codClsVencDimeFcpSt) {
         markAsChanged("CODCLSVENCDIMEFCPST", codClsVencDimeFcpSt);
-        this.codClsVencDimeFcpSt = codClsVencDimeFcpSt;
    }
 
    public BigDecimal getCodRecDime() {
-        return codRecDime;
+        return this.getVo().asBigDecimal("CODRECDIME");
    }
 
    public void setCodRecDime(BigDecimal codRecDime) {
         markAsChanged("CODRECDIME", codRecDime);
-        this.codRecDime = codRecDime;
    }
 
    public BigDecimal getCodRecDimeFcpSt() {
-        return codRecDimeFcpSt;
+        return this.getVo().asBigDecimal("CODRECDIMEFCPST");
    }
 
    public void setCodRecDimeFcpSt(BigDecimal codRecDimeFcpSt) {
         markAsChanged("CODRECDIMEFCPST", codRecDimeFcpSt);
-        this.codRecDimeFcpSt = codRecDimeFcpSt;
    }
 
    public BigDecimal getTipoDoc() {
-        return tipoDoc;
+        return this.getVo().asBigDecimal("TIPODOC");
    }
 
    public void setTipoDoc(BigDecimal tipoDoc) {
         markAsChanged("TIPODOC", tipoDoc);
-        this.tipoDoc = tipoDoc;
    }
 
    public String getTipoInfo() {
-        return tipoInfo;
+        return this.getVo().asString("TIPOINFO");
    }
 
    public void setTipoInfo(String tipoInfo) {
         markAsChanged("TIPOINFO", tipoInfo);
-        this.tipoInfo = tipoInfo;
    }
 
    public String getUsaWebServiceGnre() {
-        return usaWebServiceGnre;
+        return this.getVo().asString("USAWEBSERVICEGNRE");
    }
 
    public void setUsaWebServiceGnre(String usaWebServiceGnre) {
         markAsChanged("USAWEBSERVICEGNRE", usaWebServiceGnre);
-        this.usaWebServiceGnre = usaWebServiceGnre;
    }
 
    public BigDecimal getTabPrecoPf() {
-        return tabPrecoPf;
+        return this.getVo().asBigDecimal("TABPRECOPF");
    }
 
    public void setTabPrecoPf(BigDecimal tabPrecoPf) {
         markAsChanged("TABPRECOPF", tabPrecoPf);
-        this.tabPrecoPf = tabPrecoPf;
    }
 
    public BigDecimal getTabPrecoPmc() {
-        return tabPrecoPmc;
+        return this.getVo().asBigDecimal("TABPRECPMC");
    }
 
    public void setTabPrecoPmc(BigDecimal tabPrecoPmc) {
         markAsChanged("TABPRECPMC", tabPrecoPmc);
-        this.tabPrecoPmc = tabPrecoPmc;
    }
 
    @Override
@@ -299,34 +242,6 @@ public class UnidadeFederativa extends AbstractSankhyaEntity<UnidadeFederativa> 
    @Override
    public UnidadeFederativa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codDetGnre = vo.asBigDecimal("CODDETGNRE");
-        this.codIbge = vo.asBigDecimal("CODIBGE");
-        this.codPais = vo.asBigDecimal("CODPAIS");
-        this.codParcSecRecEst = vo.asBigDecimal("CODPARCSECRECEST");
-        this.codProdGnre = vo.asBigDecimal("CODPRODGNRE");
-        this.codStGnre = vo.asString("CODSTGNRE");
-        this.codUf = vo.asBigDecimal("CODUF");
-        this.descricao = vo.asString("DESCRICAO");
-        this.protocoloConvenio = vo.asString("PROTOCOLOCONVENIO");
-        this.uf = vo.asString("UF");
-        this.codCampoExtraGnre = vo.asBigDecimal("CODCAMPOEXTRAGNRE");
-        this.codFcpStGnre = vo.asBigDecimal("CODFCPSTGNRE");
-        this.gerInfCampAdicGnre = vo.asString("GERINFCAMPADICGNRE");
-        this.tipTitGnreFcpSt = vo.asBigDecimal("TIPTITGNREFCPST");
-        this.valorCampoExtra = vo.asString("VALORCAMPOEXTRA");
-        this.versaoGnre = vo.asString("VERSAOGNRE");
-        this.estornoNfe = vo.asString("ESTORNONFE");
-        this.codCampoExtraGnre2 = vo.asBigDecimal("CODCAMPOEXTRAGNRE2");
-        this.vlrPersGnre = vo.asString("VLRPERSGNRE");
-        this.codClsVencDime = vo.asBigDecimal("CODCLSVENCDIME");
-        this.codClsVencDimeFcpSt = vo.asBigDecimal("CODCLSVENCDIMEFCPST");
-        this.codRecDime = vo.asBigDecimal("CODRECDIME");
-        this.codRecDimeFcpSt = vo.asBigDecimal("CODRECDIMEFCPST");
-        this.tipoDoc = vo.asBigDecimal("TIPODOC");
-        this.tipoInfo = vo.asString("TIPOINFO");
-        this.usaWebServiceGnre = vo.asString("USAWEBSERVICEGNRE");
-        this.tabPrecoPf = vo.asBigDecimal("TABPRECOPF");
-        this.tabPrecoPmc = vo.asBigDecimal("TABPRECPMC");
         return this;
    }
 }

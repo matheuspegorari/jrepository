@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanejamentoProducao> {
-   private BigDecimal numPlan;
-   private String abrvEtapa;
-   private String cql;
-   private Timestamp dtFim;
-   private Timestamp dtIni;
-   private BigDecimal etapa;
-   private String geraProd;
-   private BigDecimal leadTime;
-   private BigDecimal leadTimeFim;
-   private BigDecimal leadTimeTot;
-   private BigDecimal nuNota;
-   private BigDecimal topProd;
-   private String observacao;
-
    public BigDecimal getNumPlan() {
-        return numPlan;
+        return this.getVo().asBigDecimal("NUMPLAN");
    }
 
    public void setNumPlan(BigDecimal numPlan) {
         markAsChanged("NUMPLAN", numPlan);
-        this.numPlan = numPlan;
    }
 
    public String getAbrvEtapa() {
-        return abrvEtapa;
+        return this.getVo().asString("ABRVETAPA");
    }
 
    public void setAbrvEtapa(String abrvEtapa) {
         markAsChanged("ABRVETAPA", abrvEtapa);
-        this.abrvEtapa = abrvEtapa;
    }
 
    public String getCql() {
-        return cql;
+        return this.getVo().asString("CQL");
    }
 
    public void setCql(String cql) {
         markAsChanged("CQL", cql);
-        this.cql = cql;
    }
 
    public Timestamp getDtFim() {
-        return dtFim;
+        return this.getVo().asTimestamp("DTFIM");
    }
 
    public void setDtFim(Timestamp dtFim) {
         markAsChanged("DTFIM", dtFim);
-        this.dtFim = dtFim;
    }
 
    public Timestamp getDtIni() {
-        return dtIni;
+        return this.getVo().asTimestamp("DTINI");
    }
 
    public void setDtIni(Timestamp dtIni) {
         markAsChanged("DTINI", dtIni);
-        this.dtIni = dtIni;
    }
 
    public BigDecimal getEtapa() {
-        return etapa;
+        return this.getVo().asBigDecimal("ETAPA");
    }
 
    public void setEtapa(BigDecimal etapa) {
         markAsChanged("ETAPA", etapa);
-        this.etapa = etapa;
    }
 
    public String getGeraProd() {
-        return geraProd;
+        return this.getVo().asString("GERAPROD");
    }
 
    public void setGeraProd(String geraProd) {
         markAsChanged("GERAPROD", geraProd);
-        this.geraProd = geraProd;
    }
 
    public BigDecimal getLeadTime() {
-        return leadTime;
+        return this.getVo().asBigDecimal("LEADTIME");
    }
 
    public void setLeadTime(BigDecimal leadTime) {
         markAsChanged("LEADTIME", leadTime);
-        this.leadTime = leadTime;
    }
 
    public BigDecimal getLeadTimeFim() {
-        return leadTimeFim;
+        return this.getVo().asBigDecimal("LEADTIMEFIM");
    }
 
    public void setLeadTimeFim(BigDecimal leadTimeFim) {
         markAsChanged("LEADTIMEFIM", leadTimeFim);
-        this.leadTimeFim = leadTimeFim;
    }
 
    public BigDecimal getLeadTimeTot() {
-        return leadTimeTot;
+        return this.getVo().asBigDecimal("LEADTIMETOT");
    }
 
    public void setLeadTimeTot(BigDecimal leadTimeTot) {
         markAsChanged("LEADTIMETOT", leadTimeTot);
-        this.leadTimeTot = leadTimeTot;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getTopProd() {
-        return topProd;
+        return this.getVo().asBigDecimal("TOPPROD");
    }
 
    public void setTopProd(BigDecimal topProd) {
         markAsChanged("TOPPROD", topProd);
-        this.topProd = topProd;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class EtapaPlanejamentoProducao extends AbstractSankhyaEntity<EtapaPlanej
    @Override
    public EtapaPlanejamentoProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.numPlan = vo.asBigDecimal("NUMPLAN");
-        this.abrvEtapa = vo.asString("ABRVETAPA");
-        this.cql = vo.asString("CQL");
-        this.dtFim = vo.asTimestamp("DTFIM");
-        this.dtIni = vo.asTimestamp("DTINI");
-        this.etapa = vo.asBigDecimal("ETAPA");
-        this.geraProd = vo.asString("GERAPROD");
-        this.leadTime = vo.asBigDecimal("LEADTIME");
-        this.leadTimeFim = vo.asBigDecimal("LEADTIMEFIM");
-        this.leadTimeTot = vo.asBigDecimal("LEADTIMETOT");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.topProd = vo.asBigDecimal("TOPPROD");
-        this.observacao = vo.asString("OBSERVACAO");
         return this;
    }
 }

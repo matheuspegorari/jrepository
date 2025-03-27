@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrimaAltLancamento> {
-   private BigDecimal nuLop;
-   private BigDecimal qtdMistura;
-   private BigDecimal ordem;
-   private String controleMpAlt;
-   private BigDecimal codProdMpAlt;
-   private String controleMp;
-   private BigDecimal codProdMp;
-   private String controlePa;
-   private BigDecimal codProdPa;
-   private BigDecimal seqOp;
-   private BigDecimal seqMpa;
-
    public BigDecimal getNuLop() {
-        return nuLop;
+        return this.getVo().asBigDecimal("NULOP");
    }
 
    public void setNuLop(BigDecimal nuLop) {
         markAsChanged("NULOP", nuLop);
-        this.nuLop = nuLop;
    }
 
    public BigDecimal getQtdMistura() {
-        return qtdMistura;
+        return this.getVo().asBigDecimal("QTDMISTURA");
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
         markAsChanged("QTDMISTURA", qtdMistura);
-        this.qtdMistura = qtdMistura;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getControleMpAlt() {
-        return controleMpAlt;
+        return this.getVo().asString("CONTROLEMPALT");
    }
 
    public void setControleMpAlt(String controleMpAlt) {
         markAsChanged("CONTROLEMPALT", controleMpAlt);
-        this.controleMpAlt = controleMpAlt;
    }
 
    public BigDecimal getCodProdMpAlt() {
-        return codProdMpAlt;
+        return this.getVo().asBigDecimal("CODPRODMPALT");
    }
 
    public void setCodProdMpAlt(BigDecimal codProdMpAlt) {
         markAsChanged("CODPRODMPALT", codProdMpAlt);
-        this.codProdMpAlt = codProdMpAlt;
    }
 
    public String getControleMp() {
-        return controleMp;
+        return this.getVo().asString("CONTROLEMP");
    }
 
    public void setControleMp(String controleMp) {
         markAsChanged("CONTROLEMP", controleMp);
-        this.controleMp = controleMp;
    }
 
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getSeqOp() {
-        return seqOp;
+        return this.getVo().asBigDecimal("SEQOP");
    }
 
    public void setSeqOp(BigDecimal seqOp) {
         markAsChanged("SEQOP", seqOp);
-        this.seqOp = seqOp;
    }
 
    public BigDecimal getSeqMpa() {
-        return seqMpa;
+        return this.getVo().asBigDecimal("SEQMPA");
    }
 
    public void setSeqMpa(BigDecimal seqMpa) {
         markAsChanged("SEQMPA", seqMpa);
-        this.seqMpa = seqMpa;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class MateriaPrimaAltLancamento extends AbstractSankhyaEntity<MateriaPrim
    @Override
    public MateriaPrimaAltLancamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuLop = vo.asBigDecimal("NULOP");
-        this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.controleMpAlt = vo.asString("CONTROLEMPALT");
-        this.codProdMpAlt = vo.asBigDecimal("CODPRODMPALT");
-        this.controleMp = vo.asString("CONTROLEMP");
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.seqOp = vo.asBigDecimal("SEQOP");
-        this.seqMpa = vo.asBigDecimal("SEQMPA");
         return this;
    }
 }

@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteValores> {
-   private String descEvento;
-   private BigDecimal nuNota;
-
    public String getDescEvento() {
-        return descEvento;
+        return this.getVo().asString("DESCEVENTO");
    }
 
    public void setDescEvento(String descEvento) {
         markAsChanged("DESCEVENTO", descEvento);
-        this.descEvento = descEvento;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class GuiaTransporteValores extends AbstractSankhyaEntity<GuiaTransporteV
    @Override
    public GuiaTransporteValores fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descEvento = vo.asString("DESCEVENTO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }
 }

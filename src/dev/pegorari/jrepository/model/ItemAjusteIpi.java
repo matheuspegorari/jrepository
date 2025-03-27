@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private BigDecimal vlrAjuste;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVlrAjuste() {
-        return vlrAjuste;
+        return this.getVo().asBigDecimal("VLRAJUSTE");
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
         markAsChanged("VLRAJUSTE", vlrAjuste);
-        this.vlrAjuste = vlrAjuste;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class ItemAjusteIpi extends AbstractSankhyaEntity<ItemAjusteIpi> {
    @Override
    public ItemAjusteIpi fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrAjuste = vo.asBigDecimal("VLRAJUSTE");
         return this;
    }
 }

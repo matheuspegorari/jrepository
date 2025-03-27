@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfProducao> {
-   private BigDecimal nuApo;
-   private String status;
-   private BigDecimal idAtv;
-   private Timestamp dhFinConf;
-   private BigDecimal codUsuConf;
-   private Timestamp dhIniConf;
-   private BigDecimal nuConf;
-
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getIdAtv() {
-        return idAtv;
+        return this.getVo().asBigDecimal("IDIATV");
    }
 
    public void setIdAtv(BigDecimal idAtv) {
         markAsChanged("IDIATV", idAtv);
-        this.idAtv = idAtv;
    }
 
    public Timestamp getDhFinConf() {
-        return dhFinConf;
+        return this.getVo().asTimestamp("DHFINCONF");
    }
 
    public void setDhFinConf(Timestamp dhFinConf) {
         markAsChanged("DHFINCONF", dhFinConf);
-        this.dhFinConf = dhFinConf;
    }
 
    public BigDecimal getCodUsuConf() {
-        return codUsuConf;
+        return this.getVo().asBigDecimal("CODUSUCONF");
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
         markAsChanged("CODUSUCONF", codUsuConf);
-        this.codUsuConf = codUsuConf;
    }
 
    public Timestamp getDhIniConf() {
-        return dhIniConf;
+        return this.getVo().asTimestamp("DHINICONF");
    }
 
    public void setDhIniConf(Timestamp dhIniConf) {
         markAsChanged("DHINICONF", dhIniConf);
-        this.dhIniConf = dhIniConf;
    }
 
    public BigDecimal getNuConf() {
-        return nuConf;
+        return this.getVo().asBigDecimal("NUCONF");
    }
 
    public void setNuConf(BigDecimal nuConf) {
         markAsChanged("NUCONF", nuConf);
-        this.nuConf = nuConf;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class CabecalhoConfProducao extends AbstractSankhyaEntity<CabecalhoConfPr
    @Override
    public CabecalhoConfProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.status = vo.asString("STATUS");
-        this.idAtv = vo.asBigDecimal("IDIATV");
-        this.dhFinConf = vo.asTimestamp("DHFINCONF");
-        this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
-        this.dhIniConf = vo.asTimestamp("DHINICONF");
-        this.nuConf = vo.asBigDecimal("NUCONF");
         return this;
    }
 }

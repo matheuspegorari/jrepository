@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro> {
-   private BigDecimal codIpi;
-   private BigDecimal codParc;
-   private BigDecimal codProd;
-
    public BigDecimal getCodIpi() {
-        return codIpi;
+        return this.getVo().asBigDecimal("CODIPI");
    }
 
    public void setCodIpi(BigDecimal codIpi) {
         markAsChanged("CODIPI", codIpi);
-        this.codIpi = codIpi;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class IpiProdutoParceiro extends AbstractSankhyaEntity<IpiProdutoParceiro
    @Override
    public IpiProdutoParceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codIpi = vo.asBigDecimal("CODIPI");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProd = vo.asBigDecimal("CODPROD");
         return this;
    }
 }

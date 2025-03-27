@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudicial> {
-   private String ativo;
-   private String autoria;
-   private BigDecimal codCid;
-   private String codIdentVara;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private Timestamp dtFimValidade;
-   private Timestamp dtIniValidade;
-   private BigDecimal indOrigProc;
-   private String numProcesso;
-   private BigDecimal nuProcesso;
-   private BigDecimal tipo;
-   private String descrComplReg1011;
-   private BigDecimal tipAtoConces;
-   private String gerTagProXmlNfe;
-   private BigDecimal origemProcesso;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getAutoria() {
-        return autoria;
+        return this.getVo().asString("AUTORIA");
    }
 
    public void setAutoria(String autoria) {
         markAsChanged("AUTORIA", autoria);
-        this.autoria = autoria;
    }
 
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public String getCodIdentVara() {
-        return codIdentVara;
+        return this.getVo().asString("CODIDENTVARA");
    }
 
    public void setCodIdentVara(String codIdentVara) {
         markAsChanged("CODIDENTVARA", codIdentVara);
-        this.codIdentVara = codIdentVara;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtFimValidade() {
-        return dtFimValidade;
+        return this.getVo().asTimestamp("DTFIMVALIDADE");
    }
 
    public void setDtFimValidade(Timestamp dtFimValidade) {
         markAsChanged("DTFIMVALIDADE", dtFimValidade);
-        this.dtFimValidade = dtFimValidade;
    }
 
    public Timestamp getDtIniValidade() {
-        return dtIniValidade;
+        return this.getVo().asTimestamp("DTINIVALIDADE");
    }
 
    public void setDtIniValidade(Timestamp dtIniValidade) {
         markAsChanged("DTINIVALIDADE", dtIniValidade);
-        this.dtIniValidade = dtIniValidade;
    }
 
    public BigDecimal getIndOrigProc() {
-        return indOrigProc;
+        return this.getVo().asBigDecimal("INDORIGPROC");
    }
 
    public void setIndOrigProc(BigDecimal indOrigProc) {
         markAsChanged("INDORIGPROC", indOrigProc);
-        this.indOrigProc = indOrigProc;
    }
 
    public String getNumProcesso() {
-        return numProcesso;
+        return this.getVo().asString("NUMPROCESSO");
    }
 
    public void setNumProcesso(String numProcesso) {
         markAsChanged("NUMPROCESSO", numProcesso);
-        this.numProcesso = numProcesso;
    }
 
    public BigDecimal getNuProcesso() {
-        return nuProcesso;
+        return this.getVo().asBigDecimal("NUPROCESSO");
    }
 
    public void setNuProcesso(BigDecimal nuProcesso) {
         markAsChanged("NUPROCESSO", nuProcesso);
-        this.nuProcesso = nuProcesso;
    }
 
    public BigDecimal getTipo() {
-        return tipo;
+        return this.getVo().asBigDecimal("TIPO");
    }
 
    public void setTipo(BigDecimal tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getDescrComplReg1011() {
-        return descrComplReg1011;
+        return this.getVo().asString("DESCRCOMPLREG1011");
    }
 
    public void setDescrComplReg1011(String descrComplReg1011) {
         markAsChanged("DESCRCOMPLREG1011", descrComplReg1011);
-        this.descrComplReg1011 = descrComplReg1011;
    }
 
    public BigDecimal getTipAtoConces() {
-        return tipAtoConces;
+        return this.getVo().asBigDecimal("TIPATOCONCES");
    }
 
    public void setTipAtoConces(BigDecimal tipAtoConces) {
         markAsChanged("TIPATOCONCES", tipAtoConces);
-        this.tipAtoConces = tipAtoConces;
    }
 
    public String getGerTagProXmlNfe() {
-        return gerTagProXmlNfe;
+        return this.getVo().asString("GERTAGPROXMLNFE");
    }
 
    public void setGerTagProXmlNfe(String gerTagProXmlNfe) {
         markAsChanged("GERTAGPROXMLNFE", gerTagProXmlNfe);
-        this.gerTagProXmlNfe = gerTagProXmlNfe;
    }
 
    public BigDecimal getOrigemProcesso() {
-        return origemProcesso;
+        return this.getVo().asBigDecimal("ORIGEMPROCESSO");
    }
 
    public void setOrigemProcesso(BigDecimal origemProcesso) {
         markAsChanged("ORIGEMPROCESSO", origemProcesso);
-        this.origemProcesso = origemProcesso;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class ProcessoAdmJudicial extends AbstractSankhyaEntity<ProcessoAdmJudici
    @Override
    public ProcessoAdmJudicial fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.autoria = vo.asString("AUTORIA");
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codIdentVara = vo.asString("CODIDENTVARA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtFimValidade = vo.asTimestamp("DTFIMVALIDADE");
-        this.dtIniValidade = vo.asTimestamp("DTINIVALIDADE");
-        this.indOrigProc = vo.asBigDecimal("INDORIGPROC");
-        this.numProcesso = vo.asString("NUMPROCESSO");
-        this.nuProcesso = vo.asBigDecimal("NUPROCESSO");
-        this.tipo = vo.asBigDecimal("TIPO");
-        this.descrComplReg1011 = vo.asString("DESCRCOMPLREG1011");
-        this.tipAtoConces = vo.asBigDecimal("TIPATOCONCES");
-        this.gerTagProXmlNfe = vo.asString("GERTAGPROXMLNFE");
-        this.origemProcesso = vo.asBigDecimal("ORIGEMPROCESSO");
         return this;
    }
 }

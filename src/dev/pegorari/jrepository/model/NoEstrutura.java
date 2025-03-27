@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
-   private BigDecimal chaveRegistro;
-   private BigDecimal codEmp;
-   private BigDecimal nivel;
-   private BigDecimal nuEst;
-   private BigDecimal nuInstancia;
-   private BigDecimal nuNo;
-   private BigDecimal nuNoPai;
-
    public BigDecimal getChaveRegistro() {
-        return chaveRegistro;
+        return this.getVo().asBigDecimal("CHAVEREGISTRO");
    }
 
    public void setChaveRegistro(BigDecimal chaveRegistro) {
         markAsChanged("CHAVEREGISTRO", chaveRegistro);
-        this.chaveRegistro = chaveRegistro;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getNivel() {
-        return nivel;
+        return this.getVo().asBigDecimal("NIVEL");
    }
 
    public void setNivel(BigDecimal nivel) {
         markAsChanged("NIVEL", nivel);
-        this.nivel = nivel;
    }
 
    public BigDecimal getNuEst() {
-        return nuEst;
+        return this.getVo().asBigDecimal("NUEST");
    }
 
    public void setNuEst(BigDecimal nuEst) {
         markAsChanged("NUEST", nuEst);
-        this.nuEst = nuEst;
    }
 
    public BigDecimal getNuInstancia() {
-        return nuInstancia;
+        return this.getVo().asBigDecimal("NUINSTANCIA");
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
         markAsChanged("NUINSTANCIA", nuInstancia);
-        this.nuInstancia = nuInstancia;
    }
 
    public BigDecimal getNuNo() {
-        return nuNo;
+        return this.getVo().asBigDecimal("NUNO");
    }
 
    public void setNuNo(BigDecimal nuNo) {
         markAsChanged("NUNO", nuNo);
-        this.nuNo = nuNo;
    }
 
    public BigDecimal getNuNoPai() {
-        return nuNoPai;
+        return this.getVo().asBigDecimal("NUNOPAI");
    }
 
    public void setNuNoPai(BigDecimal nuNoPai) {
         markAsChanged("NUNOPAI", nuNoPai);
-        this.nuNoPai = nuNoPai;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class NoEstrutura extends AbstractSankhyaEntity<NoEstrutura> {
    @Override
    public NoEstrutura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveRegistro = vo.asBigDecimal("CHAVEREGISTRO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.nivel = vo.asBigDecimal("NIVEL");
-        this.nuEst = vo.asBigDecimal("NUEST");
-        this.nuInstancia = vo.asBigDecimal("NUINSTANCIA");
-        this.nuNo = vo.asBigDecimal("NUNO");
-        this.nuNoPai = vo.asBigDecimal("NUNOPAI");
         return this;
    }
 }

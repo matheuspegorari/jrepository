@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
-   private String restricao;
-   private BigDecimal sequencia;
-   private BigDecimal codColRest;
-   private String serie;
-   private BigDecimal nuNico;
-   private BigDecimal codTipOper;
-   private String tipRest;
-
    public String getRestricao() {
-        return restricao;
+        return this.getVo().asString("RESTRICAO");
    }
 
    public void setRestricao(String restricao) {
         markAsChanged("RESTRICAO", restricao);
-        this.restricao = restricao;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getCodColRest() {
-        return codColRest;
+        return this.getVo().asBigDecimal("CODCOLREST");
    }
 
    public void setCodColRest(BigDecimal codColRest) {
         markAsChanged("CODCOLREST", codColRest);
-        this.codColRest = codColRest;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public BigDecimal getNuNico() {
-        return nuNico;
+        return this.getVo().asBigDecimal("NUNICO");
    }
 
    public void setNuNico(BigDecimal nuNico) {
         markAsChanged("NUNICO", nuNico);
-        this.nuNico = nuNico;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public String getTipRest() {
-        return tipRest;
+        return this.getVo().asString("TIPREST");
    }
 
    public void setTipRest(String tipRest) {
         markAsChanged("TIPREST", tipRest);
-        this.tipRest = tipRest;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class RestricaoTopBK extends AbstractSankhyaEntity<RestricaoTopBK> {
    @Override
    public RestricaoTopBK fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.restricao = vo.asString("RESTRICAO");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.codColRest = vo.asBigDecimal("CODCOLREST");
-        this.serie = vo.asString("SERIE");
-        this.nuNico = vo.asBigDecimal("NUNICO");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.tipRest = vo.asString("TIPREST");
         return this;
    }
 }

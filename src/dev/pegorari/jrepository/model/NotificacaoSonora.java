@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> {
-   private String arqSom;
-   private BigDecimal numItem;
-   private BigDecimal numOs;
-
    public String getArqSom() {
-        return arqSom;
+        return this.getVo().asString("ARQSOM");
    }
 
    public void setArqSom(String arqSom) {
         markAsChanged("ARQSOM", arqSom);
-        this.arqSom = arqSom;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class NotificacaoSonora extends AbstractSankhyaEntity<NotificacaoSonora> 
    @Override
    public NotificacaoSonora fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arqSom = vo.asString("ARQSOM");
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.numOs = vo.asBigDecimal("NUMOS");
         return this;
    }
 }

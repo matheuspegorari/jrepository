@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
-   private BigDecimal codMoeda;
-   private BigDecimal cotacao;
-   private Timestamp dtMov;
-   private BigDecimal indice2;
-   private BigDecimal indiceDesc;
-
    public BigDecimal getCodMoeda() {
-        return codMoeda;
+        return this.getVo().asBigDecimal("CODMOEDA");
    }
 
    public void setCodMoeda(BigDecimal codMoeda) {
         markAsChanged("CODMOEDA", codMoeda);
-        this.codMoeda = codMoeda;
    }
 
    public BigDecimal getCotacao() {
-        return cotacao;
+        return this.getVo().asBigDecimal("COTACAO");
    }
 
    public void setCotacao(BigDecimal cotacao) {
         markAsChanged("COTACAO", cotacao);
-        this.cotacao = cotacao;
    }
 
    public Timestamp getDtMov() {
-        return dtMov;
+        return this.getVo().asTimestamp("DTMOV");
    }
 
    public void setDtMov(Timestamp dtMov) {
         markAsChanged("DTMOV", dtMov);
-        this.dtMov = dtMov;
    }
 
    public BigDecimal getIndice2() {
-        return indice2;
+        return this.getVo().asBigDecimal("INDICE2");
    }
 
    public void setIndice2(BigDecimal indice2) {
         markAsChanged("INDICE2", indice2);
-        this.indice2 = indice2;
    }
 
    public BigDecimal getIndiceDesc() {
-        return indiceDesc;
+        return this.getVo().asBigDecimal("INDICEDESC");
    }
 
    public void setIndiceDesc(BigDecimal indiceDesc) {
         markAsChanged("INDICEDESC", indiceDesc);
-        this.indiceDesc = indiceDesc;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class CotacaoMoeda extends AbstractSankhyaEntity<CotacaoMoeda> {
    @Override
    public CotacaoMoeda fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMoeda = vo.asBigDecimal("CODMOEDA");
-        this.cotacao = vo.asBigDecimal("COTACAO");
-        this.dtMov = vo.asTimestamp("DTMOV");
-        this.indice2 = vo.asBigDecimal("INDICE2");
-        this.indiceDesc = vo.asBigDecimal("INDICEDESC");
         return this;
    }
 }

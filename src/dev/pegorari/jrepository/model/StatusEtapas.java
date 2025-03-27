@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
-   private BigDecimal codEtapa;
-   private BigDecimal codStaEtapa;
-   private String descRetapa;
-   private String descRnucurriculo;
-   private String descRrequisicao;
-   private BigDecimal nuCurriculo;
-   private BigDecimal nuRequisicao;
-   private BigDecimal nuSelecao;
-   private String statusEtapa;
-   private String tipoEtapa;
-
    public BigDecimal getCodEtapa() {
-        return codEtapa;
+        return this.getVo().asBigDecimal("CODETAPA");
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
         markAsChanged("CODETAPA", codEtapa);
-        this.codEtapa = codEtapa;
    }
 
    public BigDecimal getCodStaEtapa() {
-        return codStaEtapa;
+        return this.getVo().asBigDecimal("CODSTAETAPA");
    }
 
    public void setCodStaEtapa(BigDecimal codStaEtapa) {
         markAsChanged("CODSTAETAPA", codStaEtapa);
-        this.codStaEtapa = codStaEtapa;
    }
 
    public String getDescRetapa() {
-        return descRetapa;
+        return this.getVo().asString("DESCRETAPA");
    }
 
    public void setDescRetapa(String descRetapa) {
         markAsChanged("DESCRETAPA", descRetapa);
-        this.descRetapa = descRetapa;
    }
 
    public String getDescRnucurriculo() {
-        return descRnucurriculo;
+        return this.getVo().asString("DESCRNUCURRICULO");
    }
 
    public void setDescRnucurriculo(String descRnucurriculo) {
         markAsChanged("DESCRNUCURRICULO", descRnucurriculo);
-        this.descRnucurriculo = descRnucurriculo;
    }
 
    public String getDescRrequisicao() {
-        return descRrequisicao;
+        return this.getVo().asString("DESCRREQUISICAO");
    }
 
    public void setDescRrequisicao(String descRrequisicao) {
         markAsChanged("DESCRREQUISICAO", descRrequisicao);
-        this.descRrequisicao = descRrequisicao;
    }
 
    public BigDecimal getNuCurriculo() {
-        return nuCurriculo;
+        return this.getVo().asBigDecimal("NUCURRICULO");
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
         markAsChanged("NUCURRICULO", nuCurriculo);
-        this.nuCurriculo = nuCurriculo;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public BigDecimal getNuSelecao() {
-        return nuSelecao;
+        return this.getVo().asBigDecimal("NUSELECAO");
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         markAsChanged("NUSELECAO", nuSelecao);
-        this.nuSelecao = nuSelecao;
    }
 
    public String getStatusEtapa() {
-        return statusEtapa;
+        return this.getVo().asString("STATUSETAPA");
    }
 
    public void setStatusEtapa(String statusEtapa) {
         markAsChanged("STATUSETAPA", statusEtapa);
-        this.statusEtapa = statusEtapa;
    }
 
    public String getTipoEtapa() {
-        return tipoEtapa;
+        return this.getVo().asString("TIPOETAPA");
    }
 
    public void setTipoEtapa(String tipoEtapa) {
         markAsChanged("TIPOETAPA", tipoEtapa);
-        this.tipoEtapa = tipoEtapa;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class StatusEtapas extends AbstractSankhyaEntity<StatusEtapas> {
    @Override
    public StatusEtapas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEtapa = vo.asBigDecimal("CODETAPA");
-        this.codStaEtapa = vo.asBigDecimal("CODSTAETAPA");
-        this.descRetapa = vo.asString("DESCRETAPA");
-        this.descRnucurriculo = vo.asString("DESCRNUCURRICULO");
-        this.descRrequisicao = vo.asString("DESCRREQUISICAO");
-        this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.nuSelecao = vo.asBigDecimal("NUSELECAO");
-        this.statusEtapa = vo.asString("STATUSETAPA");
-        this.tipoEtapa = vo.asString("TIPOETAPA");
         return this;
    }
 }

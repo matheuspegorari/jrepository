@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PlantaManufatura extends AbstractSankhyaEntity<PlantaManufatura> {
-   private BigDecimal codCargaHor;
-   private BigDecimal codCencus;
-   private BigDecimal codEmp;
-   private BigDecimal codPlp;
-   private String nome;
-
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodPlp() {
-        return codPlp;
+        return this.getVo().asBigDecimal("CODPLP");
    }
 
    public void setCodPlp(BigDecimal codPlp) {
         markAsChanged("CODPLP", codPlp);
-        this.codPlp = codPlp;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class PlantaManufatura extends AbstractSankhyaEntity<PlantaManufatura> {
    @Override
    public PlantaManufatura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codPlp = vo.asBigDecimal("CODPLP");
-        this.nome = vo.asString("NOME");
         return this;
    }
 }

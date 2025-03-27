@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
-   private String campoSubstituto;
-   private String codCampo;
-   private BigDecimal codMeta;
-   private BigDecimal grau;
-
    public String getCampoSubstituto() {
-        return campoSubstituto;
+        return this.getVo().asString("CAMPOSUBSTITUTO");
    }
 
    public void setCampoSubstituto(String campoSubstituto) {
         markAsChanged("CAMPOSUBSTITUTO", campoSubstituto);
-        this.campoSubstituto = campoSubstituto;
    }
 
    public String getCodCampo() {
-        return codCampo;
+        return this.getVo().asString("CODCAMPO");
    }
 
    public void setCodCampo(String codCampo) {
         markAsChanged("CODCAMPO", codCampo);
-        this.codCampo = codCampo;
    }
 
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class CampoSubstituto extends AbstractSankhyaEntity<CampoSubstituto> {
    @Override
    public CampoSubstituto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.campoSubstituto = vo.asString("CAMPOSUBSTITUTO");
-        this.codCampo = vo.asString("CODCAMPO");
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.grau = vo.asBigDecimal("GRAU");
         return this;
    }
 }

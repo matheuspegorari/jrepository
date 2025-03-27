@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
-   private BigDecimal codParcPag;
-   private BigDecimal codParcForn;
-   private String nuCompra;
-   private BigDecimal sequencia;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-   private BigDecimal vlrPedagio;
-   private String categCombVeic;
-   private String tpValePed;
-
    public BigDecimal getCodParcPag() {
-        return codParcPag;
+        return this.getVo().asBigDecimal("CODPARCPAG");
    }
 
    public void setCodParcPag(BigDecimal codParcPag) {
         markAsChanged("CODPARCPAG", codParcPag);
-        this.codParcPag = codParcPag;
    }
 
    public BigDecimal getCodParcForn() {
-        return codParcForn;
+        return this.getVo().asBigDecimal("CODPARCFORN");
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
         markAsChanged("CODPARCFORN", codParcForn);
-        this.codParcForn = codParcForn;
    }
 
    public String getNuCompra() {
-        return nuCompra;
+        return this.getVo().asString("NUCOMPRA");
    }
 
    public void setNuCompra(String nuCompra) {
         markAsChanged("NUCOMPRA", nuCompra);
-        this.nuCompra = nuCompra;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getVlrPedagio() {
-        return vlrPedagio;
+        return this.getVo().asBigDecimal("VLRPEDAGIO");
    }
 
    public void setVlrPedagio(BigDecimal vlrPedagio) {
         markAsChanged("VLRPEDAGIO", vlrPedagio);
-        this.vlrPedagio = vlrPedagio;
    }
 
    public String getCategCombVeic() {
-        return categCombVeic;
+        return this.getVo().asString("CATEGCOMBVEIC");
    }
 
    public void setCategCombVeic(String categCombVeic) {
         markAsChanged("CATEGCOMBVEIC", categCombVeic);
-        this.categCombVeic = categCombVeic;
    }
 
    public String getTpValePed() {
-        return tpValePed;
+        return this.getVo().asString("TPVALEPED");
    }
 
    public void setTpValePed(String tpValePed) {
         markAsChanged("TPVALEPED", tpValePed);
-        this.tpValePed = tpValePed;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class ValePedagioMDFE extends AbstractSankhyaEntity<ValePedagioMDFE> {
    @Override
    public ValePedagioMDFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParcPag = vo.asBigDecimal("CODPARCPAG");
-        this.codParcForn = vo.asBigDecimal("CODPARCFORN");
-        this.nuCompra = vo.asString("NUCOMPRA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.vlrPedagio = vo.asBigDecimal("VLRPEDAGIO");
-        this.categCombVeic = vo.asString("CATEGCOMBVEIC");
-        this.tpValePed = vo.asString("TPVALEPED");
         return this;
    }
 }

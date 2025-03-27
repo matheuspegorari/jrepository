@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocking> {
-   private String codBarra;
-   private BigDecimal codProd;
-   private BigDecimal codUsuConf;
-   private String controle;
-   private String crossdocking;
-   private Timestamp dhAlter;
-   private BigDecimal nuRecebimento;
-   private BigDecimal qtdTriada;
-   private BigDecimal qtdTriadaVolPad;
-   private BigDecimal sequencia;
-
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsuConf() {
-        return codUsuConf;
+        return this.getVo().asBigDecimal("CODUSUCONF");
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
         markAsChanged("CODUSUCONF", codUsuConf);
-        this.codUsuConf = codUsuConf;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public String getCrossdocking() {
-        return crossdocking;
+        return this.getVo().asString("CROSSDOCKING");
    }
 
    public void setCrossdocking(String crossdocking) {
         markAsChanged("CROSSDOCKING", crossdocking);
-        this.crossdocking = crossdocking;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public BigDecimal getQtdTriada() {
-        return qtdTriada;
+        return this.getVo().asBigDecimal("QTDTRIADA");
    }
 
    public void setQtdTriada(BigDecimal qtdTriada) {
         markAsChanged("QTDTRIADA", qtdTriada);
-        this.qtdTriada = qtdTriada;
    }
 
    public BigDecimal getQtdTriadaVolPad() {
-        return qtdTriadaVolPad;
+        return this.getVo().asBigDecimal("QTDTRIADAVOLPAD");
    }
 
    public void setQtdTriadaVolPad(BigDecimal qtdTriadaVolPad) {
         markAsChanged("QTDTRIADAVOLPAD", qtdTriadaVolPad);
-        this.qtdTriadaVolPad = qtdTriadaVolPad;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class TriagemCrossdocking extends AbstractSankhyaEntity<TriagemCrossdocki
    @Override
    public TriagemCrossdocking fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBarra = vo.asString("CODBARRA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
-        this.controle = vo.asString("CONTROLE");
-        this.crossdocking = vo.asString("CROSSDOCKING");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.qtdTriada = vo.asBigDecimal("QTDTRIADA");
-        this.qtdTriadaVolPad = vo.asBigDecimal("QTDTRIADAVOLPAD");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

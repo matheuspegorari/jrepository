@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
-   private BigDecimal codCre;
-   private BigDecimal codProdPa;
-   private String controlePa;
-   private BigDecimal fatorCapacidade;
-   private String modCapacidade;
-   private BigDecimal qtdAlocada;
-   private BigDecimal codWcp;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getFatorCapacidade() {
-        return fatorCapacidade;
+        return this.getVo().asBigDecimal("FATORCAPACIDADE");
    }
 
    public void setFatorCapacidade(BigDecimal fatorCapacidade) {
         markAsChanged("FATORCAPACIDADE", fatorCapacidade);
-        this.fatorCapacidade = fatorCapacidade;
    }
 
    public String getModCapacidade() {
-        return modCapacidade;
+        return this.getVo().asString("MODCAPACIDADE");
    }
 
    public void setModCapacidade(String modCapacidade) {
         markAsChanged("MODCAPACIDADE", modCapacidade);
-        this.modCapacidade = modCapacidade;
    }
 
    public BigDecimal getQtdAlocada() {
-        return qtdAlocada;
+        return this.getVo().asBigDecimal("QTDALOCADA");
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
         markAsChanged("QTDALOCADA", qtdAlocada);
-        this.qtdAlocada = qtdAlocada;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class RecursosPA extends AbstractSankhyaEntity<RecursosPA> {
    @Override
    public RecursosPA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.fatorCapacidade = vo.asBigDecimal("FATORCAPACIDADE");
-        this.modCapacidade = vo.asString("MODCAPACIDADE");
-        this.qtdAlocada = vo.asBigDecimal("QTDALOCADA");
-        this.codWcp = vo.asBigDecimal("CODWCP");
         return this;
    }
 }

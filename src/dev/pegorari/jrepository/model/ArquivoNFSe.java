@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
-   private char[] xmlIntegracao;
-   private String codVerifNfse;
-   private Timestamp dhemissNfse;
-   private BigDecimal nuNota;
-   private char[] xmlConfCanc;
-   private char[] xmlNfse;
-   private char[] xmlPedCanc;
-   private char[] xmlRps;
-   private String linkNfse;
-   private char[] xmlDps;
-
    public char[] getXmlIntegracao() {
-        return xmlIntegracao;
+        return this.getVo().asClob("XMLINTEGRACAO");
    }
 
    public void setXmlIntegracao(char[] xmlIntegracao) {
         markAsChanged("XMLINTEGRACAO", xmlIntegracao);
-        this.xmlIntegracao = xmlIntegracao;
    }
 
    public String getCodVerifNfse() {
-        return codVerifNfse;
+        return this.getVo().asString("CODVERIFNFSE");
    }
 
    public void setCodVerifNfse(String codVerifNfse) {
         markAsChanged("CODVERIFNFSE", codVerifNfse);
-        this.codVerifNfse = codVerifNfse;
    }
 
    public Timestamp getDhemissNfse() {
-        return dhemissNfse;
+        return this.getVo().asTimestamp("DHEMISSNFSE");
    }
 
    public void setDhemissNfse(Timestamp dhemissNfse) {
         markAsChanged("DHEMISSNFSE", dhemissNfse);
-        this.dhemissNfse = dhemissNfse;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public char[] getXmlConfCanc() {
-        return xmlConfCanc;
+        return this.getVo().asClob("XMLCONFCANC");
    }
 
    public void setXmlConfCanc(char[] xmlConfCanc) {
         markAsChanged("XMLCONFCANC", xmlConfCanc);
-        this.xmlConfCanc = xmlConfCanc;
    }
 
    public char[] getXmlNfse() {
-        return xmlNfse;
+        return this.getVo().asClob("XMLNFSE");
    }
 
    public void setXmlNfse(char[] xmlNfse) {
         markAsChanged("XMLNFSE", xmlNfse);
-        this.xmlNfse = xmlNfse;
    }
 
    public char[] getXmlPedCanc() {
-        return xmlPedCanc;
+        return this.getVo().asClob("XMLPEDCANC");
    }
 
    public void setXmlPedCanc(char[] xmlPedCanc) {
         markAsChanged("XMLPEDCANC", xmlPedCanc);
-        this.xmlPedCanc = xmlPedCanc;
    }
 
    public char[] getXmlRps() {
-        return xmlRps;
+        return this.getVo().asClob("XMLRPS");
    }
 
    public void setXmlRps(char[] xmlRps) {
         markAsChanged("XMLRPS", xmlRps);
-        this.xmlRps = xmlRps;
    }
 
    public String getLinkNfse() {
-        return linkNfse;
+        return this.getVo().asString("LINKNFSE");
    }
 
    public void setLinkNfse(String linkNfse) {
         markAsChanged("LINKNFSE", linkNfse);
-        this.linkNfse = linkNfse;
    }
 
    public char[] getXmlDps() {
-        return xmlDps;
+        return this.getVo().asClob("XMLDPS");
    }
 
    public void setXmlDps(char[] xmlDps) {
         markAsChanged("XMLDPS", xmlDps);
-        this.xmlDps = xmlDps;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class ArquivoNFSe extends AbstractSankhyaEntity<ArquivoNFSe> {
    @Override
    public ArquivoNFSe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.xmlIntegracao = vo.asClob("XMLINTEGRACAO");
-        this.codVerifNfse = vo.asString("CODVERIFNFSE");
-        this.dhemissNfse = vo.asTimestamp("DHEMISSNFSE");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.xmlConfCanc = vo.asClob("XMLCONFCANC");
-        this.xmlNfse = vo.asClob("XMLNFSE");
-        this.xmlPedCanc = vo.asClob("XMLPEDCANC");
-        this.xmlRps = vo.asClob("XMLRPS");
-        this.linkNfse = vo.asString("LINKNFSE");
-        this.xmlDps = vo.asClob("XMLDPS");
         return this;
    }
 }

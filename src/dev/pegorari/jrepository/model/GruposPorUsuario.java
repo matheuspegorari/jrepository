@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
-   private BigDecimal codGrupo;
-   private BigDecimal codUsu;
-   private Timestamp dataFim;
-   private Timestamp dataInicio;
-   private String repassar;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDataFim() {
-        return dataFim;
+        return this.getVo().asTimestamp("DATAFIM");
    }
 
    public void setDataFim(Timestamp dataFim) {
         markAsChanged("DATAFIM", dataFim);
-        this.dataFim = dataFim;
    }
 
    public Timestamp getDataInicio() {
-        return dataInicio;
+        return this.getVo().asTimestamp("DATAINICIO");
    }
 
    public void setDataInicio(Timestamp dataInicio) {
         markAsChanged("DATAINICIO", dataInicio);
-        this.dataInicio = dataInicio;
    }
 
    public String getRepassar() {
-        return repassar;
+        return this.getVo().asString("REPASSAR");
    }
 
    public void setRepassar(String repassar) {
         markAsChanged("REPASSAR", repassar);
-        this.repassar = repassar;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class GruposPorUsuario extends AbstractSankhyaEntity<GruposPorUsuario> {
    @Override
    public GruposPorUsuario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dataFim = vo.asTimestamp("DATAFIM");
-        this.dataInicio = vo.asTimestamp("DATAINICIO");
-        this.repassar = vo.asString("REPASSAR");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

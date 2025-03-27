@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private String descricao;
-   private Timestamp dhAlter;
-   private Timestamp fimPeriodo;
-   private Timestamp inicioPeriodo;
-   private BigDecimal nuPeriodoCtb;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getFimPeriodo() {
-        return fimPeriodo;
+        return this.getVo().asTimestamp("FIMPERIODO");
    }
 
    public void setFimPeriodo(Timestamp fimPeriodo) {
         markAsChanged("FIMPERIODO", fimPeriodo);
-        this.fimPeriodo = fimPeriodo;
    }
 
    public Timestamp getInicioPeriodo() {
-        return inicioPeriodo;
+        return this.getVo().asTimestamp("INICIOPERIODO");
    }
 
    public void setInicioPeriodo(Timestamp inicioPeriodo) {
         markAsChanged("INICIOPERIODO", inicioPeriodo);
-        this.inicioPeriodo = inicioPeriodo;
    }
 
    public BigDecimal getNuPeriodoCtb() {
-        return nuPeriodoCtb;
+        return this.getVo().asBigDecimal("NUPERIODOCTB");
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
         markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
-        this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class PeriodoContabil extends AbstractSankhyaEntity<PeriodoContabil> {
    @Override
    public PeriodoContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.fimPeriodo = vo.asTimestamp("FIMPERIODO");
-        this.inicioPeriodo = vo.asTimestamp("INICIOPERIODO");
-        this.nuPeriodoCtb = vo.asBigDecimal("NUPERIODOCTB");
         return this;
    }
 }

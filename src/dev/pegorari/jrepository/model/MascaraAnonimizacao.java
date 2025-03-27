@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizacao> {
-   private BigDecimal codMasAno;
-   private BigDecimal codUsuAlter;
-   private BigDecimal codUsuCriac;
-   private String descMasc;
-   private Timestamp dtAlter;
-   private Timestamp dtCriac;
-   private String tipoCampo;
-
    public BigDecimal getCodMasAno() {
-        return codMasAno;
+        return this.getVo().asBigDecimal("CODMASANO");
    }
 
    public void setCodMasAno(BigDecimal codMasAno) {
         markAsChanged("CODMASANO", codMasAno);
-        this.codMasAno = codMasAno;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getCodUsuCriac() {
-        return codUsuCriac;
+        return this.getVo().asBigDecimal("CODUSUCRIAC");
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
         markAsChanged("CODUSUCRIAC", codUsuCriac);
-        this.codUsuCriac = codUsuCriac;
    }
 
    public String getDescMasc() {
-        return descMasc;
+        return this.getVo().asString("DESCMASC");
    }
 
    public void setDescMasc(String descMasc) {
         markAsChanged("DESCMASC", descMasc);
-        this.descMasc = descMasc;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtCriac() {
-        return dtCriac;
+        return this.getVo().asTimestamp("DTCRIAC");
    }
 
    public void setDtCriac(Timestamp dtCriac) {
         markAsChanged("DTCRIAC", dtCriac);
-        this.dtCriac = dtCriac;
    }
 
    public String getTipoCampo() {
-        return tipoCampo;
+        return this.getVo().asString("TIPOCAMPO");
    }
 
    public void setTipoCampo(String tipoCampo) {
         markAsChanged("TIPOCAMPO", tipoCampo);
-        this.tipoCampo = tipoCampo;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class MascaraAnonimizacao extends AbstractSankhyaEntity<MascaraAnonimizac
    @Override
    public MascaraAnonimizacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMasAno = vo.asBigDecimal("CODMASANO");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");
-        this.descMasc = vo.asString("DESCMASC");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtCriac = vo.asTimestamp("DTCRIAC");
-        this.tipoCampo = vo.asString("TIPOCAMPO");
         return this;
    }
 }

@@ -4,35 +4,28 @@ import br.com.sankhya.jape.vo.DynamicVO;
 import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
 public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
-   private String locale;
-   private String nomeTab;
-   private String texto;
-
    public String getLocale() {
-        return locale;
+        return this.getVo().asString("LOCALE");
    }
 
    public void setLocale(String locale) {
         markAsChanged("LOCALE", locale);
-        this.locale = locale;
    }
 
    public String getNomeTab() {
-        return nomeTab;
+        return this.getVo().asString("NOMETAB");
    }
 
    public void setNomeTab(String nomeTab) {
         markAsChanged("NOMETAB", nomeTab);
-        this.nomeTab = nomeTab;
    }
 
    public String getTexto() {
-        return texto;
+        return this.getVo().asString("TEXTO");
    }
 
    public void setTexto(String texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    @Override
@@ -48,9 +41,6 @@ public class TabelaI18n extends AbstractSankhyaEntity<TabelaI18n> {
    @Override
    public TabelaI18n fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.locale = vo.asString("LOCALE");
-        this.nomeTab = vo.asString("NOMETAB");
-        this.texto = vo.asString("TEXTO");
         return this;
    }
 }

@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> {
-   private String chaveDant;
-   private BigDecimal codParc;
-   private BigDecimal nuNota;
-   private BigDecimal seqDant;
-   private String cteRef;
-   private Timestamp demi;
-   private String nDoc;
-   private String serie;
-   private String subSer;
-   private String tpDocta;
-
    public String getChaveDant() {
-        return chaveDant;
+        return this.getVo().asString("CHAVEDANT");
    }
 
    public void setChaveDant(String chaveDant) {
         markAsChanged("CHAVEDANT", chaveDant);
-        this.chaveDant = chaveDant;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSeqDant() {
-        return seqDant;
+        return this.getVo().asBigDecimal("SEQDANT");
    }
 
    public void setSeqDant(BigDecimal seqDant) {
         markAsChanged("SEQDANT", seqDant);
-        this.seqDant = seqDant;
    }
 
    public String getCteRef() {
-        return cteRef;
+        return this.getVo().asString("CTEREF");
    }
 
    public void setCteRef(String cteRef) {
         markAsChanged("CTEREF", cteRef);
-        this.cteRef = cteRef;
    }
 
    public Timestamp getDemi() {
-        return demi;
+        return this.getVo().asTimestamp("DEMI");
    }
 
    public void setDemi(Timestamp demi) {
         markAsChanged("DEMI", demi);
-        this.demi = demi;
    }
 
    public String getNDoc() {
-        return nDoc;
+        return this.getVo().asString("NDOC");
    }
 
    public void setNDoc(String nDoc) {
         markAsChanged("NDOC", nDoc);
-        this.nDoc = nDoc;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public String getSubSer() {
-        return subSer;
+        return this.getVo().asString("SUBSER");
    }
 
    public void setSubSer(String subSer) {
         markAsChanged("SUBSER", subSer);
-        this.subSer = subSer;
    }
 
    public String getTpDocta() {
-        return tpDocta;
+        return this.getVo().asString("TPDOCTA");
    }
 
    public void setTpDocta(String tpDocta) {
         markAsChanged("TPDOCTA", tpDocta);
-        this.tpDocta = tpDocta;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class DocumentoAnterior extends AbstractSankhyaEntity<DocumentoAnterior> 
    @Override
    public DocumentoAnterior fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveDant = vo.asString("CHAVEDANT");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.seqDant = vo.asBigDecimal("SEQDANT");
-        this.cteRef = vo.asString("CTEREF");
-        this.demi = vo.asTimestamp("DEMI");
-        this.nDoc = vo.asString("NDOC");
-        this.serie = vo.asString("SERIE");
-        this.subSer = vo.asString("SUBSER");
-        this.tpDocta = vo.asString("TPDOCTA");
         return this;
    }
 }

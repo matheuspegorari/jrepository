@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
-   private BigDecimal codGrupo;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuRemetente;
-   private String descricao;
-   private Timestamp dhCriacao;
-   private String identificador;
-   private BigDecimal importancia;
-   private BigDecimal nuAviso;
-   private BigDecimal nuAvisoPai;
-   private String solucao;
-   private String tipo;
-   private String titulo;
-   private BigDecimal ordem;
-   private Timestamp dtExpiracao;
-   private Timestamp dtNotificacao;
-
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuRemetente() {
-        return codUsuRemetente;
+        return this.getVo().asBigDecimal("CODUSUREMETENTE");
    }
 
    public void setCodUsuRemetente(BigDecimal codUsuRemetente) {
         markAsChanged("CODUSUREMETENTE", codUsuRemetente);
-        this.codUsuRemetente = codUsuRemetente;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhCriacao() {
-        return dhCriacao;
+        return this.getVo().asTimestamp("DHCRIACAO");
    }
 
    public void setDhCriacao(Timestamp dhCriacao) {
         markAsChanged("DHCRIACAO", dhCriacao);
-        this.dhCriacao = dhCriacao;
    }
 
    public String getIdentificador() {
-        return identificador;
+        return this.getVo().asString("IDENTIFICADOR");
    }
 
    public void setIdentificador(String identificador) {
         markAsChanged("IDENTIFICADOR", identificador);
-        this.identificador = identificador;
    }
 
    public BigDecimal getImportancia() {
-        return importancia;
+        return this.getVo().asBigDecimal("IMPORTANCIA");
    }
 
    public void setImportancia(BigDecimal importancia) {
         markAsChanged("IMPORTANCIA", importancia);
-        this.importancia = importancia;
    }
 
    public BigDecimal getNuAviso() {
-        return nuAviso;
+        return this.getVo().asBigDecimal("NUAVISO");
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
         markAsChanged("NUAVISO", nuAviso);
-        this.nuAviso = nuAviso;
    }
 
    public BigDecimal getNuAvisoPai() {
-        return nuAvisoPai;
+        return this.getVo().asBigDecimal("NUAVISOPAI");
    }
 
    public void setNuAvisoPai(BigDecimal nuAvisoPai) {
         markAsChanged("NUAVISOPAI", nuAvisoPai);
-        this.nuAvisoPai = nuAvisoPai;
    }
 
    public String getSolucao() {
-        return solucao;
+        return this.getVo().asString("SOLUCAO");
    }
 
    public void setSolucao(String solucao) {
         markAsChanged("SOLUCAO", solucao);
-        this.solucao = solucao;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTitulo() {
-        return titulo;
+        return this.getVo().asString("TITULO");
    }
 
    public void setTitulo(String titulo) {
         markAsChanged("TITULO", titulo);
-        this.titulo = titulo;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public Timestamp getDtExpiracao() {
-        return dtExpiracao;
+        return this.getVo().asTimestamp("DTEXPIRACAO");
    }
 
    public void setDtExpiracao(Timestamp dtExpiracao) {
         markAsChanged("DTEXPIRACAO", dtExpiracao);
-        this.dtExpiracao = dtExpiracao;
    }
 
    public Timestamp getDtNotificacao() {
-        return dtNotificacao;
+        return this.getVo().asTimestamp("DTNOTIFICACAO");
    }
 
    public void setDtNotificacao(Timestamp dtNotificacao) {
         markAsChanged("DTNOTIFICACAO", dtNotificacao);
-        this.dtNotificacao = dtNotificacao;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class AvisoSistema extends AbstractSankhyaEntity<AvisoSistema> {
    @Override
    public AvisoSistema fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuRemetente = vo.asBigDecimal("CODUSUREMETENTE");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhCriacao = vo.asTimestamp("DHCRIACAO");
-        this.identificador = vo.asString("IDENTIFICADOR");
-        this.importancia = vo.asBigDecimal("IMPORTANCIA");
-        this.nuAviso = vo.asBigDecimal("NUAVISO");
-        this.nuAvisoPai = vo.asBigDecimal("NUAVISOPAI");
-        this.solucao = vo.asString("SOLUCAO");
-        this.tipo = vo.asString("TIPO");
-        this.titulo = vo.asString("TITULO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.dtExpiracao = vo.asTimestamp("DTEXPIRACAO");
-        this.dtNotificacao = vo.asTimestamp("DTNOTIFICACAO");
         return this;
    }
 }

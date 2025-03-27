@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<RelatorioFormatadoAtividade> {
-   private String descricao;
-   private BigDecimal nuEle;
-   private BigDecimal nuRfe;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getNuEle() {
-        return nuEle;
+        return this.getVo().asBigDecimal("NUELE");
    }
 
    public void setNuEle(BigDecimal nuEle) {
         markAsChanged("NUELE", nuEle);
-        this.nuEle = nuEle;
    }
 
    public BigDecimal getNuRfe() {
-        return nuRfe;
+        return this.getVo().asBigDecimal("NURFE");
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
         markAsChanged("NURFE", nuRfe);
-        this.nuRfe = nuRfe;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class RelatorioFormatadoAtividade extends AbstractSankhyaEntity<Relatorio
    @Override
    public RelatorioFormatadoAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.nuEle = vo.asBigDecimal("NUELE");
-        this.nuRfe = vo.asBigDecimal("NURFE");
         return this;
    }
 }

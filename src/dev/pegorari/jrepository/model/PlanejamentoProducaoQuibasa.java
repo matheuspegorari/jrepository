@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<PlanejamentoProducaoQuibasa> {
-   private BigDecimal numPlan;
-   private BigDecimal codEmp;
-   private BigDecimal codProd;
-   private String concluido;
-   private Timestamp dtAlter;
-   private BigDecimal numLote;
-   private String observacao;
-   private BigDecimal qtdProd;
-   private Timestamp dtVal;
-
    public BigDecimal getNumPlan() {
-        return numPlan;
+        return this.getVo().asBigDecimal("NUMPLAN");
    }
 
    public void setNumPlan(BigDecimal numPlan) {
         markAsChanged("NUMPLAN", numPlan);
-        this.numPlan = numPlan;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getConcluido() {
-        return concluido;
+        return this.getVo().asString("CONCLUIDO");
    }
 
    public void setConcluido(String concluido) {
         markAsChanged("CONCLUIDO", concluido);
-        this.concluido = concluido;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNumLote() {
-        return numLote;
+        return this.getVo().asBigDecimal("NUMLOTE");
    }
 
    public void setNumLote(BigDecimal numLote) {
         markAsChanged("NUMLOTE", numLote);
-        this.numLote = numLote;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getQtdProd() {
-        return qtdProd;
+        return this.getVo().asBigDecimal("QTDPROD");
    }
 
    public void setQtdProd(BigDecimal qtdProd) {
         markAsChanged("QTDPROD", qtdProd);
-        this.qtdProd = qtdProd;
    }
 
    public Timestamp getDtVal() {
-        return dtVal;
+        return this.getVo().asTimestamp("DTVAL");
    }
 
    public void setDtVal(Timestamp dtVal) {
         markAsChanged("DTVAL", dtVal);
-        this.dtVal = dtVal;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class PlanejamentoProducaoQuibasa extends AbstractSankhyaEntity<Planejame
    @Override
    public PlanejamentoProducaoQuibasa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.numPlan = vo.asBigDecimal("NUMPLAN");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.concluido = vo.asString("CONCLUIDO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.numLote = vo.asBigDecimal("NUMLOTE");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.qtdProd = vo.asBigDecimal("QTDPROD");
-        this.dtVal = vo.asTimestamp("DTVAL");
         return this;
    }
 }

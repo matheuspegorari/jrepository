@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
-   private BigDecimal cargaInfGtv;
-   private BigDecimal codVeiculo;
-   private BigDecimal digVerInfGtv;
-   private String idInfGtv;
-   private String numInfGtv;
-   private BigDecimal nuNota;
-   private String serInfGtv;
-   private String subSerInfGtv;
-
    public BigDecimal getCargaInfGtv() {
-        return cargaInfGtv;
+        return this.getVo().asBigDecimal("CARGAINFGTV");
    }
 
    public void setCargaInfGtv(BigDecimal cargaInfGtv) {
         markAsChanged("CARGAINFGTV", cargaInfGtv);
-        this.cargaInfGtv = cargaInfGtv;
    }
 
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public BigDecimal getDigVerInfGtv() {
-        return digVerInfGtv;
+        return this.getVo().asBigDecimal("DIGVERINFGTV");
    }
 
    public void setDigVerInfGtv(BigDecimal digVerInfGtv) {
         markAsChanged("DIGVERINFGTV", digVerInfGtv);
-        this.digVerInfGtv = digVerInfGtv;
    }
 
    public String getIdInfGtv() {
-        return idInfGtv;
+        return this.getVo().asString("IDINFGTV");
    }
 
    public void setIdInfGtv(String idInfGtv) {
         markAsChanged("IDINFGTV", idInfGtv);
-        this.idInfGtv = idInfGtv;
    }
 
    public String getNumInfGtv() {
-        return numInfGtv;
+        return this.getVo().asString("NUMINFGTV");
    }
 
    public void setNumInfGtv(String numInfGtv) {
         markAsChanged("NUMINFGTV", numInfGtv);
-        this.numInfGtv = numInfGtv;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getSerInfGtv() {
-        return serInfGtv;
+        return this.getVo().asString("SERINFGTV");
    }
 
    public void setSerInfGtv(String serInfGtv) {
         markAsChanged("SERINFGTV", serInfGtv);
-        this.serInfGtv = serInfGtv;
    }
 
    public String getSubSerInfGtv() {
-        return subSerInfGtv;
+        return this.getVo().asString("SUBSERINFGTV");
    }
 
    public void setSubSerInfGtv(String subSerInfGtv) {
         markAsChanged("SUBSERINFGTV", subSerInfGtv);
-        this.subSerInfGtv = subSerInfGtv;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class InformacoesGTV extends AbstractSankhyaEntity<InformacoesGTV> {
    @Override
    public InformacoesGTV fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cargaInfGtv = vo.asBigDecimal("CARGAINFGTV");
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.digVerInfGtv = vo.asBigDecimal("DIGVERINFGTV");
-        this.idInfGtv = vo.asString("IDINFGTV");
-        this.numInfGtv = vo.asString("NUMINFGTV");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.serInfGtv = vo.asString("SERINFGTV");
-        this.subSerInfGtv = vo.asString("SUBSERINFGTV");
         return this;
    }
 }

@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaPlanoContaRef> {
-   private BigDecimal tipo;
-   private String tabela;
-   private BigDecimal ano;
-   private BigDecimal codUsu;
-   private String versao;
-   private Timestamp dtAlter;
-
    public BigDecimal getTipo() {
-        return tipo;
+        return this.getVo().asBigDecimal("TIPO");
    }
 
    public void setTipo(BigDecimal tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public BigDecimal getAno() {
-        return ano;
+        return this.getVo().asBigDecimal("ANO");
    }
 
    public void setAno(BigDecimal ano) {
         markAsChanged("ANO", ano);
-        this.ano = ano;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getVersao() {
-        return versao;
+        return this.getVo().asString("VERSAO");
    }
 
    public void setVersao(String versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class TabDinamicaPlanoContaRef extends AbstractSankhyaEntity<TabDinamicaP
    @Override
    public TabDinamicaPlanoContaRef fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipo = vo.asBigDecimal("TIPO");
-        this.tabela = vo.asString("TABELA");
-        this.ano = vo.asBigDecimal("ANO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.versao = vo.asString("VERSAO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
         return this;
    }
 }

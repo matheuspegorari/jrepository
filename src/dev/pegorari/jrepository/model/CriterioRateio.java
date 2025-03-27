@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
-   private String automatico;
-   private BigDecimal codCencus;
-   private BigDecimal codCriterio;
-   private BigDecimal codEmp;
-   private BigDecimal codNat;
-   private BigDecimal codProj;
-   private String descricao;
-   private String origemCriterio;
-   private BigDecimal numContrato;
-
    public String getAutomatico() {
-        return automatico;
+        return this.getVo().asString("AUTOMATICO");
    }
 
    public void setAutomatico(String automatico) {
         markAsChanged("AUTOMATICO", automatico);
-        this.automatico = automatico;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodCriterio() {
-        return codCriterio;
+        return this.getVo().asBigDecimal("CODCRITERIO");
    }
 
    public void setCodCriterio(BigDecimal codCriterio) {
         markAsChanged("CODCRITERIO", codCriterio);
-        this.codCriterio = codCriterio;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getCodProj() {
-        return codProj;
+        return this.getVo().asBigDecimal("CODPROJ");
    }
 
    public void setCodProj(BigDecimal codProj) {
         markAsChanged("CODPROJ", codProj);
-        this.codProj = codProj;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getOrigemCriterio() {
-        return origemCriterio;
+        return this.getVo().asString("ORIGEMCRITERIO");
    }
 
    public void setOrigemCriterio(String origemCriterio) {
         markAsChanged("ORIGEMCRITERIO", origemCriterio);
-        this.origemCriterio = origemCriterio;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class CriterioRateio extends AbstractSankhyaEntity<CriterioRateio> {
    @Override
    public CriterioRateio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.automatico = vo.asString("AUTOMATICO");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codCriterio = vo.asBigDecimal("CODCRITERIO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.codProj = vo.asBigDecimal("CODPROJ");
-        this.descricao = vo.asString("DESCRICAO");
-        this.origemCriterio = vo.asString("ORIGEMCRITERIO");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         return this;
    }
 }

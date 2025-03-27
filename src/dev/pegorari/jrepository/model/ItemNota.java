@@ -6,2125 +6,1700 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemNota extends AbstractSankhyaEntity<ItemNota> {
-   private BigDecimal aliqIcms;
-   private BigDecimal aliqIcmsRed;
-   private BigDecimal aliqIpi;
-   private BigDecimal aliqIss;
-   private BigDecimal vlrIcmsUfDest;
-   private BigDecimal vlrIpi;
-   private BigDecimal vlrIss;
-   private BigDecimal vlrLiqProm;
-   private BigDecimal vlrPromo;
-   private BigDecimal vlrPtoPureza;
-   private BigDecimal vlrRepRed;
-   private BigDecimal vlrRetencao;
-   private BigDecimal vlrStExtraNota;
-   private BigDecimal vlrSubst;
-   private BigDecimal vlrSubstAnt;
-   private BigDecimal vlrSugerido;
-   private BigDecimal vlrTot;
-   private BigDecimal vlrTotLiq;
-   private BigDecimal vlrTroca;
-   private BigDecimal vlrUnidPad;
-   private BigDecimal vlrUnit;
-   private BigDecimal vlrUnitDolar;
-   private BigDecimal vlrUnitLiq;
-   private BigDecimal vlrDescBonif;
-   private BigDecimal basicmMod;
-   private BigDecimal basicmStMod;
-   private String codAntecipSt;
-   private BigDecimal numeroOs;
-   private BigDecimal atualEstoque;
-   private String atualEstTerc;
-   private BigDecimal baseIcms;
-   private BigDecimal baseIpi;
-   private BigDecimal baseIss;
-   private BigDecimal baseStAnt;
-   private BigDecimal baseStUfDest;
-   private BigDecimal baseSubstit;
-   private BigDecimal vlrDescDigitado;
-   private BigDecimal vlrIcms;
-   private BigDecimal vlrIcmsAnt;
-   private String terceiros;
-   private String usoProd;
-   private BigDecimal variacaoFcp;
-   private BigDecimal vlrAcrescDesc;
-   private BigDecimal vlrCom;
-   private BigDecimal vlrComGer;
-   private BigDecimal vlrCus;
-   private String codVolParc;
-   private BigDecimal vlrDesc;
-   private BigDecimal vlrTotLiqMoe;
-   private BigDecimal vlrTotMoe;
-   private BigDecimal vlrDescMoe;
-   private BigDecimal vlrUnitMoe;
-   private BigDecimal codEspecSt;
-   private BigDecimal idAliqIcms;
-   private BigDecimal numContrato;
-   private BigDecimal vlrUnitLoc;
-   private BigDecimal codEnqIpi;
-   private BigDecimal vlrUnitLiqMoe;
-   private BigDecimal baseSubstitAnt;
-   private BigDecimal baseSubstitSemRed;
-   private BigDecimal codCav;
-   private BigDecimal codCfo;
-   private BigDecimal codCfps;
-   private BigDecimal codEmp;
-   private BigDecimal codExec;
-   private BigDecimal codLocalDest;
-   private BigDecimal codLocalOrig;
-   private BigDecimal codMotDesoneraIcms;
-   private BigDecimal codObsPadrao;
-   private BigDecimal codParceExec;
-   private BigDecimal codProc;
-   private BigDecimal codProd;
-   private BigDecimal codPromo;
-   private BigDecimal codTpa;
-   private BigDecimal codTrib;
-   private BigDecimal codTribIss;
-   private BigDecimal codUsu;
-   private BigDecimal codVend;
-   private String codVol;
-   private String codVolPad;
-   private String complDesc;
-   private String controle;
-   private String controleDest;
-   private BigDecimal csosn;
-   private BigDecimal cstIpi;
-   private BigDecimal custo;
-   private Timestamp dtAlter;
-   private Timestamp dtVigor;
-   private String endImagem;
-   private BigDecimal espessura;
-   private BigDecimal estoque;
-   private String faturar;
-   private BigDecimal grupoTransg;
-   private String gtinNfe;
-   private String gtinTribNfe;
-   private BigDecimal largura;
-   private BigDecimal m3;
-   private String marca;
-   private String ncm;
-   private String nrSerieReserva;
-   private String numPedido2;
-   private BigDecimal nuNota;
-   private BigDecimal nuPromocao;
-   private BigDecimal nuTab;
-   private String observacao;
-   private String origProd;
-   private String pendente;
-   private BigDecimal percCom;
-   private BigDecimal percComGer;
-   private BigDecimal percDesc;
-   private BigDecimal percDescBase;
-   private BigDecimal percDescBonif;
-   private BigDecimal percDescDigitado;
-   private BigDecimal percDescProm;
-   private BigDecimal percDescTgfdes;
-   private BigDecimal percGermin;
-   private BigDecimal percPureza;
-   private BigDecimal pesoBruto;
-   private BigDecimal pesoLiq;
-   private BigDecimal precoBase;
-   private BigDecimal precoBaseQtd;
-   private String produtoNfe;
-   private BigDecimal qtdConferida;
-   private BigDecimal qtdEntregue;
-   private BigDecimal qtdFat;
-   private BigDecimal qtdFixada;
-   private BigDecimal qtdFormula;
-   private BigDecimal qtdNeg;
-   private BigDecimal qtdPeca;
-   private BigDecimal qtdPendente;
-   private BigDecimal qtdUnidPad;
-   private BigDecimal qtdWms;
-   private String referencia;
-   private String refForn;
-   private String reserva;
-   private String seqPedido2;
-   private BigDecimal sequencia;
-   private String solCompra;
-   private String statusLote;
-   private String statusNota;
-   private String altPreco;
-   private BigDecimal altura;
-   private BigDecimal qtdVol;
-   private Timestamp dtInicio;
-   private BigDecimal aliqStExtraNota;
-   private BigDecimal aliqStFcpStAnt;
-   private BigDecimal baseStExtraNota;
-   private String origemBusca;
-   private BigDecimal produtoPesquisado;
-   private BigDecimal qtdTribExport;
-   private BigDecimal reservado;
-   private BigDecimal vlrRepRedSemDesc;
-   private BigDecimal vlrTotLiqRef;
-   private BigDecimal vlrVendaPromo;
-   private BigDecimal nuFop;
-   private BigDecimal sequenciaFiscal;
-   private BigDecimal codLocalTerc;
-   private BigDecimal percStFcpIntAnt;
-   private BigDecimal vlrStFcpIntAnt;
-   private BigDecimal baseStFcpIntAnt;
-   private String indEscala;
-   private String codBenefNauf;
-   private String cnpjFabricante;
-   private String codAgregacao;
-   private BigDecimal percRedVlrIpi;
-   private BigDecimal codDocArrecad;
-   private String numDocArrecad;
-   private BigDecimal baseCalcStExtraNota;
-   private BigDecimal margLucro;
-   private BigDecimal redBaseSt;
-   private BigDecimal vlrIcmsDiferido;
-   private String tipoSeparacao;
-   private String nroProcesso;
-   private BigDecimal baseSubstitUnitOrig;
-   private BigDecimal vlrSubstitUnitOrig;
-   private BigDecimal percDescFornecedor;
-   private String statusProc;
-   private String operAtual;
-   private String geraProducao;
-   private BigDecimal icmsStFrete;
-   private BigDecimal idAliqIcmsDifIcms;
-   private String codBarraPdv;
-   private BigDecimal aliqFetHab;
-   private BigDecimal vlrFetHab;
-   private String codSit08Efd;
-   private BigDecimal aliqFuntTel;
-   private BigDecimal aliqFust;
-   private BigDecimal baseFuntTel;
-   private BigDecimal baseFust;
-   private BigDecimal vlrFuntTel;
-   private BigDecimal vlrFust;
-   private BigDecimal tipUtilCom;
-   private BigDecimal percUsaquDecpe;
-   private BigDecimal vlrCusAquDecpe;
-   private BigDecimal baseIcmsStFrete;
-   private BigDecimal codMotDesoneraSt;
-   private BigDecimal vlrRepRedSt;
-   private String unidade;
-   private String tipEntrega;
-   private BigDecimal aliqIcmsAt;
-   private BigDecimal aliqInterIcmsAt;
-   private BigDecimal baseIcmsAt;
-   private BigDecimal idAliqIcmsAt;
-   private BigDecimal vlrIcmsAt;
-   private BigDecimal idDescParceria;
-   private BigDecimal vlrDescParceria;
-   private String codFci;
-   private BigDecimal percUsaquDecpeEst;
-   private BigDecimal codIpi;
-   private BigDecimal idAliqIss;
-   private BigDecimal codNatRend;
-   private String indRepDes;
-
    public BigDecimal getAliqIcms() {
-        return aliqIcms;
+        return this.getVo().asBigDecimal("ALIQICMS");
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
         markAsChanged("ALIQICMS", aliqIcms);
-        this.aliqIcms = aliqIcms;
    }
 
    public BigDecimal getAliqIcmsRed() {
-        return aliqIcmsRed;
+        return this.getVo().asBigDecimal("ALIQICMSRED");
    }
 
    public void setAliqIcmsRed(BigDecimal aliqIcmsRed) {
         markAsChanged("ALIQICMSRED", aliqIcmsRed);
-        this.aliqIcmsRed = aliqIcmsRed;
    }
 
    public BigDecimal getAliqIpi() {
-        return aliqIpi;
+        return this.getVo().asBigDecimal("ALIQIPI");
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
         markAsChanged("ALIQIPI", aliqIpi);
-        this.aliqIpi = aliqIpi;
    }
 
    public BigDecimal getAliqIss() {
-        return aliqIss;
+        return this.getVo().asBigDecimal("ALIQISS");
    }
 
    public void setAliqIss(BigDecimal aliqIss) {
         markAsChanged("ALIQISS", aliqIss);
-        this.aliqIss = aliqIss;
    }
 
    public BigDecimal getVlrIcmsUfDest() {
-        return vlrIcmsUfDest;
+        return this.getVo().asBigDecimal("VLRICMSUFDEST");
    }
 
    public void setVlrIcmsUfDest(BigDecimal vlrIcmsUfDest) {
         markAsChanged("VLRICMSUFDEST", vlrIcmsUfDest);
-        this.vlrIcmsUfDest = vlrIcmsUfDest;
    }
 
    public BigDecimal getVlrIpi() {
-        return vlrIpi;
+        return this.getVo().asBigDecimal("VLRIPI");
    }
 
    public void setVlrIpi(BigDecimal vlrIpi) {
         markAsChanged("VLRIPI", vlrIpi);
-        this.vlrIpi = vlrIpi;
    }
 
    public BigDecimal getVlrIss() {
-        return vlrIss;
+        return this.getVo().asBigDecimal("VLRISS");
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
         markAsChanged("VLRISS", vlrIss);
-        this.vlrIss = vlrIss;
    }
 
    public BigDecimal getVlrLiqProm() {
-        return vlrLiqProm;
+        return this.getVo().asBigDecimal("VLRLIQPROM");
    }
 
    public void setVlrLiqProm(BigDecimal vlrLiqProm) {
         markAsChanged("VLRLIQPROM", vlrLiqProm);
-        this.vlrLiqProm = vlrLiqProm;
    }
 
    public BigDecimal getVlrPromo() {
-        return vlrPromo;
+        return this.getVo().asBigDecimal("VLRPROMO");
    }
 
    public void setVlrPromo(BigDecimal vlrPromo) {
         markAsChanged("VLRPROMO", vlrPromo);
-        this.vlrPromo = vlrPromo;
    }
 
    public BigDecimal getVlrPtoPureza() {
-        return vlrPtoPureza;
+        return this.getVo().asBigDecimal("VLRPTOPUREZA");
    }
 
    public void setVlrPtoPureza(BigDecimal vlrPtoPureza) {
         markAsChanged("VLRPTOPUREZA", vlrPtoPureza);
-        this.vlrPtoPureza = vlrPtoPureza;
    }
 
    public BigDecimal getVlrRepRed() {
-        return vlrRepRed;
+        return this.getVo().asBigDecimal("VLRREPRED");
    }
 
    public void setVlrRepRed(BigDecimal vlrRepRed) {
         markAsChanged("VLRREPRED", vlrRepRed);
-        this.vlrRepRed = vlrRepRed;
    }
 
    public BigDecimal getVlrRetencao() {
-        return vlrRetencao;
+        return this.getVo().asBigDecimal("VLRRETENCAO");
    }
 
    public void setVlrRetencao(BigDecimal vlrRetencao) {
         markAsChanged("VLRRETENCAO", vlrRetencao);
-        this.vlrRetencao = vlrRetencao;
    }
 
    public BigDecimal getVlrStExtraNota() {
-        return vlrStExtraNota;
+        return this.getVo().asBigDecimal("VLRSTEXTRANOTA");
    }
 
    public void setVlrStExtraNota(BigDecimal vlrStExtraNota) {
         markAsChanged("VLRSTEXTRANOTA", vlrStExtraNota);
-        this.vlrStExtraNota = vlrStExtraNota;
    }
 
    public BigDecimal getVlrSubst() {
-        return vlrSubst;
+        return this.getVo().asBigDecimal("VLRSUBST");
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
         markAsChanged("VLRSUBST", vlrSubst);
-        this.vlrSubst = vlrSubst;
    }
 
    public BigDecimal getVlrSubstAnt() {
-        return vlrSubstAnt;
+        return this.getVo().asBigDecimal("VLRSUBSTANT");
    }
 
    public void setVlrSubstAnt(BigDecimal vlrSubstAnt) {
         markAsChanged("VLRSUBSTANT", vlrSubstAnt);
-        this.vlrSubstAnt = vlrSubstAnt;
    }
 
    public BigDecimal getVlrSugerido() {
-        return vlrSugerido;
+        return this.getVo().asBigDecimal("VLRSUGERIDO");
    }
 
    public void setVlrSugerido(BigDecimal vlrSugerido) {
         markAsChanged("VLRSUGERIDO", vlrSugerido);
-        this.vlrSugerido = vlrSugerido;
    }
 
    public BigDecimal getVlrTot() {
-        return vlrTot;
+        return this.getVo().asBigDecimal("VLRTOT");
    }
 
    public void setVlrTot(BigDecimal vlrTot) {
         markAsChanged("VLRTOT", vlrTot);
-        this.vlrTot = vlrTot;
    }
 
    public BigDecimal getVlrTotLiq() {
-        return vlrTotLiq;
+        return this.getVo().asBigDecimal("VLRTOTLIQ");
    }
 
    public void setVlrTotLiq(BigDecimal vlrTotLiq) {
         markAsChanged("VLRTOTLIQ", vlrTotLiq);
-        this.vlrTotLiq = vlrTotLiq;
    }
 
    public BigDecimal getVlrTroca() {
-        return vlrTroca;
+        return this.getVo().asBigDecimal("VLRTROCA");
    }
 
    public void setVlrTroca(BigDecimal vlrTroca) {
         markAsChanged("VLRTROCA", vlrTroca);
-        this.vlrTroca = vlrTroca;
    }
 
    public BigDecimal getVlrUnidPad() {
-        return vlrUnidPad;
+        return this.getVo().asBigDecimal("VLRUNIDPAD");
    }
 
    public void setVlrUnidPad(BigDecimal vlrUnidPad) {
         markAsChanged("VLRUNIDPAD", vlrUnidPad);
-        this.vlrUnidPad = vlrUnidPad;
    }
 
    public BigDecimal getVlrUnit() {
-        return vlrUnit;
+        return this.getVo().asBigDecimal("VLRUNIT");
    }
 
    public void setVlrUnit(BigDecimal vlrUnit) {
         markAsChanged("VLRUNIT", vlrUnit);
-        this.vlrUnit = vlrUnit;
    }
 
    public BigDecimal getVlrUnitDolar() {
-        return vlrUnitDolar;
+        return this.getVo().asBigDecimal("VLRUNITDOLAR");
    }
 
    public void setVlrUnitDolar(BigDecimal vlrUnitDolar) {
         markAsChanged("VLRUNITDOLAR", vlrUnitDolar);
-        this.vlrUnitDolar = vlrUnitDolar;
    }
 
    public BigDecimal getVlrUnitLiq() {
-        return vlrUnitLiq;
+        return this.getVo().asBigDecimal("VLRUNITLIQ");
    }
 
    public void setVlrUnitLiq(BigDecimal vlrUnitLiq) {
         markAsChanged("VLRUNITLIQ", vlrUnitLiq);
-        this.vlrUnitLiq = vlrUnitLiq;
    }
 
    public BigDecimal getVlrDescBonif() {
-        return vlrDescBonif;
+        return this.getVo().asBigDecimal("VLRDESCBONIF");
    }
 
    public void setVlrDescBonif(BigDecimal vlrDescBonif) {
         markAsChanged("VLRDESCBONIF", vlrDescBonif);
-        this.vlrDescBonif = vlrDescBonif;
    }
 
    public BigDecimal getBasicmMod() {
-        return basicmMod;
+        return this.getVo().asBigDecimal("BASICMMOD");
    }
 
    public void setBasicmMod(BigDecimal basicmMod) {
         markAsChanged("BASICMMOD", basicmMod);
-        this.basicmMod = basicmMod;
    }
 
    public BigDecimal getBasicmStMod() {
-        return basicmStMod;
+        return this.getVo().asBigDecimal("BASICMSTMOD");
    }
 
    public void setBasicmStMod(BigDecimal basicmStMod) {
         markAsChanged("BASICMSTMOD", basicmStMod);
-        this.basicmStMod = basicmStMod;
    }
 
    public String getCodAntecipSt() {
-        return codAntecipSt;
+        return this.getVo().asString("CODANTECIPST");
    }
 
    public void setCodAntecipSt(String codAntecipSt) {
         markAsChanged("CODANTECIPST", codAntecipSt);
-        this.codAntecipSt = codAntecipSt;
    }
 
    public BigDecimal getNumeroOs() {
-        return numeroOs;
+        return this.getVo().asBigDecimal("NUMEROOS");
    }
 
    public void setNumeroOs(BigDecimal numeroOs) {
         markAsChanged("NUMEROOS", numeroOs);
-        this.numeroOs = numeroOs;
    }
 
    public BigDecimal getAtualEstoque() {
-        return atualEstoque;
+        return this.getVo().asBigDecimal("ATUALESTOQUE");
    }
 
    public void setAtualEstoque(BigDecimal atualEstoque) {
         markAsChanged("ATUALESTOQUE", atualEstoque);
-        this.atualEstoque = atualEstoque;
    }
 
    public String getAtualEstTerc() {
-        return atualEstTerc;
+        return this.getVo().asString("ATUALESTTERC");
    }
 
    public void setAtualEstTerc(String atualEstTerc) {
         markAsChanged("ATUALESTTERC", atualEstTerc);
-        this.atualEstTerc = atualEstTerc;
    }
 
    public BigDecimal getBaseIcms() {
-        return baseIcms;
+        return this.getVo().asBigDecimal("BASEICMS");
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
         markAsChanged("BASEICMS", baseIcms);
-        this.baseIcms = baseIcms;
    }
 
    public BigDecimal getBaseIpi() {
-        return baseIpi;
+        return this.getVo().asBigDecimal("BASEIPI");
    }
 
    public void setBaseIpi(BigDecimal baseIpi) {
         markAsChanged("BASEIPI", baseIpi);
-        this.baseIpi = baseIpi;
    }
 
    public BigDecimal getBaseIss() {
-        return baseIss;
+        return this.getVo().asBigDecimal("BASEISS");
    }
 
    public void setBaseIss(BigDecimal baseIss) {
         markAsChanged("BASEISS", baseIss);
-        this.baseIss = baseIss;
    }
 
    public BigDecimal getBaseStAnt() {
-        return baseStAnt;
+        return this.getVo().asBigDecimal("BASESTANT");
    }
 
    public void setBaseStAnt(BigDecimal baseStAnt) {
         markAsChanged("BASESTANT", baseStAnt);
-        this.baseStAnt = baseStAnt;
    }
 
    public BigDecimal getBaseStUfDest() {
-        return baseStUfDest;
+        return this.getVo().asBigDecimal("BASESTUFDEST");
    }
 
    public void setBaseStUfDest(BigDecimal baseStUfDest) {
         markAsChanged("BASESTUFDEST", baseStUfDest);
-        this.baseStUfDest = baseStUfDest;
    }
 
    public BigDecimal getBaseSubstit() {
-        return baseSubstit;
+        return this.getVo().asBigDecimal("BASESUBSTIT");
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
         markAsChanged("BASESUBSTIT", baseSubstit);
-        this.baseSubstit = baseSubstit;
    }
 
    public BigDecimal getVlrDescDigitado() {
-        return vlrDescDigitado;
+        return this.getVo().asBigDecimal("VLRDESCDIGITADO");
    }
 
    public void setVlrDescDigitado(BigDecimal vlrDescDigitado) {
         markAsChanged("VLRDESCDIGITADO", vlrDescDigitado);
-        this.vlrDescDigitado = vlrDescDigitado;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getVlrIcmsAnt() {
-        return vlrIcmsAnt;
+        return this.getVo().asBigDecimal("VLRICMSANT");
    }
 
    public void setVlrIcmsAnt(BigDecimal vlrIcmsAnt) {
         markAsChanged("VLRICMSANT", vlrIcmsAnt);
-        this.vlrIcmsAnt = vlrIcmsAnt;
    }
 
    public String getTerceiros() {
-        return terceiros;
+        return this.getVo().asString("TERCEIROS");
    }
 
    public void setTerceiros(String terceiros) {
         markAsChanged("TERCEIROS", terceiros);
-        this.terceiros = terceiros;
    }
 
    public String getUsoProd() {
-        return usoProd;
+        return this.getVo().asString("USOPROD");
    }
 
    public void setUsoProd(String usoProd) {
         markAsChanged("USOPROD", usoProd);
-        this.usoProd = usoProd;
    }
 
    public BigDecimal getVariacaoFcp() {
-        return variacaoFcp;
+        return this.getVo().asBigDecimal("VARIACAOFCP");
    }
 
    public void setVariacaoFcp(BigDecimal variacaoFcp) {
         markAsChanged("VARIACAOFCP", variacaoFcp);
-        this.variacaoFcp = variacaoFcp;
    }
 
    public BigDecimal getVlrAcrescDesc() {
-        return vlrAcrescDesc;
+        return this.getVo().asBigDecimal("VLRACRESCDESC");
    }
 
    public void setVlrAcrescDesc(BigDecimal vlrAcrescDesc) {
         markAsChanged("VLRACRESCDESC", vlrAcrescDesc);
-        this.vlrAcrescDesc = vlrAcrescDesc;
    }
 
    public BigDecimal getVlrCom() {
-        return vlrCom;
+        return this.getVo().asBigDecimal("VLRCOM");
    }
 
    public void setVlrCom(BigDecimal vlrCom) {
         markAsChanged("VLRCOM", vlrCom);
-        this.vlrCom = vlrCom;
    }
 
    public BigDecimal getVlrComGer() {
-        return vlrComGer;
+        return this.getVo().asBigDecimal("VLRCOMGER");
    }
 
    public void setVlrComGer(BigDecimal vlrComGer) {
         markAsChanged("VLRCOMGER", vlrComGer);
-        this.vlrComGer = vlrComGer;
    }
 
    public BigDecimal getVlrCus() {
-        return vlrCus;
+        return this.getVo().asBigDecimal("VLRCUS");
    }
 
    public void setVlrCus(BigDecimal vlrCus) {
         markAsChanged("VLRCUS", vlrCus);
-        this.vlrCus = vlrCus;
    }
 
    public String getCodVolParc() {
-        return codVolParc;
+        return this.getVo().asString("CODVOLPARC");
    }
 
    public void setCodVolParc(String codVolParc) {
         markAsChanged("CODVOLPARC", codVolParc);
-        this.codVolParc = codVolParc;
    }
 
    public BigDecimal getVlrDesc() {
-        return vlrDesc;
+        return this.getVo().asBigDecimal("VLRDESC");
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
         markAsChanged("VLRDESC", vlrDesc);
-        this.vlrDesc = vlrDesc;
    }
 
    public BigDecimal getVlrTotLiqMoe() {
-        return vlrTotLiqMoe;
+        return this.getVo().asBigDecimal("VLRTOTLIQMOE");
    }
 
    public void setVlrTotLiqMoe(BigDecimal vlrTotLiqMoe) {
         markAsChanged("VLRTOTLIQMOE", vlrTotLiqMoe);
-        this.vlrTotLiqMoe = vlrTotLiqMoe;
    }
 
    public BigDecimal getVlrTotMoe() {
-        return vlrTotMoe;
+        return this.getVo().asBigDecimal("VLRTOTMOE");
    }
 
    public void setVlrTotMoe(BigDecimal vlrTotMoe) {
         markAsChanged("VLRTOTMOE", vlrTotMoe);
-        this.vlrTotMoe = vlrTotMoe;
    }
 
    public BigDecimal getVlrDescMoe() {
-        return vlrDescMoe;
+        return this.getVo().asBigDecimal("VLRDESCMOE");
    }
 
    public void setVlrDescMoe(BigDecimal vlrDescMoe) {
         markAsChanged("VLRDESCMOE", vlrDescMoe);
-        this.vlrDescMoe = vlrDescMoe;
    }
 
    public BigDecimal getVlrUnitMoe() {
-        return vlrUnitMoe;
+        return this.getVo().asBigDecimal("VLRUNITMOE");
    }
 
    public void setVlrUnitMoe(BigDecimal vlrUnitMoe) {
         markAsChanged("VLRUNITMOE", vlrUnitMoe);
-        this.vlrUnitMoe = vlrUnitMoe;
    }
 
    public BigDecimal getCodEspecSt() {
-        return codEspecSt;
+        return this.getVo().asBigDecimal("CODESPECST");
    }
 
    public void setCodEspecSt(BigDecimal codEspecSt) {
         markAsChanged("CODESPECST", codEspecSt);
-        this.codEspecSt = codEspecSt;
    }
 
    public BigDecimal getIdAliqIcms() {
-        return idAliqIcms;
+        return this.getVo().asBigDecimal("IDALIQICMS");
    }
 
    public void setIdAliqIcms(BigDecimal idAliqIcms) {
         markAsChanged("IDALIQICMS", idAliqIcms);
-        this.idAliqIcms = idAliqIcms;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getVlrUnitLoc() {
-        return vlrUnitLoc;
+        return this.getVo().asBigDecimal("VLRUNITLOC");
    }
 
    public void setVlrUnitLoc(BigDecimal vlrUnitLoc) {
         markAsChanged("VLRUNITLOC", vlrUnitLoc);
-        this.vlrUnitLoc = vlrUnitLoc;
    }
 
    public BigDecimal getCodEnqIpi() {
-        return codEnqIpi;
+        return this.getVo().asBigDecimal("CODENQIPI");
    }
 
    public void setCodEnqIpi(BigDecimal codEnqIpi) {
         markAsChanged("CODENQIPI", codEnqIpi);
-        this.codEnqIpi = codEnqIpi;
    }
 
    public BigDecimal getVlrUnitLiqMoe() {
-        return vlrUnitLiqMoe;
+        return this.getVo().asBigDecimal("VLRUNITLIQMOE");
    }
 
    public void setVlrUnitLiqMoe(BigDecimal vlrUnitLiqMoe) {
         markAsChanged("VLRUNITLIQMOE", vlrUnitLiqMoe);
-        this.vlrUnitLiqMoe = vlrUnitLiqMoe;
    }
 
    public BigDecimal getBaseSubstitAnt() {
-        return baseSubstitAnt;
+        return this.getVo().asBigDecimal("BASESUBSTITANT");
    }
 
    public void setBaseSubstitAnt(BigDecimal baseSubstitAnt) {
         markAsChanged("BASESUBSTITANT", baseSubstitAnt);
-        this.baseSubstitAnt = baseSubstitAnt;
    }
 
    public BigDecimal getBaseSubstitSemRed() {
-        return baseSubstitSemRed;
+        return this.getVo().asBigDecimal("BASESUBSTSEMRED");
    }
 
    public void setBaseSubstitSemRed(BigDecimal baseSubstitSemRed) {
         markAsChanged("BASESUBSTSEMRED", baseSubstitSemRed);
-        this.baseSubstitSemRed = baseSubstitSemRed;
    }
 
    public BigDecimal getCodCav() {
-        return codCav;
+        return this.getVo().asBigDecimal("CODCAV");
    }
 
    public void setCodCav(BigDecimal codCav) {
         markAsChanged("CODCAV", codCav);
-        this.codCav = codCav;
    }
 
    public BigDecimal getCodCfo() {
-        return codCfo;
+        return this.getVo().asBigDecimal("CODCFO");
    }
 
    public void setCodCfo(BigDecimal codCfo) {
         markAsChanged("CODCFO", codCfo);
-        this.codCfo = codCfo;
    }
 
    public BigDecimal getCodCfps() {
-        return codCfps;
+        return this.getVo().asBigDecimal("CODCFPS");
    }
 
    public void setCodCfps(BigDecimal codCfps) {
         markAsChanged("CODCFPS", codCfps);
-        this.codCfps = codCfps;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodExec() {
-        return codExec;
+        return this.getVo().asBigDecimal("CODEXEC");
    }
 
    public void setCodExec(BigDecimal codExec) {
         markAsChanged("CODEXEC", codExec);
-        this.codExec = codExec;
    }
 
    public BigDecimal getCodLocalDest() {
-        return codLocalDest;
+        return this.getVo().asBigDecimal("CODLOCALDEST");
    }
 
    public void setCodLocalDest(BigDecimal codLocalDest) {
         markAsChanged("CODLOCALDEST", codLocalDest);
-        this.codLocalDest = codLocalDest;
    }
 
    public BigDecimal getCodLocalOrig() {
-        return codLocalOrig;
+        return this.getVo().asBigDecimal("CODLOCALORIG");
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
         markAsChanged("CODLOCALORIG", codLocalOrig);
-        this.codLocalOrig = codLocalOrig;
    }
 
    public BigDecimal getCodMotDesoneraIcms() {
-        return codMotDesoneraIcms;
+        return this.getVo().asBigDecimal("CODMOTDESONERAICMS");
    }
 
    public void setCodMotDesoneraIcms(BigDecimal codMotDesoneraIcms) {
         markAsChanged("CODMOTDESONERAICMS", codMotDesoneraIcms);
-        this.codMotDesoneraIcms = codMotDesoneraIcms;
    }
 
    public BigDecimal getCodObsPadrao() {
-        return codObsPadrao;
+        return this.getVo().asBigDecimal("CODOBSPADRAO");
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
         markAsChanged("CODOBSPADRAO", codObsPadrao);
-        this.codObsPadrao = codObsPadrao;
    }
 
    public BigDecimal getCodParceExec() {
-        return codParceExec;
+        return this.getVo().asBigDecimal("CODPARCEXEC");
    }
 
    public void setCodParceExec(BigDecimal codParceExec) {
         markAsChanged("CODPARCEXEC", codParceExec);
-        this.codParceExec = codParceExec;
    }
 
    public BigDecimal getCodProc() {
-        return codProc;
+        return this.getVo().asBigDecimal("CODPROC");
    }
 
    public void setCodProc(BigDecimal codProc) {
         markAsChanged("CODPROC", codProc);
-        this.codProc = codProc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodPromo() {
-        return codPromo;
+        return this.getVo().asBigDecimal("CODPROMO");
    }
 
    public void setCodPromo(BigDecimal codPromo) {
         markAsChanged("CODPROMO", codPromo);
-        this.codPromo = codPromo;
    }
 
    public BigDecimal getCodTpa() {
-        return codTpa;
+        return this.getVo().asBigDecimal("CODTPA");
    }
 
    public void setCodTpa(BigDecimal codTpa) {
         markAsChanged("CODTPA", codTpa);
-        this.codTpa = codTpa;
    }
 
    public BigDecimal getCodTrib() {
-        return codTrib;
+        return this.getVo().asBigDecimal("CODTRIB");
    }
 
    public void setCodTrib(BigDecimal codTrib) {
         markAsChanged("CODTRIB", codTrib);
-        this.codTrib = codTrib;
    }
 
    public BigDecimal getCodTribIss() {
-        return codTribIss;
+        return this.getVo().asBigDecimal("CODTRIBISS");
    }
 
    public void setCodTribIss(BigDecimal codTribIss) {
         markAsChanged("CODTRIBISS", codTribIss);
-        this.codTribIss = codTribIss;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getCodVolPad() {
-        return codVolPad;
+        return this.getVo().asString("CODVOLPAD");
    }
 
    public void setCodVolPad(String codVolPad) {
         markAsChanged("CODVOLPAD", codVolPad);
-        this.codVolPad = codVolPad;
    }
 
    public String getComplDesc() {
-        return complDesc;
+        return this.getVo().asString("COMPLDESC");
    }
 
    public void setComplDesc(String complDesc) {
         markAsChanged("COMPLDESC", complDesc);
-        this.complDesc = complDesc;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public String getControleDest() {
-        return controleDest;
+        return this.getVo().asString("CONTROLEDEST");
    }
 
    public void setControleDest(String controleDest) {
         markAsChanged("CONTROLEDEST", controleDest);
-        this.controleDest = controleDest;
    }
 
    public BigDecimal getCsosn() {
-        return csosn;
+        return this.getVo().asBigDecimal("CSOSN");
    }
 
    public void setCsosn(BigDecimal csosn) {
         markAsChanged("CSOSN", csosn);
-        this.csosn = csosn;
    }
 
    public BigDecimal getCstIpi() {
-        return cstIpi;
+        return this.getVo().asBigDecimal("CSTIPI");
    }
 
    public void setCstIpi(BigDecimal cstIpi) {
         markAsChanged("CSTIPI", cstIpi);
-        this.cstIpi = cstIpi;
    }
 
    public BigDecimal getCusto() {
-        return custo;
+        return this.getVo().asBigDecimal("CUSTO");
    }
 
    public void setCusto(BigDecimal custo) {
         markAsChanged("CUSTO", custo);
-        this.custo = custo;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtVigor() {
-        return dtVigor;
+        return this.getVo().asTimestamp("DTVIGOR");
    }
 
    public void setDtVigor(Timestamp dtVigor) {
         markAsChanged("DTVIGOR", dtVigor);
-        this.dtVigor = dtVigor;
    }
 
    public String getEndImagem() {
-        return endImagem;
+        return this.getVo().asString("ENDIMAGEM");
    }
 
    public void setEndImagem(String endImagem) {
         markAsChanged("ENDIMAGEM", endImagem);
-        this.endImagem = endImagem;
    }
 
    public BigDecimal getEspessura() {
-        return espessura;
+        return this.getVo().asBigDecimal("ESPESSURA");
    }
 
    public void setEspessura(BigDecimal espessura) {
         markAsChanged("ESPESSURA", espessura);
-        this.espessura = espessura;
    }
 
    public BigDecimal getEstoque() {
-        return estoque;
+        return this.getVo().asBigDecimal("ESTOQUE");
    }
 
    public void setEstoque(BigDecimal estoque) {
         markAsChanged("ESTOQUE", estoque);
-        this.estoque = estoque;
    }
 
    public String getFaturar() {
-        return faturar;
+        return this.getVo().asString("FATURAR");
    }
 
    public void setFaturar(String faturar) {
         markAsChanged("FATURAR", faturar);
-        this.faturar = faturar;
    }
 
    public BigDecimal getGrupoTransg() {
-        return grupoTransg;
+        return this.getVo().asBigDecimal("GRUPOTRANSG");
    }
 
    public void setGrupoTransg(BigDecimal grupoTransg) {
         markAsChanged("GRUPOTRANSG", grupoTransg);
-        this.grupoTransg = grupoTransg;
    }
 
    public String getGtinNfe() {
-        return gtinNfe;
+        return this.getVo().asString("GTINNFE");
    }
 
    public void setGtinNfe(String gtinNfe) {
         markAsChanged("GTINNFE", gtinNfe);
-        this.gtinNfe = gtinNfe;
    }
 
    public String getGtinTribNfe() {
-        return gtinTribNfe;
+        return this.getVo().asString("GTINTRIBNFE");
    }
 
    public void setGtinTribNfe(String gtinTribNfe) {
         markAsChanged("GTINTRIBNFE", gtinTribNfe);
-        this.gtinTribNfe = gtinTribNfe;
    }
 
    public BigDecimal getLargura() {
-        return largura;
+        return this.getVo().asBigDecimal("LARGURA");
    }
 
    public void setLargura(BigDecimal largura) {
         markAsChanged("LARGURA", largura);
-        this.largura = largura;
    }
 
    public BigDecimal getM3() {
-        return m3;
+        return this.getVo().asBigDecimal("M3");
    }
 
    public void setM3(BigDecimal m3) {
         markAsChanged("M3", m3);
-        this.m3 = m3;
    }
 
    public String getMarca() {
-        return marca;
+        return this.getVo().asString("MARCA");
    }
 
    public void setMarca(String marca) {
         markAsChanged("MARCA", marca);
-        this.marca = marca;
    }
 
    public String getNcm() {
-        return ncm;
+        return this.getVo().asString("NCM");
    }
 
    public void setNcm(String ncm) {
         markAsChanged("NCM", ncm);
-        this.ncm = ncm;
    }
 
    public String getNrSerieReserva() {
-        return nrSerieReserva;
+        return this.getVo().asString("NRSERIERESERVA");
    }
 
    public void setNrSerieReserva(String nrSerieReserva) {
         markAsChanged("NRSERIERESERVA", nrSerieReserva);
-        this.nrSerieReserva = nrSerieReserva;
    }
 
    public String getNumPedido2() {
-        return numPedido2;
+        return this.getVo().asString("NUMPEDIDO2");
    }
 
    public void setNumPedido2(String numPedido2) {
         markAsChanged("NUMPEDIDO2", numPedido2);
-        this.numPedido2 = numPedido2;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuPromocao() {
-        return nuPromocao;
+        return this.getVo().asBigDecimal("NUPROMOCAO");
    }
 
    public void setNuPromocao(BigDecimal nuPromocao) {
         markAsChanged("NUPROMOCAO", nuPromocao);
-        this.nuPromocao = nuPromocao;
    }
 
    public BigDecimal getNuTab() {
-        return nuTab;
+        return this.getVo().asBigDecimal("NUTAB");
    }
 
    public void setNuTab(BigDecimal nuTab) {
         markAsChanged("NUTAB", nuTab);
-        this.nuTab = nuTab;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getOrigProd() {
-        return origProd;
+        return this.getVo().asString("ORIGPROD");
    }
 
    public void setOrigProd(String origProd) {
         markAsChanged("ORIGPROD", origProd);
-        this.origProd = origProd;
    }
 
    public String getPendente() {
-        return pendente;
+        return this.getVo().asString("PENDENTE");
    }
 
    public void setPendente(String pendente) {
         markAsChanged("PENDENTE", pendente);
-        this.pendente = pendente;
    }
 
    public BigDecimal getPercCom() {
-        return percCom;
+        return this.getVo().asBigDecimal("PERCCOM");
    }
 
    public void setPercCom(BigDecimal percCom) {
         markAsChanged("PERCCOM", percCom);
-        this.percCom = percCom;
    }
 
    public BigDecimal getPercComGer() {
-        return percComGer;
+        return this.getVo().asBigDecimal("PERCCOMGER");
    }
 
    public void setPercComGer(BigDecimal percComGer) {
         markAsChanged("PERCCOMGER", percComGer);
-        this.percComGer = percComGer;
    }
 
    public BigDecimal getPercDesc() {
-        return percDesc;
+        return this.getVo().asBigDecimal("PERCDESC");
    }
 
    public void setPercDesc(BigDecimal percDesc) {
         markAsChanged("PERCDESC", percDesc);
-        this.percDesc = percDesc;
    }
 
    public BigDecimal getPercDescBase() {
-        return percDescBase;
+        return this.getVo().asBigDecimal("PERCDESCBASE");
    }
 
    public void setPercDescBase(BigDecimal percDescBase) {
         markAsChanged("PERCDESCBASE", percDescBase);
-        this.percDescBase = percDescBase;
    }
 
    public BigDecimal getPercDescBonif() {
-        return percDescBonif;
+        return this.getVo().asBigDecimal("PERCDESCBONIF");
    }
 
    public void setPercDescBonif(BigDecimal percDescBonif) {
         markAsChanged("PERCDESCBONIF", percDescBonif);
-        this.percDescBonif = percDescBonif;
    }
 
    public BigDecimal getPercDescDigitado() {
-        return percDescDigitado;
+        return this.getVo().asBigDecimal("PERCDESCDIGITADO");
    }
 
    public void setPercDescDigitado(BigDecimal percDescDigitado) {
         markAsChanged("PERCDESCDIGITADO", percDescDigitado);
-        this.percDescDigitado = percDescDigitado;
    }
 
    public BigDecimal getPercDescProm() {
-        return percDescProm;
+        return this.getVo().asBigDecimal("PERCDESCPROM");
    }
 
    public void setPercDescProm(BigDecimal percDescProm) {
         markAsChanged("PERCDESCPROM", percDescProm);
-        this.percDescProm = percDescProm;
    }
 
    public BigDecimal getPercDescTgfdes() {
-        return percDescTgfdes;
+        return this.getVo().asBigDecimal("PERCDESCTGFDES");
    }
 
    public void setPercDescTgfdes(BigDecimal percDescTgfdes) {
         markAsChanged("PERCDESCTGFDES", percDescTgfdes);
-        this.percDescTgfdes = percDescTgfdes;
    }
 
    public BigDecimal getPercGermin() {
-        return percGermin;
+        return this.getVo().asBigDecimal("PERCGERMIN");
    }
 
    public void setPercGermin(BigDecimal percGermin) {
         markAsChanged("PERCGERMIN", percGermin);
-        this.percGermin = percGermin;
    }
 
    public BigDecimal getPercPureza() {
-        return percPureza;
+        return this.getVo().asBigDecimal("PERCPUREZA");
    }
 
    public void setPercPureza(BigDecimal percPureza) {
         markAsChanged("PERCPUREZA", percPureza);
-        this.percPureza = percPureza;
    }
 
    public BigDecimal getPesoBruto() {
-        return pesoBruto;
+        return this.getVo().asBigDecimal("PESOBRUTO");
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
         markAsChanged("PESOBRUTO", pesoBruto);
-        this.pesoBruto = pesoBruto;
    }
 
    public BigDecimal getPesoLiq() {
-        return pesoLiq;
+        return this.getVo().asBigDecimal("PESOLIQ");
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
         markAsChanged("PESOLIQ", pesoLiq);
-        this.pesoLiq = pesoLiq;
    }
 
    public BigDecimal getPrecoBase() {
-        return precoBase;
+        return this.getVo().asBigDecimal("PRECOBASE");
    }
 
    public void setPrecoBase(BigDecimal precoBase) {
         markAsChanged("PRECOBASE", precoBase);
-        this.precoBase = precoBase;
    }
 
    public BigDecimal getPrecoBaseQtd() {
-        return precoBaseQtd;
+        return this.getVo().asBigDecimal("PRECOBASEQTD");
    }
 
    public void setPrecoBaseQtd(BigDecimal precoBaseQtd) {
         markAsChanged("PRECOBASEQTD", precoBaseQtd);
-        this.precoBaseQtd = precoBaseQtd;
    }
 
    public String getProdutoNfe() {
-        return produtoNfe;
+        return this.getVo().asString("PRODUTONFE");
    }
 
    public void setProdutoNfe(String produtoNfe) {
         markAsChanged("PRODUTONFE", produtoNfe);
-        this.produtoNfe = produtoNfe;
    }
 
    public BigDecimal getQtdConferida() {
-        return qtdConferida;
+        return this.getVo().asBigDecimal("QTDCONFERIDA");
    }
 
    public void setQtdConferida(BigDecimal qtdConferida) {
         markAsChanged("QTDCONFERIDA", qtdConferida);
-        this.qtdConferida = qtdConferida;
    }
 
    public BigDecimal getQtdEntregue() {
-        return qtdEntregue;
+        return this.getVo().asBigDecimal("QTDENTREGUE");
    }
 
    public void setQtdEntregue(BigDecimal qtdEntregue) {
         markAsChanged("QTDENTREGUE", qtdEntregue);
-        this.qtdEntregue = qtdEntregue;
    }
 
    public BigDecimal getQtdFat() {
-        return qtdFat;
+        return this.getVo().asBigDecimal("QTDFAT");
    }
 
    public void setQtdFat(BigDecimal qtdFat) {
         markAsChanged("QTDFAT", qtdFat);
-        this.qtdFat = qtdFat;
    }
 
    public BigDecimal getQtdFixada() {
-        return qtdFixada;
+        return this.getVo().asBigDecimal("QTDFIXADA");
    }
 
    public void setQtdFixada(BigDecimal qtdFixada) {
         markAsChanged("QTDFIXADA", qtdFixada);
-        this.qtdFixada = qtdFixada;
    }
 
    public BigDecimal getQtdFormula() {
-        return qtdFormula;
+        return this.getVo().asBigDecimal("QTDFORMULA");
    }
 
    public void setQtdFormula(BigDecimal qtdFormula) {
         markAsChanged("QTDFORMULA", qtdFormula);
-        this.qtdFormula = qtdFormula;
    }
 
    public BigDecimal getQtdNeg() {
-        return qtdNeg;
+        return this.getVo().asBigDecimal("QTDNEG");
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
         markAsChanged("QTDNEG", qtdNeg);
-        this.qtdNeg = qtdNeg;
    }
 
    public BigDecimal getQtdPeca() {
-        return qtdPeca;
+        return this.getVo().asBigDecimal("QTDPECA");
    }
 
    public void setQtdPeca(BigDecimal qtdPeca) {
         markAsChanged("QTDPECA", qtdPeca);
-        this.qtdPeca = qtdPeca;
    }
 
    public BigDecimal getQtdPendente() {
-        return qtdPendente;
+        return this.getVo().asBigDecimal("QTDPENDENTE");
    }
 
    public void setQtdPendente(BigDecimal qtdPendente) {
         markAsChanged("QTDPENDENTE", qtdPendente);
-        this.qtdPendente = qtdPendente;
    }
 
    public BigDecimal getQtdUnidPad() {
-        return qtdUnidPad;
+        return this.getVo().asBigDecimal("QTDUNIDPAD");
    }
 
    public void setQtdUnidPad(BigDecimal qtdUnidPad) {
         markAsChanged("QTDUNIDPAD", qtdUnidPad);
-        this.qtdUnidPad = qtdUnidPad;
    }
 
    public BigDecimal getQtdWms() {
-        return qtdWms;
+        return this.getVo().asBigDecimal("QTDWMS");
    }
 
    public void setQtdWms(BigDecimal qtdWms) {
         markAsChanged("QTDWMS", qtdWms);
-        this.qtdWms = qtdWms;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getRefForn() {
-        return refForn;
+        return this.getVo().asString("REFFORN");
    }
 
    public void setRefForn(String refForn) {
         markAsChanged("REFFORN", refForn);
-        this.refForn = refForn;
    }
 
    public String getReserva() {
-        return reserva;
+        return this.getVo().asString("RESERVA");
    }
 
    public void setReserva(String reserva) {
         markAsChanged("RESERVA", reserva);
-        this.reserva = reserva;
    }
 
    public String getSeqPedido2() {
-        return seqPedido2;
+        return this.getVo().asString("SEQPEDIDO2");
    }
 
    public void setSeqPedido2(String seqPedido2) {
         markAsChanged("SEQPEDIDO2", seqPedido2);
-        this.seqPedido2 = seqPedido2;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSolCompra() {
-        return solCompra;
+        return this.getVo().asString("SOLCOMPRA");
    }
 
    public void setSolCompra(String solCompra) {
         markAsChanged("SOLCOMPRA", solCompra);
-        this.solCompra = solCompra;
    }
 
    public String getStatusLote() {
-        return statusLote;
+        return this.getVo().asString("STATUSLOTE");
    }
 
    public void setStatusLote(String statusLote) {
         markAsChanged("STATUSLOTE", statusLote);
-        this.statusLote = statusLote;
    }
 
    public String getStatusNota() {
-        return statusNota;
+        return this.getVo().asString("STATUSNOTA");
    }
 
    public void setStatusNota(String statusNota) {
         markAsChanged("STATUSNOTA", statusNota);
-        this.statusNota = statusNota;
    }
 
    public String getAltPreco() {
-        return altPreco;
+        return this.getVo().asString("ALTPRECO");
    }
 
    public void setAltPreco(String altPreco) {
         markAsChanged("ALTPRECO", altPreco);
-        this.altPreco = altPreco;
    }
 
    public BigDecimal getAltura() {
-        return altura;
+        return this.getVo().asBigDecimal("ALTURA");
    }
 
    public void setAltura(BigDecimal altura) {
         markAsChanged("ALTURA", altura);
-        this.altura = altura;
    }
 
    public BigDecimal getQtdVol() {
-        return qtdVol;
+        return this.getVo().asBigDecimal("QTDVOL");
    }
 
    public void setQtdVol(BigDecimal qtdVol) {
         markAsChanged("QTDVOL", qtdVol);
-        this.qtdVol = qtdVol;
    }
 
    public Timestamp getDtInicio() {
-        return dtInicio;
+        return this.getVo().asTimestamp("DTINICIO");
    }
 
    public void setDtInicio(Timestamp dtInicio) {
         markAsChanged("DTINICIO", dtInicio);
-        this.dtInicio = dtInicio;
    }
 
    public BigDecimal getAliqStExtraNota() {
-        return aliqStExtraNota;
+        return this.getVo().asBigDecimal("ALIQSTEXTRANOTA");
    }
 
    public void setAliqStExtraNota(BigDecimal aliqStExtraNota) {
         markAsChanged("ALIQSTEXTRANOTA", aliqStExtraNota);
-        this.aliqStExtraNota = aliqStExtraNota;
    }
 
    public BigDecimal getAliqStFcpStAnt() {
-        return aliqStFcpStAnt;
+        return this.getVo().asBigDecimal("ALIQSTFCPSTANT");
    }
 
    public void setAliqStFcpStAnt(BigDecimal aliqStFcpStAnt) {
         markAsChanged("ALIQSTFCPSTANT", aliqStFcpStAnt);
-        this.aliqStFcpStAnt = aliqStFcpStAnt;
    }
 
    public BigDecimal getBaseStExtraNota() {
-        return baseStExtraNota;
+        return this.getVo().asBigDecimal("BASESTEXTRANOTA");
    }
 
    public void setBaseStExtraNota(BigDecimal baseStExtraNota) {
         markAsChanged("BASESTEXTRANOTA", baseStExtraNota);
-        this.baseStExtraNota = baseStExtraNota;
    }
 
    public String getOrigemBusca() {
-        return origemBusca;
+        return this.getVo().asString("ORIGEMBUSCA");
    }
 
    public void setOrigemBusca(String origemBusca) {
         markAsChanged("ORIGEMBUSCA", origemBusca);
-        this.origemBusca = origemBusca;
    }
 
    public BigDecimal getProdutoPesquisado() {
-        return produtoPesquisado;
+        return this.getVo().asBigDecimal("PRODUTOPESQUISADO");
    }
 
    public void setProdutoPesquisado(BigDecimal produtoPesquisado) {
         markAsChanged("PRODUTOPESQUISADO", produtoPesquisado);
-        this.produtoPesquisado = produtoPesquisado;
    }
 
    public BigDecimal getQtdTribExport() {
-        return qtdTribExport;
+        return this.getVo().asBigDecimal("QTDTRIBEXPORT");
    }
 
    public void setQtdTribExport(BigDecimal qtdTribExport) {
         markAsChanged("QTDTRIBEXPORT", qtdTribExport);
-        this.qtdTribExport = qtdTribExport;
    }
 
    public BigDecimal getReservado() {
-        return reservado;
+        return this.getVo().asBigDecimal("RESERVADO");
    }
 
    public void setReservado(BigDecimal reservado) {
         markAsChanged("RESERVADO", reservado);
-        this.reservado = reservado;
    }
 
    public BigDecimal getVlrRepRedSemDesc() {
-        return vlrRepRedSemDesc;
+        return this.getVo().asBigDecimal("VLRREPREDSEMDESC");
    }
 
    public void setVlrRepRedSemDesc(BigDecimal vlrRepRedSemDesc) {
         markAsChanged("VLRREPREDSEMDESC", vlrRepRedSemDesc);
-        this.vlrRepRedSemDesc = vlrRepRedSemDesc;
    }
 
    public BigDecimal getVlrTotLiqRef() {
-        return vlrTotLiqRef;
+        return this.getVo().asBigDecimal("VLRTOTLIQREF");
    }
 
    public void setVlrTotLiqRef(BigDecimal vlrTotLiqRef) {
         markAsChanged("VLRTOTLIQREF", vlrTotLiqRef);
-        this.vlrTotLiqRef = vlrTotLiqRef;
    }
 
    public BigDecimal getVlrVendaPromo() {
-        return vlrVendaPromo;
+        return this.getVo().asBigDecimal("VLRVENDAPROMO");
    }
 
    public void setVlrVendaPromo(BigDecimal vlrVendaPromo) {
         markAsChanged("VLRVENDAPROMO", vlrVendaPromo);
-        this.vlrVendaPromo = vlrVendaPromo;
    }
 
    public BigDecimal getNuFop() {
-        return nuFop;
+        return this.getVo().asBigDecimal("NUFOP");
    }
 
    public void setNuFop(BigDecimal nuFop) {
         markAsChanged("NUFOP", nuFop);
-        this.nuFop = nuFop;
    }
 
    public BigDecimal getSequenciaFiscal() {
-        return sequenciaFiscal;
+        return this.getVo().asBigDecimal("SEQUENCIAFISCAL");
    }
 
    public void setSequenciaFiscal(BigDecimal sequenciaFiscal) {
         markAsChanged("SEQUENCIAFISCAL", sequenciaFiscal);
-        this.sequenciaFiscal = sequenciaFiscal;
    }
 
    public BigDecimal getCodLocalTerc() {
-        return codLocalTerc;
+        return this.getVo().asBigDecimal("CODLOCALTERC");
    }
 
    public void setCodLocalTerc(BigDecimal codLocalTerc) {
         markAsChanged("CODLOCALTERC", codLocalTerc);
-        this.codLocalTerc = codLocalTerc;
    }
 
    public BigDecimal getPercStFcpIntAnt() {
-        return percStFcpIntAnt;
+        return this.getVo().asBigDecimal("PERCSTFCPINTANT");
    }
 
    public void setPercStFcpIntAnt(BigDecimal percStFcpIntAnt) {
         markAsChanged("PERCSTFCPINTANT", percStFcpIntAnt);
-        this.percStFcpIntAnt = percStFcpIntAnt;
    }
 
    public BigDecimal getVlrStFcpIntAnt() {
-        return vlrStFcpIntAnt;
+        return this.getVo().asBigDecimal("VLRSTFCPINTANT");
    }
 
    public void setVlrStFcpIntAnt(BigDecimal vlrStFcpIntAnt) {
         markAsChanged("VLRSTFCPINTANT", vlrStFcpIntAnt);
-        this.vlrStFcpIntAnt = vlrStFcpIntAnt;
    }
 
    public BigDecimal getBaseStFcpIntAnt() {
-        return baseStFcpIntAnt;
+        return this.getVo().asBigDecimal("BASESTFCPINTANT");
    }
 
    public void setBaseStFcpIntAnt(BigDecimal baseStFcpIntAnt) {
         markAsChanged("BASESTFCPINTANT", baseStFcpIntAnt);
-        this.baseStFcpIntAnt = baseStFcpIntAnt;
    }
 
    public String getIndEscala() {
-        return indEscala;
+        return this.getVo().asString("INDESCALA");
    }
 
    public void setIndEscala(String indEscala) {
         markAsChanged("INDESCALA", indEscala);
-        this.indEscala = indEscala;
    }
 
    public String getCodBenefNauf() {
-        return codBenefNauf;
+        return this.getVo().asString("CODBENEFNAUF");
    }
 
    public void setCodBenefNauf(String codBenefNauf) {
         markAsChanged("CODBENEFNAUF", codBenefNauf);
-        this.codBenefNauf = codBenefNauf;
    }
 
    public String getCnpjFabricante() {
-        return cnpjFabricante;
+        return this.getVo().asString("CNPJFABRICANTE");
    }
 
    public void setCnpjFabricante(String cnpjFabricante) {
         markAsChanged("CNPJFABRICANTE", cnpjFabricante);
-        this.cnpjFabricante = cnpjFabricante;
    }
 
    public String getCodAgregacao() {
-        return codAgregacao;
+        return this.getVo().asString("CODAGREGACAO");
    }
 
    public void setCodAgregacao(String codAgregacao) {
         markAsChanged("CODAGREGACAO", codAgregacao);
-        this.codAgregacao = codAgregacao;
    }
 
    public BigDecimal getPercRedVlrIpi() {
-        return percRedVlrIpi;
+        return this.getVo().asBigDecimal("PERCREDVLRIPI");
    }
 
    public void setPercRedVlrIpi(BigDecimal percRedVlrIpi) {
         markAsChanged("PERCREDVLRIPI", percRedVlrIpi);
-        this.percRedVlrIpi = percRedVlrIpi;
    }
 
    public BigDecimal getCodDocArrecad() {
-        return codDocArrecad;
+        return this.getVo().asBigDecimal("CODDOCARRECAD");
    }
 
    public void setCodDocArrecad(BigDecimal codDocArrecad) {
         markAsChanged("CODDOCARRECAD", codDocArrecad);
-        this.codDocArrecad = codDocArrecad;
    }
 
    public String getNumDocArrecad() {
-        return numDocArrecad;
+        return this.getVo().asString("NUMDOCARRECAD");
    }
 
    public void setNumDocArrecad(String numDocArrecad) {
         markAsChanged("NUMDOCARRECAD", numDocArrecad);
-        this.numDocArrecad = numDocArrecad;
    }
 
    public BigDecimal getBaseCalcStExtraNota() {
-        return baseCalcStExtraNota;
+        return this.getVo().asBigDecimal("BASECALCSTEXTRANOTA");
    }
 
    public void setBaseCalcStExtraNota(BigDecimal baseCalcStExtraNota) {
         markAsChanged("BASECALCSTEXTRANOTA", baseCalcStExtraNota);
-        this.baseCalcStExtraNota = baseCalcStExtraNota;
    }
 
    public BigDecimal getMargLucro() {
-        return margLucro;
+        return this.getVo().asBigDecimal("MARGLUCRO");
    }
 
    public void setMargLucro(BigDecimal margLucro) {
         markAsChanged("MARGLUCRO", margLucro);
-        this.margLucro = margLucro;
    }
 
    public BigDecimal getRedBaseSt() {
-        return redBaseSt;
+        return this.getVo().asBigDecimal("REDBASEST");
    }
 
    public void setRedBaseSt(BigDecimal redBaseSt) {
         markAsChanged("REDBASEST", redBaseSt);
-        this.redBaseSt = redBaseSt;
    }
 
    public BigDecimal getVlrIcmsDiferido() {
-        return vlrIcmsDiferido;
+        return this.getVo().asBigDecimal("VLRICMSDIFERIDO");
    }
 
    public void setVlrIcmsDiferido(BigDecimal vlrIcmsDiferido) {
         markAsChanged("VLRICMSDIFERIDO", vlrIcmsDiferido);
-        this.vlrIcmsDiferido = vlrIcmsDiferido;
    }
 
    public String getTipoSeparacao() {
-        return tipoSeparacao;
+        return this.getVo().asString("TIPOSEPARACAO");
    }
 
    public void setTipoSeparacao(String tipoSeparacao) {
         markAsChanged("TIPOSEPARACAO", tipoSeparacao);
-        this.tipoSeparacao = tipoSeparacao;
    }
 
    public String getNroProcesso() {
-        return nroProcesso;
+        return this.getVo().asString("NROPROCESSO");
    }
 
    public void setNroProcesso(String nroProcesso) {
         markAsChanged("NROPROCESSO", nroProcesso);
-        this.nroProcesso = nroProcesso;
    }
 
    public BigDecimal getBaseSubstitUnitOrig() {
-        return baseSubstitUnitOrig;
+        return this.getVo().asBigDecimal("BASESUBSTITUNITORIG");
    }
 
    public void setBaseSubstitUnitOrig(BigDecimal baseSubstitUnitOrig) {
         markAsChanged("BASESUBSTITUNITORIG", baseSubstitUnitOrig);
-        this.baseSubstitUnitOrig = baseSubstitUnitOrig;
    }
 
    public BigDecimal getVlrSubstitUnitOrig() {
-        return vlrSubstitUnitOrig;
+        return this.getVo().asBigDecimal("VLRSUBSTUNITORIG");
    }
 
    public void setVlrSubstitUnitOrig(BigDecimal vlrSubstitUnitOrig) {
         markAsChanged("VLRSUBSTUNITORIG", vlrSubstitUnitOrig);
-        this.vlrSubstitUnitOrig = vlrSubstitUnitOrig;
    }
 
    public BigDecimal getPercDescFornecedor() {
-        return percDescFornecedor;
+        return this.getVo().asBigDecimal("PERCDESCFORNECEDOR");
    }
 
    public void setPercDescFornecedor(BigDecimal percDescFornecedor) {
         markAsChanged("PERCDESCFORNECEDOR", percDescFornecedor);
-        this.percDescFornecedor = percDescFornecedor;
    }
 
    public String getStatusProc() {
-        return statusProc;
+        return this.getVo().asString("STATUSPROC");
    }
 
    public void setStatusProc(String statusProc) {
         markAsChanged("STATUSPROC", statusProc);
-        this.statusProc = statusProc;
    }
 
    public String getOperAtual() {
-        return operAtual;
+        return this.getVo().asString("OPERATUAL");
    }
 
    public void setOperAtual(String operAtual) {
         markAsChanged("OPERATUAL", operAtual);
-        this.operAtual = operAtual;
    }
 
    public String getGeraProducao() {
-        return geraProducao;
+        return this.getVo().asString("GERAPRODUCAO");
    }
 
    public void setGeraProducao(String geraProducao) {
         markAsChanged("GERAPRODUCAO", geraProducao);
-        this.geraProducao = geraProducao;
    }
 
    public BigDecimal getIcmsStFrete() {
-        return icmsStFrete;
+        return this.getVo().asBigDecimal("ICMSSTFRETE");
    }
 
    public void setIcmsStFrete(BigDecimal icmsStFrete) {
         markAsChanged("ICMSSTFRETE", icmsStFrete);
-        this.icmsStFrete = icmsStFrete;
    }
 
    public BigDecimal getIdAliqIcmsDifIcms() {
-        return idAliqIcmsDifIcms;
+        return this.getVo().asBigDecimal("IDALIQICMSDIFICMS");
    }
 
    public void setIdAliqIcmsDifIcms(BigDecimal idAliqIcmsDifIcms) {
         markAsChanged("IDALIQICMSDIFICMS", idAliqIcmsDifIcms);
-        this.idAliqIcmsDifIcms = idAliqIcmsDifIcms;
    }
 
    public String getCodBarraPdv() {
-        return codBarraPdv;
+        return this.getVo().asString("CODBARRAPDV");
    }
 
    public void setCodBarraPdv(String codBarraPdv) {
         markAsChanged("CODBARRAPDV", codBarraPdv);
-        this.codBarraPdv = codBarraPdv;
    }
 
    public BigDecimal getAliqFetHab() {
-        return aliqFetHab;
+        return this.getVo().asBigDecimal("ALIQFETHAB");
    }
 
    public void setAliqFetHab(BigDecimal aliqFetHab) {
         markAsChanged("ALIQFETHAB", aliqFetHab);
-        this.aliqFetHab = aliqFetHab;
    }
 
    public BigDecimal getVlrFetHab() {
-        return vlrFetHab;
+        return this.getVo().asBigDecimal("VLRFETHAB");
    }
 
    public void setVlrFetHab(BigDecimal vlrFetHab) {
         markAsChanged("VLRFETHAB", vlrFetHab);
-        this.vlrFetHab = vlrFetHab;
    }
 
    public String getCodSit08Efd() {
-        return codSit08Efd;
+        return this.getVo().asString("CODSIT08EFD");
    }
 
    public void setCodSit08Efd(String codSit08Efd) {
         markAsChanged("CODSIT08EFD", codSit08Efd);
-        this.codSit08Efd = codSit08Efd;
    }
 
    public BigDecimal getAliqFuntTel() {
-        return aliqFuntTel;
+        return this.getVo().asBigDecimal("ALIQFUNTTEL");
    }
 
    public void setAliqFuntTel(BigDecimal aliqFuntTel) {
         markAsChanged("ALIQFUNTTEL", aliqFuntTel);
-        this.aliqFuntTel = aliqFuntTel;
    }
 
    public BigDecimal getAliqFust() {
-        return aliqFust;
+        return this.getVo().asBigDecimal("ALIQFUST");
    }
 
    public void setAliqFust(BigDecimal aliqFust) {
         markAsChanged("ALIQFUST", aliqFust);
-        this.aliqFust = aliqFust;
    }
 
    public BigDecimal getBaseFuntTel() {
-        return baseFuntTel;
+        return this.getVo().asBigDecimal("BASEFUNTTEL");
    }
 
    public void setBaseFuntTel(BigDecimal baseFuntTel) {
         markAsChanged("BASEFUNTTEL", baseFuntTel);
-        this.baseFuntTel = baseFuntTel;
    }
 
    public BigDecimal getBaseFust() {
-        return baseFust;
+        return this.getVo().asBigDecimal("BASEFUST");
    }
 
    public void setBaseFust(BigDecimal baseFust) {
         markAsChanged("BASEFUST", baseFust);
-        this.baseFust = baseFust;
    }
 
    public BigDecimal getVlrFuntTel() {
-        return vlrFuntTel;
+        return this.getVo().asBigDecimal("VLRFUNTTEL");
    }
 
    public void setVlrFuntTel(BigDecimal vlrFuntTel) {
         markAsChanged("VLRFUNTTEL", vlrFuntTel);
-        this.vlrFuntTel = vlrFuntTel;
    }
 
    public BigDecimal getVlrFust() {
-        return vlrFust;
+        return this.getVo().asBigDecimal("VLRFUST");
    }
 
    public void setVlrFust(BigDecimal vlrFust) {
         markAsChanged("VLRFUST", vlrFust);
-        this.vlrFust = vlrFust;
    }
 
    public BigDecimal getTipUtilCom() {
-        return tipUtilCom;
+        return this.getVo().asBigDecimal("TIPUTILCOM");
    }
 
    public void setTipUtilCom(BigDecimal tipUtilCom) {
         markAsChanged("TIPUTILCOM", tipUtilCom);
-        this.tipUtilCom = tipUtilCom;
    }
 
    public BigDecimal getPercUsaquDecpe() {
-        return percUsaquDecpe;
+        return this.getVo().asBigDecimal("PERCUSAQUDECPE");
    }
 
    public void setPercUsaquDecpe(BigDecimal percUsaquDecpe) {
         markAsChanged("PERCUSAQUDECPE", percUsaquDecpe);
-        this.percUsaquDecpe = percUsaquDecpe;
    }
 
    public BigDecimal getVlrCusAquDecpe() {
-        return vlrCusAquDecpe;
+        return this.getVo().asBigDecimal("VLRCUSAQUDECPE");
    }
 
    public void setVlrCusAquDecpe(BigDecimal vlrCusAquDecpe) {
         markAsChanged("VLRCUSAQUDECPE", vlrCusAquDecpe);
-        this.vlrCusAquDecpe = vlrCusAquDecpe;
    }
 
    public BigDecimal getBaseIcmsStFrete() {
-        return baseIcmsStFrete;
+        return this.getVo().asBigDecimal("BASEICMSSTFRETE");
    }
 
    public void setBaseIcmsStFrete(BigDecimal baseIcmsStFrete) {
         markAsChanged("BASEICMSSTFRETE", baseIcmsStFrete);
-        this.baseIcmsStFrete = baseIcmsStFrete;
    }
 
    public BigDecimal getCodMotDesoneraSt() {
-        return codMotDesoneraSt;
+        return this.getVo().asBigDecimal("CODMOTDESONERAST");
    }
 
    public void setCodMotDesoneraSt(BigDecimal codMotDesoneraSt) {
         markAsChanged("CODMOTDESONERAST", codMotDesoneraSt);
-        this.codMotDesoneraSt = codMotDesoneraSt;
    }
 
    public BigDecimal getVlrRepRedSt() {
-        return vlrRepRedSt;
+        return this.getVo().asBigDecimal("VLRREPREDST");
    }
 
    public void setVlrRepRedSt(BigDecimal vlrRepRedSt) {
         markAsChanged("VLRREPREDST", vlrRepRedSt);
-        this.vlrRepRedSt = vlrRepRedSt;
    }
 
    public String getUnidade() {
-        return unidade;
+        return this.getVo().asString("UNIDADE");
    }
 
    public void setUnidade(String unidade) {
         markAsChanged("UNIDADE", unidade);
-        this.unidade = unidade;
    }
 
    public String getTipEntrega() {
-        return tipEntrega;
+        return this.getVo().asString("TIPENTREGA");
    }
 
    public void setTipEntrega(String tipEntrega) {
         markAsChanged("TIPENTREGA", tipEntrega);
-        this.tipEntrega = tipEntrega;
    }
 
    public BigDecimal getAliqIcmsAt() {
-        return aliqIcmsAt;
+        return this.getVo().asBigDecimal("ALIQICMSAT");
    }
 
    public void setAliqIcmsAt(BigDecimal aliqIcmsAt) {
         markAsChanged("ALIQICMSAT", aliqIcmsAt);
-        this.aliqIcmsAt = aliqIcmsAt;
    }
 
    public BigDecimal getAliqInterIcmsAt() {
-        return aliqInterIcmsAt;
+        return this.getVo().asBigDecimal("ALIQINTERICMSAT");
    }
 
    public void setAliqInterIcmsAt(BigDecimal aliqInterIcmsAt) {
         markAsChanged("ALIQINTERICMSAT", aliqInterIcmsAt);
-        this.aliqInterIcmsAt = aliqInterIcmsAt;
    }
 
    public BigDecimal getBaseIcmsAt() {
-        return baseIcmsAt;
+        return this.getVo().asBigDecimal("BASEICMSAT");
    }
 
    public void setBaseIcmsAt(BigDecimal baseIcmsAt) {
         markAsChanged("BASEICMSAT", baseIcmsAt);
-        this.baseIcmsAt = baseIcmsAt;
    }
 
    public BigDecimal getIdAliqIcmsAt() {
-        return idAliqIcmsAt;
+        return this.getVo().asBigDecimal("IDALIQICMSAT");
    }
 
    public void setIdAliqIcmsAt(BigDecimal idAliqIcmsAt) {
         markAsChanged("IDALIQICMSAT", idAliqIcmsAt);
-        this.idAliqIcmsAt = idAliqIcmsAt;
    }
 
    public BigDecimal getVlrIcmsAt() {
-        return vlrIcmsAt;
+        return this.getVo().asBigDecimal("VLRICMSAT");
    }
 
    public void setVlrIcmsAt(BigDecimal vlrIcmsAt) {
         markAsChanged("VLRICMSAT", vlrIcmsAt);
-        this.vlrIcmsAt = vlrIcmsAt;
    }
 
    public BigDecimal getIdDescParceria() {
-        return idDescParceria;
+        return this.getVo().asBigDecimal("IDDESCPARCERIA");
    }
 
    public void setIdDescParceria(BigDecimal idDescParceria) {
         markAsChanged("IDDESCPARCERIA", idDescParceria);
-        this.idDescParceria = idDescParceria;
    }
 
    public BigDecimal getVlrDescParceria() {
-        return vlrDescParceria;
+        return this.getVo().asBigDecimal("VLRDESCPARCERIA");
    }
 
    public void setVlrDescParceria(BigDecimal vlrDescParceria) {
         markAsChanged("VLRDESCPARCERIA", vlrDescParceria);
-        this.vlrDescParceria = vlrDescParceria;
    }
 
    public String getCodFci() {
-        return codFci;
+        return this.getVo().asString("CODFCI");
    }
 
    public void setCodFci(String codFci) {
         markAsChanged("CODFCI", codFci);
-        this.codFci = codFci;
    }
 
    public BigDecimal getPercUsaquDecpeEst() {
-        return percUsaquDecpeEst;
+        return this.getVo().asBigDecimal("PERCUSAQUDECPEEST");
    }
 
    public void setPercUsaquDecpeEst(BigDecimal percUsaquDecpeEst) {
         markAsChanged("PERCUSAQUDECPEEST", percUsaquDecpeEst);
-        this.percUsaquDecpeEst = percUsaquDecpeEst;
    }
 
    public BigDecimal getCodIpi() {
-        return codIpi;
+        return this.getVo().asBigDecimal("CODIPI");
    }
 
    public void setCodIpi(BigDecimal codIpi) {
         markAsChanged("CODIPI", codIpi);
-        this.codIpi = codIpi;
    }
 
    public BigDecimal getIdAliqIss() {
-        return idAliqIss;
+        return this.getVo().asBigDecimal("IDALIQISS");
    }
 
    public void setIdAliqIss(BigDecimal idAliqIss) {
         markAsChanged("IDALIQISS", idAliqIss);
-        this.idAliqIss = idAliqIss;
    }
 
    public BigDecimal getCodNatRend() {
-        return codNatRend;
+        return this.getVo().asBigDecimal("CODNATREND");
    }
 
    public void setCodNatRend(BigDecimal codNatRend) {
         markAsChanged("CODNATREND", codNatRend);
-        this.codNatRend = codNatRend;
    }
 
    public String getIndRepDes() {
-        return indRepDes;
+        return this.getVo().asString("INDREPDES");
    }
 
    public void setIndRepDes(String indRepDes) {
         markAsChanged("INDREPDES", indRepDes);
-        this.indRepDes = indRepDes;
    }
 
    @Override
@@ -2140,218 +1715,6 @@ public class ItemNota extends AbstractSankhyaEntity<ItemNota> {
    @Override
    public ItemNota fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliqIcms = vo.asBigDecimal("ALIQICMS");
-        this.aliqIcmsRed = vo.asBigDecimal("ALIQICMSRED");
-        this.aliqIpi = vo.asBigDecimal("ALIQIPI");
-        this.aliqIss = vo.asBigDecimal("ALIQISS");
-        this.vlrIcmsUfDest = vo.asBigDecimal("VLRICMSUFDEST");
-        this.vlrIpi = vo.asBigDecimal("VLRIPI");
-        this.vlrIss = vo.asBigDecimal("VLRISS");
-        this.vlrLiqProm = vo.asBigDecimal("VLRLIQPROM");
-        this.vlrPromo = vo.asBigDecimal("VLRPROMO");
-        this.vlrPtoPureza = vo.asBigDecimal("VLRPTOPUREZA");
-        this.vlrRepRed = vo.asBigDecimal("VLRREPRED");
-        this.vlrRetencao = vo.asBigDecimal("VLRRETENCAO");
-        this.vlrStExtraNota = vo.asBigDecimal("VLRSTEXTRANOTA");
-        this.vlrSubst = vo.asBigDecimal("VLRSUBST");
-        this.vlrSubstAnt = vo.asBigDecimal("VLRSUBSTANT");
-        this.vlrSugerido = vo.asBigDecimal("VLRSUGERIDO");
-        this.vlrTot = vo.asBigDecimal("VLRTOT");
-        this.vlrTotLiq = vo.asBigDecimal("VLRTOTLIQ");
-        this.vlrTroca = vo.asBigDecimal("VLRTROCA");
-        this.vlrUnidPad = vo.asBigDecimal("VLRUNIDPAD");
-        this.vlrUnit = vo.asBigDecimal("VLRUNIT");
-        this.vlrUnitDolar = vo.asBigDecimal("VLRUNITDOLAR");
-        this.vlrUnitLiq = vo.asBigDecimal("VLRUNITLIQ");
-        this.vlrDescBonif = vo.asBigDecimal("VLRDESCBONIF");
-        this.basicmMod = vo.asBigDecimal("BASICMMOD");
-        this.basicmStMod = vo.asBigDecimal("BASICMSTMOD");
-        this.codAntecipSt = vo.asString("CODANTECIPST");
-        this.numeroOs = vo.asBigDecimal("NUMEROOS");
-        this.atualEstoque = vo.asBigDecimal("ATUALESTOQUE");
-        this.atualEstTerc = vo.asString("ATUALESTTERC");
-        this.baseIcms = vo.asBigDecimal("BASEICMS");
-        this.baseIpi = vo.asBigDecimal("BASEIPI");
-        this.baseIss = vo.asBigDecimal("BASEISS");
-        this.baseStAnt = vo.asBigDecimal("BASESTANT");
-        this.baseStUfDest = vo.asBigDecimal("BASESTUFDEST");
-        this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
-        this.vlrDescDigitado = vo.asBigDecimal("VLRDESCDIGITADO");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrIcmsAnt = vo.asBigDecimal("VLRICMSANT");
-        this.terceiros = vo.asString("TERCEIROS");
-        this.usoProd = vo.asString("USOPROD");
-        this.variacaoFcp = vo.asBigDecimal("VARIACAOFCP");
-        this.vlrAcrescDesc = vo.asBigDecimal("VLRACRESCDESC");
-        this.vlrCom = vo.asBigDecimal("VLRCOM");
-        this.vlrComGer = vo.asBigDecimal("VLRCOMGER");
-        this.vlrCus = vo.asBigDecimal("VLRCUS");
-        this.codVolParc = vo.asString("CODVOLPARC");
-        this.vlrDesc = vo.asBigDecimal("VLRDESC");
-        this.vlrTotLiqMoe = vo.asBigDecimal("VLRTOTLIQMOE");
-        this.vlrTotMoe = vo.asBigDecimal("VLRTOTMOE");
-        this.vlrDescMoe = vo.asBigDecimal("VLRDESCMOE");
-        this.vlrUnitMoe = vo.asBigDecimal("VLRUNITMOE");
-        this.codEspecSt = vo.asBigDecimal("CODESPECST");
-        this.idAliqIcms = vo.asBigDecimal("IDALIQICMS");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.vlrUnitLoc = vo.asBigDecimal("VLRUNITLOC");
-        this.codEnqIpi = vo.asBigDecimal("CODENQIPI");
-        this.vlrUnitLiqMoe = vo.asBigDecimal("VLRUNITLIQMOE");
-        this.baseSubstitAnt = vo.asBigDecimal("BASESUBSTITANT");
-        this.baseSubstitSemRed = vo.asBigDecimal("BASESUBSTSEMRED");
-        this.codCav = vo.asBigDecimal("CODCAV");
-        this.codCfo = vo.asBigDecimal("CODCFO");
-        this.codCfps = vo.asBigDecimal("CODCFPS");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codExec = vo.asBigDecimal("CODEXEC");
-        this.codLocalDest = vo.asBigDecimal("CODLOCALDEST");
-        this.codLocalOrig = vo.asBigDecimal("CODLOCALORIG");
-        this.codMotDesoneraIcms = vo.asBigDecimal("CODMOTDESONERAICMS");
-        this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
-        this.codParceExec = vo.asBigDecimal("CODPARCEXEC");
-        this.codProc = vo.asBigDecimal("CODPROC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codPromo = vo.asBigDecimal("CODPROMO");
-        this.codTpa = vo.asBigDecimal("CODTPA");
-        this.codTrib = vo.asBigDecimal("CODTRIB");
-        this.codTribIss = vo.asBigDecimal("CODTRIBISS");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.codVol = vo.asString("CODVOL");
-        this.codVolPad = vo.asString("CODVOLPAD");
-        this.complDesc = vo.asString("COMPLDESC");
-        this.controle = vo.asString("CONTROLE");
-        this.controleDest = vo.asString("CONTROLEDEST");
-        this.csosn = vo.asBigDecimal("CSOSN");
-        this.cstIpi = vo.asBigDecimal("CSTIPI");
-        this.custo = vo.asBigDecimal("CUSTO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtVigor = vo.asTimestamp("DTVIGOR");
-        this.endImagem = vo.asString("ENDIMAGEM");
-        this.espessura = vo.asBigDecimal("ESPESSURA");
-        this.estoque = vo.asBigDecimal("ESTOQUE");
-        this.faturar = vo.asString("FATURAR");
-        this.grupoTransg = vo.asBigDecimal("GRUPOTRANSG");
-        this.gtinNfe = vo.asString("GTINNFE");
-        this.gtinTribNfe = vo.asString("GTINTRIBNFE");
-        this.largura = vo.asBigDecimal("LARGURA");
-        this.m3 = vo.asBigDecimal("M3");
-        this.marca = vo.asString("MARCA");
-        this.ncm = vo.asString("NCM");
-        this.nrSerieReserva = vo.asString("NRSERIERESERVA");
-        this.numPedido2 = vo.asString("NUMPEDIDO2");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");
-        this.nuTab = vo.asBigDecimal("NUTAB");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.origProd = vo.asString("ORIGPROD");
-        this.pendente = vo.asString("PENDENTE");
-        this.percCom = vo.asBigDecimal("PERCCOM");
-        this.percComGer = vo.asBigDecimal("PERCCOMGER");
-        this.percDesc = vo.asBigDecimal("PERCDESC");
-        this.percDescBase = vo.asBigDecimal("PERCDESCBASE");
-        this.percDescBonif = vo.asBigDecimal("PERCDESCBONIF");
-        this.percDescDigitado = vo.asBigDecimal("PERCDESCDIGITADO");
-        this.percDescProm = vo.asBigDecimal("PERCDESCPROM");
-        this.percDescTgfdes = vo.asBigDecimal("PERCDESCTGFDES");
-        this.percGermin = vo.asBigDecimal("PERCGERMIN");
-        this.percPureza = vo.asBigDecimal("PERCPUREZA");
-        this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
-        this.pesoLiq = vo.asBigDecimal("PESOLIQ");
-        this.precoBase = vo.asBigDecimal("PRECOBASE");
-        this.precoBaseQtd = vo.asBigDecimal("PRECOBASEQTD");
-        this.produtoNfe = vo.asString("PRODUTONFE");
-        this.qtdConferida = vo.asBigDecimal("QTDCONFERIDA");
-        this.qtdEntregue = vo.asBigDecimal("QTDENTREGUE");
-        this.qtdFat = vo.asBigDecimal("QTDFAT");
-        this.qtdFixada = vo.asBigDecimal("QTDFIXADA");
-        this.qtdFormula = vo.asBigDecimal("QTDFORMULA");
-        this.qtdNeg = vo.asBigDecimal("QTDNEG");
-        this.qtdPeca = vo.asBigDecimal("QTDPECA");
-        this.qtdPendente = vo.asBigDecimal("QTDPENDENTE");
-        this.qtdUnidPad = vo.asBigDecimal("QTDUNIDPAD");
-        this.qtdWms = vo.asBigDecimal("QTDWMS");
-        this.referencia = vo.asString("REFERENCIA");
-        this.refForn = vo.asString("REFFORN");
-        this.reserva = vo.asString("RESERVA");
-        this.seqPedido2 = vo.asString("SEQPEDIDO2");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.solCompra = vo.asString("SOLCOMPRA");
-        this.statusLote = vo.asString("STATUSLOTE");
-        this.statusNota = vo.asString("STATUSNOTA");
-        this.altPreco = vo.asString("ALTPRECO");
-        this.altura = vo.asBigDecimal("ALTURA");
-        this.qtdVol = vo.asBigDecimal("QTDVOL");
-        this.dtInicio = vo.asTimestamp("DTINICIO");
-        this.aliqStExtraNota = vo.asBigDecimal("ALIQSTEXTRANOTA");
-        this.aliqStFcpStAnt = vo.asBigDecimal("ALIQSTFCPSTANT");
-        this.baseStExtraNota = vo.asBigDecimal("BASESTEXTRANOTA");
-        this.origemBusca = vo.asString("ORIGEMBUSCA");
-        this.produtoPesquisado = vo.asBigDecimal("PRODUTOPESQUISADO");
-        this.qtdTribExport = vo.asBigDecimal("QTDTRIBEXPORT");
-        this.reservado = vo.asBigDecimal("RESERVADO");
-        this.vlrRepRedSemDesc = vo.asBigDecimal("VLRREPREDSEMDESC");
-        this.vlrTotLiqRef = vo.asBigDecimal("VLRTOTLIQREF");
-        this.vlrVendaPromo = vo.asBigDecimal("VLRVENDAPROMO");
-        this.nuFop = vo.asBigDecimal("NUFOP");
-        this.sequenciaFiscal = vo.asBigDecimal("SEQUENCIAFISCAL");
-        this.codLocalTerc = vo.asBigDecimal("CODLOCALTERC");
-        this.percStFcpIntAnt = vo.asBigDecimal("PERCSTFCPINTANT");
-        this.vlrStFcpIntAnt = vo.asBigDecimal("VLRSTFCPINTANT");
-        this.baseStFcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
-        this.indEscala = vo.asString("INDESCALA");
-        this.codBenefNauf = vo.asString("CODBENEFNAUF");
-        this.cnpjFabricante = vo.asString("CNPJFABRICANTE");
-        this.codAgregacao = vo.asString("CODAGREGACAO");
-        this.percRedVlrIpi = vo.asBigDecimal("PERCREDVLRIPI");
-        this.codDocArrecad = vo.asBigDecimal("CODDOCARRECAD");
-        this.numDocArrecad = vo.asString("NUMDOCARRECAD");
-        this.baseCalcStExtraNota = vo.asBigDecimal("BASECALCSTEXTRANOTA");
-        this.margLucro = vo.asBigDecimal("MARGLUCRO");
-        this.redBaseSt = vo.asBigDecimal("REDBASEST");
-        this.vlrIcmsDiferido = vo.asBigDecimal("VLRICMSDIFERIDO");
-        this.tipoSeparacao = vo.asString("TIPOSEPARACAO");
-        this.nroProcesso = vo.asString("NROPROCESSO");
-        this.baseSubstitUnitOrig = vo.asBigDecimal("BASESUBSTITUNITORIG");
-        this.vlrSubstitUnitOrig = vo.asBigDecimal("VLRSUBSTUNITORIG");
-        this.percDescFornecedor = vo.asBigDecimal("PERCDESCFORNECEDOR");
-        this.statusProc = vo.asString("STATUSPROC");
-        this.operAtual = vo.asString("OPERATUAL");
-        this.geraProducao = vo.asString("GERAPRODUCAO");
-        this.icmsStFrete = vo.asBigDecimal("ICMSSTFRETE");
-        this.idAliqIcmsDifIcms = vo.asBigDecimal("IDALIQICMSDIFICMS");
-        this.codBarraPdv = vo.asString("CODBARRAPDV");
-        this.aliqFetHab = vo.asBigDecimal("ALIQFETHAB");
-        this.vlrFetHab = vo.asBigDecimal("VLRFETHAB");
-        this.codSit08Efd = vo.asString("CODSIT08EFD");
-        this.aliqFuntTel = vo.asBigDecimal("ALIQFUNTTEL");
-        this.aliqFust = vo.asBigDecimal("ALIQFUST");
-        this.baseFuntTel = vo.asBigDecimal("BASEFUNTTEL");
-        this.baseFust = vo.asBigDecimal("BASEFUST");
-        this.vlrFuntTel = vo.asBigDecimal("VLRFUNTTEL");
-        this.vlrFust = vo.asBigDecimal("VLRFUST");
-        this.tipUtilCom = vo.asBigDecimal("TIPUTILCOM");
-        this.percUsaquDecpe = vo.asBigDecimal("PERCUSAQUDECPE");
-        this.vlrCusAquDecpe = vo.asBigDecimal("VLRCUSAQUDECPE");
-        this.baseIcmsStFrete = vo.asBigDecimal("BASEICMSSTFRETE");
-        this.codMotDesoneraSt = vo.asBigDecimal("CODMOTDESONERAST");
-        this.vlrRepRedSt = vo.asBigDecimal("VLRREPREDST");
-        this.unidade = vo.asString("UNIDADE");
-        this.tipEntrega = vo.asString("TIPENTREGA");
-        this.aliqIcmsAt = vo.asBigDecimal("ALIQICMSAT");
-        this.aliqInterIcmsAt = vo.asBigDecimal("ALIQINTERICMSAT");
-        this.baseIcmsAt = vo.asBigDecimal("BASEICMSAT");
-        this.idAliqIcmsAt = vo.asBigDecimal("IDALIQICMSAT");
-        this.vlrIcmsAt = vo.asBigDecimal("VLRICMSAT");
-        this.idDescParceria = vo.asBigDecimal("IDDESCPARCERIA");
-        this.vlrDescParceria = vo.asBigDecimal("VLRDESCPARCERIA");
-        this.codFci = vo.asString("CODFCI");
-        this.percUsaquDecpeEst = vo.asBigDecimal("PERCUSAQUDECPEEST");
-        this.codIpi = vo.asBigDecimal("CODIPI");
-        this.idAliqIss = vo.asBigDecimal("IDALIQISS");
-        this.codNatRend = vo.asBigDecimal("CODNATREND");
-        this.indRepDes = vo.asString("INDREPDES");
         return this;
    }
 }

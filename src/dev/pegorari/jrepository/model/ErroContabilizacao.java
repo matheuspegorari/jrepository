@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao> {
-   private BigDecimal codTipOper;
-   private String contabilizado;
-   private String descricao;
-   private Timestamp dhCtz;
-   private BigDecimal nuAgendCtz;
-   private BigDecimal nuNico;
-   private BigDecimal nuSeqErr;
-   private String origem;
-   private BigDecimal seqCtb;
-   private String tipLanc;
-   private String tipo;
-
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public String getContabilizado() {
-        return contabilizado;
+        return this.getVo().asString("CONTABILIZADO");
    }
 
    public void setContabilizado(String contabilizado) {
         markAsChanged("CONTABILIZADO", contabilizado);
-        this.contabilizado = contabilizado;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhCtz() {
-        return dhCtz;
+        return this.getVo().asTimestamp("DHCTZ");
    }
 
    public void setDhCtz(Timestamp dhCtz) {
         markAsChanged("DHCTZ", dhCtz);
-        this.dhCtz = dhCtz;
    }
 
    public BigDecimal getNuAgendCtz() {
-        return nuAgendCtz;
+        return this.getVo().asBigDecimal("NUAGENDCTZ");
    }
 
    public void setNuAgendCtz(BigDecimal nuAgendCtz) {
         markAsChanged("NUAGENDCTZ", nuAgendCtz);
-        this.nuAgendCtz = nuAgendCtz;
    }
 
    public BigDecimal getNuNico() {
-        return nuNico;
+        return this.getVo().asBigDecimal("NUNICO");
    }
 
    public void setNuNico(BigDecimal nuNico) {
         markAsChanged("NUNICO", nuNico);
-        this.nuNico = nuNico;
    }
 
    public BigDecimal getNuSeqErr() {
-        return nuSeqErr;
+        return this.getVo().asBigDecimal("NUSEQERR");
    }
 
    public void setNuSeqErr(BigDecimal nuSeqErr) {
         markAsChanged("NUSEQERR", nuSeqErr);
-        this.nuSeqErr = nuSeqErr;
    }
 
    public String getOrigem() {
-        return origem;
+        return this.getVo().asString("ORIGEM");
    }
 
    public void setOrigem(String origem) {
         markAsChanged("ORIGEM", origem);
-        this.origem = origem;
    }
 
    public BigDecimal getSeqCtb() {
-        return seqCtb;
+        return this.getVo().asBigDecimal("SEQCTB");
    }
 
    public void setSeqCtb(BigDecimal seqCtb) {
         markAsChanged("SEQCTB", seqCtb);
-        this.seqCtb = seqCtb;
    }
 
    public String getTipLanc() {
-        return tipLanc;
+        return this.getVo().asString("TIPLANC");
    }
 
    public void setTipLanc(String tipLanc) {
         markAsChanged("TIPLANC", tipLanc);
-        this.tipLanc = tipLanc;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class ErroContabilizacao extends AbstractSankhyaEntity<ErroContabilizacao
    @Override
    public ErroContabilizacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.contabilizado = vo.asString("CONTABILIZADO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhCtz = vo.asTimestamp("DHCTZ");
-        this.nuAgendCtz = vo.asBigDecimal("NUAGENDCTZ");
-        this.nuNico = vo.asBigDecimal("NUNICO");
-        this.nuSeqErr = vo.asBigDecimal("NUSEQERR");
-        this.origem = vo.asString("ORIGEM");
-        this.seqCtb = vo.asBigDecimal("SEQCTB");
-        this.tipLanc = vo.asString("TIPLANC");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

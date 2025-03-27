@@ -6,215 +6,172 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
-   private String descrsituacao;
-   private String numPedido2;
-   private BigDecimal codDoca;
-   private BigDecimal codEndDoca;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private String confFinal;
-   private Timestamp dtAlter;
-   private Timestamp dtRecebimento;
-   private String nomeParc;
-   private BigDecimal nuConferencia;
-   private BigDecimal nuNota;
-   private BigDecimal nuRecebimento;
-   private BigDecimal nuTarefa;
-   private BigDecimal prioridade;
-   private BigDecimal situacao;
-   private BigDecimal statusConf;
-   private String usaConfParcial;
-   private BigDecimal nuTarefaCan;
-   private String observacao;
-   private BigDecimal tipoNota;
-
    public String getDescrsituacao() {
-        return descrsituacao;
+        return this.getVo().asString("DESCRSITUACAO");
    }
 
    public void setDescrsituacao(String descrsituacao) {
         markAsChanged("DESCRSITUACAO", descrsituacao);
-        this.descrsituacao = descrsituacao;
    }
 
    public String getNumPedido2() {
-        return numPedido2;
+        return this.getVo().asString("NUMPEDIDO2");
    }
 
    public void setNumPedido2(String numPedido2) {
         markAsChanged("NUMPEDIDO2", numPedido2);
-        this.numPedido2 = numPedido2;
    }
 
    public BigDecimal getCodDoca() {
-        return codDoca;
+        return this.getVo().asBigDecimal("CODDOCA");
    }
 
    public void setCodDoca(BigDecimal codDoca) {
         markAsChanged("CODDOCA", codDoca);
-        this.codDoca = codDoca;
    }
 
    public BigDecimal getCodEndDoca() {
-        return codEndDoca;
+        return this.getVo().asBigDecimal("CODENDDOCA");
    }
 
    public void setCodEndDoca(BigDecimal codEndDoca) {
         markAsChanged("CODENDDOCA", codEndDoca);
-        this.codEndDoca = codEndDoca;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getConfFinal() {
-        return confFinal;
+        return this.getVo().asString("CONFFINAL");
    }
 
    public void setConfFinal(String confFinal) {
         markAsChanged("CONFFINAL", confFinal);
-        this.confFinal = confFinal;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtRecebimento() {
-        return dtRecebimento;
+        return this.getVo().asTimestamp("DTRECEBIMENTO");
    }
 
    public void setDtRecebimento(Timestamp dtRecebimento) {
         markAsChanged("DTRECEBIMENTO", dtRecebimento);
-        this.dtRecebimento = dtRecebimento;
    }
 
    public String getNomeParc() {
-        return nomeParc;
+        return this.getVo().asString("NOMEPARC");
    }
 
    public void setNomeParc(String nomeParc) {
         markAsChanged("NOMEPARC", nomeParc);
-        this.nomeParc = nomeParc;
    }
 
    public BigDecimal getNuConferencia() {
-        return nuConferencia;
+        return this.getVo().asBigDecimal("NUCONFERENCIA");
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
         markAsChanged("NUCONFERENCIA", nuConferencia);
-        this.nuConferencia = nuConferencia;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public BigDecimal getSituacao() {
-        return situacao;
+        return this.getVo().asBigDecimal("SITUACAO");
    }
 
    public void setSituacao(BigDecimal situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    public BigDecimal getStatusConf() {
-        return statusConf;
+        return this.getVo().asBigDecimal("STATUSCONF");
    }
 
    public void setStatusConf(BigDecimal statusConf) {
         markAsChanged("STATUSCONF", statusConf);
-        this.statusConf = statusConf;
    }
 
    public String getUsaConfParcial() {
-        return usaConfParcial;
+        return this.getVo().asString("USACONFPARCIAL");
    }
 
    public void setUsaConfParcial(String usaConfParcial) {
         markAsChanged("USACONFPARCIAL", usaConfParcial);
-        this.usaConfParcial = usaConfParcial;
    }
 
    public BigDecimal getNuTarefaCan() {
-        return nuTarefaCan;
+        return this.getVo().asBigDecimal("NUTAREFACAN");
    }
 
    public void setNuTarefaCan(BigDecimal nuTarefaCan) {
         markAsChanged("NUTAREFACAN", nuTarefaCan);
-        this.nuTarefaCan = nuTarefaCan;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getTipoNota() {
-        return tipoNota;
+        return this.getVo().asBigDecimal("TIPONOTA");
    }
 
    public void setTipoNota(BigDecimal tipoNota) {
         markAsChanged("TIPONOTA", tipoNota);
-        this.tipoNota = tipoNota;
    }
 
    @Override
@@ -230,27 +187,6 @@ public class Recebimento extends AbstractSankhyaEntity<Recebimento> {
    @Override
    public Recebimento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descrsituacao = vo.asString("DESCRSITUACAO");
-        this.numPedido2 = vo.asString("NUMPEDIDO2");
-        this.codDoca = vo.asBigDecimal("CODDOCA");
-        this.codEndDoca = vo.asBigDecimal("CODENDDOCA");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.confFinal = vo.asString("CONFFINAL");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtRecebimento = vo.asTimestamp("DTRECEBIMENTO");
-        this.nomeParc = vo.asString("NOMEPARC");
-        this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.situacao = vo.asBigDecimal("SITUACAO");
-        this.statusConf = vo.asBigDecimal("STATUSCONF");
-        this.usaConfParcial = vo.asString("USACONFPARCIAL");
-        this.nuTarefaCan = vo.asBigDecimal("NUTAREFACAN");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.tipoNota = vo.asBigDecimal("TIPONOTA");
         return this;
    }
 }

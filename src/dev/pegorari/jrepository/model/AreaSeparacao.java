@@ -6,245 +6,196 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
-   private BigDecimal codAreaConf;
-   private Timestamp dhAlter;
-   private BigDecimal m3Max;
-   private String nomeAreaSep;
-   private BigDecimal pesoMax;
-   private String tipoSep;
-   private BigDecimal codAreaSep;
-   private BigDecimal codUsu;
-   private String impEtiqFechVol;
-   private BigDecimal qtdUmaPed;
-   private String volContinuo;
-   private String usaSepAgruProd;
-   private BigDecimal qtPedSepAgr;
-   private BigDecimal pesMaxSepAgru;
-   private BigDecimal volCheckSepProd;
-   private BigDecimal qtCheckSep;
-   private String impressoraEtqSep;
-   private String posEsteiraSep;
-   private String agruparPedidosWms;
-   private String impressoraEtqVol;
-   private BigDecimal modEtqVol;
-   private BigDecimal qtdSku;
-   private BigDecimal toleranciaSku;
-   private String quebraPorNorma;
-
    public BigDecimal getCodAreaConf() {
-        return codAreaConf;
+        return this.getVo().asBigDecimal("CODAREACONF");
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
         markAsChanged("CODAREACONF", codAreaConf);
-        this.codAreaConf = codAreaConf;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getM3Max() {
-        return m3Max;
+        return this.getVo().asBigDecimal("M3MAX");
    }
 
    public void setM3Max(BigDecimal m3Max) {
         markAsChanged("M3MAX", m3Max);
-        this.m3Max = m3Max;
    }
 
    public String getNomeAreaSep() {
-        return nomeAreaSep;
+        return this.getVo().asString("NOMEAREASEP");
    }
 
    public void setNomeAreaSep(String nomeAreaSep) {
         markAsChanged("NOMEAREASEP", nomeAreaSep);
-        this.nomeAreaSep = nomeAreaSep;
    }
 
    public BigDecimal getPesoMax() {
-        return pesoMax;
+        return this.getVo().asBigDecimal("PESOMAX");
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
         markAsChanged("PESOMAX", pesoMax);
-        this.pesoMax = pesoMax;
    }
 
    public String getTipoSep() {
-        return tipoSep;
+        return this.getVo().asString("TIPOSEP");
    }
 
    public void setTipoSep(String tipoSep) {
         markAsChanged("TIPOSEP", tipoSep);
-        this.tipoSep = tipoSep;
    }
 
    public BigDecimal getCodAreaSep() {
-        return codAreaSep;
+        return this.getVo().asBigDecimal("CODAREASEP");
    }
 
    public void setCodAreaSep(BigDecimal codAreaSep) {
         markAsChanged("CODAREASEP", codAreaSep);
-        this.codAreaSep = codAreaSep;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getImpEtiqFechVol() {
-        return impEtiqFechVol;
+        return this.getVo().asString("IMPETIQFECHVOL");
    }
 
    public void setImpEtiqFechVol(String impEtiqFechVol) {
         markAsChanged("IMPETIQFECHVOL", impEtiqFechVol);
-        this.impEtiqFechVol = impEtiqFechVol;
    }
 
    public BigDecimal getQtdUmaPed() {
-        return qtdUmaPed;
+        return this.getVo().asBigDecimal("QTDUMAPED");
    }
 
    public void setQtdUmaPed(BigDecimal qtdUmaPed) {
         markAsChanged("QTDUMAPED", qtdUmaPed);
-        this.qtdUmaPed = qtdUmaPed;
    }
 
    public String getVolContinuo() {
-        return volContinuo;
+        return this.getVo().asString("VOLCONTINUO");
    }
 
    public void setVolContinuo(String volContinuo) {
         markAsChanged("VOLCONTINUO", volContinuo);
-        this.volContinuo = volContinuo;
    }
 
    public String getUsaSepAgruProd() {
-        return usaSepAgruProd;
+        return this.getVo().asString("USASEPAGRUPROD");
    }
 
    public void setUsaSepAgruProd(String usaSepAgruProd) {
         markAsChanged("USASEPAGRUPROD", usaSepAgruProd);
-        this.usaSepAgruProd = usaSepAgruProd;
    }
 
    public BigDecimal getQtPedSepAgr() {
-        return qtPedSepAgr;
+        return this.getVo().asBigDecimal("QTPEDSEPAGR");
    }
 
    public void setQtPedSepAgr(BigDecimal qtPedSepAgr) {
         markAsChanged("QTPEDSEPAGR", qtPedSepAgr);
-        this.qtPedSepAgr = qtPedSepAgr;
    }
 
    public BigDecimal getPesMaxSepAgru() {
-        return pesMaxSepAgru;
+        return this.getVo().asBigDecimal("PESMAXSEPAGRU");
    }
 
    public void setPesMaxSepAgru(BigDecimal pesMaxSepAgru) {
         markAsChanged("PESMAXSEPAGRU", pesMaxSepAgru);
-        this.pesMaxSepAgru = pesMaxSepAgru;
    }
 
    public BigDecimal getVolCheckSepProd() {
-        return volCheckSepProd;
+        return this.getVo().asBigDecimal("VOLCHECKSEPROD");
    }
 
    public void setVolCheckSepProd(BigDecimal volCheckSepProd) {
         markAsChanged("VOLCHECKSEPROD", volCheckSepProd);
-        this.volCheckSepProd = volCheckSepProd;
    }
 
    public BigDecimal getQtCheckSep() {
-        return qtCheckSep;
+        return this.getVo().asBigDecimal("QTCHECKSEP");
    }
 
    public void setQtCheckSep(BigDecimal qtCheckSep) {
         markAsChanged("QTCHECKSEP", qtCheckSep);
-        this.qtCheckSep = qtCheckSep;
    }
 
    public String getImpressoraEtqSep() {
-        return impressoraEtqSep;
+        return this.getVo().asString("IMPRESSORAETQSEP");
    }
 
    public void setImpressoraEtqSep(String impressoraEtqSep) {
         markAsChanged("IMPRESSORAETQSEP", impressoraEtqSep);
-        this.impressoraEtqSep = impressoraEtqSep;
    }
 
    public String getPosEsteiraSep() {
-        return posEsteiraSep;
+        return this.getVo().asString("POSESTEIRASEP");
    }
 
    public void setPosEsteiraSep(String posEsteiraSep) {
         markAsChanged("POSESTEIRASEP", posEsteiraSep);
-        this.posEsteiraSep = posEsteiraSep;
    }
 
    public String getAgruparPedidosWms() {
-        return agruparPedidosWms;
+        return this.getVo().asString("AGRUPARPEDIDOSWMS");
    }
 
    public void setAgruparPedidosWms(String agruparPedidosWms) {
         markAsChanged("AGRUPARPEDIDOSWMS", agruparPedidosWms);
-        this.agruparPedidosWms = agruparPedidosWms;
    }
 
    public String getImpressoraEtqVol() {
-        return impressoraEtqVol;
+        return this.getVo().asString("IMPRESSORAETQVOL");
    }
 
    public void setImpressoraEtqVol(String impressoraEtqVol) {
         markAsChanged("IMPRESSORAETQVOL", impressoraEtqVol);
-        this.impressoraEtqVol = impressoraEtqVol;
    }
 
    public BigDecimal getModEtqVol() {
-        return modEtqVol;
+        return this.getVo().asBigDecimal("MODETQVOL");
    }
 
    public void setModEtqVol(BigDecimal modEtqVol) {
         markAsChanged("MODETQVOL", modEtqVol);
-        this.modEtqVol = modEtqVol;
    }
 
    public BigDecimal getQtdSku() {
-        return qtdSku;
+        return this.getVo().asBigDecimal("QTDSKU");
    }
 
    public void setQtdSku(BigDecimal qtdSku) {
         markAsChanged("QTDSKU", qtdSku);
-        this.qtdSku = qtdSku;
    }
 
    public BigDecimal getToleranciaSku() {
-        return toleranciaSku;
+        return this.getVo().asBigDecimal("TOLERANCIASKU");
    }
 
    public void setToleranciaSku(BigDecimal toleranciaSku) {
         markAsChanged("TOLERANCIASKU", toleranciaSku);
-        this.toleranciaSku = toleranciaSku;
    }
 
    public String getQuebraPorNorma() {
-        return quebraPorNorma;
+        return this.getVo().asString("QUEBRAPORNORMA");
    }
 
    public void setQuebraPorNorma(String quebraPorNorma) {
         markAsChanged("QUEBRAPORNORMA", quebraPorNorma);
-        this.quebraPorNorma = quebraPorNorma;
    }
 
    @Override
@@ -260,30 +211,6 @@ public class AreaSeparacao extends AbstractSankhyaEntity<AreaSeparacao> {
    @Override
    public AreaSeparacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codAreaConf = vo.asBigDecimal("CODAREACONF");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.m3Max = vo.asBigDecimal("M3MAX");
-        this.nomeAreaSep = vo.asString("NOMEAREASEP");
-        this.pesoMax = vo.asBigDecimal("PESOMAX");
-        this.tipoSep = vo.asString("TIPOSEP");
-        this.codAreaSep = vo.asBigDecimal("CODAREASEP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.impEtiqFechVol = vo.asString("IMPETIQFECHVOL");
-        this.qtdUmaPed = vo.asBigDecimal("QTDUMAPED");
-        this.volContinuo = vo.asString("VOLCONTINUO");
-        this.usaSepAgruProd = vo.asString("USASEPAGRUPROD");
-        this.qtPedSepAgr = vo.asBigDecimal("QTPEDSEPAGR");
-        this.pesMaxSepAgru = vo.asBigDecimal("PESMAXSEPAGRU");
-        this.volCheckSepProd = vo.asBigDecimal("VOLCHECKSEPROD");
-        this.qtCheckSep = vo.asBigDecimal("QTCHECKSEP");
-        this.impressoraEtqSep = vo.asString("IMPRESSORAETQSEP");
-        this.posEsteiraSep = vo.asString("POSESTEIRASEP");
-        this.agruparPedidosWms = vo.asString("AGRUPARPEDIDOSWMS");
-        this.impressoraEtqVol = vo.asString("IMPRESSORAETQVOL");
-        this.modEtqVol = vo.asBigDecimal("MODETQVOL");
-        this.qtdSku = vo.asBigDecimal("QTDSKU");
-        this.toleranciaSku = vo.asBigDecimal("TOLERANCIASKU");
-        this.quebraPorNorma = vo.asString("QUEBRAPORNORMA");
         return this;
    }
 }

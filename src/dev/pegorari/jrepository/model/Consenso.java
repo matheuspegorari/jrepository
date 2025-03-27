@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Consenso extends AbstractSankhyaEntity<Consenso> {
-   private BigDecimal nuAvaliacao;
-   private BigDecimal nuPesq;
-   private BigDecimal codUsu;
-   private BigDecimal nuPesqConsenso;
-   private Timestamp dhAlter;
-   private BigDecimal nuPesqAvaliado;
-   private String status;
-   private String planoDeAcao;
-
    public BigDecimal getNuAvaliacao() {
-        return nuAvaliacao;
+        return this.getVo().asBigDecimal("NUAVALIACAO");
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
         markAsChanged("NUAVALIACAO", nuAvaliacao);
-        this.nuAvaliacao = nuAvaliacao;
    }
 
    public BigDecimal getNuPesq() {
-        return nuPesq;
+        return this.getVo().asBigDecimal("NUPESQ");
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
         markAsChanged("NUPESQ", nuPesq);
-        this.nuPesq = nuPesq;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuPesqConsenso() {
-        return nuPesqConsenso;
+        return this.getVo().asBigDecimal("NUPESQCONSENSO");
    }
 
    public void setNuPesqConsenso(BigDecimal nuPesqConsenso) {
         markAsChanged("NUPESQCONSENSO", nuPesqConsenso);
-        this.nuPesqConsenso = nuPesqConsenso;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuPesqAvaliado() {
-        return nuPesqAvaliado;
+        return this.getVo().asBigDecimal("NUPESQAVALIADO");
    }
 
    public void setNuPesqAvaliado(BigDecimal nuPesqAvaliado) {
         markAsChanged("NUPESQAVALIADO", nuPesqAvaliado);
-        this.nuPesqAvaliado = nuPesqAvaliado;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public String getPlanoDeAcao() {
-        return planoDeAcao;
+        return this.getVo().asString("PLANODEACAO");
    }
 
    public void setPlanoDeAcao(String planoDeAcao) {
         markAsChanged("PLANODEACAO", planoDeAcao);
-        this.planoDeAcao = planoDeAcao;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class Consenso extends AbstractSankhyaEntity<Consenso> {
    @Override
    public Consenso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
-        this.nuPesq = vo.asBigDecimal("NUPESQ");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuPesqConsenso = vo.asBigDecimal("NUPESQCONSENSO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuPesqAvaliado = vo.asBigDecimal("NUPESQAVALIADO");
-        this.status = vo.asString("STATUS");
-        this.planoDeAcao = vo.asString("PLANODEACAO");
         return this;
    }
 }

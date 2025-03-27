@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOperacaoMunicipio> {
-   private BigDecimal sequencia;
-   private String descrNatOper;
-   private String codNatOper;
-   private BigDecimal codMunFis;
-
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getDescrNatOper() {
-        return descrNatOper;
+        return this.getVo().asString("DESCRNATOPER");
    }
 
    public void setDescrNatOper(String descrNatOper) {
         markAsChanged("DESCRNATOPER", descrNatOper);
-        this.descrNatOper = descrNatOper;
    }
 
    public String getCodNatOper() {
-        return codNatOper;
+        return this.getVo().asString("CODNATOPER");
    }
 
    public void setCodNatOper(String codNatOper) {
         markAsChanged("CODNATOPER", codNatOper);
-        this.codNatOper = codNatOper;
    }
 
    public BigDecimal getCodMunFis() {
-        return codMunFis;
+        return this.getVo().asBigDecimal("CODMUNFIS");
    }
 
    public void setCodMunFis(BigDecimal codMunFis) {
         markAsChanged("CODMUNFIS", codMunFis);
-        this.codMunFis = codMunFis;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NaturezaOperacaoMunicipio extends AbstractSankhyaEntity<NaturezaOpe
    @Override
    public NaturezaOperacaoMunicipio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.descrNatOper = vo.asString("DESCRNATOPER");
-        this.codNatOper = vo.asString("CODNATOPER");
-        this.codMunFis = vo.asBigDecimal("CODMUNFIS");
         return this;
    }
 }

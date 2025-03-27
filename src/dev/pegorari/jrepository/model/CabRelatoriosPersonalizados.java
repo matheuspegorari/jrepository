@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelatoriosPersonalizados> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuPeriodoCtb;
-   private BigDecimal tabela;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuPeriodoCtb() {
-        return nuPeriodoCtb;
+        return this.getVo().asBigDecimal("NUPERIODOCTB");
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
         markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
-        this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
    public BigDecimal getTabela() {
-        return tabela;
+        return this.getVo().asBigDecimal("TABELA");
    }
 
    public void setTabela(BigDecimal tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class CabRelatoriosPersonalizados extends AbstractSankhyaEntity<CabRelato
    @Override
    public CabRelatoriosPersonalizados fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuPeriodoCtb = vo.asBigDecimal("NUPERIODOCTB");
-        this.tabela = vo.asBigDecimal("TABELA");
         return this;
    }
 }

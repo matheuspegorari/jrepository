@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalacaoBem> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuNotaDesp;
-   private BigDecimal nuRateio;
-   private String statusRateio;
-   private BigDecimal vlrPendNota;
-   private BigDecimal vlrTotRateio;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuNotaDesp() {
-        return nuNotaDesp;
+        return this.getVo().asBigDecimal("NUNOTADESP");
    }
 
    public void setNuNotaDesp(BigDecimal nuNotaDesp) {
         markAsChanged("NUNOTADESP", nuNotaDesp);
-        this.nuNotaDesp = nuNotaDesp;
    }
 
    public BigDecimal getNuRateio() {
-        return nuRateio;
+        return this.getVo().asBigDecimal("NURATEIO");
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
         markAsChanged("NURATEIO", nuRateio);
-        this.nuRateio = nuRateio;
    }
 
    public String getStatusRateio() {
-        return statusRateio;
+        return this.getVo().asString("STATUSRATEIO");
    }
 
    public void setStatusRateio(String statusRateio) {
         markAsChanged("STATUSRATEIO", statusRateio);
-        this.statusRateio = statusRateio;
    }
 
    public BigDecimal getVlrPendNota() {
-        return vlrPendNota;
+        return this.getVo().asBigDecimal("VLRPENDNOTA");
    }
 
    public void setVlrPendNota(BigDecimal vlrPendNota) {
         markAsChanged("VLRPENDNOTA", vlrPendNota);
-        this.vlrPendNota = vlrPendNota;
    }
 
    public BigDecimal getVlrTotRateio() {
-        return vlrTotRateio;
+        return this.getVo().asBigDecimal("VLRTOTRATEIO");
    }
 
    public void setVlrTotRateio(BigDecimal vlrTotRateio) {
         markAsChanged("VLRTOTRATEIO", vlrTotRateio);
-        this.vlrTotRateio = vlrTotRateio;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class DespesaInstalacaoBem extends AbstractSankhyaEntity<DespesaInstalaca
    @Override
    public DespesaInstalacaoBem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuNotaDesp = vo.asBigDecimal("NUNOTADESP");
-        this.nuRateio = vo.asBigDecimal("NURATEIO");
-        this.statusRateio = vo.asString("STATUSRATEIO");
-        this.vlrPendNota = vo.asBigDecimal("VLRPENDNOTA");
-        this.vlrTotRateio = vo.asBigDecimal("VLRTOTRATEIO");
         return this;
    }
 }

@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<HistoricoWorkCenterAtividade> {
-   private BigDecimal idIproc;
-   private Timestamp dhaloc;
-   private BigDecimal idiAtv;
-   private BigDecimal codUsuLibAloc;
-   private BigDecimal codUsuAloc;
-   private Timestamp dhLibAloc;
-   private BigDecimal codWcp;
-   private String descrAtv;
-
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public Timestamp getDhaloc() {
-        return dhaloc;
+        return this.getVo().asTimestamp("DHALOC");
    }
 
    public void setDhaloc(Timestamp dhaloc) {
         markAsChanged("DHALOC", dhaloc);
-        this.dhaloc = dhaloc;
    }
 
    public BigDecimal getIdiAtv() {
-        return idiAtv;
+        return this.getVo().asBigDecimal("IDIATV");
    }
 
    public void setIdiAtv(BigDecimal idiAtv) {
         markAsChanged("IDIATV", idiAtv);
-        this.idiAtv = idiAtv;
    }
 
    public BigDecimal getCodUsuLibAloc() {
-        return codUsuLibAloc;
+        return this.getVo().asBigDecimal("CODUSULIBALOC");
    }
 
    public void setCodUsuLibAloc(BigDecimal codUsuLibAloc) {
         markAsChanged("CODUSULIBALOC", codUsuLibAloc);
-        this.codUsuLibAloc = codUsuLibAloc;
    }
 
    public BigDecimal getCodUsuAloc() {
-        return codUsuAloc;
+        return this.getVo().asBigDecimal("CODUSUALOC");
    }
 
    public void setCodUsuAloc(BigDecimal codUsuAloc) {
         markAsChanged("CODUSUALOC", codUsuAloc);
-        this.codUsuAloc = codUsuAloc;
    }
 
    public Timestamp getDhLibAloc() {
-        return dhLibAloc;
+        return this.getVo().asTimestamp("DHLIBALOC");
    }
 
    public void setDhLibAloc(Timestamp dhLibAloc) {
         markAsChanged("DHLIBALOC", dhLibAloc);
-        this.dhLibAloc = dhLibAloc;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public String getDescrAtv() {
-        return descrAtv;
+        return this.getVo().asString("DESCRATV");
    }
 
    public void setDescrAtv(String descrAtv) {
         markAsChanged("DESCRATV", descrAtv);
-        this.descrAtv = descrAtv;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class HistoricoWorkCenterAtividade extends AbstractSankhyaEntity<Historic
    @Override
    public HistoricoWorkCenterAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.dhaloc = vo.asTimestamp("DHALOC");
-        this.idiAtv = vo.asBigDecimal("IDIATV");
-        this.codUsuLibAloc = vo.asBigDecimal("CODUSULIBALOC");
-        this.codUsuAloc = vo.asBigDecimal("CODUSUALOC");
-        this.dhLibAloc = vo.asTimestamp("DHLIBALOC");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.descrAtv = vo.asString("DESCRATV");
         return this;
    }
 }

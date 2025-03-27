@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
-   private String descricao;
-   private String nomeArquivoSkw;
-   private String caminhoArquivo;
-   private String tipoDoc;
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getNomeArquivoSkw() {
-        return nomeArquivoSkw;
+        return this.getVo().asString("NOMEARQUIVOSKW");
    }
 
    public void setNomeArquivoSkw(String nomeArquivoSkw) {
         markAsChanged("NOMEARQUIVOSKW", nomeArquivoSkw);
-        this.nomeArquivoSkw = nomeArquivoSkw;
    }
 
    public String getCaminhoArquivo() {
-        return caminhoArquivo;
+        return this.getVo().asString("CAMINHOARQUIVO");
    }
 
    public void setCaminhoArquivo(String caminhoArquivo) {
         markAsChanged("CAMINHOARQUIVO", caminhoArquivo);
-        this.caminhoArquivo = caminhoArquivo;
    }
 
    public String getTipoDoc() {
-        return tipoDoc;
+        return this.getVo().asString("TIPODOC");
    }
 
    public void setTipoDoc(String tipoDoc) {
         markAsChanged("TIPODOC", tipoDoc);
-        this.tipoDoc = tipoDoc;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ArquivoAnexoECD extends AbstractSankhyaEntity<ArquivoAnexoECD> {
    @Override
    public ArquivoAnexoECD fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.nomeArquivoSkw = vo.asString("NOMEARQUIVOSKW");
-        this.caminhoArquivo = vo.asString("CAMINHOARQUIVO");
-        this.tipoDoc = vo.asString("TIPODOC");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
         return this;
    }
 }

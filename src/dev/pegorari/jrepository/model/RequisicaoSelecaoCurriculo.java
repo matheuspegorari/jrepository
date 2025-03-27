@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<RequisicaoSelecaoCurriculo> {
-   private BigDecimal nuSelecao;
-   private BigDecimal nuRequisicao;
-
    public BigDecimal getNuSelecao() {
-        return nuSelecao;
+        return this.getVo().asBigDecimal("NUSELECAO");
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         markAsChanged("NUSELECAO", nuSelecao);
-        this.nuSelecao = nuSelecao;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class RequisicaoSelecaoCurriculo extends AbstractSankhyaEntity<Requisicao
    @Override
    public RequisicaoSelecaoCurriculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuSelecao = vo.asBigDecimal("NUSELECAO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
         return this;
    }
 }

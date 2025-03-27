@@ -5,15 +5,12 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdicional> {
-   private BigDecimal nuNota;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    @Override
@@ -29,7 +26,6 @@ public class TotalizadorAdicional extends AbstractSankhyaEntity<TotalizadorAdici
    @Override
    public TotalizadorAdicional fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }
 }

@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDados> {
-   private BigDecimal codExec;
-   private BigDecimal margem;
-   private BigDecimal vendas;
-
    public BigDecimal getCodExec() {
-        return codExec;
+        return this.getVo().asBigDecimal("CODEXEC");
    }
 
    public void setCodExec(BigDecimal codExec) {
         markAsChanged("CODEXEC", codExec);
-        this.codExec = codExec;
    }
 
    public BigDecimal getMargem() {
-        return margem;
+        return this.getVo().asBigDecimal("MARGEM");
    }
 
    public void setMargem(BigDecimal margem) {
         markAsChanged("MARGEM", margem);
-        this.margem = margem;
    }
 
    public BigDecimal getVendas() {
-        return vendas;
+        return this.getVo().asBigDecimal("VENDAS");
    }
 
    public void setVendas(BigDecimal vendas) {
         markAsChanged("VENDAS", vendas);
-        this.vendas = vendas;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PrevisaoVendasDados extends AbstractSankhyaEntity<PrevisaoVendasDad
    @Override
    public PrevisaoVendasDados fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codExec = vo.asBigDecimal("CODEXEC");
-        this.margem = vo.asBigDecimal("MARGEM");
-        this.vendas = vo.asBigDecimal("VENDAS");
         return this;
    }
 }

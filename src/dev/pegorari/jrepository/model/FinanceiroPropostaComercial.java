@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<FinanceiroPropostaComercial> {
-   private BigDecimal codNat;
-   private BigDecimal nuProjeto;
-   private String rateado;
-   private String tipFin;
-   private String versaoProjeto;
-   private BigDecimal vlrDesp;
-
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getNuProjeto() {
-        return nuProjeto;
+        return this.getVo().asBigDecimal("NUPROJETO");
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
         markAsChanged("NUPROJETO", nuProjeto);
-        this.nuProjeto = nuProjeto;
    }
 
    public String getRateado() {
-        return rateado;
+        return this.getVo().asString("RATEADO");
    }
 
    public void setRateado(String rateado) {
         markAsChanged("RATEADO", rateado);
-        this.rateado = rateado;
    }
 
    public String getTipFin() {
-        return tipFin;
+        return this.getVo().asString("TIPFIN");
    }
 
    public void setTipFin(String tipFin) {
         markAsChanged("TIPFIN", tipFin);
-        this.tipFin = tipFin;
    }
 
    public String getVersaoProjeto() {
-        return versaoProjeto;
+        return this.getVo().asString("VERSAOPROJETO");
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
         markAsChanged("VERSAOPROJETO", versaoProjeto);
-        this.versaoProjeto = versaoProjeto;
    }
 
    public BigDecimal getVlrDesp() {
-        return vlrDesp;
+        return this.getVo().asBigDecimal("VLRDESP");
    }
 
    public void setVlrDesp(BigDecimal vlrDesp) {
         markAsChanged("VLRDESP", vlrDesp);
-        this.vlrDesp = vlrDesp;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class FinanceiroPropostaComercial extends AbstractSankhyaEntity<Financeir
    @Override
    public FinanceiroPropostaComercial fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.nuProjeto = vo.asBigDecimal("NUPROJETO");
-        this.rateado = vo.asString("RATEADO");
-        this.tipFin = vo.asString("TIPFIN");
-        this.versaoProjeto = vo.asString("VERSAOPROJETO");
-        this.vlrDesp = vo.asBigDecimal("VLRDESP");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ConsolidacaoAcessos extends AbstractSankhyaEntity<ConsolidacaoAcessos> {
-   private BigDecimal codUsu;
-   private BigDecimal codGrupo;
-   private String consultar;
-   private BigDecimal codConfig;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public String getConsultar() {
-        return consultar;
+        return this.getVo().asString("CONSULTAR");
    }
 
    public void setConsultar(String consultar) {
         markAsChanged("CONSULTAR", consultar);
-        this.consultar = consultar;
    }
 
    public BigDecimal getCodConfig() {
-        return codConfig;
+        return this.getVo().asBigDecimal("CODCONFIG");
    }
 
    public void setCodConfig(BigDecimal codConfig) {
         markAsChanged("CODCONFIG", codConfig);
-        this.codConfig = codConfig;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ConsolidacaoAcessos extends AbstractSankhyaEntity<ConsolidacaoAcess
    @Override
    public ConsolidacaoAcessos fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.consultar = vo.asString("CONSULTAR");
-        this.codConfig = vo.asBigDecimal("CODCONFIG");
         return this;
    }
 }

@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento> {
-   private BigDecimal ideFx;
-   private BigDecimal idForm;
-   private String obrigatorio;
-   private BigDecimal ordem;
-   private String tipoAcesso;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdForm() {
-        return idForm;
+        return this.getVo().asBigDecimal("IDFORM");
    }
 
    public void setIdForm(BigDecimal idForm) {
         markAsChanged("IDFORM", idForm);
-        this.idForm = idForm;
    }
 
    public String getObrigatorio() {
-        return obrigatorio;
+        return this.getVo().asString("OBRIGATORIO");
    }
 
    public void setObrigatorio(String obrigatorio) {
         markAsChanged("OBRIGATORIO", obrigatorio);
-        this.obrigatorio = obrigatorio;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getTipoAcesso() {
-        return tipoAcesso;
+        return this.getVo().asString("TIPOACESSO");
    }
 
    public void setTipoAcesso(String tipoAcesso) {
         markAsChanged("TIPOACESSO", tipoAcesso);
-        this.tipoAcesso = tipoAcesso;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class FormularioElemento extends AbstractSankhyaEntity<FormularioElemento
    @Override
    public FormularioElemento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.idForm = vo.asBigDecimal("IDFORM");
-        this.obrigatorio = vo.asString("OBRIGATORIO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.tipoAcesso = vo.asString("TIPOACESSO");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGapsGestao> {
-   private BigDecimal nuAviso;
-   private String rotina;
-   private BigDecimal codFila;
-   private String ignorarProximas;
-
    public BigDecimal getNuAviso() {
-        return nuAviso;
+        return this.getVo().asBigDecimal("NUAVISO");
    }
 
    public void setNuAviso(BigDecimal nuAviso) {
         markAsChanged("NUAVISO", nuAviso);
-        this.nuAviso = nuAviso;
    }
 
    public String getRotina() {
-        return rotina;
+        return this.getVo().asString("ROTINA");
    }
 
    public void setRotina(String rotina) {
         markAsChanged("ROTINA", rotina);
-        this.rotina = rotina;
    }
 
    public BigDecimal getCodFila() {
-        return codFila;
+        return this.getVo().asBigDecimal("CODFILA");
    }
 
    public void setCodFila(BigDecimal codFila) {
         markAsChanged("CODFILA", codFila);
-        this.codFila = codFila;
    }
 
    public String getIgnorarProximas() {
-        return ignorarProximas;
+        return this.getVo().asString("IGNORARPROXIMAS");
    }
 
    public void setIgnorarProximas(String ignorarProximas) {
         markAsChanged("IGNORARPROXIMAS", ignorarProximas);
-        this.ignorarProximas = ignorarProximas;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NotificacaoGapsGestao extends AbstractSankhyaEntity<NotificacaoGaps
    @Override
    public NotificacaoGapsGestao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuAviso = vo.asBigDecimal("NUAVISO");
-        this.rotina = vo.asString("ROTINA");
-        this.codFila = vo.asBigDecimal("CODFILA");
-        this.ignorarProximas = vo.asString("IGNORARPROXIMAS");
         return this;
    }
 }

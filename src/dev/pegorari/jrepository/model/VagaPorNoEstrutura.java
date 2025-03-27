@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura> {
-   private Timestamp dhAlter;
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private BigDecimal nuNo;
-   private BigDecimal qtdVagas;
-
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuNo() {
-        return nuNo;
+        return this.getVo().asBigDecimal("NUNO");
    }
 
    public void setNuNo(BigDecimal nuNo) {
         markAsChanged("NUNO", nuNo);
-        this.nuNo = nuNo;
    }
 
    public BigDecimal getQtdVagas() {
-        return qtdVagas;
+        return this.getVo().asBigDecimal("QTDVAGAS");
    }
 
    public void setQtdVagas(BigDecimal qtdVagas) {
         markAsChanged("QTDVAGAS", qtdVagas);
-        this.qtdVagas = qtdVagas;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class VagaPorNoEstrutura extends AbstractSankhyaEntity<VagaPorNoEstrutura
    @Override
    public VagaPorNoEstrutura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuNo = vo.asBigDecimal("NUNO");
-        this.qtdVagas = vo.asBigDecimal("QTDVAGAS");
         return this;
    }
 }

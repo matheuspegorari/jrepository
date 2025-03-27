@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
-   private String acesso;
-   private BigDecimal codGrupo;
-   private BigDecimal codUsu;
-   private String idAcesso;
-   private BigDecimal nuNico;
-   private BigDecimal sequencia;
-   private BigDecimal versao;
-
    public String getAcesso() {
-        return acesso;
+        return this.getVo().asString("ACESSO");
    }
 
    public void setAcesso(String acesso) {
         markAsChanged("ACESSO", acesso);
-        this.acesso = acesso;
    }
 
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getIdAcesso() {
-        return idAcesso;
+        return this.getVo().asString("IDACESSO");
    }
 
    public void setIdAcesso(String idAcesso) {
         markAsChanged("IDACESSO", idAcesso);
-        this.idAcesso = idAcesso;
    }
 
    public BigDecimal getNuNico() {
-        return nuNico;
+        return this.getVo().asBigDecimal("NUNICO");
    }
 
    public void setNuNico(BigDecimal nuNico) {
         markAsChanged("NUNICO", nuNico);
-        this.nuNico = nuNico;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVersao() {
-        return versao;
+        return this.getVo().asBigDecimal("VERSAO");
    }
 
    public void setVersao(BigDecimal versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class PermissaoBK extends AbstractSankhyaEntity<PermissaoBK> {
    @Override
    public PermissaoBK fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.acesso = vo.asString("ACESSO");
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.idAcesso = vo.asString("IDACESSO");
-        this.nuNico = vo.asBigDecimal("NUNICO");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.versao = vo.asBigDecimal("VERSAO");
         return this;
    }
 }

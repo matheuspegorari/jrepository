@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CreditoUtilizadoPisCofins extends AbstractSankhyaEntity<CreditoUtilizadoPisCofins> {
-   private String cnpj;
-   private String cnpjSuc;
-   private BigDecimal codemp;
-   private BigDecimal codCred;
-   private String origCred;
-   private Timestamp perApuCred;
-   private Timestamp perUtiCred;
-   private String tipo;
-   private BigDecimal vlCredDcompPa;
-   private BigDecimal vlCredDescPa;
-   private BigDecimal vrCredPerPa;
-
    public String getCnpj() {
-        return cnpj;
+        return this.getVo().asString("CNPJ");
    }
 
    public void setCnpj(String cnpj) {
         markAsChanged("CNPJ", cnpj);
-        this.cnpj = cnpj;
    }
 
    public String getCnpjSuc() {
-        return cnpjSuc;
+        return this.getVo().asString("CNPJ_SUC");
    }
 
    public void setCnpjSuc(String cnpjSuc) {
         markAsChanged("CNPJ_SUC", cnpjSuc);
-        this.cnpjSuc = cnpjSuc;
    }
 
    public BigDecimal getCodemp() {
-        return codemp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodemp(BigDecimal codemp) {
         markAsChanged("CODEMP", codemp);
-        this.codemp = codemp;
    }
 
    public BigDecimal getCodCred() {
-        return codCred;
+        return this.getVo().asBigDecimal("COD_CRED");
    }
 
    public void setCodCred(BigDecimal codCred) {
         markAsChanged("COD_CRED", codCred);
-        this.codCred = codCred;
    }
 
    public String getOrigCred() {
-        return origCred;
+        return this.getVo().asString("ORIG_CRED");
    }
 
    public void setOrigCred(String origCred) {
         markAsChanged("ORIG_CRED", origCred);
-        this.origCred = origCred;
    }
 
    public Timestamp getPerApuCred() {
-        return perApuCred;
+        return this.getVo().asTimestamp("PER_APU_CRED");
    }
 
    public void setPerApuCred(Timestamp perApuCred) {
         markAsChanged("PER_APU_CRED", perApuCred);
-        this.perApuCred = perApuCred;
    }
 
    public Timestamp getPerUtiCred() {
-        return perUtiCred;
+        return this.getVo().asTimestamp("PER_UTI_CRED");
    }
 
    public void setPerUtiCred(Timestamp perUtiCred) {
         markAsChanged("PER_UTI_CRED", perUtiCred);
-        this.perUtiCred = perUtiCred;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getVlCredDcompPa() {
-        return vlCredDcompPa;
+        return this.getVo().asBigDecimal("VL_CRED_DCOMP_PA");
    }
 
    public void setVlCredDcompPa(BigDecimal vlCredDcompPa) {
         markAsChanged("VL_CRED_DCOMP_PA", vlCredDcompPa);
-        this.vlCredDcompPa = vlCredDcompPa;
    }
 
    public BigDecimal getVlCredDescPa() {
-        return vlCredDescPa;
+        return this.getVo().asBigDecimal("VL_CRED_DESC_PA");
    }
 
    public void setVlCredDescPa(BigDecimal vlCredDescPa) {
         markAsChanged("VL_CRED_DESC_PA", vlCredDescPa);
-        this.vlCredDescPa = vlCredDescPa;
    }
 
    public BigDecimal getVrCredPerPa() {
-        return vrCredPerPa;
+        return this.getVo().asBigDecimal("VR_CRED_PER_PA");
    }
 
    public void setVrCredPerPa(BigDecimal vrCredPerPa) {
         markAsChanged("VR_CRED_PER_PA", vrCredPerPa);
-        this.vrCredPerPa = vrCredPerPa;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class CreditoUtilizadoPisCofins extends AbstractSankhyaEntity<CreditoUtil
    @Override
    public CreditoUtilizadoPisCofins fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cnpj = vo.asString("CNPJ");
-        this.cnpjSuc = vo.asString("CNPJ_SUC");
-        this.codemp = vo.asBigDecimal("CODEMP");
-        this.codCred = vo.asBigDecimal("COD_CRED");
-        this.origCred = vo.asString("ORIG_CRED");
-        this.perApuCred = vo.asTimestamp("PER_APU_CRED");
-        this.perUtiCred = vo.asTimestamp("PER_UTI_CRED");
-        this.tipo = vo.asString("TIPO");
-        this.vlCredDcompPa = vo.asBigDecimal("VL_CRED_DCOMP_PA");
-        this.vlCredDescPa = vo.asBigDecimal("VL_CRED_DESC_PA");
-        this.vrCredPerPa = vo.asBigDecimal("VR_CRED_PER_PA");
         return this;
    }
 }

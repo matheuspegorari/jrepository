@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
-   private BigDecimal nuViag;
-   private String numLacre;
-   private BigDecimal seqMdfe;
-
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public String getNumLacre() {
-        return numLacre;
+        return this.getVo().asString("NUMLACRE");
    }
 
    public void setNumLacre(String numLacre) {
         markAsChanged("NUMLACRE", numLacre);
-        this.numLacre = numLacre;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class LacreMDFE extends AbstractSankhyaEntity<LacreMDFE> {
    @Override
    public LacreMDFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.numLacre = vo.asString("NUMLACRE");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         return this;
    }
 }

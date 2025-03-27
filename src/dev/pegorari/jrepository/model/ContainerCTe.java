@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
-   private String idContainers;
-   private BigDecimal nuNota;
-
    public String getIdContainers() {
-        return idContainers;
+        return this.getVo().asString("IDCONTAINERS");
    }
 
    public void setIdContainers(String idContainers) {
         markAsChanged("IDCONTAINERS", idContainers);
-        this.idContainers = idContainers;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class ContainerCTe extends AbstractSankhyaEntity<ContainerCTe> {
    @Override
    public ContainerCTe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idContainers = vo.asString("IDCONTAINERS");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }
 }

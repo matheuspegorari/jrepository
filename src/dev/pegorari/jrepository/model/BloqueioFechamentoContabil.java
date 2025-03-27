@@ -6,235 +6,188 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFechamentoContabil> {
-   private Timestamp dhInclusao;
-   private Timestamp dtFechamentoBco;
-   private Timestamp dtFechamentoCtb;
-   private Timestamp dtFechamentoCus;
-   private Timestamp dtFechamentoDesp;
-   private Timestamp dtFechamentoFis;
-   private Timestamp dtFechamentoRec;
-   private Timestamp dtFechamentoSai;
-   private BigDecimal nuBloqueio;
-   private Timestamp referencia;
-   private BigDecimal sequencia;
-   private String tipoFechaCalcust;
-   private String tipoFechaEstEnt;
-   private String tipoFechaEstSai;
-   private String tipoFechaFinDesp;
-   private String tipoFechaFinRec;
-   private String tipoFechaMovBco;
-   private String tipoFechaMovCtb;
-   private String tipoFechaMovFis;
-   private Timestamp dtFechamentoEnt;
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private String refFixa;
-
    public Timestamp getDhInclusao() {
-        return dhInclusao;
+        return this.getVo().asTimestamp("DHINCLUSAO");
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
         markAsChanged("DHINCLUSAO", dhInclusao);
-        this.dhInclusao = dhInclusao;
    }
 
    public Timestamp getDtFechamentoBco() {
-        return dtFechamentoBco;
+        return this.getVo().asTimestamp("DTFECHAMENTOBCO");
    }
 
    public void setDtFechamentoBco(Timestamp dtFechamentoBco) {
         markAsChanged("DTFECHAMENTOBCO", dtFechamentoBco);
-        this.dtFechamentoBco = dtFechamentoBco;
    }
 
    public Timestamp getDtFechamentoCtb() {
-        return dtFechamentoCtb;
+        return this.getVo().asTimestamp("DTFECHAMENTOCTB");
    }
 
    public void setDtFechamentoCtb(Timestamp dtFechamentoCtb) {
         markAsChanged("DTFECHAMENTOCTB", dtFechamentoCtb);
-        this.dtFechamentoCtb = dtFechamentoCtb;
    }
 
    public Timestamp getDtFechamentoCus() {
-        return dtFechamentoCus;
+        return this.getVo().asTimestamp("DTFECHAMENTOCUS");
    }
 
    public void setDtFechamentoCus(Timestamp dtFechamentoCus) {
         markAsChanged("DTFECHAMENTOCUS", dtFechamentoCus);
-        this.dtFechamentoCus = dtFechamentoCus;
    }
 
    public Timestamp getDtFechamentoDesp() {
-        return dtFechamentoDesp;
+        return this.getVo().asTimestamp("DTFECHAMENTODESP");
    }
 
    public void setDtFechamentoDesp(Timestamp dtFechamentoDesp) {
         markAsChanged("DTFECHAMENTODESP", dtFechamentoDesp);
-        this.dtFechamentoDesp = dtFechamentoDesp;
    }
 
    public Timestamp getDtFechamentoFis() {
-        return dtFechamentoFis;
+        return this.getVo().asTimestamp("DTFECHAMENTOFIS");
    }
 
    public void setDtFechamentoFis(Timestamp dtFechamentoFis) {
         markAsChanged("DTFECHAMENTOFIS", dtFechamentoFis);
-        this.dtFechamentoFis = dtFechamentoFis;
    }
 
    public Timestamp getDtFechamentoRec() {
-        return dtFechamentoRec;
+        return this.getVo().asTimestamp("DTFECHAMENTOREC");
    }
 
    public void setDtFechamentoRec(Timestamp dtFechamentoRec) {
         markAsChanged("DTFECHAMENTOREC", dtFechamentoRec);
-        this.dtFechamentoRec = dtFechamentoRec;
    }
 
    public Timestamp getDtFechamentoSai() {
-        return dtFechamentoSai;
+        return this.getVo().asTimestamp("DTFECHAMENTOSAI");
    }
 
    public void setDtFechamentoSai(Timestamp dtFechamentoSai) {
         markAsChanged("DTFECHAMENTOSAI", dtFechamentoSai);
-        this.dtFechamentoSai = dtFechamentoSai;
    }
 
    public BigDecimal getNuBloqueio() {
-        return nuBloqueio;
+        return this.getVo().asBigDecimal("NUBLOQUEIO");
    }
 
    public void setNuBloqueio(BigDecimal nuBloqueio) {
         markAsChanged("NUBLOQUEIO", nuBloqueio);
-        this.nuBloqueio = nuBloqueio;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipoFechaCalcust() {
-        return tipoFechaCalcust;
+        return this.getVo().asString("TIPOFECHACALCUST");
    }
 
    public void setTipoFechaCalcust(String tipoFechaCalcust) {
         markAsChanged("TIPOFECHACALCUST", tipoFechaCalcust);
-        this.tipoFechaCalcust = tipoFechaCalcust;
    }
 
    public String getTipoFechaEstEnt() {
-        return tipoFechaEstEnt;
+        return this.getVo().asString("TIPOFECHAESTENT");
    }
 
    public void setTipoFechaEstEnt(String tipoFechaEstEnt) {
         markAsChanged("TIPOFECHAESTENT", tipoFechaEstEnt);
-        this.tipoFechaEstEnt = tipoFechaEstEnt;
    }
 
    public String getTipoFechaEstSai() {
-        return tipoFechaEstSai;
+        return this.getVo().asString("TIPOFECHAESTSAI");
    }
 
    public void setTipoFechaEstSai(String tipoFechaEstSai) {
         markAsChanged("TIPOFECHAESTSAI", tipoFechaEstSai);
-        this.tipoFechaEstSai = tipoFechaEstSai;
    }
 
    public String getTipoFechaFinDesp() {
-        return tipoFechaFinDesp;
+        return this.getVo().asString("TIPOFECHAFINDESP");
    }
 
    public void setTipoFechaFinDesp(String tipoFechaFinDesp) {
         markAsChanged("TIPOFECHAFINDESP", tipoFechaFinDesp);
-        this.tipoFechaFinDesp = tipoFechaFinDesp;
    }
 
    public String getTipoFechaFinRec() {
-        return tipoFechaFinRec;
+        return this.getVo().asString("TIPOFECHAFINREC");
    }
 
    public void setTipoFechaFinRec(String tipoFechaFinRec) {
         markAsChanged("TIPOFECHAFINREC", tipoFechaFinRec);
-        this.tipoFechaFinRec = tipoFechaFinRec;
    }
 
    public String getTipoFechaMovBco() {
-        return tipoFechaMovBco;
+        return this.getVo().asString("TIPOFECHAMOVBCO");
    }
 
    public void setTipoFechaMovBco(String tipoFechaMovBco) {
         markAsChanged("TIPOFECHAMOVBCO", tipoFechaMovBco);
-        this.tipoFechaMovBco = tipoFechaMovBco;
    }
 
    public String getTipoFechaMovCtb() {
-        return tipoFechaMovCtb;
+        return this.getVo().asString("TIPOFECHAMOVCTB");
    }
 
    public void setTipoFechaMovCtb(String tipoFechaMovCtb) {
         markAsChanged("TIPOFECHAMOVCTB", tipoFechaMovCtb);
-        this.tipoFechaMovCtb = tipoFechaMovCtb;
    }
 
    public String getTipoFechaMovFis() {
-        return tipoFechaMovFis;
+        return this.getVo().asString("TIPOFECHAMOVFIS");
    }
 
    public void setTipoFechaMovFis(String tipoFechaMovFis) {
         markAsChanged("TIPOFECHAMOVFIS", tipoFechaMovFis);
-        this.tipoFechaMovFis = tipoFechaMovFis;
    }
 
    public Timestamp getDtFechamentoEnt() {
-        return dtFechamentoEnt;
+        return this.getVo().asTimestamp("DTFECHAMENTOENT");
    }
 
    public void setDtFechamentoEnt(Timestamp dtFechamentoEnt) {
         markAsChanged("DTFECHAMENTOENT", dtFechamentoEnt);
-        this.dtFechamentoEnt = dtFechamentoEnt;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getRefFixa() {
-        return refFixa;
+        return this.getVo().asString("REFFIXA");
    }
 
    public void setRefFixa(String refFixa) {
         markAsChanged("REFFIXA", refFixa);
-        this.refFixa = refFixa;
    }
 
    @Override
@@ -250,29 +203,6 @@ public class BloqueioFechamentoContabil extends AbstractSankhyaEntity<BloqueioFe
    @Override
    public BloqueioFechamentoContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
-        this.dtFechamentoBco = vo.asTimestamp("DTFECHAMENTOBCO");
-        this.dtFechamentoCtb = vo.asTimestamp("DTFECHAMENTOCTB");
-        this.dtFechamentoCus = vo.asTimestamp("DTFECHAMENTOCUS");
-        this.dtFechamentoDesp = vo.asTimestamp("DTFECHAMENTODESP");
-        this.dtFechamentoFis = vo.asTimestamp("DTFECHAMENTOFIS");
-        this.dtFechamentoRec = vo.asTimestamp("DTFECHAMENTOREC");
-        this.dtFechamentoSai = vo.asTimestamp("DTFECHAMENTOSAI");
-        this.nuBloqueio = vo.asBigDecimal("NUBLOQUEIO");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipoFechaCalcust = vo.asString("TIPOFECHACALCUST");
-        this.tipoFechaEstEnt = vo.asString("TIPOFECHAESTENT");
-        this.tipoFechaEstSai = vo.asString("TIPOFECHAESTSAI");
-        this.tipoFechaFinDesp = vo.asString("TIPOFECHAFINDESP");
-        this.tipoFechaFinRec = vo.asString("TIPOFECHAFINREC");
-        this.tipoFechaMovBco = vo.asString("TIPOFECHAMOVBCO");
-        this.tipoFechaMovCtb = vo.asString("TIPOFECHAMOVCTB");
-        this.tipoFechaMovFis = vo.asString("TIPOFECHAMOVFIS");
-        this.dtFechamentoEnt = vo.asTimestamp("DTFECHAMENTOENT");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.refFixa = vo.asString("REFFIXA");
         return this;
    }
 }

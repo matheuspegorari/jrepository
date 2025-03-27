@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private String expressao;
-   private String nomeInstDest;
-   private String nomeInstOrig;
-   private String relationName;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getExpressao() {
-        return expressao;
+        return this.getVo().asString("EXPRESSAO");
    }
 
    public void setExpressao(String expressao) {
         markAsChanged("EXPRESSAO", expressao);
-        this.expressao = expressao;
    }
 
    public String getNomeInstDest() {
-        return nomeInstDest;
+        return this.getVo().asString("NOMEINSTDEST");
    }
 
    public void setNomeInstDest(String nomeInstDest) {
         markAsChanged("NOMEINSTDEST", nomeInstDest);
-        this.nomeInstDest = nomeInstDest;
    }
 
    public String getNomeInstOrig() {
-        return nomeInstOrig;
+        return this.getVo().asString("NOMEINSTORIG");
    }
 
    public void setNomeInstOrig(String nomeInstOrig) {
         markAsChanged("NOMEINSTORIG", nomeInstOrig);
-        this.nomeInstOrig = nomeInstOrig;
    }
 
    public String getRelationName() {
-        return relationName;
+        return this.getVo().asString("RELATIONNAME");
    }
 
    public void setRelationName(String relationName) {
         markAsChanged("RELATIONNAME", relationName);
-        this.relationName = relationName;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class FiltroFormulario extends AbstractSankhyaEntity<FiltroFormulario> {
    @Override
    public FiltroFormulario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.expressao = vo.asString("EXPRESSAO");
-        this.nomeInstDest = vo.asString("NOMEINSTDEST");
-        this.nomeInstOrig = vo.asString("NOMEINSTORIG");
-        this.relationName = vo.asString("RELATIONNAME");
         return this;
    }
 }

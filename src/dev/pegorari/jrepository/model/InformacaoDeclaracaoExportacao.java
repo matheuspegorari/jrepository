@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<InformacaoDeclaracaoExportacao> {
-   private BigDecimal codPaisDestino;
-   private Timestamp dtaVerbacao;
-   private Timestamp dtDeclaracao;
-   private String natureza;
-   private String nroDeclaracao;
-   private BigDecimal tipoDec;
-
    public BigDecimal getCodPaisDestino() {
-        return codPaisDestino;
+        return this.getVo().asBigDecimal("CODPAISDESTINO");
    }
 
    public void setCodPaisDestino(BigDecimal codPaisDestino) {
         markAsChanged("CODPAISDESTINO", codPaisDestino);
-        this.codPaisDestino = codPaisDestino;
    }
 
    public Timestamp getDtaVerbacao() {
-        return dtaVerbacao;
+        return this.getVo().asTimestamp("DTAVERBACAO");
    }
 
    public void setDtaVerbacao(Timestamp dtaVerbacao) {
         markAsChanged("DTAVERBACAO", dtaVerbacao);
-        this.dtaVerbacao = dtaVerbacao;
    }
 
    public Timestamp getDtDeclaracao() {
-        return dtDeclaracao;
+        return this.getVo().asTimestamp("DTDECLARACAO");
    }
 
    public void setDtDeclaracao(Timestamp dtDeclaracao) {
         markAsChanged("DTDECLARACAO", dtDeclaracao);
-        this.dtDeclaracao = dtDeclaracao;
    }
 
    public String getNatureza() {
-        return natureza;
+        return this.getVo().asString("NATUREZA");
    }
 
    public void setNatureza(String natureza) {
         markAsChanged("NATUREZA", natureza);
-        this.natureza = natureza;
    }
 
    public String getNroDeclaracao() {
-        return nroDeclaracao;
+        return this.getVo().asString("NRODECLARACAO");
    }
 
    public void setNroDeclaracao(String nroDeclaracao) {
         markAsChanged("NRODECLARACAO", nroDeclaracao);
-        this.nroDeclaracao = nroDeclaracao;
    }
 
    public BigDecimal getTipoDec() {
-        return tipoDec;
+        return this.getVo().asBigDecimal("TIPODEC");
    }
 
    public void setTipoDec(BigDecimal tipoDec) {
         markAsChanged("TIPODEC", tipoDec);
-        this.tipoDec = tipoDec;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class InformacaoDeclaracaoExportacao extends AbstractSankhyaEntity<Inform
    @Override
    public InformacaoDeclaracaoExportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPaisDestino = vo.asBigDecimal("CODPAISDESTINO");
-        this.dtaVerbacao = vo.asTimestamp("DTAVERBACAO");
-        this.dtDeclaracao = vo.asTimestamp("DTDECLARACAO");
-        this.natureza = vo.asString("NATUREZA");
-        this.nroDeclaracao = vo.asString("NRODECLARACAO");
-        this.tipoDec = vo.asBigDecimal("TIPODEC");
         return this;
    }
 }

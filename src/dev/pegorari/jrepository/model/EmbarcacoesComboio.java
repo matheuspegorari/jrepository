@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio> {
-   private BigDecimal codVeiculo;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class EmbarcacoesComboio extends AbstractSankhyaEntity<EmbarcacoesComboio
    @Override
    public EmbarcacoesComboio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         return this;
    }
 }

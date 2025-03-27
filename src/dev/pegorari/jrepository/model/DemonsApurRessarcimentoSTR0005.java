@@ -6,145 +6,116 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DemonsApurRessarcimentoSTR0005 extends AbstractSankhyaEntity<DemonsApurRessarcimentoSTR0005> {
-   private String bairro;
-   private String cep;
-   private BigDecimal codEmp;
-   private String compl;
-   private String digitado;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String email;
-   private String ender;
-   private String fantasia;
-   private String fax;
-   private String fone;
-   private String num;
-   private String reg;
-
    public String getBairro() {
-        return bairro;
+        return this.getVo().asString("BAIRRO");
    }
 
    public void setBairro(String bairro) {
         markAsChanged("BAIRRO", bairro);
-        this.bairro = bairro;
    }
 
    public String getCep() {
-        return cep;
+        return this.getVo().asString("CEP");
    }
 
    public void setCep(String cep) {
         markAsChanged("CEP", cep);
-        this.cep = cep;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCompl() {
-        return compl;
+        return this.getVo().asString("COMPL");
    }
 
    public void setCompl(String compl) {
         markAsChanged("COMPL", compl);
-        this.compl = compl;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getEnder() {
-        return ender;
+        return this.getVo().asString("ENDER");
    }
 
    public void setEnder(String ender) {
         markAsChanged("ENDER", ender);
-        this.ender = ender;
    }
 
    public String getFantasia() {
-        return fantasia;
+        return this.getVo().asString("FANTASIA");
    }
 
    public void setFantasia(String fantasia) {
         markAsChanged("FANTASIA", fantasia);
-        this.fantasia = fantasia;
    }
 
    public String getFax() {
-        return fax;
+        return this.getVo().asString("FAX");
    }
 
    public void setFax(String fax) {
         markAsChanged("FAX", fax);
-        this.fax = fax;
    }
 
    public String getFone() {
-        return fone;
+        return this.getVo().asString("FONE");
    }
 
    public void setFone(String fone) {
         markAsChanged("FONE", fone);
-        this.fone = fone;
    }
 
    public String getNum() {
-        return num;
+        return this.getVo().asString("NUM");
    }
 
    public void setNum(String num) {
         markAsChanged("NUM", num);
-        this.num = num;
    }
 
    public String getReg() {
-        return reg;
+        return this.getVo().asString("REG");
    }
 
    public void setReg(String reg) {
         markAsChanged("REG", reg);
-        this.reg = reg;
    }
 
    @Override
@@ -160,20 +131,6 @@ public class DemonsApurRessarcimentoSTR0005 extends AbstractSankhyaEntity<Demons
    @Override
    public DemonsApurRessarcimentoSTR0005 fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.bairro = vo.asString("BAIRRO");
-        this.cep = vo.asString("CEP");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.compl = vo.asString("COMPL");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.email = vo.asString("EMAIL");
-        this.ender = vo.asString("ENDER");
-        this.fantasia = vo.asString("FANTASIA");
-        this.fax = vo.asString("FAX");
-        this.fone = vo.asString("FONE");
-        this.num = vo.asString("NUM");
-        this.reg = vo.asString("REG");
         return this;
    }
 }

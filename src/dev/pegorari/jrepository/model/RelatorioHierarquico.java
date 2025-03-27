@@ -5,165 +5,132 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarquico> {
-   private BigDecimal alinhamento;
-   private BigDecimal codCampo;
-   private BigDecimal codCampoPai;
-   private BigDecimal codUni;
-   private String descricao;
-   private String expressao;
-   private String ligacao;
-   private String mascara;
-   private String programa;
-   private String sankhya;
-   private String soHierarquia;
-   private String tabelas;
-   private BigDecimal tamanho;
-   private String tipo;
-   private String totaliza;
-   private String zerarNaQuebra;
-
    public BigDecimal getAlinhamento() {
-        return alinhamento;
+        return this.getVo().asBigDecimal("ALINHAMENTO");
    }
 
    public void setAlinhamento(BigDecimal alinhamento) {
         markAsChanged("ALINHAMENTO", alinhamento);
-        this.alinhamento = alinhamento;
    }
 
    public BigDecimal getCodCampo() {
-        return codCampo;
+        return this.getVo().asBigDecimal("CODCAMPO");
    }
 
    public void setCodCampo(BigDecimal codCampo) {
         markAsChanged("CODCAMPO", codCampo);
-        this.codCampo = codCampo;
    }
 
    public BigDecimal getCodCampoPai() {
-        return codCampoPai;
+        return this.getVo().asBigDecimal("CODCAMPOPAI");
    }
 
    public void setCodCampoPai(BigDecimal codCampoPai) {
         markAsChanged("CODCAMPOPAI", codCampoPai);
-        this.codCampoPai = codCampoPai;
    }
 
    public BigDecimal getCodUni() {
-        return codUni;
+        return this.getVo().asBigDecimal("CODUNI");
    }
 
    public void setCodUni(BigDecimal codUni) {
         markAsChanged("CODUNI", codUni);
-        this.codUni = codUni;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getExpressao() {
-        return expressao;
+        return this.getVo().asString("EXPRESSAO");
    }
 
    public void setExpressao(String expressao) {
         markAsChanged("EXPRESSAO", expressao);
-        this.expressao = expressao;
    }
 
    public String getLigacao() {
-        return ligacao;
+        return this.getVo().asString("LIGACAO");
    }
 
    public void setLigacao(String ligacao) {
         markAsChanged("LIGACAO", ligacao);
-        this.ligacao = ligacao;
    }
 
    public String getMascara() {
-        return mascara;
+        return this.getVo().asString("MASCARA");
    }
 
    public void setMascara(String mascara) {
         markAsChanged("MASCARA", mascara);
-        this.mascara = mascara;
    }
 
    public String getPrograma() {
-        return programa;
+        return this.getVo().asString("PROGRAMA");
    }
 
    public void setPrograma(String programa) {
         markAsChanged("PROGRAMA", programa);
-        this.programa = programa;
    }
 
    public String getSankhya() {
-        return sankhya;
+        return this.getVo().asString("SANKHYA");
    }
 
    public void setSankhya(String sankhya) {
         markAsChanged("SANKHYA", sankhya);
-        this.sankhya = sankhya;
    }
 
    public String getSoHierarquia() {
-        return soHierarquia;
+        return this.getVo().asString("SOHIERARQUIA");
    }
 
    public void setSoHierarquia(String soHierarquia) {
         markAsChanged("SOHIERARQUIA", soHierarquia);
-        this.soHierarquia = soHierarquia;
    }
 
    public String getTabelas() {
-        return tabelas;
+        return this.getVo().asString("TABELAS");
    }
 
    public void setTabelas(String tabelas) {
         markAsChanged("TABELAS", tabelas);
-        this.tabelas = tabelas;
    }
 
    public BigDecimal getTamanho() {
-        return tamanho;
+        return this.getVo().asBigDecimal("TAMANHO");
    }
 
    public void setTamanho(BigDecimal tamanho) {
         markAsChanged("TAMANHO", tamanho);
-        this.tamanho = tamanho;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTotaliza() {
-        return totaliza;
+        return this.getVo().asString("TOTALIZA");
    }
 
    public void setTotaliza(String totaliza) {
         markAsChanged("TOTALIZA", totaliza);
-        this.totaliza = totaliza;
    }
 
    public String getZerarNaQuebra() {
-        return zerarNaQuebra;
+        return this.getVo().asString("ZERARNAQUEBRA");
    }
 
    public void setZerarNaQuebra(String zerarNaQuebra) {
         markAsChanged("ZERARNAQUEBRA", zerarNaQuebra);
-        this.zerarNaQuebra = zerarNaQuebra;
    }
 
    @Override
@@ -179,22 +146,6 @@ public class RelatorioHierarquico extends AbstractSankhyaEntity<RelatorioHierarq
    @Override
    public RelatorioHierarquico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.alinhamento = vo.asBigDecimal("ALINHAMENTO");
-        this.codCampo = vo.asBigDecimal("CODCAMPO");
-        this.codCampoPai = vo.asBigDecimal("CODCAMPOPAI");
-        this.codUni = vo.asBigDecimal("CODUNI");
-        this.descricao = vo.asString("DESCRICAO");
-        this.expressao = vo.asString("EXPRESSAO");
-        this.ligacao = vo.asString("LIGACAO");
-        this.mascara = vo.asString("MASCARA");
-        this.programa = vo.asString("PROGRAMA");
-        this.sankhya = vo.asString("SANKHYA");
-        this.soHierarquia = vo.asString("SOHIERARQUIA");
-        this.tabelas = vo.asString("TABELAS");
-        this.tamanho = vo.asBigDecimal("TAMANHO");
-        this.tipo = vo.asString("TIPO");
-        this.totaliza = vo.asString("TOTALIZA");
-        this.zerarNaQuebra = vo.asString("ZERARNAQUEBRA");
         return this;
    }
 }

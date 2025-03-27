@@ -6,215 +6,172 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
-   private String analitico;
-   private BigDecimal area;
-   private BigDecimal areaCont;
-   private BigDecimal areaPerm;
-   private BigDecimal areaReal;
-   private String ativo;
-   private BigDecimal codCenCus;
-   private BigDecimal codCenCusPai;
-   private BigDecimal codParc;
-   private BigDecimal codTab;
-   private BigDecimal codUng;
-   private BigDecimal codUnn;
-   private BigDecimal codUsuResp;
-   private String descrCenCus;
-   private Timestamp dtInclusao;
-   private BigDecimal fracCont;
-   private BigDecimal fracGeren;
-   private BigDecimal grau;
-   private String veiculo;
-   private BigDecimal codParcResp;
-   private String calcElalurPartea;
-
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public BigDecimal getArea() {
-        return area;
+        return this.getVo().asBigDecimal("AREA");
    }
 
    public void setArea(BigDecimal area) {
         markAsChanged("AREA", area);
-        this.area = area;
    }
 
    public BigDecimal getAreaCont() {
-        return areaCont;
+        return this.getVo().asBigDecimal("AREACONT");
    }
 
    public void setAreaCont(BigDecimal areaCont) {
         markAsChanged("AREACONT", areaCont);
-        this.areaCont = areaCont;
    }
 
    public BigDecimal getAreaPerm() {
-        return areaPerm;
+        return this.getVo().asBigDecimal("AREAPERM");
    }
 
    public void setAreaPerm(BigDecimal areaPerm) {
         markAsChanged("AREAPERM", areaPerm);
-        this.areaPerm = areaPerm;
    }
 
    public BigDecimal getAreaReal() {
-        return areaReal;
+        return this.getVo().asBigDecimal("AREAREAL");
    }
 
    public void setAreaReal(BigDecimal areaReal) {
         markAsChanged("AREAREAL", areaReal);
-        this.areaReal = areaReal;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodCenCus() {
-        return codCenCus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
         markAsChanged("CODCENCUS", codCenCus);
-        this.codCenCus = codCenCus;
    }
 
    public BigDecimal getCodCenCusPai() {
-        return codCenCusPai;
+        return this.getVo().asBigDecimal("CODCENCUSPAI");
    }
 
    public void setCodCenCusPai(BigDecimal codCenCusPai) {
         markAsChanged("CODCENCUSPAI", codCenCusPai);
-        this.codCenCusPai = codCenCusPai;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTab() {
-        return codTab;
+        return this.getVo().asBigDecimal("CODTAB");
    }
 
    public void setCodTab(BigDecimal codTab) {
         markAsChanged("CODTAB", codTab);
-        this.codTab = codTab;
    }
 
    public BigDecimal getCodUng() {
-        return codUng;
+        return this.getVo().asBigDecimal("CODUNG");
    }
 
    public void setCodUng(BigDecimal codUng) {
         markAsChanged("CODUNG", codUng);
-        this.codUng = codUng;
    }
 
    public BigDecimal getCodUnn() {
-        return codUnn;
+        return this.getVo().asBigDecimal("CODUNN");
    }
 
    public void setCodUnn(BigDecimal codUnn) {
         markAsChanged("CODUNN", codUnn);
-        this.codUnn = codUnn;
    }
 
    public BigDecimal getCodUsuResp() {
-        return codUsuResp;
+        return this.getVo().asBigDecimal("CODUSURESP");
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
         markAsChanged("CODUSURESP", codUsuResp);
-        this.codUsuResp = codUsuResp;
    }
 
    public String getDescrCenCus() {
-        return descrCenCus;
+        return this.getVo().asString("DESCRCENCUS");
    }
 
    public void setDescrCenCus(String descrCenCus) {
         markAsChanged("DESCRCENCUS", descrCenCus);
-        this.descrCenCus = descrCenCus;
    }
 
    public Timestamp getDtInclusao() {
-        return dtInclusao;
+        return this.getVo().asTimestamp("DTINCLUSAO");
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
         markAsChanged("DTINCLUSAO", dtInclusao);
-        this.dtInclusao = dtInclusao;
    }
 
    public BigDecimal getFracCont() {
-        return fracCont;
+        return this.getVo().asBigDecimal("FRACCONT");
    }
 
    public void setFracCont(BigDecimal fracCont) {
         markAsChanged("FRACCONT", fracCont);
-        this.fracCont = fracCont;
    }
 
    public BigDecimal getFracGeren() {
-        return fracGeren;
+        return this.getVo().asBigDecimal("FRACGEREN");
    }
 
    public void setFracGeren(BigDecimal fracGeren) {
         markAsChanged("FRACGEREN", fracGeren);
-        this.fracGeren = fracGeren;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getVeiculo() {
-        return veiculo;
+        return this.getVo().asString("VEICULO");
    }
 
    public void setVeiculo(String veiculo) {
         markAsChanged("VEICULO", veiculo);
-        this.veiculo = veiculo;
    }
 
    public BigDecimal getCodParcResp() {
-        return codParcResp;
+        return this.getVo().asBigDecimal("CODPARCRESP");
    }
 
    public void setCodParcResp(BigDecimal codParcResp) {
         markAsChanged("CODPARCRESP", codParcResp);
-        this.codParcResp = codParcResp;
    }
 
    public String getCalcElalurPartea() {
-        return calcElalurPartea;
+        return this.getVo().asString("CALCELALURPARTEA");
    }
 
    public void setCalcElalurPartea(String calcElalurPartea) {
         markAsChanged("CALCELALURPARTEA", calcElalurPartea);
-        this.calcElalurPartea = calcElalurPartea;
    }
 
    @Override
@@ -230,27 +187,6 @@ public class CentroResultado extends AbstractSankhyaEntity<CentroResultado> {
    @Override
    public CentroResultado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.analitico = vo.asString("ANALITICO");
-        this.area = vo.asBigDecimal("AREA");
-        this.areaCont = vo.asBigDecimal("AREACONT");
-        this.areaPerm = vo.asBigDecimal("AREAPERM");
-        this.areaReal = vo.asBigDecimal("AREAREAL");
-        this.ativo = vo.asString("ATIVO");
-        this.codCenCus = vo.asBigDecimal("CODCENCUS");
-        this.codCenCusPai = vo.asBigDecimal("CODCENCUSPAI");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTab = vo.asBigDecimal("CODTAB");
-        this.codUng = vo.asBigDecimal("CODUNG");
-        this.codUnn = vo.asBigDecimal("CODUNN");
-        this.codUsuResp = vo.asBigDecimal("CODUSURESP");
-        this.descrCenCus = vo.asString("DESCRCENCUS");
-        this.dtInclusao = vo.asTimestamp("DTINCLUSAO");
-        this.fracCont = vo.asBigDecimal("FRACCONT");
-        this.fracGeren = vo.asBigDecimal("FRACGEREN");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.veiculo = vo.asString("VEICULO");
-        this.codParcResp = vo.asBigDecimal("CODPARCRESP");
-        this.calcElalurPartea = vo.asString("CALCELALURPARTEA");
         return this;
    }
 }

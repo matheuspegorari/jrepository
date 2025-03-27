@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<PropriedadeElementoProcesso> {
-   private String nome;
-   private BigDecimal nuEle;
-   private String valor;
-
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuEle() {
-        return nuEle;
+        return this.getVo().asBigDecimal("NUELE");
    }
 
    public void setNuEle(BigDecimal nuEle) {
         markAsChanged("NUELE", nuEle);
-        this.nuEle = nuEle;
    }
 
    public String getValor() {
-        return valor;
+        return this.getVo().asString("VALOR");
    }
 
    public void setValor(String valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PropriedadeElementoProcesso extends AbstractSankhyaEntity<Proprieda
    @Override
    public PropriedadeElementoProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nome = vo.asString("NOME");
-        this.nuEle = vo.asBigDecimal("NUELE");
-        this.valor = vo.asString("VALOR");
         return this;
    }
 }

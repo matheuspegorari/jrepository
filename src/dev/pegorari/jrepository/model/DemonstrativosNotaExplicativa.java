@@ -6,225 +6,180 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<DemonstrativosNotaExplicativa> {
-   private String ativo;
-   private String codDmt;
-   private BigDecimal codTab;
-   private BigDecimal codTdm;
-   private BigDecimal codUsu;
-   private String descImagem;
-   private Timestamp dhAlter;
-   private BigDecimal formatDtImpr;
-   private String geraNeColunasValor;
-   private String geraAssinatura;
-   private String imagem;
-   private String indEntTit;
-   private BigDecimal nivel;
-   private BigDecimal nuDnePai;
-   private BigDecimal nuPeriodoCtb;
-   private String percentual;
-   private String quebraPagina;
-   private BigDecimal sequencia;
-   private BigDecimal simbolos;
-   private char[] texto;
-   private String tipo;
-   private String titulo;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getCodDmt() {
-        return codDmt;
+        return this.getVo().asString("CODDMT");
    }
 
    public void setCodDmt(String codDmt) {
         markAsChanged("CODDMT", codDmt);
-        this.codDmt = codDmt;
    }
 
    public BigDecimal getCodTab() {
-        return codTab;
+        return this.getVo().asBigDecimal("CODTAB");
    }
 
    public void setCodTab(BigDecimal codTab) {
         markAsChanged("CODTAB", codTab);
-        this.codTab = codTab;
    }
 
    public BigDecimal getCodTdm() {
-        return codTdm;
+        return this.getVo().asBigDecimal("CODTDM");
    }
 
    public void setCodTdm(BigDecimal codTdm) {
         markAsChanged("CODTDM", codTdm);
-        this.codTdm = codTdm;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescImagem() {
-        return descImagem;
+        return this.getVo().asString("DESCIMAGEM");
    }
 
    public void setDescImagem(String descImagem) {
         markAsChanged("DESCIMAGEM", descImagem);
-        this.descImagem = descImagem;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getFormatDtImpr() {
-        return formatDtImpr;
+        return this.getVo().asBigDecimal("FORMATDTIMPR");
    }
 
    public void setFormatDtImpr(BigDecimal formatDtImpr) {
         markAsChanged("FORMATDTIMPR", formatDtImpr);
-        this.formatDtImpr = formatDtImpr;
    }
 
    public String getGeraNeColunasValor() {
-        return geraNeColunasValor;
+        return this.getVo().asString("GERANECOLUNASVALOR");
    }
 
    public void setGeraNeColunasValor(String geraNeColunasValor) {
         markAsChanged("GERANECOLUNASVALOR", geraNeColunasValor);
-        this.geraNeColunasValor = geraNeColunasValor;
    }
 
    public String getGeraAssinatura() {
-        return geraAssinatura;
+        return this.getVo().asString("GERASSINATURA");
    }
 
    public void setGeraAssinatura(String geraAssinatura) {
         markAsChanged("GERASSINATURA", geraAssinatura);
-        this.geraAssinatura = geraAssinatura;
    }
 
    public String getImagem() {
-        return imagem;
+        return this.getVo().asString("IMAGEM");
    }
 
    public void setImagem(String imagem) {
         markAsChanged("IMAGEM", imagem);
-        this.imagem = imagem;
    }
 
    public String getIndEntTit() {
-        return indEntTit;
+        return this.getVo().asString("INDENTTIT");
    }
 
    public void setIndEntTit(String indEntTit) {
         markAsChanged("INDENTTIT", indEntTit);
-        this.indEntTit = indEntTit;
    }
 
    public BigDecimal getNivel() {
-        return nivel;
+        return this.getVo().asBigDecimal("NIVEL");
    }
 
    public void setNivel(BigDecimal nivel) {
         markAsChanged("NIVEL", nivel);
-        this.nivel = nivel;
    }
 
    public BigDecimal getNuDnePai() {
-        return nuDnePai;
+        return this.getVo().asBigDecimal("NUDNEPAI");
    }
 
    public void setNuDnePai(BigDecimal nuDnePai) {
         markAsChanged("NUDNEPAI", nuDnePai);
-        this.nuDnePai = nuDnePai;
    }
 
    public BigDecimal getNuPeriodoCtb() {
-        return nuPeriodoCtb;
+        return this.getVo().asBigDecimal("NUPERIODOCTB");
    }
 
    public void setNuPeriodoCtb(BigDecimal nuPeriodoCtb) {
         markAsChanged("NUPERIODOCTB", nuPeriodoCtb);
-        this.nuPeriodoCtb = nuPeriodoCtb;
    }
 
    public String getPercentual() {
-        return percentual;
+        return this.getVo().asString("PERCENTUAL");
    }
 
    public void setPercentual(String percentual) {
         markAsChanged("PERCENTUAL", percentual);
-        this.percentual = percentual;
    }
 
    public String getQuebraPagina() {
-        return quebraPagina;
+        return this.getVo().asString("QUEBRAPAGINA");
    }
 
    public void setQuebraPagina(String quebraPagina) {
         markAsChanged("QUEBRAPAGINA", quebraPagina);
-        this.quebraPagina = quebraPagina;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getSimbolos() {
-        return simbolos;
+        return this.getVo().asBigDecimal("SIMBOLOS");
    }
 
    public void setSimbolos(BigDecimal simbolos) {
         markAsChanged("SIMBOLOS", simbolos);
-        this.simbolos = simbolos;
    }
 
    public char[] getTexto() {
-        return texto;
+        return this.getVo().asClob("TEXTO");
    }
 
    public void setTexto(char[] texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTitulo() {
-        return titulo;
+        return this.getVo().asString("TITULO");
    }
 
    public void setTitulo(String titulo) {
         markAsChanged("TITULO", titulo);
-        this.titulo = titulo;
    }
 
    @Override
@@ -240,28 +195,6 @@ public class DemonstrativosNotaExplicativa extends AbstractSankhyaEntity<Demonst
    @Override
    public DemonstrativosNotaExplicativa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codDmt = vo.asString("CODDMT");
-        this.codTab = vo.asBigDecimal("CODTAB");
-        this.codTdm = vo.asBigDecimal("CODTDM");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descImagem = vo.asString("DESCIMAGEM");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.formatDtImpr = vo.asBigDecimal("FORMATDTIMPR");
-        this.geraNeColunasValor = vo.asString("GERANECOLUNASVALOR");
-        this.geraAssinatura = vo.asString("GERASSINATURA");
-        this.imagem = vo.asString("IMAGEM");
-        this.indEntTit = vo.asString("INDENTTIT");
-        this.nivel = vo.asBigDecimal("NIVEL");
-        this.nuDnePai = vo.asBigDecimal("NUDNEPAI");
-        this.nuPeriodoCtb = vo.asBigDecimal("NUPERIODOCTB");
-        this.percentual = vo.asString("PERCENTUAL");
-        this.quebraPagina = vo.asString("QUEBRAPAGINA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.simbolos = vo.asBigDecimal("SIMBOLOS");
-        this.texto = vo.asClob("TEXTO");
-        this.tipo = vo.asString("TIPO");
-        this.titulo = vo.asString("TITULO");
         return this;
    }
 }

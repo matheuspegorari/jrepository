@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
-   private BigDecimal codEmp;
-   private BigDecimal codFunc;
-   private BigDecimal codHistocor;
-   private Timestamp dtMov;
-   private BigDecimal entrada;
-   private String falta;
-   private BigDecimal numItem;
-   private BigDecimal numOs;
-   private BigDecimal nuOcor;
-   private BigDecimal saida;
-   private BigDecimal sequencia;
-   private BigDecimal turno;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodHistocor() {
-        return codHistocor;
+        return this.getVo().asBigDecimal("CODHISTOCOR");
    }
 
    public void setCodHistocor(BigDecimal codHistocor) {
         markAsChanged("CODHISTOCOR", codHistocor);
-        this.codHistocor = codHistocor;
    }
 
    public Timestamp getDtMov() {
-        return dtMov;
+        return this.getVo().asTimestamp("DTMOV");
    }
 
    public void setDtMov(Timestamp dtMov) {
         markAsChanged("DTMOV", dtMov);
-        this.dtMov = dtMov;
    }
 
    public BigDecimal getEntrada() {
-        return entrada;
+        return this.getVo().asBigDecimal("ENTRADA");
    }
 
    public void setEntrada(BigDecimal entrada) {
         markAsChanged("ENTRADA", entrada);
-        this.entrada = entrada;
    }
 
    public String getFalta() {
-        return falta;
+        return this.getVo().asString("FALTA");
    }
 
    public void setFalta(String falta) {
         markAsChanged("FALTA", falta);
-        this.falta = falta;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNuOcor() {
-        return nuOcor;
+        return this.getVo().asBigDecimal("NUOCOR");
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
         markAsChanged("NUOCOR", nuOcor);
-        this.nuOcor = nuOcor;
    }
 
    public BigDecimal getSaida() {
-        return saida;
+        return this.getVo().asBigDecimal("SAIDA");
    }
 
    public void setSaida(BigDecimal saida) {
         markAsChanged("SAIDA", saida);
-        this.saida = saida;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getTurno() {
-        return turno;
+        return this.getVo().asBigDecimal("TURNO");
    }
 
    public void setTurno(BigDecimal turno) {
         markAsChanged("TURNO", turno);
-        this.turno = turno;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class ControleTelaI18n extends AbstractSankhyaEntity<ControleTelaI18n> {
    @Override
    public ControleTelaI18n fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codHistocor = vo.asBigDecimal("CODHISTOCOR");
-        this.dtMov = vo.asTimestamp("DTMOV");
-        this.entrada = vo.asBigDecimal("ENTRADA");
-        this.falta = vo.asString("FALTA");
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.nuOcor = vo.asBigDecimal("NUOCOR");
-        this.saida = vo.asBigDecimal("SAIDA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.turno = vo.asBigDecimal("TURNO");
         return this;
    }
 }

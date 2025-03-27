@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio> {
-   private String ativo;
-   private BigDecimal cargaHoraria;
-   private BigDecimal codPrn;
-   private char[] condicoesEscolha;
-   private char[] condicoesSuspensao;
-   private String nomeRegra;
-   private BigDecimal regra;
-   private BigDecimal tempoLimite;
-   private String tipoTempo;
-   private String tipoTempoAviso;
-   private BigDecimal versao;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCargaHoraria() {
-        return cargaHoraria;
+        return this.getVo().asBigDecimal("CARGAHORARIA");
    }
 
    public void setCargaHoraria(BigDecimal cargaHoraria) {
         markAsChanged("CARGAHORARIA", cargaHoraria);
-        this.cargaHoraria = cargaHoraria;
    }
 
    public BigDecimal getCodPrn() {
-        return codPrn;
+        return this.getVo().asBigDecimal("CODPRN");
    }
 
    public void setCodPrn(BigDecimal codPrn) {
         markAsChanged("CODPRN", codPrn);
-        this.codPrn = codPrn;
    }
 
    public char[] getCondicoesEscolha() {
-        return condicoesEscolha;
+        return this.getVo().asClob("CONDICOESESCOLHA");
    }
 
    public void setCondicoesEscolha(char[] condicoesEscolha) {
         markAsChanged("CONDICOESESCOLHA", condicoesEscolha);
-        this.condicoesEscolha = condicoesEscolha;
    }
 
    public char[] getCondicoesSuspensao() {
-        return condicoesSuspensao;
+        return this.getVo().asClob("CONDICOESSUSPENSAO");
    }
 
    public void setCondicoesSuspensao(char[] condicoesSuspensao) {
         markAsChanged("CONDICOESSUSPENSAO", condicoesSuspensao);
-        this.condicoesSuspensao = condicoesSuspensao;
    }
 
    public String getNomeRegra() {
-        return nomeRegra;
+        return this.getVo().asString("NOMEREGRA");
    }
 
    public void setNomeRegra(String nomeRegra) {
         markAsChanged("NOMEREGRA", nomeRegra);
-        this.nomeRegra = nomeRegra;
    }
 
    public BigDecimal getRegra() {
-        return regra;
+        return this.getVo().asBigDecimal("REGRA");
    }
 
    public void setRegra(BigDecimal regra) {
         markAsChanged("REGRA", regra);
-        this.regra = regra;
    }
 
    public BigDecimal getTempoLimite() {
-        return tempoLimite;
+        return this.getVo().asBigDecimal("TEMPOLIMITE");
    }
 
    public void setTempoLimite(BigDecimal tempoLimite) {
         markAsChanged("TEMPOLIMITE", tempoLimite);
-        this.tempoLimite = tempoLimite;
    }
 
    public String getTipoTempo() {
-        return tipoTempo;
+        return this.getVo().asString("TIPOTEMPO");
    }
 
    public void setTipoTempo(String tipoTempo) {
         markAsChanged("TIPOTEMPO", tipoTempo);
-        this.tipoTempo = tipoTempo;
    }
 
    public String getTipoTempoAviso() {
-        return tipoTempoAviso;
+        return this.getVo().asString("TIPOTEMPOAVISO");
    }
 
    public void setTipoTempoAviso(String tipoTempoAviso) {
         markAsChanged("TIPOTEMPOAVISO", tipoTempoAviso);
-        this.tipoTempoAviso = tipoTempoAviso;
    }
 
    public BigDecimal getVersao() {
-        return versao;
+        return this.getVo().asBigDecimal("VERSAO");
    }
 
    public void setVersao(BigDecimal versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class SLAProcessoNegocio extends AbstractSankhyaEntity<SLAProcessoNegocio
    @Override
    public SLAProcessoNegocio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.cargaHoraria = vo.asBigDecimal("CARGAHORARIA");
-        this.codPrn = vo.asBigDecimal("CODPRN");
-        this.condicoesEscolha = vo.asClob("CONDICOESESCOLHA");
-        this.condicoesSuspensao = vo.asClob("CONDICOESSUSPENSAO");
-        this.nomeRegra = vo.asString("NOMEREGRA");
-        this.regra = vo.asBigDecimal("REGRA");
-        this.tempoLimite = vo.asBigDecimal("TEMPOLIMITE");
-        this.tipoTempo = vo.asString("TIPOTEMPO");
-        this.tipoTempoAviso = vo.asString("TIPOTEMPOAVISO");
-        this.versao = vo.asBigDecimal("VERSAO");
         return this;
    }
 }

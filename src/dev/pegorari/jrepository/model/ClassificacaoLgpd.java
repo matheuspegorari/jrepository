@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> {
-   private BigDecimal codCla;
-   private BigDecimal codUsuAlter;
-   private BigDecimal codUsuCriac;
-   private String descCla;
-   private Timestamp dtAlter;
-   private Timestamp dtCriac;
-
    public BigDecimal getCodCla() {
-        return codCla;
+        return this.getVo().asBigDecimal("CODCLA");
    }
 
    public void setCodCla(BigDecimal codCla) {
         markAsChanged("CODCLA", codCla);
-        this.codCla = codCla;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getCodUsuCriac() {
-        return codUsuCriac;
+        return this.getVo().asBigDecimal("CODUSUCRIAC");
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
         markAsChanged("CODUSUCRIAC", codUsuCriac);
-        this.codUsuCriac = codUsuCriac;
    }
 
    public String getDescCla() {
-        return descCla;
+        return this.getVo().asString("DESCCLA");
    }
 
    public void setDescCla(String descCla) {
         markAsChanged("DESCCLA", descCla);
-        this.descCla = descCla;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtCriac() {
-        return dtCriac;
+        return this.getVo().asTimestamp("DTCRIAC");
    }
 
    public void setDtCriac(Timestamp dtCriac) {
         markAsChanged("DTCRIAC", dtCriac);
-        this.dtCriac = dtCriac;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class ClassificacaoLgpd extends AbstractSankhyaEntity<ClassificacaoLgpd> 
    @Override
    public ClassificacaoLgpd fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCla = vo.asBigDecimal("CODCLA");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");
-        this.descCla = vo.asString("DESCCLA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtCriac = vo.asTimestamp("DTCRIAC");
         return this;
    }
 }

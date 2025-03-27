@@ -5,155 +5,124 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioProcessoNegocio> {
-   private String cardinalidade;
-   private char[] configCampos;
-   private String descricao;
-   private String escopo;
-   private String nomeInstancia;
-   private BigDecimal nuEle;
-   private BigDecimal nuForm;
-   private BigDecimal ordem;
-   private String politicaReetrancia;
-   private BigDecimal nuFormPai;
-   private String ordemAbas;
-   private String salvarDestino;
-   private String tipo;
-   private String utilizaTarefa;
-   private String salvarFinalProcesso;
-
    public String getCardinalidade() {
-        return cardinalidade;
+        return this.getVo().asString("CARDINALIDADE");
    }
 
    public void setCardinalidade(String cardinalidade) {
         markAsChanged("CARDINALIDADE", cardinalidade);
-        this.cardinalidade = cardinalidade;
    }
 
    public char[] getConfigCampos() {
-        return configCampos;
+        return this.getVo().asClob("CONFIGCAMPOS");
    }
 
    public void setConfigCampos(char[] configCampos) {
         markAsChanged("CONFIGCAMPOS", configCampos);
-        this.configCampos = configCampos;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getEscopo() {
-        return escopo;
+        return this.getVo().asString("ESCOPO");
    }
 
    public void setEscopo(String escopo) {
         markAsChanged("ESCOPO", escopo);
-        this.escopo = escopo;
    }
 
    public String getNomeInstancia() {
-        return nomeInstancia;
+        return this.getVo().asString("NOMEINSTANCIA");
    }
 
    public void setNomeInstancia(String nomeInstancia) {
         markAsChanged("NOMEINSTANCIA", nomeInstancia);
-        this.nomeInstancia = nomeInstancia;
    }
 
    public BigDecimal getNuEle() {
-        return nuEle;
+        return this.getVo().asBigDecimal("NUELE");
    }
 
    public void setNuEle(BigDecimal nuEle) {
         markAsChanged("NUELE", nuEle);
-        this.nuEle = nuEle;
    }
 
    public BigDecimal getNuForm() {
-        return nuForm;
+        return this.getVo().asBigDecimal("NUFORM");
    }
 
    public void setNuForm(BigDecimal nuForm) {
         markAsChanged("NUFORM", nuForm);
-        this.nuForm = nuForm;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getPoliticaReetrancia() {
-        return politicaReetrancia;
+        return this.getVo().asString("POLITICAREETRANCIA");
    }
 
    public void setPoliticaReetrancia(String politicaReetrancia) {
         markAsChanged("POLITICAREETRANCIA", politicaReetrancia);
-        this.politicaReetrancia = politicaReetrancia;
    }
 
    public BigDecimal getNuFormPai() {
-        return nuFormPai;
+        return this.getVo().asBigDecimal("NUFORMPAI");
    }
 
    public void setNuFormPai(BigDecimal nuFormPai) {
         markAsChanged("NUFORMPAI", nuFormPai);
-        this.nuFormPai = nuFormPai;
    }
 
    public String getOrdemAbas() {
-        return ordemAbas;
+        return this.getVo().asString("ORDEMABAS");
    }
 
    public void setOrdemAbas(String ordemAbas) {
         markAsChanged("ORDEMABAS", ordemAbas);
-        this.ordemAbas = ordemAbas;
    }
 
    public String getSalvarDestino() {
-        return salvarDestino;
+        return this.getVo().asString("SALVARDESTINO");
    }
 
    public void setSalvarDestino(String salvarDestino) {
         markAsChanged("SALVARDESTINO", salvarDestino);
-        this.salvarDestino = salvarDestino;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getUtilizaTarefa() {
-        return utilizaTarefa;
+        return this.getVo().asString("UTILIZATAREFA");
    }
 
    public void setUtilizaTarefa(String utilizaTarefa) {
         markAsChanged("UTILIZATAREFA", utilizaTarefa);
-        this.utilizaTarefa = utilizaTarefa;
    }
 
    public String getSalvarFinalProcesso() {
-        return salvarFinalProcesso;
+        return this.getVo().asString("SALVARFINALPROCESSO");
    }
 
    public void setSalvarFinalProcesso(String salvarFinalProcesso) {
         markAsChanged("SALVARFINALPROCESSO", salvarFinalProcesso);
-        this.salvarFinalProcesso = salvarFinalProcesso;
    }
 
    @Override
@@ -169,21 +138,6 @@ public class FormularioProcessoNegocio extends AbstractSankhyaEntity<FormularioP
    @Override
    public FormularioProcessoNegocio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cardinalidade = vo.asString("CARDINALIDADE");
-        this.configCampos = vo.asClob("CONFIGCAMPOS");
-        this.descricao = vo.asString("DESCRICAO");
-        this.escopo = vo.asString("ESCOPO");
-        this.nomeInstancia = vo.asString("NOMEINSTANCIA");
-        this.nuEle = vo.asBigDecimal("NUELE");
-        this.nuForm = vo.asBigDecimal("NUFORM");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.politicaReetrancia = vo.asString("POLITICAREETRANCIA");
-        this.nuFormPai = vo.asBigDecimal("NUFORMPAI");
-        this.ordemAbas = vo.asString("ORDEMABAS");
-        this.salvarDestino = vo.asString("SALVARDESTINO");
-        this.tipo = vo.asString("TIPO");
-        this.utilizaTarefa = vo.asString("UTILIZATAREFA");
-        this.salvarFinalProcesso = vo.asString("SALVARFINALPROCESSO");
         return this;
    }
 }

@@ -6,335 +6,268 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrencia> {
-   private String afastamento;
-   private BigDecimal codAfaCausa;
-   private BigDecimal codAfaRais;
-   private String codAfast;
-   private BigDecimal codHistOcor;
-   private String descrHistOcor;
-   private Timestamp dtAlter;
-   private String falta;
-   private String tipTab;
-   private String abateAvisoPrevio;
-   private String absentismo;
-   private String anexoObrigatorio;
-   private String aparecePortal;
-   private String apelido;
-   private String baixaProvisao;
-   private BigDecimal codGrupoOco;
-   private String codMotAfast;
-   private String compNProg;
-   private String cor;
-   private String descartaOPonto;
-   private String direitoAdn;
-   private BigDecimal hrCompl;
-   private String indenizaEstab;
-   private String ocorrenciaAfdt;
-   private String qFerAfart133;
-   private BigDecimal qtdMesesEstab;
-   private String quitaFerLicRem;
-   private String reajSalSind;
-   private String reduzDiasTrab;
-   private String suspComResiduo;
-   private String tipReg;
-   private String utilizaMotivo;
-   private String deduzDiasAviso;
-
    public String getAfastamento() {
-        return afastamento;
+        return this.getVo().asString("AFASTAMENTO");
    }
 
    public void setAfastamento(String afastamento) {
         markAsChanged("AFASTAMENTO", afastamento);
-        this.afastamento = afastamento;
    }
 
    public BigDecimal getCodAfaCausa() {
-        return codAfaCausa;
+        return this.getVo().asBigDecimal("CODAFACAUSA");
    }
 
    public void setCodAfaCausa(BigDecimal codAfaCausa) {
         markAsChanged("CODAFACAUSA", codAfaCausa);
-        this.codAfaCausa = codAfaCausa;
    }
 
    public BigDecimal getCodAfaRais() {
-        return codAfaRais;
+        return this.getVo().asBigDecimal("CODAFARAIS");
    }
 
    public void setCodAfaRais(BigDecimal codAfaRais) {
         markAsChanged("CODAFARAIS", codAfaRais);
-        this.codAfaRais = codAfaRais;
    }
 
    public String getCodAfast() {
-        return codAfast;
+        return this.getVo().asString("CODAFAST");
    }
 
    public void setCodAfast(String codAfast) {
         markAsChanged("CODAFAST", codAfast);
-        this.codAfast = codAfast;
    }
 
    public BigDecimal getCodHistOcor() {
-        return codHistOcor;
+        return this.getVo().asBigDecimal("CODHISTOCOR");
    }
 
    public void setCodHistOcor(BigDecimal codHistOcor) {
         markAsChanged("CODHISTOCOR", codHistOcor);
-        this.codHistOcor = codHistOcor;
    }
 
    public String getDescrHistOcor() {
-        return descrHistOcor;
+        return this.getVo().asString("DESCRHISTOCOR");
    }
 
    public void setDescrHistOcor(String descrHistOcor) {
         markAsChanged("DESCRHISTOCOR", descrHistOcor);
-        this.descrHistOcor = descrHistOcor;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getFalta() {
-        return falta;
+        return this.getVo().asString("FALTA");
    }
 
    public void setFalta(String falta) {
         markAsChanged("FALTA", falta);
-        this.falta = falta;
    }
 
    public String getTipTab() {
-        return tipTab;
+        return this.getVo().asString("TIPTAB");
    }
 
    public void setTipTab(String tipTab) {
         markAsChanged("TIPTAB", tipTab);
-        this.tipTab = tipTab;
    }
 
    public String getAbateAvisoPrevio() {
-        return abateAvisoPrevio;
+        return this.getVo().asString("ABATEAVISOPREVIO");
    }
 
    public void setAbateAvisoPrevio(String abateAvisoPrevio) {
         markAsChanged("ABATEAVISOPREVIO", abateAvisoPrevio);
-        this.abateAvisoPrevio = abateAvisoPrevio;
    }
 
    public String getAbsentismo() {
-        return absentismo;
+        return this.getVo().asString("ABSENTEISMO");
    }
 
    public void setAbsentismo(String absentismo) {
         markAsChanged("ABSENTEISMO", absentismo);
-        this.absentismo = absentismo;
    }
 
    public String getAnexoObrigatorio() {
-        return anexoObrigatorio;
+        return this.getVo().asString("ANEXOOBRIGATORIO");
    }
 
    public void setAnexoObrigatorio(String anexoObrigatorio) {
         markAsChanged("ANEXOOBRIGATORIO", anexoObrigatorio);
-        this.anexoObrigatorio = anexoObrigatorio;
    }
 
    public String getAparecePortal() {
-        return aparecePortal;
+        return this.getVo().asString("APARECEPORTAL");
    }
 
    public void setAparecePortal(String aparecePortal) {
         markAsChanged("APARECEPORTAL", aparecePortal);
-        this.aparecePortal = aparecePortal;
    }
 
    public String getApelido() {
-        return apelido;
+        return this.getVo().asString("APELIDO");
    }
 
    public void setApelido(String apelido) {
         markAsChanged("APELIDO", apelido);
-        this.apelido = apelido;
    }
 
    public String getBaixaProvisao() {
-        return baixaProvisao;
+        return this.getVo().asString("BAIXAPROVISAO");
    }
 
    public void setBaixaProvisao(String baixaProvisao) {
         markAsChanged("BAIXAPROVISAO", baixaProvisao);
-        this.baixaProvisao = baixaProvisao;
    }
 
    public BigDecimal getCodGrupoOco() {
-        return codGrupoOco;
+        return this.getVo().asBigDecimal("CODGRUPOOCO");
    }
 
    public void setCodGrupoOco(BigDecimal codGrupoOco) {
         markAsChanged("CODGRUPOOCO", codGrupoOco);
-        this.codGrupoOco = codGrupoOco;
    }
 
    public String getCodMotAfast() {
-        return codMotAfast;
+        return this.getVo().asString("CODMOTAFAST");
    }
 
    public void setCodMotAfast(String codMotAfast) {
         markAsChanged("CODMOTAFAST", codMotAfast);
-        this.codMotAfast = codMotAfast;
    }
 
    public String getCompNProg() {
-        return compNProg;
+        return this.getVo().asString("COMPNPROG");
    }
 
    public void setCompNProg(String compNProg) {
         markAsChanged("COMPNPROG", compNProg);
-        this.compNProg = compNProg;
    }
 
    public String getCor() {
-        return cor;
+        return this.getVo().asString("COR");
    }
 
    public void setCor(String cor) {
         markAsChanged("COR", cor);
-        this.cor = cor;
    }
 
    public String getDescartaOPonto() {
-        return descartaOPonto;
+        return this.getVo().asString("DESCARTAOPONTO");
    }
 
    public void setDescartaOPonto(String descartaOPonto) {
         markAsChanged("DESCARTAOPONTO", descartaOPonto);
-        this.descartaOPonto = descartaOPonto;
    }
 
    public String getDireitoAdn() {
-        return direitoAdn;
+        return this.getVo().asString("DIREITOADN");
    }
 
    public void setDireitoAdn(String direitoAdn) {
         markAsChanged("DIREITOADN", direitoAdn);
-        this.direitoAdn = direitoAdn;
    }
 
    public BigDecimal getHrCompl() {
-        return hrCompl;
+        return this.getVo().asBigDecimal("HRCOMPL");
    }
 
    public void setHrCompl(BigDecimal hrCompl) {
         markAsChanged("HRCOMPL", hrCompl);
-        this.hrCompl = hrCompl;
    }
 
    public String getIndenizaEstab() {
-        return indenizaEstab;
+        return this.getVo().asString("INDENIZAESTAB");
    }
 
    public void setIndenizaEstab(String indenizaEstab) {
         markAsChanged("INDENIZAESTAB", indenizaEstab);
-        this.indenizaEstab = indenizaEstab;
    }
 
    public String getOcorrenciaAfdt() {
-        return ocorrenciaAfdt;
+        return this.getVo().asString("OCORRENCIAAFDT");
    }
 
    public void setOcorrenciaAfdt(String ocorrenciaAfdt) {
         markAsChanged("OCORRENCIAAFDT", ocorrenciaAfdt);
-        this.ocorrenciaAfdt = ocorrenciaAfdt;
    }
 
    public String getQFerAfart133() {
-        return qFerAfart133;
+        return this.getVo().asString("QFERAFART133");
    }
 
    public void setQFerAfart133(String qFerAfart133) {
         markAsChanged("QFERAFART133", qFerAfart133);
-        this.qFerAfart133 = qFerAfart133;
    }
 
    public BigDecimal getQtdMesesEstab() {
-        return qtdMesesEstab;
+        return this.getVo().asBigDecimal("QTDMESESESTAB");
    }
 
    public void setQtdMesesEstab(BigDecimal qtdMesesEstab) {
         markAsChanged("QTDMESESESTAB", qtdMesesEstab);
-        this.qtdMesesEstab = qtdMesesEstab;
    }
 
    public String getQuitaFerLicRem() {
-        return quitaFerLicRem;
+        return this.getVo().asString("QUITAFERLICREM");
    }
 
    public void setQuitaFerLicRem(String quitaFerLicRem) {
         markAsChanged("QUITAFERLICREM", quitaFerLicRem);
-        this.quitaFerLicRem = quitaFerLicRem;
    }
 
    public String getReajSalSind() {
-        return reajSalSind;
+        return this.getVo().asString("REAJSALSIND");
    }
 
    public void setReajSalSind(String reajSalSind) {
         markAsChanged("REAJSALSIND", reajSalSind);
-        this.reajSalSind = reajSalSind;
    }
 
    public String getReduzDiasTrab() {
-        return reduzDiasTrab;
+        return this.getVo().asString("REDUZDIASTRAB");
    }
 
    public void setReduzDiasTrab(String reduzDiasTrab) {
         markAsChanged("REDUZDIASTRAB", reduzDiasTrab);
-        this.reduzDiasTrab = reduzDiasTrab;
    }
 
    public String getSuspComResiduo() {
-        return suspComResiduo;
+        return this.getVo().asString("SUSPCOMRESIDUO");
    }
 
    public void setSuspComResiduo(String suspComResiduo) {
         markAsChanged("SUSPCOMRESIDUO", suspComResiduo);
-        this.suspComResiduo = suspComResiduo;
    }
 
    public String getTipReg() {
-        return tipReg;
+        return this.getVo().asString("TIPREG");
    }
 
    public void setTipReg(String tipReg) {
         markAsChanged("TIPREG", tipReg);
-        this.tipReg = tipReg;
    }
 
    public String getUtilizaMotivo() {
-        return utilizaMotivo;
+        return this.getVo().asString("UTILIZAMOTIVO");
    }
 
    public void setUtilizaMotivo(String utilizaMotivo) {
         markAsChanged("UTILIZAMOTIVO", utilizaMotivo);
-        this.utilizaMotivo = utilizaMotivo;
    }
 
    public String getDeduzDiasAviso() {
-        return deduzDiasAviso;
+        return this.getVo().asString("DEDUZDIASAVISO");
    }
 
    public void setDeduzDiasAviso(String deduzDiasAviso) {
         markAsChanged("DEDUZDIASAVISO", deduzDiasAviso);
-        this.deduzDiasAviso = deduzDiasAviso;
    }
 
    @Override
@@ -350,39 +283,6 @@ public class HistoricoOcorrencia extends AbstractSankhyaEntity<HistoricoOcorrenc
    @Override
    public HistoricoOcorrencia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.afastamento = vo.asString("AFASTAMENTO");
-        this.codAfaCausa = vo.asBigDecimal("CODAFACAUSA");
-        this.codAfaRais = vo.asBigDecimal("CODAFARAIS");
-        this.codAfast = vo.asString("CODAFAST");
-        this.codHistOcor = vo.asBigDecimal("CODHISTOCOR");
-        this.descrHistOcor = vo.asString("DESCRHISTOCOR");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.falta = vo.asString("FALTA");
-        this.tipTab = vo.asString("TIPTAB");
-        this.abateAvisoPrevio = vo.asString("ABATEAVISOPREVIO");
-        this.absentismo = vo.asString("ABSENTEISMO");
-        this.anexoObrigatorio = vo.asString("ANEXOOBRIGATORIO");
-        this.aparecePortal = vo.asString("APARECEPORTAL");
-        this.apelido = vo.asString("APELIDO");
-        this.baixaProvisao = vo.asString("BAIXAPROVISAO");
-        this.codGrupoOco = vo.asBigDecimal("CODGRUPOOCO");
-        this.codMotAfast = vo.asString("CODMOTAFAST");
-        this.compNProg = vo.asString("COMPNPROG");
-        this.cor = vo.asString("COR");
-        this.descartaOPonto = vo.asString("DESCARTAOPONTO");
-        this.direitoAdn = vo.asString("DIREITOADN");
-        this.hrCompl = vo.asBigDecimal("HRCOMPL");
-        this.indenizaEstab = vo.asString("INDENIZAESTAB");
-        this.ocorrenciaAfdt = vo.asString("OCORRENCIAAFDT");
-        this.qFerAfart133 = vo.asString("QFERAFART133");
-        this.qtdMesesEstab = vo.asBigDecimal("QTDMESESESTAB");
-        this.quitaFerLicRem = vo.asString("QUITAFERLICREM");
-        this.reajSalSind = vo.asString("REAJSALSIND");
-        this.reduzDiasTrab = vo.asString("REDUZDIASTRAB");
-        this.suspComResiduo = vo.asString("SUSPCOMRESIDUO");
-        this.tipReg = vo.asString("TIPREG");
-        this.utilizaMotivo = vo.asString("UTILIZAMOTIVO");
-        this.deduzDiasAviso = vo.asString("DEDUZDIASAVISO");
         return this;
    }
 }

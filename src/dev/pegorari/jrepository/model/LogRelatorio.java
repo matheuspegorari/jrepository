@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
-   private String className;
-   private BigDecimal codUsu;
-   private String consulta;
-   private Timestamp dtAlter;
-   private String impressora;
-   private BigDecimal nuRel;
-   private String tipo;
-
    public String getClassName() {
-        return className;
+        return this.getVo().asString("CLASSNAME");
    }
 
    public void setClassName(String className) {
         markAsChanged("CLASSNAME", className);
-        this.className = className;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getConsulta() {
-        return consulta;
+        return this.getVo().asString("CONSULTA");
    }
 
    public void setConsulta(String consulta) {
         markAsChanged("CONSULTA", consulta);
-        this.consulta = consulta;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getImpressora() {
-        return impressora;
+        return this.getVo().asString("IMPRESSORA");
    }
 
    public void setImpressora(String impressora) {
         markAsChanged("IMPRESSORA", impressora);
-        this.impressora = impressora;
    }
 
    public BigDecimal getNuRel() {
-        return nuRel;
+        return this.getVo().asBigDecimal("NUREL");
    }
 
    public void setNuRel(BigDecimal nuRel) {
         markAsChanged("NUREL", nuRel);
-        this.nuRel = nuRel;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class LogRelatorio extends AbstractSankhyaEntity<LogRelatorio> {
    @Override
    public LogRelatorio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.className = vo.asString("CLASSNAME");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.consulta = vo.asString("CONSULTA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.impressora = vo.asString("IMPRESSORA");
-        this.nuRel = vo.asBigDecimal("NUREL");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

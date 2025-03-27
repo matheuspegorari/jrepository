@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<DestinatarioRelatorioFormatado> {
-   private BigDecimal codCon;
-   private BigDecimal nuRfe;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodCon() {
-        return codCon;
+        return this.getVo().asBigDecimal("CODCON");
    }
 
    public void setCodCon(BigDecimal codCon) {
         markAsChanged("CODCON", codCon);
-        this.codCon = codCon;
    }
 
    public BigDecimal getNuRfe() {
-        return nuRfe;
+        return this.getVo().asBigDecimal("NURFE");
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
         markAsChanged("NURFE", nuRfe);
-        this.nuRfe = nuRfe;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class DestinatarioRelatorioFormatado extends AbstractSankhyaEntity<Destin
    @Override
    public DestinatarioRelatorioFormatado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCon = vo.asBigDecimal("CODCON");
-        this.nuRfe = vo.asBigDecimal("NURFE");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPorNota> {
-   private String cgcCpf;
-   private BigDecimal codMunFis;
-   private BigDecimal codParc;
-   private String inscEstad;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private String tipo;
-   private BigDecimal tipoTransp;
-
    public String getCgcCpf() {
-        return cgcCpf;
+        return this.getVo().asString("CGC_CPF");
    }
 
    public void setCgcCpf(String cgcCpf) {
         markAsChanged("CGC_CPF", cgcCpf);
-        this.cgcCpf = cgcCpf;
    }
 
    public BigDecimal getCodMunFis() {
-        return codMunFis;
+        return this.getVo().asBigDecimal("CODMUNFIS");
    }
 
    public void setCodMunFis(BigDecimal codMunFis) {
         markAsChanged("CODMUNFIS", codMunFis);
-        this.codMunFis = codMunFis;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public String getInscEstad() {
-        return inscEstad;
+        return this.getVo().asString("INSCESTAD");
    }
 
    public void setInscEstad(String inscEstad) {
         markAsChanged("INSCESTAD", inscEstad);
-        this.inscEstad = inscEstad;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getTipoTransp() {
-        return tipoTransp;
+        return this.getVo().asBigDecimal("TIPOTRANSP");
    }
 
    public void setTipoTransp(BigDecimal tipoTransp) {
         markAsChanged("TIPOTRANSP", tipoTransp);
-        this.tipoTransp = tipoTransp;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class ColetaEntregaPorNota extends AbstractSankhyaEntity<ColetaEntregaPor
    @Override
    public ColetaEntregaPorNota fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cgcCpf = vo.asString("CGC_CPF");
-        this.codMunFis = vo.asBigDecimal("CODMUNFIS");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.inscEstad = vo.asString("INSCESTAD");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipo = vo.asString("TIPO");
-        this.tipoTransp = vo.asBigDecimal("TIPOTRANSP");
         return this;
    }
 }

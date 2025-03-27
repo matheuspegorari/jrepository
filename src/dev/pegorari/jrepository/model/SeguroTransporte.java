@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
-   private BigDecimal vlrCarga;
-   private BigDecimal seqSeg;
-   private String numApo;
-   private BigDecimal nuNota;
-   private String respSeg;
-   private String nomeSeg;
-   private String numAve;
-
    public BigDecimal getVlrCarga() {
-        return vlrCarga;
+        return this.getVo().asBigDecimal("VLRCARGA");
    }
 
    public void setVlrCarga(BigDecimal vlrCarga) {
         markAsChanged("VLRCARGA", vlrCarga);
-        this.vlrCarga = vlrCarga;
    }
 
    public BigDecimal getSeqSeg() {
-        return seqSeg;
+        return this.getVo().asBigDecimal("SEQSEG");
    }
 
    public void setSeqSeg(BigDecimal seqSeg) {
         markAsChanged("SEQSEG", seqSeg);
-        this.seqSeg = seqSeg;
    }
 
    public String getNumApo() {
-        return numApo;
+        return this.getVo().asString("NUMAPO");
    }
 
    public void setNumApo(String numApo) {
         markAsChanged("NUMAPO", numApo);
-        this.numApo = numApo;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getRespSeg() {
-        return respSeg;
+        return this.getVo().asString("RESPSEG");
    }
 
    public void setRespSeg(String respSeg) {
         markAsChanged("RESPSEG", respSeg);
-        this.respSeg = respSeg;
    }
 
    public String getNomeSeg() {
-        return nomeSeg;
+        return this.getVo().asString("NOMESEG");
    }
 
    public void setNomeSeg(String nomeSeg) {
         markAsChanged("NOMESEG", nomeSeg);
-        this.nomeSeg = nomeSeg;
    }
 
    public String getNumAve() {
-        return numAve;
+        return this.getVo().asString("NUMAVE");
    }
 
    public void setNumAve(String numAve) {
         markAsChanged("NUMAVE", numAve);
-        this.numAve = numAve;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class SeguroTransporte extends AbstractSankhyaEntity<SeguroTransporte> {
    @Override
    public SeguroTransporte fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.vlrCarga = vo.asBigDecimal("VLRCARGA");
-        this.seqSeg = vo.asBigDecimal("SEQSEG");
-        this.numApo = vo.asString("NUMAPO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.respSeg = vo.asString("RESPSEG");
-        this.nomeSeg = vo.asString("NOMESEG");
-        this.numAve = vo.asString("NUMAVE");
         return this;
    }
 }

@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVeiculo> {
-   private BigDecimal codModVei;
-   private BigDecimal codProd;
-
    public BigDecimal getCodModVei() {
-        return codModVei;
+        return this.getVo().asBigDecimal("CODMODVEI");
    }
 
    public void setCodModVei(BigDecimal codModVei) {
         markAsChanged("CODMODVEI", codModVei);
-        this.codModVei = codModVei;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class ProdutoModeloVeiculo extends AbstractSankhyaEntity<ProdutoModeloVei
    @Override
    public ProdutoModeloVeiculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codModVei = vo.asBigDecimal("CODMODVEI");
-        this.codProd = vo.asBigDecimal("CODPROD");
         return this;
    }
 }

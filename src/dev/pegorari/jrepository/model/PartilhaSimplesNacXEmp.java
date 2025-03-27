@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimplesNacXEmp> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private Timestamp dtRef;
-   private BigDecimal nuPartilha;
-   private BigDecimal codEmp;
-   private BigDecimal tipoSn;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public BigDecimal getNuPartilha() {
-        return nuPartilha;
+        return this.getVo().asBigDecimal("NUPARTILHA");
    }
 
    public void setNuPartilha(BigDecimal nuPartilha) {
         markAsChanged("NUPARTILHA", nuPartilha);
-        this.nuPartilha = nuPartilha;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getTipoSn() {
-        return tipoSn;
+        return this.getVo().asBigDecimal("TIPOSN");
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
         markAsChanged("TIPOSN", tipoSn);
-        this.tipoSn = tipoSn;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class PartilhaSimplesNacXEmp extends AbstractSankhyaEntity<PartilhaSimple
    @Override
    public PartilhaSimplesNacXEmp fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.nuPartilha = vo.asBigDecimal("NUPARTILHA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.tipoSn = vo.asBigDecimal("TIPOSN");
         return this;
    }
 }

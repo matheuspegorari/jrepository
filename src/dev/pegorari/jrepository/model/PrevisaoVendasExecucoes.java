@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVendasExecucoes> {
-   private BigDecimal codExec;
-   private BigDecimal codGrupo;
-   private BigDecimal codProd;
-   private String diretorio;
-   private String tipo;
-
    public BigDecimal getCodExec() {
-        return codExec;
+        return this.getVo().asBigDecimal("CODEXEC");
    }
 
    public void setCodExec(BigDecimal codExec) {
         markAsChanged("CODEXEC", codExec);
-        this.codExec = codExec;
    }
 
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDiretorio() {
-        return diretorio;
+        return this.getVo().asString("DIRETORIO");
    }
 
    public void setDiretorio(String diretorio) {
         markAsChanged("DIRETORIO", diretorio);
-        this.diretorio = diretorio;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class PrevisaoVendasExecucoes extends AbstractSankhyaEntity<PrevisaoVenda
    @Override
    public PrevisaoVendasExecucoes fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codExec = vo.asBigDecimal("CODEXEC");
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.diretorio = vo.asString("DIRETORIO");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

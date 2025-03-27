@@ -5,145 +5,116 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMateriais> {
-   private String referencia;
-   private String codVol;
-   private BigDecimal seqApa;
-   private BigDecimal nuApo;
-   private String controleMp;
-   private BigDecimal codProdMp;
-   private String tipoUso;
-   private BigDecimal qtd;
-   private String vinculoSeriePa;
-   private BigDecimal seqMp;
-   private BigDecimal codLocalBaixa;
-   private BigDecimal codMpe;
-   private BigDecimal qtdMpe;
-   private BigDecimal qtdPerda;
-
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public String getControleMp() {
-        return controleMp;
+        return this.getVo().asString("CONTROLEMP");
    }
 
    public void setControleMp(String controleMp) {
         markAsChanged("CONTROLEMP", controleMp);
-        this.controleMp = controleMp;
    }
 
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public String getTipoUso() {
-        return tipoUso;
+        return this.getVo().asString("TIPOUSO");
    }
 
    public void setTipoUso(String tipoUso) {
         markAsChanged("TIPOUSO", tipoUso);
-        this.tipoUso = tipoUso;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public String getVinculoSeriePa() {
-        return vinculoSeriePa;
+        return this.getVo().asString("VINCULOSERIEPA");
    }
 
    public void setVinculoSeriePa(String vinculoSeriePa) {
         markAsChanged("VINCULOSERIEPA", vinculoSeriePa);
-        this.vinculoSeriePa = vinculoSeriePa;
    }
 
    public BigDecimal getSeqMp() {
-        return seqMp;
+        return this.getVo().asBigDecimal("SEQMP");
    }
 
    public void setSeqMp(BigDecimal seqMp) {
         markAsChanged("SEQMP", seqMp);
-        this.seqMp = seqMp;
    }
 
    public BigDecimal getCodLocalBaixa() {
-        return codLocalBaixa;
+        return this.getVo().asBigDecimal("CODLOCALBAIXA");
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
         markAsChanged("CODLOCALBAIXA", codLocalBaixa);
-        this.codLocalBaixa = codLocalBaixa;
    }
 
    public BigDecimal getCodMpe() {
-        return codMpe;
+        return this.getVo().asBigDecimal("CODMPE");
    }
 
    public void setCodMpe(BigDecimal codMpe) {
         markAsChanged("CODMPE", codMpe);
-        this.codMpe = codMpe;
    }
 
    public BigDecimal getQtdMpe() {
-        return qtdMpe;
+        return this.getVo().asBigDecimal("QTDMPE");
    }
 
    public void setQtdMpe(BigDecimal qtdMpe) {
         markAsChanged("QTDMPE", qtdMpe);
-        this.qtdMpe = qtdMpe;
    }
 
    public BigDecimal getQtdPerda() {
-        return qtdPerda;
+        return this.getVo().asBigDecimal("QTDPERDA");
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
         markAsChanged("QTDPERDA", qtdPerda);
-        this.qtdPerda = qtdPerda;
    }
 
    @Override
@@ -159,20 +130,6 @@ public class ApontamentoMateriais extends AbstractSankhyaEntity<ApontamentoMater
    @Override
    public ApontamentoMateriais fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.referencia = vo.asString("REFERENCIA");
-        this.codVol = vo.asString("CODVOL");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.controleMp = vo.asString("CONTROLEMP");
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.tipoUso = vo.asString("TIPOUSO");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.vinculoSeriePa = vo.asString("VINCULOSERIEPA");
-        this.seqMp = vo.asBigDecimal("SEQMP");
-        this.codLocalBaixa = vo.asBigDecimal("CODLOCALBAIXA");
-        this.codMpe = vo.asBigDecimal("CODMPE");
-        this.qtdMpe = vo.asBigDecimal("QTDMPE");
-        this.qtdPerda = vo.asBigDecimal("QTDPERDA");
         return this;
    }
 }

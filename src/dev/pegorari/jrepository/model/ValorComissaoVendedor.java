@@ -6,235 +6,188 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVendedor> {
-   private BigDecimal codEmp;
-   private BigDecimal codEvento;
-   private BigDecimal codForm;
-   private BigDecimal codFunc;
-   private BigDecimal codUsu;
-   private BigDecimal codVend;
-   private Timestamp dhAlter;
-   private BigDecimal indiceProdutividade;
-   private BigDecimal nuFechamento;
-   private BigDecimal nuFin;
-   private BigDecimal nuFinOrig;
-   private BigDecimal numItemOrig;
-   private BigDecimal numOsOrig;
-   private BigDecimal nuNotaOrig;
-   private BigDecimal qtdHora;
-   private BigDecimal qtdHoraExtra;
-   private Timestamp referencia;
-   private BigDecimal sequencia;
-   private String tipo;
-   private BigDecimal vlrCom;
-   private BigDecimal vlrHora;
-   private BigDecimal vlrHoraExtra;
-   private BigDecimal vlrResiduoCom;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodEvento() {
-        return codEvento;
+        return this.getVo().asBigDecimal("CODEVENTO");
    }
 
    public void setCodEvento(BigDecimal codEvento) {
         markAsChanged("CODEVENTO", codEvento);
-        this.codEvento = codEvento;
    }
 
    public BigDecimal getCodForm() {
-        return codForm;
+        return this.getVo().asBigDecimal("CODFORM");
    }
 
    public void setCodForm(BigDecimal codForm) {
         markAsChanged("CODFORM", codForm);
-        this.codForm = codForm;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getIndiceProdutividade() {
-        return indiceProdutividade;
+        return this.getVo().asBigDecimal("INDICEPRODUTIVIDADE");
    }
 
    public void setIndiceProdutividade(BigDecimal indiceProdutividade) {
         markAsChanged("INDICEPRODUTIVIDADE", indiceProdutividade);
-        this.indiceProdutividade = indiceProdutividade;
    }
 
    public BigDecimal getNuFechamento() {
-        return nuFechamento;
+        return this.getVo().asBigDecimal("NUFECHAMENTO");
    }
 
    public void setNuFechamento(BigDecimal nuFechamento) {
         markAsChanged("NUFECHAMENTO", nuFechamento);
-        this.nuFechamento = nuFechamento;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNuFinOrig() {
-        return nuFinOrig;
+        return this.getVo().asBigDecimal("NUFINORIG");
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
         markAsChanged("NUFINORIG", nuFinOrig);
-        this.nuFinOrig = nuFinOrig;
    }
 
    public BigDecimal getNumItemOrig() {
-        return numItemOrig;
+        return this.getVo().asBigDecimal("NUMITEMORIG");
    }
 
    public void setNumItemOrig(BigDecimal numItemOrig) {
         markAsChanged("NUMITEMORIG", numItemOrig);
-        this.numItemOrig = numItemOrig;
    }
 
    public BigDecimal getNumOsOrig() {
-        return numOsOrig;
+        return this.getVo().asBigDecimal("NUMOSORIG");
    }
 
    public void setNumOsOrig(BigDecimal numOsOrig) {
         markAsChanged("NUMOSORIG", numOsOrig);
-        this.numOsOrig = numOsOrig;
    }
 
    public BigDecimal getNuNotaOrig() {
-        return nuNotaOrig;
+        return this.getVo().asBigDecimal("NUNOTAORIG");
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
         markAsChanged("NUNOTAORIG", nuNotaOrig);
-        this.nuNotaOrig = nuNotaOrig;
    }
 
    public BigDecimal getQtdHora() {
-        return qtdHora;
+        return this.getVo().asBigDecimal("QTDHORA");
    }
 
    public void setQtdHora(BigDecimal qtdHora) {
         markAsChanged("QTDHORA", qtdHora);
-        this.qtdHora = qtdHora;
    }
 
    public BigDecimal getQtdHoraExtra() {
-        return qtdHoraExtra;
+        return this.getVo().asBigDecimal("QTDHORAEXTRA");
    }
 
    public void setQtdHoraExtra(BigDecimal qtdHoraExtra) {
         markAsChanged("QTDHORAEXTRA", qtdHoraExtra);
-        this.qtdHoraExtra = qtdHoraExtra;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getVlrCom() {
-        return vlrCom;
+        return this.getVo().asBigDecimal("VLRCOM");
    }
 
    public void setVlrCom(BigDecimal vlrCom) {
         markAsChanged("VLRCOM", vlrCom);
-        this.vlrCom = vlrCom;
    }
 
    public BigDecimal getVlrHora() {
-        return vlrHora;
+        return this.getVo().asBigDecimal("VLRHORA");
    }
 
    public void setVlrHora(BigDecimal vlrHora) {
         markAsChanged("VLRHORA", vlrHora);
-        this.vlrHora = vlrHora;
    }
 
    public BigDecimal getVlrHoraExtra() {
-        return vlrHoraExtra;
+        return this.getVo().asBigDecimal("VLRHORAEXTRA");
    }
 
    public void setVlrHoraExtra(BigDecimal vlrHoraExtra) {
         markAsChanged("VLRHORAEXTRA", vlrHoraExtra);
-        this.vlrHoraExtra = vlrHoraExtra;
    }
 
    public BigDecimal getVlrResiduoCom() {
-        return vlrResiduoCom;
+        return this.getVo().asBigDecimal("VLRRESIDUOCOM");
    }
 
    public void setVlrResiduoCom(BigDecimal vlrResiduoCom) {
         markAsChanged("VLRRESIDUOCOM", vlrResiduoCom);
-        this.vlrResiduoCom = vlrResiduoCom;
    }
 
    @Override
@@ -250,29 +203,6 @@ public class ValorComissaoVendedor extends AbstractSankhyaEntity<ValorComissaoVe
    @Override
    public ValorComissaoVendedor fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEvento = vo.asBigDecimal("CODEVENTO");
-        this.codForm = vo.asBigDecimal("CODFORM");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.indiceProdutividade = vo.asBigDecimal("INDICEPRODUTIVIDADE");
-        this.nuFechamento = vo.asBigDecimal("NUFECHAMENTO");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.nuFinOrig = vo.asBigDecimal("NUFINORIG");
-        this.numItemOrig = vo.asBigDecimal("NUMITEMORIG");
-        this.numOsOrig = vo.asBigDecimal("NUMOSORIG");
-        this.nuNotaOrig = vo.asBigDecimal("NUNOTAORIG");
-        this.qtdHora = vo.asBigDecimal("QTDHORA");
-        this.qtdHoraExtra = vo.asBigDecimal("QTDHORAEXTRA");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipo = vo.asString("TIPO");
-        this.vlrCom = vo.asBigDecimal("VLRCOM");
-        this.vlrHora = vo.asBigDecimal("VLRHORA");
-        this.vlrHoraExtra = vo.asBigDecimal("VLRHORAEXTRA");
-        this.vlrResiduoCom = vo.asBigDecimal("VLRRESIDUOCOM");
         return this;
    }
 }

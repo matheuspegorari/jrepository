@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
-   private String impSep;
-   private BigDecimal codAreaConf;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private String nomeAreaConf;
-
    public String getImpSep() {
-        return impSep;
+        return this.getVo().asString("IMPSEP");
    }
 
    public void setImpSep(String impSep) {
         markAsChanged("IMPSEP", impSep);
-        this.impSep = impSep;
    }
 
    public BigDecimal getCodAreaConf() {
-        return codAreaConf;
+        return this.getVo().asBigDecimal("CODAREACONF");
    }
 
    public void setCodAreaConf(BigDecimal codAreaConf) {
         markAsChanged("CODAREACONF", codAreaConf);
-        this.codAreaConf = codAreaConf;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getNomeAreaConf() {
-        return nomeAreaConf;
+        return this.getVo().asString("NOMEAREACONF");
    }
 
    public void setNomeAreaConf(String nomeAreaConf) {
         markAsChanged("NOMEAREACONF", nomeAreaConf);
-        this.nomeAreaConf = nomeAreaConf;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class AreaConferencia extends AbstractSankhyaEntity<AreaConferencia> {
    @Override
    public AreaConferencia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.impSep = vo.asString("IMPSEP");
-        this.codAreaConf = vo.asBigDecimal("CODAREACONF");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nomeAreaConf = vo.asString("NOMEAREACONF");
         return this;
    }
 }

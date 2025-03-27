@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatarioMensagem> {
-   private BigDecimal codCon;
-   private BigDecimal codMsg;
-   private BigDecimal intMin;
-   private Timestamp ultEnvio;
-
    public BigDecimal getCodCon() {
-        return codCon;
+        return this.getVo().asBigDecimal("CODCON");
    }
 
    public void setCodCon(BigDecimal codCon) {
         markAsChanged("CODCON", codCon);
-        this.codCon = codCon;
    }
 
    public BigDecimal getCodMsg() {
-        return codMsg;
+        return this.getVo().asBigDecimal("CODMSG");
    }
 
    public void setCodMsg(BigDecimal codMsg) {
         markAsChanged("CODMSG", codMsg);
-        this.codMsg = codMsg;
    }
 
    public BigDecimal getIntMin() {
-        return intMin;
+        return this.getVo().asBigDecimal("INTMIN");
    }
 
    public void setIntMin(BigDecimal intMin) {
         markAsChanged("INTMIN", intMin);
-        this.intMin = intMin;
    }
 
    public Timestamp getUltEnvio() {
-        return ultEnvio;
+        return this.getVo().asTimestamp("ULTENVIO");
    }
 
    public void setUltEnvio(Timestamp ultEnvio) {
         markAsChanged("ULTENVIO", ultEnvio);
-        this.ultEnvio = ultEnvio;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class MSDDestinatarioMensagem extends AbstractSankhyaEntity<MSDDestinatar
    @Override
    public MSDDestinatarioMensagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCon = vo.asBigDecimal("CODCON");
-        this.codMsg = vo.asBigDecimal("CODMSG");
-        this.intMin = vo.asBigDecimal("INTMIN");
-        this.ultEnvio = vo.asTimestamp("ULTENVIO");
         return this;
    }
 }

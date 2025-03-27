@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Impressora extends AbstractSankhyaEntity<Impressora> {
-   private String aliasLocal;
-   private String ativo;
-   private Timestamp dhStatus;
-   private String nome;
-   private BigDecimal nuPrinter;
-   private BigDecimal nuSvp;
-   private String printerUri;
-   private String status;
-
    public String getAliasLocal() {
-        return aliasLocal;
+        return this.getVo().asString("ALIASLOCAL");
    }
 
    public void setAliasLocal(String aliasLocal) {
         markAsChanged("ALIASLOCAL", aliasLocal);
-        this.aliasLocal = aliasLocal;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public Timestamp getDhStatus() {
-        return dhStatus;
+        return this.getVo().asTimestamp("DHSTATUS");
    }
 
    public void setDhStatus(Timestamp dhStatus) {
         markAsChanged("DHSTATUS", dhStatus);
-        this.dhStatus = dhStatus;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuPrinter() {
-        return nuPrinter;
+        return this.getVo().asBigDecimal("NUPRINTER");
    }
 
    public void setNuPrinter(BigDecimal nuPrinter) {
         markAsChanged("NUPRINTER", nuPrinter);
-        this.nuPrinter = nuPrinter;
    }
 
    public BigDecimal getNuSvp() {
-        return nuSvp;
+        return this.getVo().asBigDecimal("NUSVP");
    }
 
    public void setNuSvp(BigDecimal nuSvp) {
         markAsChanged("NUSVP", nuSvp);
-        this.nuSvp = nuSvp;
    }
 
    public String getPrinterUri() {
-        return printerUri;
+        return this.getVo().asString("PRINTERURI");
    }
 
    public void setPrinterUri(String printerUri) {
         markAsChanged("PRINTERURI", printerUri);
-        this.printerUri = printerUri;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class Impressora extends AbstractSankhyaEntity<Impressora> {
    @Override
    public Impressora fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliasLocal = vo.asString("ALIASLOCAL");
-        this.ativo = vo.asString("ATIVO");
-        this.dhStatus = vo.asTimestamp("DHSTATUS");
-        this.nome = vo.asString("NOME");
-        this.nuPrinter = vo.asBigDecimal("NUPRINTER");
-        this.nuSvp = vo.asBigDecimal("NUSVP");
-        this.printerUri = vo.asString("PRINTERURI");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

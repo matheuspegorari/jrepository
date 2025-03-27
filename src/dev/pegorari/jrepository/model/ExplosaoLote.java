@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
-   private BigDecimal codEndOrigem;
-   private BigDecimal codProd;
-   private String controle;
-   private Timestamp dtAlter;
-   private BigDecimal nuTarefa;
-   private BigDecimal quantidade;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodEndOrigem() {
-        return codEndOrigem;
+        return this.getVo().asBigDecimal("CODENDORIGEM");
    }
 
    public void setCodEndOrigem(BigDecimal codEndOrigem) {
         markAsChanged("CODENDORIGEM", codEndOrigem);
-        this.codEndOrigem = codEndOrigem;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getQuantidade() {
-        return quantidade;
+        return this.getVo().asBigDecimal("QUANTIDADE");
    }
 
    public void setQuantidade(BigDecimal quantidade) {
         markAsChanged("QUANTIDADE", quantidade);
-        this.quantidade = quantidade;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ExplosaoLote extends AbstractSankhyaEntity<ExplosaoLote> {
    @Override
    public ExplosaoLote fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEndOrigem = vo.asBigDecimal("CODENDORIGEM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.controle = vo.asString("CONTROLE");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.quantidade = vo.asBigDecimal("QUANTIDADE");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

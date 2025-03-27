@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
-   private String descricao;
-   private BigDecimal codUf;
-   private String codigoItem;
-   private Timestamp dtInicial;
-   private Timestamp dtFinal;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getCodUf() {
-        return codUf;
+        return this.getVo().asBigDecimal("CODUF");
    }
 
    public void setCodUf(BigDecimal codUf) {
         markAsChanged("CODUF", codUf);
-        this.codUf = codUf;
    }
 
    public String getCodigoItem() {
-        return codigoItem;
+        return this.getVo().asString("CODIGOITEM");
    }
 
    public void setCodigoItem(String codigoItem) {
         markAsChanged("CODIGOITEM", codigoItem);
-        this.codigoItem = codigoItem;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class CodigoItemIPM extends AbstractSankhyaEntity<CodigoItemIPM> {
    @Override
    public CodigoItemIPM fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.codUf = vo.asBigDecimal("CODUF");
-        this.codigoItem = vo.asString("CODIGOITEM");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
         return this;
    }
 }

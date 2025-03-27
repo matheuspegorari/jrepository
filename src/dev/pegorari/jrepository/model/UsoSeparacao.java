@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
-   private String agrupFinNotas;
-   private BigDecimal codTipOperPrinc;
-   private String confirmNotasFat;
-   private String seriePrinc;
-   private BigDecimal codEmp;
-   private BigDecimal codTipOper;
-   private BigDecimal codTipOperSep;
-   private String serieSeparacao;
-   private String usoSeparacao;
-
    public String getAgrupFinNotas() {
-        return agrupFinNotas;
+        return this.getVo().asString("AGRUPFINNOTAS");
    }
 
    public void setAgrupFinNotas(String agrupFinNotas) {
         markAsChanged("AGRUPFINNOTAS", agrupFinNotas);
-        this.agrupFinNotas = agrupFinNotas;
    }
 
    public BigDecimal getCodTipOperPrinc() {
-        return codTipOperPrinc;
+        return this.getVo().asBigDecimal("CODTIPOPERPRINC");
    }
 
    public void setCodTipOperPrinc(BigDecimal codTipOperPrinc) {
         markAsChanged("CODTIPOPERPRINC", codTipOperPrinc);
-        this.codTipOperPrinc = codTipOperPrinc;
    }
 
    public String getConfirmNotasFat() {
-        return confirmNotasFat;
+        return this.getVo().asString("CONFIRMNOTASFAT");
    }
 
    public void setConfirmNotasFat(String confirmNotasFat) {
         markAsChanged("CONFIRMNOTASFAT", confirmNotasFat);
-        this.confirmNotasFat = confirmNotasFat;
    }
 
    public String getSeriePrinc() {
-        return seriePrinc;
+        return this.getVo().asString("SERIEPRINC");
    }
 
    public void setSeriePrinc(String seriePrinc) {
         markAsChanged("SERIEPRINC", seriePrinc);
-        this.seriePrinc = seriePrinc;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getCodTipOperSep() {
-        return codTipOperSep;
+        return this.getVo().asBigDecimal("CODTIPOPERSEP");
    }
 
    public void setCodTipOperSep(BigDecimal codTipOperSep) {
         markAsChanged("CODTIPOPERSEP", codTipOperSep);
-        this.codTipOperSep = codTipOperSep;
    }
 
    public String getSerieSeparacao() {
-        return serieSeparacao;
+        return this.getVo().asString("SERIESEPARACAO");
    }
 
    public void setSerieSeparacao(String serieSeparacao) {
         markAsChanged("SERIESEPARACAO", serieSeparacao);
-        this.serieSeparacao = serieSeparacao;
    }
 
    public String getUsoSeparacao() {
-        return usoSeparacao;
+        return this.getVo().asString("USOSEPARACAO");
    }
 
    public void setUsoSeparacao(String usoSeparacao) {
         markAsChanged("USOSEPARACAO", usoSeparacao);
-        this.usoSeparacao = usoSeparacao;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class UsoSeparacao extends AbstractSankhyaEntity<UsoSeparacao> {
    @Override
    public UsoSeparacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.agrupFinNotas = vo.asString("AGRUPFINNOTAS");
-        this.codTipOperPrinc = vo.asBigDecimal("CODTIPOPERPRINC");
-        this.confirmNotasFat = vo.asString("CONFIRMNOTASFAT");
-        this.seriePrinc = vo.asString("SERIEPRINC");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.codTipOperSep = vo.asBigDecimal("CODTIPOPERSEP");
-        this.serieSeparacao = vo.asString("SERIESEPARACAO");
-        this.usoSeparacao = vo.asString("USOSEPARACAO");
         return this;
    }
 }

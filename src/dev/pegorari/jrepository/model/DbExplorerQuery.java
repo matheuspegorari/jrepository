@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
-   private Timestamp dhAlter;
-   private char[] textoQuery;
-   private String tituloQuery;
-   private BigDecimal codUsu;
-   private BigDecimal nuQuery;
-
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public char[] getTextoQuery() {
-        return textoQuery;
+        return this.getVo().asClob("TEXTOQUERY");
    }
 
    public void setTextoQuery(char[] textoQuery) {
         markAsChanged("TEXTOQUERY", textoQuery);
-        this.textoQuery = textoQuery;
    }
 
    public String getTituloQuery() {
-        return tituloQuery;
+        return this.getVo().asString("TITULOQUERY");
    }
 
    public void setTituloQuery(String tituloQuery) {
         markAsChanged("TITULOQUERY", tituloQuery);
-        this.tituloQuery = tituloQuery;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuQuery() {
-        return nuQuery;
+        return this.getVo().asBigDecimal("NUQUERY");
    }
 
    public void setNuQuery(BigDecimal nuQuery) {
         markAsChanged("NUQUERY", nuQuery);
-        this.nuQuery = nuQuery;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class DbExplorerQuery extends AbstractSankhyaEntity<DbExplorerQuery> {
    @Override
    public DbExplorerQuery fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.textoQuery = vo.asClob("TEXTOQUERY");
-        this.tituloQuery = vo.asString("TITULOQUERY");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuQuery = vo.asBigDecimal("NUQUERY");
         return this;
    }
 }

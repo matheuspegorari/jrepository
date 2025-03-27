@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApuracaoReceitaMensal> {
-   private BigDecimal codEmp;
-   private BigDecimal codParc;
-   private BigDecimal codTipOper;
-   private String digitado;
-   private Timestamp dtNeg;
-   private BigDecimal nuApuracao;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private String serieNota;
-   private BigDecimal status;
-   private String tipMov;
-   private BigDecimal vlrTotRecExt;
-   private BigDecimal vlrTotRecInt;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtNeg() {
-        return dtNeg;
+        return this.getVo().asTimestamp("DTNEG");
    }
 
    public void setDtNeg(Timestamp dtNeg) {
         markAsChanged("DTNEG", dtNeg);
-        this.dtNeg = dtNeg;
    }
 
    public BigDecimal getNuApuracao() {
-        return nuApuracao;
+        return this.getVo().asBigDecimal("NUAPURACAO");
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
         markAsChanged("NUAPURACAO", nuApuracao);
-        this.nuApuracao = nuApuracao;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getSerieNota() {
-        return serieNota;
+        return this.getVo().asString("SERIENOTA");
    }
 
    public void setSerieNota(String serieNota) {
         markAsChanged("SERIENOTA", serieNota);
-        this.serieNota = serieNota;
    }
 
    public BigDecimal getStatus() {
-        return status;
+        return this.getVo().asBigDecimal("STATUS");
    }
 
    public void setStatus(BigDecimal status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public String getTipMov() {
-        return tipMov;
+        return this.getVo().asString("TIPMOV");
    }
 
    public void setTipMov(String tipMov) {
         markAsChanged("TIPMOV", tipMov);
-        this.tipMov = tipMov;
    }
 
    public BigDecimal getVlrTotRecExt() {
-        return vlrTotRecExt;
+        return this.getVo().asBigDecimal("VLRTOTRECEXT");
    }
 
    public void setVlrTotRecExt(BigDecimal vlrTotRecExt) {
         markAsChanged("VLRTOTRECEXT", vlrTotRecExt);
-        this.vlrTotRecExt = vlrTotRecExt;
    }
 
    public BigDecimal getVlrTotRecInt() {
-        return vlrTotRecInt;
+        return this.getVo().asBigDecimal("VLRTOTRECINT");
    }
 
    public void setVlrTotRecInt(BigDecimal vlrTotRecInt) {
         markAsChanged("VLRTOTRECINT", vlrTotRecInt);
-        this.vlrTotRecInt = vlrTotRecInt;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class NotasApuracaoReceitaMensal extends AbstractSankhyaEntity<NotasApura
    @Override
    public NotasApuracaoReceitaMensal fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtNeg = vo.asTimestamp("DTNEG");
-        this.nuApuracao = vo.asBigDecimal("NUAPURACAO");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.serieNota = vo.asString("SERIENOTA");
-        this.status = vo.asBigDecimal("STATUS");
-        this.tipMov = vo.asString("TIPMOV");
-        this.vlrTotRecExt = vo.asBigDecimal("VLRTOTRECEXT");
-        this.vlrTotRecInt = vo.asBigDecimal("VLRTOTRECINT");
         return this;
    }
 }

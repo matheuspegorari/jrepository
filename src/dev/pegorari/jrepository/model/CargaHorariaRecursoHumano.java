@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorariaRecursoHumano> {
-   private BigDecimal codCargaHor;
-   private BigDecimal codRhp;
-   private Timestamp dtFinalVigor;
-   private Timestamp dtInicioVigor;
-
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public BigDecimal getCodRhp() {
-        return codRhp;
+        return this.getVo().asBigDecimal("CODRHP");
    }
 
    public void setCodRhp(BigDecimal codRhp) {
         markAsChanged("CODRHP", codRhp);
-        this.codRhp = codRhp;
    }
 
    public Timestamp getDtFinalVigor() {
-        return dtFinalVigor;
+        return this.getVo().asTimestamp("DTFINALVIGOR");
    }
 
    public void setDtFinalVigor(Timestamp dtFinalVigor) {
         markAsChanged("DTFINALVIGOR", dtFinalVigor);
-        this.dtFinalVigor = dtFinalVigor;
    }
 
    public Timestamp getDtInicioVigor() {
-        return dtInicioVigor;
+        return this.getVo().asTimestamp("DTINICIOVIGOR");
    }
 
    public void setDtInicioVigor(Timestamp dtInicioVigor) {
         markAsChanged("DTINICIOVIGOR", dtInicioVigor);
-        this.dtInicioVigor = dtInicioVigor;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class CargaHorariaRecursoHumano extends AbstractSankhyaEntity<CargaHorari
    @Override
    public CargaHorariaRecursoHumano fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.codRhp = vo.asBigDecimal("CODRHP");
-        this.dtFinalVigor = vo.asTimestamp("DTFINALVIGOR");
-        this.dtInicioVigor = vo.asTimestamp("DTINICIOVIGOR");
         return this;
    }
 }

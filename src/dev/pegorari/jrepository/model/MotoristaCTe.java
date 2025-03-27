@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
-   private BigDecimal nuNota;
-   private BigDecimal codParc;
-   private BigDecimal seqMot;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getSeqMot() {
-        return seqMot;
+        return this.getVo().asBigDecimal("SEQMOT");
    }
 
    public void setSeqMot(BigDecimal seqMot) {
         markAsChanged("SEQMOT", seqMot);
-        this.seqMot = seqMot;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class MotoristaCTe extends AbstractSankhyaEntity<MotoristaCTe> {
    @Override
    public MotoristaCTe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.seqMot = vo.asBigDecimal("SEQMOT");
         return this;
    }
 }

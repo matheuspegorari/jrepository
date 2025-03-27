@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
-   private BigDecimal codVend;
-   private BigDecimal nuNota;
-   private String obs;
-   private BigDecimal percCom;
-
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getObs() {
-        return obs;
+        return this.getVo().asString("OBS");
    }
 
    public void setObs(String obs) {
         markAsChanged("OBS", obs);
-        this.obs = obs;
    }
 
    public BigDecimal getPercCom() {
-        return percCom;
+        return this.getVo().asBigDecimal("PERCCOM");
    }
 
    public void setPercCom(BigDecimal percCom) {
         markAsChanged("PERCCOM", percCom);
-        this.percCom = percCom;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ComissaoMultipla extends AbstractSankhyaEntity<ComissaoMultipla> {
    @Override
    public ComissaoMultipla fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.obs = vo.asString("OBS");
-        this.percCom = vo.asBigDecimal("PERCCOM");
         return this;
    }
 }

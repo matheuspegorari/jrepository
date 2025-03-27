@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDiferencialAliquota> {
-   private BigDecimal codForm;
-   private String descrForm;
-   private String formula;
-
    public BigDecimal getCodForm() {
-        return codForm;
+        return this.getVo().asBigDecimal("CODFORM");
    }
 
    public void setCodForm(BigDecimal codForm) {
         markAsChanged("CODFORM", codForm);
-        this.codForm = codForm;
    }
 
    public String getDescrForm() {
-        return descrForm;
+        return this.getVo().asString("DESCRFORM");
    }
 
    public void setDescrForm(String descrForm) {
         markAsChanged("DESCRFORM", descrForm);
-        this.descrForm = descrForm;
    }
 
    public String getFormula() {
-        return formula;
+        return this.getVo().asString("FORMULA");
    }
 
    public void setFormula(String formula) {
         markAsChanged("FORMULA", formula);
-        this.formula = formula;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class FormulaDiferencialAliquota extends AbstractSankhyaEntity<FormulaDif
    @Override
    public FormulaDiferencialAliquota fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codForm = vo.asBigDecimal("CODFORM");
-        this.descrForm = vo.asString("DESCRFORM");
-        this.formula = vo.asString("FORMULA");
         return this;
    }
 }

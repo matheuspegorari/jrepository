@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRetornoMovimentoBco> {
-   private BigDecimal codigo;
-   private String idLinha;
-   private String idValor;
-   private String nome;
-   private BigDecimal posFim;
-   private BigDecimal posIni;
-   private BigDecimal qtdDec;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodigo() {
-        return codigo;
+        return this.getVo().asBigDecimal("CODIGO");
    }
 
    public void setCodigo(BigDecimal codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public String getIdLinha() {
-        return idLinha;
+        return this.getVo().asString("IDLINHA");
    }
 
    public void setIdLinha(String idLinha) {
         markAsChanged("IDLINHA", idLinha);
-        this.idLinha = idLinha;
    }
 
    public String getIdValor() {
-        return idValor;
+        return this.getVo().asString("IDVALOR");
    }
 
    public void setIdValor(String idValor) {
         markAsChanged("IDVALOR", idValor);
-        this.idValor = idValor;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getPosFim() {
-        return posFim;
+        return this.getVo().asBigDecimal("POSFIM");
    }
 
    public void setPosFim(BigDecimal posFim) {
         markAsChanged("POSFIM", posFim);
-        this.posFim = posFim;
    }
 
    public BigDecimal getPosIni() {
-        return posIni;
+        return this.getVo().asBigDecimal("POSINI");
    }
 
    public void setPosIni(BigDecimal posIni) {
         markAsChanged("POSINI", posIni);
-        this.posIni = posIni;
    }
 
    public BigDecimal getQtdDec() {
-        return qtdDec;
+        return this.getVo().asBigDecimal("QTDDEC");
    }
 
    public void setQtdDec(BigDecimal qtdDec) {
         markAsChanged("QTDDEC", qtdDec);
-        this.qtdDec = qtdDec;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class DetalheRetornoMovimentoBco extends AbstractSankhyaEntity<DetalheRet
    @Override
    public DetalheRetornoMovimentoBco fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codigo = vo.asBigDecimal("CODIGO");
-        this.idLinha = vo.asString("IDLINHA");
-        this.idValor = vo.asString("IDVALOR");
-        this.nome = vo.asString("NOME");
-        this.posFim = vo.asBigDecimal("POSFIM");
-        this.posIni = vo.asBigDecimal("POSINI");
-        this.qtdDec = vo.asBigDecimal("QTDDEC");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

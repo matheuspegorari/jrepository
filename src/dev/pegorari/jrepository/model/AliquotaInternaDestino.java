@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaInternaDestino> {
-   private BigDecimal percIcmFcp;
-   private BigDecimal codUf;
-   private BigDecimal codProd;
-   private BigDecimal aliqIntDest;
-   private BigDecimal percRedBaseDest;
-
    public BigDecimal getPercIcmFcp() {
-        return percIcmFcp;
+        return this.getVo().asBigDecimal("PERCICMSFCP");
    }
 
    public void setPercIcmFcp(BigDecimal percIcmFcp) {
         markAsChanged("PERCICMSFCP", percIcmFcp);
-        this.percIcmFcp = percIcmFcp;
    }
 
    public BigDecimal getCodUf() {
-        return codUf;
+        return this.getVo().asBigDecimal("CODUF");
    }
 
    public void setCodUf(BigDecimal codUf) {
         markAsChanged("CODUF", codUf);
-        this.codUf = codUf;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getAliqIntDest() {
-        return aliqIntDest;
+        return this.getVo().asBigDecimal("ALIQINTDEST");
    }
 
    public void setAliqIntDest(BigDecimal aliqIntDest) {
         markAsChanged("ALIQINTDEST", aliqIntDest);
-        this.aliqIntDest = aliqIntDest;
    }
 
    public BigDecimal getPercRedBaseDest() {
-        return percRedBaseDest;
+        return this.getVo().asBigDecimal("PERCREDBASEDEST");
    }
 
    public void setPercRedBaseDest(BigDecimal percRedBaseDest) {
         markAsChanged("PERCREDBASEDEST", percRedBaseDest);
-        this.percRedBaseDest = percRedBaseDest;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class AliquotaInternaDestino extends AbstractSankhyaEntity<AliquotaIntern
    @Override
    public AliquotaInternaDestino fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.percIcmFcp = vo.asBigDecimal("PERCICMSFCP");
-        this.codUf = vo.asBigDecimal("CODUF");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.aliqIntDest = vo.asBigDecimal("ALIQINTDEST");
-        this.percRedBaseDest = vo.asBigDecimal("PERCREDBASEDEST");
         return this;
    }
 }

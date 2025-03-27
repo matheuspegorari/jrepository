@@ -5,245 +5,196 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> {
-   private String ativo;
-   private BigDecimal codigo;
-   private BigDecimal codPai;
-   private String comGroupBy;
-   private String comHaving;
-   private String comOrderBy;
-   private String comSelect;
-   private String conf;
-   private String ficha;
-   private String filtro;
-   private BigDecimal grau;
-   private String iniCarqRem;
-   private String modulo;
-   private String nomeArq;
-   private String ordenar;
-   private BigDecimal seqInfo;
-   private BigDecimal tamRegistro;
-   private String titulo;
-   private String utilizaSeqAlt;
-   private String utilizaSeqInfo;
-   private String analitico;
-   private String arqPorLinha;
-   private String consultaSqlLote;
-   private String arqPorLayoutDetalhe;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodigo() {
-        return codigo;
+        return this.getVo().asBigDecimal("CODIGO");
    }
 
    public void setCodigo(BigDecimal codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public BigDecimal getCodPai() {
-        return codPai;
+        return this.getVo().asBigDecimal("CODPAI");
    }
 
    public void setCodPai(BigDecimal codPai) {
         markAsChanged("CODPAI", codPai);
-        this.codPai = codPai;
    }
 
    public String getComGroupBy() {
-        return comGroupBy;
+        return this.getVo().asString("COMGROUPBY");
    }
 
    public void setComGroupBy(String comGroupBy) {
         markAsChanged("COMGROUPBY", comGroupBy);
-        this.comGroupBy = comGroupBy;
    }
 
    public String getComHaving() {
-        return comHaving;
+        return this.getVo().asString("COMHAVING");
    }
 
    public void setComHaving(String comHaving) {
         markAsChanged("COMHAVING", comHaving);
-        this.comHaving = comHaving;
    }
 
    public String getComOrderBy() {
-        return comOrderBy;
+        return this.getVo().asString("COMORDERBY");
    }
 
    public void setComOrderBy(String comOrderBy) {
         markAsChanged("COMORDERBY", comOrderBy);
-        this.comOrderBy = comOrderBy;
    }
 
    public String getComSelect() {
-        return comSelect;
+        return this.getVo().asString("COMSELECT");
    }
 
    public void setComSelect(String comSelect) {
         markAsChanged("COMSELECT", comSelect);
-        this.comSelect = comSelect;
    }
 
    public String getConf() {
-        return conf;
+        return this.getVo().asString("CONF");
    }
 
    public void setConf(String conf) {
         markAsChanged("CONF", conf);
-        this.conf = conf;
    }
 
    public String getFicha() {
-        return ficha;
+        return this.getVo().asString("FICHA");
    }
 
    public void setFicha(String ficha) {
         markAsChanged("FICHA", ficha);
-        this.ficha = ficha;
    }
 
    public String getFiltro() {
-        return filtro;
+        return this.getVo().asString("FILTRO");
    }
 
    public void setFiltro(String filtro) {
         markAsChanged("FILTRO", filtro);
-        this.filtro = filtro;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getIniCarqRem() {
-        return iniCarqRem;
+        return this.getVo().asString("INICARQREM");
    }
 
    public void setIniCarqRem(String iniCarqRem) {
         markAsChanged("INICARQREM", iniCarqRem);
-        this.iniCarqRem = iniCarqRem;
    }
 
    public String getModulo() {
-        return modulo;
+        return this.getVo().asString("MODULO");
    }
 
    public void setModulo(String modulo) {
         markAsChanged("MODULO", modulo);
-        this.modulo = modulo;
    }
 
    public String getNomeArq() {
-        return nomeArq;
+        return this.getVo().asString("NOMEARQ");
    }
 
    public void setNomeArq(String nomeArq) {
         markAsChanged("NOMEARQ", nomeArq);
-        this.nomeArq = nomeArq;
    }
 
    public String getOrdenar() {
-        return ordenar;
+        return this.getVo().asString("ORDENAR");
    }
 
    public void setOrdenar(String ordenar) {
         markAsChanged("ORDENAR", ordenar);
-        this.ordenar = ordenar;
    }
 
    public BigDecimal getSeqInfo() {
-        return seqInfo;
+        return this.getVo().asBigDecimal("SEQINFO");
    }
 
    public void setSeqInfo(BigDecimal seqInfo) {
         markAsChanged("SEQINFO", seqInfo);
-        this.seqInfo = seqInfo;
    }
 
    public BigDecimal getTamRegistro() {
-        return tamRegistro;
+        return this.getVo().asBigDecimal("TAMREGISTRO");
    }
 
    public void setTamRegistro(BigDecimal tamRegistro) {
         markAsChanged("TAMREGISTRO", tamRegistro);
-        this.tamRegistro = tamRegistro;
    }
 
    public String getTitulo() {
-        return titulo;
+        return this.getVo().asString("TITULO");
    }
 
    public void setTitulo(String titulo) {
         markAsChanged("TITULO", titulo);
-        this.titulo = titulo;
    }
 
    public String getUtilizaSeqAlt() {
-        return utilizaSeqAlt;
+        return this.getVo().asString("UTILIZASEQALT");
    }
 
    public void setUtilizaSeqAlt(String utilizaSeqAlt) {
         markAsChanged("UTILIZASEQALT", utilizaSeqAlt);
-        this.utilizaSeqAlt = utilizaSeqAlt;
    }
 
    public String getUtilizaSeqInfo() {
-        return utilizaSeqInfo;
+        return this.getVo().asString("UTILIZASEQINFO");
    }
 
    public void setUtilizaSeqInfo(String utilizaSeqInfo) {
         markAsChanged("UTILIZASEQINFO", utilizaSeqInfo);
-        this.utilizaSeqInfo = utilizaSeqInfo;
    }
 
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getArqPorLinha() {
-        return arqPorLinha;
+        return this.getVo().asString("ARQPORLINHA");
    }
 
    public void setArqPorLinha(String arqPorLinha) {
         markAsChanged("ARQPORLINHA", arqPorLinha);
-        this.arqPorLinha = arqPorLinha;
    }
 
    public String getConsultaSqlLote() {
-        return consultaSqlLote;
+        return this.getVo().asString("CONSULTASQLLOTE");
    }
 
    public void setConsultaSqlLote(String consultaSqlLote) {
         markAsChanged("CONSULTASQLLOTE", consultaSqlLote);
-        this.consultaSqlLote = consultaSqlLote;
    }
 
    public String getArqPorLayoutDetalhe() {
-        return arqPorLayoutDetalhe;
+        return this.getVo().asString("ARQPORLAYOUTDETALHE");
    }
 
    public void setArqPorLayoutDetalhe(String arqPorLayoutDetalhe) {
         markAsChanged("ARQPORLAYOUTDETALHE", arqPorLayoutDetalhe);
-        this.arqPorLayoutDetalhe = arqPorLayoutDetalhe;
    }
 
    @Override
@@ -259,30 +210,6 @@ public class FormatadorRemessa extends AbstractSankhyaEntity<FormatadorRemessa> 
    @Override
    public FormatadorRemessa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codigo = vo.asBigDecimal("CODIGO");
-        this.codPai = vo.asBigDecimal("CODPAI");
-        this.comGroupBy = vo.asString("COMGROUPBY");
-        this.comHaving = vo.asString("COMHAVING");
-        this.comOrderBy = vo.asString("COMORDERBY");
-        this.comSelect = vo.asString("COMSELECT");
-        this.conf = vo.asString("CONF");
-        this.ficha = vo.asString("FICHA");
-        this.filtro = vo.asString("FILTRO");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.iniCarqRem = vo.asString("INICARQREM");
-        this.modulo = vo.asString("MODULO");
-        this.nomeArq = vo.asString("NOMEARQ");
-        this.ordenar = vo.asString("ORDENAR");
-        this.seqInfo = vo.asBigDecimal("SEQINFO");
-        this.tamRegistro = vo.asBigDecimal("TAMREGISTRO");
-        this.titulo = vo.asString("TITULO");
-        this.utilizaSeqAlt = vo.asString("UTILIZASEQALT");
-        this.utilizaSeqInfo = vo.asString("UTILIZASEQINFO");
-        this.analitico = vo.asString("ANALITICO");
-        this.arqPorLinha = vo.asString("ARQPORLINHA");
-        this.consultaSqlLote = vo.asString("CONSULTASQLLOTE");
-        this.arqPorLayoutDetalhe = vo.asString("ARQPORLAYOUTDETALHE");
         return this;
    }
 }

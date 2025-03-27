@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCotaParticipacao> {
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private String cnpj;
-   private String nome;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getCnpj() {
-        return cnpj;
+        return this.getVo().asString("CNPJ");
    }
 
    public void setCnpj(String cnpj) {
         markAsChanged("CNPJ", cnpj);
-        this.cnpj = cnpj;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class SociedadeCotaParticipacao extends AbstractSankhyaEntity<SociedadeCo
    @Override
    public SociedadeCotaParticipacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.cnpj = vo.asString("CNPJ");
-        this.nome = vo.asString("NOME");
         return this;
    }
 }

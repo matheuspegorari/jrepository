@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformacao> {
-   private String campoAgrup;
-   private String campoValor;
-   private BigDecimal codGbi;
-   private String descrGbi;
-   private String idCmp;
-   private String idInfoBia;
-   private String idLvl;
-   private BigDecimal nuGdg;
-
    public String getCampoAgrup() {
-        return campoAgrup;
+        return this.getVo().asString("CAMPOAGRUP");
    }
 
    public void setCampoAgrup(String campoAgrup) {
         markAsChanged("CAMPOAGRUP", campoAgrup);
-        this.campoAgrup = campoAgrup;
    }
 
    public String getCampoValor() {
-        return campoValor;
+        return this.getVo().asString("CAMPOVALOR");
    }
 
    public void setCampoValor(String campoValor) {
         markAsChanged("CAMPOVALOR", campoValor);
-        this.campoValor = campoValor;
    }
 
    public BigDecimal getCodGbi() {
-        return codGbi;
+        return this.getVo().asBigDecimal("CODGBI");
    }
 
    public void setCodGbi(BigDecimal codGbi) {
         markAsChanged("CODGBI", codGbi);
-        this.codGbi = codGbi;
    }
 
    public String getDescrGbi() {
-        return descrGbi;
+        return this.getVo().asString("DESCRGBI");
    }
 
    public void setDescrGbi(String descrGbi) {
         markAsChanged("DESCRGBI", descrGbi);
-        this.descrGbi = descrGbi;
    }
 
    public String getIdCmp() {
-        return idCmp;
+        return this.getVo().asString("IDCMP");
    }
 
    public void setIdCmp(String idCmp) {
         markAsChanged("IDCMP", idCmp);
-        this.idCmp = idCmp;
    }
 
    public String getIdInfoBia() {
-        return idInfoBia;
+        return this.getVo().asString("IDINFOBIA");
    }
 
    public void setIdInfoBia(String idInfoBia) {
         markAsChanged("IDINFOBIA", idInfoBia);
-        this.idInfoBia = idInfoBia;
    }
 
    public String getIdLvl() {
-        return idLvl;
+        return this.getVo().asString("IDLVL");
    }
 
    public void setIdLvl(String idLvl) {
         markAsChanged("IDLVL", idLvl);
-        this.idLvl = idLvl;
    }
 
    public BigDecimal getNuGdg() {
-        return nuGdg;
+        return this.getVo().asBigDecimal("NUGDG");
    }
 
    public void setNuGdg(BigDecimal nuGdg) {
         markAsChanged("NUGDG", nuGdg);
-        this.nuGdg = nuGdg;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class GadgetBiaInformacao extends AbstractSankhyaEntity<GadgetBiaInformac
    @Override
    public GadgetBiaInformacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.campoAgrup = vo.asString("CAMPOAGRUP");
-        this.campoValor = vo.asString("CAMPOVALOR");
-        this.codGbi = vo.asBigDecimal("CODGBI");
-        this.descrGbi = vo.asString("DESCRGBI");
-        this.idCmp = vo.asString("IDCMP");
-        this.idInfoBia = vo.asString("IDINFOBIA");
-        this.idLvl = vo.asString("IDLVL");
-        this.nuGdg = vo.asBigDecimal("NUGDG");
         return this;
    }
 }

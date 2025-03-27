@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
-   private BigDecimal codPergDep;
-   private BigDecimal codPergMestre;
-   private BigDecimal codRespMestre;
-   private Timestamp dhAlter;
-   private BigDecimal ordem;
-
    public BigDecimal getCodPergDep() {
-        return codPergDep;
+        return this.getVo().asBigDecimal("CODPERGDEP");
    }
 
    public void setCodPergDep(BigDecimal codPergDep) {
         markAsChanged("CODPERGDEP", codPergDep);
-        this.codPergDep = codPergDep;
    }
 
    public BigDecimal getCodPergMestre() {
-        return codPergMestre;
+        return this.getVo().asBigDecimal("CODPERGMESTRE");
    }
 
    public void setCodPergMestre(BigDecimal codPergMestre) {
         markAsChanged("CODPERGMESTRE", codPergMestre);
-        this.codPergMestre = codPergMestre;
    }
 
    public BigDecimal getCodRespMestre() {
-        return codRespMestre;
+        return this.getVo().asBigDecimal("CODRESPMESTRE");
    }
 
    public void setCodRespMestre(BigDecimal codRespMestre) {
         markAsChanged("CODRESPMESTRE", codRespMestre);
-        this.codRespMestre = codRespMestre;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class RelacaoPergunta extends AbstractSankhyaEntity<RelacaoPergunta> {
    @Override
    public RelacaoPergunta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPergDep = vo.asBigDecimal("CODPERGDEP");
-        this.codPergMestre = vo.asBigDecimal("CODPERGMESTRE");
-        this.codRespMestre = vo.asBigDecimal("CODRESPMESTRE");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.ordem = vo.asBigDecimal("ORDEM");
         return this;
    }
 }

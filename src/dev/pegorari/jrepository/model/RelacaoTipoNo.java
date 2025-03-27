@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
-   private BigDecimal nuEst;
-   private BigDecimal nuInstanciaFilha;
-   private BigDecimal nuInstanciaPai;
-
    public BigDecimal getNuEst() {
-        return nuEst;
+        return this.getVo().asBigDecimal("NUEST");
    }
 
    public void setNuEst(BigDecimal nuEst) {
         markAsChanged("NUEST", nuEst);
-        this.nuEst = nuEst;
    }
 
    public BigDecimal getNuInstanciaFilha() {
-        return nuInstanciaFilha;
+        return this.getVo().asBigDecimal("NUINSTANCIAFILHA");
    }
 
    public void setNuInstanciaFilha(BigDecimal nuInstanciaFilha) {
         markAsChanged("NUINSTANCIAFILHA", nuInstanciaFilha);
-        this.nuInstanciaFilha = nuInstanciaFilha;
    }
 
    public BigDecimal getNuInstanciaPai() {
-        return nuInstanciaPai;
+        return this.getVo().asBigDecimal("NUINSTANCIAPAI");
    }
 
    public void setNuInstanciaPai(BigDecimal nuInstanciaPai) {
         markAsChanged("NUINSTANCIAPAI", nuInstanciaPai);
-        this.nuInstanciaPai = nuInstanciaPai;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class RelacaoTipoNo extends AbstractSankhyaEntity<RelacaoTipoNo> {
    @Override
    public RelacaoTipoNo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuEst = vo.asBigDecimal("NUEST");
-        this.nuInstanciaFilha = vo.asBigDecimal("NUINSTANCIAFILHA");
-        this.nuInstanciaPai = vo.asBigDecimal("NUINSTANCIAPAI");
         return this;
    }
 }

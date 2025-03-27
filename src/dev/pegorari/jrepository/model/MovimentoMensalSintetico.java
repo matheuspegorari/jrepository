@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMensalSintetico> {
-   private BigDecimal ano;
-   private BigDecimal codEmp;
-   private BigDecimal codGrupoProd;
-   private BigDecimal codParc;
-   private Timestamp dtam;
-   private String grupo;
-   private BigDecimal mes;
-   private String tipMov;
-   private BigDecimal vlrMov;
-
    public BigDecimal getAno() {
-        return ano;
+        return this.getVo().asBigDecimal("ANO");
    }
 
    public void setAno(BigDecimal ano) {
         markAsChanged("ANO", ano);
-        this.ano = ano;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodGrupoProd() {
-        return codGrupoProd;
+        return this.getVo().asBigDecimal("CODGRUPOPROD");
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
         markAsChanged("CODGRUPOPROD", codGrupoProd);
-        this.codGrupoProd = codGrupoProd;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public Timestamp getDtam() {
-        return dtam;
+        return this.getVo().asTimestamp("DTAM");
    }
 
    public void setDtam(Timestamp dtam) {
         markAsChanged("DTAM", dtam);
-        this.dtam = dtam;
    }
 
    public String getGrupo() {
-        return grupo;
+        return this.getVo().asString("GRUPO");
    }
 
    public void setGrupo(String grupo) {
         markAsChanged("GRUPO", grupo);
-        this.grupo = grupo;
    }
 
    public BigDecimal getMes() {
-        return mes;
+        return this.getVo().asBigDecimal("MES");
    }
 
    public void setMes(BigDecimal mes) {
         markAsChanged("MES", mes);
-        this.mes = mes;
    }
 
    public String getTipMov() {
-        return tipMov;
+        return this.getVo().asString("TIPMOV");
    }
 
    public void setTipMov(String tipMov) {
         markAsChanged("TIPMOV", tipMov);
-        this.tipMov = tipMov;
    }
 
    public BigDecimal getVlrMov() {
-        return vlrMov;
+        return this.getVo().asBigDecimal("VLRMOV");
    }
 
    public void setVlrMov(BigDecimal vlrMov) {
         markAsChanged("VLRMOV", vlrMov);
-        this.vlrMov = vlrMov;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class MovimentoMensalSintetico extends AbstractSankhyaEntity<MovimentoMen
    @Override
    public MovimentoMensalSintetico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ano = vo.asBigDecimal("ANO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.dtam = vo.asTimestamp("DTAM");
-        this.grupo = vo.asString("GRUPO");
-        this.mes = vo.asBigDecimal("MES");
-        this.tipMov = vo.asString("TIPMOV");
-        this.vlrMov = vo.asBigDecimal("VLRMOV");
         return this;
    }
 }

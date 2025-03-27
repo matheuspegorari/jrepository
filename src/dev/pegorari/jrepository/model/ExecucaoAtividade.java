@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> {
-   private BigDecimal codMtp;
-   private String observacao;
-   private String tipo;
-   private Timestamp dhInicio;
-   private BigDecimal codExec;
-   private BigDecimal codUsu;
-   private BigDecimal ideiAtv;
-   private Timestamp dhFinal;
-   private BigDecimal idAtv;
-
    public BigDecimal getCodMtp() {
-        return codMtp;
+        return this.getVo().asBigDecimal("CODMTP");
    }
 
    public void setCodMtp(BigDecimal codMtp) {
         markAsChanged("CODMTP", codMtp);
-        this.codMtp = codMtp;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public Timestamp getDhInicio() {
-        return dhInicio;
+        return this.getVo().asTimestamp("DHINICIO");
    }
 
    public void setDhInicio(Timestamp dhInicio) {
         markAsChanged("DHINICIO", dhInicio);
-        this.dhInicio = dhInicio;
    }
 
    public BigDecimal getCodExec() {
-        return codExec;
+        return this.getVo().asBigDecimal("CODEXEC");
    }
 
    public void setCodExec(BigDecimal codExec) {
         markAsChanged("CODEXEC", codExec);
-        this.codExec = codExec;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getIdeiAtv() {
-        return ideiAtv;
+        return this.getVo().asBigDecimal("IDEIATV");
    }
 
    public void setIdeiAtv(BigDecimal ideiAtv) {
         markAsChanged("IDEIATV", ideiAtv);
-        this.ideiAtv = ideiAtv;
    }
 
    public Timestamp getDhFinal() {
-        return dhFinal;
+        return this.getVo().asTimestamp("DHFINAL");
    }
 
    public void setDhFinal(Timestamp dhFinal) {
         markAsChanged("DHFINAL", dhFinal);
-        this.dhFinal = dhFinal;
    }
 
    public BigDecimal getIdAtv() {
-        return idAtv;
+        return this.getVo().asBigDecimal("IDIATV");
    }
 
    public void setIdAtv(BigDecimal idAtv) {
         markAsChanged("IDIATV", idAtv);
-        this.idAtv = idAtv;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class ExecucaoAtividade extends AbstractSankhyaEntity<ExecucaoAtividade> 
    @Override
    public ExecucaoAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMtp = vo.asBigDecimal("CODMTP");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.tipo = vo.asString("TIPO");
-        this.dhInicio = vo.asTimestamp("DHINICIO");
-        this.codExec = vo.asBigDecimal("CODEXEC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.ideiAtv = vo.asBigDecimal("IDEIATV");
-        this.dhFinal = vo.asTimestamp("DHFINAL");
-        this.idAtv = vo.asBigDecimal("IDIATV");
         return this;
    }
 }

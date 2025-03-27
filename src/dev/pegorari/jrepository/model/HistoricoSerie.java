@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuNota;
-   private String ocorrencia;
-   private BigDecimal seqHistSerie;
-   private BigDecimal seqNota;
-   private String serie;
-   private String status;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getOcorrencia() {
-        return ocorrencia;
+        return this.getVo().asString("OCORRENCIA");
    }
 
    public void setOcorrencia(String ocorrencia) {
         markAsChanged("OCORRENCIA", ocorrencia);
-        this.ocorrencia = ocorrencia;
    }
 
    public BigDecimal getSeqHistSerie() {
-        return seqHistSerie;
+        return this.getVo().asBigDecimal("SEQHISTSERIE");
    }
 
    public void setSeqHistSerie(BigDecimal seqHistSerie) {
         markAsChanged("SEQHISTSERIE", seqHistSerie);
-        this.seqHistSerie = seqHistSerie;
    }
 
    public BigDecimal getSeqNota() {
-        return seqNota;
+        return this.getVo().asBigDecimal("SEQNOTA");
    }
 
    public void setSeqNota(BigDecimal seqNota) {
         markAsChanged("SEQNOTA", seqNota);
-        this.seqNota = seqNota;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class HistoricoSerie extends AbstractSankhyaEntity<HistoricoSerie> {
    @Override
    public HistoricoSerie fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.ocorrencia = vo.asString("OCORRENCIA");
-        this.seqHistSerie = vo.asBigDecimal("SEQHISTSERIE");
-        this.seqNota = vo.asBigDecimal("SEQNOTA");
-        this.serie = vo.asString("SERIE");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandidato> {
-   private BigDecimal codigo;
-   private String formula;
-   private BigDecimal ideFx;
-   private BigDecimal seqEcd;
-   private String tipo;
-   private String nome;
-
    public BigDecimal getCodigo() {
-        return codigo;
+        return this.getVo().asBigDecimal("CODIGO");
    }
 
    public void setCodigo(BigDecimal codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public String getFormula() {
-        return formula;
+        return this.getVo().asString("FORMULA");
    }
 
    public void setFormula(String formula) {
         markAsChanged("FORMULA", formula);
-        this.formula = formula;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getSeqEcd() {
-        return seqEcd;
+        return this.getVo().asBigDecimal("SEQECD");
    }
 
    public void setSeqEcd(BigDecimal seqEcd) {
         markAsChanged("SEQECD", seqEcd);
-        this.seqEcd = seqEcd;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class ExecutanteCandidato extends AbstractSankhyaEntity<ExecutanteCandida
    @Override
    public ExecutanteCandidato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codigo = vo.asBigDecimal("CODIGO");
-        this.formula = vo.asString("FORMULA");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.seqEcd = vo.asBigDecimal("SEQECD");
-        this.tipo = vo.asString("TIPO");
-        this.nome = vo.asString("NOME");
         return this;
    }
 }

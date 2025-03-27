@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
 public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<InformacaoRegistroExportacao> {
-   private Timestamp dtRe;
-   private String nroDeclaracao;
-   private String nroRe;
-
    public Timestamp getDtRe() {
-        return dtRe;
+        return this.getVo().asTimestamp("DTRE");
    }
 
    public void setDtRe(Timestamp dtRe) {
         markAsChanged("DTRE", dtRe);
-        this.dtRe = dtRe;
    }
 
    public String getNroDeclaracao() {
-        return nroDeclaracao;
+        return this.getVo().asString("NRODECLARACAO");
    }
 
    public void setNroDeclaracao(String nroDeclaracao) {
         markAsChanged("NRODECLARACAO", nroDeclaracao);
-        this.nroDeclaracao = nroDeclaracao;
    }
 
    public String getNroRe() {
-        return nroRe;
+        return this.getVo().asString("NRORE");
    }
 
    public void setNroRe(String nroRe) {
         markAsChanged("NRORE", nroRe);
-        this.nroRe = nroRe;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class InformacaoRegistroExportacao extends AbstractSankhyaEntity<Informac
    @Override
    public InformacaoRegistroExportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtRe = vo.asTimestamp("DTRE");
-        this.nroDeclaracao = vo.asString("NRODECLARACAO");
-        this.nroRe = vo.asString("NRORE");
         return this;
    }
 }

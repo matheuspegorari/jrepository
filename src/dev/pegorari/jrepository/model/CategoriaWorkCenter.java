@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCenter> {
-   private BigDecimal codCap;
-   private BigDecimal codCwc;
-   private BigDecimal codWcppadrao;
-   private String descricao;
-   private BigDecimal qtdCapacidadeMax;
-   private BigDecimal qtdCapacidadeMin;
-   private BigDecimal qtdCapacidadePad;
-   private BigDecimal tempoCleanup;
-   private BigDecimal tempoSetup;
-   private String tipo;
-   private BigDecimal capacidadeHora;
-
    public BigDecimal getCodCap() {
-        return codCap;
+        return this.getVo().asBigDecimal("CODCAP");
    }
 
    public void setCodCap(BigDecimal codCap) {
         markAsChanged("CODCAP", codCap);
-        this.codCap = codCap;
    }
 
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public BigDecimal getCodWcppadrao() {
-        return codWcppadrao;
+        return this.getVo().asBigDecimal("CODWCPPADRAO");
    }
 
    public void setCodWcppadrao(BigDecimal codWcppadrao) {
         markAsChanged("CODWCPPADRAO", codWcppadrao);
-        this.codWcppadrao = codWcppadrao;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getQtdCapacidadeMax() {
-        return qtdCapacidadeMax;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEMAX");
    }
 
    public void setQtdCapacidadeMax(BigDecimal qtdCapacidadeMax) {
         markAsChanged("QTDCAPACIDADEMAX", qtdCapacidadeMax);
-        this.qtdCapacidadeMax = qtdCapacidadeMax;
    }
 
    public BigDecimal getQtdCapacidadeMin() {
-        return qtdCapacidadeMin;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEMIN");
    }
 
    public void setQtdCapacidadeMin(BigDecimal qtdCapacidadeMin) {
         markAsChanged("QTDCAPACIDADEMIN", qtdCapacidadeMin);
-        this.qtdCapacidadeMin = qtdCapacidadeMin;
    }
 
    public BigDecimal getQtdCapacidadePad() {
-        return qtdCapacidadePad;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEPAD");
    }
 
    public void setQtdCapacidadePad(BigDecimal qtdCapacidadePad) {
         markAsChanged("QTDCAPACIDADEPAD", qtdCapacidadePad);
-        this.qtdCapacidadePad = qtdCapacidadePad;
    }
 
    public BigDecimal getTempoCleanup() {
-        return tempoCleanup;
+        return this.getVo().asBigDecimal("TEMPOCLEANUP");
    }
 
    public void setTempoCleanup(BigDecimal tempoCleanup) {
         markAsChanged("TEMPOCLEANUP", tempoCleanup);
-        this.tempoCleanup = tempoCleanup;
    }
 
    public BigDecimal getTempoSetup() {
-        return tempoSetup;
+        return this.getVo().asBigDecimal("TEMPOSETUP");
    }
 
    public void setTempoSetup(BigDecimal tempoSetup) {
         markAsChanged("TEMPOSETUP", tempoSetup);
-        this.tempoSetup = tempoSetup;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getCapacidadeHora() {
-        return capacidadeHora;
+        return this.getVo().asBigDecimal("CAPACIDADEHORA");
    }
 
    public void setCapacidadeHora(BigDecimal capacidadeHora) {
         markAsChanged("CAPACIDADEHORA", capacidadeHora);
-        this.capacidadeHora = capacidadeHora;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class CategoriaWorkCenter extends AbstractSankhyaEntity<CategoriaWorkCent
    @Override
    public CategoriaWorkCenter fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCap = vo.asBigDecimal("CODCAP");
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.codWcppadrao = vo.asBigDecimal("CODWCPPADRAO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.qtdCapacidadeMax = vo.asBigDecimal("QTDCAPACIDADEMAX");
-        this.qtdCapacidadeMin = vo.asBigDecimal("QTDCAPACIDADEMIN");
-        this.qtdCapacidadePad = vo.asBigDecimal("QTDCAPACIDADEPAD");
-        this.tempoCleanup = vo.asBigDecimal("TEMPOCLEANUP");
-        this.tempoSetup = vo.asBigDecimal("TEMPOSETUP");
-        this.tipo = vo.asString("TIPO");
-        this.capacidadeHora = vo.asBigDecimal("CAPACIDADEHORA");
         return this;
    }
 }

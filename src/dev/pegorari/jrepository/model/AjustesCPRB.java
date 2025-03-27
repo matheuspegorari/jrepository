@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
-   private String codCprb;
-   private BigDecimal codEmp;
-   private String codObra;
-   private Timestamp dtRef;
-   private BigDecimal vlrTotAdicao;
-   private BigDecimal vlrTotExclusao;
-
    public String getCodCprb() {
-        return codCprb;
+        return this.getVo().asString("CODCPRB");
    }
 
    public void setCodCprb(String codCprb) {
         markAsChanged("CODCPRB", codCprb);
-        this.codCprb = codCprb;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCodObra() {
-        return codObra;
+        return this.getVo().asString("CODOBRA");
    }
 
    public void setCodObra(String codObra) {
         markAsChanged("CODOBRA", codObra);
-        this.codObra = codObra;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public BigDecimal getVlrTotAdicao() {
-        return vlrTotAdicao;
+        return this.getVo().asBigDecimal("VLRTOTADICAO");
    }
 
    public void setVlrTotAdicao(BigDecimal vlrTotAdicao) {
         markAsChanged("VLRTOTADICAO", vlrTotAdicao);
-        this.vlrTotAdicao = vlrTotAdicao;
    }
 
    public BigDecimal getVlrTotExclusao() {
-        return vlrTotExclusao;
+        return this.getVo().asBigDecimal("VLRTOTEXCLUSAO");
    }
 
    public void setVlrTotExclusao(BigDecimal vlrTotExclusao) {
         markAsChanged("VLRTOTEXCLUSAO", vlrTotExclusao);
-        this.vlrTotExclusao = vlrTotExclusao;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class AjustesCPRB extends AbstractSankhyaEntity<AjustesCPRB> {
    @Override
    public AjustesCPRB fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCprb = vo.asString("CODCPRB");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codObra = vo.asString("CODOBRA");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.vlrTotAdicao = vo.asBigDecimal("VLRTOTADICAO");
-        this.vlrTotExclusao = vo.asBigDecimal("VLRTOTEXCLUSAO");
         return this;
    }
 }

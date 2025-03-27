@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoUsuario> {
-   private BigDecimal codUsu;
-   private BigDecimal codUsuRel;
-   private String tipo;
-   private String vinculo;
-   private String liderImediato;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuRel() {
-        return codUsuRel;
+        return this.getVo().asBigDecimal("CODUSUREL");
    }
 
    public void setCodUsuRel(BigDecimal codUsuRel) {
         markAsChanged("CODUSUREL", codUsuRel);
-        this.codUsuRel = codUsuRel;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getVinculo() {
-        return vinculo;
+        return this.getVo().asString("VINCULO");
    }
 
    public void setVinculo(String vinculo) {
         markAsChanged("VINCULO", vinculo);
-        this.vinculo = vinculo;
    }
 
    public String getLiderImediato() {
-        return liderImediato;
+        return this.getVo().asString("LIDERIMEDIATO");
    }
 
    public void setLiderImediato(String liderImediato) {
         markAsChanged("LIDERIMEDIATO", liderImediato);
-        this.liderImediato = liderImediato;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class RelacionamentoUsuario extends AbstractSankhyaEntity<RelacionamentoU
    @Override
    public RelacionamentoUsuario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuRel = vo.asBigDecimal("CODUSUREL");
-        this.tipo = vo.asString("TIPO");
-        this.vinculo = vo.asString("VINCULO");
-        this.liderImediato = vo.asString("LIDERIMEDIATO");
         return this;
    }
 }

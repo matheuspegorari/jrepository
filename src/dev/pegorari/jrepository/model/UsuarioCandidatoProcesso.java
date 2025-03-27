@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandidatoProcesso> {
-   private String ativo;
-   private BigDecimal codEquipe;
-   private BigDecimal codGrupoUsu;
-   private BigDecimal codPrn;
-   private BigDecimal codUsu;
-   private String idElemento;
-   private BigDecimal sequencia;
-   private String dinamico;
-   private BigDecimal idInstPrn;
-   private BigDecimal idInstTar;
-   private String expressao;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodEquipe() {
-        return codEquipe;
+        return this.getVo().asBigDecimal("CODEQUIPE");
    }
 
    public void setCodEquipe(BigDecimal codEquipe) {
         markAsChanged("CODEQUIPE", codEquipe);
-        this.codEquipe = codEquipe;
    }
 
    public BigDecimal getCodGrupoUsu() {
-        return codGrupoUsu;
+        return this.getVo().asBigDecimal("CODGRUPOUSU");
    }
 
    public void setCodGrupoUsu(BigDecimal codGrupoUsu) {
         markAsChanged("CODGRUPOUSU", codGrupoUsu);
-        this.codGrupoUsu = codGrupoUsu;
    }
 
    public BigDecimal getCodPrn() {
-        return codPrn;
+        return this.getVo().asBigDecimal("CODPRN");
    }
 
    public void setCodPrn(BigDecimal codPrn) {
         markAsChanged("CODPRN", codPrn);
-        this.codPrn = codPrn;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getIdElemento() {
-        return idElemento;
+        return this.getVo().asString("IDELEMENTO");
    }
 
    public void setIdElemento(String idElemento) {
         markAsChanged("IDELEMENTO", idElemento);
-        this.idElemento = idElemento;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getDinamico() {
-        return dinamico;
+        return this.getVo().asString("DINAMICO");
    }
 
    public void setDinamico(String dinamico) {
         markAsChanged("DINAMICO", dinamico);
-        this.dinamico = dinamico;
    }
 
    public BigDecimal getIdInstPrn() {
-        return idInstPrn;
+        return this.getVo().asBigDecimal("IDINSTPRN");
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
         markAsChanged("IDINSTPRN", idInstPrn);
-        this.idInstPrn = idInstPrn;
    }
 
    public BigDecimal getIdInstTar() {
-        return idInstTar;
+        return this.getVo().asBigDecimal("IDINSTTAR");
    }
 
    public void setIdInstTar(BigDecimal idInstTar) {
         markAsChanged("IDINSTTAR", idInstTar);
-        this.idInstTar = idInstTar;
    }
 
    public String getExpressao() {
-        return expressao;
+        return this.getVo().asString("EXPRESSAO");
    }
 
    public void setExpressao(String expressao) {
         markAsChanged("EXPRESSAO", expressao);
-        this.expressao = expressao;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class UsuarioCandidatoProcesso extends AbstractSankhyaEntity<UsuarioCandi
    @Override
    public UsuarioCandidatoProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codEquipe = vo.asBigDecimal("CODEQUIPE");
-        this.codGrupoUsu = vo.asBigDecimal("CODGRUPOUSU");
-        this.codPrn = vo.asBigDecimal("CODPRN");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.idElemento = vo.asString("IDELEMENTO");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.dinamico = vo.asString("DINAMICO");
-        this.idInstPrn = vo.asBigDecimal("IDINSTPRN");
-        this.idInstTar = vo.asBigDecimal("IDINSTTAR");
-        this.expressao = vo.asString("EXPRESSAO");
         return this;
    }
 }

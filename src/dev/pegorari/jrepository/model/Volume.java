@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Volume extends AbstractSankhyaEntity<Volume> {
-   private String codVol;
-   private String descrVol;
-   private String utiliRegVolWms;
-   private String utiliConfPeso;
-   private String codVolFci;
-   private BigDecimal decQtd;
-   private String atuNuVersao;
-   private BigDecimal nuVersao;
-
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getDescrVol() {
-        return descrVol;
+        return this.getVo().asString("DESCRVOL");
    }
 
    public void setDescrVol(String descrVol) {
         markAsChanged("DESCRVOL", descrVol);
-        this.descrVol = descrVol;
    }
 
    public String getUtiliRegVolWms() {
-        return utiliRegVolWms;
+        return this.getVo().asString("UTILIREGVOLWMS");
    }
 
    public void setUtiliRegVolWms(String utiliRegVolWms) {
         markAsChanged("UTILIREGVOLWMS", utiliRegVolWms);
-        this.utiliRegVolWms = utiliRegVolWms;
    }
 
    public String getUtiliConfPeso() {
-        return utiliConfPeso;
+        return this.getVo().asString("UTILICONFPESO");
    }
 
    public void setUtiliConfPeso(String utiliConfPeso) {
         markAsChanged("UTILICONFPESO", utiliConfPeso);
-        this.utiliConfPeso = utiliConfPeso;
    }
 
    public String getCodVolFci() {
-        return codVolFci;
+        return this.getVo().asString("CODVOLFCI");
    }
 
    public void setCodVolFci(String codVolFci) {
         markAsChanged("CODVOLFCI", codVolFci);
-        this.codVolFci = codVolFci;
    }
 
    public BigDecimal getDecQtd() {
-        return decQtd;
+        return this.getVo().asBigDecimal("DECQTD");
    }
 
    public void setDecQtd(BigDecimal decQtd) {
         markAsChanged("DECQTD", decQtd);
-        this.decQtd = decQtd;
    }
 
    public String getAtuNuVersao() {
-        return atuNuVersao;
+        return this.getVo().asString("ATUNUVERSAO");
    }
 
    public void setAtuNuVersao(String atuNuVersao) {
         markAsChanged("ATUNUVERSAO", atuNuVersao);
-        this.atuNuVersao = atuNuVersao;
    }
 
    public BigDecimal getNuVersao() {
-        return nuVersao;
+        return this.getVo().asBigDecimal("NUVERSAO");
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
         markAsChanged("NUVERSAO", nuVersao);
-        this.nuVersao = nuVersao;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class Volume extends AbstractSankhyaEntity<Volume> {
    @Override
    public Volume fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVol = vo.asString("CODVOL");
-        this.descrVol = vo.asString("DESCRVOL");
-        this.utiliRegVolWms = vo.asString("UTILIREGVOLWMS");
-        this.utiliConfPeso = vo.asString("UTILICONFPESO");
-        this.codVolFci = vo.asString("CODVOLFCI");
-        this.decQtd = vo.asBigDecimal("DECQTD");
-        this.atuNuVersao = vo.asString("ATUNUVERSAO");
-        this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }
 }

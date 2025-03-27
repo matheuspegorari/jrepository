@@ -6,255 +6,204 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
-   private Timestamp dhUltTenta;
-   private String assunto;
-   private BigDecimal codCon;
-   private BigDecimal codFila;
-   private BigDecimal codMsg;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuRemet;
-   private Timestamp dtEntrada;
-   private String email;
-   private String emailSemCopia;
-   private BigDecimal maxTentEnvio;
-   private char[] mensagem;
-   private String mimeType;
-   private BigDecimal nuAnexo;
-   private BigDecimal nuChave;
-   private String reenviar;
-   private String status;
-   private BigDecimal tentEnvio;
-   private String tipoDoc;
-   private String tipoEnvio;
-   private String msgErro;
-   private BigDecimal codSmtp;
-   private String celular;
-   private BigDecimal codContaSms;
-   private String dbHashCode;
-
    public Timestamp getDhUltTenta() {
-        return dhUltTenta;
+        return this.getVo().asTimestamp("DHULTTENTA");
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
         markAsChanged("DHULTTENTA", dhUltTenta);
-        this.dhUltTenta = dhUltTenta;
    }
 
    public String getAssunto() {
-        return assunto;
+        return this.getVo().asString("ASSUNTO");
    }
 
    public void setAssunto(String assunto) {
         markAsChanged("ASSUNTO", assunto);
-        this.assunto = assunto;
    }
 
    public BigDecimal getCodCon() {
-        return codCon;
+        return this.getVo().asBigDecimal("CODCON");
    }
 
    public void setCodCon(BigDecimal codCon) {
         markAsChanged("CODCON", codCon);
-        this.codCon = codCon;
    }
 
    public BigDecimal getCodFila() {
-        return codFila;
+        return this.getVo().asBigDecimal("CODFILA");
    }
 
    public void setCodFila(BigDecimal codFila) {
         markAsChanged("CODFILA", codFila);
-        this.codFila = codFila;
    }
 
    public BigDecimal getCodMsg() {
-        return codMsg;
+        return this.getVo().asBigDecimal("CODMSG");
    }
 
    public void setCodMsg(BigDecimal codMsg) {
         markAsChanged("CODMSG", codMsg);
-        this.codMsg = codMsg;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuRemet() {
-        return codUsuRemet;
+        return this.getVo().asBigDecimal("CODUSUREMET");
    }
 
    public void setCodUsuRemet(BigDecimal codUsuRemet) {
         markAsChanged("CODUSUREMET", codUsuRemet);
-        this.codUsuRemet = codUsuRemet;
    }
 
    public Timestamp getDtEntrada() {
-        return dtEntrada;
+        return this.getVo().asTimestamp("DTENTRADA");
    }
 
    public void setDtEntrada(Timestamp dtEntrada) {
         markAsChanged("DTENTRADA", dtEntrada);
-        this.dtEntrada = dtEntrada;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getEmailSemCopia() {
-        return emailSemCopia;
+        return this.getVo().asString("EMAILSEMCOPIA");
    }
 
    public void setEmailSemCopia(String emailSemCopia) {
         markAsChanged("EMAILSEMCOPIA", emailSemCopia);
-        this.emailSemCopia = emailSemCopia;
    }
 
    public BigDecimal getMaxTentEnvio() {
-        return maxTentEnvio;
+        return this.getVo().asBigDecimal("MAXTENTENVIO");
    }
 
    public void setMaxTentEnvio(BigDecimal maxTentEnvio) {
         markAsChanged("MAXTENTENVIO", maxTentEnvio);
-        this.maxTentEnvio = maxTentEnvio;
    }
 
    public char[] getMensagem() {
-        return mensagem;
+        return this.getVo().asClob("MENSAGEM");
    }
 
    public void setMensagem(char[] mensagem) {
         markAsChanged("MENSAGEM", mensagem);
-        this.mensagem = mensagem;
    }
 
    public String getMimeType() {
-        return mimeType;
+        return this.getVo().asString("MIMETYPE");
    }
 
    public void setMimeType(String mimeType) {
         markAsChanged("MIMETYPE", mimeType);
-        this.mimeType = mimeType;
    }
 
    public BigDecimal getNuAnexo() {
-        return nuAnexo;
+        return this.getVo().asBigDecimal("NUANEXO");
    }
 
    public void setNuAnexo(BigDecimal nuAnexo) {
         markAsChanged("NUANEXO", nuAnexo);
-        this.nuAnexo = nuAnexo;
    }
 
    public BigDecimal getNuChave() {
-        return nuChave;
+        return this.getVo().asBigDecimal("NUCHAVE");
    }
 
    public void setNuChave(BigDecimal nuChave) {
         markAsChanged("NUCHAVE", nuChave);
-        this.nuChave = nuChave;
    }
 
    public String getReenviar() {
-        return reenviar;
+        return this.getVo().asString("REENVIAR");
    }
 
    public void setReenviar(String reenviar) {
         markAsChanged("REENVIAR", reenviar);
-        this.reenviar = reenviar;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getTentEnvio() {
-        return tentEnvio;
+        return this.getVo().asBigDecimal("TENTENVIO");
    }
 
    public void setTentEnvio(BigDecimal tentEnvio) {
         markAsChanged("TENTENVIO", tentEnvio);
-        this.tentEnvio = tentEnvio;
    }
 
    public String getTipoDoc() {
-        return tipoDoc;
+        return this.getVo().asString("TIPODOC");
    }
 
    public void setTipoDoc(String tipoDoc) {
         markAsChanged("TIPODOC", tipoDoc);
-        this.tipoDoc = tipoDoc;
    }
 
    public String getTipoEnvio() {
-        return tipoEnvio;
+        return this.getVo().asString("TIPOENVIO");
    }
 
    public void setTipoEnvio(String tipoEnvio) {
         markAsChanged("TIPOENVIO", tipoEnvio);
-        this.tipoEnvio = tipoEnvio;
    }
 
    public String getMsgErro() {
-        return msgErro;
+        return this.getVo().asString("MSGERRO");
    }
 
    public void setMsgErro(String msgErro) {
         markAsChanged("MSGERRO", msgErro);
-        this.msgErro = msgErro;
    }
 
    public BigDecimal getCodSmtp() {
-        return codSmtp;
+        return this.getVo().asBigDecimal("CODSMTP");
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
         markAsChanged("CODSMTP", codSmtp);
-        this.codSmtp = codSmtp;
    }
 
    public String getCelular() {
-        return celular;
+        return this.getVo().asString("CELULAR");
    }
 
    public void setCelular(String celular) {
         markAsChanged("CELULAR", celular);
-        this.celular = celular;
    }
 
    public BigDecimal getCodContaSms() {
-        return codContaSms;
+        return this.getVo().asBigDecimal("CODCONTASMS");
    }
 
    public void setCodContaSms(BigDecimal codContaSms) {
         markAsChanged("CODCONTASMS", codContaSms);
-        this.codContaSms = codContaSms;
    }
 
    public String getDbHashCode() {
-        return dbHashCode;
+        return this.getVo().asString("DBHASHCODE");
    }
 
    public void setDbHashCode(String dbHashCode) {
         markAsChanged("DBHASHCODE", dbHashCode);
-        this.dbHashCode = dbHashCode;
    }
 
    @Override
@@ -270,31 +219,6 @@ public class MSDFilaMensagem extends AbstractSankhyaEntity<MSDFilaMensagem> {
    @Override
    public MSDFilaMensagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
-        this.assunto = vo.asString("ASSUNTO");
-        this.codCon = vo.asBigDecimal("CODCON");
-        this.codFila = vo.asBigDecimal("CODFILA");
-        this.codMsg = vo.asBigDecimal("CODMSG");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuRemet = vo.asBigDecimal("CODUSUREMET");
-        this.dtEntrada = vo.asTimestamp("DTENTRADA");
-        this.email = vo.asString("EMAIL");
-        this.emailSemCopia = vo.asString("EMAILSEMCOPIA");
-        this.maxTentEnvio = vo.asBigDecimal("MAXTENTENVIO");
-        this.mensagem = vo.asClob("MENSAGEM");
-        this.mimeType = vo.asString("MIMETYPE");
-        this.nuAnexo = vo.asBigDecimal("NUANEXO");
-        this.nuChave = vo.asBigDecimal("NUCHAVE");
-        this.reenviar = vo.asString("REENVIAR");
-        this.status = vo.asString("STATUS");
-        this.tentEnvio = vo.asBigDecimal("TENTENVIO");
-        this.tipoDoc = vo.asString("TIPODOC");
-        this.tipoEnvio = vo.asString("TIPOENVIO");
-        this.msgErro = vo.asString("MSGERRO");
-        this.codSmtp = vo.asBigDecimal("CODSMTP");
-        this.celular = vo.asString("CELULAR");
-        this.codContaSms = vo.asBigDecimal("CODCONTASMS");
-        this.dbHashCode = vo.asString("DBHASHCODE");
         return this;
    }
 }

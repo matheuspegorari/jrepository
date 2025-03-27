@@ -6,285 +6,228 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriaisAtividade> {
-   private BigDecimal codLocalBaixa;
-   private BigDecimal percDesvioInf;
-   private BigDecimal percDesvioSup;
-   private String tipoControleMp;
-   private BigDecimal codLocalOrig;
-   private BigDecimal codProdMp;
-   private BigDecimal codProdPa;
-   private String codVol;
-   private String controleMp;
-   private String controlePa;
-   private String geraRequisicao;
-   private BigDecimal ideFx;
-   private BigDecimal qtdMistura;
-   private BigDecimal seqMp;
-   private String tipoUsoMp;
-   private String verificaEst;
-   private String tipoQtd;
-   private String referencia;
-   private String fixaQtdApo;
-   private String consuRefUgo;
-   private String vinculoSeriePa;
-   private String estoqueTerceiro;
-   private String liberaDesvio;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-   private String propMpFixa;
-
    public BigDecimal getCodLocalBaixa() {
-        return codLocalBaixa;
+        return this.getVo().asBigDecimal("CODLOCALBAIXA");
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
         markAsChanged("CODLOCALBAIXA", codLocalBaixa);
-        this.codLocalBaixa = codLocalBaixa;
    }
 
    public BigDecimal getPercDesvioInf() {
-        return percDesvioInf;
+        return this.getVo().asBigDecimal("PERCDESVIOINF");
    }
 
    public void setPercDesvioInf(BigDecimal percDesvioInf) {
         markAsChanged("PERCDESVIOINF", percDesvioInf);
-        this.percDesvioInf = percDesvioInf;
    }
 
    public BigDecimal getPercDesvioSup() {
-        return percDesvioSup;
+        return this.getVo().asBigDecimal("PERCDESVIOSUP");
    }
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
         markAsChanged("PERCDESVIOSUP", percDesvioSup);
-        this.percDesvioSup = percDesvioSup;
    }
 
    public String getTipoControleMp() {
-        return tipoControleMp;
+        return this.getVo().asString("TIPOCONTROLEMP");
    }
 
    public void setTipoControleMp(String tipoControleMp) {
         markAsChanged("TIPOCONTROLEMP", tipoControleMp);
-        this.tipoControleMp = tipoControleMp;
    }
 
    public BigDecimal getCodLocalOrig() {
-        return codLocalOrig;
+        return this.getVo().asBigDecimal("CODLOCALORIG");
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
         markAsChanged("CODLOCALORIG", codLocalOrig);
-        this.codLocalOrig = codLocalOrig;
    }
 
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControleMp() {
-        return controleMp;
+        return this.getVo().asString("CONTROLEMP");
    }
 
    public void setControleMp(String controleMp) {
         markAsChanged("CONTROLEMP", controleMp);
-        this.controleMp = controleMp;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public String getGeraRequisicao() {
-        return geraRequisicao;
+        return this.getVo().asString("GERAREQUISICAO");
    }
 
    public void setGeraRequisicao(String geraRequisicao) {
         markAsChanged("GERAREQUISICAO", geraRequisicao);
-        this.geraRequisicao = geraRequisicao;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getQtdMistura() {
-        return qtdMistura;
+        return this.getVo().asBigDecimal("QTDMISTURA");
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
         markAsChanged("QTDMISTURA", qtdMistura);
-        this.qtdMistura = qtdMistura;
    }
 
    public BigDecimal getSeqMp() {
-        return seqMp;
+        return this.getVo().asBigDecimal("SEQMP");
    }
 
    public void setSeqMp(BigDecimal seqMp) {
         markAsChanged("SEQMP", seqMp);
-        this.seqMp = seqMp;
    }
 
    public String getTipoUsoMp() {
-        return tipoUsoMp;
+        return this.getVo().asString("TIPOUSOMP");
    }
 
    public void setTipoUsoMp(String tipoUsoMp) {
         markAsChanged("TIPOUSOMP", tipoUsoMp);
-        this.tipoUsoMp = tipoUsoMp;
    }
 
    public String getVerificaEst() {
-        return verificaEst;
+        return this.getVo().asString("VERIFICAEST");
    }
 
    public void setVerificaEst(String verificaEst) {
         markAsChanged("VERIFICAEST", verificaEst);
-        this.verificaEst = verificaEst;
    }
 
    public String getTipoQtd() {
-        return tipoQtd;
+        return this.getVo().asString("TIPOQTD");
    }
 
    public void setTipoQtd(String tipoQtd) {
         markAsChanged("TIPOQTD", tipoQtd);
-        this.tipoQtd = tipoQtd;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getFixaQtdApo() {
-        return fixaQtdApo;
+        return this.getVo().asString("FIXAQTDAPO");
    }
 
    public void setFixaQtdApo(String fixaQtdApo) {
         markAsChanged("FIXAQTDAPO", fixaQtdApo);
-        this.fixaQtdApo = fixaQtdApo;
    }
 
    public String getConsuRefUgo() {
-        return consuRefUgo;
+        return this.getVo().asString("CONSUREFUGO");
    }
 
    public void setConsuRefUgo(String consuRefUgo) {
         markAsChanged("CONSUREFUGO", consuRefUgo);
-        this.consuRefUgo = consuRefUgo;
    }
 
    public String getVinculoSeriePa() {
-        return vinculoSeriePa;
+        return this.getVo().asString("VINCULOSERIEPA");
    }
 
    public void setVinculoSeriePa(String vinculoSeriePa) {
         markAsChanged("VINCULOSERIEPA", vinculoSeriePa);
-        this.vinculoSeriePa = vinculoSeriePa;
    }
 
    public String getEstoqueTerceiro() {
-        return estoqueTerceiro;
+        return this.getVo().asString("ESTOQUETERCEIRO");
    }
 
    public void setEstoqueTerceiro(String estoqueTerceiro) {
         markAsChanged("ESTOQUETERCEIRO", estoqueTerceiro);
-        this.estoqueTerceiro = estoqueTerceiro;
    }
 
    public String getLiberaDesvio() {
-        return liberaDesvio;
+        return this.getVo().asString("LIBERADESVIO");
    }
 
    public void setLiberaDesvio(String liberaDesvio) {
         markAsChanged("LIBERADESVIO", liberaDesvio);
-        this.liberaDesvio = liberaDesvio;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    public String getPropMpFixa() {
-        return propMpFixa;
+        return this.getVo().asString("PROPMPFIXA");
    }
 
    public void setPropMpFixa(String propMpFixa) {
         markAsChanged("PROPMPFIXA", propMpFixa);
-        this.propMpFixa = propMpFixa;
    }
 
    @Override
@@ -300,34 +243,6 @@ public class ListaMateriaisAtividade extends AbstractSankhyaEntity<ListaMateriai
    @Override
    public ListaMateriaisAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codLocalBaixa = vo.asBigDecimal("CODLOCALBAIXA");
-        this.percDesvioInf = vo.asBigDecimal("PERCDESVIOINF");
-        this.percDesvioSup = vo.asBigDecimal("PERCDESVIOSUP");
-        this.tipoControleMp = vo.asString("TIPOCONTROLEMP");
-        this.codLocalOrig = vo.asBigDecimal("CODLOCALORIG");
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.codVol = vo.asString("CODVOL");
-        this.controleMp = vo.asString("CONTROLEMP");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.geraRequisicao = vo.asString("GERAREQUISICAO");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
-        this.seqMp = vo.asBigDecimal("SEQMP");
-        this.tipoUsoMp = vo.asString("TIPOUSOMP");
-        this.verificaEst = vo.asString("VERIFICAEST");
-        this.tipoQtd = vo.asString("TIPOQTD");
-        this.referencia = vo.asString("REFERENCIA");
-        this.fixaQtdApo = vo.asString("FIXAQTDAPO");
-        this.consuRefUgo = vo.asString("CONSUREFUGO");
-        this.vinculoSeriePa = vo.asString("VINCULOSERIEPA");
-        this.estoqueTerceiro = vo.asString("ESTOQUETERCEIRO");
-        this.liberaDesvio = vo.asString("LIBERADESVIO");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
-        this.propMpFixa = vo.asString("PROPMPFIXA");
         return this;
    }
 }

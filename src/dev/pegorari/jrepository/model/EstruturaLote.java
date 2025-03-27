@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
-   private BigDecimal codProd;
-   private String lista;
-   private BigDecimal ordem;
-   private BigDecimal tamanho;
-   private String tipo;
-   private String titulo;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getLista() {
-        return lista;
+        return this.getVo().asString("LISTA");
    }
 
    public void setLista(String lista) {
         markAsChanged("LISTA", lista);
-        this.lista = lista;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getTamanho() {
-        return tamanho;
+        return this.getVo().asBigDecimal("TAMANHO");
    }
 
    public void setTamanho(BigDecimal tamanho) {
         markAsChanged("TAMANHO", tamanho);
-        this.tamanho = tamanho;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTitulo() {
-        return titulo;
+        return this.getVo().asString("TITULO");
    }
 
    public void setTitulo(String titulo) {
         markAsChanged("TITULO", titulo);
-        this.titulo = titulo;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class EstruturaLote extends AbstractSankhyaEntity<EstruturaLote> {
    @Override
    public EstruturaLote fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.lista = vo.asString("LISTA");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.tamanho = vo.asBigDecimal("TAMANHO");
-        this.tipo = vo.asString("TIPO");
-        this.titulo = vo.asString("TITULO");
         return this;
    }
 }

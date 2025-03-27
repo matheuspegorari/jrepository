@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
-   private String nuMapolice;
-   private BigDecimal codParcSeg;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-   private BigDecimal codParcRespSeg;
-
    public String getNuMapolice() {
-        return nuMapolice;
+        return this.getVo().asString("NUMAPOLICE");
    }
 
    public void setNuMapolice(String nuMapolice) {
         markAsChanged("NUMAPOLICE", nuMapolice);
-        this.nuMapolice = nuMapolice;
    }
 
    public BigDecimal getCodParcSeg() {
-        return codParcSeg;
+        return this.getVo().asBigDecimal("CODPARCSEG");
    }
 
    public void setCodParcSeg(BigDecimal codParcSeg) {
         markAsChanged("CODPARCSEG", codParcSeg);
-        this.codParcSeg = codParcSeg;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getCodParcRespSeg() {
-        return codParcRespSeg;
+        return this.getVo().asBigDecimal("CODPARCRESPSEG");
    }
 
    public void setCodParcRespSeg(BigDecimal codParcRespSeg) {
         markAsChanged("CODPARCRESPSEG", codParcRespSeg);
-        this.codParcRespSeg = codParcRespSeg;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class SeguroMDFE extends AbstractSankhyaEntity<SeguroMDFE> {
    @Override
    public SeguroMDFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuMapolice = vo.asString("NUMAPOLICE");
-        this.codParcSeg = vo.asBigDecimal("CODPARCSEG");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.codParcRespSeg = vo.asBigDecimal("CODPARCRESPSEG");
         return this;
    }
 }

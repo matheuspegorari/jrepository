@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<ExecutantePorFluxoProcesso> {
-   private BigDecimal codProd;
-   private BigDecimal codServ;
-   private BigDecimal codUsu;
-   private BigDecimal sequencia;
-   private BigDecimal variacao;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodServ() {
-        return codServ;
+        return this.getVo().asBigDecimal("CODSERV");
    }
 
    public void setCodServ(BigDecimal codServ) {
         markAsChanged("CODSERV", codServ);
-        this.codServ = codServ;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVariacao() {
-        return variacao;
+        return this.getVo().asBigDecimal("VARIACAO");
    }
 
    public void setVariacao(BigDecimal variacao) {
         markAsChanged("VARIACAO", variacao);
-        this.variacao = variacao;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ExecutantePorFluxoProcesso extends AbstractSankhyaEntity<Executante
    @Override
    public ExecutantePorFluxoProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codServ = vo.asBigDecimal("CODSERV");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.variacao = vo.asBigDecimal("VARIACAO");
         return this;
    }
 }

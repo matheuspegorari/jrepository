@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
-   private BigDecimal codUsu;
-   private String destFinal;
-   private Timestamp dhFinalConf;
-   private Timestamp dhInicioConf;
-   private BigDecimal nuConferencia;
-   private BigDecimal nuRecebimento;
-   private String parcial;
-   private String situacao;
-   private String tipConf;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDestFinal() {
-        return destFinal;
+        return this.getVo().asString("DESTFINAL");
    }
 
    public void setDestFinal(String destFinal) {
         markAsChanged("DESTFINAL", destFinal);
-        this.destFinal = destFinal;
    }
 
    public Timestamp getDhFinalConf() {
-        return dhFinalConf;
+        return this.getVo().asTimestamp("DHFINALCONF");
    }
 
    public void setDhFinalConf(Timestamp dhFinalConf) {
         markAsChanged("DHFINALCONF", dhFinalConf);
-        this.dhFinalConf = dhFinalConf;
    }
 
    public Timestamp getDhInicioConf() {
-        return dhInicioConf;
+        return this.getVo().asTimestamp("DHINICIOCONF");
    }
 
    public void setDhInicioConf(Timestamp dhInicioConf) {
         markAsChanged("DHINICIOCONF", dhInicioConf);
-        this.dhInicioConf = dhInicioConf;
    }
 
    public BigDecimal getNuConferencia() {
-        return nuConferencia;
+        return this.getVo().asBigDecimal("NUCONFERENCIA");
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
         markAsChanged("NUCONFERENCIA", nuConferencia);
-        this.nuConferencia = nuConferencia;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public String getParcial() {
-        return parcial;
+        return this.getVo().asString("PARCIAL");
    }
 
    public void setParcial(String parcial) {
         markAsChanged("PARCIAL", parcial);
-        this.parcial = parcial;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    public String getTipConf() {
-        return tipConf;
+        return this.getVo().asString("TIPCONF");
    }
 
    public void setTipConf(String tipConf) {
         markAsChanged("TIPCONF", tipConf);
-        this.tipConf = tipConf;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class ConferenciaCega extends AbstractSankhyaEntity<ConferenciaCega> {
    @Override
    public ConferenciaCega fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.destFinal = vo.asString("DESTFINAL");
-        this.dhFinalConf = vo.asTimestamp("DHFINALCONF");
-        this.dhInicioConf = vo.asTimestamp("DHINICIOCONF");
-        this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.parcial = vo.asString("PARCIAL");
-        this.situacao = vo.asString("SITUACAO");
-        this.tipConf = vo.asString("TIPCONF");
         return this;
    }
 }

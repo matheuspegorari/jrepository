@@ -4,35 +4,28 @@ import br.com.sankhya.jape.vo.DynamicVO;
 import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
 public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital> {
-   private String nomeArquivo;
-   private String interno;
-   private String cgcCpf;
-
    public String getNomeArquivo() {
-        return nomeArquivo;
+        return this.getVo().asString("NOMEARQUIVO");
    }
 
    public void setNomeArquivo(String nomeArquivo) {
         markAsChanged("NOMEARQUIVO", nomeArquivo);
-        this.nomeArquivo = nomeArquivo;
    }
 
    public String getInterno() {
-        return interno;
+        return this.getVo().asString("INTERNO");
    }
 
    public void setInterno(String interno) {
         markAsChanged("INTERNO", interno);
-        this.interno = interno;
    }
 
    public String getCgcCpf() {
-        return cgcCpf;
+        return this.getVo().asString("CGC_CPF");
    }
 
    public void setCgcCpf(String cgcCpf) {
         markAsChanged("CGC_CPF", cgcCpf);
-        this.cgcCpf = cgcCpf;
    }
 
    @Override
@@ -48,9 +41,6 @@ public class CertificadoDigital extends AbstractSankhyaEntity<CertificadoDigital
    @Override
    public CertificadoDigital fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nomeArquivo = vo.asString("NOMEARQUIVO");
-        this.interno = vo.asString("INTERNO");
-        this.cgcCpf = vo.asString("CGC_CPF");
         return this;
    }
 }

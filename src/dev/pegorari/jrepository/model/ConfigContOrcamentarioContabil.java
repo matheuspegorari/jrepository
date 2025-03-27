@@ -5,155 +5,124 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<ConfigContOrcamentarioContabil> {
-   private String apresCod;
-   private String ativo;
-   private BigDecimal codCco;
-   private String crPart;
-   private String ctaCtbPart;
-   private String descricao;
-   private String detalharPor;
-   private String empPart;
-   private String gruCtaCtbPart;
-   private String periodic;
-   private String projPart;
-   private BigDecimal dtIniCorc;
-   private String calDesInRecDesp;
-   private String usaSalConReali;
-   private String zerarCtaCtab;
-
    public String getApresCod() {
-        return apresCod;
+        return this.getVo().asString("APRESCOD");
    }
 
    public void setApresCod(String apresCod) {
         markAsChanged("APRESCOD", apresCod);
-        this.apresCod = apresCod;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodCco() {
-        return codCco;
+        return this.getVo().asBigDecimal("CODCCO");
    }
 
    public void setCodCco(BigDecimal codCco) {
         markAsChanged("CODCCO", codCco);
-        this.codCco = codCco;
    }
 
    public String getCrPart() {
-        return crPart;
+        return this.getVo().asString("CRPART");
    }
 
    public void setCrPart(String crPart) {
         markAsChanged("CRPART", crPart);
-        this.crPart = crPart;
    }
 
    public String getCtaCtbPart() {
-        return ctaCtbPart;
+        return this.getVo().asString("CTACTBPART");
    }
 
    public void setCtaCtbPart(String ctaCtbPart) {
         markAsChanged("CTACTBPART", ctaCtbPart);
-        this.ctaCtbPart = ctaCtbPart;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getDetalharPor() {
-        return detalharPor;
+        return this.getVo().asString("DETALHARPOR");
    }
 
    public void setDetalharPor(String detalharPor) {
         markAsChanged("DETALHARPOR", detalharPor);
-        this.detalharPor = detalharPor;
    }
 
    public String getEmpPart() {
-        return empPart;
+        return this.getVo().asString("EMPPART");
    }
 
    public void setEmpPart(String empPart) {
         markAsChanged("EMPPART", empPart);
-        this.empPart = empPart;
    }
 
    public String getGruCtaCtbPart() {
-        return gruCtaCtbPart;
+        return this.getVo().asString("GRUCTACTBPART");
    }
 
    public void setGruCtaCtbPart(String gruCtaCtbPart) {
         markAsChanged("GRUCTACTBPART", gruCtaCtbPart);
-        this.gruCtaCtbPart = gruCtaCtbPart;
    }
 
    public String getPeriodic() {
-        return periodic;
+        return this.getVo().asString("PERIODIC");
    }
 
    public void setPeriodic(String periodic) {
         markAsChanged("PERIODIC", periodic);
-        this.periodic = periodic;
    }
 
    public String getProjPart() {
-        return projPart;
+        return this.getVo().asString("PROJPART");
    }
 
    public void setProjPart(String projPart) {
         markAsChanged("PROJPART", projPart);
-        this.projPart = projPart;
    }
 
    public BigDecimal getDtIniCorc() {
-        return dtIniCorc;
+        return this.getVo().asBigDecimal("DTINICORC");
    }
 
    public void setDtIniCorc(BigDecimal dtIniCorc) {
         markAsChanged("DTINICORC", dtIniCorc);
-        this.dtIniCorc = dtIniCorc;
    }
 
    public String getCalDesInRecDesp() {
-        return calDesInRecDesp;
+        return this.getVo().asString("CALDESINRECDESP");
    }
 
    public void setCalDesInRecDesp(String calDesInRecDesp) {
         markAsChanged("CALDESINRECDESP", calDesInRecDesp);
-        this.calDesInRecDesp = calDesInRecDesp;
    }
 
    public String getUsaSalConReali() {
-        return usaSalConReali;
+        return this.getVo().asString("USASALCONREALI");
    }
 
    public void setUsaSalConReali(String usaSalConReali) {
         markAsChanged("USASALCONREALI", usaSalConReali);
-        this.usaSalConReali = usaSalConReali;
    }
 
    public String getZerarCtaCtab() {
-        return zerarCtaCtab;
+        return this.getVo().asString("ZERARCTACTAB");
    }
 
    public void setZerarCtaCtab(String zerarCtaCtab) {
         markAsChanged("ZERARCTACTAB", zerarCtaCtab);
-        this.zerarCtaCtab = zerarCtaCtab;
    }
 
    @Override
@@ -169,21 +138,6 @@ public class ConfigContOrcamentarioContabil extends AbstractSankhyaEntity<Config
    @Override
    public ConfigContOrcamentarioContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.apresCod = vo.asString("APRESCOD");
-        this.ativo = vo.asString("ATIVO");
-        this.codCco = vo.asBigDecimal("CODCCO");
-        this.crPart = vo.asString("CRPART");
-        this.ctaCtbPart = vo.asString("CTACTBPART");
-        this.descricao = vo.asString("DESCRICAO");
-        this.detalharPor = vo.asString("DETALHARPOR");
-        this.empPart = vo.asString("EMPPART");
-        this.gruCtaCtbPart = vo.asString("GRUCTACTBPART");
-        this.periodic = vo.asString("PERIODIC");
-        this.projPart = vo.asString("PROJPART");
-        this.dtIniCorc = vo.asBigDecimal("DTINICORC");
-        this.calDesInRecDesp = vo.asString("CALDESINRECDESP");
-        this.usaSalConReali = vo.asString("USASALCONREALI");
-        this.zerarCtaCtab = vo.asString("ZERARCTACTAB");
         return this;
    }
 }

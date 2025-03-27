@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class QuestionarioFluxo extends AbstractSankhyaEntity<QuestionarioFluxo> {
-   private BigDecimal codFld;
-   private BigDecimal codPerg;
-   private BigDecimal codQuest;
-   private BigDecimal codResp;
-   private BigDecimal percentualRespondido;
-
    public BigDecimal getCodFld() {
-        return codFld;
+        return this.getVo().asBigDecimal("CODFLD");
    }
 
    public void setCodFld(BigDecimal codFld) {
         markAsChanged("CODFLD", codFld);
-        this.codFld = codFld;
    }
 
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getCodResp() {
-        return codResp;
+        return this.getVo().asBigDecimal("CODRESP");
    }
 
    public void setCodResp(BigDecimal codResp) {
         markAsChanged("CODRESP", codResp);
-        this.codResp = codResp;
    }
 
    public BigDecimal getPercentualRespondido() {
-        return percentualRespondido;
+        return this.getVo().asBigDecimal("PERCENTUALRESPONDIDO");
    }
 
    public void setPercentualRespondido(BigDecimal percentualRespondido) {
         markAsChanged("PERCENTUALRESPONDIDO", percentualRespondido);
-        this.percentualRespondido = percentualRespondido;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class QuestionarioFluxo extends AbstractSankhyaEntity<QuestionarioFluxo> 
    @Override
    public QuestionarioFluxo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codFld = vo.asBigDecimal("CODFLD");
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.codResp = vo.asBigDecimal("CODRESP");
-        this.percentualRespondido = vo.asBigDecimal("PERCENTUALRESPONDIDO");
         return this;
    }
 }

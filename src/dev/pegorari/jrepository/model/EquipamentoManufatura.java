@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManufatura> {
-   private BigDecimal codCre;
-   private BigDecimal codPlp;
-   private String nome;
-   private BigDecimal nuEqp;
-   private String ativo;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodPlp() {
-        return codPlp;
+        return this.getVo().asBigDecimal("CODPLP");
    }
 
    public void setCodPlp(BigDecimal codPlp) {
         markAsChanged("CODPLP", codPlp);
-        this.codPlp = codPlp;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuEqp() {
-        return nuEqp;
+        return this.getVo().asBigDecimal("NUEQP");
    }
 
    public void setNuEqp(BigDecimal nuEqp) {
         markAsChanged("NUEQP", nuEqp);
-        this.nuEqp = nuEqp;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class EquipamentoManufatura extends AbstractSankhyaEntity<EquipamentoManu
    @Override
    public EquipamentoManufatura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codPlp = vo.asBigDecimal("CODPLP");
-        this.nome = vo.asString("NOME");
-        this.nuEqp = vo.asBigDecimal("NUEQP");
-        this.ativo = vo.asString("ATIVO");
         return this;
    }
 }

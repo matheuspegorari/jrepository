@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinutaDespacho> {
-   private String idTela;
-   private BigDecimal nuInstancia;
-   private BigDecimal nuRfe;
-   private BigDecimal nuRfeDependente;
-   private String tipo;
-   private BigDecimal codUsu;
-   private char[] config;
-   private String descricao;
-   private Timestamp dhAlter;
-   private String expFiltroInstancia;
-   private String formato;
-   private String categoria;
-   private String dsName;
-   private String prefixoAnexo;
-   private String nomeImpressora;
-
    public String getIdTela() {
-        return idTela;
+        return this.getVo().asString("IDTELA");
    }
 
    public void setIdTela(String idTela) {
         markAsChanged("IDTELA", idTela);
-        this.idTela = idTela;
    }
 
    public BigDecimal getNuInstancia() {
-        return nuInstancia;
+        return this.getVo().asBigDecimal("NUINSTANCIA");
    }
 
    public void setNuInstancia(BigDecimal nuInstancia) {
         markAsChanged("NUINSTANCIA", nuInstancia);
-        this.nuInstancia = nuInstancia;
    }
 
    public BigDecimal getNuRfe() {
-        return nuRfe;
+        return this.getVo().asBigDecimal("NURFE");
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
         markAsChanged("NURFE", nuRfe);
-        this.nuRfe = nuRfe;
    }
 
    public BigDecimal getNuRfeDependente() {
-        return nuRfeDependente;
+        return this.getVo().asBigDecimal("NURFEDEPENDENTE");
    }
 
    public void setNuRfeDependente(BigDecimal nuRfeDependente) {
         markAsChanged("NURFEDEPENDENTE", nuRfeDependente);
-        this.nuRfeDependente = nuRfeDependente;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public char[] getConfig() {
-        return config;
+        return this.getVo().asClob("CONFIG");
    }
 
    public void setConfig(char[] config) {
         markAsChanged("CONFIG", config);
-        this.config = config;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getExpFiltroInstancia() {
-        return expFiltroInstancia;
+        return this.getVo().asString("EXPFILTROINSTANCIA");
    }
 
    public void setExpFiltroInstancia(String expFiltroInstancia) {
         markAsChanged("EXPFILTROINSTANCIA", expFiltroInstancia);
-        this.expFiltroInstancia = expFiltroInstancia;
    }
 
    public String getFormato() {
-        return formato;
+        return this.getVo().asString("FORMATO");
    }
 
    public void setFormato(String formato) {
         markAsChanged("FORMATO", formato);
-        this.formato = formato;
    }
 
    public String getCategoria() {
-        return categoria;
+        return this.getVo().asString("CATEGORIA");
    }
 
    public void setCategoria(String categoria) {
         markAsChanged("CATEGORIA", categoria);
-        this.categoria = categoria;
    }
 
    public String getDsName() {
-        return dsName;
+        return this.getVo().asString("DSNAME");
    }
 
    public void setDsName(String dsName) {
         markAsChanged("DSNAME", dsName);
-        this.dsName = dsName;
    }
 
    public String getPrefixoAnexo() {
-        return prefixoAnexo;
+        return this.getVo().asString("PREFIXOANEXO");
    }
 
    public void setPrefixoAnexo(String prefixoAnexo) {
         markAsChanged("PREFIXOANEXO", prefixoAnexo);
-        this.prefixoAnexo = prefixoAnexo;
    }
 
    public String getNomeImpressora() {
-        return nomeImpressora;
+        return this.getVo().asString("NOMEIMPRESSORA");
    }
 
    public void setNomeImpressora(String nomeImpressora) {
         markAsChanged("NOMEIMPRESSORA", nomeImpressora);
-        this.nomeImpressora = nomeImpressora;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class RelatorioMinutaDespacho extends AbstractSankhyaEntity<RelatorioMinu
    @Override
    public RelatorioMinutaDespacho fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idTela = vo.asString("IDTELA");
-        this.nuInstancia = vo.asBigDecimal("NUINSTANCIA");
-        this.nuRfe = vo.asBigDecimal("NURFE");
-        this.nuRfeDependente = vo.asBigDecimal("NURFEDEPENDENTE");
-        this.tipo = vo.asString("TIPO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.config = vo.asClob("CONFIG");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.expFiltroInstancia = vo.asString("EXPFILTROINSTANCIA");
-        this.formato = vo.asString("FORMATO");
-        this.categoria = vo.asString("CATEGORIA");
-        this.dsName = vo.asString("DSNAME");
-        this.prefixoAnexo = vo.asString("PREFIXOANEXO");
-        this.nomeImpressora = vo.asString("NOMEIMPRESSORA");
         return this;
    }
 }

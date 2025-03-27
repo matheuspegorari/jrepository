@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoContabilizacao extends AbstractSankhyaEntity<HistoricoContabilizacao> {
-   private Timestamp dhctz;
-   private char[] erroExec;
-   private BigDecimal minutosCtz;
-   private BigDecimal nuAgendCtz;
-   private BigDecimal qtdLancCtz;
-   private BigDecimal qtdLancNctz;
-   private BigDecimal qtdLancTot;
-   private String tipo;
-   private String tipoExec;
-   private String liberada;
-
    public Timestamp getDhctz() {
-        return dhctz;
+        return this.getVo().asTimestamp("DHCTZ");
    }
 
    public void setDhctz(Timestamp dhctz) {
         markAsChanged("DHCTZ", dhctz);
-        this.dhctz = dhctz;
    }
 
    public char[] getErroExec() {
-        return erroExec;
+        return this.getVo().asClob("ERROEXEC");
    }
 
    public void setErroExec(char[] erroExec) {
         markAsChanged("ERROEXEC", erroExec);
-        this.erroExec = erroExec;
    }
 
    public BigDecimal getMinutosCtz() {
-        return minutosCtz;
+        return this.getVo().asBigDecimal("MINUTOSCTZ");
    }
 
    public void setMinutosCtz(BigDecimal minutosCtz) {
         markAsChanged("MINUTOSCTZ", minutosCtz);
-        this.minutosCtz = minutosCtz;
    }
 
    public BigDecimal getNuAgendCtz() {
-        return nuAgendCtz;
+        return this.getVo().asBigDecimal("NUAGENDCTZ");
    }
 
    public void setNuAgendCtz(BigDecimal nuAgendCtz) {
         markAsChanged("NUAGENDCTZ", nuAgendCtz);
-        this.nuAgendCtz = nuAgendCtz;
    }
 
    public BigDecimal getQtdLancCtz() {
-        return qtdLancCtz;
+        return this.getVo().asBigDecimal("QTDLANCCTZ");
    }
 
    public void setQtdLancCtz(BigDecimal qtdLancCtz) {
         markAsChanged("QTDLANCCTZ", qtdLancCtz);
-        this.qtdLancCtz = qtdLancCtz;
    }
 
    public BigDecimal getQtdLancNctz() {
-        return qtdLancNctz;
+        return this.getVo().asBigDecimal("QTDLANCNCTZ");
    }
 
    public void setQtdLancNctz(BigDecimal qtdLancNctz) {
         markAsChanged("QTDLANCNCTZ", qtdLancNctz);
-        this.qtdLancNctz = qtdLancNctz;
    }
 
    public BigDecimal getQtdLancTot() {
-        return qtdLancTot;
+        return this.getVo().asBigDecimal("QTDLANCTOT");
    }
 
    public void setQtdLancTot(BigDecimal qtdLancTot) {
         markAsChanged("QTDLANCTOT", qtdLancTot);
-        this.qtdLancTot = qtdLancTot;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTipoExec() {
-        return tipoExec;
+        return this.getVo().asString("TIPOEXEC");
    }
 
    public void setTipoExec(String tipoExec) {
         markAsChanged("TIPOEXEC", tipoExec);
-        this.tipoExec = tipoExec;
    }
 
    public String getLiberada() {
-        return liberada;
+        return this.getVo().asString("LIBERADA");
    }
 
    public void setLiberada(String liberada) {
         markAsChanged("LIBERADA", liberada);
-        this.liberada = liberada;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class HistoricoContabilizacao extends AbstractSankhyaEntity<HistoricoCont
    @Override
    public HistoricoContabilizacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhctz = vo.asTimestamp("DHCTZ");
-        this.erroExec = vo.asClob("ERROEXEC");
-        this.minutosCtz = vo.asBigDecimal("MINUTOSCTZ");
-        this.nuAgendCtz = vo.asBigDecimal("NUAGENDCTZ");
-        this.qtdLancCtz = vo.asBigDecimal("QTDLANCCTZ");
-        this.qtdLancNctz = vo.asBigDecimal("QTDLANCNCTZ");
-        this.qtdLancTot = vo.asBigDecimal("QTDLANCTOT");
-        this.tipo = vo.asString("TIPO");
-        this.tipoExec = vo.asString("TIPOEXEC");
-        this.liberada = vo.asString("LIBERADA");
         return this;
    }
 }

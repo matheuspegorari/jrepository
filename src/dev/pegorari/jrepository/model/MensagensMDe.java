@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
-   private BigDecimal sequencia;
-   private String chaveAcesso;
-   private BigDecimal codEmp;
-   private BigDecimal statusResp;
-   private Timestamp dhResp;
-   private String motivoResp;
-
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getChaveAcesso() {
-        return chaveAcesso;
+        return this.getVo().asString("CHAVEACESSO");
    }
 
    public void setChaveAcesso(String chaveAcesso) {
         markAsChanged("CHAVEACESSO", chaveAcesso);
-        this.chaveAcesso = chaveAcesso;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getStatusResp() {
-        return statusResp;
+        return this.getVo().asBigDecimal("STATUSRESP");
    }
 
    public void setStatusResp(BigDecimal statusResp) {
         markAsChanged("STATUSRESP", statusResp);
-        this.statusResp = statusResp;
    }
 
    public Timestamp getDhResp() {
-        return dhResp;
+        return this.getVo().asTimestamp("DHRESP");
    }
 
    public void setDhResp(Timestamp dhResp) {
         markAsChanged("DHRESP", dhResp);
-        this.dhResp = dhResp;
    }
 
    public String getMotivoResp() {
-        return motivoResp;
+        return this.getVo().asString("MOTIVORESP");
    }
 
    public void setMotivoResp(String motivoResp) {
         markAsChanged("MOTIVORESP", motivoResp);
-        this.motivoResp = motivoResp;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class MensagensMDe extends AbstractSankhyaEntity<MensagensMDe> {
    @Override
    public MensagensMDe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.chaveAcesso = vo.asString("CHAVEACESSO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.statusResp = vo.asBigDecimal("STATUSRESP");
-        this.dhResp = vo.asTimestamp("DHRESP");
-        this.motivoResp = vo.asString("MOTIVORESP");
         return this;
    }
 }

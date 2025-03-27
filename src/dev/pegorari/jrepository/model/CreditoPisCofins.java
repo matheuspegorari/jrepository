@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
-   private String cnpj;
-   private String cnpjSuc;
-   private BigDecimal codemp;
-   private BigDecimal codCred;
-   private String origCred;
-   private Timestamp perApuCred;
-   private BigDecimal saldo;
-   private String tipo;
-   private BigDecimal vlCredApu;
-   private BigDecimal vlCredExtApu;
-
    public String getCnpj() {
-        return cnpj;
+        return this.getVo().asString("CNPJ");
    }
 
    public void setCnpj(String cnpj) {
         markAsChanged("CNPJ", cnpj);
-        this.cnpj = cnpj;
    }
 
    public String getCnpjSuc() {
-        return cnpjSuc;
+        return this.getVo().asString("CNPJ_SUC");
    }
 
    public void setCnpjSuc(String cnpjSuc) {
         markAsChanged("CNPJ_SUC", cnpjSuc);
-        this.cnpjSuc = cnpjSuc;
    }
 
    public BigDecimal getCodemp() {
-        return codemp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodemp(BigDecimal codemp) {
         markAsChanged("CODEMP", codemp);
-        this.codemp = codemp;
    }
 
    public BigDecimal getCodCred() {
-        return codCred;
+        return this.getVo().asBigDecimal("COD_CRED");
    }
 
    public void setCodCred(BigDecimal codCred) {
         markAsChanged("COD_CRED", codCred);
-        this.codCred = codCred;
    }
 
    public String getOrigCred() {
-        return origCred;
+        return this.getVo().asString("ORIG_CRED");
    }
 
    public void setOrigCred(String origCred) {
         markAsChanged("ORIG_CRED", origCred);
-        this.origCred = origCred;
    }
 
    public Timestamp getPerApuCred() {
-        return perApuCred;
+        return this.getVo().asTimestamp("PER_APU_CRED");
    }
 
    public void setPerApuCred(Timestamp perApuCred) {
         markAsChanged("PER_APU_CRED", perApuCred);
-        this.perApuCred = perApuCred;
    }
 
    public BigDecimal getSaldo() {
-        return saldo;
+        return this.getVo().asBigDecimal("SALDO");
    }
 
    public void setSaldo(BigDecimal saldo) {
         markAsChanged("SALDO", saldo);
-        this.saldo = saldo;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getVlCredApu() {
-        return vlCredApu;
+        return this.getVo().asBigDecimal("VL_CRED_APU");
    }
 
    public void setVlCredApu(BigDecimal vlCredApu) {
         markAsChanged("VL_CRED_APU", vlCredApu);
-        this.vlCredApu = vlCredApu;
    }
 
    public BigDecimal getVlCredExtApu() {
-        return vlCredExtApu;
+        return this.getVo().asBigDecimal("VL_CRED_EXT_APU");
    }
 
    public void setVlCredExtApu(BigDecimal vlCredExtApu) {
         markAsChanged("VL_CRED_EXT_APU", vlCredExtApu);
-        this.vlCredExtApu = vlCredExtApu;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class CreditoPisCofins extends AbstractSankhyaEntity<CreditoPisCofins> {
    @Override
    public CreditoPisCofins fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cnpj = vo.asString("CNPJ");
-        this.cnpjSuc = vo.asString("CNPJ_SUC");
-        this.codemp = vo.asBigDecimal("CODEMP");
-        this.codCred = vo.asBigDecimal("COD_CRED");
-        this.origCred = vo.asString("ORIG_CRED");
-        this.perApuCred = vo.asTimestamp("PER_APU_CRED");
-        this.saldo = vo.asBigDecimal("SALDO");
-        this.tipo = vo.asString("TIPO");
-        this.vlCredApu = vo.asBigDecimal("VL_CRED_APU");
-        this.vlCredExtApu = vo.asBigDecimal("VL_CRED_EXT_APU");
         return this;
    }
 }

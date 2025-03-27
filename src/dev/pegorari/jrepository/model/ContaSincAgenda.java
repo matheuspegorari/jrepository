@@ -6,145 +6,116 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
-   private String authCode;
-   private String emailEnviado;
-   private String refreshToken;
-   private String token;
-   private BigDecimal codUsu;
-   private String contaSincAgenda;
-   private Timestamp dhUltSincAgenda;
-   private String idSincAgenda;
-   private String senhaSincAgenda;
-   private String sincAgenda;
-   private Timestamp dhToken;
-   private BigDecimal expireIn;
-   private String email;
-   private String sincStatus;
-
    public String getAuthCode() {
-        return authCode;
+        return this.getVo().asString("AUTHCODE");
    }
 
    public void setAuthCode(String authCode) {
         markAsChanged("AUTHCODE", authCode);
-        this.authCode = authCode;
    }
 
    public String getEmailEnviado() {
-        return emailEnviado;
+        return this.getVo().asString("EMAILENVIADO");
    }
 
    public void setEmailEnviado(String emailEnviado) {
         markAsChanged("EMAILENVIADO", emailEnviado);
-        this.emailEnviado = emailEnviado;
    }
 
    public String getRefreshToken() {
-        return refreshToken;
+        return this.getVo().asString("REFRESHTOKEN");
    }
 
    public void setRefreshToken(String refreshToken) {
         markAsChanged("REFRESHTOKEN", refreshToken);
-        this.refreshToken = refreshToken;
    }
 
    public String getToken() {
-        return token;
+        return this.getVo().asString("TOKEN");
    }
 
    public void setToken(String token) {
         markAsChanged("TOKEN", token);
-        this.token = token;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getContaSincAgenda() {
-        return contaSincAgenda;
+        return this.getVo().asString("CONTASINCAGENDA");
    }
 
    public void setContaSincAgenda(String contaSincAgenda) {
         markAsChanged("CONTASINCAGENDA", contaSincAgenda);
-        this.contaSincAgenda = contaSincAgenda;
    }
 
    public Timestamp getDhUltSincAgenda() {
-        return dhUltSincAgenda;
+        return this.getVo().asTimestamp("DHULTSINCAGENDA");
    }
 
    public void setDhUltSincAgenda(Timestamp dhUltSincAgenda) {
         markAsChanged("DHULTSINCAGENDA", dhUltSincAgenda);
-        this.dhUltSincAgenda = dhUltSincAgenda;
    }
 
    public String getIdSincAgenda() {
-        return idSincAgenda;
+        return this.getVo().asString("IDSINCAGENDA");
    }
 
    public void setIdSincAgenda(String idSincAgenda) {
         markAsChanged("IDSINCAGENDA", idSincAgenda);
-        this.idSincAgenda = idSincAgenda;
    }
 
    public String getSenhaSincAgenda() {
-        return senhaSincAgenda;
+        return this.getVo().asString("SENHASINCAGENDA");
    }
 
    public void setSenhaSincAgenda(String senhaSincAgenda) {
         markAsChanged("SENHASINCAGENDA", senhaSincAgenda);
-        this.senhaSincAgenda = senhaSincAgenda;
    }
 
    public String getSincAgenda() {
-        return sincAgenda;
+        return this.getVo().asString("SINCAGENDA");
    }
 
    public void setSincAgenda(String sincAgenda) {
         markAsChanged("SINCAGENDA", sincAgenda);
-        this.sincAgenda = sincAgenda;
    }
 
    public Timestamp getDhToken() {
-        return dhToken;
+        return this.getVo().asTimestamp("DHTOKEN");
    }
 
    public void setDhToken(Timestamp dhToken) {
         markAsChanged("DHTOKEN", dhToken);
-        this.dhToken = dhToken;
    }
 
    public BigDecimal getExpireIn() {
-        return expireIn;
+        return this.getVo().asBigDecimal("EXPIREIN");
    }
 
    public void setExpireIn(BigDecimal expireIn) {
         markAsChanged("EXPIREIN", expireIn);
-        this.expireIn = expireIn;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getSincStatus() {
-        return sincStatus;
+        return this.getVo().asString("SINCSTATUS");
    }
 
    public void setSincStatus(String sincStatus) {
         markAsChanged("SINCSTATUS", sincStatus);
-        this.sincStatus = sincStatus;
    }
 
    @Override
@@ -160,20 +131,6 @@ public class ContaSincAgenda extends AbstractSankhyaEntity<ContaSincAgenda> {
    @Override
    public ContaSincAgenda fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.authCode = vo.asString("AUTHCODE");
-        this.emailEnviado = vo.asString("EMAILENVIADO");
-        this.refreshToken = vo.asString("REFRESHTOKEN");
-        this.token = vo.asString("TOKEN");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.contaSincAgenda = vo.asString("CONTASINCAGENDA");
-        this.dhUltSincAgenda = vo.asTimestamp("DHULTSINCAGENDA");
-        this.idSincAgenda = vo.asString("IDSINCAGENDA");
-        this.senhaSincAgenda = vo.asString("SENHASINCAGENDA");
-        this.sincAgenda = vo.asString("SINCAGENDA");
-        this.dhToken = vo.asTimestamp("DHTOKEN");
-        this.expireIn = vo.asBigDecimal("EXPIREIN");
-        this.email = vo.asString("EMAIL");
-        this.sincStatus = vo.asString("SINCSTATUS");
         return this;
    }
 }

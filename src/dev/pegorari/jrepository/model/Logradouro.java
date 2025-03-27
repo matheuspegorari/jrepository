@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
-   private String codLogradouro;
-   private BigDecimal codUsu;
-   private String descrLogradouro;
-   private Timestamp dhAlter;
-
    public String getCodLogradouro() {
-        return codLogradouro;
+        return this.getVo().asString("CODLOGRADOURO");
    }
 
    public void setCodLogradouro(String codLogradouro) {
         markAsChanged("CODLOGRADOURO", codLogradouro);
-        this.codLogradouro = codLogradouro;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescrLogradouro() {
-        return descrLogradouro;
+        return this.getVo().asString("DESCRLOGRADOURO");
    }
 
    public void setDescrLogradouro(String descrLogradouro) {
         markAsChanged("DESCRLOGRADOURO", descrLogradouro);
-        this.descrLogradouro = descrLogradouro;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class Logradouro extends AbstractSankhyaEntity<Logradouro> {
    @Override
    public Logradouro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codLogradouro = vo.asString("CODLOGRADOURO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descrLogradouro = vo.asString("DESCRLOGRADOURO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
         return this;
    }
 }

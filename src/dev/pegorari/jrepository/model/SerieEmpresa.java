@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
-   private BigDecimal codEmp;
-   private BigDecimal codTipOper;
-   private BigDecimal sequencia;
-   private String serie;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class SerieEmpresa extends AbstractSankhyaEntity<SerieEmpresa> {
    @Override
    public SerieEmpresa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.serie = vo.asString("SERIE");
         return this;
    }
 }

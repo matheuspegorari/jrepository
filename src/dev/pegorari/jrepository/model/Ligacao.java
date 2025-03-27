@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
-   private String alterar;
-   private String condicao;
-   private String excluir;
-   private String expressao;
-   private String inserir;
-   private String nomeLigacao;
-   private BigDecimal nuInstDest;
-   private BigDecimal nuInstOrig;
-   private String obrigatoria;
-   private String tipLigacao;
-
    public String getAlterar() {
-        return alterar;
+        return this.getVo().asString("ALTERAR");
    }
 
    public void setAlterar(String alterar) {
         markAsChanged("ALTERAR", alterar);
-        this.alterar = alterar;
    }
 
    public String getCondicao() {
-        return condicao;
+        return this.getVo().asString("CONDICAO");
    }
 
    public void setCondicao(String condicao) {
         markAsChanged("CONDICAO", condicao);
-        this.condicao = condicao;
    }
 
    public String getExcluir() {
-        return excluir;
+        return this.getVo().asString("EXCLUIR");
    }
 
    public void setExcluir(String excluir) {
         markAsChanged("EXCLUIR", excluir);
-        this.excluir = excluir;
    }
 
    public String getExpressao() {
-        return expressao;
+        return this.getVo().asString("EXPRESSAO");
    }
 
    public void setExpressao(String expressao) {
         markAsChanged("EXPRESSAO", expressao);
-        this.expressao = expressao;
    }
 
    public String getInserir() {
-        return inserir;
+        return this.getVo().asString("INSERIR");
    }
 
    public void setInserir(String inserir) {
         markAsChanged("INSERIR", inserir);
-        this.inserir = inserir;
    }
 
    public String getNomeLigacao() {
-        return nomeLigacao;
+        return this.getVo().asString("NOMELIGACAO");
    }
 
    public void setNomeLigacao(String nomeLigacao) {
         markAsChanged("NOMELIGACAO", nomeLigacao);
-        this.nomeLigacao = nomeLigacao;
    }
 
    public BigDecimal getNuInstDest() {
-        return nuInstDest;
+        return this.getVo().asBigDecimal("NUINSTDEST");
    }
 
    public void setNuInstDest(BigDecimal nuInstDest) {
         markAsChanged("NUINSTDEST", nuInstDest);
-        this.nuInstDest = nuInstDest;
    }
 
    public BigDecimal getNuInstOrig() {
-        return nuInstOrig;
+        return this.getVo().asBigDecimal("NUINSTORIG");
    }
 
    public void setNuInstOrig(BigDecimal nuInstOrig) {
         markAsChanged("NUINSTORIG", nuInstOrig);
-        this.nuInstOrig = nuInstOrig;
    }
 
    public String getObrigatoria() {
-        return obrigatoria;
+        return this.getVo().asString("OBRIGATORIA");
    }
 
    public void setObrigatoria(String obrigatoria) {
         markAsChanged("OBRIGATORIA", obrigatoria);
-        this.obrigatoria = obrigatoria;
    }
 
    public String getTipLigacao() {
-        return tipLigacao;
+        return this.getVo().asString("TIPLIGACAO");
    }
 
    public void setTipLigacao(String tipLigacao) {
         markAsChanged("TIPLIGACAO", tipLigacao);
-        this.tipLigacao = tipLigacao;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class Ligacao extends AbstractSankhyaEntity<Ligacao> {
    @Override
    public Ligacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.alterar = vo.asString("ALTERAR");
-        this.condicao = vo.asString("CONDICAO");
-        this.excluir = vo.asString("EXCLUIR");
-        this.expressao = vo.asString("EXPRESSAO");
-        this.inserir = vo.asString("INSERIR");
-        this.nomeLigacao = vo.asString("NOMELIGACAO");
-        this.nuInstDest = vo.asBigDecimal("NUINSTDEST");
-        this.nuInstOrig = vo.asBigDecimal("NUINSTORIG");
-        this.obrigatoria = vo.asString("OBRIGATORIA");
-        this.tipLigacao = vo.asString("TIPLIGACAO");
         return this;
    }
 }

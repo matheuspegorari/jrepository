@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenciaProducao> {
-   private String codBarra;
-   private BigDecimal codProd;
-   private BigDecimal nuConf;
-   private BigDecimal qtdConf;
-   private String controle;
-
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getNuConf() {
-        return nuConf;
+        return this.getVo().asBigDecimal("NUCONF");
    }
 
    public void setNuConf(BigDecimal nuConf) {
         markAsChanged("NUCONF", nuConf);
-        this.nuConf = nuConf;
    }
 
    public BigDecimal getQtdConf() {
-        return qtdConf;
+        return this.getVo().asBigDecimal("QTDCONF");
    }
 
    public void setQtdConf(BigDecimal qtdConf) {
         markAsChanged("QTDCONF", qtdConf);
-        this.qtdConf = qtdConf;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ItemConferenciaProducao extends AbstractSankhyaEntity<ItemConferenc
    @Override
    public ItemConferenciaProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBarra = vo.asString("CODBARRA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.nuConf = vo.asBigDecimal("NUCONF");
-        this.qtdConf = vo.asBigDecimal("QTDCONF");
-        this.controle = vo.asString("CONTROLE");
         return this;
    }
 }

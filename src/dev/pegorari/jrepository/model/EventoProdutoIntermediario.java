@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProdutoIntermediario> {
-   private BigDecimal ideFx;
-   private String controlePi;
-   private BigDecimal codProdPi;
-   private String controlePa;
-   private BigDecimal codProdPa;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public String getControlePi() {
-        return controlePi;
+        return this.getVo().asString("CONTROLEPI");
    }
 
    public void setControlePi(String controlePi) {
         markAsChanged("CONTROLEPI", controlePi);
-        this.controlePi = controlePi;
    }
 
    public BigDecimal getCodProdPi() {
-        return codProdPi;
+        return this.getVo().asBigDecimal("CODPRODPI");
    }
 
    public void setCodProdPi(BigDecimal codProdPi) {
         markAsChanged("CODPRODPI", codProdPi);
-        this.codProdPi = codProdPi;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class EventoProdutoIntermediario extends AbstractSankhyaEntity<EventoProd
    @Override
    public EventoProdutoIntermediario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.controlePi = vo.asString("CONTROLEPI");
-        this.codProdPi = vo.asBigDecimal("CODPRODPI");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
         return this;
    }
 }

@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArquivoMOBIS> {
-   private Timestamp dhImp;
-   private char[] msg;
-   private String nomeArq;
-   private BigDecimal nuImp;
-   private BigDecimal qtdPedImp;
-   private BigDecimal qtdProc;
-   private BigDecimal qtdTotPed;
-   private String reprocessar;
-   private String tipArquivo;
-   private String arqHeader;
-
    public Timestamp getDhImp() {
-        return dhImp;
+        return this.getVo().asTimestamp("DHIMP");
    }
 
    public void setDhImp(Timestamp dhImp) {
         markAsChanged("DHIMP", dhImp);
-        this.dhImp = dhImp;
    }
 
    public char[] getMsg() {
-        return msg;
+        return this.getVo().asClob("MSG");
    }
 
    public void setMsg(char[] msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public String getNomeArq() {
-        return nomeArq;
+        return this.getVo().asString("NOMEARQ");
    }
 
    public void setNomeArq(String nomeArq) {
         markAsChanged("NOMEARQ", nomeArq);
-        this.nomeArq = nomeArq;
    }
 
    public BigDecimal getNuImp() {
-        return nuImp;
+        return this.getVo().asBigDecimal("NUIMP");
    }
 
    public void setNuImp(BigDecimal nuImp) {
         markAsChanged("NUIMP", nuImp);
-        this.nuImp = nuImp;
    }
 
    public BigDecimal getQtdPedImp() {
-        return qtdPedImp;
+        return this.getVo().asBigDecimal("QTDPEDIMP");
    }
 
    public void setQtdPedImp(BigDecimal qtdPedImp) {
         markAsChanged("QTDPEDIMP", qtdPedImp);
-        this.qtdPedImp = qtdPedImp;
    }
 
    public BigDecimal getQtdProc() {
-        return qtdProc;
+        return this.getVo().asBigDecimal("QTDPROC");
    }
 
    public void setQtdProc(BigDecimal qtdProc) {
         markAsChanged("QTDPROC", qtdProc);
-        this.qtdProc = qtdProc;
    }
 
    public BigDecimal getQtdTotPed() {
-        return qtdTotPed;
+        return this.getVo().asBigDecimal("QTDTOTPED");
    }
 
    public void setQtdTotPed(BigDecimal qtdTotPed) {
         markAsChanged("QTDTOTPED", qtdTotPed);
-        this.qtdTotPed = qtdTotPed;
    }
 
    public String getReprocessar() {
-        return reprocessar;
+        return this.getVo().asString("REPROCESSAR");
    }
 
    public void setReprocessar(String reprocessar) {
         markAsChanged("REPROCESSAR", reprocessar);
-        this.reprocessar = reprocessar;
    }
 
    public String getTipArquivo() {
-        return tipArquivo;
+        return this.getVo().asString("TIPARQUIVO");
    }
 
    public void setTipArquivo(String tipArquivo) {
         markAsChanged("TIPARQUIVO", tipArquivo);
-        this.tipArquivo = tipArquivo;
    }
 
    public String getArqHeader() {
-        return arqHeader;
+        return this.getVo().asString("ARQHEADER");
    }
 
    public void setArqHeader(String arqHeader) {
         markAsChanged("ARQHEADER", arqHeader);
-        this.arqHeader = arqHeader;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class ImportacaoArquivoMOBIS extends AbstractSankhyaEntity<ImportacaoArqu
    @Override
    public ImportacaoArquivoMOBIS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhImp = vo.asTimestamp("DHIMP");
-        this.msg = vo.asClob("MSG");
-        this.nomeArq = vo.asString("NOMEARQ");
-        this.nuImp = vo.asBigDecimal("NUIMP");
-        this.qtdPedImp = vo.asBigDecimal("QTDPEDIMP");
-        this.qtdProc = vo.asBigDecimal("QTDPROC");
-        this.qtdTotPed = vo.asBigDecimal("QTDTOTPED");
-        this.reprocessar = vo.asString("REPROCESSAR");
-        this.tipArquivo = vo.asString("TIPARQUIVO");
-        this.arqHeader = vo.asString("ARQHEADER");
         return this;
    }
 }

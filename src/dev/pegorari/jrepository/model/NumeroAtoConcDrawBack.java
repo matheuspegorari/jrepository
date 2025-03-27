@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDrawBack> {
-   private BigDecimal sequenciaDraw;
-   private BigDecimal sequencia;
-   private BigDecimal nuNota;
-   private String nroAtoConcDraw;
-
    public BigDecimal getSequenciaDraw() {
-        return sequenciaDraw;
+        return this.getVo().asBigDecimal("SEQUENCIADRAW");
    }
 
    public void setSequenciaDraw(BigDecimal sequenciaDraw) {
         markAsChanged("SEQUENCIADRAW", sequenciaDraw);
-        this.sequenciaDraw = sequenciaDraw;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getNroAtoConcDraw() {
-        return nroAtoConcDraw;
+        return this.getVo().asString("NROATOCONCDRAW");
    }
 
    public void setNroAtoConcDraw(String nroAtoConcDraw) {
         markAsChanged("NROATOCONCDRAW", nroAtoConcDraw);
-        this.nroAtoConcDraw = nroAtoConcDraw;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NumeroAtoConcDrawBack extends AbstractSankhyaEntity<NumeroAtoConcDr
    @Override
    public NumeroAtoConcDrawBack fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.sequenciaDraw = vo.asBigDecimal("SEQUENCIADRAW");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nroAtoConcDraw = vo.asString("NROATOCONCDRAW");
         return this;
    }
 }

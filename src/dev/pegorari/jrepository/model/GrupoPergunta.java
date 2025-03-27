@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
-   private String analitico;
-   private String ativo;
-   private BigDecimal codGrupoPerg;
-   private BigDecimal codGrupoPergPai;
-   private BigDecimal codUsu;
-   private String descrGrupoPerg;
-   private Timestamp dhAlter;
-   private BigDecimal grau;
-
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodGrupoPerg() {
-        return codGrupoPerg;
+        return this.getVo().asBigDecimal("CODGRUPOPERG");
    }
 
    public void setCodGrupoPerg(BigDecimal codGrupoPerg) {
         markAsChanged("CODGRUPOPERG", codGrupoPerg);
-        this.codGrupoPerg = codGrupoPerg;
    }
 
    public BigDecimal getCodGrupoPergPai() {
-        return codGrupoPergPai;
+        return this.getVo().asBigDecimal("CODGRUPOPERGPAI");
    }
 
    public void setCodGrupoPergPai(BigDecimal codGrupoPergPai) {
         markAsChanged("CODGRUPOPERGPAI", codGrupoPergPai);
-        this.codGrupoPergPai = codGrupoPergPai;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescrGrupoPerg() {
-        return descrGrupoPerg;
+        return this.getVo().asString("DESCRGRUPOPERG");
    }
 
    public void setDescrGrupoPerg(String descrGrupoPerg) {
         markAsChanged("DESCRGRUPOPERG", descrGrupoPerg);
-        this.descrGrupoPerg = descrGrupoPerg;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class GrupoPergunta extends AbstractSankhyaEntity<GrupoPergunta> {
    @Override
    public GrupoPergunta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");
-        this.codGrupoPergPai = vo.asBigDecimal("CODGRUPOPERGPAI");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descrGrupoPerg = vo.asString("DESCRGRUPOPERG");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.grau = vo.asBigDecimal("GRAU");
         return this;
    }
 }

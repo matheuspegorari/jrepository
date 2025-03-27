@@ -6,315 +6,252 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudancaTributacao> {
-   private BigDecimal aliqIcms;
-   private BigDecimal aliqSt;
-   private BigDecimal baseIcms;
-   private BigDecimal baseSubstit;
-   private BigDecimal baseSubstitCompra;
-   private BigDecimal codEmp;
-   private BigDecimal codGrupoProd;
-   private BigDecimal codParcCompra;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private String codVol;
-   private BigDecimal cst;
-   private String digitado;
-   private Timestamp dtAlter;
-   private Timestamp dtMtp;
-   private BigDecimal idAliq;
-   private BigDecimal mva;
-   private String ncm;
-   private BigDecimal nuNotaCompra;
-   private BigDecimal qtdEst;
-   private String usoProd;
-   private BigDecimal vlrIcms;
-   private BigDecimal vlrIcmsCompra;
-   private BigDecimal vlrUnitCusto;
-   private BigDecimal baseIcmsSt;
-   private BigDecimal cstAnterior;
-   private BigDecimal idAliqAnterior;
-   private BigDecimal vlrIcmsSt;
-   private BigDecimal baseStEstoque;
-   private String vlrCusUtil;
-   private BigDecimal vlrIcmsUnit;
-
    public BigDecimal getAliqIcms() {
-        return aliqIcms;
+        return this.getVo().asBigDecimal("ALIQICMS");
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
         markAsChanged("ALIQICMS", aliqIcms);
-        this.aliqIcms = aliqIcms;
    }
 
    public BigDecimal getAliqSt() {
-        return aliqSt;
+        return this.getVo().asBigDecimal("ALIQST");
    }
 
    public void setAliqSt(BigDecimal aliqSt) {
         markAsChanged("ALIQST", aliqSt);
-        this.aliqSt = aliqSt;
    }
 
    public BigDecimal getBaseIcms() {
-        return baseIcms;
+        return this.getVo().asBigDecimal("BASEICMS");
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
         markAsChanged("BASEICMS", baseIcms);
-        this.baseIcms = baseIcms;
    }
 
    public BigDecimal getBaseSubstit() {
-        return baseSubstit;
+        return this.getVo().asBigDecimal("BASESUBSTIT");
    }
 
    public void setBaseSubstit(BigDecimal baseSubstit) {
         markAsChanged("BASESUBSTIT", baseSubstit);
-        this.baseSubstit = baseSubstit;
    }
 
    public BigDecimal getBaseSubstitCompra() {
-        return baseSubstitCompra;
+        return this.getVo().asBigDecimal("BASESUBSTITCOMPRA");
    }
 
    public void setBaseSubstitCompra(BigDecimal baseSubstitCompra) {
         markAsChanged("BASESUBSTITCOMPRA", baseSubstitCompra);
-        this.baseSubstitCompra = baseSubstitCompra;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodGrupoProd() {
-        return codGrupoProd;
+        return this.getVo().asBigDecimal("CODGRUPOPROD");
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
         markAsChanged("CODGRUPOPROD", codGrupoProd);
-        this.codGrupoProd = codGrupoProd;
    }
 
    public BigDecimal getCodParcCompra() {
-        return codParcCompra;
+        return this.getVo().asBigDecimal("CODPARCCOMPRA");
    }
 
    public void setCodParcCompra(BigDecimal codParcCompra) {
         markAsChanged("CODPARCCOMPRA", codParcCompra);
-        this.codParcCompra = codParcCompra;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getCst() {
-        return cst;
+        return this.getVo().asBigDecimal("CST");
    }
 
    public void setCst(BigDecimal cst) {
         markAsChanged("CST", cst);
-        this.cst = cst;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtMtp() {
-        return dtMtp;
+        return this.getVo().asTimestamp("DTMTP");
    }
 
    public void setDtMtp(Timestamp dtMtp) {
         markAsChanged("DTMTP", dtMtp);
-        this.dtMtp = dtMtp;
    }
 
    public BigDecimal getIdAliq() {
-        return idAliq;
+        return this.getVo().asBigDecimal("IDALIQ");
    }
 
    public void setIdAliq(BigDecimal idAliq) {
         markAsChanged("IDALIQ", idAliq);
-        this.idAliq = idAliq;
    }
 
    public BigDecimal getMva() {
-        return mva;
+        return this.getVo().asBigDecimal("MVA");
    }
 
    public void setMva(BigDecimal mva) {
         markAsChanged("MVA", mva);
-        this.mva = mva;
    }
 
    public String getNcm() {
-        return ncm;
+        return this.getVo().asString("NCM");
    }
 
    public void setNcm(String ncm) {
         markAsChanged("NCM", ncm);
-        this.ncm = ncm;
    }
 
    public BigDecimal getNuNotaCompra() {
-        return nuNotaCompra;
+        return this.getVo().asBigDecimal("NUNOTACOMPRA");
    }
 
    public void setNuNotaCompra(BigDecimal nuNotaCompra) {
         markAsChanged("NUNOTACOMPRA", nuNotaCompra);
-        this.nuNotaCompra = nuNotaCompra;
    }
 
    public BigDecimal getQtdEst() {
-        return qtdEst;
+        return this.getVo().asBigDecimal("QTDEST");
    }
 
    public void setQtdEst(BigDecimal qtdEst) {
         markAsChanged("QTDEST", qtdEst);
-        this.qtdEst = qtdEst;
    }
 
    public String getUsoProd() {
-        return usoProd;
+        return this.getVo().asString("USOPROD");
    }
 
    public void setUsoProd(String usoProd) {
         markAsChanged("USOPROD", usoProd);
-        this.usoProd = usoProd;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getVlrIcmsCompra() {
-        return vlrIcmsCompra;
+        return this.getVo().asBigDecimal("VLRICMSCOMPRA");
    }
 
    public void setVlrIcmsCompra(BigDecimal vlrIcmsCompra) {
         markAsChanged("VLRICMSCOMPRA", vlrIcmsCompra);
-        this.vlrIcmsCompra = vlrIcmsCompra;
    }
 
    public BigDecimal getVlrUnitCusto() {
-        return vlrUnitCusto;
+        return this.getVo().asBigDecimal("VLRUNITCUSTO");
    }
 
    public void setVlrUnitCusto(BigDecimal vlrUnitCusto) {
         markAsChanged("VLRUNITCUSTO", vlrUnitCusto);
-        this.vlrUnitCusto = vlrUnitCusto;
    }
 
    public BigDecimal getBaseIcmsSt() {
-        return baseIcmsSt;
+        return this.getVo().asBigDecimal("BASEICMSST");
    }
 
    public void setBaseIcmsSt(BigDecimal baseIcmsSt) {
         markAsChanged("BASEICMSST", baseIcmsSt);
-        this.baseIcmsSt = baseIcmsSt;
    }
 
    public BigDecimal getCstAnterior() {
-        return cstAnterior;
+        return this.getVo().asBigDecimal("CSTANTERIOR");
    }
 
    public void setCstAnterior(BigDecimal cstAnterior) {
         markAsChanged("CSTANTERIOR", cstAnterior);
-        this.cstAnterior = cstAnterior;
    }
 
    public BigDecimal getIdAliqAnterior() {
-        return idAliqAnterior;
+        return this.getVo().asBigDecimal("IDALIQANTERIOR");
    }
 
    public void setIdAliqAnterior(BigDecimal idAliqAnterior) {
         markAsChanged("IDALIQANTERIOR", idAliqAnterior);
-        this.idAliqAnterior = idAliqAnterior;
    }
 
    public BigDecimal getVlrIcmsSt() {
-        return vlrIcmsSt;
+        return this.getVo().asBigDecimal("VLRICMSST");
    }
 
    public void setVlrIcmsSt(BigDecimal vlrIcmsSt) {
         markAsChanged("VLRICMSST", vlrIcmsSt);
-        this.vlrIcmsSt = vlrIcmsSt;
    }
 
    public BigDecimal getBaseStEstoque() {
-        return baseStEstoque;
+        return this.getVo().asBigDecimal("BASESTESTOQUE");
    }
 
    public void setBaseStEstoque(BigDecimal baseStEstoque) {
         markAsChanged("BASESTESTOQUE", baseStEstoque);
-        this.baseStEstoque = baseStEstoque;
    }
 
    public String getVlrCusUtil() {
-        return vlrCusUtil;
+        return this.getVo().asString("VLRCUSUTIL");
    }
 
    public void setVlrCusUtil(String vlrCusUtil) {
         markAsChanged("VLRCUSUTIL", vlrCusUtil);
-        this.vlrCusUtil = vlrCusUtil;
    }
 
    public BigDecimal getVlrIcmsUnit() {
-        return vlrIcmsUnit;
+        return this.getVo().asBigDecimal("VLRICMSUNIT");
    }
 
    public void setVlrIcmsUnit(BigDecimal vlrIcmsUnit) {
         markAsChanged("VLRICMSUNIT", vlrIcmsUnit);
-        this.vlrIcmsUnit = vlrIcmsUnit;
    }
 
    @Override
@@ -330,37 +267,6 @@ public class ProdutoMudancaTributacao extends AbstractSankhyaEntity<ProdutoMudan
    @Override
    public ProdutoMudancaTributacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliqIcms = vo.asBigDecimal("ALIQICMS");
-        this.aliqSt = vo.asBigDecimal("ALIQST");
-        this.baseIcms = vo.asBigDecimal("BASEICMS");
-        this.baseSubstit = vo.asBigDecimal("BASESUBSTIT");
-        this.baseSubstitCompra = vo.asBigDecimal("BASESUBSTITCOMPRA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
-        this.codParcCompra = vo.asBigDecimal("CODPARCCOMPRA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVol = vo.asString("CODVOL");
-        this.cst = vo.asBigDecimal("CST");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtMtp = vo.asTimestamp("DTMTP");
-        this.idAliq = vo.asBigDecimal("IDALIQ");
-        this.mva = vo.asBigDecimal("MVA");
-        this.ncm = vo.asString("NCM");
-        this.nuNotaCompra = vo.asBigDecimal("NUNOTACOMPRA");
-        this.qtdEst = vo.asBigDecimal("QTDEST");
-        this.usoProd = vo.asString("USOPROD");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrIcmsCompra = vo.asBigDecimal("VLRICMSCOMPRA");
-        this.vlrUnitCusto = vo.asBigDecimal("VLRUNITCUSTO");
-        this.baseIcmsSt = vo.asBigDecimal("BASEICMSST");
-        this.cstAnterior = vo.asBigDecimal("CSTANTERIOR");
-        this.idAliqAnterior = vo.asBigDecimal("IDALIQANTERIOR");
-        this.vlrIcmsSt = vo.asBigDecimal("VLRICMSST");
-        this.baseStEstoque = vo.asBigDecimal("BASESTESTOQUE");
-        this.vlrCusUtil = vo.asString("VLRCUSUTIL");
-        this.vlrIcmsUnit = vo.asBigDecimal("VLRICMSUNIT");
         return this;
    }
 }

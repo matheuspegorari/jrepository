@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTabelaProgressiva> {
-   private BigDecimal codParc;
-   private BigDecimal codProd;
-   private Timestamp competencia;
-   private BigDecimal dependente;
-   private String tem13;
-   private String retemInssOrigFin;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public Timestamp getCompetencia() {
-        return competencia;
+        return this.getVo().asTimestamp("COMPETENCIA");
    }
 
    public void setCompetencia(Timestamp competencia) {
         markAsChanged("COMPETENCIA", competencia);
-        this.competencia = competencia;
    }
 
    public BigDecimal getDependente() {
-        return dependente;
+        return this.getVo().asBigDecimal("DEPENDENTE");
    }
 
    public void setDependente(BigDecimal dependente) {
         markAsChanged("DEPENDENTE", dependente);
-        this.dependente = dependente;
    }
 
    public String getTem13() {
-        return tem13;
+        return this.getVo().asString("TEM13");
    }
 
    public void setTem13(String tem13) {
         markAsChanged("TEM13", tem13);
-        this.tem13 = tem13;
    }
 
    public String getRetemInssOrigFin() {
-        return retemInssOrigFin;
+        return this.getVo().asString("RETEMINSSORIGFIN");
    }
 
    public void setRetemInssOrigFin(String retemInssOrigFin) {
         markAsChanged("RETEMINSSORIGFIN", retemInssOrigFin);
-        this.retemInssOrigFin = retemInssOrigFin;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class ParceiroTabelaProgressiva extends AbstractSankhyaEntity<ParceiroTab
    @Override
    public ParceiroTabelaProgressiva fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.competencia = vo.asTimestamp("COMPETENCIA");
-        this.dependente = vo.asBigDecimal("DEPENDENTE");
-        this.tem13 = vo.asString("TEM13");
-        this.retemInssOrigFin = vo.asString("RETEMINSSORIGFIN");
         return this;
    }
 }

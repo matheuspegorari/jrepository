@@ -6,265 +6,212 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
-   private BigDecimal codEmp;
-   private String descRevento;
-   private Timestamp dhEvento;
-   private String emisSterc;
-   private String infCompl;
-   private String justificativa;
-   private String nomeParcDest;
-   private String nomeParcEmit;
-   private String nomeParcRec;
-   private String nomeParcTransp;
-   private String nsu;
-   private String numProtoc;
-   private BigDecimal seqEvento;
-   private String situacaoCte;
-   private String tpAmb;
-   private BigDecimal tpDoc;
-   private BigDecimal tpEvento;
-   private char[] xmlEvento;
-   private String motivoNdDigital;
-   private String status;
-   private String situacaoNfe;
-   private Timestamp dhAlter;
-   private BigDecimal codUsu;
-   private BigDecimal sequencia;
-   private String situacaoMde;
-   private String chaveAcesso;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getDescRevento() {
-        return descRevento;
+        return this.getVo().asString("DESCREVENTO");
    }
 
    public void setDescRevento(String descRevento) {
         markAsChanged("DESCREVENTO", descRevento);
-        this.descRevento = descRevento;
    }
 
    public Timestamp getDhEvento() {
-        return dhEvento;
+        return this.getVo().asTimestamp("DHEVENTO");
    }
 
    public void setDhEvento(Timestamp dhEvento) {
         markAsChanged("DHEVENTO", dhEvento);
-        this.dhEvento = dhEvento;
    }
 
    public String getEmisSterc() {
-        return emisSterc;
+        return this.getVo().asString("EMISSTERC");
    }
 
    public void setEmisSterc(String emisSterc) {
         markAsChanged("EMISSTERC", emisSterc);
-        this.emisSterc = emisSterc;
    }
 
    public String getInfCompl() {
-        return infCompl;
+        return this.getVo().asString("INFCOMPL");
    }
 
    public void setInfCompl(String infCompl) {
         markAsChanged("INFCOMPL", infCompl);
-        this.infCompl = infCompl;
    }
 
    public String getJustificativa() {
-        return justificativa;
+        return this.getVo().asString("JUSTIFICATIVA");
    }
 
    public void setJustificativa(String justificativa) {
         markAsChanged("JUSTIFICATIVA", justificativa);
-        this.justificativa = justificativa;
    }
 
    public String getNomeParcDest() {
-        return nomeParcDest;
+        return this.getVo().asString("NOMEPARCDEST");
    }
 
    public void setNomeParcDest(String nomeParcDest) {
         markAsChanged("NOMEPARCDEST", nomeParcDest);
-        this.nomeParcDest = nomeParcDest;
    }
 
    public String getNomeParcEmit() {
-        return nomeParcEmit;
+        return this.getVo().asString("NOMEPARCEMIT");
    }
 
    public void setNomeParcEmit(String nomeParcEmit) {
         markAsChanged("NOMEPARCEMIT", nomeParcEmit);
-        this.nomeParcEmit = nomeParcEmit;
    }
 
    public String getNomeParcRec() {
-        return nomeParcRec;
+        return this.getVo().asString("NOMEPARCREC");
    }
 
    public void setNomeParcRec(String nomeParcRec) {
         markAsChanged("NOMEPARCREC", nomeParcRec);
-        this.nomeParcRec = nomeParcRec;
    }
 
    public String getNomeParcTransp() {
-        return nomeParcTransp;
+        return this.getVo().asString("NOMEPARCTRANSP");
    }
 
    public void setNomeParcTransp(String nomeParcTransp) {
         markAsChanged("NOMEPARCTRANSP", nomeParcTransp);
-        this.nomeParcTransp = nomeParcTransp;
    }
 
    public String getNsu() {
-        return nsu;
+        return this.getVo().asString("NSU");
    }
 
    public void setNsu(String nsu) {
         markAsChanged("NSU", nsu);
-        this.nsu = nsu;
    }
 
    public String getNumProtoc() {
-        return numProtoc;
+        return this.getVo().asString("NUMPROTOC");
    }
 
    public void setNumProtoc(String numProtoc) {
         markAsChanged("NUMPROTOC", numProtoc);
-        this.numProtoc = numProtoc;
    }
 
    public BigDecimal getSeqEvento() {
-        return seqEvento;
+        return this.getVo().asBigDecimal("SEQEVENTO");
    }
 
    public void setSeqEvento(BigDecimal seqEvento) {
         markAsChanged("SEQEVENTO", seqEvento);
-        this.seqEvento = seqEvento;
    }
 
    public String getSituacaoCte() {
-        return situacaoCte;
+        return this.getVo().asString("SITUACAOCTE");
    }
 
    public void setSituacaoCte(String situacaoCte) {
         markAsChanged("SITUACAOCTE", situacaoCte);
-        this.situacaoCte = situacaoCte;
    }
 
    public String getTpAmb() {
-        return tpAmb;
+        return this.getVo().asString("TPAMB");
    }
 
    public void setTpAmb(String tpAmb) {
         markAsChanged("TPAMB", tpAmb);
-        this.tpAmb = tpAmb;
    }
 
    public BigDecimal getTpDoc() {
-        return tpDoc;
+        return this.getVo().asBigDecimal("TPDOC");
    }
 
    public void setTpDoc(BigDecimal tpDoc) {
         markAsChanged("TPDOC", tpDoc);
-        this.tpDoc = tpDoc;
    }
 
    public BigDecimal getTpEvento() {
-        return tpEvento;
+        return this.getVo().asBigDecimal("TPEVENTO");
    }
 
    public void setTpEvento(BigDecimal tpEvento) {
         markAsChanged("TPEVENTO", tpEvento);
-        this.tpEvento = tpEvento;
    }
 
    public char[] getXmlEvento() {
-        return xmlEvento;
+        return this.getVo().asClob("XMLEVENTO");
    }
 
    public void setXmlEvento(char[] xmlEvento) {
         markAsChanged("XMLEVENTO", xmlEvento);
-        this.xmlEvento = xmlEvento;
    }
 
    public String getMotivoNdDigital() {
-        return motivoNdDigital;
+        return this.getVo().asString("MOTIVONDDIGITAL");
    }
 
    public void setMotivoNdDigital(String motivoNdDigital) {
         markAsChanged("MOTIVONDDIGITAL", motivoNdDigital);
-        this.motivoNdDigital = motivoNdDigital;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public String getSituacaoNfe() {
-        return situacaoNfe;
+        return this.getVo().asString("SITUACAONFE");
    }
 
    public void setSituacaoNfe(String situacaoNfe) {
         markAsChanged("SITUACAONFE", situacaoNfe);
-        this.situacaoNfe = situacaoNfe;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSituacaoMde() {
-        return situacaoMde;
+        return this.getVo().asString("SITUACAOMDE");
    }
 
    public void setSituacaoMde(String situacaoMde) {
         markAsChanged("SITUACAOMDE", situacaoMde);
-        this.situacaoMde = situacaoMde;
    }
 
    public String getChaveAcesso() {
-        return chaveAcesso;
+        return this.getVo().asString("CHAVEACESSO");
    }
 
    public void setChaveAcesso(String chaveAcesso) {
         markAsChanged("CHAVEACESSO", chaveAcesso);
-        this.chaveAcesso = chaveAcesso;
    }
 
    @Override
@@ -280,32 +227,6 @@ public class LogRegistrosMDe extends AbstractSankhyaEntity<LogRegistrosMDe> {
    @Override
    public LogRegistrosMDe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.descRevento = vo.asString("DESCREVENTO");
-        this.dhEvento = vo.asTimestamp("DHEVENTO");
-        this.emisSterc = vo.asString("EMISSTERC");
-        this.infCompl = vo.asString("INFCOMPL");
-        this.justificativa = vo.asString("JUSTIFICATIVA");
-        this.nomeParcDest = vo.asString("NOMEPARCDEST");
-        this.nomeParcEmit = vo.asString("NOMEPARCEMIT");
-        this.nomeParcRec = vo.asString("NOMEPARCREC");
-        this.nomeParcTransp = vo.asString("NOMEPARCTRANSP");
-        this.nsu = vo.asString("NSU");
-        this.numProtoc = vo.asString("NUMPROTOC");
-        this.seqEvento = vo.asBigDecimal("SEQEVENTO");
-        this.situacaoCte = vo.asString("SITUACAOCTE");
-        this.tpAmb = vo.asString("TPAMB");
-        this.tpDoc = vo.asBigDecimal("TPDOC");
-        this.tpEvento = vo.asBigDecimal("TPEVENTO");
-        this.xmlEvento = vo.asClob("XMLEVENTO");
-        this.motivoNdDigital = vo.asString("MOTIVONDDIGITAL");
-        this.status = vo.asString("STATUS");
-        this.situacaoNfe = vo.asString("SITUACAONFE");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.situacaoMde = vo.asString("SITUACAOMDE");
-        this.chaveAcesso = vo.asString("CHAVEACESSO");
         return this;
    }
 }

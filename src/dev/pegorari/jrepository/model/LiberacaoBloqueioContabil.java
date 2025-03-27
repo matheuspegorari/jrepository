@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBloqueioContabil> {
-   private BigDecimal codUsuLib;
-   private BigDecimal codUsuSolicit;
-   private Timestamp dhSolicit;
-   private Timestamp dtFinLib;
-   private Timestamp dtIniLib;
-   private BigDecimal nuBloqueio;
-   private BigDecimal nuLiberacao;
-   private String rotinaCtb;
-   private BigDecimal seqBloqueio;
-   private String statusLib;
-   private String tipoAcao;
-   private String tipoMov;
-
    public BigDecimal getCodUsuLib() {
-        return codUsuLib;
+        return this.getVo().asBigDecimal("CODUSULIB");
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
         markAsChanged("CODUSULIB", codUsuLib);
-        this.codUsuLib = codUsuLib;
    }
 
    public BigDecimal getCodUsuSolicit() {
-        return codUsuSolicit;
+        return this.getVo().asBigDecimal("CODUSUSOLICIT");
    }
 
    public void setCodUsuSolicit(BigDecimal codUsuSolicit) {
         markAsChanged("CODUSUSOLICIT", codUsuSolicit);
-        this.codUsuSolicit = codUsuSolicit;
    }
 
    public Timestamp getDhSolicit() {
-        return dhSolicit;
+        return this.getVo().asTimestamp("DHSOLICIT");
    }
 
    public void setDhSolicit(Timestamp dhSolicit) {
         markAsChanged("DHSOLICIT", dhSolicit);
-        this.dhSolicit = dhSolicit;
    }
 
    public Timestamp getDtFinLib() {
-        return dtFinLib;
+        return this.getVo().asTimestamp("DTFINLIB");
    }
 
    public void setDtFinLib(Timestamp dtFinLib) {
         markAsChanged("DTFINLIB", dtFinLib);
-        this.dtFinLib = dtFinLib;
    }
 
    public Timestamp getDtIniLib() {
-        return dtIniLib;
+        return this.getVo().asTimestamp("DTINILIB");
    }
 
    public void setDtIniLib(Timestamp dtIniLib) {
         markAsChanged("DTINILIB", dtIniLib);
-        this.dtIniLib = dtIniLib;
    }
 
    public BigDecimal getNuBloqueio() {
-        return nuBloqueio;
+        return this.getVo().asBigDecimal("NUBLOQUEIO");
    }
 
    public void setNuBloqueio(BigDecimal nuBloqueio) {
         markAsChanged("NUBLOQUEIO", nuBloqueio);
-        this.nuBloqueio = nuBloqueio;
    }
 
    public BigDecimal getNuLiberacao() {
-        return nuLiberacao;
+        return this.getVo().asBigDecimal("NULIBERACAO");
    }
 
    public void setNuLiberacao(BigDecimal nuLiberacao) {
         markAsChanged("NULIBERACAO", nuLiberacao);
-        this.nuLiberacao = nuLiberacao;
    }
 
    public String getRotinaCtb() {
-        return rotinaCtb;
+        return this.getVo().asString("ROTINACTB");
    }
 
    public void setRotinaCtb(String rotinaCtb) {
         markAsChanged("ROTINACTB", rotinaCtb);
-        this.rotinaCtb = rotinaCtb;
    }
 
    public BigDecimal getSeqBloqueio() {
-        return seqBloqueio;
+        return this.getVo().asBigDecimal("SEQBLOQUEIO");
    }
 
    public void setSeqBloqueio(BigDecimal seqBloqueio) {
         markAsChanged("SEQBLOQUEIO", seqBloqueio);
-        this.seqBloqueio = seqBloqueio;
    }
 
    public String getStatusLib() {
-        return statusLib;
+        return this.getVo().asString("STATUSLIB");
    }
 
    public void setStatusLib(String statusLib) {
         markAsChanged("STATUSLIB", statusLib);
-        this.statusLib = statusLib;
    }
 
    public String getTipoAcao() {
-        return tipoAcao;
+        return this.getVo().asString("TIPOACAO");
    }
 
    public void setTipoAcao(String tipoAcao) {
         markAsChanged("TIPOACAO", tipoAcao);
-        this.tipoAcao = tipoAcao;
    }
 
    public String getTipoMov() {
-        return tipoMov;
+        return this.getVo().asString("TIPOMOV");
    }
 
    public void setTipoMov(String tipoMov) {
         markAsChanged("TIPOMOV", tipoMov);
-        this.tipoMov = tipoMov;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class LiberacaoBloqueioContabil extends AbstractSankhyaEntity<LiberacaoBl
    @Override
    public LiberacaoBloqueioContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsuLib = vo.asBigDecimal("CODUSULIB");
-        this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");
-        this.dhSolicit = vo.asTimestamp("DHSOLICIT");
-        this.dtFinLib = vo.asTimestamp("DTFINLIB");
-        this.dtIniLib = vo.asTimestamp("DTINILIB");
-        this.nuBloqueio = vo.asBigDecimal("NUBLOQUEIO");
-        this.nuLiberacao = vo.asBigDecimal("NULIBERACAO");
-        this.rotinaCtb = vo.asString("ROTINACTB");
-        this.seqBloqueio = vo.asBigDecimal("SEQBLOQUEIO");
-        this.statusLib = vo.asString("STATUSLIB");
-        this.tipoAcao = vo.asString("TIPOACAO");
-        this.tipoMov = vo.asString("TIPOMOV");
         return this;
    }
 }

@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
-   private String arquivo;
-   private BigDecimal codCtabCoint;
-   private BigDecimal codLayout;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuRem;
-   private BigDecimal nuRemessa;
-
    public String getArquivo() {
-        return arquivo;
+        return this.getVo().asString("ARQUIVO");
    }
 
    public void setArquivo(String arquivo) {
         markAsChanged("ARQUIVO", arquivo);
-        this.arquivo = arquivo;
    }
 
    public BigDecimal getCodCtabCoint() {
-        return codCtabCoint;
+        return this.getVo().asBigDecimal("CODCTABCOINT");
    }
 
    public void setCodCtabCoint(BigDecimal codCtabCoint) {
         markAsChanged("CODCTABCOINT", codCtabCoint);
-        this.codCtabCoint = codCtabCoint;
    }
 
    public BigDecimal getCodLayout() {
-        return codLayout;
+        return this.getVo().asBigDecimal("CODLAYOUT");
    }
 
    public void setCodLayout(BigDecimal codLayout) {
         markAsChanged("CODLAYOUT", codLayout);
-        this.codLayout = codLayout;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuRem() {
-        return nuRem;
+        return this.getVo().asBigDecimal("NUREM");
    }
 
    public void setNuRem(BigDecimal nuRem) {
         markAsChanged("NUREM", nuRem);
-        this.nuRem = nuRem;
    }
 
    public BigDecimal getNuRemessa() {
-        return nuRemessa;
+        return this.getVo().asBigDecimal("NUREMESSA");
    }
 
    public void setNuRemessa(BigDecimal nuRemessa) {
         markAsChanged("NUREMESSA", nuRemessa);
-        this.nuRemessa = nuRemessa;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class LogRemessa extends AbstractSankhyaEntity<LogRemessa> {
    @Override
    public LogRemessa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arquivo = vo.asString("ARQUIVO");
-        this.codCtabCoint = vo.asBigDecimal("CODCTABCOINT");
-        this.codLayout = vo.asBigDecimal("CODLAYOUT");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuRem = vo.asBigDecimal("NUREM");
-        this.nuRemessa = vo.asBigDecimal("NUREMESSA");
         return this;
    }
 }

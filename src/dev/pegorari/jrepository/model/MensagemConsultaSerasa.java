@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsultaSerasa> {
-   private BigDecimal nuConsulta;
-   private String msg;
-   private BigDecimal codMsg;
-   private String codOpcao;
-
    public BigDecimal getNuConsulta() {
-        return nuConsulta;
+        return this.getVo().asBigDecimal("NUCONSULTA");
    }
 
    public void setNuConsulta(BigDecimal nuConsulta) {
         markAsChanged("NUCONSULTA", nuConsulta);
-        this.nuConsulta = nuConsulta;
    }
 
    public String getMsg() {
-        return msg;
+        return this.getVo().asString("MSG");
    }
 
    public void setMsg(String msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public BigDecimal getCodMsg() {
-        return codMsg;
+        return this.getVo().asBigDecimal("CODMSG");
    }
 
    public void setCodMsg(BigDecimal codMsg) {
         markAsChanged("CODMSG", codMsg);
-        this.codMsg = codMsg;
    }
 
    public String getCodOpcao() {
-        return codOpcao;
+        return this.getVo().asString("CODOPCAO");
    }
 
    public void setCodOpcao(String codOpcao) {
         markAsChanged("CODOPCAO", codOpcao);
-        this.codOpcao = codOpcao;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class MensagemConsultaSerasa extends AbstractSankhyaEntity<MensagemConsul
    @Override
    public MensagemConsultaSerasa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuConsulta = vo.asBigDecimal("NUCONSULTA");
-        this.msg = vo.asString("MSG");
-        this.codMsg = vo.asBigDecimal("CODMSG");
-        this.codOpcao = vo.asString("CODOPCAO");
         return this;
    }
 }

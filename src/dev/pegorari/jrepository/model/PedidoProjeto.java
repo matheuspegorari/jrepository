@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
-   private String ativo;
-   private BigDecimal nuFap;
-   private BigDecimal nuNota;
-   private BigDecimal qtdHoras;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getNuFap() {
-        return nuFap;
+        return this.getVo().asBigDecimal("NUFAP");
    }
 
    public void setNuFap(BigDecimal nuFap) {
         markAsChanged("NUFAP", nuFap);
-        this.nuFap = nuFap;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getQtdHoras() {
-        return qtdHoras;
+        return this.getVo().asBigDecimal("QTDHORAS");
    }
 
    public void setQtdHoras(BigDecimal qtdHoras) {
         markAsChanged("QTDHORAS", qtdHoras);
-        this.qtdHoras = qtdHoras;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class PedidoProjeto extends AbstractSankhyaEntity<PedidoProjeto> {
    @Override
    public PedidoProjeto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.nuFap = vo.asBigDecimal("NUFAP");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtdHoras = vo.asBigDecimal("QTDHORAS");
         return this;
    }
 }

@@ -6,175 +6,140 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
-   private String aceitaObservacao;
-   private BigDecimal codGrupoPerg;
-   private BigDecimal codPerg;
-   private BigDecimal codPergTab;
-   private BigDecimal codUsu;
-   private String descrPerg;
-   private Timestamp dhAlter;
-   private String instrucaoAplicador;
-   private BigDecimal nroTentativas;
-   private String obrigatoria;
-   private BigDecimal ordemTab;
-   private String permiteAnexo;
-   private BigDecimal qtdMaxEscolhas;
-   private BigDecimal qtdMaxLinhas;
-   private BigDecimal tempoParaResposta;
-   private String tipo;
-   private String permiteFiltrar;
-
    public String getAceitaObservacao() {
-        return aceitaObservacao;
+        return this.getVo().asString("ACEITAOBSERVACAO");
    }
 
    public void setAceitaObservacao(String aceitaObservacao) {
         markAsChanged("ACEITAOBSERVACAO", aceitaObservacao);
-        this.aceitaObservacao = aceitaObservacao;
    }
 
    public BigDecimal getCodGrupoPerg() {
-        return codGrupoPerg;
+        return this.getVo().asBigDecimal("CODGRUPOPERG");
    }
 
    public void setCodGrupoPerg(BigDecimal codGrupoPerg) {
         markAsChanged("CODGRUPOPERG", codGrupoPerg);
-        this.codGrupoPerg = codGrupoPerg;
    }
 
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public BigDecimal getCodPergTab() {
-        return codPergTab;
+        return this.getVo().asBigDecimal("CODPERGTAB");
    }
 
    public void setCodPergTab(BigDecimal codPergTab) {
         markAsChanged("CODPERGTAB", codPergTab);
-        this.codPergTab = codPergTab;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescrPerg() {
-        return descrPerg;
+        return this.getVo().asString("DESCRPERG");
    }
 
    public void setDescrPerg(String descrPerg) {
         markAsChanged("DESCRPERG", descrPerg);
-        this.descrPerg = descrPerg;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getInstrucaoAplicador() {
-        return instrucaoAplicador;
+        return this.getVo().asString("INSTRUCAOAPLICADOR");
    }
 
    public void setInstrucaoAplicador(String instrucaoAplicador) {
         markAsChanged("INSTRUCAOAPLICADOR", instrucaoAplicador);
-        this.instrucaoAplicador = instrucaoAplicador;
    }
 
    public BigDecimal getNroTentativas() {
-        return nroTentativas;
+        return this.getVo().asBigDecimal("NROTENTATIVAS");
    }
 
    public void setNroTentativas(BigDecimal nroTentativas) {
         markAsChanged("NROTENTATIVAS", nroTentativas);
-        this.nroTentativas = nroTentativas;
    }
 
    public String getObrigatoria() {
-        return obrigatoria;
+        return this.getVo().asString("OBRIGATORIA");
    }
 
    public void setObrigatoria(String obrigatoria) {
         markAsChanged("OBRIGATORIA", obrigatoria);
-        this.obrigatoria = obrigatoria;
    }
 
    public BigDecimal getOrdemTab() {
-        return ordemTab;
+        return this.getVo().asBigDecimal("ORDEMTAB");
    }
 
    public void setOrdemTab(BigDecimal ordemTab) {
         markAsChanged("ORDEMTAB", ordemTab);
-        this.ordemTab = ordemTab;
    }
 
    public String getPermiteAnexo() {
-        return permiteAnexo;
+        return this.getVo().asString("PERMITEANEXO");
    }
 
    public void setPermiteAnexo(String permiteAnexo) {
         markAsChanged("PERMITEANEXO", permiteAnexo);
-        this.permiteAnexo = permiteAnexo;
    }
 
    public BigDecimal getQtdMaxEscolhas() {
-        return qtdMaxEscolhas;
+        return this.getVo().asBigDecimal("QTDMAXESCOLHAS");
    }
 
    public void setQtdMaxEscolhas(BigDecimal qtdMaxEscolhas) {
         markAsChanged("QTDMAXESCOLHAS", qtdMaxEscolhas);
-        this.qtdMaxEscolhas = qtdMaxEscolhas;
    }
 
    public BigDecimal getQtdMaxLinhas() {
-        return qtdMaxLinhas;
+        return this.getVo().asBigDecimal("QTDMAXLINHAS");
    }
 
    public void setQtdMaxLinhas(BigDecimal qtdMaxLinhas) {
         markAsChanged("QTDMAXLINHAS", qtdMaxLinhas);
-        this.qtdMaxLinhas = qtdMaxLinhas;
    }
 
    public BigDecimal getTempoParaResposta() {
-        return tempoParaResposta;
+        return this.getVo().asBigDecimal("TEMPOPARARESPOSTA");
    }
 
    public void setTempoParaResposta(BigDecimal tempoParaResposta) {
         markAsChanged("TEMPOPARARESPOSTA", tempoParaResposta);
-        this.tempoParaResposta = tempoParaResposta;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getPermiteFiltrar() {
-        return permiteFiltrar;
+        return this.getVo().asString("PERMITEFILTRAR");
    }
 
    public void setPermiteFiltrar(String permiteFiltrar) {
         markAsChanged("PERMITEFILTRAR", permiteFiltrar);
-        this.permiteFiltrar = permiteFiltrar;
    }
 
    @Override
@@ -190,23 +155,6 @@ public class Pergunta extends AbstractSankhyaEntity<Pergunta> {
    @Override
    public Pergunta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aceitaObservacao = vo.asString("ACEITAOBSERVACAO");
-        this.codGrupoPerg = vo.asBigDecimal("CODGRUPOPERG");
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.codPergTab = vo.asBigDecimal("CODPERGTAB");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descrPerg = vo.asString("DESCRPERG");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.instrucaoAplicador = vo.asString("INSTRUCAOAPLICADOR");
-        this.nroTentativas = vo.asBigDecimal("NROTENTATIVAS");
-        this.obrigatoria = vo.asString("OBRIGATORIA");
-        this.ordemTab = vo.asBigDecimal("ORDEMTAB");
-        this.permiteAnexo = vo.asString("PERMITEANEXO");
-        this.qtdMaxEscolhas = vo.asBigDecimal("QTDMAXESCOLHAS");
-        this.qtdMaxLinhas = vo.asBigDecimal("QTDMAXLINHAS");
-        this.tempoParaResposta = vo.asBigDecimal("TEMPOPARARESPOSTA");
-        this.tipo = vo.asString("TIPO");
-        this.permiteFiltrar = vo.asString("PERMITEFILTRAR");
         return this;
    }
 }

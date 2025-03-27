@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
-   private String aLineaCheqDev;
-   private BigDecimal codTipTit;
-   private BigDecimal nuDev;
-   private BigDecimal nuFinDesp;
-   private BigDecimal nuFinOrig;
-   private BigDecimal nuFinRec;
-
    public String getALineaCheqDev() {
-        return aLineaCheqDev;
+        return this.getVo().asString("ALINEACHEQDEV");
    }
 
    public void setALineaCheqDev(String aLineaCheqDev) {
         markAsChanged("ALINEACHEQDEV", aLineaCheqDev);
-        this.aLineaCheqDev = aLineaCheqDev;
    }
 
    public BigDecimal getCodTipTit() {
-        return codTipTit;
+        return this.getVo().asBigDecimal("CODTIPTIT");
    }
 
    public void setCodTipTit(BigDecimal codTipTit) {
         markAsChanged("CODTIPTIT", codTipTit);
-        this.codTipTit = codTipTit;
    }
 
    public BigDecimal getNuDev() {
-        return nuDev;
+        return this.getVo().asBigDecimal("NUDEV");
    }
 
    public void setNuDev(BigDecimal nuDev) {
         markAsChanged("NUDEV", nuDev);
-        this.nuDev = nuDev;
    }
 
    public BigDecimal getNuFinDesp() {
-        return nuFinDesp;
+        return this.getVo().asBigDecimal("NUFINDESP");
    }
 
    public void setNuFinDesp(BigDecimal nuFinDesp) {
         markAsChanged("NUFINDESP", nuFinDesp);
-        this.nuFinDesp = nuFinDesp;
    }
 
    public BigDecimal getNuFinOrig() {
-        return nuFinOrig;
+        return this.getVo().asBigDecimal("NUFINORIG");
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
         markAsChanged("NUFINORIG", nuFinOrig);
-        this.nuFinOrig = nuFinOrig;
    }
 
    public BigDecimal getNuFinRec() {
-        return nuFinRec;
+        return this.getVo().asBigDecimal("NUFINREC");
    }
 
    public void setNuFinRec(BigDecimal nuFinRec) {
         markAsChanged("NUFINREC", nuFinRec);
-        this.nuFinRec = nuFinRec;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class DevolucaoCheque extends AbstractSankhyaEntity<DevolucaoCheque> {
    @Override
    public DevolucaoCheque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aLineaCheqDev = vo.asString("ALINEACHEQDEV");
-        this.codTipTit = vo.asBigDecimal("CODTIPTIT");
-        this.nuDev = vo.asBigDecimal("NUDEV");
-        this.nuFinDesp = vo.asBigDecimal("NUFINDESP");
-        this.nuFinOrig = vo.asBigDecimal("NUFINORIG");
-        this.nuFinRec = vo.asBigDecimal("NUFINREC");
         return this;
    }
 }

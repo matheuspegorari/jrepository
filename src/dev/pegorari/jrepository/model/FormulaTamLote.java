@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
-   private String descFormula;
-   private String expressao;
-   private BigDecimal idFormula;
-
    public String getDescFormula() {
-        return descFormula;
+        return this.getVo().asString("DESCFORMULA");
    }
 
    public void setDescFormula(String descFormula) {
         markAsChanged("DESCFORMULA", descFormula);
-        this.descFormula = descFormula;
    }
 
    public String getExpressao() {
-        return expressao;
+        return this.getVo().asString("EXPRESSAO");
    }
 
    public void setExpressao(String expressao) {
         markAsChanged("EXPRESSAO", expressao);
-        this.expressao = expressao;
    }
 
    public BigDecimal getIdFormula() {
-        return idFormula;
+        return this.getVo().asBigDecimal("IDFORMULA");
    }
 
    public void setIdFormula(BigDecimal idFormula) {
         markAsChanged("IDFORMULA", idFormula);
-        this.idFormula = idFormula;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class FormulaTamLote extends AbstractSankhyaEntity<FormulaTamLote> {
    @Override
    public FormulaTamLote fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descFormula = vo.asString("DESCFORMULA");
-        this.expressao = vo.asString("EXPRESSAO");
-        this.idFormula = vo.asBigDecimal("IDFORMULA");
         return this;
    }
 }

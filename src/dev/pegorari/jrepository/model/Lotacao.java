@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
-   private BigDecimal nuOcor;
-   private BigDecimal codCargo;
-   private BigDecimal codEmp;
-   private BigDecimal codFunc;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private Timestamp dtPosse;
-   private Timestamp dtSaida;
-
    public BigDecimal getNuOcor() {
-        return nuOcor;
+        return this.getVo().asBigDecimal("NUOCOR");
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
         markAsChanged("NUOCOR", nuOcor);
-        this.nuOcor = nuOcor;
    }
 
    public BigDecimal getCodCargo() {
-        return codCargo;
+        return this.getVo().asBigDecimal("CODCARGO");
    }
 
    public void setCodCargo(BigDecimal codCargo) {
         markAsChanged("CODCARGO", codCargo);
-        this.codCargo = codCargo;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtPosse() {
-        return dtPosse;
+        return this.getVo().asTimestamp("DTPOSSE");
    }
 
    public void setDtPosse(Timestamp dtPosse) {
         markAsChanged("DTPOSSE", dtPosse);
-        this.dtPosse = dtPosse;
    }
 
    public Timestamp getDtSaida() {
-        return dtSaida;
+        return this.getVo().asTimestamp("DTSAIDA");
    }
 
    public void setDtSaida(Timestamp dtSaida) {
         markAsChanged("DTSAIDA", dtSaida);
-        this.dtSaida = dtSaida;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class Lotacao extends AbstractSankhyaEntity<Lotacao> {
    @Override
    public Lotacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuOcor = vo.asBigDecimal("NUOCOR");
-        this.codCargo = vo.asBigDecimal("CODCARGO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtPosse = vo.asTimestamp("DTPOSSE");
-        this.dtSaida = vo.asTimestamp("DTSAIDA");
         return this;
    }
 }

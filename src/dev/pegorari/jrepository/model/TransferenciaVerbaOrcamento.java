@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<TransferenciaVerbaOrcamento> {
-   private BigDecimal codMeta;
-   private Timestamp dhTransf;
-   private BigDecimal nuTvo;
-   private BigDecimal vlrTransf;
-
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public Timestamp getDhTransf() {
-        return dhTransf;
+        return this.getVo().asTimestamp("DHTRANSF");
    }
 
    public void setDhTransf(Timestamp dhTransf) {
         markAsChanged("DHTRANSF", dhTransf);
-        this.dhTransf = dhTransf;
    }
 
    public BigDecimal getNuTvo() {
-        return nuTvo;
+        return this.getVo().asBigDecimal("NUTVO");
    }
 
    public void setNuTvo(BigDecimal nuTvo) {
         markAsChanged("NUTVO", nuTvo);
-        this.nuTvo = nuTvo;
    }
 
    public BigDecimal getVlrTransf() {
-        return vlrTransf;
+        return this.getVo().asBigDecimal("VLRTRANSF");
    }
 
    public void setVlrTransf(BigDecimal vlrTransf) {
         markAsChanged("VLRTRANSF", vlrTransf);
-        this.vlrTransf = vlrTransf;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class TransferenciaVerbaOrcamento extends AbstractSankhyaEntity<Transfere
    @Override
    public TransferenciaVerbaOrcamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.dhTransf = vo.asTimestamp("DHTRANSF");
-        this.nuTvo = vo.asBigDecimal("NUTVO");
-        this.vlrTransf = vo.asBigDecimal("VLRTRANSF");
         return this;
    }
 }

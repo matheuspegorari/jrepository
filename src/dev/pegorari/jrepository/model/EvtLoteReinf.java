@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
-   private Timestamp dhInc;
-   private Timestamp dhPrevConsulta;
-   private char[] msg;
-   private String nroProtLote;
-   private BigDecimal nuLote;
-   private String status;
-   private char[] xmlEnvLote;
-   private char[] xmlRetLote;
-   private BigDecimal tpAmb;
-
    public Timestamp getDhInc() {
-        return dhInc;
+        return this.getVo().asTimestamp("DHINC");
    }
 
    public void setDhInc(Timestamp dhInc) {
         markAsChanged("DHINC", dhInc);
-        this.dhInc = dhInc;
    }
 
    public Timestamp getDhPrevConsulta() {
-        return dhPrevConsulta;
+        return this.getVo().asTimestamp("DHPREVCONSULTA");
    }
 
    public void setDhPrevConsulta(Timestamp dhPrevConsulta) {
         markAsChanged("DHPREVCONSULTA", dhPrevConsulta);
-        this.dhPrevConsulta = dhPrevConsulta;
    }
 
    public char[] getMsg() {
-        return msg;
+        return this.getVo().asClob("MSG");
    }
 
    public void setMsg(char[] msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public String getNroProtLote() {
-        return nroProtLote;
+        return this.getVo().asString("NROPROTLOTE");
    }
 
    public void setNroProtLote(String nroProtLote) {
         markAsChanged("NROPROTLOTE", nroProtLote);
-        this.nroProtLote = nroProtLote;
    }
 
    public BigDecimal getNuLote() {
-        return nuLote;
+        return this.getVo().asBigDecimal("NULOTE");
    }
 
    public void setNuLote(BigDecimal nuLote) {
         markAsChanged("NULOTE", nuLote);
-        this.nuLote = nuLote;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public char[] getXmlEnvLote() {
-        return xmlEnvLote;
+        return this.getVo().asClob("XMLENVLOTE");
    }
 
    public void setXmlEnvLote(char[] xmlEnvLote) {
         markAsChanged("XMLENVLOTE", xmlEnvLote);
-        this.xmlEnvLote = xmlEnvLote;
    }
 
    public char[] getXmlRetLote() {
-        return xmlRetLote;
+        return this.getVo().asClob("XMLRETLOTE");
    }
 
    public void setXmlRetLote(char[] xmlRetLote) {
         markAsChanged("XMLRETLOTE", xmlRetLote);
-        this.xmlRetLote = xmlRetLote;
    }
 
    public BigDecimal getTpAmb() {
-        return tpAmb;
+        return this.getVo().asBigDecimal("TPAMB");
    }
 
    public void setTpAmb(BigDecimal tpAmb) {
         markAsChanged("TPAMB", tpAmb);
-        this.tpAmb = tpAmb;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class EvtLoteReinf extends AbstractSankhyaEntity<EvtLoteReinf> {
    @Override
    public EvtLoteReinf fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhInc = vo.asTimestamp("DHINC");
-        this.dhPrevConsulta = vo.asTimestamp("DHPREVCONSULTA");
-        this.msg = vo.asClob("MSG");
-        this.nroProtLote = vo.asString("NROPROTLOTE");
-        this.nuLote = vo.asBigDecimal("NULOTE");
-        this.status = vo.asString("STATUS");
-        this.xmlEnvLote = vo.asClob("XMLENVLOTE");
-        this.xmlRetLote = vo.asClob("XMLRETLOTE");
-        this.tpAmb = vo.asBigDecimal("TPAMB");
         return this;
    }
 }

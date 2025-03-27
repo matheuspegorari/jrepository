@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto> {
-   private String codVol;
-   private BigDecimal nuNota;
-   private BigDecimal codEnd;
-   private Timestamp dhAlter;
-   private BigDecimal codUsu;
-   private BigDecimal estoque;
-   private BigDecimal codProd;
-   private BigDecimal estoqueVolPad;
-   private BigDecimal codLocal;
-   private String controle;
-   private BigDecimal sequencia;
-   private BigDecimal codEmp;
-
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getEstoque() {
-        return estoque;
+        return this.getVo().asBigDecimal("ESTOQUE");
    }
 
    public void setEstoque(BigDecimal estoque) {
         markAsChanged("ESTOQUE", estoque);
-        this.estoque = estoque;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getEstoqueVolPad() {
-        return estoqueVolPad;
+        return this.getVo().asBigDecimal("ESTOQUEVOLPAD");
    }
 
    public void setEstoqueVolPad(BigDecimal estoqueVolPad) {
         markAsChanged("ESTOQUEVOLPAD", estoqueVolPad);
-        this.estoqueVolPad = estoqueVolPad;
    }
 
    public BigDecimal getCodLocal() {
-        return codLocal;
+        return this.getVo().asBigDecimal("CODLOCAL");
    }
 
    public void setCodLocal(BigDecimal codLocal) {
         markAsChanged("CODLOCAL", codLocal);
-        this.codLocal = codLocal;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class EstoqueNotaProduto extends AbstractSankhyaEntity<EstoqueNotaProduto
    @Override
    public EstoqueNotaProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVol = vo.asString("CODVOL");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.estoque = vo.asBigDecimal("ESTOQUE");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.estoqueVolPad = vo.asBigDecimal("ESTOQUEVOLPAD");
-        this.codLocal = vo.asBigDecimal("CODLOCAL");
-        this.controle = vo.asString("CONTROLE");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
         return this;
    }
 }

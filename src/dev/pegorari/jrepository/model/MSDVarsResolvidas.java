@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> {
-   private BigDecimal codVar;
-   private BigDecimal codVarRes;
-   private Timestamp dtAlter;
-   private Timestamp dtRef;
-   private String valor;
-   private BigDecimal valorNumerico;
-
    public BigDecimal getCodVar() {
-        return codVar;
+        return this.getVo().asBigDecimal("CODVAR");
    }
 
    public void setCodVar(BigDecimal codVar) {
         markAsChanged("CODVAR", codVar);
-        this.codVar = codVar;
    }
 
    public BigDecimal getCodVarRes() {
-        return codVarRes;
+        return this.getVo().asBigDecimal("CODVARRES");
    }
 
    public void setCodVarRes(BigDecimal codVarRes) {
         markAsChanged("CODVARRES", codVarRes);
-        this.codVarRes = codVarRes;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public String getValor() {
-        return valor;
+        return this.getVo().asString("VALOR");
    }
 
    public void setValor(String valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public BigDecimal getValorNumerico() {
-        return valorNumerico;
+        return this.getVo().asBigDecimal("VALORNUMERICO");
    }
 
    public void setValorNumerico(BigDecimal valorNumerico) {
         markAsChanged("VALORNUMERICO", valorNumerico);
-        this.valorNumerico = valorNumerico;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class MSDVarsResolvidas extends AbstractSankhyaEntity<MSDVarsResolvidas> 
    @Override
    public MSDVarsResolvidas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVar = vo.asBigDecimal("CODVAR");
-        this.codVarRes = vo.asBigDecimal("CODVARRES");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.valor = vo.asString("VALOR");
-        this.valorNumerico = vo.asBigDecimal("VALORNUMERICO");
         return this;
    }
 }

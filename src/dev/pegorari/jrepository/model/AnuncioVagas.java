@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
-   private String tipo;
-   private String resumo;
-   private String descrVaga;
-   private BigDecimal codAnuncio;
-   private BigDecimal nuRequisicao;
-   private String status;
-   private BigDecimal faixaSalarialFinal;
-   private Timestamp dtEntrada;
-   private BigDecimal faixaSalarialInicial;
-   private BigDecimal grauInstr;
-   private BigDecimal nuVagas;
-   private Timestamp dtTermino;
-
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getResumo() {
-        return resumo;
+        return this.getVo().asString("RESUMO");
    }
 
    public void setResumo(String resumo) {
         markAsChanged("RESUMO", resumo);
-        this.resumo = resumo;
    }
 
    public String getDescrVaga() {
-        return descrVaga;
+        return this.getVo().asString("DESCRVAGA");
    }
 
    public void setDescrVaga(String descrVaga) {
         markAsChanged("DESCRVAGA", descrVaga);
-        this.descrVaga = descrVaga;
    }
 
    public BigDecimal getCodAnuncio() {
-        return codAnuncio;
+        return this.getVo().asBigDecimal("CODANUNCIO");
    }
 
    public void setCodAnuncio(BigDecimal codAnuncio) {
         markAsChanged("CODANUNCIO", codAnuncio);
-        this.codAnuncio = codAnuncio;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getFaixaSalarialFinal() {
-        return faixaSalarialFinal;
+        return this.getVo().asBigDecimal("FAIXASALARIALFINAL");
    }
 
    public void setFaixaSalarialFinal(BigDecimal faixaSalarialFinal) {
         markAsChanged("FAIXASALARIALFINAL", faixaSalarialFinal);
-        this.faixaSalarialFinal = faixaSalarialFinal;
    }
 
    public Timestamp getDtEntrada() {
-        return dtEntrada;
+        return this.getVo().asTimestamp("DTENTRADA");
    }
 
    public void setDtEntrada(Timestamp dtEntrada) {
         markAsChanged("DTENTRADA", dtEntrada);
-        this.dtEntrada = dtEntrada;
    }
 
    public BigDecimal getFaixaSalarialInicial() {
-        return faixaSalarialInicial;
+        return this.getVo().asBigDecimal("FAIXASALARIALINICIAL");
    }
 
    public void setFaixaSalarialInicial(BigDecimal faixaSalarialInicial) {
         markAsChanged("FAIXASALARIALINICIAL", faixaSalarialInicial);
-        this.faixaSalarialInicial = faixaSalarialInicial;
    }
 
    public BigDecimal getGrauInstr() {
-        return grauInstr;
+        return this.getVo().asBigDecimal("GRAUINSTR");
    }
 
    public void setGrauInstr(BigDecimal grauInstr) {
         markAsChanged("GRAUINSTR", grauInstr);
-        this.grauInstr = grauInstr;
    }
 
    public BigDecimal getNuVagas() {
-        return nuVagas;
+        return this.getVo().asBigDecimal("NUVAGAS");
    }
 
    public void setNuVagas(BigDecimal nuVagas) {
         markAsChanged("NUVAGAS", nuVagas);
-        this.nuVagas = nuVagas;
    }
 
    public Timestamp getDtTermino() {
-        return dtTermino;
+        return this.getVo().asTimestamp("DTTERMINO");
    }
 
    public void setDtTermino(Timestamp dtTermino) {
         markAsChanged("DTTERMINO", dtTermino);
-        this.dtTermino = dtTermino;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class AnuncioVagas extends AbstractSankhyaEntity<AnuncioVagas> {
    @Override
    public AnuncioVagas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipo = vo.asString("TIPO");
-        this.resumo = vo.asString("RESUMO");
-        this.descrVaga = vo.asString("DESCRVAGA");
-        this.codAnuncio = vo.asBigDecimal("CODANUNCIO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.status = vo.asString("STATUS");
-        this.faixaSalarialFinal = vo.asBigDecimal("FAIXASALARIALFINAL");
-        this.dtEntrada = vo.asTimestamp("DTENTRADA");
-        this.faixaSalarialInicial = vo.asBigDecimal("FAIXASALARIALINICIAL");
-        this.grauInstr = vo.asBigDecimal("GRAUINSTR");
-        this.nuVagas = vo.asBigDecimal("NUVAGAS");
-        this.dtTermino = vo.asTimestamp("DTTERMINO");
         return this;
    }
 }

@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosWorkCenterAtividade> {
-   private BigDecimal codCre;
-   private BigDecimal codProdPa;
-   private String controlePa;
-   private BigDecimal ideFx;
-   private BigDecimal qtdUtilizacao;
-   private BigDecimal seqRec;
-   private BigDecimal multUtilizacao;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getQtdUtilizacao() {
-        return qtdUtilizacao;
+        return this.getVo().asBigDecimal("QTDUTILIZACAO");
    }
 
    public void setQtdUtilizacao(BigDecimal qtdUtilizacao) {
         markAsChanged("QTDUTILIZACAO", qtdUtilizacao);
-        this.qtdUtilizacao = qtdUtilizacao;
    }
 
    public BigDecimal getSeqRec() {
-        return seqRec;
+        return this.getVo().asBigDecimal("SEQREC");
    }
 
    public void setSeqRec(BigDecimal seqRec) {
         markAsChanged("SEQREC", seqRec);
-        this.seqRec = seqRec;
    }
 
    public BigDecimal getMultUtilizacao() {
-        return multUtilizacao;
+        return this.getVo().asBigDecimal("MULTUTILIZACAO");
    }
 
    public void setMultUtilizacao(BigDecimal multUtilizacao) {
         markAsChanged("MULTUTILIZACAO", multUtilizacao);
-        this.multUtilizacao = multUtilizacao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class RecursosWorkCenterAtividade extends AbstractSankhyaEntity<RecursosW
    @Override
    public RecursosWorkCenterAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.qtdUtilizacao = vo.asBigDecimal("QTDUTILIZACAO");
-        this.seqRec = vo.asBigDecimal("SEQREC");
-        this.multUtilizacao = vo.asBigDecimal("MULTUTILIZACAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
         return this;
    }
 }

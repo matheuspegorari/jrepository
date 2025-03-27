@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto> {
-   private BigDecimal codChave;
-   private BigDecimal codForm;
-   private String tabela;
-   private String tipForm;
-   private BigDecimal codEmpPla;
-   private String tipLancPla;
-
    public BigDecimal getCodChave() {
-        return codChave;
+        return this.getVo().asBigDecimal("CODCHAVE");
    }
 
    public void setCodChave(BigDecimal codChave) {
         markAsChanged("CODCHAVE", codChave);
-        this.codChave = codChave;
    }
 
    public BigDecimal getCodForm() {
-        return codForm;
+        return this.getVo().asBigDecimal("CODFORM");
    }
 
    public void setCodForm(BigDecimal codForm) {
         markAsChanged("CODFORM", codForm);
-        this.codForm = codForm;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public String getTipForm() {
-        return tipForm;
+        return this.getVo().asString("TIPFORM");
    }
 
    public void setTipForm(String tipForm) {
         markAsChanged("TIPFORM", tipForm);
-        this.tipForm = tipForm;
    }
 
    public BigDecimal getCodEmpPla() {
-        return codEmpPla;
+        return this.getVo().asBigDecimal("CODEMPPLA");
    }
 
    public void setCodEmpPla(BigDecimal codEmpPla) {
         markAsChanged("CODEMPPLA", codEmpPla);
-        this.codEmpPla = codEmpPla;
    }
 
    public String getTipLancPla() {
-        return tipLancPla;
+        return this.getVo().asString("TIPLANCPLA");
    }
 
    public void setTipLancPla(String tipLancPla) {
         markAsChanged("TIPLANCPLA", tipLancPla);
-        this.tipLancPla = tipLancPla;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class FiltroCalculoCusto extends AbstractSankhyaEntity<FiltroCalculoCusto
    @Override
    public FiltroCalculoCusto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codChave = vo.asBigDecimal("CODCHAVE");
-        this.codForm = vo.asBigDecimal("CODFORM");
-        this.tabela = vo.asString("TABELA");
-        this.tipForm = vo.asString("TIPFORM");
-        this.codEmpPla = vo.asBigDecimal("CODEMPPLA");
-        this.tipLancPla = vo.asString("TIPLANCPLA");
         return this;
    }
 }

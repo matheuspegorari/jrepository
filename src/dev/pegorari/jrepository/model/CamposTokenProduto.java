@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto> {
-   private String campo;
-   private BigDecimal codCfg;
-   private String entidade;
-   private BigDecimal relevancia;
-   private String tabela;
-
    public String getCampo() {
-        return campo;
+        return this.getVo().asString("CAMPO");
    }
 
    public void setCampo(String campo) {
         markAsChanged("CAMPO", campo);
-        this.campo = campo;
    }
 
    public BigDecimal getCodCfg() {
-        return codCfg;
+        return this.getVo().asBigDecimal("CODCFG");
    }
 
    public void setCodCfg(BigDecimal codCfg) {
         markAsChanged("CODCFG", codCfg);
-        this.codCfg = codCfg;
    }
 
    public String getEntidade() {
-        return entidade;
+        return this.getVo().asString("ENTIDADE");
    }
 
    public void setEntidade(String entidade) {
         markAsChanged("ENTIDADE", entidade);
-        this.entidade = entidade;
    }
 
    public BigDecimal getRelevancia() {
-        return relevancia;
+        return this.getVo().asBigDecimal("RELEVANCIA");
    }
 
    public void setRelevancia(BigDecimal relevancia) {
         markAsChanged("RELEVANCIA", relevancia);
-        this.relevancia = relevancia;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class CamposTokenProduto extends AbstractSankhyaEntity<CamposTokenProduto
    @Override
    public CamposTokenProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.campo = vo.asString("CAMPO");
-        this.codCfg = vo.asBigDecimal("CODCFG");
-        this.entidade = vo.asString("ENTIDADE");
-        this.relevancia = vo.asBigDecimal("RELEVANCIA");
-        this.tabela = vo.asString("TABELA");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMsgCotacao> {
-   private BigDecimal codFila;
-   private BigDecimal codParc;
-   private BigDecimal contador;
-   private BigDecimal numCotacao;
-
    public BigDecimal getCodFila() {
-        return codFila;
+        return this.getVo().asBigDecimal("CODFILA");
    }
 
    public void setCodFila(BigDecimal codFila) {
         markAsChanged("CODFILA", codFila);
-        this.codFila = codFila;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getContador() {
-        return contador;
+        return this.getVo().asBigDecimal("CONTADOR");
    }
 
    public void setContador(BigDecimal contador) {
         markAsChanged("CONTADOR", contador);
-        this.contador = contador;
    }
 
    public BigDecimal getNumCotacao() {
-        return numCotacao;
+        return this.getVo().asBigDecimal("NUMCOTACAO");
    }
 
    public void setNumCotacao(BigDecimal numCotacao) {
         markAsChanged("NUMCOTACAO", numCotacao);
-        this.numCotacao = numCotacao;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class IteracaoFilaMsgCotacao extends AbstractSankhyaEntity<IteracaoFilaMs
    @Override
    public IteracaoFilaMsgCotacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codFila = vo.asBigDecimal("CODFILA");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.contador = vo.asBigDecimal("CONTADOR");
-        this.numCotacao = vo.asBigDecimal("NUMCOTACAO");
         return this;
    }
 }

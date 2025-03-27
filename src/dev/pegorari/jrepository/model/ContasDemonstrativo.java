@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrativo> {
-   private String codDmt;
-   private BigDecimal codTdm;
-   private BigDecimal codCtaCtb;
-   private BigDecimal codEmp;
-
    public String getCodDmt() {
-        return codDmt;
+        return this.getVo().asString("CODDMT");
    }
 
    public void setCodDmt(String codDmt) {
         markAsChanged("CODDMT", codDmt);
-        this.codDmt = codDmt;
    }
 
    public BigDecimal getCodTdm() {
-        return codTdm;
+        return this.getVo().asBigDecimal("CODTDM");
    }
 
    public void setCodTdm(BigDecimal codTdm) {
         markAsChanged("CODTDM", codTdm);
-        this.codTdm = codTdm;
    }
 
    public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+        return this.getVo().asBigDecimal("CODCTACTB");
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
         markAsChanged("CODCTACTB", codCtaCtb);
-        this.codCtaCtb = codCtaCtb;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ContasDemonstrativo extends AbstractSankhyaEntity<ContasDemonstrati
    @Override
    public ContasDemonstrativo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codDmt = vo.asString("CODDMT");
-        this.codTdm = vo.asBigDecimal("CODTDM");
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.codEmp = vo.asBigDecimal("CODEMP");
         return this;
    }
 }

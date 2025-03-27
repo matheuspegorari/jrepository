@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
-   private String ativo;
-   private String celular;
-   private BigDecimal codCon;
-   private BigDecimal codCont;
-   private BigDecimal codFunc;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private String email;
-   private String nomeCon;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getCelular() {
-        return celular;
+        return this.getVo().asString("CELULAR");
    }
 
    public void setCelular(String celular) {
         markAsChanged("CELULAR", celular);
-        this.celular = celular;
    }
 
    public BigDecimal getCodCon() {
-        return codCon;
+        return this.getVo().asBigDecimal("CODCON");
    }
 
    public void setCodCon(BigDecimal codCon) {
         markAsChanged("CODCON", codCon);
-        this.codCon = codCon;
    }
 
    public BigDecimal getCodCont() {
-        return codCont;
+        return this.getVo().asBigDecimal("CODCONT");
    }
 
    public void setCodCont(BigDecimal codCont) {
         markAsChanged("CODCONT", codCont);
-        this.codCont = codCont;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getNomeCon() {
-        return nomeCon;
+        return this.getVo().asString("NOMECON");
    }
 
    public void setNomeCon(String nomeCon) {
         markAsChanged("NOMECON", nomeCon);
-        this.nomeCon = nomeCon;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class MSDDestinatario extends AbstractSankhyaEntity<MSDDestinatario> {
    @Override
    public MSDDestinatario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.celular = vo.asString("CELULAR");
-        this.codCon = vo.asBigDecimal("CODCON");
-        this.codCont = vo.asBigDecimal("CODCONT");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.email = vo.asString("EMAIL");
-        this.nomeCon = vo.asString("NOMECON");
         return this;
    }
 }

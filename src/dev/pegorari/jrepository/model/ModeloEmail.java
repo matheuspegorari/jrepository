@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
-   private String assunto;
-   private BigDecimal codModelo;
-   private BigDecimal codSmtp;
-   private char[] conteudo;
-   private String descricao;
-   private String responderPara;
-   private String tipo;
-   private BigDecimal codUsuRemet;
-
    public String getAssunto() {
-        return assunto;
+        return this.getVo().asString("ASSUNTO");
    }
 
    public void setAssunto(String assunto) {
         markAsChanged("ASSUNTO", assunto);
-        this.assunto = assunto;
    }
 
    public BigDecimal getCodModelo() {
-        return codModelo;
+        return this.getVo().asBigDecimal("CODMODELO");
    }
 
    public void setCodModelo(BigDecimal codModelo) {
         markAsChanged("CODMODELO", codModelo);
-        this.codModelo = codModelo;
    }
 
    public BigDecimal getCodSmtp() {
-        return codSmtp;
+        return this.getVo().asBigDecimal("CODSMTP");
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
         markAsChanged("CODSMTP", codSmtp);
-        this.codSmtp = codSmtp;
    }
 
    public char[] getConteudo() {
-        return conteudo;
+        return this.getVo().asClob("CONTEUDO");
    }
 
    public void setConteudo(char[] conteudo) {
         markAsChanged("CONTEUDO", conteudo);
-        this.conteudo = conteudo;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getResponderPara() {
-        return responderPara;
+        return this.getVo().asString("RESPONDERPARA");
    }
 
    public void setResponderPara(String responderPara) {
         markAsChanged("RESPONDERPARA", responderPara);
-        this.responderPara = responderPara;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getCodUsuRemet() {
-        return codUsuRemet;
+        return this.getVo().asBigDecimal("CODUSUREMET");
    }
 
    public void setCodUsuRemet(BigDecimal codUsuRemet) {
         markAsChanged("CODUSUREMET", codUsuRemet);
-        this.codUsuRemet = codUsuRemet;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class ModeloEmail extends AbstractSankhyaEntity<ModeloEmail> {
    @Override
    public ModeloEmail fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.assunto = vo.asString("ASSUNTO");
-        this.codModelo = vo.asBigDecimal("CODMODELO");
-        this.codSmtp = vo.asBigDecimal("CODSMTP");
-        this.conteudo = vo.asClob("CONTEUDO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.responderPara = vo.asString("RESPONDERPARA");
-        this.tipo = vo.asString("TIPO");
-        this.codUsuRemet = vo.asBigDecimal("CODUSUREMET");
         return this;
    }
 }

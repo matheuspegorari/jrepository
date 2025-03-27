@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
-   private BigDecimal codCargaHor;
-   private String descricao;
-   private BigDecimal nuSla;
-   private String tipoFiltro;
-
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getNuSla() {
-        return nuSla;
+        return this.getVo().asBigDecimal("NUSLA");
    }
 
    public void setNuSla(BigDecimal nuSla) {
         markAsChanged("NUSLA", nuSla);
-        this.nuSla = nuSla;
    }
 
    public String getTipoFiltro() {
-        return tipoFiltro;
+        return this.getVo().asString("TIPOFILTRO");
    }
 
    public void setTipoFiltro(String tipoFiltro) {
         markAsChanged("TIPOFILTRO", tipoFiltro);
-        this.tipoFiltro = tipoFiltro;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class CabecalhoSLA extends AbstractSankhyaEntity<CabecalhoSLA> {
    @Override
    public CabecalhoSLA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.descricao = vo.asString("DESCRICAO");
-        this.nuSla = vo.asBigDecimal("NUSLA");
-        this.tipoFiltro = vo.asString("TIPOFILTRO");
         return this;
    }
 }

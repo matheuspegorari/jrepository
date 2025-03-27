@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> {
-   private String ativo;
-   private char[] config;
-   private String descricao;
-   private String nomeInstancia;
-   private BigDecimal nuEvento;
-   private BigDecimal ordem;
-   private String resourceId;
-   private String tipo;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public char[] getConfig() {
-        return config;
+        return this.getVo().asClob("CONFIG");
    }
 
    public void setConfig(char[] config) {
         markAsChanged("CONFIG", config);
-        this.config = config;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getNomeInstancia() {
-        return nomeInstancia;
+        return this.getVo().asString("NOMEINSTANCIA");
    }
 
    public void setNomeInstancia(String nomeInstancia) {
         markAsChanged("NOMEINSTANCIA", nomeInstancia);
-        this.nomeInstancia = nomeInstancia;
    }
 
    public BigDecimal getNuEvento() {
-        return nuEvento;
+        return this.getVo().asBigDecimal("NUEVENTO");
    }
 
    public void setNuEvento(BigDecimal nuEvento) {
         markAsChanged("NUEVENTO", nuEvento);
-        this.nuEvento = nuEvento;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getResourceId() {
-        return resourceId;
+        return this.getVo().asString("RESOURCEID");
    }
 
    public void setResourceId(String resourceId) {
         markAsChanged("RESOURCEID", resourceId);
-        this.resourceId = resourceId;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class EventoProgramavel extends AbstractSankhyaEntity<EventoProgramavel> 
    @Override
    public EventoProgramavel fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.config = vo.asClob("CONFIG");
-        this.descricao = vo.asString("DESCRICAO");
-        this.nomeInstancia = vo.asString("NOMEINSTANCIA");
-        this.nuEvento = vo.asBigDecimal("NUEVENTO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.resourceId = vo.asString("RESOURCEID");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

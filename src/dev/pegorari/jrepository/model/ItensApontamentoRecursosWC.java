@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApontamentoRecursosWC> {
-   private BigDecimal codCre;
-   private BigDecimal codMqp;
-   private BigDecimal codRhp;
-   private BigDecimal codWcp;
-   private BigDecimal nuApo;
-   private BigDecimal nuEqp;
-   private BigDecimal seqApa;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodMqp() {
-        return codMqp;
+        return this.getVo().asBigDecimal("CODMQP");
    }
 
    public void setCodMqp(BigDecimal codMqp) {
         markAsChanged("CODMQP", codMqp);
-        this.codMqp = codMqp;
    }
 
    public BigDecimal getCodRhp() {
-        return codRhp;
+        return this.getVo().asBigDecimal("CODRHP");
    }
 
    public void setCodRhp(BigDecimal codRhp) {
         markAsChanged("CODRHP", codRhp);
-        this.codRhp = codRhp;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public BigDecimal getNuEqp() {
-        return nuEqp;
+        return this.getVo().asBigDecimal("NUEQP");
    }
 
    public void setNuEqp(BigDecimal nuEqp) {
         markAsChanged("NUEQP", nuEqp);
-        this.nuEqp = nuEqp;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ItensApontamentoRecursosWC extends AbstractSankhyaEntity<ItensApont
    @Override
    public ItensApontamentoRecursosWC fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codMqp = vo.asBigDecimal("CODMQP");
-        this.codRhp = vo.asBigDecimal("CODRHP");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.nuEqp = vo.asBigDecimal("NUEQP");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
         return this;
    }
 }

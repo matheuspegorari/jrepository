@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PortariaCat42R0200 extends AbstractSankhyaEntity<PortariaCat42R0200> {
-   private BigDecimal aliqIcms;
-   private BigDecimal cest;
-   private String codBarra;
-   private BigDecimal codEmp;
-   private String codItem;
-   private String codNcm;
-   private BigDecimal codProd;
-   private String descrItem;
-   private String digitado;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String reg;
-   private String unidInv;
-
    public BigDecimal getAliqIcms() {
-        return aliqIcms;
+        return this.getVo().asBigDecimal("ALIQICMS");
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
         markAsChanged("ALIQICMS", aliqIcms);
-        this.aliqIcms = aliqIcms;
    }
 
    public BigDecimal getCest() {
-        return cest;
+        return this.getVo().asBigDecimal("CEST");
    }
 
    public void setCest(BigDecimal cest) {
         markAsChanged("CEST", cest);
-        this.cest = cest;
    }
 
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCodItem() {
-        return codItem;
+        return this.getVo().asString("CODITEM");
    }
 
    public void setCodItem(String codItem) {
         markAsChanged("CODITEM", codItem);
-        this.codItem = codItem;
    }
 
    public String getCodNcm() {
-        return codNcm;
+        return this.getVo().asString("CODNCM");
    }
 
    public void setCodNcm(String codNcm) {
         markAsChanged("CODNCM", codNcm);
-        this.codNcm = codNcm;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDescrItem() {
-        return descrItem;
+        return this.getVo().asString("DESCRITEM");
    }
 
    public void setDescrItem(String descrItem) {
         markAsChanged("DESCRITEM", descrItem);
-        this.descrItem = descrItem;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getReg() {
-        return reg;
+        return this.getVo().asString("REG");
    }
 
    public void setReg(String reg) {
         markAsChanged("REG", reg);
-        this.reg = reg;
    }
 
    public String getUnidInv() {
-        return unidInv;
+        return this.getVo().asString("UNIDINV");
    }
 
    public void setUnidInv(String unidInv) {
         markAsChanged("UNIDINV", unidInv);
-        this.unidInv = unidInv;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class PortariaCat42R0200 extends AbstractSankhyaEntity<PortariaCat42R0200
    @Override
    public PortariaCat42R0200 fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliqIcms = vo.asBigDecimal("ALIQICMS");
-        this.cest = vo.asBigDecimal("CEST");
-        this.codBarra = vo.asString("CODBARRA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codItem = vo.asString("CODITEM");
-        this.codNcm = vo.asString("CODNCM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.descrItem = vo.asString("DESCRITEM");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.reg = vo.asString("REG");
-        this.unidInv = vo.asString("UNIDINV");
         return this;
    }
 }

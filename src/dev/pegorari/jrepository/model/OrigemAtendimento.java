@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> {
-   private String analitico;
-   private String ativo;
-   private BigDecimal codOat;
-   private BigDecimal codOatPai;
-   private BigDecimal codUsu;
-   private String descOat;
-   private Timestamp dtAlter;
-   private BigDecimal grau;
-   private String tipo;
-
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodOat() {
-        return codOat;
+        return this.getVo().asBigDecimal("CODOAT");
    }
 
    public void setCodOat(BigDecimal codOat) {
         markAsChanged("CODOAT", codOat);
-        this.codOat = codOat;
    }
 
    public BigDecimal getCodOatPai() {
-        return codOatPai;
+        return this.getVo().asBigDecimal("CODOATPAI");
    }
 
    public void setCodOatPai(BigDecimal codOatPai) {
         markAsChanged("CODOATPAI", codOatPai);
-        this.codOatPai = codOatPai;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescOat() {
-        return descOat;
+        return this.getVo().asString("DESCROAT");
    }
 
    public void setDescOat(String descOat) {
         markAsChanged("DESCROAT", descOat);
-        this.descOat = descOat;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class OrigemAtendimento extends AbstractSankhyaEntity<OrigemAtendimento> 
    @Override
    public OrigemAtendimento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.codOat = vo.asBigDecimal("CODOAT");
-        this.codOatPai = vo.asBigDecimal("CODOATPAI");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descOat = vo.asString("DESCROAT");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

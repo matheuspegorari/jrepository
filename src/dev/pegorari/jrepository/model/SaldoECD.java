@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
-   private BigDecimal saldoFinMes;
-   private Timestamp referencia;
-   private String indStIni;
-   private String codCencus;
-   private String indStFin;
-   private BigDecimal saldoInicMes;
-   private BigDecimal credMes;
-   private BigDecimal debMes;
-   private String ctaCtb;
-   private BigDecimal codEmp;
-
    public BigDecimal getSaldoFinMes() {
-        return saldoFinMes;
+        return this.getVo().asBigDecimal("SALDOFINMES");
    }
 
    public void setSaldoFinMes(BigDecimal saldoFinMes) {
         markAsChanged("SALDOFINMES", saldoFinMes);
-        this.saldoFinMes = saldoFinMes;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getIndStIni() {
-        return indStIni;
+        return this.getVo().asString("INDSTINI");
    }
 
    public void setIndStIni(String indStIni) {
         markAsChanged("INDSTINI", indStIni);
-        this.indStIni = indStIni;
    }
 
    public String getCodCencus() {
-        return codCencus;
+        return this.getVo().asString("CODCENCUS");
    }
 
    public void setCodCencus(String codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public String getIndStFin() {
-        return indStFin;
+        return this.getVo().asString("INDSTFIN");
    }
 
    public void setIndStFin(String indStFin) {
         markAsChanged("INDSTFIN", indStFin);
-        this.indStFin = indStFin;
    }
 
    public BigDecimal getSaldoInicMes() {
-        return saldoInicMes;
+        return this.getVo().asBigDecimal("SALDOINICMES");
    }
 
    public void setSaldoInicMes(BigDecimal saldoInicMes) {
         markAsChanged("SALDOINICMES", saldoInicMes);
-        this.saldoInicMes = saldoInicMes;
    }
 
    public BigDecimal getCredMes() {
-        return credMes;
+        return this.getVo().asBigDecimal("CREDMES");
    }
 
    public void setCredMes(BigDecimal credMes) {
         markAsChanged("CREDMES", credMes);
-        this.credMes = credMes;
    }
 
    public BigDecimal getDebMes() {
-        return debMes;
+        return this.getVo().asBigDecimal("DEBMES");
    }
 
    public void setDebMes(BigDecimal debMes) {
         markAsChanged("DEBMES", debMes);
-        this.debMes = debMes;
    }
 
    public String getCtaCtb() {
-        return ctaCtb;
+        return this.getVo().asString("CTACTB");
    }
 
    public void setCtaCtb(String ctaCtb) {
         markAsChanged("CTACTB", ctaCtb);
-        this.ctaCtb = ctaCtb;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class SaldoECD extends AbstractSankhyaEntity<SaldoECD> {
    @Override
    public SaldoECD fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.saldoFinMes = vo.asBigDecimal("SALDOFINMES");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.indStIni = vo.asString("INDSTINI");
-        this.codCencus = vo.asString("CODCENCUS");
-        this.indStFin = vo.asString("INDSTFIN");
-        this.saldoInicMes = vo.asBigDecimal("SALDOINICMES");
-        this.credMes = vo.asBigDecimal("CREDMES");
-        this.debMes = vo.asBigDecimal("DEBMES");
-        this.ctaCtb = vo.asString("CTACTB");
-        this.codEmp = vo.asBigDecimal("CODEMP");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados> {
-   private BigDecimal codCargo;
-   private BigDecimal nuCurriculo;
-   private String triagem;
-   private String candidato;
-
    public BigDecimal getCodCargo() {
-        return codCargo;
+        return this.getVo().asBigDecimal("CODCARGO");
    }
 
    public void setCodCargo(BigDecimal codCargo) {
         markAsChanged("CODCARGO", codCargo);
-        this.codCargo = codCargo;
    }
 
    public BigDecimal getNuCurriculo() {
-        return nuCurriculo;
+        return this.getVo().asBigDecimal("NUCURRICULO");
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
         markAsChanged("NUCURRICULO", nuCurriculo);
-        this.nuCurriculo = nuCurriculo;
    }
 
    public String getTriagem() {
-        return triagem;
+        return this.getVo().asString("TRIAGEM");
    }
 
    public void setTriagem(String triagem) {
         markAsChanged("TRIAGEM", triagem);
-        this.triagem = triagem;
    }
 
    public String getCandidato() {
-        return candidato;
+        return this.getVo().asString("CANDIDATO");
    }
 
    public void setCandidato(String candidato) {
         markAsChanged("CANDIDATO", candidato);
-        this.candidato = candidato;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class CargosSelecionados extends AbstractSankhyaEntity<CargosSelecionados
    @Override
    public CargosSelecionados fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCargo = vo.asBigDecimal("CODCARGO");
-        this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
-        this.triagem = vo.asString("TRIAGEM");
-        this.candidato = vo.asString("CANDIDATO");
         return this;
    }
 }

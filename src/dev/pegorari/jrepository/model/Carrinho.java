@@ -5,165 +5,132 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
-   private BigDecimal codLocal;
-   private BigDecimal codProd;
-   private String codVol;
-   private String controle;
-   private BigDecimal nuNota;
-   private char[] outrasColunas;
-   private BigDecimal precoTotal;
-   private BigDecimal precoUsado;
-   private BigDecimal qtdProduto;
-   private BigDecimal seqCac;
-   private BigDecimal descTotal;
-   private BigDecimal precoBase;
-   private BigDecimal precoBaseQtd;
-   private BigDecimal vlrAcrescDesc;
-   private BigDecimal vlrCus;
-   private BigDecimal vlrRetencao;
-
    public BigDecimal getCodLocal() {
-        return codLocal;
+        return this.getVo().asBigDecimal("CODLOCAL");
    }
 
    public void setCodLocal(BigDecimal codLocal) {
         markAsChanged("CODLOCAL", codLocal);
-        this.codLocal = codLocal;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public char[] getOutrasColunas() {
-        return outrasColunas;
+        return this.getVo().asClob("OUTRASCOLUNAS");
    }
 
    public void setOutrasColunas(char[] outrasColunas) {
         markAsChanged("OUTRASCOLUNAS", outrasColunas);
-        this.outrasColunas = outrasColunas;
    }
 
    public BigDecimal getPrecoTotal() {
-        return precoTotal;
+        return this.getVo().asBigDecimal("PRECOTOTAL");
    }
 
    public void setPrecoTotal(BigDecimal precoTotal) {
         markAsChanged("PRECOTOTAL", precoTotal);
-        this.precoTotal = precoTotal;
    }
 
    public BigDecimal getPrecoUsado() {
-        return precoUsado;
+        return this.getVo().asBigDecimal("PRECOUSADO");
    }
 
    public void setPrecoUsado(BigDecimal precoUsado) {
         markAsChanged("PRECOUSADO", precoUsado);
-        this.precoUsado = precoUsado;
    }
 
    public BigDecimal getQtdProduto() {
-        return qtdProduto;
+        return this.getVo().asBigDecimal("QTDPRODUTO");
    }
 
    public void setQtdProduto(BigDecimal qtdProduto) {
         markAsChanged("QTDPRODUTO", qtdProduto);
-        this.qtdProduto = qtdProduto;
    }
 
    public BigDecimal getSeqCac() {
-        return seqCac;
+        return this.getVo().asBigDecimal("SEQCAC");
    }
 
    public void setSeqCac(BigDecimal seqCac) {
         markAsChanged("SEQCAC", seqCac);
-        this.seqCac = seqCac;
    }
 
    public BigDecimal getDescTotal() {
-        return descTotal;
+        return this.getVo().asBigDecimal("DESCTOTAL");
    }
 
    public void setDescTotal(BigDecimal descTotal) {
         markAsChanged("DESCTOTAL", descTotal);
-        this.descTotal = descTotal;
    }
 
    public BigDecimal getPrecoBase() {
-        return precoBase;
+        return this.getVo().asBigDecimal("PRECOBASE");
    }
 
    public void setPrecoBase(BigDecimal precoBase) {
         markAsChanged("PRECOBASE", precoBase);
-        this.precoBase = precoBase;
    }
 
    public BigDecimal getPrecoBaseQtd() {
-        return precoBaseQtd;
+        return this.getVo().asBigDecimal("PRECOBASEQTD");
    }
 
    public void setPrecoBaseQtd(BigDecimal precoBaseQtd) {
         markAsChanged("PRECOBASEQTD", precoBaseQtd);
-        this.precoBaseQtd = precoBaseQtd;
    }
 
    public BigDecimal getVlrAcrescDesc() {
-        return vlrAcrescDesc;
+        return this.getVo().asBigDecimal("VLRACRESCDESC");
    }
 
    public void setVlrAcrescDesc(BigDecimal vlrAcrescDesc) {
         markAsChanged("VLRACRESCDESC", vlrAcrescDesc);
-        this.vlrAcrescDesc = vlrAcrescDesc;
    }
 
    public BigDecimal getVlrCus() {
-        return vlrCus;
+        return this.getVo().asBigDecimal("VLRCUS");
    }
 
    public void setVlrCus(BigDecimal vlrCus) {
         markAsChanged("VLRCUS", vlrCus);
-        this.vlrCus = vlrCus;
    }
 
    public BigDecimal getVlrRetencao() {
-        return vlrRetencao;
+        return this.getVo().asBigDecimal("VLRRETENCAO");
    }
 
    public void setVlrRetencao(BigDecimal vlrRetencao) {
         markAsChanged("VLRRETENCAO", vlrRetencao);
-        this.vlrRetencao = vlrRetencao;
    }
 
    @Override
@@ -179,22 +146,6 @@ public class Carrinho extends AbstractSankhyaEntity<Carrinho> {
    @Override
    public Carrinho fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codLocal = vo.asBigDecimal("CODLOCAL");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codVol = vo.asString("CODVOL");
-        this.controle = vo.asString("CONTROLE");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.outrasColunas = vo.asClob("OUTRASCOLUNAS");
-        this.precoTotal = vo.asBigDecimal("PRECOTOTAL");
-        this.precoUsado = vo.asBigDecimal("PRECOUSADO");
-        this.qtdProduto = vo.asBigDecimal("QTDPRODUTO");
-        this.seqCac = vo.asBigDecimal("SEQCAC");
-        this.descTotal = vo.asBigDecimal("DESCTOTAL");
-        this.precoBase = vo.asBigDecimal("PRECOBASE");
-        this.precoBaseQtd = vo.asBigDecimal("PRECOBASEQTD");
-        this.vlrAcrescDesc = vo.asBigDecimal("VLRACRESCDESC");
-        this.vlrCus = vo.asBigDecimal("VLRCUS");
-        this.vlrRetencao = vo.asBigDecimal("VLRRETENCAO");
         return this;
    }
 }

@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
-   private BigDecimal codMetod;
-   private BigDecimal codTipFuncao;
-   private BigDecimal numModelo;
-
    public BigDecimal getCodMetod() {
-        return codMetod;
+        return this.getVo().asBigDecimal("CODMETOD");
    }
 
    public void setCodMetod(BigDecimal codMetod) {
         markAsChanged("CODMETOD", codMetod);
-        this.codMetod = codMetod;
    }
 
    public BigDecimal getCodTipFuncao() {
-        return codTipFuncao;
+        return this.getVo().asBigDecimal("CODTIPFUNCAO");
    }
 
    public void setCodTipFuncao(BigDecimal codTipFuncao) {
         markAsChanged("CODTIPFUNCAO", codTipFuncao);
-        this.codTipFuncao = codTipFuncao;
    }
 
    public BigDecimal getNumModelo() {
-        return numModelo;
+        return this.getVo().asBigDecimal("NUMMODELO");
    }
 
    public void setNumModelo(BigDecimal numModelo) {
         markAsChanged("NUMMODELO", numModelo);
-        this.numModelo = numModelo;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class RecursoModEtapa extends AbstractSankhyaEntity<RecursoModEtapa> {
    @Override
    public RecursoModEtapa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMetod = vo.asBigDecimal("CODMETOD");
-        this.codTipFuncao = vo.asBigDecimal("CODTIPFUNCAO");
-        this.numModelo = vo.asBigDecimal("NUMMODELO");
         return this;
    }
 }

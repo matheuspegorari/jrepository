@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejamentoEntrega> {
-   private BigDecimal nuPlan;
-   private BigDecimal qtdNeg;
-   private BigDecimal codContato;
-   private BigDecimal codParcFat;
-   private BigDecimal codProd;
-   private BigDecimal sequenciaOrig;
-   private BigDecimal nuNotaOrig;
-
    public BigDecimal getNuPlan() {
-        return nuPlan;
+        return this.getVo().asBigDecimal("NUPLAN");
    }
 
    public void setNuPlan(BigDecimal nuPlan) {
         markAsChanged("NUPLAN", nuPlan);
-        this.nuPlan = nuPlan;
    }
 
    public BigDecimal getQtdNeg() {
-        return qtdNeg;
+        return this.getVo().asBigDecimal("QTDNEG");
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
         markAsChanged("QTDNEG", qtdNeg);
-        this.qtdNeg = qtdNeg;
    }
 
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodParcFat() {
-        return codParcFat;
+        return this.getVo().asBigDecimal("CODPARCFAT");
    }
 
    public void setCodParcFat(BigDecimal codParcFat) {
         markAsChanged("CODPARCFAT", codParcFat);
-        this.codParcFat = codParcFat;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getSequenciaOrig() {
-        return sequenciaOrig;
+        return this.getVo().asBigDecimal("SEQUENCIAORIG");
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
         markAsChanged("SEQUENCIAORIG", sequenciaOrig);
-        this.sequenciaOrig = sequenciaOrig;
    }
 
    public BigDecimal getNuNotaOrig() {
-        return nuNotaOrig;
+        return this.getVo().asBigDecimal("NUNOTAORIG");
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
         markAsChanged("NUNOTAORIG", nuNotaOrig);
-        this.nuNotaOrig = nuNotaOrig;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ItemPlanejamentoEntrega extends AbstractSankhyaEntity<ItemPlanejame
    @Override
    public ItemPlanejamentoEntrega fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuPlan = vo.asBigDecimal("NUPLAN");
-        this.qtdNeg = vo.asBigDecimal("QTDNEG");
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codParcFat = vo.asBigDecimal("CODPARCFAT");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.sequenciaOrig = vo.asBigDecimal("SEQUENCIAORIG");
-        this.nuNotaOrig = vo.asBigDecimal("NUNOTAORIG");
         return this;
    }
 }

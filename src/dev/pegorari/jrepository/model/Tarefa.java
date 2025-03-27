@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
-   private BigDecimal codEmpoc;
-   private BigDecimal codTarefa;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private Timestamp dtTarefa;
-   private BigDecimal nuConferencia;
-   private BigDecimal nuIvt;
-   private BigDecimal nuTarefa;
-   private BigDecimal nuTarefaDep;
-   private BigDecimal nuTarefaOrigem;
-   private BigDecimal ordemCarga;
-   private BigDecimal prioridade;
-   private String proAtiva;
-   private BigDecimal sequenciaDep;
-   private String situacao;
-   private BigDecimal codParc;
-
    public BigDecimal getCodEmpoc() {
-        return codEmpoc;
+        return this.getVo().asBigDecimal("CODEMPOC");
    }
 
    public void setCodEmpoc(BigDecimal codEmpoc) {
         markAsChanged("CODEMPOC", codEmpoc);
-        this.codEmpoc = codEmpoc;
    }
 
    public BigDecimal getCodTarefa() {
-        return codTarefa;
+        return this.getVo().asBigDecimal("CODTAREFA");
    }
 
    public void setCodTarefa(BigDecimal codTarefa) {
         markAsChanged("CODTAREFA", codTarefa);
-        this.codTarefa = codTarefa;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtTarefa() {
-        return dtTarefa;
+        return this.getVo().asTimestamp("DTTAREFA");
    }
 
    public void setDtTarefa(Timestamp dtTarefa) {
         markAsChanged("DTTAREFA", dtTarefa);
-        this.dtTarefa = dtTarefa;
    }
 
    public BigDecimal getNuConferencia() {
-        return nuConferencia;
+        return this.getVo().asBigDecimal("NUCONFERENCIA");
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
         markAsChanged("NUCONFERENCIA", nuConferencia);
-        this.nuConferencia = nuConferencia;
    }
 
    public BigDecimal getNuIvt() {
-        return nuIvt;
+        return this.getVo().asBigDecimal("NUIVT");
    }
 
    public void setNuIvt(BigDecimal nuIvt) {
         markAsChanged("NUIVT", nuIvt);
-        this.nuIvt = nuIvt;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getNuTarefaDep() {
-        return nuTarefaDep;
+        return this.getVo().asBigDecimal("NUTAREFADEP");
    }
 
    public void setNuTarefaDep(BigDecimal nuTarefaDep) {
         markAsChanged("NUTAREFADEP", nuTarefaDep);
-        this.nuTarefaDep = nuTarefaDep;
    }
 
    public BigDecimal getNuTarefaOrigem() {
-        return nuTarefaOrigem;
+        return this.getVo().asBigDecimal("NUTAREFAORIGEM");
    }
 
    public void setNuTarefaOrigem(BigDecimal nuTarefaOrigem) {
         markAsChanged("NUTAREFAORIGEM", nuTarefaOrigem);
-        this.nuTarefaOrigem = nuTarefaOrigem;
    }
 
    public BigDecimal getOrdemCarga() {
-        return ordemCarga;
+        return this.getVo().asBigDecimal("ORDEMCARGA");
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
         markAsChanged("ORDEMCARGA", ordemCarga);
-        this.ordemCarga = ordemCarga;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public String getProAtiva() {
-        return proAtiva;
+        return this.getVo().asString("PROATIVA");
    }
 
    public void setProAtiva(String proAtiva) {
         markAsChanged("PROATIVA", proAtiva);
-        this.proAtiva = proAtiva;
    }
 
    public BigDecimal getSequenciaDep() {
-        return sequenciaDep;
+        return this.getVo().asBigDecimal("SEQUENCIADEP");
    }
 
    public void setSequenciaDep(BigDecimal sequenciaDep) {
         markAsChanged("SEQUENCIADEP", sequenciaDep);
-        this.sequenciaDep = sequenciaDep;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class Tarefa extends AbstractSankhyaEntity<Tarefa> {
    @Override
    public Tarefa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmpoc = vo.asBigDecimal("CODEMPOC");
-        this.codTarefa = vo.asBigDecimal("CODTAREFA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtTarefa = vo.asTimestamp("DTTAREFA");
-        this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
-        this.nuIvt = vo.asBigDecimal("NUIVT");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.nuTarefaDep = vo.asBigDecimal("NUTAREFADEP");
-        this.nuTarefaOrigem = vo.asBigDecimal("NUTAREFAORIGEM");
-        this.ordemCarga = vo.asBigDecimal("ORDEMCARGA");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.proAtiva = vo.asString("PROATIVA");
-        this.sequenciaDep = vo.asBigDecimal("SEQUENCIADEP");
-        this.situacao = vo.asString("SITUACAO");
-        this.codParc = vo.asBigDecimal("CODPARC");
         return this;
    }
 }

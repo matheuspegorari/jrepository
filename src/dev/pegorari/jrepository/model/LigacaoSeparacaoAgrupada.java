@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSeparacaoAgrupada> {
-   private BigDecimal nuSepFilha;
-   private BigDecimal seqIttFilha;
-   private BigDecimal seqIttMae;
-   private BigDecimal nuSepMae;
-   private BigDecimal qtdFilha;
-
    public BigDecimal getNuSepFilha() {
-        return nuSepFilha;
+        return this.getVo().asBigDecimal("NUSEPFILHA");
    }
 
    public void setNuSepFilha(BigDecimal nuSepFilha) {
         markAsChanged("NUSEPFILHA", nuSepFilha);
-        this.nuSepFilha = nuSepFilha;
    }
 
    public BigDecimal getSeqIttFilha() {
-        return seqIttFilha;
+        return this.getVo().asBigDecimal("SEQITTFILHA");
    }
 
    public void setSeqIttFilha(BigDecimal seqIttFilha) {
         markAsChanged("SEQITTFILHA", seqIttFilha);
-        this.seqIttFilha = seqIttFilha;
    }
 
    public BigDecimal getSeqIttMae() {
-        return seqIttMae;
+        return this.getVo().asBigDecimal("SEQITTMAE");
    }
 
    public void setSeqIttMae(BigDecimal seqIttMae) {
         markAsChanged("SEQITTMAE", seqIttMae);
-        this.seqIttMae = seqIttMae;
    }
 
    public BigDecimal getNuSepMae() {
-        return nuSepMae;
+        return this.getVo().asBigDecimal("NUSEPMAE");
    }
 
    public void setNuSepMae(BigDecimal nuSepMae) {
         markAsChanged("NUSEPMAE", nuSepMae);
-        this.nuSepMae = nuSepMae;
    }
 
    public BigDecimal getQtdFilha() {
-        return qtdFilha;
+        return this.getVo().asBigDecimal("QTDFILHA");
    }
 
    public void setQtdFilha(BigDecimal qtdFilha) {
         markAsChanged("QTDFILHA", qtdFilha);
-        this.qtdFilha = qtdFilha;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class LigacaoSeparacaoAgrupada extends AbstractSankhyaEntity<LigacaoSepar
    @Override
    public LigacaoSeparacaoAgrupada fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuSepFilha = vo.asBigDecimal("NUSEPFILHA");
-        this.seqIttFilha = vo.asBigDecimal("SEQITTFILHA");
-        this.seqIttMae = vo.asBigDecimal("SEQITTMAE");
-        this.nuSepMae = vo.asBigDecimal("NUSEPMAE");
-        this.qtdFilha = vo.asBigDecimal("QTDFILHA");
         return this;
    }
 }

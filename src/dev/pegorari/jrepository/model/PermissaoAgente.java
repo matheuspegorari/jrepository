@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
 public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
-   private Timestamp dhAutorizacao;
-   private String id;
-   private String permissao;
-   private String autorizado;
-
    public Timestamp getDhAutorizacao() {
-        return dhAutorizacao;
+        return this.getVo().asTimestamp("DHAUTORIZACAO");
    }
 
    public void setDhAutorizacao(Timestamp dhAutorizacao) {
         markAsChanged("DHAUTORIZACAO", dhAutorizacao);
-        this.dhAutorizacao = dhAutorizacao;
    }
 
    public String getId() {
-        return id;
+        return this.getVo().asString("ID");
    }
 
    public void setId(String id) {
         markAsChanged("ID", id);
-        this.id = id;
    }
 
    public String getPermissao() {
-        return permissao;
+        return this.getVo().asString("PERMISSAO");
    }
 
    public void setPermissao(String permissao) {
         markAsChanged("PERMISSAO", permissao);
-        this.permissao = permissao;
    }
 
    public String getAutorizado() {
-        return autorizado;
+        return this.getVo().asString("AUTORIZADO");
    }
 
    public void setAutorizado(String autorizado) {
         markAsChanged("AUTORIZADO", autorizado);
-        this.autorizado = autorizado;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class PermissaoAgente extends AbstractSankhyaEntity<PermissaoAgente> {
    @Override
    public PermissaoAgente fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhAutorizacao = vo.asTimestamp("DHAUTORIZACAO");
-        this.id = vo.asString("ID");
-        this.permissao = vo.asString("PERMISSAO");
-        this.autorizado = vo.asString("AUTORIZADO");
         return this;
    }
 }

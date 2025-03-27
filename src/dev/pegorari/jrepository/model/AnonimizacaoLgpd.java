@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
-   private BigDecimal codAnon;
-   private BigDecimal codUsuAlter;
-   private BigDecimal codUsuCriac;
-   private String descAnon;
-   private Timestamp dtAlter;
-   private Timestamp dtCriac;
-
    public BigDecimal getCodAnon() {
-        return codAnon;
+        return this.getVo().asBigDecimal("CODANON");
    }
 
    public void setCodAnon(BigDecimal codAnon) {
         markAsChanged("CODANON", codAnon);
-        this.codAnon = codAnon;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getCodUsuCriac() {
-        return codUsuCriac;
+        return this.getVo().asBigDecimal("CODUSUCRIAC");
    }
 
    public void setCodUsuCriac(BigDecimal codUsuCriac) {
         markAsChanged("CODUSUCRIAC", codUsuCriac);
-        this.codUsuCriac = codUsuCriac;
    }
 
    public String getDescAnon() {
-        return descAnon;
+        return this.getVo().asString("DESCANON");
    }
 
    public void setDescAnon(String descAnon) {
         markAsChanged("DESCANON", descAnon);
-        this.descAnon = descAnon;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtCriac() {
-        return dtCriac;
+        return this.getVo().asTimestamp("DTCRIAC");
    }
 
    public void setDtCriac(Timestamp dtCriac) {
         markAsChanged("DTCRIAC", dtCriac);
-        this.dtCriac = dtCriac;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class AnonimizacaoLgpd extends AbstractSankhyaEntity<AnonimizacaoLgpd> {
    @Override
    public AnonimizacaoLgpd fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codAnon = vo.asBigDecimal("CODANON");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.codUsuCriac = vo.asBigDecimal("CODUSUCRIAC");
-        this.descAnon = vo.asString("DESCANON");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtCriac = vo.asTimestamp("DTCRIAC");
         return this;
    }
 }

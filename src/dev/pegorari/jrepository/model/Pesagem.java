@@ -6,185 +6,148 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
-   private BigDecimal tara;
-   private String variasNotas;
-   private String nfTransp;
-   private BigDecimal nuNota;
-   private BigDecimal nuNotaDest;
-   private BigDecimal nuPesagem;
-   private BigDecimal pesoBruto;
-   private BigDecimal balancaPb;
-   private BigDecimal balancaTara;
-   private BigDecimal codParcTransp;
-   private BigDecimal codUsuPb;
-   private BigDecimal codUsuTara;
-   private BigDecimal codVeiculo;
-   private Timestamp dhPesoBruto;
-   private Timestamp dhTara;
-   private BigDecimal pesoLiq;
-   private String pesagemManual;
-   private BigDecimal sequencia;
-
    public BigDecimal getTara() {
-        return tara;
+        return this.getVo().asBigDecimal("TARA");
    }
 
    public void setTara(BigDecimal tara) {
         markAsChanged("TARA", tara);
-        this.tara = tara;
    }
 
    public String getVariasNotas() {
-        return variasNotas;
+        return this.getVo().asString("VARIASNOTAS");
    }
 
    public void setVariasNotas(String variasNotas) {
         markAsChanged("VARIASNOTAS", variasNotas);
-        this.variasNotas = variasNotas;
    }
 
    public String getNfTransp() {
-        return nfTransp;
+        return this.getVo().asString("NFTRANSP");
    }
 
    public void setNfTransp(String nfTransp) {
         markAsChanged("NFTRANSP", nfTransp);
-        this.nfTransp = nfTransp;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuNotaDest() {
-        return nuNotaDest;
+        return this.getVo().asBigDecimal("NUNOTADEST");
    }
 
    public void setNuNotaDest(BigDecimal nuNotaDest) {
         markAsChanged("NUNOTADEST", nuNotaDest);
-        this.nuNotaDest = nuNotaDest;
    }
 
    public BigDecimal getNuPesagem() {
-        return nuPesagem;
+        return this.getVo().asBigDecimal("NUPESAGEM");
    }
 
    public void setNuPesagem(BigDecimal nuPesagem) {
         markAsChanged("NUPESAGEM", nuPesagem);
-        this.nuPesagem = nuPesagem;
    }
 
    public BigDecimal getPesoBruto() {
-        return pesoBruto;
+        return this.getVo().asBigDecimal("PESOBRUTO");
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
         markAsChanged("PESOBRUTO", pesoBruto);
-        this.pesoBruto = pesoBruto;
    }
 
    public BigDecimal getBalancaPb() {
-        return balancaPb;
+        return this.getVo().asBigDecimal("BALANCAPB");
    }
 
    public void setBalancaPb(BigDecimal balancaPb) {
         markAsChanged("BALANCAPB", balancaPb);
-        this.balancaPb = balancaPb;
    }
 
    public BigDecimal getBalancaTara() {
-        return balancaTara;
+        return this.getVo().asBigDecimal("BALANCATARA");
    }
 
    public void setBalancaTara(BigDecimal balancaTara) {
         markAsChanged("BALANCATARA", balancaTara);
-        this.balancaTara = balancaTara;
    }
 
    public BigDecimal getCodParcTransp() {
-        return codParcTransp;
+        return this.getVo().asBigDecimal("CODPARCTRANSP");
    }
 
    public void setCodParcTransp(BigDecimal codParcTransp) {
         markAsChanged("CODPARCTRANSP", codParcTransp);
-        this.codParcTransp = codParcTransp;
    }
 
    public BigDecimal getCodUsuPb() {
-        return codUsuPb;
+        return this.getVo().asBigDecimal("CODUSUPB");
    }
 
    public void setCodUsuPb(BigDecimal codUsuPb) {
         markAsChanged("CODUSUPB", codUsuPb);
-        this.codUsuPb = codUsuPb;
    }
 
    public BigDecimal getCodUsuTara() {
-        return codUsuTara;
+        return this.getVo().asBigDecimal("CODUSUTARA");
    }
 
    public void setCodUsuTara(BigDecimal codUsuTara) {
         markAsChanged("CODUSUTARA", codUsuTara);
-        this.codUsuTara = codUsuTara;
    }
 
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public Timestamp getDhPesoBruto() {
-        return dhPesoBruto;
+        return this.getVo().asTimestamp("DHPESOBRUTO");
    }
 
    public void setDhPesoBruto(Timestamp dhPesoBruto) {
         markAsChanged("DHPESOBRUTO", dhPesoBruto);
-        this.dhPesoBruto = dhPesoBruto;
    }
 
    public Timestamp getDhTara() {
-        return dhTara;
+        return this.getVo().asTimestamp("DHTARA");
    }
 
    public void setDhTara(Timestamp dhTara) {
         markAsChanged("DHTARA", dhTara);
-        this.dhTara = dhTara;
    }
 
    public BigDecimal getPesoLiq() {
-        return pesoLiq;
+        return this.getVo().asBigDecimal("PESOLIQ");
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
         markAsChanged("PESOLIQ", pesoLiq);
-        this.pesoLiq = pesoLiq;
    }
 
    public String getPesagemManual() {
-        return pesagemManual;
+        return this.getVo().asString("PESAGEMMANUAL");
    }
 
    public void setPesagemManual(String pesagemManual) {
         markAsChanged("PESAGEMMANUAL", pesagemManual);
-        this.pesagemManual = pesagemManual;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -200,24 +163,6 @@ public class Pesagem extends AbstractSankhyaEntity<Pesagem> {
    @Override
    public Pesagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tara = vo.asBigDecimal("TARA");
-        this.variasNotas = vo.asString("VARIASNOTAS");
-        this.nfTransp = vo.asString("NFTRANSP");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuNotaDest = vo.asBigDecimal("NUNOTADEST");
-        this.nuPesagem = vo.asBigDecimal("NUPESAGEM");
-        this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
-        this.balancaPb = vo.asBigDecimal("BALANCAPB");
-        this.balancaTara = vo.asBigDecimal("BALANCATARA");
-        this.codParcTransp = vo.asBigDecimal("CODPARCTRANSP");
-        this.codUsuPb = vo.asBigDecimal("CODUSUPB");
-        this.codUsuTara = vo.asBigDecimal("CODUSUTARA");
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.dhPesoBruto = vo.asTimestamp("DHPESOBRUTO");
-        this.dhTara = vo.asTimestamp("DHTARA");
-        this.pesoLiq = vo.asBigDecimal("PESOLIQ");
-        this.pesagemManual = vo.asString("PESAGEMMANUAL");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

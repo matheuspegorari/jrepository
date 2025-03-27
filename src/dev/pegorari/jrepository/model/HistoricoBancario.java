@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> {
-   private String aceitaDev;
-   private BigDecimal codLanc;
-   private String descrLancBco;
-   private BigDecimal tipLanc;
-
    public String getAceitaDev() {
-        return aceitaDev;
+        return this.getVo().asString("ACEITADEV");
    }
 
    public void setAceitaDev(String aceitaDev) {
         markAsChanged("ACEITADEV", aceitaDev);
-        this.aceitaDev = aceitaDev;
    }
 
    public BigDecimal getCodLanc() {
-        return codLanc;
+        return this.getVo().asBigDecimal("CODLANC");
    }
 
    public void setCodLanc(BigDecimal codLanc) {
         markAsChanged("CODLANC", codLanc);
-        this.codLanc = codLanc;
    }
 
    public String getDescrLancBco() {
-        return descrLancBco;
+        return this.getVo().asString("DESCRLANCBCO");
    }
 
    public void setDescrLancBco(String descrLancBco) {
         markAsChanged("DESCRLANCBCO", descrLancBco);
-        this.descrLancBco = descrLancBco;
    }
 
    public BigDecimal getTipLanc() {
-        return tipLanc;
+        return this.getVo().asBigDecimal("TIPLANC");
    }
 
    public void setTipLanc(BigDecimal tipLanc) {
         markAsChanged("TIPLANC", tipLanc);
-        this.tipLanc = tipLanc;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class HistoricoBancario extends AbstractSankhyaEntity<HistoricoBancario> 
    @Override
    public HistoricoBancario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aceitaDev = vo.asString("ACEITADEV");
-        this.codLanc = vo.asBigDecimal("CODLANC");
-        this.descrLancBco = vo.asString("DESCRLANCBCO");
-        this.tipLanc = vo.asBigDecimal("TIPLANC");
         return this;
    }
 }

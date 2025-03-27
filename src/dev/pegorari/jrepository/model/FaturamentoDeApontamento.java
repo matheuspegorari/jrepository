@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FaturamentoDeApontamento extends AbstractSankhyaEntity<FaturamentoDeApontamento> {
-   private BigDecimal nuNota;
-   private BigDecimal nuApo;
-   private BigDecimal seqApa;
-   private BigDecimal seqIte;
-   private BigDecimal qtd;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    public BigDecimal getSeqIte() {
-        return seqIte;
+        return this.getVo().asBigDecimal("SEQITE");
    }
 
    public void setSeqIte(BigDecimal seqIte) {
         markAsChanged("SEQITE", seqIte);
-        this.seqIte = seqIte;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class FaturamentoDeApontamento extends AbstractSankhyaEntity<FaturamentoD
    @Override
    public FaturamentoDeApontamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
-        this.seqIte = vo.asBigDecimal("SEQITE");
-        this.qtd = vo.asBigDecimal("QTD");
         return this;
    }
 }

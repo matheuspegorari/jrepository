@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia> {
-   private BigDecimal codUnicv;
-   private String idUnidCargaVazia;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-   private BigDecimal tipoUniCargaVazia;
-
    public BigDecimal getCodUnicv() {
-        return codUnicv;
+        return this.getVo().asBigDecimal("CODUNICV");
    }
 
    public void setCodUnicv(BigDecimal codUnicv) {
         markAsChanged("CODUNICV", codUnicv);
-        this.codUnicv = codUnicv;
    }
 
    public String getIdUnidCargaVazia() {
-        return idUnidCargaVazia;
+        return this.getVo().asString("IDUNIDCARGAVAZIA");
    }
 
    public void setIdUnidCargaVazia(String idUnidCargaVazia) {
         markAsChanged("IDUNIDCARGAVAZIA", idUnidCargaVazia);
-        this.idUnidCargaVazia = idUnidCargaVazia;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getTipoUniCargaVazia() {
-        return tipoUniCargaVazia;
+        return this.getVo().asBigDecimal("TIPOUNICARGAVAZIA");
    }
 
    public void setTipoUniCargaVazia(BigDecimal tipoUniCargaVazia) {
         markAsChanged("TIPOUNICARGAVAZIA", tipoUniCargaVazia);
-        this.tipoUniCargaVazia = tipoUniCargaVazia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class UnidadesCargaVazia extends AbstractSankhyaEntity<UnidadesCargaVazia
    @Override
    public UnidadesCargaVazia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUnicv = vo.asBigDecimal("CODUNICV");
-        this.idUnidCargaVazia = vo.asString("IDUNIDCARGAVAZIA");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.tipoUniCargaVazia = vo.asBigDecimal("TIPOUNICARGAVAZIA");
         return this;
    }
 }

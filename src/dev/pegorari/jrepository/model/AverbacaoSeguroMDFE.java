@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMDFE> {
-   private String nuAverb;
-   private BigDecimal seqMdfe;
-   private String numApOlice;
-   private BigDecimal nuViag;
-
    public String getNuAverb() {
-        return nuAverb;
+        return this.getVo().asString("NUMAVERB");
    }
 
    public void setNuAverb(String nuAverb) {
         markAsChanged("NUMAVERB", nuAverb);
-        this.nuAverb = nuAverb;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public String getNumApOlice() {
-        return numApOlice;
+        return this.getVo().asString("NUMAPOLICE");
    }
 
    public void setNumApOlice(String numApOlice) {
         markAsChanged("NUMAPOLICE", numApOlice);
-        this.numApOlice = numApOlice;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class AverbacaoSeguroMDFE extends AbstractSankhyaEntity<AverbacaoSeguroMD
    @Override
    public AverbacaoSeguroMDFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuAverb = vo.asString("NUMAVERB");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.numApOlice = vo.asString("NUMAPOLICE");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
         return this;
    }
 }

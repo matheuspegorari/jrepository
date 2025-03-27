@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPendente> {
-   private BigDecimal seqHip;
-   private String descricao;
-   private String status;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-
    public BigDecimal getSeqHip() {
-        return seqHip;
+        return this.getVo().asBigDecimal("SEQHIP");
    }
 
    public void setSeqHip(BigDecimal seqHip) {
         markAsChanged("SEQHIP", seqHip);
-        this.seqHip = seqHip;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class HistoricoItemPendente extends AbstractSankhyaEntity<HistoricoItemPe
    @Override
    public HistoricoItemPendente fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqHip = vo.asBigDecimal("SEQHIP");
-        this.descricao = vo.asString("DESCRICAO");
-        this.status = vo.asString("STATUS");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
         return this;
    }
 }

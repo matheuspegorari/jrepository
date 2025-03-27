@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreamentoEstoque> {
-   private BigDecimal chave;
-   private BigDecimal codEmp;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private String msg;
-   private String tipoErro;
-
    public BigDecimal getChave() {
-        return chave;
+        return this.getVo().asBigDecimal("CHAVE");
    }
 
    public void setChave(BigDecimal chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getMsg() {
-        return msg;
+        return this.getVo().asString("MSG");
    }
 
    public void setMsg(String msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public String getTipoErro() {
-        return tipoErro;
+        return this.getVo().asString("TIPOERRO");
    }
 
    public void setTipoErro(String tipoErro) {
         markAsChanged("TIPOERRO", tipoErro);
-        this.tipoErro = tipoErro;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ErroRastreamentoEstoque extends AbstractSankhyaEntity<ErroRastreame
    @Override
    public ErroRastreamentoEstoque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chave = vo.asBigDecimal("CHAVE");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.msg = vo.asString("MSG");
-        this.tipoErro = vo.asString("TIPOERRO");
         return this;
    }
 }

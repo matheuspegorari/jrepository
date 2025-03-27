@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesRecentesFavoritas> {
-   private String nomeInstancia;
-   private Timestamp dhUltimoAcesso;
-   private BigDecimal codUsu;
-   private String favorito;
-   private String pkRegistro;
-
    public String getNomeInstancia() {
-        return nomeInstancia;
+        return this.getVo().asString("NOMEINSTANCIA");
    }
 
    public void setNomeInstancia(String nomeInstancia) {
         markAsChanged("NOMEINSTANCIA", nomeInstancia);
-        this.nomeInstancia = nomeInstancia;
    }
 
    public Timestamp getDhUltimoAcesso() {
-        return dhUltimoAcesso;
+        return this.getVo().asTimestamp("DHULTIMOACESSO");
    }
 
    public void setDhUltimoAcesso(Timestamp dhUltimoAcesso) {
         markAsChanged("DHULTIMOACESSO", dhUltimoAcesso);
-        this.dhUltimoAcesso = dhUltimoAcesso;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getFavorito() {
-        return favorito;
+        return this.getVo().asString("FAVORITO");
    }
 
    public void setFavorito(String favorito) {
         markAsChanged("FAVORITO", favorito);
-        this.favorito = favorito;
    }
 
    public String getPkRegistro() {
-        return pkRegistro;
+        return this.getVo().asString("PKREGISTRO");
    }
 
    public void setPkRegistro(String pkRegistro) {
         markAsChanged("PKREGISTRO", pkRegistro);
-        this.pkRegistro = pkRegistro;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class EntidadesRecentesFavoritas extends AbstractSankhyaEntity<EntidadesR
    @Override
    public EntidadesRecentesFavoritas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nomeInstancia = vo.asString("NOMEINSTANCIA");
-        this.dhUltimoAcesso = vo.asTimestamp("DHULTIMOACESSO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.favorito = vo.asString("FAVORITO");
-        this.pkRegistro = vo.asString("PKREGISTRO");
         return this;
    }
 }

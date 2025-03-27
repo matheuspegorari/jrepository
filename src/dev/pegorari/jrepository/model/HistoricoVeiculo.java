@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
-   private String ativo;
-   private BigDecimal codParctransp;
-   private BigDecimal codUsu;
-   private BigDecimal codVeiculo;
-   private Timestamp dtAlter;
-   private Timestamp dtVigor;
-   private BigDecimal nuTabFret;
-   private BigDecimal preco;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodParctransp() {
-        return codParctransp;
+        return this.getVo().asBigDecimal("CODPARCTRANSP");
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
         markAsChanged("CODPARCTRANSP", codParctransp);
-        this.codParctransp = codParctransp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtVigor() {
-        return dtVigor;
+        return this.getVo().asTimestamp("DTVIGOR");
    }
 
    public void setDtVigor(Timestamp dtVigor) {
         markAsChanged("DTVIGOR", dtVigor);
-        this.dtVigor = dtVigor;
    }
 
    public BigDecimal getNuTabFret() {
-        return nuTabFret;
+        return this.getVo().asBigDecimal("NUTABFRET");
    }
 
    public void setNuTabFret(BigDecimal nuTabFret) {
         markAsChanged("NUTABFRET", nuTabFret);
-        this.nuTabFret = nuTabFret;
    }
 
    public BigDecimal getPreco() {
-        return preco;
+        return this.getVo().asBigDecimal("PRECO");
    }
 
    public void setPreco(BigDecimal preco) {
         markAsChanged("PRECO", preco);
-        this.preco = preco;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class HistoricoVeiculo extends AbstractSankhyaEntity<HistoricoVeiculo> {
    @Override
    public HistoricoVeiculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtVigor = vo.asTimestamp("DTVIGOR");
-        this.nuTabFret = vo.asBigDecimal("NUTABFRET");
-        this.preco = vo.asBigDecimal("PRECO");
         return this;
    }
 }

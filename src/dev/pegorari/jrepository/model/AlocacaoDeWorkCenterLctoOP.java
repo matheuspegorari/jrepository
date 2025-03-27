@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDeWorkCenterLctoOP> {
-   private BigDecimal seqOp;
-   private BigDecimal nuLop;
-   private BigDecimal idAwc;
-   private BigDecimal idProc;
-   private BigDecimal codWcp;
-   private BigDecimal codCwc;
-   private String descrCwc;
-   private String descrAtv;
-
    public BigDecimal getSeqOp() {
-        return seqOp;
+        return this.getVo().asBigDecimal("SEQOP");
    }
 
    public void setSeqOp(BigDecimal seqOp) {
         markAsChanged("SEQOP", seqOp);
-        this.seqOp = seqOp;
    }
 
    public BigDecimal getNuLop() {
-        return nuLop;
+        return this.getVo().asBigDecimal("NULOP");
    }
 
    public void setNuLop(BigDecimal nuLop) {
         markAsChanged("NULOP", nuLop);
-        this.nuLop = nuLop;
    }
 
    public BigDecimal getIdAwc() {
-        return idAwc;
+        return this.getVo().asBigDecimal("IDAWC");
    }
 
    public void setIdAwc(BigDecimal idAwc) {
         markAsChanged("IDAWC", idAwc);
-        this.idAwc = idAwc;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public String getDescrCwc() {
-        return descrCwc;
+        return this.getVo().asString("DESCRCWC");
    }
 
    public void setDescrCwc(String descrCwc) {
         markAsChanged("DESCRCWC", descrCwc);
-        this.descrCwc = descrCwc;
    }
 
    public String getDescrAtv() {
-        return descrAtv;
+        return this.getVo().asString("DESCRATV");
    }
 
    public void setDescrAtv(String descrAtv) {
         markAsChanged("DESCRATV", descrAtv);
-        this.descrAtv = descrAtv;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class AlocacaoDeWorkCenterLctoOP extends AbstractSankhyaEntity<AlocacaoDe
    @Override
    public AlocacaoDeWorkCenterLctoOP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqOp = vo.asBigDecimal("SEQOP");
-        this.nuLop = vo.asBigDecimal("NULOP");
-        this.idAwc = vo.asBigDecimal("IDAWC");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.descrCwc = vo.asString("DESCRCWC");
-        this.descrAtv = vo.asString("DESCRATV");
         return this;
    }
 }

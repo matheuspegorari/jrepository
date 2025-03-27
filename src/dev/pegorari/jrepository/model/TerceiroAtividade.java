@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> {
-   private BigDecimal idIproc;
-   private BigDecimal ideFx;
-   private BigDecimal codParcterc;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getCodParcterc() {
-        return codParcterc;
+        return this.getVo().asBigDecimal("CODPARCTERC");
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
         markAsChanged("CODPARCTERC", codParcterc);
-        this.codParcterc = codParcterc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class TerceiroAtividade extends AbstractSankhyaEntity<TerceiroAtividade> 
    @Override
    public TerceiroAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.codParcterc = vo.asBigDecimal("CODPARCTERC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
         return this;
    }
 }

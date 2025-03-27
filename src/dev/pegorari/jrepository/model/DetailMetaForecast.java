@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast> {
-   private BigDecimal codCenario;
-   private BigDecimal codMeta;
-   private BigDecimal codUsu;
-   private Timestamp dtRef;
-   private BigDecimal previsto;
-   private String recDesp;
-   private String valueDetail;
-
    public BigDecimal getCodCenario() {
-        return codCenario;
+        return this.getVo().asBigDecimal("CODCENARIO");
    }
 
    public void setCodCenario(BigDecimal codCenario) {
         markAsChanged("CODCENARIO", codCenario);
-        this.codCenario = codCenario;
    }
 
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public BigDecimal getPrevisto() {
-        return previsto;
+        return this.getVo().asBigDecimal("PREVISTO");
    }
 
    public void setPrevisto(BigDecimal previsto) {
         markAsChanged("PREVISTO", previsto);
-        this.previsto = previsto;
    }
 
    public String getRecDesp() {
-        return recDesp;
+        return this.getVo().asString("RECDESP");
    }
 
    public void setRecDesp(String recDesp) {
         markAsChanged("RECDESP", recDesp);
-        this.recDesp = recDesp;
    }
 
    public String getValueDetail() {
-        return valueDetail;
+        return this.getVo().asString("VALUEDETAIL");
    }
 
    public void setValueDetail(String valueDetail) {
         markAsChanged("VALUEDETAIL", valueDetail);
-        this.valueDetail = valueDetail;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class DetailMetaForecast extends AbstractSankhyaEntity<DetailMetaForecast
    @Override
    public DetailMetaForecast fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCenario = vo.asBigDecimal("CODCENARIO");
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.previsto = vo.asBigDecimal("PREVISTO");
-        this.recDesp = vo.asString("RECDESP");
-        this.valueDetail = vo.asString("VALUEDETAIL");
         return this;
    }
 }

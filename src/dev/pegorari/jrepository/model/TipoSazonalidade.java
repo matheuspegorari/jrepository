@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
-   private BigDecimal codTipSaz;
-   private String descricao;
-
    public BigDecimal getCodTipSaz() {
-        return codTipSaz;
+        return this.getVo().asBigDecimal("CODTIPSAZ");
    }
 
    public void setCodTipSaz(BigDecimal codTipSaz) {
         markAsChanged("CODTIPSAZ", codTipSaz);
-        this.codTipSaz = codTipSaz;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class TipoSazonalidade extends AbstractSankhyaEntity<TipoSazonalidade> {
    @Override
    public TipoSazonalidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codTipSaz = vo.asBigDecimal("CODTIPSAZ");
-        this.descricao = vo.asString("DESCRICAO");
         return this;
    }
 }

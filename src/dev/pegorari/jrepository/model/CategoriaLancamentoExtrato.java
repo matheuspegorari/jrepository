@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaLancamentoExtrato> {
-   private BigDecimal codCtabcoint;
-   private BigDecimal codigoEdi;
-   private String descricao;
-   private BigDecimal sequencia;
-   private BigDecimal tipoLanc;
-
    public BigDecimal getCodCtabcoint() {
-        return codCtabcoint;
+        return this.getVo().asBigDecimal("CODCTABCOINT");
    }
 
    public void setCodCtabcoint(BigDecimal codCtabcoint) {
         markAsChanged("CODCTABCOINT", codCtabcoint);
-        this.codCtabcoint = codCtabcoint;
    }
 
    public BigDecimal getCodigoEdi() {
-        return codigoEdi;
+        return this.getVo().asBigDecimal("CODIGOEDI");
    }
 
    public void setCodigoEdi(BigDecimal codigoEdi) {
         markAsChanged("CODIGOEDI", codigoEdi);
-        this.codigoEdi = codigoEdi;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getTipoLanc() {
-        return tipoLanc;
+        return this.getVo().asBigDecimal("TIPOLANC");
    }
 
    public void setTipoLanc(BigDecimal tipoLanc) {
         markAsChanged("TIPOLANC", tipoLanc);
-        this.tipoLanc = tipoLanc;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class CategoriaLancamentoExtrato extends AbstractSankhyaEntity<CategoriaL
    @Override
    public CategoriaLancamentoExtrato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
-        this.codigoEdi = vo.asBigDecimal("CODIGOEDI");
-        this.descricao = vo.asString("DESCRICAO");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipoLanc = vo.asBigDecimal("TIPOLANC");
         return this;
    }
 }

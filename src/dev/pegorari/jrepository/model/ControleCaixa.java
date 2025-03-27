@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
-   private BigDecimal codCtabcoint;
-   private BigDecimal codUsu;
-   private String conferido;
-   private BigDecimal despesa;
-   private Timestamp dtAbertura;
-   private Timestamp dtFechamento;
-   private BigDecimal nuCaixa;
-   private BigDecimal receita;
-   private BigDecimal saldoInicial;
-   private BigDecimal codPdv;
-
    public BigDecimal getCodCtabcoint() {
-        return codCtabcoint;
+        return this.getVo().asBigDecimal("CODCTABCOINT");
    }
 
    public void setCodCtabcoint(BigDecimal codCtabcoint) {
         markAsChanged("CODCTABCOINT", codCtabcoint);
-        this.codCtabcoint = codCtabcoint;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getConferido() {
-        return conferido;
+        return this.getVo().asString("CONFERIDO");
    }
 
    public void setConferido(String conferido) {
         markAsChanged("CONFERIDO", conferido);
-        this.conferido = conferido;
    }
 
    public BigDecimal getDespesa() {
-        return despesa;
+        return this.getVo().asBigDecimal("DESPESA");
    }
 
    public void setDespesa(BigDecimal despesa) {
         markAsChanged("DESPESA", despesa);
-        this.despesa = despesa;
    }
 
    public Timestamp getDtAbertura() {
-        return dtAbertura;
+        return this.getVo().asTimestamp("DTABERTURA");
    }
 
    public void setDtAbertura(Timestamp dtAbertura) {
         markAsChanged("DTABERTURA", dtAbertura);
-        this.dtAbertura = dtAbertura;
    }
 
    public Timestamp getDtFechamento() {
-        return dtFechamento;
+        return this.getVo().asTimestamp("DTFECHAMENTO");
    }
 
    public void setDtFechamento(Timestamp dtFechamento) {
         markAsChanged("DTFECHAMENTO", dtFechamento);
-        this.dtFechamento = dtFechamento;
    }
 
    public BigDecimal getNuCaixa() {
-        return nuCaixa;
+        return this.getVo().asBigDecimal("NUCAIXA");
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
         markAsChanged("NUCAIXA", nuCaixa);
-        this.nuCaixa = nuCaixa;
    }
 
    public BigDecimal getReceita() {
-        return receita;
+        return this.getVo().asBigDecimal("RECEITA");
    }
 
    public void setReceita(BigDecimal receita) {
         markAsChanged("RECEITA", receita);
-        this.receita = receita;
    }
 
    public BigDecimal getSaldoInicial() {
-        return saldoInicial;
+        return this.getVo().asBigDecimal("SALDOINICIAL");
    }
 
    public void setSaldoInicial(BigDecimal saldoInicial) {
         markAsChanged("SALDOINICIAL", saldoInicial);
-        this.saldoInicial = saldoInicial;
    }
 
    public BigDecimal getCodPdv() {
-        return codPdv;
+        return this.getVo().asBigDecimal("CODPDV");
    }
 
    public void setCodPdv(BigDecimal codPdv) {
         markAsChanged("CODPDV", codPdv);
-        this.codPdv = codPdv;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class ControleCaixa extends AbstractSankhyaEntity<ControleCaixa> {
    @Override
    public ControleCaixa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtabcoint = vo.asBigDecimal("CODCTABCOINT");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.conferido = vo.asString("CONFERIDO");
-        this.despesa = vo.asBigDecimal("DESPESA");
-        this.dtAbertura = vo.asTimestamp("DTABERTURA");
-        this.dtFechamento = vo.asTimestamp("DTFECHAMENTO");
-        this.nuCaixa = vo.asBigDecimal("NUCAIXA");
-        this.receita = vo.asBigDecimal("RECEITA");
-        this.saldoInicial = vo.asBigDecimal("SALDOINICIAL");
-        this.codPdv = vo.asBigDecimal("CODPDV");
         return this;
    }
 }

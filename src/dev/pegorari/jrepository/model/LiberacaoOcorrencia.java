@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrencia> {
-   private BigDecimal codProd;
-   private BigDecimal codUsuLib;
-   private BigDecimal codUsuSolicit;
-   private Timestamp dhLiberacao;
-   private Timestamp dhSolicitacao;
-   private BigDecimal numNota;
-   private BigDecimal nuSeparacao;
-   private BigDecimal nuTarefa;
-   private BigDecimal qtdEndAtual;
-   private BigDecimal qtdEndereco;
-   private BigDecimal qtdFalta;
-   private BigDecimal qtdOutrosEnd;
-   private BigDecimal qtdSaidasPend;
-   private BigDecimal seqTarefa;
-   private String situacao;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsuLib() {
-        return codUsuLib;
+        return this.getVo().asBigDecimal("CODUSULIB");
    }
 
    public void setCodUsuLib(BigDecimal codUsuLib) {
         markAsChanged("CODUSULIB", codUsuLib);
-        this.codUsuLib = codUsuLib;
    }
 
    public BigDecimal getCodUsuSolicit() {
-        return codUsuSolicit;
+        return this.getVo().asBigDecimal("CODUSUSOLICIT");
    }
 
    public void setCodUsuSolicit(BigDecimal codUsuSolicit) {
         markAsChanged("CODUSUSOLICIT", codUsuSolicit);
-        this.codUsuSolicit = codUsuSolicit;
    }
 
    public Timestamp getDhLiberacao() {
-        return dhLiberacao;
+        return this.getVo().asTimestamp("DHLIBERACAO");
    }
 
    public void setDhLiberacao(Timestamp dhLiberacao) {
         markAsChanged("DHLIBERACAO", dhLiberacao);
-        this.dhLiberacao = dhLiberacao;
    }
 
    public Timestamp getDhSolicitacao() {
-        return dhSolicitacao;
+        return this.getVo().asTimestamp("DHSOLICITACAO");
    }
 
    public void setDhSolicitacao(Timestamp dhSolicitacao) {
         markAsChanged("DHSOLICITACAO", dhSolicitacao);
-        this.dhSolicitacao = dhSolicitacao;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuSeparacao() {
-        return nuSeparacao;
+        return this.getVo().asBigDecimal("NUSEPARACAO");
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
         markAsChanged("NUSEPARACAO", nuSeparacao);
-        this.nuSeparacao = nuSeparacao;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getQtdEndAtual() {
-        return qtdEndAtual;
+        return this.getVo().asBigDecimal("QTDENDATUAL");
    }
 
    public void setQtdEndAtual(BigDecimal qtdEndAtual) {
         markAsChanged("QTDENDATUAL", qtdEndAtual);
-        this.qtdEndAtual = qtdEndAtual;
    }
 
    public BigDecimal getQtdEndereco() {
-        return qtdEndereco;
+        return this.getVo().asBigDecimal("QTDENDERECO");
    }
 
    public void setQtdEndereco(BigDecimal qtdEndereco) {
         markAsChanged("QTDENDERECO", qtdEndereco);
-        this.qtdEndereco = qtdEndereco;
    }
 
    public BigDecimal getQtdFalta() {
-        return qtdFalta;
+        return this.getVo().asBigDecimal("QTDFALTA");
    }
 
    public void setQtdFalta(BigDecimal qtdFalta) {
         markAsChanged("QTDFALTA", qtdFalta);
-        this.qtdFalta = qtdFalta;
    }
 
    public BigDecimal getQtdOutrosEnd() {
-        return qtdOutrosEnd;
+        return this.getVo().asBigDecimal("QTDOUTROSEND");
    }
 
    public void setQtdOutrosEnd(BigDecimal qtdOutrosEnd) {
         markAsChanged("QTDOUTROSEND", qtdOutrosEnd);
-        this.qtdOutrosEnd = qtdOutrosEnd;
    }
 
    public BigDecimal getQtdSaidasPend() {
-        return qtdSaidasPend;
+        return this.getVo().asBigDecimal("QTDSAIDASPEND");
    }
 
    public void setQtdSaidasPend(BigDecimal qtdSaidasPend) {
         markAsChanged("QTDSAIDASPEND", qtdSaidasPend);
-        this.qtdSaidasPend = qtdSaidasPend;
    }
 
    public BigDecimal getSeqTarefa() {
-        return seqTarefa;
+        return this.getVo().asBigDecimal("SEQTAREFA");
    }
 
    public void setSeqTarefa(BigDecimal seqTarefa) {
         markAsChanged("SEQTAREFA", seqTarefa);
-        this.seqTarefa = seqTarefa;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class LiberacaoOcorrencia extends AbstractSankhyaEntity<LiberacaoOcorrenc
    @Override
    public LiberacaoOcorrencia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsuLib = vo.asBigDecimal("CODUSULIB");
-        this.codUsuSolicit = vo.asBigDecimal("CODUSUSOLICIT");
-        this.dhLiberacao = vo.asTimestamp("DHLIBERACAO");
-        this.dhSolicitacao = vo.asTimestamp("DHSOLICITACAO");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.qtdEndAtual = vo.asBigDecimal("QTDENDATUAL");
-        this.qtdEndereco = vo.asBigDecimal("QTDENDERECO");
-        this.qtdFalta = vo.asBigDecimal("QTDFALTA");
-        this.qtdOutrosEnd = vo.asBigDecimal("QTDOUTROSEND");
-        this.qtdSaidasPend = vo.asBigDecimal("QTDSAIDASPEND");
-        this.seqTarefa = vo.asBigDecimal("SEQTAREFA");
-        this.situacao = vo.asString("SITUACAO");
         return this;
    }
 }

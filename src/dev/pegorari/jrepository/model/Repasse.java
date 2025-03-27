@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Repasse extends AbstractSankhyaEntity<Repasse> {
-   private BigDecimal nuCnd;
-   private BigDecimal nuFinDesp;
-   private BigDecimal nuFinOrig;
-   private BigDecimal nuFinRec;
-   private BigDecimal percRateio;
-   private BigDecimal valorRateio;
-
    public BigDecimal getNuCnd() {
-        return nuCnd;
+        return this.getVo().asBigDecimal("NUCND");
    }
 
    public void setNuCnd(BigDecimal nuCnd) {
         markAsChanged("NUCND", nuCnd);
-        this.nuCnd = nuCnd;
    }
 
    public BigDecimal getNuFinDesp() {
-        return nuFinDesp;
+        return this.getVo().asBigDecimal("NUFINDESP");
    }
 
    public void setNuFinDesp(BigDecimal nuFinDesp) {
         markAsChanged("NUFINDESP", nuFinDesp);
-        this.nuFinDesp = nuFinDesp;
    }
 
    public BigDecimal getNuFinOrig() {
-        return nuFinOrig;
+        return this.getVo().asBigDecimal("NUFINORIG");
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
         markAsChanged("NUFINORIG", nuFinOrig);
-        this.nuFinOrig = nuFinOrig;
    }
 
    public BigDecimal getNuFinRec() {
-        return nuFinRec;
+        return this.getVo().asBigDecimal("NUFINREC");
    }
 
    public void setNuFinRec(BigDecimal nuFinRec) {
         markAsChanged("NUFINREC", nuFinRec);
-        this.nuFinRec = nuFinRec;
    }
 
    public BigDecimal getPercRateio() {
-        return percRateio;
+        return this.getVo().asBigDecimal("PERCRATEIO");
    }
 
    public void setPercRateio(BigDecimal percRateio) {
         markAsChanged("PERCRATEIO", percRateio);
-        this.percRateio = percRateio;
    }
 
    public BigDecimal getValorRateio() {
-        return valorRateio;
+        return this.getVo().asBigDecimal("VALORRATEIO");
    }
 
    public void setValorRateio(BigDecimal valorRateio) {
         markAsChanged("VALORRATEIO", valorRateio);
-        this.valorRateio = valorRateio;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class Repasse extends AbstractSankhyaEntity<Repasse> {
    @Override
    public Repasse fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuCnd = vo.asBigDecimal("NUCND");
-        this.nuFinDesp = vo.asBigDecimal("NUFINDESP");
-        this.nuFinOrig = vo.asBigDecimal("NUFINORIG");
-        this.nuFinRec = vo.asBigDecimal("NUFINREC");
-        this.percRateio = vo.asBigDecimal("PERCRATEIO");
-        this.valorRateio = vo.asBigDecimal("VALORRATEIO");
         return this;
    }
 }

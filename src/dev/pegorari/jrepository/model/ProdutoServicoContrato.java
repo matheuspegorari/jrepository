@@ -6,215 +6,172 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServicoContrato> {
-   private BigDecimal codParcPref;
-   private BigDecimal codProd;
-   private Timestamp dtVersao;
-   private BigDecimal frequencia;
-   private BigDecimal grupImpressao;
-   private String imprNota;
-   private String imprOs;
-   private String limitante;
-   private BigDecimal numContrato;
-   private String numSerie;
-   private BigDecimal numUsuarios;
-   private String observacao;
-   private String prodPrinc;
-   private BigDecimal qtdePrevista;
-   private BigDecimal qtdMeses;
-   private String sitProd;
-   private String versao;
-   private BigDecimal vlrUnit;
-   private String serFaturCon;
-   private BigDecimal topFaturCon;
-   private BigDecimal qtdUsu;
-
    public BigDecimal getCodParcPref() {
-        return codParcPref;
+        return this.getVo().asBigDecimal("CODPARCPREF");
    }
 
    public void setCodParcPref(BigDecimal codParcPref) {
         markAsChanged("CODPARCPREF", codParcPref);
-        this.codParcPref = codParcPref;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public Timestamp getDtVersao() {
-        return dtVersao;
+        return this.getVo().asTimestamp("DTVERSAO");
    }
 
    public void setDtVersao(Timestamp dtVersao) {
         markAsChanged("DTVERSAO", dtVersao);
-        this.dtVersao = dtVersao;
    }
 
    public BigDecimal getFrequencia() {
-        return frequencia;
+        return this.getVo().asBigDecimal("FREQUENCIA");
    }
 
    public void setFrequencia(BigDecimal frequencia) {
         markAsChanged("FREQUENCIA", frequencia);
-        this.frequencia = frequencia;
    }
 
    public BigDecimal getGrupImpressao() {
-        return grupImpressao;
+        return this.getVo().asBigDecimal("GRUPIMPRESSAO");
    }
 
    public void setGrupImpressao(BigDecimal grupImpressao) {
         markAsChanged("GRUPIMPRESSAO", grupImpressao);
-        this.grupImpressao = grupImpressao;
    }
 
    public String getImprNota() {
-        return imprNota;
+        return this.getVo().asString("IMPRNOTA");
    }
 
    public void setImprNota(String imprNota) {
         markAsChanged("IMPRNOTA", imprNota);
-        this.imprNota = imprNota;
    }
 
    public String getImprOs() {
-        return imprOs;
+        return this.getVo().asString("IMPROS");
    }
 
    public void setImprOs(String imprOs) {
         markAsChanged("IMPROS", imprOs);
-        this.imprOs = imprOs;
    }
 
    public String getLimitante() {
-        return limitante;
+        return this.getVo().asString("LIMITANTE");
    }
 
    public void setLimitante(String limitante) {
         markAsChanged("LIMITANTE", limitante);
-        this.limitante = limitante;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public String getNumSerie() {
-        return numSerie;
+        return this.getVo().asString("NUMSERIE");
    }
 
    public void setNumSerie(String numSerie) {
         markAsChanged("NUMSERIE", numSerie);
-        this.numSerie = numSerie;
    }
 
    public BigDecimal getNumUsuarios() {
-        return numUsuarios;
+        return this.getVo().asBigDecimal("NUMUSUARIOS");
    }
 
    public void setNumUsuarios(BigDecimal numUsuarios) {
         markAsChanged("NUMUSUARIOS", numUsuarios);
-        this.numUsuarios = numUsuarios;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getProdPrinc() {
-        return prodPrinc;
+        return this.getVo().asString("PRODPRINC");
    }
 
    public void setProdPrinc(String prodPrinc) {
         markAsChanged("PRODPRINC", prodPrinc);
-        this.prodPrinc = prodPrinc;
    }
 
    public BigDecimal getQtdePrevista() {
-        return qtdePrevista;
+        return this.getVo().asBigDecimal("QTDEPREVISTA");
    }
 
    public void setQtdePrevista(BigDecimal qtdePrevista) {
         markAsChanged("QTDEPREVISTA", qtdePrevista);
-        this.qtdePrevista = qtdePrevista;
    }
 
    public BigDecimal getQtdMeses() {
-        return qtdMeses;
+        return this.getVo().asBigDecimal("QTDMESES");
    }
 
    public void setQtdMeses(BigDecimal qtdMeses) {
         markAsChanged("QTDMESES", qtdMeses);
-        this.qtdMeses = qtdMeses;
    }
 
    public String getSitProd() {
-        return sitProd;
+        return this.getVo().asString("SITPROD");
    }
 
    public void setSitProd(String sitProd) {
         markAsChanged("SITPROD", sitProd);
-        this.sitProd = sitProd;
    }
 
    public String getVersao() {
-        return versao;
+        return this.getVo().asString("VERSAO");
    }
 
    public void setVersao(String versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    public BigDecimal getVlrUnit() {
-        return vlrUnit;
+        return this.getVo().asBigDecimal("VLRUNIT");
    }
 
    public void setVlrUnit(BigDecimal vlrUnit) {
         markAsChanged("VLRUNIT", vlrUnit);
-        this.vlrUnit = vlrUnit;
    }
 
    public String getSerFaturCon() {
-        return serFaturCon;
+        return this.getVo().asString("SERFATURCON");
    }
 
    public void setSerFaturCon(String serFaturCon) {
         markAsChanged("SERFATURCON", serFaturCon);
-        this.serFaturCon = serFaturCon;
    }
 
    public BigDecimal getTopFaturCon() {
-        return topFaturCon;
+        return this.getVo().asBigDecimal("TOPFATURCON");
    }
 
    public void setTopFaturCon(BigDecimal topFaturCon) {
         markAsChanged("TOPFATURCON", topFaturCon);
-        this.topFaturCon = topFaturCon;
    }
 
    public BigDecimal getQtdUsu() {
-        return qtdUsu;
+        return this.getVo().asBigDecimal("QTDUSU");
    }
 
    public void setQtdUsu(BigDecimal qtdUsu) {
         markAsChanged("QTDUSU", qtdUsu);
-        this.qtdUsu = qtdUsu;
    }
 
    @Override
@@ -230,27 +187,6 @@ public class ProdutoServicoContrato extends AbstractSankhyaEntity<ProdutoServico
    @Override
    public ProdutoServicoContrato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParcPref = vo.asBigDecimal("CODPARCPREF");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.dtVersao = vo.asTimestamp("DTVERSAO");
-        this.frequencia = vo.asBigDecimal("FREQUENCIA");
-        this.grupImpressao = vo.asBigDecimal("GRUPIMPRESSAO");
-        this.imprNota = vo.asString("IMPRNOTA");
-        this.imprOs = vo.asString("IMPROS");
-        this.limitante = vo.asString("LIMITANTE");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.numSerie = vo.asString("NUMSERIE");
-        this.numUsuarios = vo.asBigDecimal("NUMUSUARIOS");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.prodPrinc = vo.asString("PRODPRINC");
-        this.qtdePrevista = vo.asBigDecimal("QTDEPREVISTA");
-        this.qtdMeses = vo.asBigDecimal("QTDMESES");
-        this.sitProd = vo.asString("SITPROD");
-        this.versao = vo.asString("VERSAO");
-        this.vlrUnit = vo.asBigDecimal("VLRUNIT");
-        this.serFaturCon = vo.asString("SERFATURCON");
-        this.topFaturCon = vo.asBigDecimal("TOPFATURCON");
-        this.qtdUsu = vo.asBigDecimal("QTDUSU");
         return this;
    }
 }

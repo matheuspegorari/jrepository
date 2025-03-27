@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
-   private BigDecimal codUsuAvaliador;
-   private String assuntoEmail;
-   private BigDecimal codParc;
-   private BigDecimal codQuest;
-   private BigDecimal codUsu;
-   private String descricao;
-   private Timestamp dhAlter;
-   private Timestamp dtFim;
-   private Timestamp dtInicio;
-   private String formaDeAplicar;
-   private BigDecimal intervaloEnvio;
-   private BigDecimal maxEnvio;
-   private char[] modeloEmail;
-   private BigDecimal nuPla;
-   private String status;
-   private BigDecimal codSmtp;
-
    public BigDecimal getCodUsuAvaliador() {
-        return codUsuAvaliador;
+        return this.getVo().asBigDecimal("CODUSUAVALIADOR");
    }
 
    public void setCodUsuAvaliador(BigDecimal codUsuAvaliador) {
         markAsChanged("CODUSUAVALIADOR", codUsuAvaliador);
-        this.codUsuAvaliador = codUsuAvaliador;
    }
 
    public String getAssuntoEmail() {
-        return assuntoEmail;
+        return this.getVo().asString("ASSUNTOEMAIL");
    }
 
    public void setAssuntoEmail(String assuntoEmail) {
         markAsChanged("ASSUNTOEMAIL", assuntoEmail);
-        this.assuntoEmail = assuntoEmail;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDtFim() {
-        return dtFim;
+        return this.getVo().asTimestamp("DTFIM");
    }
 
    public void setDtFim(Timestamp dtFim) {
         markAsChanged("DTFIM", dtFim);
-        this.dtFim = dtFim;
    }
 
    public Timestamp getDtInicio() {
-        return dtInicio;
+        return this.getVo().asTimestamp("DTINICIO");
    }
 
    public void setDtInicio(Timestamp dtInicio) {
         markAsChanged("DTINICIO", dtInicio);
-        this.dtInicio = dtInicio;
    }
 
    public String getFormaDeAplicar() {
-        return formaDeAplicar;
+        return this.getVo().asString("FORMADEAPLICAR");
    }
 
    public void setFormaDeAplicar(String formaDeAplicar) {
         markAsChanged("FORMADEAPLICAR", formaDeAplicar);
-        this.formaDeAplicar = formaDeAplicar;
    }
 
    public BigDecimal getIntervaloEnvio() {
-        return intervaloEnvio;
+        return this.getVo().asBigDecimal("INTERVALOENVIO");
    }
 
    public void setIntervaloEnvio(BigDecimal intervaloEnvio) {
         markAsChanged("INTERVALOENVIO", intervaloEnvio);
-        this.intervaloEnvio = intervaloEnvio;
    }
 
    public BigDecimal getMaxEnvio() {
-        return maxEnvio;
+        return this.getVo().asBigDecimal("MAXENVIO");
    }
 
    public void setMaxEnvio(BigDecimal maxEnvio) {
         markAsChanged("MAXENVIO", maxEnvio);
-        this.maxEnvio = maxEnvio;
    }
 
    public char[] getModeloEmail() {
-        return modeloEmail;
+        return this.getVo().asClob("MODELOEMAIL");
    }
 
    public void setModeloEmail(char[] modeloEmail) {
         markAsChanged("MODELOEMAIL", modeloEmail);
-        this.modeloEmail = modeloEmail;
    }
 
    public BigDecimal getNuPla() {
-        return nuPla;
+        return this.getVo().asBigDecimal("NUPLA");
    }
 
    public void setNuPla(BigDecimal nuPla) {
         markAsChanged("NUPLA", nuPla);
-        this.nuPla = nuPla;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getCodSmtp() {
-        return codSmtp;
+        return this.getVo().asBigDecimal("CODSMTP");
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
         markAsChanged("CODSMTP", codSmtp);
-        this.codSmtp = codSmtp;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class Planejamento extends AbstractSankhyaEntity<Planejamento> {
    @Override
    public Planejamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsuAvaliador = vo.asBigDecimal("CODUSUAVALIADOR");
-        this.assuntoEmail = vo.asString("ASSUNTOEMAIL");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dtFim = vo.asTimestamp("DTFIM");
-        this.dtInicio = vo.asTimestamp("DTINICIO");
-        this.formaDeAplicar = vo.asString("FORMADEAPLICAR");
-        this.intervaloEnvio = vo.asBigDecimal("INTERVALOENVIO");
-        this.maxEnvio = vo.asBigDecimal("MAXENVIO");
-        this.modeloEmail = vo.asClob("MODELOEMAIL");
-        this.nuPla = vo.asBigDecimal("NUPLA");
-        this.status = vo.asString("STATUS");
-        this.codSmtp = vo.asBigDecimal("CODSMTP");
         return this;
    }
 }

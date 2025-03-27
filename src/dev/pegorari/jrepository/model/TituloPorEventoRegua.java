@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoRegua> {
-   private BigDecimal codRegua;
-   private String mensagem;
-   private BigDecimal nuFin;
-   private BigDecimal seqExec;
-   private String status;
-
    public BigDecimal getCodRegua() {
-        return codRegua;
+        return this.getVo().asBigDecimal("CODREGUA");
    }
 
    public void setCodRegua(BigDecimal codRegua) {
         markAsChanged("CODREGUA", codRegua);
-        this.codRegua = codRegua;
    }
 
    public String getMensagem() {
-        return mensagem;
+        return this.getVo().asString("MENSAGEM");
    }
 
    public void setMensagem(String mensagem) {
         markAsChanged("MENSAGEM", mensagem);
-        this.mensagem = mensagem;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getSeqExec() {
-        return seqExec;
+        return this.getVo().asBigDecimal("SEQEXEC");
    }
 
    public void setSeqExec(BigDecimal seqExec) {
         markAsChanged("SEQEXEC", seqExec);
-        this.seqExec = seqExec;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class TituloPorEventoRegua extends AbstractSankhyaEntity<TituloPorEventoR
    @Override
    public TituloPorEventoRegua fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codRegua = vo.asBigDecimal("CODREGUA");
-        this.mensagem = vo.asString("MENSAGEM");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.seqExec = vo.asBigDecimal("SEQEXEC");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

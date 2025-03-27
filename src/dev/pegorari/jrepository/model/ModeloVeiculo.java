@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
-   private BigDecimal cilindrada;
-   private BigDecimal codModVei;
-   private String combustivel;
-   private String descrModVei;
-
    public BigDecimal getCilindrada() {
-        return cilindrada;
+        return this.getVo().asBigDecimal("CILINDRADA");
    }
 
    public void setCilindrada(BigDecimal cilindrada) {
         markAsChanged("CILINDRADA", cilindrada);
-        this.cilindrada = cilindrada;
    }
 
    public BigDecimal getCodModVei() {
-        return codModVei;
+        return this.getVo().asBigDecimal("CODMODVEI");
    }
 
    public void setCodModVei(BigDecimal codModVei) {
         markAsChanged("CODMODVEI", codModVei);
-        this.codModVei = codModVei;
    }
 
    public String getCombustivel() {
-        return combustivel;
+        return this.getVo().asString("COMBUSTIVEL");
    }
 
    public void setCombustivel(String combustivel) {
         markAsChanged("COMBUSTIVEL", combustivel);
-        this.combustivel = combustivel;
    }
 
    public String getDescrModVei() {
-        return descrModVei;
+        return this.getVo().asString("DESCRMODVEI");
    }
 
    public void setDescrModVei(String descrModVei) {
         markAsChanged("DESCRMODVEI", descrModVei);
-        this.descrModVei = descrModVei;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ModeloVeiculo extends AbstractSankhyaEntity<ModeloVeiculo> {
    @Override
    public ModeloVeiculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cilindrada = vo.asBigDecimal("CILINDRADA");
-        this.codModVei = vo.asBigDecimal("CODMODVEI");
-        this.combustivel = vo.asString("COMBUSTIVEL");
-        this.descrModVei = vo.asString("DESCRMODVEI");
         return this;
    }
 }

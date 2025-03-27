@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ExcecoesUsuariosLgpd extends AbstractSankhyaEntity<ExcecoesUsuariosLgpd> {
-   private BigDecimal codCla;
-   private BigDecimal codUsu;
-   private String tipoVisu;
-
    public BigDecimal getCodCla() {
-        return codCla;
+        return this.getVo().asBigDecimal("CODCLA");
    }
 
    public void setCodCla(BigDecimal codCla) {
         markAsChanged("CODCLA", codCla);
-        this.codCla = codCla;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getTipoVisu() {
-        return tipoVisu;
+        return this.getVo().asString("TIPOVISU");
    }
 
    public void setTipoVisu(String tipoVisu) {
         markAsChanged("TIPOVISU", tipoVisu);
-        this.tipoVisu = tipoVisu;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ExcecoesUsuariosLgpd extends AbstractSankhyaEntity<ExcecoesUsuarios
    @Override
    public ExcecoesUsuariosLgpd fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCla = vo.asBigDecimal("CODCLA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.tipoVisu = vo.asString("TIPOVISU");
         return this;
    }
 }

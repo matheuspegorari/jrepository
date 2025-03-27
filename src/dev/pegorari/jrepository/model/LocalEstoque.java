@@ -5,235 +5,188 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
-   private String aceitaNovoProd;
-   private String analitico;
-   private String ativo;
-   private BigDecimal capacidadeProducao;
-   private BigDecimal codLocal;
-   private BigDecimal codLocalPai;
-   private BigDecimal codParc;
-   private BigDecimal codTab;
-   private String descrLocal;
-   private BigDecimal diasProducao;
-   private String domingo;
-   private BigDecimal grau;
-   private String incSobreIrf;
-   private String quarta;
-   private String quinta;
-   private String sabado;
-   private String segunda;
-   private String sexta;
-   private String terca;
-   private String utilizaWms;
-   private String valEstIndep;
-   private BigDecimal vlrCus;
-   private BigDecimal vlrVenda;
-
    public String getAceitaNovoProd() {
-        return aceitaNovoProd;
+        return this.getVo().asString("ACEITANOVAPROD");
    }
 
    public void setAceitaNovoProd(String aceitaNovoProd) {
         markAsChanged("ACEITANOVAPROD", aceitaNovoProd);
-        this.aceitaNovoProd = aceitaNovoProd;
    }
 
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCapacidadeProducao() {
-        return capacidadeProducao;
+        return this.getVo().asBigDecimal("CAPACIDADEPRODUCAO");
    }
 
    public void setCapacidadeProducao(BigDecimal capacidadeProducao) {
         markAsChanged("CAPACIDADEPRODUCAO", capacidadeProducao);
-        this.capacidadeProducao = capacidadeProducao;
    }
 
    public BigDecimal getCodLocal() {
-        return codLocal;
+        return this.getVo().asBigDecimal("CODLOCAL");
    }
 
    public void setCodLocal(BigDecimal codLocal) {
         markAsChanged("CODLOCAL", codLocal);
-        this.codLocal = codLocal;
    }
 
    public BigDecimal getCodLocalPai() {
-        return codLocalPai;
+        return this.getVo().asBigDecimal("CODLOCALPAI");
    }
 
    public void setCodLocalPai(BigDecimal codLocalPai) {
         markAsChanged("CODLOCALPAI", codLocalPai);
-        this.codLocalPai = codLocalPai;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTab() {
-        return codTab;
+        return this.getVo().asBigDecimal("CODTAB");
    }
 
    public void setCodTab(BigDecimal codTab) {
         markAsChanged("CODTAB", codTab);
-        this.codTab = codTab;
    }
 
    public String getDescrLocal() {
-        return descrLocal;
+        return this.getVo().asString("DESCRLOCAL");
    }
 
    public void setDescrLocal(String descrLocal) {
         markAsChanged("DESCRLOCAL", descrLocal);
-        this.descrLocal = descrLocal;
    }
 
    public BigDecimal getDiasProducao() {
-        return diasProducao;
+        return this.getVo().asBigDecimal("DIASPRODUCAO");
    }
 
    public void setDiasProducao(BigDecimal diasProducao) {
         markAsChanged("DIASPRODUCAO", diasProducao);
-        this.diasProducao = diasProducao;
    }
 
    public String getDomingo() {
-        return domingo;
+        return this.getVo().asString("DOMINGO");
    }
 
    public void setDomingo(String domingo) {
         markAsChanged("DOMINGO", domingo);
-        this.domingo = domingo;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getIncSobreIrf() {
-        return incSobreIrf;
+        return this.getVo().asString("INCSOBREIRF");
    }
 
    public void setIncSobreIrf(String incSobreIrf) {
         markAsChanged("INCSOBREIRF", incSobreIrf);
-        this.incSobreIrf = incSobreIrf;
    }
 
    public String getQuarta() {
-        return quarta;
+        return this.getVo().asString("QUARTA");
    }
 
    public void setQuarta(String quarta) {
         markAsChanged("QUARTA", quarta);
-        this.quarta = quarta;
    }
 
    public String getQuinta() {
-        return quinta;
+        return this.getVo().asString("QUINTA");
    }
 
    public void setQuinta(String quinta) {
         markAsChanged("QUINTA", quinta);
-        this.quinta = quinta;
    }
 
    public String getSabado() {
-        return sabado;
+        return this.getVo().asString("SABADO");
    }
 
    public void setSabado(String sabado) {
         markAsChanged("SABADO", sabado);
-        this.sabado = sabado;
    }
 
    public String getSegunda() {
-        return segunda;
+        return this.getVo().asString("SEGUNDA");
    }
 
    public void setSegunda(String segunda) {
         markAsChanged("SEGUNDA", segunda);
-        this.segunda = segunda;
    }
 
    public String getSexta() {
-        return sexta;
+        return this.getVo().asString("SEXTA");
    }
 
    public void setSexta(String sexta) {
         markAsChanged("SEXTA", sexta);
-        this.sexta = sexta;
    }
 
    public String getTerca() {
-        return terca;
+        return this.getVo().asString("TERCA");
    }
 
    public void setTerca(String terca) {
         markAsChanged("TERCA", terca);
-        this.terca = terca;
    }
 
    public String getUtilizaWms() {
-        return utilizaWms;
+        return this.getVo().asString("UTILIZAWMS");
    }
 
    public void setUtilizaWms(String utilizaWms) {
         markAsChanged("UTILIZAWMS", utilizaWms);
-        this.utilizaWms = utilizaWms;
    }
 
    public String getValEstIndep() {
-        return valEstIndep;
+        return this.getVo().asString("VALESTINDEP");
    }
 
    public void setValEstIndep(String valEstIndep) {
         markAsChanged("VALESTINDEP", valEstIndep);
-        this.valEstIndep = valEstIndep;
    }
 
    public BigDecimal getVlrCus() {
-        return vlrCus;
+        return this.getVo().asBigDecimal("VLRCUS");
    }
 
    public void setVlrCus(BigDecimal vlrCus) {
         markAsChanged("VLRCUS", vlrCus);
-        this.vlrCus = vlrCus;
    }
 
    public BigDecimal getVlrVenda() {
-        return vlrVenda;
+        return this.getVo().asBigDecimal("VLRVENDA");
    }
 
    public void setVlrVenda(BigDecimal vlrVenda) {
         markAsChanged("VLRVENDA", vlrVenda);
-        this.vlrVenda = vlrVenda;
    }
 
    @Override
@@ -249,29 +202,6 @@ public class LocalEstoque extends AbstractSankhyaEntity<LocalEstoque> {
    @Override
    public LocalEstoque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aceitaNovoProd = vo.asString("ACEITANOVAPROD");
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.capacidadeProducao = vo.asBigDecimal("CAPACIDADEPRODUCAO");
-        this.codLocal = vo.asBigDecimal("CODLOCAL");
-        this.codLocalPai = vo.asBigDecimal("CODLOCALPAI");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTab = vo.asBigDecimal("CODTAB");
-        this.descrLocal = vo.asString("DESCRLOCAL");
-        this.diasProducao = vo.asBigDecimal("DIASPRODUCAO");
-        this.domingo = vo.asString("DOMINGO");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.incSobreIrf = vo.asString("INCSOBREIRF");
-        this.quarta = vo.asString("QUARTA");
-        this.quinta = vo.asString("QUINTA");
-        this.sabado = vo.asString("SABADO");
-        this.segunda = vo.asString("SEGUNDA");
-        this.sexta = vo.asString("SEXTA");
-        this.terca = vo.asString("TERCA");
-        this.utilizaWms = vo.asString("UTILIZAWMS");
-        this.valEstIndep = vo.asString("VALESTINDEP");
-        this.vlrCus = vo.asBigDecimal("VLRCUS");
-        this.vlrVenda = vo.asBigDecimal("VLRVENDA");
         return this;
    }
 }

@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpresa> {
-   private BigDecimal cnae;
-   private BigDecimal codEmp;
-   private BigDecimal codLst;
-   private BigDecimal codProd;
-   private String codTribMunIss;
-   private BigDecimal codNbs;
-   private BigDecimal codCtaCtbEfd;
-   private BigDecimal tipoSn;
-   private BigDecimal enqReIntegra;
-
    public BigDecimal getCnae() {
-        return cnae;
+        return this.getVo().asBigDecimal("CNAE");
    }
 
    public void setCnae(BigDecimal cnae) {
         markAsChanged("CNAE", cnae);
-        this.cnae = cnae;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodLst() {
-        return codLst;
+        return this.getVo().asBigDecimal("CODLST");
    }
 
    public void setCodLst(BigDecimal codLst) {
         markAsChanged("CODLST", codLst);
-        this.codLst = codLst;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getCodTribMunIss() {
-        return codTribMunIss;
+        return this.getVo().asString("CODTRIBMUNISS");
    }
 
    public void setCodTribMunIss(String codTribMunIss) {
         markAsChanged("CODTRIBMUNISS", codTribMunIss);
-        this.codTribMunIss = codTribMunIss;
    }
 
    public BigDecimal getCodNbs() {
-        return codNbs;
+        return this.getVo().asBigDecimal("CODNBS");
    }
 
    public void setCodNbs(BigDecimal codNbs) {
         markAsChanged("CODNBS", codNbs);
-        this.codNbs = codNbs;
    }
 
    public BigDecimal getCodCtaCtbEfd() {
-        return codCtaCtbEfd;
+        return this.getVo().asBigDecimal("CODCTACTBEFD");
    }
 
    public void setCodCtaCtbEfd(BigDecimal codCtaCtbEfd) {
         markAsChanged("CODCTACTBEFD", codCtaCtbEfd);
-        this.codCtaCtbEfd = codCtaCtbEfd;
    }
 
    public BigDecimal getTipoSn() {
-        return tipoSn;
+        return this.getVo().asBigDecimal("TIPOSN");
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
         markAsChanged("TIPOSN", tipoSn);
-        this.tipoSn = tipoSn;
    }
 
    public BigDecimal getEnqReIntegra() {
-        return enqReIntegra;
+        return this.getVo().asBigDecimal("ENQREINTEGRA");
    }
 
    public void setEnqReIntegra(BigDecimal enqReIntegra) {
         markAsChanged("ENQREINTEGRA", enqReIntegra);
-        this.enqReIntegra = enqReIntegra;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class ConfiguracaoEmpresa extends AbstractSankhyaEntity<ConfiguracaoEmpre
    @Override
    public ConfiguracaoEmpresa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cnae = vo.asBigDecimal("CNAE");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codLst = vo.asBigDecimal("CODLST");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codTribMunIss = vo.asString("CODTRIBMUNISS");
-        this.codNbs = vo.asBigDecimal("CODNBS");
-        this.codCtaCtbEfd = vo.asBigDecimal("CODCTACTBEFD");
-        this.tipoSn = vo.asBigDecimal("TIPOSN");
-        this.enqReIntegra = vo.asBigDecimal("ENQREINTEGRA");
         return this;
    }
 }

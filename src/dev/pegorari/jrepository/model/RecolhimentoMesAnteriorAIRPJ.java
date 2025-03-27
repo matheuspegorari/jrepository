@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<RecolhimentoMesAnteriorAIRPJ> {
-   private BigDecimal codEmp;
-   private String digitado;
-   private Timestamp mesPagamento;
-   private Timestamp referencia;
-   private BigDecimal vlrImposto;
-   private BigDecimal vlrImpostoCsll;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getMesPagamento() {
-        return mesPagamento;
+        return this.getVo().asTimestamp("MESPAGAMENTO");
    }
 
    public void setMesPagamento(Timestamp mesPagamento) {
         markAsChanged("MESPAGAMENTO", mesPagamento);
-        this.mesPagamento = mesPagamento;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getVlrImposto() {
-        return vlrImposto;
+        return this.getVo().asBigDecimal("VLRIMPOSTO");
    }
 
    public void setVlrImposto(BigDecimal vlrImposto) {
         markAsChanged("VLRIMPOSTO", vlrImposto);
-        this.vlrImposto = vlrImposto;
    }
 
    public BigDecimal getVlrImpostoCsll() {
-        return vlrImpostoCsll;
+        return this.getVo().asBigDecimal("VLRIMPOSTO_CSLL");
    }
 
    public void setVlrImpostoCsll(BigDecimal vlrImpostoCsll) {
         markAsChanged("VLRIMPOSTO_CSLL", vlrImpostoCsll);
-        this.vlrImpostoCsll = vlrImpostoCsll;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class RecolhimentoMesAnteriorAIRPJ extends AbstractSankhyaEntity<Recolhim
    @Override
    public RecolhimentoMesAnteriorAIRPJ fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.digitado = vo.asString("DIGITADO");
-        this.mesPagamento = vo.asTimestamp("MESPAGAMENTO");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.vlrImposto = vo.asBigDecimal("VLRIMPOSTO");
-        this.vlrImpostoCsll = vo.asBigDecimal("VLRIMPOSTO_CSLL");
         return this;
    }
 }

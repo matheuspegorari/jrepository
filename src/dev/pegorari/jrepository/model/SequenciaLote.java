@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
-   private BigDecimal seqConf;
-   private BigDecimal nuConf;
-   private String identificador;
-   private String codBarra;
-
    public BigDecimal getSeqConf() {
-        return seqConf;
+        return this.getVo().asBigDecimal("SEQCONF");
    }
 
    public void setSeqConf(BigDecimal seqConf) {
         markAsChanged("SEQCONF", seqConf);
-        this.seqConf = seqConf;
    }
 
    public BigDecimal getNuConf() {
-        return nuConf;
+        return this.getVo().asBigDecimal("NUCONF");
    }
 
    public void setNuConf(BigDecimal nuConf) {
         markAsChanged("NUCONF", nuConf);
-        this.nuConf = nuConf;
    }
 
    public String getIdentificador() {
-        return identificador;
+        return this.getVo().asString("IDENTIFICADOR");
    }
 
    public void setIdentificador(String identificador) {
         markAsChanged("IDENTIFICADOR", identificador);
-        this.identificador = identificador;
    }
 
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class SequenciaLote extends AbstractSankhyaEntity<SequenciaLote> {
    @Override
    public SequenciaLote fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqConf = vo.asBigDecimal("SEQCONF");
-        this.nuConf = vo.asBigDecimal("NUCONF");
-        this.identificador = vo.asString("IDENTIFICADOR");
-        this.codBarra = vo.asString("CODBARRA");
         return this;
    }
 }

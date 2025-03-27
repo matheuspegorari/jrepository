@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class LigacaoClassificacaoProduto extends AbstractSankhyaEntity<LigacaoClassificacaoProduto> {
-   private BigDecimal codClassif;
-   private BigDecimal codProd;
-
    public BigDecimal getCodClassif() {
-        return codClassif;
+        return this.getVo().asBigDecimal("CODCLASSIF");
    }
 
    public void setCodClassif(BigDecimal codClassif) {
         markAsChanged("CODCLASSIF", codClassif);
-        this.codClassif = codClassif;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class LigacaoClassificacaoProduto extends AbstractSankhyaEntity<LigacaoCl
    @Override
    public LigacaoClassificacaoProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codClassif = vo.asBigDecimal("CODCLASSIF");
-        this.codProd = vo.asBigDecimal("CODPROD");
         return this;
    }
 }

@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao> {
-   private BigDecimal baseImposto;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private BigDecimal vlrDespadua;
-   private BigDecimal vlrImposto;
-   private BigDecimal vlrIof;
-   private String impTagExcnNotNac;
-
    public BigDecimal getBaseImposto() {
-        return baseImposto;
+        return this.getVo().asBigDecimal("BASEIMPOSTO");
    }
 
    public void setBaseImposto(BigDecimal baseImposto) {
         markAsChanged("BASEIMPOSTO", baseImposto);
-        this.baseImposto = baseImposto;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVlrDespadua() {
-        return vlrDespadua;
+        return this.getVo().asBigDecimal("VLRDESPADUA");
    }
 
    public void setVlrDespadua(BigDecimal vlrDespadua) {
         markAsChanged("VLRDESPADUA", vlrDespadua);
-        this.vlrDespadua = vlrDespadua;
    }
 
    public BigDecimal getVlrImposto() {
-        return vlrImposto;
+        return this.getVo().asBigDecimal("VLRIMPOSTO");
    }
 
    public void setVlrImposto(BigDecimal vlrImposto) {
         markAsChanged("VLRIMPOSTO", vlrImposto);
-        this.vlrImposto = vlrImposto;
    }
 
    public BigDecimal getVlrIof() {
-        return vlrIof;
+        return this.getVo().asBigDecimal("VLRIOF");
    }
 
    public void setVlrIof(BigDecimal vlrIof) {
         markAsChanged("VLRIOF", vlrIof);
-        this.vlrIof = vlrIof;
    }
 
    public String getImpTagExcnNotNac() {
-        return impTagExcnNotNac;
+        return this.getVo().asString("IMPTAGEXCNOTNAC");
    }
 
    public void setImpTagExcnNotNac(String impTagExcnNotNac) {
         markAsChanged("IMPTAGEXCNOTNAC", impTagExcnNotNac);
-        this.impTagExcnNotNac = impTagExcnNotNac;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class ImpostosImportacao extends AbstractSankhyaEntity<ImpostosImportacao
    @Override
    public ImpostosImportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.baseImposto = vo.asBigDecimal("BASEIMPOSTO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrDespadua = vo.asBigDecimal("VLRDESPADUA");
-        this.vlrImposto = vo.asBigDecimal("VLRIMPOSTO");
-        this.vlrIof = vo.asBigDecimal("VLRIOF");
-        this.impTagExcnNotNac = vo.asString("IMPTAGEXCNOTNAC");
         return this;
    }
 }

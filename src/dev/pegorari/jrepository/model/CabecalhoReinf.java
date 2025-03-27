@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
-   private BigDecimal codEmp;
-   private String controle;
-   private Timestamp dtRef;
-   private BigDecimal evtAguarCorrecao;
-   private BigDecimal evtEnviado;
-   private BigDecimal evtErroEvtPrior;
-   private BigDecimal evtFinalizado;
-   private BigDecimal evtPendente;
-   private BigDecimal evtTotais;
-   private BigDecimal sequenciaAtual;
-   private String tpAmb;
-   private BigDecimal status;
-   private BigDecimal versaoLayout;
-   private BigDecimal sequenciaAtual4000;
-   private BigDecimal statusGrupo4000;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public BigDecimal getEvtAguarCorrecao() {
-        return evtAguarCorrecao;
+        return this.getVo().asBigDecimal("EVTAGUARCORRECAO");
    }
 
    public void setEvtAguarCorrecao(BigDecimal evtAguarCorrecao) {
         markAsChanged("EVTAGUARCORRECAO", evtAguarCorrecao);
-        this.evtAguarCorrecao = evtAguarCorrecao;
    }
 
    public BigDecimal getEvtEnviado() {
-        return evtEnviado;
+        return this.getVo().asBigDecimal("EVTENVIADO");
    }
 
    public void setEvtEnviado(BigDecimal evtEnviado) {
         markAsChanged("EVTENVIADO", evtEnviado);
-        this.evtEnviado = evtEnviado;
    }
 
    public BigDecimal getEvtErroEvtPrior() {
-        return evtErroEvtPrior;
+        return this.getVo().asBigDecimal("EVTERROEVTPRIOR");
    }
 
    public void setEvtErroEvtPrior(BigDecimal evtErroEvtPrior) {
         markAsChanged("EVTERROEVTPRIOR", evtErroEvtPrior);
-        this.evtErroEvtPrior = evtErroEvtPrior;
    }
 
    public BigDecimal getEvtFinalizado() {
-        return evtFinalizado;
+        return this.getVo().asBigDecimal("EVTFINALIZADO");
    }
 
    public void setEvtFinalizado(BigDecimal evtFinalizado) {
         markAsChanged("EVTFINALIZADO", evtFinalizado);
-        this.evtFinalizado = evtFinalizado;
    }
 
    public BigDecimal getEvtPendente() {
-        return evtPendente;
+        return this.getVo().asBigDecimal("EVTPENDENTE");
    }
 
    public void setEvtPendente(BigDecimal evtPendente) {
         markAsChanged("EVTPENDENTE", evtPendente);
-        this.evtPendente = evtPendente;
    }
 
    public BigDecimal getEvtTotais() {
-        return evtTotais;
+        return this.getVo().asBigDecimal("EVTTOTAIS");
    }
 
    public void setEvtTotais(BigDecimal evtTotais) {
         markAsChanged("EVTTOTAIS", evtTotais);
-        this.evtTotais = evtTotais;
    }
 
    public BigDecimal getSequenciaAtual() {
-        return sequenciaAtual;
+        return this.getVo().asBigDecimal("SEQUENCIAATUAL");
    }
 
    public void setSequenciaAtual(BigDecimal sequenciaAtual) {
         markAsChanged("SEQUENCIAATUAL", sequenciaAtual);
-        this.sequenciaAtual = sequenciaAtual;
    }
 
    public String getTpAmb() {
-        return tpAmb;
+        return this.getVo().asString("TPAMB");
    }
 
    public void setTpAmb(String tpAmb) {
         markAsChanged("TPAMB", tpAmb);
-        this.tpAmb = tpAmb;
    }
 
    public BigDecimal getStatus() {
-        return status;
+        return this.getVo().asBigDecimal("STATUS");
    }
 
    public void setStatus(BigDecimal status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getVersaoLayout() {
-        return versaoLayout;
+        return this.getVo().asBigDecimal("VERSAOLAYOUT");
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
         markAsChanged("VERSAOLAYOUT", versaoLayout);
-        this.versaoLayout = versaoLayout;
    }
 
    public BigDecimal getSequenciaAtual4000() {
-        return sequenciaAtual4000;
+        return this.getVo().asBigDecimal("SEQUENCIAATUAL4000");
    }
 
    public void setSequenciaAtual4000(BigDecimal sequenciaAtual4000) {
         markAsChanged("SEQUENCIAATUAL4000", sequenciaAtual4000);
-        this.sequenciaAtual4000 = sequenciaAtual4000;
    }
 
    public BigDecimal getStatusGrupo4000() {
-        return statusGrupo4000;
+        return this.getVo().asBigDecimal("STATUS_GRUPO4000");
    }
 
    public void setStatusGrupo4000(BigDecimal statusGrupo4000) {
         markAsChanged("STATUS_GRUPO4000", statusGrupo4000);
-        this.statusGrupo4000 = statusGrupo4000;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class CabecalhoReinf extends AbstractSankhyaEntity<CabecalhoReinf> {
    @Override
    public CabecalhoReinf fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.controle = vo.asString("CONTROLE");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.evtAguarCorrecao = vo.asBigDecimal("EVTAGUARCORRECAO");
-        this.evtEnviado = vo.asBigDecimal("EVTENVIADO");
-        this.evtErroEvtPrior = vo.asBigDecimal("EVTERROEVTPRIOR");
-        this.evtFinalizado = vo.asBigDecimal("EVTFINALIZADO");
-        this.evtPendente = vo.asBigDecimal("EVTPENDENTE");
-        this.evtTotais = vo.asBigDecimal("EVTTOTAIS");
-        this.sequenciaAtual = vo.asBigDecimal("SEQUENCIAATUAL");
-        this.tpAmb = vo.asString("TPAMB");
-        this.status = vo.asBigDecimal("STATUS");
-        this.versaoLayout = vo.asBigDecimal("VERSAOLAYOUT");
-        this.sequenciaAtual4000 = vo.asBigDecimal("SEQUENCIAATUAL4000");
-        this.statusGrupo4000 = vo.asBigDecimal("STATUS_GRUPO4000");
         return this;
    }
 }

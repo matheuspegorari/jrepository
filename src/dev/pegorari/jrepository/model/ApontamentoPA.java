@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
-   private String referencia;
-   private BigDecimal qtdFatsp;
-   private BigDecimal qtdApontada;
-   private String controlePa;
-   private BigDecimal codProdpa;
-   private BigDecimal seqApa;
-   private BigDecimal qtdFat;
-   private BigDecimal nuApo;
-   private BigDecimal codMpe;
-   private BigDecimal qtdPerda;
-   private BigDecimal qtdMpe;
-
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getQtdFatsp() {
-        return qtdFatsp;
+        return this.getVo().asBigDecimal("QTDFATSP");
    }
 
    public void setQtdFatsp(BigDecimal qtdFatsp) {
         markAsChanged("QTDFATSP", qtdFatsp);
-        this.qtdFatsp = qtdFatsp;
    }
 
    public BigDecimal getQtdApontada() {
-        return qtdApontada;
+        return this.getVo().asBigDecimal("QTDAPONTADA");
    }
 
    public void setQtdApontada(BigDecimal qtdApontada) {
         markAsChanged("QTDAPONTADA", qtdApontada);
-        this.qtdApontada = qtdApontada;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getCodProdpa() {
-        return codProdpa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdpa(BigDecimal codProdpa) {
         markAsChanged("CODPRODPA", codProdpa);
-        this.codProdpa = codProdpa;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    public BigDecimal getQtdFat() {
-        return qtdFat;
+        return this.getVo().asBigDecimal("QTDFAT");
    }
 
    public void setQtdFat(BigDecimal qtdFat) {
         markAsChanged("QTDFAT", qtdFat);
-        this.qtdFat = qtdFat;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public BigDecimal getCodMpe() {
-        return codMpe;
+        return this.getVo().asBigDecimal("CODMPE");
    }
 
    public void setCodMpe(BigDecimal codMpe) {
         markAsChanged("CODMPE", codMpe);
-        this.codMpe = codMpe;
    }
 
    public BigDecimal getQtdPerda() {
-        return qtdPerda;
+        return this.getVo().asBigDecimal("QTDPERDA");
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
         markAsChanged("QTDPERDA", qtdPerda);
-        this.qtdPerda = qtdPerda;
    }
 
    public BigDecimal getQtdMpe() {
-        return qtdMpe;
+        return this.getVo().asBigDecimal("QTDMPE");
    }
 
    public void setQtdMpe(BigDecimal qtdMpe) {
         markAsChanged("QTDMPE", qtdMpe);
-        this.qtdMpe = qtdMpe;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class ApontamentoPA extends AbstractSankhyaEntity<ApontamentoPA> {
    @Override
    public ApontamentoPA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.referencia = vo.asString("REFERENCIA");
-        this.qtdFatsp = vo.asBigDecimal("QTDFATSP");
-        this.qtdApontada = vo.asBigDecimal("QTDAPONTADA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.codProdpa = vo.asBigDecimal("CODPRODPA");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
-        this.qtdFat = vo.asBigDecimal("QTDFAT");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.codMpe = vo.asBigDecimal("CODMPE");
-        this.qtdPerda = vo.asBigDecimal("QTDPERDA");
-        this.qtdMpe = vo.asBigDecimal("QTDMPE");
         return this;
    }
 }

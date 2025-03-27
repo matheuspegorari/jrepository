@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso> {
-   private String descricao;
-   private String escopo;
-   private BigDecimal idForm;
-   private BigDecimal idProc;
-   private String nomeInstanciaRef;
-   private String obrigatorioInicia;
-   private BigDecimal ordemInicia;
-   private String tipoForm;
-   private String cardinalidade;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getEscopo() {
-        return escopo;
+        return this.getVo().asString("ESCOPO");
    }
 
    public void setEscopo(String escopo) {
         markAsChanged("ESCOPO", escopo);
-        this.escopo = escopo;
    }
 
    public BigDecimal getIdForm() {
-        return idForm;
+        return this.getVo().asBigDecimal("IDFORM");
    }
 
    public void setIdForm(BigDecimal idForm) {
         markAsChanged("IDFORM", idForm);
-        this.idForm = idForm;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public String getNomeInstanciaRef() {
-        return nomeInstanciaRef;
+        return this.getVo().asString("NOMEINSTANCIAREF");
    }
 
    public void setNomeInstanciaRef(String nomeInstanciaRef) {
         markAsChanged("NOMEINSTANCIAREF", nomeInstanciaRef);
-        this.nomeInstanciaRef = nomeInstanciaRef;
    }
 
    public String getObrigatorioInicia() {
-        return obrigatorioInicia;
+        return this.getVo().asString("OBRIGATORIOINICIA");
    }
 
    public void setObrigatorioInicia(String obrigatorioInicia) {
         markAsChanged("OBRIGATORIOINICIA", obrigatorioInicia);
-        this.obrigatorioInicia = obrigatorioInicia;
    }
 
    public BigDecimal getOrdemInicia() {
-        return ordemInicia;
+        return this.getVo().asBigDecimal("ORDEMINICIA");
    }
 
    public void setOrdemInicia(BigDecimal ordemInicia) {
         markAsChanged("ORDEMINICIA", ordemInicia);
-        this.ordemInicia = ordemInicia;
    }
 
    public String getTipoForm() {
-        return tipoForm;
+        return this.getVo().asString("TIPOFORM");
    }
 
    public void setTipoForm(String tipoForm) {
         markAsChanged("TIPOFORM", tipoForm);
-        this.tipoForm = tipoForm;
    }
 
    public String getCardinalidade() {
-        return cardinalidade;
+        return this.getVo().asString("CARDINALIDADE");
    }
 
    public void setCardinalidade(String cardinalidade) {
         markAsChanged("CARDINALIDADE", cardinalidade);
-        this.cardinalidade = cardinalidade;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class FormularioProcesso extends AbstractSankhyaEntity<FormularioProcesso
    @Override
    public FormularioProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.escopo = vo.asString("ESCOPO");
-        this.idForm = vo.asBigDecimal("IDFORM");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.nomeInstanciaRef = vo.asString("NOMEINSTANCIAREF");
-        this.obrigatorioInicia = vo.asString("OBRIGATORIOINICIA");
-        this.ordemInicia = vo.asBigDecimal("ORDEMINICIA");
-        this.tipoForm = vo.asString("TIPOFORM");
-        this.cardinalidade = vo.asString("CARDINALIDADE");
         return this;
    }
 }

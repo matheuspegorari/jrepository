@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CargosEtapasProcesso extends AbstractSankhyaEntity<CargosEtapasProcesso> {
-   private BigDecimal codEtapa;
-   private BigDecimal seqEtapa;
-   private BigDecimal codCargo;
-   private BigDecimal codEmp;
-   private BigDecimal peso;
-   private Timestamp dtAlter;
-   private BigDecimal codUsu;
-   private BigDecimal pontuacaoMinima;
-   private BigDecimal vlrEtapa;
-
    public BigDecimal getCodEtapa() {
-        return codEtapa;
+        return this.getVo().asBigDecimal("CODETAPA");
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
         markAsChanged("CODETAPA", codEtapa);
-        this.codEtapa = codEtapa;
    }
 
    public BigDecimal getSeqEtapa() {
-        return seqEtapa;
+        return this.getVo().asBigDecimal("SEQETAPA");
    }
 
    public void setSeqEtapa(BigDecimal seqEtapa) {
         markAsChanged("SEQETAPA", seqEtapa);
-        this.seqEtapa = seqEtapa;
    }
 
    public BigDecimal getCodCargo() {
-        return codCargo;
+        return this.getVo().asBigDecimal("CODCARGO");
    }
 
    public void setCodCargo(BigDecimal codCargo) {
         markAsChanged("CODCARGO", codCargo);
-        this.codCargo = codCargo;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getPeso() {
-        return peso;
+        return this.getVo().asBigDecimal("PESO");
    }
 
    public void setPeso(BigDecimal peso) {
         markAsChanged("PESO", peso);
-        this.peso = peso;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getPontuacaoMinima() {
-        return pontuacaoMinima;
+        return this.getVo().asBigDecimal("PONTUACAOMINIMA");
    }
 
    public void setPontuacaoMinima(BigDecimal pontuacaoMinima) {
         markAsChanged("PONTUACAOMINIMA", pontuacaoMinima);
-        this.pontuacaoMinima = pontuacaoMinima;
    }
 
    public BigDecimal getVlrEtapa() {
-        return vlrEtapa;
+        return this.getVo().asBigDecimal("VLRETAPA");
    }
 
    public void setVlrEtapa(BigDecimal vlrEtapa) {
         markAsChanged("VLRETAPA", vlrEtapa);
-        this.vlrEtapa = vlrEtapa;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class CargosEtapasProcesso extends AbstractSankhyaEntity<CargosEtapasProc
    @Override
    public CargosEtapasProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEtapa = vo.asBigDecimal("CODETAPA");
-        this.seqEtapa = vo.asBigDecimal("SEQETAPA");
-        this.codCargo = vo.asBigDecimal("CODCARGO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.peso = vo.asBigDecimal("PESO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.pontuacaoMinima = vo.asBigDecimal("PONTUACAOMINIMA");
-        this.vlrEtapa = vo.asBigDecimal("VLRETAPA");
         return this;
    }
 }

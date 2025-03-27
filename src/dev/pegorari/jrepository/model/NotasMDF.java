@@ -5,135 +5,108 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
-   private BigDecimal codParc;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private BigDecimal nuViag;
-   private BigDecimal ordemCarga;
-   private BigDecimal pesoBruto;
-   private String razaoSocial;
-   private String razaoSocialParc;
-   private BigDecimal seqMdfe;
-   private BigDecimal vlrNota;
-   private BigDecimal codEmp;
-   private String indReentrega;
-   private String statusEnvio;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getOrdemCarga() {
-        return ordemCarga;
+        return this.getVo().asBigDecimal("ORDEMCARGA");
    }
 
    public void setOrdemCarga(BigDecimal ordemCarga) {
         markAsChanged("ORDEMCARGA", ordemCarga);
-        this.ordemCarga = ordemCarga;
    }
 
    public BigDecimal getPesoBruto() {
-        return pesoBruto;
+        return this.getVo().asBigDecimal("PESOBRUTO");
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
         markAsChanged("PESOBRUTO", pesoBruto);
-        this.pesoBruto = pesoBruto;
    }
 
    public String getRazaoSocial() {
-        return razaoSocial;
+        return this.getVo().asString("RAZAOSOCIAL");
    }
 
    public void setRazaoSocial(String razaoSocial) {
         markAsChanged("RAZAOSOCIAL", razaoSocial);
-        this.razaoSocial = razaoSocial;
    }
 
    public String getRazaoSocialParc() {
-        return razaoSocialParc;
+        return this.getVo().asString("RAZAOSOCIALPARC");
    }
 
    public void setRazaoSocialParc(String razaoSocialParc) {
         markAsChanged("RAZAOSOCIALPARC", razaoSocialParc);
-        this.razaoSocialParc = razaoSocialParc;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getVlrNota() {
-        return vlrNota;
+        return this.getVo().asBigDecimal("VLRNOTA");
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
         markAsChanged("VLRNOTA", vlrNota);
-        this.vlrNota = vlrNota;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getIndReentrega() {
-        return indReentrega;
+        return this.getVo().asString("INDREENTREGA");
    }
 
    public void setIndReentrega(String indReentrega) {
         markAsChanged("INDREENTREGA", indReentrega);
-        this.indReentrega = indReentrega;
    }
 
    public String getStatusEnvio() {
-        return statusEnvio;
+        return this.getVo().asString("STATUSENVIO");
    }
 
    public void setStatusEnvio(String statusEnvio) {
         markAsChanged("STATUSENVIO", statusEnvio);
-        this.statusEnvio = statusEnvio;
    }
 
    @Override
@@ -149,19 +122,6 @@ public class NotasMDF extends AbstractSankhyaEntity<NotasMDF> {
    @Override
    public NotasMDF fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.ordemCarga = vo.asBigDecimal("ORDEMCARGA");
-        this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
-        this.razaoSocial = vo.asString("RAZAOSOCIAL");
-        this.razaoSocialParc = vo.asString("RAZAOSOCIALPARC");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.vlrNota = vo.asBigDecimal("VLRNOTA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.indReentrega = vo.asString("INDREENTREGA");
-        this.statusEnvio = vo.asString("STATUSENVIO");
         return this;
    }
 }

@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
-   private BigDecimal nuDsb;
-   private BigDecimal nuGdg;
-
    public BigDecimal getNuDsb() {
-        return nuDsb;
+        return this.getVo().asBigDecimal("NUDSB");
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
         markAsChanged("NUDSB", nuDsb);
-        this.nuDsb = nuDsb;
    }
 
    public BigDecimal getNuGdg() {
-        return nuGdg;
+        return this.getVo().asBigDecimal("NUGDG");
    }
 
    public void setNuGdg(BigDecimal nuGdg) {
         markAsChanged("NUGDG", nuGdg);
-        this.nuGdg = nuGdg;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class DashboardGadget extends AbstractSankhyaEntity<DashboardGadget> {
    @Override
    public DashboardGadget fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuDsb = vo.asBigDecimal("NUDSB");
-        this.nuGdg = vo.asBigDecimal("NUGDG");
         return this;
    }
 }

@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> {
-   private BigDecimal diasAbonoPec;
-   private BigDecimal id;
-   private Timestamp dtIniAqui;
-   private BigDecimal seqFer;
-   private String observacao;
-   private String abonoPecUniario;
-   private BigDecimal codFunc;
-   private BigDecimal codEmp;
-   private Timestamp dhSolicit;
-   private BigDecimal nuSolicit;
-   private Timestamp prevInicio;
-   private String status;
-   private BigDecimal diasSolicitados;
-
    public BigDecimal getDiasAbonoPec() {
-        return diasAbonoPec;
+        return this.getVo().asBigDecimal("DIASABONOPEC");
    }
 
    public void setDiasAbonoPec(BigDecimal diasAbonoPec) {
         markAsChanged("DIASABONOPEC", diasAbonoPec);
-        this.diasAbonoPec = diasAbonoPec;
    }
 
    public BigDecimal getId() {
-        return id;
+        return this.getVo().asBigDecimal("ID");
    }
 
    public void setId(BigDecimal id) {
         markAsChanged("ID", id);
-        this.id = id;
    }
 
    public Timestamp getDtIniAqui() {
-        return dtIniAqui;
+        return this.getVo().asTimestamp("DTINIAQUI");
    }
 
    public void setDtIniAqui(Timestamp dtIniAqui) {
         markAsChanged("DTINIAQUI", dtIniAqui);
-        this.dtIniAqui = dtIniAqui;
    }
 
    public BigDecimal getSeqFer() {
-        return seqFer;
+        return this.getVo().asBigDecimal("SEQFER");
    }
 
    public void setSeqFer(BigDecimal seqFer) {
         markAsChanged("SEQFER", seqFer);
-        this.seqFer = seqFer;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getAbonoPecUniario() {
-        return abonoPecUniario;
+        return this.getVo().asString("ABONOPECUNIARIO");
    }
 
    public void setAbonoPecUniario(String abonoPecUniario) {
         markAsChanged("ABONOPECUNIARIO", abonoPecUniario);
-        this.abonoPecUniario = abonoPecUniario;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public Timestamp getDhSolicit() {
-        return dhSolicit;
+        return this.getVo().asTimestamp("DHSOLICIT");
    }
 
    public void setDhSolicit(Timestamp dhSolicit) {
         markAsChanged("DHSOLICIT", dhSolicit);
-        this.dhSolicit = dhSolicit;
    }
 
    public BigDecimal getNuSolicit() {
-        return nuSolicit;
+        return this.getVo().asBigDecimal("NUSOLICIT");
    }
 
    public void setNuSolicit(BigDecimal nuSolicit) {
         markAsChanged("NUSOLICIT", nuSolicit);
-        this.nuSolicit = nuSolicit;
    }
 
    public Timestamp getPrevInicio() {
-        return prevInicio;
+        return this.getVo().asTimestamp("PREVINICIO");
    }
 
    public void setPrevInicio(Timestamp prevInicio) {
         markAsChanged("PREVINICIO", prevInicio);
-        this.prevInicio = prevInicio;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getDiasSolicitados() {
-        return diasSolicitados;
+        return this.getVo().asBigDecimal("DIASSOLICITADOS");
    }
 
    public void setDiasSolicitados(BigDecimal diasSolicitados) {
         markAsChanged("DIASSOLICITADOS", diasSolicitados);
-        this.diasSolicitados = diasSolicitados;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class SolicitacaoFerias extends AbstractSankhyaEntity<SolicitacaoFerias> 
    @Override
    public SolicitacaoFerias fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.diasAbonoPec = vo.asBigDecimal("DIASABONOPEC");
-        this.id = vo.asBigDecimal("ID");
-        this.dtIniAqui = vo.asTimestamp("DTINIAQUI");
-        this.seqFer = vo.asBigDecimal("SEQFER");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.abonoPecUniario = vo.asString("ABONOPECUNIARIO");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.dhSolicit = vo.asTimestamp("DHSOLICIT");
-        this.nuSolicit = vo.asBigDecimal("NUSOLICIT");
-        this.prevInicio = vo.asTimestamp("PREVINICIO");
-        this.status = vo.asString("STATUS");
-        this.diasSolicitados = vo.asBigDecimal("DIASSOLICITADOS");
         return this;
    }
 }

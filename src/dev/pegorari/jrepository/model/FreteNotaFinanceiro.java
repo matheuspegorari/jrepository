@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinanceiro> {
-   private BigDecimal nuFin;
-   private BigDecimal nuNota;
-   private BigDecimal vlrFrete;
-   private String tipFrete;
-
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getVlrFrete() {
-        return vlrFrete;
+        return this.getVo().asBigDecimal("VLRFRETE");
    }
 
    public void setVlrFrete(BigDecimal vlrFrete) {
         markAsChanged("VLRFRETE", vlrFrete);
-        this.vlrFrete = vlrFrete;
    }
 
    public String getTipFrete() {
-        return tipFrete;
+        return this.getVo().asString("TIPFRETE");
    }
 
    public void setTipFrete(String tipFrete) {
         markAsChanged("TIPFRETE", tipFrete);
-        this.tipFrete = tipFrete;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class FreteNotaFinanceiro extends AbstractSankhyaEntity<FreteNotaFinancei
    @Override
    public FreteNotaFinanceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.vlrFrete = vo.asBigDecimal("VLRFRETE");
-        this.tipFrete = vo.asString("TIPFRETE");
         return this;
    }
 }

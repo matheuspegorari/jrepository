@@ -6,205 +6,164 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRastreamentoEstoque> {
-   private BigDecimal baseStfcpIntAnt;
-   private BigDecimal baseSubst;
-   private BigDecimal codEmp;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private String digitado;
-   private BigDecimal nuNota;
-   private BigDecimal nuNotaCompra;
-   private BigDecimal percStfcpIntAnt;
-   private BigDecimal qtdNeg;
-   private BigDecimal sequencia;
-   private BigDecimal sequenciaCompra;
-   private BigDecimal vlrIcms;
-   private BigDecimal vlrStfcpIntAnt;
-   private BigDecimal vlrSubst;
-   private BigDecimal percSubst;
-   private BigDecimal codCfo;
-   private Timestamp dtNeg;
-   private String tipMov;
-
    public BigDecimal getBaseStfcpIntAnt() {
-        return baseStfcpIntAnt;
+        return this.getVo().asBigDecimal("BASESTFCPINTANT");
    }
 
    public void setBaseStfcpIntAnt(BigDecimal baseStfcpIntAnt) {
         markAsChanged("BASESTFCPINTANT", baseStfcpIntAnt);
-        this.baseStfcpIntAnt = baseStfcpIntAnt;
    }
 
    public BigDecimal getBaseSubst() {
-        return baseSubst;
+        return this.getVo().asBigDecimal("BASESUBST");
    }
 
    public void setBaseSubst(BigDecimal baseSubst) {
         markAsChanged("BASESUBST", baseSubst);
-        this.baseSubst = baseSubst;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuNotaCompra() {
-        return nuNotaCompra;
+        return this.getVo().asBigDecimal("NUNOTACOMPRA");
    }
 
    public void setNuNotaCompra(BigDecimal nuNotaCompra) {
         markAsChanged("NUNOTACOMPRA", nuNotaCompra);
-        this.nuNotaCompra = nuNotaCompra;
    }
 
    public BigDecimal getPercStfcpIntAnt() {
-        return percStfcpIntAnt;
+        return this.getVo().asBigDecimal("PERCSTFCPINTANT");
    }
 
    public void setPercStfcpIntAnt(BigDecimal percStfcpIntAnt) {
         markAsChanged("PERCSTFCPINTANT", percStfcpIntAnt);
-        this.percStfcpIntAnt = percStfcpIntAnt;
    }
 
    public BigDecimal getQtdNeg() {
-        return qtdNeg;
+        return this.getVo().asBigDecimal("QTDNEG");
    }
 
    public void setQtdNeg(BigDecimal qtdNeg) {
         markAsChanged("QTDNEG", qtdNeg);
-        this.qtdNeg = qtdNeg;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getSequenciaCompra() {
-        return sequenciaCompra;
+        return this.getVo().asBigDecimal("SEQUENCIACOMPRA");
    }
 
    public void setSequenciaCompra(BigDecimal sequenciaCompra) {
         markAsChanged("SEQUENCIACOMPRA", sequenciaCompra);
-        this.sequenciaCompra = sequenciaCompra;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getVlrStfcpIntAnt() {
-        return vlrStfcpIntAnt;
+        return this.getVo().asBigDecimal("VLRSTFCPINTANT");
    }
 
    public void setVlrStfcpIntAnt(BigDecimal vlrStfcpIntAnt) {
         markAsChanged("VLRSTFCPINTANT", vlrStfcpIntAnt);
-        this.vlrStfcpIntAnt = vlrStfcpIntAnt;
    }
 
    public BigDecimal getVlrSubst() {
-        return vlrSubst;
+        return this.getVo().asBigDecimal("VLRSUBST");
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
         markAsChanged("VLRSUBST", vlrSubst);
-        this.vlrSubst = vlrSubst;
    }
 
    public BigDecimal getPercSubst() {
-        return percSubst;
+        return this.getVo().asBigDecimal("PERCSUBST");
    }
 
    public void setPercSubst(BigDecimal percSubst) {
         markAsChanged("PERCSUBST", percSubst);
-        this.percSubst = percSubst;
    }
 
    public BigDecimal getCodCfo() {
-        return codCfo;
+        return this.getVo().asBigDecimal("CODCFO");
    }
 
    public void setCodCfo(BigDecimal codCfo) {
         markAsChanged("CODCFO", codCfo);
-        this.codCfo = codCfo;
    }
 
    public Timestamp getDtNeg() {
-        return dtNeg;
+        return this.getVo().asTimestamp("DTNEG");
    }
 
    public void setDtNeg(Timestamp dtNeg) {
         markAsChanged("DTNEG", dtNeg);
-        this.dtNeg = dtNeg;
    }
 
    public String getTipMov() {
-        return tipMov;
+        return this.getVo().asString("TIPMOV");
    }
 
    public void setTipMov(String tipMov) {
         markAsChanged("TIPMOV", tipMov);
-        this.tipMov = tipMov;
    }
 
    @Override
@@ -220,26 +179,6 @@ public class ImpostoRastreamentoEstoque extends AbstractSankhyaEntity<ImpostoRas
    @Override
    public ImpostoRastreamentoEstoque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.baseStfcpIntAnt = vo.asBigDecimal("BASESTFCPINTANT");
-        this.baseSubst = vo.asBigDecimal("BASESUBST");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.digitado = vo.asString("DIGITADO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuNotaCompra = vo.asBigDecimal("NUNOTACOMPRA");
-        this.percStfcpIntAnt = vo.asBigDecimal("PERCSTFCPINTANT");
-        this.qtdNeg = vo.asBigDecimal("QTDNEG");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.sequenciaCompra = vo.asBigDecimal("SEQUENCIACOMPRA");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrStfcpIntAnt = vo.asBigDecimal("VLRSTFCPINTANT");
-        this.vlrSubst = vo.asBigDecimal("VLRSUBST");
-        this.percSubst = vo.asBigDecimal("PERCSUBST");
-        this.codCfo = vo.asBigDecimal("CODCFO");
-        this.dtNeg = vo.asTimestamp("DTNEG");
-        this.tipMov = vo.asString("TIPMOV");
         return this;
    }
 }

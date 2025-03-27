@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroParadaEquipamento> {
-   private BigDecimal codEquip;
-   private BigDecimal codMotPar;
-   private Timestamp dhFim;
-   private Timestamp dhInicio;
-   private String observacao;
-
    public BigDecimal getCodEquip() {
-        return codEquip;
+        return this.getVo().asBigDecimal("CODEQUIP");
    }
 
    public void setCodEquip(BigDecimal codEquip) {
         markAsChanged("CODEQUIP", codEquip);
-        this.codEquip = codEquip;
    }
 
    public BigDecimal getCodMotPar() {
-        return codMotPar;
+        return this.getVo().asBigDecimal("CODMOTPAR");
    }
 
    public void setCodMotPar(BigDecimal codMotPar) {
         markAsChanged("CODMOTPAR", codMotPar);
-        this.codMotPar = codMotPar;
    }
 
    public Timestamp getDhFim() {
-        return dhFim;
+        return this.getVo().asTimestamp("DHFIM");
    }
 
    public void setDhFim(Timestamp dhFim) {
         markAsChanged("DHFIM", dhFim);
-        this.dhFim = dhFim;
    }
 
    public Timestamp getDhInicio() {
-        return dhInicio;
+        return this.getVo().asTimestamp("DHINICIO");
    }
 
    public void setDhInicio(Timestamp dhInicio) {
         markAsChanged("DHINICIO", dhInicio);
-        this.dhInicio = dhInicio;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class RegistroParadaEquipamento extends AbstractSankhyaEntity<RegistroPar
    @Override
    public RegistroParadaEquipamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEquip = vo.asBigDecimal("CODEQUIP");
-        this.codMotPar = vo.asBigDecimal("CODMOTPAR");
-        this.dhFim = vo.asTimestamp("DHFIM");
-        this.dhInicio = vo.asTimestamp("DHINICIO");
-        this.observacao = vo.asString("OBSERVACAO");
         return this;
    }
 }

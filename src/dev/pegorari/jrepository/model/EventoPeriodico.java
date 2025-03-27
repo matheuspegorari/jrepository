@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private String descricao;
-   private Timestamp dtAlter;
-   private String evento;
-   private String geraEvento;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getEvento() {
-        return evento;
+        return this.getVo().asString("EVENTO");
    }
 
    public void setEvento(String evento) {
         markAsChanged("EVENTO", evento);
-        this.evento = evento;
    }
 
    public String getGeraEvento() {
-        return geraEvento;
+        return this.getVo().asString("GERAREVENTO");
    }
 
    public void setGeraEvento(String geraEvento) {
         markAsChanged("GERAREVENTO", geraEvento);
-        this.geraEvento = geraEvento;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class EventoPeriodico extends AbstractSankhyaEntity<EventoPeriodico> {
    @Override
    public EventoPeriodico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.evento = vo.asString("EVENTO");
-        this.geraEvento = vo.asString("GERAREVENTO");
         return this;
    }
 }

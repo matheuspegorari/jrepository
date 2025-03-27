@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
-   private char[] arquivo;
-   private byte[] arquivoBin;
-   private String nome;
-   private BigDecimal nuRfe;
-   private BigDecimal sequencia;
-
    public char[] getArquivo() {
-        return arquivo;
+        return this.getVo().asClob("ARQUIVO");
    }
 
    public void setArquivo(char[] arquivo) {
         markAsChanged("ARQUIVO", arquivo);
-        this.arquivo = arquivo;
    }
 
    public byte[] getArquivoBin() {
-        return arquivoBin;
+        return this.getVo().asBlob("ARQUIVOBIN");
    }
 
    public void setArquivoBin(byte[] arquivoBin) {
         markAsChanged("ARQUIVOBIN", arquivoBin);
-        this.arquivoBin = arquivoBin;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuRfe() {
-        return nuRfe;
+        return this.getVo().asBigDecimal("NURFE");
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
         markAsChanged("NURFE", nuRfe);
-        this.nuRfe = nuRfe;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ArquivoRelatorio extends AbstractSankhyaEntity<ArquivoRelatorio> {
    @Override
    public ArquivoRelatorio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arquivo = vo.asClob("ARQUIVO");
-        this.arquivoBin = vo.asBlob("ARQUIVOBIN");
-        this.nome = vo.asString("NOME");
-        this.nuRfe = vo.asBigDecimal("NURFE");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

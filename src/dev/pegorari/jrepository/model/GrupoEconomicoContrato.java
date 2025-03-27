@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomicoContrato> {
-   private BigDecimal codParc;
-   private BigDecimal numContrato;
-   private BigDecimal percCusto;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getPercCusto() {
-        return percCusto;
+        return this.getVo().asBigDecimal("PERCCUSTO");
    }
 
    public void setPercCusto(BigDecimal percCusto) {
         markAsChanged("PERCCUSTO", percCusto);
-        this.percCusto = percCusto;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class GrupoEconomicoContrato extends AbstractSankhyaEntity<GrupoEconomico
    @Override
    public GrupoEconomicoContrato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.percCusto = vo.asBigDecimal("PERCCUSTO");
         return this;
    }
 }

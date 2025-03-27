@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
-   private String defStatusExec;
-   private String expCondicao;
-   private BigDecimal ideFx;
-   private BigDecimal ideFxDest;
-   private BigDecimal ideFxOrig;
-   private BigDecimal ordemAval;
-   private String padrao;
-   private String prioritario;
-
    public String getDefStatusExec() {
-        return defStatusExec;
+        return this.getVo().asString("DEFSTATUSEXEC");
    }
 
    public void setDefStatusExec(String defStatusExec) {
         markAsChanged("DEFSTATUSEXEC", defStatusExec);
-        this.defStatusExec = defStatusExec;
    }
 
    public String getExpCondicao() {
-        return expCondicao;
+        return this.getVo().asString("EXPCONDICAO");
    }
 
    public void setExpCondicao(String expCondicao) {
         markAsChanged("EXPCONDICAO", expCondicao);
-        this.expCondicao = expCondicao;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdeFxDest() {
-        return ideFxDest;
+        return this.getVo().asBigDecimal("IDEFXDEST");
    }
 
    public void setIdeFxDest(BigDecimal ideFxDest) {
         markAsChanged("IDEFXDEST", ideFxDest);
-        this.ideFxDest = ideFxDest;
    }
 
    public BigDecimal getIdeFxOrig() {
-        return ideFxOrig;
+        return this.getVo().asBigDecimal("IDEFXORIG");
    }
 
    public void setIdeFxOrig(BigDecimal ideFxOrig) {
         markAsChanged("IDEFXORIG", ideFxOrig);
-        this.ideFxOrig = ideFxOrig;
    }
 
    public BigDecimal getOrdemAval() {
-        return ordemAval;
+        return this.getVo().asBigDecimal("ORDEMAVAL");
    }
 
    public void setOrdemAval(BigDecimal ordemAval) {
         markAsChanged("ORDEMAVAL", ordemAval);
-        this.ordemAval = ordemAval;
    }
 
    public String getPadrao() {
-        return padrao;
+        return this.getVo().asString("PADRAO");
    }
 
    public void setPadrao(String padrao) {
         markAsChanged("PADRAO", padrao);
-        this.padrao = padrao;
    }
 
    public String getPrioritario() {
-        return prioritario;
+        return this.getVo().asString("PRIORITARIO");
    }
 
    public void setPrioritario(String prioritario) {
         markAsChanged("PRIORITARIO", prioritario);
-        this.prioritario = prioritario;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class TransicaoFluxo extends AbstractSankhyaEntity<TransicaoFluxo> {
    @Override
    public TransicaoFluxo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.defStatusExec = vo.asString("DEFSTATUSEXEC");
-        this.expCondicao = vo.asString("EXPCONDICAO");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.ideFxDest = vo.asBigDecimal("IDEFXDEST");
-        this.ideFxOrig = vo.asBigDecimal("IDEFXORIG");
-        this.ordemAval = vo.asBigDecimal("ORDEMAVAL");
-        this.padrao = vo.asString("PADRAO");
-        this.prioritario = vo.asString("PRIORITARIO");
         return this;
    }
 }

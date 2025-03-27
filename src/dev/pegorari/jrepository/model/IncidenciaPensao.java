@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
-   private Timestamp dtAlter;
-   private BigDecimal codEmp;
-   private BigDecimal codEvento;
-   private BigDecimal codFunc;
-   private BigDecimal sequencia;
-   private String origPens;
-
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodEvento() {
-        return codEvento;
+        return this.getVo().asBigDecimal("CODEVENTO");
    }
 
    public void setCodEvento(BigDecimal codEvento) {
         markAsChanged("CODEVENTO", codEvento);
-        this.codEvento = codEvento;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getOrigPens() {
-        return origPens;
+        return this.getVo().asString("ORIGPENS");
    }
 
    public void setOrigPens(String origPens) {
         markAsChanged("ORIGPENS", origPens);
-        this.origPens = origPens;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class IncidenciaPensao extends AbstractSankhyaEntity<IncidenciaPensao> {
    @Override
    public IncidenciaPensao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEvento = vo.asBigDecimal("CODEVENTO");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.origPens = vo.asString("ORIGPENS");
         return this;
    }
 }

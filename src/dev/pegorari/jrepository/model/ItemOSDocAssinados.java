@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados> {
-   private BigDecimal numOs;
-   private BigDecimal numItem;
-   private BigDecimal nuDoc;
-
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNuDoc() {
-        return nuDoc;
+        return this.getVo().asBigDecimal("NUDOC");
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
         markAsChanged("NUDOC", nuDoc);
-        this.nuDoc = nuDoc;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ItemOSDocAssinados extends AbstractSankhyaEntity<ItemOSDocAssinados
    @Override
    public ItemOSDocAssinados fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.nuDoc = vo.asBigDecimal("NUDOC");
         return this;
    }
 }

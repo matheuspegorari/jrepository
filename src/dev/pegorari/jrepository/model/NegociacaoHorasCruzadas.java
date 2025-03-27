@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHorasCruzadas> {
-   private BigDecimal codParc;
-   private Timestamp dtAlter;
-   private BigDecimal nuNegociacao;
-   private BigDecimal multHoraExtra;
-   private BigDecimal nuFap;
-   private Timestamp dtIni;
-   private BigDecimal codUnnCompradora;
-   private BigDecimal codUnnVendedora;
-   private Timestamp dtFin;
-   private BigDecimal nuNota;
-   private BigDecimal vlrHora;
-   private BigDecimal codUsu;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuNegociacao() {
-        return nuNegociacao;
+        return this.getVo().asBigDecimal("NUNEGOCIACAO");
    }
 
    public void setNuNegociacao(BigDecimal nuNegociacao) {
         markAsChanged("NUNEGOCIACAO", nuNegociacao);
-        this.nuNegociacao = nuNegociacao;
    }
 
    public BigDecimal getMultHoraExtra() {
-        return multHoraExtra;
+        return this.getVo().asBigDecimal("MULTHORAEXTRA");
    }
 
    public void setMultHoraExtra(BigDecimal multHoraExtra) {
         markAsChanged("MULTHORAEXTRA", multHoraExtra);
-        this.multHoraExtra = multHoraExtra;
    }
 
    public BigDecimal getNuFap() {
-        return nuFap;
+        return this.getVo().asBigDecimal("NUFAP");
    }
 
    public void setNuFap(BigDecimal nuFap) {
         markAsChanged("NUFAP", nuFap);
-        this.nuFap = nuFap;
    }
 
    public Timestamp getDtIni() {
-        return dtIni;
+        return this.getVo().asTimestamp("DTINI");
    }
 
    public void setDtIni(Timestamp dtIni) {
         markAsChanged("DTINI", dtIni);
-        this.dtIni = dtIni;
    }
 
    public BigDecimal getCodUnnCompradora() {
-        return codUnnCompradora;
+        return this.getVo().asBigDecimal("CODUNNCOMPRADORA");
    }
 
    public void setCodUnnCompradora(BigDecimal codUnnCompradora) {
         markAsChanged("CODUNNCOMPRADORA", codUnnCompradora);
-        this.codUnnCompradora = codUnnCompradora;
    }
 
    public BigDecimal getCodUnnVendedora() {
-        return codUnnVendedora;
+        return this.getVo().asBigDecimal("CODUNNVENDEDORA");
    }
 
    public void setCodUnnVendedora(BigDecimal codUnnVendedora) {
         markAsChanged("CODUNNVENDEDORA", codUnnVendedora);
-        this.codUnnVendedora = codUnnVendedora;
    }
 
    public Timestamp getDtFin() {
-        return dtFin;
+        return this.getVo().asTimestamp("DTFIN");
    }
 
    public void setDtFin(Timestamp dtFin) {
         markAsChanged("DTFIN", dtFin);
-        this.dtFin = dtFin;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getVlrHora() {
-        return vlrHora;
+        return this.getVo().asBigDecimal("VLRHORA");
    }
 
    public void setVlrHora(BigDecimal vlrHora) {
         markAsChanged("VLRHORA", vlrHora);
-        this.vlrHora = vlrHora;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class NegociacaoHorasCruzadas extends AbstractSankhyaEntity<NegociacaoHor
    @Override
    public NegociacaoHorasCruzadas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuNegociacao = vo.asBigDecimal("NUNEGOCIACAO");
-        this.multHoraExtra = vo.asBigDecimal("MULTHORAEXTRA");
-        this.nuFap = vo.asBigDecimal("NUFAP");
-        this.dtIni = vo.asTimestamp("DTINI");
-        this.codUnnCompradora = vo.asBigDecimal("CODUNNCOMPRADORA");
-        this.codUnnVendedora = vo.asBigDecimal("CODUNNVENDEDORA");
-        this.dtFin = vo.asTimestamp("DTFIN");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.vlrHora = vo.asBigDecimal("VLRHORA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
         return this;
    }
 }

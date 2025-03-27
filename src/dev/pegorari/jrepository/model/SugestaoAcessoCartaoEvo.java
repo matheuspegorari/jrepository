@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcessoCartaoEvo> {
-   private String alteradoPeloUsuario;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private String liberado;
-   private String resourceId;
-
    public String getAlteradoPeloUsuario() {
-        return alteradoPeloUsuario;
+        return this.getVo().asString("ALTERADOPELOUSUARIO");
    }
 
    public void setAlteradoPeloUsuario(String alteradoPeloUsuario) {
         markAsChanged("ALTERADOPELOUSUARIO", alteradoPeloUsuario);
-        this.alteradoPeloUsuario = alteradoPeloUsuario;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getLiberado() {
-        return liberado;
+        return this.getVo().asString("LIBERADO");
    }
 
    public void setLiberado(String liberado) {
         markAsChanged("LIBERADO", liberado);
-        this.liberado = liberado;
    }
 
    public String getResourceId() {
-        return resourceId;
+        return this.getVo().asString("RESOURCEID");
    }
 
    public void setResourceId(String resourceId) {
         markAsChanged("RESOURCEID", resourceId);
-        this.resourceId = resourceId;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class SugestaoAcessoCartaoEvo extends AbstractSankhyaEntity<SugestaoAcess
    @Override
    public SugestaoAcessoCartaoEvo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.alteradoPeloUsuario = vo.asString("ALTERADOPELOUSUARIO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.liberado = vo.asString("LIBERADO");
-        this.resourceId = vo.asString("RESOURCEID");
         return this;
    }
 }

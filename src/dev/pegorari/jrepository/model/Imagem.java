@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Imagem extends AbstractSankhyaEntity<Imagem> {
-   private BigDecimal codImg;
-   private byte[] foto;
-
    public BigDecimal getCodImg() {
-        return codImg;
+        return this.getVo().asBigDecimal("CODIMG");
    }
 
    public void setCodImg(BigDecimal codImg) {
         markAsChanged("CODIMG", codImg);
-        this.codImg = codImg;
    }
 
    public byte[] getFoto() {
-        return foto;
+        return this.getVo().asBlob("FOTO");
    }
 
    public void setFoto(byte[] foto) {
         markAsChanged("FOTO", foto);
-        this.foto = foto;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class Imagem extends AbstractSankhyaEntity<Imagem> {
    @Override
    public Imagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codImg = vo.asBigDecimal("CODIMG");
-        this.foto = vo.asBlob("FOTO");
         return this;
    }
 }

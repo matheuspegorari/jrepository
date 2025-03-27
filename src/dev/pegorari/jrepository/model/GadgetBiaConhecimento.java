@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhecimento> {
-   private BigDecimal codGbc;
-   private BigDecimal codUsu;
-   private BigDecimal nuDsb;
-   private String pergunta;
-   private BigDecimal qtdUso;
-   private String resourceId;
-
    public BigDecimal getCodGbc() {
-        return codGbc;
+        return this.getVo().asBigDecimal("CODGBC");
    }
 
    public void setCodGbc(BigDecimal codGbc) {
         markAsChanged("CODGBC", codGbc);
-        this.codGbc = codGbc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuDsb() {
-        return nuDsb;
+        return this.getVo().asBigDecimal("NUDSB");
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
         markAsChanged("NUDSB", nuDsb);
-        this.nuDsb = nuDsb;
    }
 
    public String getPergunta() {
-        return pergunta;
+        return this.getVo().asString("PERGUNTA");
    }
 
    public void setPergunta(String pergunta) {
         markAsChanged("PERGUNTA", pergunta);
-        this.pergunta = pergunta;
    }
 
    public BigDecimal getQtdUso() {
-        return qtdUso;
+        return this.getVo().asBigDecimal("QTDUSO");
    }
 
    public void setQtdUso(BigDecimal qtdUso) {
         markAsChanged("QTDUSO", qtdUso);
-        this.qtdUso = qtdUso;
    }
 
    public String getResourceId() {
-        return resourceId;
+        return this.getVo().asString("RESOURCEID");
    }
 
    public void setResourceId(String resourceId) {
         markAsChanged("RESOURCEID", resourceId);
-        this.resourceId = resourceId;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class GadgetBiaConhecimento extends AbstractSankhyaEntity<GadgetBiaConhec
    @Override
    public GadgetBiaConhecimento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codGbc = vo.asBigDecimal("CODGBC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuDsb = vo.asBigDecimal("NUDSB");
-        this.pergunta = vo.asString("PERGUNTA");
-        this.qtdUso = vo.asBigDecimal("QTDUSO");
-        this.resourceId = vo.asString("RESOURCEID");
         return this;
    }
 }

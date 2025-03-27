@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufatura> {
-   private String descricao;
-   private BigDecimal grau;
-   private BigDecimal qtdComp;
-   private String analitico;
-   private String ativo;
-   private BigDecimal codCpm;
-   private BigDecimal codCpmPai;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public BigDecimal getQtdComp() {
-        return qtdComp;
+        return this.getVo().asBigDecimal("QTDCOMP");
    }
 
    public void setQtdComp(BigDecimal qtdComp) {
         markAsChanged("QTDCOMP", qtdComp);
-        this.qtdComp = qtdComp;
    }
 
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodCpm() {
-        return codCpm;
+        return this.getVo().asBigDecimal("CODCPM");
    }
 
    public void setCodCpm(BigDecimal codCpm) {
         markAsChanged("CODCPM", codCpm);
-        this.codCpm = codCpm;
    }
 
    public BigDecimal getCodCpmPai() {
-        return codCpmPai;
+        return this.getVo().asBigDecimal("CODCPMPAI");
    }
 
    public void setCodCpmPai(BigDecimal codCpmPai) {
         markAsChanged("CODCPMPAI", codCpmPai);
-        this.codCpmPai = codCpmPai;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ComponenteManufatura extends AbstractSankhyaEntity<ComponenteManufa
    @Override
    public ComponenteManufatura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.qtdComp = vo.asBigDecimal("QTDCOMP");
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.codCpm = vo.asBigDecimal("CODCPM");
-        this.codCpmPai = vo.asBigDecimal("CODCPMPAI");
         return this;
    }
 }

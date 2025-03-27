@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioProdutoAcabado> {
-   private BigDecimal codProdPa;
-   private String controlePa;
-   private BigDecimal idForm;
-   private BigDecimal idProc;
-
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdForm() {
-        return idForm;
+        return this.getVo().asBigDecimal("IDFORM");
    }
 
    public void setIdForm(BigDecimal idForm) {
         markAsChanged("IDFORM", idForm);
-        this.idForm = idForm;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class FormularioProdutoAcabado extends AbstractSankhyaEntity<FormularioPr
    @Override
    public FormularioProdutoAcabado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.idForm = vo.asBigDecimal("IDFORM");
-        this.idProc = vo.asBigDecimal("IDPROC");
         return this;
    }
 }

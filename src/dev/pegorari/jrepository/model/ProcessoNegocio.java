@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
-   private String ativo;
-   private BigDecimal codPrn;
-   private BigDecimal codUsuAlter;
-   private BigDecimal codUsuDono;
-   private Timestamp dhAlter;
-   private Timestamp dhCriacao;
-   private Timestamp dhPublicacao;
-   private char[] documentacao;
-   private char[] imgBpmn;
-   private String nome;
-   private BigDecimal nuGrupo;
-   private String ultimaVersao;
-   private Timestamp verAntDhPublicacao;
-   private BigDecimal versao;
-   private char[] xmlBpmn;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodPrn() {
-        return codPrn;
+        return this.getVo().asBigDecimal("CODPRN");
    }
 
    public void setCodPrn(BigDecimal codPrn) {
         markAsChanged("CODPRN", codPrn);
-        this.codPrn = codPrn;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getCodUsuDono() {
-        return codUsuDono;
+        return this.getVo().asBigDecimal("CODUSUDONO");
    }
 
    public void setCodUsuDono(BigDecimal codUsuDono) {
         markAsChanged("CODUSUDONO", codUsuDono);
-        this.codUsuDono = codUsuDono;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCriacao() {
-        return dhCriacao;
+        return this.getVo().asTimestamp("DHCRIACAO");
    }
 
    public void setDhCriacao(Timestamp dhCriacao) {
         markAsChanged("DHCRIACAO", dhCriacao);
-        this.dhCriacao = dhCriacao;
    }
 
    public Timestamp getDhPublicacao() {
-        return dhPublicacao;
+        return this.getVo().asTimestamp("DHPUBLICACAO");
    }
 
    public void setDhPublicacao(Timestamp dhPublicacao) {
         markAsChanged("DHPUBLICACAO", dhPublicacao);
-        this.dhPublicacao = dhPublicacao;
    }
 
    public char[] getDocumentacao() {
-        return documentacao;
+        return this.getVo().asClob("DOCUMENTACAO");
    }
 
    public void setDocumentacao(char[] documentacao) {
         markAsChanged("DOCUMENTACAO", documentacao);
-        this.documentacao = documentacao;
    }
 
    public char[] getImgBpmn() {
-        return imgBpmn;
+        return this.getVo().asClob("IMGBPMN");
    }
 
    public void setImgBpmn(char[] imgBpmn) {
         markAsChanged("IMGBPMN", imgBpmn);
-        this.imgBpmn = imgBpmn;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuGrupo() {
-        return nuGrupo;
+        return this.getVo().asBigDecimal("NUGRUPO");
    }
 
    public void setNuGrupo(BigDecimal nuGrupo) {
         markAsChanged("NUGRUPO", nuGrupo);
-        this.nuGrupo = nuGrupo;
    }
 
    public String getUltimaVersao() {
-        return ultimaVersao;
+        return this.getVo().asString("ULTIMAVERSAO");
    }
 
    public void setUltimaVersao(String ultimaVersao) {
         markAsChanged("ULTIMAVERSAO", ultimaVersao);
-        this.ultimaVersao = ultimaVersao;
    }
 
    public Timestamp getVerAntDhPublicacao() {
-        return verAntDhPublicacao;
+        return this.getVo().asTimestamp("VERANTDHPUBLICACAO");
    }
 
    public void setVerAntDhPublicacao(Timestamp verAntDhPublicacao) {
         markAsChanged("VERANTDHPUBLICACAO", verAntDhPublicacao);
-        this.verAntDhPublicacao = verAntDhPublicacao;
    }
 
    public BigDecimal getVersao() {
-        return versao;
+        return this.getVo().asBigDecimal("VERSAO");
    }
 
    public void setVersao(BigDecimal versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    public char[] getXmlBpmn() {
-        return xmlBpmn;
+        return this.getVo().asClob("XMLBPMN");
    }
 
    public void setXmlBpmn(char[] xmlBpmn) {
         markAsChanged("XMLBPMN", xmlBpmn);
-        this.xmlBpmn = xmlBpmn;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class ProcessoNegocio extends AbstractSankhyaEntity<ProcessoNegocio> {
    @Override
    public ProcessoNegocio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codPrn = vo.asBigDecimal("CODPRN");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.codUsuDono = vo.asBigDecimal("CODUSUDONO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCriacao = vo.asTimestamp("DHCRIACAO");
-        this.dhPublicacao = vo.asTimestamp("DHPUBLICACAO");
-        this.documentacao = vo.asClob("DOCUMENTACAO");
-        this.imgBpmn = vo.asClob("IMGBPMN");
-        this.nome = vo.asString("NOME");
-        this.nuGrupo = vo.asBigDecimal("NUGRUPO");
-        this.ultimaVersao = vo.asString("ULTIMAVERSAO");
-        this.verAntDhPublicacao = vo.asTimestamp("VERANTDHPUBLICACAO");
-        this.versao = vo.asBigDecimal("VERSAO");
-        this.xmlBpmn = vo.asClob("XMLBPMN");
         return this;
    }
 }

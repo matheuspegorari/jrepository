@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaVista> {
-   private String cgcCpf;
-   private String cmc7;
-   private BigDecimal codUsu;
-   private Timestamp dhConsulta;
-   private char[] resposta;
-   private String tipConsulta;
-
    public String getCgcCpf() {
-        return cgcCpf;
+        return this.getVo().asString("CGC_CPF");
    }
 
    public void setCgcCpf(String cgcCpf) {
         markAsChanged("CGC_CPF", cgcCpf);
-        this.cgcCpf = cgcCpf;
    }
 
    public String getCmc7() {
-        return cmc7;
+        return this.getVo().asString("CMC7");
    }
 
    public void setCmc7(String cmc7) {
         markAsChanged("CMC7", cmc7);
-        this.cmc7 = cmc7;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhConsulta() {
-        return dhConsulta;
+        return this.getVo().asTimestamp("DHCONSULTA");
    }
 
    public void setDhConsulta(Timestamp dhConsulta) {
         markAsChanged("DHCONSULTA", dhConsulta);
-        this.dhConsulta = dhConsulta;
    }
 
    public char[] getResposta() {
-        return resposta;
+        return this.getVo().asClob("RESPOSTA");
    }
 
    public void setResposta(char[] resposta) {
         markAsChanged("RESPOSTA", resposta);
-        this.resposta = resposta;
    }
 
    public String getTipConsulta() {
-        return tipConsulta;
+        return this.getVo().asString("TIPCONSULTA");
    }
 
    public void setTipConsulta(String tipConsulta) {
         markAsChanged("TIPCONSULTA", tipConsulta);
-        this.tipConsulta = tipConsulta;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class CacheServicoBoaVista extends AbstractSankhyaEntity<CacheServicoBoaV
    @Override
    public CacheServicoBoaVista fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cgcCpf = vo.asString("CGC_CPF");
-        this.cmc7 = vo.asString("CMC7");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhConsulta = vo.asTimestamp("DHCONSULTA");
-        this.resposta = vo.asClob("RESPOSTA");
-        this.tipConsulta = vo.asString("TIPCONSULTA");
         return this;
    }
 }

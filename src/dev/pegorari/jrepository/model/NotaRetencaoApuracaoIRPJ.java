@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencaoApuracaoIRPJ> {
-   private BigDecimal codEmp;
-   private BigDecimal codParc;
-   private Timestamp dtEntSai;
-   private Timestamp dtNeg;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private Timestamp referencia;
-   private String serieNota;
-   private BigDecimal vlrCsll;
-   private BigDecimal vlrIrpj;
-   private BigDecimal vlrNota;
-   private String retemIrpjCsll;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public Timestamp getDtEntSai() {
-        return dtEntSai;
+        return this.getVo().asTimestamp("DTENTSAI");
    }
 
    public void setDtEntSai(Timestamp dtEntSai) {
         markAsChanged("DTENTSAI", dtEntSai);
-        this.dtEntSai = dtEntSai;
    }
 
    public Timestamp getDtNeg() {
-        return dtNeg;
+        return this.getVo().asTimestamp("DTNEG");
    }
 
    public void setDtNeg(Timestamp dtNeg) {
         markAsChanged("DTNEG", dtNeg);
-        this.dtNeg = dtNeg;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getSerieNota() {
-        return serieNota;
+        return this.getVo().asString("SERIENOTA");
    }
 
    public void setSerieNota(String serieNota) {
         markAsChanged("SERIENOTA", serieNota);
-        this.serieNota = serieNota;
    }
 
    public BigDecimal getVlrCsll() {
-        return vlrCsll;
+        return this.getVo().asBigDecimal("VLRCSLL");
    }
 
    public void setVlrCsll(BigDecimal vlrCsll) {
         markAsChanged("VLRCSLL", vlrCsll);
-        this.vlrCsll = vlrCsll;
    }
 
    public BigDecimal getVlrIrpj() {
-        return vlrIrpj;
+        return this.getVo().asBigDecimal("VLRIRPJ");
    }
 
    public void setVlrIrpj(BigDecimal vlrIrpj) {
         markAsChanged("VLRIRPJ", vlrIrpj);
-        this.vlrIrpj = vlrIrpj;
    }
 
    public BigDecimal getVlrNota() {
-        return vlrNota;
+        return this.getVo().asBigDecimal("VLRNOTA");
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
         markAsChanged("VLRNOTA", vlrNota);
-        this.vlrNota = vlrNota;
    }
 
    public String getRetemIrpjCsll() {
-        return retemIrpjCsll;
+        return this.getVo().asString("RETEMIRPJCSLL");
    }
 
    public void setRetemIrpjCsll(String retemIrpjCsll) {
         markAsChanged("RETEMIRPJCSLL", retemIrpjCsll);
-        this.retemIrpjCsll = retemIrpjCsll;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class NotaRetencaoApuracaoIRPJ extends AbstractSankhyaEntity<NotaRetencao
    @Override
    public NotaRetencaoApuracaoIRPJ fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.dtEntSai = vo.asTimestamp("DTENTSAI");
-        this.dtNeg = vo.asTimestamp("DTNEG");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.serieNota = vo.asString("SERIENOTA");
-        this.vlrCsll = vo.asBigDecimal("VLRCSLL");
-        this.vlrIrpj = vo.asBigDecimal("VLRIRPJ");
-        this.vlrNota = vo.asBigDecimal("VLRNOTA");
-        this.retemIrpjCsll = vo.asString("RETEMIRPJCSLL");
         return this;
    }
 }

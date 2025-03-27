@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<HistoricoAtualizaTabDinamica> {
-   private BigDecimal codHis;
-   private String msg;
-   private Timestamp dtExec;
-   private String tipoAtualizacao;
-   private BigDecimal tempoGasto;
-
    public BigDecimal getCodHis() {
-        return codHis;
+        return this.getVo().asBigDecimal("CODHIS");
    }
 
    public void setCodHis(BigDecimal codHis) {
         markAsChanged("CODHIS", codHis);
-        this.codHis = codHis;
    }
 
    public String getMsg() {
-        return msg;
+        return this.getVo().asString("MSG");
    }
 
    public void setMsg(String msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public Timestamp getDtExec() {
-        return dtExec;
+        return this.getVo().asTimestamp("DTEXEC");
    }
 
    public void setDtExec(Timestamp dtExec) {
         markAsChanged("DTEXEC", dtExec);
-        this.dtExec = dtExec;
    }
 
    public String getTipoAtualizacao() {
-        return tipoAtualizacao;
+        return this.getVo().asString("TIPOATUALIZACAO");
    }
 
    public void setTipoAtualizacao(String tipoAtualizacao) {
         markAsChanged("TIPOATUALIZACAO", tipoAtualizacao);
-        this.tipoAtualizacao = tipoAtualizacao;
    }
 
    public BigDecimal getTempoGasto() {
-        return tempoGasto;
+        return this.getVo().asBigDecimal("TEMPOGASTO");
    }
 
    public void setTempoGasto(BigDecimal tempoGasto) {
         markAsChanged("TEMPOGASTO", tempoGasto);
-        this.tempoGasto = tempoGasto;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class HistoricoAtualizaTabDinamica extends AbstractSankhyaEntity<Historic
    @Override
    public HistoricoAtualizaTabDinamica fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codHis = vo.asBigDecimal("CODHIS");
-        this.msg = vo.asString("MSG");
-        this.dtExec = vo.asTimestamp("DTEXEC");
-        this.tipoAtualizacao = vo.asString("TIPOATUALIZACAO");
-        this.tempoGasto = vo.asBigDecimal("TEMPOGASTO");
         return this;
    }
 }

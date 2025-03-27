@@ -6,465 +6,372 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
-   private String atuMovMen;
-   private String calcFerPerAqui;
-   private String calcParcFer;
-   private String calcResiduo;
-   private String centIrf;
-   private String centValores;
-   private BigDecimal codEvenBHoras;
-   private BigDecimal codEvenCred;
-   private BigDecimal codEvenDeb;
-   private BigDecimal codEvenDomIn;
-   private BigDecimal codEvenNotUr;
-   private BigDecimal codEvenPadrao;
-   private BigDecimal codEvenPosPri;
-   private BigDecimal codEvenPri;
-   private BigDecimal codPref;
-   private BigDecimal codUsu;
-   private String compensacao;
-   private String descricao;
-   private BigDecimal diaRetiradPd;
-   private Timestamp dtAlter;
-   private String ferPerPerAqui;
-   private String formaCalcMedias;
-   private BigDecimal irfMin;
-   private String lancFerAdiant;
-   private BigDecimal limMinHExtra;
-   private BigDecimal limMinTolAtr;
-   private String mediaAritim13;
-   private String mediaPerFerias;
-   private BigDecimal mesCarencia;
-   private BigDecimal mesDataBase;
-   private BigDecimal mesesMedia13s;
-   private BigDecimal mesesMedia13s2;
-   private BigDecimal mesesMediaFer;
-   private BigDecimal mesesMediaFer2;
-   private BigDecimal mesesMediaResc;
-   private BigDecimal mesesMediaResc2;
-   private BigDecimal pagAtraso;
-   private BigDecimal pagHsExtra;
-   private String provFerMedias;
-   private BigDecimal qtdMaiores;
-   private BigDecimal remuMinima;
-   private String respFolha;
-   private String tipArred;
-   private String tipMes;
-   private String tipMovMedias;
-   private BigDecimal arredSalLiq;
-
    public String getAtuMovMen() {
-        return atuMovMen;
+        return this.getVo().asString("ATUMOVMEN");
    }
 
    public void setAtuMovMen(String atuMovMen) {
         markAsChanged("ATUMOVMEN", atuMovMen);
-        this.atuMovMen = atuMovMen;
    }
 
    public String getCalcFerPerAqui() {
-        return calcFerPerAqui;
+        return this.getVo().asString("CALCFERPERAQUI");
    }
 
    public void setCalcFerPerAqui(String calcFerPerAqui) {
         markAsChanged("CALCFERPERAQUI", calcFerPerAqui);
-        this.calcFerPerAqui = calcFerPerAqui;
    }
 
    public String getCalcParcFer() {
-        return calcParcFer;
+        return this.getVo().asString("CALCPARCFER");
    }
 
    public void setCalcParcFer(String calcParcFer) {
         markAsChanged("CALCPARCFER", calcParcFer);
-        this.calcParcFer = calcParcFer;
    }
 
    public String getCalcResiduo() {
-        return calcResiduo;
+        return this.getVo().asString("CALCRESIDUO");
    }
 
    public void setCalcResiduo(String calcResiduo) {
         markAsChanged("CALCRESIDUO", calcResiduo);
-        this.calcResiduo = calcResiduo;
    }
 
    public String getCentIrf() {
-        return centIrf;
+        return this.getVo().asString("CENTIRF");
    }
 
    public void setCentIrf(String centIrf) {
         markAsChanged("CENTIRF", centIrf);
-        this.centIrf = centIrf;
    }
 
    public String getCentValores() {
-        return centValores;
+        return this.getVo().asString("CENTVALORES");
    }
 
    public void setCentValores(String centValores) {
         markAsChanged("CENTVALORES", centValores);
-        this.centValores = centValores;
    }
 
    public BigDecimal getCodEvenBHoras() {
-        return codEvenBHoras;
+        return this.getVo().asBigDecimal("CODEVENBHORAS");
    }
 
    public void setCodEvenBHoras(BigDecimal codEvenBHoras) {
         markAsChanged("CODEVENBHORAS", codEvenBHoras);
-        this.codEvenBHoras = codEvenBHoras;
    }
 
    public BigDecimal getCodEvenCred() {
-        return codEvenCred;
+        return this.getVo().asBigDecimal("CODEVENCRED");
    }
 
    public void setCodEvenCred(BigDecimal codEvenCred) {
         markAsChanged("CODEVENCRED", codEvenCred);
-        this.codEvenCred = codEvenCred;
    }
 
    public BigDecimal getCodEvenDeb() {
-        return codEvenDeb;
+        return this.getVo().asBigDecimal("CODEVENDEB");
    }
 
    public void setCodEvenDeb(BigDecimal codEvenDeb) {
         markAsChanged("CODEVENDEB", codEvenDeb);
-        this.codEvenDeb = codEvenDeb;
    }
 
    public BigDecimal getCodEvenDomIn() {
-        return codEvenDomIn;
+        return this.getVo().asBigDecimal("CODEVENDOMIN");
    }
 
    public void setCodEvenDomIn(BigDecimal codEvenDomIn) {
         markAsChanged("CODEVENDOMIN", codEvenDomIn);
-        this.codEvenDomIn = codEvenDomIn;
    }
 
    public BigDecimal getCodEvenNotUr() {
-        return codEvenNotUr;
+        return this.getVo().asBigDecimal("CODEVENNOTUR");
    }
 
    public void setCodEvenNotUr(BigDecimal codEvenNotUr) {
         markAsChanged("CODEVENNOTUR", codEvenNotUr);
-        this.codEvenNotUr = codEvenNotUr;
    }
 
    public BigDecimal getCodEvenPadrao() {
-        return codEvenPadrao;
+        return this.getVo().asBigDecimal("CODEVENPADRAO");
    }
 
    public void setCodEvenPadrao(BigDecimal codEvenPadrao) {
         markAsChanged("CODEVENPADRAO", codEvenPadrao);
-        this.codEvenPadrao = codEvenPadrao;
    }
 
    public BigDecimal getCodEvenPosPri() {
-        return codEvenPosPri;
+        return this.getVo().asBigDecimal("CODEVENPOSPRI");
    }
 
    public void setCodEvenPosPri(BigDecimal codEvenPosPri) {
         markAsChanged("CODEVENPOSPRI", codEvenPosPri);
-        this.codEvenPosPri = codEvenPosPri;
    }
 
    public BigDecimal getCodEvenPri() {
-        return codEvenPri;
+        return this.getVo().asBigDecimal("CODEVENPRI");
    }
 
    public void setCodEvenPri(BigDecimal codEvenPri) {
         markAsChanged("CODEVENPRI", codEvenPri);
-        this.codEvenPri = codEvenPri;
    }
 
    public BigDecimal getCodPref() {
-        return codPref;
+        return this.getVo().asBigDecimal("CODPREF");
    }
 
    public void setCodPref(BigDecimal codPref) {
         markAsChanged("CODPREF", codPref);
-        this.codPref = codPref;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCompensacao() {
-        return compensacao;
+        return this.getVo().asString("COMPENSACAO");
    }
 
    public void setCompensacao(String compensacao) {
         markAsChanged("COMPENSACAO", compensacao);
-        this.compensacao = compensacao;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getDiaRetiradPd() {
-        return diaRetiradPd;
+        return this.getVo().asBigDecimal("DIARETIRADPD");
    }
 
    public void setDiaRetiradPd(BigDecimal diaRetiradPd) {
         markAsChanged("DIARETIRADPD", diaRetiradPd);
-        this.diaRetiradPd = diaRetiradPd;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getFerPerPerAqui() {
-        return ferPerPerAqui;
+        return this.getVo().asString("FERPROPERAQUI");
    }
 
    public void setFerPerPerAqui(String ferPerPerAqui) {
         markAsChanged("FERPROPERAQUI", ferPerPerAqui);
-        this.ferPerPerAqui = ferPerPerAqui;
    }
 
    public String getFormaCalcMedias() {
-        return formaCalcMedias;
+        return this.getVo().asString("FORMACALCMEDIAS");
    }
 
    public void setFormaCalcMedias(String formaCalcMedias) {
         markAsChanged("FORMACALCMEDIAS", formaCalcMedias);
-        this.formaCalcMedias = formaCalcMedias;
    }
 
    public BigDecimal getIrfMin() {
-        return irfMin;
+        return this.getVo().asBigDecimal("IRFMIN");
    }
 
    public void setIrfMin(BigDecimal irfMin) {
         markAsChanged("IRFMIN", irfMin);
-        this.irfMin = irfMin;
    }
 
    public String getLancFerAdiant() {
-        return lancFerAdiant;
+        return this.getVo().asString("LANCFERADIANT");
    }
 
    public void setLancFerAdiant(String lancFerAdiant) {
         markAsChanged("LANCFERADIANT", lancFerAdiant);
-        this.lancFerAdiant = lancFerAdiant;
    }
 
    public BigDecimal getLimMinHExtra() {
-        return limMinHExtra;
+        return this.getVo().asBigDecimal("LIMMINHEXTRA");
    }
 
    public void setLimMinHExtra(BigDecimal limMinHExtra) {
         markAsChanged("LIMMINHEXTRA", limMinHExtra);
-        this.limMinHExtra = limMinHExtra;
    }
 
    public BigDecimal getLimMinTolAtr() {
-        return limMinTolAtr;
+        return this.getVo().asBigDecimal("LIMMINTOLATR");
    }
 
    public void setLimMinTolAtr(BigDecimal limMinTolAtr) {
         markAsChanged("LIMMINTOLATR", limMinTolAtr);
-        this.limMinTolAtr = limMinTolAtr;
    }
 
    public String getMediaAritim13() {
-        return mediaAritim13;
+        return this.getVo().asString("MEDIAARITIM13");
    }
 
    public void setMediaAritim13(String mediaAritim13) {
         markAsChanged("MEDIAARITIM13", mediaAritim13);
-        this.mediaAritim13 = mediaAritim13;
    }
 
    public String getMediaPerFerias() {
-        return mediaPerFerias;
+        return this.getVo().asString("MEDIAPERFERIAS");
    }
 
    public void setMediaPerFerias(String mediaPerFerias) {
         markAsChanged("MEDIAPERFERIAS", mediaPerFerias);
-        this.mediaPerFerias = mediaPerFerias;
    }
 
    public BigDecimal getMesCarencia() {
-        return mesCarencia;
+        return this.getVo().asBigDecimal("MESCARENCIA");
    }
 
    public void setMesCarencia(BigDecimal mesCarencia) {
         markAsChanged("MESCARENCIA", mesCarencia);
-        this.mesCarencia = mesCarencia;
    }
 
    public BigDecimal getMesDataBase() {
-        return mesDataBase;
+        return this.getVo().asBigDecimal("MESDATABASE");
    }
 
    public void setMesDataBase(BigDecimal mesDataBase) {
         markAsChanged("MESDATABASE", mesDataBase);
-        this.mesDataBase = mesDataBase;
    }
 
    public BigDecimal getMesesMedia13s() {
-        return mesesMedia13s;
+        return this.getVo().asBigDecimal("MESESMEDIA13S");
    }
 
    public void setMesesMedia13s(BigDecimal mesesMedia13s) {
         markAsChanged("MESESMEDIA13S", mesesMedia13s);
-        this.mesesMedia13s = mesesMedia13s;
    }
 
    public BigDecimal getMesesMedia13s2() {
-        return mesesMedia13s2;
+        return this.getVo().asBigDecimal("MESESMEDIA13S2");
    }
 
    public void setMesesMedia13s2(BigDecimal mesesMedia13s2) {
         markAsChanged("MESESMEDIA13S2", mesesMedia13s2);
-        this.mesesMedia13s2 = mesesMedia13s2;
    }
 
    public BigDecimal getMesesMediaFer() {
-        return mesesMediaFer;
+        return this.getVo().asBigDecimal("MESESMEDIAFER");
    }
 
    public void setMesesMediaFer(BigDecimal mesesMediaFer) {
         markAsChanged("MESESMEDIAFER", mesesMediaFer);
-        this.mesesMediaFer = mesesMediaFer;
    }
 
    public BigDecimal getMesesMediaFer2() {
-        return mesesMediaFer2;
+        return this.getVo().asBigDecimal("MESESMEDIAFER2");
    }
 
    public void setMesesMediaFer2(BigDecimal mesesMediaFer2) {
         markAsChanged("MESESMEDIAFER2", mesesMediaFer2);
-        this.mesesMediaFer2 = mesesMediaFer2;
    }
 
    public BigDecimal getMesesMediaResc() {
-        return mesesMediaResc;
+        return this.getVo().asBigDecimal("MESESMEDIARESC");
    }
 
    public void setMesesMediaResc(BigDecimal mesesMediaResc) {
         markAsChanged("MESESMEDIARESC", mesesMediaResc);
-        this.mesesMediaResc = mesesMediaResc;
    }
 
    public BigDecimal getMesesMediaResc2() {
-        return mesesMediaResc2;
+        return this.getVo().asBigDecimal("MESESMEDIARESC2");
    }
 
    public void setMesesMediaResc2(BigDecimal mesesMediaResc2) {
         markAsChanged("MESESMEDIARESC2", mesesMediaResc2);
-        this.mesesMediaResc2 = mesesMediaResc2;
    }
 
    public BigDecimal getPagAtraso() {
-        return pagAtraso;
+        return this.getVo().asBigDecimal("PAGATRASO");
    }
 
    public void setPagAtraso(BigDecimal pagAtraso) {
         markAsChanged("PAGATRASO", pagAtraso);
-        this.pagAtraso = pagAtraso;
    }
 
    public BigDecimal getPagHsExtra() {
-        return pagHsExtra;
+        return this.getVo().asBigDecimal("PAGHSEXTRA");
    }
 
    public void setPagHsExtra(BigDecimal pagHsExtra) {
         markAsChanged("PAGHSEXTRA", pagHsExtra);
-        this.pagHsExtra = pagHsExtra;
    }
 
    public String getProvFerMedias() {
-        return provFerMedias;
+        return this.getVo().asString("PROVFERMEDIAS");
    }
 
    public void setProvFerMedias(String provFerMedias) {
         markAsChanged("PROVFERMEDIAS", provFerMedias);
-        this.provFerMedias = provFerMedias;
    }
 
    public BigDecimal getQtdMaiores() {
-        return qtdMaiores;
+        return this.getVo().asBigDecimal("QTDMAIORES");
    }
 
    public void setQtdMaiores(BigDecimal qtdMaiores) {
         markAsChanged("QTDMAIORES", qtdMaiores);
-        this.qtdMaiores = qtdMaiores;
    }
 
    public BigDecimal getRemuMinima() {
-        return remuMinima;
+        return this.getVo().asBigDecimal("REMUMINIMA");
    }
 
    public void setRemuMinima(BigDecimal remuMinima) {
         markAsChanged("REMUMINIMA", remuMinima);
-        this.remuMinima = remuMinima;
    }
 
    public String getRespFolha() {
-        return respFolha;
+        return this.getVo().asString("RESPFOLHA");
    }
 
    public void setRespFolha(String respFolha) {
         markAsChanged("RESPFOLHA", respFolha);
-        this.respFolha = respFolha;
    }
 
    public String getTipArred() {
-        return tipArred;
+        return this.getVo().asString("TIPARRED");
    }
 
    public void setTipArred(String tipArred) {
         markAsChanged("TIPARRED", tipArred);
-        this.tipArred = tipArred;
    }
 
    public String getTipMes() {
-        return tipMes;
+        return this.getVo().asString("TIPMES");
    }
 
    public void setTipMes(String tipMes) {
         markAsChanged("TIPMES", tipMes);
-        this.tipMes = tipMes;
    }
 
    public String getTipMovMedias() {
-        return tipMovMedias;
+        return this.getVo().asString("TIPMOVMEDIAS");
    }
 
    public void setTipMovMedias(String tipMovMedias) {
         markAsChanged("TIPMOVMEDIAS", tipMovMedias);
-        this.tipMovMedias = tipMovMedias;
    }
 
    public BigDecimal getArredSalLiq() {
-        return arredSalLiq;
+        return this.getVo().asBigDecimal("ARREDSALLIQ");
    }
 
    public void setArredSalLiq(BigDecimal arredSalLiq) {
         markAsChanged("ARREDSALLIQ", arredSalLiq);
-        this.arredSalLiq = arredSalLiq;
    }
 
    @Override
@@ -480,52 +387,6 @@ public class RegraCalculo extends AbstractSankhyaEntity<RegraCalculo> {
    @Override
    public RegraCalculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.atuMovMen = vo.asString("ATUMOVMEN");
-        this.calcFerPerAqui = vo.asString("CALCFERPERAQUI");
-        this.calcParcFer = vo.asString("CALCPARCFER");
-        this.calcResiduo = vo.asString("CALCRESIDUO");
-        this.centIrf = vo.asString("CENTIRF");
-        this.centValores = vo.asString("CENTVALORES");
-        this.codEvenBHoras = vo.asBigDecimal("CODEVENBHORAS");
-        this.codEvenCred = vo.asBigDecimal("CODEVENCRED");
-        this.codEvenDeb = vo.asBigDecimal("CODEVENDEB");
-        this.codEvenDomIn = vo.asBigDecimal("CODEVENDOMIN");
-        this.codEvenNotUr = vo.asBigDecimal("CODEVENNOTUR");
-        this.codEvenPadrao = vo.asBigDecimal("CODEVENPADRAO");
-        this.codEvenPosPri = vo.asBigDecimal("CODEVENPOSPRI");
-        this.codEvenPri = vo.asBigDecimal("CODEVENPRI");
-        this.codPref = vo.asBigDecimal("CODPREF");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.compensacao = vo.asString("COMPENSACAO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.diaRetiradPd = vo.asBigDecimal("DIARETIRADPD");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.ferPerPerAqui = vo.asString("FERPROPERAQUI");
-        this.formaCalcMedias = vo.asString("FORMACALCMEDIAS");
-        this.irfMin = vo.asBigDecimal("IRFMIN");
-        this.lancFerAdiant = vo.asString("LANCFERADIANT");
-        this.limMinHExtra = vo.asBigDecimal("LIMMINHEXTRA");
-        this.limMinTolAtr = vo.asBigDecimal("LIMMINTOLATR");
-        this.mediaAritim13 = vo.asString("MEDIAARITIM13");
-        this.mediaPerFerias = vo.asString("MEDIAPERFERIAS");
-        this.mesCarencia = vo.asBigDecimal("MESCARENCIA");
-        this.mesDataBase = vo.asBigDecimal("MESDATABASE");
-        this.mesesMedia13s = vo.asBigDecimal("MESESMEDIA13S");
-        this.mesesMedia13s2 = vo.asBigDecimal("MESESMEDIA13S2");
-        this.mesesMediaFer = vo.asBigDecimal("MESESMEDIAFER");
-        this.mesesMediaFer2 = vo.asBigDecimal("MESESMEDIAFER2");
-        this.mesesMediaResc = vo.asBigDecimal("MESESMEDIARESC");
-        this.mesesMediaResc2 = vo.asBigDecimal("MESESMEDIARESC2");
-        this.pagAtraso = vo.asBigDecimal("PAGATRASO");
-        this.pagHsExtra = vo.asBigDecimal("PAGHSEXTRA");
-        this.provFerMedias = vo.asString("PROVFERMEDIAS");
-        this.qtdMaiores = vo.asBigDecimal("QTDMAIORES");
-        this.remuMinima = vo.asBigDecimal("REMUMINIMA");
-        this.respFolha = vo.asString("RESPFOLHA");
-        this.tipArred = vo.asString("TIPARRED");
-        this.tipMes = vo.asString("TIPMES");
-        this.tipMovMedias = vo.asString("TIPMOVMEDIAS");
-        this.arredSalLiq = vo.asBigDecimal("ARREDSALLIQ");
         return this;
    }
 }

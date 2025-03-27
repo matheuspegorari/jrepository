@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<DemonsApurRessarcimentoSTR0190> {
-   private BigDecimal codEmp;
-   private String descr;
-   private String digitado;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String reg;
-   private String unid;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getDescr() {
-        return descr;
+        return this.getVo().asString("DESCR");
    }
 
    public void setDescr(String descr) {
         markAsChanged("DESCR", descr);
-        this.descr = descr;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getReg() {
-        return reg;
+        return this.getVo().asString("REG");
    }
 
    public void setReg(String reg) {
         markAsChanged("REG", reg);
-        this.reg = reg;
    }
 
    public String getUnid() {
-        return unid;
+        return this.getVo().asString("UNID");
    }
 
    public void setUnid(String unid) {
         markAsChanged("UNID", unid);
-        this.unid = unid;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class DemonsApurRessarcimentoSTR0190 extends AbstractSankhyaEntity<Demons
    @Override
    public DemonsApurRessarcimentoSTR0190 fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.descr = vo.asString("DESCR");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.reg = vo.asString("REG");
-        this.unid = vo.asString("UNID");
         return this;
    }
 }

@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<MovimentacaoRepositorioPA> {
-   private BigDecimal codCpm;
-   private BigDecimal codProdPa;
-   private String controlePa;
-   private Timestamp dhMov;
-   private BigDecimal idIatv;
-   private BigDecimal idProc;
-   private BigDecimal idMer;
-   private BigDecimal idRpa;
-   private BigDecimal qtd;
-   private BigDecimal seqMer;
-   private BigDecimal sinal;
-   private String statusExec;
-   private BigDecimal qtdPerda;
-
    public BigDecimal getCodCpm() {
-        return codCpm;
+        return this.getVo().asBigDecimal("CODCPM");
    }
 
    public void setCodCpm(BigDecimal codCpm) {
         markAsChanged("CODCPM", codCpm);
-        this.codCpm = codCpm;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public Timestamp getDhMov() {
-        return dhMov;
+        return this.getVo().asTimestamp("DHMOV");
    }
 
    public void setDhMov(Timestamp dhMov) {
         markAsChanged("DHMOV", dhMov);
-        this.dhMov = dhMov;
    }
 
    public BigDecimal getIdIatv() {
-        return idIatv;
+        return this.getVo().asBigDecimal("IDIATV");
    }
 
    public void setIdIatv(BigDecimal idIatv) {
         markAsChanged("IDIATV", idIatv);
-        this.idIatv = idIatv;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDIPROC", idProc);
-        this.idProc = idProc;
    }
 
    public BigDecimal getIdMer() {
-        return idMer;
+        return this.getVo().asBigDecimal("IDMER");
    }
 
    public void setIdMer(BigDecimal idMer) {
         markAsChanged("IDMER", idMer);
-        this.idMer = idMer;
    }
 
    public BigDecimal getIdRpa() {
-        return idRpa;
+        return this.getVo().asBigDecimal("IDRPA");
    }
 
    public void setIdRpa(BigDecimal idRpa) {
         markAsChanged("IDRPA", idRpa);
-        this.idRpa = idRpa;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public BigDecimal getSeqMer() {
-        return seqMer;
+        return this.getVo().asBigDecimal("SEQMER");
    }
 
    public void setSeqMer(BigDecimal seqMer) {
         markAsChanged("SEQMER", seqMer);
-        this.seqMer = seqMer;
    }
 
    public BigDecimal getSinal() {
-        return sinal;
+        return this.getVo().asBigDecimal("SINAL");
    }
 
    public void setSinal(BigDecimal sinal) {
         markAsChanged("SINAL", sinal);
-        this.sinal = sinal;
    }
 
    public String getStatusExec() {
-        return statusExec;
+        return this.getVo().asString("STATUSEXEC");
    }
 
    public void setStatusExec(String statusExec) {
         markAsChanged("STATUSEXEC", statusExec);
-        this.statusExec = statusExec;
    }
 
    public BigDecimal getQtdPerda() {
-        return qtdPerda;
+        return this.getVo().asBigDecimal("QTDPERDA");
    }
 
    public void setQtdPerda(BigDecimal qtdPerda) {
         markAsChanged("QTDPERDA", qtdPerda);
-        this.qtdPerda = qtdPerda;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class MovimentacaoRepositorioPA extends AbstractSankhyaEntity<Movimentaca
    @Override
    public MovimentacaoRepositorioPA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCpm = vo.asBigDecimal("CODCPM");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.dhMov = vo.asTimestamp("DHMOV");
-        this.idIatv = vo.asBigDecimal("IDIATV");
-        this.idProc = vo.asBigDecimal("IDIPROC");
-        this.idMer = vo.asBigDecimal("IDMER");
-        this.idRpa = vo.asBigDecimal("IDRPA");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.seqMer = vo.asBigDecimal("SEQMER");
-        this.sinal = vo.asBigDecimal("SINAL");
-        this.statusExec = vo.asString("STATUSEXEC");
-        this.qtdPerda = vo.asBigDecimal("QTDPERDA");
         return this;
    }
 }

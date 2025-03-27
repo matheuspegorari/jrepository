@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQuestionario> {
-   private BigDecimal codQuest;
-   private BigDecimal codUsu;
-   private String descricao;
-   private Timestamp dhAlter;
-   private BigDecimal sequencia;
-   private String texto;
-
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTexto() {
-        return texto;
+        return this.getVo().asString("TEXTO");
    }
 
    public void setTexto(String texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class InformacaoQuestionario extends AbstractSankhyaEntity<InformacaoQues
    @Override
    public InformacaoQuestionario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.texto = vo.asString("TEXTO");
         return this;
    }
 }

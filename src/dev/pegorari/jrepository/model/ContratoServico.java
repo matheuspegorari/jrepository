@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
-   private BigDecimal codServ;
-   private BigDecimal numContrato;
-   private BigDecimal parcelas;
-   private BigDecimal sequencia;
-   private BigDecimal valor;
-
    public BigDecimal getCodServ() {
-        return codServ;
+        return this.getVo().asBigDecimal("CODSERV");
    }
 
    public void setCodServ(BigDecimal codServ) {
         markAsChanged("CODSERV", codServ);
-        this.codServ = codServ;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getParcelas() {
-        return parcelas;
+        return this.getVo().asBigDecimal("PARCELAS");
    }
 
    public void setParcelas(BigDecimal parcelas) {
         markAsChanged("PARCELAS", parcelas);
-        this.parcelas = parcelas;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ContratoServico extends AbstractSankhyaEntity<ContratoServico> {
    @Override
    public ContratoServico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codServ = vo.asBigDecimal("CODSERV");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.parcelas = vo.asBigDecimal("PARCELAS");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.valor = vo.asBigDecimal("VALOR");
         return this;
    }
 }

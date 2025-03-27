@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
-   private Timestamp dhUltPostagem;
-   private BigDecimal numItem;
-   private BigDecimal numOs;
-   private BigDecimal numReg;
-   private BigDecimal nuSla;
-   private BigDecimal seqNotifica;
-
    public Timestamp getDhUltPostagem() {
-        return dhUltPostagem;
+        return this.getVo().asTimestamp("DHULTPOSTAGEM");
    }
 
    public void setDhUltPostagem(Timestamp dhUltPostagem) {
         markAsChanged("DHULTPOSTAGEM", dhUltPostagem);
-        this.dhUltPostagem = dhUltPostagem;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNumReg() {
-        return numReg;
+        return this.getVo().asBigDecimal("NUMREG");
    }
 
    public void setNumReg(BigDecimal numReg) {
         markAsChanged("NUMREG", numReg);
-        this.numReg = numReg;
    }
 
    public BigDecimal getNuSla() {
-        return nuSla;
+        return this.getVo().asBigDecimal("NUSLA");
    }
 
    public void setNuSla(BigDecimal nuSla) {
         markAsChanged("NUSLA", nuSla);
-        this.nuSla = nuSla;
    }
 
    public BigDecimal getSeqNotifica() {
-        return seqNotifica;
+        return this.getVo().asBigDecimal("SEQNOTIFICA");
    }
 
    public void setSeqNotifica(BigDecimal seqNotifica) {
         markAsChanged("SEQNOTIFICA", seqNotifica);
-        this.seqNotifica = seqNotifica;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class NotificacaoItem extends AbstractSankhyaEntity<NotificacaoItem> {
    @Override
    public NotificacaoItem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhUltPostagem = vo.asTimestamp("DHULTPOSTAGEM");
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.numReg = vo.asBigDecimal("NUMREG");
-        this.nuSla = vo.asBigDecimal("NUSLA");
-        this.seqNotifica = vo.asBigDecimal("SEQNOTIFICA");
         return this;
    }
 }

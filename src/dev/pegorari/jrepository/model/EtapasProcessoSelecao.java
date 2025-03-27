@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoSelecao> {
-   private String arqModEmail;
-   private BigDecimal codEtapa;
-   private BigDecimal codQuestionario;
-   private BigDecimal codUsu;
-   private String descRetapa;
-   private Timestamp dtAlter;
-   private BigDecimal nuCurriculo;
-   private BigDecimal nuRequisicao;
-   private BigDecimal nuSelecao;
-
    public String getArqModEmail() {
-        return arqModEmail;
+        return this.getVo().asString("ARQMODEMAIL");
    }
 
    public void setArqModEmail(String arqModEmail) {
         markAsChanged("ARQMODEMAIL", arqModEmail);
-        this.arqModEmail = arqModEmail;
    }
 
    public BigDecimal getCodEtapa() {
-        return codEtapa;
+        return this.getVo().asBigDecimal("CODETAPA");
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
         markAsChanged("CODETAPA", codEtapa);
-        this.codEtapa = codEtapa;
    }
 
    public BigDecimal getCodQuestionario() {
-        return codQuestionario;
+        return this.getVo().asBigDecimal("CODQUESTIONARIO");
    }
 
    public void setCodQuestionario(BigDecimal codQuestionario) {
         markAsChanged("CODQUESTIONARIO", codQuestionario);
-        this.codQuestionario = codQuestionario;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescRetapa() {
-        return descRetapa;
+        return this.getVo().asString("DESCRETAPA");
    }
 
    public void setDescRetapa(String descRetapa) {
         markAsChanged("DESCRETAPA", descRetapa);
-        this.descRetapa = descRetapa;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuCurriculo() {
-        return nuCurriculo;
+        return this.getVo().asBigDecimal("NUCURRICULO");
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
         markAsChanged("NUCURRICULO", nuCurriculo);
-        this.nuCurriculo = nuCurriculo;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public BigDecimal getNuSelecao() {
-        return nuSelecao;
+        return this.getVo().asBigDecimal("NUSELECAO");
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         markAsChanged("NUSELECAO", nuSelecao);
-        this.nuSelecao = nuSelecao;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class EtapasProcessoSelecao extends AbstractSankhyaEntity<EtapasProcessoS
    @Override
    public EtapasProcessoSelecao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arqModEmail = vo.asString("ARQMODEMAIL");
-        this.codEtapa = vo.asBigDecimal("CODETAPA");
-        this.codQuestionario = vo.asBigDecimal("CODQUESTIONARIO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descRetapa = vo.asString("DESCRETAPA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         return this;
    }
 }

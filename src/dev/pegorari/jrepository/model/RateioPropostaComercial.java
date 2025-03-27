@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropostaComercial> {
-   private BigDecimal chave;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuProjeto;
-   private BigDecimal percRateio;
-   private String rateado;
-   private BigDecimal seqItem;
-   private BigDecimal seqKit;
-   private String tipo;
-   private String versaoProjeto;
-   private BigDecimal vlrRateio;
-
    public BigDecimal getChave() {
-        return chave;
+        return this.getVo().asBigDecimal("CHAVE");
    }
 
    public void setChave(BigDecimal chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuProjeto() {
-        return nuProjeto;
+        return this.getVo().asBigDecimal("NUPROJETO");
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
         markAsChanged("NUPROJETO", nuProjeto);
-        this.nuProjeto = nuProjeto;
    }
 
    public BigDecimal getPercRateio() {
-        return percRateio;
+        return this.getVo().asBigDecimal("PERCRATEIO");
    }
 
    public void setPercRateio(BigDecimal percRateio) {
         markAsChanged("PERCRATEIO", percRateio);
-        this.percRateio = percRateio;
    }
 
    public String getRateado() {
-        return rateado;
+        return this.getVo().asString("RATEADO");
    }
 
    public void setRateado(String rateado) {
         markAsChanged("RATEADO", rateado);
-        this.rateado = rateado;
    }
 
    public BigDecimal getSeqItem() {
-        return seqItem;
+        return this.getVo().asBigDecimal("SEQITEM");
    }
 
    public void setSeqItem(BigDecimal seqItem) {
         markAsChanged("SEQITEM", seqItem);
-        this.seqItem = seqItem;
    }
 
    public BigDecimal getSeqKit() {
-        return seqKit;
+        return this.getVo().asBigDecimal("SEQKIT");
    }
 
    public void setSeqKit(BigDecimal seqKit) {
         markAsChanged("SEQKIT", seqKit);
-        this.seqKit = seqKit;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getVersaoProjeto() {
-        return versaoProjeto;
+        return this.getVo().asString("VERSAOPROJETO");
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
         markAsChanged("VERSAOPROJETO", versaoProjeto);
-        this.versaoProjeto = versaoProjeto;
    }
 
    public BigDecimal getVlrRateio() {
-        return vlrRateio;
+        return this.getVo().asBigDecimal("VLRRATEIO");
    }
 
    public void setVlrRateio(BigDecimal vlrRateio) {
         markAsChanged("VLRRATEIO", vlrRateio);
-        this.vlrRateio = vlrRateio;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class RateioPropostaComercial extends AbstractSankhyaEntity<RateioPropost
    @Override
    public RateioPropostaComercial fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chave = vo.asBigDecimal("CHAVE");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuProjeto = vo.asBigDecimal("NUPROJETO");
-        this.percRateio = vo.asBigDecimal("PERCRATEIO");
-        this.rateado = vo.asString("RATEADO");
-        this.seqItem = vo.asBigDecimal("SEQITEM");
-        this.seqKit = vo.asBigDecimal("SEQKIT");
-        this.tipo = vo.asString("TIPO");
-        this.versaoProjeto = vo.asString("VERSAOPROJETO");
-        this.vlrRateio = vo.asBigDecimal("VLRRATEIO");
         return this;
    }
 }

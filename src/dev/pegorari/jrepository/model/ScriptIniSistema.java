@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
 public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
-   private String nome;
-   private String execucao;
-   private Timestamp dtExecucao;
-
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public String getExecucao() {
-        return execucao;
+        return this.getVo().asString("EXECUCAO");
    }
 
    public void setExecucao(String execucao) {
         markAsChanged("EXECUCAO", execucao);
-        this.execucao = execucao;
    }
 
    public Timestamp getDtExecucao() {
-        return dtExecucao;
+        return this.getVo().asTimestamp("DTEXECUCAO");
    }
 
    public void setDtExecucao(Timestamp dtExecucao) {
         markAsChanged("DTEXECUCAO", dtExecucao);
-        this.dtExecucao = dtExecucao;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ScriptIniSistema extends AbstractSankhyaEntity<ScriptIniSistema> {
    @Override
    public ScriptIniSistema fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nome = vo.asString("NOME");
-        this.execucao = vo.asString("EXECUCAO");
-        this.dtExecucao = vo.asTimestamp("DTEXECUCAO");
         return this;
    }
 }

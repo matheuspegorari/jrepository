@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
-   private BigDecimal codParc;
-   private BigDecimal codReg;
-   private BigDecimal codVend;
-   private BigDecimal seqVisita;
-   private String tipo;
-   private BigDecimal valor;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodReg() {
-        return codReg;
+        return this.getVo().asBigDecimal("CODREG");
    }
 
    public void setCodReg(BigDecimal codReg) {
         markAsChanged("CODREG", codReg);
-        this.codReg = codReg;
    }
 
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public BigDecimal getSeqVisita() {
-        return seqVisita;
+        return this.getVo().asBigDecimal("SEQVISITA");
    }
 
    public void setSeqVisita(BigDecimal seqVisita) {
         markAsChanged("SEQVISITA", seqVisita);
-        this.seqVisita = seqVisita;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class ControleEntrega extends AbstractSankhyaEntity<ControleEntrega> {
    @Override
    public ControleEntrega fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codReg = vo.asBigDecimal("CODREG");
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.seqVisita = vo.asBigDecimal("SEQVISITA");
-        this.tipo = vo.asString("TIPO");
-        this.valor = vo.asBigDecimal("VALOR");
         return this;
    }
 }

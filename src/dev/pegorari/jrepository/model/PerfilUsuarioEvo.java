@@ -6,35 +6,28 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private String perfil;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getPerfil() {
-        return perfil;
+        return this.getVo().asString("PERFIL");
    }
 
    public void setPerfil(String perfil) {
         markAsChanged("PERFIL", perfil);
-        this.perfil = perfil;
    }
 
    @Override
@@ -50,9 +43,6 @@ public class PerfilUsuarioEvo extends AbstractSankhyaEntity<PerfilUsuarioEvo> {
    @Override
    public PerfilUsuarioEvo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.perfil = vo.asString("PERFIL");
         return this;
    }
 }

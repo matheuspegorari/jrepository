@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
-   private BigDecimal sequencia;
-   private BigDecimal qtdDevolver;
-   private BigDecimal nuNota;
-   private BigDecimal nuDev;
-   private BigDecimal codUsu;
-   private BigDecimal nuConferencia;
-   private Timestamp dhDev;
-
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getQtdDevolver() {
-        return qtdDevolver;
+        return this.getVo().asBigDecimal("QTDDEVOLVER");
    }
 
    public void setQtdDevolver(BigDecimal qtdDevolver) {
         markAsChanged("QTDDEVOLVER", qtdDevolver);
-        this.qtdDevolver = qtdDevolver;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuDev() {
-        return nuDev;
+        return this.getVo().asBigDecimal("NUDEV");
    }
 
    public void setNuDev(BigDecimal nuDev) {
         markAsChanged("NUDEV", nuDev);
-        this.nuDev = nuDev;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuConferencia() {
-        return nuConferencia;
+        return this.getVo().asBigDecimal("NUCONFERENCIA");
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
         markAsChanged("NUCONFERENCIA", nuConferencia);
-        this.nuConferencia = nuConferencia;
    }
 
    public Timestamp getDhDev() {
-        return dhDev;
+        return this.getVo().asTimestamp("DHDEV");
    }
 
    public void setDhDev(Timestamp dhDev) {
         markAsChanged("DHDEV", dhDev);
-        this.dhDev = dhDev;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class DevolucaoWMS extends AbstractSankhyaEntity<DevolucaoWMS> {
    @Override
    public DevolucaoWMS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.qtdDevolver = vo.asBigDecimal("QTDDEVOLVER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuDev = vo.asBigDecimal("NUDEV");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
-        this.dhDev = vo.asTimestamp("DHDEV");
         return this;
    }
 }

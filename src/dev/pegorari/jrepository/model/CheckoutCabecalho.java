@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> {
-   private BigDecimal codCencus;
-   private BigDecimal codEmp;
-   private BigDecimal codNat;
-   private BigDecimal codParc;
-   private BigDecimal codTipOper;
-   private BigDecimal codTipVenda;
-   private BigDecimal codUsu;
-   private BigDecimal codVend;
-   private BigDecimal nuKc;
-   private BigDecimal nuLayout;
-   private String cpfCnpjAdquirEnte;
-
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getCodTipVenda() {
-        return codTipVenda;
+        return this.getVo().asBigDecimal("CODTIPVENDA");
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
         markAsChanged("CODTIPVENDA", codTipVenda);
-        this.codTipVenda = codTipVenda;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public BigDecimal getNuKc() {
-        return nuKc;
+        return this.getVo().asBigDecimal("NUCKC");
    }
 
    public void setNuKc(BigDecimal nuKc) {
         markAsChanged("NUCKC", nuKc);
-        this.nuKc = nuKc;
    }
 
    public BigDecimal getNuLayout() {
-        return nuLayout;
+        return this.getVo().asBigDecimal("NULAYOUT");
    }
 
    public void setNuLayout(BigDecimal nuLayout) {
         markAsChanged("NULAYOUT", nuLayout);
-        this.nuLayout = nuLayout;
    }
 
    public String getCpfCnpjAdquirEnte() {
-        return cpfCnpjAdquirEnte;
+        return this.getVo().asString("CPFCNPJADQUIRENTE");
    }
 
    public void setCpfCnpjAdquirEnte(String cpfCnpjAdquirEnte) {
         markAsChanged("CPFCNPJADQUIRENTE", cpfCnpjAdquirEnte);
-        this.cpfCnpjAdquirEnte = cpfCnpjAdquirEnte;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class CheckoutCabecalho extends AbstractSankhyaEntity<CheckoutCabecalho> 
    @Override
    public CheckoutCabecalho fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.nuKc = vo.asBigDecimal("NUCKC");
-        this.nuLayout = vo.asBigDecimal("NULAYOUT");
-        this.cpfCnpjAdquirEnte = vo.asString("CPFCNPJADQUIRENTE");
         return this;
    }
 }

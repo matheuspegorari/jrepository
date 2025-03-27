@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRecursoBK> {
-   private String chave;
-   private String chavePai;
-   private BigDecimal codUsu;
-   private char[] config;
-   private BigDecimal nuNico;
-   private BigDecimal sequencia;
-   private String tipo;
-
    public String getChave() {
-        return chave;
+        return this.getVo().asString("CHAVE");
    }
 
    public void setChave(String chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public String getChavePai() {
-        return chavePai;
+        return this.getVo().asString("CHAVEPAI");
    }
 
    public void setChavePai(String chavePai) {
         markAsChanged("CHAVEPAI", chavePai);
-        this.chavePai = chavePai;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public char[] getConfig() {
-        return config;
+        return this.getVo().asClob("CONFIG");
    }
 
    public void setConfig(char[] config) {
         markAsChanged("CONFIG", config);
-        this.config = config;
    }
 
    public BigDecimal getNuNico() {
-        return nuNico;
+        return this.getVo().asBigDecimal("NUNICO");
    }
 
    public void setNuNico(BigDecimal nuNico) {
         markAsChanged("NUNICO", nuNico);
-        this.nuNico = nuNico;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ConfiguracaoRecursoBK extends AbstractSankhyaEntity<ConfiguracaoRec
    @Override
    public ConfiguracaoRecursoBK fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chave = vo.asString("CHAVE");
-        this.chavePai = vo.asString("CHAVEPAI");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.config = vo.asClob("CONFIG");
-        this.nuNico = vo.asBigDecimal("NUNICO");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNaturezaParceiro> {
-   private BigDecimal codNat;
-   private BigDecimal codParc;
-   private String descrNat;
-
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public String getDescrNat() {
-        return descrNat;
+        return this.getVo().asString("DESCRNAT");
    }
 
    public void setDescrNat(String descrNat) {
         markAsChanged("DESCRNAT", descrNat);
-        this.descrNat = descrNat;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class DescricaoNaturezaParceiro extends AbstractSankhyaEntity<DescricaoNa
    @Override
    public DescricaoNaturezaParceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.descrNat = vo.asString("DESCRNAT");
         return this;
    }
 }

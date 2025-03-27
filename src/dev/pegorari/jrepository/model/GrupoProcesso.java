@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
-   private BigDecimal codUsu;
-   private String descricao;
-   private BigDecimal grupoPai;
-   private BigDecimal nuGrupo;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getGrupoPai() {
-        return grupoPai;
+        return this.getVo().asBigDecimal("GRUPOPAI");
    }
 
    public void setGrupoPai(BigDecimal grupoPai) {
         markAsChanged("GRUPOPAI", grupoPai);
-        this.grupoPai = grupoPai;
    }
 
    public BigDecimal getNuGrupo() {
-        return nuGrupo;
+        return this.getVo().asBigDecimal("NUGRUPO");
    }
 
    public void setNuGrupo(BigDecimal nuGrupo) {
         markAsChanged("NUGRUPO", nuGrupo);
-        this.nuGrupo = nuGrupo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class GrupoProcesso extends AbstractSankhyaEntity<GrupoProcesso> {
    @Override
    public GrupoProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.grupoPai = vo.asBigDecimal("GRUPOPAI");
-        this.nuGrupo = vo.asBigDecimal("NUGRUPO");
         return this;
    }
 }

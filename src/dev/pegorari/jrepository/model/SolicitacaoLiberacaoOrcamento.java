@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<SolicitacaoLiberacaoOrcamento> {
-   private BigDecimal codAprovador;
-   private BigDecimal codMeta;
-   private BigDecimal codSolicitante;
-   private Timestamp dhAprovacao;
-   private Timestamp dhSolicitacao;
-   private BigDecimal nuSolicitacao;
-   private String observacao;
-   private String status;
-
    public BigDecimal getCodAprovador() {
-        return codAprovador;
+        return this.getVo().asBigDecimal("CODAPROVADOR");
    }
 
    public void setCodAprovador(BigDecimal codAprovador) {
         markAsChanged("CODAPROVADOR", codAprovador);
-        this.codAprovador = codAprovador;
    }
 
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public BigDecimal getCodSolicitante() {
-        return codSolicitante;
+        return this.getVo().asBigDecimal("CODSOLICITANTE");
    }
 
    public void setCodSolicitante(BigDecimal codSolicitante) {
         markAsChanged("CODSOLICITANTE", codSolicitante);
-        this.codSolicitante = codSolicitante;
    }
 
    public Timestamp getDhAprovacao() {
-        return dhAprovacao;
+        return this.getVo().asTimestamp("DHAPROVACAO");
    }
 
    public void setDhAprovacao(Timestamp dhAprovacao) {
         markAsChanged("DHAPROVACAO", dhAprovacao);
-        this.dhAprovacao = dhAprovacao;
    }
 
    public Timestamp getDhSolicitacao() {
-        return dhSolicitacao;
+        return this.getVo().asTimestamp("DHSOLICITACAO");
    }
 
    public void setDhSolicitacao(Timestamp dhSolicitacao) {
         markAsChanged("DHSOLICITACAO", dhSolicitacao);
-        this.dhSolicitacao = dhSolicitacao;
    }
 
    public BigDecimal getNuSolicitacao() {
-        return nuSolicitacao;
+        return this.getVo().asBigDecimal("NUSOLICITACAO");
    }
 
    public void setNuSolicitacao(BigDecimal nuSolicitacao) {
         markAsChanged("NUSOLICITACAO", nuSolicitacao);
-        this.nuSolicitacao = nuSolicitacao;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class SolicitacaoLiberacaoOrcamento extends AbstractSankhyaEntity<Solicit
    @Override
    public SolicitacaoLiberacaoOrcamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codAprovador = vo.asBigDecimal("CODAPROVADOR");
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.codSolicitante = vo.asBigDecimal("CODSOLICITANTE");
-        this.dhAprovacao = vo.asTimestamp("DHAPROVACAO");
-        this.dhSolicitacao = vo.asTimestamp("DHSOLICITACAO");
-        this.nuSolicitacao = vo.asBigDecimal("NUSOLICITACAO");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

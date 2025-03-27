@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
-   private BigDecimal nuTarefaDep;
-   private BigDecimal nuTarefa;
-   private BigDecimal qtdDep;
-   private BigDecimal sequencia;
-   private BigDecimal sequenciaDep;
-
    public BigDecimal getNuTarefaDep() {
-        return nuTarefaDep;
+        return this.getVo().asBigDecimal("NUTAREFADEP");
    }
 
    public void setNuTarefaDep(BigDecimal nuTarefaDep) {
         markAsChanged("NUTAREFADEP", nuTarefaDep);
-        this.nuTarefaDep = nuTarefaDep;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getQtdDep() {
-        return qtdDep;
+        return this.getVo().asBigDecimal("QTDDEP");
    }
 
    public void setQtdDep(BigDecimal qtdDep) {
         markAsChanged("QTDDEP", qtdDep);
-        this.qtdDep = qtdDep;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getSequenciaDep() {
-        return sequenciaDep;
+        return this.getVo().asBigDecimal("SEQUENCIADEP");
    }
 
    public void setSequenciaDep(BigDecimal sequenciaDep) {
         markAsChanged("SEQUENCIADEP", sequenciaDep);
-        this.sequenciaDep = sequenciaDep;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class TarefaDependente extends AbstractSankhyaEntity<TarefaDependente> {
    @Override
    public TarefaDependente fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuTarefaDep = vo.asBigDecimal("NUTAREFADEP");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.qtdDep = vo.asBigDecimal("QTDDEP");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.sequenciaDep = vo.asBigDecimal("SEQUENCIADEP");
         return this;
    }
 }

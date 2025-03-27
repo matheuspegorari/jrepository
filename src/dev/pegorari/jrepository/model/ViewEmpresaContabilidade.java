@@ -6,195 +6,156 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaContabilidade> {
-   private BigDecimal codCtaCtbEncRes;
-   private String aceitarHistZero;
-   private BigDecimal corEmpresa;
-   private Timestamp referencia;
-   private BigDecimal codEmp;
-   private String razaoSocial;
-   private BigDecimal ultimoNumeroUsado;
-   private Timestamp dtFimPerCtb;
-   private BigDecimal nroLoteMnualIni;
-   private String numLoteSaut;
-   private BigDecimal nroLoteMnualFim;
-   private String mascCta;
-   private Timestamp dtInicPerCtb;
-   private String perAltQdCom;
-   private BigDecimal codEmpPlaCta;
-   private String utilProj;
-   private String utilCencus;
-   private String codInstResp;
-   private String mascCtaExt;
-
    public BigDecimal getCodCtaCtbEncRes() {
-        return codCtaCtbEncRes;
+        return this.getVo().asBigDecimal("CODCTACTBENCRES");
    }
 
    public void setCodCtaCtbEncRes(BigDecimal codCtaCtbEncRes) {
         markAsChanged("CODCTACTBENCRES", codCtaCtbEncRes);
-        this.codCtaCtbEncRes = codCtaCtbEncRes;
    }
 
    public String getAceitarHistZero() {
-        return aceitarHistZero;
+        return this.getVo().asString("ACEITARHISTZERO");
    }
 
    public void setAceitarHistZero(String aceitarHistZero) {
         markAsChanged("ACEITARHISTZERO", aceitarHistZero);
-        this.aceitarHistZero = aceitarHistZero;
    }
 
    public BigDecimal getCorEmpresa() {
-        return corEmpresa;
+        return this.getVo().asBigDecimal("COREMPRESA");
    }
 
    public void setCorEmpresa(BigDecimal corEmpresa) {
         markAsChanged("COREMPRESA", corEmpresa);
-        this.corEmpresa = corEmpresa;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getRazaoSocial() {
-        return razaoSocial;
+        return this.getVo().asString("RAZAOSOCIAL");
    }
 
    public void setRazaoSocial(String razaoSocial) {
         markAsChanged("RAZAOSOCIAL", razaoSocial);
-        this.razaoSocial = razaoSocial;
    }
 
    public BigDecimal getUltimoNumeroUsado() {
-        return ultimoNumeroUsado;
+        return this.getVo().asBigDecimal("ULTIMONUMEROUSADO");
    }
 
    public void setUltimoNumeroUsado(BigDecimal ultimoNumeroUsado) {
         markAsChanged("ULTIMONUMEROUSADO", ultimoNumeroUsado);
-        this.ultimoNumeroUsado = ultimoNumeroUsado;
    }
 
    public Timestamp getDtFimPerCtb() {
-        return dtFimPerCtb;
+        return this.getVo().asTimestamp("DTFIMPERCTB");
    }
 
    public void setDtFimPerCtb(Timestamp dtFimPerCtb) {
         markAsChanged("DTFIMPERCTB", dtFimPerCtb);
-        this.dtFimPerCtb = dtFimPerCtb;
    }
 
    public BigDecimal getNroLoteMnualIni() {
-        return nroLoteMnualIni;
+        return this.getVo().asBigDecimal("NROLOTEMNUALINI");
    }
 
    public void setNroLoteMnualIni(BigDecimal nroLoteMnualIni) {
         markAsChanged("NROLOTEMNUALINI", nroLoteMnualIni);
-        this.nroLoteMnualIni = nroLoteMnualIni;
    }
 
    public String getNumLoteSaut() {
-        return numLoteSaut;
+        return this.getVo().asString("NUMLOTESAUT");
    }
 
    public void setNumLoteSaut(String numLoteSaut) {
         markAsChanged("NUMLOTESAUT", numLoteSaut);
-        this.numLoteSaut = numLoteSaut;
    }
 
    public BigDecimal getNroLoteMnualFim() {
-        return nroLoteMnualFim;
+        return this.getVo().asBigDecimal("NROLOTEMNUALFIM");
    }
 
    public void setNroLoteMnualFim(BigDecimal nroLoteMnualFim) {
         markAsChanged("NROLOTEMNUALFIM", nroLoteMnualFim);
-        this.nroLoteMnualFim = nroLoteMnualFim;
    }
 
    public String getMascCta() {
-        return mascCta;
+        return this.getVo().asString("MASCCTA");
    }
 
    public void setMascCta(String mascCta) {
         markAsChanged("MASCCTA", mascCta);
-        this.mascCta = mascCta;
    }
 
    public Timestamp getDtInicPerCtb() {
-        return dtInicPerCtb;
+        return this.getVo().asTimestamp("DTINICPERCTB");
    }
 
    public void setDtInicPerCtb(Timestamp dtInicPerCtb) {
         markAsChanged("DTINICPERCTB", dtInicPerCtb);
-        this.dtInicPerCtb = dtInicPerCtb;
    }
 
    public String getPerAltQdCom() {
-        return perAltQdCom;
+        return this.getVo().asString("PERALTQDCOM");
    }
 
    public void setPerAltQdCom(String perAltQdCom) {
         markAsChanged("PERALTQDCOM", perAltQdCom);
-        this.perAltQdCom = perAltQdCom;
    }
 
    public BigDecimal getCodEmpPlaCta() {
-        return codEmpPlaCta;
+        return this.getVo().asBigDecimal("CODEMPPLACTA");
    }
 
    public void setCodEmpPlaCta(BigDecimal codEmpPlaCta) {
         markAsChanged("CODEMPPLACTA", codEmpPlaCta);
-        this.codEmpPlaCta = codEmpPlaCta;
    }
 
    public String getUtilProj() {
-        return utilProj;
+        return this.getVo().asString("UTILPROJ");
    }
 
    public void setUtilProj(String utilProj) {
         markAsChanged("UTILPROJ", utilProj);
-        this.utilProj = utilProj;
    }
 
    public String getUtilCencus() {
-        return utilCencus;
+        return this.getVo().asString("UTILCENCUS");
    }
 
    public void setUtilCencus(String utilCencus) {
         markAsChanged("UTILCENCUS", utilCencus);
-        this.utilCencus = utilCencus;
    }
 
    public String getCodInstResp() {
-        return codInstResp;
+        return this.getVo().asString("CODINSTRESP");
    }
 
    public void setCodInstResp(String codInstResp) {
         markAsChanged("CODINSTRESP", codInstResp);
-        this.codInstResp = codInstResp;
    }
 
    public String getMascCtaExt() {
-        return mascCtaExt;
+        return this.getVo().asString("MASCCTAEXT");
    }
 
    public void setMascCtaExt(String mascCtaExt) {
         markAsChanged("MASCCTAEXT", mascCtaExt);
-        this.mascCtaExt = mascCtaExt;
    }
 
    @Override
@@ -210,25 +171,6 @@ public class ViewEmpresaContabilidade extends AbstractSankhyaEntity<ViewEmpresaC
    @Override
    public ViewEmpresaContabilidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtaCtbEncRes = vo.asBigDecimal("CODCTACTBENCRES");
-        this.aceitarHistZero = vo.asString("ACEITARHISTZERO");
-        this.corEmpresa = vo.asBigDecimal("COREMPRESA");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.razaoSocial = vo.asString("RAZAOSOCIAL");
-        this.ultimoNumeroUsado = vo.asBigDecimal("ULTIMONUMEROUSADO");
-        this.dtFimPerCtb = vo.asTimestamp("DTFIMPERCTB");
-        this.nroLoteMnualIni = vo.asBigDecimal("NROLOTEMNUALINI");
-        this.numLoteSaut = vo.asString("NUMLOTESAUT");
-        this.nroLoteMnualFim = vo.asBigDecimal("NROLOTEMNUALFIM");
-        this.mascCta = vo.asString("MASCCTA");
-        this.dtInicPerCtb = vo.asTimestamp("DTINICPERCTB");
-        this.perAltQdCom = vo.asString("PERALTQDCOM");
-        this.codEmpPlaCta = vo.asBigDecimal("CODEMPPLACTA");
-        this.utilProj = vo.asString("UTILPROJ");
-        this.utilCencus = vo.asString("UTILCENCUS");
-        this.codInstResp = vo.asString("CODINSTRESP");
-        this.mascCtaExt = vo.asString("MASCCTAEXT");
         return this;
    }
 }

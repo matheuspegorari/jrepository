@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributacaoPeriodo> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private String mes3BalRed;
-   private BigDecimal codEmp;
-   private String mes2BalRed;
-   private BigDecimal trimestre;
-   private BigDecimal exercicio;
-   private String formaTribPer;
-   private String mes1BalRed;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getMes3BalRed() {
-        return mes3BalRed;
+        return this.getVo().asString("MES3BALRED");
    }
 
    public void setMes3BalRed(String mes3BalRed) {
         markAsChanged("MES3BALRED", mes3BalRed);
-        this.mes3BalRed = mes3BalRed;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getMes2BalRed() {
-        return mes2BalRed;
+        return this.getVo().asString("MES2BALRED");
    }
 
    public void setMes2BalRed(String mes2BalRed) {
         markAsChanged("MES2BALRED", mes2BalRed);
-        this.mes2BalRed = mes2BalRed;
    }
 
    public BigDecimal getTrimestre() {
-        return trimestre;
+        return this.getVo().asBigDecimal("TRIMESTRE");
    }
 
    public void setTrimestre(BigDecimal trimestre) {
         markAsChanged("TRIMESTRE", trimestre);
-        this.trimestre = trimestre;
    }
 
    public BigDecimal getExercicio() {
-        return exercicio;
+        return this.getVo().asBigDecimal("EXERCICIO");
    }
 
    public void setExercicio(BigDecimal exercicio) {
         markAsChanged("EXERCICIO", exercicio);
-        this.exercicio = exercicio;
    }
 
    public String getFormaTribPer() {
-        return formaTribPer;
+        return this.getVo().asString("FORMATRIBPER");
    }
 
    public void setFormaTribPer(String formaTribPer) {
         markAsChanged("FORMATRIBPER", formaTribPer);
-        this.formaTribPer = formaTribPer;
    }
 
    public String getMes1BalRed() {
-        return mes1BalRed;
+        return this.getVo().asString("MES1BALRED");
    }
 
    public void setMes1BalRed(String mes1BalRed) {
         markAsChanged("MES1BALRED", mes1BalRed);
-        this.mes1BalRed = mes1BalRed;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class FormaTributacaoPeriodo extends AbstractSankhyaEntity<FormaTributaca
    @Override
    public FormaTributacaoPeriodo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.mes3BalRed = vo.asString("MES3BALRED");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.mes2BalRed = vo.asString("MES2BALRED");
-        this.trimestre = vo.asBigDecimal("TRIMESTRE");
-        this.exercicio = vo.asBigDecimal("EXERCICIO");
-        this.formaTribPer = vo.asString("FORMATRIBPER");
-        this.mes1BalRed = vo.asString("MES1BALRED");
         return this;
    }
 }

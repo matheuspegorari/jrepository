@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExterna> {
-   private Timestamp dtAlter;
-   private BigDecimal codUsu;
-   private String mascCtaExt;
-   private String descrVinculo;
-   private BigDecimal codEmp;
-   private Timestamp dtMudaPlano;
-   private String geraRi157Ecd;
-
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getMascCtaExt() {
-        return mascCtaExt;
+        return this.getVo().asString("MASCCTAEXT");
    }
 
    public void setMascCtaExt(String mascCtaExt) {
         markAsChanged("MASCCTAEXT", mascCtaExt);
-        this.mascCtaExt = mascCtaExt;
    }
 
    public String getDescrVinculo() {
-        return descrVinculo;
+        return this.getVo().asString("DESCRVINCULO");
    }
 
    public void setDescrVinculo(String descrVinculo) {
         markAsChanged("DESCRVINCULO", descrVinculo);
-        this.descrVinculo = descrVinculo;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public Timestamp getDtMudaPlano() {
-        return dtMudaPlano;
+        return this.getVo().asTimestamp("DTMUDAPLANO");
    }
 
    public void setDtMudaPlano(Timestamp dtMudaPlano) {
         markAsChanged("DTMUDAPLANO", dtMudaPlano);
-        this.dtMudaPlano = dtMudaPlano;
    }
 
    public String getGeraRi157Ecd() {
-        return geraRi157Ecd;
+        return this.getVo().asString("GERARI157ECD");
    }
 
    public void setGeraRi157Ecd(String geraRi157Ecd) {
         markAsChanged("GERARI157ECD", geraRi157Ecd);
-        this.geraRi157Ecd = geraRi157Ecd;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class VinculoContaExterna extends AbstractSankhyaEntity<VinculoContaExter
    @Override
    public VinculoContaExterna fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.mascCtaExt = vo.asString("MASCCTAEXT");
-        this.descrVinculo = vo.asString("DESCRVINCULO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.dtMudaPlano = vo.asTimestamp("DTMUDAPLANO");
-        this.geraRi157Ecd = vo.asString("GERARI157ECD");
         return this;
    }
 }

@@ -6,145 +6,116 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoAssinaturaDigital> {
-   private String chaveDoc;
-   private BigDecimal codEvento;
-   private BigDecimal codUsu;
-   private String detalhesStatus;
-   private Timestamp dhEvento;
-   private char[] erro;
-   private String hashArquivo;
-   private BigDecimal id;
-   private String msg;
-   private BigDecimal nuDoc;
-   private BigDecimal solicitacaoManual;
-   private String statusAssinatura;
-   private String tipoDoc;
-   private String transactionId;
-
    public String getChaveDoc() {
-        return chaveDoc;
+        return this.getVo().asString("CHAVEDOC");
    }
 
    public void setChaveDoc(String chaveDoc) {
         markAsChanged("CHAVEDOC", chaveDoc);
-        this.chaveDoc = chaveDoc;
    }
 
    public BigDecimal getCodEvento() {
-        return codEvento;
+        return this.getVo().asBigDecimal("CODEVENTO");
    }
 
    public void setCodEvento(BigDecimal codEvento) {
         markAsChanged("CODEVENTO", codEvento);
-        this.codEvento = codEvento;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDetalhesStatus() {
-        return detalhesStatus;
+        return this.getVo().asString("DETALHES_STATUS");
    }
 
    public void setDetalhesStatus(String detalhesStatus) {
         markAsChanged("DETALHES_STATUS", detalhesStatus);
-        this.detalhesStatus = detalhesStatus;
    }
 
    public Timestamp getDhEvento() {
-        return dhEvento;
+        return this.getVo().asTimestamp("DHEVENTO");
    }
 
    public void setDhEvento(Timestamp dhEvento) {
         markAsChanged("DHEVENTO", dhEvento);
-        this.dhEvento = dhEvento;
    }
 
    public char[] getErro() {
-        return erro;
+        return this.getVo().asClob("ERRO");
    }
 
    public void setErro(char[] erro) {
         markAsChanged("ERRO", erro);
-        this.erro = erro;
    }
 
    public String getHashArquivo() {
-        return hashArquivo;
+        return this.getVo().asString("HASHARQUIVO");
    }
 
    public void setHashArquivo(String hashArquivo) {
         markAsChanged("HASHARQUIVO", hashArquivo);
-        this.hashArquivo = hashArquivo;
    }
 
    public BigDecimal getId() {
-        return id;
+        return this.getVo().asBigDecimal("ID");
    }
 
    public void setId(BigDecimal id) {
         markAsChanged("ID", id);
-        this.id = id;
    }
 
    public String getMsg() {
-        return msg;
+        return this.getVo().asString("MSG");
    }
 
    public void setMsg(String msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public BigDecimal getNuDoc() {
-        return nuDoc;
+        return this.getVo().asBigDecimal("NUDOC");
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
         markAsChanged("NUDOC", nuDoc);
-        this.nuDoc = nuDoc;
    }
 
    public BigDecimal getSolicitacaoManual() {
-        return solicitacaoManual;
+        return this.getVo().asBigDecimal("SOLICITACAO_MANUAL");
    }
 
    public void setSolicitacaoManual(BigDecimal solicitacaoManual) {
         markAsChanged("SOLICITACAO_MANUAL", solicitacaoManual);
-        this.solicitacaoManual = solicitacaoManual;
    }
 
    public String getStatusAssinatura() {
-        return statusAssinatura;
+        return this.getVo().asString("STATUS_ASSINATURA");
    }
 
    public void setStatusAssinatura(String statusAssinatura) {
         markAsChanged("STATUS_ASSINATURA", statusAssinatura);
-        this.statusAssinatura = statusAssinatura;
    }
 
    public String getTipoDoc() {
-        return tipoDoc;
+        return this.getVo().asString("TIPODOC");
    }
 
    public void setTipoDoc(String tipoDoc) {
         markAsChanged("TIPODOC", tipoDoc);
-        this.tipoDoc = tipoDoc;
    }
 
    public String getTransactionId() {
-        return transactionId;
+        return this.getVo().asString("TRANSACTIONID");
    }
 
    public void setTransactionId(String transactionId) {
         markAsChanged("TRANSACTIONID", transactionId);
-        this.transactionId = transactionId;
    }
 
    @Override
@@ -160,20 +131,6 @@ public class HistoricoAssinaturaDigital extends AbstractSankhyaEntity<HistoricoA
    @Override
    public HistoricoAssinaturaDigital fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveDoc = vo.asString("CHAVEDOC");
-        this.codEvento = vo.asBigDecimal("CODEVENTO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.detalhesStatus = vo.asString("DETALHES_STATUS");
-        this.dhEvento = vo.asTimestamp("DHEVENTO");
-        this.erro = vo.asClob("ERRO");
-        this.hashArquivo = vo.asString("HASHARQUIVO");
-        this.id = vo.asBigDecimal("ID");
-        this.msg = vo.asString("MSG");
-        this.nuDoc = vo.asBigDecimal("NUDOC");
-        this.solicitacaoManual = vo.asBigDecimal("SOLICITACAO_MANUAL");
-        this.statusAssinatura = vo.asString("STATUS_ASSINATURA");
-        this.tipoDoc = vo.asString("TIPODOC");
-        this.transactionId = vo.asString("TRANSACTIONID");
         return this;
    }
 }

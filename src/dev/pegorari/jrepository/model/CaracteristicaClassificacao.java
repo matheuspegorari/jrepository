@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CaracteristicaClassificacao extends AbstractSankhyaEntity<CaracteristicaClassificacao> {
-   private BigDecimal codClc;
-   private BigDecimal codClt;
-   private BigDecimal descontar;
-   private String formulaDesc;
-   private BigDecimal maximo;
-   private BigDecimal minimo;
-   private String observacao;
-   private String obrigatorio;
-   private String usaIntervalo;
-   private String usaIndice;
-   private BigDecimal vlrCalcIndice;
-
    public BigDecimal getCodClc() {
-        return codClc;
+        return this.getVo().asBigDecimal("CODCLC");
    }
 
    public void setCodClc(BigDecimal codClc) {
         markAsChanged("CODCLC", codClc);
-        this.codClc = codClc;
    }
 
    public BigDecimal getCodClt() {
-        return codClt;
+        return this.getVo().asBigDecimal("CODCLT");
    }
 
    public void setCodClt(BigDecimal codClt) {
         markAsChanged("CODCLT", codClt);
-        this.codClt = codClt;
    }
 
    public BigDecimal getDescontar() {
-        return descontar;
+        return this.getVo().asBigDecimal("DESCONTAR");
    }
 
    public void setDescontar(BigDecimal descontar) {
         markAsChanged("DESCONTAR", descontar);
-        this.descontar = descontar;
    }
 
    public String getFormulaDesc() {
-        return formulaDesc;
+        return this.getVo().asString("FORMULADESC");
    }
 
    public void setFormulaDesc(String formulaDesc) {
         markAsChanged("FORMULADESC", formulaDesc);
-        this.formulaDesc = formulaDesc;
    }
 
    public BigDecimal getMaximo() {
-        return maximo;
+        return this.getVo().asBigDecimal("MAXIMO");
    }
 
    public void setMaximo(BigDecimal maximo) {
         markAsChanged("MAXIMO", maximo);
-        this.maximo = maximo;
    }
 
    public BigDecimal getMinimo() {
-        return minimo;
+        return this.getVo().asBigDecimal("MINIMO");
    }
 
    public void setMinimo(BigDecimal minimo) {
         markAsChanged("MINIMO", minimo);
-        this.minimo = minimo;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getObrigatorio() {
-        return obrigatorio;
+        return this.getVo().asString("OBRIGATORIO");
    }
 
    public void setObrigatorio(String obrigatorio) {
         markAsChanged("OBRIGATORIO", obrigatorio);
-        this.obrigatorio = obrigatorio;
    }
 
    public String getUsaIntervalo() {
-        return usaIntervalo;
+        return this.getVo().asString("USAINTERVALO");
    }
 
    public void setUsaIntervalo(String usaIntervalo) {
         markAsChanged("USAINTERVALO", usaIntervalo);
-        this.usaIntervalo = usaIntervalo;
    }
 
    public String getUsaIndice() {
-        return usaIndice;
+        return this.getVo().asString("USAINDICE");
    }
 
    public void setUsaIndice(String usaIndice) {
         markAsChanged("USAINDICE", usaIndice);
-        this.usaIndice = usaIndice;
    }
 
    public BigDecimal getVlrCalcIndice() {
-        return vlrCalcIndice;
+        return this.getVo().asBigDecimal("VLRCALCINDICE");
    }
 
    public void setVlrCalcIndice(BigDecimal vlrCalcIndice) {
         markAsChanged("VLRCALCINDICE", vlrCalcIndice);
-        this.vlrCalcIndice = vlrCalcIndice;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class CaracteristicaClassificacao extends AbstractSankhyaEntity<Caracteri
    @Override
    public CaracteristicaClassificacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codClc = vo.asBigDecimal("CODCLC");
-        this.codClt = vo.asBigDecimal("CODCLT");
-        this.descontar = vo.asBigDecimal("DESCONTAR");
-        this.formulaDesc = vo.asString("FORMULADESC");
-        this.maximo = vo.asBigDecimal("MAXIMO");
-        this.minimo = vo.asBigDecimal("MINIMO");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.obrigatorio = vo.asString("OBRIGATORIO");
-        this.usaIntervalo = vo.asString("USAINTERVALO");
-        this.usaIndice = vo.asString("USAINDICE");
-        this.vlrCalcIndice = vo.asBigDecimal("VLRCALCINDICE");
         return this;
    }
 }

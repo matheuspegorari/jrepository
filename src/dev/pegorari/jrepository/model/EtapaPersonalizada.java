@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada> {
-   private String arqModEmail;
-   private BigDecimal codEpe;
-   private BigDecimal codEtapa;
-   private BigDecimal codUsu;
-   private Timestamp dtAbertura;
-   private Timestamp dtAlter;
-   private BigDecimal nuRequisicao;
-   private BigDecimal nuSelecao;
-
    public String getArqModEmail() {
-        return arqModEmail;
+        return this.getVo().asString("ARQMODEMAIL");
    }
 
    public void setArqModEmail(String arqModEmail) {
         markAsChanged("ARQMODEMAIL", arqModEmail);
-        this.arqModEmail = arqModEmail;
    }
 
    public BigDecimal getCodEpe() {
-        return codEpe;
+        return this.getVo().asBigDecimal("CODEPE");
    }
 
    public void setCodEpe(BigDecimal codEpe) {
         markAsChanged("CODEPE", codEpe);
-        this.codEpe = codEpe;
    }
 
    public BigDecimal getCodEtapa() {
-        return codEtapa;
+        return this.getVo().asBigDecimal("CODETAPA");
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
         markAsChanged("CODETAPA", codEtapa);
-        this.codEtapa = codEtapa;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAbertura() {
-        return dtAbertura;
+        return this.getVo().asTimestamp("DTABERTURA");
    }
 
    public void setDtAbertura(Timestamp dtAbertura) {
         markAsChanged("DTABERTURA", dtAbertura);
-        this.dtAbertura = dtAbertura;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public BigDecimal getNuSelecao() {
-        return nuSelecao;
+        return this.getVo().asBigDecimal("NUSELECAO");
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         markAsChanged("NUSELECAO", nuSelecao);
-        this.nuSelecao = nuSelecao;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class EtapaPersonalizada extends AbstractSankhyaEntity<EtapaPersonalizada
    @Override
    public EtapaPersonalizada fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arqModEmail = vo.asString("ARQMODEMAIL");
-        this.codEpe = vo.asBigDecimal("CODEPE");
-        this.codEtapa = vo.asBigDecimal("CODETAPA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAbertura = vo.asTimestamp("DTABERTURA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.nuSelecao = vo.asBigDecimal("NUSELECAO");
         return this;
    }
 }

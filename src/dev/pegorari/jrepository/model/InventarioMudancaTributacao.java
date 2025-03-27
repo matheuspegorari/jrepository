@@ -6,225 +6,180 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InventarioMudancaTributacao extends AbstractSankhyaEntity<InventarioMudancaTributacao> {
-   private BigDecimal codEmp;
-   private BigDecimal codParc;
-   private BigDecimal codTipOper;
-   private BigDecimal codTipVenda;
-   private BigDecimal codUsu;
-   private String customTp;
-   private Timestamp dtAlter;
-   private Timestamp dtMtp;
-   private String motInv;
-   private String statusEfd;
-   private String gravarIcmsNormSth020;
-   private String usaStant;
-   private String usaVlrUnit;
-   private String procPorMed;
-   private String geraSpedBaseSt;
-   private Timestamp dtRefEsc;
-   private String usaVlrCusto;
-   private BigDecimal aliqInterna;
-   private String consEmpUltCompra;
-   private String geraSpedVlrSt;
-   private String usaRicmsCalc;
-   private String consAntExNota;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getCodTipVenda() {
-        return codTipVenda;
+        return this.getVo().asBigDecimal("CODTIPVENDA");
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
         markAsChanged("CODTIPVENDA", codTipVenda);
-        this.codTipVenda = codTipVenda;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCustomTp() {
-        return customTp;
+        return this.getVo().asString("CUSTOMTP");
    }
 
    public void setCustomTp(String customTp) {
         markAsChanged("CUSTOMTP", customTp);
-        this.customTp = customTp;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtMtp() {
-        return dtMtp;
+        return this.getVo().asTimestamp("DTMTP");
    }
 
    public void setDtMtp(Timestamp dtMtp) {
         markAsChanged("DTMTP", dtMtp);
-        this.dtMtp = dtMtp;
    }
 
    public String getMotInv() {
-        return motInv;
+        return this.getVo().asString("MOTINV");
    }
 
    public void setMotInv(String motInv) {
         markAsChanged("MOTINV", motInv);
-        this.motInv = motInv;
    }
 
    public String getStatusEfd() {
-        return statusEfd;
+        return this.getVo().asString("STATUSEFD");
    }
 
    public void setStatusEfd(String statusEfd) {
         markAsChanged("STATUSEFD", statusEfd);
-        this.statusEfd = statusEfd;
    }
 
    public String getGravarIcmsNormSth020() {
-        return gravarIcmsNormSth020;
+        return this.getVo().asString("GRAVARICMSNORMSTH020");
    }
 
    public void setGravarIcmsNormSth020(String gravarIcmsNormSth020) {
         markAsChanged("GRAVARICMSNORMSTH020", gravarIcmsNormSth020);
-        this.gravarIcmsNormSth020 = gravarIcmsNormSth020;
    }
 
    public String getUsaStant() {
-        return usaStant;
+        return this.getVo().asString("USASTANT");
    }
 
    public void setUsaStant(String usaStant) {
         markAsChanged("USASTANT", usaStant);
-        this.usaStant = usaStant;
    }
 
    public String getUsaVlrUnit() {
-        return usaVlrUnit;
+        return this.getVo().asString("USAVLRUNIT");
    }
 
    public void setUsaVlrUnit(String usaVlrUnit) {
         markAsChanged("USAVLRUNIT", usaVlrUnit);
-        this.usaVlrUnit = usaVlrUnit;
    }
 
    public String getProcPorMed() {
-        return procPorMed;
+        return this.getVo().asString("PROCPORMED");
    }
 
    public void setProcPorMed(String procPorMed) {
         markAsChanged("PROCPORMED", procPorMed);
-        this.procPorMed = procPorMed;
    }
 
    public String getGeraSpedBaseSt() {
-        return geraSpedBaseSt;
+        return this.getVo().asString("GERASPEDBASEST");
    }
 
    public void setGeraSpedBaseSt(String geraSpedBaseSt) {
         markAsChanged("GERASPEDBASEST", geraSpedBaseSt);
-        this.geraSpedBaseSt = geraSpedBaseSt;
    }
 
    public Timestamp getDtRefEsc() {
-        return dtRefEsc;
+        return this.getVo().asTimestamp("DTREFESC");
    }
 
    public void setDtRefEsc(Timestamp dtRefEsc) {
         markAsChanged("DTREFESC", dtRefEsc);
-        this.dtRefEsc = dtRefEsc;
    }
 
    public String getUsaVlrCusto() {
-        return usaVlrCusto;
+        return this.getVo().asString("USAVLRCUSTO");
    }
 
    public void setUsaVlrCusto(String usaVlrCusto) {
         markAsChanged("USAVLRCUSTO", usaVlrCusto);
-        this.usaVlrCusto = usaVlrCusto;
    }
 
    public BigDecimal getAliqInterna() {
-        return aliqInterna;
+        return this.getVo().asBigDecimal("ALIQINTERNA");
    }
 
    public void setAliqInterna(BigDecimal aliqInterna) {
         markAsChanged("ALIQINTERNA", aliqInterna);
-        this.aliqInterna = aliqInterna;
    }
 
    public String getConsEmpUltCompra() {
-        return consEmpUltCompra;
+        return this.getVo().asString("CONSEMPULTCOMPRA");
    }
 
    public void setConsEmpUltCompra(String consEmpUltCompra) {
         markAsChanged("CONSEMPULTCOMPRA", consEmpUltCompra);
-        this.consEmpUltCompra = consEmpUltCompra;
    }
 
    public String getGeraSpedVlrSt() {
-        return geraSpedVlrSt;
+        return this.getVo().asString("GERASPEDVLRST");
    }
 
    public void setGeraSpedVlrSt(String geraSpedVlrSt) {
         markAsChanged("GERASPEDVLRST", geraSpedVlrSt);
-        this.geraSpedVlrSt = geraSpedVlrSt;
    }
 
    public String getUsaRicmsCalc() {
-        return usaRicmsCalc;
+        return this.getVo().asString("USARICMSCALC");
    }
 
    public void setUsaRicmsCalc(String usaRicmsCalc) {
         markAsChanged("USARICMSCALC", usaRicmsCalc);
-        this.usaRicmsCalc = usaRicmsCalc;
    }
 
    public String getConsAntExNota() {
-        return consAntExNota;
+        return this.getVo().asString("CONSANTEXNOTA");
    }
 
    public void setConsAntExNota(String consAntExNota) {
         markAsChanged("CONSANTEXNOTA", consAntExNota);
-        this.consAntExNota = consAntExNota;
    }
 
    @Override
@@ -240,28 +195,6 @@ public class InventarioMudancaTributacao extends AbstractSankhyaEntity<Inventari
    @Override
    public InventarioMudancaTributacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.customTp = vo.asString("CUSTOMTP");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtMtp = vo.asTimestamp("DTMTP");
-        this.motInv = vo.asString("MOTINV");
-        this.statusEfd = vo.asString("STATUSEFD");
-        this.gravarIcmsNormSth020 = vo.asString("GRAVARICMSNORMSTH020");
-        this.usaStant = vo.asString("USASTANT");
-        this.usaVlrUnit = vo.asString("USAVLRUNIT");
-        this.procPorMed = vo.asString("PROCPORMED");
-        this.geraSpedBaseSt = vo.asString("GERASPEDBASEST");
-        this.dtRefEsc = vo.asTimestamp("DTREFESC");
-        this.usaVlrCusto = vo.asString("USAVLRCUSTO");
-        this.aliqInterna = vo.asBigDecimal("ALIQINTERNA");
-        this.consEmpUltCompra = vo.asString("CONSEMPULTCOMPRA");
-        this.geraSpedVlrSt = vo.asString("GERASPEDVLRST");
-        this.usaRicmsCalc = vo.asString("USARICMSCALC");
-        this.consAntExNota = vo.asString("CONSANTEXNOTA");
         return this;
    }
 }

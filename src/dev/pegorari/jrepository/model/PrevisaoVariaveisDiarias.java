@@ -6,35 +6,28 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PrevisaoVariaveisDiarias extends AbstractSankhyaEntity<PrevisaoVariaveisDiarias> {
-   private String chave;
-   private Timestamp dia;
-   private BigDecimal valor;
-
    public String getChave() {
-        return chave;
+        return this.getVo().asString("CHAVE");
    }
 
    public void setChave(String chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public Timestamp getDia() {
-        return dia;
+        return this.getVo().asTimestamp("DIA");
    }
 
    public void setDia(Timestamp dia) {
         markAsChanged("DIA", dia);
-        this.dia = dia;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    @Override
@@ -50,9 +43,6 @@ public class PrevisaoVariaveisDiarias extends AbstractSankhyaEntity<PrevisaoVari
    @Override
    public PrevisaoVariaveisDiarias fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chave = vo.asString("CHAVE");
-        this.dia = vo.asTimestamp("DIA");
-        this.valor = vo.asBigDecimal("VALOR");
         return this;
    }
 }

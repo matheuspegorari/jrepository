@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
-   private String ativo;
-   private BigDecimal codEnd;
-   private BigDecimal codProd;
-   private String codVol;
-   private String controle;
-   private Timestamp dtFim;
-   private Timestamp dtInicio;
-   private BigDecimal estMax;
-   private BigDecimal estMaxVolPad;
-   private BigDecimal estMin;
-   private BigDecimal estMinVolPad;
-   private BigDecimal ordem;
-   private String picking;
-   private String undPad;
-   private String vinculoProd;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public Timestamp getDtFim() {
-        return dtFim;
+        return this.getVo().asTimestamp("DTFIM");
    }
 
    public void setDtFim(Timestamp dtFim) {
         markAsChanged("DTFIM", dtFim);
-        this.dtFim = dtFim;
    }
 
    public Timestamp getDtInicio() {
-        return dtInicio;
+        return this.getVo().asTimestamp("DTINICIO");
    }
 
    public void setDtInicio(Timestamp dtInicio) {
         markAsChanged("DTINICIO", dtInicio);
-        this.dtInicio = dtInicio;
    }
 
    public BigDecimal getEstMax() {
-        return estMax;
+        return this.getVo().asBigDecimal("ESTMAX");
    }
 
    public void setEstMax(BigDecimal estMax) {
         markAsChanged("ESTMAX", estMax);
-        this.estMax = estMax;
    }
 
    public BigDecimal getEstMaxVolPad() {
-        return estMaxVolPad;
+        return this.getVo().asBigDecimal("ESTMAXVOLPAD");
    }
 
    public void setEstMaxVolPad(BigDecimal estMaxVolPad) {
         markAsChanged("ESTMAXVOLPAD", estMaxVolPad);
-        this.estMaxVolPad = estMaxVolPad;
    }
 
    public BigDecimal getEstMin() {
-        return estMin;
+        return this.getVo().asBigDecimal("ESTMIN");
    }
 
    public void setEstMin(BigDecimal estMin) {
         markAsChanged("ESTMIN", estMin);
-        this.estMin = estMin;
    }
 
    public BigDecimal getEstMinVolPad() {
-        return estMinVolPad;
+        return this.getVo().asBigDecimal("ESTMINVOLPAD");
    }
 
    public void setEstMinVolPad(BigDecimal estMinVolPad) {
         markAsChanged("ESTMINVOLPAD", estMinVolPad);
-        this.estMinVolPad = estMinVolPad;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getPicking() {
-        return picking;
+        return this.getVo().asString("PICKING");
    }
 
    public void setPicking(String picking) {
         markAsChanged("PICKING", picking);
-        this.picking = picking;
    }
 
    public String getUndPad() {
-        return undPad;
+        return this.getVo().asString("UNDPAD");
    }
 
    public void setUndPad(String undPad) {
         markAsChanged("UNDPAD", undPad);
-        this.undPad = undPad;
    }
 
    public String getVinculoProd() {
-        return vinculoProd;
+        return this.getVo().asString("VINCULOPROD");
    }
 
    public void setVinculoProd(String vinculoProd) {
         markAsChanged("VINCULOPROD", vinculoProd);
-        this.vinculoProd = vinculoProd;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class ProdutoEndereco extends AbstractSankhyaEntity<ProdutoEndereco> {
    @Override
    public ProdutoEndereco fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codVol = vo.asString("CODVOL");
-        this.controle = vo.asString("CONTROLE");
-        this.dtFim = vo.asTimestamp("DTFIM");
-        this.dtInicio = vo.asTimestamp("DTINICIO");
-        this.estMax = vo.asBigDecimal("ESTMAX");
-        this.estMaxVolPad = vo.asBigDecimal("ESTMAXVOLPAD");
-        this.estMin = vo.asBigDecimal("ESTMIN");
-        this.estMinVolPad = vo.asBigDecimal("ESTMINVOLPAD");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.picking = vo.asString("PICKING");
-        this.undPad = vo.asString("UNDPAD");
-        this.vinculoProd = vo.asString("VINCULOPROD");
         return this;
    }
 }

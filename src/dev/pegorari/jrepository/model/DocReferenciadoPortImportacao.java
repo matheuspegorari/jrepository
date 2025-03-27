@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocReferenciadoPortImportacao> {
-   private String chaveRef;
-   private BigDecimal nuArquivo;
-
    public String getChaveRef() {
-        return chaveRef;
+        return this.getVo().asString("CHAVEREF");
    }
 
    public void setChaveRef(String chaveRef) {
         markAsChanged("CHAVEREF", chaveRef);
-        this.chaveRef = chaveRef;
    }
 
    public BigDecimal getNuArquivo() {
-        return nuArquivo;
+        return this.getVo().asBigDecimal("NUARQUIVO");
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
         markAsChanged("NUARQUIVO", nuArquivo);
-        this.nuArquivo = nuArquivo;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class DocReferenciadoPortImportacao extends AbstractSankhyaEntity<DocRefe
    @Override
    public DocReferenciadoPortImportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveRef = vo.asString("CHAVEREF");
-        this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
         return this;
    }
 }

@@ -5,135 +5,108 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
-   private String corFonte;
-   private String corPreenchimento;
-   private String descricao;
-   private BigDecimal ideFx;
-   private BigDecimal ideFxLane;
-   private BigDecimal idProc;
-   private BigDecimal tamFonte;
-   private BigDecimal tipo;
-   private BigDecimal x1Pos;
-   private BigDecimal x2Pos;
-   private BigDecimal y1Pos;
-   private BigDecimal y2Pos;
-   private char[] waypoints;
-
    public String getCorFonte() {
-        return corFonte;
+        return this.getVo().asString("CORFONTE");
    }
 
    public void setCorFonte(String corFonte) {
         markAsChanged("CORFONTE", corFonte);
-        this.corFonte = corFonte;
    }
 
    public String getCorPreenchimento() {
-        return corPreenchimento;
+        return this.getVo().asString("CORPREENCHIMENTO");
    }
 
    public void setCorPreenchimento(String corPreenchimento) {
         markAsChanged("CORPREENCHIMENTO", corPreenchimento);
-        this.corPreenchimento = corPreenchimento;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdeFxLane() {
-        return ideFxLane;
+        return this.getVo().asBigDecimal("IDEFXLANE");
    }
 
    public void setIdeFxLane(BigDecimal ideFxLane) {
         markAsChanged("IDEFXLANE", ideFxLane);
-        this.ideFxLane = ideFxLane;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public BigDecimal getTamFonte() {
-        return tamFonte;
+        return this.getVo().asBigDecimal("TAMFONTE");
    }
 
    public void setTamFonte(BigDecimal tamFonte) {
         markAsChanged("TAMFONTE", tamFonte);
-        this.tamFonte = tamFonte;
    }
 
    public BigDecimal getTipo() {
-        return tipo;
+        return this.getVo().asBigDecimal("TIPO");
    }
 
    public void setTipo(BigDecimal tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getX1Pos() {
-        return x1Pos;
+        return this.getVo().asBigDecimal("X1POS");
    }
 
    public void setX1Pos(BigDecimal x1Pos) {
         markAsChanged("X1POS", x1Pos);
-        this.x1Pos = x1Pos;
    }
 
    public BigDecimal getX2Pos() {
-        return x2Pos;
+        return this.getVo().asBigDecimal("X2POS");
    }
 
    public void setX2Pos(BigDecimal x2Pos) {
         markAsChanged("X2POS", x2Pos);
-        this.x2Pos = x2Pos;
    }
 
    public BigDecimal getY1Pos() {
-        return y1Pos;
+        return this.getVo().asBigDecimal("Y1POS");
    }
 
    public void setY1Pos(BigDecimal y1Pos) {
         markAsChanged("Y1POS", y1Pos);
-        this.y1Pos = y1Pos;
    }
 
    public BigDecimal getY2Pos() {
-        return y2Pos;
+        return this.getVo().asBigDecimal("Y2POS");
    }
 
    public void setY2Pos(BigDecimal y2Pos) {
         markAsChanged("Y2POS", y2Pos);
-        this.y2Pos = y2Pos;
    }
 
    public char[] getWaypoints() {
-        return waypoints;
+        return this.getVo().asClob("WAYPOINTS");
    }
 
    public void setWaypoints(char[] waypoints) {
         markAsChanged("WAYPOINTS", waypoints);
-        this.waypoints = waypoints;
    }
 
    @Override
@@ -149,19 +122,6 @@ public class ElementoFluxo extends AbstractSankhyaEntity<ElementoFluxo> {
    @Override
    public ElementoFluxo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.corFonte = vo.asString("CORFONTE");
-        this.corPreenchimento = vo.asString("CORPREENCHIMENTO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.ideFxLane = vo.asBigDecimal("IDEFXLANE");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.tamFonte = vo.asBigDecimal("TAMFONTE");
-        this.tipo = vo.asBigDecimal("TIPO");
-        this.x1Pos = vo.asBigDecimal("X1POS");
-        this.x2Pos = vo.asBigDecimal("X2POS");
-        this.y1Pos = vo.asBigDecimal("Y1POS");
-        this.y2Pos = vo.asBigDecimal("Y2POS");
-        this.waypoints = vo.asClob("WAYPOINTS");
         return this;
    }
 }

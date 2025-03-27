@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
-   private BigDecimal codServ;
-   private BigDecimal codUsu;
-   private BigDecimal codVeiculo;
-   private Timestamp dtAlter;
-   private Timestamp dtDesinstal;
-   private Timestamp dtInstal;
-   private BigDecimal numContrato;
-   private BigDecimal numOsDesinstal;
-   private BigDecimal numOsInstal;
-   private BigDecimal sequencia;
-   private String telefone;
-
    public BigDecimal getCodServ() {
-        return codServ;
+        return this.getVo().asBigDecimal("CODSERV");
    }
 
    public void setCodServ(BigDecimal codServ) {
         markAsChanged("CODSERV", codServ);
-        this.codServ = codServ;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtDesinstal() {
-        return dtDesinstal;
+        return this.getVo().asTimestamp("DTDESINSTAL");
    }
 
    public void setDtDesinstal(Timestamp dtDesinstal) {
         markAsChanged("DTDESINSTAL", dtDesinstal);
-        this.dtDesinstal = dtDesinstal;
    }
 
    public Timestamp getDtInstal() {
-        return dtInstal;
+        return this.getVo().asTimestamp("DTINSTAL");
    }
 
    public void setDtInstal(Timestamp dtInstal) {
         markAsChanged("DTINSTAL", dtInstal);
-        this.dtInstal = dtInstal;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getNumOsDesinstal() {
-        return numOsDesinstal;
+        return this.getVo().asBigDecimal("NUMOSDESINSTAL");
    }
 
    public void setNumOsDesinstal(BigDecimal numOsDesinstal) {
         markAsChanged("NUMOSDESINSTAL", numOsDesinstal);
-        this.numOsDesinstal = numOsDesinstal;
    }
 
    public BigDecimal getNumOsInstal() {
-        return numOsInstal;
+        return this.getVo().asBigDecimal("NUMOSINSTAL");
    }
 
    public void setNumOsInstal(BigDecimal numOsInstal) {
         markAsChanged("NUMOSINSTAL", numOsInstal);
-        this.numOsInstal = numOsInstal;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTelefone() {
-        return telefone;
+        return this.getVo().asString("TELEFONE");
    }
 
    public void setTelefone(String telefone) {
         markAsChanged("TELEFONE", telefone);
-        this.telefone = telefone;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class ContratoVeiculo extends AbstractSankhyaEntity<ContratoVeiculo> {
    @Override
    public ContratoVeiculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codServ = vo.asBigDecimal("CODSERV");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtDesinstal = vo.asTimestamp("DTDESINSTAL");
-        this.dtInstal = vo.asTimestamp("DTINSTAL");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.numOsDesinstal = vo.asBigDecimal("NUMOSDESINSTAL");
-        this.numOsInstal = vo.asBigDecimal("NUMOSINSTAL");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.telefone = vo.asString("TELEFONE");
         return this;
    }
 }

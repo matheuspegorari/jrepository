@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota> {
-   private BigDecimal codUsu;
-   private Timestamp dhOcor;
-   private String digitado;
-   private BigDecimal hrAct;
-   private BigDecimal notaPontual;
-   private BigDecimal notaQualidade;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private String ocorrencias;
-   private String referencia;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhOcor() {
-        return dhOcor;
+        return this.getVo().asTimestamp("DHOCOR");
    }
 
    public void setDhOcor(Timestamp dhOcor) {
         markAsChanged("DHOCOR", dhOcor);
-        this.dhOcor = dhOcor;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public BigDecimal getHrAct() {
-        return hrAct;
+        return this.getVo().asBigDecimal("HRACT");
    }
 
    public void setHrAct(BigDecimal hrAct) {
         markAsChanged("HRACT", hrAct);
-        this.hrAct = hrAct;
    }
 
    public BigDecimal getNotaPontual() {
-        return notaPontual;
+        return this.getVo().asBigDecimal("NOTAPONTUAL");
    }
 
    public void setNotaPontual(BigDecimal notaPontual) {
         markAsChanged("NOTAPONTUAL", notaPontual);
-        this.notaPontual = notaPontual;
    }
 
    public BigDecimal getNotaQualidade() {
-        return notaQualidade;
+        return this.getVo().asBigDecimal("NOTAQUALIDADE");
    }
 
    public void setNotaQualidade(BigDecimal notaQualidade) {
         markAsChanged("NOTAQUALIDADE", notaQualidade);
-        this.notaQualidade = notaQualidade;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getOcorrencias() {
-        return ocorrencias;
+        return this.getVo().asString("OCORRENCIAS");
    }
 
    public void setOcorrencias(String ocorrencias) {
         markAsChanged("OCORRENCIAS", ocorrencias);
-        this.ocorrencias = ocorrencias;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class AcompanhamentoNota extends AbstractSankhyaEntity<AcompanhamentoNota
    @Override
    public AcompanhamentoNota fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhOcor = vo.asTimestamp("DHOCOR");
-        this.digitado = vo.asString("DIGITADO");
-        this.hrAct = vo.asBigDecimal("HRACT");
-        this.notaPontual = vo.asBigDecimal("NOTAPONTUAL");
-        this.notaQualidade = vo.asBigDecimal("NOTAQUALIDADE");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.ocorrencias = vo.asString("OCORRENCIAS");
-        this.referencia = vo.asString("REFERENCIA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

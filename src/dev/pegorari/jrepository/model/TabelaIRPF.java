@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
-   private String tipTabela;
-   private BigDecimal aliquota;
-   private Timestamp competencia;
-   private BigDecimal vlrDeducao;
-   private BigDecimal vlrLimite;
-
    public String getTipTabela() {
-        return tipTabela;
+        return this.getVo().asString("TIPTABELA");
    }
 
    public void setTipTabela(String tipTabela) {
         markAsChanged("TIPTABELA", tipTabela);
-        this.tipTabela = tipTabela;
    }
 
    public BigDecimal getAliquota() {
-        return aliquota;
+        return this.getVo().asBigDecimal("ALIQUOTA");
    }
 
    public void setAliquota(BigDecimal aliquota) {
         markAsChanged("ALIQUOTA", aliquota);
-        this.aliquota = aliquota;
    }
 
    public Timestamp getCompetencia() {
-        return competencia;
+        return this.getVo().asTimestamp("COMPETENCIA");
    }
 
    public void setCompetencia(Timestamp competencia) {
         markAsChanged("COMPETENCIA", competencia);
-        this.competencia = competencia;
    }
 
    public BigDecimal getVlrDeducao() {
-        return vlrDeducao;
+        return this.getVo().asBigDecimal("VLRDEDUCAO");
    }
 
    public void setVlrDeducao(BigDecimal vlrDeducao) {
         markAsChanged("VLRDEDUCAO", vlrDeducao);
-        this.vlrDeducao = vlrDeducao;
    }
 
    public BigDecimal getVlrLimite() {
-        return vlrLimite;
+        return this.getVo().asBigDecimal("VLRLIMITE");
    }
 
    public void setVlrLimite(BigDecimal vlrLimite) {
         markAsChanged("VLRLIMITE", vlrLimite);
-        this.vlrLimite = vlrLimite;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class TabelaIRPF extends AbstractSankhyaEntity<TabelaIRPF> {
    @Override
    public TabelaIRPF fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipTabela = vo.asString("TIPTABELA");
-        this.aliquota = vo.asBigDecimal("ALIQUOTA");
-        this.competencia = vo.asTimestamp("COMPETENCIA");
-        this.vlrDeducao = vo.asBigDecimal("VLRDEDUCAO");
-        this.vlrLimite = vo.asBigDecimal("VLRLIMITE");
         return this;
    }
 }

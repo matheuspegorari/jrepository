@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
-   private String chaveNfe;
-   private BigDecimal codAjuste;
-   private BigDecimal codEmp;
-   private BigDecimal codModDoc;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private String digitado;
-   private Timestamp dtAlter;
-   private Timestamp dtDoc;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private String observacao;
-   private BigDecimal origProcesso;
-   private String serieNota;
-   private String tipImposto;
-   private BigDecimal vlrAjuste;
-
    public String getChaveNfe() {
-        return chaveNfe;
+        return this.getVo().asString("CHAVENFE");
    }
 
    public void setChaveNfe(String chaveNfe) {
         markAsChanged("CHAVENFE", chaveNfe);
-        this.chaveNfe = chaveNfe;
    }
 
    public BigDecimal getCodAjuste() {
-        return codAjuste;
+        return this.getVo().asBigDecimal("CODAJUSTE");
    }
 
    public void setCodAjuste(BigDecimal codAjuste) {
         markAsChanged("CODAJUSTE", codAjuste);
-        this.codAjuste = codAjuste;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodModDoc() {
-        return codModDoc;
+        return this.getVo().asBigDecimal("CODMODDOC");
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
         markAsChanged("CODMODDOC", codModDoc);
-        this.codModDoc = codModDoc;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtDoc() {
-        return dtDoc;
+        return this.getVo().asTimestamp("DTDOC");
    }
 
    public void setDtDoc(Timestamp dtDoc) {
         markAsChanged("DTDOC", dtDoc);
-        this.dtDoc = dtDoc;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getOrigProcesso() {
-        return origProcesso;
+        return this.getVo().asBigDecimal("ORIGPROCESSO");
    }
 
    public void setOrigProcesso(BigDecimal origProcesso) {
         markAsChanged("ORIGPROCESSO", origProcesso);
-        this.origProcesso = origProcesso;
    }
 
    public String getSerieNota() {
-        return serieNota;
+        return this.getVo().asString("SERIENOTA");
    }
 
    public void setSerieNota(String serieNota) {
         markAsChanged("SERIENOTA", serieNota);
-        this.serieNota = serieNota;
    }
 
    public String getTipImposto() {
-        return tipImposto;
+        return this.getVo().asString("TIPIMPOSTO");
    }
 
    public void setTipImposto(String tipImposto) {
         markAsChanged("TIPIMPOSTO", tipImposto);
-        this.tipImposto = tipImposto;
    }
 
    public BigDecimal getVlrAjuste() {
-        return vlrAjuste;
+        return this.getVo().asBigDecimal("VLRAJUSTE");
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
         markAsChanged("VLRAJUSTE", vlrAjuste);
-        this.vlrAjuste = vlrAjuste;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class AjusteIpi extends AbstractSankhyaEntity<AjusteIpi> {
    @Override
    public AjusteIpi fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveNfe = vo.asString("CHAVENFE");
-        this.codAjuste = vo.asBigDecimal("CODAJUSTE");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codModDoc = vo.asBigDecimal("CODMODDOC");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtDoc = vo.asTimestamp("DTDOC");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.origProcesso = vo.asBigDecimal("ORIGPROCESSO");
-        this.serieNota = vo.asString("SERIENOTA");
-        this.tipImposto = vo.asString("TIPIMPOSTO");
-        this.vlrAjuste = vo.asBigDecimal("VLRAJUSTE");
         return this;
    }
 }

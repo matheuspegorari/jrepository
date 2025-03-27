@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Doca extends AbstractSankhyaEntity<Doca> {
-   private String balcao;
-   private String impressoraDoca;
-   private BigDecimal altura;
-   private String ativo;
-   private String descricao;
-   private String situacao;
-   private String tipDoca;
-   private BigDecimal codDoca;
-   private BigDecimal codEnd;
-   private BigDecimal codEndCrossdock;
-
    public String getBalcao() {
-        return balcao;
+        return this.getVo().asString("BALCAO");
    }
 
    public void setBalcao(String balcao) {
         markAsChanged("BALCAO", balcao);
-        this.balcao = balcao;
    }
 
    public String getImpressoraDoca() {
-        return impressoraDoca;
+        return this.getVo().asString("IMPRESSORADOCA");
    }
 
    public void setImpressoraDoca(String impressoraDoca) {
         markAsChanged("IMPRESSORADOCA", impressoraDoca);
-        this.impressoraDoca = impressoraDoca;
    }
 
    public BigDecimal getAltura() {
-        return altura;
+        return this.getVo().asBigDecimal("ALTURA");
    }
 
    public void setAltura(BigDecimal altura) {
         markAsChanged("ALTURA", altura);
-        this.altura = altura;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    public String getTipDoca() {
-        return tipDoca;
+        return this.getVo().asString("TIPDOCA");
    }
 
    public void setTipDoca(String tipDoca) {
         markAsChanged("TIPDOCA", tipDoca);
-        this.tipDoca = tipDoca;
    }
 
    public BigDecimal getCodDoca() {
-        return codDoca;
+        return this.getVo().asBigDecimal("CODDOCA");
    }
 
    public void setCodDoca(BigDecimal codDoca) {
         markAsChanged("CODDOCA", codDoca);
-        this.codDoca = codDoca;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getCodEndCrossdock() {
-        return codEndCrossdock;
+        return this.getVo().asBigDecimal("CODENDCROSSDOCK");
    }
 
    public void setCodEndCrossdock(BigDecimal codEndCrossdock) {
         markAsChanged("CODENDCROSSDOCK", codEndCrossdock);
-        this.codEndCrossdock = codEndCrossdock;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class Doca extends AbstractSankhyaEntity<Doca> {
    @Override
    public Doca fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.balcao = vo.asString("BALCAO");
-        this.impressoraDoca = vo.asString("IMPRESSORADOCA");
-        this.altura = vo.asBigDecimal("ALTURA");
-        this.ativo = vo.asString("ATIVO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.situacao = vo.asString("SITUACAO");
-        this.tipDoca = vo.asString("TIPDOCA");
-        this.codDoca = vo.asBigDecimal("CODDOCA");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codEndCrossdock = vo.asBigDecimal("CODENDCROSSDOCK");
         return this;
    }
 }

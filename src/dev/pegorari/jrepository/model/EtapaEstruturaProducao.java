@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstruturaProducao> {
-   private BigDecimal leadTimeCql;
-   private String abreviacao;
-   private BigDecimal codEst;
-   private BigDecimal codEtp;
-   private String cql;
-   private String descricao;
-   private String geraProducao;
-   private BigDecimal leadTime;
-   private BigDecimal topProd;
-   private String compart;
-
    public BigDecimal getLeadTimeCql() {
-        return leadTimeCql;
+        return this.getVo().asBigDecimal("LEADTIMECQL");
    }
 
    public void setLeadTimeCql(BigDecimal leadTimeCql) {
         markAsChanged("LEADTIMECQL", leadTimeCql);
-        this.leadTimeCql = leadTimeCql;
    }
 
    public String getAbreviacao() {
-        return abreviacao;
+        return this.getVo().asString("ABREVIACAO");
    }
 
    public void setAbreviacao(String abreviacao) {
         markAsChanged("ABREVIACAO", abreviacao);
-        this.abreviacao = abreviacao;
    }
 
    public BigDecimal getCodEst() {
-        return codEst;
+        return this.getVo().asBigDecimal("CODEST");
    }
 
    public void setCodEst(BigDecimal codEst) {
         markAsChanged("CODEST", codEst);
-        this.codEst = codEst;
    }
 
    public BigDecimal getCodEtp() {
-        return codEtp;
+        return this.getVo().asBigDecimal("CODETP");
    }
 
    public void setCodEtp(BigDecimal codEtp) {
         markAsChanged("CODETP", codEtp);
-        this.codEtp = codEtp;
    }
 
    public String getCql() {
-        return cql;
+        return this.getVo().asString("CQL");
    }
 
    public void setCql(String cql) {
         markAsChanged("CQL", cql);
-        this.cql = cql;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getGeraProducao() {
-        return geraProducao;
+        return this.getVo().asString("GERAPRODUCAO");
    }
 
    public void setGeraProducao(String geraProducao) {
         markAsChanged("GERAPRODUCAO", geraProducao);
-        this.geraProducao = geraProducao;
    }
 
    public BigDecimal getLeadTime() {
-        return leadTime;
+        return this.getVo().asBigDecimal("LEADTIME");
    }
 
    public void setLeadTime(BigDecimal leadTime) {
         markAsChanged("LEADTIME", leadTime);
-        this.leadTime = leadTime;
    }
 
    public BigDecimal getTopProd() {
-        return topProd;
+        return this.getVo().asBigDecimal("TOPPROD");
    }
 
    public void setTopProd(BigDecimal topProd) {
         markAsChanged("TOPPROD", topProd);
-        this.topProd = topProd;
    }
 
    public String getCompart() {
-        return compart;
+        return this.getVo().asString("COMPART");
    }
 
    public void setCompart(String compart) {
         markAsChanged("COMPART", compart);
-        this.compart = compart;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class EtapaEstruturaProducao extends AbstractSankhyaEntity<EtapaEstrutura
    @Override
    public EtapaEstruturaProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.leadTimeCql = vo.asBigDecimal("LEADTIMECQL");
-        this.abreviacao = vo.asString("ABREVIACAO");
-        this.codEst = vo.asBigDecimal("CODEST");
-        this.codEtp = vo.asBigDecimal("CODETP");
-        this.cql = vo.asString("CQL");
-        this.descricao = vo.asString("DESCRICAO");
-        this.geraProducao = vo.asString("GERAPRODUCAO");
-        this.leadTime = vo.asBigDecimal("LEADTIME");
-        this.topProd = vo.asBigDecimal("TOPPROD");
-        this.compart = vo.asString("COMPART");
         return this;
    }
 }

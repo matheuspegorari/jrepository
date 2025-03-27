@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes> {
-   private BigDecimal codProd;
-   private String controle;
-   private BigDecimal id;
-   private BigDecimal idIatv;
-   private BigDecimal idIproc;
-   private String nroLote;
-   private BigDecimal nuApo;
-   private BigDecimal pesoBruto;
-   private BigDecimal pesoLiq;
-   private String tipo;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public BigDecimal getId() {
-        return id;
+        return this.getVo().asBigDecimal("ID");
    }
 
    public void setId(BigDecimal id) {
         markAsChanged("ID", id);
-        this.id = id;
    }
 
    public BigDecimal getIdIatv() {
-        return idIatv;
+        return this.getVo().asBigDecimal("IDIATV");
    }
 
    public void setIdIatv(BigDecimal idIatv) {
         markAsChanged("IDIATV", idIatv);
-        this.idIatv = idIatv;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public String getNroLote() {
-        return nroLote;
+        return this.getVo().asString("NROLOTE");
    }
 
    public void setNroLote(String nroLote) {
         markAsChanged("NROLOTE", nroLote);
-        this.nroLote = nroLote;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public BigDecimal getPesoBruto() {
-        return pesoBruto;
+        return this.getVo().asBigDecimal("PESOBRUTO");
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
         markAsChanged("PESOBRUTO", pesoBruto);
-        this.pesoBruto = pesoBruto;
    }
 
    public BigDecimal getPesoLiq() {
-        return pesoLiq;
+        return this.getVo().asBigDecimal("PESOLIQ");
    }
 
    public void setPesoLiq(BigDecimal pesoLiq) {
         markAsChanged("PESOLIQ", pesoLiq);
-        this.pesoLiq = pesoLiq;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class ApontamentoVolumes extends AbstractSankhyaEntity<ApontamentoVolumes
    @Override
    public ApontamentoVolumes fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.controle = vo.asString("CONTROLE");
-        this.id = vo.asBigDecimal("ID");
-        this.idIatv = vo.asBigDecimal("IDIATV");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.nroLote = vo.asString("NROLOTE");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
-        this.pesoLiq = vo.asBigDecimal("PESOLIQ");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturamento> {
-   private BigDecimal codEmp;
-   private BigDecimal codTipOper;
-   private BigDecimal codTipOperDest;
-   private String confirmDocFat;
-   private char[] criterioSep;
-   private BigDecimal sequencia;
-   private String serieDest;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getCodTipOperDest() {
-        return codTipOperDest;
+        return this.getVo().asBigDecimal("CODTIPOPERDEST");
    }
 
    public void setCodTipOperDest(BigDecimal codTipOperDest) {
         markAsChanged("CODTIPOPERDEST", codTipOperDest);
-        this.codTipOperDest = codTipOperDest;
    }
 
    public String getConfirmDocFat() {
-        return confirmDocFat;
+        return this.getVo().asString("CONFIRMDOCFAT");
    }
 
    public void setConfirmDocFat(String confirmDocFat) {
         markAsChanged("CONFIRMDOCFAT", confirmDocFat);
-        this.confirmDocFat = confirmDocFat;
    }
 
    public char[] getCriterioSep() {
-        return criterioSep;
+        return this.getVo().asClob("CRITERIOSEP");
    }
 
    public void setCriterioSep(char[] criterioSep) {
         markAsChanged("CRITERIOSEP", criterioSep);
-        this.criterioSep = criterioSep;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSerieDest() {
-        return serieDest;
+        return this.getVo().asString("SERIEDEST");
    }
 
    public void setSerieDest(String serieDest) {
         markAsChanged("SERIEDEST", serieDest);
-        this.serieDest = serieDest;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class SeparacaoFaturamento extends AbstractSankhyaEntity<SeparacaoFaturam
    @Override
    public SeparacaoFaturamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.codTipOperDest = vo.asBigDecimal("CODTIPOPERDEST");
-        this.confirmDocFat = vo.asString("CONFIRMDOCFAT");
-        this.criterioSep = vo.asClob("CRITERIOSEP");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.serieDest = vo.asString("SERIEDEST");
         return this;
    }
 }

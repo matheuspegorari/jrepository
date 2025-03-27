@@ -6,305 +6,244 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimplesNacional> {
-   private BigDecimal aliqCofins;
-   private BigDecimal aliqCpp;
-   private BigDecimal aliqCsll;
-   private BigDecimal aliqIcms;
-   private BigDecimal aliqIpi;
-   private BigDecimal aliqIrpj;
-   private BigDecimal aliqIss;
-   private BigDecimal aliqPisPasep;
-   private BigDecimal aliquota;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuPartilha;
-   private BigDecimal tipoSn;
-   private BigDecimal vlrRecBruta;
-   private String tipoMercado;
-   private BigDecimal nuFaixa;
-   private BigDecimal nuApuracao;
-   private BigDecimal aliqCofinsAliefe;
-   private BigDecimal aliqCppAliefe;
-   private BigDecimal aliqCsllAliefe;
-   private BigDecimal aliqIcmsAliefe;
-   private BigDecimal aliqIpiAliefe;
-   private BigDecimal aliqIrpjAliefe;
-   private BigDecimal aliqIssAliefe;
-   private BigDecimal aliqPisPasepAliefe;
-   private BigDecimal aliquotaAliefe;
-   private BigDecimal nuFaixaAliefe;
-   private String tipoMercadoAliefe;
-   private BigDecimal tipoSnAliefe;
-   private BigDecimal vlrRecBrutaAliefe;
-
    public BigDecimal getAliqCofins() {
-        return aliqCofins;
+        return this.getVo().asBigDecimal("ALIQCOFINS");
    }
 
    public void setAliqCofins(BigDecimal aliqCofins) {
         markAsChanged("ALIQCOFINS", aliqCofins);
-        this.aliqCofins = aliqCofins;
    }
 
    public BigDecimal getAliqCpp() {
-        return aliqCpp;
+        return this.getVo().asBigDecimal("ALIQCPP");
    }
 
    public void setAliqCpp(BigDecimal aliqCpp) {
         markAsChanged("ALIQCPP", aliqCpp);
-        this.aliqCpp = aliqCpp;
    }
 
    public BigDecimal getAliqCsll() {
-        return aliqCsll;
+        return this.getVo().asBigDecimal("ALIQCSLL");
    }
 
    public void setAliqCsll(BigDecimal aliqCsll) {
         markAsChanged("ALIQCSLL", aliqCsll);
-        this.aliqCsll = aliqCsll;
    }
 
    public BigDecimal getAliqIcms() {
-        return aliqIcms;
+        return this.getVo().asBigDecimal("ALIQICMS");
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
         markAsChanged("ALIQICMS", aliqIcms);
-        this.aliqIcms = aliqIcms;
    }
 
    public BigDecimal getAliqIpi() {
-        return aliqIpi;
+        return this.getVo().asBigDecimal("ALIQIPI");
    }
 
    public void setAliqIpi(BigDecimal aliqIpi) {
         markAsChanged("ALIQIPI", aliqIpi);
-        this.aliqIpi = aliqIpi;
    }
 
    public BigDecimal getAliqIrpj() {
-        return aliqIrpj;
+        return this.getVo().asBigDecimal("ALIQIRPJ");
    }
 
    public void setAliqIrpj(BigDecimal aliqIrpj) {
         markAsChanged("ALIQIRPJ", aliqIrpj);
-        this.aliqIrpj = aliqIrpj;
    }
 
    public BigDecimal getAliqIss() {
-        return aliqIss;
+        return this.getVo().asBigDecimal("ALIQISS");
    }
 
    public void setAliqIss(BigDecimal aliqIss) {
         markAsChanged("ALIQISS", aliqIss);
-        this.aliqIss = aliqIss;
    }
 
    public BigDecimal getAliqPisPasep() {
-        return aliqPisPasep;
+        return this.getVo().asBigDecimal("ALIQPISPASEP");
    }
 
    public void setAliqPisPasep(BigDecimal aliqPisPasep) {
         markAsChanged("ALIQPISPASEP", aliqPisPasep);
-        this.aliqPisPasep = aliqPisPasep;
    }
 
    public BigDecimal getAliquota() {
-        return aliquota;
+        return this.getVo().asBigDecimal("ALIQUOTA");
    }
 
    public void setAliquota(BigDecimal aliquota) {
         markAsChanged("ALIQUOTA", aliquota);
-        this.aliquota = aliquota;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuPartilha() {
-        return nuPartilha;
+        return this.getVo().asBigDecimal("NUPARTILHA");
    }
 
    public void setNuPartilha(BigDecimal nuPartilha) {
         markAsChanged("NUPARTILHA", nuPartilha);
-        this.nuPartilha = nuPartilha;
    }
 
    public BigDecimal getTipoSn() {
-        return tipoSn;
+        return this.getVo().asBigDecimal("TIPOSN");
    }
 
    public void setTipoSn(BigDecimal tipoSn) {
         markAsChanged("TIPOSN", tipoSn);
-        this.tipoSn = tipoSn;
    }
 
    public BigDecimal getVlrRecBruta() {
-        return vlrRecBruta;
+        return this.getVo().asBigDecimal("VLRRECBRUTA");
    }
 
    public void setVlrRecBruta(BigDecimal vlrRecBruta) {
         markAsChanged("VLRRECBRUTA", vlrRecBruta);
-        this.vlrRecBruta = vlrRecBruta;
    }
 
    public String getTipoMercado() {
-        return tipoMercado;
+        return this.getVo().asString("TIPOMERCADO");
    }
 
    public void setTipoMercado(String tipoMercado) {
         markAsChanged("TIPOMERCADO", tipoMercado);
-        this.tipoMercado = tipoMercado;
    }
 
    public BigDecimal getNuFaixa() {
-        return nuFaixa;
+        return this.getVo().asBigDecimal("NUFAIXA");
    }
 
    public void setNuFaixa(BigDecimal nuFaixa) {
         markAsChanged("NUFAIXA", nuFaixa);
-        this.nuFaixa = nuFaixa;
    }
 
    public BigDecimal getNuApuracao() {
-        return nuApuracao;
+        return this.getVo().asBigDecimal("NUAPURACAO");
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
         markAsChanged("NUAPURACAO", nuApuracao);
-        this.nuApuracao = nuApuracao;
    }
 
    public BigDecimal getAliqCofinsAliefe() {
-        return aliqCofinsAliefe;
+        return this.getVo().asBigDecimal("ALIQCOFINSALIEFE");
    }
 
    public void setAliqCofinsAliefe(BigDecimal aliqCofinsAliefe) {
         markAsChanged("ALIQCOFINSALIEFE", aliqCofinsAliefe);
-        this.aliqCofinsAliefe = aliqCofinsAliefe;
    }
 
    public BigDecimal getAliqCppAliefe() {
-        return aliqCppAliefe;
+        return this.getVo().asBigDecimal("ALIQCPPALIEFE");
    }
 
    public void setAliqCppAliefe(BigDecimal aliqCppAliefe) {
         markAsChanged("ALIQCPPALIEFE", aliqCppAliefe);
-        this.aliqCppAliefe = aliqCppAliefe;
    }
 
    public BigDecimal getAliqCsllAliefe() {
-        return aliqCsllAliefe;
+        return this.getVo().asBigDecimal("ALIQCSLLALIEFE");
    }
 
    public void setAliqCsllAliefe(BigDecimal aliqCsllAliefe) {
         markAsChanged("ALIQCSLLALIEFE", aliqCsllAliefe);
-        this.aliqCsllAliefe = aliqCsllAliefe;
    }
 
    public BigDecimal getAliqIcmsAliefe() {
-        return aliqIcmsAliefe;
+        return this.getVo().asBigDecimal("ALIQICMSALIEFE");
    }
 
    public void setAliqIcmsAliefe(BigDecimal aliqIcmsAliefe) {
         markAsChanged("ALIQICMSALIEFE", aliqIcmsAliefe);
-        this.aliqIcmsAliefe = aliqIcmsAliefe;
    }
 
    public BigDecimal getAliqIpiAliefe() {
-        return aliqIpiAliefe;
+        return this.getVo().asBigDecimal("ALIQIPIALIEFE");
    }
 
    public void setAliqIpiAliefe(BigDecimal aliqIpiAliefe) {
         markAsChanged("ALIQIPIALIEFE", aliqIpiAliefe);
-        this.aliqIpiAliefe = aliqIpiAliefe;
    }
 
    public BigDecimal getAliqIrpjAliefe() {
-        return aliqIrpjAliefe;
+        return this.getVo().asBigDecimal("ALIQIRPJALIEFE");
    }
 
    public void setAliqIrpjAliefe(BigDecimal aliqIrpjAliefe) {
         markAsChanged("ALIQIRPJALIEFE", aliqIrpjAliefe);
-        this.aliqIrpjAliefe = aliqIrpjAliefe;
    }
 
    public BigDecimal getAliqIssAliefe() {
-        return aliqIssAliefe;
+        return this.getVo().asBigDecimal("ALIQISSALIEFE");
    }
 
    public void setAliqIssAliefe(BigDecimal aliqIssAliefe) {
         markAsChanged("ALIQISSALIEFE", aliqIssAliefe);
-        this.aliqIssAliefe = aliqIssAliefe;
    }
 
    public BigDecimal getAliqPisPasepAliefe() {
-        return aliqPisPasepAliefe;
+        return this.getVo().asBigDecimal("ALIQPISPASEPALIEFE");
    }
 
    public void setAliqPisPasepAliefe(BigDecimal aliqPisPasepAliefe) {
         markAsChanged("ALIQPISPASEPALIEFE", aliqPisPasepAliefe);
-        this.aliqPisPasepAliefe = aliqPisPasepAliefe;
    }
 
    public BigDecimal getAliquotaAliefe() {
-        return aliquotaAliefe;
+        return this.getVo().asBigDecimal("ALIQUOTAALIEFE");
    }
 
    public void setAliquotaAliefe(BigDecimal aliquotaAliefe) {
         markAsChanged("ALIQUOTAALIEFE", aliquotaAliefe);
-        this.aliquotaAliefe = aliquotaAliefe;
    }
 
    public BigDecimal getNuFaixaAliefe() {
-        return nuFaixaAliefe;
+        return this.getVo().asBigDecimal("NUFAIXAALIEFE");
    }
 
    public void setNuFaixaAliefe(BigDecimal nuFaixaAliefe) {
         markAsChanged("NUFAIXAALIEFE", nuFaixaAliefe);
-        this.nuFaixaAliefe = nuFaixaAliefe;
    }
 
    public String getTipoMercadoAliefe() {
-        return tipoMercadoAliefe;
+        return this.getVo().asString("TIPOMERCADOALIEFE");
    }
 
    public void setTipoMercadoAliefe(String tipoMercadoAliefe) {
         markAsChanged("TIPOMERCADOALIEFE", tipoMercadoAliefe);
-        this.tipoMercadoAliefe = tipoMercadoAliefe;
    }
 
    public BigDecimal getTipoSnAliefe() {
-        return tipoSnAliefe;
+        return this.getVo().asBigDecimal("TIPOSNALIEFE");
    }
 
    public void setTipoSnAliefe(BigDecimal tipoSnAliefe) {
         markAsChanged("TIPOSNALIEFE", tipoSnAliefe);
-        this.tipoSnAliefe = tipoSnAliefe;
    }
 
    public BigDecimal getVlrRecBrutaAliefe() {
-        return vlrRecBrutaAliefe;
+        return this.getVo().asBigDecimal("VLRRECBRUTAALIEFE");
    }
 
    public void setVlrRecBrutaAliefe(BigDecimal vlrRecBrutaAliefe) {
         markAsChanged("VLRRECBRUTAALIEFE", vlrRecBrutaAliefe);
-        this.vlrRecBrutaAliefe = vlrRecBrutaAliefe;
    }
 
    @Override
@@ -320,36 +259,6 @@ public class PartilhaSimplesNacional extends AbstractSankhyaEntity<PartilhaSimpl
    @Override
    public PartilhaSimplesNacional fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliqCofins = vo.asBigDecimal("ALIQCOFINS");
-        this.aliqCpp = vo.asBigDecimal("ALIQCPP");
-        this.aliqCsll = vo.asBigDecimal("ALIQCSLL");
-        this.aliqIcms = vo.asBigDecimal("ALIQICMS");
-        this.aliqIpi = vo.asBigDecimal("ALIQIPI");
-        this.aliqIrpj = vo.asBigDecimal("ALIQIRPJ");
-        this.aliqIss = vo.asBigDecimal("ALIQISS");
-        this.aliqPisPasep = vo.asBigDecimal("ALIQPISPASEP");
-        this.aliquota = vo.asBigDecimal("ALIQUOTA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuPartilha = vo.asBigDecimal("NUPARTILHA");
-        this.tipoSn = vo.asBigDecimal("TIPOSN");
-        this.vlrRecBruta = vo.asBigDecimal("VLRRECBRUTA");
-        this.tipoMercado = vo.asString("TIPOMERCADO");
-        this.nuFaixa = vo.asBigDecimal("NUFAIXA");
-        this.nuApuracao = vo.asBigDecimal("NUAPURACAO");
-        this.aliqCofinsAliefe = vo.asBigDecimal("ALIQCOFINSALIEFE");
-        this.aliqCppAliefe = vo.asBigDecimal("ALIQCPPALIEFE");
-        this.aliqCsllAliefe = vo.asBigDecimal("ALIQCSLLALIEFE");
-        this.aliqIcmsAliefe = vo.asBigDecimal("ALIQICMSALIEFE");
-        this.aliqIpiAliefe = vo.asBigDecimal("ALIQIPIALIEFE");
-        this.aliqIrpjAliefe = vo.asBigDecimal("ALIQIRPJALIEFE");
-        this.aliqIssAliefe = vo.asBigDecimal("ALIQISSALIEFE");
-        this.aliqPisPasepAliefe = vo.asBigDecimal("ALIQPISPASEPALIEFE");
-        this.aliquotaAliefe = vo.asBigDecimal("ALIQUOTAALIEFE");
-        this.nuFaixaAliefe = vo.asBigDecimal("NUFAIXAALIEFE");
-        this.tipoMercadoAliefe = vo.asString("TIPOMERCADOALIEFE");
-        this.tipoSnAliefe = vo.asBigDecimal("TIPOSNALIEFE");
-        this.vlrRecBrutaAliefe = vo.asBigDecimal("VLRRECBRUTAALIEFE");
         return this;
    }
 }

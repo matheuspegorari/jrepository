@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemServico> {
-   private String aplicavel;
-   private BigDecimal codFld;
-   private BigDecimal numItem;
-   private BigDecimal numOs;
-   private BigDecimal nuPesq;
-
    public String getAplicavel() {
-        return aplicavel;
+        return this.getVo().asString("APLICAVEL");
    }
 
    public void setAplicavel(String aplicavel) {
         markAsChanged("APLICAVEL", aplicavel);
-        this.aplicavel = aplicavel;
    }
 
    public BigDecimal getCodFld() {
-        return codFld;
+        return this.getVo().asBigDecimal("CODFLD");
    }
 
    public void setCodFld(BigDecimal codFld) {
         markAsChanged("CODFLD", codFld);
-        this.codFld = codFld;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNuPesq() {
-        return nuPesq;
+        return this.getVo().asBigDecimal("NUPESQ");
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
         markAsChanged("NUPESQ", nuPesq);
-        this.nuPesq = nuPesq;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class PesquisaOrdemServico extends AbstractSankhyaEntity<PesquisaOrdemSer
    @Override
    public PesquisaOrdemServico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aplicavel = vo.asString("APLICAVEL");
-        this.codFld = vo.asBigDecimal("CODFLD");
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.nuPesq = vo.asBigDecimal("NUPESQ");
         return this;
    }
 }

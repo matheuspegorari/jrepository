@@ -6,145 +6,116 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SelecaoCurriculo extends AbstractSankhyaEntity<SelecaoCurriculo> {
-   private BigDecimal codEmp;
-   private BigDecimal codFunc;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuAprov;
-   private Timestamp dtAlter;
-   private Timestamp dtAprov;
-   private BigDecimal notaSelecao;
-   private BigDecimal nuCurriculo;
-   private BigDecimal nuRequisicao;
-   private BigDecimal nuSelecao;
-   private String obsAprov;
-   private BigDecimal resultado;
-   private String status;
-   private String statusAprov;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuAprov() {
-        return codUsuAprov;
+        return this.getVo().asBigDecimal("CODUSUAPROV");
    }
 
    public void setCodUsuAprov(BigDecimal codUsuAprov) {
         markAsChanged("CODUSUAPROV", codUsuAprov);
-        this.codUsuAprov = codUsuAprov;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtAprov() {
-        return dtAprov;
+        return this.getVo().asTimestamp("DTAPROV");
    }
 
    public void setDtAprov(Timestamp dtAprov) {
         markAsChanged("DTAPROV", dtAprov);
-        this.dtAprov = dtAprov;
    }
 
    public BigDecimal getNotaSelecao() {
-        return notaSelecao;
+        return this.getVo().asBigDecimal("NOTASELECAO");
    }
 
    public void setNotaSelecao(BigDecimal notaSelecao) {
         markAsChanged("NOTASELECAO", notaSelecao);
-        this.notaSelecao = notaSelecao;
    }
 
    public BigDecimal getNuCurriculo() {
-        return nuCurriculo;
+        return this.getVo().asBigDecimal("NUCURRICULO");
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
         markAsChanged("NUCURRICULO", nuCurriculo);
-        this.nuCurriculo = nuCurriculo;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public BigDecimal getNuSelecao() {
-        return nuSelecao;
+        return this.getVo().asBigDecimal("NUSELECAO");
    }
 
    public void setNuSelecao(BigDecimal nuSelecao) {
         markAsChanged("NUSELECAO", nuSelecao);
-        this.nuSelecao = nuSelecao;
    }
 
    public String getObsAprov() {
-        return obsAprov;
+        return this.getVo().asString("OBSAPROV");
    }
 
    public void setObsAprov(String obsAprov) {
         markAsChanged("OBSAPROV", obsAprov);
-        this.obsAprov = obsAprov;
    }
 
    public BigDecimal getResultado() {
-        return resultado;
+        return this.getVo().asBigDecimal("RESULTADO");
    }
 
    public void setResultado(BigDecimal resultado) {
         markAsChanged("RESULTADO", resultado);
-        this.resultado = resultado;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public String getStatusAprov() {
-        return statusAprov;
+        return this.getVo().asString("STATUSAPROV");
    }
 
    public void setStatusAprov(String statusAprov) {
         markAsChanged("STATUSAPROV", statusAprov);
-        this.statusAprov = statusAprov;
    }
 
    @Override
@@ -160,20 +131,6 @@ public class SelecaoCurriculo extends AbstractSankhyaEntity<SelecaoCurriculo> {
    @Override
    public SelecaoCurriculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuAprov = vo.asBigDecimal("CODUSUAPROV");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtAprov = vo.asTimestamp("DTAPROV");
-        this.notaSelecao = vo.asBigDecimal("NOTASELECAO");
-        this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.nuSelecao = vo.asBigDecimal("NUSELECAO");
-        this.obsAprov = vo.asString("OBSAPROV");
-        this.resultado = vo.asBigDecimal("RESULTADO");
-        this.status = vo.asString("STATUS");
-        this.statusAprov = vo.asString("STATUSAPROV");
         return this;
    }
 }

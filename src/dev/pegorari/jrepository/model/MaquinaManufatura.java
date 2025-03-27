@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> {
-   private BigDecimal codCre;
-   private BigDecimal codMqp;
-   private BigDecimal codPlp;
-   private String nome;
-   private BigDecimal numEq;
-   private String ativo;
-   private BigDecimal decQtd;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodMqp() {
-        return codMqp;
+        return this.getVo().asBigDecimal("CODMQP");
    }
 
    public void setCodMqp(BigDecimal codMqp) {
         markAsChanged("CODMQP", codMqp);
-        this.codMqp = codMqp;
    }
 
    public BigDecimal getCodPlp() {
-        return codPlp;
+        return this.getVo().asBigDecimal("CODPLP");
    }
 
    public void setCodPlp(BigDecimal codPlp) {
         markAsChanged("CODPLP", codPlp);
-        this.codPlp = codPlp;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNumEq() {
-        return numEq;
+        return this.getVo().asBigDecimal("NUMEQ");
    }
 
    public void setNumEq(BigDecimal numEq) {
         markAsChanged("NUMEQ", numEq);
-        this.numEq = numEq;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getDecQtd() {
-        return decQtd;
+        return this.getVo().asBigDecimal("DECQTD");
    }
 
    public void setDecQtd(BigDecimal decQtd) {
         markAsChanged("DECQTD", decQtd);
-        this.decQtd = decQtd;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class MaquinaManufatura extends AbstractSankhyaEntity<MaquinaManufatura> 
    @Override
    public MaquinaManufatura fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codMqp = vo.asBigDecimal("CODMQP");
-        this.codPlp = vo.asBigDecimal("CODPLP");
-        this.nome = vo.asString("NOME");
-        this.numEq = vo.asBigDecimal("NUMEQ");
-        this.ativo = vo.asString("ATIVO");
-        this.decQtd = vo.asBigDecimal("DECQTD");
         return this;
    }
 }

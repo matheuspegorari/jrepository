@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcabado> {
-   private BigDecimal codProdPa;
-   private BigDecimal idiProc;
-   private String liberado;
-   private BigDecimal nuApo;
-   private String perda;
-   private String seriePa;
-
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getIdiProc() {
-        return idiProc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdiProc(BigDecimal idiProc) {
         markAsChanged("IDIPROC", idiProc);
-        this.idiProc = idiProc;
    }
 
    public String getLiberado() {
-        return liberado;
+        return this.getVo().asString("LIBERADO");
    }
 
    public void setLiberado(String liberado) {
         markAsChanged("LIBERADO", liberado);
-        this.liberado = liberado;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public String getPerda() {
-        return perda;
+        return this.getVo().asString("PERDA");
    }
 
    public void setPerda(String perda) {
         markAsChanged("PERDA", perda);
-        this.perda = perda;
    }
 
    public String getSeriePa() {
-        return seriePa;
+        return this.getVo().asString("SERIEPA");
    }
 
    public void setSeriePa(String seriePa) {
         markAsChanged("SERIEPA", seriePa);
-        this.seriePa = seriePa;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class SerieProdutoAcabado extends AbstractSankhyaEntity<SerieProdutoAcaba
    @Override
    public SerieProdutoAcabado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.idiProc = vo.asBigDecimal("IDIPROC");
-        this.liberado = vo.asString("LIBERADO");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.perda = vo.asString("PERDA");
-        this.seriePa = vo.asString("SERIEPA");
         return this;
    }
 }

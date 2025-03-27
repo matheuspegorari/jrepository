@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao> {
-   private BigDecimal codVend;
-   private BigDecimal nuComissao;
-   private BigDecimal codNat;
-   private BigDecimal comissao;
-   private Timestamp dhAlter;
-   private BigDecimal codUsuAlter;
-   private BigDecimal numOs;
-   private BigDecimal vlrBase;
-   private BigDecimal vlrTotComissao;
-   private BigDecimal gridMult;
-
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public BigDecimal getNuComissao() {
-        return nuComissao;
+        return this.getVo().asBigDecimal("NUCOMISSAO");
    }
 
    public void setNuComissao(BigDecimal nuComissao) {
         markAsChanged("NUCOMISSAO", nuComissao);
-        this.nuComissao = nuComissao;
    }
 
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getComissao() {
-        return comissao;
+        return this.getVo().asBigDecimal("COMISSAO");
    }
 
    public void setComissao(BigDecimal comissao) {
         markAsChanged("COMISSAO", comissao);
-        this.comissao = comissao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getVlrBase() {
-        return vlrBase;
+        return this.getVo().asBigDecimal("VLRBASE");
    }
 
    public void setVlrBase(BigDecimal vlrBase) {
         markAsChanged("VLRBASE", vlrBase);
-        this.vlrBase = vlrBase;
    }
 
    public BigDecimal getVlrTotComissao() {
-        return vlrTotComissao;
+        return this.getVo().asBigDecimal("VLRTOTCOMISSAO");
    }
 
    public void setVlrTotComissao(BigDecimal vlrTotComissao) {
         markAsChanged("VLRTOTCOMISSAO", vlrTotComissao);
-        this.vlrTotComissao = vlrTotComissao;
    }
 
    public BigDecimal getGridMult() {
-        return gridMult;
+        return this.getVo().asBigDecimal("GRIDMULT");
    }
 
    public void setGridMult(BigDecimal gridMult) {
         markAsChanged("GRIDMULT", gridMult);
-        this.gridMult = gridMult;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class ComissaoNegociacao extends AbstractSankhyaEntity<ComissaoNegociacao
    @Override
    public ComissaoNegociacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.nuComissao = vo.asBigDecimal("NUCOMISSAO");
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.comissao = vo.asBigDecimal("COMISSAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.vlrBase = vo.asBigDecimal("VLRBASE");
-        this.vlrTotComissao = vo.asBigDecimal("VLRTOTCOMISSAO");
-        this.gridMult = vo.asBigDecimal("GRIDMULT");
         return this;
    }
 }

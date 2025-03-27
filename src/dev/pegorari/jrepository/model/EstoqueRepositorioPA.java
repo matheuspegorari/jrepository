@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositorioPA> {
-   private BigDecimal codCpm;
-   private BigDecimal codProdPa;
-   private String controlePa;
-   private BigDecimal estoque;
-   private BigDecimal idIproc;
-   private BigDecimal idRpa;
-   private String statusExec;
-   private String referencia;
-   private BigDecimal estoquePerda;
-
    public BigDecimal getCodCpm() {
-        return codCpm;
+        return this.getVo().asBigDecimal("CODCPM");
    }
 
    public void setCodCpm(BigDecimal codCpm) {
         markAsChanged("CODCPM", codCpm);
-        this.codCpm = codCpm;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getEstoque() {
-        return estoque;
+        return this.getVo().asBigDecimal("ESTOQUE");
    }
 
    public void setEstoque(BigDecimal estoque) {
         markAsChanged("ESTOQUE", estoque);
-        this.estoque = estoque;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public BigDecimal getIdRpa() {
-        return idRpa;
+        return this.getVo().asBigDecimal("IDRPA");
    }
 
    public void setIdRpa(BigDecimal idRpa) {
         markAsChanged("IDRPA", idRpa);
-        this.idRpa = idRpa;
    }
 
    public String getStatusExec() {
-        return statusExec;
+        return this.getVo().asString("STATUSEXEC");
    }
 
    public void setStatusExec(String statusExec) {
         markAsChanged("STATUSEXEC", statusExec);
-        this.statusExec = statusExec;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getEstoquePerda() {
-        return estoquePerda;
+        return this.getVo().asBigDecimal("ESTOQUEPERDA");
    }
 
    public void setEstoquePerda(BigDecimal estoquePerda) {
         markAsChanged("ESTOQUEPERDA", estoquePerda);
-        this.estoquePerda = estoquePerda;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class EstoqueRepositorioPA extends AbstractSankhyaEntity<EstoqueRepositor
    @Override
    public EstoqueRepositorioPA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCpm = vo.asBigDecimal("CODCPM");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.estoque = vo.asBigDecimal("ESTOQUE");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.idRpa = vo.asBigDecimal("IDRPA");
-        this.statusExec = vo.asString("STATUSEXEC");
-        this.referencia = vo.asString("REFERENCIA");
-        this.estoquePerda = vo.asBigDecimal("ESTOQUEPERDA");
         return this;
    }
 }

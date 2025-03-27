@@ -5,15 +5,12 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PrevisaoVendasAgendamento extends AbstractSankhyaEntity<PrevisaoVendasAgendamento> {
-   private BigDecimal codExec;
-
    public BigDecimal getCodExec() {
-        return codExec;
+        return this.getVo().asBigDecimal("CODEXEC");
    }
 
    public void setCodExec(BigDecimal codExec) {
         markAsChanged("CODEXEC", codExec);
-        this.codExec = codExec;
    }
 
    @Override
@@ -29,7 +26,6 @@ public class PrevisaoVendasAgendamento extends AbstractSankhyaEntity<PrevisaoVen
    @Override
    public PrevisaoVendasAgendamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codExec = vo.asBigDecimal("CODEXEC");
         return this;
    }
 }

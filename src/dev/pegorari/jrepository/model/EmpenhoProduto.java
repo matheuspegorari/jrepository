@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
-   private String chaveNfe;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private String codVol;
-   private String controle;
-   private String descrSituacao;
-   private Timestamp dtAlter;
-   private BigDecimal nuNota;
-   private BigDecimal nuNotaPedVen;
-   private BigDecimal nuRecebimento;
-   private String pendente;
-   private BigDecimal qtdEmpenho;
-   private String tipo;
-
    public String getChaveNfe() {
-        return chaveNfe;
+        return this.getVo().asString("CHAVENFE");
    }
 
    public void setChaveNfe(String chaveNfe) {
         markAsChanged("CHAVENFE", chaveNfe);
-        this.chaveNfe = chaveNfe;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public String getDescrSituacao() {
-        return descrSituacao;
+        return this.getVo().asString("DESCRSITUACAO");
    }
 
    public void setDescrSituacao(String descrSituacao) {
         markAsChanged("DESCRSITUACAO", descrSituacao);
-        this.descrSituacao = descrSituacao;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuNotaPedVen() {
-        return nuNotaPedVen;
+        return this.getVo().asBigDecimal("NUNOTAPEDVEN");
    }
 
    public void setNuNotaPedVen(BigDecimal nuNotaPedVen) {
         markAsChanged("NUNOTAPEDVEN", nuNotaPedVen);
-        this.nuNotaPedVen = nuNotaPedVen;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public String getPendente() {
-        return pendente;
+        return this.getVo().asString("PENDENTE");
    }
 
    public void setPendente(String pendente) {
         markAsChanged("PENDENTE", pendente);
-        this.pendente = pendente;
    }
 
    public BigDecimal getQtdEmpenho() {
-        return qtdEmpenho;
+        return this.getVo().asBigDecimal("QTDEMPENHO");
    }
 
    public void setQtdEmpenho(BigDecimal qtdEmpenho) {
         markAsChanged("QTDEMPENHO", qtdEmpenho);
-        this.qtdEmpenho = qtdEmpenho;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class EmpenhoProduto extends AbstractSankhyaEntity<EmpenhoProduto> {
    @Override
    public EmpenhoProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveNfe = vo.asString("CHAVENFE");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codVol = vo.asString("CODVOL");
-        this.controle = vo.asString("CONTROLE");
-        this.descrSituacao = vo.asString("DESCRSITUACAO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuNotaPedVen = vo.asBigDecimal("NUNOTAPEDVEN");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.pendente = vo.asString("PENDENTE");
-        this.qtdEmpenho = vo.asBigDecimal("QTDEMPENHO");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

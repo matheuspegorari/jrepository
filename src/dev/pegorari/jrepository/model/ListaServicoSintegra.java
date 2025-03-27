@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSintegra> {
-   private String analitico;
-   private String ativo;
-   private BigDecimal codLst;
-   private BigDecimal codLstPai;
-   private String descrLst;
-   private BigDecimal grau;
-   private String informaCodObra;
-   private BigDecimal tipoRepasse;
-   private String geraVlrTotRec;
-   private String desdNac;
-
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodLst() {
-        return codLst;
+        return this.getVo().asBigDecimal("CODLST");
    }
 
    public void setCodLst(BigDecimal codLst) {
         markAsChanged("CODLST", codLst);
-        this.codLst = codLst;
    }
 
    public BigDecimal getCodLstPai() {
-        return codLstPai;
+        return this.getVo().asBigDecimal("CODLSTPAI");
    }
 
    public void setCodLstPai(BigDecimal codLstPai) {
         markAsChanged("CODLSTPAI", codLstPai);
-        this.codLstPai = codLstPai;
    }
 
    public String getDescrLst() {
-        return descrLst;
+        return this.getVo().asString("DESCRLST");
    }
 
    public void setDescrLst(String descrLst) {
         markAsChanged("DESCRLST", descrLst);
-        this.descrLst = descrLst;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getInformaCodObra() {
-        return informaCodObra;
+        return this.getVo().asString("INFORMACODOBRA");
    }
 
    public void setInformaCodObra(String informaCodObra) {
         markAsChanged("INFORMACODOBRA", informaCodObra);
-        this.informaCodObra = informaCodObra;
    }
 
    public BigDecimal getTipoRepasse() {
-        return tipoRepasse;
+        return this.getVo().asBigDecimal("TIPOREPASSE");
    }
 
    public void setTipoRepasse(BigDecimal tipoRepasse) {
         markAsChanged("TIPOREPASSE", tipoRepasse);
-        this.tipoRepasse = tipoRepasse;
    }
 
    public String getGeraVlrTotRec() {
-        return geraVlrTotRec;
+        return this.getVo().asString("GERAVLRTOTREC");
    }
 
    public void setGeraVlrTotRec(String geraVlrTotRec) {
         markAsChanged("GERAVLRTOTREC", geraVlrTotRec);
-        this.geraVlrTotRec = geraVlrTotRec;
    }
 
    public String getDesdNac() {
-        return desdNac;
+        return this.getVo().asString("DESDNAC");
    }
 
    public void setDesdNac(String desdNac) {
         markAsChanged("DESDNAC", desdNac);
-        this.desdNac = desdNac;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class ListaServicoSintegra extends AbstractSankhyaEntity<ListaServicoSint
    @Override
    public ListaServicoSintegra fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.codLst = vo.asBigDecimal("CODLST");
-        this.codLstPai = vo.asBigDecimal("CODLSTPAI");
-        this.descrLst = vo.asString("DESCRLST");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.informaCodObra = vo.asString("INFORMACODOBRA");
-        this.tipoRepasse = vo.asBigDecimal("TIPOREPASSE");
-        this.geraVlrTotRec = vo.asString("GERAVLRTOTREC");
-        this.desdNac = vo.asString("DESDNAC");
         return this;
    }
 }

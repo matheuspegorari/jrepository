@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisicao> {
-   private String obsAvaliacao;
-   private BigDecimal codMotivo;
-   private BigDecimal codUsu;
-   private BigDecimal nuAvaliacao;
-   private BigDecimal nuRequisicao;
-   private Timestamp dhAvaliacao;
-   private String status;
-
    public String getObsAvaliacao() {
-        return obsAvaliacao;
+        return this.getVo().asString("OBSAVALIACAO");
    }
 
    public void setObsAvaliacao(String obsAvaliacao) {
         markAsChanged("OBSAVALIACAO", obsAvaliacao);
-        this.obsAvaliacao = obsAvaliacao;
    }
 
    public BigDecimal getCodMotivo() {
-        return codMotivo;
+        return this.getVo().asBigDecimal("CODMOTIVO");
    }
 
    public void setCodMotivo(BigDecimal codMotivo) {
         markAsChanged("CODMOTIVO", codMotivo);
-        this.codMotivo = codMotivo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuAvaliacao() {
-        return nuAvaliacao;
+        return this.getVo().asBigDecimal("NUAVALIACAO");
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
         markAsChanged("NUAVALIACAO", nuAvaliacao);
-        this.nuAvaliacao = nuAvaliacao;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public Timestamp getDhAvaliacao() {
-        return dhAvaliacao;
+        return this.getVo().asTimestamp("DHAVALIACAO");
    }
 
    public void setDhAvaliacao(Timestamp dhAvaliacao) {
         markAsChanged("DHAVALIACAO", dhAvaliacao);
-        this.dhAvaliacao = dhAvaliacao;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class AvaliacaoRequisicao extends AbstractSankhyaEntity<AvaliacaoRequisic
    @Override
    public AvaliacaoRequisicao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.obsAvaliacao = vo.asString("OBSAVALIACAO");
-        this.codMotivo = vo.asBigDecimal("CODMOTIVO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.dhAvaliacao = vo.asTimestamp("DHAVALIACAO");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

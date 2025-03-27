@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamicaImportada> {
-   private String tipoLanc;
-   private String descricao;
-   private String tabela;
-   private String codigo;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-
    public String getTipoLanc() {
-        return tipoLanc;
+        return this.getVo().asString("TIPOLANC");
    }
 
    public void setTipoLanc(String tipoLanc) {
         markAsChanged("TIPOLANC", tipoLanc);
-        this.tipoLanc = tipoLanc;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public String getCodigo() {
-        return codigo;
+        return this.getVo().asString("CODIGO");
    }
 
    public void setCodigo(String codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class TabelaDinamicaImportada extends AbstractSankhyaEntity<TabelaDinamic
    @Override
    public TabelaDinamicaImportada fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipoLanc = vo.asString("TIPOLANC");
-        this.descricao = vo.asString("DESCRICAO");
-        this.tabela = vo.asString("TABELA");
-        this.codigo = vo.asString("CODIGO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
         return this;
    }
 }

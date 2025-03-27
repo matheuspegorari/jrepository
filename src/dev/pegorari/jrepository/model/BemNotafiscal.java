@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
-   private String codBem;
-   private BigDecimal codProd;
-   private BigDecimal nuNota;
-   private BigDecimal ordem;
-   private BigDecimal sequencia;
-
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class BemNotafiscal extends AbstractSankhyaEntity<BemNotafiscal> {
    @Override
    public BemNotafiscal fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBem = vo.asString("CODBEM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoIdentOperacaoTransporte> {
-   private BigDecimal seqMdfe;
-   private String ciot;
-   private BigDecimal nuViag;
-   private BigDecimal codParCciot;
-
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public String getCiot() {
-        return ciot;
+        return this.getVo().asString("CIOT");
    }
 
    public void setCiot(String ciot) {
         markAsChanged("CIOT", ciot);
-        this.ciot = ciot;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getCodParCciot() {
-        return codParCciot;
+        return this.getVo().asBigDecimal("CODPARCCIOT");
    }
 
    public void setCodParCciot(BigDecimal codParCciot) {
         markAsChanged("CODPARCCIOT", codParCciot);
-        this.codParCciot = codParCciot;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class CodigoIdentOperacaoTransporte extends AbstractSankhyaEntity<CodigoI
    @Override
    public CodigoIdentOperacaoTransporte fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.ciot = vo.asString("CIOT");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.codParCciot = vo.asBigDecimal("CODPARCCIOT");
         return this;
    }
 }

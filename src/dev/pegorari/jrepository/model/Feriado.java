@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Feriado extends AbstractSankhyaEntity<Feriado> {
-   private BigDecimal codCid;
-   private BigDecimal codPais;
-   private BigDecimal codUf;
-   private String descFeriado;
-   private Timestamp dtFeriado;
-   private String nacional;
-   private String obrigatorio;
-   private String recorrente;
-   private String usaNoPonto;
-
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodPais() {
-        return codPais;
+        return this.getVo().asBigDecimal("CODPAIS");
    }
 
    public void setCodPais(BigDecimal codPais) {
         markAsChanged("CODPAIS", codPais);
-        this.codPais = codPais;
    }
 
    public BigDecimal getCodUf() {
-        return codUf;
+        return this.getVo().asBigDecimal("CODUF");
    }
 
    public void setCodUf(BigDecimal codUf) {
         markAsChanged("CODUF", codUf);
-        this.codUf = codUf;
    }
 
    public String getDescFeriado() {
-        return descFeriado;
+        return this.getVo().asString("DESCRFERIADO");
    }
 
    public void setDescFeriado(String descFeriado) {
         markAsChanged("DESCRFERIADO", descFeriado);
-        this.descFeriado = descFeriado;
    }
 
    public Timestamp getDtFeriado() {
-        return dtFeriado;
+        return this.getVo().asTimestamp("DTFERIADO");
    }
 
    public void setDtFeriado(Timestamp dtFeriado) {
         markAsChanged("DTFERIADO", dtFeriado);
-        this.dtFeriado = dtFeriado;
    }
 
    public String getNacional() {
-        return nacional;
+        return this.getVo().asString("NACIONAL");
    }
 
    public void setNacional(String nacional) {
         markAsChanged("NACIONAL", nacional);
-        this.nacional = nacional;
    }
 
    public String getObrigatorio() {
-        return obrigatorio;
+        return this.getVo().asString("OBRIGATORIO");
    }
 
    public void setObrigatorio(String obrigatorio) {
         markAsChanged("OBRIGATORIO", obrigatorio);
-        this.obrigatorio = obrigatorio;
    }
 
    public String getRecorrente() {
-        return recorrente;
+        return this.getVo().asString("RECORRENTE");
    }
 
    public void setRecorrente(String recorrente) {
         markAsChanged("RECORRENTE", recorrente);
-        this.recorrente = recorrente;
    }
 
    public String getUsaNoPonto() {
-        return usaNoPonto;
+        return this.getVo().asString("USANOPONTO");
    }
 
    public void setUsaNoPonto(String usaNoPonto) {
         markAsChanged("USANOPONTO", usaNoPonto);
-        this.usaNoPonto = usaNoPonto;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class Feriado extends AbstractSankhyaEntity<Feriado> {
    @Override
    public Feriado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codPais = vo.asBigDecimal("CODPAIS");
-        this.codUf = vo.asBigDecimal("CODUF");
-        this.descFeriado = vo.asString("DESCRFERIADO");
-        this.dtFeriado = vo.asTimestamp("DTFERIADO");
-        this.nacional = vo.asString("NACIONAL");
-        this.obrigatorio = vo.asString("OBRIGATORIO");
-        this.recorrente = vo.asString("RECORRENTE");
-        this.usaNoPonto = vo.asString("USANOPONTO");
         return this;
    }
 }

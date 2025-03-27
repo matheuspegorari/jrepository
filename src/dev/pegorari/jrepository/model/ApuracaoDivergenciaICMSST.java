@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDivergenciaICMSST> {
-   private BigDecimal baseSubstitCalc;
-   private BigDecimal baseSubstitNota;
-   private String digitado;
-   private Timestamp dtNeg;
-   private BigDecimal nuFin;
-   private BigDecimal numNota;
-   private BigDecimal nuNota;
-   private String status;
-   private BigDecimal vlrSubstCalc;
-   private BigDecimal vlrSubstNota;
-   private BigDecimal vlrTotDivSubst;
-
    public BigDecimal getBaseSubstitCalc() {
-        return baseSubstitCalc;
+        return this.getVo().asBigDecimal("BASESUBSTITCALC");
    }
 
    public void setBaseSubstitCalc(BigDecimal baseSubstitCalc) {
         markAsChanged("BASESUBSTITCALC", baseSubstitCalc);
-        this.baseSubstitCalc = baseSubstitCalc;
    }
 
    public BigDecimal getBaseSubstitNota() {
-        return baseSubstitNota;
+        return this.getVo().asBigDecimal("BASESUBSTITNOTA");
    }
 
    public void setBaseSubstitNota(BigDecimal baseSubstitNota) {
         markAsChanged("BASESUBSTITNOTA", baseSubstitNota);
-        this.baseSubstitNota = baseSubstitNota;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtNeg() {
-        return dtNeg;
+        return this.getVo().asTimestamp("DTNEG");
    }
 
    public void setDtNeg(Timestamp dtNeg) {
         markAsChanged("DTNEG", dtNeg);
-        this.dtNeg = dtNeg;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getVlrSubstCalc() {
-        return vlrSubstCalc;
+        return this.getVo().asBigDecimal("VLRSUBSTCALC");
    }
 
    public void setVlrSubstCalc(BigDecimal vlrSubstCalc) {
         markAsChanged("VLRSUBSTCALC", vlrSubstCalc);
-        this.vlrSubstCalc = vlrSubstCalc;
    }
 
    public BigDecimal getVlrSubstNota() {
-        return vlrSubstNota;
+        return this.getVo().asBigDecimal("VLRSUBSTNOTA");
    }
 
    public void setVlrSubstNota(BigDecimal vlrSubstNota) {
         markAsChanged("VLRSUBSTNOTA", vlrSubstNota);
-        this.vlrSubstNota = vlrSubstNota;
    }
 
    public BigDecimal getVlrTotDivSubst() {
-        return vlrTotDivSubst;
+        return this.getVo().asBigDecimal("VLRTOTDIVSUBST");
    }
 
    public void setVlrTotDivSubst(BigDecimal vlrTotDivSubst) {
         markAsChanged("VLRTOTDIVSUBST", vlrTotDivSubst);
-        this.vlrTotDivSubst = vlrTotDivSubst;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class ApuracaoDivergenciaICMSST extends AbstractSankhyaEntity<ApuracaoDiv
    @Override
    public ApuracaoDivergenciaICMSST fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.baseSubstitCalc = vo.asBigDecimal("BASESUBSTITCALC");
-        this.baseSubstitNota = vo.asBigDecimal("BASESUBSTITNOTA");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtNeg = vo.asTimestamp("DTNEG");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.status = vo.asString("STATUS");
-        this.vlrSubstCalc = vo.asBigDecimal("VLRSUBSTCALC");
-        this.vlrSubstNota = vo.asBigDecimal("VLRSUBSTNOTA");
-        this.vlrTotDivSubst = vo.asBigDecimal("VLRTOTDIVSUBST");
         return this;
    }
 }

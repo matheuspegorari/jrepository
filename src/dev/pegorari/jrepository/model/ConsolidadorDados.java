@@ -6,245 +6,196 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> {
-   private String ativo;
-   private BigDecimal codConsolidacao;
-   private BigDecimal codUsu;
-   private char[] consulta;
-   private Timestamp dataInicial;
-   private String descricao;
-   private Timestamp dhAlter;
-   private Timestamp dhProxExec;
-   private Timestamp dhUltExec;
-   private String expGatilho;
-   private String fonteDados;
-   private String invalido;
-   private String logErro;
-   private String observacao;
-   private BigDecimal qtdMesesConsolidar;
-   private BigDecimal qtdMesesRetroagir;
-   private String status;
-   private String tabela;
-   private BigDecimal tempoProcessamento;
-   private BigDecimal tipConsolidacao;
-   private String tipGatilho;
-   private String tipIntervalo;
-   private String tipProcessamento;
-   private BigDecimal vlrIntervalo;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodConsolidacao() {
-        return codConsolidacao;
+        return this.getVo().asBigDecimal("CODCONSOLIDACAO");
    }
 
    public void setCodConsolidacao(BigDecimal codConsolidacao) {
         markAsChanged("CODCONSOLIDACAO", codConsolidacao);
-        this.codConsolidacao = codConsolidacao;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public char[] getConsulta() {
-        return consulta;
+        return this.getVo().asClob("CONSULTA");
    }
 
    public void setConsulta(char[] consulta) {
         markAsChanged("CONSULTA", consulta);
-        this.consulta = consulta;
    }
 
    public Timestamp getDataInicial() {
-        return dataInicial;
+        return this.getVo().asTimestamp("DATAINICIAL");
    }
 
    public void setDataInicial(Timestamp dataInicial) {
         markAsChanged("DATAINICIAL", dataInicial);
-        this.dataInicial = dataInicial;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhProxExec() {
-        return dhProxExec;
+        return this.getVo().asTimestamp("DHPROXEXEC");
    }
 
    public void setDhProxExec(Timestamp dhProxExec) {
         markAsChanged("DHPROXEXEC", dhProxExec);
-        this.dhProxExec = dhProxExec;
    }
 
    public Timestamp getDhUltExec() {
-        return dhUltExec;
+        return this.getVo().asTimestamp("DHULTEXEC");
    }
 
    public void setDhUltExec(Timestamp dhUltExec) {
         markAsChanged("DHULTEXEC", dhUltExec);
-        this.dhUltExec = dhUltExec;
    }
 
    public String getExpGatilho() {
-        return expGatilho;
+        return this.getVo().asString("EXPGATILHO");
    }
 
    public void setExpGatilho(String expGatilho) {
         markAsChanged("EXPGATILHO", expGatilho);
-        this.expGatilho = expGatilho;
    }
 
    public String getFonteDados() {
-        return fonteDados;
+        return this.getVo().asString("FONTEDADOS");
    }
 
    public void setFonteDados(String fonteDados) {
         markAsChanged("FONTEDADOS", fonteDados);
-        this.fonteDados = fonteDados;
    }
 
    public String getInvalido() {
-        return invalido;
+        return this.getVo().asString("INVALIDO");
    }
 
    public void setInvalido(String invalido) {
         markAsChanged("INVALIDO", invalido);
-        this.invalido = invalido;
    }
 
    public String getLogErro() {
-        return logErro;
+        return this.getVo().asString("LOG_ERRO");
    }
 
    public void setLogErro(String logErro) {
         markAsChanged("LOG_ERRO", logErro);
-        this.logErro = logErro;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getQtdMesesConsolidar() {
-        return qtdMesesConsolidar;
+        return this.getVo().asBigDecimal("QTDMESESCONSOLIDAR");
    }
 
    public void setQtdMesesConsolidar(BigDecimal qtdMesesConsolidar) {
         markAsChanged("QTDMESESCONSOLIDAR", qtdMesesConsolidar);
-        this.qtdMesesConsolidar = qtdMesesConsolidar;
    }
 
    public BigDecimal getQtdMesesRetroagir() {
-        return qtdMesesRetroagir;
+        return this.getVo().asBigDecimal("QTDMESESRETROAGIR");
    }
 
    public void setQtdMesesRetroagir(BigDecimal qtdMesesRetroagir) {
         markAsChanged("QTDMESESRETROAGIR", qtdMesesRetroagir);
-        this.qtdMesesRetroagir = qtdMesesRetroagir;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public BigDecimal getTempoProcessamento() {
-        return tempoProcessamento;
+        return this.getVo().asBigDecimal("TEMPOPROCESSAMENTO");
    }
 
    public void setTempoProcessamento(BigDecimal tempoProcessamento) {
         markAsChanged("TEMPOPROCESSAMENTO", tempoProcessamento);
-        this.tempoProcessamento = tempoProcessamento;
    }
 
    public BigDecimal getTipConsolidacao() {
-        return tipConsolidacao;
+        return this.getVo().asBigDecimal("TIPCONSOLIDACAO");
    }
 
    public void setTipConsolidacao(BigDecimal tipConsolidacao) {
         markAsChanged("TIPCONSOLIDACAO", tipConsolidacao);
-        this.tipConsolidacao = tipConsolidacao;
    }
 
    public String getTipGatilho() {
-        return tipGatilho;
+        return this.getVo().asString("TIPGATILHO");
    }
 
    public void setTipGatilho(String tipGatilho) {
         markAsChanged("TIPGATILHO", tipGatilho);
-        this.tipGatilho = tipGatilho;
    }
 
    public String getTipIntervalo() {
-        return tipIntervalo;
+        return this.getVo().asString("TIPINTERVALO");
    }
 
    public void setTipIntervalo(String tipIntervalo) {
         markAsChanged("TIPINTERVALO", tipIntervalo);
-        this.tipIntervalo = tipIntervalo;
    }
 
    public String getTipProcessamento() {
-        return tipProcessamento;
+        return this.getVo().asString("TIPPROCESSAMENTO");
    }
 
    public void setTipProcessamento(String tipProcessamento) {
         markAsChanged("TIPPROCESSAMENTO", tipProcessamento);
-        this.tipProcessamento = tipProcessamento;
    }
 
    public BigDecimal getVlrIntervalo() {
-        return vlrIntervalo;
+        return this.getVo().asBigDecimal("VLRINTERVALO");
    }
 
    public void setVlrIntervalo(BigDecimal vlrIntervalo) {
         markAsChanged("VLRINTERVALO", vlrIntervalo);
-        this.vlrIntervalo = vlrIntervalo;
    }
 
    @Override
@@ -260,30 +211,6 @@ public class ConsolidadorDados extends AbstractSankhyaEntity<ConsolidadorDados> 
    @Override
    public ConsolidadorDados fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codConsolidacao = vo.asBigDecimal("CODCONSOLIDACAO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.consulta = vo.asClob("CONSULTA");
-        this.dataInicial = vo.asTimestamp("DATAINICIAL");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhProxExec = vo.asTimestamp("DHPROXEXEC");
-        this.dhUltExec = vo.asTimestamp("DHULTEXEC");
-        this.expGatilho = vo.asString("EXPGATILHO");
-        this.fonteDados = vo.asString("FONTEDADOS");
-        this.invalido = vo.asString("INVALIDO");
-        this.logErro = vo.asString("LOG_ERRO");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.qtdMesesConsolidar = vo.asBigDecimal("QTDMESESCONSOLIDAR");
-        this.qtdMesesRetroagir = vo.asBigDecimal("QTDMESESRETROAGIR");
-        this.status = vo.asString("STATUS");
-        this.tabela = vo.asString("TABELA");
-        this.tempoProcessamento = vo.asBigDecimal("TEMPOPROCESSAMENTO");
-        this.tipConsolidacao = vo.asBigDecimal("TIPCONSOLIDACAO");
-        this.tipGatilho = vo.asString("TIPGATILHO");
-        this.tipIntervalo = vo.asString("TIPINTERVALO");
-        this.tipProcessamento = vo.asString("TIPPROCESSAMENTO");
-        this.vlrIntervalo = vo.asBigDecimal("VLRINTERVALO");
         return this;
    }
 }

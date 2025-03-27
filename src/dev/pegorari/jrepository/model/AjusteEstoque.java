@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuAjuste;
-   private BigDecimal nuIvt;
-   private String observacao;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuAjuste() {
-        return nuAjuste;
+        return this.getVo().asBigDecimal("NUAJUSTE");
    }
 
    public void setNuAjuste(BigDecimal nuAjuste) {
         markAsChanged("NUAJUSTE", nuAjuste);
-        this.nuAjuste = nuAjuste;
    }
 
    public BigDecimal getNuIvt() {
-        return nuIvt;
+        return this.getVo().asBigDecimal("NUIVT");
    }
 
    public void setNuIvt(BigDecimal nuIvt) {
         markAsChanged("NUIVT", nuIvt);
-        this.nuIvt = nuIvt;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class AjusteEstoque extends AbstractSankhyaEntity<AjusteEstoque> {
    @Override
    public AjusteEstoque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuAjuste = vo.asBigDecimal("NUAJUSTE");
-        this.nuIvt = vo.asBigDecimal("NUIVT");
-        this.observacao = vo.asString("OBSERVACAO");
         return this;
    }
 }

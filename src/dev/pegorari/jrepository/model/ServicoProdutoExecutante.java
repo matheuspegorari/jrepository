@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdutoExecutante> {
-   private BigDecimal codProd;
-   private BigDecimal codServ;
-   private BigDecimal codUsu;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodServ() {
-        return codServ;
+        return this.getVo().asBigDecimal("CODSERV");
    }
 
    public void setCodServ(BigDecimal codServ) {
         markAsChanged("CODSERV", codServ);
-        this.codServ = codServ;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ServicoProdutoExecutante extends AbstractSankhyaEntity<ServicoProdu
    @Override
    public ServicoProdutoExecutante fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codServ = vo.asBigDecimal("CODSERV");
-        this.codUsu = vo.asBigDecimal("CODUSU");
         return this;
    }
 }

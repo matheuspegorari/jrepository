@@ -5,125 +5,100 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApuracaoSimplesNacional extends AbstractSankhyaEntity<ApuracaoSimplesNacional> {
-   private BigDecimal aliqEfetivaMercExt;
-   private BigDecimal aliqEfetivaMercInt;
-   private BigDecimal faixaMercExt;
-   private BigDecimal faixaMercInt;
-   private BigDecimal nuApuracao;
-   private BigDecimal tipoAnexo;
-   private BigDecimal vlrTotRecMen;
-   private BigDecimal vlrTotRecMenExt;
-   private BigDecimal vlrTotRecMenInt;
-   private BigDecimal vlrTotRecProj;
-   private BigDecimal vlrTotRecProjExt;
-   private BigDecimal vlrTotRecProjInt;
-
    public BigDecimal getAliqEfetivaMercExt() {
-        return aliqEfetivaMercExt;
+        return this.getVo().asBigDecimal("ALIQEFETIVAMERCEXT");
    }
 
    public void setAliqEfetivaMercExt(BigDecimal aliqEfetivaMercExt) {
         markAsChanged("ALIQEFETIVAMERCEXT", aliqEfetivaMercExt);
-        this.aliqEfetivaMercExt = aliqEfetivaMercExt;
    }
 
    public BigDecimal getAliqEfetivaMercInt() {
-        return aliqEfetivaMercInt;
+        return this.getVo().asBigDecimal("ALIQEFETIVAMERCINT");
    }
 
    public void setAliqEfetivaMercInt(BigDecimal aliqEfetivaMercInt) {
         markAsChanged("ALIQEFETIVAMERCINT", aliqEfetivaMercInt);
-        this.aliqEfetivaMercInt = aliqEfetivaMercInt;
    }
 
    public BigDecimal getFaixaMercExt() {
-        return faixaMercExt;
+        return this.getVo().asBigDecimal("FAIXAMERCEXT");
    }
 
    public void setFaixaMercExt(BigDecimal faixaMercExt) {
         markAsChanged("FAIXAMERCEXT", faixaMercExt);
-        this.faixaMercExt = faixaMercExt;
    }
 
    public BigDecimal getFaixaMercInt() {
-        return faixaMercInt;
+        return this.getVo().asBigDecimal("FAIXAMERCINT");
    }
 
    public void setFaixaMercInt(BigDecimal faixaMercInt) {
         markAsChanged("FAIXAMERCINT", faixaMercInt);
-        this.faixaMercInt = faixaMercInt;
    }
 
    public BigDecimal getNuApuracao() {
-        return nuApuracao;
+        return this.getVo().asBigDecimal("NUAPURACAO");
    }
 
    public void setNuApuracao(BigDecimal nuApuracao) {
         markAsChanged("NUAPURACAO", nuApuracao);
-        this.nuApuracao = nuApuracao;
    }
 
    public BigDecimal getTipoAnexo() {
-        return tipoAnexo;
+        return this.getVo().asBigDecimal("TIPOANEXO");
    }
 
    public void setTipoAnexo(BigDecimal tipoAnexo) {
         markAsChanged("TIPOANEXO", tipoAnexo);
-        this.tipoAnexo = tipoAnexo;
    }
 
    public BigDecimal getVlrTotRecMen() {
-        return vlrTotRecMen;
+        return this.getVo().asBigDecimal("VLRTOTRECMEN");
    }
 
    public void setVlrTotRecMen(BigDecimal vlrTotRecMen) {
         markAsChanged("VLRTOTRECMEN", vlrTotRecMen);
-        this.vlrTotRecMen = vlrTotRecMen;
    }
 
    public BigDecimal getVlrTotRecMenExt() {
-        return vlrTotRecMenExt;
+        return this.getVo().asBigDecimal("VLRTOTRECMENEXT");
    }
 
    public void setVlrTotRecMenExt(BigDecimal vlrTotRecMenExt) {
         markAsChanged("VLRTOTRECMENEXT", vlrTotRecMenExt);
-        this.vlrTotRecMenExt = vlrTotRecMenExt;
    }
 
    public BigDecimal getVlrTotRecMenInt() {
-        return vlrTotRecMenInt;
+        return this.getVo().asBigDecimal("VLRTOTRECMENINT");
    }
 
    public void setVlrTotRecMenInt(BigDecimal vlrTotRecMenInt) {
         markAsChanged("VLRTOTRECMENINT", vlrTotRecMenInt);
-        this.vlrTotRecMenInt = vlrTotRecMenInt;
    }
 
    public BigDecimal getVlrTotRecProj() {
-        return vlrTotRecProj;
+        return this.getVo().asBigDecimal("VLRTOTRECPROJ");
    }
 
    public void setVlrTotRecProj(BigDecimal vlrTotRecProj) {
         markAsChanged("VLRTOTRECPROJ", vlrTotRecProj);
-        this.vlrTotRecProj = vlrTotRecProj;
    }
 
    public BigDecimal getVlrTotRecProjExt() {
-        return vlrTotRecProjExt;
+        return this.getVo().asBigDecimal("VLRTOTRECPROJEXT");
    }
 
    public void setVlrTotRecProjExt(BigDecimal vlrTotRecProjExt) {
         markAsChanged("VLRTOTRECPROJEXT", vlrTotRecProjExt);
-        this.vlrTotRecProjExt = vlrTotRecProjExt;
    }
 
    public BigDecimal getVlrTotRecProjInt() {
-        return vlrTotRecProjInt;
+        return this.getVo().asBigDecimal("VLRTOTRECPROJINT");
    }
 
    public void setVlrTotRecProjInt(BigDecimal vlrTotRecProjInt) {
         markAsChanged("VLRTOTRECPROJINT", vlrTotRecProjInt);
-        this.vlrTotRecProjInt = vlrTotRecProjInt;
    }
 
    @Override
@@ -139,18 +114,6 @@ public class ApuracaoSimplesNacional extends AbstractSankhyaEntity<ApuracaoSimpl
    @Override
    public ApuracaoSimplesNacional fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aliqEfetivaMercExt = vo.asBigDecimal("ALIQEFETIVAMERCEXT");
-        this.aliqEfetivaMercInt = vo.asBigDecimal("ALIQEFETIVAMERCINT");
-        this.faixaMercExt = vo.asBigDecimal("FAIXAMERCEXT");
-        this.faixaMercInt = vo.asBigDecimal("FAIXAMERCINT");
-        this.nuApuracao = vo.asBigDecimal("NUAPURACAO");
-        this.tipoAnexo = vo.asBigDecimal("TIPOANEXO");
-        this.vlrTotRecMen = vo.asBigDecimal("VLRTOTRECMEN");
-        this.vlrTotRecMenExt = vo.asBigDecimal("VLRTOTRECMENEXT");
-        this.vlrTotRecMenInt = vo.asBigDecimal("VLRTOTRECMENINT");
-        this.vlrTotRecProj = vo.asBigDecimal("VLRTOTRECPROJ");
-        this.vlrTotRecProjExt = vo.asBigDecimal("VLRTOTRECPROJEXT");
-        this.vlrTotRecProjInt = vo.asBigDecimal("VLRTOTRECPROJINT");
         return this;
    }
 }

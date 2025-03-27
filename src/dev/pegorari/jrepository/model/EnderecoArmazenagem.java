@@ -5,465 +5,372 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenagem> {
-   private BigDecimal altura;
-   private String analitico;
-   private String apenasContPorProd;
-   private String ativo;
-   private String bloqueado;
-   private BigDecimal codEmp;
-   private BigDecimal codEnd;
-   private BigDecimal codEndPai;
-   private BigDecimal codEndPref;
-   private BigDecimal codEndSec;
-   private BigDecimal codLocal;
-   private BigDecimal codUsuTarContagem;
-   private String conexaoEntrada;
-   private String conexaoSaida;
-   private String descrEnd;
-   private String endereco;
-   private String endMovVertical;
-   private String exclConf;
-   private String expedicao;
-   private String flowRack;
-   private String fragmentaEst;
-   private BigDecimal grau;
-   private BigDecimal largura;
-   private BigDecimal m3Max;
-   private String multiProd;
-   private BigDecimal nivel;
-   private BigDecimal ordem;
-   private String par;
-   private BigDecimal pesoMax;
-   private String picking;
-   private String pickingIntermediario;
-   private String possuiContPend;
-   private String possuiEstoque;
-   private BigDecimal profundidade;
-   private String proibirControle;
-   private String proibirGrupo;
-   private String proibirLocal;
-   private String proibirProduto;
-   private String tipo;
-   private String usaPickingIntermediario;
-   private String crossDock;
-   private String reabPick;
-   private BigDecimal nroMaxProd;
-   private String loteUnico;
-   private BigDecimal qtdMaxUma;
-   private String utilizaUma;
-
    public BigDecimal getAltura() {
-        return altura;
+        return this.getVo().asBigDecimal("ALTURA");
    }
 
    public void setAltura(BigDecimal altura) {
         markAsChanged("ALTURA", altura);
-        this.altura = altura;
    }
 
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getApenasContPorProd() {
-        return apenasContPorProd;
+        return this.getVo().asString("APENASCONTPORPROD");
    }
 
    public void setApenasContPorProd(String apenasContPorProd) {
         markAsChanged("APENASCONTPORPROD", apenasContPorProd);
-        this.apenasContPorProd = apenasContPorProd;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getBloqueado() {
-        return bloqueado;
+        return this.getVo().asString("BLOQUEADO");
    }
 
    public void setBloqueado(String bloqueado) {
         markAsChanged("BLOQUEADO", bloqueado);
-        this.bloqueado = bloqueado;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getCodEndPai() {
-        return codEndPai;
+        return this.getVo().asBigDecimal("CODENDPAI");
    }
 
    public void setCodEndPai(BigDecimal codEndPai) {
         markAsChanged("CODENDPAI", codEndPai);
-        this.codEndPai = codEndPai;
    }
 
    public BigDecimal getCodEndPref() {
-        return codEndPref;
+        return this.getVo().asBigDecimal("CODENDPREF");
    }
 
    public void setCodEndPref(BigDecimal codEndPref) {
         markAsChanged("CODENDPREF", codEndPref);
-        this.codEndPref = codEndPref;
    }
 
    public BigDecimal getCodEndSec() {
-        return codEndSec;
+        return this.getVo().asBigDecimal("CODENDSEC");
    }
 
    public void setCodEndSec(BigDecimal codEndSec) {
         markAsChanged("CODENDSEC", codEndSec);
-        this.codEndSec = codEndSec;
    }
 
    public BigDecimal getCodLocal() {
-        return codLocal;
+        return this.getVo().asBigDecimal("CODLOCAL");
    }
 
    public void setCodLocal(BigDecimal codLocal) {
         markAsChanged("CODLOCAL", codLocal);
-        this.codLocal = codLocal;
    }
 
    public BigDecimal getCodUsuTarContagem() {
-        return codUsuTarContagem;
+        return this.getVo().asBigDecimal("CODUSUTARCONTAGEM");
    }
 
    public void setCodUsuTarContagem(BigDecimal codUsuTarContagem) {
         markAsChanged("CODUSUTARCONTAGEM", codUsuTarContagem);
-        this.codUsuTarContagem = codUsuTarContagem;
    }
 
    public String getConexaoEntrada() {
-        return conexaoEntrada;
+        return this.getVo().asString("CONEXAOENTRADA");
    }
 
    public void setConexaoEntrada(String conexaoEntrada) {
         markAsChanged("CONEXAOENTRADA", conexaoEntrada);
-        this.conexaoEntrada = conexaoEntrada;
    }
 
    public String getConexaoSaida() {
-        return conexaoSaida;
+        return this.getVo().asString("CONEXAOSAIDA");
    }
 
    public void setConexaoSaida(String conexaoSaida) {
         markAsChanged("CONEXAOSAIDA", conexaoSaida);
-        this.conexaoSaida = conexaoSaida;
    }
 
    public String getDescrEnd() {
-        return descrEnd;
+        return this.getVo().asString("DESCREND");
    }
 
    public void setDescrEnd(String descrEnd) {
         markAsChanged("DESCREND", descrEnd);
-        this.descrEnd = descrEnd;
    }
 
    public String getEndereco() {
-        return endereco;
+        return this.getVo().asString("ENDERECO");
    }
 
    public void setEndereco(String endereco) {
         markAsChanged("ENDERECO", endereco);
-        this.endereco = endereco;
    }
 
    public String getEndMovVertical() {
-        return endMovVertical;
+        return this.getVo().asString("ENDMOVVERTICAL");
    }
 
    public void setEndMovVertical(String endMovVertical) {
         markAsChanged("ENDMOVVERTICAL", endMovVertical);
-        this.endMovVertical = endMovVertical;
    }
 
    public String getExclConf() {
-        return exclConf;
+        return this.getVo().asString("EXCLCONF");
    }
 
    public void setExclConf(String exclConf) {
         markAsChanged("EXCLCONF", exclConf);
-        this.exclConf = exclConf;
    }
 
    public String getExpedicao() {
-        return expedicao;
+        return this.getVo().asString("EXPEDICAO");
    }
 
    public void setExpedicao(String expedicao) {
         markAsChanged("EXPEDICAO", expedicao);
-        this.expedicao = expedicao;
    }
 
    public String getFlowRack() {
-        return flowRack;
+        return this.getVo().asString("FLOWRACK");
    }
 
    public void setFlowRack(String flowRack) {
         markAsChanged("FLOWRACK", flowRack);
-        this.flowRack = flowRack;
    }
 
    public String getFragmentaEst() {
-        return fragmentaEst;
+        return this.getVo().asString("FRAGMENTAEST");
    }
 
    public void setFragmentaEst(String fragmentaEst) {
         markAsChanged("FRAGMENTAEST", fragmentaEst);
-        this.fragmentaEst = fragmentaEst;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public BigDecimal getLargura() {
-        return largura;
+        return this.getVo().asBigDecimal("LARGURA");
    }
 
    public void setLargura(BigDecimal largura) {
         markAsChanged("LARGURA", largura);
-        this.largura = largura;
    }
 
    public BigDecimal getM3Max() {
-        return m3Max;
+        return this.getVo().asBigDecimal("M3MAX");
    }
 
    public void setM3Max(BigDecimal m3Max) {
         markAsChanged("M3MAX", m3Max);
-        this.m3Max = m3Max;
    }
 
    public String getMultiProd() {
-        return multiProd;
+        return this.getVo().asString("MULTIPROD");
    }
 
    public void setMultiProd(String multiProd) {
         markAsChanged("MULTIPROD", multiProd);
-        this.multiProd = multiProd;
    }
 
    public BigDecimal getNivel() {
-        return nivel;
+        return this.getVo().asBigDecimal("NIVEL");
    }
 
    public void setNivel(BigDecimal nivel) {
         markAsChanged("NIVEL", nivel);
-        this.nivel = nivel;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getPar() {
-        return par;
+        return this.getVo().asString("PAR");
    }
 
    public void setPar(String par) {
         markAsChanged("PAR", par);
-        this.par = par;
    }
 
    public BigDecimal getPesoMax() {
-        return pesoMax;
+        return this.getVo().asBigDecimal("PESOMAX");
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
         markAsChanged("PESOMAX", pesoMax);
-        this.pesoMax = pesoMax;
    }
 
    public String getPicking() {
-        return picking;
+        return this.getVo().asString("PICKING");
    }
 
    public void setPicking(String picking) {
         markAsChanged("PICKING", picking);
-        this.picking = picking;
    }
 
    public String getPickingIntermediario() {
-        return pickingIntermediario;
+        return this.getVo().asString("PICKINGINTERMEDIARIO");
    }
 
    public void setPickingIntermediario(String pickingIntermediario) {
         markAsChanged("PICKINGINTERMEDIARIO", pickingIntermediario);
-        this.pickingIntermediario = pickingIntermediario;
    }
 
    public String getPossuiContPend() {
-        return possuiContPend;
+        return this.getVo().asString("POSSUICONTPEND");
    }
 
    public void setPossuiContPend(String possuiContPend) {
         markAsChanged("POSSUICONTPEND", possuiContPend);
-        this.possuiContPend = possuiContPend;
    }
 
    public String getPossuiEstoque() {
-        return possuiEstoque;
+        return this.getVo().asString("POSSUIESTOQUE");
    }
 
    public void setPossuiEstoque(String possuiEstoque) {
         markAsChanged("POSSUIESTOQUE", possuiEstoque);
-        this.possuiEstoque = possuiEstoque;
    }
 
    public BigDecimal getProfundidade() {
-        return profundidade;
+        return this.getVo().asBigDecimal("PROFUNDIDADE");
    }
 
    public void setProfundidade(BigDecimal profundidade) {
         markAsChanged("PROFUNDIDADE", profundidade);
-        this.profundidade = profundidade;
    }
 
    public String getProibirControle() {
-        return proibirControle;
+        return this.getVo().asString("PROIBIRCONTROLE");
    }
 
    public void setProibirControle(String proibirControle) {
         markAsChanged("PROIBIRCONTROLE", proibirControle);
-        this.proibirControle = proibirControle;
    }
 
    public String getProibirGrupo() {
-        return proibirGrupo;
+        return this.getVo().asString("PROIBIRGRUPO");
    }
 
    public void setProibirGrupo(String proibirGrupo) {
         markAsChanged("PROIBIRGRUPO", proibirGrupo);
-        this.proibirGrupo = proibirGrupo;
    }
 
    public String getProibirLocal() {
-        return proibirLocal;
+        return this.getVo().asString("PROIBIRLOCAL");
    }
 
    public void setProibirLocal(String proibirLocal) {
         markAsChanged("PROIBIRLOCAL", proibirLocal);
-        this.proibirLocal = proibirLocal;
    }
 
    public String getProibirProduto() {
-        return proibirProduto;
+        return this.getVo().asString("PROIBIRPRODUTO");
    }
 
    public void setProibirProduto(String proibirProduto) {
         markAsChanged("PROIBIRPRODUTO", proibirProduto);
-        this.proibirProduto = proibirProduto;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getUsaPickingIntermediario() {
-        return usaPickingIntermediario;
+        return this.getVo().asString("USAPICKINGINTERMEDIARIO");
    }
 
    public void setUsaPickingIntermediario(String usaPickingIntermediario) {
         markAsChanged("USAPICKINGINTERMEDIARIO", usaPickingIntermediario);
-        this.usaPickingIntermediario = usaPickingIntermediario;
    }
 
    public String getCrossDock() {
-        return crossDock;
+        return this.getVo().asString("CROSSDOCK");
    }
 
    public void setCrossDock(String crossDock) {
         markAsChanged("CROSSDOCK", crossDock);
-        this.crossDock = crossDock;
    }
 
    public String getReabPick() {
-        return reabPick;
+        return this.getVo().asString("REABPICK");
    }
 
    public void setReabPick(String reabPick) {
         markAsChanged("REABPICK", reabPick);
-        this.reabPick = reabPick;
    }
 
    public BigDecimal getNroMaxProd() {
-        return nroMaxProd;
+        return this.getVo().asBigDecimal("NROMAXPROD");
    }
 
    public void setNroMaxProd(BigDecimal nroMaxProd) {
         markAsChanged("NROMAXPROD", nroMaxProd);
-        this.nroMaxProd = nroMaxProd;
    }
 
    public String getLoteUnico() {
-        return loteUnico;
+        return this.getVo().asString("LOTEUNICO");
    }
 
    public void setLoteUnico(String loteUnico) {
         markAsChanged("LOTEUNICO", loteUnico);
-        this.loteUnico = loteUnico;
    }
 
    public BigDecimal getQtdMaxUma() {
-        return qtdMaxUma;
+        return this.getVo().asBigDecimal("QTDMAXUMA");
    }
 
    public void setQtdMaxUma(BigDecimal qtdMaxUma) {
         markAsChanged("QTDMAXUMA", qtdMaxUma);
-        this.qtdMaxUma = qtdMaxUma;
    }
 
    public String getUtilizaUma() {
-        return utilizaUma;
+        return this.getVo().asString("UTILIZAUMA");
    }
 
    public void setUtilizaUma(String utilizaUma) {
         markAsChanged("UTILIZAUMA", utilizaUma);
-        this.utilizaUma = utilizaUma;
    }
 
    @Override
@@ -479,52 +386,6 @@ public class EnderecoArmazenagem extends AbstractSankhyaEntity<EnderecoArmazenag
    @Override
    public EnderecoArmazenagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.altura = vo.asBigDecimal("ALTURA");
-        this.analitico = vo.asString("ANALITICO");
-        this.apenasContPorProd = vo.asString("APENASCONTPORPROD");
-        this.ativo = vo.asString("ATIVO");
-        this.bloqueado = vo.asString("BLOQUEADO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codEndPai = vo.asBigDecimal("CODENDPAI");
-        this.codEndPref = vo.asBigDecimal("CODENDPREF");
-        this.codEndSec = vo.asBigDecimal("CODENDSEC");
-        this.codLocal = vo.asBigDecimal("CODLOCAL");
-        this.codUsuTarContagem = vo.asBigDecimal("CODUSUTARCONTAGEM");
-        this.conexaoEntrada = vo.asString("CONEXAOENTRADA");
-        this.conexaoSaida = vo.asString("CONEXAOSAIDA");
-        this.descrEnd = vo.asString("DESCREND");
-        this.endereco = vo.asString("ENDERECO");
-        this.endMovVertical = vo.asString("ENDMOVVERTICAL");
-        this.exclConf = vo.asString("EXCLCONF");
-        this.expedicao = vo.asString("EXPEDICAO");
-        this.flowRack = vo.asString("FLOWRACK");
-        this.fragmentaEst = vo.asString("FRAGMENTAEST");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.largura = vo.asBigDecimal("LARGURA");
-        this.m3Max = vo.asBigDecimal("M3MAX");
-        this.multiProd = vo.asString("MULTIPROD");
-        this.nivel = vo.asBigDecimal("NIVEL");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.par = vo.asString("PAR");
-        this.pesoMax = vo.asBigDecimal("PESOMAX");
-        this.picking = vo.asString("PICKING");
-        this.pickingIntermediario = vo.asString("PICKINGINTERMEDIARIO");
-        this.possuiContPend = vo.asString("POSSUICONTPEND");
-        this.possuiEstoque = vo.asString("POSSUIESTOQUE");
-        this.profundidade = vo.asBigDecimal("PROFUNDIDADE");
-        this.proibirControle = vo.asString("PROIBIRCONTROLE");
-        this.proibirGrupo = vo.asString("PROIBIRGRUPO");
-        this.proibirLocal = vo.asString("PROIBIRLOCAL");
-        this.proibirProduto = vo.asString("PROIBIRPRODUTO");
-        this.tipo = vo.asString("TIPO");
-        this.usaPickingIntermediario = vo.asString("USAPICKINGINTERMEDIARIO");
-        this.crossDock = vo.asString("CROSSDOCK");
-        this.reabPick = vo.asString("REABPICK");
-        this.nroMaxProd = vo.asBigDecimal("NROMAXPROD");
-        this.loteUnico = vo.asString("LOTEUNICO");
-        this.qtdMaxUma = vo.asBigDecimal("QTDMAXUMA");
-        this.utilizaUma = vo.asString("UTILIZAUMA");
         return this;
    }
 }

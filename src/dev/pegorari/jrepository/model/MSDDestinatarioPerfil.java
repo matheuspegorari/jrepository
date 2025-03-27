@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatarioPerfil> {
-   private BigDecimal codCon;
-   private BigDecimal codPer;
-
    public BigDecimal getCodCon() {
-        return codCon;
+        return this.getVo().asBigDecimal("CODCON");
    }
 
    public void setCodCon(BigDecimal codCon) {
         markAsChanged("CODCON", codCon);
-        this.codCon = codCon;
    }
 
    public BigDecimal getCodPer() {
-        return codPer;
+        return this.getVo().asBigDecimal("CODPER");
    }
 
    public void setCodPer(BigDecimal codPer) {
         markAsChanged("CODPER", codPer);
-        this.codPer = codPer;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class MSDDestinatarioPerfil extends AbstractSankhyaEntity<MSDDestinatario
    @Override
    public MSDDestinatarioPerfil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCon = vo.asBigDecimal("CODCON");
-        this.codPer = vo.asBigDecimal("CODPER");
         return this;
    }
 }

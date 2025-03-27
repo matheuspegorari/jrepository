@@ -6,355 +6,284 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
-   private BigDecimal vlrRedBaseIss;
-   private BigDecimal vlrSub;
-   private BigDecimal sequencia;
-   private String serieNota;
-   private BigDecimal aliqIss;
-   private BigDecimal baseIss;
-   private BigDecimal codCfps;
-   private BigDecimal codCidDestino;
-   private BigDecimal codCidExecServ;
-   private BigDecimal codCidOrigem;
-   private BigDecimal codEmp;
-   private BigDecimal codEmpOrig;
-   private String codModDocIss;
-   private BigDecimal codParc;
-   private BigDecimal codTribIss;
-   private String digitado;
-   private Timestamp dtDoc;
-   private Timestamp dtFilt;
-   private Timestamp dtMov;
-   private String entSai;
-   private BigDecimal isentasIss;
-   private BigDecimal naoTribIss;
-   private BigDecimal numNota;
-   private BigDecimal numNota2;
-   private BigDecimal nuNota;
-   private BigDecimal vlrIss;
-   private BigDecimal vlrMat;
-   private BigDecimal vlrMatTerc;
-   private String observacao;
-   private String origem;
-   private String retido;
-   private String ufDestino;
-   private String ufOrigem;
-   private BigDecimal vlrCtb;
-   private BigDecimal codLst;
-
    public BigDecimal getVlrRedBaseIss() {
-        return vlrRedBaseIss;
+        return this.getVo().asBigDecimal("VLRREDBASEISS");
    }
 
    public void setVlrRedBaseIss(BigDecimal vlrRedBaseIss) {
         markAsChanged("VLRREDBASEISS", vlrRedBaseIss);
-        this.vlrRedBaseIss = vlrRedBaseIss;
    }
 
    public BigDecimal getVlrSub() {
-        return vlrSub;
+        return this.getVo().asBigDecimal("VLRSUB");
    }
 
    public void setVlrSub(BigDecimal vlrSub) {
         markAsChanged("VLRSUB", vlrSub);
-        this.vlrSub = vlrSub;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSerieNota() {
-        return serieNota;
+        return this.getVo().asString("SERIENOTA");
    }
 
    public void setSerieNota(String serieNota) {
         markAsChanged("SERIENOTA", serieNota);
-        this.serieNota = serieNota;
    }
 
    public BigDecimal getAliqIss() {
-        return aliqIss;
+        return this.getVo().asBigDecimal("ALIQISS");
    }
 
    public void setAliqIss(BigDecimal aliqIss) {
         markAsChanged("ALIQISS", aliqIss);
-        this.aliqIss = aliqIss;
    }
 
    public BigDecimal getBaseIss() {
-        return baseIss;
+        return this.getVo().asBigDecimal("BASEISS");
    }
 
    public void setBaseIss(BigDecimal baseIss) {
         markAsChanged("BASEISS", baseIss);
-        this.baseIss = baseIss;
    }
 
    public BigDecimal getCodCfps() {
-        return codCfps;
+        return this.getVo().asBigDecimal("CODCFPS");
    }
 
    public void setCodCfps(BigDecimal codCfps) {
         markAsChanged("CODCFPS", codCfps);
-        this.codCfps = codCfps;
    }
 
    public BigDecimal getCodCidDestino() {
-        return codCidDestino;
+        return this.getVo().asBigDecimal("CODCIDDESTINO");
    }
 
    public void setCodCidDestino(BigDecimal codCidDestino) {
         markAsChanged("CODCIDDESTINO", codCidDestino);
-        this.codCidDestino = codCidDestino;
    }
 
    public BigDecimal getCodCidExecServ() {
-        return codCidExecServ;
+        return this.getVo().asBigDecimal("CODCIDEXECSERV");
    }
 
    public void setCodCidExecServ(BigDecimal codCidExecServ) {
         markAsChanged("CODCIDEXECSERV", codCidExecServ);
-        this.codCidExecServ = codCidExecServ;
    }
 
    public BigDecimal getCodCidOrigem() {
-        return codCidOrigem;
+        return this.getVo().asBigDecimal("CODCIDORIGEM");
    }
 
    public void setCodCidOrigem(BigDecimal codCidOrigem) {
         markAsChanged("CODCIDORIGEM", codCidOrigem);
-        this.codCidOrigem = codCidOrigem;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodEmpOrig() {
-        return codEmpOrig;
+        return this.getVo().asBigDecimal("CODEMPORIG");
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
         markAsChanged("CODEMPORIG", codEmpOrig);
-        this.codEmpOrig = codEmpOrig;
    }
 
    public String getCodModDocIss() {
-        return codModDocIss;
+        return this.getVo().asString("CODMODDOCISS");
    }
 
    public void setCodModDocIss(String codModDocIss) {
         markAsChanged("CODMODDOCISS", codModDocIss);
-        this.codModDocIss = codModDocIss;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTribIss() {
-        return codTribIss;
+        return this.getVo().asBigDecimal("CODTRIBISS");
    }
 
    public void setCodTribIss(BigDecimal codTribIss) {
         markAsChanged("CODTRIBISS", codTribIss);
-        this.codTribIss = codTribIss;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtDoc() {
-        return dtDoc;
+        return this.getVo().asTimestamp("DTDOC");
    }
 
    public void setDtDoc(Timestamp dtDoc) {
         markAsChanged("DTDOC", dtDoc);
-        this.dtDoc = dtDoc;
    }
 
    public Timestamp getDtFilt() {
-        return dtFilt;
+        return this.getVo().asTimestamp("DTFILT");
    }
 
    public void setDtFilt(Timestamp dtFilt) {
         markAsChanged("DTFILT", dtFilt);
-        this.dtFilt = dtFilt;
    }
 
    public Timestamp getDtMov() {
-        return dtMov;
+        return this.getVo().asTimestamp("DTMOV");
    }
 
    public void setDtMov(Timestamp dtMov) {
         markAsChanged("DTMOV", dtMov);
-        this.dtMov = dtMov;
    }
 
    public String getEntSai() {
-        return entSai;
+        return this.getVo().asString("ENTSAI");
    }
 
    public void setEntSai(String entSai) {
         markAsChanged("ENTSAI", entSai);
-        this.entSai = entSai;
    }
 
    public BigDecimal getIsentasIss() {
-        return isentasIss;
+        return this.getVo().asBigDecimal("ISENTASISS");
    }
 
    public void setIsentasIss(BigDecimal isentasIss) {
         markAsChanged("ISENTASISS", isentasIss);
-        this.isentasIss = isentasIss;
    }
 
    public BigDecimal getNaoTribIss() {
-        return naoTribIss;
+        return this.getVo().asBigDecimal("NAOTRIBISS");
    }
 
    public void setNaoTribIss(BigDecimal naoTribIss) {
         markAsChanged("NAOTRIBISS", naoTribIss);
-        this.naoTribIss = naoTribIss;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public BigDecimal getNumNota2() {
-        return numNota2;
+        return this.getVo().asBigDecimal("NUMNOTA2");
    }
 
    public void setNumNota2(BigDecimal numNota2) {
         markAsChanged("NUMNOTA2", numNota2);
-        this.numNota2 = numNota2;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getVlrIss() {
-        return vlrIss;
+        return this.getVo().asBigDecimal("VLRISS");
    }
 
    public void setVlrIss(BigDecimal vlrIss) {
         markAsChanged("VLRISS", vlrIss);
-        this.vlrIss = vlrIss;
    }
 
    public BigDecimal getVlrMat() {
-        return vlrMat;
+        return this.getVo().asBigDecimal("VLRMAT");
    }
 
    public void setVlrMat(BigDecimal vlrMat) {
         markAsChanged("VLRMAT", vlrMat);
-        this.vlrMat = vlrMat;
    }
 
    public BigDecimal getVlrMatTerc() {
-        return vlrMatTerc;
+        return this.getVo().asBigDecimal("VLRMATTERC");
    }
 
    public void setVlrMatTerc(BigDecimal vlrMatTerc) {
         markAsChanged("VLRMATTERC", vlrMatTerc);
-        this.vlrMatTerc = vlrMatTerc;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getOrigem() {
-        return origem;
+        return this.getVo().asString("ORIGEM");
    }
 
    public void setOrigem(String origem) {
         markAsChanged("ORIGEM", origem);
-        this.origem = origem;
    }
 
    public String getRetido() {
-        return retido;
+        return this.getVo().asString("RETIDO");
    }
 
    public void setRetido(String retido) {
         markAsChanged("RETIDO", retido);
-        this.retido = retido;
    }
 
    public String getUfDestino() {
-        return ufDestino;
+        return this.getVo().asString("UFDESTINO");
    }
 
    public void setUfDestino(String ufDestino) {
         markAsChanged("UFDESTINO", ufDestino);
-        this.ufDestino = ufDestino;
    }
 
    public String getUfOrigem() {
-        return ufOrigem;
+        return this.getVo().asString("UFORIGEM");
    }
 
    public void setUfOrigem(String ufOrigem) {
         markAsChanged("UFORIGEM", ufOrigem);
-        this.ufOrigem = ufOrigem;
    }
 
    public BigDecimal getVlrCtb() {
-        return vlrCtb;
+        return this.getVo().asBigDecimal("VLRCTB");
    }
 
    public void setVlrCtb(BigDecimal vlrCtb) {
         markAsChanged("VLRCTB", vlrCtb);
-        this.vlrCtb = vlrCtb;
    }
 
    public BigDecimal getCodLst() {
-        return codLst;
+        return this.getVo().asBigDecimal("CODLST");
    }
 
    public void setCodLst(BigDecimal codLst) {
         markAsChanged("CODLST", codLst);
-        this.codLst = codLst;
    }
 
    @Override
@@ -370,41 +299,6 @@ public class RegistroIss extends AbstractSankhyaEntity<RegistroIss> {
    @Override
    public RegistroIss fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.vlrRedBaseIss = vo.asBigDecimal("VLRREDBASEISS");
-        this.vlrSub = vo.asBigDecimal("VLRSUB");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.serieNota = vo.asString("SERIENOTA");
-        this.aliqIss = vo.asBigDecimal("ALIQISS");
-        this.baseIss = vo.asBigDecimal("BASEISS");
-        this.codCfps = vo.asBigDecimal("CODCFPS");
-        this.codCidDestino = vo.asBigDecimal("CODCIDDESTINO");
-        this.codCidExecServ = vo.asBigDecimal("CODCIDEXECSERV");
-        this.codCidOrigem = vo.asBigDecimal("CODCIDORIGEM");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
-        this.codModDocIss = vo.asString("CODMODDOCISS");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTribIss = vo.asBigDecimal("CODTRIBISS");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtDoc = vo.asTimestamp("DTDOC");
-        this.dtFilt = vo.asTimestamp("DTFILT");
-        this.dtMov = vo.asTimestamp("DTMOV");
-        this.entSai = vo.asString("ENTSAI");
-        this.isentasIss = vo.asBigDecimal("ISENTASISS");
-        this.naoTribIss = vo.asBigDecimal("NAOTRIBISS");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.numNota2 = vo.asBigDecimal("NUMNOTA2");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.vlrIss = vo.asBigDecimal("VLRISS");
-        this.vlrMat = vo.asBigDecimal("VLRMAT");
-        this.vlrMatTerc = vo.asBigDecimal("VLRMATTERC");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.origem = vo.asString("ORIGEM");
-        this.retido = vo.asString("RETIDO");
-        this.ufDestino = vo.asString("UFDESTINO");
-        this.ufOrigem = vo.asString("UFORIGEM");
-        this.vlrCtb = vo.asBigDecimal("VLRCTB");
-        this.codLst = vo.asBigDecimal("CODLST");
         return this;
    }
 }

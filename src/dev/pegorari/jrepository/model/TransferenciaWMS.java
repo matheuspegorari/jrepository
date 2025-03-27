@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuRecebimento;
-   private BigDecimal nuTarefa;
-   private BigDecimal nuTransferencia;
-   private String situacao;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getNuTransferencia() {
-        return nuTransferencia;
+        return this.getVo().asBigDecimal("NUTRANSFERENCIA");
    }
 
    public void setNuTransferencia(BigDecimal nuTransferencia) {
         markAsChanged("NUTRANSFERENCIA", nuTransferencia);
-        this.nuTransferencia = nuTransferencia;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class TransferenciaWMS extends AbstractSankhyaEntity<TransferenciaWMS> {
    @Override
    public TransferenciaWMS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.nuTransferencia = vo.asBigDecimal("NUTRANSFERENCIA");
-        this.situacao = vo.asString("SITUACAO");
         return this;
    }
 }

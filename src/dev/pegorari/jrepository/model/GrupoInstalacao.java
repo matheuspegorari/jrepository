@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
-   private BigDecimal grupo;
-   private BigDecimal numContrato;
-   private BigDecimal qtdParc;
-
    public BigDecimal getGrupo() {
-        return grupo;
+        return this.getVo().asBigDecimal("GRUPO");
    }
 
    public void setGrupo(BigDecimal grupo) {
         markAsChanged("GRUPO", grupo);
-        this.grupo = grupo;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getQtdParc() {
-        return qtdParc;
+        return this.getVo().asBigDecimal("QTDPARC");
    }
 
    public void setQtdParc(BigDecimal qtdParc) {
         markAsChanged("QTDPARC", qtdParc);
-        this.qtdParc = qtdParc;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class GrupoInstalacao extends AbstractSankhyaEntity<GrupoInstalacao> {
    @Override
    public GrupoInstalacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.grupo = vo.asBigDecimal("GRUPO");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.qtdParc = vo.asBigDecimal("QTDPARC");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQualidade> {
-   private String aprovarComRessalvas;
-   private String descrCiclo;
-   private BigDecimal idCcq;
-   private BigDecimal idProc;
-
    public String getAprovarComRessalvas() {
-        return aprovarComRessalvas;
+        return this.getVo().asString("APROVARCOMRESSALVAS");
    }
 
    public void setAprovarComRessalvas(String aprovarComRessalvas) {
         markAsChanged("APROVARCOMRESSALVAS", aprovarComRessalvas);
-        this.aprovarComRessalvas = aprovarComRessalvas;
    }
 
    public String getDescrCiclo() {
-        return descrCiclo;
+        return this.getVo().asString("DESCRCICLO");
    }
 
    public void setDescrCiclo(String descrCiclo) {
         markAsChanged("DESCRCICLO", descrCiclo);
-        this.descrCiclo = descrCiclo;
    }
 
    public BigDecimal getIdCcq() {
-        return idCcq;
+        return this.getVo().asBigDecimal("IDCCQ");
    }
 
    public void setIdCcq(BigDecimal idCcq) {
         markAsChanged("IDCCQ", idCcq);
-        this.idCcq = idCcq;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class CicloControleQualidade extends AbstractSankhyaEntity<CicloControleQ
    @Override
    public CicloControleQualidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.aprovarComRessalvas = vo.asString("APROVARCOMRESSALVAS");
-        this.descrCiclo = vo.asString("DESCRCICLO");
-        this.idCcq = vo.asBigDecimal("IDCCQ");
-        this.idProc = vo.asBigDecimal("IDPROC");
         return this;
    }
 }

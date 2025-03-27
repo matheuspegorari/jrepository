@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestionario> {
-   private String apelido;
-   private BigDecimal codPerg;
-   private BigDecimal codQuest;
-   private BigDecimal ordem;
-   private BigDecimal peso;
-
    public String getApelido() {
-        return apelido;
+        return this.getVo().asString("APELIDO");
    }
 
    public void setApelido(String apelido) {
         markAsChanged("APELIDO", apelido);
-        this.apelido = apelido;
    }
 
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getPeso() {
-        return peso;
+        return this.getVo().asBigDecimal("PESO");
    }
 
    public void setPeso(BigDecimal peso) {
         markAsChanged("PESO", peso);
-        this.peso = peso;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class PerguntaQuestionario extends AbstractSankhyaEntity<PerguntaQuestion
    @Override
    public PerguntaQuestionario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.apelido = vo.asString("APELIDO");
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.peso = vo.asBigDecimal("PESO");
         return this;
    }
 }

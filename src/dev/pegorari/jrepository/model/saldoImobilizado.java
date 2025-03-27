@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
-   private String codBem;
-   private Timestamp referencia;
-   private BigDecimal saldo;
-   private BigDecimal totalDep;
-   private BigDecimal codProd;
-
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSaldo() {
-        return saldo;
+        return this.getVo().asBigDecimal("SALDO");
    }
 
    public void setSaldo(BigDecimal saldo) {
         markAsChanged("SALDO", saldo);
-        this.saldo = saldo;
    }
 
    public BigDecimal getTotalDep() {
-        return totalDep;
+        return this.getVo().asBigDecimal("TOTALDEP");
    }
 
    public void setTotalDep(BigDecimal totalDep) {
         markAsChanged("TOTALDEP", totalDep);
-        this.totalDep = totalDep;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class saldoImobilizado extends AbstractSankhyaEntity<saldoImobilizado> {
    @Override
    public saldoImobilizado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBem = vo.asString("CODBEM");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.saldo = vo.asBigDecimal("SALDO");
-        this.totalDep = vo.asBigDecimal("TOTALDEP");
-        this.codProd = vo.asBigDecimal("CODPROD");
         return this;
    }
 }

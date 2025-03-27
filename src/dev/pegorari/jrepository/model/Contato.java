@@ -6,525 +6,420 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Contato extends AbstractSankhyaEntity<Contato> {
-   private String email;
-   private String fax;
-   private String latitude;
-   private String longitude;
-   private BigDecimal nivelCob;
-   private String nomeContato;
-   private String numEnd;
-   private String possuiAcessoBt;
-   private BigDecimal prioridade;
-   private BigDecimal ramal;
-   private String recebeBoletoEmail;
-   private String recebeNotaEmail;
-   private String recEmailImpPed;
-   private String senhaAcesso;
-   private String socio;
-   private String telefone;
-   private String telResid;
-   private String tipPessoa;
-   private String apelido;
-   private String ativo;
-   private String cargo;
-   private String celular;
-   private String cep;
-   private String cnpj;
-   private BigDecimal codBai;
-   private BigDecimal codCid;
-   private BigDecimal codContato;
-   private BigDecimal codEnd;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private String complemento;
-   private String cpf;
-   private Timestamp dtCad;
-   private Timestamp dtNasc;
-   private BigDecimal qtdEntregaCestas;
-   private String habPlanEntCestas;
-   private BigDecimal codReg;
-   private String inscEstad;
-   private String respCobranca;
-   private String timAgencia;
-   private BigDecimal timBanco;
-   private String timBeneficiario;
-   private String timConta;
-   private BigDecimal timNacionalidad;
-   private BigDecimal timProcurador;
-   private BigDecimal timProfissao;
-   private String timRepresentante;
-   private String timRg;
-   private BigDecimal timTipo;
-   private String enviaNotifCota;
-   private BigDecimal codUsuAlt;
-   private Timestamp dhAlter;
-
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getFax() {
-        return fax;
+        return this.getVo().asString("FAX");
    }
 
    public void setFax(String fax) {
         markAsChanged("FAX", fax);
-        this.fax = fax;
    }
 
    public String getLatitude() {
-        return latitude;
+        return this.getVo().asString("LATITUDE");
    }
 
    public void setLatitude(String latitude) {
         markAsChanged("LATITUDE", latitude);
-        this.latitude = latitude;
    }
 
    public String getLongitude() {
-        return longitude;
+        return this.getVo().asString("LONGITUDE");
    }
 
    public void setLongitude(String longitude) {
         markAsChanged("LONGITUDE", longitude);
-        this.longitude = longitude;
    }
 
    public BigDecimal getNivelCob() {
-        return nivelCob;
+        return this.getVo().asBigDecimal("NIVELCOB");
    }
 
    public void setNivelCob(BigDecimal nivelCob) {
         markAsChanged("NIVELCOB", nivelCob);
-        this.nivelCob = nivelCob;
    }
 
    public String getNomeContato() {
-        return nomeContato;
+        return this.getVo().asString("NOMECONTATO");
    }
 
    public void setNomeContato(String nomeContato) {
         markAsChanged("NOMECONTATO", nomeContato);
-        this.nomeContato = nomeContato;
    }
 
    public String getNumEnd() {
-        return numEnd;
+        return this.getVo().asString("NUMEND");
    }
 
    public void setNumEnd(String numEnd) {
         markAsChanged("NUMEND", numEnd);
-        this.numEnd = numEnd;
    }
 
    public String getPossuiAcessoBt() {
-        return possuiAcessoBt;
+        return this.getVo().asString("POSSUIACESSOBT");
    }
 
    public void setPossuiAcessoBt(String possuiAcessoBt) {
         markAsChanged("POSSUIACESSOBT", possuiAcessoBt);
-        this.possuiAcessoBt = possuiAcessoBt;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public BigDecimal getRamal() {
-        return ramal;
+        return this.getVo().asBigDecimal("RAMAL");
    }
 
    public void setRamal(BigDecimal ramal) {
         markAsChanged("RAMAL", ramal);
-        this.ramal = ramal;
    }
 
    public String getRecebeBoletoEmail() {
-        return recebeBoletoEmail;
+        return this.getVo().asString("RECEBEBOLETOEMAIL");
    }
 
    public void setRecebeBoletoEmail(String recebeBoletoEmail) {
         markAsChanged("RECEBEBOLETOEMAIL", recebeBoletoEmail);
-        this.recebeBoletoEmail = recebeBoletoEmail;
    }
 
    public String getRecebeNotaEmail() {
-        return recebeNotaEmail;
+        return this.getVo().asString("RECEBENOTAEMAIL");
    }
 
    public void setRecebeNotaEmail(String recebeNotaEmail) {
         markAsChanged("RECEBENOTAEMAIL", recebeNotaEmail);
-        this.recebeNotaEmail = recebeNotaEmail;
    }
 
    public String getRecEmailImpPed() {
-        return recEmailImpPed;
+        return this.getVo().asString("RECEMAILIMPPED");
    }
 
    public void setRecEmailImpPed(String recEmailImpPed) {
         markAsChanged("RECEMAILIMPPED", recEmailImpPed);
-        this.recEmailImpPed = recEmailImpPed;
    }
 
    public String getSenhaAcesso() {
-        return senhaAcesso;
+        return this.getVo().asString("SENHAACESSO");
    }
 
    public void setSenhaAcesso(String senhaAcesso) {
         markAsChanged("SENHAACESSO", senhaAcesso);
-        this.senhaAcesso = senhaAcesso;
    }
 
    public String getSocio() {
-        return socio;
+        return this.getVo().asString("SOCIO");
    }
 
    public void setSocio(String socio) {
         markAsChanged("SOCIO", socio);
-        this.socio = socio;
    }
 
    public String getTelefone() {
-        return telefone;
+        return this.getVo().asString("TELEFONE");
    }
 
    public void setTelefone(String telefone) {
         markAsChanged("TELEFONE", telefone);
-        this.telefone = telefone;
    }
 
    public String getTelResid() {
-        return telResid;
+        return this.getVo().asString("TELRESID");
    }
 
    public void setTelResid(String telResid) {
         markAsChanged("TELRESID", telResid);
-        this.telResid = telResid;
    }
 
    public String getTipPessoa() {
-        return tipPessoa;
+        return this.getVo().asString("TIPPESSOA");
    }
 
    public void setTipPessoa(String tipPessoa) {
         markAsChanged("TIPPESSOA", tipPessoa);
-        this.tipPessoa = tipPessoa;
    }
 
    public String getApelido() {
-        return apelido;
+        return this.getVo().asString("APELIDO");
    }
 
    public void setApelido(String apelido) {
         markAsChanged("APELIDO", apelido);
-        this.apelido = apelido;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getCargo() {
-        return cargo;
+        return this.getVo().asString("CARGO");
    }
 
    public void setCargo(String cargo) {
         markAsChanged("CARGO", cargo);
-        this.cargo = cargo;
    }
 
    public String getCelular() {
-        return celular;
+        return this.getVo().asString("CELULAR");
    }
 
    public void setCelular(String celular) {
         markAsChanged("CELULAR", celular);
-        this.celular = celular;
    }
 
    public String getCep() {
-        return cep;
+        return this.getVo().asString("CEP");
    }
 
    public void setCep(String cep) {
         markAsChanged("CEP", cep);
-        this.cep = cep;
    }
 
    public String getCnpj() {
-        return cnpj;
+        return this.getVo().asString("CNPJ");
    }
 
    public void setCnpj(String cnpj) {
         markAsChanged("CNPJ", cnpj);
-        this.cnpj = cnpj;
    }
 
    public BigDecimal getCodBai() {
-        return codBai;
+        return this.getVo().asBigDecimal("CODBAI");
    }
 
    public void setCodBai(BigDecimal codBai) {
         markAsChanged("CODBAI", codBai);
-        this.codBai = codBai;
    }
 
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getComplemento() {
-        return complemento;
+        return this.getVo().asString("COMPLEMENTO");
    }
 
    public void setComplemento(String complemento) {
         markAsChanged("COMPLEMENTO", complemento);
-        this.complemento = complemento;
    }
 
    public String getCpf() {
-        return cpf;
+        return this.getVo().asString("CPF");
    }
 
    public void setCpf(String cpf) {
         markAsChanged("CPF", cpf);
-        this.cpf = cpf;
    }
 
    public Timestamp getDtCad() {
-        return dtCad;
+        return this.getVo().asTimestamp("DTCAD");
    }
 
    public void setDtCad(Timestamp dtCad) {
         markAsChanged("DTCAD", dtCad);
-        this.dtCad = dtCad;
    }
 
    public Timestamp getDtNasc() {
-        return dtNasc;
+        return this.getVo().asTimestamp("DTNASC");
    }
 
    public void setDtNasc(Timestamp dtNasc) {
         markAsChanged("DTNASC", dtNasc);
-        this.dtNasc = dtNasc;
    }
 
    public BigDecimal getQtdEntregaCestas() {
-        return qtdEntregaCestas;
+        return this.getVo().asBigDecimal("QTDENTREGACESTAS");
    }
 
    public void setQtdEntregaCestas(BigDecimal qtdEntregaCestas) {
         markAsChanged("QTDENTREGACESTAS", qtdEntregaCestas);
-        this.qtdEntregaCestas = qtdEntregaCestas;
    }
 
    public String getHabPlanEntCestas() {
-        return habPlanEntCestas;
+        return this.getVo().asString("HABPLANENTCESTAS");
    }
 
    public void setHabPlanEntCestas(String habPlanEntCestas) {
         markAsChanged("HABPLANENTCESTAS", habPlanEntCestas);
-        this.habPlanEntCestas = habPlanEntCestas;
    }
 
    public BigDecimal getCodReg() {
-        return codReg;
+        return this.getVo().asBigDecimal("CODREG");
    }
 
    public void setCodReg(BigDecimal codReg) {
         markAsChanged("CODREG", codReg);
-        this.codReg = codReg;
    }
 
    public String getInscEstad() {
-        return inscEstad;
+        return this.getVo().asString("INSCESTAD");
    }
 
    public void setInscEstad(String inscEstad) {
         markAsChanged("INSCESTAD", inscEstad);
-        this.inscEstad = inscEstad;
    }
 
    public String getRespCobranca() {
-        return respCobranca;
+        return this.getVo().asString("RESPCOBRANCA");
    }
 
    public void setRespCobranca(String respCobranca) {
         markAsChanged("RESPCOBRANCA", respCobranca);
-        this.respCobranca = respCobranca;
    }
 
    public String getTimAgencia() {
-        return timAgencia;
+        return this.getVo().asString("TIMAGENCIA");
    }
 
    public void setTimAgencia(String timAgencia) {
         markAsChanged("TIMAGENCIA", timAgencia);
-        this.timAgencia = timAgencia;
    }
 
    public BigDecimal getTimBanco() {
-        return timBanco;
+        return this.getVo().asBigDecimal("TIMBANCO");
    }
 
    public void setTimBanco(BigDecimal timBanco) {
         markAsChanged("TIMBANCO", timBanco);
-        this.timBanco = timBanco;
    }
 
    public String getTimBeneficiario() {
-        return timBeneficiario;
+        return this.getVo().asString("TIMBENEFICIARIO");
    }
 
    public void setTimBeneficiario(String timBeneficiario) {
         markAsChanged("TIMBENEFICIARIO", timBeneficiario);
-        this.timBeneficiario = timBeneficiario;
    }
 
    public String getTimConta() {
-        return timConta;
+        return this.getVo().asString("TIMCONTA");
    }
 
    public void setTimConta(String timConta) {
         markAsChanged("TIMCONTA", timConta);
-        this.timConta = timConta;
    }
 
    public BigDecimal getTimNacionalidad() {
-        return timNacionalidad;
+        return this.getVo().asBigDecimal("TIMNACIONALIDAD");
    }
 
    public void setTimNacionalidad(BigDecimal timNacionalidad) {
         markAsChanged("TIMNACIONALIDAD", timNacionalidad);
-        this.timNacionalidad = timNacionalidad;
    }
 
    public BigDecimal getTimProcurador() {
-        return timProcurador;
+        return this.getVo().asBigDecimal("TIMPROCURADOR");
    }
 
    public void setTimProcurador(BigDecimal timProcurador) {
         markAsChanged("TIMPROCURADOR", timProcurador);
-        this.timProcurador = timProcurador;
    }
 
    public BigDecimal getTimProfissao() {
-        return timProfissao;
+        return this.getVo().asBigDecimal("TIMPROFISSAO");
    }
 
    public void setTimProfissao(BigDecimal timProfissao) {
         markAsChanged("TIMPROFISSAO", timProfissao);
-        this.timProfissao = timProfissao;
    }
 
    public String getTimRepresentante() {
-        return timRepresentante;
+        return this.getVo().asString("TIMREPRESENTANTE");
    }
 
    public void setTimRepresentante(String timRepresentante) {
         markAsChanged("TIMREPRESENTANTE", timRepresentante);
-        this.timRepresentante = timRepresentante;
    }
 
    public String getTimRg() {
-        return timRg;
+        return this.getVo().asString("TIMRG");
    }
 
    public void setTimRg(String timRg) {
         markAsChanged("TIMRG", timRg);
-        this.timRg = timRg;
    }
 
    public BigDecimal getTimTipo() {
-        return timTipo;
+        return this.getVo().asBigDecimal("TIMTIPO");
    }
 
    public void setTimTipo(BigDecimal timTipo) {
         markAsChanged("TIMTIPO", timTipo);
-        this.timTipo = timTipo;
    }
 
    public String getEnviaNotifCota() {
-        return enviaNotifCota;
+        return this.getVo().asString("ENVIANOTIFCOTA");
    }
 
    public void setEnviaNotifCota(String enviaNotifCota) {
         markAsChanged("ENVIANOTIFCOTA", enviaNotifCota);
-        this.enviaNotifCota = enviaNotifCota;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    @Override
@@ -540,58 +435,6 @@ public class Contato extends AbstractSankhyaEntity<Contato> {
    @Override
    public Contato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.email = vo.asString("EMAIL");
-        this.fax = vo.asString("FAX");
-        this.latitude = vo.asString("LATITUDE");
-        this.longitude = vo.asString("LONGITUDE");
-        this.nivelCob = vo.asBigDecimal("NIVELCOB");
-        this.nomeContato = vo.asString("NOMECONTATO");
-        this.numEnd = vo.asString("NUMEND");
-        this.possuiAcessoBt = vo.asString("POSSUIACESSOBT");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.ramal = vo.asBigDecimal("RAMAL");
-        this.recebeBoletoEmail = vo.asString("RECEBEBOLETOEMAIL");
-        this.recebeNotaEmail = vo.asString("RECEBENOTAEMAIL");
-        this.recEmailImpPed = vo.asString("RECEMAILIMPPED");
-        this.senhaAcesso = vo.asString("SENHAACESSO");
-        this.socio = vo.asString("SOCIO");
-        this.telefone = vo.asString("TELEFONE");
-        this.telResid = vo.asString("TELRESID");
-        this.tipPessoa = vo.asString("TIPPESSOA");
-        this.apelido = vo.asString("APELIDO");
-        this.ativo = vo.asString("ATIVO");
-        this.cargo = vo.asString("CARGO");
-        this.celular = vo.asString("CELULAR");
-        this.cep = vo.asString("CEP");
-        this.cnpj = vo.asString("CNPJ");
-        this.codBai = vo.asBigDecimal("CODBAI");
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.complemento = vo.asString("COMPLEMENTO");
-        this.cpf = vo.asString("CPF");
-        this.dtCad = vo.asTimestamp("DTCAD");
-        this.dtNasc = vo.asTimestamp("DTNASC");
-        this.qtdEntregaCestas = vo.asBigDecimal("QTDENTREGACESTAS");
-        this.habPlanEntCestas = vo.asString("HABPLANENTCESTAS");
-        this.codReg = vo.asBigDecimal("CODREG");
-        this.inscEstad = vo.asString("INSCESTAD");
-        this.respCobranca = vo.asString("RESPCOBRANCA");
-        this.timAgencia = vo.asString("TIMAGENCIA");
-        this.timBanco = vo.asBigDecimal("TIMBANCO");
-        this.timBeneficiario = vo.asString("TIMBENEFICIARIO");
-        this.timConta = vo.asString("TIMCONTA");
-        this.timNacionalidad = vo.asBigDecimal("TIMNACIONALIDAD");
-        this.timProcurador = vo.asBigDecimal("TIMPROCURADOR");
-        this.timProfissao = vo.asBigDecimal("TIMPROFISSAO");
-        this.timRepresentante = vo.asString("TIMREPRESENTANTE");
-        this.timRg = vo.asString("TIMRG");
-        this.timTipo = vo.asBigDecimal("TIMTIPO");
-        this.enviaNotifCota = vo.asString("ENVIANOTIFCOTA");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.dhAlter = vo.asTimestamp("DHALTER");
         return this;
    }
 }

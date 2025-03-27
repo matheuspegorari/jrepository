@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PortariaCat42 extends AbstractSankhyaEntity<PortariaCat42> {
-   private BigDecimal vlrTotRessarcimento;
-   private String arqConfirmado;
-   private BigDecimal codEmp;
-   private String consFilTronativo;
-   private String consMarcGruprod;
-   private String consMarcProd;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String filPersonalizado;
-   private BigDecimal finApresentacao;
-   private String temDivergencia;
-   private BigDecimal tipApur;
-   private String usaVlrOrigSaldev;
-   private BigDecimal versaoLayout;
-   private BigDecimal totIcmsCredOperPropria;
-   private BigDecimal vlrTotComplemento;
-
    public BigDecimal getVlrTotRessarcimento() {
-        return vlrTotRessarcimento;
+        return this.getVo().asBigDecimal("VLR_TOT_RESSARCIMENTO");
    }
 
    public void setVlrTotRessarcimento(BigDecimal vlrTotRessarcimento) {
         markAsChanged("VLR_TOT_RESSARCIMENTO", vlrTotRessarcimento);
-        this.vlrTotRessarcimento = vlrTotRessarcimento;
    }
 
    public String getArqConfirmado() {
-        return arqConfirmado;
+        return this.getVo().asString("ARQCONFIRMADO");
    }
 
    public void setArqConfirmado(String arqConfirmado) {
         markAsChanged("ARQCONFIRMADO", arqConfirmado);
-        this.arqConfirmado = arqConfirmado;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getConsFilTronativo() {
-        return consFilTronativo;
+        return this.getVo().asString("CONSFILTRONATIVO");
    }
 
    public void setConsFilTronativo(String consFilTronativo) {
         markAsChanged("CONSFILTRONATIVO", consFilTronativo);
-        this.consFilTronativo = consFilTronativo;
    }
 
    public String getConsMarcGruprod() {
-        return consMarcGruprod;
+        return this.getVo().asString("CONSMARCGRUPROD");
    }
 
    public void setConsMarcGruprod(String consMarcGruprod) {
         markAsChanged("CONSMARCGRUPROD", consMarcGruprod);
-        this.consMarcGruprod = consMarcGruprod;
    }
 
    public String getConsMarcProd() {
-        return consMarcProd;
+        return this.getVo().asString("CONSMARCPROD");
    }
 
    public void setConsMarcProd(String consMarcProd) {
         markAsChanged("CONSMARCPROD", consMarcProd);
-        this.consMarcProd = consMarcProd;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getFilPersonalizado() {
-        return filPersonalizado;
+        return this.getVo().asString("FILPERSONALIZADO");
    }
 
    public void setFilPersonalizado(String filPersonalizado) {
         markAsChanged("FILPERSONALIZADO", filPersonalizado);
-        this.filPersonalizado = filPersonalizado;
    }
 
    public BigDecimal getFinApresentacao() {
-        return finApresentacao;
+        return this.getVo().asBigDecimal("FINAPRESENTACAO");
    }
 
    public void setFinApresentacao(BigDecimal finApresentacao) {
         markAsChanged("FINAPRESENTACAO", finApresentacao);
-        this.finApresentacao = finApresentacao;
    }
 
    public String getTemDivergencia() {
-        return temDivergencia;
+        return this.getVo().asString("TEMDIVERGENCIA");
    }
 
    public void setTemDivergencia(String temDivergencia) {
         markAsChanged("TEMDIVERGENCIA", temDivergencia);
-        this.temDivergencia = temDivergencia;
    }
 
    public BigDecimal getTipApur() {
-        return tipApur;
+        return this.getVo().asBigDecimal("TIPAPUR");
    }
 
    public void setTipApur(BigDecimal tipApur) {
         markAsChanged("TIPAPUR", tipApur);
-        this.tipApur = tipApur;
    }
 
    public String getUsaVlrOrigSaldev() {
-        return usaVlrOrigSaldev;
+        return this.getVo().asString("USAVLRORIGSALDEV");
    }
 
    public void setUsaVlrOrigSaldev(String usaVlrOrigSaldev) {
         markAsChanged("USAVLRORIGSALDEV", usaVlrOrigSaldev);
-        this.usaVlrOrigSaldev = usaVlrOrigSaldev;
    }
 
    public BigDecimal getVersaoLayout() {
-        return versaoLayout;
+        return this.getVo().asBigDecimal("VERSAOLAYOUT");
    }
 
    public void setVersaoLayout(BigDecimal versaoLayout) {
         markAsChanged("VERSAOLAYOUT", versaoLayout);
-        this.versaoLayout = versaoLayout;
    }
 
    public BigDecimal getTotIcmsCredOperPropria() {
-        return totIcmsCredOperPropria;
+        return this.getVo().asBigDecimal("TOT_ICMS_CRED_OPER_PROPRIA");
    }
 
    public void setTotIcmsCredOperPropria(BigDecimal totIcmsCredOperPropria) {
         markAsChanged("TOT_ICMS_CRED_OPER_PROPRIA", totIcmsCredOperPropria);
-        this.totIcmsCredOperPropria = totIcmsCredOperPropria;
    }
 
    public BigDecimal getVlrTotComplemento() {
-        return vlrTotComplemento;
+        return this.getVo().asBigDecimal("VLR_TOT_COMPLEMENTO");
    }
 
    public void setVlrTotComplemento(BigDecimal vlrTotComplemento) {
         markAsChanged("VLR_TOT_COMPLEMENTO", vlrTotComplemento);
-        this.vlrTotComplemento = vlrTotComplemento;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class PortariaCat42 extends AbstractSankhyaEntity<PortariaCat42> {
    @Override
    public PortariaCat42 fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.vlrTotRessarcimento = vo.asBigDecimal("VLR_TOT_RESSARCIMENTO");
-        this.arqConfirmado = vo.asString("ARQCONFIRMADO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.consFilTronativo = vo.asString("CONSFILTRONATIVO");
-        this.consMarcGruprod = vo.asString("CONSMARCGRUPROD");
-        this.consMarcProd = vo.asString("CONSMARCPROD");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.filPersonalizado = vo.asString("FILPERSONALIZADO");
-        this.finApresentacao = vo.asBigDecimal("FINAPRESENTACAO");
-        this.temDivergencia = vo.asString("TEMDIVERGENCIA");
-        this.tipApur = vo.asBigDecimal("TIPAPUR");
-        this.usaVlrOrigSaldev = vo.asString("USAVLRORIGSALDEV");
-        this.versaoLayout = vo.asBigDecimal("VERSAOLAYOUT");
-        this.totIcmsCredOperPropria = vo.asBigDecimal("TOT_ICMS_CRED_OPER_PROPRIA");
-        this.vlrTotComplemento = vo.asBigDecimal("VLR_TOT_COMPLEMENTO");
         return this;
    }
 }

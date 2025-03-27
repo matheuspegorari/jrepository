@@ -6,205 +6,164 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternativo> {
-   private String referenciaMpAlt;
-   private String referenciaMp;
-   private BigDecimal codProdMp;
-   private BigDecimal codProdMpAlt;
-   private BigDecimal codProdPa;
-   private String controleMp;
-   private String controleMpAlt;
-   private String controlePa;
-   private BigDecimal ideFx;
-   private BigDecimal qtdMistura;
-   private BigDecimal seqMpa;
-   private String usoMpa;
-   private String codVol;
-   private BigDecimal conjunto;
-   private BigDecimal codLocalBaixa;
-   private BigDecimal codLocalOrig;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-
    public String getReferenciaMpAlt() {
-        return referenciaMpAlt;
+        return this.getVo().asString("REFERENCIAMPALT");
    }
 
    public void setReferenciaMpAlt(String referenciaMpAlt) {
         markAsChanged("REFERENCIAMPALT", referenciaMpAlt);
-        this.referenciaMpAlt = referenciaMpAlt;
    }
 
    public String getReferenciaMp() {
-        return referenciaMp;
+        return this.getVo().asString("REFERENCIAMP");
    }
 
    public void setReferenciaMp(String referenciaMp) {
         markAsChanged("REFERENCIAMP", referenciaMp);
-        this.referenciaMp = referenciaMp;
    }
 
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public BigDecimal getCodProdMpAlt() {
-        return codProdMpAlt;
+        return this.getVo().asBigDecimal("CODPRODMPALT");
    }
 
    public void setCodProdMpAlt(BigDecimal codProdMpAlt) {
         markAsChanged("CODPRODMPALT", codProdMpAlt);
-        this.codProdMpAlt = codProdMpAlt;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getControleMp() {
-        return controleMp;
+        return this.getVo().asString("CONTROLEMP");
    }
 
    public void setControleMp(String controleMp) {
         markAsChanged("CONTROLEMP", controleMp);
-        this.controleMp = controleMp;
    }
 
    public String getControleMpAlt() {
-        return controleMpAlt;
+        return this.getVo().asString("CONTROLEMPALT");
    }
 
    public void setControleMpAlt(String controleMpAlt) {
         markAsChanged("CONTROLEMPALT", controleMpAlt);
-        this.controleMpAlt = controleMpAlt;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getQtdMistura() {
-        return qtdMistura;
+        return this.getVo().asBigDecimal("QTDMISTURA");
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
         markAsChanged("QTDMISTURA", qtdMistura);
-        this.qtdMistura = qtdMistura;
    }
 
    public BigDecimal getSeqMpa() {
-        return seqMpa;
+        return this.getVo().asBigDecimal("SEQMPA");
    }
 
    public void setSeqMpa(BigDecimal seqMpa) {
         markAsChanged("SEQMPA", seqMpa);
-        this.seqMpa = seqMpa;
    }
 
    public String getUsoMpa() {
-        return usoMpa;
+        return this.getVo().asString("USOMPA");
    }
 
    public void setUsoMpa(String usoMpa) {
         markAsChanged("USOMPA", usoMpa);
-        this.usoMpa = usoMpa;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getConjunto() {
-        return conjunto;
+        return this.getVo().asBigDecimal("CONJUNTO");
    }
 
    public void setConjunto(BigDecimal conjunto) {
         markAsChanged("CONJUNTO", conjunto);
-        this.conjunto = conjunto;
    }
 
    public BigDecimal getCodLocalBaixa() {
-        return codLocalBaixa;
+        return this.getVo().asBigDecimal("CODLOCALBAIXA");
    }
 
    public void setCodLocalBaixa(BigDecimal codLocalBaixa) {
         markAsChanged("CODLOCALBAIXA", codLocalBaixa);
-        this.codLocalBaixa = codLocalBaixa;
    }
 
    public BigDecimal getCodLocalOrig() {
-        return codLocalOrig;
+        return this.getVo().asBigDecimal("CODLOCALORIG");
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
         markAsChanged("CODLOCALORIG", codLocalOrig);
-        this.codLocalOrig = codLocalOrig;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    @Override
@@ -220,26 +179,6 @@ public class MaterialAlternativo extends AbstractSankhyaEntity<MaterialAlternati
    @Override
    public MaterialAlternativo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.referenciaMpAlt = vo.asString("REFERENCIAMPALT");
-        this.referenciaMp = vo.asString("REFERENCIAMP");
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.codProdMpAlt = vo.asBigDecimal("CODPRODMPALT");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.controleMp = vo.asString("CONTROLEMP");
-        this.controleMpAlt = vo.asString("CONTROLEMPALT");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
-        this.seqMpa = vo.asBigDecimal("SEQMPA");
-        this.usoMpa = vo.asString("USOMPA");
-        this.codVol = vo.asString("CODVOL");
-        this.conjunto = vo.asBigDecimal("CONJUNTO");
-        this.codLocalBaixa = vo.asBigDecimal("CODLOCALBAIXA");
-        this.codLocalOrig = vo.asBigDecimal("CODLOCALORIG");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
         return this;
    }
 }

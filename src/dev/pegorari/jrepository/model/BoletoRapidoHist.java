@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlt;
-   private BigDecimal idUnico;
-   private String motivo;
-   private String sitRegBol;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlt() {
-        return dtAlt;
+        return this.getVo().asTimestamp("DTALT");
    }
 
    public void setDtAlt(Timestamp dtAlt) {
         markAsChanged("DTALT", dtAlt);
-        this.dtAlt = dtAlt;
    }
 
    public BigDecimal getIdUnico() {
-        return idUnico;
+        return this.getVo().asBigDecimal("IDUNICO");
    }
 
    public void setIdUnico(BigDecimal idUnico) {
         markAsChanged("IDUNICO", idUnico);
-        this.idUnico = idUnico;
    }
 
    public String getMotivo() {
-        return motivo;
+        return this.getVo().asString("MOTIVO");
    }
 
    public void setMotivo(String motivo) {
         markAsChanged("MOTIVO", motivo);
-        this.motivo = motivo;
    }
 
    public String getSitRegBol() {
-        return sitRegBol;
+        return this.getVo().asString("SITREGBOL");
    }
 
    public void setSitRegBol(String sitRegBol) {
         markAsChanged("SITREGBOL", sitRegBol);
-        this.sitRegBol = sitRegBol;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class BoletoRapidoHist extends AbstractSankhyaEntity<BoletoRapidoHist> {
    @Override
    public BoletoRapidoHist fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlt = vo.asTimestamp("DTALT");
-        this.idUnico = vo.asBigDecimal("IDUNICO");
-        this.motivo = vo.asString("MOTIVO");
-        this.sitRegBol = vo.asString("SITREGBOL");
         return this;
    }
 }

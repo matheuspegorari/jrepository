@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
-   private String ativo;
-   private BigDecimal codProdMp;
-   private String codVol;
-   private String controleMp;
-   private String descrCop;
-   private BigDecimal idCop;
-   private BigDecimal qtdProcess;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControleMp() {
-        return controleMp;
+        return this.getVo().asString("CONTROLEMP");
    }
 
    public void setControleMp(String controleMp) {
         markAsChanged("CONTROLEMP", controleMp);
-        this.controleMp = controleMp;
    }
 
    public String getDescrCop() {
-        return descrCop;
+        return this.getVo().asString("DESCRCOP");
    }
 
    public void setDescrCop(String descrCop) {
         markAsChanged("DESCRCOP", descrCop);
-        this.descrCop = descrCop;
    }
 
    public BigDecimal getIdCop() {
-        return idCop;
+        return this.getVo().asBigDecimal("IDCOP");
    }
 
    public void setIdCop(BigDecimal idCop) {
         markAsChanged("IDCOP", idCop);
-        this.idCop = idCop;
    }
 
    public BigDecimal getQtdProcess() {
-        return qtdProcess;
+        return this.getVo().asBigDecimal("QTDPROCESS");
    }
 
    public void setQtdProcess(BigDecimal qtdProcess) {
         markAsChanged("QTDPROCESS", qtdProcess);
-        this.qtdProcess = qtdProcess;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class GrupoCoProduto extends AbstractSankhyaEntity<GrupoCoProduto> {
    @Override
    public GrupoCoProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.codVol = vo.asString("CODVOL");
-        this.controleMp = vo.asString("CONTROLEMP");
-        this.descrCop = vo.asString("DESCRCOP");
-        this.idCop = vo.asBigDecimal("IDCOP");
-        this.qtdProcess = vo.asBigDecimal("QTDPROCESS");
         return this;
    }
 }

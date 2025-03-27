@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganograma> {
-   private String descricao;
-   private String descrRoot;
-   private BigDecimal nuEst;
-   private String tipVisual;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getDescrRoot() {
-        return descrRoot;
+        return this.getVo().asString("DESCRROOT");
    }
 
    public void setDescrRoot(String descrRoot) {
         markAsChanged("DESCRROOT", descrRoot);
-        this.descrRoot = descrRoot;
    }
 
    public BigDecimal getNuEst() {
-        return nuEst;
+        return this.getVo().asBigDecimal("NUEST");
    }
 
    public void setNuEst(BigDecimal nuEst) {
         markAsChanged("NUEST", nuEst);
-        this.nuEst = nuEst;
    }
 
    public String getTipVisual() {
-        return tipVisual;
+        return this.getVo().asString("TIPVISUAL");
    }
 
    public void setTipVisual(String tipVisual) {
         markAsChanged("TIPVISUAL", tipVisual);
-        this.tipVisual = tipVisual;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class EstruturaOrganograma extends AbstractSankhyaEntity<EstruturaOrganog
    @Override
    public EstruturaOrganograma fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.descrRoot = vo.asString("DESCRROOT");
-        this.nuEst = vo.asBigDecimal("NUEST");
-        this.tipVisual = vo.asString("TIPVISUAL");
         return this;
    }
 }

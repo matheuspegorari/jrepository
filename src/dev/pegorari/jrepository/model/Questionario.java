@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Questionario extends AbstractSankhyaEntity<Questionario> {
-   private String perguntasPorGrupo;
-   private Timestamp dhAlter;
-   private String exiberespCorreta;
-   private BigDecimal nroPergPorPag;
-   private String ordemAleatoria;
-   private String ativo;
-   private BigDecimal codGrupoQuest;
-   private BigDecimal codQuest;
-   private BigDecimal codUsu;
-   private String descrQuest;
-
    public String getPerguntasPorGrupo() {
-        return perguntasPorGrupo;
+        return this.getVo().asString("PERGUNTASPORGRUPO");
    }
 
    public void setPerguntasPorGrupo(String perguntasPorGrupo) {
         markAsChanged("PERGUNTASPORGRUPO", perguntasPorGrupo);
-        this.perguntasPorGrupo = perguntasPorGrupo;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getExiberespCorreta() {
-        return exiberespCorreta;
+        return this.getVo().asString("EXIBERESPCORRETA");
    }
 
    public void setExiberespCorreta(String exiberespCorreta) {
         markAsChanged("EXIBERESPCORRETA", exiberespCorreta);
-        this.exiberespCorreta = exiberespCorreta;
    }
 
    public BigDecimal getNroPergPorPag() {
-        return nroPergPorPag;
+        return this.getVo().asBigDecimal("NROPERGPORPAG");
    }
 
    public void setNroPergPorPag(BigDecimal nroPergPorPag) {
         markAsChanged("NROPERGPORPAG", nroPergPorPag);
-        this.nroPergPorPag = nroPergPorPag;
    }
 
    public String getOrdemAleatoria() {
-        return ordemAleatoria;
+        return this.getVo().asString("ORDEMALEATORIA");
    }
 
    public void setOrdemAleatoria(String ordemAleatoria) {
         markAsChanged("ORDEMALEATORIA", ordemAleatoria);
-        this.ordemAleatoria = ordemAleatoria;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodGrupoQuest() {
-        return codGrupoQuest;
+        return this.getVo().asBigDecimal("CODGRUPOQUEST");
    }
 
    public void setCodGrupoQuest(BigDecimal codGrupoQuest) {
         markAsChanged("CODGRUPOQUEST", codGrupoQuest);
-        this.codGrupoQuest = codGrupoQuest;
    }
 
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescrQuest() {
-        return descrQuest;
+        return this.getVo().asString("DESCRQUEST");
    }
 
    public void setDescrQuest(String descrQuest) {
         markAsChanged("DESCRQUEST", descrQuest);
-        this.descrQuest = descrQuest;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class Questionario extends AbstractSankhyaEntity<Questionario> {
    @Override
    public Questionario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.perguntasPorGrupo = vo.asString("PERGUNTASPORGRUPO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.exiberespCorreta = vo.asString("EXIBERESPCORRETA");
-        this.nroPergPorPag = vo.asBigDecimal("NROPERGPORPAG");
-        this.ordemAleatoria = vo.asString("ORDEMALEATORIA");
-        this.ativo = vo.asString("ATIVO");
-        this.codGrupoQuest = vo.asBigDecimal("CODGRUPOQUEST");
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descrQuest = vo.asString("DESCRQUEST");
         return this;
    }
 }

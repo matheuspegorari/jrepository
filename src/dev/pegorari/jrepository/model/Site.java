@@ -6,245 +6,196 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Site extends AbstractSankhyaEntity<Site> {
-   private String abreviatura;
-   private String analitico;
-   private String ativo;
-   private String celular;
-   private String cep;
-   private String cnpj;
-   private BigDecimal codBai;
-   private BigDecimal codCid;
-   private BigDecimal codEnd;
-   private BigDecimal codSite;
-   private BigDecimal codSitePai;
-   private BigDecimal codUsu;
-   private String complemento;
-   private Timestamp dtAlter;
-   private Timestamp dtCad;
-   private String email;
-   private String fax;
-   private BigDecimal grau;
-   private String inscEstad;
-   private String nomeSite;
-   private String numEnd;
-   private String observacoes;
-   private BigDecimal ramal;
-   private String telefone;
-
    public String getAbreviatura() {
-        return abreviatura;
+        return this.getVo().asString("ABREVIATURA");
    }
 
    public void setAbreviatura(String abreviatura) {
         markAsChanged("ABREVIATURA", abreviatura);
-        this.abreviatura = abreviatura;
    }
 
    public String getAnalitico() {
-        return analitico;
+        return this.getVo().asString("ANALITICO");
    }
 
    public void setAnalitico(String analitico) {
         markAsChanged("ANALITICO", analitico);
-        this.analitico = analitico;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public String getCelular() {
-        return celular;
+        return this.getVo().asString("CELULAR");
    }
 
    public void setCelular(String celular) {
         markAsChanged("CELULAR", celular);
-        this.celular = celular;
    }
 
    public String getCep() {
-        return cep;
+        return this.getVo().asString("CEP");
    }
 
    public void setCep(String cep) {
         markAsChanged("CEP", cep);
-        this.cep = cep;
    }
 
    public String getCnpj() {
-        return cnpj;
+        return this.getVo().asString("CNPJ");
    }
 
    public void setCnpj(String cnpj) {
         markAsChanged("CNPJ", cnpj);
-        this.cnpj = cnpj;
    }
 
    public BigDecimal getCodBai() {
-        return codBai;
+        return this.getVo().asBigDecimal("CODBAI");
    }
 
    public void setCodBai(BigDecimal codBai) {
         markAsChanged("CODBAI", codBai);
-        this.codBai = codBai;
    }
 
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getCodSite() {
-        return codSite;
+        return this.getVo().asBigDecimal("CODSITE");
    }
 
    public void setCodSite(BigDecimal codSite) {
         markAsChanged("CODSITE", codSite);
-        this.codSite = codSite;
    }
 
    public BigDecimal getCodSitePai() {
-        return codSitePai;
+        return this.getVo().asBigDecimal("CODSITEPAI");
    }
 
    public void setCodSitePai(BigDecimal codSitePai) {
         markAsChanged("CODSITEPAI", codSitePai);
-        this.codSitePai = codSitePai;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getComplemento() {
-        return complemento;
+        return this.getVo().asString("COMPLEMENTO");
    }
 
    public void setComplemento(String complemento) {
         markAsChanged("COMPLEMENTO", complemento);
-        this.complemento = complemento;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtCad() {
-        return dtCad;
+        return this.getVo().asTimestamp("DTCAD");
    }
 
    public void setDtCad(Timestamp dtCad) {
         markAsChanged("DTCAD", dtCad);
-        this.dtCad = dtCad;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public String getFax() {
-        return fax;
+        return this.getVo().asString("FAX");
    }
 
    public void setFax(String fax) {
         markAsChanged("FAX", fax);
-        this.fax = fax;
    }
 
    public BigDecimal getGrau() {
-        return grau;
+        return this.getVo().asBigDecimal("GRAU");
    }
 
    public void setGrau(BigDecimal grau) {
         markAsChanged("GRAU", grau);
-        this.grau = grau;
    }
 
    public String getInscEstad() {
-        return inscEstad;
+        return this.getVo().asString("INSCESTAD");
    }
 
    public void setInscEstad(String inscEstad) {
         markAsChanged("INSCESTAD", inscEstad);
-        this.inscEstad = inscEstad;
    }
 
    public String getNomeSite() {
-        return nomeSite;
+        return this.getVo().asString("NOMESITE");
    }
 
    public void setNomeSite(String nomeSite) {
         markAsChanged("NOMESITE", nomeSite);
-        this.nomeSite = nomeSite;
    }
 
    public String getNumEnd() {
-        return numEnd;
+        return this.getVo().asString("NUMEND");
    }
 
    public void setNumEnd(String numEnd) {
         markAsChanged("NUMEND", numEnd);
-        this.numEnd = numEnd;
    }
 
    public String getObservacoes() {
-        return observacoes;
+        return this.getVo().asString("OBSERVACOES");
    }
 
    public void setObservacoes(String observacoes) {
         markAsChanged("OBSERVACOES", observacoes);
-        this.observacoes = observacoes;
    }
 
    public BigDecimal getRamal() {
-        return ramal;
+        return this.getVo().asBigDecimal("RAMAL");
    }
 
    public void setRamal(BigDecimal ramal) {
         markAsChanged("RAMAL", ramal);
-        this.ramal = ramal;
    }
 
    public String getTelefone() {
-        return telefone;
+        return this.getVo().asString("TELEFONE");
    }
 
    public void setTelefone(String telefone) {
         markAsChanged("TELEFONE", telefone);
-        this.telefone = telefone;
    }
 
    @Override
@@ -260,30 +211,6 @@ public class Site extends AbstractSankhyaEntity<Site> {
    @Override
    public Site fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.abreviatura = vo.asString("ABREVIATURA");
-        this.analitico = vo.asString("ANALITICO");
-        this.ativo = vo.asString("ATIVO");
-        this.celular = vo.asString("CELULAR");
-        this.cep = vo.asString("CEP");
-        this.cnpj = vo.asString("CNPJ");
-        this.codBai = vo.asBigDecimal("CODBAI");
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.codSite = vo.asBigDecimal("CODSITE");
-        this.codSitePai = vo.asBigDecimal("CODSITEPAI");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.complemento = vo.asString("COMPLEMENTO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtCad = vo.asTimestamp("DTCAD");
-        this.email = vo.asString("EMAIL");
-        this.fax = vo.asString("FAX");
-        this.grau = vo.asBigDecimal("GRAU");
-        this.inscEstad = vo.asString("INSCESTAD");
-        this.nomeSite = vo.asString("NOMESITE");
-        this.numEnd = vo.asString("NUMEND");
-        this.observacoes = vo.asString("OBSERVACOES");
-        this.ramal = vo.asBigDecimal("RAMAL");
-        this.telefone = vo.asString("TELEFONE");
         return this;
    }
 }

@@ -5,645 +5,516 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
-   private BigDecimal corDenatran;
-   private String corFab;
-   private String descrEmpParc;
-   private String distEixos;
-   private String emiteExped;
-   private String empParc;
-   private String especieTipo;
-   private BigDecimal espVei;
-   private BigDecimal m3Max;
-   private String marcaModelo;
-   private String marcaPlaca;
-   private BigDecimal maxLotacao;
-   private String numMotor;
-   private BigDecimal pesoMax;
-   private String placa;
-   private String potencia;
-   private String proprio;
-   private String renavam;
-   private BigDecimal restricao;
-   private String serial;
-   private String tipFormFrete;
-   private String tipInt;
-   private String tipo;
-   private BigDecimal tipoCombust;
-   private BigDecimal tipVei;
-   private String viaTransp;
-   private BigDecimal vlrDeprecMensal;
-   private BigDecimal vlrSegMensal;
-   private String voltagem;
-   private BigDecimal anoFabric;
-   private BigDecimal anoMod;
-   private String antt;
-   private String ativo;
-   private BigDecimal codParc;
-   private BigDecimal codProd;
-   private BigDecimal codQuest;
-   private BigDecimal codVeiculo;
-   private String combustivel;
-   private BigDecimal condVei;
-   private String condVin;
-   private String cor;
-   private String codBem;
-   private String chassis;
-   private String cmKg;
-   private BigDecimal codCid;
-   private BigDecimal codEmpFolha;
-   private BigDecimal codFormFrete;
-   private BigDecimal codFunc;
-   private BigDecimal codMarcaMod;
-   private BigDecimal codMotorista;
-   private BigDecimal tara;
-   private String tipoCar;
-   private String tipoProp;
-   private String tipoRod;
-   private String capPotCil;
-   private String categoria;
-   private String afericao;
-   private BigDecimal codCencus;
-   private String tipoAfericao;
-   private String codEmbarcacao;
-   private String nomeEmbarcacao;
-   private BigDecimal tipoEmbarcacao;
-   private String tipoVeiculo;
-   private BigDecimal codParcPropAntt;
-
    public BigDecimal getCorDenatran() {
-        return corDenatran;
+        return this.getVo().asBigDecimal("CORDENATRAN");
    }
 
    public void setCorDenatran(BigDecimal corDenatran) {
         markAsChanged("CORDENATRAN", corDenatran);
-        this.corDenatran = corDenatran;
    }
 
    public String getCorFab() {
-        return corFab;
+        return this.getVo().asString("CORFAB");
    }
 
    public void setCorFab(String corFab) {
         markAsChanged("CORFAB", corFab);
-        this.corFab = corFab;
    }
 
    public String getDescrEmpParc() {
-        return descrEmpParc;
+        return this.getVo().asString("DESCR_EMP_PARC");
    }
 
    public void setDescrEmpParc(String descrEmpParc) {
         markAsChanged("DESCR_EMP_PARC", descrEmpParc);
-        this.descrEmpParc = descrEmpParc;
    }
 
    public String getDistEixos() {
-        return distEixos;
+        return this.getVo().asString("DISTEIXOS");
    }
 
    public void setDistEixos(String distEixos) {
         markAsChanged("DISTEIXOS", distEixos);
-        this.distEixos = distEixos;
    }
 
    public String getEmiteExped() {
-        return emiteExped;
+        return this.getVo().asString("EMITEEXPED");
    }
 
    public void setEmiteExped(String emiteExped) {
         markAsChanged("EMITEEXPED", emiteExped);
-        this.emiteExped = emiteExped;
    }
 
    public String getEmpParc() {
-        return empParc;
+        return this.getVo().asString("EMPPARC");
    }
 
    public void setEmpParc(String empParc) {
         markAsChanged("EMPPARC", empParc);
-        this.empParc = empParc;
    }
 
    public String getEspecieTipo() {
-        return especieTipo;
+        return this.getVo().asString("ESPECIETIPO");
    }
 
    public void setEspecieTipo(String especieTipo) {
         markAsChanged("ESPECIETIPO", especieTipo);
-        this.especieTipo = especieTipo;
    }
 
    public BigDecimal getEspVei() {
-        return espVei;
+        return this.getVo().asBigDecimal("ESPVEI");
    }
 
    public void setEspVei(BigDecimal espVei) {
         markAsChanged("ESPVEI", espVei);
-        this.espVei = espVei;
    }
 
    public BigDecimal getM3Max() {
-        return m3Max;
+        return this.getVo().asBigDecimal("M3MAX");
    }
 
    public void setM3Max(BigDecimal m3Max) {
         markAsChanged("M3MAX", m3Max);
-        this.m3Max = m3Max;
    }
 
    public String getMarcaModelo() {
-        return marcaModelo;
+        return this.getVo().asString("MARCAMODELO");
    }
 
    public void setMarcaModelo(String marcaModelo) {
         markAsChanged("MARCAMODELO", marcaModelo);
-        this.marcaModelo = marcaModelo;
    }
 
    public String getMarcaPlaca() {
-        return marcaPlaca;
+        return this.getVo().asString("MARCAPLACA");
    }
 
    public void setMarcaPlaca(String marcaPlaca) {
         markAsChanged("MARCAPLACA", marcaPlaca);
-        this.marcaPlaca = marcaPlaca;
    }
 
    public BigDecimal getMaxLotacao() {
-        return maxLotacao;
+        return this.getVo().asBigDecimal("MAXLOTACAO");
    }
 
    public void setMaxLotacao(BigDecimal maxLotacao) {
         markAsChanged("MAXLOTACAO", maxLotacao);
-        this.maxLotacao = maxLotacao;
    }
 
    public String getNumMotor() {
-        return numMotor;
+        return this.getVo().asString("NUMMOTOR");
    }
 
    public void setNumMotor(String numMotor) {
         markAsChanged("NUMMOTOR", numMotor);
-        this.numMotor = numMotor;
    }
 
    public BigDecimal getPesoMax() {
-        return pesoMax;
+        return this.getVo().asBigDecimal("PESOMAX");
    }
 
    public void setPesoMax(BigDecimal pesoMax) {
         markAsChanged("PESOMAX", pesoMax);
-        this.pesoMax = pesoMax;
    }
 
    public String getPlaca() {
-        return placa;
+        return this.getVo().asString("PLACA");
    }
 
    public void setPlaca(String placa) {
         markAsChanged("PLACA", placa);
-        this.placa = placa;
    }
 
    public String getPotencia() {
-        return potencia;
+        return this.getVo().asString("POTENCIA");
    }
 
    public void setPotencia(String potencia) {
         markAsChanged("POTENCIA", potencia);
-        this.potencia = potencia;
    }
 
    public String getProprio() {
-        return proprio;
+        return this.getVo().asString("PROPRIO");
    }
 
    public void setProprio(String proprio) {
         markAsChanged("PROPRIO", proprio);
-        this.proprio = proprio;
    }
 
    public String getRenavam() {
-        return renavam;
+        return this.getVo().asString("RENAVAM");
    }
 
    public void setRenavam(String renavam) {
         markAsChanged("RENAVAM", renavam);
-        this.renavam = renavam;
    }
 
    public BigDecimal getRestricao() {
-        return restricao;
+        return this.getVo().asBigDecimal("RESTRICAO");
    }
 
    public void setRestricao(BigDecimal restricao) {
         markAsChanged("RESTRICAO", restricao);
-        this.restricao = restricao;
    }
 
    public String getSerial() {
-        return serial;
+        return this.getVo().asString("SERIAL");
    }
 
    public void setSerial(String serial) {
         markAsChanged("SERIAL", serial);
-        this.serial = serial;
    }
 
    public String getTipFormFrete() {
-        return tipFormFrete;
+        return this.getVo().asString("TIPFORMFRETE");
    }
 
    public void setTipFormFrete(String tipFormFrete) {
         markAsChanged("TIPFORMFRETE", tipFormFrete);
-        this.tipFormFrete = tipFormFrete;
    }
 
    public String getTipInt() {
-        return tipInt;
+        return this.getVo().asString("TIPINT");
    }
 
    public void setTipInt(String tipInt) {
         markAsChanged("TIPINT", tipInt);
-        this.tipInt = tipInt;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getTipoCombust() {
-        return tipoCombust;
+        return this.getVo().asBigDecimal("TIPOCOMBUST");
    }
 
    public void setTipoCombust(BigDecimal tipoCombust) {
         markAsChanged("TIPOCOMBUST", tipoCombust);
-        this.tipoCombust = tipoCombust;
    }
 
    public BigDecimal getTipVei() {
-        return tipVei;
+        return this.getVo().asBigDecimal("TIPVEI");
    }
 
    public void setTipVei(BigDecimal tipVei) {
         markAsChanged("TIPVEI", tipVei);
-        this.tipVei = tipVei;
    }
 
    public String getViaTransp() {
-        return viaTransp;
+        return this.getVo().asString("VIATRANSP");
    }
 
    public void setViaTransp(String viaTransp) {
         markAsChanged("VIATRANSP", viaTransp);
-        this.viaTransp = viaTransp;
    }
 
    public BigDecimal getVlrDeprecMensal() {
-        return vlrDeprecMensal;
+        return this.getVo().asBigDecimal("VLRDEPRECMENSAL");
    }
 
    public void setVlrDeprecMensal(BigDecimal vlrDeprecMensal) {
         markAsChanged("VLRDEPRECMENSAL", vlrDeprecMensal);
-        this.vlrDeprecMensal = vlrDeprecMensal;
    }
 
    public BigDecimal getVlrSegMensal() {
-        return vlrSegMensal;
+        return this.getVo().asBigDecimal("VLRSEGMENSAL");
    }
 
    public void setVlrSegMensal(BigDecimal vlrSegMensal) {
         markAsChanged("VLRSEGMENSAL", vlrSegMensal);
-        this.vlrSegMensal = vlrSegMensal;
    }
 
    public String getVoltagem() {
-        return voltagem;
+        return this.getVo().asString("VOLTAGEM");
    }
 
    public void setVoltagem(String voltagem) {
         markAsChanged("VOLTAGEM", voltagem);
-        this.voltagem = voltagem;
    }
 
    public BigDecimal getAnoFabric() {
-        return anoFabric;
+        return this.getVo().asBigDecimal("ANOFABRIC");
    }
 
    public void setAnoFabric(BigDecimal anoFabric) {
         markAsChanged("ANOFABRIC", anoFabric);
-        this.anoFabric = anoFabric;
    }
 
    public BigDecimal getAnoMod() {
-        return anoMod;
+        return this.getVo().asBigDecimal("ANOMOD");
    }
 
    public void setAnoMod(BigDecimal anoMod) {
         markAsChanged("ANOMOD", anoMod);
-        this.anoMod = anoMod;
    }
 
    public String getAntt() {
-        return antt;
+        return this.getVo().asString("ANTT");
    }
 
    public void setAntt(String antt) {
         markAsChanged("ANTT", antt);
-        this.antt = antt;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodQuest() {
-        return codQuest;
+        return this.getVo().asBigDecimal("CODQUEST");
    }
 
    public void setCodQuest(BigDecimal codQuest) {
         markAsChanged("CODQUEST", codQuest);
-        this.codQuest = codQuest;
    }
 
    public BigDecimal getCodVeiculo() {
-        return codVeiculo;
+        return this.getVo().asBigDecimal("CODVEICULO");
    }
 
    public void setCodVeiculo(BigDecimal codVeiculo) {
         markAsChanged("CODVEICULO", codVeiculo);
-        this.codVeiculo = codVeiculo;
    }
 
    public String getCombustivel() {
-        return combustivel;
+        return this.getVo().asString("COMBUSTIVEL");
    }
 
    public void setCombustivel(String combustivel) {
         markAsChanged("COMBUSTIVEL", combustivel);
-        this.combustivel = combustivel;
    }
 
    public BigDecimal getCondVei() {
-        return condVei;
+        return this.getVo().asBigDecimal("CONDVEI");
    }
 
    public void setCondVei(BigDecimal condVei) {
         markAsChanged("CONDVEI", condVei);
-        this.condVei = condVei;
    }
 
    public String getCondVin() {
-        return condVin;
+        return this.getVo().asString("CONDVIN");
    }
 
    public void setCondVin(String condVin) {
         markAsChanged("CONDVIN", condVin);
-        this.condVin = condVin;
    }
 
    public String getCor() {
-        return cor;
+        return this.getVo().asString("COR");
    }
 
    public void setCor(String cor) {
         markAsChanged("COR", cor);
-        this.cor = cor;
    }
 
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public String getChassis() {
-        return chassis;
+        return this.getVo().asString("CHASSIS");
    }
 
    public void setChassis(String chassis) {
         markAsChanged("CHASSIS", chassis);
-        this.chassis = chassis;
    }
 
    public String getCmKg() {
-        return cmKg;
+        return this.getVo().asString("CMKG");
    }
 
    public void setCmKg(String cmKg) {
         markAsChanged("CMKG", cmKg);
-        this.cmKg = cmKg;
    }
 
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodEmpFolha() {
-        return codEmpFolha;
+        return this.getVo().asBigDecimal("CODEMPFOLHA");
    }
 
    public void setCodEmpFolha(BigDecimal codEmpFolha) {
         markAsChanged("CODEMPFOLHA", codEmpFolha);
-        this.codEmpFolha = codEmpFolha;
    }
 
    public BigDecimal getCodFormFrete() {
-        return codFormFrete;
+        return this.getVo().asBigDecimal("CODFORMFRETE");
    }
 
    public void setCodFormFrete(BigDecimal codFormFrete) {
         markAsChanged("CODFORMFRETE", codFormFrete);
-        this.codFormFrete = codFormFrete;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodMarcaMod() {
-        return codMarcaMod;
+        return this.getVo().asBigDecimal("CODMARCAMOD");
    }
 
    public void setCodMarcaMod(BigDecimal codMarcaMod) {
         markAsChanged("CODMARCAMOD", codMarcaMod);
-        this.codMarcaMod = codMarcaMod;
    }
 
    public BigDecimal getCodMotorista() {
-        return codMotorista;
+        return this.getVo().asBigDecimal("CODMOTORISTA");
    }
 
    public void setCodMotorista(BigDecimal codMotorista) {
         markAsChanged("CODMOTORISTA", codMotorista);
-        this.codMotorista = codMotorista;
    }
 
    public BigDecimal getTara() {
-        return tara;
+        return this.getVo().asBigDecimal("TARA");
    }
 
    public void setTara(BigDecimal tara) {
         markAsChanged("TARA", tara);
-        this.tara = tara;
    }
 
    public String getTipoCar() {
-        return tipoCar;
+        return this.getVo().asString("TIPOCAR");
    }
 
    public void setTipoCar(String tipoCar) {
         markAsChanged("TIPOCAR", tipoCar);
-        this.tipoCar = tipoCar;
    }
 
    public String getTipoProp() {
-        return tipoProp;
+        return this.getVo().asString("TIPOPROP");
    }
 
    public void setTipoProp(String tipoProp) {
         markAsChanged("TIPOPROP", tipoProp);
-        this.tipoProp = tipoProp;
    }
 
    public String getTipoRod() {
-        return tipoRod;
+        return this.getVo().asString("TIPOROD");
    }
 
    public void setTipoRod(String tipoRod) {
         markAsChanged("TIPOROD", tipoRod);
-        this.tipoRod = tipoRod;
    }
 
    public String getCapPotCil() {
-        return capPotCil;
+        return this.getVo().asString("CAPPOTCIL");
    }
 
    public void setCapPotCil(String capPotCil) {
         markAsChanged("CAPPOTCIL", capPotCil);
-        this.capPotCil = capPotCil;
    }
 
    public String getCategoria() {
-        return categoria;
+        return this.getVo().asString("CATEGORIA");
    }
 
    public void setCategoria(String categoria) {
         markAsChanged("CATEGORIA", categoria);
-        this.categoria = categoria;
    }
 
    public String getAfericao() {
-        return afericao;
+        return this.getVo().asString("AFERICAO");
    }
 
    public void setAfericao(String afericao) {
         markAsChanged("AFERICAO", afericao);
-        this.afericao = afericao;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public String getTipoAfericao() {
-        return tipoAfericao;
+        return this.getVo().asString("TIPOAFERICAO");
    }
 
    public void setTipoAfericao(String tipoAfericao) {
         markAsChanged("TIPOAFERICAO", tipoAfericao);
-        this.tipoAfericao = tipoAfericao;
    }
 
    public String getCodEmbarcacao() {
-        return codEmbarcacao;
+        return this.getVo().asString("CODEMBARCACAO");
    }
 
    public void setCodEmbarcacao(String codEmbarcacao) {
         markAsChanged("CODEMBARCACAO", codEmbarcacao);
-        this.codEmbarcacao = codEmbarcacao;
    }
 
    public String getNomeEmbarcacao() {
-        return nomeEmbarcacao;
+        return this.getVo().asString("NOMEEMBARCACAO");
    }
 
    public void setNomeEmbarcacao(String nomeEmbarcacao) {
         markAsChanged("NOMEEMBARCACAO", nomeEmbarcacao);
-        this.nomeEmbarcacao = nomeEmbarcacao;
    }
 
    public BigDecimal getTipoEmbarcacao() {
-        return tipoEmbarcacao;
+        return this.getVo().asBigDecimal("TIPOEMBARCACAO");
    }
 
    public void setTipoEmbarcacao(BigDecimal tipoEmbarcacao) {
         markAsChanged("TIPOEMBARCACAO", tipoEmbarcacao);
-        this.tipoEmbarcacao = tipoEmbarcacao;
    }
 
    public String getTipoVeiculo() {
-        return tipoVeiculo;
+        return this.getVo().asString("TIPOVEICULO");
    }
 
    public void setTipoVeiculo(String tipoVeiculo) {
         markAsChanged("TIPOVEICULO", tipoVeiculo);
-        this.tipoVeiculo = tipoVeiculo;
    }
 
    public BigDecimal getCodParcPropAntt() {
-        return codParcPropAntt;
+        return this.getVo().asBigDecimal("CODPARCPROPANTT");
    }
 
    public void setCodParcPropAntt(BigDecimal codParcPropAntt) {
         markAsChanged("CODPARCPROPANTT", codParcPropAntt);
-        this.codParcPropAntt = codParcPropAntt;
    }
 
    @Override
@@ -659,70 +530,6 @@ public class Veiculo extends AbstractSankhyaEntity<Veiculo> {
    @Override
    public Veiculo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.corDenatran = vo.asBigDecimal("CORDENATRAN");
-        this.corFab = vo.asString("CORFAB");
-        this.descrEmpParc = vo.asString("DESCR_EMP_PARC");
-        this.distEixos = vo.asString("DISTEIXOS");
-        this.emiteExped = vo.asString("EMITEEXPED");
-        this.empParc = vo.asString("EMPPARC");
-        this.especieTipo = vo.asString("ESPECIETIPO");
-        this.espVei = vo.asBigDecimal("ESPVEI");
-        this.m3Max = vo.asBigDecimal("M3MAX");
-        this.marcaModelo = vo.asString("MARCAMODELO");
-        this.marcaPlaca = vo.asString("MARCAPLACA");
-        this.maxLotacao = vo.asBigDecimal("MAXLOTACAO");
-        this.numMotor = vo.asString("NUMMOTOR");
-        this.pesoMax = vo.asBigDecimal("PESOMAX");
-        this.placa = vo.asString("PLACA");
-        this.potencia = vo.asString("POTENCIA");
-        this.proprio = vo.asString("PROPRIO");
-        this.renavam = vo.asString("RENAVAM");
-        this.restricao = vo.asBigDecimal("RESTRICAO");
-        this.serial = vo.asString("SERIAL");
-        this.tipFormFrete = vo.asString("TIPFORMFRETE");
-        this.tipInt = vo.asString("TIPINT");
-        this.tipo = vo.asString("TIPO");
-        this.tipoCombust = vo.asBigDecimal("TIPOCOMBUST");
-        this.tipVei = vo.asBigDecimal("TIPVEI");
-        this.viaTransp = vo.asString("VIATRANSP");
-        this.vlrDeprecMensal = vo.asBigDecimal("VLRDEPRECMENSAL");
-        this.vlrSegMensal = vo.asBigDecimal("VLRSEGMENSAL");
-        this.voltagem = vo.asString("VOLTAGEM");
-        this.anoFabric = vo.asBigDecimal("ANOFABRIC");
-        this.anoMod = vo.asBigDecimal("ANOMOD");
-        this.antt = vo.asString("ANTT");
-        this.ativo = vo.asString("ATIVO");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codQuest = vo.asBigDecimal("CODQUEST");
-        this.codVeiculo = vo.asBigDecimal("CODVEICULO");
-        this.combustivel = vo.asString("COMBUSTIVEL");
-        this.condVei = vo.asBigDecimal("CONDVEI");
-        this.condVin = vo.asString("CONDVIN");
-        this.cor = vo.asString("COR");
-        this.codBem = vo.asString("CODBEM");
-        this.chassis = vo.asString("CHASSIS");
-        this.cmKg = vo.asString("CMKG");
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codEmpFolha = vo.asBigDecimal("CODEMPFOLHA");
-        this.codFormFrete = vo.asBigDecimal("CODFORMFRETE");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codMarcaMod = vo.asBigDecimal("CODMARCAMOD");
-        this.codMotorista = vo.asBigDecimal("CODMOTORISTA");
-        this.tara = vo.asBigDecimal("TARA");
-        this.tipoCar = vo.asString("TIPOCAR");
-        this.tipoProp = vo.asString("TIPOPROP");
-        this.tipoRod = vo.asString("TIPOROD");
-        this.capPotCil = vo.asString("CAPPOTCIL");
-        this.categoria = vo.asString("CATEGORIA");
-        this.afericao = vo.asString("AFERICAO");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.tipoAfericao = vo.asString("TIPOAFERICAO");
-        this.codEmbarcacao = vo.asString("CODEMBARCACAO");
-        this.nomeEmbarcacao = vo.asString("NOMEEMBARCACAO");
-        this.tipoEmbarcacao = vo.asBigDecimal("TIPOEMBARCACAO");
-        this.tipoVeiculo = vo.asString("TIPOVEICULO");
-        this.codParcPropAntt = vo.asBigDecimal("CODPARCPROPANTT");
         return this;
    }
 }

@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
-   private BigDecimal codContato;
-   private BigDecimal codParc;
-   private BigDecimal codTipParc;
-
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodTipParc() {
-        return codTipParc;
+        return this.getVo().asBigDecimal("CODTIPPARC");
    }
 
    public void setCodTipParc(BigDecimal codTipParc) {
         markAsChanged("CODTIPPARC", codTipParc);
-        this.codTipParc = codTipParc;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PerfilParceiro extends AbstractSankhyaEntity<PerfilParceiro> {
    @Override
    public PerfilParceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codTipParc = vo.asBigDecimal("CODTIPPARC");
         return this;
    }
 }

@@ -6,565 +6,452 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
-   private String contato;
-   private String descricao;
-   private Timestamp dhChamada;
-   private Timestamp dhFechamentoSla;
-   private Timestamp dtAlter;
-   private BigDecimal codParcAtend;
-   private BigDecimal codPla;
-   private String bairro;
-   private String cidade;
-   private BigDecimal codAtend;
-   private String codBem;
-   private BigDecimal codCenCus;
-   private BigDecimal codContato;
-   private BigDecimal codContatoPap;
-   private BigDecimal codCos;
-   private BigDecimal codCosAnt;
-   private BigDecimal codOat;
-   private BigDecimal codPap;
-   private BigDecimal codParc;
-   private String complemento;
-   private String endereco;
-   private String etapaNeg;
-   private String identificador;
-   private String nomeContato;
-   private String nomeModelo;
-   private BigDecimal nuFap;
-   private BigDecimal numContrato;
-   private BigDecimal numEtapa;
-   private Timestamp dtFechamento;
-   private Timestamp dtPrevista;
-   private BigDecimal codServFluxo;
-   private BigDecimal codTpn;
-   private BigDecimal codUsuAlter;
-   private BigDecimal codUsuFech;
-   private BigDecimal codUsuResp;
-   private BigDecimal codUsuSolicitante;
-   private BigDecimal codVend;
-   private BigDecimal numOs;
-   private String numOsCliente;
-   private BigDecimal numOsRelacionada;
-   private BigDecimal nuNota;
-   private String possuiSla;
-   private String serie;
-   private String situacao;
-   private String statusNeg;
-   private String telContato;
-   private BigDecimal tempGasto;
-   private BigDecimal tempoGastoSla;
-   private BigDecimal tempoSla;
-   private BigDecimal tempPrevisto;
-   private String tipo;
-   private BigDecimal variacaoFluxo;
-   private String modeloVisivelAppOs;
-   private BigDecimal codProcMaHa;
-   private String impacto;
-   private String urgencia;
-
    public String getContato() {
-        return contato;
+        return this.getVo().asString("CONTATO");
    }
 
    public void setContato(String contato) {
         markAsChanged("CONTATO", contato);
-        this.contato = contato;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhChamada() {
-        return dhChamada;
+        return this.getVo().asTimestamp("DHCHAMADA");
    }
 
    public void setDhChamada(Timestamp dhChamada) {
         markAsChanged("DHCHAMADA", dhChamada);
-        this.dhChamada = dhChamada;
    }
 
    public Timestamp getDhFechamentoSla() {
-        return dhFechamentoSla;
+        return this.getVo().asTimestamp("DHFECHAMENTOSLA");
    }
 
    public void setDhFechamentoSla(Timestamp dhFechamentoSla) {
         markAsChanged("DHFECHAMENTOSLA", dhFechamentoSla);
-        this.dhFechamentoSla = dhFechamentoSla;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getCodParcAtend() {
-        return codParcAtend;
+        return this.getVo().asBigDecimal("CODPARCATEND");
    }
 
    public void setCodParcAtend(BigDecimal codParcAtend) {
         markAsChanged("CODPARCATEND", codParcAtend);
-        this.codParcAtend = codParcAtend;
    }
 
    public BigDecimal getCodPla() {
-        return codPla;
+        return this.getVo().asBigDecimal("CODPLA");
    }
 
    public void setCodPla(BigDecimal codPla) {
         markAsChanged("CODPLA", codPla);
-        this.codPla = codPla;
    }
 
    public String getBairro() {
-        return bairro;
+        return this.getVo().asString("BAIRRO");
    }
 
    public void setBairro(String bairro) {
         markAsChanged("BAIRRO", bairro);
-        this.bairro = bairro;
    }
 
    public String getCidade() {
-        return cidade;
+        return this.getVo().asString("CIDADE");
    }
 
    public void setCidade(String cidade) {
         markAsChanged("CIDADE", cidade);
-        this.cidade = cidade;
    }
 
    public BigDecimal getCodAtend() {
-        return codAtend;
+        return this.getVo().asBigDecimal("CODATEND");
    }
 
    public void setCodAtend(BigDecimal codAtend) {
         markAsChanged("CODATEND", codAtend);
-        this.codAtend = codAtend;
    }
 
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public BigDecimal getCodCenCus() {
-        return codCenCus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCenCus(BigDecimal codCenCus) {
         markAsChanged("CODCENCUS", codCenCus);
-        this.codCenCus = codCenCus;
    }
 
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodContatoPap() {
-        return codContatoPap;
+        return this.getVo().asBigDecimal("CODCONTATOPAP");
    }
 
    public void setCodContatoPap(BigDecimal codContatoPap) {
         markAsChanged("CODCONTATOPAP", codContatoPap);
-        this.codContatoPap = codContatoPap;
    }
 
    public BigDecimal getCodCos() {
-        return codCos;
+        return this.getVo().asBigDecimal("CODCOS");
    }
 
    public void setCodCos(BigDecimal codCos) {
         markAsChanged("CODCOS", codCos);
-        this.codCos = codCos;
    }
 
    public BigDecimal getCodCosAnt() {
-        return codCosAnt;
+        return this.getVo().asBigDecimal("CODCOSANT");
    }
 
    public void setCodCosAnt(BigDecimal codCosAnt) {
         markAsChanged("CODCOSANT", codCosAnt);
-        this.codCosAnt = codCosAnt;
    }
 
    public BigDecimal getCodOat() {
-        return codOat;
+        return this.getVo().asBigDecimal("CODOAT");
    }
 
    public void setCodOat(BigDecimal codOat) {
         markAsChanged("CODOAT", codOat);
-        this.codOat = codOat;
    }
 
    public BigDecimal getCodPap() {
-        return codPap;
+        return this.getVo().asBigDecimal("CODPAP");
    }
 
    public void setCodPap(BigDecimal codPap) {
         markAsChanged("CODPAP", codPap);
-        this.codPap = codPap;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public String getComplemento() {
-        return complemento;
+        return this.getVo().asString("COMPLEMENTO");
    }
 
    public void setComplemento(String complemento) {
         markAsChanged("COMPLEMENTO", complemento);
-        this.complemento = complemento;
    }
 
    public String getEndereco() {
-        return endereco;
+        return this.getVo().asString("ENDERECO");
    }
 
    public void setEndereco(String endereco) {
         markAsChanged("ENDERECO", endereco);
-        this.endereco = endereco;
    }
 
    public String getEtapaNeg() {
-        return etapaNeg;
+        return this.getVo().asString("ETAPANEG");
    }
 
    public void setEtapaNeg(String etapaNeg) {
         markAsChanged("ETAPANEG", etapaNeg);
-        this.etapaNeg = etapaNeg;
    }
 
    public String getIdentificador() {
-        return identificador;
+        return this.getVo().asString("IDENTIFICADOR");
    }
 
    public void setIdentificador(String identificador) {
         markAsChanged("IDENTIFICADOR", identificador);
-        this.identificador = identificador;
    }
 
    public String getNomeContato() {
-        return nomeContato;
+        return this.getVo().asString("NOMECONTATO");
    }
 
    public void setNomeContato(String nomeContato) {
         markAsChanged("NOMECONTATO", nomeContato);
-        this.nomeContato = nomeContato;
    }
 
    public String getNomeModelo() {
-        return nomeModelo;
+        return this.getVo().asString("NOMEMODELO");
    }
 
    public void setNomeModelo(String nomeModelo) {
         markAsChanged("NOMEMODELO", nomeModelo);
-        this.nomeModelo = nomeModelo;
    }
 
    public BigDecimal getNuFap() {
-        return nuFap;
+        return this.getVo().asBigDecimal("NUFAP");
    }
 
    public void setNuFap(BigDecimal nuFap) {
         markAsChanged("NUFAP", nuFap);
-        this.nuFap = nuFap;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getNumEtapa() {
-        return numEtapa;
+        return this.getVo().asBigDecimal("NUMETAPA");
    }
 
    public void setNumEtapa(BigDecimal numEtapa) {
         markAsChanged("NUMETAPA", numEtapa);
-        this.numEtapa = numEtapa;
    }
 
    public Timestamp getDtFechamento() {
-        return dtFechamento;
+        return this.getVo().asTimestamp("DTFECHAMENTO");
    }
 
    public void setDtFechamento(Timestamp dtFechamento) {
         markAsChanged("DTFECHAMENTO", dtFechamento);
-        this.dtFechamento = dtFechamento;
    }
 
    public Timestamp getDtPrevista() {
-        return dtPrevista;
+        return this.getVo().asTimestamp("DTPREVISTA");
    }
 
    public void setDtPrevista(Timestamp dtPrevista) {
         markAsChanged("DTPREVISTA", dtPrevista);
-        this.dtPrevista = dtPrevista;
    }
 
    public BigDecimal getCodServFluxo() {
-        return codServFluxo;
+        return this.getVo().asBigDecimal("CODSERVFLUXO");
    }
 
    public void setCodServFluxo(BigDecimal codServFluxo) {
         markAsChanged("CODSERVFLUXO", codServFluxo);
-        this.codServFluxo = codServFluxo;
    }
 
    public BigDecimal getCodTpn() {
-        return codTpn;
+        return this.getVo().asBigDecimal("CODTPN");
    }
 
    public void setCodTpn(BigDecimal codTpn) {
         markAsChanged("CODTPN", codTpn);
-        this.codTpn = codTpn;
    }
 
    public BigDecimal getCodUsuAlter() {
-        return codUsuAlter;
+        return this.getVo().asBigDecimal("CODUSUALTER");
    }
 
    public void setCodUsuAlter(BigDecimal codUsuAlter) {
         markAsChanged("CODUSUALTER", codUsuAlter);
-        this.codUsuAlter = codUsuAlter;
    }
 
    public BigDecimal getCodUsuFech() {
-        return codUsuFech;
+        return this.getVo().asBigDecimal("CODUSUFECH");
    }
 
    public void setCodUsuFech(BigDecimal codUsuFech) {
         markAsChanged("CODUSUFECH", codUsuFech);
-        this.codUsuFech = codUsuFech;
    }
 
    public BigDecimal getCodUsuResp() {
-        return codUsuResp;
+        return this.getVo().asBigDecimal("CODUSURESP");
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
         markAsChanged("CODUSURESP", codUsuResp);
-        this.codUsuResp = codUsuResp;
    }
 
    public BigDecimal getCodUsuSolicitante() {
-        return codUsuSolicitante;
+        return this.getVo().asBigDecimal("CODUSUSOLICITANTE");
    }
 
    public void setCodUsuSolicitante(BigDecimal codUsuSolicitante) {
         markAsChanged("CODUSUSOLICITANTE", codUsuSolicitante);
-        this.codUsuSolicitante = codUsuSolicitante;
    }
 
    public BigDecimal getCodVend() {
-        return codVend;
+        return this.getVo().asBigDecimal("CODVEND");
    }
 
    public void setCodVend(BigDecimal codVend) {
         markAsChanged("CODVEND", codVend);
-        this.codVend = codVend;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public String getNumOsCliente() {
-        return numOsCliente;
+        return this.getVo().asString("NUMOSCLIENTE");
    }
 
    public void setNumOsCliente(String numOsCliente) {
         markAsChanged("NUMOSCLIENTE", numOsCliente);
-        this.numOsCliente = numOsCliente;
    }
 
    public BigDecimal getNumOsRelacionada() {
-        return numOsRelacionada;
+        return this.getVo().asBigDecimal("NUMOSRELACIONADA");
    }
 
    public void setNumOsRelacionada(BigDecimal numOsRelacionada) {
         markAsChanged("NUMOSRELACIONADA", numOsRelacionada);
-        this.numOsRelacionada = numOsRelacionada;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getPossuiSla() {
-        return possuiSla;
+        return this.getVo().asString("POSSUISLA");
    }
 
    public void setPossuiSla(String possuiSla) {
         markAsChanged("POSSUISLA", possuiSla);
-        this.possuiSla = possuiSla;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    public String getStatusNeg() {
-        return statusNeg;
+        return this.getVo().asString("STATUSNEG");
    }
 
    public void setStatusNeg(String statusNeg) {
         markAsChanged("STATUSNEG", statusNeg);
-        this.statusNeg = statusNeg;
    }
 
    public String getTelContato() {
-        return telContato;
+        return this.getVo().asString("TELCONTATO");
    }
 
    public void setTelContato(String telContato) {
         markAsChanged("TELCONTATO", telContato);
-        this.telContato = telContato;
    }
 
    public BigDecimal getTempGasto() {
-        return tempGasto;
+        return this.getVo().asBigDecimal("TEMPGASTO");
    }
 
    public void setTempGasto(BigDecimal tempGasto) {
         markAsChanged("TEMPGASTO", tempGasto);
-        this.tempGasto = tempGasto;
    }
 
    public BigDecimal getTempoGastoSla() {
-        return tempoGastoSla;
+        return this.getVo().asBigDecimal("TEMPOGASTOSLA");
    }
 
    public void setTempoGastoSla(BigDecimal tempoGastoSla) {
         markAsChanged("TEMPOGASTOSLA", tempoGastoSla);
-        this.tempoGastoSla = tempoGastoSla;
    }
 
    public BigDecimal getTempoSla() {
-        return tempoSla;
+        return this.getVo().asBigDecimal("TEMPOSLA");
    }
 
    public void setTempoSla(BigDecimal tempoSla) {
         markAsChanged("TEMPOSLA", tempoSla);
-        this.tempoSla = tempoSla;
    }
 
    public BigDecimal getTempPrevisto() {
-        return tempPrevisto;
+        return this.getVo().asBigDecimal("TEMPPREVISTO");
    }
 
    public void setTempPrevisto(BigDecimal tempPrevisto) {
         markAsChanged("TEMPPREVISTO", tempPrevisto);
-        this.tempPrevisto = tempPrevisto;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getVariacaoFluxo() {
-        return variacaoFluxo;
+        return this.getVo().asBigDecimal("VARIACAOFLUXO");
    }
 
    public void setVariacaoFluxo(BigDecimal variacaoFluxo) {
         markAsChanged("VARIACAOFLUXO", variacaoFluxo);
-        this.variacaoFluxo = variacaoFluxo;
    }
 
    public String getModeloVisivelAppOs() {
-        return modeloVisivelAppOs;
+        return this.getVo().asString("MODELOVISIVELAPPOS");
    }
 
    public void setModeloVisivelAppOs(String modeloVisivelAppOs) {
         markAsChanged("MODELOVISIVELAPPOS", modeloVisivelAppOs);
-        this.modeloVisivelAppOs = modeloVisivelAppOs;
    }
 
    public BigDecimal getCodProcMaHa() {
-        return codProcMaHa;
+        return this.getVo().asBigDecimal("CODPROCMAHA");
    }
 
    public void setCodProcMaHa(BigDecimal codProcMaHa) {
         markAsChanged("CODPROCMAHA", codProcMaHa);
-        this.codProcMaHa = codProcMaHa;
    }
 
    public String getImpacto() {
-        return impacto;
+        return this.getVo().asString("IMPACTO");
    }
 
    public void setImpacto(String impacto) {
         markAsChanged("IMPACTO", impacto);
-        this.impacto = impacto;
    }
 
    public String getUrgencia() {
-        return urgencia;
+        return this.getVo().asString("URGENCIA");
    }
 
    public void setUrgencia(String urgencia) {
         markAsChanged("URGENCIA", urgencia);
-        this.urgencia = urgencia;
    }
 
    @Override
@@ -580,62 +467,6 @@ public class OrdemServico extends AbstractSankhyaEntity<OrdemServico> {
    @Override
    public OrdemServico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.contato = vo.asString("CONTATO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhChamada = vo.asTimestamp("DHCHAMADA");
-        this.dhFechamentoSla = vo.asTimestamp("DHFECHAMENTOSLA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codParcAtend = vo.asBigDecimal("CODPARCATEND");
-        this.codPla = vo.asBigDecimal("CODPLA");
-        this.bairro = vo.asString("BAIRRO");
-        this.cidade = vo.asString("CIDADE");
-        this.codAtend = vo.asBigDecimal("CODATEND");
-        this.codBem = vo.asString("CODBEM");
-        this.codCenCus = vo.asBigDecimal("CODCENCUS");
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codContatoPap = vo.asBigDecimal("CODCONTATOPAP");
-        this.codCos = vo.asBigDecimal("CODCOS");
-        this.codCosAnt = vo.asBigDecimal("CODCOSANT");
-        this.codOat = vo.asBigDecimal("CODOAT");
-        this.codPap = vo.asBigDecimal("CODPAP");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.complemento = vo.asString("COMPLEMENTO");
-        this.endereco = vo.asString("ENDERECO");
-        this.etapaNeg = vo.asString("ETAPANEG");
-        this.identificador = vo.asString("IDENTIFICADOR");
-        this.nomeContato = vo.asString("NOMECONTATO");
-        this.nomeModelo = vo.asString("NOMEMODELO");
-        this.nuFap = vo.asBigDecimal("NUFAP");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.numEtapa = vo.asBigDecimal("NUMETAPA");
-        this.dtFechamento = vo.asTimestamp("DTFECHAMENTO");
-        this.dtPrevista = vo.asTimestamp("DTPREVISTA");
-        this.codServFluxo = vo.asBigDecimal("CODSERVFLUXO");
-        this.codTpn = vo.asBigDecimal("CODTPN");
-        this.codUsuAlter = vo.asBigDecimal("CODUSUALTER");
-        this.codUsuFech = vo.asBigDecimal("CODUSUFECH");
-        this.codUsuResp = vo.asBigDecimal("CODUSURESP");
-        this.codUsuSolicitante = vo.asBigDecimal("CODUSUSOLICITANTE");
-        this.codVend = vo.asBigDecimal("CODVEND");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.numOsCliente = vo.asString("NUMOSCLIENTE");
-        this.numOsRelacionada = vo.asBigDecimal("NUMOSRELACIONADA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.possuiSla = vo.asString("POSSUISLA");
-        this.serie = vo.asString("SERIE");
-        this.situacao = vo.asString("SITUACAO");
-        this.statusNeg = vo.asString("STATUSNEG");
-        this.telContato = vo.asString("TELCONTATO");
-        this.tempGasto = vo.asBigDecimal("TEMPGASTO");
-        this.tempoGastoSla = vo.asBigDecimal("TEMPOGASTOSLA");
-        this.tempoSla = vo.asBigDecimal("TEMPOSLA");
-        this.tempPrevisto = vo.asBigDecimal("TEMPPREVISTO");
-        this.tipo = vo.asString("TIPO");
-        this.variacaoFluxo = vo.asBigDecimal("VARIACAOFLUXO");
-        this.modeloVisivelAppOs = vo.asString("MODELOVISIVELAPPOS");
-        this.codProcMaHa = vo.asBigDecimal("CODPROCMAHA");
-        this.impacto = vo.asString("IMPACTO");
-        this.urgencia = vo.asString("URGENCIA");
         return this;
    }
 }

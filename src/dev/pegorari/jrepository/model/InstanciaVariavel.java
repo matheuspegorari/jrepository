@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> {
-   private Timestamp dta;
-   private BigDecimal idInstPrn;
-   private BigDecimal idInstTar;
-   private String nome;
-   private BigDecimal numDec;
-   private BigDecimal numInt;
-   private String texto;
-   private String textoLongo;
-   private String tipo;
-
    public Timestamp getDta() {
-        return dta;
+        return this.getVo().asTimestamp("DTA");
    }
 
    public void setDta(Timestamp dta) {
         markAsChanged("DTA", dta);
-        this.dta = dta;
    }
 
    public BigDecimal getIdInstPrn() {
-        return idInstPrn;
+        return this.getVo().asBigDecimal("IDINSTPRN");
    }
 
    public void setIdInstPrn(BigDecimal idInstPrn) {
         markAsChanged("IDINSTPRN", idInstPrn);
-        this.idInstPrn = idInstPrn;
    }
 
    public BigDecimal getIdInstTar() {
-        return idInstTar;
+        return this.getVo().asBigDecimal("IDINSTTAR");
    }
 
    public void setIdInstTar(BigDecimal idInstTar) {
         markAsChanged("IDINSTTAR", idInstTar);
-        this.idInstTar = idInstTar;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNumDec() {
-        return numDec;
+        return this.getVo().asBigDecimal("NUMDEC");
    }
 
    public void setNumDec(BigDecimal numDec) {
         markAsChanged("NUMDEC", numDec);
-        this.numDec = numDec;
    }
 
    public BigDecimal getNumInt() {
-        return numInt;
+        return this.getVo().asBigDecimal("NUMINT");
    }
 
    public void setNumInt(BigDecimal numInt) {
         markAsChanged("NUMINT", numInt);
-        this.numInt = numInt;
    }
 
    public String getTexto() {
-        return texto;
+        return this.getVo().asString("TEXTO");
    }
 
    public void setTexto(String texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    public String getTextoLongo() {
-        return textoLongo;
+        return this.getVo().asString("TEXTOLONGO");
    }
 
    public void setTextoLongo(String textoLongo) {
         markAsChanged("TEXTOLONGO", textoLongo);
-        this.textoLongo = textoLongo;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class InstanciaVariavel extends AbstractSankhyaEntity<InstanciaVariavel> 
    @Override
    public InstanciaVariavel fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dta = vo.asTimestamp("DTA");
-        this.idInstPrn = vo.asBigDecimal("IDINSTPRN");
-        this.idInstTar = vo.asBigDecimal("IDINSTTAR");
-        this.nome = vo.asString("NOME");
-        this.numDec = vo.asBigDecimal("NUMDEC");
-        this.numInt = vo.asBigDecimal("NUMINT");
-        this.texto = vo.asString("TEXTO");
-        this.textoLongo = vo.asString("TEXTOLONGO");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

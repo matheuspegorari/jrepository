@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
-   private BigDecimal codMetod;
-   private BigDecimal codProd;
-   private String complementar;
-   private BigDecimal numModelo;
-
    public BigDecimal getCodMetod() {
-        return codMetod;
+        return this.getVo().asBigDecimal("CODMETOD");
    }
 
    public void setCodMetod(BigDecimal codMetod) {
         markAsChanged("CODMETOD", codMetod);
-        this.codMetod = codMetod;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getComplementar() {
-        return complementar;
+        return this.getVo().asString("COMPLEMENTAR");
    }
 
    public void setComplementar(String complementar) {
         markAsChanged("COMPLEMENTAR", complementar);
-        this.complementar = complementar;
    }
 
    public BigDecimal getNumModelo() {
-        return numModelo;
+        return this.getVo().asBigDecimal("NUMMODELO");
    }
 
    public void setNumModelo(BigDecimal numModelo) {
         markAsChanged("NUMMODELO", numModelo);
-        this.numModelo = numModelo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ServicoModEtapa extends AbstractSankhyaEntity<ServicoModEtapa> {
    @Override
    public ServicoModEtapa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMetod = vo.asBigDecimal("CODMETOD");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.complementar = vo.asString("COMPLEMENTAR");
-        this.numModelo = vo.asBigDecimal("NUMMODELO");
         return this;
    }
 }

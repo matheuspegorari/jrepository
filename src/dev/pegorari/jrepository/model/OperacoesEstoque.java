@@ -5,485 +5,388 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
-   private String tipoMaterial;
-   private BigDecimal seqOper;
-   private String statusExec;
-   private String tipoItens;
-   private String baixarReservaEst;
-   private String usarParcTerc;
-   private String tipoExec;
-   private BigDecimal codLocalBaixaMp;
-   private BigDecimal codCencus;
-   private BigDecimal codEmpDest;
-   private BigDecimal codEmpOrig;
-   private BigDecimal codLocalDest;
-   private BigDecimal codLocalOrig;
-   private BigDecimal codNat;
-   private BigDecimal codParc;
-   private BigDecimal codProj;
-   private BigDecimal codTipOper;
-   private BigDecimal codTipVenda;
-   private String confirmar;
-   private BigDecimal ideFx;
-   private BigDecimal ideFxBase;
-   private BigDecimal idForm;
-   private String nomeImpressora;
-   private BigDecimal nuNotaModelo;
-   private BigDecimal ordem;
-   private String quando;
-   private String selImpressora;
-   private String consumirEstoque;
-   private String descricao;
-   private String obrigatorio;
-   private String tipoOper;
-   private String anulaOperEst;
-   private BigDecimal codLocalDestPerda;
-   private BigDecimal codTipOperPerda;
-   private BigDecimal codEmpDestEncad;
-   private BigDecimal codLocalDestEncad;
-   private BigDecimal codParcEncad;
-   private BigDecimal codTipOperEncad;
-   private String confirmEncad;
-   private BigDecimal nuModeloEncad;
-   private String obrigEncad;
-   private String tipoOperEncad;
-   private String tipoProducao;
-   private String utilizaLocalOrig;
-   private BigDecimal codTipOperKanban;
-   private String kanban;
-   private BigDecimal nuNotaModeloKanban;
-   private String usarParcTercEncad;
-
    public String getTipoMaterial() {
-        return tipoMaterial;
+        return this.getVo().asString("TIPOMATERIAL");
    }
 
    public void setTipoMaterial(String tipoMaterial) {
         markAsChanged("TIPOMATERIAL", tipoMaterial);
-        this.tipoMaterial = tipoMaterial;
    }
 
    public BigDecimal getSeqOper() {
-        return seqOper;
+        return this.getVo().asBigDecimal("SEQOPER");
    }
 
    public void setSeqOper(BigDecimal seqOper) {
         markAsChanged("SEQOPER", seqOper);
-        this.seqOper = seqOper;
    }
 
    public String getStatusExec() {
-        return statusExec;
+        return this.getVo().asString("STATUSEXEC");
    }
 
    public void setStatusExec(String statusExec) {
         markAsChanged("STATUSEXEC", statusExec);
-        this.statusExec = statusExec;
    }
 
    public String getTipoItens() {
-        return tipoItens;
+        return this.getVo().asString("TIPOITENS");
    }
 
    public void setTipoItens(String tipoItens) {
         markAsChanged("TIPOITENS", tipoItens);
-        this.tipoItens = tipoItens;
    }
 
    public String getBaixarReservaEst() {
-        return baixarReservaEst;
+        return this.getVo().asString("BAIXARESERVAEST");
    }
 
    public void setBaixarReservaEst(String baixarReservaEst) {
         markAsChanged("BAIXARESERVAEST", baixarReservaEst);
-        this.baixarReservaEst = baixarReservaEst;
    }
 
    public String getUsarParcTerc() {
-        return usarParcTerc;
+        return this.getVo().asString("USARPARCTERC");
    }
 
    public void setUsarParcTerc(String usarParcTerc) {
         markAsChanged("USARPARCTERC", usarParcTerc);
-        this.usarParcTerc = usarParcTerc;
    }
 
    public String getTipoExec() {
-        return tipoExec;
+        return this.getVo().asString("TIPOEXEC");
    }
 
    public void setTipoExec(String tipoExec) {
         markAsChanged("TIPOEXEC", tipoExec);
-        this.tipoExec = tipoExec;
    }
 
    public BigDecimal getCodLocalBaixaMp() {
-        return codLocalBaixaMp;
+        return this.getVo().asBigDecimal("CODLOCALBAIXAMP");
    }
 
    public void setCodLocalBaixaMp(BigDecimal codLocalBaixaMp) {
         markAsChanged("CODLOCALBAIXAMP", codLocalBaixaMp);
-        this.codLocalBaixaMp = codLocalBaixaMp;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodEmpDest() {
-        return codEmpDest;
+        return this.getVo().asBigDecimal("CODEMPDEST");
    }
 
    public void setCodEmpDest(BigDecimal codEmpDest) {
         markAsChanged("CODEMPDEST", codEmpDest);
-        this.codEmpDest = codEmpDest;
    }
 
    public BigDecimal getCodEmpOrig() {
-        return codEmpOrig;
+        return this.getVo().asBigDecimal("CODEMPORIG");
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
         markAsChanged("CODEMPORIG", codEmpOrig);
-        this.codEmpOrig = codEmpOrig;
    }
 
    public BigDecimal getCodLocalDest() {
-        return codLocalDest;
+        return this.getVo().asBigDecimal("CODLOCALDEST");
    }
 
    public void setCodLocalDest(BigDecimal codLocalDest) {
         markAsChanged("CODLOCALDEST", codLocalDest);
-        this.codLocalDest = codLocalDest;
    }
 
    public BigDecimal getCodLocalOrig() {
-        return codLocalOrig;
+        return this.getVo().asBigDecimal("CODLOCALORIG");
    }
 
    public void setCodLocalOrig(BigDecimal codLocalOrig) {
         markAsChanged("CODLOCALORIG", codLocalOrig);
-        this.codLocalOrig = codLocalOrig;
    }
 
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProj() {
-        return codProj;
+        return this.getVo().asBigDecimal("CODPROJ");
    }
 
    public void setCodProj(BigDecimal codProj) {
         markAsChanged("CODPROJ", codProj);
-        this.codProj = codProj;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public BigDecimal getCodTipVenda() {
-        return codTipVenda;
+        return this.getVo().asBigDecimal("CODTIPVENDA");
    }
 
    public void setCodTipVenda(BigDecimal codTipVenda) {
         markAsChanged("CODTIPVENDA", codTipVenda);
-        this.codTipVenda = codTipVenda;
    }
 
    public String getConfirmar() {
-        return confirmar;
+        return this.getVo().asString("CONFIRMAR");
    }
 
    public void setConfirmar(String confirmar) {
         markAsChanged("CONFIRMAR", confirmar);
-        this.confirmar = confirmar;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdeFxBase() {
-        return ideFxBase;
+        return this.getVo().asBigDecimal("IDEFXBASE");
    }
 
    public void setIdeFxBase(BigDecimal ideFxBase) {
         markAsChanged("IDEFXBASE", ideFxBase);
-        this.ideFxBase = ideFxBase;
    }
 
    public BigDecimal getIdForm() {
-        return idForm;
+        return this.getVo().asBigDecimal("IDFORM");
    }
 
    public void setIdForm(BigDecimal idForm) {
         markAsChanged("IDFORM", idForm);
-        this.idForm = idForm;
    }
 
    public String getNomeImpressora() {
-        return nomeImpressora;
+        return this.getVo().asString("NOMEIMPRESSORA");
    }
 
    public void setNomeImpressora(String nomeImpressora) {
         markAsChanged("NOMEIMPRESSORA", nomeImpressora);
-        this.nomeImpressora = nomeImpressora;
    }
 
    public BigDecimal getNuNotaModelo() {
-        return nuNotaModelo;
+        return this.getVo().asBigDecimal("NUNOTAMODELO");
    }
 
    public void setNuNotaModelo(BigDecimal nuNotaModelo) {
         markAsChanged("NUNOTAMODELO", nuNotaModelo);
-        this.nuNotaModelo = nuNotaModelo;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getQuando() {
-        return quando;
+        return this.getVo().asString("QUANDO");
    }
 
    public void setQuando(String quando) {
         markAsChanged("QUANDO", quando);
-        this.quando = quando;
    }
 
    public String getSelImpressora() {
-        return selImpressora;
+        return this.getVo().asString("SELIMPRESSORA");
    }
 
    public void setSelImpressora(String selImpressora) {
         markAsChanged("SELIMPRESSORA", selImpressora);
-        this.selImpressora = selImpressora;
    }
 
    public String getConsumirEstoque() {
-        return consumirEstoque;
+        return this.getVo().asString("CONSUMIRESTOQUE");
    }
 
    public void setConsumirEstoque(String consumirEstoque) {
         markAsChanged("CONSUMIRESTOQUE", consumirEstoque);
-        this.consumirEstoque = consumirEstoque;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getObrigatorio() {
-        return obrigatorio;
+        return this.getVo().asString("OBRIGATORIO");
    }
 
    public void setObrigatorio(String obrigatorio) {
         markAsChanged("OBRIGATORIO", obrigatorio);
-        this.obrigatorio = obrigatorio;
    }
 
    public String getTipoOper() {
-        return tipoOper;
+        return this.getVo().asString("TIPOOPER");
    }
 
    public void setTipoOper(String tipoOper) {
         markAsChanged("TIPOOPER", tipoOper);
-        this.tipoOper = tipoOper;
    }
 
    public String getAnulaOperEst() {
-        return anulaOperEst;
+        return this.getVo().asString("ANULAOPEREST");
    }
 
    public void setAnulaOperEst(String anulaOperEst) {
         markAsChanged("ANULAOPEREST", anulaOperEst);
-        this.anulaOperEst = anulaOperEst;
    }
 
    public BigDecimal getCodLocalDestPerda() {
-        return codLocalDestPerda;
+        return this.getVo().asBigDecimal("CODLOCALDESTPERDA");
    }
 
    public void setCodLocalDestPerda(BigDecimal codLocalDestPerda) {
         markAsChanged("CODLOCALDESTPERDA", codLocalDestPerda);
-        this.codLocalDestPerda = codLocalDestPerda;
    }
 
    public BigDecimal getCodTipOperPerda() {
-        return codTipOperPerda;
+        return this.getVo().asBigDecimal("CODTIPOPERPERDA");
    }
 
    public void setCodTipOperPerda(BigDecimal codTipOperPerda) {
         markAsChanged("CODTIPOPERPERDA", codTipOperPerda);
-        this.codTipOperPerda = codTipOperPerda;
    }
 
    public BigDecimal getCodEmpDestEncad() {
-        return codEmpDestEncad;
+        return this.getVo().asBigDecimal("CODEMPDESTENCAD");
    }
 
    public void setCodEmpDestEncad(BigDecimal codEmpDestEncad) {
         markAsChanged("CODEMPDESTENCAD", codEmpDestEncad);
-        this.codEmpDestEncad = codEmpDestEncad;
    }
 
    public BigDecimal getCodLocalDestEncad() {
-        return codLocalDestEncad;
+        return this.getVo().asBigDecimal("CODLOCALDESTENCAD");
    }
 
    public void setCodLocalDestEncad(BigDecimal codLocalDestEncad) {
         markAsChanged("CODLOCALDESTENCAD", codLocalDestEncad);
-        this.codLocalDestEncad = codLocalDestEncad;
    }
 
    public BigDecimal getCodParcEncad() {
-        return codParcEncad;
+        return this.getVo().asBigDecimal("CODPARCENCAD");
    }
 
    public void setCodParcEncad(BigDecimal codParcEncad) {
         markAsChanged("CODPARCENCAD", codParcEncad);
-        this.codParcEncad = codParcEncad;
    }
 
    public BigDecimal getCodTipOperEncad() {
-        return codTipOperEncad;
+        return this.getVo().asBigDecimal("CODTIPOPERENCAD");
    }
 
    public void setCodTipOperEncad(BigDecimal codTipOperEncad) {
         markAsChanged("CODTIPOPERENCAD", codTipOperEncad);
-        this.codTipOperEncad = codTipOperEncad;
    }
 
    public String getConfirmEncad() {
-        return confirmEncad;
+        return this.getVo().asString("CONFIRMENCAD");
    }
 
    public void setConfirmEncad(String confirmEncad) {
         markAsChanged("CONFIRMENCAD", confirmEncad);
-        this.confirmEncad = confirmEncad;
    }
 
    public BigDecimal getNuModeloEncad() {
-        return nuModeloEncad;
+        return this.getVo().asBigDecimal("NUMODELOENCAD");
    }
 
    public void setNuModeloEncad(BigDecimal nuModeloEncad) {
         markAsChanged("NUMODELOENCAD", nuModeloEncad);
-        this.nuModeloEncad = nuModeloEncad;
    }
 
    public String getObrigEncad() {
-        return obrigEncad;
+        return this.getVo().asString("OBRIGENCAD");
    }
 
    public void setObrigEncad(String obrigEncad) {
         markAsChanged("OBRIGENCAD", obrigEncad);
-        this.obrigEncad = obrigEncad;
    }
 
    public String getTipoOperEncad() {
-        return tipoOperEncad;
+        return this.getVo().asString("TIPOOPERENCAD");
    }
 
    public void setTipoOperEncad(String tipoOperEncad) {
         markAsChanged("TIPOOPERENCAD", tipoOperEncad);
-        this.tipoOperEncad = tipoOperEncad;
    }
 
    public String getTipoProducao() {
-        return tipoProducao;
+        return this.getVo().asString("TIPOPRODUCAO");
    }
 
    public void setTipoProducao(String tipoProducao) {
         markAsChanged("TIPOPRODUCAO", tipoProducao);
-        this.tipoProducao = tipoProducao;
    }
 
    public String getUtilizaLocalOrig() {
-        return utilizaLocalOrig;
+        return this.getVo().asString("UTILIZALOCALORIG");
    }
 
    public void setUtilizaLocalOrig(String utilizaLocalOrig) {
         markAsChanged("UTILIZALOCALORIG", utilizaLocalOrig);
-        this.utilizaLocalOrig = utilizaLocalOrig;
    }
 
    public BigDecimal getCodTipOperKanban() {
-        return codTipOperKanban;
+        return this.getVo().asBigDecimal("CODTIPOPERKANBAN");
    }
 
    public void setCodTipOperKanban(BigDecimal codTipOperKanban) {
         markAsChanged("CODTIPOPERKANBAN", codTipOperKanban);
-        this.codTipOperKanban = codTipOperKanban;
    }
 
    public String getKanban() {
-        return kanban;
+        return this.getVo().asString("KANBAN");
    }
 
    public void setKanban(String kanban) {
         markAsChanged("KANBAN", kanban);
-        this.kanban = kanban;
    }
 
    public BigDecimal getNuNotaModeloKanban() {
-        return nuNotaModeloKanban;
+        return this.getVo().asBigDecimal("NUNOTAMODELOKANBAN");
    }
 
    public void setNuNotaModeloKanban(BigDecimal nuNotaModeloKanban) {
         markAsChanged("NUNOTAMODELOKANBAN", nuNotaModeloKanban);
-        this.nuNotaModeloKanban = nuNotaModeloKanban;
    }
 
    public String getUsarParcTercEncad() {
-        return usarParcTercEncad;
+        return this.getVo().asString("USARPARCTERCENCAD");
    }
 
    public void setUsarParcTercEncad(String usarParcTercEncad) {
         markAsChanged("USARPARCTERCENCAD", usarParcTercEncad);
-        this.usarParcTercEncad = usarParcTercEncad;
    }
 
    @Override
@@ -499,54 +402,6 @@ public class OperacoesEstoque extends AbstractSankhyaEntity<OperacoesEstoque> {
    @Override
    public OperacoesEstoque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipoMaterial = vo.asString("TIPOMATERIAL");
-        this.seqOper = vo.asBigDecimal("SEQOPER");
-        this.statusExec = vo.asString("STATUSEXEC");
-        this.tipoItens = vo.asString("TIPOITENS");
-        this.baixarReservaEst = vo.asString("BAIXARESERVAEST");
-        this.usarParcTerc = vo.asString("USARPARCTERC");
-        this.tipoExec = vo.asString("TIPOEXEC");
-        this.codLocalBaixaMp = vo.asBigDecimal("CODLOCALBAIXAMP");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codEmpDest = vo.asBigDecimal("CODEMPDEST");
-        this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
-        this.codLocalDest = vo.asBigDecimal("CODLOCALDEST");
-        this.codLocalOrig = vo.asBigDecimal("CODLOCALORIG");
-        this.codNat = vo.asBigDecimal("CODNAT");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProj = vo.asBigDecimal("CODPROJ");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.codTipVenda = vo.asBigDecimal("CODTIPVENDA");
-        this.confirmar = vo.asString("CONFIRMAR");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.ideFxBase = vo.asBigDecimal("IDEFXBASE");
-        this.idForm = vo.asBigDecimal("IDFORM");
-        this.nomeImpressora = vo.asString("NOMEIMPRESSORA");
-        this.nuNotaModelo = vo.asBigDecimal("NUNOTAMODELO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.quando = vo.asString("QUANDO");
-        this.selImpressora = vo.asString("SELIMPRESSORA");
-        this.consumirEstoque = vo.asString("CONSUMIRESTOQUE");
-        this.descricao = vo.asString("DESCRICAO");
-        this.obrigatorio = vo.asString("OBRIGATORIO");
-        this.tipoOper = vo.asString("TIPOOPER");
-        this.anulaOperEst = vo.asString("ANULAOPEREST");
-        this.codLocalDestPerda = vo.asBigDecimal("CODLOCALDESTPERDA");
-        this.codTipOperPerda = vo.asBigDecimal("CODTIPOPERPERDA");
-        this.codEmpDestEncad = vo.asBigDecimal("CODEMPDESTENCAD");
-        this.codLocalDestEncad = vo.asBigDecimal("CODLOCALDESTENCAD");
-        this.codParcEncad = vo.asBigDecimal("CODPARCENCAD");
-        this.codTipOperEncad = vo.asBigDecimal("CODTIPOPERENCAD");
-        this.confirmEncad = vo.asString("CONFIRMENCAD");
-        this.nuModeloEncad = vo.asBigDecimal("NUMODELOENCAD");
-        this.obrigEncad = vo.asString("OBRIGENCAD");
-        this.tipoOperEncad = vo.asString("TIPOOPERENCAD");
-        this.tipoProducao = vo.asString("TIPOPRODUCAO");
-        this.utilizaLocalOrig = vo.asString("UTILIZALOCALORIG");
-        this.codTipOperKanban = vo.asBigDecimal("CODTIPOPERKANBAN");
-        this.kanban = vo.asString("KANBAN");
-        this.nuNotaModeloKanban = vo.asBigDecimal("NUNOTAMODELOKANBAN");
-        this.usarParcTercEncad = vo.asString("USARPARCTERCENCAD");
         return this;
    }
 }

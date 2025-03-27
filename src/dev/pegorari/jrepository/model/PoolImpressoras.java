@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
-   private String caminhoSps;
-   private String nomeImpLocal;
-   private BigDecimal nuNip;
-
    public String getCaminhoSps() {
-        return caminhoSps;
+        return this.getVo().asString("CAMINHOSPS");
    }
 
    public void setCaminhoSps(String caminhoSps) {
         markAsChanged("CAMINHOSPS", caminhoSps);
-        this.caminhoSps = caminhoSps;
    }
 
    public String getNomeImpLocal() {
-        return nomeImpLocal;
+        return this.getVo().asString("NOMEIMPLOCAL");
    }
 
    public void setNomeImpLocal(String nomeImpLocal) {
         markAsChanged("NOMEIMPLOCAL", nomeImpLocal);
-        this.nomeImpLocal = nomeImpLocal;
    }
 
    public BigDecimal getNuNip() {
-        return nuNip;
+        return this.getVo().asBigDecimal("NUNIP");
    }
 
    public void setNuNip(BigDecimal nuNip) {
         markAsChanged("NUNIP", nuNip);
-        this.nuNip = nuNip;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PoolImpressoras extends AbstractSankhyaEntity<PoolImpressoras> {
    @Override
    public PoolImpressoras fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.caminhoSps = vo.asString("CAMINHOSPS");
-        this.nomeImpLocal = vo.asString("NOMEIMPLOCAL");
-        this.nuNip = vo.asBigDecimal("NUNIP");
         return this;
    }
 }

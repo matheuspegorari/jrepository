@@ -6,165 +6,132 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtiquetaVolume> {
-   private BigDecimal peso;
-   private BigDecimal codUsuConf;
-   private Timestamp dhFinConf;
-   private Timestamp dhImpressao;
-   private Timestamp dhInc;
-   private Timestamp dhIniConf;
-   private String exigeConf;
-   private BigDecimal idRev;
-   private BigDecimal nuNota;
-   private BigDecimal nuSeparacao;
-   private BigDecimal seqEtiqueta;
-   private BigDecimal sequencia;
-   private String nomeImpressora;
-   private BigDecimal totVolumes;
-   private BigDecimal codProd;
-   private String descrProd;
-
    public BigDecimal getPeso() {
-        return peso;
+        return this.getVo().asBigDecimal("PESO");
    }
 
    public void setPeso(BigDecimal peso) {
         markAsChanged("PESO", peso);
-        this.peso = peso;
    }
 
    public BigDecimal getCodUsuConf() {
-        return codUsuConf;
+        return this.getVo().asBigDecimal("CODUSUCONF");
    }
 
    public void setCodUsuConf(BigDecimal codUsuConf) {
         markAsChanged("CODUSUCONF", codUsuConf);
-        this.codUsuConf = codUsuConf;
    }
 
    public Timestamp getDhFinConf() {
-        return dhFinConf;
+        return this.getVo().asTimestamp("DHFINCONF");
    }
 
    public void setDhFinConf(Timestamp dhFinConf) {
         markAsChanged("DHFINCONF", dhFinConf);
-        this.dhFinConf = dhFinConf;
    }
 
    public Timestamp getDhImpressao() {
-        return dhImpressao;
+        return this.getVo().asTimestamp("DHIMPRESSAO");
    }
 
    public void setDhImpressao(Timestamp dhImpressao) {
         markAsChanged("DHIMPRESSAO", dhImpressao);
-        this.dhImpressao = dhImpressao;
    }
 
    public Timestamp getDhInc() {
-        return dhInc;
+        return this.getVo().asTimestamp("DHINC");
    }
 
    public void setDhInc(Timestamp dhInc) {
         markAsChanged("DHINC", dhInc);
-        this.dhInc = dhInc;
    }
 
    public Timestamp getDhIniConf() {
-        return dhIniConf;
+        return this.getVo().asTimestamp("DHINICONF");
    }
 
    public void setDhIniConf(Timestamp dhIniConf) {
         markAsChanged("DHINICONF", dhIniConf);
-        this.dhIniConf = dhIniConf;
    }
 
    public String getExigeConf() {
-        return exigeConf;
+        return this.getVo().asString("EXIGECONF");
    }
 
    public void setExigeConf(String exigeConf) {
         markAsChanged("EXIGECONF", exigeConf);
-        this.exigeConf = exigeConf;
    }
 
    public BigDecimal getIdRev() {
-        return idRev;
+        return this.getVo().asBigDecimal("IDREV");
    }
 
    public void setIdRev(BigDecimal idRev) {
         markAsChanged("IDREV", idRev);
-        this.idRev = idRev;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuSeparacao() {
-        return nuSeparacao;
+        return this.getVo().asBigDecimal("NUSEPARACAO");
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
         markAsChanged("NUSEPARACAO", nuSeparacao);
-        this.nuSeparacao = nuSeparacao;
    }
 
    public BigDecimal getSeqEtiqueta() {
-        return seqEtiqueta;
+        return this.getVo().asBigDecimal("SEQETIQUETA");
    }
 
    public void setSeqEtiqueta(BigDecimal seqEtiqueta) {
         markAsChanged("SEQETIQUETA", seqEtiqueta);
-        this.seqEtiqueta = seqEtiqueta;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getNomeImpressora() {
-        return nomeImpressora;
+        return this.getVo().asString("NOMEIMPRESSORA");
    }
 
    public void setNomeImpressora(String nomeImpressora) {
         markAsChanged("NOMEIMPRESSORA", nomeImpressora);
-        this.nomeImpressora = nomeImpressora;
    }
 
    public BigDecimal getTotVolumes() {
-        return totVolumes;
+        return this.getVo().asBigDecimal("TOTVOLUMES");
    }
 
    public void setTotVolumes(BigDecimal totVolumes) {
         markAsChanged("TOTVOLUMES", totVolumes);
-        this.totVolumes = totVolumes;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDescrProd() {
-        return descrProd;
+        return this.getVo().asString("DESCRPROD");
    }
 
    public void setDescrProd(String descrProd) {
         markAsChanged("DESCRPROD", descrProd);
-        this.descrProd = descrProd;
    }
 
    @Override
@@ -180,22 +147,6 @@ public class RegistroEtiquetaVolume extends AbstractSankhyaEntity<RegistroEtique
    @Override
    public RegistroEtiquetaVolume fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.peso = vo.asBigDecimal("PESO");
-        this.codUsuConf = vo.asBigDecimal("CODUSUCONF");
-        this.dhFinConf = vo.asTimestamp("DHFINCONF");
-        this.dhImpressao = vo.asTimestamp("DHIMPRESSAO");
-        this.dhInc = vo.asTimestamp("DHINC");
-        this.dhIniConf = vo.asTimestamp("DHINICONF");
-        this.exigeConf = vo.asString("EXIGECONF");
-        this.idRev = vo.asBigDecimal("IDREV");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.seqEtiqueta = vo.asBigDecimal("SEQETIQUETA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.nomeImpressora = vo.asString("NOMEIMPRESSORA");
-        this.totVolumes = vo.asBigDecimal("TOTVOLUMES");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.descrProd = vo.asString("DESCRPROD");
         return this;
    }
 }

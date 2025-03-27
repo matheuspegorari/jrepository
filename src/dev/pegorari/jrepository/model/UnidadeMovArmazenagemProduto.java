@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeMovArmazenagemProduto> {
-   private String codBarra;
-   private BigDecimal codProd;
-   private BigDecimal codUma;
-   private String codVol;
-   private String padrao;
-
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUma() {
-        return codUma;
+        return this.getVo().asBigDecimal("CODUMA");
    }
 
    public void setCodUma(BigDecimal codUma) {
         markAsChanged("CODUMA", codUma);
-        this.codUma = codUma;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getPadrao() {
-        return padrao;
+        return this.getVo().asString("PADRAO");
    }
 
    public void setPadrao(String padrao) {
         markAsChanged("PADRAO", padrao);
-        this.padrao = padrao;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class UnidadeMovArmazenagemProduto extends AbstractSankhyaEntity<UnidadeM
    @Override
    public UnidadeMovArmazenagemProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBarra = vo.asString("CODBARRA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUma = vo.asBigDecimal("CODUMA");
-        this.codVol = vo.asString("CODVOL");
-        this.padrao = vo.asString("PADRAO");
         return this;
    }
 }

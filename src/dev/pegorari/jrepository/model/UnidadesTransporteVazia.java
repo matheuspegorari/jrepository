@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTransporteVazia> {
-   private BigDecimal codUnitv;
-   private String idUnidTransVazia;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-   private BigDecimal tipoUnitransVazia;
-
    public BigDecimal getCodUnitv() {
-        return codUnitv;
+        return this.getVo().asBigDecimal("CODUNITV");
    }
 
    public void setCodUnitv(BigDecimal codUnitv) {
         markAsChanged("CODUNITV", codUnitv);
-        this.codUnitv = codUnitv;
    }
 
    public String getIdUnidTransVazia() {
-        return idUnidTransVazia;
+        return this.getVo().asString("IDUNIDTRANSVAZIA");
    }
 
    public void setIdUnidTransVazia(String idUnidTransVazia) {
         markAsChanged("IDUNIDTRANSVAZIA", idUnidTransVazia);
-        this.idUnidTransVazia = idUnidTransVazia;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getTipoUnitransVazia() {
-        return tipoUnitransVazia;
+        return this.getVo().asBigDecimal("TIPOUNITRANSVAZIA");
    }
 
    public void setTipoUnitransVazia(BigDecimal tipoUnitransVazia) {
         markAsChanged("TIPOUNITRANSVAZIA", tipoUnitransVazia);
-        this.tipoUnitransVazia = tipoUnitransVazia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class UnidadesTransporteVazia extends AbstractSankhyaEntity<UnidadesTrans
    @Override
    public UnidadesTransporteVazia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUnitv = vo.asBigDecimal("CODUNITV");
-        this.idUnidTransVazia = vo.asString("IDUNIDTRANSVAZIA");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.tipoUnitransVazia = vo.asBigDecimal("TIPOUNITRANSVAZIA");
         return this;
    }
 }

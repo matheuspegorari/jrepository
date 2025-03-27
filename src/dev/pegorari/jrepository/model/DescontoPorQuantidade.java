@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuantidade> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nuPromocao;
-   private BigDecimal percDesc;
-   private BigDecimal qtde;
-   private String tipDesc;
-   private String atNuVersao;
-   private BigDecimal nuVersao;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuPromocao() {
-        return nuPromocao;
+        return this.getVo().asBigDecimal("NUPROMOCAO");
    }
 
    public void setNuPromocao(BigDecimal nuPromocao) {
         markAsChanged("NUPROMOCAO", nuPromocao);
-        this.nuPromocao = nuPromocao;
    }
 
    public BigDecimal getPercDesc() {
-        return percDesc;
+        return this.getVo().asBigDecimal("PERCDESC");
    }
 
    public void setPercDesc(BigDecimal percDesc) {
         markAsChanged("PERCDESC", percDesc);
-        this.percDesc = percDesc;
    }
 
    public BigDecimal getQtde() {
-        return qtde;
+        return this.getVo().asBigDecimal("QTDE");
    }
 
    public void setQtde(BigDecimal qtde) {
         markAsChanged("QTDE", qtde);
-        this.qtde = qtde;
    }
 
    public String getTipDesc() {
-        return tipDesc;
+        return this.getVo().asString("TIPDESC");
    }
 
    public void setTipDesc(String tipDesc) {
         markAsChanged("TIPDESC", tipDesc);
-        this.tipDesc = tipDesc;
    }
 
    public String getAtNuVersao() {
-        return atNuVersao;
+        return this.getVo().asString("ATUNUVERSAO");
    }
 
    public void setAtNuVersao(String atNuVersao) {
         markAsChanged("ATUNUVERSAO", atNuVersao);
-        this.atNuVersao = atNuVersao;
    }
 
    public BigDecimal getNuVersao() {
-        return nuVersao;
+        return this.getVo().asBigDecimal("NUVERSAO");
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
         markAsChanged("NUVERSAO", nuVersao);
-        this.nuVersao = nuVersao;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class DescontoPorQuantidade extends AbstractSankhyaEntity<DescontoPorQuan
    @Override
    public DescontoPorQuantidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuPromocao = vo.asBigDecimal("NUPROMOCAO");
-        this.percDesc = vo.asBigDecimal("PERCDESC");
-        this.qtde = vo.asBigDecimal("QTDE");
-        this.tipDesc = vo.asString("TIPDESC");
-        this.atNuVersao = vo.asString("ATUNUVERSAO");
-        this.nuVersao = vo.asBigDecimal("NUVERSAO");
         return this;
    }
 }

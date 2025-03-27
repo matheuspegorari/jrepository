@@ -6,185 +6,148 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
-   private String ativo;
-   private BigDecimal nota;
-   private BigDecimal ordem;
-   private String nomeArquivo;
-   private String padrao;
-   private String aceitaObservacao;
-   private byte[] anexo;
-   private BigDecimal codPerg;
-   private BigDecimal codResp;
-   private BigDecimal codUsu;
-   private BigDecimal penalidade;
-   private BigDecimal seqAgrupa;
-   private BigDecimal tamanhoMax;
-   private BigDecimal valorMax;
-   private BigDecimal valorMin;
-   private String descrResp;
-   private Timestamp dhAlter;
-   private String limpaAgrupa;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getNota() {
-        return nota;
+        return this.getVo().asBigDecimal("NOTA");
    }
 
    public void setNota(BigDecimal nota) {
         markAsChanged("NOTA", nota);
-        this.nota = nota;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getNomeArquivo() {
-        return nomeArquivo;
+        return this.getVo().asString("NOMEARQUIVO");
    }
 
    public void setNomeArquivo(String nomeArquivo) {
         markAsChanged("NOMEARQUIVO", nomeArquivo);
-        this.nomeArquivo = nomeArquivo;
    }
 
    public String getPadrao() {
-        return padrao;
+        return this.getVo().asString("PADRAO");
    }
 
    public void setPadrao(String padrao) {
         markAsChanged("PADRAO", padrao);
-        this.padrao = padrao;
    }
 
    public String getAceitaObservacao() {
-        return aceitaObservacao;
+        return this.getVo().asString("ACEITAOBSERVACAO");
    }
 
    public void setAceitaObservacao(String aceitaObservacao) {
         markAsChanged("ACEITAOBSERVACAO", aceitaObservacao);
-        this.aceitaObservacao = aceitaObservacao;
    }
 
    public byte[] getAnexo() {
-        return anexo;
+        return this.getVo().asBlob("ANEXO");
    }
 
    public void setAnexo(byte[] anexo) {
         markAsChanged("ANEXO", anexo);
-        this.anexo = anexo;
    }
 
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public BigDecimal getCodResp() {
-        return codResp;
+        return this.getVo().asBigDecimal("CODRESP");
    }
 
    public void setCodResp(BigDecimal codResp) {
         markAsChanged("CODRESP", codResp);
-        this.codResp = codResp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getPenalidade() {
-        return penalidade;
+        return this.getVo().asBigDecimal("PENALIDADE");
    }
 
    public void setPenalidade(BigDecimal penalidade) {
         markAsChanged("PENALIDADE", penalidade);
-        this.penalidade = penalidade;
    }
 
    public BigDecimal getSeqAgrupa() {
-        return seqAgrupa;
+        return this.getVo().asBigDecimal("SEQAGRUPA");
    }
 
    public void setSeqAgrupa(BigDecimal seqAgrupa) {
         markAsChanged("SEQAGRUPA", seqAgrupa);
-        this.seqAgrupa = seqAgrupa;
    }
 
    public BigDecimal getTamanhoMax() {
-        return tamanhoMax;
+        return this.getVo().asBigDecimal("TAMANHOMAX");
    }
 
    public void setTamanhoMax(BigDecimal tamanhoMax) {
         markAsChanged("TAMANHOMAX", tamanhoMax);
-        this.tamanhoMax = tamanhoMax;
    }
 
    public BigDecimal getValorMax() {
-        return valorMax;
+        return this.getVo().asBigDecimal("VALORMAX");
    }
 
    public void setValorMax(BigDecimal valorMax) {
         markAsChanged("VALORMAX", valorMax);
-        this.valorMax = valorMax;
    }
 
    public BigDecimal getValorMin() {
-        return valorMin;
+        return this.getVo().asBigDecimal("VALORMIN");
    }
 
    public void setValorMin(BigDecimal valorMin) {
         markAsChanged("VALORMIN", valorMin);
-        this.valorMin = valorMin;
    }
 
    public String getDescrResp() {
-        return descrResp;
+        return this.getVo().asString("DESCRRESP");
    }
 
    public void setDescrResp(String descrResp) {
         markAsChanged("DESCRRESP", descrResp);
-        this.descrResp = descrResp;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public String getLimpaAgrupa() {
-        return limpaAgrupa;
+        return this.getVo().asString("LIMPAAGRUPA");
    }
 
    public void setLimpaAgrupa(String limpaAgrupa) {
         markAsChanged("LIMPAAGRUPA", limpaAgrupa);
-        this.limpaAgrupa = limpaAgrupa;
    }
 
    @Override
@@ -200,24 +163,6 @@ public class RespostaPergunta extends AbstractSankhyaEntity<RespostaPergunta> {
    @Override
    public RespostaPergunta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.nota = vo.asBigDecimal("NOTA");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.nomeArquivo = vo.asString("NOMEARQUIVO");
-        this.padrao = vo.asString("PADRAO");
-        this.aceitaObservacao = vo.asString("ACEITAOBSERVACAO");
-        this.anexo = vo.asBlob("ANEXO");
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.codResp = vo.asBigDecimal("CODRESP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.penalidade = vo.asBigDecimal("PENALIDADE");
-        this.seqAgrupa = vo.asBigDecimal("SEQAGRUPA");
-        this.tamanhoMax = vo.asBigDecimal("TAMANHOMAX");
-        this.valorMax = vo.asBigDecimal("VALORMAX");
-        this.valorMin = vo.asBigDecimal("VALORMIN");
-        this.descrResp = vo.asString("DESCRRESP");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.limpaAgrupa = vo.asString("LIMPAAGRUPA");
         return this;
    }
 }

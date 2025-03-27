@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TerminaisCarregamento extends AbstractSankhyaEntity<TerminaisCarregamento> {
-   private BigDecimal codTercar;
-   private String codTermCarreg;
-   private String nomeTermCarreg;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-
    public BigDecimal getCodTercar() {
-        return codTercar;
+        return this.getVo().asBigDecimal("CODTERCAR");
    }
 
    public void setCodTercar(BigDecimal codTercar) {
         markAsChanged("CODTERCAR", codTercar);
-        this.codTercar = codTercar;
    }
 
    public String getCodTermCarreg() {
-        return codTermCarreg;
+        return this.getVo().asString("CODTERMCARREG");
    }
 
    public void setCodTermCarreg(String codTermCarreg) {
         markAsChanged("CODTERMCARREG", codTermCarreg);
-        this.codTermCarreg = codTermCarreg;
    }
 
    public String getNomeTermCarreg() {
-        return nomeTermCarreg;
+        return this.getVo().asString("NOMETERMCARREG");
    }
 
    public void setNomeTermCarreg(String nomeTermCarreg) {
         markAsChanged("NOMETERMCARREG", nomeTermCarreg);
-        this.nomeTermCarreg = nomeTermCarreg;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class TerminaisCarregamento extends AbstractSankhyaEntity<TerminaisCarreg
    @Override
    public TerminaisCarregamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codTercar = vo.asBigDecimal("CODTERCAR");
-        this.codTermCarreg = vo.asString("CODTERMCARREG");
-        this.nomeTermCarreg = vo.asString("NOMETERMCARREG");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         return this;
    }
 }

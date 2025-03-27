@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
-   private BigDecimal codPer;
-   private String descPer;
-   private String envUlt;
-   private BigDecimal intMin;
-   private String nomePer;
-   private char[] queryListaDest;
-   private String usaQueryLista;
-
    public BigDecimal getCodPer() {
-        return codPer;
+        return this.getVo().asBigDecimal("CODPER");
    }
 
    public void setCodPer(BigDecimal codPer) {
         markAsChanged("CODPER", codPer);
-        this.codPer = codPer;
    }
 
    public String getDescPer() {
-        return descPer;
+        return this.getVo().asString("DESCPER");
    }
 
    public void setDescPer(String descPer) {
         markAsChanged("DESCPER", descPer);
-        this.descPer = descPer;
    }
 
    public String getEnvUlt() {
-        return envUlt;
+        return this.getVo().asString("ENVULT");
    }
 
    public void setEnvUlt(String envUlt) {
         markAsChanged("ENVULT", envUlt);
-        this.envUlt = envUlt;
    }
 
    public BigDecimal getIntMin() {
-        return intMin;
+        return this.getVo().asBigDecimal("INTMIN");
    }
 
    public void setIntMin(BigDecimal intMin) {
         markAsChanged("INTMIN", intMin);
-        this.intMin = intMin;
    }
 
    public String getNomePer() {
-        return nomePer;
+        return this.getVo().asString("NOMEPER");
    }
 
    public void setNomePer(String nomePer) {
         markAsChanged("NOMEPER", nomePer);
-        this.nomePer = nomePer;
    }
 
    public char[] getQueryListaDest() {
-        return queryListaDest;
+        return this.getVo().asClob("QUERYLISTADEST");
    }
 
    public void setQueryListaDest(char[] queryListaDest) {
         markAsChanged("QUERYLISTADEST", queryListaDest);
-        this.queryListaDest = queryListaDest;
    }
 
    public String getUsaQueryLista() {
-        return usaQueryLista;
+        return this.getVo().asString("USAQUERYLISTA");
    }
 
    public void setUsaQueryLista(String usaQueryLista) {
         markAsChanged("USAQUERYLISTA", usaQueryLista);
-        this.usaQueryLista = usaQueryLista;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class MSDPerfil extends AbstractSankhyaEntity<MSDPerfil> {
    @Override
    public MSDPerfil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPer = vo.asBigDecimal("CODPER");
-        this.descPer = vo.asString("DESCPER");
-        this.envUlt = vo.asString("ENVULT");
-        this.intMin = vo.asBigDecimal("INTMIN");
-        this.nomePer = vo.asString("NOMEPER");
-        this.queryListaDest = vo.asClob("QUERYLISTADEST");
-        this.usaQueryLista = vo.asString("USAQUERYLISTA");
         return this;
    }
 }

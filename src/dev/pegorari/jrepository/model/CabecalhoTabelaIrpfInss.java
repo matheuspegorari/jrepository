@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabelaIrpfInss> {
-   private Timestamp competencia;
-   private String regime;
-   private BigDecimal vlrDependente;
-   private BigDecimal vlrMaximo;
-   private BigDecimal vlrMinimo;
-   private BigDecimal vlrMinimoIrpf;
-   private String usaCalcInssProg;
-   private String usaParcInssFunRural;
-   private String consDescSimpIrpf;
-
    public Timestamp getCompetencia() {
-        return competencia;
+        return this.getVo().asTimestamp("COMPETENCIA");
    }
 
    public void setCompetencia(Timestamp competencia) {
         markAsChanged("COMPETENCIA", competencia);
-        this.competencia = competencia;
    }
 
    public String getRegime() {
-        return regime;
+        return this.getVo().asString("REGIME");
    }
 
    public void setRegime(String regime) {
         markAsChanged("REGIME", regime);
-        this.regime = regime;
    }
 
    public BigDecimal getVlrDependente() {
-        return vlrDependente;
+        return this.getVo().asBigDecimal("VLRDEPENDENTE");
    }
 
    public void setVlrDependente(BigDecimal vlrDependente) {
         markAsChanged("VLRDEPENDENTE", vlrDependente);
-        this.vlrDependente = vlrDependente;
    }
 
    public BigDecimal getVlrMaximo() {
-        return vlrMaximo;
+        return this.getVo().asBigDecimal("VLRMAXIMO");
    }
 
    public void setVlrMaximo(BigDecimal vlrMaximo) {
         markAsChanged("VLRMAXIMO", vlrMaximo);
-        this.vlrMaximo = vlrMaximo;
    }
 
    public BigDecimal getVlrMinimo() {
-        return vlrMinimo;
+        return this.getVo().asBigDecimal("VLRMINIMO");
    }
 
    public void setVlrMinimo(BigDecimal vlrMinimo) {
         markAsChanged("VLRMINIMO", vlrMinimo);
-        this.vlrMinimo = vlrMinimo;
    }
 
    public BigDecimal getVlrMinimoIrpf() {
-        return vlrMinimoIrpf;
+        return this.getVo().asBigDecimal("VLRMINIMOIRPF");
    }
 
    public void setVlrMinimoIrpf(BigDecimal vlrMinimoIrpf) {
         markAsChanged("VLRMINIMOIRPF", vlrMinimoIrpf);
-        this.vlrMinimoIrpf = vlrMinimoIrpf;
    }
 
    public String getUsaCalcInssProg() {
-        return usaCalcInssProg;
+        return this.getVo().asString("USACALCINSSPROG");
    }
 
    public void setUsaCalcInssProg(String usaCalcInssProg) {
         markAsChanged("USACALCINSSPROG", usaCalcInssProg);
-        this.usaCalcInssProg = usaCalcInssProg;
    }
 
    public String getUsaParcInssFunRural() {
-        return usaParcInssFunRural;
+        return this.getVo().asString("USAPARCINSSFUNRURAL");
    }
 
    public void setUsaParcInssFunRural(String usaParcInssFunRural) {
         markAsChanged("USAPARCINSSFUNRURAL", usaParcInssFunRural);
-        this.usaParcInssFunRural = usaParcInssFunRural;
    }
 
    public String getConsDescSimpIrpf() {
-        return consDescSimpIrpf;
+        return this.getVo().asString("CONSDESCSIMPIRPF");
    }
 
    public void setConsDescSimpIrpf(String consDescSimpIrpf) {
         markAsChanged("CONSDESCSIMPIRPF", consDescSimpIrpf);
-        this.consDescSimpIrpf = consDescSimpIrpf;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class CabecalhoTabelaIrpfInss extends AbstractSankhyaEntity<CabecalhoTabe
    @Override
    public CabecalhoTabelaIrpfInss fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.competencia = vo.asTimestamp("COMPETENCIA");
-        this.regime = vo.asString("REGIME");
-        this.vlrDependente = vo.asBigDecimal("VLRDEPENDENTE");
-        this.vlrMaximo = vo.asBigDecimal("VLRMAXIMO");
-        this.vlrMinimo = vo.asBigDecimal("VLRMINIMO");
-        this.vlrMinimoIrpf = vo.asBigDecimal("VLRMINIMOIRPF");
-        this.usaCalcInssProg = vo.asString("USACALCINSSPROG");
-        this.usaParcInssFunRural = vo.asString("USAPARCINSSFUNRURAL");
-        this.consDescSimpIrpf = vo.asString("CONSDESCSIMPIRPF");
         return this;
    }
 }

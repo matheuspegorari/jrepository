@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<AgendamentoRelatorioFormatado> {
-   private BigDecimal codUsuResp;
-   private String agendamento;
-   private String arqModEmail;
-   private String descricao;
-   private Timestamp dhFim;
-   private Timestamp dhIni;
-   private String execUnica;
-   private BigDecimal nuRfe;
-   private Timestamp proxExec;
-   private BigDecimal sequencia;
-   private BigDecimal codSmtp;
-   private char[] emailManual;
-
    public BigDecimal getCodUsuResp() {
-        return codUsuResp;
+        return this.getVo().asBigDecimal("CODUSURESP");
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
         markAsChanged("CODUSURESP", codUsuResp);
-        this.codUsuResp = codUsuResp;
    }
 
    public String getAgendamento() {
-        return agendamento;
+        return this.getVo().asString("AGENDAMENTO");
    }
 
    public void setAgendamento(String agendamento) {
         markAsChanged("AGENDAMENTO", agendamento);
-        this.agendamento = agendamento;
    }
 
    public String getArqModEmail() {
-        return arqModEmail;
+        return this.getVo().asString("ARQMODEMAIL");
    }
 
    public void setArqModEmail(String arqModEmail) {
         markAsChanged("ARQMODEMAIL", arqModEmail);
-        this.arqModEmail = arqModEmail;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhFim() {
-        return dhFim;
+        return this.getVo().asTimestamp("DHFIM");
    }
 
    public void setDhFim(Timestamp dhFim) {
         markAsChanged("DHFIM", dhFim);
-        this.dhFim = dhFim;
    }
 
    public Timestamp getDhIni() {
-        return dhIni;
+        return this.getVo().asTimestamp("DHINI");
    }
 
    public void setDhIni(Timestamp dhIni) {
         markAsChanged("DHINI", dhIni);
-        this.dhIni = dhIni;
    }
 
    public String getExecUnica() {
-        return execUnica;
+        return this.getVo().asString("EXECUNICA");
    }
 
    public void setExecUnica(String execUnica) {
         markAsChanged("EXECUNICA", execUnica);
-        this.execUnica = execUnica;
    }
 
    public BigDecimal getNuRfe() {
-        return nuRfe;
+        return this.getVo().asBigDecimal("NURFE");
    }
 
    public void setNuRfe(BigDecimal nuRfe) {
         markAsChanged("NURFE", nuRfe);
-        this.nuRfe = nuRfe;
    }
 
    public Timestamp getProxExec() {
-        return proxExec;
+        return this.getVo().asTimestamp("PROXEXEC");
    }
 
    public void setProxExec(Timestamp proxExec) {
         markAsChanged("PROXEXEC", proxExec);
-        this.proxExec = proxExec;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getCodSmtp() {
-        return codSmtp;
+        return this.getVo().asBigDecimal("CODSMTP");
    }
 
    public void setCodSmtp(BigDecimal codSmtp) {
         markAsChanged("CODSMTP", codSmtp);
-        this.codSmtp = codSmtp;
    }
 
    public char[] getEmailManual() {
-        return emailManual;
+        return this.getVo().asClob("EMAILMANUAL");
    }
 
    public void setEmailManual(char[] emailManual) {
         markAsChanged("EMAILMANUAL", emailManual);
-        this.emailManual = emailManual;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class AgendamentoRelatorioFormatado extends AbstractSankhyaEntity<Agendam
    @Override
    public AgendamentoRelatorioFormatado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsuResp = vo.asBigDecimal("CODUSURESP");
-        this.agendamento = vo.asString("AGENDAMENTO");
-        this.arqModEmail = vo.asString("ARQMODEMAIL");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhFim = vo.asTimestamp("DHFIM");
-        this.dhIni = vo.asTimestamp("DHINI");
-        this.execUnica = vo.asString("EXECUNICA");
-        this.nuRfe = vo.asBigDecimal("NURFE");
-        this.proxExec = vo.asTimestamp("PROXEXEC");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.codSmtp = vo.asBigDecimal("CODSMTP");
-        this.emailManual = vo.asClob("EMAILMANUAL");
         return this;
    }
 }

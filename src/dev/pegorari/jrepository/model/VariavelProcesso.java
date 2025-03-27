@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
-   private String descricao;
-   private String escopo;
-   private String leitura;
-   private String nome;
-   private BigDecimal nuEle;
-   private BigDecimal nuVar;
-   private String obrigatorio;
-   private BigDecimal ordem;
-   private String tipo;
-   private String valorPadrao;
-   private String defaultLong;
-
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getEscopo() {
-        return escopo;
+        return this.getVo().asString("ESCOPO");
    }
 
    public void setEscopo(String escopo) {
         markAsChanged("ESCOPO", escopo);
-        this.escopo = escopo;
    }
 
    public String getLeitura() {
-        return leitura;
+        return this.getVo().asString("LEITURA");
    }
 
    public void setLeitura(String leitura) {
         markAsChanged("LEITURA", leitura);
-        this.leitura = leitura;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public BigDecimal getNuEle() {
-        return nuEle;
+        return this.getVo().asBigDecimal("NUELE");
    }
 
    public void setNuEle(BigDecimal nuEle) {
         markAsChanged("NUELE", nuEle);
-        this.nuEle = nuEle;
    }
 
    public BigDecimal getNuVar() {
-        return nuVar;
+        return this.getVo().asBigDecimal("NUVAR");
    }
 
    public void setNuVar(BigDecimal nuVar) {
         markAsChanged("NUVAR", nuVar);
-        this.nuVar = nuVar;
    }
 
    public String getObrigatorio() {
-        return obrigatorio;
+        return this.getVo().asString("OBRIGATORIO");
    }
 
    public void setObrigatorio(String obrigatorio) {
         markAsChanged("OBRIGATORIO", obrigatorio);
-        this.obrigatorio = obrigatorio;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getValorPadrao() {
-        return valorPadrao;
+        return this.getVo().asString("VALORPADRAO");
    }
 
    public void setValorPadrao(String valorPadrao) {
         markAsChanged("VALORPADRAO", valorPadrao);
-        this.valorPadrao = valorPadrao;
    }
 
    public String getDefaultLong() {
-        return defaultLong;
+        return this.getVo().asString("DEFAULTLONG");
    }
 
    public void setDefaultLong(String defaultLong) {
         markAsChanged("DEFAULTLONG", defaultLong);
-        this.defaultLong = defaultLong;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class VariavelProcesso extends AbstractSankhyaEntity<VariavelProcesso> {
    @Override
    public VariavelProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descricao = vo.asString("DESCRICAO");
-        this.escopo = vo.asString("ESCOPO");
-        this.leitura = vo.asString("LEITURA");
-        this.nome = vo.asString("NOME");
-        this.nuEle = vo.asBigDecimal("NUELE");
-        this.nuVar = vo.asBigDecimal("NUVAR");
-        this.obrigatorio = vo.asString("OBRIGATORIO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.tipo = vo.asString("TIPO");
-        this.valorPadrao = vo.asString("VALORPADRAO");
-        this.defaultLong = vo.asString("DEFAULTLONG");
         return this;
    }
 }

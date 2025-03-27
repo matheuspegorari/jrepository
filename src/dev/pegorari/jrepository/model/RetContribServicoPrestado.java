@@ -6,415 +6,332 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribServicoPrestado> {
-   private String chave;
-   private BigDecimal codEmp;
-   private String controle;
-   private Timestamp dtRef;
-   private String idEvento;
-   private BigDecimal indObra;
-   private String nrInsc;
-   private String nrInscEstabPrest;
-   private String nrInscTomador;
-   private String nrORecibo;
-   private String nrOReciboAnt;
-   private BigDecimal sequencia;
-   private String statusReg;
-   private String tpAmb;
-   private BigDecimal tpInsc;
-   private BigDecimal tpInscEstabPrest;
-   private BigDecimal tpInscTomador;
-   private BigDecimal vlrTotalBaseRet;
-   private BigDecimal vlrTotalBruto;
-   private BigDecimal vlrTotalNRetAdic;
-   private BigDecimal vlrTotalNRetPrinc;
-   private BigDecimal vlrTotalRetAdic;
-   private BigDecimal vlrTotalRetPrinc;
-   private BigDecimal codEmpEstabPrest;
-   private BigDecimal codParcTomador;
-   private char[] dataChange;
-   private char[] msg;
-   private String nrInscTomadorRet;
-   private String tipo;
-   private BigDecimal tpInscTomadorRet;
-   private BigDecimal vlrTotalBaseRetRet;
-   private BigDecimal vlrTotalDifRet;
-   private BigDecimal vlrTotalNRetAdicRet;
-   private BigDecimal vlrTotalNRetPrincRet;
-   private BigDecimal vlrTotalRetAdicCalc;
-   private BigDecimal vlrTotalRetAdicDif;
-   private BigDecimal vlrTotalRetAdicRet;
-   private BigDecimal vlrTotalRetencaoCalc;
-   private BigDecimal vlrTotalRetPrincRet;
-   private char[] xmlEvento;
-   private char[] xmlRetorno;
-
    public String getChave() {
-        return chave;
+        return this.getVo().asString("CHAVE");
    }
 
    public void setChave(String chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public String getIdEvento() {
-        return idEvento;
+        return this.getVo().asString("IDEVENTO");
    }
 
    public void setIdEvento(String idEvento) {
         markAsChanged("IDEVENTO", idEvento);
-        this.idEvento = idEvento;
    }
 
    public BigDecimal getIndObra() {
-        return indObra;
+        return this.getVo().asBigDecimal("INDOBRA");
    }
 
    public void setIndObra(BigDecimal indObra) {
         markAsChanged("INDOBRA", indObra);
-        this.indObra = indObra;
    }
 
    public String getNrInsc() {
-        return nrInsc;
+        return this.getVo().asString("NRINSC");
    }
 
    public void setNrInsc(String nrInsc) {
         markAsChanged("NRINSC", nrInsc);
-        this.nrInsc = nrInsc;
    }
 
    public String getNrInscEstabPrest() {
-        return nrInscEstabPrest;
+        return this.getVo().asString("NRINSCESTABPREST");
    }
 
    public void setNrInscEstabPrest(String nrInscEstabPrest) {
         markAsChanged("NRINSCESTABPREST", nrInscEstabPrest);
-        this.nrInscEstabPrest = nrInscEstabPrest;
    }
 
    public String getNrInscTomador() {
-        return nrInscTomador;
+        return this.getVo().asString("NRINSCTOMADOR");
    }
 
    public void setNrInscTomador(String nrInscTomador) {
         markAsChanged("NRINSCTOMADOR", nrInscTomador);
-        this.nrInscTomador = nrInscTomador;
    }
 
    public String getNrORecibo() {
-        return nrORecibo;
+        return this.getVo().asString("NRORECIBO");
    }
 
    public void setNrORecibo(String nrORecibo) {
         markAsChanged("NRORECIBO", nrORecibo);
-        this.nrORecibo = nrORecibo;
    }
 
    public String getNrOReciboAnt() {
-        return nrOReciboAnt;
+        return this.getVo().asString("NRORECIBOANT");
    }
 
    public void setNrOReciboAnt(String nrOReciboAnt) {
         markAsChanged("NRORECIBOANT", nrOReciboAnt);
-        this.nrOReciboAnt = nrOReciboAnt;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getStatusReg() {
-        return statusReg;
+        return this.getVo().asString("STATUSREG");
    }
 
    public void setStatusReg(String statusReg) {
         markAsChanged("STATUSREG", statusReg);
-        this.statusReg = statusReg;
    }
 
    public String getTpAmb() {
-        return tpAmb;
+        return this.getVo().asString("TPAMB");
    }
 
    public void setTpAmb(String tpAmb) {
         markAsChanged("TPAMB", tpAmb);
-        this.tpAmb = tpAmb;
    }
 
    public BigDecimal getTpInsc() {
-        return tpInsc;
+        return this.getVo().asBigDecimal("TPINSC");
    }
 
    public void setTpInsc(BigDecimal tpInsc) {
         markAsChanged("TPINSC", tpInsc);
-        this.tpInsc = tpInsc;
    }
 
    public BigDecimal getTpInscEstabPrest() {
-        return tpInscEstabPrest;
+        return this.getVo().asBigDecimal("TPINSCESTABPREST");
    }
 
    public void setTpInscEstabPrest(BigDecimal tpInscEstabPrest) {
         markAsChanged("TPINSCESTABPREST", tpInscEstabPrest);
-        this.tpInscEstabPrest = tpInscEstabPrest;
    }
 
    public BigDecimal getTpInscTomador() {
-        return tpInscTomador;
+        return this.getVo().asBigDecimal("TPINSCTOMADOR");
    }
 
    public void setTpInscTomador(BigDecimal tpInscTomador) {
         markAsChanged("TPINSCTOMADOR", tpInscTomador);
-        this.tpInscTomador = tpInscTomador;
    }
 
    public BigDecimal getVlrTotalBaseRet() {
-        return vlrTotalBaseRet;
+        return this.getVo().asBigDecimal("VLRTOTALBASERET");
    }
 
    public void setVlrTotalBaseRet(BigDecimal vlrTotalBaseRet) {
         markAsChanged("VLRTOTALBASERET", vlrTotalBaseRet);
-        this.vlrTotalBaseRet = vlrTotalBaseRet;
    }
 
    public BigDecimal getVlrTotalBruto() {
-        return vlrTotalBruto;
+        return this.getVo().asBigDecimal("VLRTOTALBRUTO");
    }
 
    public void setVlrTotalBruto(BigDecimal vlrTotalBruto) {
         markAsChanged("VLRTOTALBRUTO", vlrTotalBruto);
-        this.vlrTotalBruto = vlrTotalBruto;
    }
 
    public BigDecimal getVlrTotalNRetAdic() {
-        return vlrTotalNRetAdic;
+        return this.getVo().asBigDecimal("VLRTOTALNRETADIC");
    }
 
    public void setVlrTotalNRetAdic(BigDecimal vlrTotalNRetAdic) {
         markAsChanged("VLRTOTALNRETADIC", vlrTotalNRetAdic);
-        this.vlrTotalNRetAdic = vlrTotalNRetAdic;
    }
 
    public BigDecimal getVlrTotalNRetPrinc() {
-        return vlrTotalNRetPrinc;
+        return this.getVo().asBigDecimal("VLRTOTALNRETPRINC");
    }
 
    public void setVlrTotalNRetPrinc(BigDecimal vlrTotalNRetPrinc) {
         markAsChanged("VLRTOTALNRETPRINC", vlrTotalNRetPrinc);
-        this.vlrTotalNRetPrinc = vlrTotalNRetPrinc;
    }
 
    public BigDecimal getVlrTotalRetAdic() {
-        return vlrTotalRetAdic;
+        return this.getVo().asBigDecimal("VLRTOTALRETADIC");
    }
 
    public void setVlrTotalRetAdic(BigDecimal vlrTotalRetAdic) {
         markAsChanged("VLRTOTALRETADIC", vlrTotalRetAdic);
-        this.vlrTotalRetAdic = vlrTotalRetAdic;
    }
 
    public BigDecimal getVlrTotalRetPrinc() {
-        return vlrTotalRetPrinc;
+        return this.getVo().asBigDecimal("VLRTOTALRETPRINC");
    }
 
    public void setVlrTotalRetPrinc(BigDecimal vlrTotalRetPrinc) {
         markAsChanged("VLRTOTALRETPRINC", vlrTotalRetPrinc);
-        this.vlrTotalRetPrinc = vlrTotalRetPrinc;
    }
 
    public BigDecimal getCodEmpEstabPrest() {
-        return codEmpEstabPrest;
+        return this.getVo().asBigDecimal("CODEMPESTABPREST");
    }
 
    public void setCodEmpEstabPrest(BigDecimal codEmpEstabPrest) {
         markAsChanged("CODEMPESTABPREST", codEmpEstabPrest);
-        this.codEmpEstabPrest = codEmpEstabPrest;
    }
 
    public BigDecimal getCodParcTomador() {
-        return codParcTomador;
+        return this.getVo().asBigDecimal("CODPARCTOMADOR");
    }
 
    public void setCodParcTomador(BigDecimal codParcTomador) {
         markAsChanged("CODPARCTOMADOR", codParcTomador);
-        this.codParcTomador = codParcTomador;
    }
 
    public char[] getDataChange() {
-        return dataChange;
+        return this.getVo().asClob("DATACHANGE");
    }
 
    public void setDataChange(char[] dataChange) {
         markAsChanged("DATACHANGE", dataChange);
-        this.dataChange = dataChange;
    }
 
    public char[] getMsg() {
-        return msg;
+        return this.getVo().asClob("MSG");
    }
 
    public void setMsg(char[] msg) {
         markAsChanged("MSG", msg);
-        this.msg = msg;
    }
 
    public String getNrInscTomadorRet() {
-        return nrInscTomadorRet;
+        return this.getVo().asString("NRINSCTOMADORRET");
    }
 
    public void setNrInscTomadorRet(String nrInscTomadorRet) {
         markAsChanged("NRINSCTOMADORRET", nrInscTomadorRet);
-        this.nrInscTomadorRet = nrInscTomadorRet;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getTpInscTomadorRet() {
-        return tpInscTomadorRet;
+        return this.getVo().asBigDecimal("TPINSCTOMADORRET");
    }
 
    public void setTpInscTomadorRet(BigDecimal tpInscTomadorRet) {
         markAsChanged("TPINSCTOMADORRET", tpInscTomadorRet);
-        this.tpInscTomadorRet = tpInscTomadorRet;
    }
 
    public BigDecimal getVlrTotalBaseRetRet() {
-        return vlrTotalBaseRetRet;
+        return this.getVo().asBigDecimal("VLRTOTALBASERETRET");
    }
 
    public void setVlrTotalBaseRetRet(BigDecimal vlrTotalBaseRetRet) {
         markAsChanged("VLRTOTALBASERETRET", vlrTotalBaseRetRet);
-        this.vlrTotalBaseRetRet = vlrTotalBaseRetRet;
    }
 
    public BigDecimal getVlrTotalDifRet() {
-        return vlrTotalDifRet;
+        return this.getVo().asBigDecimal("VLRTOTALDIFRET");
    }
 
    public void setVlrTotalDifRet(BigDecimal vlrTotalDifRet) {
         markAsChanged("VLRTOTALDIFRET", vlrTotalDifRet);
-        this.vlrTotalDifRet = vlrTotalDifRet;
    }
 
    public BigDecimal getVlrTotalNRetAdicRet() {
-        return vlrTotalNRetAdicRet;
+        return this.getVo().asBigDecimal("VLRTOTALNRETADICRET");
    }
 
    public void setVlrTotalNRetAdicRet(BigDecimal vlrTotalNRetAdicRet) {
         markAsChanged("VLRTOTALNRETADICRET", vlrTotalNRetAdicRet);
-        this.vlrTotalNRetAdicRet = vlrTotalNRetAdicRet;
    }
 
    public BigDecimal getVlrTotalNRetPrincRet() {
-        return vlrTotalNRetPrincRet;
+        return this.getVo().asBigDecimal("VLRTOTALNRETPRINCRET");
    }
 
    public void setVlrTotalNRetPrincRet(BigDecimal vlrTotalNRetPrincRet) {
         markAsChanged("VLRTOTALNRETPRINCRET", vlrTotalNRetPrincRet);
-        this.vlrTotalNRetPrincRet = vlrTotalNRetPrincRet;
    }
 
    public BigDecimal getVlrTotalRetAdicCalc() {
-        return vlrTotalRetAdicCalc;
+        return this.getVo().asBigDecimal("VLRTOTALRETADICCALC");
    }
 
    public void setVlrTotalRetAdicCalc(BigDecimal vlrTotalRetAdicCalc) {
         markAsChanged("VLRTOTALRETADICCALC", vlrTotalRetAdicCalc);
-        this.vlrTotalRetAdicCalc = vlrTotalRetAdicCalc;
    }
 
    public BigDecimal getVlrTotalRetAdicDif() {
-        return vlrTotalRetAdicDif;
+        return this.getVo().asBigDecimal("VLRTOTALRETADICDIF");
    }
 
    public void setVlrTotalRetAdicDif(BigDecimal vlrTotalRetAdicDif) {
         markAsChanged("VLRTOTALRETADICDIF", vlrTotalRetAdicDif);
-        this.vlrTotalRetAdicDif = vlrTotalRetAdicDif;
    }
 
    public BigDecimal getVlrTotalRetAdicRet() {
-        return vlrTotalRetAdicRet;
+        return this.getVo().asBigDecimal("VLRTOTALRETADICRET");
    }
 
    public void setVlrTotalRetAdicRet(BigDecimal vlrTotalRetAdicRet) {
         markAsChanged("VLRTOTALRETADICRET", vlrTotalRetAdicRet);
-        this.vlrTotalRetAdicRet = vlrTotalRetAdicRet;
    }
 
    public BigDecimal getVlrTotalRetencaoCalc() {
-        return vlrTotalRetencaoCalc;
+        return this.getVo().asBigDecimal("VLRTOTALRETENCAOCALC");
    }
 
    public void setVlrTotalRetencaoCalc(BigDecimal vlrTotalRetencaoCalc) {
         markAsChanged("VLRTOTALRETENCAOCALC", vlrTotalRetencaoCalc);
-        this.vlrTotalRetencaoCalc = vlrTotalRetencaoCalc;
    }
 
    public BigDecimal getVlrTotalRetPrincRet() {
-        return vlrTotalRetPrincRet;
+        return this.getVo().asBigDecimal("VLRTOTALRETPRINCRET");
    }
 
    public void setVlrTotalRetPrincRet(BigDecimal vlrTotalRetPrincRet) {
         markAsChanged("VLRTOTALRETPRINCRET", vlrTotalRetPrincRet);
-        this.vlrTotalRetPrincRet = vlrTotalRetPrincRet;
    }
 
    public char[] getXmlEvento() {
-        return xmlEvento;
+        return this.getVo().asClob("XMLEVENTO");
    }
 
    public void setXmlEvento(char[] xmlEvento) {
         markAsChanged("XMLEVENTO", xmlEvento);
-        this.xmlEvento = xmlEvento;
    }
 
    public char[] getXmlRetorno() {
-        return xmlRetorno;
+        return this.getVo().asClob("XMLRETORNO");
    }
 
    public void setXmlRetorno(char[] xmlRetorno) {
         markAsChanged("XMLRETORNO", xmlRetorno);
-        this.xmlRetorno = xmlRetorno;
    }
 
    @Override
@@ -430,47 +347,6 @@ public class RetContribServicoPrestado extends AbstractSankhyaEntity<RetContribS
    @Override
    public RetContribServicoPrestado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chave = vo.asString("CHAVE");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.controle = vo.asString("CONTROLE");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.idEvento = vo.asString("IDEVENTO");
-        this.indObra = vo.asBigDecimal("INDOBRA");
-        this.nrInsc = vo.asString("NRINSC");
-        this.nrInscEstabPrest = vo.asString("NRINSCESTABPREST");
-        this.nrInscTomador = vo.asString("NRINSCTOMADOR");
-        this.nrORecibo = vo.asString("NRORECIBO");
-        this.nrOReciboAnt = vo.asString("NRORECIBOANT");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.statusReg = vo.asString("STATUSREG");
-        this.tpAmb = vo.asString("TPAMB");
-        this.tpInsc = vo.asBigDecimal("TPINSC");
-        this.tpInscEstabPrest = vo.asBigDecimal("TPINSCESTABPREST");
-        this.tpInscTomador = vo.asBigDecimal("TPINSCTOMADOR");
-        this.vlrTotalBaseRet = vo.asBigDecimal("VLRTOTALBASERET");
-        this.vlrTotalBruto = vo.asBigDecimal("VLRTOTALBRUTO");
-        this.vlrTotalNRetAdic = vo.asBigDecimal("VLRTOTALNRETADIC");
-        this.vlrTotalNRetPrinc = vo.asBigDecimal("VLRTOTALNRETPRINC");
-        this.vlrTotalRetAdic = vo.asBigDecimal("VLRTOTALRETADIC");
-        this.vlrTotalRetPrinc = vo.asBigDecimal("VLRTOTALRETPRINC");
-        this.codEmpEstabPrest = vo.asBigDecimal("CODEMPESTABPREST");
-        this.codParcTomador = vo.asBigDecimal("CODPARCTOMADOR");
-        this.dataChange = vo.asClob("DATACHANGE");
-        this.msg = vo.asClob("MSG");
-        this.nrInscTomadorRet = vo.asString("NRINSCTOMADORRET");
-        this.tipo = vo.asString("TIPO");
-        this.tpInscTomadorRet = vo.asBigDecimal("TPINSCTOMADORRET");
-        this.vlrTotalBaseRetRet = vo.asBigDecimal("VLRTOTALBASERETRET");
-        this.vlrTotalDifRet = vo.asBigDecimal("VLRTOTALDIFRET");
-        this.vlrTotalNRetAdicRet = vo.asBigDecimal("VLRTOTALNRETADICRET");
-        this.vlrTotalNRetPrincRet = vo.asBigDecimal("VLRTOTALNRETPRINCRET");
-        this.vlrTotalRetAdicCalc = vo.asBigDecimal("VLRTOTALRETADICCALC");
-        this.vlrTotalRetAdicDif = vo.asBigDecimal("VLRTOTALRETADICDIF");
-        this.vlrTotalRetAdicRet = vo.asBigDecimal("VLRTOTALRETADICRET");
-        this.vlrTotalRetencaoCalc = vo.asBigDecimal("VLRTOTALRETENCAOCALC");
-        this.vlrTotalRetPrincRet = vo.asBigDecimal("VLRTOTALRETPRINCRET");
-        this.xmlEvento = vo.asClob("XMLEVENTO");
-        this.xmlRetorno = vo.asClob("XMLRETORNO");
         return this;
    }
 }

@@ -6,155 +6,124 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PortariaCat42R1050 extends AbstractSankhyaEntity<PortariaCat42R1050> {
-   private BigDecimal qtdFim;
-   private BigDecimal qtdIni;
-   private String reg;
-   private BigDecimal vlrUnitEntrec;
-   private BigDecimal codEmp;
-   private String codItem;
-   private BigDecimal codProd;
-   private String digitado;
-   private Timestamp dtEntrec;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private BigDecimal icmsTotFim;
-   private BigDecimal icmsTotIni;
-   private BigDecimal nuNotaEntrec;
-   private String tipoDivergencia;
-
    public BigDecimal getQtdFim() {
-        return qtdFim;
+        return this.getVo().asBigDecimal("QTDFIM");
    }
 
    public void setQtdFim(BigDecimal qtdFim) {
         markAsChanged("QTDFIM", qtdFim);
-        this.qtdFim = qtdFim;
    }
 
    public BigDecimal getQtdIni() {
-        return qtdIni;
+        return this.getVo().asBigDecimal("QTDINI");
    }
 
    public void setQtdIni(BigDecimal qtdIni) {
         markAsChanged("QTDINI", qtdIni);
-        this.qtdIni = qtdIni;
    }
 
    public String getReg() {
-        return reg;
+        return this.getVo().asString("REG");
    }
 
    public void setReg(String reg) {
         markAsChanged("REG", reg);
-        this.reg = reg;
    }
 
    public BigDecimal getVlrUnitEntrec() {
-        return vlrUnitEntrec;
+        return this.getVo().asBigDecimal("VLRUNITENTREC");
    }
 
    public void setVlrUnitEntrec(BigDecimal vlrUnitEntrec) {
         markAsChanged("VLRUNITENTREC", vlrUnitEntrec);
-        this.vlrUnitEntrec = vlrUnitEntrec;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCodItem() {
-        return codItem;
+        return this.getVo().asString("CODITEM");
    }
 
    public void setCodItem(String codItem) {
         markAsChanged("CODITEM", codItem);
-        this.codItem = codItem;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getDtEntrec() {
-        return dtEntrec;
+        return this.getVo().asTimestamp("DTENTREC");
    }
 
    public void setDtEntrec(Timestamp dtEntrec) {
         markAsChanged("DTENTREC", dtEntrec);
-        this.dtEntrec = dtEntrec;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public BigDecimal getIcmsTotFim() {
-        return icmsTotFim;
+        return this.getVo().asBigDecimal("ICMSTOTFIM");
    }
 
    public void setIcmsTotFim(BigDecimal icmsTotFim) {
         markAsChanged("ICMSTOTFIM", icmsTotFim);
-        this.icmsTotFim = icmsTotFim;
    }
 
    public BigDecimal getIcmsTotIni() {
-        return icmsTotIni;
+        return this.getVo().asBigDecimal("ICMSTOTINI");
    }
 
    public void setIcmsTotIni(BigDecimal icmsTotIni) {
         markAsChanged("ICMSTOTINI", icmsTotIni);
-        this.icmsTotIni = icmsTotIni;
    }
 
    public BigDecimal getNuNotaEntrec() {
-        return nuNotaEntrec;
+        return this.getVo().asBigDecimal("NUNOTAENTREC");
    }
 
    public void setNuNotaEntrec(BigDecimal nuNotaEntrec) {
         markAsChanged("NUNOTAENTREC", nuNotaEntrec);
-        this.nuNotaEntrec = nuNotaEntrec;
    }
 
    public String getTipoDivergencia() {
-        return tipoDivergencia;
+        return this.getVo().asString("TIPODIVERGENCIA");
    }
 
    public void setTipoDivergencia(String tipoDivergencia) {
         markAsChanged("TIPODIVERGENCIA", tipoDivergencia);
-        this.tipoDivergencia = tipoDivergencia;
    }
 
    @Override
@@ -170,21 +139,6 @@ public class PortariaCat42R1050 extends AbstractSankhyaEntity<PortariaCat42R1050
    @Override
    public PortariaCat42R1050 fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.qtdFim = vo.asBigDecimal("QTDFIM");
-        this.qtdIni = vo.asBigDecimal("QTDINI");
-        this.reg = vo.asString("REG");
-        this.vlrUnitEntrec = vo.asBigDecimal("VLRUNITENTREC");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codItem = vo.asString("CODITEM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.digitado = vo.asString("DIGITADO");
-        this.dtEntrec = vo.asTimestamp("DTENTREC");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.icmsTotFim = vo.asBigDecimal("ICMSTOTFIM");
-        this.icmsTotIni = vo.asBigDecimal("ICMSTOTINI");
-        this.nuNotaEntrec = vo.asBigDecimal("NUNOTAENTREC");
-        this.tipoDivergencia = vo.asString("TIPODIVERGENCIA");
         return this;
    }
 }

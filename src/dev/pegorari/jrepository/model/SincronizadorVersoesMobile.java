@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<SincronizadorVersoesMobile> {
-   private String id;
-   private String nomeInstancia;
-   private BigDecimal versao;
-
    public String getId() {
-        return id;
+        return this.getVo().asString("ID");
    }
 
    public void setId(String id) {
         markAsChanged("ID", id);
-        this.id = id;
    }
 
    public String getNomeInstancia() {
-        return nomeInstancia;
+        return this.getVo().asString("NOMEINSTANCIA");
    }
 
    public void setNomeInstancia(String nomeInstancia) {
         markAsChanged("NOMEINSTANCIA", nomeInstancia);
-        this.nomeInstancia = nomeInstancia;
    }
 
    public BigDecimal getVersao() {
-        return versao;
+        return this.getVo().asBigDecimal("VERSAO");
    }
 
    public void setVersao(BigDecimal versao) {
         markAsChanged("VERSAO", versao);
-        this.versao = versao;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class SincronizadorVersoesMobile extends AbstractSankhyaEntity<Sincroniza
    @Override
    public SincronizadorVersoesMobile fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.id = vo.asString("ID");
-        this.nomeInstancia = vo.asString("NOMEINSTANCIA");
-        this.versao = vo.asBigDecimal("VERSAO");
         return this;
    }
 }

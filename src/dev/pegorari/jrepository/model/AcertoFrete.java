@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nuAcerto;
-   private BigDecimal nuFin;
-   private BigDecimal nuFinOrig;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private String tipAcerto;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuAcerto() {
-        return nuAcerto;
+        return this.getVo().asBigDecimal("NUACERTO");
    }
 
    public void setNuAcerto(BigDecimal nuAcerto) {
         markAsChanged("NUACERTO", nuAcerto);
-        this.nuAcerto = nuAcerto;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNuFinOrig() {
-        return nuFinOrig;
+        return this.getVo().asBigDecimal("NUFINORIG");
    }
 
    public void setNuFinOrig(BigDecimal nuFinOrig) {
         markAsChanged("NUFINORIG", nuFinOrig);
-        this.nuFinOrig = nuFinOrig;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipAcerto() {
-        return tipAcerto;
+        return this.getVo().asString("TIPACERTO");
    }
 
    public void setTipAcerto(String tipAcerto) {
         markAsChanged("TIPACERTO", tipAcerto);
-        this.tipAcerto = tipAcerto;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class AcertoFrete extends AbstractSankhyaEntity<AcertoFrete> {
    @Override
    public AcertoFrete fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuAcerto = vo.asBigDecimal("NUACERTO");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.nuFinOrig = vo.asBigDecimal("NUFINORIG");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipAcerto = vo.asString("TIPACERTO");
         return this;
    }
 }

@@ -5,285 +5,228 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
-   private BigDecimal codCap;
-   private BigDecimal codCargaHor;
-   private BigDecimal codCencus;
-   private BigDecimal codCwc;
-   private BigDecimal codLocalWc;
-   private BigDecimal codPlp;
-   private BigDecimal codUsuResp;
-   private BigDecimal codWcp;
-   private String exigeCleanup;
-   private BigDecimal indiceOee;
-   private String nome;
-   private String nomeImpressora;
-   private BigDecimal numQp;
-   private String operacao;
-   private BigDecimal qtdCapacidadeMax;
-   private BigDecimal qtdCapacidadeMin;
-   private BigDecimal qtdCapacidadePad;
-   private String setupPronto;
-   private BigDecimal tempoCleanup;
-   private BigDecimal tempoSetup;
-   private String tipoSetup;
-   private BigDecimal qtdAlocada;
-   private String codVol;
-   private BigDecimal qtdCargaMax;
-   private BigDecimal qtdCargaMin;
-   private String restringeCarga;
-   private BigDecimal capacidadeHora;
-   private String disponibilidade;
-
    public BigDecimal getCodCap() {
-        return codCap;
+        return this.getVo().asBigDecimal("CODCAP");
    }
 
    public void setCodCap(BigDecimal codCap) {
         markAsChanged("CODCAP", codCap);
-        this.codCap = codCap;
    }
 
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public BigDecimal getCodLocalWc() {
-        return codLocalWc;
+        return this.getVo().asBigDecimal("CODLOCALWC");
    }
 
    public void setCodLocalWc(BigDecimal codLocalWc) {
         markAsChanged("CODLOCALWC", codLocalWc);
-        this.codLocalWc = codLocalWc;
    }
 
    public BigDecimal getCodPlp() {
-        return codPlp;
+        return this.getVo().asBigDecimal("CODPLP");
    }
 
    public void setCodPlp(BigDecimal codPlp) {
         markAsChanged("CODPLP", codPlp);
-        this.codPlp = codPlp;
    }
 
    public BigDecimal getCodUsuResp() {
-        return codUsuResp;
+        return this.getVo().asBigDecimal("CODUSURESP");
    }
 
    public void setCodUsuResp(BigDecimal codUsuResp) {
         markAsChanged("CODUSURESP", codUsuResp);
-        this.codUsuResp = codUsuResp;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public String getExigeCleanup() {
-        return exigeCleanup;
+        return this.getVo().asString("EXIGECLEANUP");
    }
 
    public void setExigeCleanup(String exigeCleanup) {
         markAsChanged("EXIGECLEANUP", exigeCleanup);
-        this.exigeCleanup = exigeCleanup;
    }
 
    public BigDecimal getIndiceOee() {
-        return indiceOee;
+        return this.getVo().asBigDecimal("INDICEOEE");
    }
 
    public void setIndiceOee(BigDecimal indiceOee) {
         markAsChanged("INDICEOEE", indiceOee);
-        this.indiceOee = indiceOee;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public String getNomeImpressora() {
-        return nomeImpressora;
+        return this.getVo().asString("NOMEIMPRESSORA");
    }
 
    public void setNomeImpressora(String nomeImpressora) {
         markAsChanged("NOMEIMPRESSORA", nomeImpressora);
-        this.nomeImpressora = nomeImpressora;
    }
 
    public BigDecimal getNumQp() {
-        return numQp;
+        return this.getVo().asBigDecimal("NUMQP");
    }
 
    public void setNumQp(BigDecimal numQp) {
         markAsChanged("NUMQP", numQp);
-        this.numQp = numQp;
    }
 
    public String getOperacao() {
-        return operacao;
+        return this.getVo().asString("OPERACAO");
    }
 
    public void setOperacao(String operacao) {
         markAsChanged("OPERACAO", operacao);
-        this.operacao = operacao;
    }
 
    public BigDecimal getQtdCapacidadeMax() {
-        return qtdCapacidadeMax;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEMAX");
    }
 
    public void setQtdCapacidadeMax(BigDecimal qtdCapacidadeMax) {
         markAsChanged("QTDCAPACIDADEMAX", qtdCapacidadeMax);
-        this.qtdCapacidadeMax = qtdCapacidadeMax;
    }
 
    public BigDecimal getQtdCapacidadeMin() {
-        return qtdCapacidadeMin;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEMIN");
    }
 
    public void setQtdCapacidadeMin(BigDecimal qtdCapacidadeMin) {
         markAsChanged("QTDCAPACIDADEMIN", qtdCapacidadeMin);
-        this.qtdCapacidadeMin = qtdCapacidadeMin;
    }
 
    public BigDecimal getQtdCapacidadePad() {
-        return qtdCapacidadePad;
+        return this.getVo().asBigDecimal("QTDCAPACIDADEPAD");
    }
 
    public void setQtdCapacidadePad(BigDecimal qtdCapacidadePad) {
         markAsChanged("QTDCAPACIDADEPAD", qtdCapacidadePad);
-        this.qtdCapacidadePad = qtdCapacidadePad;
    }
 
    public String getSetupPronto() {
-        return setupPronto;
+        return this.getVo().asString("SETUPPRONTO");
    }
 
    public void setSetupPronto(String setupPronto) {
         markAsChanged("SETUPPRONTO", setupPronto);
-        this.setupPronto = setupPronto;
    }
 
    public BigDecimal getTempoCleanup() {
-        return tempoCleanup;
+        return this.getVo().asBigDecimal("TEMPOCLEANUP");
    }
 
    public void setTempoCleanup(BigDecimal tempoCleanup) {
         markAsChanged("TEMPOCLEANUP", tempoCleanup);
-        this.tempoCleanup = tempoCleanup;
    }
 
    public BigDecimal getTempoSetup() {
-        return tempoSetup;
+        return this.getVo().asBigDecimal("TEMPOSETUP");
    }
 
    public void setTempoSetup(BigDecimal tempoSetup) {
         markAsChanged("TEMPOSETUP", tempoSetup);
-        this.tempoSetup = tempoSetup;
    }
 
    public String getTipoSetup() {
-        return tipoSetup;
+        return this.getVo().asString("TIPOSETUP");
    }
 
    public void setTipoSetup(String tipoSetup) {
         markAsChanged("TIPOSETUP", tipoSetup);
-        this.tipoSetup = tipoSetup;
    }
 
    public BigDecimal getQtdAlocada() {
-        return qtdAlocada;
+        return this.getVo().asBigDecimal("QTDALOCADA");
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
         markAsChanged("QTDALOCADA", qtdAlocada);
-        this.qtdAlocada = qtdAlocada;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getQtdCargaMax() {
-        return qtdCargaMax;
+        return this.getVo().asBigDecimal("QTDCARGAMAX");
    }
 
    public void setQtdCargaMax(BigDecimal qtdCargaMax) {
         markAsChanged("QTDCARGAMAX", qtdCargaMax);
-        this.qtdCargaMax = qtdCargaMax;
    }
 
    public BigDecimal getQtdCargaMin() {
-        return qtdCargaMin;
+        return this.getVo().asBigDecimal("QTDCARGAMIN");
    }
 
    public void setQtdCargaMin(BigDecimal qtdCargaMin) {
         markAsChanged("QTDCARGAMIN", qtdCargaMin);
-        this.qtdCargaMin = qtdCargaMin;
    }
 
    public String getRestringeCarga() {
-        return restringeCarga;
+        return this.getVo().asString("RESTRINGECARGA");
    }
 
    public void setRestringeCarga(String restringeCarga) {
         markAsChanged("RESTRINGECARGA", restringeCarga);
-        this.restringeCarga = restringeCarga;
    }
 
    public BigDecimal getCapacidadeHora() {
-        return capacidadeHora;
+        return this.getVo().asBigDecimal("CAPACIDADEHORA");
    }
 
    public void setCapacidadeHora(BigDecimal capacidadeHora) {
         markAsChanged("CAPACIDADEHORA", capacidadeHora);
-        this.capacidadeHora = capacidadeHora;
    }
 
    public String getDisponibilidade() {
-        return disponibilidade;
+        return this.getVo().asString("DISPONIBILIDADE");
    }
 
    public void setDisponibilidade(String disponibilidade) {
         markAsChanged("DISPONIBILIDADE", disponibilidade);
-        this.disponibilidade = disponibilidade;
    }
 
    @Override
@@ -299,34 +242,6 @@ public class WorkCenter extends AbstractSankhyaEntity<WorkCenter> {
    @Override
    public WorkCenter fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCap = vo.asBigDecimal("CODCAP");
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.codLocalWc = vo.asBigDecimal("CODLOCALWC");
-        this.codPlp = vo.asBigDecimal("CODPLP");
-        this.codUsuResp = vo.asBigDecimal("CODUSURESP");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.exigeCleanup = vo.asString("EXIGECLEANUP");
-        this.indiceOee = vo.asBigDecimal("INDICEOEE");
-        this.nome = vo.asString("NOME");
-        this.nomeImpressora = vo.asString("NOMEIMPRESSORA");
-        this.numQp = vo.asBigDecimal("NUMQP");
-        this.operacao = vo.asString("OPERACAO");
-        this.qtdCapacidadeMax = vo.asBigDecimal("QTDCAPACIDADEMAX");
-        this.qtdCapacidadeMin = vo.asBigDecimal("QTDCAPACIDADEMIN");
-        this.qtdCapacidadePad = vo.asBigDecimal("QTDCAPACIDADEPAD");
-        this.setupPronto = vo.asString("SETUPPRONTO");
-        this.tempoCleanup = vo.asBigDecimal("TEMPOCLEANUP");
-        this.tempoSetup = vo.asBigDecimal("TEMPOSETUP");
-        this.tipoSetup = vo.asString("TIPOSETUP");
-        this.qtdAlocada = vo.asBigDecimal("QTDALOCADA");
-        this.codVol = vo.asString("CODVOL");
-        this.qtdCargaMax = vo.asBigDecimal("QTDCARGAMAX");
-        this.qtdCargaMin = vo.asBigDecimal("QTDCARGAMIN");
-        this.restringeCarga = vo.asString("RESTRINGECARGA");
-        this.capacidadeHora = vo.asBigDecimal("CAPACIDADEHORA");
-        this.disponibilidade = vo.asString("DISPONIBILIDADE");
         return this;
    }
 }

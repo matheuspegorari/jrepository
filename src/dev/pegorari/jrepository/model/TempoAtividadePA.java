@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TempoAtividadePA extends AbstractSankhyaEntity<TempoAtividadePA> {
-   private BigDecimal ideFx;
-   private String controlePa;
-   private BigDecimal codProdPa;
-   private String tipoTempo;
-   private String unTempo;
-   private BigDecimal tempoAtividade;
-   private BigDecimal codCwc;
-   private BigDecimal codWcp;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-   private String usarCtPadrao;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getTipoTempo() {
-        return tipoTempo;
+        return this.getVo().asString("TIPOTEMPO");
    }
 
    public void setTipoTempo(String tipoTempo) {
         markAsChanged("TIPOTEMPO", tipoTempo);
-        this.tipoTempo = tipoTempo;
    }
 
    public String getUnTempo() {
-        return unTempo;
+        return this.getVo().asString("UNTEMPO");
    }
 
    public void setUnTempo(String unTempo) {
         markAsChanged("UNTEMPO", unTempo);
-        this.unTempo = unTempo;
    }
 
    public BigDecimal getTempoAtividade() {
-        return tempoAtividade;
+        return this.getVo().asBigDecimal("TEMPOATIVIDADE");
    }
 
    public void setTempoAtividade(BigDecimal tempoAtividade) {
         markAsChanged("TEMPOATIVIDADE", tempoAtividade);
-        this.tempoAtividade = tempoAtividade;
    }
 
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    public String getUsarCtPadrao() {
-        return usarCtPadrao;
+        return this.getVo().asString("USARCTPADRAO");
    }
 
    public void setUsarCtPadrao(String usarCtPadrao) {
         markAsChanged("USARCTPADRAO", usarCtPadrao);
-        this.usarCtPadrao = usarCtPadrao;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class TempoAtividadePA extends AbstractSankhyaEntity<TempoAtividadePA> {
    @Override
    public TempoAtividadePA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.tipoTempo = vo.asString("TIPOTEMPO");
-        this.unTempo = vo.asString("UNTEMPO");
-        this.tempoAtividade = vo.asBigDecimal("TEMPOATIVIDADE");
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
-        this.usarCtPadrao = vo.asString("USARCTPADRAO");
         return this;
    }
 }

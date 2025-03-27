@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerguntaPesquisa> {
-   private byte[] anexo;
-   private BigDecimal codPerg;
-   private BigDecimal codResp;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuCorretor;
-   private Timestamp dhAlter;
-   private Timestamp dhCorrecao;
-   private BigDecimal nota;
-   private BigDecimal nuPesq;
-   private String observacao;
-   private String texto;
-   private BigDecimal valor;
-   private String proibElimepza;
-
    public byte[] getAnexo() {
-        return anexo;
+        return this.getVo().asBlob("ANEXO");
    }
 
    public void setAnexo(byte[] anexo) {
         markAsChanged("ANEXO", anexo);
-        this.anexo = anexo;
    }
 
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public BigDecimal getCodResp() {
-        return codResp;
+        return this.getVo().asBigDecimal("CODRESP");
    }
 
    public void setCodResp(BigDecimal codResp) {
         markAsChanged("CODRESP", codResp);
-        this.codResp = codResp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuCorretor() {
-        return codUsuCorretor;
+        return this.getVo().asBigDecimal("CODUSUCORRETOR");
    }
 
    public void setCodUsuCorretor(BigDecimal codUsuCorretor) {
         markAsChanged("CODUSUCORRETOR", codUsuCorretor);
-        this.codUsuCorretor = codUsuCorretor;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCorrecao() {
-        return dhCorrecao;
+        return this.getVo().asTimestamp("DHCORRECAO");
    }
 
    public void setDhCorrecao(Timestamp dhCorrecao) {
         markAsChanged("DHCORRECAO", dhCorrecao);
-        this.dhCorrecao = dhCorrecao;
    }
 
    public BigDecimal getNota() {
-        return nota;
+        return this.getVo().asBigDecimal("NOTA");
    }
 
    public void setNota(BigDecimal nota) {
         markAsChanged("NOTA", nota);
-        this.nota = nota;
    }
 
    public BigDecimal getNuPesq() {
-        return nuPesq;
+        return this.getVo().asBigDecimal("NUPESQ");
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
         markAsChanged("NUPESQ", nuPesq);
-        this.nuPesq = nuPesq;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getTexto() {
-        return texto;
+        return this.getVo().asString("TEXTO");
    }
 
    public void setTexto(String texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public String getProibElimepza() {
-        return proibElimepza;
+        return this.getVo().asString("PROIBELIMPEZA");
    }
 
    public void setProibElimepza(String proibElimepza) {
         markAsChanged("PROIBELIMPEZA", proibElimepza);
-        this.proibElimepza = proibElimepza;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class RespostaPerguntaPesquisa extends AbstractSankhyaEntity<RespostaPerg
    @Override
    public RespostaPerguntaPesquisa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.anexo = vo.asBlob("ANEXO");
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.codResp = vo.asBigDecimal("CODRESP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuCorretor = vo.asBigDecimal("CODUSUCORRETOR");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCorrecao = vo.asTimestamp("DHCORRECAO");
-        this.nota = vo.asBigDecimal("NOTA");
-        this.nuPesq = vo.asBigDecimal("NUPESQ");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.texto = vo.asString("TEXTO");
-        this.valor = vo.asBigDecimal("VALOR");
-        this.proibElimepza = vo.asString("PROIBELIMPEZA");
         return this;
    }
 }

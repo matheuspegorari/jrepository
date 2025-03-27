@@ -6,355 +6,284 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> {
-   private String statusAval;
-   private BigDecimal statusSelecao;
-   private BigDecimal tipo;
-   private BigDecimal tipoSelecao;
-   private String tipVaga;
-   private BigDecimal vinculo;
-   private BigDecimal codCargaHor;
-   private BigDecimal codCargo;
-   private BigDecimal codDep;
-   private BigDecimal codEmp;
-   private BigDecimal codMotivo;
-   private BigDecimal codMotivoAval;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuAval;
-   private BigDecimal codUsuRequisitante;
-   private String descrRequisicao;
-   private Timestamp dhAvaliacao;
-   private Timestamp dtAlter;
-   private Timestamp dtPrevAtend;
-   private Timestamp dtRequisicao;
-   private BigDecimal fimFaixSal;
-   private BigDecimal grauInstr;
-   private BigDecimal iniFaixSal;
-   private String justificativa;
-   private BigDecimal nuRequisicao;
-   private String obs;
-   private String obsAvaliacao;
-   private String obsCargo;
-   private String permiteExFunc;
-   private BigDecimal prioridade;
-   private BigDecimal qtdVagas;
-   private BigDecimal qtdVagasAtend;
-   private BigDecimal sitRequisicao;
-   private String status;
-
    public String getStatusAval() {
-        return statusAval;
+        return this.getVo().asString("STATUSAVAL");
    }
 
    public void setStatusAval(String statusAval) {
         markAsChanged("STATUSAVAL", statusAval);
-        this.statusAval = statusAval;
    }
 
    public BigDecimal getStatusSelecao() {
-        return statusSelecao;
+        return this.getVo().asBigDecimal("STATUSSELECAO");
    }
 
    public void setStatusSelecao(BigDecimal statusSelecao) {
         markAsChanged("STATUSSELECAO", statusSelecao);
-        this.statusSelecao = statusSelecao;
    }
 
    public BigDecimal getTipo() {
-        return tipo;
+        return this.getVo().asBigDecimal("TIPO");
    }
 
    public void setTipo(BigDecimal tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getTipoSelecao() {
-        return tipoSelecao;
+        return this.getVo().asBigDecimal("TIPOSELECAO");
    }
 
    public void setTipoSelecao(BigDecimal tipoSelecao) {
         markAsChanged("TIPOSELECAO", tipoSelecao);
-        this.tipoSelecao = tipoSelecao;
    }
 
    public String getTipVaga() {
-        return tipVaga;
+        return this.getVo().asString("TIPVAGA");
    }
 
    public void setTipVaga(String tipVaga) {
         markAsChanged("TIPVAGA", tipVaga);
-        this.tipVaga = tipVaga;
    }
 
    public BigDecimal getVinculo() {
-        return vinculo;
+        return this.getVo().asBigDecimal("VINCULO");
    }
 
    public void setVinculo(BigDecimal vinculo) {
         markAsChanged("VINCULO", vinculo);
-        this.vinculo = vinculo;
    }
 
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public BigDecimal getCodCargo() {
-        return codCargo;
+        return this.getVo().asBigDecimal("CODCARGO");
    }
 
    public void setCodCargo(BigDecimal codCargo) {
         markAsChanged("CODCARGO", codCargo);
-        this.codCargo = codCargo;
    }
 
    public BigDecimal getCodDep() {
-        return codDep;
+        return this.getVo().asBigDecimal("CODDEP");
    }
 
    public void setCodDep(BigDecimal codDep) {
         markAsChanged("CODDEP", codDep);
-        this.codDep = codDep;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodMotivo() {
-        return codMotivo;
+        return this.getVo().asBigDecimal("CODMOTIVO");
    }
 
    public void setCodMotivo(BigDecimal codMotivo) {
         markAsChanged("CODMOTIVO", codMotivo);
-        this.codMotivo = codMotivo;
    }
 
    public BigDecimal getCodMotivoAval() {
-        return codMotivoAval;
+        return this.getVo().asBigDecimal("CODMOTIVOAVAL");
    }
 
    public void setCodMotivoAval(BigDecimal codMotivoAval) {
         markAsChanged("CODMOTIVOAVAL", codMotivoAval);
-        this.codMotivoAval = codMotivoAval;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuAval() {
-        return codUsuAval;
+        return this.getVo().asBigDecimal("CODUSUAVAL");
    }
 
    public void setCodUsuAval(BigDecimal codUsuAval) {
         markAsChanged("CODUSUAVAL", codUsuAval);
-        this.codUsuAval = codUsuAval;
    }
 
    public BigDecimal getCodUsuRequisitante() {
-        return codUsuRequisitante;
+        return this.getVo().asBigDecimal("CODUSUREQUISITANTE");
    }
 
    public void setCodUsuRequisitante(BigDecimal codUsuRequisitante) {
         markAsChanged("CODUSUREQUISITANTE", codUsuRequisitante);
-        this.codUsuRequisitante = codUsuRequisitante;
    }
 
    public String getDescrRequisicao() {
-        return descrRequisicao;
+        return this.getVo().asString("DESCRREQUISICAO");
    }
 
    public void setDescrRequisicao(String descrRequisicao) {
         markAsChanged("DESCRREQUISICAO", descrRequisicao);
-        this.descrRequisicao = descrRequisicao;
    }
 
    public Timestamp getDhAvaliacao() {
-        return dhAvaliacao;
+        return this.getVo().asTimestamp("DHAVALIACAO");
    }
 
    public void setDhAvaliacao(Timestamp dhAvaliacao) {
         markAsChanged("DHAVALIACAO", dhAvaliacao);
-        this.dhAvaliacao = dhAvaliacao;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtPrevAtend() {
-        return dtPrevAtend;
+        return this.getVo().asTimestamp("DTPREVATEND");
    }
 
    public void setDtPrevAtend(Timestamp dtPrevAtend) {
         markAsChanged("DTPREVATEND", dtPrevAtend);
-        this.dtPrevAtend = dtPrevAtend;
    }
 
    public Timestamp getDtRequisicao() {
-        return dtRequisicao;
+        return this.getVo().asTimestamp("DTREQUISICAO");
    }
 
    public void setDtRequisicao(Timestamp dtRequisicao) {
         markAsChanged("DTREQUISICAO", dtRequisicao);
-        this.dtRequisicao = dtRequisicao;
    }
 
    public BigDecimal getFimFaixSal() {
-        return fimFaixSal;
+        return this.getVo().asBigDecimal("FIMFAIXSAL");
    }
 
    public void setFimFaixSal(BigDecimal fimFaixSal) {
         markAsChanged("FIMFAIXSAL", fimFaixSal);
-        this.fimFaixSal = fimFaixSal;
    }
 
    public BigDecimal getGrauInstr() {
-        return grauInstr;
+        return this.getVo().asBigDecimal("GRAUINSTR");
    }
 
    public void setGrauInstr(BigDecimal grauInstr) {
         markAsChanged("GRAUINSTR", grauInstr);
-        this.grauInstr = grauInstr;
    }
 
    public BigDecimal getIniFaixSal() {
-        return iniFaixSal;
+        return this.getVo().asBigDecimal("INIFAIXSAL");
    }
 
    public void setIniFaixSal(BigDecimal iniFaixSal) {
         markAsChanged("INIFAIXSAL", iniFaixSal);
-        this.iniFaixSal = iniFaixSal;
    }
 
    public String getJustificativa() {
-        return justificativa;
+        return this.getVo().asString("JUSTIFICATIVA");
    }
 
    public void setJustificativa(String justificativa) {
         markAsChanged("JUSTIFICATIVA", justificativa);
-        this.justificativa = justificativa;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public String getObs() {
-        return obs;
+        return this.getVo().asString("OBS");
    }
 
    public void setObs(String obs) {
         markAsChanged("OBS", obs);
-        this.obs = obs;
    }
 
    public String getObsAvaliacao() {
-        return obsAvaliacao;
+        return this.getVo().asString("OBSAVALIACAO");
    }
 
    public void setObsAvaliacao(String obsAvaliacao) {
         markAsChanged("OBSAVALIACAO", obsAvaliacao);
-        this.obsAvaliacao = obsAvaliacao;
    }
 
    public String getObsCargo() {
-        return obsCargo;
+        return this.getVo().asString("OBSCARGO");
    }
 
    public void setObsCargo(String obsCargo) {
         markAsChanged("OBSCARGO", obsCargo);
-        this.obsCargo = obsCargo;
    }
 
    public String getPermiteExFunc() {
-        return permiteExFunc;
+        return this.getVo().asString("PERMITEEXFUNC");
    }
 
    public void setPermiteExFunc(String permiteExFunc) {
         markAsChanged("PERMITEEXFUNC", permiteExFunc);
-        this.permiteExFunc = permiteExFunc;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public BigDecimal getQtdVagas() {
-        return qtdVagas;
+        return this.getVo().asBigDecimal("QTDVAGAS");
    }
 
    public void setQtdVagas(BigDecimal qtdVagas) {
         markAsChanged("QTDVAGAS", qtdVagas);
-        this.qtdVagas = qtdVagas;
    }
 
    public BigDecimal getQtdVagasAtend() {
-        return qtdVagasAtend;
+        return this.getVo().asBigDecimal("QTDVAGASATEND");
    }
 
    public void setQtdVagasAtend(BigDecimal qtdVagasAtend) {
         markAsChanged("QTDVAGASATEND", qtdVagasAtend);
-        this.qtdVagasAtend = qtdVagasAtend;
    }
 
    public BigDecimal getSitRequisicao() {
-        return sitRequisicao;
+        return this.getVo().asBigDecimal("SITREQUISICAO");
    }
 
    public void setSitRequisicao(BigDecimal sitRequisicao) {
         markAsChanged("SITREQUISICAO", sitRequisicao);
-        this.sitRequisicao = sitRequisicao;
    }
 
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    @Override
@@ -370,41 +299,6 @@ public class RequisicaoPessoal extends AbstractSankhyaEntity<RequisicaoPessoal> 
    @Override
    public RequisicaoPessoal fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.statusAval = vo.asString("STATUSAVAL");
-        this.statusSelecao = vo.asBigDecimal("STATUSSELECAO");
-        this.tipo = vo.asBigDecimal("TIPO");
-        this.tipoSelecao = vo.asBigDecimal("TIPOSELECAO");
-        this.tipVaga = vo.asString("TIPVAGA");
-        this.vinculo = vo.asBigDecimal("VINCULO");
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.codCargo = vo.asBigDecimal("CODCARGO");
-        this.codDep = vo.asBigDecimal("CODDEP");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codMotivo = vo.asBigDecimal("CODMOTIVO");
-        this.codMotivoAval = vo.asBigDecimal("CODMOTIVOAVAL");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuAval = vo.asBigDecimal("CODUSUAVAL");
-        this.codUsuRequisitante = vo.asBigDecimal("CODUSUREQUISITANTE");
-        this.descrRequisicao = vo.asString("DESCRREQUISICAO");
-        this.dhAvaliacao = vo.asTimestamp("DHAVALIACAO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtPrevAtend = vo.asTimestamp("DTPREVATEND");
-        this.dtRequisicao = vo.asTimestamp("DTREQUISICAO");
-        this.fimFaixSal = vo.asBigDecimal("FIMFAIXSAL");
-        this.grauInstr = vo.asBigDecimal("GRAUINSTR");
-        this.iniFaixSal = vo.asBigDecimal("INIFAIXSAL");
-        this.justificativa = vo.asString("JUSTIFICATIVA");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.obs = vo.asString("OBS");
-        this.obsAvaliacao = vo.asString("OBSAVALIACAO");
-        this.obsCargo = vo.asString("OBSCARGO");
-        this.permiteExFunc = vo.asString("PERMITEEXFUNC");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.qtdVagas = vo.asBigDecimal("QTDVAGAS");
-        this.qtdVagasAtend = vo.asBigDecimal("QTDVAGASATEND");
-        this.sitRequisicao = vo.asBigDecimal("SITREQUISICAO");
-        this.status = vo.asString("STATUS");
         return this;
    }
 }

@@ -6,335 +6,268 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelatorio> {
-   private String acessoCubo;
-   private BigDecimal codEmp;
-   private BigDecimal codGrupoRel;
-   private BigDecimal codRel;
-   private String contasBco;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String escolhidos;
-   private String fastService;
-   private String filtros;
-   private String filtros2;
-   private byte[] grafic;
-   private byte[] layout;
-   private byte[] layoutSw;
-   private String lista1;
-   private String lista2;
-   private String lista3;
-   private String lista4;
-   private BigDecimal nivel;
-   private String nome;
-   private String observacao;
-   private String ordem;
-   private String orientacao;
-   private BigDecimal origem;
-   private String paramsGen;
-   private String personalizado;
-   private BigDecimal qtdVisualizacoes;
-   private String resumo;
-   private String sankhya;
-   private BigDecimal tamFonte;
-   private String temLayoutSw;
-   private String tipo;
-   private String tipoFonte;
-
    public String getAcessoCubo() {
-        return acessoCubo;
+        return this.getVo().asString("ACESSOCUBO");
    }
 
    public void setAcessoCubo(String acessoCubo) {
         markAsChanged("ACESSOCUBO", acessoCubo);
-        this.acessoCubo = acessoCubo;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodGrupoRel() {
-        return codGrupoRel;
+        return this.getVo().asBigDecimal("CODGRUPOREL");
    }
 
    public void setCodGrupoRel(BigDecimal codGrupoRel) {
         markAsChanged("CODGRUPOREL", codGrupoRel);
-        this.codGrupoRel = codGrupoRel;
    }
 
    public BigDecimal getCodRel() {
-        return codRel;
+        return this.getVo().asBigDecimal("CODREL");
    }
 
    public void setCodRel(BigDecimal codRel) {
         markAsChanged("CODREL", codRel);
-        this.codRel = codRel;
    }
 
    public String getContasBco() {
-        return contasBco;
+        return this.getVo().asString("CONTASBCO");
    }
 
    public void setContasBco(String contasBco) {
         markAsChanged("CONTASBCO", contasBco);
-        this.contasBco = contasBco;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getEscolhidos() {
-        return escolhidos;
+        return this.getVo().asString("ESCOLHIDOS");
    }
 
    public void setEscolhidos(String escolhidos) {
         markAsChanged("ESCOLHIDOS", escolhidos);
-        this.escolhidos = escolhidos;
    }
 
    public String getFastService() {
-        return fastService;
+        return this.getVo().asString("FASTSERVICE");
    }
 
    public void setFastService(String fastService) {
         markAsChanged("FASTSERVICE", fastService);
-        this.fastService = fastService;
    }
 
    public String getFiltros() {
-        return filtros;
+        return this.getVo().asString("FILTROS");
    }
 
    public void setFiltros(String filtros) {
         markAsChanged("FILTROS", filtros);
-        this.filtros = filtros;
    }
 
    public String getFiltros2() {
-        return filtros2;
+        return this.getVo().asString("FILTROS2");
    }
 
    public void setFiltros2(String filtros2) {
         markAsChanged("FILTROS2", filtros2);
-        this.filtros2 = filtros2;
    }
 
    public byte[] getGrafic() {
-        return grafic;
+        return this.getVo().asBlob("GRAFIC");
    }
 
    public void setGrafic(byte[] grafic) {
         markAsChanged("GRAFIC", grafic);
-        this.grafic = grafic;
    }
 
    public byte[] getLayout() {
-        return layout;
+        return this.getVo().asBlob("LAYOUT");
    }
 
    public void setLayout(byte[] layout) {
         markAsChanged("LAYOUT", layout);
-        this.layout = layout;
    }
 
    public byte[] getLayoutSw() {
-        return layoutSw;
+        return this.getVo().asBlob("LAYOUTSW");
    }
 
    public void setLayoutSw(byte[] layoutSw) {
         markAsChanged("LAYOUTSW", layoutSw);
-        this.layoutSw = layoutSw;
    }
 
    public String getLista1() {
-        return lista1;
+        return this.getVo().asString("LISTA1");
    }
 
    public void setLista1(String lista1) {
         markAsChanged("LISTA1", lista1);
-        this.lista1 = lista1;
    }
 
    public String getLista2() {
-        return lista2;
+        return this.getVo().asString("LISTA2");
    }
 
    public void setLista2(String lista2) {
         markAsChanged("LISTA2", lista2);
-        this.lista2 = lista2;
    }
 
    public String getLista3() {
-        return lista3;
+        return this.getVo().asString("LISTA3");
    }
 
    public void setLista3(String lista3) {
         markAsChanged("LISTA3", lista3);
-        this.lista3 = lista3;
    }
 
    public String getLista4() {
-        return lista4;
+        return this.getVo().asString("LISTA4");
    }
 
    public void setLista4(String lista4) {
         markAsChanged("LISTA4", lista4);
-        this.lista4 = lista4;
    }
 
    public BigDecimal getNivel() {
-        return nivel;
+        return this.getVo().asBigDecimal("NIVEL");
    }
 
    public void setNivel(BigDecimal nivel) {
         markAsChanged("NIVEL", nivel);
-        this.nivel = nivel;
    }
 
    public String getNome() {
-        return nome;
+        return this.getVo().asString("NOME");
    }
 
    public void setNome(String nome) {
         markAsChanged("NOME", nome);
-        this.nome = nome;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getOrdem() {
-        return ordem;
+        return this.getVo().asString("ORDEM");
    }
 
    public void setOrdem(String ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getOrientacao() {
-        return orientacao;
+        return this.getVo().asString("ORIENTACAO");
    }
 
    public void setOrientacao(String orientacao) {
         markAsChanged("ORIENTACAO", orientacao);
-        this.orientacao = orientacao;
    }
 
    public BigDecimal getOrigem() {
-        return origem;
+        return this.getVo().asBigDecimal("ORIGEM");
    }
 
    public void setOrigem(BigDecimal origem) {
         markAsChanged("ORIGEM", origem);
-        this.origem = origem;
    }
 
    public String getParamsGen() {
-        return paramsGen;
+        return this.getVo().asString("PARAMSGEN");
    }
 
    public void setParamsGen(String paramsGen) {
         markAsChanged("PARAMSGEN", paramsGen);
-        this.paramsGen = paramsGen;
    }
 
    public String getPersonalizado() {
-        return personalizado;
+        return this.getVo().asString("PERSONALIZADO");
    }
 
    public void setPersonalizado(String personalizado) {
         markAsChanged("PERSONALIZADO", personalizado);
-        this.personalizado = personalizado;
    }
 
    public BigDecimal getQtdVisualizacoes() {
-        return qtdVisualizacoes;
+        return this.getVo().asBigDecimal("QTDVISUALIZACOES");
    }
 
    public void setQtdVisualizacoes(BigDecimal qtdVisualizacoes) {
         markAsChanged("QTDVISUALIZACOES", qtdVisualizacoes);
-        this.qtdVisualizacoes = qtdVisualizacoes;
    }
 
    public String getResumo() {
-        return resumo;
+        return this.getVo().asString("RESUMO");
    }
 
    public void setResumo(String resumo) {
         markAsChanged("RESUMO", resumo);
-        this.resumo = resumo;
    }
 
    public String getSankhya() {
-        return sankhya;
+        return this.getVo().asString("SANKHYA");
    }
 
    public void setSankhya(String sankhya) {
         markAsChanged("SANKHYA", sankhya);
-        this.sankhya = sankhya;
    }
 
    public BigDecimal getTamFonte() {
-        return tamFonte;
+        return this.getVo().asBigDecimal("TAMFONTE");
    }
 
    public void setTamFonte(BigDecimal tamFonte) {
         markAsChanged("TAMFONTE", tamFonte);
-        this.tamFonte = tamFonte;
    }
 
    public String getTemLayoutSw() {
-        return temLayoutSw;
+        return this.getVo().asString("TEMLAYOUTSW");
    }
 
    public void setTemLayoutSw(String temLayoutSw) {
         markAsChanged("TEMLAYOUTSW", temLayoutSw);
-        this.temLayoutSw = temLayoutSw;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getTipoFonte() {
-        return tipoFonte;
+        return this.getVo().asString("TIPOFONTE");
    }
 
    public void setTipoFonte(String tipoFonte) {
         markAsChanged("TIPOFONTE", tipoFonte);
-        this.tipoFonte = tipoFonte;
    }
 
    @Override
@@ -350,39 +283,6 @@ public class FormatadorRelatorio extends AbstractSankhyaEntity<FormatadorRelator
    @Override
    public FormatadorRelatorio fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.acessoCubo = vo.asString("ACESSOCUBO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codGrupoRel = vo.asBigDecimal("CODGRUPOREL");
-        this.codRel = vo.asBigDecimal("CODREL");
-        this.contasBco = vo.asString("CONTASBCO");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.escolhidos = vo.asString("ESCOLHIDOS");
-        this.fastService = vo.asString("FASTSERVICE");
-        this.filtros = vo.asString("FILTROS");
-        this.filtros2 = vo.asString("FILTROS2");
-        this.grafic = vo.asBlob("GRAFIC");
-        this.layout = vo.asBlob("LAYOUT");
-        this.layoutSw = vo.asBlob("LAYOUTSW");
-        this.lista1 = vo.asString("LISTA1");
-        this.lista2 = vo.asString("LISTA2");
-        this.lista3 = vo.asString("LISTA3");
-        this.lista4 = vo.asString("LISTA4");
-        this.nivel = vo.asBigDecimal("NIVEL");
-        this.nome = vo.asString("NOME");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.ordem = vo.asString("ORDEM");
-        this.orientacao = vo.asString("ORIENTACAO");
-        this.origem = vo.asBigDecimal("ORIGEM");
-        this.paramsGen = vo.asString("PARAMSGEN");
-        this.personalizado = vo.asString("PERSONALIZADO");
-        this.qtdVisualizacoes = vo.asBigDecimal("QTDVISUALIZACOES");
-        this.resumo = vo.asString("RESUMO");
-        this.sankhya = vo.asString("SANKHYA");
-        this.tamFonte = vo.asBigDecimal("TAMFONTE");
-        this.temLayoutSw = vo.asString("TEMLAYOUTSW");
-        this.tipo = vo.asString("TIPO");
-        this.tipoFonte = vo.asString("TIPOFONTE");
         return this;
    }
 }

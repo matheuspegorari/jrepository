@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<AdiantamentoBaixaFinanceiro> {
-   private BigDecimal codUsu;
-   private Timestamp dhMov;
-   private BigDecimal nuAntecipa;
-   private BigDecimal nuFin;
-   private BigDecimal vlrTaxa;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhMov() {
-        return dhMov;
+        return this.getVo().asTimestamp("DHMOV");
    }
 
    public void setDhMov(Timestamp dhMov) {
         markAsChanged("DHMOV", dhMov);
-        this.dhMov = dhMov;
    }
 
    public BigDecimal getNuAntecipa() {
-        return nuAntecipa;
+        return this.getVo().asBigDecimal("NUANTECIPA");
    }
 
    public void setNuAntecipa(BigDecimal nuAntecipa) {
         markAsChanged("NUANTECIPA", nuAntecipa);
-        this.nuAntecipa = nuAntecipa;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getVlrTaxa() {
-        return vlrTaxa;
+        return this.getVo().asBigDecimal("VLRTAXA");
    }
 
    public void setVlrTaxa(BigDecimal vlrTaxa) {
         markAsChanged("VLRTAXA", vlrTaxa);
-        this.vlrTaxa = vlrTaxa;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class AdiantamentoBaixaFinanceiro extends AbstractSankhyaEntity<Adiantame
    @Override
    public AdiantamentoBaixaFinanceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhMov = vo.asTimestamp("DHMOV");
-        this.nuAntecipa = vo.asBigDecimal("NUANTECIPA");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.vlrTaxa = vo.asBigDecimal("VLRTAXA");
         return this;
    }
 }

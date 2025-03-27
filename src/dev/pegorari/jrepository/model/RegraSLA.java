@@ -5,155 +5,124 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RegraSLA extends AbstractSankhyaEntity<RegraSLA> {
-   private BigDecimal codCargaHor;
-   private String baseCalcTempo;
-   private BigDecimal codGrupoProd;
-   private BigDecimal codOcorOs;
-   private BigDecimal codProd;
-   private BigDecimal codServ;
-   private BigDecimal numReg;
-   private BigDecimal nuSla;
-   private BigDecimal ordem;
-   private String padrao;
-   private BigDecimal prioridade;
-   private BigDecimal tempoTotal;
-   private String tipoTempo;
-   private String usaRegraPadrao;
-   private BigDecimal valorTempo;
-
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public String getBaseCalcTempo() {
-        return baseCalcTempo;
+        return this.getVo().asString("BASECALCTEMPO");
    }
 
    public void setBaseCalcTempo(String baseCalcTempo) {
         markAsChanged("BASECALCTEMPO", baseCalcTempo);
-        this.baseCalcTempo = baseCalcTempo;
    }
 
    public BigDecimal getCodGrupoProd() {
-        return codGrupoProd;
+        return this.getVo().asBigDecimal("CODGRUPOPROD");
    }
 
    public void setCodGrupoProd(BigDecimal codGrupoProd) {
         markAsChanged("CODGRUPOPROD", codGrupoProd);
-        this.codGrupoProd = codGrupoProd;
    }
 
    public BigDecimal getCodOcorOs() {
-        return codOcorOs;
+        return this.getVo().asBigDecimal("CODOCOROS");
    }
 
    public void setCodOcorOs(BigDecimal codOcorOs) {
         markAsChanged("CODOCOROS", codOcorOs);
-        this.codOcorOs = codOcorOs;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodServ() {
-        return codServ;
+        return this.getVo().asBigDecimal("CODSERV");
    }
 
    public void setCodServ(BigDecimal codServ) {
         markAsChanged("CODSERV", codServ);
-        this.codServ = codServ;
    }
 
    public BigDecimal getNumReg() {
-        return numReg;
+        return this.getVo().asBigDecimal("NUMREG");
    }
 
    public void setNumReg(BigDecimal numReg) {
         markAsChanged("NUMREG", numReg);
-        this.numReg = numReg;
    }
 
    public BigDecimal getNuSla() {
-        return nuSla;
+        return this.getVo().asBigDecimal("NUSLA");
    }
 
    public void setNuSla(BigDecimal nuSla) {
         markAsChanged("NUSLA", nuSla);
-        this.nuSla = nuSla;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getPadrao() {
-        return padrao;
+        return this.getVo().asString("PADRAO");
    }
 
    public void setPadrao(String padrao) {
         markAsChanged("PADRAO", padrao);
-        this.padrao = padrao;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public BigDecimal getTempoTotal() {
-        return tempoTotal;
+        return this.getVo().asBigDecimal("TEMPOTOTAL");
    }
 
    public void setTempoTotal(BigDecimal tempoTotal) {
         markAsChanged("TEMPOTOTAL", tempoTotal);
-        this.tempoTotal = tempoTotal;
    }
 
    public String getTipoTempo() {
-        return tipoTempo;
+        return this.getVo().asString("TIPOTEMPO");
    }
 
    public void setTipoTempo(String tipoTempo) {
         markAsChanged("TIPOTEMPO", tipoTempo);
-        this.tipoTempo = tipoTempo;
    }
 
    public String getUsaRegraPadrao() {
-        return usaRegraPadrao;
+        return this.getVo().asString("USAREGRAPADRAO");
    }
 
    public void setUsaRegraPadrao(String usaRegraPadrao) {
         markAsChanged("USAREGRAPADRAO", usaRegraPadrao);
-        this.usaRegraPadrao = usaRegraPadrao;
    }
 
    public BigDecimal getValorTempo() {
-        return valorTempo;
+        return this.getVo().asBigDecimal("VALORTEMPO");
    }
 
    public void setValorTempo(BigDecimal valorTempo) {
         markAsChanged("VALORTEMPO", valorTempo);
-        this.valorTempo = valorTempo;
    }
 
    @Override
@@ -169,21 +138,6 @@ public class RegraSLA extends AbstractSankhyaEntity<RegraSLA> {
    @Override
    public RegraSLA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.baseCalcTempo = vo.asString("BASECALCTEMPO");
-        this.codGrupoProd = vo.asBigDecimal("CODGRUPOPROD");
-        this.codOcorOs = vo.asBigDecimal("CODOCOROS");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codServ = vo.asBigDecimal("CODSERV");
-        this.numReg = vo.asBigDecimal("NUMREG");
-        this.nuSla = vo.asBigDecimal("NUSLA");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.padrao = vo.asString("PADRAO");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.tempoTotal = vo.asBigDecimal("TEMPOTOTAL");
-        this.tipoTempo = vo.asString("TIPOTEMPO");
-        this.usaRegraPadrao = vo.asString("USAREGRAPADRAO");
-        this.valorTempo = vo.asBigDecimal("VALORTEMPO");
         return this;
    }
 }

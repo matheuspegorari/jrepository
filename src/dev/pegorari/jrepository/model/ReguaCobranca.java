@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
-   private String ativo;
-   private BigDecimal codRegua;
-   private char[] config;
-   private String descRegua;
-   private BigDecimal horaExec;
-   private Timestamp ultExecucao;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodRegua() {
-        return codRegua;
+        return this.getVo().asBigDecimal("CODREGUA");
    }
 
    public void setCodRegua(BigDecimal codRegua) {
         markAsChanged("CODREGUA", codRegua);
-        this.codRegua = codRegua;
    }
 
    public char[] getConfig() {
-        return config;
+        return this.getVo().asClob("CONFIG");
    }
 
    public void setConfig(char[] config) {
         markAsChanged("CONFIG", config);
-        this.config = config;
    }
 
    public String getDescRegua() {
-        return descRegua;
+        return this.getVo().asString("DESCREGUA");
    }
 
    public void setDescRegua(String descRegua) {
         markAsChanged("DESCREGUA", descRegua);
-        this.descRegua = descRegua;
    }
 
    public BigDecimal getHoraExec() {
-        return horaExec;
+        return this.getVo().asBigDecimal("HORAEXEC");
    }
 
    public void setHoraExec(BigDecimal horaExec) {
         markAsChanged("HORAEXEC", horaExec);
-        this.horaExec = horaExec;
    }
 
    public Timestamp getUltExecucao() {
-        return ultExecucao;
+        return this.getVo().asTimestamp("ULTEXECUCAO");
    }
 
    public void setUltExecucao(Timestamp ultExecucao) {
         markAsChanged("ULTEXECUCAO", ultExecucao);
-        this.ultExecucao = ultExecucao;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class ReguaCobranca extends AbstractSankhyaEntity<ReguaCobranca> {
    @Override
    public ReguaCobranca fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codRegua = vo.asBigDecimal("CODREGUA");
-        this.config = vo.asClob("CONFIG");
-        this.descRegua = vo.asString("DESCREGUA");
-        this.horaExec = vo.asBigDecimal("HORAEXEC");
-        this.ultExecucao = vo.asTimestamp("ULTEXECUCAO");
         return this;
    }
 }

@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
-   private BigDecimal codFila;
-   private BigDecimal nuAnexo;
-
    public BigDecimal getCodFila() {
-        return codFila;
+        return this.getVo().asBigDecimal("CODFILA");
    }
 
    public void setCodFila(BigDecimal codFila) {
         markAsChanged("CODFILA", codFila);
-        this.codFila = codFila;
    }
 
    public BigDecimal getNuAnexo() {
-        return nuAnexo;
+        return this.getVo().asBigDecimal("NUANEXO");
    }
 
    public void setNuAnexo(BigDecimal nuAnexo) {
         markAsChanged("NUANEXO", nuAnexo);
-        this.nuAnexo = nuAnexo;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class AnexoPorMensagem extends AbstractSankhyaEntity<AnexoPorMensagem> {
    @Override
    public AnexoPorMensagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codFila = vo.asBigDecimal("CODFILA");
-        this.nuAnexo = vo.asBigDecimal("NUANEXO");
         return this;
    }
 }

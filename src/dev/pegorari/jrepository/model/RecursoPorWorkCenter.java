@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCenter> {
-   private BigDecimal qtdAlocada;
-   private BigDecimal codCre;
-   private BigDecimal codWcp;
-   private BigDecimal fatorCapacidade;
-   private String modCapacidade;
-
    public BigDecimal getQtdAlocada() {
-        return qtdAlocada;
+        return this.getVo().asBigDecimal("QTDALOCADA");
    }
 
    public void setQtdAlocada(BigDecimal qtdAlocada) {
         markAsChanged("QTDALOCADA", qtdAlocada);
-        this.qtdAlocada = qtdAlocada;
    }
 
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getFatorCapacidade() {
-        return fatorCapacidade;
+        return this.getVo().asBigDecimal("FATORCAPACIDADE");
    }
 
    public void setFatorCapacidade(BigDecimal fatorCapacidade) {
         markAsChanged("FATORCAPACIDADE", fatorCapacidade);
-        this.fatorCapacidade = fatorCapacidade;
    }
 
    public String getModCapacidade() {
-        return modCapacidade;
+        return this.getVo().asString("MODCAPACIDADE");
    }
 
    public void setModCapacidade(String modCapacidade) {
         markAsChanged("MODCAPACIDADE", modCapacidade);
-        this.modCapacidade = modCapacidade;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class RecursoPorWorkCenter extends AbstractSankhyaEntity<RecursoPorWorkCe
    @Override
    public RecursoPorWorkCenter fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.qtdAlocada = vo.asBigDecimal("QTDALOCADA");
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.fatorCapacidade = vo.asBigDecimal("FATORCAPACIDADE");
-        this.modCapacidade = vo.asString("MODCAPACIDADE");
         return this;
    }
 }

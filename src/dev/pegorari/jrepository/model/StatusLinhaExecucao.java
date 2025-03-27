@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecucao> {
-   private BigDecimal idAtvStatusNormal;
-   private String idExecWflow;
-   private String statusExec;
-
    public BigDecimal getIdAtvStatusNormal() {
-        return idAtvStatusNormal;
+        return this.getVo().asBigDecimal("IDATVSTATUSNORMAL");
    }
 
    public void setIdAtvStatusNormal(BigDecimal idAtvStatusNormal) {
         markAsChanged("IDATVSTATUSNORMAL", idAtvStatusNormal);
-        this.idAtvStatusNormal = idAtvStatusNormal;
    }
 
    public String getIdExecWflow() {
-        return idExecWflow;
+        return this.getVo().asString("IDEXECWFLOW");
    }
 
    public void setIdExecWflow(String idExecWflow) {
         markAsChanged("IDEXECWFLOW", idExecWflow);
-        this.idExecWflow = idExecWflow;
    }
 
    public String getStatusExec() {
-        return statusExec;
+        return this.getVo().asString("STATUSEXEC");
    }
 
    public void setStatusExec(String statusExec) {
         markAsChanged("STATUSEXEC", statusExec);
-        this.statusExec = statusExec;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class StatusLinhaExecucao extends AbstractSankhyaEntity<StatusLinhaExecuc
    @Override
    public StatusLinhaExecucao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idAtvStatusNormal = vo.asBigDecimal("IDATVSTATUSNORMAL");
-        this.idExecWflow = vo.asString("IDEXECWFLOW");
-        this.statusExec = vo.asString("STATUSEXEC");
         return this;
    }
 }

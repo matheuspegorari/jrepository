@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoExtratoBancario> {
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private Timestamp dhProcesso;
-   private Timestamp dtImport;
-   private String hashArquivo;
-   private String nomeArq;
-   private BigDecimal nuImport;
-   private String processado;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhProcesso() {
-        return dhProcesso;
+        return this.getVo().asTimestamp("DHPROCESSO");
    }
 
    public void setDhProcesso(Timestamp dhProcesso) {
         markAsChanged("DHPROCESSO", dhProcesso);
-        this.dhProcesso = dhProcesso;
    }
 
    public Timestamp getDtImport() {
-        return dtImport;
+        return this.getVo().asTimestamp("DTIMPORT");
    }
 
    public void setDtImport(Timestamp dtImport) {
         markAsChanged("DTIMPORT", dtImport);
-        this.dtImport = dtImport;
    }
 
    public String getHashArquivo() {
-        return hashArquivo;
+        return this.getVo().asString("HASH_ARQUIVO");
    }
 
    public void setHashArquivo(String hashArquivo) {
         markAsChanged("HASH_ARQUIVO", hashArquivo);
-        this.hashArquivo = hashArquivo;
    }
 
    public String getNomeArq() {
-        return nomeArq;
+        return this.getVo().asString("NOMEARQ");
    }
 
    public void setNomeArq(String nomeArq) {
         markAsChanged("NOMEARQ", nomeArq);
-        this.nomeArq = nomeArq;
    }
 
    public BigDecimal getNuImport() {
-        return nuImport;
+        return this.getVo().asBigDecimal("NUIMPORT");
    }
 
    public void setNuImport(BigDecimal nuImport) {
         markAsChanged("NUIMPORT", nuImport);
-        this.nuImport = nuImport;
    }
 
    public String getProcessado() {
-        return processado;
+        return this.getVo().asString("PROCESSADO");
    }
 
    public void setProcessado(String processado) {
         markAsChanged("PROCESSADO", processado);
-        this.processado = processado;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class ImportacaoExtratoBancario extends AbstractSankhyaEntity<ImportacaoE
    @Override
    public ImportacaoExtratoBancario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhProcesso = vo.asTimestamp("DHPROCESSO");
-        this.dtImport = vo.asTimestamp("DTIMPORT");
-        this.hashArquivo = vo.asString("HASH_ARQUIVO");
-        this.nomeArq = vo.asString("NOMEARQ");
-        this.nuImport = vo.asBigDecimal("NUIMPORT");
-        this.processado = vo.asString("PROCESSADO");
         return this;
    }
 }

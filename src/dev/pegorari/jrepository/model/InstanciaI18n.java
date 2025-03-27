@@ -4,35 +4,28 @@ import br.com.sankhya.jape.vo.DynamicVO;
 import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 
 public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
-   private String locale;
-   private String nomeInstancia;
-   private String texto;
-
    public String getLocale() {
-        return locale;
+        return this.getVo().asString("LOCALE");
    }
 
    public void setLocale(String locale) {
         markAsChanged("LOCALE", locale);
-        this.locale = locale;
    }
 
    public String getNomeInstancia() {
-        return nomeInstancia;
+        return this.getVo().asString("NOMEINSTANCIA");
    }
 
    public void setNomeInstancia(String nomeInstancia) {
         markAsChanged("NOMEINSTANCIA", nomeInstancia);
-        this.nomeInstancia = nomeInstancia;
    }
 
    public String getTexto() {
-        return texto;
+        return this.getVo().asString("TEXTO");
    }
 
    public void setTexto(String texto) {
         markAsChanged("TEXTO", texto);
-        this.texto = texto;
    }
 
    @Override
@@ -48,9 +41,6 @@ public class InstanciaI18n extends AbstractSankhyaEntity<InstanciaI18n> {
    @Override
    public InstanciaI18n fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.locale = vo.asString("LOCALE");
-        this.nomeInstancia = vo.asString("NOMEINSTANCIA");
-        this.texto = vo.asString("TEXTO");
         return this;
    }
 }

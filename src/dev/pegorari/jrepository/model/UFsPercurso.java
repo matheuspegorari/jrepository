@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
-   private BigDecimal seqMdfe;
-   private BigDecimal codUf;
-   private BigDecimal nuViag;
-   private BigDecimal ordem;
-   private BigDecimal seqViagem;
-
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getCodUf() {
-        return codUf;
+        return this.getVo().asBigDecimal("CODUF");
    }
 
    public void setCodUf(BigDecimal codUf) {
         markAsChanged("CODUF", codUf);
-        this.codUf = codUf;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getSeqViagem() {
-        return seqViagem;
+        return this.getVo().asBigDecimal("SEQVIAGEM");
    }
 
    public void setSeqViagem(BigDecimal seqViagem) {
         markAsChanged("SEQVIAGEM", seqViagem);
-        this.seqViagem = seqViagem;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class UFsPercurso extends AbstractSankhyaEntity<UFsPercurso> {
    @Override
    public UFsPercurso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.codUf = vo.asBigDecimal("CODUF");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.seqViagem = vo.asBigDecimal("SEQVIAGEM");
         return this;
    }
 }

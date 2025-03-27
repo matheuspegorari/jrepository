@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ComponenteManufaturaPA extends AbstractSankhyaEntity<ComponenteManufaturaPA> {
-   private BigDecimal codCpm;
-   private BigDecimal codProd;
-   private BigDecimal qtdComp;
-
    public BigDecimal getCodCpm() {
-        return codCpm;
+        return this.getVo().asBigDecimal("CODCPM");
    }
 
    public void setCodCpm(BigDecimal codCpm) {
         markAsChanged("CODCPM", codCpm);
-        this.codCpm = codCpm;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getQtdComp() {
-        return qtdComp;
+        return this.getVo().asBigDecimal("QTDCOMP");
    }
 
    public void setQtdComp(BigDecimal qtdComp) {
         markAsChanged("QTDCOMP", qtdComp);
-        this.qtdComp = qtdComp;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ComponenteManufaturaPA extends AbstractSankhyaEntity<ComponenteManu
    @Override
    public ComponenteManufaturaPA fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCpm = vo.asBigDecimal("CODCPM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.qtdComp = vo.asBigDecimal("QTDCOMP");
         return this;
    }
 }

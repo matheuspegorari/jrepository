@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
-   private Timestamp dtAtual;
-   private BigDecimal codEmp;
-   private BigDecimal cusApurado;
-   private BigDecimal codProd;
-
    public Timestamp getDtAtual() {
-        return dtAtual;
+        return this.getVo().asTimestamp("DTATUAL");
    }
 
    public void setDtAtual(Timestamp dtAtual) {
         markAsChanged("DTATUAL", dtAtual);
-        this.dtAtual = dtAtual;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCusApurado() {
-        return cusApurado;
+        return this.getVo().asBigDecimal("CUSAPURADO");
    }
 
    public void setCusApurado(BigDecimal cusApurado) {
         markAsChanged("CUSAPURADO", cusApurado);
-        this.cusApurado = cusApurado;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class CustoTarifaCIP extends AbstractSankhyaEntity<CustoTarifaCIP> {
    @Override
    public CustoTarifaCIP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtAtual = vo.asTimestamp("DTATUAL");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.cusApurado = vo.asBigDecimal("CUSAPURADO");
-        this.codProd = vo.asBigDecimal("CODPROD");
         return this;
    }
 }

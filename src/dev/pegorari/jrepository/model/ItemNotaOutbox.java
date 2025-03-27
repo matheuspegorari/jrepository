@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
-   private String idOutbox;
-   private BigDecimal nuNota;
-   private BigDecimal qtd;
-   private BigDecimal sequencia;
-
    public String getIdOutbox() {
-        return idOutbox;
+        return this.getVo().asString("IDOUTBOX");
    }
 
    public void setIdOutbox(String idOutbox) {
         markAsChanged("IDOUTBOX", idOutbox);
-        this.idOutbox = idOutbox;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ItemNotaOutbox extends AbstractSankhyaEntity<ItemNotaOutbox> {
    @Override
    public ItemNotaOutbox fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idOutbox = vo.asString("IDOUTBOX");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

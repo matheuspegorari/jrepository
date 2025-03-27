@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
-   private BigDecimal ideFx;
-   private BigDecimal ideFxAnexado;
-   private String identificador;
-   private BigDecimal idRpAInicializa;
-   private String interrompe;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdeFxAnexado() {
-        return ideFxAnexado;
+        return this.getVo().asBigDecimal("IDEFXANEXADO");
    }
 
    public void setIdeFxAnexado(BigDecimal ideFxAnexado) {
         markAsChanged("IDEFXANEXADO", ideFxAnexado);
-        this.ideFxAnexado = ideFxAnexado;
    }
 
    public String getIdentificador() {
-        return identificador;
+        return this.getVo().asString("IDENTIFICADOR");
    }
 
    public void setIdentificador(String identificador) {
         markAsChanged("IDENTIFICADOR", identificador);
-        this.identificador = identificador;
    }
 
    public BigDecimal getIdRpAInicializa() {
-        return idRpAInicializa;
+        return this.getVo().asBigDecimal("IDRPAINICIALIZA");
    }
 
    public void setIdRpAInicializa(BigDecimal idRpAInicializa) {
         markAsChanged("IDRPAINICIALIZA", idRpAInicializa);
-        this.idRpAInicializa = idRpAInicializa;
    }
 
    public String getInterrompe() {
-        return interrompe;
+        return this.getVo().asString("INTERROMPE");
    }
 
    public void setInterrompe(String interrompe) {
         markAsChanged("INTERROMPE", interrompe);
-        this.interrompe = interrompe;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class EventoFluxo extends AbstractSankhyaEntity<EventoFluxo> {
    @Override
    public EventoFluxo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.ideFxAnexado = vo.asBigDecimal("IDEFXANEXADO");
-        this.identificador = vo.asString("IDENTIFICADOR");
-        this.idRpAInicializa = vo.asBigDecimal("IDRPAINICIALIZA");
-        this.interrompe = vo.asString("INTERROMPE");
         return this;
    }
 }

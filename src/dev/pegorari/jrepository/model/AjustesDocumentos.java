@@ -6,185 +6,148 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> {
-   private String codAjuste;
-   private BigDecimal codEmp;
-   private BigDecimal codObsPadrao;
-   private BigDecimal codUsu;
-   private String compAjuste;
-   private String compObsPadrao;
-   private Timestamp dhAlter;
-   private BigDecimal nuNota;
-   private String origem;
-   private BigDecimal sequencia;
-   private BigDecimal vlrIcms;
-   private BigDecimal vlrOutros;
-   private BigDecimal aliqIcms;
-   private BigDecimal baseIcms;
-   private BigDecimal codCfg;
-   private String agrupar;
-   private String indSubApuracaoAj;
-   private String subApuracaoAj;
-
    public String getCodAjuste() {
-        return codAjuste;
+        return this.getVo().asString("CODAJUSTE");
    }
 
    public void setCodAjuste(String codAjuste) {
         markAsChanged("CODAJUSTE", codAjuste);
-        this.codAjuste = codAjuste;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodObsPadrao() {
-        return codObsPadrao;
+        return this.getVo().asBigDecimal("CODOBSPADRAO");
    }
 
    public void setCodObsPadrao(BigDecimal codObsPadrao) {
         markAsChanged("CODOBSPADRAO", codObsPadrao);
-        this.codObsPadrao = codObsPadrao;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCompAjuste() {
-        return compAjuste;
+        return this.getVo().asString("COMPAJUSTE");
    }
 
    public void setCompAjuste(String compAjuste) {
         markAsChanged("COMPAJUSTE", compAjuste);
-        this.compAjuste = compAjuste;
    }
 
    public String getCompObsPadrao() {
-        return compObsPadrao;
+        return this.getVo().asString("COMPOBSPADRAO");
    }
 
    public void setCompObsPadrao(String compObsPadrao) {
         markAsChanged("COMPOBSPADRAO", compObsPadrao);
-        this.compObsPadrao = compObsPadrao;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getOrigem() {
-        return origem;
+        return this.getVo().asString("ORIGEM");
    }
 
    public void setOrigem(String origem) {
         markAsChanged("ORIGEM", origem);
-        this.origem = origem;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getVlrOutros() {
-        return vlrOutros;
+        return this.getVo().asBigDecimal("VLROUTROS");
    }
 
    public void setVlrOutros(BigDecimal vlrOutros) {
         markAsChanged("VLROUTROS", vlrOutros);
-        this.vlrOutros = vlrOutros;
    }
 
    public BigDecimal getAliqIcms() {
-        return aliqIcms;
+        return this.getVo().asBigDecimal("ALIQICMS");
    }
 
    public void setAliqIcms(BigDecimal aliqIcms) {
         markAsChanged("ALIQICMS", aliqIcms);
-        this.aliqIcms = aliqIcms;
    }
 
    public BigDecimal getBaseIcms() {
-        return baseIcms;
+        return this.getVo().asBigDecimal("BASEICMS");
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
         markAsChanged("BASEICMS", baseIcms);
-        this.baseIcms = baseIcms;
    }
 
    public BigDecimal getCodCfg() {
-        return codCfg;
+        return this.getVo().asBigDecimal("CODCFG");
    }
 
    public void setCodCfg(BigDecimal codCfg) {
         markAsChanged("CODCFG", codCfg);
-        this.codCfg = codCfg;
    }
 
    public String getAgrupar() {
-        return agrupar;
+        return this.getVo().asString("AGRUPAR");
    }
 
    public void setAgrupar(String agrupar) {
         markAsChanged("AGRUPAR", agrupar);
-        this.agrupar = agrupar;
    }
 
    public String getIndSubApuracaoAj() {
-        return indSubApuracaoAj;
+        return this.getVo().asString("INDSUBAPURACAOAJ");
    }
 
    public void setIndSubApuracaoAj(String indSubApuracaoAj) {
         markAsChanged("INDSUBAPURACAOAJ", indSubApuracaoAj);
-        this.indSubApuracaoAj = indSubApuracaoAj;
    }
 
    public String getSubApuracaoAj() {
-        return subApuracaoAj;
+        return this.getVo().asString("SUBAPURACAOAJ");
    }
 
    public void setSubApuracaoAj(String subApuracaoAj) {
         markAsChanged("SUBAPURACAOAJ", subApuracaoAj);
-        this.subApuracaoAj = subApuracaoAj;
    }
 
    @Override
@@ -200,24 +163,6 @@ public class AjustesDocumentos extends AbstractSankhyaEntity<AjustesDocumentos> 
    @Override
    public AjustesDocumentos fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codAjuste = vo.asString("CODAJUSTE");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codObsPadrao = vo.asBigDecimal("CODOBSPADRAO");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.compAjuste = vo.asString("COMPAJUSTE");
-        this.compObsPadrao = vo.asString("COMPOBSPADRAO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.origem = vo.asString("ORIGEM");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.vlrOutros = vo.asBigDecimal("VLROUTROS");
-        this.aliqIcms = vo.asBigDecimal("ALIQICMS");
-        this.baseIcms = vo.asBigDecimal("BASEICMS");
-        this.codCfg = vo.asBigDecimal("CODCFG");
-        this.agrupar = vo.asString("AGRUPAR");
-        this.indSubApuracaoAj = vo.asString("INDSUBAPURACAOAJ");
-        this.subApuracaoAj = vo.asString("SUBAPURACAOAJ");
         return this;
    }
 }

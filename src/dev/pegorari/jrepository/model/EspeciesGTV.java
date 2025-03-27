@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
-   private String idInfGtv;
-   private String numInfGtv;
-   private BigDecimal nuNota;
-   private BigDecimal tipoEspecie;
-   private BigDecimal vlrEspecie;
-
    public String getIdInfGtv() {
-        return idInfGtv;
+        return this.getVo().asString("IDINFGTV");
    }
 
    public void setIdInfGtv(String idInfGtv) {
         markAsChanged("IDINFGTV", idInfGtv);
-        this.idInfGtv = idInfGtv;
    }
 
    public String getNumInfGtv() {
-        return numInfGtv;
+        return this.getVo().asString("NUMINFGTV");
    }
 
    public void setNumInfGtv(String numInfGtv) {
         markAsChanged("NUMINFGTV", numInfGtv);
-        this.numInfGtv = numInfGtv;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getTipoEspecie() {
-        return tipoEspecie;
+        return this.getVo().asBigDecimal("TIPOESPECIE");
    }
 
    public void setTipoEspecie(BigDecimal tipoEspecie) {
         markAsChanged("TIPOESPECIE", tipoEspecie);
-        this.tipoEspecie = tipoEspecie;
    }
 
    public BigDecimal getVlrEspecie() {
-        return vlrEspecie;
+        return this.getVo().asBigDecimal("VLRESPECIE");
    }
 
    public void setVlrEspecie(BigDecimal vlrEspecie) {
         markAsChanged("VLRESPECIE", vlrEspecie);
-        this.vlrEspecie = vlrEspecie;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class EspeciesGTV extends AbstractSankhyaEntity<EspeciesGTV> {
    @Override
    public EspeciesGTV fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idInfGtv = vo.asString("IDINFGTV");
-        this.numInfGtv = vo.asString("NUMINFGTV");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.tipoEspecie = vo.asBigDecimal("TIPOESPECIE");
-        this.vlrEspecie = vo.asBigDecimal("VLRESPECIE");
         return this;
    }
 }

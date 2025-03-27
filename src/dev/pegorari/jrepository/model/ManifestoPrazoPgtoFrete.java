@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPrazoPgtoFrete> {
-   private BigDecimal nuViag;
-   private BigDecimal parcela;
-   private BigDecimal seqMdfe;
-   private BigDecimal seqPgFre;
-   private BigDecimal seqPraPgFre;
-   private BigDecimal valor;
-   private Timestamp vencimento;
-
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getParcela() {
-        return parcela;
+        return this.getVo().asBigDecimal("PARCELA");
    }
 
    public void setParcela(BigDecimal parcela) {
         markAsChanged("PARCELA", parcela);
-        this.parcela = parcela;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getSeqPgFre() {
-        return seqPgFre;
+        return this.getVo().asBigDecimal("SEQPGFRE");
    }
 
    public void setSeqPgFre(BigDecimal seqPgFre) {
         markAsChanged("SEQPGFRE", seqPgFre);
-        this.seqPgFre = seqPgFre;
    }
 
    public BigDecimal getSeqPraPgFre() {
-        return seqPraPgFre;
+        return this.getVo().asBigDecimal("SEQPRAPGFRE");
    }
 
    public void setSeqPraPgFre(BigDecimal seqPraPgFre) {
         markAsChanged("SEQPRAPGFRE", seqPraPgFre);
-        this.seqPraPgFre = seqPraPgFre;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public Timestamp getVencimento() {
-        return vencimento;
+        return this.getVo().asTimestamp("VENCIMENTO");
    }
 
    public void setVencimento(Timestamp vencimento) {
         markAsChanged("VENCIMENTO", vencimento);
-        this.vencimento = vencimento;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ManifestoPrazoPgtoFrete extends AbstractSankhyaEntity<ManifestoPraz
    @Override
    public ManifestoPrazoPgtoFrete fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.parcela = vo.asBigDecimal("PARCELA");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.seqPgFre = vo.asBigDecimal("SEQPGFRE");
-        this.seqPraPgFre = vo.asBigDecimal("SEQPRAPGFRE");
-        this.valor = vo.asBigDecimal("VALOR");
-        this.vencimento = vo.asTimestamp("VENCIMENTO");
         return this;
    }
 }

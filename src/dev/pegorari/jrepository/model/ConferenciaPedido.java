@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> {
-   private String codBarra;
-   private BigDecimal codUsu;
-   private BigDecimal nuConf;
-   private BigDecimal qtd;
-   private BigDecimal sequencia;
-   private String tipoConf;
-   private Timestamp dhConf;
-
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuConf() {
-        return nuConf;
+        return this.getVo().asBigDecimal("NUCONF");
    }
 
    public void setNuConf(BigDecimal nuConf) {
         markAsChanged("NUCONF", nuConf);
-        this.nuConf = nuConf;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTipoConf() {
-        return tipoConf;
+        return this.getVo().asString("TIPOCONF");
    }
 
    public void setTipoConf(String tipoConf) {
         markAsChanged("TIPOCONF", tipoConf);
-        this.tipoConf = tipoConf;
    }
 
    public Timestamp getDhConf() {
-        return dhConf;
+        return this.getVo().asTimestamp("DHCONF");
    }
 
    public void setDhConf(Timestamp dhConf) {
         markAsChanged("DHCONF", dhConf);
-        this.dhConf = dhConf;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ConferenciaPedido extends AbstractSankhyaEntity<ConferenciaPedido> 
    @Override
    public ConferenciaPedido fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBarra = vo.asString("CODBARRA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuConf = vo.asBigDecimal("NUCONF");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipoConf = vo.asString("TIPOCONF");
-        this.dhConf = vo.asTimestamp("DHCONF");
         return this;
    }
 }

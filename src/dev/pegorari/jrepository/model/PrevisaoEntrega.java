@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private Timestamp dtPrev;
-   private BigDecimal nuNota;
-   private BigDecimal qtd;
-   private BigDecimal qtdEntregue;
-   private BigDecimal seqPrev;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtPrev() {
-        return dtPrev;
+        return this.getVo().asTimestamp("DTPREV");
    }
 
    public void setDtPrev(Timestamp dtPrev) {
         markAsChanged("DTPREV", dtPrev);
-        this.dtPrev = dtPrev;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public BigDecimal getQtdEntregue() {
-        return qtdEntregue;
+        return this.getVo().asBigDecimal("QTDENTREGUE");
    }
 
    public void setQtdEntregue(BigDecimal qtdEntregue) {
         markAsChanged("QTDENTREGUE", qtdEntregue);
-        this.qtdEntregue = qtdEntregue;
    }
 
    public BigDecimal getSeqPrev() {
-        return seqPrev;
+        return this.getVo().asBigDecimal("SEQPREV");
    }
 
    public void setSeqPrev(BigDecimal seqPrev) {
         markAsChanged("SEQPREV", seqPrev);
-        this.seqPrev = seqPrev;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class PrevisaoEntrega extends AbstractSankhyaEntity<PrevisaoEntrega> {
    @Override
    public PrevisaoEntrega fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtPrev = vo.asTimestamp("DTPREV");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.qtdEntregue = vo.asBigDecimal("QTDENTREGUE");
-        this.seqPrev = vo.asBigDecimal("SEQPREV");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

@@ -6,185 +6,148 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhecimentoTransporte> {
-   private BigDecimal codModDoc;
-   private Timestamp dtEmissao;
-   private String numero;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private String serie;
-   private BigDecimal vlrNota;
-   private BigDecimal baseSt;
-   private BigDecimal baseIcms;
-   private String chaveNfe;
-   private BigDecimal vlrIcms;
-   private BigDecimal cfop;
-   private BigDecimal vlrSt;
-   private BigDecimal vlrTotProd;
-   private String segCodBar;
-   private String descrDoc;
-   private BigDecimal pesoB;
-   private BigDecimal pesoL;
-
    public BigDecimal getCodModDoc() {
-        return codModDoc;
+        return this.getVo().asBigDecimal("CODMODDOC");
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
         markAsChanged("CODMODDOC", codModDoc);
-        this.codModDoc = codModDoc;
    }
 
    public Timestamp getDtEmissao() {
-        return dtEmissao;
+        return this.getVo().asTimestamp("DTEMISSAO");
    }
 
    public void setDtEmissao(Timestamp dtEmissao) {
         markAsChanged("DTEMISSAO", dtEmissao);
-        this.dtEmissao = dtEmissao;
    }
 
    public String getNumero() {
-        return numero;
+        return this.getVo().asString("NUMERO");
    }
 
    public void setNumero(String numero) {
         markAsChanged("NUMERO", numero);
-        this.numero = numero;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public BigDecimal getVlrNota() {
-        return vlrNota;
+        return this.getVo().asBigDecimal("VLRNOTA");
    }
 
    public void setVlrNota(BigDecimal vlrNota) {
         markAsChanged("VLRNOTA", vlrNota);
-        this.vlrNota = vlrNota;
    }
 
    public BigDecimal getBaseSt() {
-        return baseSt;
+        return this.getVo().asBigDecimal("BASEST");
    }
 
    public void setBaseSt(BigDecimal baseSt) {
         markAsChanged("BASEST", baseSt);
-        this.baseSt = baseSt;
    }
 
    public BigDecimal getBaseIcms() {
-        return baseIcms;
+        return this.getVo().asBigDecimal("BASEICMS");
    }
 
    public void setBaseIcms(BigDecimal baseIcms) {
         markAsChanged("BASEICMS", baseIcms);
-        this.baseIcms = baseIcms;
    }
 
    public String getChaveNfe() {
-        return chaveNfe;
+        return this.getVo().asString("CHAVENFE");
    }
 
    public void setChaveNfe(String chaveNfe) {
         markAsChanged("CHAVENFE", chaveNfe);
-        this.chaveNfe = chaveNfe;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getCfop() {
-        return cfop;
+        return this.getVo().asBigDecimal("CFOP");
    }
 
    public void setCfop(BigDecimal cfop) {
         markAsChanged("CFOP", cfop);
-        this.cfop = cfop;
    }
 
    public BigDecimal getVlrSt() {
-        return vlrSt;
+        return this.getVo().asBigDecimal("VLRST");
    }
 
    public void setVlrSt(BigDecimal vlrSt) {
         markAsChanged("VLRST", vlrSt);
-        this.vlrSt = vlrSt;
    }
 
    public BigDecimal getVlrTotProd() {
-        return vlrTotProd;
+        return this.getVo().asBigDecimal("VLRTOTPROD");
    }
 
    public void setVlrTotProd(BigDecimal vlrTotProd) {
         markAsChanged("VLRTOTPROD", vlrTotProd);
-        this.vlrTotProd = vlrTotProd;
    }
 
    public String getSegCodBar() {
-        return segCodBar;
+        return this.getVo().asString("SEGCODBAR");
    }
 
    public void setSegCodBar(String segCodBar) {
         markAsChanged("SEGCODBAR", segCodBar);
-        this.segCodBar = segCodBar;
    }
 
    public String getDescrDoc() {
-        return descrDoc;
+        return this.getVo().asString("DESCRDOC");
    }
 
    public void setDescrDoc(String descrDoc) {
         markAsChanged("DESCRDOC", descrDoc);
-        this.descrDoc = descrDoc;
    }
 
    public BigDecimal getPesoB() {
-        return pesoB;
+        return this.getVo().asBigDecimal("PESOB");
    }
 
    public void setPesoB(BigDecimal pesoB) {
         markAsChanged("PESOB", pesoB);
-        this.pesoB = pesoB;
    }
 
    public BigDecimal getPesoL() {
-        return pesoL;
+        return this.getVo().asBigDecimal("PESOL");
    }
 
    public void setPesoL(BigDecimal pesoL) {
         markAsChanged("PESOL", pesoL);
-        this.pesoL = pesoL;
    }
 
    @Override
@@ -200,24 +163,6 @@ public class NotaConhecimentoTransporte extends AbstractSankhyaEntity<NotaConhec
    @Override
    public NotaConhecimentoTransporte fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codModDoc = vo.asBigDecimal("CODMODDOC");
-        this.dtEmissao = vo.asTimestamp("DTEMISSAO");
-        this.numero = vo.asString("NUMERO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.serie = vo.asString("SERIE");
-        this.vlrNota = vo.asBigDecimal("VLRNOTA");
-        this.baseSt = vo.asBigDecimal("BASEST");
-        this.baseIcms = vo.asBigDecimal("BASEICMS");
-        this.chaveNfe = vo.asString("CHAVENFE");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.cfop = vo.asBigDecimal("CFOP");
-        this.vlrSt = vo.asBigDecimal("VLRST");
-        this.vlrTotProd = vo.asBigDecimal("VLRTOTPROD");
-        this.segCodBar = vo.asString("SEGCODBAR");
-        this.descrDoc = vo.asString("DESCRDOC");
-        this.pesoB = vo.asBigDecimal("PESOB");
-        this.pesoL = vo.asBigDecimal("PESOL");
         return this;
    }
 }

@@ -5,155 +5,124 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
-   private BigDecimal codParc;
-   private BigDecimal codProc;
-   private BigDecimal codProd;
-   private BigDecimal numContrato;
-   private BigDecimal numPesagem;
-   private BigDecimal numProd;
-   private BigDecimal nuNota;
-   private BigDecimal nuNotaDest;
-   private BigDecimal pesoNf;
-   private BigDecimal pesoRomaneio;
-   private BigDecimal valTotal;
-   private BigDecimal valUnit;
-   private String chaveNfe;
-   private BigDecimal numNotaTrans;
-   private String controle;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProc() {
-        return codProc;
+        return this.getVo().asBigDecimal("CODPROC");
    }
 
    public void setCodProc(BigDecimal codProc) {
         markAsChanged("CODPROC", codProc);
-        this.codProc = codProc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public BigDecimal getNumPesagem() {
-        return numPesagem;
+        return this.getVo().asBigDecimal("NUMPESAGEM");
    }
 
    public void setNumPesagem(BigDecimal numPesagem) {
         markAsChanged("NUMPESAGEM", numPesagem);
-        this.numPesagem = numPesagem;
    }
 
    public BigDecimal getNumProd() {
-        return numProd;
+        return this.getVo().asBigDecimal("NUMPROD");
    }
 
    public void setNumProd(BigDecimal numProd) {
         markAsChanged("NUMPROD", numProd);
-        this.numProd = numProd;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuNotaDest() {
-        return nuNotaDest;
+        return this.getVo().asBigDecimal("NUNOTADEST");
    }
 
    public void setNuNotaDest(BigDecimal nuNotaDest) {
         markAsChanged("NUNOTADEST", nuNotaDest);
-        this.nuNotaDest = nuNotaDest;
    }
 
    public BigDecimal getPesoNf() {
-        return pesoNf;
+        return this.getVo().asBigDecimal("PESONF");
    }
 
    public void setPesoNf(BigDecimal pesoNf) {
         markAsChanged("PESONF", pesoNf);
-        this.pesoNf = pesoNf;
    }
 
    public BigDecimal getPesoRomaneio() {
-        return pesoRomaneio;
+        return this.getVo().asBigDecimal("PESOROMANEIO");
    }
 
    public void setPesoRomaneio(BigDecimal pesoRomaneio) {
         markAsChanged("PESOROMANEIO", pesoRomaneio);
-        this.pesoRomaneio = pesoRomaneio;
    }
 
    public BigDecimal getValTotal() {
-        return valTotal;
+        return this.getVo().asBigDecimal("VALTOTAL");
    }
 
    public void setValTotal(BigDecimal valTotal) {
         markAsChanged("VALTOTAL", valTotal);
-        this.valTotal = valTotal;
    }
 
    public BigDecimal getValUnit() {
-        return valUnit;
+        return this.getVo().asBigDecimal("VALUNIT");
    }
 
    public void setValUnit(BigDecimal valUnit) {
         markAsChanged("VALUNIT", valUnit);
-        this.valUnit = valUnit;
    }
 
    public String getChaveNfe() {
-        return chaveNfe;
+        return this.getVo().asString("CHAVENFE");
    }
 
    public void setChaveNfe(String chaveNfe) {
         markAsChanged("CHAVENFE", chaveNfe);
-        this.chaveNfe = chaveNfe;
    }
 
    public BigDecimal getNumNotaTrans() {
-        return numNotaTrans;
+        return this.getVo().asBigDecimal("NUMNOTATRANS");
    }
 
    public void setNumNotaTrans(BigDecimal numNotaTrans) {
         markAsChanged("NUMNOTATRANS", numNotaTrans);
-        this.numNotaTrans = numNotaTrans;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    @Override
@@ -169,21 +138,6 @@ public class ItensPesagem extends AbstractSankhyaEntity<ItensPesagem> {
    @Override
    public ItensPesagem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProc = vo.asBigDecimal("CODPROC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.numPesagem = vo.asBigDecimal("NUMPESAGEM");
-        this.numProd = vo.asBigDecimal("NUMPROD");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuNotaDest = vo.asBigDecimal("NUNOTADEST");
-        this.pesoNf = vo.asBigDecimal("PESONF");
-        this.pesoRomaneio = vo.asBigDecimal("PESOROMANEIO");
-        this.valTotal = vo.asBigDecimal("VALTOTAL");
-        this.valUnit = vo.asBigDecimal("VALUNIT");
-        this.chaveNfe = vo.asString("CHAVENFE");
-        this.numNotaTrans = vo.asBigDecimal("NUMNOTATRANS");
-        this.controle = vo.asString("CONTROLE");
         return this;
    }
 }

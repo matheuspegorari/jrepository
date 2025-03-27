@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
-   private String ajustado;
-   private String codBem;
-   private BigDecimal codDepCp;
-   private BigDecimal codDepCt;
-   private BigDecimal codDepSis;
-   private BigDecimal codEmp;
-   private BigDecimal codEmpSis;
-   private BigDecimal codProd;
-   private Timestamp dtInvent;
-   private String existenacp;
-   private String existenact;
-   private BigDecimal nuNota;
-
    public String getAjustado() {
-        return ajustado;
+        return this.getVo().asString("AJUSTADO");
    }
 
    public void setAjustado(String ajustado) {
         markAsChanged("AJUSTADO", ajustado);
-        this.ajustado = ajustado;
    }
 
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public BigDecimal getCodDepCp() {
-        return codDepCp;
+        return this.getVo().asBigDecimal("CODDEPCP");
    }
 
    public void setCodDepCp(BigDecimal codDepCp) {
         markAsChanged("CODDEPCP", codDepCp);
-        this.codDepCp = codDepCp;
    }
 
    public BigDecimal getCodDepCt() {
-        return codDepCt;
+        return this.getVo().asBigDecimal("CODDEPCT");
    }
 
    public void setCodDepCt(BigDecimal codDepCt) {
         markAsChanged("CODDEPCT", codDepCt);
-        this.codDepCt = codDepCt;
    }
 
    public BigDecimal getCodDepSis() {
-        return codDepSis;
+        return this.getVo().asBigDecimal("CODDEPSIS");
    }
 
    public void setCodDepSis(BigDecimal codDepSis) {
         markAsChanged("CODDEPSIS", codDepSis);
-        this.codDepSis = codDepSis;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodEmpSis() {
-        return codEmpSis;
+        return this.getVo().asBigDecimal("CODEMPSIS");
    }
 
    public void setCodEmpSis(BigDecimal codEmpSis) {
         markAsChanged("CODEMPSIS", codEmpSis);
-        this.codEmpSis = codEmpSis;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public Timestamp getDtInvent() {
-        return dtInvent;
+        return this.getVo().asTimestamp("DTINVENT");
    }
 
    public void setDtInvent(Timestamp dtInvent) {
         markAsChanged("DTINVENT", dtInvent);
-        this.dtInvent = dtInvent;
    }
 
    public String getExistenacp() {
-        return existenacp;
+        return this.getVo().asString("EXISTENACP");
    }
 
    public void setExistenacp(String existenacp) {
         markAsChanged("EXISTENACP", existenacp);
-        this.existenacp = existenacp;
    }
 
    public String getExistenact() {
-        return existenact;
+        return this.getVo().asString("EXISTENACT");
    }
 
    public void setExistenact(String existenact) {
         markAsChanged("EXISTENACT", existenact);
-        this.existenact = existenact;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class InventarioBem extends AbstractSankhyaEntity<InventarioBem> {
    @Override
    public InventarioBem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ajustado = vo.asString("AJUSTADO");
-        this.codBem = vo.asString("CODBEM");
-        this.codDepCp = vo.asBigDecimal("CODDEPCP");
-        this.codDepCt = vo.asBigDecimal("CODDEPCT");
-        this.codDepSis = vo.asBigDecimal("CODDEPSIS");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codEmpSis = vo.asBigDecimal("CODEMPSIS");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.dtInvent = vo.asTimestamp("DTINVENT");
-        this.existenacp = vo.asString("EXISTENACP");
-        this.existenact = vo.asString("EXISTENACT");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
         return this;
    }
 }

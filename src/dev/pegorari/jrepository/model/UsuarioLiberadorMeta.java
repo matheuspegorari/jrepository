@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberadorMeta> {
-   private BigDecimal codMeta;
-   private BigDecimal codUsu;
-
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class UsuarioLiberadorMeta extends AbstractSankhyaEntity<UsuarioLiberador
    @Override
    public UsuarioLiberadorMeta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
         return this;
    }
 }

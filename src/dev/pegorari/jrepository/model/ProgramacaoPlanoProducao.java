@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoPlanoProducao> {
-   private Timestamp dhIniPrev;
-   private BigDecimal idIproc;
-   private BigDecimal idEfx;
-   private Timestamp dhFinPrev;
-   private BigDecimal codCwc;
-   private BigDecimal codWcp;
-   private BigDecimal idAwc;
-   private char[] jsonProg;
-
    public Timestamp getDhIniPrev() {
-        return dhIniPrev;
+        return this.getVo().asTimestamp("DHINIPREV");
    }
 
    public void setDhIniPrev(Timestamp dhIniPrev) {
         markAsChanged("DHINIPREV", dhIniPrev);
-        this.dhIniPrev = dhIniPrev;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public BigDecimal getIdEfx() {
-        return idEfx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdEfx(BigDecimal idEfx) {
         markAsChanged("IDEFX", idEfx);
-        this.idEfx = idEfx;
    }
 
    public Timestamp getDhFinPrev() {
-        return dhFinPrev;
+        return this.getVo().asTimestamp("DHFINPREV");
    }
 
    public void setDhFinPrev(Timestamp dhFinPrev) {
         markAsChanged("DHFINPREV", dhFinPrev);
-        this.dhFinPrev = dhFinPrev;
    }
 
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getIdAwc() {
-        return idAwc;
+        return this.getVo().asBigDecimal("IDAWC");
    }
 
    public void setIdAwc(BigDecimal idAwc) {
         markAsChanged("IDAWC", idAwc);
-        this.idAwc = idAwc;
    }
 
    public char[] getJsonProg() {
-        return jsonProg;
+        return this.getVo().asClob("JSONPROG");
    }
 
    public void setJsonProg(char[] jsonProg) {
         markAsChanged("JSONPROG", jsonProg);
-        this.jsonProg = jsonProg;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class ProgramacaoPlanoProducao extends AbstractSankhyaEntity<ProgramacaoP
    @Override
    public ProgramacaoPlanoProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhIniPrev = vo.asTimestamp("DHINIPREV");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.idEfx = vo.asBigDecimal("IDEFX");
-        this.dhFinPrev = vo.asTimestamp("DHFINPREV");
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.idAwc = vo.asBigDecimal("IDAWC");
-        this.jsonProg = vo.asClob("JSONPROG");
         return this;
    }
 }

@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParceiro> {
-   private BigDecimal codCid;
-   private BigDecimal codEmp;
-   private BigDecimal codParc;
-   private BigDecimal codProd;
-   private String retemIss;
-
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getRetemIss() {
-        return retemIss;
+        return this.getVo().asString("RETEMISS");
    }
 
    public void setRetemIss(String retemIss) {
         markAsChanged("RETEMISS", retemIss);
-        this.retemIss = retemIss;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class AliquotaISSParceiro extends AbstractSankhyaEntity<AliquotaISSParcei
    @Override
    public AliquotaISSParceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.retemIss = vo.asString("RETEMISS");
         return this;
    }
 }

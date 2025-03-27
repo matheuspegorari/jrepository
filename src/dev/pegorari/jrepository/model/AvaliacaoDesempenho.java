@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempenho> {
-   private BigDecimal nuPla;
-   private BigDecimal nuAvaliacao;
-   private BigDecimal nuPlaAvaliado;
-   private Timestamp dhAlter;
-   private BigDecimal codUsu;
-
    public BigDecimal getNuPla() {
-        return nuPla;
+        return this.getVo().asBigDecimal("NUPLA");
    }
 
    public void setNuPla(BigDecimal nuPla) {
         markAsChanged("NUPLA", nuPla);
-        this.nuPla = nuPla;
    }
 
    public BigDecimal getNuAvaliacao() {
-        return nuAvaliacao;
+        return this.getVo().asBigDecimal("NUAVALIACAO");
    }
 
    public void setNuAvaliacao(BigDecimal nuAvaliacao) {
         markAsChanged("NUAVALIACAO", nuAvaliacao);
-        this.nuAvaliacao = nuAvaliacao;
    }
 
    public BigDecimal getNuPlaAvaliado() {
-        return nuPlaAvaliado;
+        return this.getVo().asBigDecimal("NUPLAAVALIADO");
    }
 
    public void setNuPlaAvaliado(BigDecimal nuPlaAvaliado) {
         markAsChanged("NUPLAAVALIADO", nuPlaAvaliado);
-        this.nuPlaAvaliado = nuPlaAvaliado;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class AvaliacaoDesempenho extends AbstractSankhyaEntity<AvaliacaoDesempen
    @Override
    public AvaliacaoDesempenho fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuPla = vo.asBigDecimal("NUPLA");
-        this.nuAvaliacao = vo.asBigDecimal("NUAVALIACAO");
-        this.nuPlaAvaliado = vo.asBigDecimal("NUPLAAVALIADO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.codUsu = vo.asBigDecimal("CODUSU");
         return this;
    }
 }

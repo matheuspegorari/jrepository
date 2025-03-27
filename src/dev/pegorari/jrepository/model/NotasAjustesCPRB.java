@@ -6,125 +6,100 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
-   private BigDecimal codAjuste;
-   private String codCprb;
-   private BigDecimal codEmp;
-   private String codObra;
-   private BigDecimal codProd;
-   private Timestamp dhMov;
-   private Timestamp dtDoc;
-   private Timestamp dtRef;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-   private BigDecimal tipoAjuste;
-   private BigDecimal vlrAjuste;
-
    public BigDecimal getCodAjuste() {
-        return codAjuste;
+        return this.getVo().asBigDecimal("CODAJUSTE");
    }
 
    public void setCodAjuste(BigDecimal codAjuste) {
         markAsChanged("CODAJUSTE", codAjuste);
-        this.codAjuste = codAjuste;
    }
 
    public String getCodCprb() {
-        return codCprb;
+        return this.getVo().asString("CODCPRB");
    }
 
    public void setCodCprb(String codCprb) {
         markAsChanged("CODCPRB", codCprb);
-        this.codCprb = codCprb;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCodObra() {
-        return codObra;
+        return this.getVo().asString("CODOBRA");
    }
 
    public void setCodObra(String codObra) {
         markAsChanged("CODOBRA", codObra);
-        this.codObra = codObra;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public Timestamp getDhMov() {
-        return dhMov;
+        return this.getVo().asTimestamp("DHMOV");
    }
 
    public void setDhMov(Timestamp dhMov) {
         markAsChanged("DHMOV", dhMov);
-        this.dhMov = dhMov;
    }
 
    public Timestamp getDtDoc() {
-        return dtDoc;
+        return this.getVo().asTimestamp("DTDOC");
    }
 
    public void setDtDoc(Timestamp dtDoc) {
         markAsChanged("DTDOC", dtDoc);
-        this.dtDoc = dtDoc;
    }
 
    public Timestamp getDtRef() {
-        return dtRef;
+        return this.getVo().asTimestamp("DTREF");
    }
 
    public void setDtRef(Timestamp dtRef) {
         markAsChanged("DTREF", dtRef);
-        this.dtRef = dtRef;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getTipoAjuste() {
-        return tipoAjuste;
+        return this.getVo().asBigDecimal("TIPOAJUSTE");
    }
 
    public void setTipoAjuste(BigDecimal tipoAjuste) {
         markAsChanged("TIPOAJUSTE", tipoAjuste);
-        this.tipoAjuste = tipoAjuste;
    }
 
    public BigDecimal getVlrAjuste() {
-        return vlrAjuste;
+        return this.getVo().asBigDecimal("VLRAJUSTE");
    }
 
    public void setVlrAjuste(BigDecimal vlrAjuste) {
         markAsChanged("VLRAJUSTE", vlrAjuste);
-        this.vlrAjuste = vlrAjuste;
    }
 
    @Override
@@ -140,18 +115,6 @@ public class NotasAjustesCPRB extends AbstractSankhyaEntity<NotasAjustesCPRB> {
    @Override
    public NotasAjustesCPRB fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codAjuste = vo.asBigDecimal("CODAJUSTE");
-        this.codCprb = vo.asString("CODCPRB");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codObra = vo.asString("CODOBRA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.dhMov = vo.asTimestamp("DHMOV");
-        this.dtDoc = vo.asTimestamp("DTDOC");
-        this.dtRef = vo.asTimestamp("DTREF");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.tipoAjuste = vo.asBigDecimal("TIPOAJUSTE");
-        this.vlrAjuste = vo.asBigDecimal("VLRAJUSTE");
         return this;
    }
 }

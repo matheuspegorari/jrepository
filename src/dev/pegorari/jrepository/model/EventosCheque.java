@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
-   private BigDecimal codUsu;
-   private char[] detalhe;
-   private Timestamp dhEvento;
-   private BigDecimal nuChq;
-   private BigDecimal nuEvento;
-   private String tipo;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public char[] getDetalhe() {
-        return detalhe;
+        return this.getVo().asClob("DETALHE");
    }
 
    public void setDetalhe(char[] detalhe) {
         markAsChanged("DETALHE", detalhe);
-        this.detalhe = detalhe;
    }
 
    public Timestamp getDhEvento() {
-        return dhEvento;
+        return this.getVo().asTimestamp("DHEVENTO");
    }
 
    public void setDhEvento(Timestamp dhEvento) {
         markAsChanged("DHEVENTO", dhEvento);
-        this.dhEvento = dhEvento;
    }
 
    public BigDecimal getNuChq() {
-        return nuChq;
+        return this.getVo().asBigDecimal("NUCHQ");
    }
 
    public void setNuChq(BigDecimal nuChq) {
         markAsChanged("NUCHQ", nuChq);
-        this.nuChq = nuChq;
    }
 
    public BigDecimal getNuEvento() {
-        return nuEvento;
+        return this.getVo().asBigDecimal("NUEVENTO");
    }
 
    public void setNuEvento(BigDecimal nuEvento) {
         markAsChanged("NUEVENTO", nuEvento);
-        this.nuEvento = nuEvento;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class EventosCheque extends AbstractSankhyaEntity<EventosCheque> {
    @Override
    public EventosCheque fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.detalhe = vo.asClob("DETALHE");
-        this.dhEvento = vo.asTimestamp("DHEVENTO");
-        this.nuChq = vo.asBigDecimal("NUCHQ");
-        this.nuEvento = vo.asBigDecimal("NUEVENTO");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

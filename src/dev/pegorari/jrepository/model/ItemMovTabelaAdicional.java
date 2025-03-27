@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemMovTabelaAdicional extends AbstractSankhyaEntity<ItemMovTabelaAdicional> {
-   private BigDecimal codClc;
-   private BigDecimal codClt;
-   private BigDecimal descontar;
-   private BigDecimal nuCll;
-   private String observacao;
-   private BigDecimal resultado;
-   private String aprovadorResultado;
-   private BigDecimal ordem;
-   private String resultadoConf;
-
    public BigDecimal getCodClc() {
-        return codClc;
+        return this.getVo().asBigDecimal("CODCLC");
    }
 
    public void setCodClc(BigDecimal codClc) {
         markAsChanged("CODCLC", codClc);
-        this.codClc = codClc;
    }
 
    public BigDecimal getCodClt() {
-        return codClt;
+        return this.getVo().asBigDecimal("CODCLT");
    }
 
    public void setCodClt(BigDecimal codClt) {
         markAsChanged("CODCLT", codClt);
-        this.codClt = codClt;
    }
 
    public BigDecimal getDescontar() {
-        return descontar;
+        return this.getVo().asBigDecimal("DESCONTAR");
    }
 
    public void setDescontar(BigDecimal descontar) {
         markAsChanged("DESCONTAR", descontar);
-        this.descontar = descontar;
    }
 
    public BigDecimal getNuCll() {
-        return nuCll;
+        return this.getVo().asBigDecimal("NUCLL");
    }
 
    public void setNuCll(BigDecimal nuCll) {
         markAsChanged("NUCLL", nuCll);
-        this.nuCll = nuCll;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getResultado() {
-        return resultado;
+        return this.getVo().asBigDecimal("RESULTADO");
    }
 
    public void setResultado(BigDecimal resultado) {
         markAsChanged("RESULTADO", resultado);
-        this.resultado = resultado;
    }
 
    public String getAprovadorResultado() {
-        return aprovadorResultado;
+        return this.getVo().asString("APROVADORESULTADO");
    }
 
    public void setAprovadorResultado(String aprovadorResultado) {
         markAsChanged("APROVADORESULTADO", aprovadorResultado);
-        this.aprovadorResultado = aprovadorResultado;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getResultadoConf() {
-        return resultadoConf;
+        return this.getVo().asString("RESULTADOCONF");
    }
 
    public void setResultadoConf(String resultadoConf) {
         markAsChanged("RESULTADOCONF", resultadoConf);
-        this.resultadoConf = resultadoConf;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class ItemMovTabelaAdicional extends AbstractSankhyaEntity<ItemMovTabelaA
    @Override
    public ItemMovTabelaAdicional fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codClc = vo.asBigDecimal("CODCLC");
-        this.codClt = vo.asBigDecimal("CODCLT");
-        this.descontar = vo.asBigDecimal("DESCONTAR");
-        this.nuCll = vo.asBigDecimal("NUCLL");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.resultado = vo.asBigDecimal("RESULTADO");
-        this.aprovadorResultado = vo.asString("APROVADORESULTADO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.resultadoConf = vo.asString("RESULTADOCONF");
         return this;
    }
 }

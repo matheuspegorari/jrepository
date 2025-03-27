@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensLiberacaoBloqueioContabil> {
-   private BigDecimal nuChave;
-   private BigDecimal nuLiberacao;
-   private String tabela;
-   private String tipo;
-
    public BigDecimal getNuChave() {
-        return nuChave;
+        return this.getVo().asBigDecimal("NUCHAVE");
    }
 
    public void setNuChave(BigDecimal nuChave) {
         markAsChanged("NUCHAVE", nuChave);
-        this.nuChave = nuChave;
    }
 
    public BigDecimal getNuLiberacao() {
-        return nuLiberacao;
+        return this.getVo().asBigDecimal("NULIBERACAO");
    }
 
    public void setNuLiberacao(BigDecimal nuLiberacao) {
         markAsChanged("NULIBERACAO", nuLiberacao);
-        this.nuLiberacao = nuLiberacao;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class ItensLiberacaoBloqueioContabil extends AbstractSankhyaEntity<ItensL
    @Override
    public ItensLiberacaoBloqueioContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuChave = vo.asBigDecimal("NUCHAVE");
-        this.nuLiberacao = vo.asBigDecimal("NULIBERACAO");
-        this.tabela = vo.asString("TABELA");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NotasRecebimento extends AbstractSankhyaEntity<NotasRecebimento> {
-   private BigDecimal nuNota;
-   private BigDecimal nuRecebimento;
-   private BigDecimal nuTarefacan;
-   private String statusNota;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuRecebimento() {
-        return nuRecebimento;
+        return this.getVo().asBigDecimal("NURECEBIMENTO");
    }
 
    public void setNuRecebimento(BigDecimal nuRecebimento) {
         markAsChanged("NURECEBIMENTO", nuRecebimento);
-        this.nuRecebimento = nuRecebimento;
    }
 
    public BigDecimal getNuTarefacan() {
-        return nuTarefacan;
+        return this.getVo().asBigDecimal("NUTAREFACAN");
    }
 
    public void setNuTarefacan(BigDecimal nuTarefacan) {
         markAsChanged("NUTAREFACAN", nuTarefacan);
-        this.nuTarefacan = nuTarefacan;
    }
 
    public String getStatusNota() {
-        return statusNota;
+        return this.getVo().asString("STATUSNOTA");
    }
 
    public void setStatusNota(String statusNota) {
         markAsChanged("STATUSNOTA", statusNota);
-        this.statusNota = statusNota;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NotasRecebimento extends AbstractSankhyaEntity<NotasRecebimento> {
    @Override
    public NotasRecebimento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuRecebimento = vo.asBigDecimal("NURECEBIMENTO");
-        this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");
-        this.statusNota = vo.asString("STATUSNOTA");
         return this;
    }
 }

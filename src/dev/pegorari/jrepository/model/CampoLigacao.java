@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
-   private BigDecimal nuCampoDest;
-   private BigDecimal nuCampoOrig;
-   private BigDecimal nuInstDest;
-   private BigDecimal nuInstOrig;
-   private BigDecimal ordem;
-   private String origObrigatoria;
-
    public BigDecimal getNuCampoDest() {
-        return nuCampoDest;
+        return this.getVo().asBigDecimal("NUCAMPODEST");
    }
 
    public void setNuCampoDest(BigDecimal nuCampoDest) {
         markAsChanged("NUCAMPODEST", nuCampoDest);
-        this.nuCampoDest = nuCampoDest;
    }
 
    public BigDecimal getNuCampoOrig() {
-        return nuCampoOrig;
+        return this.getVo().asBigDecimal("NUCAMPOORIG");
    }
 
    public void setNuCampoOrig(BigDecimal nuCampoOrig) {
         markAsChanged("NUCAMPOORIG", nuCampoOrig);
-        this.nuCampoOrig = nuCampoOrig;
    }
 
    public BigDecimal getNuInstDest() {
-        return nuInstDest;
+        return this.getVo().asBigDecimal("NUINSTDEST");
    }
 
    public void setNuInstDest(BigDecimal nuInstDest) {
         markAsChanged("NUINSTDEST", nuInstDest);
-        this.nuInstDest = nuInstDest;
    }
 
    public BigDecimal getNuInstOrig() {
-        return nuInstOrig;
+        return this.getVo().asBigDecimal("NUINSTORIG");
    }
 
    public void setNuInstOrig(BigDecimal nuInstOrig) {
         markAsChanged("NUINSTORIG", nuInstOrig);
-        this.nuInstOrig = nuInstOrig;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public String getOrigObrigatoria() {
-        return origObrigatoria;
+        return this.getVo().asString("ORIG_OBRIGATORIA");
    }
 
    public void setOrigObrigatoria(String origObrigatoria) {
         markAsChanged("ORIG_OBRIGATORIA", origObrigatoria);
-        this.origObrigatoria = origObrigatoria;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class CampoLigacao extends AbstractSankhyaEntity<CampoLigacao> {
    @Override
    public CampoLigacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuCampoDest = vo.asBigDecimal("NUCAMPODEST");
-        this.nuCampoOrig = vo.asBigDecimal("NUCAMPOORIG");
-        this.nuInstDest = vo.asBigDecimal("NUINSTDEST");
-        this.nuInstOrig = vo.asBigDecimal("NUINSTORIG");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.origObrigatoria = vo.asString("ORIG_OBRIGATORIA");
         return this;
    }
 }

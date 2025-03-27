@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResolvida> {
-   private BigDecimal codMsg;
-   private Timestamp dtAlter;
-   private char[] mensagem;
-   private BigDecimal nova;
-
    public BigDecimal getCodMsg() {
-        return codMsg;
+        return this.getVo().asBigDecimal("CODMSG");
    }
 
    public void setCodMsg(BigDecimal codMsg) {
         markAsChanged("CODMSG", codMsg);
-        this.codMsg = codMsg;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public char[] getMensagem() {
-        return mensagem;
+        return this.getVo().asClob("MENSAGEM");
    }
 
    public void setMensagem(char[] mensagem) {
         markAsChanged("MENSAGEM", mensagem);
-        this.mensagem = mensagem;
    }
 
    public BigDecimal getNova() {
-        return nova;
+        return this.getVo().asBigDecimal("NOVA");
    }
 
    public void setNova(BigDecimal nova) {
         markAsChanged("NOVA", nova);
-        this.nova = nova;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class MSDMensagemResolvida extends AbstractSankhyaEntity<MSDMensagemResol
    @Override
    public MSDMensagemResolvida fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMsg = vo.asBigDecimal("CODMSG");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.mensagem = vo.asClob("MENSAGEM");
-        this.nova = vo.asBigDecimal("NOVA");
         return this;
    }
 }

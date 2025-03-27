@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<ExpectativaEsforcoPreVenda> {
-   private BigDecimal codEpv;
-   private String descricao;
-   private BigDecimal percPro;
-
    public BigDecimal getCodEpv() {
-        return codEpv;
+        return this.getVo().asBigDecimal("CODEPV");
    }
 
    public void setCodEpv(BigDecimal codEpv) {
         markAsChanged("CODEPV", codEpv);
-        this.codEpv = codEpv;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getPercPro() {
-        return percPro;
+        return this.getVo().asBigDecimal("PERCPRO");
    }
 
    public void setPercPro(BigDecimal percPro) {
         markAsChanged("PERCPRO", percPro);
-        this.percPro = percPro;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ExpectativaEsforcoPreVenda extends AbstractSankhyaEntity<Expectativ
    @Override
    public ExpectativaEsforcoPreVenda fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEpv = vo.asBigDecimal("CODEPV");
-        this.descricao = vo.asString("DESCRICAO");
-        this.percPro = vo.asBigDecimal("PERCPRO");
         return this;
    }
 }

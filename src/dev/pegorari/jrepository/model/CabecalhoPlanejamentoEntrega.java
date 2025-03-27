@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<CabecalhoPlanejamentoEntrega> {
-   private BigDecimal codCid;
-   private BigDecimal codBai;
-   private BigDecimal codEnd;
-   private BigDecimal grupo;
-   private BigDecimal nuNota;
-   private BigDecimal codContato;
-   private BigDecimal codParcFat;
-   private BigDecimal distribuicaoContato;
-   private BigDecimal numEnd;
-   private BigDecimal codUsu;
-   private BigDecimal nuPlan;
-   private Timestamp dtAlter;
-   private BigDecimal codReg;
-
    public BigDecimal getCodCid() {
-        return codCid;
+        return this.getVo().asBigDecimal("CODCID");
    }
 
    public void setCodCid(BigDecimal codCid) {
         markAsChanged("CODCID", codCid);
-        this.codCid = codCid;
    }
 
    public BigDecimal getCodBai() {
-        return codBai;
+        return this.getVo().asBigDecimal("CODBAI");
    }
 
    public void setCodBai(BigDecimal codBai) {
         markAsChanged("CODBAI", codBai);
-        this.codBai = codBai;
    }
 
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public BigDecimal getGrupo() {
-        return grupo;
+        return this.getVo().asBigDecimal("GRUPO");
    }
 
    public void setGrupo(BigDecimal grupo) {
         markAsChanged("GRUPO", grupo);
-        this.grupo = grupo;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodParcFat() {
-        return codParcFat;
+        return this.getVo().asBigDecimal("CODPARCFAT");
    }
 
    public void setCodParcFat(BigDecimal codParcFat) {
         markAsChanged("CODPARCFAT", codParcFat);
-        this.codParcFat = codParcFat;
    }
 
    public BigDecimal getDistribuicaoContato() {
-        return distribuicaoContato;
+        return this.getVo().asBigDecimal("DISTRIBUICAOCONTATO");
    }
 
    public void setDistribuicaoContato(BigDecimal distribuicaoContato) {
         markAsChanged("DISTRIBUICAOCONTATO", distribuicaoContato);
-        this.distribuicaoContato = distribuicaoContato;
    }
 
    public BigDecimal getNumEnd() {
-        return numEnd;
+        return this.getVo().asBigDecimal("NUMEND");
    }
 
    public void setNumEnd(BigDecimal numEnd) {
         markAsChanged("NUMEND", numEnd);
-        this.numEnd = numEnd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getNuPlan() {
-        return nuPlan;
+        return this.getVo().asBigDecimal("NUPLAN");
    }
 
    public void setNuPlan(BigDecimal nuPlan) {
         markAsChanged("NUPLAN", nuPlan);
-        this.nuPlan = nuPlan;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getCodReg() {
-        return codReg;
+        return this.getVo().asBigDecimal("CODREG");
    }
 
    public void setCodReg(BigDecimal codReg) {
         markAsChanged("CODREG", codReg);
-        this.codReg = codReg;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class CabecalhoPlanejamentoEntrega extends AbstractSankhyaEntity<Cabecalh
    @Override
    public CabecalhoPlanejamentoEntrega fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCid = vo.asBigDecimal("CODCID");
-        this.codBai = vo.asBigDecimal("CODBAI");
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.grupo = vo.asBigDecimal("GRUPO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codParcFat = vo.asBigDecimal("CODPARCFAT");
-        this.distribuicaoContato = vo.asBigDecimal("DISTRIBUICAOCONTATO");
-        this.numEnd = vo.asBigDecimal("NUMEND");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.nuPlan = vo.asBigDecimal("NUPLAN");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.codReg = vo.asBigDecimal("CODREG");
         return this;
    }
 }

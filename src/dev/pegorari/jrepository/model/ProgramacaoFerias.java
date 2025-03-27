@@ -6,275 +6,220 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> {
-   private String abonoInicio;
-   private BigDecimal abonoPec;
-   private String atualFergoz;
-   private BigDecimal codEmp;
-   private BigDecimal codFunc;
-   private Timestamp dtAlter;
-   private Timestamp dtFinAqui;
-   private Timestamp dtIniAqui;
-   private Timestamp dtPrevista;
-   private Timestamp dtSaida;
-   private BigDecimal faltPer;
-   private BigDecimal numDiasFer;
-   private BigDecimal numDiasFerCol;
-   private BigDecimal numDiasLicRem;
-   private BigDecimal nuOcor;
-   private BigDecimal qtdParcelas;
-   private Timestamp referencia;
-   private BigDecimal sequencia;
-   private String digitado;
-   private String aprovado;
-   private BigDecimal saldoDias;
-   private BigDecimal qtdDiasSolFerias;
-   private Timestamp dtLimGozFer;
-   private BigDecimal codFervinc;
-   private BigDecimal numDiasFerReal;
-   private BigDecimal numDiasLicRemReal;
-   private String perQuitado;
-
    public String getAbonoInicio() {
-        return abonoInicio;
+        return this.getVo().asString("ABONOINICIO");
    }
 
    public void setAbonoInicio(String abonoInicio) {
         markAsChanged("ABONOINICIO", abonoInicio);
-        this.abonoInicio = abonoInicio;
    }
 
    public BigDecimal getAbonoPec() {
-        return abonoPec;
+        return this.getVo().asBigDecimal("ABONOPEC");
    }
 
    public void setAbonoPec(BigDecimal abonoPec) {
         markAsChanged("ABONOPEC", abonoPec);
-        this.abonoPec = abonoPec;
    }
 
    public String getAtualFergoz() {
-        return atualFergoz;
+        return this.getVo().asString("ATUALFERGOZ");
    }
 
    public void setAtualFergoz(String atualFergoz) {
         markAsChanged("ATUALFERGOZ", atualFergoz);
-        this.atualFergoz = atualFergoz;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public Timestamp getDtFinAqui() {
-        return dtFinAqui;
+        return this.getVo().asTimestamp("DTFINAQUI");
    }
 
    public void setDtFinAqui(Timestamp dtFinAqui) {
         markAsChanged("DTFINAQUI", dtFinAqui);
-        this.dtFinAqui = dtFinAqui;
    }
 
    public Timestamp getDtIniAqui() {
-        return dtIniAqui;
+        return this.getVo().asTimestamp("DTINIAQUI");
    }
 
    public void setDtIniAqui(Timestamp dtIniAqui) {
         markAsChanged("DTINIAQUI", dtIniAqui);
-        this.dtIniAqui = dtIniAqui;
    }
 
    public Timestamp getDtPrevista() {
-        return dtPrevista;
+        return this.getVo().asTimestamp("DTPREVISTA");
    }
 
    public void setDtPrevista(Timestamp dtPrevista) {
         markAsChanged("DTPREVISTA", dtPrevista);
-        this.dtPrevista = dtPrevista;
    }
 
    public Timestamp getDtSaida() {
-        return dtSaida;
+        return this.getVo().asTimestamp("DTSAIDA");
    }
 
    public void setDtSaida(Timestamp dtSaida) {
         markAsChanged("DTSAIDA", dtSaida);
-        this.dtSaida = dtSaida;
    }
 
    public BigDecimal getFaltPer() {
-        return faltPer;
+        return this.getVo().asBigDecimal("FALTPER");
    }
 
    public void setFaltPer(BigDecimal faltPer) {
         markAsChanged("FALTPER", faltPer);
-        this.faltPer = faltPer;
    }
 
    public BigDecimal getNumDiasFer() {
-        return numDiasFer;
+        return this.getVo().asBigDecimal("NUMDIASFER");
    }
 
    public void setNumDiasFer(BigDecimal numDiasFer) {
         markAsChanged("NUMDIASFER", numDiasFer);
-        this.numDiasFer = numDiasFer;
    }
 
    public BigDecimal getNumDiasFerCol() {
-        return numDiasFerCol;
+        return this.getVo().asBigDecimal("NUMDIASFERCOL");
    }
 
    public void setNumDiasFerCol(BigDecimal numDiasFerCol) {
         markAsChanged("NUMDIASFERCOL", numDiasFerCol);
-        this.numDiasFerCol = numDiasFerCol;
    }
 
    public BigDecimal getNumDiasLicRem() {
-        return numDiasLicRem;
+        return this.getVo().asBigDecimal("NUMDIASLICREM");
    }
 
    public void setNumDiasLicRem(BigDecimal numDiasLicRem) {
         markAsChanged("NUMDIASLICREM", numDiasLicRem);
-        this.numDiasLicRem = numDiasLicRem;
    }
 
    public BigDecimal getNuOcor() {
-        return nuOcor;
+        return this.getVo().asBigDecimal("NUOCOR");
    }
 
    public void setNuOcor(BigDecimal nuOcor) {
         markAsChanged("NUOCOR", nuOcor);
-        this.nuOcor = nuOcor;
    }
 
    public BigDecimal getQtdParcelas() {
-        return qtdParcelas;
+        return this.getVo().asBigDecimal("QTDPARCELAS");
    }
 
    public void setQtdParcelas(BigDecimal qtdParcelas) {
         markAsChanged("QTDPARCELAS", qtdParcelas);
-        this.qtdParcelas = qtdParcelas;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public String getAprovado() {
-        return aprovado;
+        return this.getVo().asString("APROVADO");
    }
 
    public void setAprovado(String aprovado) {
         markAsChanged("APROVADO", aprovado);
-        this.aprovado = aprovado;
    }
 
    public BigDecimal getSaldoDias() {
-        return saldoDias;
+        return this.getVo().asBigDecimal("SALDODIAS");
    }
 
    public void setSaldoDias(BigDecimal saldoDias) {
         markAsChanged("SALDODIAS", saldoDias);
-        this.saldoDias = saldoDias;
    }
 
    public BigDecimal getQtdDiasSolFerias() {
-        return qtdDiasSolFerias;
+        return this.getVo().asBigDecimal("QTDDIASSOLFERIAS");
    }
 
    public void setQtdDiasSolFerias(BigDecimal qtdDiasSolFerias) {
         markAsChanged("QTDDIASSOLFERIAS", qtdDiasSolFerias);
-        this.qtdDiasSolFerias = qtdDiasSolFerias;
    }
 
    public Timestamp getDtLimGozFer() {
-        return dtLimGozFer;
+        return this.getVo().asTimestamp("DTLIMGOZFER");
    }
 
    public void setDtLimGozFer(Timestamp dtLimGozFer) {
         markAsChanged("DTLIMGOZFER", dtLimGozFer);
-        this.dtLimGozFer = dtLimGozFer;
    }
 
    public BigDecimal getCodFervinc() {
-        return codFervinc;
+        return this.getVo().asBigDecimal("CODFERVINC");
    }
 
    public void setCodFervinc(BigDecimal codFervinc) {
         markAsChanged("CODFERVINC", codFervinc);
-        this.codFervinc = codFervinc;
    }
 
    public BigDecimal getNumDiasFerReal() {
-        return numDiasFerReal;
+        return this.getVo().asBigDecimal("NUMDIASFERREAL");
    }
 
    public void setNumDiasFerReal(BigDecimal numDiasFerReal) {
         markAsChanged("NUMDIASFERREAL", numDiasFerReal);
-        this.numDiasFerReal = numDiasFerReal;
    }
 
    public BigDecimal getNumDiasLicRemReal() {
-        return numDiasLicRemReal;
+        return this.getVo().asBigDecimal("NUMDIASLICREMREAL");
    }
 
    public void setNumDiasLicRemReal(BigDecimal numDiasLicRemReal) {
         markAsChanged("NUMDIASLICREMREAL", numDiasLicRemReal);
-        this.numDiasLicRemReal = numDiasLicRemReal;
    }
 
    public String getPerQuitado() {
-        return perQuitado;
+        return this.getVo().asString("PERQUITADO");
    }
 
    public void setPerQuitado(String perQuitado) {
         markAsChanged("PERQUITADO", perQuitado);
-        this.perQuitado = perQuitado;
    }
 
    @Override
@@ -290,33 +235,6 @@ public class ProgramacaoFerias extends AbstractSankhyaEntity<ProgramacaoFerias> 
    @Override
    public ProgramacaoFerias fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.abonoInicio = vo.asString("ABONOINICIO");
-        this.abonoPec = vo.asBigDecimal("ABONOPEC");
-        this.atualFergoz = vo.asString("ATUALFERGOZ");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.dtFinAqui = vo.asTimestamp("DTFINAQUI");
-        this.dtIniAqui = vo.asTimestamp("DTINIAQUI");
-        this.dtPrevista = vo.asTimestamp("DTPREVISTA");
-        this.dtSaida = vo.asTimestamp("DTSAIDA");
-        this.faltPer = vo.asBigDecimal("FALTPER");
-        this.numDiasFer = vo.asBigDecimal("NUMDIASFER");
-        this.numDiasFerCol = vo.asBigDecimal("NUMDIASFERCOL");
-        this.numDiasLicRem = vo.asBigDecimal("NUMDIASLICREM");
-        this.nuOcor = vo.asBigDecimal("NUOCOR");
-        this.qtdParcelas = vo.asBigDecimal("QTDPARCELAS");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.digitado = vo.asString("DIGITADO");
-        this.aprovado = vo.asString("APROVADO");
-        this.saldoDias = vo.asBigDecimal("SALDODIAS");
-        this.qtdDiasSolFerias = vo.asBigDecimal("QTDDIASSOLFERIAS");
-        this.dtLimGozFer = vo.asTimestamp("DTLIMGOZFER");
-        this.codFervinc = vo.asBigDecimal("CODFERVINC");
-        this.numDiasFerReal = vo.asBigDecimal("NUMDIASFERREAL");
-        this.numDiasLicRemReal = vo.asBigDecimal("NUMDIASLICREMREAL");
-        this.perQuitado = vo.asString("PERQUITADO");
         return this;
    }
 }

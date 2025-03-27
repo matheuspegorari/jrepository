@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaProjetoCtaContabil> {
-   private String priorizarRateio;
-   private BigDecimal codCtaCtb;
-   private BigDecimal codProj;
-   private BigDecimal codNat;
-
    public String getPriorizarRateio() {
-        return priorizarRateio;
+        return this.getVo().asString("PRIORIZARRATEIO");
    }
 
    public void setPriorizarRateio(String priorizarRateio) {
         markAsChanged("PRIORIZARRATEIO", priorizarRateio);
-        this.priorizarRateio = priorizarRateio;
    }
 
    public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+        return this.getVo().asBigDecimal("CODCTACTB");
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
         markAsChanged("CODCTACTB", codCtaCtb);
-        this.codCtaCtb = codCtaCtb;
    }
 
    public BigDecimal getCodProj() {
-        return codProj;
+        return this.getVo().asBigDecimal("CODPROJ");
    }
 
    public void setCodProj(BigDecimal codProj) {
         markAsChanged("CODPROJ", codProj);
-        this.codProj = codProj;
    }
 
    public BigDecimal getCodNat() {
-        return codNat;
+        return this.getVo().asBigDecimal("CODNAT");
    }
 
    public void setCodNat(BigDecimal codNat) {
         markAsChanged("CODNAT", codNat);
-        this.codNat = codNat;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NaturezaProjetoCtaContabil extends AbstractSankhyaEntity<NaturezaPr
    @Override
    public NaturezaProjetoCtaContabil fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.priorizarRateio = vo.asString("PRIORIZARRATEIO");
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.codProj = vo.asBigDecimal("CODPROJ");
-        this.codNat = vo.asBigDecimal("CODNAT");
         return this;
    }
 }

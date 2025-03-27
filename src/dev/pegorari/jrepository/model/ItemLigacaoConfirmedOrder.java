@@ -6,215 +6,172 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacaoConfirmedOrder> {
-   private String amendCodeCo;
-   private String amendCodeIv;
-   private String amendCodeSr;
-   private String amendCode;
-   private BigDecimal bkOrderQty;
-   private Timestamp dtEstDesp;
-   private Timestamp dtStatus;
-   private String flagCode;
-   private String shipMode;
-   private BigDecimal shipQty;
-   private String sufixoPo;
-   private BigDecimal supplanQty;
-   private BigDecimal nuNotaCo;
-   private BigDecimal nuNotaPo;
-   private BigDecimal packQty;
-   private BigDecimal procQty;
-   private BigDecimal qtdNegOriginal;
-   private BigDecimal sequenciaCo;
-   private BigDecimal sequenciaPo;
-   private String lastInvoice;
-   private Timestamp lastShip;
-
    public String getAmendCodeCo() {
-        return amendCodeCo;
+        return this.getVo().asString("AMENDCODECO");
    }
 
    public void setAmendCodeCo(String amendCodeCo) {
         markAsChanged("AMENDCODECO", amendCodeCo);
-        this.amendCodeCo = amendCodeCo;
    }
 
    public String getAmendCodeIv() {
-        return amendCodeIv;
+        return this.getVo().asString("AMENDCODEIV");
    }
 
    public void setAmendCodeIv(String amendCodeIv) {
         markAsChanged("AMENDCODEIV", amendCodeIv);
-        this.amendCodeIv = amendCodeIv;
    }
 
    public String getAmendCodeSr() {
-        return amendCodeSr;
+        return this.getVo().asString("AMENDCODESR");
    }
 
    public void setAmendCodeSr(String amendCodeSr) {
         markAsChanged("AMENDCODESR", amendCodeSr);
-        this.amendCodeSr = amendCodeSr;
    }
 
    public String getAmendCode() {
-        return amendCode;
+        return this.getVo().asString("AMENDCODE");
    }
 
    public void setAmendCode(String amendCode) {
         markAsChanged("AMENDCODE", amendCode);
-        this.amendCode = amendCode;
    }
 
    public BigDecimal getBkOrderQty() {
-        return bkOrderQty;
+        return this.getVo().asBigDecimal("BKORDERQTY");
    }
 
    public void setBkOrderQty(BigDecimal bkOrderQty) {
         markAsChanged("BKORDERQTY", bkOrderQty);
-        this.bkOrderQty = bkOrderQty;
    }
 
    public Timestamp getDtEstDesp() {
-        return dtEstDesp;
+        return this.getVo().asTimestamp("DTESTDESP");
    }
 
    public void setDtEstDesp(Timestamp dtEstDesp) {
         markAsChanged("DTESTDESP", dtEstDesp);
-        this.dtEstDesp = dtEstDesp;
    }
 
    public Timestamp getDtStatus() {
-        return dtStatus;
+        return this.getVo().asTimestamp("DTSTATUS");
    }
 
    public void setDtStatus(Timestamp dtStatus) {
         markAsChanged("DTSTATUS", dtStatus);
-        this.dtStatus = dtStatus;
    }
 
    public String getFlagCode() {
-        return flagCode;
+        return this.getVo().asString("FLAGCODE");
    }
 
    public void setFlagCode(String flagCode) {
         markAsChanged("FLAGCODE", flagCode);
-        this.flagCode = flagCode;
    }
 
    public String getShipMode() {
-        return shipMode;
+        return this.getVo().asString("SHIPMODE");
    }
 
    public void setShipMode(String shipMode) {
         markAsChanged("SHIPMODE", shipMode);
-        this.shipMode = shipMode;
    }
 
    public BigDecimal getShipQty() {
-        return shipQty;
+        return this.getVo().asBigDecimal("SHIPQTY");
    }
 
    public void setShipQty(BigDecimal shipQty) {
         markAsChanged("SHIPQTY", shipQty);
-        this.shipQty = shipQty;
    }
 
    public String getSufixoPo() {
-        return sufixoPo;
+        return this.getVo().asString("SUFIXOPO");
    }
 
    public void setSufixoPo(String sufixoPo) {
         markAsChanged("SUFIXOPO", sufixoPo);
-        this.sufixoPo = sufixoPo;
    }
 
    public BigDecimal getSupplanQty() {
-        return supplanQty;
+        return this.getVo().asBigDecimal("SUPPLANQTY");
    }
 
    public void setSupplanQty(BigDecimal supplanQty) {
         markAsChanged("SUPPLANQTY", supplanQty);
-        this.supplanQty = supplanQty;
    }
 
    public BigDecimal getNuNotaCo() {
-        return nuNotaCo;
+        return this.getVo().asBigDecimal("NUNOTACO");
    }
 
    public void setNuNotaCo(BigDecimal nuNotaCo) {
         markAsChanged("NUNOTACO", nuNotaCo);
-        this.nuNotaCo = nuNotaCo;
    }
 
    public BigDecimal getNuNotaPo() {
-        return nuNotaPo;
+        return this.getVo().asBigDecimal("NUNOTAPO");
    }
 
    public void setNuNotaPo(BigDecimal nuNotaPo) {
         markAsChanged("NUNOTAPO", nuNotaPo);
-        this.nuNotaPo = nuNotaPo;
    }
 
    public BigDecimal getPackQty() {
-        return packQty;
+        return this.getVo().asBigDecimal("PACKQTY");
    }
 
    public void setPackQty(BigDecimal packQty) {
         markAsChanged("PACKQTY", packQty);
-        this.packQty = packQty;
    }
 
    public BigDecimal getProcQty() {
-        return procQty;
+        return this.getVo().asBigDecimal("PROCQTY");
    }
 
    public void setProcQty(BigDecimal procQty) {
         markAsChanged("PROCQTY", procQty);
-        this.procQty = procQty;
    }
 
    public BigDecimal getQtdNegOriginal() {
-        return qtdNegOriginal;
+        return this.getVo().asBigDecimal("QTDNEGORIGINAL");
    }
 
    public void setQtdNegOriginal(BigDecimal qtdNegOriginal) {
         markAsChanged("QTDNEGORIGINAL", qtdNegOriginal);
-        this.qtdNegOriginal = qtdNegOriginal;
    }
 
    public BigDecimal getSequenciaCo() {
-        return sequenciaCo;
+        return this.getVo().asBigDecimal("SEQUENCIACO");
    }
 
    public void setSequenciaCo(BigDecimal sequenciaCo) {
         markAsChanged("SEQUENCIACO", sequenciaCo);
-        this.sequenciaCo = sequenciaCo;
    }
 
    public BigDecimal getSequenciaPo() {
-        return sequenciaPo;
+        return this.getVo().asBigDecimal("SEQUENCIAPO");
    }
 
    public void setSequenciaPo(BigDecimal sequenciaPo) {
         markAsChanged("SEQUENCIAPO", sequenciaPo);
-        this.sequenciaPo = sequenciaPo;
    }
 
    public String getLastInvoice() {
-        return lastInvoice;
+        return this.getVo().asString("LASTINVOICE");
    }
 
    public void setLastInvoice(String lastInvoice) {
         markAsChanged("LASTINVOICE", lastInvoice);
-        this.lastInvoice = lastInvoice;
    }
 
    public Timestamp getLastShip() {
-        return lastShip;
+        return this.getVo().asTimestamp("LASTSHIP");
    }
 
    public void setLastShip(Timestamp lastShip) {
         markAsChanged("LASTSHIP", lastShip);
-        this.lastShip = lastShip;
    }
 
    @Override
@@ -230,27 +187,6 @@ public class ItemLigacaoConfirmedOrder extends AbstractSankhyaEntity<ItemLigacao
    @Override
    public ItemLigacaoConfirmedOrder fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.amendCodeCo = vo.asString("AMENDCODECO");
-        this.amendCodeIv = vo.asString("AMENDCODEIV");
-        this.amendCodeSr = vo.asString("AMENDCODESR");
-        this.amendCode = vo.asString("AMENDCODE");
-        this.bkOrderQty = vo.asBigDecimal("BKORDERQTY");
-        this.dtEstDesp = vo.asTimestamp("DTESTDESP");
-        this.dtStatus = vo.asTimestamp("DTSTATUS");
-        this.flagCode = vo.asString("FLAGCODE");
-        this.shipMode = vo.asString("SHIPMODE");
-        this.shipQty = vo.asBigDecimal("SHIPQTY");
-        this.sufixoPo = vo.asString("SUFIXOPO");
-        this.supplanQty = vo.asBigDecimal("SUPPLANQTY");
-        this.nuNotaCo = vo.asBigDecimal("NUNOTACO");
-        this.nuNotaPo = vo.asBigDecimal("NUNOTAPO");
-        this.packQty = vo.asBigDecimal("PACKQTY");
-        this.procQty = vo.asBigDecimal("PROCQTY");
-        this.qtdNegOriginal = vo.asBigDecimal("QTDNEGORIGINAL");
-        this.sequenciaCo = vo.asBigDecimal("SEQUENCIACO");
-        this.sequenciaPo = vo.asBigDecimal("SEQUENCIAPO");
-        this.lastInvoice = vo.asString("LASTINVOICE");
-        this.lastShip = vo.asTimestamp("LASTSHIP");
         return this;
    }
 }

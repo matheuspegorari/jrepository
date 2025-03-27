@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
-   private String recontado;
-   private String codBarra;
-   private String codBarraConcat;
-   private BigDecimal codProd;
-   private String controle;
-   private BigDecimal nuSeparacao;
-   private BigDecimal qtdUnpad;
-   private BigDecimal sequencia;
-
    public String getRecontado() {
-        return recontado;
+        return this.getVo().asString("RECONTADO");
    }
 
    public void setRecontado(String recontado) {
         markAsChanged("RECONTADO", recontado);
-        this.recontado = recontado;
    }
 
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public String getCodBarraConcat() {
-        return codBarraConcat;
+        return this.getVo().asString("CODBARRACONCAT");
    }
 
    public void setCodBarraConcat(String codBarraConcat) {
         markAsChanged("CODBARRACONCAT", codBarraConcat);
-        this.codBarraConcat = codBarraConcat;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public BigDecimal getNuSeparacao() {
-        return nuSeparacao;
+        return this.getVo().asBigDecimal("NUSEPARACAO");
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
         markAsChanged("NUSEPARACAO", nuSeparacao);
-        this.nuSeparacao = nuSeparacao;
    }
 
    public BigDecimal getQtdUnpad() {
-        return qtdUnpad;
+        return this.getVo().asBigDecimal("QTDUNPAD");
    }
 
    public void setQtdUnpad(BigDecimal qtdUnpad) {
         markAsChanged("QTDUNPAD", qtdUnpad);
-        this.qtdUnpad = qtdUnpad;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class RomaneioWMS extends AbstractSankhyaEntity<RomaneioWMS> {
    @Override
    public RomaneioWMS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.recontado = vo.asString("RECONTADO");
-        this.codBarra = vo.asString("CODBARRA");
-        this.codBarraConcat = vo.asString("CODBARRACONCAT");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.controle = vo.asString("CONTROLE");
-        this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.qtdUnpad = vo.asBigDecimal("QTDUNPAD");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

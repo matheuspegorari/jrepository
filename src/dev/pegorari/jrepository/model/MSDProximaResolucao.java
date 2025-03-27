@@ -5,15 +5,12 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.sql.Timestamp;
 
 public class MSDProximaResolucao extends AbstractSankhyaEntity<MSDProximaResolucao> {
-   private Timestamp proxResol;
-
    public Timestamp getProxResol() {
-        return proxResol;
+        return this.getVo().asTimestamp("PROXRESOL");
    }
 
    public void setProxResol(Timestamp proxResol) {
         markAsChanged("PROXRESOL", proxResol);
-        this.proxResol = proxResol;
    }
 
    @Override
@@ -29,7 +26,6 @@ public class MSDProximaResolucao extends AbstractSankhyaEntity<MSDProximaResoluc
    @Override
    public MSDProximaResolucao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.proxResol = vo.asTimestamp("PROXRESOL");
         return this;
    }
 }

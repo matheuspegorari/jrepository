@@ -6,205 +6,164 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamentoDeOP> {
-   private BigDecimal ordem;
-   private BigDecimal seqOp;
-   private BigDecimal idProc;
-   private BigDecimal codPlp;
-   private BigDecimal nuLop;
-   private String compartilha;
-   private BigDecimal codProd;
-   private String descrProd;
-   private Timestamp dtInicioMax;
-   private Timestamp dtPrevent;
-   private BigDecimal qtdPa;
-   private String referencia;
-   private BigDecimal seqCop;
-   private BigDecimal tamLote;
-   private BigDecimal tempoAtravess;
-   private String tipoOp;
-   private BigDecimal codParcterc;
-   private BigDecimal nuNota;
-   private BigDecimal seqNota;
-   private String controle;
-
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getSeqOp() {
-        return seqOp;
+        return this.getVo().asBigDecimal("SEQOP");
    }
 
    public void setSeqOp(BigDecimal seqOp) {
         markAsChanged("SEQOP", seqOp);
-        this.seqOp = seqOp;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public BigDecimal getCodPlp() {
-        return codPlp;
+        return this.getVo().asBigDecimal("CODPLP");
    }
 
    public void setCodPlp(BigDecimal codPlp) {
         markAsChanged("CODPLP", codPlp);
-        this.codPlp = codPlp;
    }
 
    public BigDecimal getNuLop() {
-        return nuLop;
+        return this.getVo().asBigDecimal("NULOP");
    }
 
    public void setNuLop(BigDecimal nuLop) {
         markAsChanged("NULOP", nuLop);
-        this.nuLop = nuLop;
    }
 
    public String getCompartilha() {
-        return compartilha;
+        return this.getVo().asString("COMPARTILHA");
    }
 
    public void setCompartilha(String compartilha) {
         markAsChanged("COMPARTILHA", compartilha);
-        this.compartilha = compartilha;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDescrProd() {
-        return descrProd;
+        return this.getVo().asString("DESCRPROD");
    }
 
    public void setDescrProd(String descrProd) {
         markAsChanged("DESCRPROD", descrProd);
-        this.descrProd = descrProd;
    }
 
    public Timestamp getDtInicioMax() {
-        return dtInicioMax;
+        return this.getVo().asTimestamp("DTINICIOMAX");
    }
 
    public void setDtInicioMax(Timestamp dtInicioMax) {
         markAsChanged("DTINICIOMAX", dtInicioMax);
-        this.dtInicioMax = dtInicioMax;
    }
 
    public Timestamp getDtPrevent() {
-        return dtPrevent;
+        return this.getVo().asTimestamp("DTPREVENT");
    }
 
    public void setDtPrevent(Timestamp dtPrevent) {
         markAsChanged("DTPREVENT", dtPrevent);
-        this.dtPrevent = dtPrevent;
    }
 
    public BigDecimal getQtdPa() {
-        return qtdPa;
+        return this.getVo().asBigDecimal("QTDPA");
    }
 
    public void setQtdPa(BigDecimal qtdPa) {
         markAsChanged("QTDPA", qtdPa);
-        this.qtdPa = qtdPa;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSeqCop() {
-        return seqCop;
+        return this.getVo().asBigDecimal("SEQCOP");
    }
 
    public void setSeqCop(BigDecimal seqCop) {
         markAsChanged("SEQCOP", seqCop);
-        this.seqCop = seqCop;
    }
 
    public BigDecimal getTamLote() {
-        return tamLote;
+        return this.getVo().asBigDecimal("TAMLOTE");
    }
 
    public void setTamLote(BigDecimal tamLote) {
         markAsChanged("TAMLOTE", tamLote);
-        this.tamLote = tamLote;
    }
 
    public BigDecimal getTempoAtravess() {
-        return tempoAtravess;
+        return this.getVo().asBigDecimal("TEMPOATRAVESS");
    }
 
    public void setTempoAtravess(BigDecimal tempoAtravess) {
         markAsChanged("TEMPOATRAVESS", tempoAtravess);
-        this.tempoAtravess = tempoAtravess;
    }
 
    public String getTipoOp() {
-        return tipoOp;
+        return this.getVo().asString("TIPOOP");
    }
 
    public void setTipoOp(String tipoOp) {
         markAsChanged("TIPOOP", tipoOp);
-        this.tipoOp = tipoOp;
    }
 
    public BigDecimal getCodParcterc() {
-        return codParcterc;
+        return this.getVo().asBigDecimal("CODPARCTERC");
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
         markAsChanged("CODPARCTERC", codParcterc);
-        this.codParcterc = codParcterc;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSeqNota() {
-        return seqNota;
+        return this.getVo().asBigDecimal("SEQNOTA");
    }
 
    public void setSeqNota(BigDecimal seqNota) {
         markAsChanged("SEQNOTA", seqNota);
-        this.seqNota = seqNota;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    @Override
@@ -220,26 +179,6 @@ public class ItemDeLancamentoDeOP extends AbstractSankhyaEntity<ItemDeLancamento
    @Override
    public ItemDeLancamentoDeOP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.seqOp = vo.asBigDecimal("SEQOP");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.codPlp = vo.asBigDecimal("CODPLP");
-        this.nuLop = vo.asBigDecimal("NULOP");
-        this.compartilha = vo.asString("COMPARTILHA");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.descrProd = vo.asString("DESCRPROD");
-        this.dtInicioMax = vo.asTimestamp("DTINICIOMAX");
-        this.dtPrevent = vo.asTimestamp("DTPREVENT");
-        this.qtdPa = vo.asBigDecimal("QTDPA");
-        this.referencia = vo.asString("REFERENCIA");
-        this.seqCop = vo.asBigDecimal("SEQCOP");
-        this.tamLote = vo.asBigDecimal("TAMLOTE");
-        this.tempoAtravess = vo.asBigDecimal("TEMPOATRAVESS");
-        this.tipoOp = vo.asString("TIPOOP");
-        this.codParcterc = vo.asBigDecimal("CODPARCTERC");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.seqNota = vo.asBigDecimal("SEQNOTA");
-        this.controle = vo.asString("CONTROLE");
         return this;
    }
 }

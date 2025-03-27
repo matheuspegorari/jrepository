@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
-   private BigDecimal numItem;
-   private BigDecimal numOs;
-   private BigDecimal numReg;
-   private BigDecimal nuSla;
-
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNumReg() {
-        return numReg;
+        return this.getVo().asBigDecimal("NUMREG");
    }
 
    public void setNumReg(BigDecimal numReg) {
         markAsChanged("NUMREG", numReg);
-        this.numReg = numReg;
    }
 
    public BigDecimal getNuSla() {
-        return nuSla;
+        return this.getVo().asBigDecimal("NUSLA");
    }
 
    public void setNuSla(BigDecimal nuSla) {
         markAsChanged("NUSLA", nuSla);
-        this.nuSla = nuSla;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class RegraSLASubOs extends AbstractSankhyaEntity<RegraSLASubOs> {
    @Override
    public RegraSLASubOs fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.numItem = vo.asBigDecimal("NUMITEM");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.numReg = vo.asBigDecimal("NUMREG");
-        this.nuSla = vo.asBigDecimal("NUSLA");
         return this;
    }
 }

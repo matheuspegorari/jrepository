@@ -5,25 +5,20 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> {
-   private BigDecimal nuFin;
-   private BigDecimal nuRem;
-
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNuRem() {
-        return nuRem;
+        return this.getVo().asBigDecimal("NUREM");
    }
 
    public void setNuRem(BigDecimal nuRem) {
         markAsChanged("NUREM", nuRem);
-        this.nuRem = nuRem;
    }
 
    @Override
@@ -39,8 +34,6 @@ public class FinanceiroRemessa extends AbstractSankhyaEntity<FinanceiroRemessa> 
    @Override
    public FinanceiroRemessa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.nuRem = vo.asBigDecimal("NUREM");
         return this;
    }
 }

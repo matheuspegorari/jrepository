@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> {
-   private String codFabricante;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal nroAdicao;
-   private BigDecimal nuNota;
-   private BigDecimal seqAd;
-   private BigDecimal seqDi;
-   private BigDecimal sequencia;
-   private BigDecimal vlrDesc;
-
    public String getCodFabricante() {
-        return codFabricante;
+        return this.getVo().asString("CODFABRICANTE");
    }
 
    public void setCodFabricante(String codFabricante) {
         markAsChanged("CODFABRICANTE", codFabricante);
-        this.codFabricante = codFabricante;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getNroAdicao() {
-        return nroAdicao;
+        return this.getVo().asBigDecimal("NROADICAO");
    }
 
    public void setNroAdicao(BigDecimal nroAdicao) {
         markAsChanged("NROADICAO", nroAdicao);
-        this.nroAdicao = nroAdicao;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSeqAd() {
-        return seqAd;
+        return this.getVo().asBigDecimal("SEQAD");
    }
 
    public void setSeqAd(BigDecimal seqAd) {
         markAsChanged("SEQAD", seqAd);
-        this.seqAd = seqAd;
    }
 
    public BigDecimal getSeqDi() {
-        return seqDi;
+        return this.getVo().asBigDecimal("SEQDI");
    }
 
    public void setSeqDi(BigDecimal seqDi) {
         markAsChanged("SEQDI", seqDi);
-        this.seqDi = seqDi;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVlrDesc() {
-        return vlrDesc;
+        return this.getVo().asBigDecimal("VLRDESC");
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
         markAsChanged("VLRDESC", vlrDesc);
-        this.vlrDesc = vlrDesc;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class AdicoesImportacao extends AbstractSankhyaEntity<AdicoesImportacao> 
    @Override
    public AdicoesImportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codFabricante = vo.asString("CODFABRICANTE");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.nroAdicao = vo.asBigDecimal("NROADICAO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.seqAd = vo.asBigDecimal("SEQAD");
-        this.seqDi = vo.asBigDecimal("SEQDI");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrDesc = vo.asBigDecimal("VLRDESC");
         return this;
    }
 }

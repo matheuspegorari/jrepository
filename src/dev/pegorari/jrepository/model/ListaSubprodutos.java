@@ -6,195 +6,156 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
-   private BigDecimal codLocal;
-   private String referencia;
-   private BigDecimal codProdPa;
-   private BigDecimal codProdSp;
-   private String codVol;
-   private String controlePa;
-   private String controleSp;
-   private String exigeApontamento;
-   private BigDecimal ideFx;
-   private BigDecimal qtdMistura;
-   private BigDecimal seqLsp;
-   private String tipoControleSp;
-   private String tipoQtd;
-   private String subprodutoPerda;
-   private String basCalcDtValSp;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-
    public BigDecimal getCodLocal() {
-        return codLocal;
+        return this.getVo().asBigDecimal("CODLOCAL");
    }
 
    public void setCodLocal(BigDecimal codLocal) {
         markAsChanged("CODLOCAL", codLocal);
-        this.codLocal = codLocal;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getCodProdSp() {
-        return codProdSp;
+        return this.getVo().asBigDecimal("CODPRODSP");
    }
 
    public void setCodProdSp(BigDecimal codProdSp) {
         markAsChanged("CODPRODSP", codProdSp);
-        this.codProdSp = codProdSp;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public String getControleSp() {
-        return controleSp;
+        return this.getVo().asString("CONTROLESP");
    }
 
    public void setControleSp(String controleSp) {
         markAsChanged("CONTROLESP", controleSp);
-        this.controleSp = controleSp;
    }
 
    public String getExigeApontamento() {
-        return exigeApontamento;
+        return this.getVo().asString("EXIGEAPONTAMENTO");
    }
 
    public void setExigeApontamento(String exigeApontamento) {
         markAsChanged("EXIGEAPONTAMENTO", exigeApontamento);
-        this.exigeApontamento = exigeApontamento;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getQtdMistura() {
-        return qtdMistura;
+        return this.getVo().asBigDecimal("QTDMISTURA");
    }
 
    public void setQtdMistura(BigDecimal qtdMistura) {
         markAsChanged("QTDMISTURA", qtdMistura);
-        this.qtdMistura = qtdMistura;
    }
 
    public BigDecimal getSeqLsp() {
-        return seqLsp;
+        return this.getVo().asBigDecimal("SEQLSP");
    }
 
    public void setSeqLsp(BigDecimal seqLsp) {
         markAsChanged("SEQLSP", seqLsp);
-        this.seqLsp = seqLsp;
    }
 
    public String getTipoControleSp() {
-        return tipoControleSp;
+        return this.getVo().asString("TIPOCONTROLESP");
    }
 
    public void setTipoControleSp(String tipoControleSp) {
         markAsChanged("TIPOCONTROLESP", tipoControleSp);
-        this.tipoControleSp = tipoControleSp;
    }
 
    public String getTipoQtd() {
-        return tipoQtd;
+        return this.getVo().asString("TIPOQTD");
    }
 
    public void setTipoQtd(String tipoQtd) {
         markAsChanged("TIPOQTD", tipoQtd);
-        this.tipoQtd = tipoQtd;
    }
 
    public String getSubprodutoPerda() {
-        return subprodutoPerda;
+        return this.getVo().asString("SUBPRODUTOPERDA");
    }
 
    public void setSubprodutoPerda(String subprodutoPerda) {
         markAsChanged("SUBPRODUTOPERDA", subprodutoPerda);
-        this.subprodutoPerda = subprodutoPerda;
    }
 
    public String getBasCalcDtValSp() {
-        return basCalcDtValSp;
+        return this.getVo().asString("BASCALCDTVALSP");
    }
 
    public void setBasCalcDtValSp(String basCalcDtValSp) {
         markAsChanged("BASCALCDTVALSP", basCalcDtValSp);
-        this.basCalcDtValSp = basCalcDtValSp;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    @Override
@@ -210,25 +171,6 @@ public class ListaSubprodutos extends AbstractSankhyaEntity<ListaSubprodutos> {
    @Override
    public ListaSubprodutos fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codLocal = vo.asBigDecimal("CODLOCAL");
-        this.referencia = vo.asString("REFERENCIA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.codProdSp = vo.asBigDecimal("CODPRODSP");
-        this.codVol = vo.asString("CODVOL");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.controleSp = vo.asString("CONTROLESP");
-        this.exigeApontamento = vo.asString("EXIGEAPONTAMENTO");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.qtdMistura = vo.asBigDecimal("QTDMISTURA");
-        this.seqLsp = vo.asBigDecimal("SEQLSP");
-        this.tipoControleSp = vo.asString("TIPOCONTROLESP");
-        this.tipoQtd = vo.asString("TIPOQTD");
-        this.subprodutoPerda = vo.asString("SUBPRODUTOPERDA");
-        this.basCalcDtValSp = vo.asString("BASCALCDTVALSP");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
         return this;
    }
 }

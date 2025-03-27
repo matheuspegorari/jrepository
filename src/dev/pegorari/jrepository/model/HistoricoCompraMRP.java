@@ -6,105 +6,84 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP> {
-   private BigDecimal seqImrp;
-   private String cancelado;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private BigDecimal codUsuCanc;
-   private String controle;
-   private Timestamp dtCanc;
-   private Timestamp dtMov;
-   private BigDecimal numPs;
-   private BigDecimal qtdMov;
-
    public BigDecimal getSeqImrp() {
-        return seqImrp;
+        return this.getVo().asBigDecimal("SEQIMRP");
    }
 
    public void setSeqImrp(BigDecimal seqImrp) {
         markAsChanged("SEQIMRP", seqImrp);
-        this.seqImrp = seqImrp;
    }
 
    public String getCancelado() {
-        return cancelado;
+        return this.getVo().asString("CANCELADO");
    }
 
    public void setCancelado(String cancelado) {
         markAsChanged("CANCELADO", cancelado);
-        this.cancelado = cancelado;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodUsuCanc() {
-        return codUsuCanc;
+        return this.getVo().asBigDecimal("CODUSUCANC");
    }
 
    public void setCodUsuCanc(BigDecimal codUsuCanc) {
         markAsChanged("CODUSUCANC", codUsuCanc);
-        this.codUsuCanc = codUsuCanc;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public Timestamp getDtCanc() {
-        return dtCanc;
+        return this.getVo().asTimestamp("DTCANC");
    }
 
    public void setDtCanc(Timestamp dtCanc) {
         markAsChanged("DTCANC", dtCanc);
-        this.dtCanc = dtCanc;
    }
 
    public Timestamp getDtMov() {
-        return dtMov;
+        return this.getVo().asTimestamp("DTMOV");
    }
 
    public void setDtMov(Timestamp dtMov) {
         markAsChanged("DTMOV", dtMov);
-        this.dtMov = dtMov;
    }
 
    public BigDecimal getNumPs() {
-        return numPs;
+        return this.getVo().asBigDecimal("NUMPS");
    }
 
    public void setNumPs(BigDecimal numPs) {
         markAsChanged("NUMPS", numPs);
-        this.numPs = numPs;
    }
 
    public BigDecimal getQtdMov() {
-        return qtdMov;
+        return this.getVo().asBigDecimal("QTDMOV");
    }
 
    public void setQtdMov(BigDecimal qtdMov) {
         markAsChanged("QTDMOV", qtdMov);
-        this.qtdMov = qtdMov;
    }
 
    @Override
@@ -120,16 +99,6 @@ public class HistoricoCompraMRP extends AbstractSankhyaEntity<HistoricoCompraMRP
    @Override
    public HistoricoCompraMRP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqImrp = vo.asBigDecimal("SEQIMRP");
-        this.cancelado = vo.asString("CANCELADO");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codUsuCanc = vo.asBigDecimal("CODUSUCANC");
-        this.controle = vo.asString("CONTROLE");
-        this.dtCanc = vo.asTimestamp("DTCANC");
-        this.dtMov = vo.asTimestamp("DTMOV");
-        this.numPs = vo.asBigDecimal("NUMPS");
-        this.qtdMov = vo.asBigDecimal("QTDMOV");
         return this;
    }
 }

@@ -5,155 +5,124 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ModeloEtapa extends AbstractSankhyaEntity<ModeloEtapa> {
-   private BigDecimal codMetod;
-   private BigDecimal codProd;
-   private String descricao;
-   private String exigeProdutos;
-   private BigDecimal numModelo;
-   private BigDecimal numModeloPai;
-   private BigDecimal numSeq;
-   private String obrigatoria;
-   private String observacao;
-   private String tipValor;
-   private BigDecimal valor;
-   private BigDecimal vlrSuplementa;
-   private BigDecimal vlrSuplementado;
-   private String suplementa;
-   private String suplementado;
-
    public BigDecimal getCodMetod() {
-        return codMetod;
+        return this.getVo().asBigDecimal("CODMETOD");
    }
 
    public void setCodMetod(BigDecimal codMetod) {
         markAsChanged("CODMETOD", codMetod);
-        this.codMetod = codMetod;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getExigeProdutos() {
-        return exigeProdutos;
+        return this.getVo().asString("EXIGEPRODUTOS");
    }
 
    public void setExigeProdutos(String exigeProdutos) {
         markAsChanged("EXIGEPRODUTOS", exigeProdutos);
-        this.exigeProdutos = exigeProdutos;
    }
 
    public BigDecimal getNumModelo() {
-        return numModelo;
+        return this.getVo().asBigDecimal("NUMMODELO");
    }
 
    public void setNumModelo(BigDecimal numModelo) {
         markAsChanged("NUMMODELO", numModelo);
-        this.numModelo = numModelo;
    }
 
    public BigDecimal getNumModeloPai() {
-        return numModeloPai;
+        return this.getVo().asBigDecimal("NUMMODELOPAI");
    }
 
    public void setNumModeloPai(BigDecimal numModeloPai) {
         markAsChanged("NUMMODELOPAI", numModeloPai);
-        this.numModeloPai = numModeloPai;
    }
 
    public BigDecimal getNumSeq() {
-        return numSeq;
+        return this.getVo().asBigDecimal("NUMSEQ");
    }
 
    public void setNumSeq(BigDecimal numSeq) {
         markAsChanged("NUMSEQ", numSeq);
-        this.numSeq = numSeq;
    }
 
    public String getObrigatoria() {
-        return obrigatoria;
+        return this.getVo().asString("OBRIGATORIA");
    }
 
    public void setObrigatoria(String obrigatoria) {
         markAsChanged("OBRIGATORIA", obrigatoria);
-        this.obrigatoria = obrigatoria;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getTipValor() {
-        return tipValor;
+        return this.getVo().asString("TIPVALOR");
    }
 
    public void setTipValor(String tipValor) {
         markAsChanged("TIPVALOR", tipValor);
-        this.tipValor = tipValor;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public BigDecimal getVlrSuplementa() {
-        return vlrSuplementa;
+        return this.getVo().asBigDecimal("VLRSUPLEMENTA");
    }
 
    public void setVlrSuplementa(BigDecimal vlrSuplementa) {
         markAsChanged("VLRSUPLEMENTA", vlrSuplementa);
-        this.vlrSuplementa = vlrSuplementa;
    }
 
    public BigDecimal getVlrSuplementado() {
-        return vlrSuplementado;
+        return this.getVo().asBigDecimal("VLRSUPLEMENTADO");
    }
 
    public void setVlrSuplementado(BigDecimal vlrSuplementado) {
         markAsChanged("VLRSUPLEMENTADO", vlrSuplementado);
-        this.vlrSuplementado = vlrSuplementado;
    }
 
    public String getSuplementa() {
-        return suplementa;
+        return this.getVo().asString("SUPLEMENTA");
    }
 
    public void setSuplementa(String suplementa) {
         markAsChanged("SUPLEMENTA", suplementa);
-        this.suplementa = suplementa;
    }
 
    public String getSuplementado() {
-        return suplementado;
+        return this.getVo().asString("SUPLEMENTADO");
    }
 
    public void setSuplementado(String suplementado) {
         markAsChanged("SUPLEMENTADO", suplementado);
-        this.suplementado = suplementado;
    }
 
    @Override
@@ -169,21 +138,6 @@ public class ModeloEtapa extends AbstractSankhyaEntity<ModeloEtapa> {
    @Override
    public ModeloEtapa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMetod = vo.asBigDecimal("CODMETOD");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.descricao = vo.asString("DESCRICAO");
-        this.exigeProdutos = vo.asString("EXIGEPRODUTOS");
-        this.numModelo = vo.asBigDecimal("NUMMODELO");
-        this.numModeloPai = vo.asBigDecimal("NUMMODELOPAI");
-        this.numSeq = vo.asBigDecimal("NUMSEQ");
-        this.obrigatoria = vo.asString("OBRIGATORIA");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.tipValor = vo.asString("TIPVALOR");
-        this.valor = vo.asBigDecimal("VALOR");
-        this.vlrSuplementa = vo.asBigDecimal("VLRSUPLEMENTA");
-        this.vlrSuplementado = vo.asBigDecimal("VLRSUPLEMENTADO");
-        this.suplementa = vo.asString("SUPLEMENTA");
-        this.suplementado = vo.asString("SUPLEMENTADO");
         return this;
    }
 }

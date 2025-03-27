@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Endereco extends AbstractSankhyaEntity<Endereco> {
-   private BigDecimal codEnd;
-   private String descricaoCorreio;
-   private Timestamp dtAlter;
-   private String nomeEnd;
-   private String tipo;
-   private String atNuVersao;
-   private String codLogradouro;
-   private String tipoEndereco;
-
    public BigDecimal getCodEnd() {
-        return codEnd;
+        return this.getVo().asBigDecimal("CODEND");
    }
 
    public void setCodEnd(BigDecimal codEnd) {
         markAsChanged("CODEND", codEnd);
-        this.codEnd = codEnd;
    }
 
    public String getDescricaoCorreio() {
-        return descricaoCorreio;
+        return this.getVo().asString("DESCRICAOCORREIO");
    }
 
    public void setDescricaoCorreio(String descricaoCorreio) {
         markAsChanged("DESCRICAOCORREIO", descricaoCorreio);
-        this.descricaoCorreio = descricaoCorreio;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getNomeEnd() {
-        return nomeEnd;
+        return this.getVo().asString("NOMEEND");
    }
 
    public void setNomeEnd(String nomeEnd) {
         markAsChanged("NOMEEND", nomeEnd);
-        this.nomeEnd = nomeEnd;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getAtNuVersao() {
-        return atNuVersao;
+        return this.getVo().asString("ATUNUVERSAO");
    }
 
    public void setAtNuVersao(String atNuVersao) {
         markAsChanged("ATUNUVERSAO", atNuVersao);
-        this.atNuVersao = atNuVersao;
    }
 
    public String getCodLogradouro() {
-        return codLogradouro;
+        return this.getVo().asString("CODLOGRADOURO");
    }
 
    public void setCodLogradouro(String codLogradouro) {
         markAsChanged("CODLOGRADOURO", codLogradouro);
-        this.codLogradouro = codLogradouro;
    }
 
    public String getTipoEndereco() {
-        return tipoEndereco;
+        return this.getVo().asString("TIPOENDERECO");
    }
 
    public void setTipoEndereco(String tipoEndereco) {
         markAsChanged("TIPOENDERECO", tipoEndereco);
-        this.tipoEndereco = tipoEndereco;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class Endereco extends AbstractSankhyaEntity<Endereco> {
    @Override
    public Endereco fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEnd = vo.asBigDecimal("CODEND");
-        this.descricaoCorreio = vo.asString("DESCRICAOCORREIO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nomeEnd = vo.asString("NOMEEND");
-        this.tipo = vo.asString("TIPO");
-        this.atNuVersao = vo.asString("ATUNUVERSAO");
-        this.codLogradouro = vo.asString("CODLOGRADOURO");
-        this.tipoEndereco = vo.asString("TIPOENDERECO");
         return this;
    }
 }

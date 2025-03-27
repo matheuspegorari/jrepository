@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgramada> {
-   private BigDecimal codUsu;
-   private Timestamp dhParada;
-   private BigDecimal hrIndisp;
-   private String msgMp;
-   private BigDecimal numPa;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhParada() {
-        return dhParada;
+        return this.getVo().asTimestamp("DHPARADA");
    }
 
    public void setDhParada(Timestamp dhParada) {
         markAsChanged("DHPARADA", dhParada);
-        this.dhParada = dhParada;
    }
 
    public BigDecimal getHrIndisp() {
-        return hrIndisp;
+        return this.getVo().asBigDecimal("HRINDISP");
    }
 
    public void setHrIndisp(BigDecimal hrIndisp) {
         markAsChanged("HRINDISP", hrIndisp);
-        this.hrIndisp = hrIndisp;
    }
 
    public String getMsgMp() {
-        return msgMp;
+        return this.getVo().asString("MSGMP");
    }
 
    public void setMsgMp(String msgMp) {
         markAsChanged("MSGMP", msgMp);
-        this.msgMp = msgMp;
    }
 
    public BigDecimal getNumPa() {
-        return numPa;
+        return this.getVo().asBigDecimal("NUMPA");
    }
 
    public void setNumPa(BigDecimal numPa) {
         markAsChanged("NUMPA", numPa);
-        this.numPa = numPa;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class ManutencaoProgramada extends AbstractSankhyaEntity<ManutencaoProgra
    @Override
    public ManutencaoProgramada fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhParada = vo.asTimestamp("DHPARADA");
-        this.hrIndisp = vo.asBigDecimal("HRINDISP");
-        this.msgMp = vo.asString("MSGMP");
-        this.numPa = vo.asBigDecimal("NUMPA");
         return this;
    }
 }

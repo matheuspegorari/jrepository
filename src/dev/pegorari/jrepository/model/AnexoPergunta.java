@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
-   private BigDecimal codPerg;
-   private byte[] conteudo;
-   private String descricao;
-   private String nomeArquivo;
-   private BigDecimal nuPesq;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodPerg() {
-        return codPerg;
+        return this.getVo().asBigDecimal("CODPERG");
    }
 
    public void setCodPerg(BigDecimal codPerg) {
         markAsChanged("CODPERG", codPerg);
-        this.codPerg = codPerg;
    }
 
    public byte[] getConteudo() {
-        return conteudo;
+        return this.getVo().asBlob("CONTEUDO");
    }
 
    public void setConteudo(byte[] conteudo) {
         markAsChanged("CONTEUDO", conteudo);
-        this.conteudo = conteudo;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getNomeArquivo() {
-        return nomeArquivo;
+        return this.getVo().asString("NOMEARQUIVO");
    }
 
    public void setNomeArquivo(String nomeArquivo) {
         markAsChanged("NOMEARQUIVO", nomeArquivo);
-        this.nomeArquivo = nomeArquivo;
    }
 
    public BigDecimal getNuPesq() {
-        return nuPesq;
+        return this.getVo().asBigDecimal("NUPESQ");
    }
 
    public void setNuPesq(BigDecimal nuPesq) {
         markAsChanged("NUPESQ", nuPesq);
-        this.nuPesq = nuPesq;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class AnexoPergunta extends AbstractSankhyaEntity<AnexoPergunta> {
    @Override
    public AnexoPergunta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPerg = vo.asBigDecimal("CODPERG");
-        this.conteudo = vo.asBlob("CONTEUDO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.nomeArquivo = vo.asString("NOMEARQUIVO");
-        this.nuPesq = vo.asBigDecimal("NUPESQ");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

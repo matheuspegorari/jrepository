@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAssinadoExcluido> {
-   private String chaveArquivo;
-   private BigDecimal nuDoc;
-   private String motivoExc;
-   private BigDecimal codUsuExc;
-   private Timestamp dhExc;
-
    public String getChaveArquivo() {
-        return chaveArquivo;
+        return this.getVo().asString("CHAVEARQUIVO");
    }
 
    public void setChaveArquivo(String chaveArquivo) {
         markAsChanged("CHAVEARQUIVO", chaveArquivo);
-        this.chaveArquivo = chaveArquivo;
    }
 
    public BigDecimal getNuDoc() {
-        return nuDoc;
+        return this.getVo().asBigDecimal("NUDOC");
    }
 
    public void setNuDoc(BigDecimal nuDoc) {
         markAsChanged("NUDOC", nuDoc);
-        this.nuDoc = nuDoc;
    }
 
    public String getMotivoExc() {
-        return motivoExc;
+        return this.getVo().asString("MOTIVOEXC");
    }
 
    public void setMotivoExc(String motivoExc) {
         markAsChanged("MOTIVOEXC", motivoExc);
-        this.motivoExc = motivoExc;
    }
 
    public BigDecimal getCodUsuExc() {
-        return codUsuExc;
+        return this.getVo().asBigDecimal("CODUSUEXC");
    }
 
    public void setCodUsuExc(BigDecimal codUsuExc) {
         markAsChanged("CODUSUEXC", codUsuExc);
-        this.codUsuExc = codUsuExc;
    }
 
    public Timestamp getDhExc() {
-        return dhExc;
+        return this.getVo().asTimestamp("DHEXC");
    }
 
    public void setDhExc(Timestamp dhExc) {
         markAsChanged("DHEXC", dhExc);
-        this.dhExc = dhExc;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class DocumentoAssinadoExcluido extends AbstractSankhyaEntity<DocumentoAs
    @Override
    public DocumentoAssinadoExcluido fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveArquivo = vo.asString("CHAVEARQUIVO");
-        this.nuDoc = vo.asBigDecimal("NUDOC");
-        this.motivoExc = vo.asString("MOTIVOEXC");
-        this.codUsuExc = vo.asBigDecimal("CODUSUEXC");
-        this.dhExc = vo.asTimestamp("DHEXC");
         return this;
    }
 }

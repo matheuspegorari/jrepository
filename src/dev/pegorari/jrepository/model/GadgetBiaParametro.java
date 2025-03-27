@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro> {
-   private BigDecimal vlrDec;
-   private String vlrTxt;
-   private String chave;
-   private BigDecimal codGbi;
-   private String tipo;
-   private Timestamp vlrDat;
-
    public BigDecimal getVlrDec() {
-        return vlrDec;
+        return this.getVo().asBigDecimal("VLRDEC");
    }
 
    public void setVlrDec(BigDecimal vlrDec) {
         markAsChanged("VLRDEC", vlrDec);
-        this.vlrDec = vlrDec;
    }
 
    public String getVlrTxt() {
-        return vlrTxt;
+        return this.getVo().asString("VLRTXT");
    }
 
    public void setVlrTxt(String vlrTxt) {
         markAsChanged("VLRTXT", vlrTxt);
-        this.vlrTxt = vlrTxt;
    }
 
    public String getChave() {
-        return chave;
+        return this.getVo().asString("CHAVE");
    }
 
    public void setChave(String chave) {
         markAsChanged("CHAVE", chave);
-        this.chave = chave;
    }
 
    public BigDecimal getCodGbi() {
-        return codGbi;
+        return this.getVo().asBigDecimal("CODGBI");
    }
 
    public void setCodGbi(BigDecimal codGbi) {
         markAsChanged("CODGBI", codGbi);
-        this.codGbi = codGbi;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public Timestamp getVlrDat() {
-        return vlrDat;
+        return this.getVo().asTimestamp("VLRDAT");
    }
 
    public void setVlrDat(Timestamp vlrDat) {
         markAsChanged("VLRDAT", vlrDat);
-        this.vlrDat = vlrDat;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class GadgetBiaParametro extends AbstractSankhyaEntity<GadgetBiaParametro
    @Override
    public GadgetBiaParametro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.vlrDec = vo.asBigDecimal("VLRDEC");
-        this.vlrTxt = vo.asString("VLRTXT");
-        this.chave = vo.asString("CHAVE");
-        this.codGbi = vo.asBigDecimal("CODGBI");
-        this.tipo = vo.asString("TIPO");
-        this.vlrDat = vo.asTimestamp("VLRDAT");
         return this;
    }
 }

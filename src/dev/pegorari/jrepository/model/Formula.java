@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Formula extends AbstractSankhyaEntity<Formula> {
-   private String formulaWeb;
-   private String tipDist;
-   private String tipForm;
-   private BigDecimal codForm;
-   private String descrForm;
-   private String formula;
-   private BigDecimal indCusto;
-   private String considerarRateio;
-
    public String getFormulaWeb() {
-        return formulaWeb;
+        return this.getVo().asString("FORMULAWEB");
    }
 
    public void setFormulaWeb(String formulaWeb) {
         markAsChanged("FORMULAWEB", formulaWeb);
-        this.formulaWeb = formulaWeb;
    }
 
    public String getTipDist() {
-        return tipDist;
+        return this.getVo().asString("TIPDIST");
    }
 
    public void setTipDist(String tipDist) {
         markAsChanged("TIPDIST", tipDist);
-        this.tipDist = tipDist;
    }
 
    public String getTipForm() {
-        return tipForm;
+        return this.getVo().asString("TIPFORM");
    }
 
    public void setTipForm(String tipForm) {
         markAsChanged("TIPFORM", tipForm);
-        this.tipForm = tipForm;
    }
 
    public BigDecimal getCodForm() {
-        return codForm;
+        return this.getVo().asBigDecimal("CODFORM");
    }
 
    public void setCodForm(BigDecimal codForm) {
         markAsChanged("CODFORM", codForm);
-        this.codForm = codForm;
    }
 
    public String getDescrForm() {
-        return descrForm;
+        return this.getVo().asString("DESCRFORM");
    }
 
    public void setDescrForm(String descrForm) {
         markAsChanged("DESCRFORM", descrForm);
-        this.descrForm = descrForm;
    }
 
    public String getFormula() {
-        return formula;
+        return this.getVo().asString("FORMULA");
    }
 
    public void setFormula(String formula) {
         markAsChanged("FORMULA", formula);
-        this.formula = formula;
    }
 
    public BigDecimal getIndCusto() {
-        return indCusto;
+        return this.getVo().asBigDecimal("INDCUSTO");
    }
 
    public void setIndCusto(BigDecimal indCusto) {
         markAsChanged("INDCUSTO", indCusto);
-        this.indCusto = indCusto;
    }
 
    public String getConsiderarRateio() {
-        return considerarRateio;
+        return this.getVo().asString("CONSIDERARRATEIO");
    }
 
    public void setConsiderarRateio(String considerarRateio) {
         markAsChanged("CONSIDERARRATEIO", considerarRateio);
-        this.considerarRateio = considerarRateio;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class Formula extends AbstractSankhyaEntity<Formula> {
    @Override
    public Formula fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.formulaWeb = vo.asString("FORMULAWEB");
-        this.tipDist = vo.asString("TIPDIST");
-        this.tipForm = vo.asString("TIPFORM");
-        this.codForm = vo.asBigDecimal("CODFORM");
-        this.descrForm = vo.asString("DESCRFORM");
-        this.formula = vo.asString("FORMULA");
-        this.indCusto = vo.asBigDecimal("INDCUSTO");
-        this.considerarRateio = vo.asString("CONSIDERARRATEIO");
         return this;
    }
 }

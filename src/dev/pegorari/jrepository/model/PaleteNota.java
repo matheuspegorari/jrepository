@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
-   private BigDecimal idPalete;
-   private BigDecimal nuNota;
-   private BigDecimal sequencia;
-
    public BigDecimal getIdPalete() {
-        return idPalete;
+        return this.getVo().asBigDecimal("IDPALETE");
    }
 
    public void setIdPalete(BigDecimal idPalete) {
         markAsChanged("IDPALETE", idPalete);
-        this.idPalete = idPalete;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PaleteNota extends AbstractSankhyaEntity<PaleteNota> {
    @Override
    public PaleteNota fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idPalete = vo.asBigDecimal("IDPALETE");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

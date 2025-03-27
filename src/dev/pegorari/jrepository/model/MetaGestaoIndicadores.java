@@ -6,315 +6,252 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndicadores> {
-   private String apresdecGraf;
-   private BigDecimal codInd;
-   private BigDecimal codUng;
-   private String descricao;
-   private Timestamp dhProxAtual;
-   private char[] expSqlPrevAcum;
-   private char[] expSqlPrevPer;
-   private char[] expSqlRealAcum;
-   private char[] expSqlRealPer;
-   private char[] expValPrevAcum;
-   private char[] expValPrevPer;
-   private char[] expValRealAcum;
-   private char[] expValRealPer;
-   private BigDecimal horarioAtu;
-   private BigDecimal nuDsb;
-   private BigDecimal nuMet;
-   private BigDecimal nuMetPai;
-   private BigDecimal periodicidade;
-   private BigDecimal periodicidadeAtu;
-   private String tipoAcumPrev;
-   private String tipoRealAcum;
-   private String tipPrev;
-   private String dsPrevAcum;
-   private String dsPrevPer;
-   private String dsRealAcum;
-   private String dsRealPer;
-   private String infoPeriodo;
-   private String tipoReal;
-   private BigDecimal qtdPerLinear;
-   private BigDecimal codInstQuebra;
-   private String nomeInstaQuebra;
-
    public String getApresdecGraf() {
-        return apresdecGraf;
+        return this.getVo().asString("APRESDECGRAF");
    }
 
    public void setApresdecGraf(String apresdecGraf) {
         markAsChanged("APRESDECGRAF", apresdecGraf);
-        this.apresdecGraf = apresdecGraf;
    }
 
    public BigDecimal getCodInd() {
-        return codInd;
+        return this.getVo().asBigDecimal("CODIND");
    }
 
    public void setCodInd(BigDecimal codInd) {
         markAsChanged("CODIND", codInd);
-        this.codInd = codInd;
    }
 
    public BigDecimal getCodUng() {
-        return codUng;
+        return this.getVo().asBigDecimal("CODUNG");
    }
 
    public void setCodUng(BigDecimal codUng) {
         markAsChanged("CODUNG", codUng);
-        this.codUng = codUng;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDhProxAtual() {
-        return dhProxAtual;
+        return this.getVo().asTimestamp("DHPROXATUAL");
    }
 
    public void setDhProxAtual(Timestamp dhProxAtual) {
         markAsChanged("DHPROXATUAL", dhProxAtual);
-        this.dhProxAtual = dhProxAtual;
    }
 
    public char[] getExpSqlPrevAcum() {
-        return expSqlPrevAcum;
+        return this.getVo().asClob("EXPSQLPREVACUM");
    }
 
    public void setExpSqlPrevAcum(char[] expSqlPrevAcum) {
         markAsChanged("EXPSQLPREVACUM", expSqlPrevAcum);
-        this.expSqlPrevAcum = expSqlPrevAcum;
    }
 
    public char[] getExpSqlPrevPer() {
-        return expSqlPrevPer;
+        return this.getVo().asClob("EXPSQLPREVPER");
    }
 
    public void setExpSqlPrevPer(char[] expSqlPrevPer) {
         markAsChanged("EXPSQLPREVPER", expSqlPrevPer);
-        this.expSqlPrevPer = expSqlPrevPer;
    }
 
    public char[] getExpSqlRealAcum() {
-        return expSqlRealAcum;
+        return this.getVo().asClob("EXPSQLREALACUM");
    }
 
    public void setExpSqlRealAcum(char[] expSqlRealAcum) {
         markAsChanged("EXPSQLREALACUM", expSqlRealAcum);
-        this.expSqlRealAcum = expSqlRealAcum;
    }
 
    public char[] getExpSqlRealPer() {
-        return expSqlRealPer;
+        return this.getVo().asClob("EXPSQLREALPER");
    }
 
    public void setExpSqlRealPer(char[] expSqlRealPer) {
         markAsChanged("EXPSQLREALPER", expSqlRealPer);
-        this.expSqlRealPer = expSqlRealPer;
    }
 
    public char[] getExpValPrevAcum() {
-        return expValPrevAcum;
+        return this.getVo().asClob("EXPVALPREVACUM");
    }
 
    public void setExpValPrevAcum(char[] expValPrevAcum) {
         markAsChanged("EXPVALPREVACUM", expValPrevAcum);
-        this.expValPrevAcum = expValPrevAcum;
    }
 
    public char[] getExpValPrevPer() {
-        return expValPrevPer;
+        return this.getVo().asClob("EXPVALPREVPER");
    }
 
    public void setExpValPrevPer(char[] expValPrevPer) {
         markAsChanged("EXPVALPREVPER", expValPrevPer);
-        this.expValPrevPer = expValPrevPer;
    }
 
    public char[] getExpValRealAcum() {
-        return expValRealAcum;
+        return this.getVo().asClob("EXPVALREALACUM");
    }
 
    public void setExpValRealAcum(char[] expValRealAcum) {
         markAsChanged("EXPVALREALACUM", expValRealAcum);
-        this.expValRealAcum = expValRealAcum;
    }
 
    public char[] getExpValRealPer() {
-        return expValRealPer;
+        return this.getVo().asClob("EXPVALREALPER");
    }
 
    public void setExpValRealPer(char[] expValRealPer) {
         markAsChanged("EXPVALREALPER", expValRealPer);
-        this.expValRealPer = expValRealPer;
    }
 
    public BigDecimal getHorarioAtu() {
-        return horarioAtu;
+        return this.getVo().asBigDecimal("HORARIOATU");
    }
 
    public void setHorarioAtu(BigDecimal horarioAtu) {
         markAsChanged("HORARIOATU", horarioAtu);
-        this.horarioAtu = horarioAtu;
    }
 
    public BigDecimal getNuDsb() {
-        return nuDsb;
+        return this.getVo().asBigDecimal("NUDSB");
    }
 
    public void setNuDsb(BigDecimal nuDsb) {
         markAsChanged("NUDSB", nuDsb);
-        this.nuDsb = nuDsb;
    }
 
    public BigDecimal getNuMet() {
-        return nuMet;
+        return this.getVo().asBigDecimal("NUMET");
    }
 
    public void setNuMet(BigDecimal nuMet) {
         markAsChanged("NUMET", nuMet);
-        this.nuMet = nuMet;
    }
 
    public BigDecimal getNuMetPai() {
-        return nuMetPai;
+        return this.getVo().asBigDecimal("NUMETPAI");
    }
 
    public void setNuMetPai(BigDecimal nuMetPai) {
         markAsChanged("NUMETPAI", nuMetPai);
-        this.nuMetPai = nuMetPai;
    }
 
    public BigDecimal getPeriodicidade() {
-        return periodicidade;
+        return this.getVo().asBigDecimal("PERIODICIDADE");
    }
 
    public void setPeriodicidade(BigDecimal periodicidade) {
         markAsChanged("PERIODICIDADE", periodicidade);
-        this.periodicidade = periodicidade;
    }
 
    public BigDecimal getPeriodicidadeAtu() {
-        return periodicidadeAtu;
+        return this.getVo().asBigDecimal("PERIODICIDADEATU");
    }
 
    public void setPeriodicidadeAtu(BigDecimal periodicidadeAtu) {
         markAsChanged("PERIODICIDADEATU", periodicidadeAtu);
-        this.periodicidadeAtu = periodicidadeAtu;
    }
 
    public String getTipoAcumPrev() {
-        return tipoAcumPrev;
+        return this.getVo().asString("TIPOACUMPREV");
    }
 
    public void setTipoAcumPrev(String tipoAcumPrev) {
         markAsChanged("TIPOACUMPREV", tipoAcumPrev);
-        this.tipoAcumPrev = tipoAcumPrev;
    }
 
    public String getTipoRealAcum() {
-        return tipoRealAcum;
+        return this.getVo().asString("TIPOREALACUM");
    }
 
    public void setTipoRealAcum(String tipoRealAcum) {
         markAsChanged("TIPOREALACUM", tipoRealAcum);
-        this.tipoRealAcum = tipoRealAcum;
    }
 
    public String getTipPrev() {
-        return tipPrev;
+        return this.getVo().asString("TIPPREV");
    }
 
    public void setTipPrev(String tipPrev) {
         markAsChanged("TIPPREV", tipPrev);
-        this.tipPrev = tipPrev;
    }
 
    public String getDsPrevAcum() {
-        return dsPrevAcum;
+        return this.getVo().asString("DSPREVACUM");
    }
 
    public void setDsPrevAcum(String dsPrevAcum) {
         markAsChanged("DSPREVACUM", dsPrevAcum);
-        this.dsPrevAcum = dsPrevAcum;
    }
 
    public String getDsPrevPer() {
-        return dsPrevPer;
+        return this.getVo().asString("DSPREVPER");
    }
 
    public void setDsPrevPer(String dsPrevPer) {
         markAsChanged("DSPREVPER", dsPrevPer);
-        this.dsPrevPer = dsPrevPer;
    }
 
    public String getDsRealAcum() {
-        return dsRealAcum;
+        return this.getVo().asString("DSREALACUM");
    }
 
    public void setDsRealAcum(String dsRealAcum) {
         markAsChanged("DSREALACUM", dsRealAcum);
-        this.dsRealAcum = dsRealAcum;
    }
 
    public String getDsRealPer() {
-        return dsRealPer;
+        return this.getVo().asString("DSREALPER");
    }
 
    public void setDsRealPer(String dsRealPer) {
         markAsChanged("DSREALPER", dsRealPer);
-        this.dsRealPer = dsRealPer;
    }
 
    public String getInfoPeriodo() {
-        return infoPeriodo;
+        return this.getVo().asString("INFOPERIODO");
    }
 
    public void setInfoPeriodo(String infoPeriodo) {
         markAsChanged("INFOPERIODO", infoPeriodo);
-        this.infoPeriodo = infoPeriodo;
    }
 
    public String getTipoReal() {
-        return tipoReal;
+        return this.getVo().asString("TIPOREAL");
    }
 
    public void setTipoReal(String tipoReal) {
         markAsChanged("TIPOREAL", tipoReal);
-        this.tipoReal = tipoReal;
    }
 
    public BigDecimal getQtdPerLinear() {
-        return qtdPerLinear;
+        return this.getVo().asBigDecimal("QTDPERLINEAR");
    }
 
    public void setQtdPerLinear(BigDecimal qtdPerLinear) {
         markAsChanged("QTDPERLINEAR", qtdPerLinear);
-        this.qtdPerLinear = qtdPerLinear;
    }
 
    public BigDecimal getCodInstQuebra() {
-        return codInstQuebra;
+        return this.getVo().asBigDecimal("CODINSTQUEBRA");
    }
 
    public void setCodInstQuebra(BigDecimal codInstQuebra) {
         markAsChanged("CODINSTQUEBRA", codInstQuebra);
-        this.codInstQuebra = codInstQuebra;
    }
 
    public String getNomeInstaQuebra() {
-        return nomeInstaQuebra;
+        return this.getVo().asString("NOMEINSTAQUEBRA");
    }
 
    public void setNomeInstaQuebra(String nomeInstaQuebra) {
         markAsChanged("NOMEINSTAQUEBRA", nomeInstaQuebra);
-        this.nomeInstaQuebra = nomeInstaQuebra;
    }
 
    @Override
@@ -330,37 +267,6 @@ public class MetaGestaoIndicadores extends AbstractSankhyaEntity<MetaGestaoIndic
    @Override
    public MetaGestaoIndicadores fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.apresdecGraf = vo.asString("APRESDECGRAF");
-        this.codInd = vo.asBigDecimal("CODIND");
-        this.codUng = vo.asBigDecimal("CODUNG");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dhProxAtual = vo.asTimestamp("DHPROXATUAL");
-        this.expSqlPrevAcum = vo.asClob("EXPSQLPREVACUM");
-        this.expSqlPrevPer = vo.asClob("EXPSQLPREVPER");
-        this.expSqlRealAcum = vo.asClob("EXPSQLREALACUM");
-        this.expSqlRealPer = vo.asClob("EXPSQLREALPER");
-        this.expValPrevAcum = vo.asClob("EXPVALPREVACUM");
-        this.expValPrevPer = vo.asClob("EXPVALPREVPER");
-        this.expValRealAcum = vo.asClob("EXPVALREALACUM");
-        this.expValRealPer = vo.asClob("EXPVALREALPER");
-        this.horarioAtu = vo.asBigDecimal("HORARIOATU");
-        this.nuDsb = vo.asBigDecimal("NUDSB");
-        this.nuMet = vo.asBigDecimal("NUMET");
-        this.nuMetPai = vo.asBigDecimal("NUMETPAI");
-        this.periodicidade = vo.asBigDecimal("PERIODICIDADE");
-        this.periodicidadeAtu = vo.asBigDecimal("PERIODICIDADEATU");
-        this.tipoAcumPrev = vo.asString("TIPOACUMPREV");
-        this.tipoRealAcum = vo.asString("TIPOREALACUM");
-        this.tipPrev = vo.asString("TIPPREV");
-        this.dsPrevAcum = vo.asString("DSPREVACUM");
-        this.dsPrevPer = vo.asString("DSPREVPER");
-        this.dsRealAcum = vo.asString("DSREALACUM");
-        this.dsRealPer = vo.asString("DSREALPER");
-        this.infoPeriodo = vo.asString("INFOPERIODO");
-        this.tipoReal = vo.asString("TIPOREAL");
-        this.qtdPerLinear = vo.asBigDecimal("QTDPERLINEAR");
-        this.codInstQuebra = vo.asBigDecimal("CODINSTQUEBRA");
-        this.nomeInstaQuebra = vo.asString("NOMEINSTAQUEBRA");
         return this;
    }
 }

@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
-   private BigDecimal codEmp;
-   private String tipo;
-   private String nsu;
-   private Timestamp dhInc;
-   private Timestamp dhLimConsulta;
-   private BigDecimal codUsu;
-   private String localizado;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getNsu() {
-        return nsu;
+        return this.getVo().asString("NSU");
    }
 
    public void setNsu(String nsu) {
         markAsChanged("NSU", nsu);
-        this.nsu = nsu;
    }
 
    public Timestamp getDhInc() {
-        return dhInc;
+        return this.getVo().asTimestamp("DHINC");
    }
 
    public void setDhInc(Timestamp dhInc) {
         markAsChanged("DHINC", dhInc);
-        this.dhInc = dhInc;
    }
 
    public Timestamp getDhLimConsulta() {
-        return dhLimConsulta;
+        return this.getVo().asTimestamp("DHLIMCONSULTA");
    }
 
    public void setDhLimConsulta(Timestamp dhLimConsulta) {
         markAsChanged("DHLIMCONSULTA", dhLimConsulta);
-        this.dhLimConsulta = dhLimConsulta;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getLocalizado() {
-        return localizado;
+        return this.getVo().asString("LOCALIZADO");
    }
 
    public void setLocalizado(String localizado) {
         markAsChanged("LOCALIZADO", localizado);
-        this.localizado = localizado;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class NSUFaltante extends AbstractSankhyaEntity<NSUFaltante> {
    @Override
    public NSUFaltante fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.tipo = vo.asString("TIPO");
-        this.nsu = vo.asString("NSU");
-        this.dhInc = vo.asTimestamp("DHINC");
-        this.dhLimConsulta = vo.asTimestamp("DHLIMCONSULTA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.localizado = vo.asString("LOCALIZADO");
         return this;
    }
 }

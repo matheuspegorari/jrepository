@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigosoNotaMDFE> {
-   private BigDecimal nuViag;
-   private String qtdTotProd;
-   private BigDecimal seqMdfe;
-   private BigDecimal nuNota;
-   private String numOnu;
-
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public String getQtdTotProd() {
-        return qtdTotProd;
+        return this.getVo().asString("QTDTOTPROD");
    }
 
    public void setQtdTotProd(String qtdTotProd) {
         markAsChanged("QTDTOTPROD", qtdTotProd);
-        this.qtdTotProd = qtdTotProd;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getNumOnu() {
-        return numOnu;
+        return this.getVo().asString("NUMONU");
    }
 
    public void setNumOnu(String numOnu) {
         markAsChanged("NUMONU", numOnu);
-        this.numOnu = numOnu;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ProdutoPerigosoNotaMDFE extends AbstractSankhyaEntity<ProdutoPerigo
    @Override
    public ProdutoPerigosoNotaMDFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.qtdTotProd = vo.asString("QTDTOTPROD");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.numOnu = vo.asString("NUMONU");
         return this;
    }
 }

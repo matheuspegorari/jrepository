@@ -5,105 +5,84 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAcessoRelatorioBK> {
-   private String altera;
-   private BigDecimal codGrupo;
-   private BigDecimal codRel;
-   private BigDecimal codUsu;
-   private String cons;
-   private String filtro;
-   private BigDecimal nuNico;
-   private String resumo;
-   private String seguranca;
-   private BigDecimal sequencia;
-
    public String getAltera() {
-        return altera;
+        return this.getVo().asString("ALTERA");
    }
 
    public void setAltera(String altera) {
         markAsChanged("ALTERA", altera);
-        this.altera = altera;
    }
 
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public BigDecimal getCodRel() {
-        return codRel;
+        return this.getVo().asBigDecimal("CODREL");
    }
 
    public void setCodRel(BigDecimal codRel) {
         markAsChanged("CODREL", codRel);
-        this.codRel = codRel;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCons() {
-        return cons;
+        return this.getVo().asString("CONS");
    }
 
    public void setCons(String cons) {
         markAsChanged("CONS", cons);
-        this.cons = cons;
    }
 
    public String getFiltro() {
-        return filtro;
+        return this.getVo().asString("FILTRO");
    }
 
    public void setFiltro(String filtro) {
         markAsChanged("FILTRO", filtro);
-        this.filtro = filtro;
    }
 
    public BigDecimal getNuNico() {
-        return nuNico;
+        return this.getVo().asBigDecimal("NUNICO");
    }
 
    public void setNuNico(BigDecimal nuNico) {
         markAsChanged("NUNICO", nuNico);
-        this.nuNico = nuNico;
    }
 
    public String getResumo() {
-        return resumo;
+        return this.getVo().asString("RESUMO");
    }
 
    public void setResumo(String resumo) {
         markAsChanged("RESUMO", resumo);
-        this.resumo = resumo;
    }
 
    public String getSeguranca() {
-        return seguranca;
+        return this.getVo().asString("SEGURANCA");
    }
 
    public void setSeguranca(String seguranca) {
         markAsChanged("SEGURANCA", seguranca);
-        this.seguranca = seguranca;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -119,16 +98,6 @@ public class ControleAcessoRelatorioBK extends AbstractSankhyaEntity<ControleAce
    @Override
    public ControleAcessoRelatorioBK fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.altera = vo.asString("ALTERA");
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.codRel = vo.asBigDecimal("CODREL");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.cons = vo.asString("CONS");
-        this.filtro = vo.asString("FILTRO");
-        this.nuNico = vo.asBigDecimal("NUNICO");
-        this.resumo = vo.asString("RESUMO");
-        this.seguranca = vo.asString("SEGURANCA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

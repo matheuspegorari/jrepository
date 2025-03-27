@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroProcessoProdutivo> {
-   private BigDecimal codProdPa;
-   private BigDecimal codParcTerc;
-   private BigDecimal ideFx;
-   private BigDecimal idProc;
-   private String preferencial;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getCodParcTerc() {
-        return codParcTerc;
+        return this.getVo().asBigDecimal("CODPARCTERC");
    }
 
    public void setCodParcTerc(BigDecimal codParcTerc) {
         markAsChanged("CODPARCTERC", codParcTerc);
-        this.codParcTerc = codParcTerc;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public String getPreferencial() {
-        return preferencial;
+        return this.getVo().asString("PREFERENCIAL");
    }
 
    public void setPreferencial(String preferencial) {
         markAsChanged("PREFERENCIAL", preferencial);
-        this.preferencial = preferencial;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class TerceiroProcessoProdutivo extends AbstractSankhyaEntity<TerceiroPro
    @Override
    public TerceiroProcessoProdutivo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.codParcTerc = vo.asBigDecimal("CODPARCTERC");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.preferencial = vo.asString("PREFERENCIAL");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
         return this;
    }
 }

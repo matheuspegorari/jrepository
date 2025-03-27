@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDescarregamento> {
-   private BigDecimal codTerdes;
-   private String codTermdesc;
-   private String nomeTermdesc;
-   private BigDecimal nuViag;
-   private BigDecimal seqMdfe;
-
    public BigDecimal getCodTerdes() {
-        return codTerdes;
+        return this.getVo().asBigDecimal("CODTERDES");
    }
 
    public void setCodTerdes(BigDecimal codTerdes) {
         markAsChanged("CODTERDES", codTerdes);
-        this.codTerdes = codTerdes;
    }
 
    public String getCodTermdesc() {
-        return codTermdesc;
+        return this.getVo().asString("CODTERMDESC");
    }
 
    public void setCodTermdesc(String codTermdesc) {
         markAsChanged("CODTERMDESC", codTermdesc);
-        this.codTermdesc = codTermdesc;
    }
 
    public String getNomeTermdesc() {
-        return nomeTermdesc;
+        return this.getVo().asString("NOMETERMDESC");
    }
 
    public void setNomeTermdesc(String nomeTermdesc) {
         markAsChanged("NOMETERMDESC", nomeTermdesc);
-        this.nomeTermdesc = nomeTermdesc;
    }
 
    public BigDecimal getNuViag() {
-        return nuViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNuViag(BigDecimal nuViag) {
         markAsChanged("NUVIAG", nuViag);
-        this.nuViag = nuViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class TerminaisDescarregamento extends AbstractSankhyaEntity<TerminaisDes
    @Override
    public TerminaisDescarregamento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codTerdes = vo.asBigDecimal("CODTERDES");
-        this.codTermdesc = vo.asString("CODTERMDESC");
-        this.nomeTermdesc = vo.asString("NOMETERMDESC");
-        this.nuViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
         return this;
    }
 }

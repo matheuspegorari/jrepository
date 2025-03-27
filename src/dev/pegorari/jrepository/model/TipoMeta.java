@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
-   private BigDecimal codMeta;
-   private BigDecimal codUsu;
-   private String compromisso;
-   private Timestamp dtAlter;
-   private BigDecimal recDesp;
-   private BigDecimal codTipOper;
-
    public BigDecimal getCodMeta() {
-        return codMeta;
+        return this.getVo().asBigDecimal("CODMETA");
    }
 
    public void setCodMeta(BigDecimal codMeta) {
         markAsChanged("CODMETA", codMeta);
-        this.codMeta = codMeta;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getCompromisso() {
-        return compromisso;
+        return this.getVo().asString("COMPROMISSO");
    }
 
    public void setCompromisso(String compromisso) {
         markAsChanged("COMPROMISSO", compromisso);
-        this.compromisso = compromisso;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getRecDesp() {
-        return recDesp;
+        return this.getVo().asBigDecimal("RECDESP");
    }
 
    public void setRecDesp(BigDecimal recDesp) {
         markAsChanged("RECDESP", recDesp);
-        this.recDesp = recDesp;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class TipoMeta extends AbstractSankhyaEntity<TipoMeta> {
    @Override
    public TipoMeta fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codMeta = vo.asBigDecimal("CODMETA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.compromisso = vo.asString("COMPROMISSO");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.recDesp = vo.asBigDecimal("RECDESP");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
         return this;
    }
 }

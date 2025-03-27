@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloControleQualidade> {
-   private String idSubfluxo;
-   private String resultado;
-   private BigDecimal idCcq;
-   private String statusCiclo;
-   private Timestamp dhInicio;
-   private Timestamp dhFinal;
-   private BigDecimal idIproc;
-   private BigDecimal idIccq;
-
    public String getIdSubfluxo() {
-        return idSubfluxo;
+        return this.getVo().asString("IDSUBFLUXO");
    }
 
    public void setIdSubfluxo(String idSubfluxo) {
         markAsChanged("IDSUBFLUXO", idSubfluxo);
-        this.idSubfluxo = idSubfluxo;
    }
 
    public String getResultado() {
-        return resultado;
+        return this.getVo().asString("RESULTADO");
    }
 
    public void setResultado(String resultado) {
         markAsChanged("RESULTADO", resultado);
-        this.resultado = resultado;
    }
 
    public BigDecimal getIdCcq() {
-        return idCcq;
+        return this.getVo().asBigDecimal("IDCCQ");
    }
 
    public void setIdCcq(BigDecimal idCcq) {
         markAsChanged("IDCCQ", idCcq);
-        this.idCcq = idCcq;
    }
 
    public String getStatusCiclo() {
-        return statusCiclo;
+        return this.getVo().asString("STATUSCICLO");
    }
 
    public void setStatusCiclo(String statusCiclo) {
         markAsChanged("STATUSCICLO", statusCiclo);
-        this.statusCiclo = statusCiclo;
    }
 
    public Timestamp getDhInicio() {
-        return dhInicio;
+        return this.getVo().asTimestamp("DHINICIO");
    }
 
    public void setDhInicio(Timestamp dhInicio) {
         markAsChanged("DHINICIO", dhInicio);
-        this.dhInicio = dhInicio;
    }
 
    public Timestamp getDhFinal() {
-        return dhFinal;
+        return this.getVo().asTimestamp("DHFINAL");
    }
 
    public void setDhFinal(Timestamp dhFinal) {
         markAsChanged("DHFINAL", dhFinal);
-        this.dhFinal = dhFinal;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public BigDecimal getIdIccq() {
-        return idIccq;
+        return this.getVo().asBigDecimal("IDICCQ");
    }
 
    public void setIdIccq(BigDecimal idIccq) {
         markAsChanged("IDICCQ", idIccq);
-        this.idIccq = idIccq;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class ItemCicloControleQualidade extends AbstractSankhyaEntity<ItemCicloC
    @Override
    public ItemCicloControleQualidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.idSubfluxo = vo.asString("IDSUBFLUXO");
-        this.resultado = vo.asString("RESULTADO");
-        this.idCcq = vo.asBigDecimal("IDCCQ");
-        this.statusCiclo = vo.asString("STATUSCICLO");
-        this.dhInicio = vo.asTimestamp("DHINICIO");
-        this.dhFinal = vo.asTimestamp("DHFINAL");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.idIccq = vo.asBigDecimal("IDICCQ");
         return this;
    }
 }

@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
-   private BigDecimal codDoca;
-   private BigDecimal codParctransp;
-   private Timestamp dhEntrada;
-   private Timestamp dhPrevista;
-   private Timestamp dhSaida;
-   private String motivo;
-   private BigDecimal nuAgenda;
-
    public BigDecimal getCodDoca() {
-        return codDoca;
+        return this.getVo().asBigDecimal("CODDOCA");
    }
 
    public void setCodDoca(BigDecimal codDoca) {
         markAsChanged("CODDOCA", codDoca);
-        this.codDoca = codDoca;
    }
 
    public BigDecimal getCodParctransp() {
-        return codParctransp;
+        return this.getVo().asBigDecimal("CODPARCTRANSP");
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
         markAsChanged("CODPARCTRANSP", codParctransp);
-        this.codParctransp = codParctransp;
    }
 
    public Timestamp getDhEntrada() {
-        return dhEntrada;
+        return this.getVo().asTimestamp("DHENTRADA");
    }
 
    public void setDhEntrada(Timestamp dhEntrada) {
         markAsChanged("DHENTRADA", dhEntrada);
-        this.dhEntrada = dhEntrada;
    }
 
    public Timestamp getDhPrevista() {
-        return dhPrevista;
+        return this.getVo().asTimestamp("DHPREVISTA");
    }
 
    public void setDhPrevista(Timestamp dhPrevista) {
         markAsChanged("DHPREVISTA", dhPrevista);
-        this.dhPrevista = dhPrevista;
    }
 
    public Timestamp getDhSaida() {
-        return dhSaida;
+        return this.getVo().asTimestamp("DHSAIDA");
    }
 
    public void setDhSaida(Timestamp dhSaida) {
         markAsChanged("DHSAIDA", dhSaida);
-        this.dhSaida = dhSaida;
    }
 
    public String getMotivo() {
-        return motivo;
+        return this.getVo().asString("MOTIVO");
    }
 
    public void setMotivo(String motivo) {
         markAsChanged("MOTIVO", motivo);
-        this.motivo = motivo;
    }
 
    public BigDecimal getNuAgenda() {
-        return nuAgenda;
+        return this.getVo().asBigDecimal("NUAGENDA");
    }
 
    public void setNuAgenda(BigDecimal nuAgenda) {
         markAsChanged("NUAGENDA", nuAgenda);
-        this.nuAgenda = nuAgenda;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class AgendaWMS extends AbstractSankhyaEntity<AgendaWMS> {
    @Override
    public AgendaWMS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codDoca = vo.asBigDecimal("CODDOCA");
-        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
-        this.dhEntrada = vo.asTimestamp("DHENTRADA");
-        this.dhPrevista = vo.asTimestamp("DHPREVISTA");
-        this.dhSaida = vo.asTimestamp("DHSAIDA");
-        this.motivo = vo.asString("MOTIVO");
-        this.nuAgenda = vo.asBigDecimal("NUAGENDA");
         return this;
    }
 }

@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
-   private String tipMed;
-   private BigDecimal qtdMed;
-   private BigDecimal seqMed;
-   private BigDecimal nuNota;
-   private String unMed;
-
    public String getTipMed() {
-        return tipMed;
+        return this.getVo().asString("TIPMED");
    }
 
    public void setTipMed(String tipMed) {
         markAsChanged("TIPMED", tipMed);
-        this.tipMed = tipMed;
    }
 
    public BigDecimal getQtdMed() {
-        return qtdMed;
+        return this.getVo().asBigDecimal("QTDMED");
    }
 
    public void setQtdMed(BigDecimal qtdMed) {
         markAsChanged("QTDMED", qtdMed);
-        this.qtdMed = qtdMed;
    }
 
    public BigDecimal getSeqMed() {
-        return seqMed;
+        return this.getVo().asBigDecimal("SEQMED");
    }
 
    public void setSeqMed(BigDecimal seqMed) {
         markAsChanged("SEQMED", seqMed);
-        this.seqMed = seqMed;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getUnMed() {
-        return unMed;
+        return this.getVo().asString("UNMED");
    }
 
    public void setUnMed(String unMed) {
         markAsChanged("UNMED", unMed);
-        this.unMed = unMed;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class UnidadeMedida extends AbstractSankhyaEntity<UnidadeMedida> {
    @Override
    public UnidadeMedida fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.tipMed = vo.asString("TIPMED");
-        this.qtdMed = vo.asBigDecimal("QTDMED");
-        this.seqMed = vo.asBigDecimal("SEQMED");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.unMed = vo.asString("UNMED");
         return this;
    }
 }

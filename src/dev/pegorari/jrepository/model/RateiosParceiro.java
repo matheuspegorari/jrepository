@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
-   private BigDecimal nuFin;
-   private BigDecimal nuRateio;
-   private BigDecimal recDesp;
-   private String tipo;
-
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public BigDecimal getNuRateio() {
-        return nuRateio;
+        return this.getVo().asBigDecimal("NURATEIO");
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
         markAsChanged("NURATEIO", nuRateio);
-        this.nuRateio = nuRateio;
    }
 
    public BigDecimal getRecDesp() {
-        return recDesp;
+        return this.getVo().asBigDecimal("RECDESP");
    }
 
    public void setRecDesp(BigDecimal recDesp) {
         markAsChanged("RECDESP", recDesp);
-        this.recDesp = recDesp;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class RateiosParceiro extends AbstractSankhyaEntity<RateiosParceiro> {
    @Override
    public RateiosParceiro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.nuRateio = vo.asBigDecimal("NURATEIO");
-        this.recDesp = vo.asBigDecimal("RECDESP");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

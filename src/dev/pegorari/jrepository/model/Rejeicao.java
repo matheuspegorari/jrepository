@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
-   private BigDecimal codigo;
-   private String codOcorrencia;
-   private String codRej;
-   private String descrRej;
-   private BigDecimal sequencia;
-
    public BigDecimal getCodigo() {
-        return codigo;
+        return this.getVo().asBigDecimal("CODIGO");
    }
 
    public void setCodigo(BigDecimal codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public String getCodOcorrencia() {
-        return codOcorrencia;
+        return this.getVo().asString("CODOCORRENCIA");
    }
 
    public void setCodOcorrencia(String codOcorrencia) {
         markAsChanged("CODOCORRENCIA", codOcorrencia);
-        this.codOcorrencia = codOcorrencia;
    }
 
    public String getCodRej() {
-        return codRej;
+        return this.getVo().asString("CODREJ");
    }
 
    public void setCodRej(String codRej) {
         markAsChanged("CODREJ", codRej);
-        this.codRej = codRej;
    }
 
    public String getDescrRej() {
-        return descrRej;
+        return this.getVo().asString("DESCRREJ");
    }
 
    public void setDescrRej(String descrRej) {
         markAsChanged("DESCRREJ", descrRej);
-        this.descrRej = descrRej;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class Rejeicao extends AbstractSankhyaEntity<Rejeicao> {
    @Override
    public Rejeicao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codigo = vo.asBigDecimal("CODIGO");
-        this.codOcorrencia = vo.asString("CODOCORRENCIA");
-        this.codRej = vo.asString("CODREJ");
-        this.descrRej = vo.asString("DESCRREJ");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

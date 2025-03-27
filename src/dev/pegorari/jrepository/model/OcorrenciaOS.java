@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
-   private String cobrar;
-   private BigDecimal codOcorOs;
-   private String descOcorOs;
-   private String previsto;
-
    public String getCobrar() {
-        return cobrar;
+        return this.getVo().asString("COBRAR");
    }
 
    public void setCobrar(String cobrar) {
         markAsChanged("COBRAR", cobrar);
-        this.cobrar = cobrar;
    }
 
    public BigDecimal getCodOcorOs() {
-        return codOcorOs;
+        return this.getVo().asBigDecimal("CODOCOROS");
    }
 
    public void setCodOcorOs(BigDecimal codOcorOs) {
         markAsChanged("CODOCOROS", codOcorOs);
-        this.codOcorOs = codOcorOs;
    }
 
    public String getDescOcorOs() {
-        return descOcorOs;
+        return this.getVo().asString("DESCROCOROS");
    }
 
    public void setDescOcorOs(String descOcorOs) {
         markAsChanged("DESCROCOROS", descOcorOs);
-        this.descOcorOs = descOcorOs;
    }
 
    public String getPrevisto() {
-        return previsto;
+        return this.getVo().asString("PREVISTO");
    }
 
    public void setPrevisto(String previsto) {
         markAsChanged("PREVISTO", previsto);
-        this.previsto = previsto;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class OcorrenciaOS extends AbstractSankhyaEntity<OcorrenciaOS> {
    @Override
    public OcorrenciaOS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.cobrar = vo.asString("COBRAR");
-        this.codOcorOs = vo.asBigDecimal("CODOCOROS");
-        this.descOcorOs = vo.asString("DESCROCOROS");
-        this.previsto = vo.asString("PREVISTO");
         return this;
    }
 }

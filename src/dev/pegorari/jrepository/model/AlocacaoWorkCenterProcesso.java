@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWorkCenterProcesso> {
-   private BigDecimal codCwc;
-   private BigDecimal idAwc;
-   private BigDecimal idProc;
-   private String tipAlocacao;
-   private String descricao;
-   private BigDecimal codWcp;
-
    public BigDecimal getCodCwc() {
-        return codCwc;
+        return this.getVo().asBigDecimal("CODCWC");
    }
 
    public void setCodCwc(BigDecimal codCwc) {
         markAsChanged("CODCWC", codCwc);
-        this.codCwc = codCwc;
    }
 
    public BigDecimal getIdAwc() {
-        return idAwc;
+        return this.getVo().asBigDecimal("IDAWC");
    }
 
    public void setIdAwc(BigDecimal idAwc) {
         markAsChanged("IDAWC", idAwc);
-        this.idAwc = idAwc;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public String getTipAlocacao() {
-        return tipAlocacao;
+        return this.getVo().asString("TIPALOCACAO");
    }
 
    public void setTipAlocacao(String tipAlocacao) {
         markAsChanged("TIPALOCACAO", tipAlocacao);
-        this.tipAlocacao = tipAlocacao;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class AlocacaoWorkCenterProcesso extends AbstractSankhyaEntity<AlocacaoWo
    @Override
    public AlocacaoWorkCenterProcesso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCwc = vo.asBigDecimal("CODCWC");
-        this.idAwc = vo.asBigDecimal("IDAWC");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.tipAlocacao = vo.asString("TIPALOCACAO");
-        this.descricao = vo.asString("DESCRICAO");
-        this.codWcp = vo.asBigDecimal("CODWCP");
         return this;
    }
 }

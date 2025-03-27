@@ -6,225 +6,180 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImportacao> {
-   private BigDecimal codUfDesemb;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private BigDecimal docImp;
-   private Timestamp dtDesembaraco;
-   private Timestamp dtPagCofins;
-   private Timestamp dtPagPis;
-   private Timestamp dtRegistro;
-   private String locDesembaraco;
-   private String nroDocumento;
-   private String numAcDraw;
-   private BigDecimal nuNota;
-   private BigDecimal seqDi;
-   private BigDecimal sequencia;
-   private BigDecimal vlrCofinsImp;
-   private BigDecimal vlrPisImp;
-   private String codExportador;
-   private String ufAdquirente;
-   private String cnpjAdquirente;
-   private String viaTransp;
-   private String tipProcImp;
-   private BigDecimal vlrAfrmm;
-
    public BigDecimal getCodUfDesemb() {
-        return codUfDesemb;
+        return this.getVo().asBigDecimal("CODUFDESEMB");
    }
 
    public void setCodUfDesemb(BigDecimal codUfDesemb) {
         markAsChanged("CODUFDESEMB", codUfDesemb);
-        this.codUfDesemb = codUfDesemb;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getDocImp() {
-        return docImp;
+        return this.getVo().asBigDecimal("DOCIMP");
    }
 
    public void setDocImp(BigDecimal docImp) {
         markAsChanged("DOCIMP", docImp);
-        this.docImp = docImp;
    }
 
    public Timestamp getDtDesembaraco() {
-        return dtDesembaraco;
+        return this.getVo().asTimestamp("DTDESEMBARACO");
    }
 
    public void setDtDesembaraco(Timestamp dtDesembaraco) {
         markAsChanged("DTDESEMBARACO", dtDesembaraco);
-        this.dtDesembaraco = dtDesembaraco;
    }
 
    public Timestamp getDtPagCofins() {
-        return dtPagCofins;
+        return this.getVo().asTimestamp("DTPAGCOFINS");
    }
 
    public void setDtPagCofins(Timestamp dtPagCofins) {
         markAsChanged("DTPAGCOFINS", dtPagCofins);
-        this.dtPagCofins = dtPagCofins;
    }
 
    public Timestamp getDtPagPis() {
-        return dtPagPis;
+        return this.getVo().asTimestamp("DTPAGPIS");
    }
 
    public void setDtPagPis(Timestamp dtPagPis) {
         markAsChanged("DTPAGPIS", dtPagPis);
-        this.dtPagPis = dtPagPis;
    }
 
    public Timestamp getDtRegistro() {
-        return dtRegistro;
+        return this.getVo().asTimestamp("DTREGISTRO");
    }
 
    public void setDtRegistro(Timestamp dtRegistro) {
         markAsChanged("DTREGISTRO", dtRegistro);
-        this.dtRegistro = dtRegistro;
    }
 
    public String getLocDesembaraco() {
-        return locDesembaraco;
+        return this.getVo().asString("LOCDESEMBARACO");
    }
 
    public void setLocDesembaraco(String locDesembaraco) {
         markAsChanged("LOCDESEMBARACO", locDesembaraco);
-        this.locDesembaraco = locDesembaraco;
    }
 
    public String getNroDocumento() {
-        return nroDocumento;
+        return this.getVo().asString("NRODOCUMENTO");
    }
 
    public void setNroDocumento(String nroDocumento) {
         markAsChanged("NRODOCUMENTO", nroDocumento);
-        this.nroDocumento = nroDocumento;
    }
 
    public String getNumAcDraw() {
-        return numAcDraw;
+        return this.getVo().asString("NUMACDRAW");
    }
 
    public void setNumAcDraw(String numAcDraw) {
         markAsChanged("NUMACDRAW", numAcDraw);
-        this.numAcDraw = numAcDraw;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getSeqDi() {
-        return seqDi;
+        return this.getVo().asBigDecimal("SEQDI");
    }
 
    public void setSeqDi(BigDecimal seqDi) {
         markAsChanged("SEQDI", seqDi);
-        this.seqDi = seqDi;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getVlrCofinsImp() {
-        return vlrCofinsImp;
+        return this.getVo().asBigDecimal("VLRCOFINSIMP");
    }
 
    public void setVlrCofinsImp(BigDecimal vlrCofinsImp) {
         markAsChanged("VLRCOFINSIMP", vlrCofinsImp);
-        this.vlrCofinsImp = vlrCofinsImp;
    }
 
    public BigDecimal getVlrPisImp() {
-        return vlrPisImp;
+        return this.getVo().asBigDecimal("VLRPISIMP");
    }
 
    public void setVlrPisImp(BigDecimal vlrPisImp) {
         markAsChanged("VLRPISIMP", vlrPisImp);
-        this.vlrPisImp = vlrPisImp;
    }
 
    public String getCodExportador() {
-        return codExportador;
+        return this.getVo().asString("CODEXPORTADOR");
    }
 
    public void setCodExportador(String codExportador) {
         markAsChanged("CODEXPORTADOR", codExportador);
-        this.codExportador = codExportador;
    }
 
    public String getUfAdquirente() {
-        return ufAdquirente;
+        return this.getVo().asString("UFADQUIRENTE");
    }
 
    public void setUfAdquirente(String ufAdquirente) {
         markAsChanged("UFADQUIRENTE", ufAdquirente);
-        this.ufAdquirente = ufAdquirente;
    }
 
    public String getCnpjAdquirente() {
-        return cnpjAdquirente;
+        return this.getVo().asString("CNPJADQUIRENTE");
    }
 
    public void setCnpjAdquirente(String cnpjAdquirente) {
         markAsChanged("CNPJADQUIRENTE", cnpjAdquirente);
-        this.cnpjAdquirente = cnpjAdquirente;
    }
 
    public String getViaTransp() {
-        return viaTransp;
+        return this.getVo().asString("VIATRANSP");
    }
 
    public void setViaTransp(String viaTransp) {
         markAsChanged("VIATRANSP", viaTransp);
-        this.viaTransp = viaTransp;
    }
 
    public String getTipProcImp() {
-        return tipProcImp;
+        return this.getVo().asString("TIPPROCIMP");
    }
 
    public void setTipProcImp(String tipProcImp) {
         markAsChanged("TIPPROCIMP", tipProcImp);
-        this.tipProcImp = tipProcImp;
    }
 
    public BigDecimal getVlrAfrmm() {
-        return vlrAfrmm;
+        return this.getVo().asBigDecimal("VLRAFRMM");
    }
 
    public void setVlrAfrmm(BigDecimal vlrAfrmm) {
         markAsChanged("VLRAFRMM", vlrAfrmm);
-        this.vlrAfrmm = vlrAfrmm;
    }
 
    @Override
@@ -240,28 +195,6 @@ public class DeclaracaoImportacao extends AbstractSankhyaEntity<DeclaracaoImport
    @Override
    public DeclaracaoImportacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUfDesemb = vo.asBigDecimal("CODUFDESEMB");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.docImp = vo.asBigDecimal("DOCIMP");
-        this.dtDesembaraco = vo.asTimestamp("DTDESEMBARACO");
-        this.dtPagCofins = vo.asTimestamp("DTPAGCOFINS");
-        this.dtPagPis = vo.asTimestamp("DTPAGPIS");
-        this.dtRegistro = vo.asTimestamp("DTREGISTRO");
-        this.locDesembaraco = vo.asString("LOCDESEMBARACO");
-        this.nroDocumento = vo.asString("NRODOCUMENTO");
-        this.numAcDraw = vo.asString("NUMACDRAW");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.seqDi = vo.asBigDecimal("SEQDI");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.vlrCofinsImp = vo.asBigDecimal("VLRCOFINSIMP");
-        this.vlrPisImp = vo.asBigDecimal("VLRPISIMP");
-        this.codExportador = vo.asString("CODEXPORTADOR");
-        this.ufAdquirente = vo.asString("UFADQUIRENTE");
-        this.cnpjAdquirente = vo.asString("CNPJADQUIRENTE");
-        this.viaTransp = vo.asString("VIATRANSP");
-        this.tipProcImp = vo.asString("TIPPROCIMP");
-        this.vlrAfrmm = vo.asBigDecimal("VLRAFRMM");
         return this;
    }
 }

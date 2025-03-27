@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
-   private BigDecimal nuNota;
-   private BigDecimal nuSeparacao;
-   private BigDecimal nuTarefacan;
-   private String statusNota;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuSeparacao() {
-        return nuSeparacao;
+        return this.getVo().asBigDecimal("NUSEPARACAO");
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
         markAsChanged("NUSEPARACAO", nuSeparacao);
-        this.nuSeparacao = nuSeparacao;
    }
 
    public BigDecimal getNuTarefacan() {
-        return nuTarefacan;
+        return this.getVo().asBigDecimal("NUTAREFACAN");
    }
 
    public void setNuTarefacan(BigDecimal nuTarefacan) {
         markAsChanged("NUTAREFACAN", nuTarefacan);
-        this.nuTarefacan = nuTarefacan;
    }
 
    public String getStatusNota() {
-        return statusNota;
+        return this.getVo().asString("STATUSNOTA");
    }
 
    public void setStatusNota(String statusNota) {
         markAsChanged("STATUSNOTA", statusNota);
-        this.statusNota = statusNota;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class NotaSeparacao extends AbstractSankhyaEntity<NotaSeparacao> {
    @Override
    public NotaSeparacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.nuTarefacan = vo.asBigDecimal("NUTAREFACAN");
-        this.statusNota = vo.asString("STATUSNOTA");
         return this;
    }
 }

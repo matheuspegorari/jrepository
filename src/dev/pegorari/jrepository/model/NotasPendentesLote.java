@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote> {
-   private Timestamp dhInclusao;
-   private Timestamp dhUltTenta;
-   private BigDecimal nuNota;
-   private BigDecimal qtdeEnvio;
-
    public Timestamp getDhInclusao() {
-        return dhInclusao;
+        return this.getVo().asTimestamp("DHINCLUSAO");
    }
 
    public void setDhInclusao(Timestamp dhInclusao) {
         markAsChanged("DHINCLUSAO", dhInclusao);
-        this.dhInclusao = dhInclusao;
    }
 
    public Timestamp getDhUltTenta() {
-        return dhUltTenta;
+        return this.getVo().asTimestamp("DHULTTENTA");
    }
 
    public void setDhUltTenta(Timestamp dhUltTenta) {
         markAsChanged("DHULTTENTA", dhUltTenta);
-        this.dhUltTenta = dhUltTenta;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getQtdeEnvio() {
-        return qtdeEnvio;
+        return this.getVo().asBigDecimal("QTDENVIO");
    }
 
    public void setQtdeEnvio(BigDecimal qtdeEnvio) {
         markAsChanged("QTDENVIO", qtdeEnvio);
-        this.qtdeEnvio = qtdeEnvio;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class NotasPendentesLote extends AbstractSankhyaEntity<NotasPendentesLote
    @Override
    public NotasPendentesLote fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dhInclusao = vo.asTimestamp("DHINCLUSAO");
-        this.dhUltTenta = vo.asTimestamp("DHULTTENTA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtdeEnvio = vo.asBigDecimal("QTDENVIO");
         return this;
    }
 }

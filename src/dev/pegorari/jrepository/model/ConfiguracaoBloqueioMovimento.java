@@ -6,225 +6,180 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<ConfiguracaoBloqueioMovimento> {
-   private String ativo;
-   private BigDecimal codEmp;
-   private BigDecimal codUsu;
-   private String descrBloqueio;
-   private Timestamp dhAlter;
-   private BigDecimal diaFechaMovBco;
-   private BigDecimal diaFechaMovCalcCus;
-   private BigDecimal diaFechaMovCtb;
-   private BigDecimal diaFechaMovDesp;
-   private BigDecimal diaFechaMovEnt;
-   private BigDecimal diaFechaMovFis;
-   private BigDecimal diaFechaMovRec;
-   private BigDecimal diaFechaMovSai;
-   private String fechaMovBco;
-   private String fechaMovCalcCus;
-   private String fechaMovCtb;
-   private String fechaMovDesp;
-   private String fechaMovEnt;
-   private String fechaMovFis;
-   private String fechaMovRec;
-   private String fechaMovSai;
-   private BigDecimal nuConfBloqueio;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescrBloqueio() {
-        return descrBloqueio;
+        return this.getVo().asString("DESCRBLOQUEIO");
    }
 
    public void setDescrBloqueio(String descrBloqueio) {
         markAsChanged("DESCRBLOQUEIO", descrBloqueio);
-        this.descrBloqueio = descrBloqueio;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public BigDecimal getDiaFechaMovBco() {
-        return diaFechaMovBco;
+        return this.getVo().asBigDecimal("DIAFECHAMOVBCO");
    }
 
    public void setDiaFechaMovBco(BigDecimal diaFechaMovBco) {
         markAsChanged("DIAFECHAMOVBCO", diaFechaMovBco);
-        this.diaFechaMovBco = diaFechaMovBco;
    }
 
    public BigDecimal getDiaFechaMovCalcCus() {
-        return diaFechaMovCalcCus;
+        return this.getVo().asBigDecimal("DIAFECHAMOVCALCCUS");
    }
 
    public void setDiaFechaMovCalcCus(BigDecimal diaFechaMovCalcCus) {
         markAsChanged("DIAFECHAMOVCALCCUS", diaFechaMovCalcCus);
-        this.diaFechaMovCalcCus = diaFechaMovCalcCus;
    }
 
    public BigDecimal getDiaFechaMovCtb() {
-        return diaFechaMovCtb;
+        return this.getVo().asBigDecimal("DIAFECHAMOVCTB");
    }
 
    public void setDiaFechaMovCtb(BigDecimal diaFechaMovCtb) {
         markAsChanged("DIAFECHAMOVCTB", diaFechaMovCtb);
-        this.diaFechaMovCtb = diaFechaMovCtb;
    }
 
    public BigDecimal getDiaFechaMovDesp() {
-        return diaFechaMovDesp;
+        return this.getVo().asBigDecimal("DIAFECHAMOVDESP");
    }
 
    public void setDiaFechaMovDesp(BigDecimal diaFechaMovDesp) {
         markAsChanged("DIAFECHAMOVDESP", diaFechaMovDesp);
-        this.diaFechaMovDesp = diaFechaMovDesp;
    }
 
    public BigDecimal getDiaFechaMovEnt() {
-        return diaFechaMovEnt;
+        return this.getVo().asBigDecimal("DIAFECHAMOVENT");
    }
 
    public void setDiaFechaMovEnt(BigDecimal diaFechaMovEnt) {
         markAsChanged("DIAFECHAMOVENT", diaFechaMovEnt);
-        this.diaFechaMovEnt = diaFechaMovEnt;
    }
 
    public BigDecimal getDiaFechaMovFis() {
-        return diaFechaMovFis;
+        return this.getVo().asBigDecimal("DIAFECHAMOVFIS");
    }
 
    public void setDiaFechaMovFis(BigDecimal diaFechaMovFis) {
         markAsChanged("DIAFECHAMOVFIS", diaFechaMovFis);
-        this.diaFechaMovFis = diaFechaMovFis;
    }
 
    public BigDecimal getDiaFechaMovRec() {
-        return diaFechaMovRec;
+        return this.getVo().asBigDecimal("DIAFECHAMOVREC");
    }
 
    public void setDiaFechaMovRec(BigDecimal diaFechaMovRec) {
         markAsChanged("DIAFECHAMOVREC", diaFechaMovRec);
-        this.diaFechaMovRec = diaFechaMovRec;
    }
 
    public BigDecimal getDiaFechaMovSai() {
-        return diaFechaMovSai;
+        return this.getVo().asBigDecimal("DIAFECHAMOVSAI");
    }
 
    public void setDiaFechaMovSai(BigDecimal diaFechaMovSai) {
         markAsChanged("DIAFECHAMOVSAI", diaFechaMovSai);
-        this.diaFechaMovSai = diaFechaMovSai;
    }
 
    public String getFechaMovBco() {
-        return fechaMovBco;
+        return this.getVo().asString("FECHAMOVBCO");
    }
 
    public void setFechaMovBco(String fechaMovBco) {
         markAsChanged("FECHAMOVBCO", fechaMovBco);
-        this.fechaMovBco = fechaMovBco;
    }
 
    public String getFechaMovCalcCus() {
-        return fechaMovCalcCus;
+        return this.getVo().asString("FECHAMOVCALCCUS");
    }
 
    public void setFechaMovCalcCus(String fechaMovCalcCus) {
         markAsChanged("FECHAMOVCALCCUS", fechaMovCalcCus);
-        this.fechaMovCalcCus = fechaMovCalcCus;
    }
 
    public String getFechaMovCtb() {
-        return fechaMovCtb;
+        return this.getVo().asString("FECHAMOVCTB");
    }
 
    public void setFechaMovCtb(String fechaMovCtb) {
         markAsChanged("FECHAMOVCTB", fechaMovCtb);
-        this.fechaMovCtb = fechaMovCtb;
    }
 
    public String getFechaMovDesp() {
-        return fechaMovDesp;
+        return this.getVo().asString("FECHAMOVDESP");
    }
 
    public void setFechaMovDesp(String fechaMovDesp) {
         markAsChanged("FECHAMOVDESP", fechaMovDesp);
-        this.fechaMovDesp = fechaMovDesp;
    }
 
    public String getFechaMovEnt() {
-        return fechaMovEnt;
+        return this.getVo().asString("FECHAMOVENT");
    }
 
    public void setFechaMovEnt(String fechaMovEnt) {
         markAsChanged("FECHAMOVENT", fechaMovEnt);
-        this.fechaMovEnt = fechaMovEnt;
    }
 
    public String getFechaMovFis() {
-        return fechaMovFis;
+        return this.getVo().asString("FECHAMOVFIS");
    }
 
    public void setFechaMovFis(String fechaMovFis) {
         markAsChanged("FECHAMOVFIS", fechaMovFis);
-        this.fechaMovFis = fechaMovFis;
    }
 
    public String getFechaMovRec() {
-        return fechaMovRec;
+        return this.getVo().asString("FECHAMOVREC");
    }
 
    public void setFechaMovRec(String fechaMovRec) {
         markAsChanged("FECHAMOVREC", fechaMovRec);
-        this.fechaMovRec = fechaMovRec;
    }
 
    public String getFechaMovSai() {
-        return fechaMovSai;
+        return this.getVo().asString("FECHAMOVSAI");
    }
 
    public void setFechaMovSai(String fechaMovSai) {
         markAsChanged("FECHAMOVSAI", fechaMovSai);
-        this.fechaMovSai = fechaMovSai;
    }
 
    public BigDecimal getNuConfBloqueio() {
-        return nuConfBloqueio;
+        return this.getVo().asBigDecimal("NUCONFBLOQUEIO");
    }
 
    public void setNuConfBloqueio(BigDecimal nuConfBloqueio) {
         markAsChanged("NUCONFBLOQUEIO", nuConfBloqueio);
-        this.nuConfBloqueio = nuConfBloqueio;
    }
 
    @Override
@@ -240,28 +195,6 @@ public class ConfiguracaoBloqueioMovimento extends AbstractSankhyaEntity<Configu
    @Override
    public ConfiguracaoBloqueioMovimento fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descrBloqueio = vo.asString("DESCRBLOQUEIO");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.diaFechaMovBco = vo.asBigDecimal("DIAFECHAMOVBCO");
-        this.diaFechaMovCalcCus = vo.asBigDecimal("DIAFECHAMOVCALCCUS");
-        this.diaFechaMovCtb = vo.asBigDecimal("DIAFECHAMOVCTB");
-        this.diaFechaMovDesp = vo.asBigDecimal("DIAFECHAMOVDESP");
-        this.diaFechaMovEnt = vo.asBigDecimal("DIAFECHAMOVENT");
-        this.diaFechaMovFis = vo.asBigDecimal("DIAFECHAMOVFIS");
-        this.diaFechaMovRec = vo.asBigDecimal("DIAFECHAMOVREC");
-        this.diaFechaMovSai = vo.asBigDecimal("DIAFECHAMOVSAI");
-        this.fechaMovBco = vo.asString("FECHAMOVBCO");
-        this.fechaMovCalcCus = vo.asString("FECHAMOVCALCCUS");
-        this.fechaMovCtb = vo.asString("FECHAMOVCTB");
-        this.fechaMovDesp = vo.asString("FECHAMOVDESP");
-        this.fechaMovEnt = vo.asString("FECHAMOVENT");
-        this.fechaMovFis = vo.asString("FECHAMOVFIS");
-        this.fechaMovRec = vo.asString("FECHAMOVREC");
-        this.fechaMovSai = vo.asString("FECHAMOVSAI");
-        this.nuConfBloqueio = vo.asBigDecimal("NUCONFBLOQUEIO");
         return this;
    }
 }

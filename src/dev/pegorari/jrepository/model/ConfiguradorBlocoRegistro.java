@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<ConfiguradorBlocoRegistro> {
-   private String arquivosKw;
-   private BigDecimal codEmp;
-   private String bloco;
-   private String tipo;
-   private String cmdSql;
-   private BigDecimal registro;
-   private String codigo;
-   private String permVlrZerado;
-   private String ativo;
-   private BigDecimal valor;
-   private BigDecimal codUsu;
-   private String tabela;
-   private Timestamp dtAlter;
-
    public String getArquivosKw() {
-        return arquivosKw;
+        return this.getVo().asString("ARQUIVOSKW");
    }
 
    public void setArquivosKw(String arquivosKw) {
         markAsChanged("ARQUIVOSKW", arquivosKw);
-        this.arquivosKw = arquivosKw;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getBloco() {
-        return bloco;
+        return this.getVo().asString("BLOCO");
    }
 
    public void setBloco(String bloco) {
         markAsChanged("BLOCO", bloco);
-        this.bloco = bloco;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public String getCmdSql() {
-        return cmdSql;
+        return this.getVo().asString("CMDSQL");
    }
 
    public void setCmdSql(String cmdSql) {
         markAsChanged("CMDSQL", cmdSql);
-        this.cmdSql = cmdSql;
    }
 
    public BigDecimal getRegistro() {
-        return registro;
+        return this.getVo().asBigDecimal("REGISTRO");
    }
 
    public void setRegistro(BigDecimal registro) {
         markAsChanged("REGISTRO", registro);
-        this.registro = registro;
    }
 
    public String getCodigo() {
-        return codigo;
+        return this.getVo().asString("CODIGO");
    }
 
    public void setCodigo(String codigo) {
         markAsChanged("CODIGO", codigo);
-        this.codigo = codigo;
    }
 
    public String getPermVlrZerado() {
-        return permVlrZerado;
+        return this.getVo().asString("PERMVLRZERADO");
    }
 
    public void setPermVlrZerado(String permVlrZerado) {
         markAsChanged("PERMVLRZERADO", permVlrZerado);
-        this.permVlrZerado = permVlrZerado;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getTabela() {
-        return tabela;
+        return this.getVo().asString("TABELA");
    }
 
    public void setTabela(String tabela) {
         markAsChanged("TABELA", tabela);
-        this.tabela = tabela;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class ConfiguradorBlocoRegistro extends AbstractSankhyaEntity<Configurado
    @Override
    public ConfiguradorBlocoRegistro fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arquivosKw = vo.asString("ARQUIVOSKW");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.bloco = vo.asString("BLOCO");
-        this.tipo = vo.asString("TIPO");
-        this.cmdSql = vo.asString("CMDSQL");
-        this.registro = vo.asBigDecimal("REGISTRO");
-        this.codigo = vo.asString("CODIGO");
-        this.permVlrZerado = vo.asString("PERMVLRZERADO");
-        this.ativo = vo.asString("ATIVO");
-        this.valor = vo.asBigDecimal("VALOR");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.tabela = vo.asString("TABELA");
-        this.dtAlter = vo.asTimestamp("DTALTER");
         return this;
    }
 }

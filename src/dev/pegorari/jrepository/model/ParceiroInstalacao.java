@@ -6,195 +6,156 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao> {
-   private BigDecimal codParc;
-   private BigDecimal codProj;
-   private String contato;
-   private Timestamp dtInst;
-   private Timestamp dtPrevInst;
-   private BigDecimal grupo;
-   private BigDecimal numContrato;
-   private String obs1;
-   private BigDecimal sequencia;
-   private String telefone;
-   private BigDecimal cgcCpf;
-   private String cidadeParc;
-   private String complementoParc;
-   private String enderecoParc;
-   private String estadoParc;
-   private String numeroParc;
-   private String telefoneParc;
-   private String tipoParc;
-   private String cepParc;
-
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProj() {
-        return codProj;
+        return this.getVo().asBigDecimal("CODPROJ");
    }
 
    public void setCodProj(BigDecimal codProj) {
         markAsChanged("CODPROJ", codProj);
-        this.codProj = codProj;
    }
 
    public String getContato() {
-        return contato;
+        return this.getVo().asString("CONTATO");
    }
 
    public void setContato(String contato) {
         markAsChanged("CONTATO", contato);
-        this.contato = contato;
    }
 
    public Timestamp getDtInst() {
-        return dtInst;
+        return this.getVo().asTimestamp("DTINST");
    }
 
    public void setDtInst(Timestamp dtInst) {
         markAsChanged("DTINST", dtInst);
-        this.dtInst = dtInst;
    }
 
    public Timestamp getDtPrevInst() {
-        return dtPrevInst;
+        return this.getVo().asTimestamp("DTPREVINST");
    }
 
    public void setDtPrevInst(Timestamp dtPrevInst) {
         markAsChanged("DTPREVINST", dtPrevInst);
-        this.dtPrevInst = dtPrevInst;
    }
 
    public BigDecimal getGrupo() {
-        return grupo;
+        return this.getVo().asBigDecimal("GRUPO");
    }
 
    public void setGrupo(BigDecimal grupo) {
         markAsChanged("GRUPO", grupo);
-        this.grupo = grupo;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    public String getObs1() {
-        return obs1;
+        return this.getVo().asString("OBS1");
    }
 
    public void setObs1(String obs1) {
         markAsChanged("OBS1", obs1);
-        this.obs1 = obs1;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTelefone() {
-        return telefone;
+        return this.getVo().asString("TELEFONE");
    }
 
    public void setTelefone(String telefone) {
         markAsChanged("TELEFONE", telefone);
-        this.telefone = telefone;
    }
 
    public BigDecimal getCgcCpf() {
-        return cgcCpf;
+        return this.getVo().asBigDecimal("CGC_CPF");
    }
 
    public void setCgcCpf(BigDecimal cgcCpf) {
         markAsChanged("CGC_CPF", cgcCpf);
-        this.cgcCpf = cgcCpf;
    }
 
    public String getCidadeParc() {
-        return cidadeParc;
+        return this.getVo().asString("CIDADE_PARC");
    }
 
    public void setCidadeParc(String cidadeParc) {
         markAsChanged("CIDADE_PARC", cidadeParc);
-        this.cidadeParc = cidadeParc;
    }
 
    public String getComplementoParc() {
-        return complementoParc;
+        return this.getVo().asString("COMPLEMENTO_PARC");
    }
 
    public void setComplementoParc(String complementoParc) {
         markAsChanged("COMPLEMENTO_PARC", complementoParc);
-        this.complementoParc = complementoParc;
    }
 
    public String getEnderecoParc() {
-        return enderecoParc;
+        return this.getVo().asString("ENDERECO_PARC");
    }
 
    public void setEnderecoParc(String enderecoParc) {
         markAsChanged("ENDERECO_PARC", enderecoParc);
-        this.enderecoParc = enderecoParc;
    }
 
    public String getEstadoParc() {
-        return estadoParc;
+        return this.getVo().asString("ESTADO_PARC");
    }
 
    public void setEstadoParc(String estadoParc) {
         markAsChanged("ESTADO_PARC", estadoParc);
-        this.estadoParc = estadoParc;
    }
 
    public String getNumeroParc() {
-        return numeroParc;
+        return this.getVo().asString("NUMERO_PARC");
    }
 
    public void setNumeroParc(String numeroParc) {
         markAsChanged("NUMERO_PARC", numeroParc);
-        this.numeroParc = numeroParc;
    }
 
    public String getTelefoneParc() {
-        return telefoneParc;
+        return this.getVo().asString("TELEFONE_PARC");
    }
 
    public void setTelefoneParc(String telefoneParc) {
         markAsChanged("TELEFONE_PARC", telefoneParc);
-        this.telefoneParc = telefoneParc;
    }
 
    public String getTipoParc() {
-        return tipoParc;
+        return this.getVo().asString("TIPO_PARC");
    }
 
    public void setTipoParc(String tipoParc) {
         markAsChanged("TIPO_PARC", tipoParc);
-        this.tipoParc = tipoParc;
    }
 
    public String getCepParc() {
-        return cepParc;
+        return this.getVo().asString("CEP_PARC");
    }
 
    public void setCepParc(String cepParc) {
         markAsChanged("CEP_PARC", cepParc);
-        this.cepParc = cepParc;
    }
 
    @Override
@@ -210,25 +171,6 @@ public class ParceiroInstalacao extends AbstractSankhyaEntity<ParceiroInstalacao
    @Override
    public ParceiroInstalacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProj = vo.asBigDecimal("CODPROJ");
-        this.contato = vo.asString("CONTATO");
-        this.dtInst = vo.asTimestamp("DTINST");
-        this.dtPrevInst = vo.asTimestamp("DTPREVINST");
-        this.grupo = vo.asBigDecimal("GRUPO");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
-        this.obs1 = vo.asString("OBS1");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.telefone = vo.asString("TELEFONE");
-        this.cgcCpf = vo.asBigDecimal("CGC_CPF");
-        this.cidadeParc = vo.asString("CIDADE_PARC");
-        this.complementoParc = vo.asString("COMPLEMENTO_PARC");
-        this.enderecoParc = vo.asString("ENDERECO_PARC");
-        this.estadoParc = vo.asString("ESTADO_PARC");
-        this.numeroParc = vo.asString("NUMERO_PARC");
-        this.telefoneParc = vo.asString("TELEFONE_PARC");
-        this.tipoParc = vo.asString("TIPO_PARC");
-        this.cepParc = vo.asString("CEP_PARC");
         return this;
    }
 }

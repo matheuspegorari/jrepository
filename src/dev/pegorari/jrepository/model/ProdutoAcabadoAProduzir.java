@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabadoAProduzir> {
-   private Timestamp dtVal;
-   private Timestamp dtFab;
-   private String referencia;
-   private BigDecimal codProdPa;
-   private String concluido;
-   private String controlePa;
-   private BigDecimal idIproc;
-   private String nroLote;
-   private BigDecimal qtdProduzir;
-   private BigDecimal saldoOp;
-   private BigDecimal qtdProduzirOriginal;
-
    public Timestamp getDtVal() {
-        return dtVal;
+        return this.getVo().asTimestamp("DTVAL");
    }
 
    public void setDtVal(Timestamp dtVal) {
         markAsChanged("DTVAL", dtVal);
-        this.dtVal = dtVal;
    }
 
    public Timestamp getDtFab() {
-        return dtFab;
+        return this.getVo().asTimestamp("DTFAB");
    }
 
    public void setDtFab(Timestamp dtFab) {
         markAsChanged("DTFAB", dtFab);
-        this.dtFab = dtFab;
    }
 
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getConcluido() {
-        return concluido;
+        return this.getVo().asString("CONCLUIDO");
    }
 
    public void setConcluido(String concluido) {
         markAsChanged("CONCLUIDO", concluido);
-        this.concluido = concluido;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public String getNroLote() {
-        return nroLote;
+        return this.getVo().asString("NROLOTE");
    }
 
    public void setNroLote(String nroLote) {
         markAsChanged("NROLOTE", nroLote);
-        this.nroLote = nroLote;
    }
 
    public BigDecimal getQtdProduzir() {
-        return qtdProduzir;
+        return this.getVo().asBigDecimal("QTDPRODUZIR");
    }
 
    public void setQtdProduzir(BigDecimal qtdProduzir) {
         markAsChanged("QTDPRODUZIR", qtdProduzir);
-        this.qtdProduzir = qtdProduzir;
    }
 
    public BigDecimal getSaldoOp() {
-        return saldoOp;
+        return this.getVo().asBigDecimal("SALDOOP");
    }
 
    public void setSaldoOp(BigDecimal saldoOp) {
         markAsChanged("SALDOOP", saldoOp);
-        this.saldoOp = saldoOp;
    }
 
    public BigDecimal getQtdProduzirOriginal() {
-        return qtdProduzirOriginal;
+        return this.getVo().asBigDecimal("QTDPRODUZIR_ORIGINAL");
    }
 
    public void setQtdProduzirOriginal(BigDecimal qtdProduzirOriginal) {
         markAsChanged("QTDPRODUZIR_ORIGINAL", qtdProduzirOriginal);
-        this.qtdProduzirOriginal = qtdProduzirOriginal;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class ProdutoAcabadoAProduzir extends AbstractSankhyaEntity<ProdutoAcabad
    @Override
    public ProdutoAcabadoAProduzir fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtVal = vo.asTimestamp("DTVAL");
-        this.dtFab = vo.asTimestamp("DTFAB");
-        this.referencia = vo.asString("REFERENCIA");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.concluido = vo.asString("CONCLUIDO");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.nroLote = vo.asString("NROLOTE");
-        this.qtdProduzir = vo.asBigDecimal("QTDPRODUZIR");
-        this.saldoOp = vo.asBigDecimal("SALDOOP");
-        this.qtdProduzirOriginal = vo.asBigDecimal("QTDPRODUZIR_ORIGINAL");
         return this;
    }
 }

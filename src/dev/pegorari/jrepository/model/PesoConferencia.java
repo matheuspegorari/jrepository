@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PesoConferencia extends AbstractSankhyaEntity<PesoConferencia> {
-   private BigDecimal codPcon;
-   private BigDecimal nuConf;
-   private BigDecimal pesoBruto;
-   private BigDecimal pesoLiquido;
-   private BigDecimal seqConf;
-
    public BigDecimal getCodPcon() {
-        return codPcon;
+        return this.getVo().asBigDecimal("CODPCON");
    }
 
    public void setCodPcon(BigDecimal codPcon) {
         markAsChanged("CODPCON", codPcon);
-        this.codPcon = codPcon;
    }
 
    public BigDecimal getNuConf() {
-        return nuConf;
+        return this.getVo().asBigDecimal("NUCONF");
    }
 
    public void setNuConf(BigDecimal nuConf) {
         markAsChanged("NUCONF", nuConf);
-        this.nuConf = nuConf;
    }
 
    public BigDecimal getPesoBruto() {
-        return pesoBruto;
+        return this.getVo().asBigDecimal("PESOBRUTO");
    }
 
    public void setPesoBruto(BigDecimal pesoBruto) {
         markAsChanged("PESOBRUTO", pesoBruto);
-        this.pesoBruto = pesoBruto;
    }
 
    public BigDecimal getPesoLiquido() {
-        return pesoLiquido;
+        return this.getVo().asBigDecimal("PESOLIQUIDO");
    }
 
    public void setPesoLiquido(BigDecimal pesoLiquido) {
         markAsChanged("PESOLIQUIDO", pesoLiquido);
-        this.pesoLiquido = pesoLiquido;
    }
 
    public BigDecimal getSeqConf() {
-        return seqConf;
+        return this.getVo().asBigDecimal("SEQCONF");
    }
 
    public void setSeqConf(BigDecimal seqConf) {
         markAsChanged("SEQCONF", seqConf);
-        this.seqConf = seqConf;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class PesoConferencia extends AbstractSankhyaEntity<PesoConferencia> {
    @Override
    public PesoConferencia fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPcon = vo.asBigDecimal("CODPCON");
-        this.nuConf = vo.asBigDecimal("NUCONF");
-        this.pesoBruto = vo.asBigDecimal("PESOBRUTO");
-        this.pesoLiquido = vo.asBigDecimal("PESOLIQUIDO");
-        this.seqConf = vo.asBigDecimal("SEQCONF");
         return this;
    }
 }

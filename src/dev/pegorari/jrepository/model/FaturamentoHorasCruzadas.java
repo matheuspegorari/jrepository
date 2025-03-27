@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoHorasCruzadas> {
-   private BigDecimal sequencia;
-   private BigDecimal nuNota;
-   private BigDecimal numOs;
-   private BigDecimal numItem;
-
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNumOs() {
-        return numOs;
+        return this.getVo().asBigDecimal("NUMOS");
    }
 
    public void setNumOs(BigDecimal numOs) {
         markAsChanged("NUMOS", numOs);
-        this.numOs = numOs;
    }
 
    public BigDecimal getNumItem() {
-        return numItem;
+        return this.getVo().asBigDecimal("NUMITEM");
    }
 
    public void setNumItem(BigDecimal numItem) {
         markAsChanged("NUMITEM", numItem);
-        this.numItem = numItem;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class FaturamentoHorasCruzadas extends AbstractSankhyaEntity<FaturamentoH
    @Override
    public FaturamentoHorasCruzadas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.numOs = vo.asBigDecimal("NUMOS");
-        this.numItem = vo.asBigDecimal("NUMITEM");
         return this;
    }
 }

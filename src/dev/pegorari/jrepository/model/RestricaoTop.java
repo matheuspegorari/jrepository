@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
-   private BigDecimal codColRest;
-   private BigDecimal codTipOper;
-   private String descricao;
-   private String restricao;
-   private String serie;
-   private String tipRest;
-
    public BigDecimal getCodColRest() {
-        return codColRest;
+        return this.getVo().asBigDecimal("CODCOLREST");
    }
 
    public void setCodColRest(BigDecimal codColRest) {
         markAsChanged("CODCOLREST", codColRest);
-        this.codColRest = codColRest;
    }
 
    public BigDecimal getCodTipOper() {
-        return codTipOper;
+        return this.getVo().asBigDecimal("CODTIPOPER");
    }
 
    public void setCodTipOper(BigDecimal codTipOper) {
         markAsChanged("CODTIPOPER", codTipOper);
-        this.codTipOper = codTipOper;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getRestricao() {
-        return restricao;
+        return this.getVo().asString("RESTRICAO");
    }
 
    public void setRestricao(String restricao) {
         markAsChanged("RESTRICAO", restricao);
-        this.restricao = restricao;
    }
 
    public String getSerie() {
-        return serie;
+        return this.getVo().asString("SERIE");
    }
 
    public void setSerie(String serie) {
         markAsChanged("SERIE", serie);
-        this.serie = serie;
    }
 
    public String getTipRest() {
-        return tipRest;
+        return this.getVo().asString("TIPREST");
    }
 
    public void setTipRest(String tipRest) {
         markAsChanged("TIPREST", tipRest);
-        this.tipRest = tipRest;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class RestricaoTop extends AbstractSankhyaEntity<RestricaoTop> {
    @Override
    public RestricaoTop fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codColRest = vo.asBigDecimal("CODCOLREST");
-        this.codTipOper = vo.asBigDecimal("CODTIPOPER");
-        this.descricao = vo.asString("DESCRICAO");
-        this.restricao = vo.asString("RESTRICAO");
-        this.serie = vo.asString("SERIE");
-        this.tipRest = vo.asString("TIPREST");
         return this;
    }
 }

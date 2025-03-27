@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Lane extends AbstractSankhyaEntity<Lane> {
-   private BigDecimal ideFx;
-   private BigDecimal ideFxPool;
-   private BigDecimal idRpaPadrao;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdeFxPool() {
-        return ideFxPool;
+        return this.getVo().asBigDecimal("IDEFXPOOL");
    }
 
    public void setIdeFxPool(BigDecimal ideFxPool) {
         markAsChanged("IDEFXPOOL", ideFxPool);
-        this.ideFxPool = ideFxPool;
    }
 
    public BigDecimal getIdRpaPadrao() {
-        return idRpaPadrao;
+        return this.getVo().asBigDecimal("IDRPAPADRAO");
    }
 
    public void setIdRpaPadrao(BigDecimal idRpaPadrao) {
         markAsChanged("IDRPAPADRAO", idRpaPadrao);
-        this.idRpaPadrao = idRpaPadrao;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class Lane extends AbstractSankhyaEntity<Lane> {
    @Override
    public Lane fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.ideFxPool = vo.asBigDecimal("IDEFXPOOL");
-        this.idRpaPadrao = vo.asBigDecimal("IDRPAPADRAO");
         return this;
    }
 }

@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
-   private BigDecimal nuLop;
-   private Timestamp dhInc;
-   private BigDecimal codUsu;
-   private String descricao;
-   private String reutilizar;
-   private BigDecimal numPs;
-
    public BigDecimal getNuLop() {
-        return nuLop;
+        return this.getVo().asBigDecimal("NULOP");
    }
 
    public void setNuLop(BigDecimal nuLop) {
         markAsChanged("NULOP", nuLop);
-        this.nuLop = nuLop;
    }
 
    public Timestamp getDhInc() {
-        return dhInc;
+        return this.getVo().asTimestamp("DHINC");
    }
 
    public void setDhInc(Timestamp dhInc) {
         markAsChanged("DHINC", dhInc);
-        this.dhInc = dhInc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getReutilizar() {
-        return reutilizar;
+        return this.getVo().asString("REUTILIZAR");
    }
 
    public void setReutilizar(String reutilizar) {
         markAsChanged("REUTILIZAR", reutilizar);
-        this.reutilizar = reutilizar;
    }
 
    public BigDecimal getNumPs() {
-        return numPs;
+        return this.getVo().asBigDecimal("NUMPS");
    }
 
    public void setNumPs(BigDecimal numPs) {
         markAsChanged("NUMPS", numPs);
-        this.numPs = numPs;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class LancamentoDeOP extends AbstractSankhyaEntity<LancamentoDeOP> {
    @Override
    public LancamentoDeOP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuLop = vo.asBigDecimal("NULOP");
-        this.dhInc = vo.asTimestamp("DHINC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.reutilizar = vo.asString("REUTILIZAR");
-        this.numPs = vo.asBigDecimal("NUMPS");
         return this;
    }
 }

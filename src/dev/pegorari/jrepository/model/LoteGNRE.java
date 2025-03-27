@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
-   private BigDecimal codUsu;
-   private Timestamp dhLote;
-   private BigDecimal nroLoteGnre;
-   private String nroProtLote;
-   private BigDecimal qtdTit;
-   private BigDecimal vlrTot;
-   private char[] xmlLote;
-   private String situacaoAtualLote;
-   private String statusLote;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhLote() {
-        return dhLote;
+        return this.getVo().asTimestamp("DHLOTE");
    }
 
    public void setDhLote(Timestamp dhLote) {
         markAsChanged("DHLOTE", dhLote);
-        this.dhLote = dhLote;
    }
 
    public BigDecimal getNroLoteGnre() {
-        return nroLoteGnre;
+        return this.getVo().asBigDecimal("NROLOTEGNRE");
    }
 
    public void setNroLoteGnre(BigDecimal nroLoteGnre) {
         markAsChanged("NROLOTEGNRE", nroLoteGnre);
-        this.nroLoteGnre = nroLoteGnre;
    }
 
    public String getNroProtLote() {
-        return nroProtLote;
+        return this.getVo().asString("NROPROTLOTE");
    }
 
    public void setNroProtLote(String nroProtLote) {
         markAsChanged("NROPROTLOTE", nroProtLote);
-        this.nroProtLote = nroProtLote;
    }
 
    public BigDecimal getQtdTit() {
-        return qtdTit;
+        return this.getVo().asBigDecimal("QTDTIT");
    }
 
    public void setQtdTit(BigDecimal qtdTit) {
         markAsChanged("QTDTIT", qtdTit);
-        this.qtdTit = qtdTit;
    }
 
    public BigDecimal getVlrTot() {
-        return vlrTot;
+        return this.getVo().asBigDecimal("VLRTOT");
    }
 
    public void setVlrTot(BigDecimal vlrTot) {
         markAsChanged("VLRTOT", vlrTot);
-        this.vlrTot = vlrTot;
    }
 
    public char[] getXmlLote() {
-        return xmlLote;
+        return this.getVo().asClob("XMLLOTE");
    }
 
    public void setXmlLote(char[] xmlLote) {
         markAsChanged("XMLLOTE", xmlLote);
-        this.xmlLote = xmlLote;
    }
 
    public String getSituacaoAtualLote() {
-        return situacaoAtualLote;
+        return this.getVo().asString("SITUACAOATUALLOTE");
    }
 
    public void setSituacaoAtualLote(String situacaoAtualLote) {
         markAsChanged("SITUACAOATUALLOTE", situacaoAtualLote);
-        this.situacaoAtualLote = situacaoAtualLote;
    }
 
    public String getStatusLote() {
-        return statusLote;
+        return this.getVo().asString("STATUSLOTE");
    }
 
    public void setStatusLote(String statusLote) {
         markAsChanged("STATUSLOTE", statusLote);
-        this.statusLote = statusLote;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class LoteGNRE extends AbstractSankhyaEntity<LoteGNRE> {
    @Override
    public LoteGNRE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhLote = vo.asTimestamp("DHLOTE");
-        this.nroLoteGnre = vo.asBigDecimal("NROLOTEGNRE");
-        this.nroProtLote = vo.asString("NROPROTLOTE");
-        this.qtdTit = vo.asBigDecimal("QTDTIT");
-        this.vlrTot = vo.asBigDecimal("VLRTOT");
-        this.xmlLote = vo.asClob("XMLLOTE");
-        this.situacaoAtualLote = vo.asString("SITUACAOATUALLOTE");
-        this.statusLote = vo.asString("STATUSLOTE");
         return this;
    }
 }

@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
-   private BigDecimal codProdPa;
-   private String codVol;
-   private String controlePa;
-   private BigDecimal idCop;
-   private BigDecimal percQtdRend;
-   private BigDecimal percDesvioInf;
-   private BigDecimal percDesvioSup;
-
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdCop() {
-        return idCop;
+        return this.getVo().asBigDecimal("IDCOP");
    }
 
    public void setIdCop(BigDecimal idCop) {
         markAsChanged("IDCOP", idCop);
-        this.idCop = idCop;
    }
 
    public BigDecimal getPercQtdRend() {
-        return percQtdRend;
+        return this.getVo().asBigDecimal("PERCQTDREND");
    }
 
    public void setPercQtdRend(BigDecimal percQtdRend) {
         markAsChanged("PERCQTDREND", percQtdRend);
-        this.percQtdRend = percQtdRend;
    }
 
    public BigDecimal getPercDesvioInf() {
-        return percDesvioInf;
+        return this.getVo().asBigDecimal("PERCDESVIOINF");
    }
 
    public void setPercDesvioInf(BigDecimal percDesvioInf) {
         markAsChanged("PERCDESVIOINF", percDesvioInf);
-        this.percDesvioInf = percDesvioInf;
    }
 
    public BigDecimal getPercDesvioSup() {
-        return percDesvioSup;
+        return this.getVo().asBigDecimal("PERCDESVIOSUP");
    }
 
    public void setPercDesvioSup(BigDecimal percDesvioSup) {
         markAsChanged("PERCDESVIOSUP", percDesvioSup);
-        this.percDesvioSup = percDesvioSup;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ItensCoProdutos extends AbstractSankhyaEntity<ItensCoProdutos> {
    @Override
    public ItensCoProdutos fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.codVol = vo.asString("CODVOL");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.idCop = vo.asBigDecimal("IDCOP");
-        this.percQtdRend = vo.asBigDecimal("PERCQTDREND");
-        this.percDesvioInf = vo.asBigDecimal("PERCDESVIOINF");
-        this.percDesvioSup = vo.asBigDecimal("PERCDESVIOSUP");
         return this;
    }
 }

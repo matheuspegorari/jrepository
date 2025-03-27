@@ -5,165 +5,132 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
-   private BigDecimal codEmp;
-   private BigDecimal codMaq;
-   private String codNacionalIdent;
-   private BigDecimal fusoHorario;
-   private String indLivro;
-   private String marca;
-   private String md5Paf;
-   private String modDoc;
-   private String tipoEcf;
-   private String modelo;
-   private BigDecimal nroCaixa;
-   private String nroSerie;
-   private BigDecimal numUsuEcf;
-   private String tipDoc;
-   private String ativo;
-   private BigDecimal codEquip;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodMaq() {
-        return codMaq;
+        return this.getVo().asBigDecimal("CODMAQ");
    }
 
    public void setCodMaq(BigDecimal codMaq) {
         markAsChanged("CODMAQ", codMaq);
-        this.codMaq = codMaq;
    }
 
    public String getCodNacionalIdent() {
-        return codNacionalIdent;
+        return this.getVo().asString("CODNACIONALIDENT");
    }
 
    public void setCodNacionalIdent(String codNacionalIdent) {
         markAsChanged("CODNACIONALIDENT", codNacionalIdent);
-        this.codNacionalIdent = codNacionalIdent;
    }
 
    public BigDecimal getFusoHorario() {
-        return fusoHorario;
+        return this.getVo().asBigDecimal("FUSOHORARIO");
    }
 
    public void setFusoHorario(BigDecimal fusoHorario) {
         markAsChanged("FUSOHORARIO", fusoHorario);
-        this.fusoHorario = fusoHorario;
    }
 
    public String getIndLivro() {
-        return indLivro;
+        return this.getVo().asString("INDLIVRO");
    }
 
    public void setIndLivro(String indLivro) {
         markAsChanged("INDLIVRO", indLivro);
-        this.indLivro = indLivro;
    }
 
    public String getMarca() {
-        return marca;
+        return this.getVo().asString("MARCA");
    }
 
    public void setMarca(String marca) {
         markAsChanged("MARCA", marca);
-        this.marca = marca;
    }
 
    public String getMd5Paf() {
-        return md5Paf;
+        return this.getVo().asString("MD5PAF");
    }
 
    public void setMd5Paf(String md5Paf) {
         markAsChanged("MD5PAF", md5Paf);
-        this.md5Paf = md5Paf;
    }
 
    public String getModDoc() {
-        return modDoc;
+        return this.getVo().asString("MODDOC");
    }
 
    public void setModDoc(String modDoc) {
         markAsChanged("MODDOC", modDoc);
-        this.modDoc = modDoc;
    }
 
    public String getTipoEcf() {
-        return tipoEcf;
+        return this.getVo().asString("TIPOECF");
    }
 
    public void setTipoEcf(String tipoEcf) {
         markAsChanged("TIPOECF", tipoEcf);
-        this.tipoEcf = tipoEcf;
    }
 
    public String getModelo() {
-        return modelo;
+        return this.getVo().asString("MODELO");
    }
 
    public void setModelo(String modelo) {
         markAsChanged("MODELO", modelo);
-        this.modelo = modelo;
    }
 
    public BigDecimal getNroCaixa() {
-        return nroCaixa;
+        return this.getVo().asBigDecimal("NROCAIXA");
    }
 
    public void setNroCaixa(BigDecimal nroCaixa) {
         markAsChanged("NROCAIXA", nroCaixa);
-        this.nroCaixa = nroCaixa;
    }
 
    public String getNroSerie() {
-        return nroSerie;
+        return this.getVo().asString("NROSERIE");
    }
 
    public void setNroSerie(String nroSerie) {
         markAsChanged("NROSERIE", nroSerie);
-        this.nroSerie = nroSerie;
    }
 
    public BigDecimal getNumUsuEcf() {
-        return numUsuEcf;
+        return this.getVo().asBigDecimal("NUMUSUECF");
    }
 
    public void setNumUsuEcf(BigDecimal numUsuEcf) {
         markAsChanged("NUMUSUECF", numUsuEcf);
-        this.numUsuEcf = numUsuEcf;
    }
 
    public String getTipDoc() {
-        return tipDoc;
+        return this.getVo().asString("TIPDOC");
    }
 
    public void setTipDoc(String tipDoc) {
         markAsChanged("TIPDOC", tipDoc);
-        this.tipDoc = tipDoc;
    }
 
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodEquip() {
-        return codEquip;
+        return this.getVo().asBigDecimal("CODEQUIP");
    }
 
    public void setCodEquip(BigDecimal codEquip) {
         markAsChanged("CODEQUIP", codEquip);
-        this.codEquip = codEquip;
    }
 
    @Override
@@ -179,22 +146,6 @@ public class CadastroMaquina extends AbstractSankhyaEntity<CadastroMaquina> {
    @Override
    public CadastroMaquina fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codMaq = vo.asBigDecimal("CODMAQ");
-        this.codNacionalIdent = vo.asString("CODNACIONALIDENT");
-        this.fusoHorario = vo.asBigDecimal("FUSOHORARIO");
-        this.indLivro = vo.asString("INDLIVRO");
-        this.marca = vo.asString("MARCA");
-        this.md5Paf = vo.asString("MD5PAF");
-        this.modDoc = vo.asString("MODDOC");
-        this.tipoEcf = vo.asString("TIPOECF");
-        this.modelo = vo.asString("MODELO");
-        this.nroCaixa = vo.asBigDecimal("NROCAIXA");
-        this.nroSerie = vo.asString("NROSERIE");
-        this.numUsuEcf = vo.asBigDecimal("NUMUSUECF");
-        this.tipDoc = vo.asString("TIPDOC");
-        this.ativo = vo.asString("ATIVO");
-        this.codEquip = vo.asBigDecimal("CODEQUIP");
         return this;
    }
 }

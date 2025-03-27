@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
-   private String ativo;
-   private BigDecimal codFld;
-   private String descricao;
-   private char[] fluxo;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodFld() {
-        return codFld;
+        return this.getVo().asBigDecimal("CODFLD");
    }
 
    public void setCodFld(BigDecimal codFld) {
         markAsChanged("CODFLD", codFld);
-        this.codFld = codFld;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public char[] getFluxo() {
-        return fluxo;
+        return this.getVo().asClob("FLUXO");
    }
 
    public void setFluxo(char[] fluxo) {
         markAsChanged("FLUXO", fluxo);
-        this.fluxo = fluxo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class FluxoDiagnostico extends AbstractSankhyaEntity<FluxoDiagnostico> {
    @Override
    public FluxoDiagnostico fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codFld = vo.asBigDecimal("CODFLD");
-        this.descricao = vo.asString("DESCRICAO");
-        this.fluxo = vo.asClob("FLUXO");
         return this;
    }
 }

@@ -6,35 +6,28 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConfiguracaoTokenProduto extends AbstractSankhyaEntity<ConfiguracaoTokenProduto> {
-   private String ativo;
-   private BigDecimal codCfg;
-   private Timestamp dhUltExec;
-
    public String getAtivo() {
-        return ativo;
+        return this.getVo().asString("ATIVO");
    }
 
    public void setAtivo(String ativo) {
         markAsChanged("ATIVO", ativo);
-        this.ativo = ativo;
    }
 
    public BigDecimal getCodCfg() {
-        return codCfg;
+        return this.getVo().asBigDecimal("CODCFG");
    }
 
    public void setCodCfg(BigDecimal codCfg) {
         markAsChanged("CODCFG", codCfg);
-        this.codCfg = codCfg;
    }
 
    public Timestamp getDhUltExec() {
-        return dhUltExec;
+        return this.getVo().asTimestamp("DHULTEXEC");
    }
 
    public void setDhUltExec(Timestamp dhUltExec) {
         markAsChanged("DHULTEXEC", dhUltExec);
-        this.dhUltExec = dhUltExec;
    }
 
    @Override
@@ -50,9 +43,6 @@ public class ConfiguracaoTokenProduto extends AbstractSankhyaEntity<Configuracao
    @Override
    public ConfiguracaoTokenProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ativo = vo.asString("ATIVO");
-        this.codCfg = vo.asBigDecimal("CODCFG");
-        this.dhUltExec = vo.asTimestamp("DHULTEXEC");
         return this;
    }
 }

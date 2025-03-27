@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<ValidacaoArmazenamentoExpresso> {
-   private String codConcatenado;
-   private BigDecimal nuTarefa;
-   private BigDecimal sequencia;
-
    public String getCodConcatenado() {
-        return codConcatenado;
+        return this.getVo().asString("CODCONCATENADO");
    }
 
    public void setCodConcatenado(String codConcatenado) {
         markAsChanged("CODCONCATENADO", codConcatenado);
-        this.codConcatenado = codConcatenado;
    }
 
    public BigDecimal getNuTarefa() {
-        return nuTarefa;
+        return this.getVo().asBigDecimal("NUTAREFA");
    }
 
    public void setNuTarefa(BigDecimal nuTarefa) {
         markAsChanged("NUTAREFA", nuTarefa);
-        this.nuTarefa = nuTarefa;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class ValidacaoArmazenamentoExpresso extends AbstractSankhyaEntity<Valida
    @Override
    public ValidacaoArmazenamentoExpresso fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codConcatenado = vo.asString("CODCONCATENADO");
-        this.nuTarefa = vo.asBigDecimal("NUTAREFA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

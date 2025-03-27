@@ -6,35 +6,28 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
-   private BigDecimal codOnda;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-
    public BigDecimal getCodOnda() {
-        return codOnda;
+        return this.getVo().asBigDecimal("CODONDA");
    }
 
    public void setCodOnda(BigDecimal codOnda) {
         markAsChanged("CODONDA", codOnda);
-        this.codOnda = codOnda;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    @Override
@@ -50,9 +43,6 @@ public class OndaSeparacao extends AbstractSankhyaEntity<OndaSeparacao> {
    @Override
    public OndaSeparacao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codOnda = vo.asBigDecimal("CODONDA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
         return this;
    }
 }

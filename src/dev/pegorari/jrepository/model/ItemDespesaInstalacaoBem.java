@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaInstalacaoBem> {
-   private String codBem;
-   private BigDecimal codProd;
-   private BigDecimal nuRateio;
-   private BigDecimal vlrIcmsRateio;
-   private BigDecimal vlrRateio;
-
    public String getCodBem() {
-        return codBem;
+        return this.getVo().asString("CODBEM");
    }
 
    public void setCodBem(String codBem) {
         markAsChanged("CODBEM", codBem);
-        this.codBem = codBem;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getNuRateio() {
-        return nuRateio;
+        return this.getVo().asBigDecimal("NURATEIO");
    }
 
    public void setNuRateio(BigDecimal nuRateio) {
         markAsChanged("NURATEIO", nuRateio);
-        this.nuRateio = nuRateio;
    }
 
    public BigDecimal getVlrIcmsRateio() {
-        return vlrIcmsRateio;
+        return this.getVo().asBigDecimal("VLRICMSRATEIO");
    }
 
    public void setVlrIcmsRateio(BigDecimal vlrIcmsRateio) {
         markAsChanged("VLRICMSRATEIO", vlrIcmsRateio);
-        this.vlrIcmsRateio = vlrIcmsRateio;
    }
 
    public BigDecimal getVlrRateio() {
-        return vlrRateio;
+        return this.getVo().asBigDecimal("VLRRATEIO");
    }
 
    public void setVlrRateio(BigDecimal vlrRateio) {
         markAsChanged("VLRRATEIO", vlrRateio);
-        this.vlrRateio = vlrRateio;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ItemDespesaInstalacaoBem extends AbstractSankhyaEntity<ItemDespesaI
    @Override
    public ItemDespesaInstalacaoBem fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codBem = vo.asString("CODBEM");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.nuRateio = vo.asBigDecimal("NURATEIO");
-        this.vlrIcmsRateio = vo.asBigDecimal("VLRICMSRATEIO");
-        this.vlrRateio = vo.asBigDecimal("VLRRATEIO");
         return this;
    }
 }

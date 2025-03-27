@@ -6,225 +6,180 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaProfissional> {
-   private String atual;
-   private String bairro;
-   private String cep;
-   private String cidade;
-   private String complEnd;
-   private Timestamp dataDm;
-   private Timestamp dataDem;
-   private String descAtividades;
-   private String email;
-   private BigDecimal faixaSalarialFinal;
-   private BigDecimal faixaSalarialInicial;
-   private String nomeEmpresa;
-   private String nomeEnd;
-   private BigDecimal nuCurriculo;
-   private String numEnd;
-   private BigDecimal sequencia;
-   private String telefone;
-   private String tipoEmpresa;
-   private String tipoEnd;
-   private String uf;
-   private String ultCargoOcupado;
-   private BigDecimal ultSalario;
-
    public String getAtual() {
-        return atual;
+        return this.getVo().asString("ATUAL");
    }
 
    public void setAtual(String atual) {
         markAsChanged("ATUAL", atual);
-        this.atual = atual;
    }
 
    public String getBairro() {
-        return bairro;
+        return this.getVo().asString("BAIRRO");
    }
 
    public void setBairro(String bairro) {
         markAsChanged("BAIRRO", bairro);
-        this.bairro = bairro;
    }
 
    public String getCep() {
-        return cep;
+        return this.getVo().asString("CEP");
    }
 
    public void setCep(String cep) {
         markAsChanged("CEP", cep);
-        this.cep = cep;
    }
 
    public String getCidade() {
-        return cidade;
+        return this.getVo().asString("CIDADE");
    }
 
    public void setCidade(String cidade) {
         markAsChanged("CIDADE", cidade);
-        this.cidade = cidade;
    }
 
    public String getComplEnd() {
-        return complEnd;
+        return this.getVo().asString("COMPLEND");
    }
 
    public void setComplEnd(String complEnd) {
         markAsChanged("COMPLEND", complEnd);
-        this.complEnd = complEnd;
    }
 
    public Timestamp getDataDm() {
-        return dataDm;
+        return this.getVo().asTimestamp("DATADM");
    }
 
    public void setDataDm(Timestamp dataDm) {
         markAsChanged("DATADM", dataDm);
-        this.dataDm = dataDm;
    }
 
    public Timestamp getDataDem() {
-        return dataDem;
+        return this.getVo().asTimestamp("DATDEM");
    }
 
    public void setDataDem(Timestamp dataDem) {
         markAsChanged("DATDEM", dataDem);
-        this.dataDem = dataDem;
    }
 
    public String getDescAtividades() {
-        return descAtividades;
+        return this.getVo().asString("DESCRATIVIDADES");
    }
 
    public void setDescAtividades(String descAtividades) {
         markAsChanged("DESCRATIVIDADES", descAtividades);
-        this.descAtividades = descAtividades;
    }
 
    public String getEmail() {
-        return email;
+        return this.getVo().asString("EMAIL");
    }
 
    public void setEmail(String email) {
         markAsChanged("EMAIL", email);
-        this.email = email;
    }
 
    public BigDecimal getFaixaSalarialFinal() {
-        return faixaSalarialFinal;
+        return this.getVo().asBigDecimal("FAIXASALARIALFINAL");
    }
 
    public void setFaixaSalarialFinal(BigDecimal faixaSalarialFinal) {
         markAsChanged("FAIXASALARIALFINAL", faixaSalarialFinal);
-        this.faixaSalarialFinal = faixaSalarialFinal;
    }
 
    public BigDecimal getFaixaSalarialInicial() {
-        return faixaSalarialInicial;
+        return this.getVo().asBigDecimal("FAIXASALARIALINICIAL");
    }
 
    public void setFaixaSalarialInicial(BigDecimal faixaSalarialInicial) {
         markAsChanged("FAIXASALARIALINICIAL", faixaSalarialInicial);
-        this.faixaSalarialInicial = faixaSalarialInicial;
    }
 
    public String getNomeEmpresa() {
-        return nomeEmpresa;
+        return this.getVo().asString("NOMEEMPRESA");
    }
 
    public void setNomeEmpresa(String nomeEmpresa) {
         markAsChanged("NOMEEMPRESA", nomeEmpresa);
-        this.nomeEmpresa = nomeEmpresa;
    }
 
    public String getNomeEnd() {
-        return nomeEnd;
+        return this.getVo().asString("NOMEEND");
    }
 
    public void setNomeEnd(String nomeEnd) {
         markAsChanged("NOMEEND", nomeEnd);
-        this.nomeEnd = nomeEnd;
    }
 
    public BigDecimal getNuCurriculo() {
-        return nuCurriculo;
+        return this.getVo().asBigDecimal("NUCURRICULO");
    }
 
    public void setNuCurriculo(BigDecimal nuCurriculo) {
         markAsChanged("NUCURRICULO", nuCurriculo);
-        this.nuCurriculo = nuCurriculo;
    }
 
    public String getNumEnd() {
-        return numEnd;
+        return this.getVo().asString("NUMEND");
    }
 
    public void setNumEnd(String numEnd) {
         markAsChanged("NUMEND", numEnd);
-        this.numEnd = numEnd;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getTelefone() {
-        return telefone;
+        return this.getVo().asString("TELEFONE");
    }
 
    public void setTelefone(String telefone) {
         markAsChanged("TELEFONE", telefone);
-        this.telefone = telefone;
    }
 
    public String getTipoEmpresa() {
-        return tipoEmpresa;
+        return this.getVo().asString("TIPOEMPRESA");
    }
 
    public void setTipoEmpresa(String tipoEmpresa) {
         markAsChanged("TIPOEMPRESA", tipoEmpresa);
-        this.tipoEmpresa = tipoEmpresa;
    }
 
    public String getTipoEnd() {
-        return tipoEnd;
+        return this.getVo().asString("TIPOEND");
    }
 
    public void setTipoEnd(String tipoEnd) {
         markAsChanged("TIPOEND", tipoEnd);
-        this.tipoEnd = tipoEnd;
    }
 
    public String getUf() {
-        return uf;
+        return this.getVo().asString("UF");
    }
 
    public void setUf(String uf) {
         markAsChanged("UF", uf);
-        this.uf = uf;
    }
 
    public String getUltCargoOcupado() {
-        return ultCargoOcupado;
+        return this.getVo().asString("ULTCARGOOCUPADO");
    }
 
    public void setUltCargoOcupado(String ultCargoOcupado) {
         markAsChanged("ULTCARGOOCUPADO", ultCargoOcupado);
-        this.ultCargoOcupado = ultCargoOcupado;
    }
 
    public BigDecimal getUltSalario() {
-        return ultSalario;
+        return this.getVo().asBigDecimal("ULTSALARIO");
    }
 
    public void setUltSalario(BigDecimal ultSalario) {
         markAsChanged("ULTSALARIO", ultSalario);
-        this.ultSalario = ultSalario;
    }
 
    @Override
@@ -240,28 +195,6 @@ public class ExperienciaProfissional extends AbstractSankhyaEntity<ExperienciaPr
    @Override
    public ExperienciaProfissional fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.atual = vo.asString("ATUAL");
-        this.bairro = vo.asString("BAIRRO");
-        this.cep = vo.asString("CEP");
-        this.cidade = vo.asString("CIDADE");
-        this.complEnd = vo.asString("COMPLEND");
-        this.dataDm = vo.asTimestamp("DATADM");
-        this.dataDem = vo.asTimestamp("DATDEM");
-        this.descAtividades = vo.asString("DESCRATIVIDADES");
-        this.email = vo.asString("EMAIL");
-        this.faixaSalarialFinal = vo.asBigDecimal("FAIXASALARIALFINAL");
-        this.faixaSalarialInicial = vo.asBigDecimal("FAIXASALARIALINICIAL");
-        this.nomeEmpresa = vo.asString("NOMEEMPRESA");
-        this.nomeEnd = vo.asString("NOMEEND");
-        this.nuCurriculo = vo.asBigDecimal("NUCURRICULO");
-        this.numEnd = vo.asString("NUMEND");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.telefone = vo.asString("TELEFONE");
-        this.tipoEmpresa = vo.asString("TIPOEMPRESA");
-        this.tipoEnd = vo.asString("TIPOEND");
-        this.uf = vo.asString("UF");
-        this.ultCargoOcupado = vo.asString("ULTCARGOOCUPADO");
-        this.ultSalario = vo.asBigDecimal("ULTSALARIO");
         return this;
    }
 }

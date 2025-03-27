@@ -5,95 +5,76 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<ApontamentoRecursosWorkCenter> {
-   private BigDecimal codCre;
-   private String codVol;
-   private BigDecimal codWcp;
-   private BigDecimal nuApo;
-   private BigDecimal qtdApontada;
-   private BigDecimal qtdItensRec;
-   private BigDecimal qtdRecApontar;
-   private BigDecimal qtdUtilizada;
-   private BigDecimal seqApa;
-
    public BigDecimal getCodCre() {
-        return codCre;
+        return this.getVo().asBigDecimal("CODCRE");
    }
 
    public void setCodCre(BigDecimal codCre) {
         markAsChanged("CODCRE", codCre);
-        this.codCre = codCre;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public BigDecimal getQtdApontada() {
-        return qtdApontada;
+        return this.getVo().asBigDecimal("QTDAPONTADA");
    }
 
    public void setQtdApontada(BigDecimal qtdApontada) {
         markAsChanged("QTDAPONTADA", qtdApontada);
-        this.qtdApontada = qtdApontada;
    }
 
    public BigDecimal getQtdItensRec() {
-        return qtdItensRec;
+        return this.getVo().asBigDecimal("QTDITENSREC");
    }
 
    public void setQtdItensRec(BigDecimal qtdItensRec) {
         markAsChanged("QTDITENSREC", qtdItensRec);
-        this.qtdItensRec = qtdItensRec;
    }
 
    public BigDecimal getQtdRecApontar() {
-        return qtdRecApontar;
+        return this.getVo().asBigDecimal("QTDRECAPONTAR");
    }
 
    public void setQtdRecApontar(BigDecimal qtdRecApontar) {
         markAsChanged("QTDRECAPONTAR", qtdRecApontar);
-        this.qtdRecApontar = qtdRecApontar;
    }
 
    public BigDecimal getQtdUtilizada() {
-        return qtdUtilizada;
+        return this.getVo().asBigDecimal("QTDUTILIZADA");
    }
 
    public void setQtdUtilizada(BigDecimal qtdUtilizada) {
         markAsChanged("QTDUTILIZADA", qtdUtilizada);
-        this.qtdUtilizada = qtdUtilizada;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    @Override
@@ -109,15 +90,6 @@ public class ApontamentoRecursosWorkCenter extends AbstractSankhyaEntity<Apontam
    @Override
    public ApontamentoRecursosWorkCenter fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCre = vo.asBigDecimal("CODCRE");
-        this.codVol = vo.asString("CODVOL");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.qtdApontada = vo.asBigDecimal("QTDAPONTADA");
-        this.qtdItensRec = vo.asBigDecimal("QTDITENSREC");
-        this.qtdRecApontar = vo.asBigDecimal("QTDRECAPONTAR");
-        this.qtdUtilizada = vo.asBigDecimal("QTDUTILIZADA");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
         return this;
    }
 }

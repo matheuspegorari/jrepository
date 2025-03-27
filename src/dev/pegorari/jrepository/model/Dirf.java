@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Dirf extends AbstractSankhyaEntity<Dirf> {
-   private String arqConfirmado;
-   private BigDecimal codEmp;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-   private String idEstLeiaute;
-   private String numRecibo;
-   private String tipDeclaracao;
-
    public String getArqConfirmado() {
-        return arqConfirmado;
+        return this.getVo().asString("ARQCONFIRMADO");
    }
 
    public void setArqConfirmado(String arqConfirmado) {
         markAsChanged("ARQCONFIRMADO", arqConfirmado);
-        this.arqConfirmado = arqConfirmado;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    public String getIdEstLeiaute() {
-        return idEstLeiaute;
+        return this.getVo().asString("IDESTLEIAUTE");
    }
 
    public void setIdEstLeiaute(String idEstLeiaute) {
         markAsChanged("IDESTLEIAUTE", idEstLeiaute);
-        this.idEstLeiaute = idEstLeiaute;
    }
 
    public String getNumRecibo() {
-        return numRecibo;
+        return this.getVo().asString("NUMRECIBO");
    }
 
    public void setNumRecibo(String numRecibo) {
         markAsChanged("NUMRECIBO", numRecibo);
-        this.numRecibo = numRecibo;
    }
 
    public String getTipDeclaracao() {
-        return tipDeclaracao;
+        return this.getVo().asString("TIPDECLARACAO");
    }
 
    public void setTipDeclaracao(String tipDeclaracao) {
         markAsChanged("TIPDECLARACAO", tipDeclaracao);
-        this.tipDeclaracao = tipDeclaracao;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class Dirf extends AbstractSankhyaEntity<Dirf> {
    @Override
    public Dirf fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.arqConfirmado = vo.asString("ARQCONFIRMADO");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
-        this.idEstLeiaute = vo.asString("IDESTLEIAUTE");
-        this.numRecibo = vo.asString("NUMRECIBO");
-        this.tipDeclaracao = vo.asString("TIPDECLARACAO");
         return this;
    }
 }

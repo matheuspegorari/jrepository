@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo> {
-   private BigDecimal codProd;
-   private BigDecimal codProdAlt;
-   private BigDecimal prioridade;
-   private BigDecimal quantidade;
-   private String referenciaPa;
-   private Timestamp dtVigencia;
-   private String substituto;
-
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodProdAlt() {
-        return codProdAlt;
+        return this.getVo().asBigDecimal("CODPRODALT");
    }
 
    public void setCodProdAlt(BigDecimal codProdAlt) {
         markAsChanged("CODPRODALT", codProdAlt);
-        this.codProdAlt = codProdAlt;
    }
 
    public BigDecimal getPrioridade() {
-        return prioridade;
+        return this.getVo().asBigDecimal("PRIORIDADE");
    }
 
    public void setPrioridade(BigDecimal prioridade) {
         markAsChanged("PRIORIDADE", prioridade);
-        this.prioridade = prioridade;
    }
 
    public BigDecimal getQuantidade() {
-        return quantidade;
+        return this.getVo().asBigDecimal("QUANTIDADE");
    }
 
    public void setQuantidade(BigDecimal quantidade) {
         markAsChanged("QUANTIDADE", quantidade);
-        this.quantidade = quantidade;
    }
 
    public String getReferenciaPa() {
-        return referenciaPa;
+        return this.getVo().asString("REFERENCIAPA");
    }
 
    public void setReferenciaPa(String referenciaPa) {
         markAsChanged("REFERENCIAPA", referenciaPa);
-        this.referenciaPa = referenciaPa;
    }
 
    public Timestamp getDtVigencia() {
-        return dtVigencia;
+        return this.getVo().asTimestamp("DTVIGENCIA");
    }
 
    public void setDtVigencia(Timestamp dtVigencia) {
         markAsChanged("DTVIGENCIA", dtVigencia);
-        this.dtVigencia = dtVigencia;
    }
 
    public String getSubstituto() {
-        return substituto;
+        return this.getVo().asString("SUBSTITUTO");
    }
 
    public void setSubstituto(String substituto) {
         markAsChanged("SUBSTITUTO", substituto);
-        this.substituto = substituto;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ProdutoAlternativo extends AbstractSankhyaEntity<ProdutoAlternativo
    @Override
    public ProdutoAlternativo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codProdAlt = vo.asBigDecimal("CODPRODALT");
-        this.prioridade = vo.asBigDecimal("PRIORIDADE");
-        this.quantidade = vo.asBigDecimal("QUANTIDADE");
-        this.referenciaPa = vo.asString("REFERENCIAPA");
-        this.dtVigencia = vo.asTimestamp("DTVIGENCIA");
-        this.substituto = vo.asString("SUBSTITUTO");
         return this;
    }
 }

@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
-   private BigDecimal codCtaCtb;
-   private BigDecimal aliquota;
-   private String codCprb;
-   private BigDecimal codRecolhimento;
-   private String descAtividade;
-   private Timestamp dtFinal;
-   private Timestamp dtInicial;
-
    public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+        return this.getVo().asBigDecimal("CODCTACTB");
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
         markAsChanged("CODCTACTB", codCtaCtb);
-        this.codCtaCtb = codCtaCtb;
    }
 
    public BigDecimal getAliquota() {
-        return aliquota;
+        return this.getVo().asBigDecimal("ALIQUOTA");
    }
 
    public void setAliquota(BigDecimal aliquota) {
         markAsChanged("ALIQUOTA", aliquota);
-        this.aliquota = aliquota;
    }
 
    public String getCodCprb() {
-        return codCprb;
+        return this.getVo().asString("CODCPRB");
    }
 
    public void setCodCprb(String codCprb) {
         markAsChanged("CODCPRB", codCprb);
-        this.codCprb = codCprb;
    }
 
    public BigDecimal getCodRecolhimento() {
-        return codRecolhimento;
+        return this.getVo().asBigDecimal("CODRECOLHIMENTO");
    }
 
    public void setCodRecolhimento(BigDecimal codRecolhimento) {
         markAsChanged("CODRECOLHIMENTO", codRecolhimento);
-        this.codRecolhimento = codRecolhimento;
    }
 
    public String getDescAtividade() {
-        return descAtividade;
+        return this.getVo().asString("DESCATIVIDADE");
    }
 
    public void setDescAtividade(String descAtividade) {
         markAsChanged("DESCATIVIDADE", descAtividade);
-        this.descAtividade = descAtividade;
    }
 
    public Timestamp getDtFinal() {
-        return dtFinal;
+        return this.getVo().asTimestamp("DTFINAL");
    }
 
    public void setDtFinal(Timestamp dtFinal) {
         markAsChanged("DTFINAL", dtFinal);
-        this.dtFinal = dtFinal;
    }
 
    public Timestamp getDtInicial() {
-        return dtInicial;
+        return this.getVo().asTimestamp("DTINICIAL");
    }
 
    public void setDtInicial(Timestamp dtInicial) {
         markAsChanged("DTINICIAL", dtInicial);
-        this.dtInicial = dtInicial;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class TabelaCPRB extends AbstractSankhyaEntity<TabelaCPRB> {
    @Override
    public TabelaCPRB fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.aliquota = vo.asBigDecimal("ALIQUOTA");
-        this.codCprb = vo.asString("CODCPRB");
-        this.codRecolhimento = vo.asBigDecimal("CODRECOLHIMENTO");
-        this.descAtividade = vo.asString("DESCATIVIDADE");
-        this.dtFinal = vo.asTimestamp("DTFINAL");
-        this.dtInicial = vo.asTimestamp("DTINICIAL");
         return this;
    }
 }

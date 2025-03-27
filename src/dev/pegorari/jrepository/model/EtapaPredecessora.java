@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> {
-   private BigDecimal nuFap;
-   private BigDecimal nuMetapa;
-   private BigDecimal nuMetapaPred;
-   private String tipo;
-
    public BigDecimal getNuFap() {
-        return nuFap;
+        return this.getVo().asBigDecimal("NUFAP");
    }
 
    public void setNuFap(BigDecimal nuFap) {
         markAsChanged("NUFAP", nuFap);
-        this.nuFap = nuFap;
    }
 
    public BigDecimal getNuMetapa() {
-        return nuMetapa;
+        return this.getVo().asBigDecimal("NUMETAPA");
    }
 
    public void setNuMetapa(BigDecimal nuMetapa) {
         markAsChanged("NUMETAPA", nuMetapa);
-        this.nuMetapa = nuMetapa;
    }
 
    public BigDecimal getNuMetapaPred() {
-        return nuMetapaPred;
+        return this.getVo().asBigDecimal("NUMETAPAPRED");
    }
 
    public void setNuMetapaPred(BigDecimal nuMetapaPred) {
         markAsChanged("NUMETAPAPRED", nuMetapaPred);
-        this.nuMetapaPred = nuMetapaPred;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class EtapaPredecessora extends AbstractSankhyaEntity<EtapaPredecessora> 
    @Override
    public EtapaPredecessora fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuFap = vo.asBigDecimal("NUFAP");
-        this.nuMetapa = vo.asBigDecimal("NUMETAPA");
-        this.nuMetapaPred = vo.asBigDecimal("NUMETAPAPRED");
-        this.tipo = vo.asString("TIPO");
         return this;
    }
 }

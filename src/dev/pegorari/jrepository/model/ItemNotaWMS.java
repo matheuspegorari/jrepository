@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
-   private BigDecimal nuNota;
-   private BigDecimal nuSeparacao;
-   private BigDecimal qtdWms;
-   private BigDecimal seqNota;
-   private BigDecimal sequencia;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuSeparacao() {
-        return nuSeparacao;
+        return this.getVo().asBigDecimal("NUSEPARACAO");
    }
 
    public void setNuSeparacao(BigDecimal nuSeparacao) {
         markAsChanged("NUSEPARACAO", nuSeparacao);
-        this.nuSeparacao = nuSeparacao;
    }
 
    public BigDecimal getQtdWms() {
-        return qtdWms;
+        return this.getVo().asBigDecimal("QTDWMS");
    }
 
    public void setQtdWms(BigDecimal qtdWms) {
         markAsChanged("QTDWMS", qtdWms);
-        this.qtdWms = qtdWms;
    }
 
    public BigDecimal getSeqNota() {
-        return seqNota;
+        return this.getVo().asBigDecimal("SEQNOTA");
    }
 
    public void setSeqNota(BigDecimal seqNota) {
         markAsChanged("SEQNOTA", seqNota);
-        this.seqNota = seqNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class ItemNotaWMS extends AbstractSankhyaEntity<ItemNotaWMS> {
    @Override
    public ItemNotaWMS fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuSeparacao = vo.asBigDecimal("NUSEPARACAO");
-        this.qtdWms = vo.asBigDecimal("QTDWMS");
-        this.seqNota = vo.asBigDecimal("SEQNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
         return this;
    }
 }

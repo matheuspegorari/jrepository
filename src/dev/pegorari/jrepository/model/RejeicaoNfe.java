@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
-   private BigDecimal codRejeicao;
-   private String hashUtlRejeicao;
-   private BigDecimal nuNota;
-   private BigDecimal qtdRejeicoes;
-
    public BigDecimal getCodRejeicao() {
-        return codRejeicao;
+        return this.getVo().asBigDecimal("CODREJEICAO");
    }
 
    public void setCodRejeicao(BigDecimal codRejeicao) {
         markAsChanged("CODREJEICAO", codRejeicao);
-        this.codRejeicao = codRejeicao;
    }
 
    public String getHashUtlRejeicao() {
-        return hashUtlRejeicao;
+        return this.getVo().asString("HASHUTLREJEICAO");
    }
 
    public void setHashUtlRejeicao(String hashUtlRejeicao) {
         markAsChanged("HASHUTLREJEICAO", hashUtlRejeicao);
-        this.hashUtlRejeicao = hashUtlRejeicao;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getQtdRejeicoes() {
-        return qtdRejeicoes;
+        return this.getVo().asBigDecimal("QTDREJEICOES");
    }
 
    public void setQtdRejeicoes(BigDecimal qtdRejeicoes) {
         markAsChanged("QTDREJEICOES", qtdRejeicoes);
-        this.qtdRejeicoes = qtdRejeicoes;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class RejeicaoNfe extends AbstractSankhyaEntity<RejeicaoNfe> {
    @Override
    public RejeicaoNfe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codRejeicao = vo.asBigDecimal("CODREJEICAO");
-        this.hashUtlRejeicao = vo.asString("HASHUTLREJEICAO");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.qtdRejeicoes = vo.asBigDecimal("QTDREJEICOES");
         return this;
    }
 }

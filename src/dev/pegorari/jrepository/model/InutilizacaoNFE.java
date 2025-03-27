@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
-   private BigDecimal codEmp;
-   private BigDecimal codModDoc;
-   private BigDecimal codUsu;
-   private Timestamp dhProtoc;
-   private Timestamp dtMov;
-   private String motivo;
-   private BigDecimal numNota;
-   private String numProtoc;
-   private String serieNota;
-   private String entSai;
-   private String tpAmbNfe;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodModDoc() {
-        return codModDoc;
+        return this.getVo().asBigDecimal("CODMODDOC");
    }
 
    public void setCodModDoc(BigDecimal codModDoc) {
         markAsChanged("CODMODDOC", codModDoc);
-        this.codModDoc = codModDoc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhProtoc() {
-        return dhProtoc;
+        return this.getVo().asTimestamp("DHPROTOC");
    }
 
    public void setDhProtoc(Timestamp dhProtoc) {
         markAsChanged("DHPROTOC", dhProtoc);
-        this.dhProtoc = dhProtoc;
    }
 
    public Timestamp getDtMov() {
-        return dtMov;
+        return this.getVo().asTimestamp("DTMOV");
    }
 
    public void setDtMov(Timestamp dtMov) {
         markAsChanged("DTMOV", dtMov);
-        this.dtMov = dtMov;
    }
 
    public String getMotivo() {
-        return motivo;
+        return this.getVo().asString("MOTIVO");
    }
 
    public void setMotivo(String motivo) {
         markAsChanged("MOTIVO", motivo);
-        this.motivo = motivo;
    }
 
    public BigDecimal getNumNota() {
-        return numNota;
+        return this.getVo().asBigDecimal("NUMNOTA");
    }
 
    public void setNumNota(BigDecimal numNota) {
         markAsChanged("NUMNOTA", numNota);
-        this.numNota = numNota;
    }
 
    public String getNumProtoc() {
-        return numProtoc;
+        return this.getVo().asString("NUMPROTOC");
    }
 
    public void setNumProtoc(String numProtoc) {
         markAsChanged("NUMPROTOC", numProtoc);
-        this.numProtoc = numProtoc;
    }
 
    public String getSerieNota() {
-        return serieNota;
+        return this.getVo().asString("SERIENOTA");
    }
 
    public void setSerieNota(String serieNota) {
         markAsChanged("SERIENOTA", serieNota);
-        this.serieNota = serieNota;
    }
 
    public String getEntSai() {
-        return entSai;
+        return this.getVo().asString("ENTSAI");
    }
 
    public void setEntSai(String entSai) {
         markAsChanged("ENTSAI", entSai);
-        this.entSai = entSai;
    }
 
    public String getTpAmbNfe() {
-        return tpAmbNfe;
+        return this.getVo().asString("TPAMBNFE");
    }
 
    public void setTpAmbNfe(String tpAmbNfe) {
         markAsChanged("TPAMBNFE", tpAmbNfe);
-        this.tpAmbNfe = tpAmbNfe;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class InutilizacaoNFE extends AbstractSankhyaEntity<InutilizacaoNFE> {
    @Override
    public InutilizacaoNFE fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codModDoc = vo.asBigDecimal("CODMODDOC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhProtoc = vo.asTimestamp("DHPROTOC");
-        this.dtMov = vo.asTimestamp("DTMOV");
-        this.motivo = vo.asString("MOTIVO");
-        this.numNota = vo.asBigDecimal("NUMNOTA");
-        this.numProtoc = vo.asString("NUMPROTOC");
-        this.serieNota = vo.asString("SERIENOTA");
-        this.entSai = vo.asString("ENTSAI");
-        this.tpAmbNfe = vo.asString("TPAMBNFE");
         return this;
    }
 }

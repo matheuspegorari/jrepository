@@ -6,55 +6,44 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
-   private String status;
-   private BigDecimal codEmp;
-   private BigDecimal codParctransp;
-   private BigDecimal nuOdp;
-   private Timestamp dtInclusao;
-
    public String getStatus() {
-        return status;
+        return this.getVo().asString("STATUS");
    }
 
    public void setStatus(String status) {
         markAsChanged("STATUS", status);
-        this.status = status;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodParctransp() {
-        return codParctransp;
+        return this.getVo().asBigDecimal("CODPARCTRANSP");
    }
 
    public void setCodParctransp(BigDecimal codParctransp) {
         markAsChanged("CODPARCTRANSP", codParctransp);
-        this.codParctransp = codParctransp;
    }
 
    public BigDecimal getNuOdp() {
-        return nuOdp;
+        return this.getVo().asBigDecimal("NUODP");
    }
 
    public void setNuOdp(BigDecimal nuOdp) {
         markAsChanged("NUODP", nuOdp);
-        this.nuOdp = nuOdp;
    }
 
    public Timestamp getDtInclusao() {
-        return dtInclusao;
+        return this.getVo().asTimestamp("DTINCLUSAO");
    }
 
    public void setDtInclusao(Timestamp dtInclusao) {
         markAsChanged("DTINCLUSAO", dtInclusao);
-        this.dtInclusao = dtInclusao;
    }
 
    @Override
@@ -70,11 +59,6 @@ public class OrdemDespacho extends AbstractSankhyaEntity<OrdemDespacho> {
    @Override
    public OrdemDespacho fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.status = vo.asString("STATUS");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codParctransp = vo.asBigDecimal("CODPARCTRANSP");
-        this.nuOdp = vo.asBigDecimal("NUODP");
-        this.dtInclusao = vo.asTimestamp("DTINCLUSAO");
         return this;
    }
 }

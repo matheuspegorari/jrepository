@@ -5,285 +5,228 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
-   private String ajustarMps;
-   private String gerarAmostra;
-   private String localOrigEnt;
-   private String localOrigSai;
-   private String nomeEtapa;
-   private String observacao;
-   private String pendenteEnt;
-   private String pendenteSai;
-   private BigDecimal seqOtica;
-   private String tipo;
-   private BigDecimal topDevMp;
-   private BigDecimal topEntrada;
-   private BigDecimal topProducao;
-   private BigDecimal topSaida;
-   private String usaLocEntDestPa;
-   private String usaLocEntOrigPa;
-   private String usaLocSaiDestPa;
-   private String usaLocSaiOrigPa;
-   private String validaWms;
-   private BigDecimal codCencus;
-   private BigDecimal codEmpDest;
-   private BigDecimal codEmpOrig;
-   private BigDecimal codEtapa;
-   private BigDecimal codEtapaMp;
-   private BigDecimal codLocalEntDest;
-   private BigDecimal codLocalEntOrig;
-   private BigDecimal codLocalSaiDest;
-   private BigDecimal codLocalSaiOrig;
-
    public String getAjustarMps() {
-        return ajustarMps;
+        return this.getVo().asString("AJUSTARMPS");
    }
 
    public void setAjustarMps(String ajustarMps) {
         markAsChanged("AJUSTARMPS", ajustarMps);
-        this.ajustarMps = ajustarMps;
    }
 
    public String getGerarAmostra() {
-        return gerarAmostra;
+        return this.getVo().asString("GERARAMOSTRA");
    }
 
    public void setGerarAmostra(String gerarAmostra) {
         markAsChanged("GERARAMOSTRA", gerarAmostra);
-        this.gerarAmostra = gerarAmostra;
    }
 
    public String getLocalOrigEnt() {
-        return localOrigEnt;
+        return this.getVo().asString("LOCALORIGENT");
    }
 
    public void setLocalOrigEnt(String localOrigEnt) {
         markAsChanged("LOCALORIGENT", localOrigEnt);
-        this.localOrigEnt = localOrigEnt;
    }
 
    public String getLocalOrigSai() {
-        return localOrigSai;
+        return this.getVo().asString("LOCALORIGSAI");
    }
 
    public void setLocalOrigSai(String localOrigSai) {
         markAsChanged("LOCALORIGSAI", localOrigSai);
-        this.localOrigSai = localOrigSai;
    }
 
    public String getNomeEtapa() {
-        return nomeEtapa;
+        return this.getVo().asString("NOMEETAPA");
    }
 
    public void setNomeEtapa(String nomeEtapa) {
         markAsChanged("NOMEETAPA", nomeEtapa);
-        this.nomeEtapa = nomeEtapa;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getPendenteEnt() {
-        return pendenteEnt;
+        return this.getVo().asString("PENDENTEENT");
    }
 
    public void setPendenteEnt(String pendenteEnt) {
         markAsChanged("PENDENTEENT", pendenteEnt);
-        this.pendenteEnt = pendenteEnt;
    }
 
    public String getPendenteSai() {
-        return pendenteSai;
+        return this.getVo().asString("PENDENTESAI");
    }
 
    public void setPendenteSai(String pendenteSai) {
         markAsChanged("PENDENTESAI", pendenteSai);
-        this.pendenteSai = pendenteSai;
    }
 
    public BigDecimal getSeqOtica() {
-        return seqOtica;
+        return this.getVo().asBigDecimal("SEQOTICA");
    }
 
    public void setSeqOtica(BigDecimal seqOtica) {
         markAsChanged("SEQOTICA", seqOtica);
-        this.seqOtica = seqOtica;
    }
 
    public String getTipo() {
-        return tipo;
+        return this.getVo().asString("TIPO");
    }
 
    public void setTipo(String tipo) {
         markAsChanged("TIPO", tipo);
-        this.tipo = tipo;
    }
 
    public BigDecimal getTopDevMp() {
-        return topDevMp;
+        return this.getVo().asBigDecimal("TOPDEVMP");
    }
 
    public void setTopDevMp(BigDecimal topDevMp) {
         markAsChanged("TOPDEVMP", topDevMp);
-        this.topDevMp = topDevMp;
    }
 
    public BigDecimal getTopEntrada() {
-        return topEntrada;
+        return this.getVo().asBigDecimal("TOPENTRADA");
    }
 
    public void setTopEntrada(BigDecimal topEntrada) {
         markAsChanged("TOPENTRADA", topEntrada);
-        this.topEntrada = topEntrada;
    }
 
    public BigDecimal getTopProducao() {
-        return topProducao;
+        return this.getVo().asBigDecimal("TOPPRODUCAO");
    }
 
    public void setTopProducao(BigDecimal topProducao) {
         markAsChanged("TOPPRODUCAO", topProducao);
-        this.topProducao = topProducao;
    }
 
    public BigDecimal getTopSaida() {
-        return topSaida;
+        return this.getVo().asBigDecimal("TOPSAIDA");
    }
 
    public void setTopSaida(BigDecimal topSaida) {
         markAsChanged("TOPSAIDA", topSaida);
-        this.topSaida = topSaida;
    }
 
    public String getUsaLocEntDestPa() {
-        return usaLocEntDestPa;
+        return this.getVo().asString("USALOCENTDESTPA");
    }
 
    public void setUsaLocEntDestPa(String usaLocEntDestPa) {
         markAsChanged("USALOCENTDESTPA", usaLocEntDestPa);
-        this.usaLocEntDestPa = usaLocEntDestPa;
    }
 
    public String getUsaLocEntOrigPa() {
-        return usaLocEntOrigPa;
+        return this.getVo().asString("USALOCENTORIGPA");
    }
 
    public void setUsaLocEntOrigPa(String usaLocEntOrigPa) {
         markAsChanged("USALOCENTORIGPA", usaLocEntOrigPa);
-        this.usaLocEntOrigPa = usaLocEntOrigPa;
    }
 
    public String getUsaLocSaiDestPa() {
-        return usaLocSaiDestPa;
+        return this.getVo().asString("USALOCSAIDESTPA");
    }
 
    public void setUsaLocSaiDestPa(String usaLocSaiDestPa) {
         markAsChanged("USALOCSAIDESTPA", usaLocSaiDestPa);
-        this.usaLocSaiDestPa = usaLocSaiDestPa;
    }
 
    public String getUsaLocSaiOrigPa() {
-        return usaLocSaiOrigPa;
+        return this.getVo().asString("USALOCSAIORIGPA");
    }
 
    public void setUsaLocSaiOrigPa(String usaLocSaiOrigPa) {
         markAsChanged("USALOCSAIORIGPA", usaLocSaiOrigPa);
-        this.usaLocSaiOrigPa = usaLocSaiOrigPa;
    }
 
    public String getValidaWms() {
-        return validaWms;
+        return this.getVo().asString("VALIDAWMS");
    }
 
    public void setValidaWms(String validaWms) {
         markAsChanged("VALIDAWMS", validaWms);
-        this.validaWms = validaWms;
    }
 
    public BigDecimal getCodCencus() {
-        return codCencus;
+        return this.getVo().asBigDecimal("CODCENCUS");
    }
 
    public void setCodCencus(BigDecimal codCencus) {
         markAsChanged("CODCENCUS", codCencus);
-        this.codCencus = codCencus;
    }
 
    public BigDecimal getCodEmpDest() {
-        return codEmpDest;
+        return this.getVo().asBigDecimal("CODEMPDEST");
    }
 
    public void setCodEmpDest(BigDecimal codEmpDest) {
         markAsChanged("CODEMPDEST", codEmpDest);
-        this.codEmpDest = codEmpDest;
    }
 
    public BigDecimal getCodEmpOrig() {
-        return codEmpOrig;
+        return this.getVo().asBigDecimal("CODEMPORIG");
    }
 
    public void setCodEmpOrig(BigDecimal codEmpOrig) {
         markAsChanged("CODEMPORIG", codEmpOrig);
-        this.codEmpOrig = codEmpOrig;
    }
 
    public BigDecimal getCodEtapa() {
-        return codEtapa;
+        return this.getVo().asBigDecimal("CODETAPA");
    }
 
    public void setCodEtapa(BigDecimal codEtapa) {
         markAsChanged("CODETAPA", codEtapa);
-        this.codEtapa = codEtapa;
    }
 
    public BigDecimal getCodEtapaMp() {
-        return codEtapaMp;
+        return this.getVo().asBigDecimal("CODETAPAMP");
    }
 
    public void setCodEtapaMp(BigDecimal codEtapaMp) {
         markAsChanged("CODETAPAMP", codEtapaMp);
-        this.codEtapaMp = codEtapaMp;
    }
 
    public BigDecimal getCodLocalEntDest() {
-        return codLocalEntDest;
+        return this.getVo().asBigDecimal("CODLOCALENTDEST");
    }
 
    public void setCodLocalEntDest(BigDecimal codLocalEntDest) {
         markAsChanged("CODLOCALENTDEST", codLocalEntDest);
-        this.codLocalEntDest = codLocalEntDest;
    }
 
    public BigDecimal getCodLocalEntOrig() {
-        return codLocalEntOrig;
+        return this.getVo().asBigDecimal("CODLOCALENTORIG");
    }
 
    public void setCodLocalEntOrig(BigDecimal codLocalEntOrig) {
         markAsChanged("CODLOCALENTORIG", codLocalEntOrig);
-        this.codLocalEntOrig = codLocalEntOrig;
    }
 
    public BigDecimal getCodLocalSaiDest() {
-        return codLocalSaiDest;
+        return this.getVo().asBigDecimal("CODLOCALSAIDEST");
    }
 
    public void setCodLocalSaiDest(BigDecimal codLocalSaiDest) {
         markAsChanged("CODLOCALSAIDEST", codLocalSaiDest);
-        this.codLocalSaiDest = codLocalSaiDest;
    }
 
    public BigDecimal getCodLocalSaiOrig() {
-        return codLocalSaiOrig;
+        return this.getVo().asBigDecimal("CODLOCALSAIORIG");
    }
 
    public void setCodLocalSaiOrig(BigDecimal codLocalSaiOrig) {
         markAsChanged("CODLOCALSAIORIG", codLocalSaiOrig);
-        this.codLocalSaiOrig = codLocalSaiOrig;
    }
 
    @Override
@@ -299,34 +242,6 @@ public class EtapaProducao extends AbstractSankhyaEntity<EtapaProducao> {
    @Override
    public EtapaProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ajustarMps = vo.asString("AJUSTARMPS");
-        this.gerarAmostra = vo.asString("GERARAMOSTRA");
-        this.localOrigEnt = vo.asString("LOCALORIGENT");
-        this.localOrigSai = vo.asString("LOCALORIGSAI");
-        this.nomeEtapa = vo.asString("NOMEETAPA");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.pendenteEnt = vo.asString("PENDENTEENT");
-        this.pendenteSai = vo.asString("PENDENTESAI");
-        this.seqOtica = vo.asBigDecimal("SEQOTICA");
-        this.tipo = vo.asString("TIPO");
-        this.topDevMp = vo.asBigDecimal("TOPDEVMP");
-        this.topEntrada = vo.asBigDecimal("TOPENTRADA");
-        this.topProducao = vo.asBigDecimal("TOPPRODUCAO");
-        this.topSaida = vo.asBigDecimal("TOPSAIDA");
-        this.usaLocEntDestPa = vo.asString("USALOCENTDESTPA");
-        this.usaLocEntOrigPa = vo.asString("USALOCENTORIGPA");
-        this.usaLocSaiDestPa = vo.asString("USALOCSAIDESTPA");
-        this.usaLocSaiOrigPa = vo.asString("USALOCSAIORIGPA");
-        this.validaWms = vo.asString("VALIDAWMS");
-        this.codCencus = vo.asBigDecimal("CODCENCUS");
-        this.codEmpDest = vo.asBigDecimal("CODEMPDEST");
-        this.codEmpOrig = vo.asBigDecimal("CODEMPORIG");
-        this.codEtapa = vo.asBigDecimal("CODETAPA");
-        this.codEtapaMp = vo.asBigDecimal("CODETAPAMP");
-        this.codLocalEntDest = vo.asBigDecimal("CODLOCALENTDEST");
-        this.codLocalEntOrig = vo.asBigDecimal("CODLOCALENTORIG");
-        this.codLocalSaiDest = vo.asBigDecimal("CODLOCALSAIDEST");
-        this.codLocalSaiOrig = vo.asBigDecimal("CODLOCALSAIORIG");
         return this;
    }
 }

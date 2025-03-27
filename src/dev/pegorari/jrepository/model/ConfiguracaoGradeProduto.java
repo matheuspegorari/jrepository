@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<ConfiguracaoGradeProduto> {
-   private BigDecimal codUsu;
-   private Timestamp dhCad;
-   private BigDecimal idGrade;
-   private String nomGrd;
-   private String atuNuVersao;
-   private BigDecimal nuVersao;
-   private String usaMascara;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    public BigDecimal getIdGrade() {
-        return idGrade;
+        return this.getVo().asBigDecimal("IDGRADE");
    }
 
    public void setIdGrade(BigDecimal idGrade) {
         markAsChanged("IDGRADE", idGrade);
-        this.idGrade = idGrade;
    }
 
    public String getNomGrd() {
-        return nomGrd;
+        return this.getVo().asString("NOMGRD");
    }
 
    public void setNomGrd(String nomGrd) {
         markAsChanged("NOMGRD", nomGrd);
-        this.nomGrd = nomGrd;
    }
 
    public String getAtuNuVersao() {
-        return atuNuVersao;
+        return this.getVo().asString("ATUNUVERSAO");
    }
 
    public void setAtuNuVersao(String atuNuVersao) {
         markAsChanged("ATUNUVERSAO", atuNuVersao);
-        this.atuNuVersao = atuNuVersao;
    }
 
    public BigDecimal getNuVersao() {
-        return nuVersao;
+        return this.getVo().asBigDecimal("NUVERSAO");
    }
 
    public void setNuVersao(BigDecimal nuVersao) {
         markAsChanged("NUVERSAO", nuVersao);
-        this.nuVersao = nuVersao;
    }
 
    public String getUsaMascara() {
-        return usaMascara;
+        return this.getVo().asString("USAMASCARA");
    }
 
    public void setUsaMascara(String usaMascara) {
         markAsChanged("USAMASCARA", usaMascara);
-        this.usaMascara = usaMascara;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ConfiguracaoGradeProduto extends AbstractSankhyaEntity<Configuracao
    @Override
    public ConfiguracaoGradeProduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhCad = vo.asTimestamp("DHCAD");
-        this.idGrade = vo.asBigDecimal("IDGRADE");
-        this.nomGrd = vo.asString("NOMGRD");
-        this.atuNuVersao = vo.asString("ATUNUVERSAO");
-        this.nuVersao = vo.asBigDecimal("NUVERSAO");
-        this.usaMascara = vo.asString("USAMASCARA");
         return this;
    }
 }

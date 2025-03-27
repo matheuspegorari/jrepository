@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGrupo> {
-   private BigDecimal codGrupo;
-   private String descrGrupo;
-   private String nomeGrupo;
-
    public BigDecimal getCodGrupo() {
-        return codGrupo;
+        return this.getVo().asBigDecimal("CODGRUPO");
    }
 
    public void setCodGrupo(BigDecimal codGrupo) {
         markAsChanged("CODGRUPO", codGrupo);
-        this.codGrupo = codGrupo;
    }
 
    public String getDescrGrupo() {
-        return descrGrupo;
+        return this.getVo().asString("DESCRGRUPO");
    }
 
    public void setDescrGrupo(String descrGrupo) {
         markAsChanged("DESCRGRUPO", descrGrupo);
-        this.descrGrupo = descrGrupo;
    }
 
    public String getNomeGrupo() {
-        return nomeGrupo;
+        return this.getVo().asString("NOMEGRUPO");
    }
 
    public void setNomeGrupo(String nomeGrupo) {
         markAsChanged("NOMEGRUPO", nomeGrupo);
-        this.nomeGrupo = nomeGrupo;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class PrevisaoVendasGrupo extends AbstractSankhyaEntity<PrevisaoVendasGru
    @Override
    public PrevisaoVendasGrupo fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codGrupo = vo.asBigDecimal("CODGRUPO");
-        this.descrGrupo = vo.asString("DESCRGRUPO");
-        this.nomeGrupo = vo.asString("NOMEGRUPO");
         return this;
    }
 }

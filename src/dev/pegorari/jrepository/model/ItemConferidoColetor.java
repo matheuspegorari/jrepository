@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoColetor> {
-   private Timestamp dtVal;
-   private BigDecimal nuConferencia;
-   private BigDecimal numVol;
-   private BigDecimal qtdAvaria;
-   private BigDecimal quantidade;
-   private BigDecimal sequencia;
-   private String codBarra;
-   private BigDecimal codUsu;
-   private String controle;
-   private String confUsuFinal;
-   private BigDecimal qtdPecas;
-   private String seriesNcm;
-   private String tipoLeitura;
-
    public Timestamp getDtVal() {
-        return dtVal;
+        return this.getVo().asTimestamp("DTVAL");
    }
 
    public void setDtVal(Timestamp dtVal) {
         markAsChanged("DTVAL", dtVal);
-        this.dtVal = dtVal;
    }
 
    public BigDecimal getNuConferencia() {
-        return nuConferencia;
+        return this.getVo().asBigDecimal("NUCONFERENCIA");
    }
 
    public void setNuConferencia(BigDecimal nuConferencia) {
         markAsChanged("NUCONFERENCIA", nuConferencia);
-        this.nuConferencia = nuConferencia;
    }
 
    public BigDecimal getNumVol() {
-        return numVol;
+        return this.getVo().asBigDecimal("NUMVOL");
    }
 
    public void setNumVol(BigDecimal numVol) {
         markAsChanged("NUMVOL", numVol);
-        this.numVol = numVol;
    }
 
    public BigDecimal getQtdAvaria() {
-        return qtdAvaria;
+        return this.getVo().asBigDecimal("QTDAVARIA");
    }
 
    public void setQtdAvaria(BigDecimal qtdAvaria) {
         markAsChanged("QTDAVARIA", qtdAvaria);
-        this.qtdAvaria = qtdAvaria;
    }
 
    public BigDecimal getQuantidade() {
-        return quantidade;
+        return this.getVo().asBigDecimal("QUANTIDADE");
    }
 
    public void setQuantidade(BigDecimal quantidade) {
         markAsChanged("QUANTIDADE", quantidade);
-        this.quantidade = quantidade;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public String getCodBarra() {
-        return codBarra;
+        return this.getVo().asString("CODBARRA");
    }
 
    public void setCodBarra(String codBarra) {
         markAsChanged("CODBARRA", codBarra);
-        this.codBarra = codBarra;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getControle() {
-        return controle;
+        return this.getVo().asString("CONTROLE");
    }
 
    public void setControle(String controle) {
         markAsChanged("CONTROLE", controle);
-        this.controle = controle;
    }
 
    public String getConfUsuFinal() {
-        return confUsuFinal;
+        return this.getVo().asString("CONFUSUFINAL");
    }
 
    public void setConfUsuFinal(String confUsuFinal) {
         markAsChanged("CONFUSUFINAL", confUsuFinal);
-        this.confUsuFinal = confUsuFinal;
    }
 
    public BigDecimal getQtdPecas() {
-        return qtdPecas;
+        return this.getVo().asBigDecimal("QTDPECAS");
    }
 
    public void setQtdPecas(BigDecimal qtdPecas) {
         markAsChanged("QTDPECAS", qtdPecas);
-        this.qtdPecas = qtdPecas;
    }
 
    public String getSeriesNcm() {
-        return seriesNcm;
+        return this.getVo().asString("SERIESNCM");
    }
 
    public void setSeriesNcm(String seriesNcm) {
         markAsChanged("SERIESNCM", seriesNcm);
-        this.seriesNcm = seriesNcm;
    }
 
    public String getTipoLeitura() {
-        return tipoLeitura;
+        return this.getVo().asString("TIPO_LEITURA");
    }
 
    public void setTipoLeitura(String tipoLeitura) {
         markAsChanged("TIPO_LEITURA", tipoLeitura);
-        this.tipoLeitura = tipoLeitura;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class ItemConferidoColetor extends AbstractSankhyaEntity<ItemConferidoCol
    @Override
    public ItemConferidoColetor fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.dtVal = vo.asTimestamp("DTVAL");
-        this.nuConferencia = vo.asBigDecimal("NUCONFERENCIA");
-        this.numVol = vo.asBigDecimal("NUMVOL");
-        this.qtdAvaria = vo.asBigDecimal("QTDAVARIA");
-        this.quantidade = vo.asBigDecimal("QUANTIDADE");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.codBarra = vo.asString("CODBARRA");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.controle = vo.asString("CONTROLE");
-        this.confUsuFinal = vo.asString("CONFUSUFINAL");
-        this.qtdPecas = vo.asBigDecimal("QTDPECAS");
-        this.seriesNcm = vo.asString("SERIESNCM");
-        this.tipoLeitura = vo.asString("TIPO_LEITURA");
         return this;
    }
 }

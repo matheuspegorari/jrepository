@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<IndisponibilidadeWorkCenter> {
-   private BigDecimal codUsu;
-   private BigDecimal codWcp;
-   private Timestamp dhAlter;
-   private Timestamp dhFinal;
-   private Timestamp dhIncial;
-   private String motivo;
-   private BigDecimal nuIwc;
-   private String observacao;
-   private String situacao;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getCodWcp() {
-        return codWcp;
+        return this.getVo().asBigDecimal("CODWCP");
    }
 
    public void setCodWcp(BigDecimal codWcp) {
         markAsChanged("CODWCP", codWcp);
-        this.codWcp = codWcp;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhFinal() {
-        return dhFinal;
+        return this.getVo().asTimestamp("DHFINAL");
    }
 
    public void setDhFinal(Timestamp dhFinal) {
         markAsChanged("DHFINAL", dhFinal);
-        this.dhFinal = dhFinal;
    }
 
    public Timestamp getDhIncial() {
-        return dhIncial;
+        return this.getVo().asTimestamp("DHINCIAL");
    }
 
    public void setDhIncial(Timestamp dhIncial) {
         markAsChanged("DHINCIAL", dhIncial);
-        this.dhIncial = dhIncial;
    }
 
    public String getMotivo() {
-        return motivo;
+        return this.getVo().asString("MOTIVO");
    }
 
    public void setMotivo(String motivo) {
         markAsChanged("MOTIVO", motivo);
-        this.motivo = motivo;
    }
 
    public BigDecimal getNuIwc() {
-        return nuIwc;
+        return this.getVo().asBigDecimal("NUIWC");
    }
 
    public void setNuIwc(BigDecimal nuIwc) {
         markAsChanged("NUIWC", nuIwc);
-        this.nuIwc = nuIwc;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public String getSituacao() {
-        return situacao;
+        return this.getVo().asString("SITUACAO");
    }
 
    public void setSituacao(String situacao) {
         markAsChanged("SITUACAO", situacao);
-        this.situacao = situacao;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class IndisponibilidadeWorkCenter extends AbstractSankhyaEntity<Indisponi
    @Override
    public IndisponibilidadeWorkCenter fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.codWcp = vo.asBigDecimal("CODWCP");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhFinal = vo.asTimestamp("DHFINAL");
-        this.dhIncial = vo.asTimestamp("DHINCIAL");
-        this.motivo = vo.asString("MOTIVO");
-        this.nuIwc = vo.asBigDecimal("NUIWC");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.situacao = vo.asString("SITUACAO");
         return this;
    }
 }

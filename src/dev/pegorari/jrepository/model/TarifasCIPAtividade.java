@@ -6,135 +6,108 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtividade> {
-   private BigDecimal codProdPa;
-   private BigDecimal codProdTar;
-   private String codVol;
-   private String controlePa;
-   private BigDecimal ideFx;
-   private BigDecimal idProc;
-   private BigDecimal qtd;
-   private String tipoExec;
-   private String tipoIndice;
-   private BigDecimal codUsuAlt;
-   private BigDecimal codUsuCad;
-   private Timestamp dhAlter;
-   private Timestamp dhCad;
-
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getCodProdTar() {
-        return codProdTar;
+        return this.getVo().asBigDecimal("CODPRODTAR");
    }
 
    public void setCodProdTar(BigDecimal codProdTar) {
         markAsChanged("CODPRODTAR", codProdTar);
-        this.codProdTar = codProdTar;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public String getControlePa() {
-        return controlePa;
+        return this.getVo().asString("CONTROLEPA");
    }
 
    public void setControlePa(String controlePa) {
         markAsChanged("CONTROLEPA", controlePa);
-        this.controlePa = controlePa;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getIdProc() {
-        return idProc;
+        return this.getVo().asBigDecimal("IDPROC");
    }
 
    public void setIdProc(BigDecimal idProc) {
         markAsChanged("IDPROC", idProc);
-        this.idProc = idProc;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public String getTipoExec() {
-        return tipoExec;
+        return this.getVo().asString("TIPOEXEC");
    }
 
    public void setTipoExec(String tipoExec) {
         markAsChanged("TIPOEXEC", tipoExec);
-        this.tipoExec = tipoExec;
    }
 
    public String getTipoIndice() {
-        return tipoIndice;
+        return this.getVo().asString("TIPOINDICE");
    }
 
    public void setTipoIndice(String tipoIndice) {
         markAsChanged("TIPOINDICE", tipoIndice);
-        this.tipoIndice = tipoIndice;
    }
 
    public BigDecimal getCodUsuAlt() {
-        return codUsuAlt;
+        return this.getVo().asBigDecimal("CODUSUALT");
    }
 
    public void setCodUsuAlt(BigDecimal codUsuAlt) {
         markAsChanged("CODUSUALT", codUsuAlt);
-        this.codUsuAlt = codUsuAlt;
    }
 
    public BigDecimal getCodUsuCad() {
-        return codUsuCad;
+        return this.getVo().asBigDecimal("CODUSUCAD");
    }
 
    public void setCodUsuCad(BigDecimal codUsuCad) {
         markAsChanged("CODUSUCAD", codUsuCad);
-        this.codUsuCad = codUsuCad;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhCad() {
-        return dhCad;
+        return this.getVo().asTimestamp("DHCAD");
    }
 
    public void setDhCad(Timestamp dhCad) {
         markAsChanged("DHCAD", dhCad);
-        this.dhCad = dhCad;
    }
 
    @Override
@@ -150,19 +123,6 @@ public class TarifasCIPAtividade extends AbstractSankhyaEntity<TarifasCIPAtivida
    @Override
    public TarifasCIPAtividade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.codProdTar = vo.asBigDecimal("CODPRODTAR");
-        this.codVol = vo.asString("CODVOL");
-        this.controlePa = vo.asString("CONTROLEPA");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.idProc = vo.asBigDecimal("IDPROC");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.tipoExec = vo.asString("TIPOEXEC");
-        this.tipoIndice = vo.asString("TIPOINDICE");
-        this.codUsuAlt = vo.asBigDecimal("CODUSUALT");
-        this.codUsuCad = vo.asBigDecimal("CODUSUCAD");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhCad = vo.asTimestamp("DHCAD");
         return this;
    }
 }

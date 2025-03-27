@@ -5,65 +5,52 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComercial> {
-   private BigDecimal seqKit;
-   private String tipKit;
-   private String versaoProjeto;
-   private BigDecimal codParcForn;
-   private String descrKit;
-   private BigDecimal nuProjeto;
-
    public BigDecimal getSeqKit() {
-        return seqKit;
+        return this.getVo().asBigDecimal("SEQKIT");
    }
 
    public void setSeqKit(BigDecimal seqKit) {
         markAsChanged("SEQKIT", seqKit);
-        this.seqKit = seqKit;
    }
 
    public String getTipKit() {
-        return tipKit;
+        return this.getVo().asString("TIPKIT");
    }
 
    public void setTipKit(String tipKit) {
         markAsChanged("TIPKIT", tipKit);
-        this.tipKit = tipKit;
    }
 
    public String getVersaoProjeto() {
-        return versaoProjeto;
+        return this.getVo().asString("VERSAOPROJETO");
    }
 
    public void setVersaoProjeto(String versaoProjeto) {
         markAsChanged("VERSAOPROJETO", versaoProjeto);
-        this.versaoProjeto = versaoProjeto;
    }
 
    public BigDecimal getCodParcForn() {
-        return codParcForn;
+        return this.getVo().asBigDecimal("CODPARCFORN");
    }
 
    public void setCodParcForn(BigDecimal codParcForn) {
         markAsChanged("CODPARCFORN", codParcForn);
-        this.codParcForn = codParcForn;
    }
 
    public String getDescrKit() {
-        return descrKit;
+        return this.getVo().asString("DESCRKIT");
    }
 
    public void setDescrKit(String descrKit) {
         markAsChanged("DESCRKIT", descrKit);
-        this.descrKit = descrKit;
    }
 
    public BigDecimal getNuProjeto() {
-        return nuProjeto;
+        return this.getVo().asBigDecimal("NUPROJETO");
    }
 
    public void setNuProjeto(BigDecimal nuProjeto) {
         markAsChanged("NUPROJETO", nuProjeto);
-        this.nuProjeto = nuProjeto;
    }
 
    @Override
@@ -79,12 +66,6 @@ public class KitPropostaComercial extends AbstractSankhyaEntity<KitPropostaComer
    @Override
    public KitPropostaComercial fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqKit = vo.asBigDecimal("SEQKIT");
-        this.tipKit = vo.asString("TIPKIT");
-        this.versaoProjeto = vo.asString("VERSAOPROJETO");
-        this.codParcForn = vo.asBigDecimal("CODPARCFORN");
-        this.descrKit = vo.asString("DESCRKIT");
-        this.nuProjeto = vo.asBigDecimal("NUPROJETO");
         return this;
    }
 }

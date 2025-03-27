@@ -6,45 +6,36 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
-   private BigDecimal codCtabcoInt;
-   private Timestamp referencia;
-   private BigDecimal saldoBco;
-   private BigDecimal saldoReal;
-
    public BigDecimal getCodCtabcoInt() {
-        return codCtabcoInt;
+        return this.getVo().asBigDecimal("CODCTABCOINT");
    }
 
    public void setCodCtabcoInt(BigDecimal codCtabcoInt) {
         markAsChanged("CODCTABCOINT", codCtabcoInt);
-        this.codCtabcoInt = codCtabcoInt;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getSaldoBco() {
-        return saldoBco;
+        return this.getVo().asBigDecimal("SALDOBCO");
    }
 
    public void setSaldoBco(BigDecimal saldoBco) {
         markAsChanged("SALDOBCO", saldoBco);
-        this.saldoBco = saldoBco;
    }
 
    public BigDecimal getSaldoReal() {
-        return saldoReal;
+        return this.getVo().asBigDecimal("SALDOREAL");
    }
 
    public void setSaldoReal(BigDecimal saldoReal) {
         markAsChanged("SALDOREAL", saldoReal);
-        this.saldoReal = saldoReal;
    }
 
    @Override
@@ -60,10 +51,6 @@ public class SaldoBancario extends AbstractSankhyaEntity<SaldoBancario> {
    @Override
    public SaldoBancario fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtabcoInt = vo.asBigDecimal("CODCTABCOINT");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.saldoBco = vo.asBigDecimal("SALDOBCO");
-        this.saldoReal = vo.asBigDecimal("SALDOREAL");
         return this;
    }
 }

@@ -5,35 +5,28 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> {
-   private BigDecimal nuNota;
-   private BigDecimal codEst;
-   private String descricao;
-
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getCodEst() {
-        return codEst;
+        return this.getVo().asBigDecimal("CODEST");
    }
 
    public void setCodEst(BigDecimal codEst) {
         markAsChanged("CODEST", codEst);
-        this.codEst = codEst;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    @Override
@@ -49,9 +42,6 @@ public class EstruturaProducao extends AbstractSankhyaEntity<EstruturaProducao> 
    @Override
    public EstruturaProducao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.codEst = vo.asBigDecimal("CODEST");
-        this.descricao = vo.asString("DESCRICAO");
         return this;
    }
 }

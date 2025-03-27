@@ -6,415 +6,332 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
-   private String chaveMdfe;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private Timestamp dhEmiss;
-   private Timestamp dhRecibo;
-   private String nroRecibo;
-   private BigDecimal numAleatorio;
-   private BigDecimal numMdfe;
-   private BigDecimal numViag;
-   private BigDecimal seqMdfe;
-   private String statusMdfe;
-   private String tipEmiss;
-   private BigDecimal ufFinal;
-   private char[] xml;
-   private BigDecimal codCidEncerramento;
-   private String codPortoDestino;
-   private String codPortoEmbarque;
-   private String codPortoTransbordo;
-   private String irInNavio;
-   private String qrCode;
-   private BigDecimal tipoNavegacao;
-   private String usaPesoBrutoNfe;
-   private BigDecimal pesoBrutoTot;
-   private String unMed;
-   private BigDecimal ufInicial;
-   private char[] xmlEnvCli;
-   private char[] xmlProtAut;
-   private BigDecimal nuLoteMdfe;
-   private String cepCar;
-   private String cepDescar;
-   private String descProd;
-   private String ean;
-   private BigDecimal latCar;
-   private BigDecimal latDescar;
-   private BigDecimal lonDesgCar;
-   private BigDecimal longCar;
-   private String ncm;
-   private String tpCarga;
-   private String indCarregPost;
-   private BigDecimal munFinal;
-   private BigDecimal munInicial;
-
    public String getChaveMdfe() {
-        return chaveMdfe;
+        return this.getVo().asString("CHAVEMDFE");
    }
 
    public void setChaveMdfe(String chaveMdfe) {
         markAsChanged("CHAVEMDFE", chaveMdfe);
-        this.chaveMdfe = chaveMdfe;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDhEmiss() {
-        return dhEmiss;
+        return this.getVo().asTimestamp("DHEMISS");
    }
 
    public void setDhEmiss(Timestamp dhEmiss) {
         markAsChanged("DHEMISS", dhEmiss);
-        this.dhEmiss = dhEmiss;
    }
 
    public Timestamp getDhRecibo() {
-        return dhRecibo;
+        return this.getVo().asTimestamp("DHRECIBO");
    }
 
    public void setDhRecibo(Timestamp dhRecibo) {
         markAsChanged("DHRECIBO", dhRecibo);
-        this.dhRecibo = dhRecibo;
    }
 
    public String getNroRecibo() {
-        return nroRecibo;
+        return this.getVo().asString("NRORECIBO");
    }
 
    public void setNroRecibo(String nroRecibo) {
         markAsChanged("NRORECIBO", nroRecibo);
-        this.nroRecibo = nroRecibo;
    }
 
    public BigDecimal getNumAleatorio() {
-        return numAleatorio;
+        return this.getVo().asBigDecimal("NUMALEATORIO");
    }
 
    public void setNumAleatorio(BigDecimal numAleatorio) {
         markAsChanged("NUMALEATORIO", numAleatorio);
-        this.numAleatorio = numAleatorio;
    }
 
    public BigDecimal getNumMdfe() {
-        return numMdfe;
+        return this.getVo().asBigDecimal("NUMMDFE");
    }
 
    public void setNumMdfe(BigDecimal numMdfe) {
         markAsChanged("NUMMDFE", numMdfe);
-        this.numMdfe = numMdfe;
    }
 
    public BigDecimal getNumViag() {
-        return numViag;
+        return this.getVo().asBigDecimal("NUVIAG");
    }
 
    public void setNumViag(BigDecimal numViag) {
         markAsChanged("NUVIAG", numViag);
-        this.numViag = numViag;
    }
 
    public BigDecimal getSeqMdfe() {
-        return seqMdfe;
+        return this.getVo().asBigDecimal("SEQMDFE");
    }
 
    public void setSeqMdfe(BigDecimal seqMdfe) {
         markAsChanged("SEQMDFE", seqMdfe);
-        this.seqMdfe = seqMdfe;
    }
 
    public String getStatusMdfe() {
-        return statusMdfe;
+        return this.getVo().asString("STATUSMDFE");
    }
 
    public void setStatusMdfe(String statusMdfe) {
         markAsChanged("STATUSMDFE", statusMdfe);
-        this.statusMdfe = statusMdfe;
    }
 
    public String getTipEmiss() {
-        return tipEmiss;
+        return this.getVo().asString("TIPEMISS");
    }
 
    public void setTipEmiss(String tipEmiss) {
         markAsChanged("TIPEMISS", tipEmiss);
-        this.tipEmiss = tipEmiss;
    }
 
    public BigDecimal getUfFinal() {
-        return ufFinal;
+        return this.getVo().asBigDecimal("UFFINAL");
    }
 
    public void setUfFinal(BigDecimal ufFinal) {
         markAsChanged("UFFINAL", ufFinal);
-        this.ufFinal = ufFinal;
    }
 
    public char[] getXml() {
-        return xml;
+        return this.getVo().asClob("XML");
    }
 
    public void setXml(char[] xml) {
         markAsChanged("XML", xml);
-        this.xml = xml;
    }
 
    public BigDecimal getCodCidEncerramento() {
-        return codCidEncerramento;
+        return this.getVo().asBigDecimal("CODCIDENCERRAMENTO");
    }
 
    public void setCodCidEncerramento(BigDecimal codCidEncerramento) {
         markAsChanged("CODCIDENCERRAMENTO", codCidEncerramento);
-        this.codCidEncerramento = codCidEncerramento;
    }
 
    public String getCodPortoDestino() {
-        return codPortoDestino;
+        return this.getVo().asString("CODPORTODESTINO");
    }
 
    public void setCodPortoDestino(String codPortoDestino) {
         markAsChanged("CODPORTODESTINO", codPortoDestino);
-        this.codPortoDestino = codPortoDestino;
    }
 
    public String getCodPortoEmbarque() {
-        return codPortoEmbarque;
+        return this.getVo().asString("CODPORTOEMBARQUE");
    }
 
    public void setCodPortoEmbarque(String codPortoEmbarque) {
         markAsChanged("CODPORTOEMBARQUE", codPortoEmbarque);
-        this.codPortoEmbarque = codPortoEmbarque;
    }
 
    public String getCodPortoTransbordo() {
-        return codPortoTransbordo;
+        return this.getVo().asString("CODPORTOTRANSBORDO");
    }
 
    public void setCodPortoTransbordo(String codPortoTransbordo) {
         markAsChanged("CODPORTOTRANSBORDO", codPortoTransbordo);
-        this.codPortoTransbordo = codPortoTransbordo;
    }
 
    public String getIrInNavio() {
-        return irInNavio;
+        return this.getVo().asString("IRINNAVIO");
    }
 
    public void setIrInNavio(String irInNavio) {
         markAsChanged("IRINNAVIO", irInNavio);
-        this.irInNavio = irInNavio;
    }
 
    public String getQrCode() {
-        return qrCode;
+        return this.getVo().asString("QRCODE");
    }
 
    public void setQrCode(String qrCode) {
         markAsChanged("QRCODE", qrCode);
-        this.qrCode = qrCode;
    }
 
    public BigDecimal getTipoNavegacao() {
-        return tipoNavegacao;
+        return this.getVo().asBigDecimal("TIPONAVEGACAO");
    }
 
    public void setTipoNavegacao(BigDecimal tipoNavegacao) {
         markAsChanged("TIPONAVEGACAO", tipoNavegacao);
-        this.tipoNavegacao = tipoNavegacao;
    }
 
    public String getUsaPesoBrutoNfe() {
-        return usaPesoBrutoNfe;
+        return this.getVo().asString("USAPESOBRUTONFE");
    }
 
    public void setUsaPesoBrutoNfe(String usaPesoBrutoNfe) {
         markAsChanged("USAPESOBRUTONFE", usaPesoBrutoNfe);
-        this.usaPesoBrutoNfe = usaPesoBrutoNfe;
    }
 
    public BigDecimal getPesoBrutoTot() {
-        return pesoBrutoTot;
+        return this.getVo().asBigDecimal("PESOBRUTOTOT");
    }
 
    public void setPesoBrutoTot(BigDecimal pesoBrutoTot) {
         markAsChanged("PESOBRUTOTOT", pesoBrutoTot);
-        this.pesoBrutoTot = pesoBrutoTot;
    }
 
    public String getUnMed() {
-        return unMed;
+        return this.getVo().asString("UNMED");
    }
 
    public void setUnMed(String unMed) {
         markAsChanged("UNMED", unMed);
-        this.unMed = unMed;
    }
 
    public BigDecimal getUfInicial() {
-        return ufInicial;
+        return this.getVo().asBigDecimal("UFINICIAL");
    }
 
    public void setUfInicial(BigDecimal ufInicial) {
         markAsChanged("UFINICIAL", ufInicial);
-        this.ufInicial = ufInicial;
    }
 
    public char[] getXmlEnvCli() {
-        return xmlEnvCli;
+        return this.getVo().asClob("XMLENVCLI");
    }
 
    public void setXmlEnvCli(char[] xmlEnvCli) {
         markAsChanged("XMLENVCLI", xmlEnvCli);
-        this.xmlEnvCli = xmlEnvCli;
    }
 
    public char[] getXmlProtAut() {
-        return xmlProtAut;
+        return this.getVo().asClob("XMLPROTAUT");
    }
 
    public void setXmlProtAut(char[] xmlProtAut) {
         markAsChanged("XMLPROTAUT", xmlProtAut);
-        this.xmlProtAut = xmlProtAut;
    }
 
    public BigDecimal getNuLoteMdfe() {
-        return nuLoteMdfe;
+        return this.getVo().asBigDecimal("NULOTEMDFE");
    }
 
    public void setNuLoteMdfe(BigDecimal nuLoteMdfe) {
         markAsChanged("NULOTEMDFE", nuLoteMdfe);
-        this.nuLoteMdfe = nuLoteMdfe;
    }
 
    public String getCepCar() {
-        return cepCar;
+        return this.getVo().asString("CEPCAR");
    }
 
    public void setCepCar(String cepCar) {
         markAsChanged("CEPCAR", cepCar);
-        this.cepCar = cepCar;
    }
 
    public String getCepDescar() {
-        return cepDescar;
+        return this.getVo().asString("CEPDESCAR");
    }
 
    public void setCepDescar(String cepDescar) {
         markAsChanged("CEPDESCAR", cepDescar);
-        this.cepDescar = cepDescar;
    }
 
    public String getDescProd() {
-        return descProd;
+        return this.getVo().asString("DESCPROD");
    }
 
    public void setDescProd(String descProd) {
         markAsChanged("DESCPROD", descProd);
-        this.descProd = descProd;
    }
 
    public String getEan() {
-        return ean;
+        return this.getVo().asString("EAN");
    }
 
    public void setEan(String ean) {
         markAsChanged("EAN", ean);
-        this.ean = ean;
    }
 
    public BigDecimal getLatCar() {
-        return latCar;
+        return this.getVo().asBigDecimal("LATCAR");
    }
 
    public void setLatCar(BigDecimal latCar) {
         markAsChanged("LATCAR", latCar);
-        this.latCar = latCar;
    }
 
    public BigDecimal getLatDescar() {
-        return latDescar;
+        return this.getVo().asBigDecimal("LATDESCAR");
    }
 
    public void setLatDescar(BigDecimal latDescar) {
         markAsChanged("LATDESCAR", latDescar);
-        this.latDescar = latDescar;
    }
 
    public BigDecimal getLonDesgCar() {
-        return lonDesgCar;
+        return this.getVo().asBigDecimal("LONDESGCAR");
    }
 
    public void setLonDesgCar(BigDecimal lonDesgCar) {
         markAsChanged("LONDESGCAR", lonDesgCar);
-        this.lonDesgCar = lonDesgCar;
    }
 
    public BigDecimal getLongCar() {
-        return longCar;
+        return this.getVo().asBigDecimal("LONGCAR");
    }
 
    public void setLongCar(BigDecimal longCar) {
         markAsChanged("LONGCAR", longCar);
-        this.longCar = longCar;
    }
 
    public String getNcm() {
-        return ncm;
+        return this.getVo().asString("NCM");
    }
 
    public void setNcm(String ncm) {
         markAsChanged("NCM", ncm);
-        this.ncm = ncm;
    }
 
    public String getTpCarga() {
-        return tpCarga;
+        return this.getVo().asString("TPCARGA");
    }
 
    public void setTpCarga(String tpCarga) {
         markAsChanged("TPCARGA", tpCarga);
-        this.tpCarga = tpCarga;
    }
 
    public String getIndCarregPost() {
-        return indCarregPost;
+        return this.getVo().asString("INDCARREGPOST");
    }
 
    public void setIndCarregPost(String indCarregPost) {
         markAsChanged("INDCARREGPOST", indCarregPost);
-        this.indCarregPost = indCarregPost;
    }
 
    public BigDecimal getMunFinal() {
-        return munFinal;
+        return this.getVo().asBigDecimal("MUNFINAL");
    }
 
    public void setMunFinal(BigDecimal munFinal) {
         markAsChanged("MUNFINAL", munFinal);
-        this.munFinal = munFinal;
    }
 
    public BigDecimal getMunInicial() {
-        return munInicial;
+        return this.getVo().asBigDecimal("MUNINICIAL");
    }
 
    public void setMunInicial(BigDecimal munInicial) {
         markAsChanged("MUNINICIAL", munInicial);
-        this.munInicial = munInicial;
    }
 
    @Override
@@ -430,47 +347,6 @@ public class Manifesto extends AbstractSankhyaEntity<Manifesto> {
    @Override
    public Manifesto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.chaveMdfe = vo.asString("CHAVEMDFE");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dhEmiss = vo.asTimestamp("DHEMISS");
-        this.dhRecibo = vo.asTimestamp("DHRECIBO");
-        this.nroRecibo = vo.asString("NRORECIBO");
-        this.numAleatorio = vo.asBigDecimal("NUMALEATORIO");
-        this.numMdfe = vo.asBigDecimal("NUMMDFE");
-        this.numViag = vo.asBigDecimal("NUVIAG");
-        this.seqMdfe = vo.asBigDecimal("SEQMDFE");
-        this.statusMdfe = vo.asString("STATUSMDFE");
-        this.tipEmiss = vo.asString("TIPEMISS");
-        this.ufFinal = vo.asBigDecimal("UFFINAL");
-        this.xml = vo.asClob("XML");
-        this.codCidEncerramento = vo.asBigDecimal("CODCIDENCERRAMENTO");
-        this.codPortoDestino = vo.asString("CODPORTODESTINO");
-        this.codPortoEmbarque = vo.asString("CODPORTOEMBARQUE");
-        this.codPortoTransbordo = vo.asString("CODPORTOTRANSBORDO");
-        this.irInNavio = vo.asString("IRINNAVIO");
-        this.qrCode = vo.asString("QRCODE");
-        this.tipoNavegacao = vo.asBigDecimal("TIPONAVEGACAO");
-        this.usaPesoBrutoNfe = vo.asString("USAPESOBRUTONFE");
-        this.pesoBrutoTot = vo.asBigDecimal("PESOBRUTOTOT");
-        this.unMed = vo.asString("UNMED");
-        this.ufInicial = vo.asBigDecimal("UFINICIAL");
-        this.xmlEnvCli = vo.asClob("XMLENVCLI");
-        this.xmlProtAut = vo.asClob("XMLPROTAUT");
-        this.nuLoteMdfe = vo.asBigDecimal("NULOTEMDFE");
-        this.cepCar = vo.asString("CEPCAR");
-        this.cepDescar = vo.asString("CEPDESCAR");
-        this.descProd = vo.asString("DESCPROD");
-        this.ean = vo.asString("EAN");
-        this.latCar = vo.asBigDecimal("LATCAR");
-        this.latDescar = vo.asBigDecimal("LATDESCAR");
-        this.lonDesgCar = vo.asBigDecimal("LONDESGCAR");
-        this.longCar = vo.asBigDecimal("LONGCAR");
-        this.ncm = vo.asString("NCM");
-        this.tpCarga = vo.asString("TPCARGA");
-        this.indCarregPost = vo.asString("INDCARREGPOST");
-        this.munFinal = vo.asBigDecimal("MUNFINAL");
-        this.munInicial = vo.asBigDecimal("MUNINICIAL");
         return this;
    }
 }

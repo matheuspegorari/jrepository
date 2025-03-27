@@ -5,45 +5,36 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
-   private BigDecimal codCap;
-   private String descricao;
-   private String unidade;
-   private String untmp;
-
    public BigDecimal getCodCap() {
-        return codCap;
+        return this.getVo().asBigDecimal("CODCAP");
    }
 
    public void setCodCap(BigDecimal codCap) {
         markAsChanged("CODCAP", codCap);
-        this.codCap = codCap;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public String getUnidade() {
-        return unidade;
+        return this.getVo().asString("UNIDADE");
    }
 
    public void setUnidade(String unidade) {
         markAsChanged("UNIDADE", unidade);
-        this.unidade = unidade;
    }
 
    public String getUntmp() {
-        return untmp;
+        return this.getVo().asString("UNTMP");
    }
 
    public void setUntmp(String untmp) {
         markAsChanged("UNTMP", untmp);
-        this.untmp = untmp;
    }
 
    @Override
@@ -59,10 +50,6 @@ public class Capacidade extends AbstractSankhyaEntity<Capacidade> {
    @Override
    public Capacidade fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCap = vo.asBigDecimal("CODCAP");
-        this.descricao = vo.asString("DESCRICAO");
-        this.unidade = vo.asString("UNIDADE");
-        this.untmp = vo.asString("UNTMP");
         return this;
    }
 }

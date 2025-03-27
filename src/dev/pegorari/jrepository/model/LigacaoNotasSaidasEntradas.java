@@ -5,115 +5,92 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNotasSaidasEntradas> {
-   private BigDecimal baseSubst;
-   private BigDecimal vlrSubst;
-   private BigDecimal nuNota;
-   private BigDecimal nuNotaOrig;
-   private BigDecimal qtdSai;
-   private BigDecimal sequencia;
-   private BigDecimal sequenciaOrig;
-   private BigDecimal vlrIcms;
-   private BigDecimal baseStfcpInt;
-   private BigDecimal percStfcpInt;
-   private BigDecimal vlrStfcpInt;
-
    public BigDecimal getBaseSubst() {
-        return baseSubst;
+        return this.getVo().asBigDecimal("BASESUBST");
    }
 
    public void setBaseSubst(BigDecimal baseSubst) {
         markAsChanged("BASESUBST", baseSubst);
-        this.baseSubst = baseSubst;
    }
 
    public BigDecimal getVlrSubst() {
-        return vlrSubst;
+        return this.getVo().asBigDecimal("VLRSUBST");
    }
 
    public void setVlrSubst(BigDecimal vlrSubst) {
         markAsChanged("VLRSUBST", vlrSubst);
-        this.vlrSubst = vlrSubst;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public BigDecimal getNuNotaOrig() {
-        return nuNotaOrig;
+        return this.getVo().asBigDecimal("NUNOTAORIG");
    }
 
    public void setNuNotaOrig(BigDecimal nuNotaOrig) {
         markAsChanged("NUNOTAORIG", nuNotaOrig);
-        this.nuNotaOrig = nuNotaOrig;
    }
 
    public BigDecimal getQtdSai() {
-        return qtdSai;
+        return this.getVo().asBigDecimal("QTDSAI");
    }
 
    public void setQtdSai(BigDecimal qtdSai) {
         markAsChanged("QTDSAI", qtdSai);
-        this.qtdSai = qtdSai;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getSequenciaOrig() {
-        return sequenciaOrig;
+        return this.getVo().asBigDecimal("SEQUENCIAORIG");
    }
 
    public void setSequenciaOrig(BigDecimal sequenciaOrig) {
         markAsChanged("SEQUENCIAORIG", sequenciaOrig);
-        this.sequenciaOrig = sequenciaOrig;
    }
 
    public BigDecimal getVlrIcms() {
-        return vlrIcms;
+        return this.getVo().asBigDecimal("VLRICMS");
    }
 
    public void setVlrIcms(BigDecimal vlrIcms) {
         markAsChanged("VLRICMS", vlrIcms);
-        this.vlrIcms = vlrIcms;
    }
 
    public BigDecimal getBaseStfcpInt() {
-        return baseStfcpInt;
+        return this.getVo().asBigDecimal("BASESTFCPINT");
    }
 
    public void setBaseStfcpInt(BigDecimal baseStfcpInt) {
         markAsChanged("BASESTFCPINT", baseStfcpInt);
-        this.baseStfcpInt = baseStfcpInt;
    }
 
    public BigDecimal getPercStfcpInt() {
-        return percStfcpInt;
+        return this.getVo().asBigDecimal("PERCSTFCPINT");
    }
 
    public void setPercStfcpInt(BigDecimal percStfcpInt) {
         markAsChanged("PERCSTFCPINT", percStfcpInt);
-        this.percStfcpInt = percStfcpInt;
    }
 
    public BigDecimal getVlrStfcpInt() {
-        return vlrStfcpInt;
+        return this.getVo().asBigDecimal("VLRSTFCPINT");
    }
 
    public void setVlrStfcpInt(BigDecimal vlrStfcpInt) {
         markAsChanged("VLRSTFCPINT", vlrStfcpInt);
-        this.vlrStfcpInt = vlrStfcpInt;
    }
 
    @Override
@@ -129,17 +106,6 @@ public class LigacaoNotasSaidasEntradas extends AbstractSankhyaEntity<LigacaoNot
    @Override
    public LigacaoNotasSaidasEntradas fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.baseSubst = vo.asBigDecimal("BASESUBST");
-        this.vlrSubst = vo.asBigDecimal("VLRSUBST");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.nuNotaOrig = vo.asBigDecimal("NUNOTAORIG");
-        this.qtdSai = vo.asBigDecimal("QTDSAI");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.sequenciaOrig = vo.asBigDecimal("SEQUENCIAORIG");
-        this.vlrIcms = vo.asBigDecimal("VLRICMS");
-        this.baseStfcpInt = vo.asBigDecimal("BASESTFCPINT");
-        this.percStfcpInt = vo.asBigDecimal("PERCSTFCPINT");
-        this.vlrStfcpInt = vo.asBigDecimal("VLRSTFCPINT");
         return this;
    }
 }

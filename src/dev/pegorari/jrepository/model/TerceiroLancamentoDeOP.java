@@ -5,55 +5,44 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancamentoDeOP> {
-   private BigDecimal seqOp;
-   private BigDecimal nuLop;
-   private BigDecimal ideFx;
-   private BigDecimal codParcterc;
-   private String descAtv;
-
    public BigDecimal getSeqOp() {
-        return seqOp;
+        return this.getVo().asBigDecimal("SEQOP");
    }
 
    public void setSeqOp(BigDecimal seqOp) {
         markAsChanged("SEQOP", seqOp);
-        this.seqOp = seqOp;
    }
 
    public BigDecimal getNuLop() {
-        return nuLop;
+        return this.getVo().asBigDecimal("NULOP");
    }
 
    public void setNuLop(BigDecimal nuLop) {
         markAsChanged("NULOP", nuLop);
-        this.nuLop = nuLop;
    }
 
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    public BigDecimal getCodParcterc() {
-        return codParcterc;
+        return this.getVo().asBigDecimal("CODPARCTERC");
    }
 
    public void setCodParcterc(BigDecimal codParcterc) {
         markAsChanged("CODPARCTERC", codParcterc);
-        this.codParcterc = codParcterc;
    }
 
    public String getDescAtv() {
-        return descAtv;
+        return this.getVo().asString("DESCATV");
    }
 
    public void setDescAtv(String descAtv) {
         markAsChanged("DESCATV", descAtv);
-        this.descAtv = descAtv;
    }
 
    @Override
@@ -69,11 +58,6 @@ public class TerceiroLancamentoDeOP extends AbstractSankhyaEntity<TerceiroLancam
    @Override
    public TerceiroLancamentoDeOP fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqOp = vo.asBigDecimal("SEQOP");
-        this.nuLop = vo.asBigDecimal("NULOP");
-        this.ideFx = vo.asBigDecimal("IDEFX");
-        this.codParcterc = vo.asBigDecimal("CODPARCTERC");
-        this.descAtv = vo.asString("DESCATV");
         return this;
    }
 }

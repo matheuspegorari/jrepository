@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> {
-   private BigDecimal codProdMp;
-   private BigDecimal codProdPa;
-   private BigDecimal idIproc;
-   private String liberado;
-   private BigDecimal nuApo;
-   private String serieMp;
-   private String seriePa;
-
    public BigDecimal getCodProdMp() {
-        return codProdMp;
+        return this.getVo().asBigDecimal("CODPRODMP");
    }
 
    public void setCodProdMp(BigDecimal codProdMp) {
         markAsChanged("CODPRODMP", codProdMp);
-        this.codProdMp = codProdMp;
    }
 
    public BigDecimal getCodProdPa() {
-        return codProdPa;
+        return this.getVo().asBigDecimal("CODPRODPA");
    }
 
    public void setCodProdPa(BigDecimal codProdPa) {
         markAsChanged("CODPRODPA", codProdPa);
-        this.codProdPa = codProdPa;
    }
 
    public BigDecimal getIdIproc() {
-        return idIproc;
+        return this.getVo().asBigDecimal("IDIPROC");
    }
 
    public void setIdIproc(BigDecimal idIproc) {
         markAsChanged("IDIPROC", idIproc);
-        this.idIproc = idIproc;
    }
 
    public String getLiberado() {
-        return liberado;
+        return this.getVo().asString("LIBERADO");
    }
 
    public void setLiberado(String liberado) {
         markAsChanged("LIBERADO", liberado);
-        this.liberado = liberado;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public String getSerieMp() {
-        return serieMp;
+        return this.getVo().asString("SERIEMP");
    }
 
    public void setSerieMp(String serieMp) {
         markAsChanged("SERIEMP", serieMp);
-        this.serieMp = serieMp;
    }
 
    public String getSeriePa() {
-        return seriePa;
+        return this.getVo().asString("SERIEPA");
    }
 
    public void setSeriePa(String seriePa) {
         markAsChanged("SERIEPA", seriePa);
-        this.seriePa = seriePa;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class SerieMateriaPrima extends AbstractSankhyaEntity<SerieMateriaPrima> 
    @Override
    public SerieMateriaPrima fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codProdMp = vo.asBigDecimal("CODPRODMP");
-        this.codProdPa = vo.asBigDecimal("CODPRODPA");
-        this.idIproc = vo.asBigDecimal("IDIPROC");
-        this.liberado = vo.asString("LIBERADO");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.serieMp = vo.asString("SERIEMP");
-        this.seriePa = vo.asString("SERIEPA");
         return this;
    }
 }

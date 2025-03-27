@@ -6,95 +6,76 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> {
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private BigDecimal nroUnico;
-   private BigDecimal nuBco;
-   private BigDecimal nuCaixa;
-   private String origem;
-   private BigDecimal recDesp;
-   private BigDecimal valor;
-   private String numNsu;
-
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNroUnico() {
-        return nroUnico;
+        return this.getVo().asBigDecimal("NROUNICO");
    }
 
    public void setNroUnico(BigDecimal nroUnico) {
         markAsChanged("NROUNICO", nroUnico);
-        this.nroUnico = nroUnico;
    }
 
    public BigDecimal getNuBco() {
-        return nuBco;
+        return this.getVo().asBigDecimal("NUBCO");
    }
 
    public void setNuBco(BigDecimal nuBco) {
         markAsChanged("NUBCO", nuBco);
-        this.nuBco = nuBco;
    }
 
    public BigDecimal getNuCaixa() {
-        return nuCaixa;
+        return this.getVo().asBigDecimal("NUCAIXA");
    }
 
    public void setNuCaixa(BigDecimal nuCaixa) {
         markAsChanged("NUCAIXA", nuCaixa);
-        this.nuCaixa = nuCaixa;
    }
 
    public String getOrigem() {
-        return origem;
+        return this.getVo().asString("ORIGEM");
    }
 
    public void setOrigem(String origem) {
         markAsChanged("ORIGEM", origem);
-        this.origem = origem;
    }
 
    public BigDecimal getRecDesp() {
-        return recDesp;
+        return this.getVo().asBigDecimal("RECDESP");
    }
 
    public void setRecDesp(BigDecimal recDesp) {
         markAsChanged("RECDESP", recDesp);
-        this.recDesp = recDesp;
    }
 
    public BigDecimal getValor() {
-        return valor;
+        return this.getVo().asBigDecimal("VALOR");
    }
 
    public void setValor(BigDecimal valor) {
         markAsChanged("VALOR", valor);
-        this.valor = valor;
    }
 
    public String getNumNsu() {
-        return numNsu;
+        return this.getVo().asString("NUMNSU");
    }
 
    public void setNumNsu(String numNsu) {
         markAsChanged("NUMNSU", numNsu);
-        this.numNsu = numNsu;
    }
 
    @Override
@@ -110,15 +91,6 @@ public class MovimentacaoCaixa extends AbstractSankhyaEntity<MovimentacaoCaixa> 
    @Override
    public MovimentacaoCaixa fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nroUnico = vo.asBigDecimal("NROUNICO");
-        this.nuBco = vo.asBigDecimal("NUBCO");
-        this.nuCaixa = vo.asBigDecimal("NUCAIXA");
-        this.origem = vo.asString("ORIGEM");
-        this.recDesp = vo.asBigDecimal("RECDESP");
-        this.valor = vo.asBigDecimal("VALOR");
-        this.numNsu = vo.asString("NUMNSU");
         return this;
    }
 }

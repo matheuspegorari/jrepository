@@ -5,15 +5,12 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class Gateway extends AbstractSankhyaEntity<Gateway> {
-   private BigDecimal ideFx;
-
    public BigDecimal getIdeFx() {
-        return ideFx;
+        return this.getVo().asBigDecimal("IDEFX");
    }
 
    public void setIdeFx(BigDecimal ideFx) {
         markAsChanged("IDEFX", ideFx);
-        this.ideFx = ideFx;
    }
 
    @Override
@@ -29,7 +26,6 @@ public class Gateway extends AbstractSankhyaEntity<Gateway> {
    @Override
    public Gateway fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.ideFx = vo.asBigDecimal("IDEFX");
         return this;
    }
 }

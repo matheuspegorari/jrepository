@@ -5,85 +5,68 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
-   private BigDecimal seqNota;
-   private BigDecimal sequencia;
-   private BigDecimal valUnit;
-   private BigDecimal valTotal;
-   private BigDecimal nuNota;
-   private String descProd;
-   private String unidade;
-   private BigDecimal quantidade;
-
    public BigDecimal getSeqNota() {
-        return seqNota;
+        return this.getVo().asBigDecimal("SEQNOTA");
    }
 
    public void setSeqNota(BigDecimal seqNota) {
         markAsChanged("SEQNOTA", seqNota);
-        this.seqNota = seqNota;
    }
 
    public BigDecimal getSequencia() {
-        return sequencia;
+        return this.getVo().asBigDecimal("SEQUENCIA");
    }
 
    public void setSequencia(BigDecimal sequencia) {
         markAsChanged("SEQUENCIA", sequencia);
-        this.sequencia = sequencia;
    }
 
    public BigDecimal getValUnit() {
-        return valUnit;
+        return this.getVo().asBigDecimal("VALUNIT");
    }
 
    public void setValUnit(BigDecimal valUnit) {
         markAsChanged("VALUNIT", valUnit);
-        this.valUnit = valUnit;
    }
 
    public BigDecimal getValTotal() {
-        return valTotal;
+        return this.getVo().asBigDecimal("VALTOTAL");
    }
 
    public void setValTotal(BigDecimal valTotal) {
         markAsChanged("VALTOTAL", valTotal);
-        this.valTotal = valTotal;
    }
 
    public BigDecimal getNuNota() {
-        return nuNota;
+        return this.getVo().asBigDecimal("NUNOTA");
    }
 
    public void setNuNota(BigDecimal nuNota) {
         markAsChanged("NUNOTA", nuNota);
-        this.nuNota = nuNota;
    }
 
    public String getDescProd() {
-        return descProd;
+        return this.getVo().asString("DESCPROD");
    }
 
    public void setDescProd(String descProd) {
         markAsChanged("DESCPROD", descProd);
-        this.descProd = descProd;
    }
 
    public String getUnidade() {
-        return unidade;
+        return this.getVo().asString("UNIDADE");
    }
 
    public void setUnidade(String unidade) {
         markAsChanged("UNIDADE", unidade);
-        this.unidade = unidade;
    }
 
    public BigDecimal getQuantidade() {
-        return quantidade;
+        return this.getVo().asBigDecimal("QUANTIDADE");
    }
 
    public void setQuantidade(BigDecimal quantidade) {
         markAsChanged("QUANTIDADE", quantidade);
-        this.quantidade = quantidade;
    }
 
    @Override
@@ -99,14 +82,6 @@ public class RelacaoItemCTe extends AbstractSankhyaEntity<RelacaoItemCTe> {
    @Override
    public RelacaoItemCTe fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.seqNota = vo.asBigDecimal("SEQNOTA");
-        this.sequencia = vo.asBigDecimal("SEQUENCIA");
-        this.valUnit = vo.asBigDecimal("VALUNIT");
-        this.valTotal = vo.asBigDecimal("VALTOTAL");
-        this.nuNota = vo.asBigDecimal("NUNOTA");
-        this.descProd = vo.asString("DESCPROD");
-        this.unidade = vo.asString("UNIDADE");
-        this.quantidade = vo.asBigDecimal("QUANTIDADE");
         return this;
    }
 }

@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubproduto> {
-   private String referencia;
-   private BigDecimal qtd;
-   private BigDecimal seqApa;
-   private String codVol;
-   private BigDecimal nuApo;
-   private String controleSp;
-   private BigDecimal codProdSp;
-
    public String getReferencia() {
-        return referencia;
+        return this.getVo().asString("REFERENCIA");
    }
 
    public void setReferencia(String referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public BigDecimal getQtd() {
-        return qtd;
+        return this.getVo().asBigDecimal("QTD");
    }
 
    public void setQtd(BigDecimal qtd) {
         markAsChanged("QTD", qtd);
-        this.qtd = qtd;
    }
 
    public BigDecimal getSeqApa() {
-        return seqApa;
+        return this.getVo().asBigDecimal("SEQAPA");
    }
 
    public void setSeqApa(BigDecimal seqApa) {
         markAsChanged("SEQAPA", seqApa);
-        this.seqApa = seqApa;
    }
 
    public String getCodVol() {
-        return codVol;
+        return this.getVo().asString("CODVOL");
    }
 
    public void setCodVol(String codVol) {
         markAsChanged("CODVOL", codVol);
-        this.codVol = codVol;
    }
 
    public BigDecimal getNuApo() {
-        return nuApo;
+        return this.getVo().asBigDecimal("NUAPO");
    }
 
    public void setNuApo(BigDecimal nuApo) {
         markAsChanged("NUAPO", nuApo);
-        this.nuApo = nuApo;
    }
 
    public String getControleSp() {
-        return controleSp;
+        return this.getVo().asString("CONTROLESP");
    }
 
    public void setControleSp(String controleSp) {
         markAsChanged("CONTROLESP", controleSp);
-        this.controleSp = controleSp;
    }
 
    public BigDecimal getCodProdSp() {
-        return codProdSp;
+        return this.getVo().asBigDecimal("CODPRODSP");
    }
 
    public void setCodProdSp(BigDecimal codProdSp) {
         markAsChanged("CODPRODSP", codProdSp);
-        this.codProdSp = codProdSp;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class ApontamentoSubproduto extends AbstractSankhyaEntity<ApontamentoSubp
    @Override
    public ApontamentoSubproduto fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.referencia = vo.asString("REFERENCIA");
-        this.qtd = vo.asBigDecimal("QTD");
-        this.seqApa = vo.asBigDecimal("SEQAPA");
-        this.codVol = vo.asString("CODVOL");
-        this.nuApo = vo.asBigDecimal("NUAPO");
-        this.controleSp = vo.asString("CONTROLESP");
-        this.codProdSp = vo.asBigDecimal("CODPRODSP");
         return this;
    }
 }

@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato> {
-   private BigDecimal codContato;
-   private BigDecimal codOcor;
-   private BigDecimal codParc;
-   private BigDecimal codProd;
-   private BigDecimal codUsu;
-   private String descricao;
-   private Timestamp dtOcor;
-   private BigDecimal numContrato;
-
    public BigDecimal getCodContato() {
-        return codContato;
+        return this.getVo().asBigDecimal("CODCONTATO");
    }
 
    public void setCodContato(BigDecimal codContato) {
         markAsChanged("CODCONTATO", codContato);
-        this.codContato = codContato;
    }
 
    public BigDecimal getCodOcor() {
-        return codOcor;
+        return this.getVo().asBigDecimal("CODOCOR");
    }
 
    public void setCodOcor(BigDecimal codOcor) {
         markAsChanged("CODOCOR", codOcor);
-        this.codOcor = codOcor;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodProd() {
-        return codProd;
+        return this.getVo().asBigDecimal("CODPROD");
    }
 
    public void setCodProd(BigDecimal codProd) {
         markAsChanged("CODPROD", codProd);
-        this.codProd = codProd;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public String getDescricao() {
-        return descricao;
+        return this.getVo().asString("DESCRICAO");
    }
 
    public void setDescricao(String descricao) {
         markAsChanged("DESCRICAO", descricao);
-        this.descricao = descricao;
    }
 
    public Timestamp getDtOcor() {
-        return dtOcor;
+        return this.getVo().asTimestamp("DTOCOR");
    }
 
    public void setDtOcor(Timestamp dtOcor) {
         markAsChanged("DTOCOR", dtOcor);
-        this.dtOcor = dtOcor;
    }
 
    public BigDecimal getNumContrato() {
-        return numContrato;
+        return this.getVo().asBigDecimal("NUMCONTRATO");
    }
 
    public void setNumContrato(BigDecimal numContrato) {
         markAsChanged("NUMCONTRATO", numContrato);
-        this.numContrato = numContrato;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class OcorrenciaContrato extends AbstractSankhyaEntity<OcorrenciaContrato
    @Override
    public OcorrenciaContrato fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codContato = vo.asBigDecimal("CODCONTATO");
-        this.codOcor = vo.asBigDecimal("CODOCOR");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codProd = vo.asBigDecimal("CODPROD");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.descricao = vo.asString("DESCRICAO");
-        this.dtOcor = vo.asTimestamp("DTOCOR");
-        this.numContrato = vo.asBigDecimal("NUMCONTRATO");
         return this;
    }
 }

@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFinanceiroAplicado> {
-   private BigDecimal codDesc;
-   private BigDecimal codUsu;
-   private BigDecimal difContratAplicad;
-   private Timestamp dtAlter;
-   private BigDecimal nuFin;
-   private String observacao;
-   private BigDecimal vlrDesc;
-   private BigDecimal vlrDescContratado;
-
    public BigDecimal getCodDesc() {
-        return codDesc;
+        return this.getVo().asBigDecimal("CODDESC");
    }
 
    public void setCodDesc(BigDecimal codDesc) {
         markAsChanged("CODDESC", codDesc);
-        this.codDesc = codDesc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public BigDecimal getDifContratAplicad() {
-        return difContratAplicad;
+        return this.getVo().asBigDecimal("DIFCONTRATPLICAD");
    }
 
    public void setDifContratAplicad(BigDecimal difContratAplicad) {
         markAsChanged("DIFCONTRATPLICAD", difContratAplicad);
-        this.difContratAplicad = difContratAplicad;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getNuFin() {
-        return nuFin;
+        return this.getVo().asBigDecimal("NUFIN");
    }
 
    public void setNuFin(BigDecimal nuFin) {
         markAsChanged("NUFIN", nuFin);
-        this.nuFin = nuFin;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    public BigDecimal getVlrDesc() {
-        return vlrDesc;
+        return this.getVo().asBigDecimal("VLRDESC");
    }
 
    public void setVlrDesc(BigDecimal vlrDesc) {
         markAsChanged("VLRDESC", vlrDesc);
-        this.vlrDesc = vlrDesc;
    }
 
    public BigDecimal getVlrDescContratado() {
-        return vlrDescContratado;
+        return this.getVo().asBigDecimal("VLRDESCCONTRATADO");
    }
 
    public void setVlrDescContratado(BigDecimal vlrDescContratado) {
         markAsChanged("VLRDESCCONTRATADO", vlrDescContratado);
-        this.vlrDescContratado = vlrDescContratado;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class DescontoFinanceiroAplicado extends AbstractSankhyaEntity<DescontoFi
    @Override
    public DescontoFinanceiroAplicado fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codDesc = vo.asBigDecimal("CODDESC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.difContratAplicad = vo.asBigDecimal("DIFCONTRATPLICAD");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.nuFin = vo.asBigDecimal("NUFIN");
-        this.observacao = vo.asString("OBSERVACAO");
-        this.vlrDesc = vo.asBigDecimal("VLRDESC");
-        this.vlrDescContratado = vo.asBigDecimal("VLRDESCCONTRATADO");
         return this;
    }
 }

@@ -6,115 +6,92 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
-   private String descansoSem;
-   private BigDecimal diaSem;
-   private Timestamp dtAlter;
-   private BigDecimal entrada;
-   private BigDecimal saida;
-   private BigDecimal turno;
-   private String valEntrada;
-   private BigDecimal cargaHoraria;
-   private BigDecimal codCargaHor;
-   private String valSaida;
-   private BigDecimal durJornadaEsocial;
-
    public String getDescansoSem() {
-        return descansoSem;
+        return this.getVo().asString("DESCANSOSEM");
    }
 
    public void setDescansoSem(String descansoSem) {
         markAsChanged("DESCANSOSEM", descansoSem);
-        this.descansoSem = descansoSem;
    }
 
    public BigDecimal getDiaSem() {
-        return diaSem;
+        return this.getVo().asBigDecimal("DIASEM");
    }
 
    public void setDiaSem(BigDecimal diaSem) {
         markAsChanged("DIASEM", diaSem);
-        this.diaSem = diaSem;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public BigDecimal getEntrada() {
-        return entrada;
+        return this.getVo().asBigDecimal("ENTRADA");
    }
 
    public void setEntrada(BigDecimal entrada) {
         markAsChanged("ENTRADA", entrada);
-        this.entrada = entrada;
    }
 
    public BigDecimal getSaida() {
-        return saida;
+        return this.getVo().asBigDecimal("SAIDA");
    }
 
    public void setSaida(BigDecimal saida) {
         markAsChanged("SAIDA", saida);
-        this.saida = saida;
    }
 
    public BigDecimal getTurno() {
-        return turno;
+        return this.getVo().asBigDecimal("TURNO");
    }
 
    public void setTurno(BigDecimal turno) {
         markAsChanged("TURNO", turno);
-        this.turno = turno;
    }
 
    public String getValEntrada() {
-        return valEntrada;
+        return this.getVo().asString("VALENTRADA");
    }
 
    public void setValEntrada(String valEntrada) {
         markAsChanged("VALENTRADA", valEntrada);
-        this.valEntrada = valEntrada;
    }
 
    public BigDecimal getCargaHoraria() {
-        return cargaHoraria;
+        return this.getVo().asBigDecimal("CARGAHORARIA");
    }
 
    public void setCargaHoraria(BigDecimal cargaHoraria) {
         markAsChanged("CARGAHORARIA", cargaHoraria);
-        this.cargaHoraria = cargaHoraria;
    }
 
    public BigDecimal getCodCargaHor() {
-        return codCargaHor;
+        return this.getVo().asBigDecimal("CODCARGAHOR");
    }
 
    public void setCodCargaHor(BigDecimal codCargaHor) {
         markAsChanged("CODCARGAHOR", codCargaHor);
-        this.codCargaHor = codCargaHor;
    }
 
    public String getValSaida() {
-        return valSaida;
+        return this.getVo().asString("VALSAIDA");
    }
 
    public void setValSaida(String valSaida) {
         markAsChanged("VALSAIDA", valSaida);
-        this.valSaida = valSaida;
    }
 
    public BigDecimal getDurJornadaEsocial() {
-        return durJornadaEsocial;
+        return this.getVo().asBigDecimal("DURJORNADAESOCIAL");
    }
 
    public void setDurJornadaEsocial(BigDecimal durJornadaEsocial) {
         markAsChanged("DURJORNADAESOCIAL", durJornadaEsocial);
-        this.durJornadaEsocial = durJornadaEsocial;
    }
 
    @Override
@@ -130,17 +107,6 @@ public class CargaHoraria extends AbstractSankhyaEntity<CargaHoraria> {
    @Override
    public CargaHoraria fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.descansoSem = vo.asString("DESCANSOSEM");
-        this.diaSem = vo.asBigDecimal("DIASEM");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.entrada = vo.asBigDecimal("ENTRADA");
-        this.saida = vo.asBigDecimal("SAIDA");
-        this.turno = vo.asBigDecimal("TURNO");
-        this.valEntrada = vo.asString("VALENTRADA");
-        this.cargaHoraria = vo.asBigDecimal("CARGAHORARIA");
-        this.codCargaHor = vo.asBigDecimal("CODCARGAHOR");
-        this.valSaida = vo.asString("VALSAIDA");
-        this.durJornadaEsocial = vo.asBigDecimal("DURJORNADAESOCIAL");
         return this;
    }
 }

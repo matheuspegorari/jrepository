@@ -6,85 +6,68 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class Tomador extends AbstractSankhyaEntity<Tomador> {
-   private BigDecimal codEmp;
-   private BigDecimal codFunc;
-   private BigDecimal codParc;
-   private BigDecimal codUsu;
-   private Timestamp dhAlter;
-   private Timestamp dtFim;
-   private Timestamp dtInicio;
-   private String observacao;
-
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public BigDecimal getCodFunc() {
-        return codFunc;
+        return this.getVo().asBigDecimal("CODFUNC");
    }
 
    public void setCodFunc(BigDecimal codFunc) {
         markAsChanged("CODFUNC", codFunc);
-        this.codFunc = codFunc;
    }
 
    public BigDecimal getCodParc() {
-        return codParc;
+        return this.getVo().asBigDecimal("CODPARC");
    }
 
    public void setCodParc(BigDecimal codParc) {
         markAsChanged("CODPARC", codParc);
-        this.codParc = codParc;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDhAlter() {
-        return dhAlter;
+        return this.getVo().asTimestamp("DHALTER");
    }
 
    public void setDhAlter(Timestamp dhAlter) {
         markAsChanged("DHALTER", dhAlter);
-        this.dhAlter = dhAlter;
    }
 
    public Timestamp getDtFim() {
-        return dtFim;
+        return this.getVo().asTimestamp("DTFIM");
    }
 
    public void setDtFim(Timestamp dtFim) {
         markAsChanged("DTFIM", dtFim);
-        this.dtFim = dtFim;
    }
 
    public Timestamp getDtInicio() {
-        return dtInicio;
+        return this.getVo().asTimestamp("DTINICIO");
    }
 
    public void setDtInicio(Timestamp dtInicio) {
         markAsChanged("DTINICIO", dtInicio);
-        this.dtInicio = dtInicio;
    }
 
    public String getObservacao() {
-        return observacao;
+        return this.getVo().asString("OBSERVACAO");
    }
 
    public void setObservacao(String observacao) {
         markAsChanged("OBSERVACAO", observacao);
-        this.observacao = observacao;
    }
 
    @Override
@@ -100,14 +83,6 @@ public class Tomador extends AbstractSankhyaEntity<Tomador> {
    @Override
    public Tomador fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.codFunc = vo.asBigDecimal("CODFUNC");
-        this.codParc = vo.asBigDecimal("CODPARC");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dhAlter = vo.asTimestamp("DHALTER");
-        this.dtFim = vo.asTimestamp("DTFIM");
-        this.dtInicio = vo.asTimestamp("DTINICIO");
-        this.observacao = vo.asString("OBSERVACAO");
         return this;
    }
 }

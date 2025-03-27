@@ -6,65 +6,52 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
-   private BigDecimal codPerfil;
-   private BigDecimal codUsu;
-   private Timestamp dtAlter;
-   private String imprescindivel;
-   private BigDecimal nuRequisicao;
-   private BigDecimal peso;
-
    public BigDecimal getCodPerfil() {
-        return codPerfil;
+        return this.getVo().asBigDecimal("CODPERFIL");
    }
 
    public void setCodPerfil(BigDecimal codPerfil) {
         markAsChanged("CODPERFIL", codPerfil);
-        this.codPerfil = codPerfil;
    }
 
    public BigDecimal getCodUsu() {
-        return codUsu;
+        return this.getVo().asBigDecimal("CODUSU");
    }
 
    public void setCodUsu(BigDecimal codUsu) {
         markAsChanged("CODUSU", codUsu);
-        this.codUsu = codUsu;
    }
 
    public Timestamp getDtAlter() {
-        return dtAlter;
+        return this.getVo().asTimestamp("DTALTER");
    }
 
    public void setDtAlter(Timestamp dtAlter) {
         markAsChanged("DTALTER", dtAlter);
-        this.dtAlter = dtAlter;
    }
 
    public String getImprescindivel() {
-        return imprescindivel;
+        return this.getVo().asString("IMPRESCINDIVEL");
    }
 
    public void setImprescindivel(String imprescindivel) {
         markAsChanged("IMPRESCINDIVEL", imprescindivel);
-        this.imprescindivel = imprescindivel;
    }
 
    public BigDecimal getNuRequisicao() {
-        return nuRequisicao;
+        return this.getVo().asBigDecimal("NUREQUISICAO");
    }
 
    public void setNuRequisicao(BigDecimal nuRequisicao) {
         markAsChanged("NUREQUISICAO", nuRequisicao);
-        this.nuRequisicao = nuRequisicao;
    }
 
    public BigDecimal getPeso() {
-        return peso;
+        return this.getVo().asBigDecimal("PESO");
    }
 
    public void setPeso(BigDecimal peso) {
         markAsChanged("PESO", peso);
-        this.peso = peso;
    }
 
    @Override
@@ -80,12 +67,6 @@ public class PerfilRequisicao extends AbstractSankhyaEntity<PerfilRequisicao> {
    @Override
    public PerfilRequisicao fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codPerfil = vo.asBigDecimal("CODPERFIL");
-        this.codUsu = vo.asBigDecimal("CODUSU");
-        this.dtAlter = vo.asTimestamp("DTALTER");
-        this.imprescindivel = vo.asString("IMPRESCINDIVEL");
-        this.nuRequisicao = vo.asBigDecimal("NUREQUISICAO");
-        this.peso = vo.asBigDecimal("PESO");
         return this;
    }
 }

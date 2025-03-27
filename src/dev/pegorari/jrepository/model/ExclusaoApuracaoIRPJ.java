@@ -6,75 +6,60 @@ import java.sql.Timestamp;
 import java.math.BigDecimal;
 
 public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracaoIRPJ> {
-   private BigDecimal codCtaCtb;
-   private BigDecimal codEmp;
-   private String ctaCtb;
-   private String digitado;
-   private Timestamp referencia;
-   private String tipoImposto;
-   private BigDecimal vlrLanc;
-
    public BigDecimal getCodCtaCtb() {
-        return codCtaCtb;
+        return this.getVo().asBigDecimal("CODCTACTB");
    }
 
    public void setCodCtaCtb(BigDecimal codCtaCtb) {
         markAsChanged("CODCTACTB", codCtaCtb);
-        this.codCtaCtb = codCtaCtb;
    }
 
    public BigDecimal getCodEmp() {
-        return codEmp;
+        return this.getVo().asBigDecimal("CODEMP");
    }
 
    public void setCodEmp(BigDecimal codEmp) {
         markAsChanged("CODEMP", codEmp);
-        this.codEmp = codEmp;
    }
 
    public String getCtaCtb() {
-        return ctaCtb;
+        return this.getVo().asString("CTACTB");
    }
 
    public void setCtaCtb(String ctaCtb) {
         markAsChanged("CTACTB", ctaCtb);
-        this.ctaCtb = ctaCtb;
    }
 
    public String getDigitado() {
-        return digitado;
+        return this.getVo().asString("DIGITADO");
    }
 
    public void setDigitado(String digitado) {
         markAsChanged("DIGITADO", digitado);
-        this.digitado = digitado;
    }
 
    public Timestamp getReferencia() {
-        return referencia;
+        return this.getVo().asTimestamp("REFERENCIA");
    }
 
    public void setReferencia(Timestamp referencia) {
         markAsChanged("REFERENCIA", referencia);
-        this.referencia = referencia;
    }
 
    public String getTipoImposto() {
-        return tipoImposto;
+        return this.getVo().asString("TIPOIMPOSTO");
    }
 
    public void setTipoImposto(String tipoImposto) {
         markAsChanged("TIPOIMPOSTO", tipoImposto);
-        this.tipoImposto = tipoImposto;
    }
 
    public BigDecimal getVlrLanc() {
-        return vlrLanc;
+        return this.getVo().asBigDecimal("VLRLANC");
    }
 
    public void setVlrLanc(BigDecimal vlrLanc) {
         markAsChanged("VLRLANC", vlrLanc);
-        this.vlrLanc = vlrLanc;
    }
 
    @Override
@@ -90,13 +75,6 @@ public class ExclusaoApuracaoIRPJ extends AbstractSankhyaEntity<ExclusaoApuracao
    @Override
    public ExclusaoApuracaoIRPJ fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.codCtaCtb = vo.asBigDecimal("CODCTACTB");
-        this.codEmp = vo.asBigDecimal("CODEMP");
-        this.ctaCtb = vo.asString("CTACTB");
-        this.digitado = vo.asString("DIGITADO");
-        this.referencia = vo.asTimestamp("REFERENCIA");
-        this.tipoImposto = vo.asString("TIPOIMPOSTO");
-        this.vlrLanc = vo.asBigDecimal("VLRLANC");
         return this;
    }
 }

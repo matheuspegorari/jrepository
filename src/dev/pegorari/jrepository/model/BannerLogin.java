@@ -5,75 +5,60 @@ import dev.pegorari.jrepository.abstractions.AbstractSankhyaEntity;
 import java.math.BigDecimal;
 
 public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
-   private String nomeArq;
-   private BigDecimal nuArquivo;
-   private BigDecimal ordem;
-   private BigDecimal tempo;
-   private String url;
-   private String profile;
-   private String evo;
-
    public String getNomeArq() {
-        return nomeArq;
+        return this.getVo().asString("NOMEARQ");
    }
 
    public void setNomeArq(String nomeArq) {
         markAsChanged("NOMEARQ", nomeArq);
-        this.nomeArq = nomeArq;
    }
 
    public BigDecimal getNuArquivo() {
-        return nuArquivo;
+        return this.getVo().asBigDecimal("NUARQUIVO");
    }
 
    public void setNuArquivo(BigDecimal nuArquivo) {
         markAsChanged("NUARQUIVO", nuArquivo);
-        this.nuArquivo = nuArquivo;
    }
 
    public BigDecimal getOrdem() {
-        return ordem;
+        return this.getVo().asBigDecimal("ORDEM");
    }
 
    public void setOrdem(BigDecimal ordem) {
         markAsChanged("ORDEM", ordem);
-        this.ordem = ordem;
    }
 
    public BigDecimal getTempo() {
-        return tempo;
+        return this.getVo().asBigDecimal("TEMPO");
    }
 
    public void setTempo(BigDecimal tempo) {
         markAsChanged("TEMPO", tempo);
-        this.tempo = tempo;
    }
 
    public String getUrl() {
-        return url;
+        return this.getVo().asString("URL");
    }
 
    public void setUrl(String url) {
         markAsChanged("URL", url);
-        this.url = url;
    }
 
    public String getProfile() {
-        return profile;
+        return this.getVo().asString("PROFILE");
    }
 
    public void setProfile(String profile) {
         markAsChanged("PROFILE", profile);
-        this.profile = profile;
    }
 
    public String getEvo() {
-        return evo;
+        return this.getVo().asString("EVO");
    }
 
    public void setEvo(String evo) {
         markAsChanged("EVO", evo);
-        this.evo = evo;
    }
 
    @Override
@@ -89,13 +74,6 @@ public class BannerLogin extends AbstractSankhyaEntity<BannerLogin> {
    @Override
    public BannerLogin fromVO(DynamicVO vo) {
         this.setVo(vo);
-        this.nomeArq = vo.asString("NOMEARQ");
-        this.nuArquivo = vo.asBigDecimal("NUARQUIVO");
-        this.ordem = vo.asBigDecimal("ORDEM");
-        this.tempo = vo.asBigDecimal("TEMPO");
-        this.url = vo.asString("URL");
-        this.profile = vo.asString("PROFILE");
-        this.evo = vo.asString("EVO");
         return this;
    }
 }
